@@ -23,7 +23,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47503" name="High-grade Spirit Stone" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon augmentation by characters level 95 or above. -->
+		<!-- A rare mineral solidified by shock from physical and magical strikes and dimensional abnormalities. Required for augmenting weapons. The higher the Augmenting Stone's level, the higher the augmentation value. -->
 		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
@@ -45,14 +45,14 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="47503" min="1" max="1" chance="100" /> <!-- High-grade Spirit Stone -->
+			<item id="47503" min="1" max="1" chance="100" /> <!-- High-grade Weapon Augmenting Stone -->
 			<item id="47501" min="1" max="1" chance="100" /> <!-- Rune Stone Fragment -->
 			<item id="47502" min="1" max="1" chance="100" /> <!-- Superior Giant's Codex Chapter 1 - Fragment -->
 			<item id="47086" min="1" max="1" chance="100" /> <!-- Venir's Talisman Box -->
 		</capsuled_items>
 	</item>
 	<item id="47505" name="Bracelet of the Conqueror - CON" type="Armor">
-		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 CON +3. -->
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, CON +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -71,7 +71,7 @@
 		</skills>
 	</item>
 	<item id="47506" name="Bracelet of the Conqueror - MEN" type="Armor">
-		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 MEN +3. -->
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, MEN +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -90,7 +90,7 @@
 		</skills>
 	</item>
 	<item id="47507" name="Bracelet of the Conqueror - DEX" type="Armor">
-		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 DEX +3. -->
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, DEX +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -109,7 +109,7 @@
 		</skills>
 	</item>
 	<item id="47508" name="Bracelet of the Conqueror - WIT" type="Armor">
-		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 WIT +3. -->
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, WIT +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -128,7 +128,7 @@
 		</skills>
 	</item>
 	<item id="47509" name="Bracelet of the Conqueror - STR" type="Armor">
-		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 STR +3. -->
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, STR +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -147,7 +147,7 @@
 		</skills>
 	</item>
 	<item id="47510" name="Bracelet of the Conqueror - INT" type="Armor">
-		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 INT +3. -->
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, INT +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -261,7 +261,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47519" name="Request - North of the Town of Giran" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Gorgon Flower Garden and the Breka's Stronghold. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Gorgon Flower Garden and the Breka's Stronghold. For characters of Lv. 92-102. Double-click to receive the request. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -273,7 +273,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47520" name="Request - Cruma Marshlands" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Cruma Marshlands. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland. Required level: 92-102. Double-click to receive the request -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -321,7 +321,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47524" name="Request - Cemetery" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Seal of Shilen and the Cemetery. The request can be accepted by characters between Lv. 93-103. Double-click to receive the request -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Seal of Shillien and the Cemetery. The request can be accepted by characters between Lv. 93-103. Double-click to receive the request -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -463,7 +463,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47537" name="Request - Cruma Marshlands" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Cruma Marshlands. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -503,7 +503,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47541" name="Request - Cemetery" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Seal of Shilen and the Cemetery. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Seal of Shillien and the Cemetery. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -563,7 +563,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47547" name="Corroded Bait" type="EtcItem">
-		<!-- This Normal Bait cannot be used any more. You can sell it to NPC Shop. -->
+		<!-- This Normal Bait cannot be used any more. You can sell it any shop. -->
 		<set name="icon" val="icon.etc_normal_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -601,25 +601,25 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47550" name="Ugly Fish" type="EtcItem">
-		<!-- Can be exchanged for a Fish Dish item through a Fishing Guild Member. -->
+		<!-- Can be exchanged for a fish dish through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47551" name="Nimble Fish" type="EtcItem">
-		<!-- Can be exchanged for a Fish Dish or Appearance Stone item through a Fishing Guild Member. -->
+		<!-- Can be exchanged for a fish dish or Appearance Stone through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47552" name="Powerful Fish" type="EtcItem">
-		<!-- Can be exchanged for Elcyum Powder, Expertise Rune or another item through a Fishing Guild Member. -->
+		<!-- Can be exchanged for Elcyum Powder through the Fishing Guild members. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47553" name="Blueish Box" type="EtcItem">
-		<!-- Double-click to obtain the item. -->
+		<!-- Double-click to obtain an item. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -637,7 +637,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47554" name="Reddish Box" type="EtcItem">
-		<!-- Double-click to obtain the item. -->
+		<!-- Double-click to obtain an item. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -653,14 +653,14 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39720" min="1" max="1" chance="27" /> <!-- Maphr's Luck Potion -->
+			<item id="39720" min="1" max="1" chance="27" /> <!-- Freya's Luck Potion -->
 			<item id="45494" min="1" max="1" chance="3" /> <!-- Sturdy Fishing Rod -->
 			<item id="38154" min="50" max="50" chance="65" /> <!-- Fishing Shot -->
 			<item id="8034" min="1" max="1" chance="5" /> <!-- Rainbow Springs Clan Hall War Decree -->
 		</capsuled_items>
 	</item>
 	<item id="47555" name="Purplish Box" type="EtcItem">
-		<!-- Double-click to obtain the item. -->
+		<!-- Double-click to obtain an item. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -679,7 +679,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47557" name="Master Fishing Rod" additionalName="Stage 1" type="Weapon">
-		<!-- Fishing time reduced by: 10 sec. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
+		<!-- Fishing time reduced by: 10 sec. A fishing rod modified personally by Santiago, head of the Fishermen's Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.fishing_rod01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -702,7 +702,7 @@
 		</stats>
 	</item>
 	<item id="47558" name="Master Fishing Rod" additionalName="Stage 2" type="Weapon">
-		<!-- Fishing time reduced by: 15 sec. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
+		<!-- Fishing time reduced by: 15 sec. A fishing rod modified personally by Santiago, head of the Fishermen's Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.fishing_rod02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -725,7 +725,7 @@
 		</stats>
 	</item>
 	<item id="47559" name="Master Fishing Rod" additionalName="Stage 3" type="Weapon">
-		<!-- Fishing time reduced by: 20 sec. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
+		<!-- Fishing time reduced by: 20 sec. A fishing rod modified personally by Santiago, head of the Fishermen's Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.fishing_rod03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -748,7 +748,7 @@
 		</stats>
 	</item>
 	<item id="47560" name="Master Fishing Rod" additionalName="Stage 4" type="Weapon">
-		<!-- Fishing time reduced by: 25 sec. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
+		<!-- Fishing time reduced by: 25 sec. A fishing rod modified personally by Santiago, head of the Fishermen's Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.fishing_rod04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -771,7 +771,7 @@
 		</stats>
 	</item>
 	<item id="47561" name="Master Fishing Rod" additionalName="Stage 5" type="Weapon">
-		<!-- Fishing time reduced by: 30 sec. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
+		<!-- Fishing time reduced by: 30 sec. A fishing rod modified personally by Santiago, head of the Fishermen's Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.fishing_rod05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -805,12 +805,17 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47563" name="Zodiac Agathion Pack" type="EtcItem">
-		<!-- Double-click to obtain one of the twelve Agathions Stage 1. -->
+		<!-- Double-click to obtain Elementary Seed Bracelet. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48060" min="1" max="1" chance="100" /> <!-- Elementary Seed Bracelet -->
+		</capsuled_items>
 	</item>
 	<item id="47564" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double-click to obtain the item. -->
@@ -897,7 +902,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47571" name="Basic Supply Box" additionalName="Fishing Guild" type="EtcItem">
-		<!-- A supply box given by Santiago, head of the Fishing Guild, for your hard work in reviving the Fishing Guild. Double-click to obtain the item. -->
+		<!-- A supply box from Santiago for your hard work in reviving the Fishing Guild. Double-click to obtain an item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -917,7 +922,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47572" name="Intermediate Supply Box" additionalName="Fishing Guild" type="EtcItem">
-		<!-- A supply box given by Santiago, head of the Fishing Guild, for your sustained effort toward reviving the Fishing Guild. Double-click to obtain the item. -->
+		<!-- A supply box from Santiago for your efforts in reviving the Fishing Guild. Double-click to obtain an item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -938,7 +943,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47573" name="Magic Spices" type="EtcItem">
-		<!-- A seasoning that famous chefs in Santiago and Aden developed after studying Fish Stew. With this seasoning and fish, you can make an excellent Royal Fish Soup. -->
+		<!-- Santiago has invented new recipes without seasonings. Can be exchanged for Nimble Fish through Santiago in Heine. -->
 		<set name="icon" val="icon.etc_powder_orange_i00" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -949,7 +954,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47574" name="PA Treasure Chest" type="EtcItem">
-		<!-- Double-click to obtain the item. -->
+		<!-- Double-click to obtain an item. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -961,25 +966,25 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47575" name="Royal White Save Ticket (R-grade)" type="EtcItem">
-		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- Enchant success rate +15% for R-grade armor when using a normal armor enchant scroll. Can only be used on items enchanted from +3 to +9. In case of failure, the item is not crystallized, but the existing enchant value is decreased by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47576" name="Royal White Save Ticket (R95-grade)" type="EtcItem">
-		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R95 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R95 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47577" name="Royal White Save Ticket (R99-grade)" type="EtcItem">
-		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47578" name="Gran Kain's Miraculous Medicine" type="EtcItem">
-		<!-- Legendary Miraculous Medicine said to have been concocted using a secret passed on by Gran Kain. Use to recover 7000 HP -->
+		<!-- The legendary elixir said to have been concocted from Gran Kain's secret recipe. Recovers 7000 HP. If HP is full, recovers CP. Can be used under most debuffs. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_grankain_potion" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1008,7 +1013,7 @@
 		<set name="weight" val="1000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="60" />
 		<set name="is_private_storeable" val="false" />
@@ -1092,7 +1097,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47591" name="Cat Fighter Appearance Stone - Ertheia Only" type="EtcItem">
-		<!-- An appearance stone that changes the appearance of your fist weapons into that of a Cat Fighter. <Caution> Items whose appearance has been changed can be equipped on by Ertheia. Remember this when extracting appearances. -->
+		<!-- Changes the appearance of fist weapons to that of a Cat Fighter. Note!. For Ertheia only. Choose new appearance carefully. -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1108,7 +1113,7 @@
 		</skills>
 	</item>
 	<item id="47592" name="Warm Bear Paws Appearance Stone" type="EtcItem">
-		<!-- An appearance stone that changes the appearance of your fist weapons in to that of Warm Bear Paws. -->
+		<!-- Changes the appearance of fist weapons to that of Warm Bear Paws. -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1124,7 +1129,7 @@
 		</skills>
 	</item>
 	<item id="47593" name="Boxing Glove Appearance Stone - Ertheia Only" type="EtcItem">
-		<!-- An appearance stone that changes the appearance of your fist weapons into that of Boxing Gloves. <Caution> Items whose appearance has been changed can be equipped on by Ertheia. Remember this when extracting appearances. -->
+		<!-- Changes the appearance of fist weapons to that of Boxing Gloves. Note!. For Ertheia only. Choose new appearance carefully. -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1140,7 +1145,7 @@
 		</skills>
 	</item>
 	<item id="47594" name="Cupid's Arrow Appearance Stone" type="EtcItem">
-		<!-- An appearance stone that changes the appearance of your bow into Cupid's Bow. -->
+		<!-- Changes the appearance of a bow to that of Cupid's Bow. -->
 		<set name="icon" val="icon.shape_shifting_bow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1156,7 +1161,7 @@
 		</skills>
 	</item>
 	<item id="47595" name="Wedding Bouquet Appearance Stone" type="EtcItem">
-		<!-- An appearance stone that changes the appearance of your one-handed Blunt Weapon into that of a Wedding Bouquet. -->
+		<!-- Changes the appearance of a one-handed blunt weapon to that of a Wedding Bouquet. -->
 		<set name="icon" val="icon.shape_shifting_blunt_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1172,7 +1177,7 @@
 		</skills>
 	</item>
 	<item id="47596" name="Pig Lollipop Appearance Stone" type="EtcItem">
-		<!-- An appearance stone that changes the appearance of your one-handed Dagger into that of a Pig Lollipop. -->
+		<!-- Changes the appearance of a dagger to that of a Pig Lollipop. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />

@@ -4,13 +4,13 @@
 		<skills>
 			<skill id="5115" level="4" triggerRate="40" successRate="84" target="TARGET"> <!-- Cubic Hate -->
 				<conditions>
-					<hp type="GREATER" percent="30" />
+					<hp type="GREATER" percent="1" />
 					<range value="1000" />
 				</conditions>
 			</skill>
 			<skill id="4049" level="8" triggerRate="15" successRate="40" canUseOnStaticObjects="true" target="TARGET"> <!-- Cubic Strike -->
 				<conditions>
-					<hp type="GREATER" percent="30" />
+					<hp type="GREATER" percent="1" />
 					<range value="1000" />
 				</conditions>
 			</skill>

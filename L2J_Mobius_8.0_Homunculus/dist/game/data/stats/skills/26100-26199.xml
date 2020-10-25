@@ -64,7 +64,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="26110" toLevel="1" name="2014 World Olympiad Hero's Accessory">
-		<!-- All Stats +5. -->
+		<!-- STR +5, DEX +5, CON +5, INT +5, WIT +5, MEN +5. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -95,7 +95,7 @@
 		</effects>
 	</skill>
 	<skill id="26111" toLevel="1" name="2014 World Olympiad Semifinalist's Accessory">
-		<!-- All Stats +2. -->
+		<!-- STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -132,7 +132,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26114" toLevel="1" name="Daily PA Support">
-		<!-- For 1 h., STR/ DEX/ CON/ INT/ WIT/ MEN +3, Attack Attribute Bonus +30, and Attribute Resistance +30. -->
+		<!-- For 1 h., STR/ DEX/ CON/ INT/ WIT/ MEN +3, Attribute Attack Bonus +30, and Attribute Resistance +30. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -140,7 +140,7 @@
 	<skill id="26115" toLevel="1" name="Extra Pass">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26116" toLevel="7" name="Zodiac Agathion Stat Boost">
+	<skill id="26116" toLevel="7" name="Starlight Agathion Buffing Skill">
 		<!-- MEN +$s1. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
@@ -187,7 +187,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26117" toLevel="11" name="Zodiac Agathion Attribute Enchant">
+	<skill id="26117" toLevel="11" name="Starlight Agathion Attribute Buff">
 		<!-- Attribute Resistance +$s1. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
@@ -381,6 +381,8 @@
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<isMagic>22</isMagic>
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -395,7 +397,6 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
-		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<selfEffects>
 			<effect name="Blink">
 				<!-- Teleport to Front -->
@@ -440,10 +441,7 @@
 		<effects>
 			<effect name="RebalanceHP" />
 			<effect name="HealOverTime">
-				<power>
-					<value fromLevel="1" toLevel="1">333</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
-				</power>
+				<power>333</power>
 				<ticks>1</ticks>
 			</effect>
 		</effects>
@@ -529,6 +527,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<isMagic>22</isMagic>
 		<effects>
 			<effect name="PAtk">
 				<amount>100</amount>
@@ -633,7 +632,7 @@
 		</effects>
 	</skill>
 	<skill id="26125" toLevel="12" name="Scorpion's Mass Exile">
-		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and standard attacks, and lose $s1 HP/ second. -->
+		<!-- Banishes enemies near the target into another dimension. The exiled enemies become incapacitated and invincible against attacks, skills, and debuffs. The enemies' HP -$s1 per sec. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_oct_i00</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -676,7 +675,7 @@
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DamOverTime">
 				<power>282</power>
@@ -738,7 +737,7 @@
 		<effects>
 			<effect name="AirBind" />
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
@@ -770,7 +769,7 @@
 		</effects>
 	</skill>
 	<skill id="26127" toLevel="12" name="Slippery Scale">
-		<!-- For $s1, defends against debuffs $s2 times. -->
+		<!-- For $s1, blocks $s2 debuff attack(s). -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_feb_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
@@ -804,12 +803,11 @@
 		<hitTime>15000</hitTime>
 		<effectPoint>467</effectPoint>
 		<isMagic>4</isMagic>
-		<effectRange>-2</effectRange>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>OTHERS</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<staticReuse>true</staticReuse>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">6750000</value>
@@ -825,14 +823,17 @@
 			<value level="11">2250000</value>
 			<value level="12">1800000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27359</reuseDelayGroup>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 		<conditions>
 			<condition name="OpCallPc" />
-			<condition name="TargetMyParty">
-				<includeMe>false</includeMe>
-			</condition>
 		</conditions>
 		<effects>
-			<effect name="CallPc" />
+			<effect name="CallParty" />
 		</effects>
 	</skill>
 	<skill id="26129" toLevel="12" name="Exoskeletal Shield">
@@ -841,6 +842,15 @@
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>379</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">4500000</value>
 			<value level="2">4200000</value>
@@ -855,7 +865,7 @@
 			<value level="11">1500000</value>
 			<value level="12">1200000</value>
 		</reuseDelay>
-		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<reuseDelayGroup>27360</reuseDelayGroup>
 		<effects>
 			<effect name="DamageShield">
 				<amount>20</amount>
@@ -931,7 +941,7 @@
 							<item id="18079" count="1" /> <!-- Blessed Helios Retributer -->
 						</item>
 						<item chance="7.14285">
-							<item id="18080" count="1" /> <!-- Blessed Helios Dual Sword -->
+							<item id="18080" count="1" /> <!-- Blessed Helios Dual Swords -->
 						</item>
 						<item chance="7.14285">
 							<item id="18081" count="1" /> <!-- Blessed Helios Dual Daggers -->
@@ -965,52 +975,52 @@
 				<items>
 					<value level="1">
 						<item chance="5.88235">
-							<item id="18083" count="1" /> <!-- Blessed Eternal Helmet -->
+							<item id="18083" count="1" /> <!-- Blessed Eternal Helmet - Heavy armor -->
 						</item>
 						<item chance="5.88235">
-							<item id="18084" count="1" /> <!-- Blessed Eternal Breastplate -->
+							<item id="18084" count="1" /> <!-- Blessed Eternal Breastplate - Heavy armor -->
 						</item>
 						<item chance="5.88235">
-							<item id="18085" count="1" /> <!-- Blessed Eternal Gaiters -->
+							<item id="18085" count="1" /> <!-- Blessed Eternal Gaiters - Heavy armor -->
 						</item>
 						<item chance="5.88235">
-							<item id="18086" count="1" /> <!-- Blessed Eternal Gauntlets -->
+							<item id="18086" count="1" /> <!-- Blessed Eternal Gauntlets - Heavy armor -->
 						</item>
 						<item chance="5.88235">
-							<item id="18087" count="1" /> <!-- Blessed Eternal Boots -->
+							<item id="18087" count="1" /> <!-- Blessed Eternal Boots - Heavy armor -->
 						</item>
 						<item chance="5.88235">
 							<item id="18088" count="1" /> <!-- Blessed Eternal Shield -->
 						</item>
 						<item chance="5.88235">
-							<item id="18089" count="1" /> <!-- Blessed Eternal Leather Helmet -->
+							<item id="18089" count="1" /> <!-- Blessed Eternal Leather Helmet - Light armor -->
 						</item>
 						<item chance="5.88235">
-							<item id="18090" count="1" /> <!-- Blessed Eternal Leather Armor -->
+							<item id="18090" count="1" /> <!-- Blessed Eternal Leather Armor - Light armor -->
 						</item>
 						<item chance="5.88235">
-							<item id="18091" count="1" /> <!-- Blessed Eternal Leather Leggings -->
+							<item id="18091" count="1" /> <!-- Blessed Eternal Leather Leggings - Light armor -->
 						</item>
 						<item chance="5.88235">
-							<item id="18092" count="1" /> <!-- Blessed Eternal Leather Gloves -->
+							<item id="18092" count="1" /> <!-- Blessed Eternal Leather Gloves - Light armor -->
 						</item>
 						<item chance="5.88235">
-							<item id="18093" count="1" /> <!-- Blessed Eternal Leather Boots -->
+							<item id="18093" count="1" /> <!-- Blessed Eternal Leather Boots - Light armor -->
 						</item>
 						<item chance="5.88235">
-							<item id="18094" count="1" /> <!-- Blessed Eternal Circlet -->
+							<item id="18094" count="1" /> <!-- Blessed Eternal Circlet - Robe -->
 						</item>
 						<item chance="5.88235">
-							<item id="18095" count="1" /> <!-- Blessed Eternal Tunic -->
+							<item id="18095" count="1" /> <!-- Blessed Eternal Tunic - Robe -->
 						</item>
 						<item chance="5.88235">
-							<item id="18096" count="1" /> <!-- Blessed Eternal Stockings -->
+							<item id="18096" count="1" /> <!-- Blessed Eternal Stockings - Robe -->
 						</item>
 						<item chance="5.88235">
-							<item id="18097" count="1" /> <!-- Blessed Eternal Gloves -->
+							<item id="18097" count="1" /> <!-- Blessed Eternal Gloves - Robe -->
 						</item>
 						<item chance="5.88235">
-							<item id="18098" count="1" /> <!-- Blessed Eternal Shoes -->
+							<item id="18098" count="1" /> <!-- Blessed Eternal Shoes - Robe -->
 						</item>
 						<item chance="5.88235">
 							<item id="18099" count="1" /> <!-- Blessed Eternal Sigil -->
@@ -1020,22 +1030,22 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26135" toLevel="1" name="Luck Box 1">
+	<skill id="26135" toLevel="1" name="Wondrous Casket">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26136" toLevel="1" name="Luck Box 2">
+	<skill id="26136" toLevel="1" name="Vintage Casket">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26137" toLevel="1" name="Luck Box 3">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26138" toLevel="1" name="Agathion - Virgo Pack (Low-grade)">
+	<skill id="26138" toLevel="1" name="Low Quality Agathion Virgo Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26139" toLevel="1" name="Agathion - Virgo Pack (Mid-grade)">
+	<skill id="26139" toLevel="1" name="Mid-grade Agathion Virgo Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26140" toLevel="1" name="Agathion - Virgo Pack (High-grade)">
+	<skill id="26140" toLevel="1" name="High Quality Agathion Virgo Box">
 		<itemConsumeId>24153</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1057,22 +1067,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="23995" count="1" /> <!-- Agathion - Virgo / Stage 7 -->
+						<item id="23995" count="1" /> <!-- Agathion Virgo - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="23996" count="1" /> <!-- Agathion - Virgo / Stage 8 -->
+						<item id="23996" count="1" /> <!-- Agathion Virgo - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26141" toLevel="1" name="Agathion - Capricorn Pack (Low-grade)">
+	<skill id="26141" toLevel="1" name="Low Quality Agathion Capricorn Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26142" toLevel="1" name="Agathion - Capricorn Pack (Mid-grade)">
+	<skill id="26142" toLevel="1" name="Mid-grade Agathion Capricorn Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26143" toLevel="1" name="Agathion - Capricorn Pack (High-grade)">
+	<skill id="26143" toLevel="1" name="High Quality Agathion Capricorn Box">
 		<itemConsumeId>24156</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1094,22 +1104,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24007" count="1" /> <!-- Agathion - Capricorn / Stage 7 -->
+						<item id="24007" count="1" /> <!-- Agathion Capricorn - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24008" count="1" /> <!-- Agathion - Capricorn / Stage 8 -->
+						<item id="24008" count="1" /> <!-- Agathion Capricorn - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26144" toLevel="1" name="Agathion - Libra Pack (Low-grade)">
+	<skill id="26144" toLevel="1" name="Low Quality Agathion Libra Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26145" toLevel="1" name="Agathion - Libra Pack (Mid-grade)">
+	<skill id="26145" toLevel="1" name="Mid-grade Agathion Libra Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26146" toLevel="1" name="Agathion - Libra Pack (High-grade)">
+	<skill id="26146" toLevel="1" name="High Quality Agathion Libra Box">
 		<itemConsumeId>24159</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1131,22 +1141,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24019" count="1" /> <!-- Agathion - Libra / Stage 7 -->
+						<item id="24019" count="1" /> <!-- Agathion Libra - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24020" count="1" /> <!-- Agathion - Libra / Stage 8 -->
+						<item id="24020" count="1" /> <!-- Agathion Libra - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26147" toLevel="1" name="Agathion - Aries Pack (Low-grade)">
+	<skill id="26147" toLevel="1" name="Low Quality Agathion Aries Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26148" toLevel="1" name="Agathion - Aries Pack (Mid-grade)">
+	<skill id="26148" toLevel="1" name="Mid-grade Agathion Aries Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26149" toLevel="1" name="Agathion - Aries Pack (High-grade)">
+	<skill id="26149" toLevel="1" name="High Quality Agathion Aries Box">
 		<itemConsumeId>24162</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1168,22 +1178,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24031" count="1" /> <!-- Agathion - Aries / Stage 7 -->
+						<item id="24031" count="1" /> <!-- Agathion Aries - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24032" count="1" /> <!-- Agathion - Aries / Stage 8 -->
+						<item id="24032" count="1" /> <!-- Agathion Aries - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26150" toLevel="1" name="Agathion - Taurus Pack (Low-grade)">
+	<skill id="26150" toLevel="1" name="Low Quality Agathion Taurus Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26151" toLevel="1" name="Agathion - Taurus Pack (Mid-grade)">
+	<skill id="26151" toLevel="1" name="Mid-grade Agathion Taurus Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26152" toLevel="1" name="Agathion - Taurus Pack (High-grade)">
+	<skill id="26152" toLevel="1" name="High Quality Agathion Taurus Box">
 		<itemConsumeId>24165</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1205,22 +1215,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24043" count="1" /> <!-- Agathion - Taurus / Stage 7 -->
+						<item id="24043" count="1" /> <!-- Agathion Taurus - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24044" count="1" /> <!-- Agathion - Taurus / Stage 8 -->
+						<item id="24044" count="1" /> <!-- Agathion Taurus - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26153" toLevel="1" name="Agathion - Leo Pack (Low-grade)">
+	<skill id="26153" toLevel="1" name="Low Quality Agathion Leo Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26154" toLevel="1" name="Agathion - Leo Pack (Mid-grade)">
+	<skill id="26154" toLevel="1" name="Mid-grade Agathion Leo Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26155" toLevel="1" name="Agathion - Leo Pack (High-grade)">
+	<skill id="26155" toLevel="1" name="High Quality Agathion Leo Box">
 		<itemConsumeId>24168</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1242,22 +1252,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24055" count="1" /> <!-- Agathion - Leo / Stage 7 -->
+						<item id="24055" count="1" /> <!-- Agathion Leo - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24056" count="1" /> <!-- Agathion - Leo / Stage 8 -->
+						<item id="24056" count="1" /> <!-- Agathion Leo - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26156" toLevel="1" name="Agathion - Gemini Pack (Low-grade)">
+	<skill id="26156" toLevel="1" name="Low Quality Agathion Gemini Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26157" toLevel="1" name="Agathion - Gemini Pack (Mid-grade)">
+	<skill id="26157" toLevel="1" name="Mid-grade Agathion Gemini Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26158" toLevel="1" name="Agathion - Gemini Pack (High-grade)">
+	<skill id="26158" toLevel="1" name="High Quality Agathion Gemini Box">
 		<itemConsumeId>24171</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1279,22 +1289,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24067" count="1" /> <!-- Agathion - Gemini / Stage 7 -->
+						<item id="24067" count="1" /> <!-- Agathion Gemini - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24068" count="1" /> <!-- Agathion - Gemini / Stage 8 -->
+						<item id="24068" count="1" /> <!-- Agathion Gemini - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26159" toLevel="1" name="Agathion - Scorpio Pack (Low-grade)">
+	<skill id="26159" toLevel="1" name="Low Quality Agathion Scorpion Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26160" toLevel="1" name="Agathion - Scorpio Pack (Mid-grade)">
+	<skill id="26160" toLevel="1" name="Mid-grade Agathion Scorpio Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26161" toLevel="1" name="Agathion - Scorpio Pack (High-grade)">
+	<skill id="26161" toLevel="1" name="High Quality Agathion Scorpion Box">
 		<itemConsumeId>24174</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1316,22 +1326,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24079" count="1" /> <!-- Agathion - Scorpio / Stage 7 -->
+						<item id="24079" count="1" /> <!-- Agathion Scorpio - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24080" count="1" /> <!-- Agathion - Scorpio / Stage 8 -->
+						<item id="24080" count="1" /> <!-- Agathion Scorpio - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26162" toLevel="1" name="Agathion - Aquarius Pack (Low-grade)">
+	<skill id="26162" toLevel="1" name="Low Quality Agathion Aquarius Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26163" toLevel="1" name="Agathion - Aquarius Pack (Mid-grade)">
+	<skill id="26163" toLevel="1" name="Mid-grade Agathion Aquarius Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26164" toLevel="1" name="Agathion - Aquarius Pack (High-grade)">
+	<skill id="26164" toLevel="1" name="High Quality Agathion Aquarius Box">
 		<itemConsumeId>24177</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1353,22 +1363,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24091" count="1" /> <!-- Agathion - Aquarius / Stage 7 -->
+						<item id="24091" count="1" /> <!-- Agathion Aquarius - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24092" count="1" /> <!-- Agathion - Aquarius / Stage 8 -->
+						<item id="24092" count="1" /> <!-- Agathion Aquarius - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26165" toLevel="1" name="Agathion - Pisces Pack (Low-grade)">
+	<skill id="26165" toLevel="1" name="Low Quality Agathion Pisces Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26166" toLevel="1" name="Agathion - Pisces Pack (Mid-grade)">
+	<skill id="26166" toLevel="1" name="Mid-grade Agathion Pisces Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26167" toLevel="1" name="Agathion - Pisces Pack (High-grade)">
+	<skill id="26167" toLevel="1" name="High Quality Agathion Pisces Box">
 		<itemConsumeId>24180</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1390,22 +1400,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24103" count="1" /> <!-- Agathion - Pisces / Stage 7 -->
+						<item id="24103" count="1" /> <!-- Agathion Pisces - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24104" count="1" /> <!-- Agathion - Pisces / Stage 8 -->
+						<item id="24104" count="1" /> <!-- Agathion Pisces - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26168" toLevel="1" name="Agathion - Sagittarius Pack (Low-grade)">
+	<skill id="26168" toLevel="1" name="Low Quality Agathion Sagittarius Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26169" toLevel="1" name="Agathion - Sagittarius Pack (Mid-grade)">
+	<skill id="26169" toLevel="1" name="Mid-grade Agathion Sagittarius Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26170" toLevel="1" name="Agathion - Sagittarius Pack (High-grade)">
+	<skill id="26170" toLevel="1" name="High Quality Agathion Sagittarius Box">
 		<itemConsumeId>24183</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1427,22 +1437,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24115" count="1" /> <!-- Agathion - Sagittarius / Stage 7 -->
+						<item id="24115" count="1" /> <!-- Agathion Sagittarius - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24116" count="1" /> <!-- Agathion - Sagittarius / Stage 8 -->
+						<item id="24116" count="1" /> <!-- Agathion Sagittarius - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26171" toLevel="1" name="Agathion - Cancer Pack (Low-grade)">
+	<skill id="26171" toLevel="1" name="Low Quality Agathion Cancer Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26172" toLevel="1" name="Agathion - Cancer Pack (Mid-grade)">
+	<skill id="26172" toLevel="1" name="Mid-grade Agathion Cancer Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26173" toLevel="1" name="Agathion - Cancer Pack (High-grade)">
+	<skill id="26173" toLevel="1" name="High Quality Agathion Cancer Box">
 		<itemConsumeId>24186</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1464,10 +1474,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="90">
-						<item id="24127" count="1" /> <!-- Agathion - Cancer / Stage 7 -->
+						<item id="24127" count="1" /> <!-- Agathion Cancer - Lv. 7 -->
 					</item>
 					<item chance="10">
-						<item id="24128" count="1" /> <!-- Agathion - Cancer / Stage 8 -->
+						<item id="24128" count="1" /> <!-- Agathion Cancer - Lv. 8 -->
 					</item>
 				</items>
 			</effect>
@@ -1476,8 +1486,8 @@
 	<skill id="26174" toLevel="1" name="Easter Egg">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26175" toLevel="1" name="Summon Agathion - Virgo">
-		<!-- Summons Agathion. -->
+	<skill id="26175" toLevel="1" name="Summon Agathion Virgo">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1493,8 +1503,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26176" toLevel="1" name="Summon Agathion - Capricorn">
-		<!-- Summons Agathion. -->
+	<skill id="26176" toLevel="1" name="Summon Agathion Capricorn">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1510,8 +1520,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26177" toLevel="1" name="Summon Agathion - Libra">
-		<!-- Summons Agathion. -->
+	<skill id="26177" toLevel="1" name="Summon Agathion Libra">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1527,8 +1537,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26178" toLevel="1" name="Summon Agathion - Aries">
-		<!-- Summons Agathion. -->
+	<skill id="26178" toLevel="1" name="Summon Agathion Aries">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1544,8 +1554,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26179" toLevel="1" name="Summon Agathion - Taurus">
-		<!-- Summons Agathion. -->
+	<skill id="26179" toLevel="1" name="Summon Agathion Taurus">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1561,8 +1571,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26180" toLevel="1" name="Summon Agathion - Leo">
-		<!-- Summons Agathion. -->
+	<skill id="26180" toLevel="1" name="Summon Agathion Leo">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1578,8 +1588,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26181" toLevel="1" name="Summon Agathion - Gemini">
-		<!-- Summons Agathion. -->
+	<skill id="26181" toLevel="1" name="Summon Agathion Gemini">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1595,8 +1605,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26182" toLevel="1" name="Summon Agathion - Scorpio">
-		<!-- Summons Agathion. -->
+	<skill id="26182" toLevel="1" name="Summon Agathion Scorpio">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1612,8 +1622,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26183" toLevel="1" name="Summon Agathion - Aquarius">
-		<!-- Summons Agathion. -->
+	<skill id="26183" toLevel="1" name="Summon Agathion Aquarius">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1629,8 +1639,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26184" toLevel="1" name="Summon Agathion - Pisces">
-		<!-- Summons Agathion. -->
+	<skill id="26184" toLevel="1" name="Summon Agathion Pisces">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1646,8 +1656,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26185" toLevel="1" name="Summon Agathion - Sagittarius">
-		<!-- Summons Agathion. -->
+	<skill id="26185" toLevel="1" name="Summon Agathion Sagittarius">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1663,8 +1673,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26186" toLevel="1" name="Summon Agathion - Cancer">
-		<!-- Summons Agathion. -->
+	<skill id="26186" toLevel="1" name="Summon Agathion Cancer">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1680,8 +1690,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26187" toLevel="1" name="Summon Agathion - Virgo">
-		<!-- Summons Agathion. -->
+	<skill id="26187" toLevel="1" name="Summon Agathion Virgo">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1697,8 +1707,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26188" toLevel="1" name="Summon Agathion - Capricorn">
-		<!-- Summons Agathion. -->
+	<skill id="26188" toLevel="1" name="Summon Agathion Capricorn">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1714,8 +1724,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26189" toLevel="1" name="Summon Agathion - Libra">
-		<!-- Summons Agathion. -->
+	<skill id="26189" toLevel="1" name="Summon Agathion Libra">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1731,8 +1741,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26190" toLevel="1" name="Summon Agathion - Aries">
-		<!-- Summons Agathion. -->
+	<skill id="26190" toLevel="1" name="Summon Agathion Aries">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1748,8 +1758,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26191" toLevel="1" name="Summon Agathion - Taurus">
-		<!-- Summons Agathion. -->
+	<skill id="26191" toLevel="1" name="Summon Agathion Taurus">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1765,8 +1775,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26192" toLevel="1" name="Summon Agathion - Leo">
-		<!-- Summons Agathion. -->
+	<skill id="26192" toLevel="1" name="Summon Agathion Leo">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1782,8 +1792,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26193" toLevel="1" name="Summon Agathion - Gemini">
-		<!-- Summons Agathion. -->
+	<skill id="26193" toLevel="1" name="Summon Agathion Gemini">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1799,8 +1809,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26194" toLevel="1" name="Summon Agathion - Scorpio">
-		<!-- Summons Agathion. -->
+	<skill id="26194" toLevel="1" name="Summon Agathion Scorpio">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1816,8 +1826,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26195" toLevel="1" name="Summon Agathion - Aquarius">
-		<!-- Summons Agathion. -->
+	<skill id="26195" toLevel="1" name="Summon Agathion Aquarius">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1833,8 +1843,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26196" toLevel="1" name="Summon Agathion - Pisces">
-		<!-- Summons Agathion. -->
+	<skill id="26196" toLevel="1" name="Summon Agathion Pisces">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1850,8 +1860,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26197" toLevel="1" name="Summon Agathion - Sagittarius">
-		<!-- Summons Agathion. -->
+	<skill id="26197" toLevel="1" name="Summon Agathion Sagittarius">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1867,8 +1877,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26198" toLevel="1" name="Summon Agathion - Cancer">
-		<!-- Summons Agathion. -->
+	<skill id="26198" toLevel="1" name="Summon Agathion Cancer">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1884,8 +1894,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26199" toLevel="1" name="Summon Agathion - Virgo">
-		<!-- Summons Agathion. -->
+	<skill id="26199" toLevel="1" name="Summon Agathion Virgo">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->

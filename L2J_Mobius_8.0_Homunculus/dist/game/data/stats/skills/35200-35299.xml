@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="35200" toLevel="1" name="Legend Infinity Caster Special Ability">
-		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
+		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -77,7 +77,7 @@
 		</effects>
 	</skill>
 	<skill id="35201" toLevel="1" name="Legend Infinity Retributer Special Ability">
-		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
+		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_staff_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -151,7 +151,7 @@
 		</effects>
 	</skill>
 	<skill id="35202" toLevel="1" name="Legend Infinity Dual Sword Special Ability">
-		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
+		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -225,7 +225,7 @@
 		</effects>
 	</skill>
 	<skill id="35203" toLevel="1" name="Legend Infinity Dual Dagger Special Ability">
-		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
+		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_r_dualdagger_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -299,7 +299,7 @@
 		</effects>
 	</skill>
 	<skill id="35204" toLevel="1" name="Legend Infinity Dual Blunt Weapon Special Ability">
-		<!-- PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
+		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_r_dualblunt_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -373,7 +373,7 @@
 		</effects>
 	</skill>
 	<skill id="35205" toLevel="1" name="Savior's Mask Basic Effect">
-		<!-- Increases M. Def. by 5%. -->
+		<!-- M. Def. +$s1. -->
 		<icon>icon.episode_mask_01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -383,7 +383,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35206" toLevel="11" name="Enchantment Effect: Savior's Mask">
+	<skill id="35206" toLevel="11" name="Enchant Effect: Savior's Mask">
 		<!-- Enchanting a hair accessory increases its Debuff Resistance and an adds extra option depending on the equipped Knight's/ Warrior's/ Wizard's Circlet. -->
 		<icon>icon.episode_scrl_of_ench_hair</icon>
 		<operateType>P</operateType>
@@ -407,7 +407,7 @@
 		</effects>
 	</skill>
 	<skill id="35207" toLevel="4" name="Strength of Savior's Warrior">
-		<!-- Increases P. Atk. by $s1. -->
+		<!-- P. Atk. +$s1. -->
 		<icon>icon.episode_scrl_of_ench_hair</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
@@ -433,7 +433,7 @@
 		</effects>
 	</skill>
 	<skill id="35208" toLevel="4" name="Power of Savior's Wizard">
-		<!-- Increases M. Atk. by $s1. -->
+		<!-- M. Atk. +$s1. -->
 		<icon>icon.episode_scrl_of_ench_hair</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
@@ -459,7 +459,7 @@
 		</effects>
 	</skill>
 	<skill id="35209" toLevel="4" name="Defense of Savior's Knight">
-		<!-- Increases P./ M. Def. by $s1. -->
+		<!-- P./ M. Def. +$s1. -->
 		<icon>icon.episode_scrl_of_ench_hair</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
@@ -494,12 +494,12 @@
 		</effects>
 	</skill>
 	<skill id="35210" toLevel="1" name="Hero's Ring">
-		<!-- Max CP +10%, P. Critical Damage and P./ M. Skill Critical Damage +15%, Atk./ Casting Spd. +5%, Confusion Resistance/ Atk. Rate +15%. -->
+		<!-- Max CP +$s1, P. Critical Damage and P./ M. Skill Critical Damage +$s2, Atk./ Casting Spd. +$s3, Confusion Resistance/ Atk. Rate +$s4. -->
 		<icon>icon.accessory_ring_of_hero_i01</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35211" toLevel="11" name="Angel's Necklace">
-		<!-- Angel's necklace. Enchanting the necklace activates special effects. -->
+		<!-- Angel's Necklace. Enchanting adds special effects. -->
 		<icon>icon.elemental_necklace_wind_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -636,14 +636,37 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35212" toLevel="1" name="Talisman - Battle: Cancel Hide">
-		<!-- Cancel Hide effect of enemies within range and prevents it from obtaining the same effect for 9 sec. Cooldown is 30 sec. Can only be used in the Grand Olympiad. -->
+	<skill id="35212" toLevel="1" name="Talisman of Battle - Cancel Hide">
+		<!-- Cancel Hide effect of enemies within range and prevents it from obtaining the same effect for $s1 Cooldown is $s2 Can only be used in the Grand Olympiad. -->
 		<icon>icon.etc_talisman_i07</icon>
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
+		<abnormalLevel>1</abnormalLevel>
+		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>30000</reuseDelay>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>2000</affectRange>
+		<staticReuse>true</staticReuse>
 		<effectPoint>-711</effectPoint>
+		<abnormalTime>9</abnormalTime>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<isMagic>2</isMagic>
+		<conditions>
+			<condition name="OpOlympiad" />
+		</conditions>
+		<effects>
+			<effect name="Detection" />
+			<effect name="TrapRemove">
+				<power>99</power>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,9</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HIDE</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35213" toLevel="11" name="Angel's Earring">
 		<!-- Enchanting the earring activates special effects. -->
@@ -825,7 +848,7 @@
 		</effects>
 	</skill>
 	<skill id="35214" toLevel="11" name="Lucien's Bracelet - Attack">
-		<!-- Can equip $s1 talismans. P. Atk. +$s2. -->
+		<!-- Unlocks $s1 talisman slot(s). P. Atk. +$s2. -->
 		<icon>icon.accessary_bracelet_lucien_p01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -863,7 +886,7 @@
 		</effects>
 	</skill>
 	<skill id="35215" toLevel="11" name="Lucien's Bracelet - Magic">
-		<!-- Can equip $s1 talismans. M. Atk. +$s2. -->
+		<!-- Unlocks $s1 talisman slot(s). M. Atk. +$s2. -->
 		<icon>icon.accessary_bracelet_lucien_m01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -901,7 +924,7 @@
 		</effects>
 	</skill>
 	<skill id="35216" toLevel="11" name="Lucien's Bracelet - Defense">
-		<!-- Can equip $s1 talismans. P./ M. Def. +$s2. -->
+		<!-- Unlocks $s1 talisman slot(s). P./ M. Def. +$s2. -->
 		<icon>icon.accessary_bracelet_lucien_d01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -959,19 +982,19 @@
 		<icon>icon.bm_ring_of_fallen_angel</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="VitalityPointsRate">
+			<effect name="VitalityExpRate">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
-					<value level="4">-10</value>
-					<value level="5">-10</value>
-					<value level="6">-10</value>
-					<value level="7">-15</value>
-					<value level="8">-16</value>
-					<value level="9">-17</value>
-					<value level="10">-18</value>
-					<value level="11">-20</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">16</value>
+					<value level="9">17</value>
+					<value level="10">18</value>
+					<value level="11">20</value>
 				</amount>
 			</effect>
 			<effect name="ExpModify">
@@ -1021,6 +1044,22 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">16</value>
+					<value level="9">17</value>
+					<value level="10">18</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1090,10 +1129,64 @@
 					<value level="11">25</value>
 				</SHOCK>
 			</effect>
+			<effect name="AttackTrait">
+				<KNOCKBACK>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+					<value level="7">25</value>
+					<value level="8">25</value>
+					<value level="9">25</value>
+					<value level="10">25</value>
+					<value level="11">25</value>
+				</KNOCKBACK>
+				<KNOCKDOWN>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+					<value level="7">25</value>
+					<value level="8">25</value>
+					<value level="9">25</value>
+					<value level="10">25</value>
+					<value level="11">25</value>
+				</KNOCKDOWN>
+				<PULL>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+					<value level="7">25</value>
+					<value level="8">25</value>
+					<value level="9">25</value>
+					<value level="10">25</value>
+					<value level="11">25</value>
+				</PULL>
+				<SHOCK>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+					<value level="7">25</value>
+					<value level="8">25</value>
+					<value level="9">25</value>
+					<value level="10">25</value>
+					<value level="11">25</value>
+				</SHOCK>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35218" toLevel="1" name="Item Skill: Recovery">
-		<!-- Passive: Decreases cooldown of Passive skill by 1%. -->
+		<!-- Item skill: Skill Cooldown -$s1, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1207,55 +1300,34 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
+			<effect name="TriggerSkillByMagicType">
+				<magicTypes>0;1</magicTypes>
+				<skillId>35226</skillId> <!-- Triggered Stun -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
 				<chance>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
 					<value level="4">0</value>
 					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
+					<value level="6">40</value>
+					<value level="7">40</value>
+					<value level="8">40</value>
+					<value level="9">40</value>
+					<value level="10">40</value>
 				</chance>
 				<targetType>ENEMY</targetType>
-				<allowSkillAttack>true</allowSkillAttack>
-				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-				</chance>
-				<targetType>ENEMY</targetType>
-				<allowSkillAttack>false</allowSkillAttack>
-				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1369,60 +1441,39 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
+			<effect name="TriggerSkillByMagicType">
+				<magicTypes>0;1</magicTypes>
+				<skillId>35226</skillId> <!-- Triggered Stun -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
 				<chance>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
 					<value level="4">0</value>
 					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
+					<value level="6">40</value>
+					<value level="7">40</value>
+					<value level="8">40</value>
+					<value level="9">40</value>
+					<value level="10">40</value>
 				</chance>
 				<targetType>ENEMY</targetType>
-				<allowSkillAttack>true</allowSkillAttack>
-				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-				</chance>
-				<targetType>ENEMY</targetType>
-				<allowSkillAttack>false</allowSkillAttack>
-				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="35221" toLevel="10" name="Greed">
-		<!-- Normal Attack Critical Damage +$s1. -->
+		<!-- Critical Damage for standard attacks +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1531,55 +1582,34 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
+			<effect name="TriggerSkillByMagicType">
+				<magicTypes>0;1</magicTypes>
+				<skillId>35226</skillId> <!-- Triggered Stun -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
 				<chance>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
 					<value level="4">0</value>
 					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
+					<value level="6">40</value>
+					<value level="7">40</value>
+					<value level="8">40</value>
+					<value level="9">40</value>
+					<value level="10">40</value>
 				</chance>
 				<targetType>ENEMY</targetType>
-				<allowSkillAttack>true</allowSkillAttack>
-				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-				</chance>
-				<targetType>ENEMY</targetType>
-				<allowSkillAttack>false</allowSkillAttack>
-				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1693,59 +1723,38 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
+			<effect name="TriggerSkillByMagicType">
+				<magicTypes>0;1</magicTypes>
+				<skillId>35226</skillId> <!-- Triggered Stun -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
 				<chance>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
 					<value level="4">0</value>
 					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
+					<value level="6">40</value>
+					<value level="7">40</value>
+					<value level="8">40</value>
+					<value level="9">40</value>
+					<value level="10">40</value>
 				</chance>
 				<targetType>ENEMY</targetType>
-				<allowSkillAttack>true</allowSkillAttack>
-				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-				</chance>
-				<targetType>ENEMY</targetType>
-				<allowSkillAttack>false</allowSkillAttack>
-				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35223" toLevel="10" name="Awakened">
+	<skill id="35223" toLevel="10" name="Awakening">
 		<!-- M. Skill Critical Damage +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
 		<operateType>P</operateType>
@@ -1855,55 +1864,34 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
+			<effect name="TriggerSkillByMagicType">
+				<magicTypes>0;1</magicTypes>
+				<skillId>35226</skillId> <!-- Triggered Stun -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
 				<chance>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
 					<value level="4">0</value>
 					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
+					<value level="6">40</value>
+					<value level="7">40</value>
+					<value level="8">40</value>
+					<value level="9">40</value>
+					<value level="10">40</value>
 				</chance>
 				<targetType>ENEMY</targetType>
-				<allowSkillAttack>true</allowSkillAttack>
-				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-				</chance>
-				<targetType>ENEMY</targetType>
-				<allowSkillAttack>false</allowSkillAttack>
-				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -2006,55 +1994,34 @@
 				</amount>
 				<type>PK</type>
 			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
+			<effect name="TriggerSkillByMagicType">
+				<magicTypes>0;1</magicTypes>
+				<skillId>35226</skillId> <!-- Triggered Stun -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
 				<chance>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
 					<value level="4">0</value>
 					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
+					<value level="6">40</value>
+					<value level="7">40</value>
+					<value level="8">40</value>
+					<value level="9">40</value>
+					<value level="10">40</value>
 				</chance>
 				<targetType>ENEMY</targetType>
-				<allowSkillAttack>true</allowSkillAttack>
-				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-				</chance>
-				<targetType>ENEMY</targetType>
-				<allowSkillAttack>false</allowSkillAttack>
-				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -2108,86 +2075,84 @@
 				</amount>
 				<type>PK</type>
 			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
+			<effect name="TriggerSkillByMagicType">
+				<magicTypes>0;1</magicTypes>
+				<skillId>35226</skillId> <!-- Triggered Stun -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+				</skillLevel>
 				<chance>
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
 					<value level="4">0</value>
 					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
+					<value level="6">40</value>
+					<value level="7">40</value>
+					<value level="8">40</value>
+					<value level="9">40</value>
+					<value level="10">40</value>
 				</chance>
 				<targetType>ENEMY</targetType>
-				<allowSkillAttack>true</allowSkillAttack>
-				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-				</chance>
-				<targetType>ENEMY</targetType>
-				<allowSkillAttack>false</allowSkillAttack>
-				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>35226</skillId>
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35226" toLevel="10" name="Active Stun">
-		<!-- Momentarily immobile due to the Stun effect. Debuff resistance ignored. -->
+	<skill id="35226" toLevel="10" name="Triggered Stun">
+		<!-- Stuns the target ignoring their debuff immunity. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
-		<abnormalLevel>9</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>800</activateRate>
-		<basicProperty>NONE</basicProperty>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>30</lvlBonusRate>
-		<magicLevel>-1</magicLevel>
-		<castRange>600</castRange>
-		<effectRange>1500</effectRange>
-		<reuseDelay>30000</reuseDelay>
-		<staticReuse>true</staticReuse>
-		<trait>SHOCK</trait>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
 		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="5">0</value>
+			<value level="6">3</value>
+			<value level="7">3</value>
+			<value level="8">4</value>
+			<value level="9">5</value>
+			<value level="10">5</value>
+		</abnormalTime>
+		<abnormalType>SHILLIEN_STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>-1</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>1000</castRange>
+		<canBeDispelled>false</canBeDispelled>
+		<reuseDelay>
+			<value level="1">60000</value>
+			<value level="2">60000</value>
+			<value level="3">60000</value>
+			<value level="4">60000</value>
+			<value level="5">60000</value>
+			<value level="6">60000</value>
+			<value level="7">30000</value>
+			<value level="8">30000</value>
+			<value level="9">30000</value>
+			<value level="10">20000</value>
+		</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<staticReuse>true</staticReuse>
+		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="35227" toLevel="1" name="Artifact Set Effect Lv. 1">
-		<!-- Damage +1%, Received Damage -5%. -->
+		<!-- Damage +$s1, Received Damage -$s2. -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2228,7 +2193,7 @@
 		</effects>
 	</skill>
 	<skill id="35228" toLevel="1" name="Artifact Set Effect Lv. 2">
-		<!-- Damage +5%, Received Damage -6%. -->
+		<!-- Damage +$s1, Received Damage -$s2. -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2269,7 +2234,7 @@
 		</effects>
 	</skill>
 	<skill id="35229" toLevel="1" name="Artifact Set Effect Lv. 3">
-		<!-- Damage +6%, Received Damage -7%, All Basic Stats ++1 -->
+		<!-- Damage +$s1, received damage -$s2, all stats +$s3. -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2384,7 +2349,7 @@
 		</effects>
 	</skill>
 	<skill id="35232" toLevel="11" name="Artifact - Atk. Spd.">
-		<!-- Atk. Spd. increased when upgraded. -->
+		<!-- Atk. Spd. increased when upgraded -->
 		<icon>icon.artifact_b_pa_speed</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2409,7 +2374,7 @@
 		</effects>
 	</skill>
 	<skill id="35233" toLevel="11" name="Artifact - Casting Spd.">
-		<!-- Casting Spd. increased when upgraded. -->
+		<!-- Casting Spd. increased when upgraded -->
 		<icon>icon.artifact_b_ma_speed</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2434,7 +2399,7 @@
 		</effects>
 	</skill>
 	<skill id="35234" toLevel="11" name="Artifact - P. Def.">
-		<!-- P. Def. increased when upgraded. -->
+		<!-- P. Def. increased when upgraded -->
 		<icon>icon.artifact_c_phy_def</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2459,7 +2424,7 @@
 		</effects>
 	</skill>
 	<skill id="35235" toLevel="11" name="Artifact - M. Def.">
-		<!-- M. Def. increased when upgraded. -->
+		<!-- M. Def. increased when upgraded -->
 		<icon>icon.artifact_c_mag_def</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2747,8 +2712,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35246" toLevel="11" name="Artifact - P. Critical Rate">
-		<!-- Enchantment increases Normal Attack Critical Rate. -->
+	<skill id="35246" toLevel="11" name="Artifact - Standard Attack Critical Rate">
+		<!-- Critical Rate for standard attacks increased when upgraded -->
 		<icon>icon.artifact_a_crt_per</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2799,7 +2764,7 @@
 		</effects>
 	</skill>
 	<skill id="35248" toLevel="11" name="Artifact - M. Critical Rate">
-		<!-- M. Skill Critical Rate increased when upgraded. -->
+		<!-- M. Skill Critical Rate increased when upgraded -->
 		<icon>icon.artifact_a_crt_mag_per</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2882,7 +2847,7 @@
 		</effects>
 	</skill>
 	<skill id="35250" toLevel="11" name="Artifact - Received Damage When Immobilized">
-		<!-- Received Damage when Immobilized reduced when upgraded. -->
+		<!-- Received damage when immobilized decreased when upgraded -->
 		<icon>icon.artifact_a_block_act_dmg</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2902,7 +2867,7 @@
 			</condition>
 		</passiveConditions>
 		<effects>
-			<effect name="DamageByAttack">
+			<effect name="ImmobileDamageResist">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">-1</value>
@@ -2916,34 +2881,19 @@
 					<value level="10">-8</value>
 					<value level="11">-10</value>
 				</amount>
-				<type>PK</type>
-			</effect>
-			<effect name="DamageByAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">-1</value>
-					<value level="3">-1</value>
-					<value level="4">-2</value>
-					<value level="5">-3</value>
-					<value level="6">-4</value>
-					<value level="7">-5</value>
-					<value level="8">-6</value>
-					<value level="9">-7</value>
-					<value level="10">-8</value>
-					<value level="11">-10</value>
-				</amount>
-				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="35251" toLevel="11" name="Artifact - Fixed Damage Resistance">
+		<!-- Fixed Damage Resistance increased when upgraded. -->
 		<icon>icon.artifact_a_dmg_by_atk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>80</magicLevel>
 		<effects>
-			<effect name="AbsorbDamage">
-				<amount>
+			<effect name="RealDamageResist">
+				<damage>
 					<value level="1">0</value>
 					<value level="2">1</value>
 					<value level="3">1</value>
@@ -2955,14 +2905,13 @@
 					<value level="9">7</value>
 					<value level="10">8</value>
 					<value level="11">10</value>
-				</amount>
+				</damage>
 				<mode>PER</mode>
 			</effect>
 		</effects>
-		<!-- Fixed Damage Resistance increased when upgraded. -->
 	</skill>
-	<skill id="35252" toLevel="1" name="Artifact - Attribute Attack Power">
-		<!-- Atk. Attribute +30. -->
+	<skill id="35252" toLevel="1" name="Artifact - Attribute Attack">
+		<!-- Attribute Attack +$s1. -->
 		<icon>icon.artifact_a_attribute_att_up</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2974,7 +2923,7 @@
 		</effects>
 	</skill>
 	<skill id="35253" toLevel="1" name="Artifact - Attribute Resistance">
-		<!-- Attribute Resistance +30. -->
+		<!-- Attribute Resistance +$s1. -->
 		<icon>icon.artifact_a_attribute_def_up</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3007,7 +2956,7 @@
 		</effects>
 	</skill>
 	<skill id="35254" toLevel="1" name="Artifact - Received Damage When Immobilized">
-		<!-- Received Damage -11% when immobilized. -->
+		<!-- Received damage when immobilized -$s1. -->
 		<icon>icon.artifact_a_block_act_dmg</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3027,18 +2976,14 @@
 			</condition>
 		</passiveConditions>
 		<effects>
-			<effect name="DamageByAttack">
+			<effect name="ImmobileDamageResist">
 				<amount>-11</amount>
-				<type>PK</type>
-			</effect>
-			<effect name="DamageByAttack">
-				<amount>-11</amount>
-				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="35255" toLevel="1" name="Artifact - P. Skill Power">
-		<!-- P. Skill Power +11%. -->
+		<!-- P. Skill Power +$s1. -->
 		<icon>icon.artifact_a_skill_power</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3051,7 +2996,7 @@
 		</effects>
 	</skill>
 	<skill id="35256" toLevel="1" name="Artifact - M. Skill Power">
-		<!-- M. Skill Power +11%. -->
+		<!-- M. Skill Power +$s1. -->
 		<icon>icon.artifact_a_spell_power</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3064,7 +3009,7 @@
 		</effects>
 	</skill>
 	<skill id="35257" toLevel="1" name="Red Mask of Victory (2018)">
-		<!-- M. Def. +6%, Debuff Resistance +7% P. Atk./ M. Atk./ P. Def. +1%. -->
+		<!-- M. Def. +$s1, Debuff Resistance +$s2 P. Atk./ M. Atk./ P. Def. +$s3. -->
 		<icon>icon.accessory_worldcup_mask_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3091,7 +3036,7 @@
 		</effects>
 	</skill>
 	<skill id="35258" toLevel="1" name="Paulina's Eternal Necklace - Skill Cooldown">
-		<!-- Skill Cooldown -10%. -->
+		<!-- Skill Cooldown -$s1. -->
 		<icon>icon.skill5239</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3102,7 +3047,7 @@
 		</effects>
 	</skill>
 	<skill id="35259" toLevel="1" name="Paulina's Eternal Earring - MP Consumption">
-		<!-- Heal Received +10%, Skill MP Consumption -5%. -->
+		<!-- Received Healing +$s1, Skill MP Consumption -$s2. -->
 		<icon>icon.skill1397</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3133,7 +3078,7 @@
 		</effects>
 	</skill>
 	<skill id="35260" toLevel="1" name="Paulina's Eternal Earring - Vampiric Rage">
-		<!-- A chance to apply Vampiric Rage 5%. -->
+		<!-- Vampiric Rage effect +$s1. -->
 		<icon>icon.skill1268</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3144,7 +3089,7 @@
 		</effects>
 	</skill>
 	<skill id="35261" toLevel="1" name="Paulina's Eternal Ring - Critical Rate">
-		<!-- P./ M. Critical Rate +50. -->
+		<!-- P./ M. Critical Rate +$s1. -->
 		<icon>icon.skill0137</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3159,15 +3104,11 @@
 		</effects>
 	</skill>
 	<skill id="35262" toLevel="1" name="Paulina's Eternal Ring - Critical Damage">
-		<!-- Normal/ P. Atk./ M. Atk. Skill Critical Damage +15%. -->
+		<!-- P. Critical Damage and P./ M. Skill Critical Damage +$s1. -->
 		<icon>icon.skill0531</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PAtk">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
+			<effect name="CriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3182,7 +3123,7 @@
 		</effects>
 	</skill>
 	<skill id="35263" toLevel="1" name="Set Effect - Paulina's Eternal Heavy Armor, 5-piece">
-		<!-- STR +3, CON +2, P. Atk. +7%, Skill Power +7%, P. Def. +7%, M. Def. +7%. -->
+		<!-- P. Atk. +$s1, P. Def. +$s2, M. Def. +$s3, STR +$s4, CON +$s5, P./ M. Skill Power +$s6. -->
 		<icon>icon.m_class_heavy</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3213,7 +3154,7 @@
 		</effects>
 	</skill>
 	<skill id="35264" toLevel="1" name="Set Effect - Paulina's Eternal Light Armor, 5-piece">
-		<!-- STR +3, CON +2, P. Atk. +7%, Skill Power +7%, Attribute Resistance +30, Speed +14. -->
+		<!-- P. Atk. +$s1, Speed +$s2, STR +$s3, CON +$s4, Attribute Resistance +$s5, P./ M. Skill Power +$s6. -->
 		<icon>icon.m_class_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3264,7 +3205,7 @@
 		</effects>
 	</skill>
 	<skill id="35265" toLevel="1" name="Set Effect - Paulina's Eternal Robe, 5-piece">
-		<!-- INT +3, CON +2, M. Atk. +7%, Skill Power +7%, Max HP/ MP +10%, Skill MP Consumption -7%. -->
+		<!-- Max HP/ MP +$s1, M. Atk. +$s2, INT +$s3, CON +$s4, P./ M. Skill Power +$s5, Skill MP Consumption -$s6. -->
 		<icon>icon.m_class_robe</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3314,8 +3255,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35266" toLevel="1" name="Paulina's Battle Enhancement Blessing">
-		<!-- Max HP +15%, P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15% -->
+	<skill id="35266" toLevel="1" name="Paulina's Blessing - Combat">
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3337,8 +3278,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35267" toLevel="1" name="Paulina's Battle Enhancement Blessing">
-		<!-- Max HP +15%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15% -->
+	<skill id="35267" toLevel="1" name="Paulina's Blessing - Combat">
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3360,8 +3301,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35268" toLevel="1" name="Paulina's Magic Enhancement Blessing">
-		<!-- Max HP +15%, M. Skill Critical Rate +50, M. Skill Critical Damage +10%, Casting Spd. +15% -->
+	<skill id="35268" toLevel="1" name="Paulina's Blessing - Magic">
+		<!-- Max HP +$s1, M. Skill Critical Rate +$s2, M. Skill Critical Damage +$s3, Casting Spd. +$s4 -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3384,7 +3325,7 @@
 		</effects>
 	</skill>
 	<skill id="35269" toLevel="1" name="Paulina's Magic Enhancement Blessing">
-		<!-- Max HP +15%, P. Critical Damage +10%, M. Skill Critical Damage +10%, Atk. Spd./ Casting Spd. +15% -->
+		<!-- Max HP +$s1, Critical Damage for standard attacks +$s2, M. Skill Critical Damage +$s3, Atk. Spd./ Casting Spd. +$s4. -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3411,7 +3352,7 @@
 		</effects>
 	</skill>
 	<skill id="35270" toLevel="1" name="Paulina's Eternal Bracelet">
-		<!-- Can equip 5 talismans. Additionally increases P. Atk./ M. Atk./ P./ M. Def. by 3%. -->
+		<!-- Unlocks $s1 talisman slot(s). P./ M. Atk. and P./ M. Def. +$s2. -->
 		<icon>icon.bm_polyne_R99_bracelet</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3437,31 +3378,61 @@
 		</effects>
 	</skill>
 	<skill id="35271" toLevel="1" name="Fafurion's Breath">
-		<!-- Petrifies nearby enemies for 5 sec and then paralyzes them for 10 sec when fully petrified. Ignores debuff resistance. Consumes 1 Dragon Blood. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
+		<!-- Gradually freezes the enemy's body for 5 sec. and after that paralyzes them for 10 sec. Ignores debuff resistance. Consumes 1 Dragon Blood. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.fafurion_breath_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>36415</itemConsumeId> <!-- Dragon Blood -->
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>15</activateRate>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-418</effectPoint>
-		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>PARALYZE</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effects>
 			<effect name="BlockActions" />
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="BuffBlock" />
+			<effect name="DebuffBlock" />
+			<effect name="HpRegen">
+				<amount>-100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>8894</skillId> <!-- Paralyzing Breath -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="35272" toLevel="1" name="Fafurion Raging Waves">
 		<!-- Completely drains CP of nearby enemies. Consumes 1 Dragon Blood. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
@@ -3490,28 +3461,28 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35273" toLevel="1" name="Dandy's Combat Boost Blessing">
-		<!-- Max HP +15%, P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15% -->
+	<skill id="35273" toLevel="1" name="Dandy's Blessing - Combat">
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35274" toLevel="1" name="Dandy's Combat Boost Blessing">
-		<!-- Max HP +15%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15% -->
+	<skill id="35274" toLevel="1" name="Dandy's Blessing - Combat">
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35275" toLevel="1" name="Dandy's Magic Boost Blessing">
-		<!-- Max HP +15%, M. Skill Critical Rate +50, M. Skill Critical Damage +10%, Casting Spd. +15% -->
+		<!-- Max HP +$s1, M. Skill Critical Rate +$s2, M. Skill Critical Damage +$s3, Casting Spd. +$s4 -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35276" toLevel="1" name="Dandy's Magic Boost Blessing">
-		<!-- Max HP +15%, P. Critical Damage +10%, M. Skill Critical Damage +10%, Atk. Spd./ Casting Spd. +15% -->
+		<!-- Max HP +$s1, Critical Damage for standard attacks +$s2, M. Skill Critical Damage +$s3, Atk. Spd./ Casting Spd. +$s4. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35277" toLevel="1" name="Enchantment Effect: Krishna Shaper">
-		<!-- P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
+	<skill id="35277" toLevel="1" name="Enhancement Effect: Krishna Shaper">
+		<!-- P. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
 		<icon>icon.weapon_r110_dagger_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3535,8 +3506,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35278" toLevel="1" name="Enchantment Effect: Krishna Cutter">
-		<!-- P. Skill Critical Damage +3%, P. Def. +5%. -->
+	<skill id="35278" toLevel="1" name="Enhancement Effect: Krishna Cutter">
+		<!-- P. Skill Critical Damage +$s1, P. Def. +$s2. -->
 		<icon>icon.weapon_r110_onehand_sword_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3552,8 +3523,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35279" toLevel="1" name="Enchantment Effect: Krishna Slasher">
-		<!-- P. Skill Critical Damage +3%, P. Atk. +3%. -->
+	<skill id="35279" toLevel="1" name="Enhancement Effect: Krishna Slasher">
+		<!-- P. Skill Critical Damage +$s1, P. Atk. +$s2. -->
 		<icon>icon.weapon_r110_twohand_sword_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3569,8 +3540,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35280" toLevel="1" name="Enchantment Effect: Krishna Avenger">
-		<!-- P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
+	<skill id="35280" toLevel="1" name="Enhancement Effect: Krishna Avenger">
+		<!-- P. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
 		<icon>icon.weapon_r110_onehand_blunt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3594,8 +3565,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35281" toLevel="1" name="Enchantment Effect: Krishna Fighter">
-		<!-- Normal Attack Critical Damage +3% and additional damage +50. -->
+	<skill id="35281" toLevel="1" name="Enhancement Effect: Krishna Fighter">
+		<!-- Critical Damage for standard attacks +$s1, Attribute Attack +$s2. -->
 		<icon>icon.weapon_r110_fist_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3631,8 +3602,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35282" toLevel="1" name="Enchantment Effect: Krishna Stormer">
-		<!-- Increases Normal Attack Critical Damage by 3% and has a chance to stun enemies near the target for 3 sec. on a standard attack. -->
+	<skill id="35282" toLevel="1" name="Enhancement Effect: Krishna Stormer">
+		<!-- Critical Damage for standard attacks +$s1. Has a certain chance to stun nearby enemies for $s2 after a standard attack. -->
 		<icon>icon.weapon_r110_spear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3644,8 +3615,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35283" toLevel="1" name="Enchantment Effect: Krishna Thrower">
-		<!-- P. Skill Critical Damage +3%, Normal Critical Damage +3%. -->
+	<skill id="35283" toLevel="1" name="Enhancement Effect: Krishna Thrower">
+		<!-- P. Skill Critical Damage +$s1, Normal Critical Damage +$s2. -->
 		<icon>icon.weapon_r110_bow_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3661,8 +3632,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35284" toLevel="1" name="Enchantment Effect: Krishna Shooter">
-		<!-- P. Skill Critical Damage +3%, P. Skill Power +3%. -->
+	<skill id="35284" toLevel="1" name="Enhancement Effect: Krishna Shooter">
+		<!-- P. Skill Critical Damage +$s1, P. Skill Power +$s2. -->
 		<icon>icon.weapon_r110_crossbow_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3678,8 +3649,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35285" toLevel="1" name="Enchantment Effect: Krishna Buster">
-		<!-- M. Skill Critical Damage +3%, P. Def. +5%. -->
+	<skill id="35285" toLevel="1" name="Enhancement Effect: Krishna Buster">
+		<!-- M. Skill Critical Damage +$s1, P. Def. +$s2. -->
 		<icon>icon.weapon_r110_onehand_magic_sword_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3695,8 +3666,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35286" toLevel="1" name="Enchantment Effect: Krishna Caster">
-		<!-- M. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
+	<skill id="35286" toLevel="1" name="Enhancement Effect: Krishna Caster">
+		<!-- M. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
 		<icon>icon.weapon_r110_onehand_magic_blunt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3720,8 +3691,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35287" toLevel="1" name="Enchantment Effect: Krishna Retributer">
-		<!-- Normal Attack/ P. Skill/ M. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
+	<skill id="35287" toLevel="1" name="Enhancement Effect: Krishna Retributer">
+		<!-- Normal Attack/ P. Skill/ M. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
 		<icon>icon.weapon_r110_twohand_magic_blunt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3753,8 +3724,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35288" toLevel="1" name="Enchantment Effect: Krishna Dual Sword">
-		<!-- P. Skill Critical Damage +3%, P. Skill Power +3%. -->
+	<skill id="35288" toLevel="1" name="Enhancement Effect: Krishna Dual Sword">
+		<!-- P. Skill Critical Damage +$s1, P. Skill Power +$s2. -->
 		<icon>icon.weapon_r110_dual_sword_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3770,8 +3741,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35289" toLevel="1" name="Enchantment Effect: Krishna Dual Dagger">
-		<!-- P. Skill Critical Damage +3%, Normal Attack Critical Damage +3%. -->
+	<skill id="35289" toLevel="1" name="Enhancement Effect: Krishna Dual Dagger">
+		<!-- P. Skill Critical Damage +$s1, Critical Damage for standard attacks +$s2. -->
 		<icon>icon.weapon_r110_dual_dagger_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3787,8 +3758,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35290" toLevel="1" name="Enchantment Effect: Krishna Dual Blunt Weapon">
-		<!-- P. Skill Critical Damage +3%, Skill Cooldown -3%. -->
+	<skill id="35290" toLevel="1" name="Enhancement Effect: Krishna Dual Blunt Weapon">
+		<!-- P. Skill Critical Damage +$s1, Skill Cooldown -$s2. -->
 		<icon>icon.weapon_r110_dual_blunt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3885,6 +3856,10 @@
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DefenceAttribute">
 				<amount>
 					<value level="1">0</value>
@@ -3921,6 +3896,24 @@
 				</amount>
 				<attribute>EARTH</attribute>
 			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">20</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">20</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
 			<effect name="StatUp">
 				<amount>3</amount>
 				<stat>STR</stat>
@@ -3932,7 +3925,7 @@
 		</effects>
 	</skill>
 	<skill id="35292" toLevel="4" name="Set Effect - Leviathan Light Armor, 2-piece">
-		<!-- STR +$s1, DEX $s2. -->
+		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3973,6 +3966,24 @@
 					<value level="4">20</value>
 				</amount>
 				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">20</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">20</value>
+				</amount>
+				<attribute>DARK</attribute>
 			</effect>
 			<effect name="HealEffect">
 				<amount>
@@ -4055,8 +4066,17 @@
 			<effect name="MagicalSkillPower">
 				<amount>
 					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+					<value level="3">5</value>
 					<value level="4">5</value>
 				</amount>
 				<mode>PER</mode>
@@ -4123,6 +4143,24 @@
 				</amount>
 				<attribute>EARTH</attribute>
 			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">20</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">20</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
 			<effect name="HealEffect">
 				<amount>
 					<value level="1">0</value>
@@ -4133,6 +4171,15 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -4185,8 +4232,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35294" toLevel="1" name="Enchantment Effect: Leviathan Shield">
-		<!-- Atk. Spd. +5%, P. Skill Power +2%, M. Skill Power -10%. -->
+	<skill id="35294" toLevel="1" name="Enhancement Effect: Leviathan Shield">
+		<!-- Atk. Spd. +$s1, P. Atk. +$s2, P./ M. Def. +$s3. -->
 		<icon>icon.weapon_r110_shield</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -4194,18 +4241,22 @@
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>2</amount>
+			<effect name="PAtk">
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalSkillPower">
-				<amount>-10</amount>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35295" toLevel="1" name="Enchantment Effect: Leviathan Sigil">
-		<!-- Casting Spd. +5%, M. Skill Power +2%, P. Skill Power -10%. -->
+	<skill id="35295" toLevel="1" name="Enhancement Effect: Leviathan Sigil">
+		<!-- Atk. Spd./ Casting Spd. +$s1, P. Atk. +$s2, M. Skill Power +$s3. -->
 		<icon>icon.weapon_r110_sigil</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -4213,18 +4264,22 @@
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicalSkillPower">
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>-10</amount>
+			<effect name="PAtk">
+				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="35296" toLevel="1" name="Krishna Cutter Special Ability">
-		<!-- P. Accuracy +4, Normal Attack Critical Rate +30. -->
+		<!-- P. Accuracy +$s1, Critical Rate for standard attacks +$s2. -->
 		<icon>icon.weapon_r110_onehand_sword_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4241,7 +4296,7 @@
 		</effects>
 	</skill>
 	<skill id="35297" toLevel="1" name="Krishna Slasher Special Ability">
-		<!-- P. Atk. +5%. -->
+		<!-- P. Atk. +$s1. -->
 		<icon>icon.weapon_r110_twohand_sword_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4254,7 +4309,7 @@
 		</effects>
 	</skill>
 	<skill id="35298" toLevel="1" name="Krishna Avenger Special Ability">
-		<!-- P. Accuracy +4, P./ M. Skill Power +2%. -->
+		<!-- P. Accuracy +$s1, P./ M. Skill Power +$s2. -->
 		<icon>icon.weapon_r110_onehand_blunt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4275,7 +4330,7 @@
 		</effects>
 	</skill>
 	<skill id="35299" toLevel="1" name="Krishna Shaper Special Ability">
-		<!-- P. Accuracy +4, P. Skill Critical Damage +2%. -->
+		<!-- P. Accuracy +$s1, P. Skill Critical Damage +$s2. -->
 		<icon>icon.weapon_r110_dagger_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

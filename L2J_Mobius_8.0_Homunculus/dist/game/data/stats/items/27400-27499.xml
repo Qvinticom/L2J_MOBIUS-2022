@@ -969,7 +969,7 @@
 		</skills>
 	</item>
 	<item id="27470" name="Shadai's Jewelry Box" type="EtcItem">
-		<!-- Double-click to acquire 1 of the La Vie En Rose's Jewelry Boxes. Has a very low chance of obtaining a Radiant Gemstone Fragment or a La Vie En Rose's Radiant Brooch. -->
+		<!-- Double-click to obtain La Vie En Rose's Jewelry Box. Low chance to obtain Radiant Gemstone Fragment or La Vie En Rose's Brooch Lv. 2. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -977,7 +977,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
 	<item id="27471" name="Vital Stone" additionalName="Lv. 4" type="Armor">
-		<!-- Vitality Bonus +25% and Vitality Point Consumption Speed -7%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
+		<!-- Vitality bonus +25%, Vitality Consumption -7%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding of two jewels of the same level. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -991,7 +991,7 @@
 		<set name="weight" val="5" />
 	</item>
 	<item id="27472" name="Vital Stone" additionalName="Lv. 5" type="Armor">
-		<!-- Vitality Bonus +50% and Vitality Point Consumption Speed -15%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
+		<!-- Vitality bonus +50%, Vitality Consumption -15%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1000,7 +1000,7 @@
 		<set name="weight" val="5" />
 	</item>
 	<item id="27473" name="Garnet" additionalName="Lv. 5" type="Armor">
-		<!-- Debuff Resistance +30%. Cancels your debuffs. Effect does not stack with additional jewels of the same type. -->
+		<!-- Debuff Resistance +30%. Removes debuffs from you. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1013,7 +1013,7 @@
 		</skills>
 	</item>
 	<item id="27474" name="Tanzanite" additionalName="Lv. 1" type="Armor">
-		<!-- Creates a protection shield that absorbs 5,000 damage for 5 sec. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protective barrier that absorbs 5,000 damage for 5 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding of two jewels of the same level. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1030,7 +1030,7 @@
 		</skills>
 	</item>
 	<item id="27475" name="Tanzanite" additionalName="Lv. 2" type="Armor">
-		<!-- Creates a protection shield that absorbs 10,000 damage for 5 sec. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protective barrier that absorbs 10,000 damage for 5 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding of two jewels of the same level. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1047,7 +1047,7 @@
 		</skills>
 	</item>
 	<item id="27476" name="Tanzanite" additionalName="Lv. 3" type="Armor">
-		<!-- Creates a protection shield that absorbs 15,000 damage for 10 sec. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protective barrier that absorbs 15,000 damage for 10 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding of two jewels of the same level. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1064,7 +1064,7 @@
 		</skills>
 	</item>
 	<item id="27477" name="Tanzanite" additionalName="Lv. 4" type="Armor">
-		<!-- Creates a protection shield that absorbs 30,000 damage for 10 sec. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protective barrier that absorbs 30,000 damage for 10 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding of two jewels of the same level. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1081,7 +1081,7 @@
 		</skills>
 	</item>
 	<item id="27478" name="Tanzanite" additionalName="Lv. 5" type="Armor">
-		<!-- Creates a protection shield that absorbs 50,000 damage for 15 sec. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protective barrier that absorbs 50,000 damage for 15 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1093,7 +1093,7 @@
 		</skills>
 	</item>
 	<item id="27479" name="La Vie En Rose's Tanzanite Box" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Tanzanite. -->
+		<!-- Double-click to obtain Tanzanite Lv. 1. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1106,11 +1106,11 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="26486" min="1" max="1" chance="100" /> <!-- Tanzanite - Lv. 1 -->
+			<item id="26486" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 1 - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="27480" name="Vital Stone" additionalName="Lv. 1" type="Armor">
-		<!-- Vitality Bonus +3%. Effect does not stack with additional jewels of the same type. -->
+		<!-- Vitality bonus +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding of two jewels of the same level. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1124,7 +1124,7 @@
 		<set name="weight" val="5" />
 	</item>
 	<item id="27481" name="Vital Stone" additionalName="Lv. 2" type="Armor">
-		<!-- Vitality Bonus +6%. Effect does not stack with additional jewels of the same type. -->
+		<!-- Vitality bonus +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding of two jewels of the same level. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1138,7 +1138,7 @@
 		<set name="weight" val="5" />
 	</item>
 	<item id="27482" name="Vital Stone" additionalName="Lv. 3" type="Armor">
-		<!-- Vitality Bonus +12%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
+		<!-- Vitality bonus +12%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding of two jewels of the same level. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1165,11 +1165,11 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="26476" min="1" max="1" chance="100" /> <!-- Vital Stone - Lv. 1 -->
+			<item id="26476" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 1 - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="27484" name="Maphr's Wind Scroll" additionalName="Event" type="EtcItem">
-		<!-- Vitality consumption +200% and Acquired XP/ SP +200%. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<!-- For 30 sec., Vitality Consumption +200%, acquired XP/ SP +200%. The effect remains after death. Cooldown: 1 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. The effect does not stack with those of Freya's Frozen Scroll, Freya's Scroll of Storm, Dandy's Scroll: Challenge, Emperor's Growth Scroll, Scroll: Midsummer Passion, Vital Wind, Wind of Bard. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1186,7 +1186,7 @@
 		</skills>
 	</item>
 	<item id="27485" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 85 solo dungeon. -->
+		<!-- A pass for adventurers from the Kartia Research Center. Double-click to reset the instance zone timer for the Lv. 85 solo dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1197,7 +1197,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27486" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Solo" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 90 solo dungeon. -->
+		<!-- A pass for adventurers from the Kartia Research Center. Double-click to reset the instance zone timer for the Lv. 90 solo dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1208,7 +1208,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27487" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Solo" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 95 solo dungeon. -->
+		<!-- A pass for adventurers from the Kartia Research Center. Double-click to reset the instance zone timer for the Lv. 95 solo dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1219,7 +1219,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27488" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 85 party dungeon. -->
+		<!-- A pass for adventurers from the Kartia Research Center. Double-click to reset the instance zone timer for the Lv. 85 party dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1230,7 +1230,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27489" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Party" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 90 party dungeon. -->
+		<!-- A pass for adventurers from the Kartia Research Center. Double-click to reset the instance zone timer for the Lv. 90 party dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1241,7 +1241,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27490" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 95 party dungeon. -->
+		<!-- A pass for adventurers from the Kartia Research Center. Double-click to reset the instance zone timer for the Lv. 95 party dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1252,7 +1252,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27491" name="Rare Accessory Pack" additionalName="Underground" type="EtcItem">
-		<!-- Double-click to get one of the following: Antharas' Earring, Valakas' Necklace, Baium's Ring, Zaken's Earring, Queen Ant's Ring, Frintezza's Necklace, Orfen's Earring, Freya's Necklace. -->
+		<!-- Double-click to obtain one of the following items: Antharas' Earring, Valakas' Necklace, Baium's Ring, Zaken's Earring, Queen Ant's Ring, Frintezza's Necklace, Orfen's Earring, Freya's Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
@@ -1265,7 +1265,7 @@
 		</skills>
 	</item>
 	<item id="27492" name="Greater Rare Accessory Pack" additionalName="Underground" type="EtcItem">
-		<!-- Double-click to get one of the following: Baium's Soul Ring, Frintezza's Soul Necklace, Blessed Antharas's Earring, Blessed Valakas's Necklace, Blessed Freya's Necklace, Queen Ant's Soul Ring, Orfen's Soul Earring, Blessed Zaken's Earring, Lilith's Soul Necklace, Lindvior's Earring, Earth Wyrm Heart Ring, Tauti's Ring. -->
+		<!-- Double-click to obtain one of the following items: Baium's Soul Ring, Frintezza's Soul Necklace, Blessed Antharas' Earring, Blessed Valakas' Necklace, Blessed Freya's Necklace, Queen Ant's Soul Ring, Orfen's Soul Earring, Blessed Zaken's Earring, Lilith' Soul Necklace, Lindvior's Earring, Earth Wyrm's Heart Ring, Tauti's Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
@@ -1278,7 +1278,7 @@
 		</skills>
 	</item>
 	<item id="27493" name="Soul Bottle Pack" additionalName="Underground" type="EtcItem">
-		<!-- Double-click to get one of the following: Bottle of Freya's Soul, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Bottle of Queen Ant's Soul, Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Baium's Soul. -->
+		<!-- Double-click to obtain one of the following items: Bottle of Freya's Soul, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Bottle of Queen Ant's Soul, Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Baium's Soul. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
@@ -1291,7 +1291,7 @@
 		</skills>
 	</item>
 	<item id="27494" name="Soul Crystal Coupon Pack" additionalName="Underground" type="EtcItem">
-		<!-- Double-click to obtain a Soul Crystal Coupon Stage 1-5. -->
+		<!-- Double-click to obtain Soul Crystal Coupon Lv. 1-5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
@@ -1304,7 +1304,7 @@
 		</skills>
 	</item>
 	<item id="27495" name="Talisman - Abundance Pack" additionalName="Underground" type="EtcItem">
-		<!-- Double-click to obtain either a Talisman - Abudance or a Recipe: Talisman - Abundance (High-grade). -->
+		<!-- Double-click to obtain Talisman of Abudance or Recipe: High-grade Talisman of Abundance. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
@@ -1317,7 +1317,7 @@
 		</skills>
 	</item>
 	<item id="27496" name="Spirit Stone Pack" additionalName="Underground" type="EtcItem">
-		<!-- Double-click to obtain Spirit Stone. -->
+		<!-- Double-click to obtain Weapon Augmenting Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
@@ -1356,7 +1356,7 @@
 		</skills>
 	</item>
 	<item id="27499" name="Ingredient Box" additionalName="Underground" type="EtcItem">
-		<!-- Double-click to obtain a crafting ingredient. -->
+		<!-- Double-click to obtain a material. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />

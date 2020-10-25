@@ -76,18 +76,22 @@
 	<item id="38208" name="Starfish Appearance Stone: Sigil" type="EtcItem">
 		<!-- Turns the appearance of a sigil into that of a Starfish. -->
 		<set name="icon" val="Icon.shape_shifting_sigil_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38209" name="Turtle Appearance Stone: Shield" type="EtcItem">
 		<!-- Turns the appearance of a shield into that of a Turtle. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
@@ -383,7 +387,7 @@
 		</stats>
 	</item>
 	<item id="38222" name="Rotten Fish Stew" type="EtcItem">
-		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. -->
+		<!-- Rotten Fried Fish. It has no effects. Bring it to a fishing guildsman at any village to exchange it for fish. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -399,7 +403,7 @@
 		</skills>
 	</item>
 	<item id="38223" name="Rotten Fish Stew" type="EtcItem">
-		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. -->
+		<!-- Rotten Fried Fish. It has no effects. Bring it to a fishing guildsman at any village to exchange it for fish. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -415,7 +419,7 @@
 		</skills>
 	</item>
 	<item id="38224" name="Rotten Fish Stew" type="EtcItem">
-		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. -->
+		<!-- Rotten Fried Fish. It has no effects. Bring it to a fishing guildsman at any village to exchange it for fish. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -431,7 +435,7 @@
 		</skills>
 	</item>
 	<item id="38225" name="Rotten Fish Stew" type="EtcItem">
-		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. -->
+		<!-- Rotten Fried Fish. It has no effects. Bring it to a fishing guildsman at any village to exchange it for fish. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -447,7 +451,7 @@
 		</skills>
 	</item>
 	<item id="38226" name="Rotten Fish Stew" type="EtcItem">
-		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. -->
+		<!-- Rotten Fried Fish. It has no effects. Bring it to a fishing guildsman at any village to exchange it for fish. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -463,7 +467,7 @@
 		</skills>
 	</item>
 	<item id="38227" name="Rotten Fish Stew" type="EtcItem">
-		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. -->
+		<!-- Rotten Fried Fish. It has no effects. Bring it to a fishing guildsman at any village to exchange it for fish. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -581,7 +585,7 @@
 		</skills>
 	</item>
 	<item id="38234" name="Lady's Hairpin" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. Female only. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -598,7 +602,7 @@
 		</skills>
 	</item>
 	<item id="38235" name="Lady's Hairpin" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. Female only. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -700,7 +704,7 @@
 		</skills>
 	</item>
 	<item id="38241" name="Lady's Hairpin" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. Female only. -->
+		<!-- P. Accuracy +5. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -801,7 +805,7 @@
 		</skills>
 	</item>
 	<item id="38248" name="Party Mask" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -815,7 +819,7 @@
 		</skills>
 	</item>
 	<item id="38249" name="Party Mask" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -829,7 +833,7 @@
 		</skills>
 	</item>
 	<item id="38250" name="Party Mask" additionalName="P. Def." type="Armor">
-		<!-- P. Def. +5%. -->
+		<!-- P. Def. +5%, when equipped. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -843,7 +847,7 @@
 		</skills>
 	</item>
 	<item id="38251" name="Party Mask" additionalName="M. Def." type="Armor">
-		<!-- M. Def. +5%. -->
+		<!-- M. Def. +5%, when equipped. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -857,7 +861,7 @@
 		</skills>
 	</item>
 	<item id="38252" name="Party Mask" additionalName="Evasion" type="Armor">
-		<!-- Evasion +5. -->
+		<!-- Evasion +5, when equipped. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -871,7 +875,7 @@
 		</skills>
 	</item>
 	<item id="38253" name="Party Mask" additionalName="P. Atk." type="Armor">
-		<!-- P. Atk. +5%. -->
+		<!-- P. Atk. +5%, when equipped. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -885,7 +889,7 @@
 		</skills>
 	</item>
 	<item id="38254" name="Party Mask" additionalName="M. Atk." type="Armor">
-		<!-- M. Atk. +10%. -->
+		<!-- M. Atk. +10%, when equipped. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -899,7 +903,7 @@
 		</skills>
 	</item>
 	<item id="38255" name="Party Mask" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5, when equipped. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -997,7 +1001,7 @@
 		</skills>
 	</item>
 	<item id="38262" name="Monocle" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1011,7 +1015,7 @@
 		</skills>
 	</item>
 	<item id="38263" name="Monocle" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1095,7 +1099,7 @@
 		</skills>
 	</item>
 	<item id="38269" name="Monocle" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5, when equipped. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1211,7 +1215,7 @@
 		</skills>
 	</item>
 	<item id="38276" name="Maiden's Hairpin" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. Female only. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1228,7 +1232,7 @@
 		</skills>
 	</item>
 	<item id="38277" name="Maiden's Hairpin" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. Female only. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1330,7 +1334,7 @@
 		</skills>
 	</item>
 	<item id="38283" name="Maiden's Hairpin" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. Female only. -->
+		<!-- P. Accuracy +5. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1449,7 +1453,7 @@
 		</skills>
 	</item>
 	<item id="38290" name="Forget-me-not Hairpin" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. Female only. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1466,7 +1470,7 @@
 		</skills>
 	</item>
 	<item id="38291" name="Forget-me-not Hairpin" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. Female only. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1568,7 +1572,7 @@
 		</skills>
 	</item>
 	<item id="38297" name="Forget-me-not Hairpin" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. Female only. -->
+		<!-- P. Accuracy +5. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />

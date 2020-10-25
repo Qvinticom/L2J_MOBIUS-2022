@@ -239,6 +239,13 @@ public enum AbnormalType
 	SONG_OF_ARCHERY(-1),
 	DANCE_OF_SAGE(-1),
 	SAYHA_BLESSING(-1),
+	SAYHA_BUFF(-1),
+	FREYA_SCROLL_VIT(-1),
+	SHILLIEN_STUN(-1),
+	DEMONIC_CAGE(-1),
+	OLYMPIAD_SPEED(-1),
+	OLYMPIAD_ATTACK(-1),
+	FOCUS_ATTACK(-1),
 	SONG_WEAPON(-1), // TODO: need find proper name
 	HEAL_RESISTANCE(-1), // TODO: need find proper name
 	TRIAD(-1),

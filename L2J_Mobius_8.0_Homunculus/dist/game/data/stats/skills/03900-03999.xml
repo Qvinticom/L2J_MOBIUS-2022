@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3900" toLevel="2" name="Staff of Divine Power">
-		<!-- Increases the power of one's own recovery magic. -->
+		<!-- Increases Healing Power. -->
 		<icon>icon.skill1459</icon>
 		<magicLevel>
 			<value level="1">61</value>
@@ -39,7 +39,7 @@
 		</effects>
 	</skill>
 	<skill id="3902" toLevel="1" name="Staff of Clarity">
-		<!-- Decreases MP Consumption. -->
+		<!-- Decreases Skill MP Consumption. -->
 		<icon>icon.skill1397</icon>
 		<magicLevel>70</magicLevel>
 		<operateType>P</operateType>
@@ -62,7 +62,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3904" toLevel="1" name="Augment Option - Holy Attack">
+	<skill id="3904" toLevel="1" name="Augment Effect - Holy Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -75,7 +75,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3905" toLevel="1" name="Augment Option - Dark Attack">
+	<skill id="3905" toLevel="1" name="Augment Effect - Dark Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -88,7 +88,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3906" toLevel="1" name="Augment Option - Fire Attack">
+	<skill id="3906" toLevel="1" name="Augment Effect - Fire Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -101,7 +101,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3907" toLevel="1" name="Augment Option - Water Attack">
+	<skill id="3907" toLevel="1" name="Augment Effect - Water Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -114,7 +114,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3908" toLevel="1" name="Augment Option - Wind Attack">
+	<skill id="3908" toLevel="1" name="Augment Effect - Wind Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -127,7 +127,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3909" toLevel="1" name="Augment Option - Earth Attack">
+	<skill id="3909" toLevel="1" name="Augment Effect - Earth Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -140,7 +140,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3910" toLevel="1" name="Augment Option - Holy Resistance">
+	<skill id="3910" toLevel="1" name="Augment Effect - Holy Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -153,7 +153,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3911" toLevel="1" name="Augment Option - Dark Resistance">
+	<skill id="3911" toLevel="1" name="Augment Effect - Dark Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -166,7 +166,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3912" toLevel="1" name="Augment Option - Fire Resistance">
+	<skill id="3912" toLevel="1" name="Augment Effect - Fire Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -179,7 +179,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3913" toLevel="1" name="Augment Option - Water Resistance">
+	<skill id="3913" toLevel="1" name="Augment Effect - Water Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -192,7 +192,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3914" toLevel="1" name="Augment Option - Wind Resistance">
+	<skill id="3914" toLevel="1" name="Augment Effect - Wind Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -205,7 +205,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3915" toLevel="1" name="Augment Option - Earth Resistance">
+	<skill id="3915" toLevel="1" name="Augment Effect - Earth Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -218,7 +218,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3916" toLevel="1" name="Augment Option - Holy Attack">
+	<skill id="3916" toLevel="1" name="Augment Effect - Holy Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -231,7 +231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3917" toLevel="1" name="Augment Option - Dark Attack">
+	<skill id="3917" toLevel="1" name="Augment Effect - Dark Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -244,7 +244,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3918" toLevel="1" name="Augment Option - Fire Attack">
+	<skill id="3918" toLevel="1" name="Augment Effect - Fire Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -257,7 +257,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3919" toLevel="1" name="Augment Option - Water Attack">
+	<skill id="3919" toLevel="1" name="Augment Effect - Water Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -270,7 +270,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3920" toLevel="1" name="Augment Option - Wind Attack">
+	<skill id="3920" toLevel="1" name="Augment Effect - Wind Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -283,7 +283,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3921" toLevel="1" name="Augment Option - Earth Attack">
+	<skill id="3921" toLevel="1" name="Augment Effect - Earth Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -296,7 +296,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3922" toLevel="1" name="Augment Option - Holy Resistance">
+	<skill id="3922" toLevel="1" name="Augment Effect - Holy Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -309,7 +309,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3923" toLevel="1" name="Augment Option - Dark Resistance">
+	<skill id="3923" toLevel="1" name="Augment Effect - Dark Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -322,7 +322,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3924" toLevel="1" name="Augment Option - Fire Resistance">
+	<skill id="3924" toLevel="1" name="Augment Effect - Fire Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -335,7 +335,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3925" toLevel="1" name="Augment Option - Water Resistance">
+	<skill id="3925" toLevel="1" name="Augment Effect - Water Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -348,7 +348,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3926" toLevel="1" name="Augment Option - Wind Resistance">
+	<skill id="3926" toLevel="1" name="Augment Effect - Wind Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -361,7 +361,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3927" toLevel="1" name="Augment Option - Earth Resistance">
+	<skill id="3927" toLevel="1" name="Augment Effect - Earth Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -374,7 +374,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3928" toLevel="1" name="Augment Option - Holy Attack">
+	<skill id="3928" toLevel="1" name="Augment Effect - Holy Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -387,7 +387,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3929" toLevel="1" name="Augment Option - Dark Attack">
+	<skill id="3929" toLevel="1" name="Augment Effect - Dark Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -400,7 +400,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3930" toLevel="1" name="Augment Option - Fire Attack">
+	<skill id="3930" toLevel="1" name="Augment Effect - Fire Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -413,7 +413,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3931" toLevel="1" name="Augment Option - Water Attack">
+	<skill id="3931" toLevel="1" name="Augment Effect - Water Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -426,7 +426,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3932" toLevel="1" name="Augment Option - Wind Attack">
+	<skill id="3932" toLevel="1" name="Augment Effect - Wind Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -439,7 +439,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3933" toLevel="1" name="Augment Option - Earth Attack">
+	<skill id="3933" toLevel="1" name="Augment Effect - Earth Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -452,7 +452,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3934" toLevel="1" name="Augment Option - Holy Resistance">
+	<skill id="3934" toLevel="1" name="Augment Effect - Holy Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -465,7 +465,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3935" toLevel="1" name="Augment Option - Dark Resistance">
+	<skill id="3935" toLevel="1" name="Augment Effect - Dark Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -478,7 +478,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3936" toLevel="1" name="Augment Option - Fire Resistance">
+	<skill id="3936" toLevel="1" name="Augment Effect - Fire Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -491,7 +491,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3937" toLevel="1" name="Augment Option - Water Resistance">
+	<skill id="3937" toLevel="1" name="Augment Effect - Water Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -504,7 +504,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3938" toLevel="1" name="Augment Option - Wind Resistance">
+	<skill id="3938" toLevel="1" name="Augment Effect - Wind Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -517,7 +517,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3939" toLevel="1" name="Augment Option - Earth Resistance">
+	<skill id="3939" toLevel="1" name="Augment Effect - Earth Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -530,7 +530,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3940" toLevel="1" name="Augment Option - Holy Attack">
+	<skill id="3940" toLevel="1" name="Augment Effect - Holy Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -543,7 +543,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3941" toLevel="1" name="Augment Option - Dark Attack">
+	<skill id="3941" toLevel="1" name="Augment Effect - Dark Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -556,7 +556,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3942" toLevel="1" name="Augment Option - Fire Attack">
+	<skill id="3942" toLevel="1" name="Augment Effect - Fire Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -569,7 +569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3943" toLevel="1" name="Augment Option - Water Attack">
+	<skill id="3943" toLevel="1" name="Augment Effect - Water Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -582,7 +582,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3944" toLevel="1" name="Augment Option - Wind Attack">
+	<skill id="3944" toLevel="1" name="Augment Effect - Wind Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -595,7 +595,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3945" toLevel="1" name="Augment Option - Earth Attack">
+	<skill id="3945" toLevel="1" name="Augment Effect - Earth Attack">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -608,7 +608,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3946" toLevel="1" name="Augment Option - Holy Resistance">
+	<skill id="3946" toLevel="1" name="Augment Effect - Holy Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -621,7 +621,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3947" toLevel="1" name="Augment Option - Dark Resistance">
+	<skill id="3947" toLevel="1" name="Augment Effect - Dark Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -634,7 +634,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3948" toLevel="1" name="Augment Option - Fire Resistance">
+	<skill id="3948" toLevel="1" name="Augment Effect - Fire Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -647,7 +647,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3949" toLevel="1" name="Augment Option - Water Resistance">
+	<skill id="3949" toLevel="1" name="Augment Effect - Water Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -660,7 +660,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3950" toLevel="1" name="Augment Option - Wind Resistance">
+	<skill id="3950" toLevel="1" name="Augment Effect - Wind Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -673,7 +673,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3951" toLevel="1" name="Augment Option - Earth Resistance">
+	<skill id="3951" toLevel="1" name="Augment Effect - Earth Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -686,7 +686,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3952" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3952" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -698,7 +698,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3953" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3953" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -710,7 +710,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3954" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3954" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -722,7 +722,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3955" toLevel="1" name="Augment Option - Stupor Resistance">
+	<skill id="3955" toLevel="1" name="Augment Effect - Stupor Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -734,7 +734,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3956" toLevel="1" name="Augment Option - Paralysis Resistance">
+	<skill id="3956" toLevel="1" name="Augment Effect - Paralysis Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -746,7 +746,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3957" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3957" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -758,7 +758,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3958" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3958" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -770,7 +770,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3959" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3959" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -782,7 +782,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3960" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3960" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -794,7 +794,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3961" toLevel="1" name="Augment Option - Stupor Resistance">
+	<skill id="3961" toLevel="1" name="Augment Effect - Stupor Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -806,7 +806,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3962" toLevel="1" name="Augment Option - Paralysis Resistance">
+	<skill id="3962" toLevel="1" name="Augment Effect - Paralysis Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -818,7 +818,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3963" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3963" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -830,7 +830,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3964" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3964" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -842,7 +842,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3965" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3965" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -854,7 +854,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3966" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3966" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -866,7 +866,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3967" toLevel="1" name="Augment Option - Stupor Resistance">
+	<skill id="3967" toLevel="1" name="Augment Effect - Stupor Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -878,7 +878,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3968" toLevel="1" name="Augment Option - Paralysis Resistance">
+	<skill id="3968" toLevel="1" name="Augment Effect - Paralysis Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -890,7 +890,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3969" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3969" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -902,7 +902,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3970" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3970" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -914,7 +914,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3971" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3971" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -926,7 +926,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3972" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3972" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -938,7 +938,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3973" toLevel="1" name="Augment Option - Stupor Resistance">
+	<skill id="3973" toLevel="1" name="Augment Effect - Stupor Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -950,7 +950,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3974" toLevel="1" name="Augment Option - Paralysis Resistance">
+	<skill id="3974" toLevel="1" name="Augment Effect - Paralysis Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -962,7 +962,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3975" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3975" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -974,7 +974,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3976" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3976" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -986,7 +986,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3977" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3977" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -998,7 +998,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3978" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3978" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1010,7 +1010,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3979" toLevel="1" name="Augment Option - Stupor Resistance">
+	<skill id="3979" toLevel="1" name="Augment Effect - Stupor Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1022,7 +1022,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3980" toLevel="1" name="Augment Option - Paralysis Resistance">
+	<skill id="3980" toLevel="1" name="Augment Effect - Paralysis Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1034,7 +1034,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3981" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3981" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1046,7 +1046,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3982" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3982" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1058,7 +1058,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3983" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3983" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1070,7 +1070,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3984" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3984" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1082,7 +1082,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3985" toLevel="1" name="Augment Option - Stupor Resistance">
+	<skill id="3985" toLevel="1" name="Augment Effect - Stupor Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1094,7 +1094,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3986" toLevel="1" name="Augment Option - Paralysis Resistance">
+	<skill id="3986" toLevel="1" name="Augment Effect - Paralysis Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1106,7 +1106,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3987" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3987" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1118,7 +1118,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3988" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3988" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1130,7 +1130,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3989" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3989" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1142,7 +1142,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3990" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3990" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1154,7 +1154,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3991" toLevel="1" name="Augment Option - Stupor Resistance">
+	<skill id="3991" toLevel="1" name="Augment Effect - Stupor Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1166,7 +1166,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3992" toLevel="1" name="Augment Option - Paralysis Resistance">
+	<skill id="3992" toLevel="1" name="Augment Effect - Paralysis Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1178,7 +1178,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3993" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3993" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1190,7 +1190,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3994" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3994" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1202,7 +1202,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3995" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3995" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1214,7 +1214,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3996" toLevel="1" name="Augment Option - Infection Resistance">
+	<skill id="3996" toLevel="1" name="Augment Effect - Infection Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1226,7 +1226,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3997" toLevel="1" name="Augment Option - Stupor Resistance">
+	<skill id="3997" toLevel="1" name="Augment Effect - Stupor Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1238,7 +1238,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3998" toLevel="1" name="Augment Option - Paralysis Resistance">
+	<skill id="3998" toLevel="1" name="Augment Effect - Paralysis Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>
@@ -1250,7 +1250,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3999" toLevel="1" name="Augment Option - Confusion Resistance">
+	<skill id="3999" toLevel="1" name="Augment Effect - Confusion Resistance">
 		<!-- Accessory that contains special power. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<magicLevel>1</magicLevel>

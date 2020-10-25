@@ -37,8 +37,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.quest.QuestState;
-import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.variables.NpcVariables;
@@ -51,7 +49,6 @@ import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
 import instances.AbstractInstance;
-import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
 
 /**
  * Ice Queen's Castle (Normal Battle) instance zone.
@@ -195,20 +192,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 								}
 							}
 							
-							if (!isHard(world))
-							{
-								for (PlayerInstance players : world.getPlayers())
-								{
-									if (!players.isDead())
-									{
-										final QuestState qs = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
-										if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(5))
-										{
-											qs.setCond(6, true);
-										}
-									}
-								}
-							}
 							startQuestTimer("STAGE_1_MOVIE", 60000, control, null);
 							world.setParameter("controller", control);
 						}
@@ -221,12 +204,6 @@ public class IceQueensCastleBattle extends AbstractInstance
 					}
 					case "killFreya":
 					{
-						final QuestState qs = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
-						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(6))
-						{
-							qs.setMemoState(10);
-							qs.setCond(7, true);
-						}
 						world.getNpc(SUPP_KEGOR).deleteMe();
 						freya.decayMe();
 						manageMovie(world, Movie.SC_BOSS_FREYA_ENDING_B);

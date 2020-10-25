@@ -131,7 +131,7 @@
 		</effects>
 	</skill>
 	<skill id="8303" toLevel="1" name="Vesper Light Armor Set - PvP">
-		<!-- Increases P. Atk. by 5.57%, Atk. Spd./ MP Recovery by 5% and Max MP by 347. Decreases damage received during PvP and has a chance of canceling the enemy attacker's target. -->
+		<!-- Increases P. Atk. by 5.57%, Atk. Spd./ MP Recovery by 5% and Max MP by +347. Decreases received PvP damage and has a chance of canceling the enemy attacker's target. -->
 		<icon>icon.armor_t95_u_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -179,7 +179,7 @@
 		</effects>
 	</skill>
 	<skill id="8304" toLevel="1" name="Vesper Noble Light Armor Set - PvP">
-		<!-- When equipped, increases P. Atk. by 5.57%, Atk. Spd./ MP Recovery by 5%, Max MP by 354, Evasion by 3, Critical Damage by 172, and Paralysis Resistance by 50%. Decreases damage received during PvP and has a chance to cancel the attacker's target when attacked. Can equip a cloak. -->
+		<!-- P. Atk. +5.57%, Atk. Spd./ MP Recovery +5%, Max MP +354, P. Evasion +3, Critical Damage for standard attacks +172, and Paralysis Resistance +50%. Decreases received PvP damage and has a chance to cancel the attacker's target. Activates the cloak slot. -->
 		<icon>icon.armor_t95_u_i01</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -236,7 +236,7 @@
 		</effects>
 	</skill>
 	<skill id="8305" toLevel="1" name="Vesper Robe Set - PvP">
-		<!-- M. Atk. +8.47%, Casting Spd. +15%, MP Recovery Rate +5%, Confusion Resistance +50%. Casting Interruption Rate -30. Decreases received PvP damage, also has a chance to decrease the opponent's Critical Rate and Critical Damage. -->
+		<!-- M. Atk. +8.47%, Casting Spd. +15%, MP Recovery Rate +5%, Confusion Resistance +50%. Casting Interruption Rate -30. Decreases received PvP damage, also has a chance to decrease Received P. Critical Rate and Received Critical Damage from standard attacks. -->
 		<icon>icon.armor_t96_u_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -291,7 +291,7 @@
 		</effects>
 	</skill>
 	<skill id="8306" toLevel="1" name="Vesper Noble Robe Set - PvP">
-		<!-- M. Atk. +8.47%, Casting Spd. +15%, MP Recovery Rate +5%, Confusion Resistance +50% and Speed +7. Casting Interruption Rate -30, M. Skill MP Consumption -3%. Decreases received PvP damage, also has a chance to decrease the opponent's Critical Rate and Critical Damage. Activates the cloak slot. -->
+		<!-- M. Atk. +8.47%, Casting Spd. +15%, MP Recovery Rate +5%, Confusion Resistance +50%, Speed +7. Casting Interruption Rate -30. M. Skill MP Consumption -3%. Decreases received PvP damage, also has a chance to decrease Received P. Critical Rate and Received Critical Damage from standard attacks. Activates the cloak slot. -->
 		<icon>icon.armor_t96_u_i01</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -352,7 +352,7 @@
 		</effects>
 	</skill>
 	<skill id="8307" toLevel="1" name="Boing Hammer's Mysterious Effect">
-		<!-- Has a chance to increase the size of the target's head during a general attack. -->
+		<!-- Has a chance to increase the size of the target's head after a standard attack. -->
 		<icon>icon.weapon_bbyong_hammer_a_i00</icon>
 		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -374,7 +374,7 @@
 		</effects>
 	</skill>
 	<skill id="8308" toLevel="1" name="Red Talisman - Territory Guardian">
-		<!-- Instantly recovers 1200 CP and increases Max CP to 1200. -->
+		<!-- CP +1200, Max CP +1200, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -403,7 +403,7 @@
 		</effects>
 	</skill>
 	<skill id="8309" toLevel="1" name="Red Talisman - Territory Escort">
-		<!-- Instantly recovers 800 CP and increases Max CP to 800. -->
+		<!-- CP +800, Max CP +800, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -432,7 +432,7 @@
 		</effects>
 	</skill>
 	<skill id="8310" toLevel="1" name="Arcana Sigil">
-		<!-- Increases M. Def. by 2% and decreases magic canceling damage by 13. -->
+		<!-- M. Def. +2%, Casting Interruption Rate -13. -->
 		<icon>icon.arcana_sigil_i00</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -493,8 +493,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8314" toLevel="1" name="Summon Agathion - Neolithica">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="8314" toLevel="1" name="Summon Agathion Neolithica">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -506,7 +506,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>16063</npcId> <!-- Neolithica -->
+				<npcId>16063</npcId> <!-- Saerom -->
 			</effect>
 		</effects>
 	</skill>
@@ -755,7 +755,7 @@
 		</effects>
 	</skill>
 	<skill id="8323" toLevel="1" name="Notifier">
-		<!-- Notifies about the Agathion's New Year's gift resupply time. -->
+		<!-- Notifies about the agathion's gift resupply time. -->
 		<icon>icon.skill5239</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -779,7 +779,7 @@
 		</effects>
 	</skill>
 	<skill id="8325" toLevel="1" name="Wild Rose Pig Candy">
-		<!-- Head is enlarged. -->
+		<!-- Makes your head larger. -->
 		<icon>icon.etc_pig_candy_i00</icon>
 		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -798,14 +798,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8326" toLevel="1" name="Wild Rose Pig Candy">
-		<!-- Increases Speed by 20. -->
+		<!-- Speed +20. -->
 		<icon>icon.etc_pig_candy_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="8327" toLevel="1" name="Agathion Summon - Juju">
-		<!-- Summons Agathion. -->
+	<skill id="8327" toLevel="1" name="Summon Agathion Chuchu">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -817,12 +817,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>16064</npcId> <!-- Juju -->
+				<npcId>16064</npcId> <!-- Agathion Chuchu -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8328" toLevel="1" name="Summon Agathion - Oink oink">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="8328" toLevel="1" name="Summon Agathion Oink Oink">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -834,7 +834,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>16065</npcId> <!-- Oink Oink -->
+				<npcId>16065</npcId> <!-- Agathion Oink Oink -->
 			</effect>
 		</effects>
 	</skill>
@@ -862,8 +862,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="8330" toLevel="1" name="Summon Agathion - Dawn">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="8330" toLevel="1" name="Summon Agathion Dawn">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -880,7 +880,7 @@
 		</effects>
 	</skill>
 	<skill id="8331" toLevel="1" name="Blue Talisman - Buff Cancel">
-		<!-- Cancels the buffs of nearby enemies by with the power of Talisman. -->
+		<!-- Removes a buff from an enemy, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<affectLimit>5-5</affectLimit>
 		<affectRange>150</affectRange>
@@ -906,7 +906,7 @@
 		</effects>
 	</skill>
 	<skill id="8332" toLevel="1" name="Blue Talisman - Buff Steal">
-		<!-- Steals the enemy's abnormal status using the talisman's power. -->
+		<!-- Steals a buff from an enemy, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<castRange>600</castRange>
 		<effectPoint>-532</effectPoint>
@@ -931,7 +931,7 @@
 		</effects>
 	</skill>
 	<skill id="8333" toLevel="1" name="Red Talisman - Territory Royal Guard">
-		<!-- Increases Max CP 1500 and recovers CP by the increased amount with the power of Talisman. -->
+		<!-- Recovers CP, Max CP +1500, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -960,7 +960,7 @@
 		</effects>
 	</skill>
 	<skill id="8334" toLevel="1" name="Blue Talisman - Lord's Divine Protection">
-		<!-- Decreases damage received during PvP by 75% with the power of Talisman. -->
+		<!-- Received PvP damage -75%, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -990,7 +990,7 @@
 		</effects>
 	</skill>
 	<skill id="8335" toLevel="1" name="White Talisman - Attribute Resistance">
-		<!-- For 10 sec., increases Attribute Resistance by 15 with the power of Talisman. -->
+		<!-- For 10 sec., Attribute Resistance +15, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1228,7 +1228,7 @@
 		</effects>
 	</skill>
 	<skill id="8344" toLevel="4" name="Low-grade Magic Ornament Iron Belt">
-		<!-- Decreases damage received during PvP when equipped. -->
+		<!-- When using the belt, decreases received PvP damage. -->
 		<icon>icon.skill0332</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1309,7 +1309,7 @@
 		</effects>
 	</skill>
 	<skill id="8347" toLevel="4" name="Low-grade Magic Ornament Mithril Belt">
-		<!-- Decreases damage received during PvP when equipped. -->
+		<!-- When using the belt, decreases received PvP damage. -->
 		<icon>icon.skill0332</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1570,7 +1570,7 @@
 		</effects>
 	</skill>
 	<skill id="8357" toLevel="1" name="Einhasad's Strike">
-		<!-- Einhasad's sword bestowed by Emperor Shunaiman of Elmoreden. With the pride of being chosen, he can fiercely attack the enemies on the front line. -->
+		<!-- A holy sword bestowed by Einhasad to Emperor Shunaiman of Elmoreden. Only the Chosen one can wield it, and no one will be their match. -->
 		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<affectLimit>5-15</affectLimit>
 		<affectRange>300</affectRange>
@@ -1599,8 +1599,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8358" toLevel="1" name="Summon Agathion - Towbat">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="8358" toLevel="1" name="Summon Agathion Towbat">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1654,8 +1654,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8361" toLevel="1" name="6th Anniversary Party Earring">
-		<!-- Confusion Resistance/ Atk. Rate +20%. Has a certain chance to recover damage inflicted on the enemy as HP. -->
+	<skill id="8361" toLevel="1" name="Anniversary Earring">
+		<!-- Confusion Resistance and Atk. Rate +20%. With a certain chance, absorbs 4% of the inflicted damage as HP. -->
 		<icon>icon.event_six_party_earing_i00</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -1732,7 +1732,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="8366" toLevel="1" name="Dynasty Jewel Leather Armor">
-		<!-- Increases P. Atk., Max HP, Critical Rate, Dark Resistance, and Critical Damage. -->
+		<!-- Increases P. Atk., Max HP, Critical Rate/ Damage for standard attacks, and Dark Resistance. -->
 		<icon>icon.armor_t91_uw_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1806,7 +1806,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="8372" toLevel="1" name="Shiny Reanimated Corpse Mask">
+	<skill id="8372" toLevel="1" name="Reanimated Corpse Mask">
 		<!-- Mask's effect. For 60 min., increases Max HP and Max MP by 10%, P. Atk. by 5%, and Earth Resistance by 5. -->
 		<icon>icon.ev_frankenstein_mask_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1844,7 +1844,7 @@
 		</effects>
 	</skill>
 	<skill id="8373" toLevel="1" name="Shriek Mask">
-		<!-- Mask's effect. For 60 min., increases Max HP and Max MP by 10%, Critical rate by 5%, and Wind Resistance by 5. -->
+		<!-- Mask's effect. For 60 min., Max HP and Max MP +10%, Critical Rate for standard attacks +5%, and Wind Resistance +5. -->
 		<icon>icon.ev_scream_mask_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1922,7 +1922,7 @@
 		</effects>
 	</skill>
 	<skill id="8375" toLevel="1" name="Mummy Mask">
-		<!-- Mask's effect. For 60 min., increases Max HP and Max MP by 10%, skill's MP Consumption by 5%, and Dark Resistance by 5. -->
+		<!-- Mask's effect. For 60 min., Max HP and Max MP +10%, Skill MP consumption +5%, and Dark Resistance +5. -->
 		<icon>icon.ev_mummy_mask_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2062,7 +2062,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="8379" toLevel="2" name="Protection Ring - Gludio">
-		<!-- Increases Earth Resistance by $s1. -->
+		<!-- Earth Resistance +$s1. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2119,7 +2119,7 @@
 		</effects>
 	</skill>
 	<skill id="8382" toLevel="2" name="Protection Ring - Oren">
-		<!-- Increases Earth Resistance by $s1. -->
+		<!-- Earth Resistance +$s1. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2138,7 +2138,7 @@
 		</effects>
 	</skill>
 	<skill id="8383" toLevel="2" name="Protection Ring - Aden">
-		<!-- Increases Holy Resistance by $s1. -->
+		<!-- Holy Resistance +$s1. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2309,7 +2309,7 @@
 		</effects>
 	</skill>
 	<skill id="8392" toLevel="2" name="Protection Necklace - Aden">
-		<!-- Increases Earth Resistance by $s1. -->
+		<!-- Earth Resistance +$s1. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_necklace_i00</value>
 			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>

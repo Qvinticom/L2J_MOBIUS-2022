@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Octavis Warzone -->
 <instance id="180" maxWorlds="20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
-	<time duration="120" empty="5" /> <!-- TODO: Confir me -->
-	<removeBuffs type="ALL" />
+	<time duration="120" empty="5" /> <!-- TODO: Confirm me -->
 	<locations>
 		<enter type="FIXED">
 			<location x="210649" y="119107" z="-9994" />
@@ -13,12 +12,8 @@
 		<condition type="Party" showMessageAndHtml="true">
 			<param name="html" value="condNoGroup.html" />
 		</condition>
-		<condition type="CommandChannel" showMessageAndHtml="true">
-			<param name="html" value="condNoGroup.html" />
-		</condition>
-		<condition type="CommandChannelLeader" />
 		<condition type="GroupMin">
-			<param name="limit" value="7" />
+			<param name="limit" value="2" />
 		</condition>
 		<condition type="GroupMax">
 			<param name="html" value="condBigGroup.html" />
@@ -27,7 +22,6 @@
 		<condition type="Level" showMessageAndHtml="true">
 			<param name="html" value="condNoLevelCommon.html" />
 			<param name="min" value="95" />
-			<param name="max" value="99" />
 		</condition>
 		<condition type="Distance" />
 		<condition type="Reenter" />

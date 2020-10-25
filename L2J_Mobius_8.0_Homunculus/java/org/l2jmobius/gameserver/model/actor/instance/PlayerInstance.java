@@ -66,7 +66,6 @@ import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.impl.HennaData;
-import org.l2jmobius.gameserver.data.xml.impl.MonsterBookData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
@@ -223,8 +222,6 @@ import org.l2jmobius.gameserver.model.holders.AutoPlaySettingsHolder;
 import org.l2jmobius.gameserver.model.holders.AutoUseSettingsHolder;
 import org.l2jmobius.gameserver.model.holders.DamageTakenHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
-import org.l2jmobius.gameserver.model.holders.MonsterBookRewardHolder;
 import org.l2jmobius.gameserver.model.holders.MovieHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
@@ -349,9 +346,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
-import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBook;
-import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookCloseForce;
-import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookRewardIcon;
 import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
@@ -848,10 +842,6 @@ public class PlayerInstance extends Playable
 		_pvpRegTask = null;
 	}
 	
-	// Monster Book variables
-	private static final String MONSTER_BOOK_KILLS_VAR = "MONSTER_BOOK_KILLS_";
-	private static final String MONSTER_BOOK_LEVEL_VAR = "MONSTER_BOOK_LEVEL_";
-	
 	// Training Camp
 	private static final String TRAINING_CAMP_VAR = "TRAINING_CAMP";
 	private static final String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
@@ -871,6 +861,11 @@ public class PlayerInstance extends Playable
 	private final AutoUseSettingsHolder _autoUseSettings = new AutoUseSettingsHolder();
 	
 	private ScheduledFuture<?> _timedHuntingZoneFinishTask = null;
+	
+	private int _homunculusHpBonus;
+	private int _homunculusAtkBonus;
+	private int _homunculusDefBonus;
+	private float _homunculusCritBonus;
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -4740,6 +4735,9 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean doDie(Creature killer)
 	{
+		// Add Tranquil Soul effect.
+		SkillCaster.triggerCast(this, this, CommonSkill.TRANQUIL_SOUL.getSkill());
+		
 		Collection<ItemInstance> droppedItems = null;
 		
 		if (killer != null)
@@ -6421,7 +6419,7 @@ public class PlayerInstance extends Playable
 					
 					player.getStat().setExp(rset.getLong("exp"));
 					player.setExpBeforeDeath(rset.getLong("expBeforeDeath"));
-					player.getStat().setLevel(rset.getByte("level"));
+					player.getStat().setLevel(rset.getInt("level"));
 					player.getStat().setSp(rset.getLong("sp"));
 					
 					player.setWantsPeace(rset.getInt("wantspeace"));
@@ -6671,6 +6669,8 @@ public class PlayerInstance extends Playable
 				player.setTrueHero(true);
 			}
 			
+			player.calculateHomunculusBonuses();
+			
 			// Recalculate all stats
 			player.getStat().recalculateStats(false);
 			
@@ -6808,7 +6808,7 @@ public class PlayerInstance extends Playable
 					subClass.setClassId(rset.getInt("class_id"));
 					subClass.setDualClassActive(rset.getBoolean("dual_class"));
 					subClass.setVitalityPoints(rset.getInt("vitality_points"));
-					subClass.setLevel(rset.getByte("level"));
+					subClass.setLevel(rset.getInt("level"));
 					subClass.setExp(rset.getLong("exp"));
 					subClass.setSp(rset.getLong("sp"));
 					subClass.setClassIndex(rset.getInt("class_index"));
@@ -10124,6 +10124,9 @@ public class PlayerInstance extends Playable
 		}
 		
 		_lastDamageTaken.clear();
+		
+		// Stop Tranquil Soul effect.
+		getEffectList().stopSkillEffects(true, CommonSkill.TRANQUIL_SOUL.getSkill());
 	}
 	
 	@Override
@@ -13988,51 +13991,6 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public int getMonsterBookKillCount(int cardId)
-	{
-		return getVariables().getInt(MONSTER_BOOK_KILLS_VAR + cardId, 0);
-	}
-	
-	public int getMonsterBookRewardLevel(int cardId)
-	{
-		return getVariables().getInt(MONSTER_BOOK_LEVEL_VAR + cardId, 0);
-	}
-	
-	public void updateMonsterBook(MonsterBookCardHolder card)
-	{
-		final int killCount = getMonsterBookKillCount(card.getId());
-		if (killCount < card.getReward(3).getKills()) // no point adding kills when player has reached max
-		{
-			getVariables().set(MONSTER_BOOK_KILLS_VAR + card.getId(), killCount + 1);
-			sendPacket(new ExMonsterBookCloseForce()); // in case it is open
-			final int rewardLevel = getMonsterBookRewardLevel(card.getId());
-			if ((getMonsterBookKillCount(card.getId()) >= card.getReward(rewardLevel).getKills()) && (rewardLevel < 4)) // make sure player can be rewarded
-			{
-				sendPacket(new ExMonsterBookRewardIcon());
-			}
-		}
-	}
-	
-	public void rewardMonsterBook(int cardId)
-	{
-		if (getLevel() < 99)
-		{
-			sendPacket(new SystemMessage(SystemMessageId.ONLY_CHARACTERS_OF_LEVEL_S1_OR_HIGHER_ARE_ELIGIBLE_FOR_REWARDS).addInt(99));
-			return;
-		}
-		
-		final int rewardLevel = getMonsterBookRewardLevel(cardId);
-		final MonsterBookCardHolder card = MonsterBookData.getInstance().getMonsterBookCardById(cardId);
-		final MonsterBookRewardHolder reward = card.getReward(rewardLevel);
-		if ((getMonsterBookKillCount(cardId) >= reward.getKills()) && (rewardLevel < 4)) // make sure player can be rewarded
-		{
-			getVariables().set(MONSTER_BOOK_LEVEL_VAR + cardId, rewardLevel + 1);
-			addExpAndSp(reward.getExp(), reward.getSp());
-			addFactionPoints(card.getFaction(), reward.getPoints());
-			sendPacket(new ExMonsterBook(this));
-		}
-	}
-	
 	@Override
 	protected void initStatusUpdateCache()
 	{
@@ -14176,7 +14134,11 @@ public class PlayerInstance extends Playable
 	public boolean isInTimedHuntingZone(int x, int y)
 	{
 		return isInTimedHuntingZone(1, x, y) // Storm Isle
-			|| isInTimedHuntingZone(6, x, y); // Primeval Isle
+			|| isInTimedHuntingZone(6, x, y) // Primeval Isle
+			|| isInTimedHuntingZone(7, x, y) // Golden Altar
+			|| isInTimedHuntingZone(11, x, y) // Abandoned Coal Mines
+			|| isInTimedHuntingZone(8, x, y) // Tower of Insolence
+			|| isInTimedHuntingZone(12, x, y); // Imperial Tomb
 	}
 	
 	public boolean isInTimedHuntingZone(int zoneId)
@@ -14198,6 +14160,22 @@ public class PlayerInstance extends Playable
 			case 6: // Primeval Isle
 			{
 				return (x == 20) && (y == 17);
+			}
+			case 7: // Golden Altar
+			{
+				return (x == 16) && (y == 20);
+			}
+			case 11: // Abandoned Coal Mines
+			{
+				return (x == 24) && (y == 12);
+			}
+			case 8: // Tower of Insolence
+			{
+				return (x == 17) && (y == 18);
+			}
+			case 12: // Imperial Tomb
+			{
+				return (x == 25) && (y == 15);
 			}
 		}
 		return false;
@@ -14240,5 +14218,44 @@ public class PlayerInstance extends Playable
 			return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
 		}
 		return 0;
+	}
+	
+	public int getHomunculusHpBonus()
+	{
+		return _homunculusHpBonus;
+	}
+	
+	public int getHomunculusAtkBonus()
+	{
+		return _homunculusAtkBonus;
+	}
+	
+	public int getHomunculusDefBonus()
+	{
+		return _homunculusDefBonus;
+	}
+	
+	public float getHomunculusCritBonus()
+	{
+		return _homunculusCritBonus;
+	}
+	
+	public void calculateHomunculusBonuses()
+	{
+		if (getVariables().getInt(PlayerVariables.HOMUNCULUS_ID, 0) > 0)
+		{
+			final int quality = getVariables().getInt(PlayerVariables.HOMUNCULUS_QUALITY, 0);
+			_homunculusHpBonus = 800 + (quality * 100);
+			_homunculusAtkBonus = 100 + (quality * 25);
+			_homunculusDefBonus = 80 + (quality * 10);
+			_homunculusCritBonus = 0.1f * (quality + 1);
+		}
+		else
+		{
+			_homunculusHpBonus = 0;
+			_homunculusAtkBonus = 0;
+			_homunculusDefBonus = 0;
+			_homunculusCritBonus = 0;
+		}
 	}
 }

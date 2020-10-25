@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="47900" name="Angel's Fortune Box" type="EtcItem">
-		<!-- Double-click to obtain 30 Shining Magic Baits. Either Archangel's Box of Grace or Nevit's Blessing Box is available to get with a random chance. -->
+		<!-- Double-click to obtain 30 Shining Magic Baits. Also yu can obtain either Archangel's Box of Grace or Nevit's Blessing Box. -->
 		<set name="icon" val="icon.bm_sayha_silver_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -25,7 +25,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47903" name="Shining Magic Bait (85)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift Fish, with a chance to obtain a Coin of light. Can be used only above level 85. -->
+		<!-- Fishing time: 45 sec. Fishing standby time: 15 sec. A fishing bait. Allows to catch Ugly Fish, Swift Fish, or Coin of Light. Required level: 85+. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -34,7 +34,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47904" name="Shining Magic Bait (95)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift Fish, with a chance to obtain a Coin of light. Can be used only above level 95. -->
+		<!-- Fishing time: 45 sec. Fishing standby time: 15 sec. A fishing bait. Allows to catch Ugly Fish, Swift Fish, or Coin of Light. Required level: 95+. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -43,7 +43,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47905" name="Shining Magic Bait (99)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift Fish, with a chance to obtain a Coin of light. Can be used only above level 99. -->
+		<!-- Fishing time: 45 sec. Fishing standby time: 15 sec. A fishing bait. Allows to catch Ugly Fish, Swift Fish, or Coin of Light. Required level: 99+. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -52,7 +52,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47906" name="Shining Magic Bait (102)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift Fish, with a chance to obtain a Coin of light. Can be used only above level 102. -->
+		<!-- Fishing time: 45 sec. Fishing standby time: 15 sec. A fishing bait. Allows to catch Ugly Fish, Swift Fish, or Coin of Light. Required level: 102+. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -70,14 +70,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47908" name="Shining Magic Bait Exchange Coupon" type="EtcItem">
-		<!-- Fishing Guild Members in each village can exchange this for 1 of your desired Shining Magic Bait. -->
+		<!-- Fishermen's Guild Members in each village can exchange this for 1 of your desired Shining Magic Bait. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket2" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47909" name="Angel's Gift Package" additionalName="Lv. 1" type="EtcItem">
-		<!-- Double-click to acquire one Stage 5 (30-day fixed period) fishing pole box and one Scroll: Enchant Faint Elemental Shirt. -->
+		<!-- Double-click to obtain 1 Master Fishing Rod Lv. 5 (30-day) and 1 Faint Scroll: Enchant Elemental Shirt. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -86,7 +86,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47910" name="Angel's Gift Package" additionalName="Lv. 2" type="EtcItem">
-		<!-- Double-click to acquire one Stage 5 (30-day fixed period) fishing pole box and one Scroll: Enchant Faint Elemental Shirt, and one Greater Vital Stone (30-day fixed period). -->
+		<!-- Double-click to obtain 1 Master Fishing Rod Lv. 5 (30-day), 1 Faint Scroll: Enchant Elemental Shirt, and 1 Greater Vital Stone (30-day). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -95,7 +95,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47911" name="Angel's Gift Package" additionalName="Lv. 3" type="EtcItem">
-		<!-- Double-click to acquire one Stage 5 (30-day fixed period) fishing pole box and two Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), and one Advanced Red&Blue Cat's Eye (30-day fixed period). -->
+		<!-- Double-click to obtain 1 Master Fishing Rod Lv. 5 (30-day), 1 Faint Scroll: Enchant Elemental Shirt, 1 Greater Vital Stone (30-day), and 1 Red/ Blue Cat's Eye (30-day). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -104,7 +104,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47912" name="Angel's Gift Package" additionalName="Lv. 4" type="EtcItem">
-		<!-- Double-click to acquire one Stage 5 (30-day fixed period) fishing pole box and three Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), one Advanced Red&Blue Cat's Eye (30-day fixed period), one Greater Tanzanite (30-day fixed period) box, and one Nevit's Cloak of Light (30-day fixed period) box. -->
+		<!-- Double-click to obtain 1 Master Fishing Rod Lv. 5 (30-day), Faint Scroll: Enchant Elemental Shirt (3 pcs.), 1 Greater Vital Stone (30-day), 1 Red/ Blue Cat's Eye (30-day), Greater Tanzanite (30-day), and 1 Nevit's Cloak of Light (30-day). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -133,7 +133,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="47915" name="Greater Tanzanite Lv. 1 Box" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a Greater Tanzanite Lv. 1 (30-day). -->
+		<!-- Double-click to obtain Greater Tanzanite Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -143,7 +143,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="47916" name="Nevit's Cloak of Light Box" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain Nevit's Cloak of Light (30-day fixed term). -->
+		<!-- Double-click to obtain a Nevit's Cloak of Light (30-day). -->
 		<set name="icon" val="icon.bm_sayha_present" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="default_action" val="PEEL" />
@@ -153,11 +153,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="47917" min="1" max="1" chance="100" /> <!-- Nevit's Cloak of Light -->
+			<item id="47917" min="1" max="1" chance="100" /> <!-- Nevit's Cloak of Light - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="47917" name="Nevit's Cloak of Light" additionalName="30-day" type="Armor">
-		<!-- By Angel Nevit's strength, when equipped reduces received damage by -10%, and increases all stats by +3. -->
+		<!-- Received damage -10%, all stats +3. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -196,7 +196,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47919" name="Shining Scroll of Growth" type="EtcItem">
-		<!-- When used, 1 billion EXP obtained, is only 20% effective while below Lv 99. Can be used above Lv 85. This scroll cannot be used by chaotic characters. -->
+		<!-- Double-click to obtain 1 billion XP. If character s level is lower than 99, the effectiveness is only 20%. Required level: 85+. -->
 		<set name="icon" val="icon.bm_nebit_exp_book" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -204,7 +204,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47920" name="Greater Vital Stone Lv. 1" additionalName="30-day" type="Armor">
-		<!-- Increases bonus EXP by 30% and decreases Vitality consumption by 15% when worn using Vitality. Additionally, acquired XP is increased by 10%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
+		<!-- Vitality bonus +50%, Vitality Consumption -15%, acquired XP/ SP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -219,7 +219,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47921" name="Greater Red Cat's Eye Lv. 1" additionalName="30-day" type="Armor">
-		<!-- Increases P. Critical Damage by 12%, P. Skill Critical Damage by 12%, and P. Skill Power by 5%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
+		<!-- Critical Damage for standard attacks +12%, P. Skill Critical Damage +12%, P. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -234,7 +234,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47922" name="Greater Blue Cat's Eye Lv. 1" additionalName="30-day" type="Armor">
-		<!-- Increases Magic Critical Damage by 12%, M. Skill Power by 5%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
+		<!-- M. Skill Critical Damage +12%, M. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -249,7 +249,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47923" name="Greater Tanzanite Lv. 1" additionalName="30-day" type="Armor">
-		<!-- When used, it creates a shield that absorbs 50,000 damage for 15 sec. and recovers 15% of maximum HP immediately after use. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
+		<!-- Creates a protective barrier that absorbs 50,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -264,7 +264,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47924" name="Coin of Light" type="EtcItem">
-		<!-- A special coin obtained using Shiny Magic Bait. Can be used with the Dimensional Merchant. -->
+		<!-- A special coin obtained with Shining Magic Bait. Can be used through the Game Assistant. -->
 		<set name="icon" val="icon.bm_nebit_coin" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -276,7 +276,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47925" name="Red Libra Request - Altar of Shilen" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate Maliss and Isadora in the Altar of Shilen. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate Maliss and Isadora in the Altar of Shillien. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -289,7 +289,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47926" name="Red Libra Request - Altar of Shilen" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate Maliss and Isadora in the Altar of Shilen. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate Maliss and Isadora in the Altar of Shillien. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -300,7 +300,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47927" name="Magic Fan - Blue" type="Weapon">
-		<!-- Use this magic fan to light a fire. -->
+		<!-- A magic fan that can be used for making fire and cooling in hot weather. A beautiful accessory for every costume. -->
 		<set name="icon" val="icon.ev_kr_13th_present_blue" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -327,7 +327,7 @@
 		</stats>
 	</item>
 	<item id="47928" name="Magic Woodpile" type="EtcItem">
-		<!-- Double-click to use a magic woodpile for one player. If you have the Magic Fan equipped, you can use the skills Breeze and Gust to set fire to the woodpile. Will be deleted after the event is over, September 26, 2018. -->
+		<!-- Double-click to use a magic woodpile for one player. If you have the Magic Fan equipped, you can use the skills Breeze and Gust to set fire to the woodpile. -->
 		<set name="icon" val="icon.ev_firewood_seed_solo" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LEATHER" />
@@ -335,7 +335,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47929" name="Large Magic Woodpile" type="EtcItem">
-		<!-- Double-click to use a magic woodpile for party use. If you have the Magic Fan equipped, you can use the skills Breeze and Gust to set fire to the woodpile. Will be deleted after the event is over, September 26, 2018. -->
+		<!-- Double-click to use a magic woodpile for party use. If you have the Magic Fan equipped, you can use the skills Breeze and Gust to set fire to the woodpile. -->
 		<set name="icon" val="icon.ev_firewood_seed_party" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LEATHER" />
@@ -370,7 +370,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47933" name="Dwarvish Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the "Mystic Tavern of the Continent's Hidden Stories" which is known by adventurers in Aden. -->
+		<!-- Double-click to find out more about the Mystic Tavern where you can hear stories about all mysteries of Aden. -->
 		<set name="icon" val="icon.ev_dwarf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -379,7 +379,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47934" name="Human Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the "Kain van Halter and Giselle's (Camille) Tragic Love Story" which is unknown by adventurers in Aden. -->
+		<!-- Double-click to find out more about Kain van Halter and Giselle (Camille). -->
 		<set name="icon" val="icon.ev_human_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -415,7 +415,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47938" name="First Gift Box" type="EtcItem">
-		<!-- This first gift was prepared for all that deeply love Lineage 2. Double-click to obtain a reward. -->
+		<!-- Double-click to obtain a gift. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -426,7 +426,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47939" name="Second Gift Box" type="EtcItem">
-		<!-- This second gift was prepared for all that deeply love Lineage 2. Double-click to obtain a reward. -->
+		<!-- Double-click to obtain a gift. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -437,7 +437,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47940" name="Third Gift Box" type="EtcItem">
-		<!-- This third gift was prepared for all that deeply love Lineage 2. Double-click to obtain a reward. -->
+		<!-- Double-click to obtain a gift. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -448,7 +448,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47941" name="Golden Orc Treasure Chest" type="EtcItem">
-		<!-- A shining golden chest. Double-click to obtain one of the items that Frederick the Destroyer tenaciously gathered over a long time. With a premium account, you will receive an even better reward. -->
+		<!-- A shining golden chest. Double-click to obtain one of the items that Frederick the Destroyer tenaciously gathered over a long time. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -459,7 +459,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47942" name="Old Orc Box" type="EtcItem">
-		<!-- An old, dusty box. Double-click to obtain one of the Magic Fire Event Items that Frederick the Destroyer haphazardly gathered. -->
+		<!-- Double-click to obtain a souvenir created for the anniversary of Lineage II. Also contains Gold Chest for PA users. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -481,14 +481,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47944" name="Magic Fire Event Item" type="EtcItem">
-		<!-- Take it to Bliss to receive a Magic Woodpile. Will be deleted after the event is over, September 26, 2018. -->
+		<!-- Take it to Bliss to receive a Magic Woodpile. -->
 		<set name="icon" val="icon.ev_L2_soul_ore" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47945" name="Magic Fan - Yellow" type="Weapon">
-		<!-- Use this magic fan to light a fire. -->
+		<!-- A magic fan that can be used for making fire and cooling in hot weather. A beautiful accessory for every costume. -->
 		<set name="icon" val="icon.ev_kr_13th_present_yellow" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -515,7 +515,7 @@
 		</stats>
 	</item>
 	<item id="47946" name="Magic Fire" type="EtcItem">
-		<!-- Double-click to send the Magic Fire towards heaven and receive a reward. Many people send their hopes and wishes towards heaven with this fire for luck. It is said that the wishes will come true if the fire reaches the sky without extinguishing. Maybe you will receive a reward if you send it up with a wish. Will be deleted after the event is over, September 26, 2018. -->
+		<!-- Double-click to send the Magic Fire towards heaven and receive a reward. Many people send their hopes and wishes towards heaven with this fire for luck. It is said that the wishes will come true if the fire reaches the sky without extinguishing. Maybe you will receive a reward if you send it up with a wish. -->
 		<set name="icon" val="icon.ev_firewood_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LEATHER" />
@@ -579,7 +579,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47953" name="Challenger's Shaper" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -608,7 +608,7 @@
 		</stats>
 	</item>
 	<item id="47954" name="Challenger's Dicing Death" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -637,7 +637,7 @@
 		</stats>
 	</item>
 	<item id="47955" name="Challenger's Slasher" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -666,7 +666,7 @@
 		</stats>
 	</item>
 	<item id="47956" name="Challenger's Avenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -696,7 +696,7 @@
 		</stats>
 	</item>
 	<item id="47957" name="Challenger's Fighter" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -726,7 +726,7 @@
 		</stats>
 	</item>
 	<item id="47958" name="Challenger's Stormer" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -757,7 +757,7 @@
 		</stats>
 	</item>
 	<item id="47959" name="Challenger's Thrower" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -787,7 +787,7 @@
 		</stats>
 	</item>
 	<item id="47960" name="Challenger's Shooter" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -817,7 +817,7 @@
 		</stats>
 	</item>
 	<item id="47961" name="Challenger's Buster" type="Weapon">
-		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. M. Skill Critical Rate +50, M. Skill Critical Damage +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, assigned an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_magic_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -846,7 +846,7 @@
 		</stats>
 	</item>
 	<item id="47962" name="Challenger's Caster" type="Weapon">
-		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. M. Skill Critical Rate +50, M. Skill Critical Damage +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, assigned an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -876,7 +876,7 @@
 		</stats>
 	</item>
 	<item id="47963" name="Challenger's Retributer" type="Weapon">
-		<!-- <Special Options>. Atk. Spd./ Casting Spd. +15%. P. Critical Damage +10%, M. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%. Critical Damage for standard attacks +10%, M. Skill Critical Damage +5%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -906,7 +906,7 @@
 		</stats>
 	</item>
 	<item id="47964" name="Challenger's Dual Sword" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_dualsword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -935,7 +935,7 @@
 		</stats>
 	</item>
 	<item id="47965" name="Challenger's Dual Dagger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -965,7 +965,7 @@
 		</stats>
 	</item>
 	<item id="47966" name="Challenger's Dual Blunt" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. <Enhancing>. Take the weapon and Challenger's Enhanced Weapon Coupon to the Game Assistant to get a Challenger's Enhanced weapon. -->
 		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -995,7 +995,7 @@
 		</stats>
 	</item>
 	<item id="47967" name="Challenger's Enhanced Shaper" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1025,7 +1025,7 @@
 		</stats>
 	</item>
 	<item id="47968" name="Challenger's Enhanced Dicing Death" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1055,7 +1055,7 @@
 		</stats>
 	</item>
 	<item id="47969" name="Challenger's Enhanced Slasher" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1085,7 +1085,7 @@
 		</stats>
 	</item>
 	<item id="47970" name="Challenger's Enhanced Avenger" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1116,7 +1116,7 @@
 		</stats>
 	</item>
 	<item id="47971" name="Challenger's Enhanced Fighter" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1147,7 +1147,7 @@
 		</stats>
 	</item>
 	<item id="47972" name="Challenger's Enhanced Stormer" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1179,7 +1179,7 @@
 		</stats>
 	</item>
 	<item id="47973" name="Challenger's Enhanced Thrower" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1210,7 +1210,7 @@
 		</stats>
 	</item>
 	<item id="47974" name="Challenger's Enhanced Shooter" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1241,7 +1241,7 @@
 		</stats>
 	</item>
 	<item id="47975" name="Challenger's Enhanced Buster" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. M. Skill Critical Rate +50, M. Skill Critical Damage +10%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_magic_sword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1271,7 +1271,7 @@
 		</stats>
 	</item>
 	<item id="47976" name="Challenger's Enhanced Caster" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. M. Skill Critical Rate +50, M. Skill Critical Damage +10%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or assigned an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1302,7 +1302,7 @@
 		</stats>
 	</item>
 	<item id="47977" name="Challenger's Enhanced Retributer" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd./ Casting Spd. +15%. P. Critical Damage +10%, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd./ Casting Spd. +15%. Critical Damage for standard attacks +10%, M. Skill Critical Damage +10%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1333,7 +1333,7 @@
 		</stats>
 	</item>
 	<item id="47978" name="Challenger's Enhanced Dual Sword" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_dualsword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1363,7 +1363,7 @@
 		</stats>
 	</item>
 	<item id="47979" name="Challenger's Enhanced Dual Dagger" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1394,7 +1394,7 @@
 		</stats>
 	</item>
 	<item id="47980" name="Challenger's Enhanced Dual Blunt" type="Weapon">
-		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- PvE damage +10%. <Special properties>. Atk. Spd. +15%. Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%. Max HP +15%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, or imbued with an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1425,7 +1425,7 @@
 		</stats>
 	</item>
 	<item id="47981" name="Challenger's Weapon Selection Ticket" type="EtcItem">
-		<!-- It can be used to purchase a Challenger weapon of choice through a Dimensional Merchant found in every town. -->
+		<!-- Can be exchanged for a Challenger's weapon through the Game Assistant. -->
 		<set name="icon" val="icon.bm_challenger_wp_sell_ticket" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1435,7 +1435,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47982" name="Challenger's Weapon Exchange Ticket" type="EtcItem">
-		<!-- It can be used to exchange a Challenger weapon to another type of choice through a Dimensional Merchant found in every town. -->
+		<!-- Take it to the Game Assistant to obtain another Challenger's weapon. -->
 		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1445,7 +1445,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47983" name="Brooch Spirit Stone" type="EtcItem">
-		<!-- Spirit Stone: Accessory for La Vie En Rose's Brooch. Can only be used to augment an enhanced Glorious Brooch. -->
+		<!-- Increases stats of La Vie En Rose's Brooch Lv. 4 and higher. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -1453,7 +1453,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47984" name="La Vie En Rose's Glorious Brooch" type="Armor">
-		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. -->
+		<!-- When equipped, activates 6 Jewel Slots. Inventory Slots +12. <Enhancing>. Can be enhanced to La Vie En Rose's Brooch Lv. 4 through Shadai in Heine. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
@@ -1472,7 +1472,7 @@
 		</stats>
 	</item>
 	<item id="47985" name="La Vie En Rose's Glorious Brooch" additionalName="Enchant Type" type="Armor">
-		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. CHA +1. Can be augmented. -->
+		<!-- When equipped, activates 6 Jewel Slots. Inventory Slots +12. CHA +1. Can be augmented. <Enhancing>. Can be enhanced to La Vie En Rose's Brooch Lv. 5 through Shadai in Heine. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
@@ -1502,7 +1502,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47987" name="Challenger's Weapon Enhancement Ticket" type="EtcItem">
-		<!-- It can be used to enhance a Challenger weapon through a Dimensional Merchant found in every town. -->
+		<!-- Take it to the Game Assistant to enchant a Challenger's weapon. -->
 		<set name="icon" val="icon.bm_challenger_wp_ench_ticket" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1512,7 +1512,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47988" name="Master's Lucky Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain a jewelry box containing Ruby, Sapphire, Topaz, Opal, Diamond, Emerald, Tanzanite, Red Cat's Eye, Blue Cat's Eye, or Obsidian. -->
+		<!-- Double-click to obtain one of the following items: Ruby, Sapphire, Topaz, Opal, Diamond, Emerald, Tanzanite, Red Cat's Eye, Blue Cat's Eye, Obsidian. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -1530,7 +1530,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47990" name="La Vie En Rose's Glorious Brooch" additionalName="Rare" type="Armor">
-		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. All stats +1. Can be augmented. -->
+		<!-- Unlocks 6 jewel slots. Inventory Slots +12. All base stats +1. <Enhancing>. Take Crystal of Dawn to Head Blacksmith in any town to get Enhanced La Vie En Rose's Brooch. Can be augmented. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
@@ -1556,7 +1556,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47992" name="Fish Chilli Stew - WIT" additionalName="Event" type="EtcItem">
-		<!-- When used, WIT +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
+		<!-- For 30 min., WIT +3, LUC +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1564,7 +1564,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47993" name="Fish Chilli Stew - INT" additionalName="Event" type="EtcItem">
-		<!-- When used, INT +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
+		<!-- For 30 min., INT +3, LUC +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1572,7 +1572,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47994" name="Fish Chilli Stew - MEN" additionalName="Event" type="EtcItem">
-		<!-- When used, MEN +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
+		<!-- For 30 min., MEN +3, LUC +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1580,7 +1580,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47995" name="Fish Chilli Stew - DEX" additionalName="Event" type="EtcItem">
-		<!-- When used, DEX +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
+		<!-- For 30 min., DEX +3, LUC +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1588,7 +1588,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47996" name="Fish Chilli Stew - STR" additionalName="Event" type="EtcItem">
-		<!-- When used, STR +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
+		<!-- For 30 min., STR +3, LUC +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1596,7 +1596,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47997" name="Fish Chilli Stew - CON" additionalName="Event" type="EtcItem">
-		<!-- When used, CON +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
+		<!-- For 30 min., CON +3, LUC +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1604,7 +1604,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47998" name="Fish Cream Stew - WIT" additionalName="Event" type="EtcItem">
-		<!-- When used, WIT +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
+		<!-- For 30 min., WIT +3, CHA +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1612,7 +1612,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47999" name="Fish Cream Stew - INT" additionalName="Event" type="EtcItem">
-		<!-- When used, INT +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
+		<!-- For 30 min., INT +3, CHA +1. Effects of different types of Fish Stew do not stack. Cooldown: 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

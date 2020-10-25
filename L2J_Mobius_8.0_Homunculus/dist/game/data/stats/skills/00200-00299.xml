@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="205" toLevel="45" name="Sword/ Blunt Weapon Mastery">
+	<skill id="205" toLevel="45" name="Sword / Blunt Weapon Mastery">
 		<!-- Increases P. Atk. by $s1 when using a sword or blunt weapon, with an additional increase of $s2 when using a sword, or $s3 when using a blunt weapon. -->
 		<icon>icon.skill0217</icon>
 		<magicLevel>
@@ -71,7 +71,7 @@
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>SWORD,BLUNT</allowWeapons>
-				<skillId>5604</skillId> <!-- Sword/ Blunt Weapon Mastery -->
+				<skillId>5604</skillId> <!-- Sword / Blunt Weapon Mastery -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="PAtk">
@@ -596,7 +596,7 @@
 		</effects>
 	</skill>
 	<skill id="216" toLevel="45" name="Polearm Mastery">
-		<!-- Increases P. Atk. by $s1 when using a polearm, and allows an attack on multiple targets. -->
+		<!-- P. Atk. +$s1 when using a spear. Allows to attack multiple targets. -->
 		<icon>icon.skill0216</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -756,7 +756,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="217" toLevel="45" name="Sword/Blunt Weapon Mastery">
+	<skill id="217" toLevel="45" name="Sword / Blunt Weapon Mastery">
 		<!-- Increases P. Atk. by $s1 when using a sword or blunt weapon. -->
 		<icon>icon.skill0217</icon>
 		<magicLevel>
@@ -874,7 +874,7 @@
 		</effects>
 	</skill>
 	<skill id="221" toLevel="1" name="Silent Move">
-		<!-- Disables preemptive attacks from enemies. Decreases Speed by 40% and continuously consumes MP. -->
+		<!-- Makes you invisible for monsters. Speed -$s1. Consumes MP while active. -->
 		<icon>icon.skill0221</icon>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<magicLevel>40</magicLevel>
@@ -916,7 +916,7 @@
 		</effects>
 	</skill>
 	<skill id="223" toLevel="49" name="Sting">
-		<!-- Attacks the enemy with $s1 power. Inflicts bleed causing loss of $s3 HP per sec. for $s2 Requires a sword, dagger, dual sword, or dual-dagger. Over-hit. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Attacks the enemy with $s1 power. Inflicts bleed causing loss of $s3 HP per sec. for $s2 Requires a sword, a dagger, or dual swords. Over-hit.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -1264,7 +1264,7 @@
 		</effects>
 	</skill>
 	<skill id="225" toLevel="3" name="Acrobatic Move">
-		<!-- Evasion +$s1 when running. -->
+		<!-- P. Evasion +$s1 when running. -->
 		<icon>icon.skill0225</icon>
 		<magicLevel>
 			<value level="1">28</value>
@@ -1308,7 +1308,7 @@
 		</effects>
 	</skill>
 	<skill id="227" toLevel="50" name="Light Armor Mastery">
-		<!-- Increases P. Def. by $s1 and Evasion by $s2 when equipped with light armor. -->
+		<!-- When using light armor, P. Def. +$s1, P. Evasion +$s2. -->
 		<icon>icon.skill0227</icon>
 		<magicLevel>
 			<value level="1">18</value>
@@ -1534,7 +1534,7 @@
 		</effects>
 	</skill>
 	<skill id="230" toLevel="2" name="Sprint">
-		<!-- Increases Speed by $s2 for $s1 -->
+		<!-- For $s1, Speed +$s2. -->
 		<icon>icon.skill0230</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1695,7 +1695,7 @@
 		</effects>
 	</skill>
 	<skill id="232" toLevel="52" name="Heavy Armor Mastery">
-		<!-- Increases P. Def. by $s1 and decreases received Critical Damage by $s2 when equipped with heavy armor. -->
+		<!-- P. Def. +$s1, Received Critical Damage from standard attacks -$s2. -->
 		<icon>icon.skill0232</icon>
 		<magicLevel>
 			<value level="1">18</value>
@@ -1877,7 +1877,7 @@
 		</effects>
 	</skill>
 	<skill id="233" toLevel="47" name="Light Armor Mastery">
-		<!-- Increases P. Def. by $s1 and Evasion by $s2, and decreases the chance of receiving Critical Damage by $s3 when equipped with light armor. -->
+		<!-- P. Def. +$s1, P. Evasion +$s2, Received P. Critical Rate -$s3. -->
 		<icon>icon.skill0233</icon>
 		<magicLevel>
 			<value level="1">18</value>
@@ -2451,7 +2451,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="244" toLevel="3" name="Armor Mastery">
-		<!-- Increases P. Def. by $s1. -->
+		<!-- P. Def. +$s1. -->
 		<icon>icon.skill0244</icon>
 		<magicLevel>
 			<value level="1">7</value>
@@ -2472,7 +2472,7 @@
 		</effects>
 	</skill>
 	<skill id="245" toLevel="15" name="Wild Sweep">
-		<!-- Attacks multiple enemies simultaneously with $s1 Power added to P. Atk. Requires a polearm. Over-hit is possible. -->
+		<!-- Attacks multiple enemies simultaneously with $s1 power. Requires a polearm. Over-hit. -->
 		<icon>icon.skill0245</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
@@ -2642,7 +2642,7 @@
 		</effects>
 	</skill>
 	<skill id="249" toLevel="42" name="Weapon Mastery">
-		<!-- Increases P. Atk. by $s1 and M. Atk. by $s2. -->
+		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0249</icon>
 		<magicLevel>
 			<value level="1">7</value>
@@ -3396,7 +3396,7 @@
 		</effects>
 	</skill>
 	<skill id="255" toLevel="15" name="Power Smash">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit is possible. -->
+		<!-- Attacks the enemy with $s1 power. Requires a sword or a blunt weapon. Over-hit. -->
 		<icon>icon.skill0255</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3491,7 +3491,7 @@
 		</effects>
 	</skill>
 	<skill id="256" toLevel="1" name="Accuracy">
-		<!-- Increases Accuracy by 3. Continuously consumes MP proportionately to your level. -->
+		<!-- P. Accuracy +$s1. MP Consumption depends on your level. -->
 		<icon>icon.skill0256</icon>
 		<magicLevel>24</magicLevel>
 		<mpConsume>5</mpConsume>
@@ -3509,7 +3509,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="257" toLevel="45" name="Sword/Blunt Weapon Mastery">
+	<skill id="257" toLevel="45" name="Sword / Blunt Weapon Mastery">
 		<!-- Increases P. Atk. by $s1 when using a sword or blunt weapon. -->
 		<icon>icon.skill0257</icon>
 		<magicLevel>
@@ -3822,7 +3822,7 @@
 		</effects>
 	</skill>
 	<skill id="260" toLevel="37" name="Hammer Crush">
-		<!-- Attacks the enemy with $s1 power. Inflicts stun for $s2 Requires a blunt weapon. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks the enemy with $s1 power. Inflicts stun for $s2 Requires a blunt weapon. Ignores Shield Defense. Critical. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0260</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -4013,7 +4013,7 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -4208,7 +4208,7 @@
 		</effects>
 	</skill>
 	<skill id="262" toLevel="37" name="Divine Blessing">
-		<!-- Restores the target's HP with $s1 Power. -->
+		<!-- Recovers the target's HP with $s1 power. -->
 		<icon>icon.skill0262</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -4381,7 +4381,7 @@
 		</effects>
 	</skill>
 	<skill id="263" toLevel="37" name="Deadly Blow">
-		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Requires a dagger. Over-hit and Half-kill are possible. -->
+		<!-- Attacks the target's vital points with $s1 power. Requires a dagger. Half-kill. Over-hit. -->
 		<icon>icon.skill0263</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -4569,7 +4569,7 @@
 		</effects>
 	</skill>
 	<skill id="264" toLevel="1" name="Song of Earth">
-		<!-- All party members' P. Def. +25% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- All party members' M. Def. +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. -->
 		<icon>icon.skill0264</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4595,7 +4595,7 @@
 		</effects>
 	</skill>
 	<skill id="265" toLevel="1" name="Song of Life">
-		<!-- Increases all party members' HP Recovery Bonus by 20% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- All party members' HP Recovery Rate +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. -->
 		<icon>icon.skill0265</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4621,7 +4621,7 @@
 		</effects>
 	</skill>
 	<skill id="266" toLevel="1" name="Song of Water">
-		<!-- Increases all party members' Evasion by 3 for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- All party members' P. Evasion +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. -->
 		<icon>icon.skill0266</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4647,7 +4647,7 @@
 		</effects>
 	</skill>
 	<skill id="267" toLevel="1" name="Song of Warding">
-		<!-- Increases all party members' M. Def. by 30% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- All party members' M. Def. +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. -->
 		<icon>icon.skill0267</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4673,7 +4673,7 @@
 		</effects>
 	</skill>
 	<skill id="268" toLevel="1" name="Song of Wind">
-		<!-- Increases all party members' Speed by 20 for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- All party members' Speed +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. -->
 		<icon>icon.skill0268</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4699,7 +4699,7 @@
 		</effects>
 	</skill>
 	<skill id="269" toLevel="1" name="Hunter's Song">
-		<!-- Increases all party members' Critical Rate by 100% for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- All party members' Critical Rate for standard attacks +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. -->
 		<icon>icon.skill0269</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4725,7 +4725,7 @@
 		</effects>
 	</skill>
 	<skill id="270" toLevel="1" name="Song of Invocation">
-		<!-- Increases all party members' Dark Attack Resistance by 20 for 2 min. Increases MP Consumption when singing while song/ dance effect lasts. -->
+		<!-- All party members' Dark Resistance +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. -->
 		<icon>icon.skill0270</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4750,8 +4750,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="271" toLevel="1" name="Dance of the Warrior">
-		<!-- Increases all party members' P. Atk. by 12% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+	<skill id="271" toLevel="1" name="Warrior's Dance">
+		<!-- All party members' P. Atk. +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. Requires dual swords. -->
 		<icon>icon.skill0271</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4785,7 +4785,7 @@
 		</effects>
 	</skill>
 	<skill id="272" toLevel="1" name="Dance of Inspiration">
-		<!-- Increases all party members' Accuracy by 4 for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- All party members' P. Accuracy +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. Requires dual swords. -->
 		<icon>icon.skill0272</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4819,7 +4819,7 @@
 		</effects>
 	</skill>
 	<skill id="273" toLevel="1" name="Dance of the Mystic">
-		<!-- Increases all party members' M. Atk. by 20% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- All party members' M. Atk. +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. Requires dual swords. -->
 		<icon>icon.skill0273</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4853,7 +4853,7 @@
 		</effects>
 	</skill>
 	<skill id="274" toLevel="1" name="Dance of Fire">
-		<!-- Increases all party members' Critical Damage by 35% for 2 min. Additionally increases MP Consumption when dancing while sing/ dance is in effect. Requires a dual sword. -->
+		<!-- All party members' Critical Damage for standard attacks +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. Requires dual swords. -->
 		<icon>icon.skill0274</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4887,7 +4887,7 @@
 		</effects>
 	</skill>
 	<skill id="275" toLevel="1" name="Dance of Fury">
-		<!-- Increases all party members' Atk. Spd. by 15% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- All party members' Atk. Spd. +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. Requires dual swords. -->
 		<icon>icon.skill0275</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4921,7 +4921,7 @@
 		</effects>
 	</skill>
 	<skill id="276" toLevel="1" name="Dance of Concentration">
-		<!-- Decreases all party members' magic cancel damage by 40 and increases Casting Spd. by 30% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- All party members' Casting Interruption Rate -$s2, Casting Spd. +$s3 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. Requires dual swords. -->
 		<icon>icon.skill0276</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4959,7 +4959,7 @@
 		</effects>
 	</skill>
 	<skill id="277" toLevel="1" name="Dance of Light">
-		<!-- Increases all party members' Holy P. Atk. by 20 for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- All party members' P. Atk. +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. Requires dual swords. -->
 		<icon>icon.skill0277</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -4994,7 +4994,7 @@
 		</effects>
 	</skill>
 	<skill id="278" toLevel="6" name="Summon Viper Cubic">
-		<!-- Summons a Viper Cubic. The Viper Cubic uses magic that poisons a targeted enemy. Consumes $s1 Spirit Ore when summoning. -->
+		<!-- Summons Viper Cubic that uses magic that poisons a target. Consumes $s1 Spirit Ore when summoning. -->
 		<icon>icon.skill0278</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -5054,7 +5054,7 @@
 		</effects>
 	</skill>
 	<skill id="279" toLevel="17" name="Lightning Strike">
-		<!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with $s1 power. Paralyzes for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with $s1 power. Paralyzes for $s2\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0279</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -5160,7 +5160,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DefenceTrait">
 				<PARALYZE>100</PARALYZE>
@@ -5168,7 +5168,7 @@
 		</effects>
 	</skill>
 	<skill id="280" toLevel="37" name="Burning Fist">
-		<!-- Hurls a Fire type iron-fist to attack the target with $s1 Power added to P. Atk. Requires a fist weapon. Ignores Shield Defense. Over-hit and Critical are possible. -->
+		<!-- Hurls a fiery iron fist to attack the target with $s1 power. Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0280</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -5354,7 +5354,7 @@
 		</effects>
 	</skill>
 	<skill id="281" toLevel="37" name="Soul Breaker">
-		<!-- Attacks the target with $s1 power. Inflicts stun for $s2 Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks the target with $s1 power. Inflicts stun for $s2 Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0281</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -5621,12 +5621,12 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="282" toLevel="1" name="Puma Spirit Totem">
-		<!-- Possessed by a Puma's soul, Accuracy +6 and Atk. Spd. +20% for 5 min. Requires a fist weapon. -->
+		<!-- Summons a Puma's spirit. P. Accuracy +6, Atk. Spd. +20% for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0282</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -5727,7 +5727,7 @@
 					<value level="7">14805</value>
 				</npcId>
 				<lifeTime>1200</lifeTime>
-				<consumeItemId>1459</consumeItemId> <!-- Crystal (C-grade) -->
+				<consumeItemId>1459</consumeItemId> <!-- C-grade Crystal -->
 				<consumeItemCount>
 					<value level="1">1</value>
 					<value level="2">1</value>
@@ -5742,7 +5742,7 @@
 		</effects>
 	</skill>
 	<skill id="284" toLevel="40" name="Hurricane Assault">
-		<!-- Attacks the target with rapid consecutive strikes with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consumption of up to $s2 Momentum levels. Over-hit and Critical are possible. Ignores Shield Defense. -->
+		<!-- Attacks the target with rapid consecutive strikes with $s1 power. Consumes up to $s2 Momentum to increase damage. Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0284</icon>
 		<castRange>40</castRange>
 		<coolTime>440</coolTime>
@@ -6098,7 +6098,7 @@
 		</effects>
 	</skill>
 	<skill id="287" toLevel="3" name="Lionheart">
-		<!-- Buff Cancellation/ Obstruction/ Stupor/ Confusion Resistance +$s2 for $s1 -->
+		<!-- For $s1, Buff Cancel/ Obstruction/ Stupor/ Confusion Resistance +$s2. -->
 		<icon>icon.skill0287</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -6378,7 +6378,7 @@
 		</effects>
 	</skill>
 	<skill id="292" toLevel="1" name="Bison Spirit Totem">
-		<!-- The player is possessed by a Bison's soul. For 1 min., Accuracy +6 when using a fist weapon, P. Atk. +10% and Critical Rate +100 when HP is 60% or below. If HP is 30% or below, P. Atk. +30% and Critical Rate +300. Requires a fist weapon. -->
+		<!-- Summons a Bison's spirit. For 1 min., P. Accuracy +6. When HP<60%, P. Atk. +10% and Critical Rate for standard attacks +100. When HP<30%, P. Atk. +30% and Critical Rate for standard attacks +300. Requires a fist weapon. -->
 		<icon>icon.skill0292</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -6431,7 +6431,7 @@
 		</effects>
 	</skill>
 	<skill id="293" toLevel="20" name="Two-handed Weapon Mastery">
-		<!-- Increases P. Atk. by $s1 and Accuracy by $s2 when using a two-handed sword or two-handed blunt. -->
+		<!-- P. Atk. +$s1 and P. Accuracy +$s2 when using a two-handed sword or a two-handed blunt weapon. -->
 		<icon>icon.skill0293</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -6488,7 +6488,7 @@
 		</effects>
 	</skill>
 	<skill id="294" toLevel="1" name="Shadow Sense">
-		<!-- Increases Accuracy by 3 at night. -->
+		<!-- P. Accuracy +3 at night. -->
 		<icon>icon.skill0294</icon>
 		<magicLevel>15</magicLevel>
 		<operateType>P</operateType>
@@ -6513,7 +6513,7 @@
 		</effects>
 	</skill>
 	<skill id="296" toLevel="1" name="Chameleon Rest">
-		<!-- Allows you to sit and rest while being protected from a monster's pre-emptive attack. MP will be consumed continuously. -->
+		<!-- Allows you to sit and rest while being protected from monsters' preemptive attacks. MP will be consumed continuously. -->
 		<icon>icon.skill0296</icon>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<magicLevel>46</magicLevel>
@@ -6584,7 +6584,7 @@
 		</effects>
 	</skill>
 	<skill id="298" toLevel="1" name="Rabbit Spirit Totem">
-		<!-- Becomes possessed by a Rabbit's soul. Increases Atk. Spd. by 30%, Speed by 30%, and Evasion by 12 for 5 min. Requires a fist weapon. -->
+		<!-- Summons a Rabbit's spirit. For 5 min., Atk. Spd. +30%, Speed +30%, P. Evasion +12. Requires a fist weapon. -->
 		<icon>icon.skill0298</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -6625,7 +6625,7 @@
 		</effects>
 	</skill>
 	<skill id="299" toLevel="1" name="Summon Wild Hog Cannon">
-		<!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict ranged attacks. Switching modes takes 30 sec. Requires 70 B-grade Crystals. -->
+		<!-- Summons a siege weapon. It can move only in the normal mode. When the siege mode is active, it cannot move, but attacks targets from a distance. Switching modes takes 30 sec. Requires 70 B-grade Crystals. -->
 		<icon>icon.skill0299</icon>
 		<hitTime>180000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -6646,7 +6646,7 @@
 			<effect name="Summon">
 				<npcId>14768</npcId> <!-- Wild Hog Cannon -->
 				<lifeTime>1200</lifeTime>
-				<consumeItemId>2132</consumeItemId> <!-- Gemstone (B-grade) -->
+				<consumeItemId>2132</consumeItemId> <!-- B-grade Gemstone -->
 				<consumeItemCount>20</consumeItemCount>
 			</effect>
 		</effects>

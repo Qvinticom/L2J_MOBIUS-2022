@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="48800" name="Greater Pearl" additionalName="Lv. 3" type="Armor">
-		<!-- When equipped, increases M. Def. by 1485 and decreases Received M. Critical Damage by 7%. Additionally increases M. Def. by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- M. Def. +1485, Received M. Critical Damage -7%. Additionally, M. Def. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -9,11 +9,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="17709" level="8" />
+			<skill id="17709" level="8" /> <!-- Pearl -->
 		</skills>
 	</item>
 	<item id="48801" name="Greater Pearl" additionalName="Lv. 4" type="Armor">
-		<!-- When equipped, increases M. Def. by 1621 and decreases Received M. Critical Damage by 8%. Additionally increases M. Def. by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- M. Def. +1621, Received M. Critical Damage -8%. Additionally, M. Def. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -21,11 +21,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="17709" level="9" />
+			<skill id="17709" level="9" /> <!-- Pearl -->
 		</skills>
 	</item>
 	<item id="48802" name="Greater Pearl" additionalName="Lv. 5" type="Armor">
-		<!-- When equipped, increases M. Def. by 1785 and decreases Received M. Critical Damage by 10%. Additionally increases M. Def. by 10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- M. Def. +1785, received M. Critical Damage -10%. Additionally, M. Def. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -33,11 +33,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="17709" level="10" />
+			<skill id="17709" level="10" /> <!-- Pearl -->
 		</skills>
 	</item>
 	<item id="48803" name="Greater Vital Stone" additionalName="Lv. 2" type="Armor">
-		<!-- When equipped, increases Bonus XP gain in Vitality state by 32%, and decreases Vitality Consumption Spd. by 16%. Additionally increases XP gain by 10%. Can use the Vital Wind skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Vitality bonus +52%, Vitality Consumption -16%, acquired XP/ SP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -45,12 +45,12 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18568" level="7" />
-			<skill id="27439" level="4" />
+			<skill id="18568" level="7" /> <!-- Vital Stone -->
+			<skill id="27439" level="4" /> <!-- Vital Stone - Vital Wind -->
 		</skills>
 	</item>
 	<item id="48804" name="Greater Vital Stone" additionalName="Lv. 3" type="Armor">
-		<!-- When equipped, increases Bonus XP gain in Vitality state by 34%, and decreases Vitality Consumption Spd. by 17%. Additionally increases XP gain by 10%. Can use the Vital Wind skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Vitality bonus +54%, Vitality Consumption -17%, acquired XP/ SP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -58,12 +58,12 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18568" level="8" />
-			<skill id="27439" level="4" />
+			<skill id="18568" level="8" /> <!-- Vital Stone -->
+			<skill id="27439" level="4" /> <!-- Vital Stone - Vital Wind -->
 		</skills>
 	</item>
 	<item id="48805" name="Greater Vital Stone" additionalName="Lv. 4" type="Armor">
-		<!-- When equipped, increases Bonus XP gain in Vitality state by 36%, and decreases Vitality Consumption Spd. by 18%. Additionally increases XP gain by 10%. Can use the Vital Wind skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Vitality bonus +56%, Vitality Consumption -18%, acquired XP/ SP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -72,12 +72,12 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18568" level="9" />
-			<skill id="27439" level="4" />
+			<skill id="18568" level="9" /> <!-- Vital Stone -->
+			<skill id="27439" level="4" /> <!-- Vital Stone - Vital Wind -->
 		</skills>
 	</item>
 	<item id="48806" name="Greater Vital Stone" additionalName="Lv. 5" type="Armor">
-		<!-- When equipped, increases Bonus XP gain in Vitality state by 40%, and decreases Vitality Consumption Spd. by 20%. Additionally increases XP gain by 10%. Can use the Vital Wind skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Vitality bonus +60%, Vitality Consumption -20%, acquired XP/ SP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -86,64 +86,68 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18568" level="10" />
-			<skill id="27439" level="5" />
+			<skill id="18568" level="10" /> <!-- Vital Stone -->
+			<skill id="27439" level="5" /> <!-- Vital Stone - Vital Wind -->
 		</skills>
 	</item>
 	<item id="48807" name="Greater Garnet" additionalName="Lv. 2" type="Armor">
-		<!-- When equipped, increases All Debuff Defense Success Rates by 30%, Reflect Resistance by 3%, and removes Stun/ Silence if damaged by a PC. When used, removes your debuff. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<!-- Debuff Resistance +30%, Damage Reflection Resistance +3%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="30" />
 		<skills>
-			<skill id="18566" level="7" />
-			<skill id="18567" level="2" />
+			<skill id="18566" level="7" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
 	<item id="48808" name="Greater Garnet" additionalName="Lv. 3" type="Armor">
-		<!-- When equipped, increases All Debuff Defense Success Rates by 30%, Reflect Resistance by 6%, and removes Stun/ Silence if damaged by a PC. When used, removes your debuff. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<!-- Debuff Resistance +30%, Damage Reflection Resistance +6%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="30" />
 		<skills>
-			<skill id="18566" level="8" />
-			<skill id="18567" level="2" />
+			<skill id="18566" level="8" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
 	<item id="48809" name="Greater Garnet" additionalName="Lv. 4" type="Armor">
-		<!-- When equipped, increases All Debuff Defense Success Rates by 30%, Reflect Resistance by 9%, and removes Stun/ Silence if damaged by a PC. When used, removes your debuff. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<!-- Debuff Resistance +30%, Damage Reflection Resistance +9%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="30" />
 		<skills>
-			<skill id="18566" level="9" />
-			<skill id="18567" level="2" />
+			<skill id="18566" level="9" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
 	<item id="48810" name="Greater Garnet" additionalName="Lv. 5" type="Armor">
-		<!-- When equipped, increases All Debuff Defense Success Rates by 30%, Reflect Resistance by 15%, and removes Stun/ Silence if damaged by a PC. When used, removes your debuff. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+		<!-- Debuff Resistance +30%. Damage Reflection Resistance +15%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="30" />
 		<skills>
-			<skill id="18566" level="10" />
-			<skill id="18567" level="2" />
+			<skill id="18566" level="10" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
 	<item id="48811" name="Greater Tanzanite" additionalName="Lv. 2" type="Armor">
-		<!-- When used, creates a barrier that absorbs 55000 Damage for 15 sec, and instantly restores 15% of Max HP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Creates a protective barrier that absorbs 55,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -155,7 +159,7 @@
 		</skills>
 	</item>
 	<item id="48812" name="Greater Tanzanite" additionalName="Lv. 3" type="Armor">
-		<!-- When used, creates a barrier that absorbs 60000 Damage for 15 sec, and instantly restores 15% of Max HP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Creates a protective barrier that absorbs 60,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -167,7 +171,7 @@
 		</skills>
 	</item>
 	<item id="48813" name="Greater Tanzanite" additionalName="Lv. 4" type="Armor">
-		<!-- When used, creates a barrier that absorbs 65000 Damage for 15 sec, and instantly restores 15% of Max HP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Creates a protective barrier that absorbs 65,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -179,7 +183,7 @@
 		</skills>
 	</item>
 	<item id="48814" name="Greater Tanzanite" additionalName="Lv. 5" type="Armor">
-		<!-- When used, creates a barrier that absorbs 70000 Damage for 15 sec, and instantly restores 15% of Max HP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Creates a protective barrier that absorbs 70,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -191,7 +195,7 @@
 		</skills>
 	</item>
 	<item id="48815" name="Greater Red Cat's Eye" additionalName="Lv. 2" type="Armor">
-		<!-- When equipped, increases P. Critical Damage by 13%, P. Skill Critical Damage by 13%, P. Skill Power by 5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Critical Damage for standard attacks +13%, P. Skill Critical Damage +13%, P. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -199,11 +203,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18713" level="7" />
+			<skill id="18713" level="7" /> <!-- Red Cat's Eye -->
 		</skills>
 	</item>
 	<item id="48816" name="Greater Red Cat's Eye" additionalName="Lv. 3" type="Armor">
-		<!-- When equipped, increases P. Critical Damage by 13%, P. Skill Critical Damage by 13%, P. Skill Power by 6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Critical Damage for standard attacks +13%, P. Skill Critical Damage +13%, P. Skill Power +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -211,11 +215,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18713" level="8" />
+			<skill id="18713" level="8" /> <!-- Red Cat's Eye -->
 		</skills>
 	</item>
 	<item id="48817" name="Greater Red Cat's Eye" additionalName="Lv. 4" type="Armor">
-		<!-- When equipped, increases P. Critical Damage by 14%, P. Skill Critical Damage by 14%, P. Skill Power by 6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Critical Damage for standard attacks +14%, P. Skill Critical Damage +14%, P. Skill Power +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -223,11 +227,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18713" level="9" />
+			<skill id="18713" level="9" /> <!-- Red Cat's Eye -->
 		</skills>
 	</item>
 	<item id="48818" name="Greater Red Cat's Eye" additionalName="Lv. 5" type="Armor">
-		<!-- When equipped, increases P. Critical Damage by 15%, P. Skill Critical Damage by 15%, P. Skill Power by 7%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Critical Damage for standard attacks +15%, P. Skill Critical Damage +15%, P. Skill Power +7%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -235,11 +239,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18713" level="10" />
+			<skill id="18713" level="10" /> <!-- Red Cat's Eye -->
 		</skills>
 	</item>
 	<item id="48819" name="Greater Blue Cat's Eye" additionalName="Lv. 2" type="Armor">
-		<!-- When equipped, increases M. Skill Critical Damage by 13% and M. Skill Power by 5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- M. Skill Critical Damage +13%, M. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -247,11 +251,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18714" level="7" />
+			<skill id="18714" level="7" /> <!-- Blue Cat's Eye -->
 		</skills>
 	</item>
 	<item id="48820" name="Greater Blue Cat's Eye" additionalName="Lv. 3" type="Armor">
-		<!-- When equipped, increases M. Skill Critical Damage by 13% and M. Skill Power by 6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- M. Skill Critical Damage +13%, M. Skill Power +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -259,11 +263,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18714" level="8" />
+			<skill id="18714" level="8" /> <!-- Blue Cat's Eye -->
 		</skills>
 	</item>
 	<item id="48821" name="Greater Blue Cat's Eye" additionalName="Lv. 4" type="Armor">
-		<!-- When equipped, increases M. Skill Critical Damage by 14% and M. Skill Power by 6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- M. Skill Critical Damage +14%, M. Skill Power +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -271,11 +275,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18714" level="9" />
+			<skill id="18714" level="9" /> <!-- Blue Cat's Eye -->
 		</skills>
 	</item>
 	<item id="48822" name="Greater Blue Cat's Eye" additionalName="Lv. 5" type="Armor">
-		<!-- When equipped, increases M. Skill Critical Damage by 15% and M. Skill Power by 7%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Equipping various Greater Gems will grant additional effects. -->
+		<!-- M. Skill Critical Damage +15%, M. Skill Power +7%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enhancing>. Compounding two jewels of the same level, you can get superior jewel. -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -283,11 +287,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18714" level="10" />
+			<skill id="18714" level="10" /> <!-- Blue Cat's Eye -->
 		</skills>
 	</item>
 	<item id="48823" name="Freya's Ice Staff" additionalName="Event" type="Weapon">
-		<!-- Freya's Ice Staff. Enchant it to draw out its power. If you successfully enchant it to a high level, you can exchange it for a special reward through Event NPC Freya. Will be deleted when the event ends. -->
+		<!-- If you enchant it to a high level, you can exchange it for a special reward through the Mammon's Relic Collector. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -311,7 +315,7 @@
 		</stats>
 	</item>
 	<item id="48824" name="Scroll: Enchant Freya's Staff" additionalName="Event" type="EtcItem">
-		<!-- A weapon enchant scroll that can be used only on Freya's Ice Staff. You cannot use items that increase enchant success rates. Will be deleted when the event ends. -->
+		<!-- A weapon enchant scroll that can be used only on Mammon's Magic Staff. You cannot use items that increase enchant success rates. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -320,7 +324,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48825" name="Giant's Scroll: Enchant Freya's Staff" additionalName="Event" type="EtcItem">
-		<!-- A weapon enchant scroll that can be used only on Freya's Ice Staff. The scroll enchants the weapon randomly between +1 to +3, and can only be used up to +14. Failure to enchant destroys the item. You cannot use items that increase enchant success rates. Will be deleted when the event ends. -->
+		<!-- Scroll for enchanting Mammon's Magic Staff. Enchants randomly from +1 to +3. Can be used for enchanting up to +22, in case of failure the weapon disappears. Cannot be used with items that increase enchant success rate. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -361,7 +365,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48830" name="Freya's Ice Rose" type="EtcItem">
-		<!-- Dimensional item. When used, increases Max HP/ MP/ CP by 30%, P. Atk./ M. Atk./ P. Def./ M. Def. by 30%, Atk. Spd./ Casting Spd. by 10%, Speed by 20, Attack/ Attribute Resistance by 100, Damage by 10%, P./ M. Skill Power by 10%, Acquired XP/ SP by 30%, and decreases Damage Received by 10% and Skill MP Consumption by 15% for 30 min. Buffs persist after death. Cooldown is 5 min. Cannot stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P./ M. Atk. and P./ M. Def. +30%. Atk. Spd./ Casting Spd. +10%, Speed +20. Attribute Atk. Rate/ Resistance +100, Damage +10%, P./M. Skill Power +10%, Acquired XP/ SP +30%, Received damage -10%, and Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -382,7 +386,7 @@
 		</skills>
 	</item>
 	<item id="48831" name="Jewel Energy" type="EtcItem">
-		<!-- Combine it with a Greater Jewel to increase the jewel's power. Can be used with any Greater Jewel. -->
+		<!-- Enhance jewels during compounding. Can be used with any jewel Lv. 1-4. If compounding fails, jewel enhance level is reset. -->
 		<set name="icon" val="icon.bm_blessed_jewel" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -421,7 +425,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48835" name="Merkios' Altar Entrance Pass" type="EtcItem">
-		<!-- Extra pass to a daily instanced zone. Double-click to unbind Merkios' Altar. Cannot be used if the instanced zone is not bound. Can be used only once a day outside of the instanced zone. -->
+		<!-- An extra pass to an instance zone. Double-click to reset the instance zone timer for Merkios' Altar. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -468,7 +472,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="48839" name="Ultimate Lv. 5 Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain one level 5 Gem. -->
+		<!-- Double-click to obtain a Lv. 5 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -484,7 +488,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48841" name="Angel's Earring" type="Armor">
-		<!-- An Angel's earring. Enchanting increases Stun/ Mental/ Sleep Resistance and Atk. Rate, Received Healing, Vampiric Rage, P./ M. Atk., decreases Skill MP Consumption, Received P./ M. Critical Damage, depending on the enchantment level. These effects do not stack with identical earrings. -->
+		<!-- An Angel's earring.When enchanted, increases Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect and P./ M. Atk., also decreases Skill MP Consumption and Received P./ M. Critical Damage. The effect doesn't stack if two identical earrings are equipped. The item can be changed. <Enchanting>. Use Scroll: Enchant Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.accessary_angel_of_earing" />
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="78" />
@@ -601,7 +605,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48848" name="Freya's Ice Rose" additionalName="Event" type="EtcItem">
-		<!-- Dimensional item. When used, increases Max HP/ MP/ CP by 30%, P. Atk./ M. Atk./ P. Def./ M. Def. by 30%, Atk. Spd./ Casting Spd. by 10%, Speed by 20, Attack/ Attribute Resistance by 100, Damage by 10%, P./ M. Skill Power by 10%, Acquired XP/ SP by 30%, and decreases Damage Received by 10% and Skill MP Consumption by 15% for 30 min. Buffs persist after death. Cooldown is 5 min. Cannot stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P./ M. Atk. and P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, damage +10%, P./ M. Skill Power +10%, acquired XP/ SP +30%, received damage -10%, Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -624,7 +628,7 @@
 		</skills>
 	</item>
 	<item id="48849" name="Chronicle Token" additionalName="30-day" type="EtcItem">
-		<!-- A rune item. If stored in the inventory, increases P. Atk./ M. Atk./ P. Def./ M. Def./ Atk. Spd./ Casting Spd./ P. Critical Rate/ M. Increases Critical Rate/ Max HP&MP&CP by 5% and Vitality by 14%. Cannot be used in Olympiad. -->
+		<!-- A rune. When in inventory, P./ M. Atk., P./ M. Def., Atk./ Casting Spd., Critical Rate for standard attacks, M. Skill Critical Rate, Max HP/ MP/ CP +5%, Vitality bonus +14%. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -647,7 +651,7 @@
 		</skills>
 	</item>
 	<item id="48850" name="Chronicle Token" additionalName="90-day" type="EtcItem">
-		<!-- A rune item. If stored in the inventory, increases P. Atk./ M. Atk./ P. Def./ M. Def./ Atk. Spd./ Casting Spd./ P. Critical Rate/ M. Increases Critical Rate/ Max HP&MP&CP by 5% and Vitality by 14%. Cannot be used in Olympiad. -->
+		<!-- A rune. When in inventory, P./ M. Atk., P./ M. Def., Atk./ Casting Spd., Critical Rate for standard attacks, M. Skill Critical Rate, Max HP/ MP/ CP +5%, Vitality bonus +14%. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -692,7 +696,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48853" name="Lucky Gift Coupon" additionalName="8-hour" type="EtcItem">
-		<!-- Use it to participate in the lucky gift draw for 8 hours. Can be used by level 85 or higher. Buffs persist even after you change to a dual class or subclass. -->
+		<!-- You can apply to the Lucky Gift Draw for 8 h. Only for characters of level 85 or higher. The effect is not removed if you switch to a different class. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -703,7 +707,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48854" name="1 Billion Adena Box" type="EtcItem">
-		<!-- A gift from Chorong's fortune draw. Use it to earn 1 billion Adena. -->
+		<!-- Festival Fairy's gift. Double-click to obtain 1 billion adena. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -716,11 +720,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="57" min="1000000000" max="1000000000" chance="100" /> <!-- 1 Billion Adena -->
+			<item id="57" min="1000000000" max="1000000000" chance="100" /> <!-- Adena -->
 		</capsuled_items>
 	</item>
 	<item id="48855" name="2 Billion Adena Box" type="EtcItem">
-		<!-- A gift from Chorong's fortune draw. Use it to earn 2 billion Adena. -->
+		<!-- A gift from Festival Fairy's fortune draw. Double-click to earn 2 billion Adena. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -733,11 +737,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="57" min="2000000000" max="2000000000" chance="100" /> <!-- 2 Billion Adena -->
+			<item id="57" min="2000000000" max="2000000000" chance="100" /> <!-- Adena -->
 		</capsuled_items>
 	</item>
 	<item id="48856" name="3 Billion Adena Box" type="EtcItem">
-		<!-- A gift from Chorong's fortune draw. Use it to earn 3 billion Adena. -->
+		<!-- A gift from Festival Fairy's fortune draw. Double-click to earn 3 billion Adena. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -750,23 +754,30 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48857" name="Shining Dragon Attribute Tonic (XP)" additionalName="Event" type="EtcItem">
-		<!-- When used, increases Attack Attributes by 70, all Attribute Resistance by 70, and Acquired XP/ SP by 30% for 30 min. Buffs persist after death. Cooldown is 5 min. Cannot be used in Olympiad. -->
+		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for +30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39356" level="1" /> <!-- Glowing Dragon's Attribute Potion -->
+		</skills>
 	</item>
 	<item id="48858" name="Mysterious Ancient Herb" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.etc_vampiric_rage_herb_i01" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="48859" name="Sayha's Talisman Stage 8" type="Armor">
-		<!-- If equipped by Sayha's power, increases P. Def. by 1576, M. Def. by 1030, and Acquired XP/ SP by 20%. If equipped along with Stage 10 or higher Venir Talisman, increases Skill Power by 5% and decreases cooldown by 5%. <Active Skill>. Sayha's Divine Protection Lv. 2. Sayha's Encouragement Lv. 2. Sayha's Fury Lv. 2. If identical Talismans are equipped, only the effect of the highest level Talisman applies. -->
+		<!-- Grants Sayha's power: P. Def. +1576, M. Def. +1030, and acquired XP/ SP +20%. If equipped with Venir's Talisman Lv. 10 or higher, Skill Power +5% and Skill Cooldown -5%. Active Skill: Sayha's Grace Lv. 2. Sayha's Encouragement Lv. 2. Sayha's Anger Lv. 2. If two identical talismans are equipped, only the effect of the max level talisman is applied. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -778,7 +789,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48860" name="Fallen Angel's Ring Box" type="EtcItem">
-		<!-- Double-click to obtain 1 Fallen Angel's Ring and 10 Scrolls: Enchant Fallen Angel Accessory. -->
+		<!-- Double-click to obtain Fallen Angel's Ring and Scroll: Enchant Fallen Angel Accessory (10 pcs.). -->
 		<set name="icon" val="icon.sayha2017_box_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -796,7 +807,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48861" name="+9 Fallen Angel's Ring Box" type="EtcItem">
-		<!-- Double-click to obtain 1 +9 Fallen Angel's Ring. -->
+		<!-- Double-click to obtain +9 Fallen Angel's Ring. -->
 		<set name="icon" val="icon.sayha2017_box_i01" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -809,7 +820,7 @@
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="48864" min="1" max="1" minEnchant="9" maxEnchant="9" chance="100" /> <!-- +9 Fallen Angel's Ring -->
+			<item id="48864" min="1" max="1" minEnchant="9" maxEnchant="9" chance="100" /> <!-- Fallen Angel's Ring -->
 		</capsuled_items>
 	</item>
 	<item id="48862" name="+10 Fallen Angel's Ring Box" type="EtcItem">
@@ -826,11 +837,11 @@
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="48864" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- +10 Fallen Angel's Ring -->
+			<item id="48864" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Fallen Angel's Ring -->
 		</capsuled_items>
 	</item>
 	<item id="48863" name="Scroll: Enchant Fallen Angel Accessory" type="EtcItem">
-		<!-- Enchant scroll exclusively for Fallen Angel accessories. The scroll can enchant an accessory up to +10. Failure to enchant destroys the accessory. -->
+		<!-- Enchant scroll exclusively for Fallen Angel accessories. Can enchant an accessory up to +10. Note!. There is a chance to fail enchanting to +1. In that case, the item will be destroyed. -->
 		<set name="icon" val="icon.bm_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -848,7 +859,7 @@
 		</skills>
 	</item>
 	<item id="48864" name="Fallen Angel's Ring" type="Armor">
-		<!-- Fallen Angel's Ring. Enchantment increases Knock Back/ Knock Down/ Pull/ Faint Resistance and Attack Success, Vitality Bonus, Acquired XP/ SP, P. Critical Damage, P. Skill/ M. Skill Critical Damage, and additional Damage to Immobilized Target, depending on the enchantment level. These effects do not stack with identical rings. -->
+		<!-- Fallen Angel's Ring. When enchanted, increases Confusion Resistance/ Atk. Rate, Vitality Bonus, acquired XP/ SP, P. Critical Damage, P. Skill/ M. Skill Critical Damage and damage to immobilized targets. The effect doesn't stack if two identical earring are equipped. The item can be changed. <Enchanting>. Use Scroll: Enchant Fallen Angel Accessory. Can be augmented. -->
 		<set name="icon" val="icon.bm_ring_of_fallen_angel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -865,7 +876,7 @@
 		</stats>
 	</item>
 	<item id="48865" name="Fantastic Fishing Cube (15 times)" type="EtcItem">
-		<!-- A Fantastic Fishing Cube item. Use it to receive a Fantastic Fishing Basic Bundle. You can earn a Fantastic Fishing Intermediate Bundle containing Fantastic Fishing Spot Entrance Passes on the 3th, 6th, 9th, and 12th uses and a Fantastic Fishing Advanced Bundle on the 15th use. -->
+		<!-- A cube for the Fishing Dock. Double-click to obtain Fantastic Fishing Basic Bundle. Using it for the 3rd, 6th, 9th and 12th time grants Fantastic Fishing Intermediate Bundle and Pass to Fishing Dock. For the 15th time you get Fantastic Fishing Advanced Bundle. -->
 		<set name="icon" val="icon.bm_nebit_lure_cube" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -888,7 +899,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48867" name="Fantastic Fishing Intermediate Bundle" type="EtcItem">
-		<!-- Use it to obtain 500 Secret Embryo Bait Coupons, 3 Angler's Blessing (1-hour), and 2 Fantastic Fishing Spot Entrance Pass Packs (1-hour). -->
+		<!-- Double-click to obtain Secret Embryo Bait Coupon (500 pcs.), Master Fisherman's Blessing (1-hour) (3 pcs.), and Fishing Dock Pass Box (1-hour) (2 pcs.). -->
 		<set name="icon" val="Icon.bm_gold_fishing_poket" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -900,7 +911,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48868" name="Fantastic Fishing Advanced Bundle" type="EtcItem">
-		<!-- Use it to obtain 600 Secret Embryo Bait Coupons, 4 Angler's Blessing (1-hour), and 4 Fantastic Fishing Spot Entrance Pass Packs (1-hour). -->
+		<!-- Double-click to obtain Secret Embryo Bait Coupon (600 pcs.), Master Fisherman's Blessing (1-hour) (4 pcs.), and Fishing Dock Pass Box (1-hour) (4 pcs.). -->
 		<set name="icon" val="Icon.bm_gold_fishing_poket" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -958,7 +969,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48875" name="Forgotten Spellbook" type="EtcItem">
-		<!-- Double-click to randomly obtain a Forgotten Spellbook Chapter 1, Forgotten Spellbook Chapter 2, or Forgotten Spellbook Chapter 3. The Forgotten Spellbook can boost Forgotten Power: Physical Attack/ Magical Attack/ Armor Defense Skills. -->
+		<!-- Double-click to randomly obtain a Forgotten Spellbook Chapter 1. Forgotten Spellbook Chapter 2. or Forgotten Spellbook Chapter 3. The Forgotten Spellbook can boost Forgotten Power: Physical Attack/Magical Attack/Armor Defense/Vitalizing/Elemental Guard Skills. -->
 		<set name="icon" val="icon.bm_skill_book_lock" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="immediate_effect" val="true" />
@@ -969,7 +980,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48876" name="Forgotten Spellbook Chapter 1" type="EtcItem">
-		<!-- A spellbook required to learn Forgotten Power Levels 6 to 10. You can exchange it through a Dimensional Merchant for Forgotten Spellbook Chapter 2 or Forgotten Spellbook Chapter 3. -->
+		<!-- A spellbook for learning the Forgotten Power skills Lv. 6-10. Can be exchanged for Forgotten Spellbook Chapter 2 or Forgotten Spellbook Chapter 3 through the Game Assistant. -->
 		<set name="icon" val="icon.bm_skill_book_base" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -979,7 +990,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48877" name="Forgotten Spellbook Chapter 2" type="EtcItem">
-		<!-- A spellbook required to learn Forgotten Power Levels 11 to 20. -->
+		<!-- A spellbook for learning the Forgotten Power skills Lv. 11-20. -->
 		<set name="icon" val="icon.bm_skill_book_base" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -989,7 +1000,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48878" name="Forgotten Spellbook Chapter 3" type="EtcItem">
-		<!-- A spellbook required to learn Forgotten Power Levels 21 to 30. -->
+		<!-- A spellbook for learning the Forgotten Power skills Lv. 21-30. -->
 		<set name="icon" val="icon.bm_skill_book_base" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1110,7 +1121,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48892" name="Scroll: Summon Golden Dog" type="EtcItem">
-		<!-- Contains Golden Dog's strong wish to personally see the brave warriors of Aden. Use the scroll and Golden Dog will be summoned as long as Hellion White Dog or Pink Dog do not interfere. -->
+		<!-- Contains Golden Dog's strong wish to personally see the brave warriors of Aden. Use the scroll to summon the White or Pink Dog and then the Golden Dog. -->
 		<set name="icon" val="icon.newyear_dog" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -1162,7 +1173,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48898" name="Suspicious Vault" type="EtcItem">
-		<!-- A suspicious vault secretly traded at Mystic Tavern. If used, it returns a rare item. -->
+		<!-- A suspicious vault discovered at Mystic Tavern. There are Honey Dark Beer and rare items inside. -->
 		<set name="icon" val="icon.bm_strongbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -1170,7 +1181,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48899" name="Shilen's Soul Crystal - Stage 1" type="EtcItem">
-		<!-- A special Soul Crystal with Shilen's Soul. Can assign weapons one of the following soul crystal enhancement abilities: War, Revelation, Greed, Punishment, Awakening, Disaster, and Advent. Can be upgraded to the next stage by compounding with Shilen's Soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
+		<!-- A special Soul Crystal with Shillien's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Shillien's Soul. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="material" val="PAPER" />

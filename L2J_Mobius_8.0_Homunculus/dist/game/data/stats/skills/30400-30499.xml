@@ -4,48 +4,30 @@
 		<!-- Wind/ Holy Resistance +$s1. -->
 		<icon>icon.skill30400</icon>
 		<operateType>P</operateType>
-		<magicLevel>
-			<value level="1">85</value>
-			<value level="2">85</value>
-		</magicLevel>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="DefenceAttribute">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">20</value>
-				</amount>
+				<amount>10</amount>
 				<attribute>WIND</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">20</value>
-				</amount>
+				<amount>10</amount>
 				<attribute>HOLY</attribute>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30401" toLevel="2" name="Tenacity">
-		<!-- Max. HP +$s1, Speed +$s2. -->
+		<!-- Max HP +$s1, Speed +$s2. -->
 		<icon>icon.skill30401</icon>
-		<magicLevel>
-			<value level="1">85</value>
-			<value level="2">85</value>
-		</magicLevel>
+		<magicLevel>99</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
-				<amount>
-					<value level="1">1</value>
-					<value level="2">2</value>
-				</amount>
+				<amount>1</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
-				<amount>
-					<value level="1">4</value>
-					<value level="2">7</value>
-				</amount>
+				<amount>4</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -54,28 +36,20 @@
 		<!-- MP Consumption -$s1. -->
 		<icon>icon.skill30402</icon>
 		<operateType>P</operateType>
+		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="MagicMpCost">
-				<amount>
-					<value level="1">-1</value>
-					<value level="2">-2</value>
-				</amount>
+				<amount>-1</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>
-					<value level="1">-1</value>
-					<value level="2">-2</value>
-				</amount>
+				<amount>-1</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>
-					<value level="1">-1</value>
-					<value level="2">-2</value>
-				</amount>
+				<amount>-1</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>

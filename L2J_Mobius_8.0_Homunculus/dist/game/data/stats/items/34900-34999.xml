@@ -58,6 +58,9 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player instanceId="224,225,226,227" />
+		</cond>
 		<skills>
 			<skill id="15105" level="1" /> <!-- Mysterious Shadow -->
 		</skills>
@@ -77,12 +80,15 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player instanceId="224,225,226,227" />
+		</cond>
 		<skills>
 			<skill id="15106" level="1" /> <!-- Mysterious Power -->
 		</skills>
 	</item>
 	<item id="34905" name="Clan-exclusive Pet (Raccoon)" type="EtcItem">
-		<!-- An item that summons a nurture-type clan pet (Rakun). You have a chance of obtaining an additional item for 72 hours after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
+		<!-- An item that summons a nurture-type clan pet (Rakun). You have a chance of obtaining an additional item for 72 h. after the pet is summoned. Only characters belonging to a clan of level 5 and higher can summon it. -->
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="weight" val="10" />
 		<set name="is_oly_restricted" val="true" />
@@ -99,7 +105,7 @@
 		</skills>
 	</item>
 	<item id="34906" name="Clan-exclusive Pet (White Cat)" type="EtcItem">
-		<!-- An item that summons a nurture-type clan pet (White Cat). You have a chance of obtaining an additional item for 72 hours after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
+		<!-- An item that summons a nurture-type clan pet (White Cat). You have a chance of obtaining an additional item for 72 h. after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="weight" val="10" />
 		<set name="is_oly_restricted" val="true" />
@@ -116,7 +122,7 @@
 		</skills>
 	</item>
 	<item id="34907" name="Clan-exclusive Pet (Desert Fox)" type="EtcItem">
-		<!-- An item that summons a nurture-type clan pet (Desert Fox). You have a chance of obtaining an additional item for 72 hours after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
+		<!-- An item that summons a nurture-type clan pet (Desert Fox). You have a chance of obtaining an additional item for 72 h. after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="weight" val="10" />
 		<set name="is_oly_restricted" val="true" />
@@ -185,7 +191,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34911" name="Ruler's Authority" additionalName="Not in Use" type="EtcItem">
-		<!-- Item given to the winner of the tournament held in the Mysterious Mansion. Increases Max HP/ MP/ CP by 500, Weight Gauge by 12000, damage inflicted during PvP by 5%, Damage Reflection Resistance by 5, and Attribute Resistance by 10. Also increases HP/ MP Recovery Rate and Inventory Slot numbers. Decreases damage received during PvP by 6%. You can use these item skills only during the week of victory. -->
+		<!-- A reward for the winner of the race held in the Mysterious Mansion. Max HP/ MP/ CP +500, Weight Limit +12,000, PvP damage +5%, Damage Reflection Resistance +5, 6 Attribute Resistance +10, Inventory Slots +1, Received PvP damage -6%. Increases HP/ MP Recovery Rate. Available only during the tournament. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -234,7 +240,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34914" name="Transport Goods - Aden" type="EtcItem">
-		<!-- Box stolen from the transportation unit. Give it to the revolutionaries to receive a campaign reward. -->
+		<!-- A box stolen from the Captain of the Revolutionaries. Double-click to obtain Transport Goods. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -253,7 +259,7 @@
 		</skills>
 	</item>
 	<item id="34915" name="Hard Transport Goods - Aden" additionalName="Not in Use" type="EtcItem">
-		<!-- Box stolen from the transportation cart. Give it to the revolutionaries to receive a campaign reward. -->
+		<!-- Box for the supply shipment. Take it to the revolutionaries to get a reward. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -272,7 +278,7 @@
 		</skills>
 	</item>
 	<item id="34916" name="Transport Box" type="EtcItem">
-		<!-- Box stolen from the transportation unit. Give it to the revolutionaries to receive a campaign reward. -->
+		<!-- Box for the supply shipment. Take it to the revolutionaries to get a reward. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -287,7 +293,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34917" name="Greater Transport Box" type="EtcItem">
-		<!-- Box stolen from the transportation cart. Give it to the revolutionaries to receive a campaign reward. -->
+		<!-- Box for the supply shipment. Take it to the revolutionaries to get a reward. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -498,7 +504,7 @@
 		</stats>
 	</item>
 	<item id="34925" name="Cloak of Light" type="Armor">
-		<!-- A cloak that symbolizes glory and light. When equipped, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +2, and Damage Received -5%. Can use the Escape: Castle skill. Cannot be used while in a chaotic state. Can be equipped only by marquis or higher. Cannot be used in the Olympiad and dimensional servers. Cannot be transferred between servers. -->
+		<!-- A cloak that symbolizes glory and light. STR/ DEX +2, CON +2, INT +2, WIT +2, MEN +2, LUC +2 CHA +2, Received damage -5%. Enables teleportation to the castle. Cannot be used by chaotic characters. Available only to Marquis or higher. Cannot be used in the Olympiad and on the dimensional servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -519,9 +525,6 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
-		<cond>
-			<player level="80" />
-		</cond>
 		<skills>
 			<skill id="19041" level="1" /> <!-- King's Call -->
 			<skill id="19039" level="1" /> <!-- Cloak of Light -->
@@ -538,7 +541,7 @@
 		</stats>
 	</item>
 	<item id="34926" name="Cloak of Darkness" type="Armor">
-		<!-- A cloak that symbolizes avarice and darkness. When equipped, STR/ MEN/ DEX/ WIT/ INT/ CON/ LUC/ CHA +2, and Damage Received -5%. Can use the Escape: Castle skill. Can be equipped only by marquis or higher. Cannot be used in the Olympiad and dimensional servers. Cannot be transferred between servers. -->
+		<!-- A cloak that symbolizes darkness. STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2, LUC +2 CHA +2, Received damage -5%. Enables teleportation to the castle. Available only to Marquis or higher. Cannot be used in the Olympiad and on the dimensional servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -559,9 +562,6 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
-		<cond>
-			<player level="80" />
-		</cond>
 		<skills>
 			<skill id="19041" level="1" /> <!-- King's Call -->
 			<skill id="19040" level="1" /> <!-- Cloak of Darkness -->
@@ -578,7 +578,7 @@
 		</stats>
 	</item>
 	<item id="34927" name="Dimension Keeper's Blue Box" type="EtcItem">
-		<!-- Blue-colored box bestowed by the kingdom of Aden as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<!-- Double-click to obtain a reward for defeating the dimensional demons in Kartia's Labyrinth. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -598,7 +598,7 @@
 		</skills>
 	</item>
 	<item id="34928" name="Dimension Keeper's Red Box" type="EtcItem">
-		<!-- Red-colored box bestowed by the kingdom of Aden as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<!-- Double-click to obtain a reward for defeating the dimensional demons in Kartia's Labyrinth. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -618,7 +618,7 @@
 		</skills>
 	</item>
 	<item id="34929" name="Dimension Keeper's Golden Box" type="EtcItem">
-		<!-- Gold-colored box bestowed by the kingdom of Aden as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<!-- Double-click to obtain a reward for defeating the dimensional demons in Kartia's Labyrinth. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -638,7 +638,7 @@
 		</skills>
 	</item>
 	<item id="34930" name="Dimension Traveler's Blue Box" type="EtcItem">
-		<!-- Blue-colored box given by the Kartia Researcher as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<!-- Double-click to obtain a reward for defeating the dimensional demons in Kartia's Labyrinth. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -658,7 +658,7 @@
 		</skills>
 	</item>
 	<item id="34931" name="Dimension Traveler's Red Box" type="EtcItem">
-		<!-- Red-colored box given by the Kartia Researcher as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<!-- Double-click to obtain a reward for defeating the dimensional demons in Kartia's Labyrinth. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -678,7 +678,7 @@
 		</skills>
 	</item>
 	<item id="34932" name="Dimension Traveler's Golden Box" type="EtcItem">
-		<!-- Gold-colored box given by the Kartia Researcher as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<!-- Double-click to obtain a reward for defeating the dimensional demons in Kartia's Labyrinth. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -698,7 +698,7 @@
 		</skills>
 	</item>
 	<item id="34933" name="Kranken's Gift" type="EtcItem">
-		<!-- Gift containing Kranken's heart. Open to acquire a Scroll: Enchant Weapon (R-grade) or Scroll: Enchant Armor (R-grade). -->
+		<!-- A gift imbued with Kranken's spirit. Double-click to obtain a Scroll: Enchant R-grade Weapon or Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -717,7 +717,7 @@
 		</skills>
 	</item>
 	<item id="34934" name="Pobre's Gift" type="EtcItem">
-		<!-- Gift containing Pobre's heart. Open to acquire a Scroll: Enchant Weapon (R-grade) or Scroll: Enchant Armor (R-grade). -->
+		<!-- A gift imbued with Pobre's spirit. Double-click to obtain a Scroll: Enchant R-grade Weapon or Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -736,7 +736,7 @@
 		</skills>
 	</item>
 	<item id="34935" name="Star Agathion - Heejin Jang" additionalName="7-day" type="Armor">
-		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/ MP/ CP by 300, M. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Limit by 10000, Max HP/ MP/ CP by 300, M. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -769,7 +769,7 @@
 		</stats>
 	</item>
 	<item id="34936" name="Star Agathion - Hyuk Jang" additionalName="7-day" type="Armor">
-		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/ MP/ CP by 300, P. Atk. by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. When equipped, increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, P. Atk. +5%, and Attribute Resistance +10. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -802,7 +802,7 @@
 		</stats>
 	</item>
 	<item id="34937" name="Star Agathion - Sooro Kim" additionalName="7-day" type="Armor">
-		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/ MP/ CP by 300, P. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. When equipped, increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, P. Def. +5%, Max HP +5%, and Attribute Resistance +10. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -835,7 +835,7 @@
 		</stats>
 	</item>
 	<item id="34938" name="Star Agathion - Jaebum Pack" additionalName="7-day" type="Armor">
-		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/ MP/ CP by 300, M. Atk. By 6%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. When equipped, increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, M. Atk. +6%, and Attribute Resistance +10. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -868,7 +868,7 @@
 		</stats>
 	</item>
 	<item id="34939" name="Star Agathion - Shin-young Kim" additionalName="7-day" type="Armor">
-		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/ MP/ CP by 300, and Attribute Resistance by 10. Decreases skill cooldown and MP consumed during skill use by 3%. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. When equipped, increases CON/ MEN +3, Weight limit +10,000, Max HP/ MP/ CP +300, Attribute Resistance +10. Skill Cooldown -3%, Skill MP consumption -3%. Active skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -917,7 +917,7 @@
 		</skills>
 	</item>
 	<item id="34941" name="Life Stone: Hair Accessory" additionalName="Event" type="EtcItem">
-		<!-- Life Stone for Hair Accessories. -->
+		<!-- Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.life_dust_hairacc_general" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -927,7 +927,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34942" name="Lv. 2 Giant Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 2 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of the Giant's Dyes Lv. 2: STR/ DEX/ CON/ INT/ WIT/ MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -942,7 +942,7 @@
 		</skills>
 	</item>
 	<item id="34943" name="Lv. 2 Legendary Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 2 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of Legendary Dyes Lv. 2: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -957,7 +957,7 @@
 		</skills>
 	</item>
 	<item id="34944" name="Lv. 2 Ancient Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 2 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of Ancient Dyes Lv. 2: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -972,7 +972,7 @@
 		</skills>
 	</item>
 	<item id="34945" name="Lv. 3 Giant Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 3 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of the Giant's Dyes Lv. 3: STR/ DEX/ CON/ INT/ WIT/ MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -987,7 +987,7 @@
 		</skills>
 	</item>
 	<item id="34946" name="Lv. 3 Legendary Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 3 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of Legendary Dyes Lv. 3: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1002,7 +1002,7 @@
 		</skills>
 	</item>
 	<item id="34947" name="Lv. 3 Ancient Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 3 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of Ancient Dyes Lv. 3: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1032,7 +1032,7 @@
 		</skills>
 	</item>
 	<item id="34949" name="Letter Collector's Gift" additionalName="Event" type="EtcItem">
-		<!-- When Letter Collector's Gift is. used, for 1 hour it increases Atk. Spd. by 10%, Casting Spd. by 10%, Spd. by 10, Max HP and Max MP by 10%, and the appearance of the equipped weapon and armor change to that of Memorable items. Cooldown is 30 min. -->
+		<!-- When Letter Collector's Gift is. used, for 1 h. it increases Atk. Spd. by 10%, Casting Spd. by 10%, Spd. by 10, Max HP and Max MP by 10%, and the appearance of the equipped weapon and armor change to that of Memorable items. Cooldown is 30 min. -->
 		<set name="icon" val="icon.shield_bread_i02" />
 		<set name="weight" val="5" />
 		<set name="is_oly_restricted" val="true" />
@@ -1046,7 +1046,7 @@
 		</skills>
 	</item>
 	<item id="34950" name="Lv. 4 Giant Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 4 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of the Giant's Dyes Lv. 4: STR/ DEX/ CON/ INT/ WIT/ MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1061,7 +1061,7 @@
 		</skills>
 	</item>
 	<item id="34951" name="Lv. 4 Legendary Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 4 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of Legendary Dyes Lv. 4: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1076,7 +1076,7 @@
 		</skills>
 	</item>
 	<item id="34952" name="Lv. 4 Ancient Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 4 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of Ancient Dyes Lv. 4: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1091,7 +1091,7 @@
 		</skills>
 	</item>
 	<item id="34953" name="Lv. 5 Giant Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 5 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of the Giant's Dyes Lv. 5: STR/ DEX/ CON/ INT/ WIT/ MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1106,7 +1106,7 @@
 		</skills>
 	</item>
 	<item id="34954" name="Lv. 5 Legendary Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 5 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of Legendary Dyes Lv. 5: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1121,7 +1121,7 @@
 		</skills>
 	</item>
 	<item id="34955" name="Lv. 5 Ancient Dye Pack" additionalName="Event" type="EtcItem">
-		<!-- When opened, you can acquire 1 of the following Lv. 5 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- Double-click to obtain one of Ancient Dyes Lv. 5: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1135,7 +1135,7 @@
 		</skills>
 	</item>
 	<item id="34956" name="Letter - M" type="EtcItem">
-		<!-- Item for the Lineage II 8th Anniversary event. Combine with other letters to create a special word and bring it to Angel Cat to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_m_i00" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1306,7 +1306,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34968" name="Pansy" type="EtcItem">
-		<!-- Purple flower called a "Pansy." It means, "Think of me." -->
+		<!-- Purple flower called Pansy. It symbolizes thoughts and care about special person. -->
 		<set name="icon" val="icon.etc_flower_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1320,7 +1320,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34969" name="Iris" type="EtcItem">
-		<!-- Blue flower called an "Iris". It symbolizes the bringing of good news. -->
+		<!-- Blue flower called Iris. It symbolizes the bringing of good news. -->
 		<set name="icon" val="icon.etc_flower_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1392,7 +1392,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34974" name="Mandragora Stem" type="EtcItem">
-		<!-- Mandragora Stem obtained after defeating the Mandragora of Joy and Sorrow in the Guillotine Fortress. Bring to the Dark Elf Dadphyna in the Guillotine Fortress. -->
+		<!-- Mandragora Stem obtained after defeating the mandragoras in the Guillotine Fortress. Bring to the Dark Elf Dadphyna in the Guillotine Fortress. -->
 		<set name="icon" val="icon.etc_branch_gold_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1406,7 +1406,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34975" name="Mandragora Root" type="EtcItem">
-		<!-- Mandragora Root obtained after defeating the Mandragora of Prayer in the Guillotine Fortress. Bring to the Dark Elf Dadphyna in the Guillotine Fortress. -->
+		<!-- Mandragora Stem obtained after defeating the mandragoras in the Guillotine Fortress. Bring to the Dark Elf Dadphyna in the Guillotine Fortress. -->
 		<set name="icon" val="icon.etc_ginseng_gray_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1499,7 +1499,7 @@
 		</skills>
 	</item>
 	<item id="34980" name="Scroll of Escape - Isle of Prayer" type="EtcItem">
-		<!-- Scroll of Escape to the Isle of Prayer. Can only be used in the Soul Testing quest. Can move to the special Isle of Prayer area for the quest mission. Cannot be received again. -->
+		<!-- Can only be used in the Soul Testing quest. Can move character to the Chromatic Highlands for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1584,7 +1584,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34984" name="Talisman - Infinity" type="Armor">
-		<!-- Increases Max HP/ MP/ CP by 100, P. Accuracy and M. Accuracy by 1, P. Evasion and M. Evasion by 1 Vampiric Rage Effect by 2%, and Atk. Spd. and Casting Spd. by 10. -->
+		<!-- Max HP/ MP/ CP +100, P./ M. Accuracy +1, P./ M. Evasion +1, Vampiric Rage effect +2%, Atk. Spd./ Casting Spd. +10. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Can be upgraded to Talisman of Destruction through Seed Talisman Manager. -->
 		<set name="icon" val="icon.accessory_immortal_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1605,7 +1605,7 @@
 		</skills>
 	</item>
 	<item id="34985" name="Talisman - Destruction" type="Armor">
-		<!-- Increases Max HP/ MP/ CP by 100, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage Effect by 2%, Atk. Spd. and Casting Spd. by 10, P. Critical Rate by 30, and M. Critical Rate by 10. -->
+		<!-- Max HP/ MP/ CP +100, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +2%, Atk. Spd./ Casting Spd. +10, Critical Rate for standard attacks +30, M. Skill Critical Rate +10. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Take it along with Energy of Destruction and Giant's Energy to Seed Talisman Manager to obtain Talisman of Annihilation. -->
 		<set name="icon" val="icon.accessory_destruction_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1626,7 +1626,7 @@
 		</skills>
 	</item>
 	<item id="34986" name="Talisman - Annihilation" type="Armor">
-		<!-- Increases Max HP/ MP/ CP by 300, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage Effect by 3%, Atk. Spd. and Casting Spd. by 20, P. Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, and M. Atk. by 156. -->
+		<!-- Max HP/ MP/ CP +300, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +20, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +103, M. Atk. +156. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Take it along with Energy of Destruction and Giant's Energy to Seed Talisman Manager to obtain Talisman of Hellfire. -->
 		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1647,7 +1647,7 @@
 		</skills>
 	</item>
 	<item id="34987" name="Talisman - Hellfire" type="Armor">
-		<!-- When equipped, increases Max HP, MP, and CP by 400, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 30, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, M. Atk. by 156, Skill Power by 1%, Damage Reflection Resistance by 10, and P. and M. Def. by 20. -->
+		<!-- Max HP/ MP/ CP +400, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +30, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +103, M. Atk. +156, Skill Power +1%, Damage Reflection Resistance +10, P./ M. Def. +20. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Take it along with Hellfire Energy and Giant's Energy to Seed Talisman Manager to obtain Talisman of Desire. -->
 		<set name="icon" val="icon.accessory_hellfire_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1668,7 +1668,7 @@
 		</skills>
 	</item>
 	<item id="34988" name="Talisman - Desire" type="Armor">
-		<!-- When equipped, increases Max HP, MP, and CP by 500, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 40, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 203, M. Atk. by 256, Skill Power by 2%, Damage Reflection Resistance by 20, and P. and M. Def. by 40. MP consumption decreases by 1%. -->
+		<!-- Max HP/ MP/ CP +500, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +40, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +203, M. Atk. +256, Skill Power +2%, Damage Reflection Resistance +20, P./ M. Def. +40, Skill MP Consumption -1%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Take it along with Energy of Desire and Giant's Energy to Seed Talisman Manager to obtain Talisman of Longing. -->
 		<set name="icon" val="icon.accessory_ocean_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1689,7 +1689,7 @@
 		</skills>
 	</item>
 	<item id="34989" name="Talisman - Longing" type="Armor">
-		<!-- When equipped, increases Max HP, MP, and CP by 600, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 50, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 303, M. Atk. by 356, Skill Power by 4%, Damage Reflection Resistance by 30, and P. M. Def. by 60, and STR/ INT/ CON/ MEN/ DEX/ WIT by 2. MP consumption decreases by 3%. -->
+		<!-- Max HP/ MP/ CP +600, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +50, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +303, M. Atk. +356, Skill Power +4%, Damage Reflection Resistance +30%, P./ M. Def. +60, STR/ INT/ CON/ MEN/ DEX/ WIT +2, Skill MP consumption -3%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Can be compounded with Energy of Longing to obtain Talisman of Insanity. -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1710,7 +1710,7 @@
 		</skills>
 	</item>
 	<item id="34990" name="Corroded Weapon Fragment" type="EtcItem">
-		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
+		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_r_weapon_piece_i01" />
 		<set name="price" val="2500" />
 		<set name="is_oly_restricted" val="true" />
@@ -1720,7 +1720,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34991" name="Corroded Armor Fragment" type="EtcItem">
-		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
+		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_r_armor_piece_i01" />
 		<set name="price" val="1000" />
 		<set name="is_oly_restricted" val="true" />
@@ -1730,7 +1730,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34992" name="Corroded Accessory Gem" type="EtcItem">
-		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
+		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_r_acc_piece_i01" />
 		<set name="price" val="1000" />
 		<set name="is_oly_restricted" val="true" />
@@ -1767,7 +1767,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34996" name="Cloak of Radiant Light" type="Armor">
-		<!-- A cloak that symbolizes glory and light. When equipped, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +4, and Damage Received -15%. Can use the Escape: Castle skill. Cannot be used while in a chaotic state. Can be equipped only by marquis or higher. Cannot be used in the Olympiad and dimensional servers. Cannot be transferred between servers. -->
+		<!-- A cloak that symbolizes glory and light. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4, LUC +4 CHA +4, Received damage -15%. Enables Blessed teleportation to the castle. Cannot be used by chaotic characters. Available only to Clan Leader. Cannot be used in the Olympiad and on the dimensional servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1808,7 +1808,7 @@
 		</stats>
 	</item>
 	<item id="34997" name="Cloak of Cold Darkness" type="Armor">
-		<!-- A cloak that symbolizes avarice and darkness. When equipped, STR/ MEN/ DEX/ WIT/ INT/ CON/ LUC/ CHA +4, and Damage Received -15%. Can use the Escape: Castle skill. Can be equipped only by marquis or higher. Cannot be used in the Olympiad and dimensional servers. Cannot be transferred between servers. -->
+		<!-- A cloak that symbolizes avarice and darkness. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4, LUC +4 CHA +4, Received damage -15%. Enables Blessed teleportation to the castle. Available only to Clan Leader. Cannot be used in the Olympiad and on the dimensional servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1849,7 +1849,7 @@
 		</stats>
 	</item>
 	<item id="34998" name="Tauti's One-handed Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill Tauti's Wrath' can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
+		<!-- A weapon made from Tauti's Fragments. PvP Damage +15%, Max HP +25%, P. Atk. +10%, Atk. Spd. +15%, Critical Rate for standard attacks +150. Additionally, enables the Tauti's Wrath skill. The item's appearance cannot be modified. Cannot be enchanted, augmented, crystallized, assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon along with Frenzied Tauti's Fragment and Tauti's Crystal to Ishuma in the Gludio Wharf to upgrade it to Frenzied Tauti's weapon. -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1878,7 +1878,7 @@
 		</stats>
 	</item>
 	<item id="34999" name="Tauti's Two-handed Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill Tauti's Wrath' can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
+		<!-- A weapon made from Tauti's Fragments. PvP Damage +15%, Max HP +25%, P. Atk. +10%, Atk. Spd. +15%, Critical Rate for standard attacks +150. Additionally, enables the Tauti's Wrath skill. The item's appearance cannot be modified. Cannot be enchanted, augmented, crystallized, assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon along with Frenzied Tauti's Fragment and Tauti's Crystal to Ishuma in the Gludio Wharf to upgrade it to Frenzied Tauti's weapon. -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_magic_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

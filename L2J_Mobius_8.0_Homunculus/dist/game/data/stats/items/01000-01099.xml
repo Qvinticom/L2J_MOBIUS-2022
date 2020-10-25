@@ -184,7 +184,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1012" name="Delivery List" type="EtcItem">
-		<!-- Take the heavy wooden box to Trader Jackson. The bolts of cloth to Trader Silvia. Take the clay pot to the warehouse keeper Rant. -->
+		<!-- Take the Heavy Wood Box to Trader Jackson. The Cloth Bundle to Trader Silvia. Take the Clay Pot to the Warehouse Keeper Rant. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -232,7 +232,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1015" name="Clay Pot" type="EtcItem">
-		<!-- The clay pot that must be delivered to the warehouse keeper Rant. -->
+		<!-- The clay pot that must be delivered to the Warehouse Keeper Rant. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -280,7 +280,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1018" name="Rant's Receipt" type="EtcItem">
-		<!-- The receipt issued by Rant upon his receiving of the clay pot. Take this to Guard Arnold. -->
+		<!-- The receipt issued by Warehouse Keeper Rant upon his receiving of the clay pot. Take this to Guard Arnold. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -552,7 +552,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1035" name="Plague Dust" type="EtcItem">
-		<!-- Powder obtained from the plague zombie. Take this to Hierarch Asterios. -->
+		<!-- Powder obtained from the Plague Zombie. Take it to Hierarch Asterios. -->
 		<set name="icon" val="icon.etc_powder_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -728,7 +728,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1046" name="Nightmare Crystal" type="EtcItem">
-		<!-- Crystal used by the Succubus Merkenis to cast nightmares. Take this to Tetrarch Vellior. -->
+		<!-- Crystal used by the Succubus Merkenis to cast nightmares. Take this to Hierarch Vellior. -->
 		<set name="icon" val="icon.etc_totem_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -744,7 +744,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1047" name="Spellbook: Light" type="EtcItem">
-		<!-- Spellbook needed to learn Light. -->
+		<!-- A spellbook for learning the Decrease Weight skill. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -753,7 +753,7 @@
 		<set name="price" val="100" />
 	</item>
 	<item id="1048" name="Spellbook: Might" type="EtcItem">
-		<!-- Spellbook needed to learn Might. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
+		<!-- A spellbook for learning the Might skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -763,7 +763,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1049" name="Spellbook: Ice Bolt" type="EtcItem">
-		<!-- Spellbook needed to learn Ice Bolt. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
+		<!-- A spellbook for learning the Ice Bolt skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -773,7 +773,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1050" name="Spellbook: Battle Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Battle Heal. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 14 -->
+		<!-- A spellbook for learning the Battle Heal skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 14. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -783,7 +783,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1051" name="Spellbook: Vampiric Touch" type="EtcItem">
-		<!-- Spellbook needed to learn Vampiric Touch. Used by Human Mystics and Dark Mystics. Required level: 14 -->
+		<!-- A spellbook for learning the Vampiric Touch skill. Used by Human Mystics and Dark Mystics. Required level: 14. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -793,7 +793,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1052" name="Spellbook: Flame Strike" type="EtcItem">
-		<!-- Spellbook needed to learn Flame Strike. Used by Human Wizards, Elven Wizards and Dark Wizards. Required level: 20 -->
+		<!-- A spellbook for learning the Flame Strike skill. Used by Wizards, Elven Wizards and Dark Wizards. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -803,7 +803,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1053" name="Spellbook: Cure Poison" type="EtcItem">
-		<!-- Spellbook needed to learn Cure Poison. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
+		<!-- A spellbook for learning the Cure Poison skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -813,7 +813,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1054" name="Spellbook: Group Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Group Heal. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 14 -->
+		<!-- A spellbook for learning the Group Heal skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 14. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -823,7 +823,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1055" name="Spellbook: Curse Poison" type="EtcItem">
-		<!-- Spellbook needed to learn Curse Poison. Used by Human Mystics and Dark Mystics. Required level: 7 -->
+		<!-- A spellbook for learning the Curse Poison skill. Used by Human Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -833,7 +833,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1056" name="Spellbook: Curse Weakness" type="EtcItem">
-		<!-- Spellbook needed to learn Curse Weakness. Used by Human Mystics and Elven Mystics. Required level: 14 -->
+		<!-- A spellbook for learning the Curse Weakness skill. Used by Human Mystics and Elven Mystics. Required level: 14. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -843,7 +843,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1057" name="Spellbook: Summon Meal" type="EtcItem">
-		<!-- Spellbook needed to learn Summon Meal. -->
+		<!-- A spellbook for learning the Summon Meal skill. Used by Human Mystics and Elven Mystics. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -852,7 +852,7 @@
 		<set name="price" val="500" />
 	</item>
 	<item id="1058" name="Spellbook: Shield" type="EtcItem">
-		<!-- Spellbook needed to learn Shield. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
+		<!-- A spellbook for learning the Shield skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -862,7 +862,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1059" name="Spellbook: Know Enemy" type="EtcItem">
-		<!-- Spellbook needed to learn Know Enemy. -->
+		<!-- A spellbook for learning the Know Enemy skill. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -917,7 +917,7 @@
 		</skills>
 	</item>
 	<item id="1062" name="Haste Potion" type="EtcItem">
-		<!-- Magical potion that increases Speed. -->
+		<!-- A magical potion that increases Speed. -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1077,7 +1077,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1072" name="Hyacinth Charm" type="EtcItem">
-		<!-- Charm given by Hierarch Asterios. Go to the water source and obtain five handfuls of plague dust from the zombies. -->
+		<!-- A charm given by Hierarch Asterios. Go to the water source and obtain 5 handfuls of ashes from the Plague Zombies. -->
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1180,7 +1180,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1079" name="Darin's Receipt" type="EtcItem">
-		<!-- Receipt for a magical potion Darin received after paying Baulro. This must be handed to Baulro. -->
+		<!-- Darin's receipt for the magical potion. Take it to Baulro. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1228,7 +1228,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1082" name="Taint Stone" type="EtcItem">
-		<!-- The second of three materials Tetrarch Talos asked you to collect. -->
+		<!-- The second of three materials Hierarch Talos asked you to collect. -->
 		<set name="icon" val="icon.etc_totem_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1244,7 +1244,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1083" name="Succubus Blood" type="EtcItem">
-		<!-- The third of three materials Tetrarch Talos asked you to collect. -->
+		<!-- The third of three materials Hierarch Talos asked you to collect. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1276,7 +1276,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1085" name="Orc's Necklace" type="EtcItem">
-		<!-- Bone necklace that Orc fighters possess on their bodies for magic purposes. Take this to Captain Gilbert. -->
+		<!-- A bone necklace that Orc fighters use in their rituals. Take it to Captain Gilbert. -->
 		<set name="icon" val="icon.accessary_necklace_of_anguish_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1292,7 +1292,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1086" name="Werewolf's Fang" type="EtcItem">
-		<!-- Fangs from a dead werewolf. Take this to Captain Gilbert. -->
+		<!-- Fangs from a dead werewolf. Take them to Captain Gilbert. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1324,7 +1324,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1088" name="Undrias' Letter" type="EtcItem">
-		<!-- Abyssal Celebrant Undrias' letter. Take this letter to Trader Iria, Warehouse Keeper Dorankus, and Master Trudy. -->
+		<!-- Abyssal Celebrant Undrias' letter. Take this letter to Weapon Merchant Iria, Warehouse Keeper Dorankus, and Master Trudy. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1372,7 +1372,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1091" name="Garmiel's Scripture" type="EtcItem">
-		<!-- The scripture used during the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
+		<!-- Sacred book used in the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1436,7 +1436,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1095" name="Spellbook: Attack Aura" type="EtcItem">
-		<!-- Spellbook needed to learn Attack Aura. Used by Elven Fighters and Dark Fighters. Required level: 10 -->
+		<!-- A spellbook for learning the Attack Aura skill. Used by Elven Fighters and Dark Fighters. Required level: 10. -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1446,7 +1446,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1096" name="Spellbook: Elemental Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Elemental Heal. Used by Elven Fighters. Required level: 15 -->
+		<!-- A spellbook for learning the Elemental Heal skill. Used by Elven Fighters. Required level: 15. -->
 		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1456,7 +1456,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1097" name="Spellbook: Drain Energy" type="EtcItem">
-		<!-- Spellbook needed to learn Drain Energy. Used by Knights and Dark Fighters. Required level: Dark Fighter - 15, Knight - 20 -->
+		<!-- A spellbook for learning the Drain Energy skill. Used by Knights and Dark Fighters. Required level: Dark Fighter - 15, Knight - 20. -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1466,7 +1466,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1098" name="Spellbook: Wind Walk" type="EtcItem">
-		<!-- Spellbook needed to learn Wind Walk. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 20 -->
+		<!-- A spellbook for learning the Wind Walk skill. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1476,7 +1476,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1099" name="Spellbook: Wind Shackle" type="EtcItem">
-		<!-- Spellbook needed to learn Wind Shackle. Used by Elven Mystics and Dark Mystics. Required level: 14 -->
+		<!-- A spellbook for learning the Wind Shackle skill. Used by Elven Mystics and Dark Mystics. Required level: 14. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

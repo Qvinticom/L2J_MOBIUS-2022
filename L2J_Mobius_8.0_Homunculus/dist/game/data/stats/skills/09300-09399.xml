@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9300" toLevel="1" name="PA - Blessed Spiritshot (No-grade)">
+	<skill id="9300" toLevel="1" name="PA - Blessed No-grade Spiritshot">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -9,7 +9,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9301" toLevel="1" name="PA - Blessed Spiritshot (D-grade)">
+	<skill id="9301" toLevel="1" name="PA - Blessed D-grade Spiritshot">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -18,7 +18,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9302" toLevel="1" name="PA - Blessed Spiritshot (C-grade)">
+	<skill id="9302" toLevel="1" name="PA - Blessed C-grade Spiritshot">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -27,7 +27,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9303" toLevel="1" name="PA - Blessed Spiritshot (B-grade)">
+	<skill id="9303" toLevel="1" name="PA - Blessed B-grade Spiritshot">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -36,7 +36,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9304" toLevel="1" name="PA - Blessed Spiritshot (A-grade)">
+	<skill id="9304" toLevel="1" name="PA - Blessed A-grade Spiritshot">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -45,7 +45,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9305" toLevel="1" name="PA - Blessed Spiritshot (S-grade)">
+	<skill id="9305" toLevel="1" name="PA - Blessed S-grade Spiritshot">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -54,7 +54,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9306" toLevel="1" name="PA - Blessed Spiritshot (R-grade)">
+	<skill id="9306" toLevel="1" name="PA - Blessed R-grade Spiritshot">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -64,7 +64,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9307" toLevel="1" name="Summon Agathion">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -81,7 +81,7 @@
 		</conditions>
 	</skill>
 	<skill id="9308" toLevel="1" name="Summon Agathion">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -98,7 +98,7 @@
 		</conditions>
 	</skill>
 	<skill id="9309" toLevel="1" name="Summon Agathion">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -115,7 +115,7 @@
 		</conditions>
 	</skill>
 	<skill id="9310" toLevel="1" name="Summon Agathion">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -131,8 +131,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9311" toLevel="1" name="Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+	<skill id="9311" toLevel="1" name="Agathion's Cute Trick">
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -146,8 +146,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="9312" toLevel="1" name="Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+	<skill id="9312" toLevel="1" name="Agathion's Cute Trick">
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -161,8 +161,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="9313" toLevel="1" name="Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+	<skill id="9313" toLevel="1" name="Agathion's Cute Trick">
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -176,8 +176,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="9314" toLevel="1" name="Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+	<skill id="9314" toLevel="1" name="Agathion's Cute Trick">
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -293,7 +293,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9320" toLevel="1" name="PA - Mount: Black Bear">
+	<skill id="9320" toLevel="1" name="PA - Black Bear Bracelet">
 		<!-- Mount Black Bear. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -463,7 +463,7 @@
 		</conditions>
 	</skill>
 	<skill id="9331" toLevel="1" name="Horn Melody - Enhanced Cocktail">
-		<!-- For 1 h., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. PA exclusive. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -508,7 +508,7 @@
 		</effects>
 	</skill>
 	<skill id="9332" toLevel="1" name="Drum Melody - Enhanced Cocktail">
-		<!-- For 1 h., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. PA exclusive. -->
+		<!-- For PA. For $s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, M. Skill Critical Rate +$s4, Received Critical Damage from standard attacks -$s5. Also has a chance to increase P. Critical Damage when hit. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -565,7 +565,7 @@
 		</effects>
 	</skill>
 	<skill id="9333" toLevel="1" name="Lute Melody - Enhanced Cocktail">
-		<!-- For 60 min., Atk. Spd. +34%, and Casting Spd. +31%. Has a chance of applying 9% Vampiric Rage. PA only. -->
+		<!-- For 60 min., Atk. Spd. +34%, Casting Spd. +31%, Vampiric Rage effect +9%. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -605,7 +605,7 @@
 		</effects>
 	</skill>
 	<skill id="9334" toLevel="1" name="Pipe Organ Melody - Enhanced Cocktail">
-		<!-- For 1 h., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. PA exclusive. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4, Vampiric Rage effect +$s5. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -653,7 +653,7 @@
 		</effects>
 	</skill>
 	<skill id="9335" toLevel="1" name="Guitar Melody - Enhanced Cocktail">
-		<!-- For 1 h., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. PA only. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, M. Skill MP Consumption -$s4. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -718,7 +718,7 @@
 		</effects>
 	</skill>
 	<skill id="9336" toLevel="1" name="Harp Melody - Enhanced Cocktail">
-		<!-- For 60 min., P. Accuracy +5, P. Evasion/ M. Evasion +5, and Speed +34. Received Critical Damage -30%. PA only. -->
+		<!-- For PA. For 60 min., P. Accuracy +5, P./ M. Evasion +5, and Speed +34. Received Critical Damage from standard attacks -30%. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -759,7 +759,7 @@
 						<item id="8565" count="1" /> <!-- Romantic Chapeau -->
 					</item>
 					<item chance="3">
-						<item id="8920" count="1" /> <!-- Angel Halo -->
+						<item id="8920" count="1" /> <!-- Angel Circlet -->
 					</item>
 					<item chance="3">
 						<item id="8921" count="1" /> <!-- Demon Circlet -->
@@ -1007,22 +1007,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="35">
-						<item id="30381" count="1" /> <!-- Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="30381" count="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="15">
-						<item id="30382" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="30382" count="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="21">
-						<item id="12366" count="1" /> <!-- Lucky Enchant Stone: Weapon (S-grade) -->
+						<item id="12366" count="1" /> <!-- Lucky Enchant Stone: S-grade Weapon -->
 					</item>
 					<item chance="9">
-						<item id="12371" count="1" /> <!-- Lucky Enchant Stone: Armor (S-grade) -->
+						<item id="12371" count="1" /> <!-- Lucky Enchant Stone: S-grade Armor -->
 					</item>
 					<item chance="14">
-						<item id="12365" count="1" /> <!-- Lucky Enchant Stone: Weapon (A-grade) -->
+						<item id="12365" count="1" /> <!-- Lucky Enchant Stone: A-grade Weapon -->
 					</item>
 					<item chance="6">
-						<item id="12370" count="1" /> <!-- Lucky Enchant Stone: Armor (A-grade) -->
+						<item id="12370" count="1" /> <!-- Lucky Enchant Stone: A-grade Armor -->
 					</item>
 				</items>
 			</effect>
@@ -1042,22 +1042,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="14">
-						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
+						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="6">
-						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant Armor (R-grade) -->
+						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="21">
-						<item id="22221" count="1" /> <!-- Destruction Scroll: Enchant Weapon (S-grade) - Event -->
+						<item id="22221" count="1" /> <!-- Destruction Scroll: Enchant S-grade Weapon - Event -->
 					</item>
 					<item chance="9">
-						<item id="22222" count="1" /> <!-- Destruction Scroll: Enchant Armor (S-grade) - Event -->
+						<item id="22222" count="1" /> <!-- Destruction Scroll: Enchant S-grade Armor - Event -->
 					</item>
 					<item chance="35">
-						<item id="22223" count="1" /> <!-- Destruction Scroll: Enchant Weapon (A-grade) - Event -->
+						<item id="22223" count="1" /> <!-- Destruction Scroll: Enchant A-grade Weapon - Event -->
 					</item>
 					<item chance="15">
-						<item id="22224" count="1" /> <!-- Destruction Scroll: Enchant Armor (A-grade) - Event -->
+						<item id="22224" count="1" /> <!-- Destruction Scroll: Enchant A-grade Armor - Event -->
 					</item>
 				</items>
 			</effect>
@@ -1077,22 +1077,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="35">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="15">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="21">
-						<item id="6577" count="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+						<item id="6577" count="1" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="9">
-						<item id="6578" count="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+						<item id="6578" count="1" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="6">
-						<item id="6570" count="1" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+						<item id="6570" count="1" /> <!-- Blessed Scroll: Enchant A-grade Armor -->
 					</item>
 					<item chance="14">
-						<item id="6569" count="1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+						<item id="6569" count="1" /> <!-- Blessed Scroll: Enchant A-grade Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -1112,13 +1112,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="50">
-						<item id="19444" count="1" /> <!-- Unbind Scroll (R-grade) -->
+						<item id="19444" count="1" /> <!-- R-grade Unbind Scroll -->
 					</item>
 					<item chance="30">
-						<item id="19445" count="1" /> <!-- Unbind Scroll (R95-grade) -->
+						<item id="19445" count="1" /> <!-- R95-grade Unbind Scroll -->
 					</item>
 					<item chance="20">
-						<item id="19446" count="1" /> <!-- Unbind Scroll (R99-grade) -->
+						<item id="19446" count="1" /> <!-- R99-grade Unbind Scroll -->
 					</item>
 				</items>
 			</effect>
@@ -1144,40 +1144,40 @@
 						<item id="34692" count="1" /> <!-- Pendant Pack -->
 					</item>
 					<item chance="1.8">
-						<item id="32732" count="1" /> <!-- Enchant Scroll Pack (D-grade) -->
+						<item id="32732" count="1" /> <!-- D-grade Enchant Scroll Box -->
 					</item>
 					<item chance="0.49">
-						<item id="32733" count="1" /> <!-- Enchant Scroll Pack (C-grade) -->
+						<item id="32733" count="1" /> <!-- C-grade Enchant Scroll Box -->
 					</item>
 					<item chance="0.45">
-						<item id="32734" count="1" /> <!-- Enchant Scroll Pack (B-grade) -->
+						<item id="32734" count="1" /> <!-- B-grade Enchant Scroll Box -->
 					</item>
 					<item chance="0.37">
-						<item id="32735" count="1" /> <!-- Enchant Scroll Pack (A-grade) -->
+						<item id="32735" count="1" /> <!-- A-grade Enchant Scroll Box -->
 					</item>
 					<item chance="0.18">
-						<item id="32730" count="1" /> <!-- Enchant Scroll Pack (S-grade) -->
+						<item id="32730" count="1" /> <!-- S-grade Enchant Scroll Pack -->
 					</item>
 					<item chance="0.08">
-						<item id="32731" count="1" /> <!-- Enchant Scroll Pack (R-grade) -->
+						<item id="32731" count="1" /> <!-- R-grade Enchant Scroll Box -->
 					</item>
 					<item chance="35">
-						<item id="32738" count="1" /> <!-- Elixir Pack (D-grade) -->
+						<item id="32738" count="1" /> <!-- D-grade Elixir Pack -->
 					</item>
 					<item chance="16.35">
-						<item id="32739" count="1" /> <!-- Elixir Pack (C-grade) -->
+						<item id="32739" count="1" /> <!-- C-grade Elixir Pack -->
 					</item>
 					<item chance="12.07">
-						<item id="32740" count="1" /> <!-- Elixir Pack (B-grade) -->
+						<item id="32740" count="1" /> <!-- B-grade Elixir Pack -->
 					</item>
 					<item chance="9.69">
-						<item id="32741" count="1" /> <!-- Elixir Pack (A-grade) -->
+						<item id="32741" count="1" /> <!-- A-grade Elixir Pack -->
 					</item>
 					<item chance="8.17">
-						<item id="32736" count="1" /> <!-- Elixir Pack (S-grade) -->
+						<item id="32736" count="1" /> <!-- S-grade Elixir Box -->
 					</item>
 					<item chance="4.77">
-						<item id="32737" count="1" /> <!-- Elixir Pack (R-grade) -->
+						<item id="32737" count="1" /> <!-- R-grade Elixir Pack -->
 					</item>
 					<item chance="10.1">
 						<item id="34693" count="1" /> <!-- Attribute Stone Fragment Box -->
@@ -1372,7 +1372,7 @@
 		</effects>
 	</skill>
 	<skill id="9357" toLevel="1" name="Party Hat - P. Critical Rate">
-		<!-- P. Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_party_hat_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1385,7 +1385,7 @@
 		</effects>
 	</skill>
 	<skill id="9358" toLevel="1" name="Party Hat - Critical Damage">
-		<!-- P. Critical Damage +90, and M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_party_hat_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1470,7 +1470,7 @@
 		</effects>
 	</skill>
 	<skill id="9365" toLevel="2" name="Power of Eva">
-		<!-- Recovers HP by $s1 MP by $s2, and CP by $s3. Can be used in the Olympiad. -->
+		<!-- Recovers $s1 HP, $s2 MP and $s3 CP. Can be used in the Olympiad. -->
 		<icon>icon.pi_shirt_of_wolf_2nd_water</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -1504,7 +1504,7 @@
 		</effects>
 	</skill>
 	<skill id="9367" toLevel="2" name="Power of Pa'agrio">
-		<!-- Cancels all your debuffs. Invincible for $s1 Cannot be used when immobile. Can be used in the Olympiad. -->
+		<!-- Removes all debuffs and grants invincibility for $s1 Cannot be used while stunned/ inflicted with Fear. Can be used in the Olympiad. -->
 		<icon>icon.pi_shirt_of_wolf_2nd_fire</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -1519,20 +1519,30 @@
 			<value level="2">10</value>
 		</abnormalTime>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<abnormalType>INVINCIBILITY</abnormalType>
 		<isMagic>2</isMagic>
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
 				<max>10</max>
-			</effect>
-			<effect name="ResistDispelByCategory">
-				<amount>-100</amount>
-				<slot>BUFF</slot>
 			</effect>
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
@@ -1629,7 +1639,7 @@
 		</effects>
 	</skill>
 	<skill id="9375" toLevel="1" name="Einhasad's Energy">
-		<!-- For 1 h., Vitality replenished if XP is gained through hunting. Buff remains even after death. -->
+		<!-- For 1 h., recovers Vitality when XP is acquired through hunting. The effect remains after death. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i05</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
@@ -1658,7 +1668,7 @@
 		</conditions>
 	</skill>
 	<skill id="9376" toLevel="1" name="Knight's Harmony - Mentor">
-		<!-- For 2 h., increases the selected mentee's P. Atk. by 12%, P. Critical Damage by 35%, P. Critical Rate by 100%, P. Def. by 45%, Shield Defense Rate by 30%, and Shield Defense by 50%. Effect remains for 5 min. after the mentor goes offline. -->
+		<!-- For 2 h., mentee's P. Atk. +12%, Critical Damage for standard attacks +35%, Critical Rate for standard attacks +100%, P. Def. +45%, Shield Defense Rate +30%, and Shield Defense +50%. Effect remains for 5 min. after the mentor goes offline. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -1683,7 +1693,7 @@
 		</conditions>
 	</skill>
 	<skill id="9377" toLevel="1" name="Wizard's Harmony - Mentor">
-		<!-- For 2 h., the selected mentee's M. Atk. +40%, M. Critical Rate +100%, Atk. Spd./ Casting Spd. +8%, P. Atk. +8%, M. Def. +14%, MP Recovery Rate +20%, M. Skill MP Consumption -15%, P. Skill MP Consumption -5%, Skill Cooldown -20%. The effect is active for 5 min. after the mentor goes offline. -->
+		<!-- For 2 h., the selected mentee's M. Atk. +40%, M. Skill Critical Rate +100%, Atk. Spd./ Casting Spd. +8%, P. Atk. +8%, M. Def. +14%, MP Recovery Rate +20%, M. Skill MP Consumption -15%, P. Skill MP Consumption -5%, Song/ Dance MP Consumption -5%, Skill Cooldown -20%. The effect is active for 5 min. after the mentor goes offline. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -1708,7 +1718,7 @@
 		</conditions>
 	</skill>
 	<skill id="9378" toLevel="1" name="Warrior's Harmony - Mentor">
-		<!-- For 2 hours, increases the selected mentee's P. Atk. by 35%, P. Critical Damage by 35%, P. Critical Rate by 100%, Atk. Spd. by 8%, M. Atk. by 16%, and Casting Spd. by 8%. Buff persists for 5 minutes after the mentor goes offline. -->
+		<!-- For 2 h., mentee's P. Atk. +35%, Critical Damage for standard attacks +35%, Critical Rate for standard attacks +100%, Atk. Spd./ Casting Spd. +8%, M. Atk. +16%. The effect is active for 5 min. after the mentor goes offline. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -1770,16 +1780,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="55">
-						<item id="34606" count="500" /> <!-- Mysterious Soulshot (B-grade) - Event -->
+						<item id="34606" count="500" /> <!-- Mysterious B-grade Soulshot - Event -->
 					</item>
 					<item chance="30">
-						<item id="34607" count="500" /> <!-- Mysterious Soulshot (A-grade) - Event -->
+						<item id="34607" count="500" /> <!-- Mysterious A-grade Soulshot - Event -->
 					</item>
 					<item chance="10">
-						<item id="34608" count="500" /> <!-- Mysterious Soulshot (S-grade) - Event -->
+						<item id="34608" count="500" /> <!-- Mysterious S-grade Soulshot - Event -->
 					</item>
 					<item chance="5">
-						<item id="34609" count="500" /> <!-- Mysterious Soulshot (R-grade) - Event -->
+						<item id="34609" count="500" /> <!-- Mysterious R-grade Soulshot - Event -->
 					</item>
 				</items>
 			</effect>
@@ -1801,16 +1811,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="55">
-						<item id="34613" count="500" /> <!-- Mysterious Blessed Spiritshot (B-grade) - Event -->
+						<item id="34613" count="500" /> <!-- Mysterious Blessed B-grade Spiritshot - Event -->
 					</item>
 					<item chance="30">
-						<item id="34614" count="500" /> <!-- Mysterious Blessed Spiritshot (A-grade) - Event -->
+						<item id="34614" count="500" /> <!-- Mysterious Blessed A-grade Spiritshot - Event -->
 					</item>
 					<item chance="10">
-						<item id="34615" count="500" /> <!-- Mysterious Blessed Spiritshot (S-grade) - Event -->
+						<item id="34615" count="500" /> <!-- Mysterious Blessed S-grade Spiritshot - Event -->
 					</item>
 					<item chance="5">
-						<item id="34616" count="500" /> <!-- Mysterious Blessed Spiritshot (R-grade) - Event -->
+						<item id="34616" count="500" /> <!-- Mysterious Blessed R-grade Spiritshot - Event -->
 					</item>
 				</items>
 			</effect>
@@ -1890,7 +1900,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9384" toLevel="1" name="Scroll: Enchant Armor Pack (S-grade)">
+	<skill id="9384" toLevel="1" name="Scroll: Enchant S-grade Armor Pack">
 		<itemConsumeId>34815</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1906,19 +1916,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="98">
-						<item id="34782" count="1" /> <!-- Scroll: Enchant Armor (S-grade) - Event -->
+						<item id="34782" count="1" /> <!-- Scroll: Enchant S-grade Armor - Event -->
 					</item>
 					<item chance="1.5">
-						<item id="34786" count="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) - Event -->
+						<item id="34786" count="1" /> <!-- Blessed Scroll: Enchant S-grade Armor - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="22222" count="1" /> <!-- Destruction Scroll: Enchant Armor (S-grade) - Event -->
+						<item id="22222" count="1" /> <!-- Destruction Scroll: Enchant S-grade Armor - Event -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9385" toLevel="1" name="Scroll: Enchant Armor Pack (R-grade)">
+	<skill id="9385" toLevel="1" name="Scroll: Enchant R-grade Armor Box">
 		<itemConsumeId>34815</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1934,19 +1944,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="98">
-						<item id="34783" count="1" /> <!-- Scroll: Enchant Armor (R-grade) - Event -->
+						<item id="34783" count="1" /> <!-- Scroll: Enchant R-grade Armor - Event -->
 					</item>
 					<item chance="1.5">
-						<item id="34787" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) - Event -->
+						<item id="34787" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant Armor (R-grade) -->
+						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant R-grade Armor -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9386" toLevel="1" name="Scroll: Enchant Weapon Pack (S-grade)">
+	<skill id="9386" toLevel="1" name="Scroll: Enchant S-grade Weapon Pack">
 		<itemConsumeId>34815</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1962,19 +1972,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="98">
-						<item id="34784" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) - Event -->
+						<item id="34784" count="1" /> <!-- Scroll: Enchant S-grade Weapon - Event -->
 					</item>
 					<item chance="1.5">
-						<item id="34788" count="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) - Event -->
+						<item id="34788" count="1" /> <!-- Blessed Scroll: Enchant S-grade Weapon - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="22221" count="1" /> <!-- Destruction Scroll: Enchant Weapon (S-grade) - Event -->
+						<item id="22221" count="1" /> <!-- Destruction Scroll: Enchant S-grade Weapon - Event -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9387" toLevel="1" name="Scroll: Enchant Weapon Pack (R-grade)">
+	<skill id="9387" toLevel="1" name="Scroll: Enchant R-grade Weapon Box">
 		<itemConsumeId>34815</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1990,13 +2000,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="98">
-						<item id="34785" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) - Event -->
+						<item id="34785" count="1" /> <!-- Scroll: Enchant R-grade Weapon - Event -->
 					</item>
 					<item chance="1.5">
-						<item id="34789" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) - Event -->
+						<item id="34789" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
+						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant R-grade Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -2030,7 +2040,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9389" toLevel="1" name="Soul Crystal Pack (R-grade)">
+	<skill id="9389" toLevel="1" name="R-grade Soul Crystal Pack">
 		<itemConsumeId>34823</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2046,19 +2056,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33">
-						<item id="19502" count="1" /> <!-- Yellow Soul Crystal (R-grade) -->
+						<item id="19502" count="1" /> <!-- Yellow R-grade Soul Crystal -->
 					</item>
 					<item chance="33">
-						<item id="19503" count="1" /> <!-- Teal Soul Crystal (R-grade) -->
+						<item id="19503" count="1" /> <!-- Teal R-grade Soul Crystal -->
 					</item>
 					<item chance="34">
-						<item id="19504" count="1" /> <!-- Purple Soul Crystal (R-grade) -->
+						<item id="19504" count="1" /> <!-- Purple R-grade Soul Crystal -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9390" toLevel="1" name="Soul Crystal Pack (R95-grade)">
+	<skill id="9390" toLevel="1" name="R95-grade Soul Crystal Pack">
 		<itemConsumeId>34824</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2074,19 +2084,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33">
-						<item id="19505" count="1" /> <!-- Yellow Soul Crystal (R95-grade) -->
+						<item id="19505" count="1" /> <!-- R95-grade Yellow Soul Crystal -->
 					</item>
 					<item chance="33">
-						<item id="19506" count="1" /> <!-- Teal Soul Crystal (R95-grade) -->
+						<item id="19506" count="1" /> <!-- R95-grade Teal Soul Crystal -->
 					</item>
 					<item chance="34">
-						<item id="19507" count="1" /> <!-- Purple Soul Crystal (R95-grade) -->
+						<item id="19507" count="1" /> <!-- R95-grade Purple Soul Crystal -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9391" toLevel="1" name="Soul Crystal Pack (R99-grade)">
+	<skill id="9391" toLevel="1" name="R99-grade Soul Crystal Pack">
 		<itemConsumeId>34825</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2102,13 +2112,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33">
-						<item id="18560" count="1" /> <!-- Yellow Soul Crystal (R99-grade) -->
+						<item id="18560" count="1" /> <!-- R99-grade Yellow Soul Crystal -->
 					</item>
 					<item chance="33">
-						<item id="18561" count="1" /> <!-- Teal Soul Crystal (R99-grade) -->
+						<item id="18561" count="1" /> <!-- R99-grade Teal Soul Crystal -->
 					</item>
 					<item chance="34">
-						<item id="18562" count="1" /> <!-- Purple Soul Crystal (R99-grade) -->
+						<item id="18562" count="1" /> <!-- R99-grade Purple Soul Crystal -->
 					</item>
 				</items>
 			</effect>
@@ -2130,58 +2140,58 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="7">
-						<item id="18273" count="1" /> <!-- Talisman (R85-grade) - P. Atk. (Passive) -->
+						<item id="18273" count="1" /> <!-- R85-grade Talisman - P. Atk. (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18277" count="1" /> <!-- Talisman (R85-grade) - P. Def. (Passive) -->
+						<item id="18277" count="1" /> <!-- R85-grade Talisman - P. Def. (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18281" count="1" /> <!-- Talisman (R85-grade) - M. Atk. (Passive) -->
+						<item id="18281" count="1" /> <!-- R85-grade Talisman - M. Atk. (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18285" count="1" /> <!-- Talisman (R85-grade) - M. Def. (Passive) -->
+						<item id="18285" count="1" /> <!-- R85-grade Talisman - M. Def. (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18289" count="1" /> <!-- Talisman (R85-grade) - HP (Passive) -->
+						<item id="18289" count="1" /> <!-- R85-grade Talisman - HP (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18293" count="1" /> <!-- Talisman (R85-grade) - MP (Passive) -->
+						<item id="18293" count="1" /> <!-- R85-grade Talisman - MP (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18297" count="1" /> <!-- Talisman (R85-grade) - CP (Passive) -->
+						<item id="18297" count="1" /> <!-- R85-grade Talisman - CP (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18301" count="1" /> <!-- Talisman (R85-grade) - Critical Damage (Passive) -->
+						<item id="18301" count="1" /> <!-- R85-grade Talisman - Critical Damage (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18305" count="1" /> <!-- Talisman (R85-grade) - Decrease Critical (Passive) -->
+						<item id="18305" count="1" /> <!-- R85-grade Talisman - Decrease Critical (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18309" count="1" /> <!-- Talisman (R-grade) - M. Critical (Passive) -->
+						<item id="18309" count="1" /> <!-- R-grade Talisman - M. Critical (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18310" count="1" /> <!-- Talisman (R-grade) - P. Accuracy (Passive) -->
+						<item id="18310" count="1" /> <!-- R-grade Talisman - P. Accuracy (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18311" count="1" /> <!-- Talisman (R-grade) - M. Accuracy (Passive) -->
+						<item id="18311" count="1" /> <!-- R-grade Talisman - M. Accuracy (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18312" count="1" /> <!-- Talisman (R-grade) - Evasion (Passive) -->
+						<item id="18312" count="1" /> <!-- R-grade Talisman - Evasion (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18313" count="1" /> <!-- Talisman (R-grade) - M. Evasion (Passive) -->
+						<item id="18313" count="1" /> <!-- R-grade Talisman - M. Evasion (Passive) -->
 					</item>
 					<item chance="8">
-						<item id="18314" count="1" /> <!-- Talisman (R-grade) - P. Critical Rate (Passive) -->
+						<item id="18314" count="1" /> <!-- R-grade Talisman - Critical Rate (Passive) -->
 					</item>
 					<item chance="8">
-						<item id="18315" count="1" /> <!-- Talisman (R-grade) - Critical Evasion (Passive) -->
+						<item id="18315" count="1" /> <!-- R-grade Talisman - Critical Evasion (Passive) -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9393" toLevel="1" name="Elixir Pack (S-grade)">
+	<skill id="9393" toLevel="1" name="S-grade Elixir Pack">
 		<itemConsumeId>34827</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2197,19 +2207,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="60">
-						<item id="8627" count="1" /> <!-- Elixir of Life (S-grade) -->
+						<item id="8627" count="1" /> <!-- Elixir of Life -->
 					</item>
 					<item chance="10">
-						<item id="8633" count="1" /> <!-- Elixir of Mind (S-grade) -->
+						<item id="8633" count="1" /> <!-- Elixir of Mind -->
 					</item>
 					<item chance="30">
-						<item id="8639" count="1" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8639" count="1" /> <!-- Elixir of CP -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9394" toLevel="1" name="Elixir Pack (R-grade)">
+	<skill id="9394" toLevel="1" name="R-grade Elixir Pack">
 		<itemConsumeId>34828</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2225,19 +2235,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="60">
-						<item id="30357" count="1" /> <!-- Elixir of Life (R-grade) -->
+						<item id="30357" count="1" /> <!-- Elixir of Life -->
 					</item>
 					<item chance="10">
-						<item id="30358" count="1" /> <!-- Elixir of Mind (R-grade) -->
+						<item id="30358" count="1" /> <!-- Elixir of Mind -->
 					</item>
 					<item chance="30">
-						<item id="30359" count="1" /> <!-- Elixir of CP (R-grade) -->
+						<item id="30359" count="1" /> <!-- Elixir of CP -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9395" toLevel="1" name="Scroll of Blessing Pack (R-grade)">
+	<skill id="9395" toLevel="1" name="R-grade Scroll of Blessing Box">
 		<itemConsumeId>34829</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2253,16 +2263,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="60">
-						<item id="34774" count="1" /> <!-- Scroll of Blessing: (R1-grade) - Event -->
+						<item id="34774" count="1" /> <!-- Scroll of Blessing (R1-grade) - Event -->
 					</item>
 					<item chance="35">
-						<item id="34775" count="1" /> <!-- Scroll of Blessing: (R2-grade) - Event -->
+						<item id="34775" count="1" /> <!-- Scroll of Blessing (R2-grade) - Event -->
 					</item>
 					<item chance="4.5">
-						<item id="34776" count="1" /> <!-- Scroll of Blessing: (R95-grade) - Event -->
+						<item id="34776" count="1" /> <!-- R95-grade Scroll of Blessing - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="34777" count="1" /> <!-- Scroll of Blessing: (R99-grade) - Event -->
+						<item id="34777" count="1" /> <!-- R99-grade Scroll of Blessing - Event -->
 					</item>
 				</items>
 			</effect>

@@ -26,6 +26,7 @@ import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -42,13 +43,15 @@ public class BaylorWarzone extends AbstractInstance
 	// NPCs
 	private static final int BAYLOR = 29213;
 	private static final int PRISON_GUARD = 29104;
-	private static final int ENTRANCE_PORTAL = 33523;
+	private static final int BENUSTA = 34542;
 	private static final int INVISIBLE_NPC_1 = 29106;
 	private static final int INVISIBLE_NPC_2 = 29108;
 	private static final int INVISIBLE_NPC_3 = 29109;
 	// Skills
 	private static final SkillHolder INVIS_NPC_SOCIAL_SKILL = new SkillHolder(5401, 1);
 	private static final SkillHolder BAYLOR_SOCIAL_SKILL = new SkillHolder(5402, 1);
+	// Item
+	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
 	// Locations
 	private static final Location BATTLE_PORT = new Location(153567, 143319, -12736);
 	// Misc
@@ -57,8 +60,8 @@ public class BaylorWarzone extends AbstractInstance
 	public BaylorWarzone()
 	{
 		super(TEMPLATE_ID);
-		addStartNpc(ENTRANCE_PORTAL);
-		addTalkId(ENTRANCE_PORTAL);
+		addStartNpc(BENUSTA);
+		addTalkId(BENUSTA);
 		addInstanceCreatedId(TEMPLATE_ID);
 		addSpawnId(INVISIBLE_NPC_1);
 		addSpellFinishedId(INVISIBLE_NPC_1);
@@ -295,6 +298,10 @@ public class BaylorWarzone extends AbstractInstance
 		{
 			if (world.getAliveNpcs(BAYLOR).isEmpty())
 			{
+				for (PlayerInstance member : world.getPlayers())
+				{
+					giveItems(member, BENUSTAS_REWARD_BOX);
+				}
 				world.finishInstance();
 			}
 			else

@@ -4,9 +4,9 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17425" />
-		<acquire exp="381103202" sp="381203" />
+		<acquire exp="104531069" sp="209121" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="63066.4739884393" hpRegen="9.5" mp="24690.4290429043" mpRegen="3.3" />
+			<vitals hp="63065.8959537572" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="333994.155065416" magical="207907.777974305" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<speed>
@@ -24,7 +24,7 @@
 			<height normal="25.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
@@ -34,26 +34,14 @@
 			<skill id="23706" level="1" /> <!-- Dark Fire -->
 			<skill id="23707" level="1" /> <!-- Chaos Fire -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="4675" max="10891" chance="70" /> <!-- Adena -->
-				<item id="35345" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="36520" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather -->
-				<item id="36908" min="1" max="1" chance="0.0075" /> <!-- Recipe: Adamantite Wire - Combination -->
-				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-			</drop>
-			<spoil>
-				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
-			</spoil>
-		</dropLists>
 	</npc>
 	<npc id="23601" level="102" type="Monster" name="Fortress Archon">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17392" />
-		<acquire exp="444700149" sp="444771" />
+		<acquire exp="888259707" sp="1776588" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004.046242775" hpRegen="9.5" mp="24690.4290429043" mpRegen="3.3" />
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="333994.155065416" magical="207907.777974305" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<speed>
@@ -71,7 +59,7 @@
 			<height normal="29" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
@@ -80,26 +68,14 @@
 			<skill id="23706" level="2" /> <!-- Dark Fire -->
 			<skill id="23707" level="2" /> <!-- Chaos Fire -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings -->
-				<item id="57" min="4675" max="10891" chance="70" /> <!-- Adena -->
-				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36912" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Upgrade -->
-			</drop>
-			<spoil>
-				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
-			</spoil>
-		</dropLists>
 	</npc>
 	<npc id="23602" level="102" type="Monster" name="Atelia High Priest">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17426" />
-		<acquire exp="444700149" sp="444771" />
+		<acquire exp="888259707" sp="1776588" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004.046242775" hpRegen="9.5" mp="24690.4290429043" mpRegen="3.3" />
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="333994.155065416" magical="207907.777974305" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<speed>
@@ -117,7 +93,7 @@
 			<height normal="29" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
@@ -126,24 +102,12 @@
 			<skill id="23706" level="2" /> <!-- Dark Fire -->
 			<skill id="23707" level="2" /> <!-- Chaos Fire -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor -->
-				<item id="57" min="4675" max="10891" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="1.095" /> <!-- Quality Leather -->
-				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
-			</drop>
-			<spoil>
-				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
-			</spoil>
-		</dropLists>
 	</npc>
 	<npc id="23603" level="102" type="Monster" name="Guardian Sinistra" title="Burnstein's Servant">
-		<race>HUMAN</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4130206.183125" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="3784031.79190751" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="1001982.07708638" magical="155930.833480729" critical="4" attackSpeed="253" range="40" />
 			<defence physical="6693.19371727749" magical="3880.22048278126" />
 			<attribute>
@@ -159,8 +123,8 @@
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="23695" level="1" /> <!-- Tornado Shackle -->
 			<skill id="23696" level="1" /> <!-- Stun Crash -->
 			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
@@ -171,10 +135,10 @@
 		</collision>
 	</npc>
 	<npc id="23604" level="102" type="Monster" name="Guardian Destra" title="Burnstein's Servant">
-		<race>HUMAN</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4130206.183125" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="3784031.79190751" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="500991.232598124" magical="311861.666961458" critical="4" attackSpeed="253" range="40" />
 			<defence physical="6693.19371727749" magical="3880.22048278126" />
 			<attribute>
@@ -190,8 +154,8 @@
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="23697" level="1" /> <!-- Chain Snake -->
 			<skill id="23698" level="1" /> <!-- Curse of Silence -->
 			<skill id="23709" level="3" /> <!-- Chaos Breaker -->
@@ -204,8 +168,9 @@
 	<npc id="23605" level="102" type="Monster" name="Aden Elite Knight" title="Brainwashed">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<acquire exp="812123235" sp="1624273" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="516275.851755" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="667987.922020966" magical="103953.888987153" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<attribute>
@@ -234,8 +199,9 @@
 	<npc id="23606" level="102" type="Monster" name="Aden Elite Warrior" title="Brainwashed">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<acquire exp="812123235" sp="1624273" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="516275.851755" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="667987.922020966" magical="103953.888987153" critical="4" attackSpeed="253" range="80" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<attribute>
@@ -265,8 +231,9 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15302" />
+		<acquire exp="812123235" sp="1624273" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="516275.851755" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="667987.922020966" magical="103953.888987153" critical="8" attackSpeed="253" range="1100" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<attribute>
@@ -293,8 +260,9 @@
 	<npc id="23608" level="102" type="Monster" name="Aden Elite Wizard" title="Brainwashed">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<acquire exp="812123235" sp="1624273" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="516275.851755" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="333994.155065416" magical="207907.777974305" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<attribute>
@@ -321,10 +289,11 @@
 		</collision>
 	</npc>
 	<npc id="23609" level="103" type="Monster" name="Corrupted Captain" title="Embryo">
-		<race>HUMANOID</race>
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1065911692" sp="2131879" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1118252.67345" hpRegen="9.5" mp="31115.637" mpRegen="3.3" />
+			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
 			<attack physical="748963.738571782" magical="118675.876040372" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5003.125" magical="2900.50880088009" />
 			<attribute>
@@ -338,7 +307,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -348,10 +317,11 @@
 		</collision>
 	</npc>
 	<npc id="23610" level="103" type="Monster" name="Corrupted High Priest" title="Embryo">
-		<race>HUMANOID</race>
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1065911692" sp="2131879" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1118252.67345" hpRegen="9.5" mp="31115.637" mpRegen="3.3" />
+			<vitals hp="1024526.01156069" hpRegen="9.5" mp="25324.7524752475" mpRegen="3.3" />
 			<attack physical="340438.133185075" magical="215774.25629553" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4548.4375" magical="2636.82618261826" />
 			<attribute>
@@ -365,7 +335,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="23647" level="1" /> <!-- Absolute Black -->
@@ -380,8 +350,9 @@
 	<npc id="23611" level="102" type="Monster" name="Elite Commander" title="Embryo">
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="888259707" sp="1776588" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="831204.01407" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="761536.416184971" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="667987.922020966" magical="103953.888987153" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<attribute>
@@ -395,7 +366,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="23636" level="1" /> <!-- Stun Crush -->
@@ -410,8 +381,9 @@
 	<npc id="23612" level="102" type="Monster" name="Elite Priest" title="Embryo">
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="888259707" sp="1776588" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="831204.01407" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="761536.416184971" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="333994.155065416" magical="207907.777974305" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<attribute>
@@ -425,10 +397,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="12" />
@@ -438,8 +410,9 @@
 	<npc id="23613" level="102" type="Monster" name="Elite Instructor" title="Embryo">
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="888259707" sp="1776588" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="831204.01407" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="761536.416184971" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="667987.922020966" magical="103953.888987153" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<attribute>
@@ -453,7 +426,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="23639" level="1" /> <!-- Rush Assault -->
@@ -468,8 +441,9 @@
 	<npc id="23614" level="102" type="Monster" name="Elite Executioner" title="Embryo">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="888259707" sp="1776588" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="831204.01407" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="761536.416184971" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="667987.922020966" magical="103953.888987153" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<attribute>
@@ -498,8 +472,9 @@
 	<npc id="23615" level="102" type="Monster" name="Elite Shaman" title="Embryo">
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="888259707" sp="1776588" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="831204.01407" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="761536.416184971" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="333994.155065416" magical="207907.777974305" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4462.30366492147" magical="2587.04404471861" />
 			<attribute>
@@ -518,10 +493,10 @@
 		</ai>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="23645" level="1" /> <!-- Curse of Silence -->
 			<skill id="23650" level="1" /> <!-- Meteor Hurricane -->
 			<skill id="23749" level="1" /> <!-- Elemental Storm -->
@@ -2155,21 +2130,21 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23648" level="100" type="Monster" name="Dark Crusader">
+	<npc id="23648" level="110" type="Monster" name="Dark Crusader">
 		<parameters>
 			<skill name="DDMagic1" id="11383" level="1" />
 			<skill name="DDMagic2" id="11384" level="1" />
 		</parameters>
-		<race>DEMONIC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
 			</speed>
-			<attack physical="265208.012205788" magical="39741.082892845" random="10" critical="4" accuracy="4.75" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" evasion="5" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="4.75" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" evasion="5" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2193,22 +2168,22 @@
 			<height normal="28.6" />
 		</collision>
 	</npc>
-	<npc id="23649" level="100" type="Monster" name="Banshee Queen">
+	<npc id="23649" level="110" type="Monster" name="Banshee Queen">
 		<parameters>
 			<skill name="DDMagic1" id="11385" level="1" />
 			<skill name="DDMagic2" id="11386" level="1" />
 		</parameters>
-		<race>DEMONIC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="37016" /> <!-- Spectral Reaper -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="265208.012205788" magical="39741.082892845" random="10" critical="4" accuracy="4.75" attackSpeed="290" type="BOW" range="1000" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" evasion="4" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="4.75" attackSpeed="290" type="BOW" range="1000" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" evasion="4" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2232,13 +2207,13 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="23650" level="100" type="Monster" name="Dwarf Spy" title="Spy">
-		<race>DWARF</race>
+	<npc id="23650" level="110" type="Monster" name="Dwarf Spy" title="Spy">
+		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="436753.757225434" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2258,22 +2233,14 @@
 			<radius normal="9" />
 			<height normal="18" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="40000000" max="60000000" chance="100" /> <!-- Adena -->
-			</drop>
-			<spoil>
-				<item id="57" min="40000000" max="60000000" chance="100" /> <!-- Adena -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23651" level="100" type="Monster" name="Unit Signalman" title="Ashen Shadow">
-		<race>ORC</race>
+	<npc id="23651" level="110" type="Monster" name="Unit Signalman" title="Ashen Shadow">
+		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="10" accuracy="9" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="10" accuracy="9" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2298,13 +2265,13 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23652" level="100" type="Monster" name="Unit Guard" title="Ashen Shadow">
+	<npc id="23652" level="110" type="Monster" name="Unit Guard" title="Ashen Shadow">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -3480,7 +3447,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="17421" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="63560.269845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
+			<vitals hp="58232.9479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="595421.949982443" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3977.36842105263" magical="2306.06218516589" />
 			<attribute>
@@ -3494,7 +3461,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
@@ -3513,7 +3480,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="17417" lhand="17435" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="516275.851755" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<vitals hp="473004.046242775" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="607261.923705362" magical="94503.5225394218" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4056.5445026178" magical="2351.70113870026" />
 			<attribute>
@@ -3527,7 +3494,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
@@ -3547,7 +3514,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="17329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="63560.269845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
+			<vitals hp="58232.9479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="595421.949982443" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3977.36842105263" magical="2306.06218516589" />
 			<attribute>
@@ -3561,7 +3528,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
@@ -3578,9 +3545,9 @@
 	<npc id="23680" level="101" type="Monster" name="Flame Golem">
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="8154641452" sp="16309358" />
+		<acquire exp="8154641453" sp="16309359" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2511960.11560694" hpRegen="9.5" mp="47856.1056105611" mpRegen="3.3" />
+			<vitals hp="3457212.13872832" hpRegen="9.5" mp="63871.9471947195" mpRegen="3.3" />
 			<attack physical="297710.974991222" magical="45476.7341932766" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<attribute>
@@ -3607,7 +3574,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53771.098265896" hpRegen="9.5" mp="23928.0528052805" mpRegen="3.3" />
+			<vitals hp="107542.196531792" hpRegen="9.5" mp="24166.99669967" mpRegen="3.3" />
 			<attack physical="265208.012205788" magical="39741.082892845" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1771.95767195767" magical="1027.11858487436" />
 			<attribute>
@@ -3625,7 +3592,7 @@
 			<height normal="40" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
@@ -3633,9 +3600,9 @@
 	<npc id="23682" level="100" type="Monster" name="Flame Scorpion">
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="499622600" sp="999300" />
+		<acquire exp="499622600" sp="999301" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="107542.196531792" hpRegen="9.5" mp="23928.0528052805" mpRegen="3.3" />
+			<vitals hp="645252.023121387" hpRegen="9.5" mp="24166.99669967" mpRegen="3.3" />
 			<attack physical="265208.012205788" magical="39741.082892845" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1771.95767195767" magical="1027.11858487436" />
 			<attribute>
@@ -3653,7 +3620,7 @@
 			<height normal="52.8" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
@@ -3662,7 +3629,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12498818.4971098" hpRegen="9.5" mp="47856.1056105611" mpRegen="3.3" />
+			<vitals hp="18922343.9306358" hpRegen="9.5" mp="63871.9471947195" mpRegen="3.3" />
 			<attack physical="333994.155065416" magical="51976.9444935764" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2231.41361256545" magical="1293.5220223593" />
 			<attribute>
@@ -3680,7 +3647,7 @@
 			<height normal="76" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
@@ -3708,7 +3675,7 @@
 			<height normal="37.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
@@ -3736,33 +3703,16 @@
 			<height normal="35.25" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="19448" min="1" max="1" chance="80.25" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19448" min="1" max="1" chance="80.25" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 				<item id="57" min="35000000" max="70000000" chance="20" /> <!-- Adena -->
-				<item id="19447" min="1" max="1" chance="20.42" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="1" max="1" chance="20.42" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 				<item id="48568" min="1" max="3" chance="19.02" /> <!-- Guard Agathion Fragment -->
-				<item id="35340" min="1" max="1" chance="3" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35353" min="1" max="1" chance="2.993" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35347" min="1" max="1" chance="2.967" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35345" min="1" max="1" chance="2.951" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="35343" min="1" max="1" chance="2.942" /> <!-- Eternal Shield Ingredient -->
-				<item id="35344" min="1" max="1" chance="2.937" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="35339" min="1" max="1" chance="2.929" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35348" min="1" max="1" chance="2.929" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="35350" min="1" max="1" chance="2.925" /> <!-- Eternal Tunic Ingredient -->
-				<item id="35354" min="1" max="1" chance="2.926" /> <!-- Eternal Sigil Ingredient -->
-				<item id="35338" min="1" max="1" chance="2.92" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35341" min="1" max="1" chance="2.907" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="35349" min="1" max="1" chance="2.901" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35351" min="1" max="1" chance="2.899" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35352" min="1" max="1" chance="2.895" /> <!-- Eternal Glove Ingredient -->
-				<item id="35342" min="1" max="1" chance="2.89" /> <!-- Eternal Boot Ingredient -->
-				<item id="35346" min="1" max="1" chance="2.876" /> <!-- Eternal Leather Legging Ingredient -->
 				<item id="35473" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Circlet (60%) -->
 				<item id="35474" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Tunic (60%) -->
 				<item id="35475" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Stockings (60%) -->
@@ -3787,18 +3737,18 @@
 				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
 				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
 				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light armor -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy armor -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light armor -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3887,27 +3837,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="19448" min="1" max="1" chance="78.28" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19448" min="1" max="1" chance="78.28" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 				<item id="57" min="35000000" max="70000000" chance="20" /> <!-- Adena -->
-				<item id="19447" min="1" max="1" chance="19.98" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="1" max="1" chance="19.98" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 				<item id="48568" min="1" max="3" chance="19.64" /> <!-- Guard Agathion Fragment -->
-				<item id="35343" min="1" max="1" chance="3.005" /> <!-- Eternal Shield Ingredient -->
-				<item id="35351" min="1" max="1" chance="2.995" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35340" min="1" max="1" chance="2.994" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35346" min="1" max="1" chance="2.986" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="35348" min="1" max="1" chance="2.953" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="35350" min="1" max="1" chance="2.948" /> <!-- Eternal Tunic Ingredient -->
-				<item id="35338" min="1" max="1" chance="2.948" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35345" min="1" max="1" chance="2.932" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="35354" min="1" max="1" chance="2.934" /> <!-- Eternal Sigil Ingredient -->
-				<item id="35339" min="1" max="1" chance="2.916" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35341" min="1" max="1" chance="2.91" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="35342" min="1" max="1" chance="2.901" /> <!-- Eternal Boot Ingredient -->
-				<item id="35347" min="1" max="1" chance="2.897" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35349" min="1" max="1" chance="2.894" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35344" min="1" max="1" chance="2.877" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="35353" min="1" max="1" chance="2.876" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35352" min="1" max="1" chance="2.874" /> <!-- Eternal Glove Ingredient -->
 				<item id="35473" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Circlet (60%) -->
 				<item id="35474" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Tunic (60%) -->
 				<item id="35475" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Stockings (60%) -->
@@ -3932,18 +3865,18 @@
 				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
 				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
 				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light armor -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy armor -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light armor -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3951,7 +3884,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53771.098265896" hpRegen="9.5" mp="23928.0528052805" mpRegen="3.3" />
+			<vitals hp="53771.098265896" hpRegen="9.5" mp="24166.99669967" mpRegen="3.3" />
 			<attack physical="265208.012205788" magical="119222.958130003" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5314.81481481481" magical="3081.35575462308" />
 			<attribute>
@@ -3970,10 +3903,10 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="16554" level="1" /> <!-- Spinning Slash -->
 		</skillList>
 		<collision>
@@ -4007,7 +3940,7 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="6279" level="1" /> <!-- Frozen Storm -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
@@ -4025,7 +3958,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="16152" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="12498818" hpRegen="7.5" mp="47856" mpRegen="2.7" />
+			<vitals hp="12498818.1436371" hpRegen="7.5" mp="47856.1438561439" mpRegen="2.7" />
 			<attack physical="1001981.95717733" magical="409194.773105296" critical="4" attackSpeed="253" range="40" />
 			<defence physical="6693.19371727749" magical="3880.41278093634" />
 			<attribute>
@@ -4051,11 +3984,11 @@
 		</collision>
 	</npc>
 	<npc id="23691" level="101" type="Monster" name="Haren" title="Dragonclaw Knight Captain">
-		<race>HUMAN</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="1893041700" sp="3786101" />
+		<acquire exp="1893041701" sp="3786102" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="837320.231213873" hpRegen="9.5" mp="47856.1056105611" mpRegen="3.3" />
+			<vitals hp="1037163.58381503" hpRegen="9.5" mp="63871.9471947195" mpRegen="3.3" />
 			<attack physical="297710.974991222" magical="136429.915395836" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4972.1052631579" magical="2882.40402987667" />
 			<attribute>
@@ -4078,11 +4011,11 @@
 		</collision>
 	</npc>
 	<npc id="23692" level="101" type="Monster" name="Fiora" title="Dragonclaw Knight Captain">
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1893041700" sp="3786101" />
+		<acquire exp="1893041701" sp="3786102" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="837320.231213873" hpRegen="9.5" mp="47856.1056105611" mpRegen="3.3" />
+			<vitals hp="1037163.58381503" hpRegen="9.5" mp="63871.9471947195" mpRegen="3.3" />
 			<attack physical="297710.974991222" magical="136429.915395836" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4972.1052631579" magical="2882.40402987667" />
 			<attribute>
@@ -4106,11 +4039,11 @@
 		</collision>
 	</npc>
 	<npc id="23693" level="101" type="Monster" name="Typhoon" title="Dragonclaw Royal Guard Captain">
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="1893041700" sp="3786101" />
+		<acquire exp="1893041701" sp="3786102" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2511960.11560694" hpRegen="9.5" mp="47856.1056105611" mpRegen="3.3" />
+			<vitals hp="3111490.75144509" hpRegen="9.5" mp="63871.9471947195" mpRegen="3.3" />
 			<attack physical="297710.974991222" magical="136429.915395836" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4972.1052631579" magical="2882.40402987667" />
 			<attribute>
@@ -4134,72 +4067,51 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="19448" min="1" max="1" chance="79.36" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="17446" min="1" max="1" chance="0.0075" /> <!-- Eternal Sigil -->
+				<item id="17433" min="1" max="1" chance="0.0075" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0075" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0075" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0075" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0075" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0075" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0075" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0075" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0075" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0075" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.003" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.003" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.003" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.003" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.003" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.003" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.003" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.003" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
 				<item id="57" min="35000000" max="70000000" chance="20" /> <!-- Adena -->
-				<item id="19447" min="1" max="1" chance="20.41" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="48568" min="1" max="3" chance="19.66" /> <!-- Guard Agathion Fragment -->
-				<item id="35347" min="1" max="1" chance="3.001" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35348" min="1" max="1" chance="2.992" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="35346" min="1" max="1" chance="2.985" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="35341" min="1" max="1" chance="2.984" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="35354" min="1" max="1" chance="2.966" /> <!-- Eternal Sigil Ingredient -->
-				<item id="35338" min="1" max="1" chance="2.955" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35350" min="1" max="1" chance="2.949" /> <!-- Eternal Tunic Ingredient -->
-				<item id="35340" min="1" max="1" chance="2.949" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35344" min="1" max="1" chance="2.934" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="35351" min="1" max="1" chance="2.928" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35343" min="1" max="1" chance="2.924" /> <!-- Eternal Shield Ingredient -->
-				<item id="35349" min="1" max="1" chance="2.917" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35339" min="1" max="1" chance="2.905" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35353" min="1" max="1" chance="2.903" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35345" min="1" max="1" chance="2.9" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="35342" min="1" max="1" chance="2.899" /> <!-- Eternal Boot Ingredient -->
-				<item id="35352" min="1" max="1" chance="2.885" /> <!-- Eternal Glove Ingredient -->
-				<item id="35473" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35474" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="48568" min="1" max="3" chance="19.27" /> <!-- Guard Agathion Fragment -->
+				<item id="19448" min="1" max="1" chance="6.988" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="4.91" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 				<item id="46537" min="1" max="1" chance="0.75" /> <!-- Mystic Soul Crystal Fragment -->
-				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
-				<item id="35472" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35464" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35465" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35466" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35467" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35468" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35469" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35470" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
 			</drop>
 		</dropLists>
 	</npc>
 	<npc id="23694" level="100" type="Monster" name="Royal Guard Knight">
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="463935300" sp="927900" />
+		<acquire exp="463935300" sp="927901" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="436753.757225434" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="265208.012205788" magical="119222.958130003" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1771.95767195767" magical="1027.11858487436" />
 			<attribute>
@@ -4222,11 +4134,11 @@
 		</collision>
 	</npc>
 	<npc id="23695" level="100" type="Monster" name="Royal Guard Healer">
-		<race>ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="463935300" sp="927900" />
+		<acquire exp="463935300" sp="927901" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="436753.757225434" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="265208.012205788" magical="119222.958130003" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1771.95767195767" magical="1027.11858487436" />
 			<attribute>
@@ -4249,11 +4161,11 @@
 		</collision>
 	</npc>
 	<npc id="23696" level="101" type="Monster" name="Domithan" title="Dragonclaw Royal Guard">
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="946520799" sp="1893101" />
+		<acquire exp="946520800" sp="1893102" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="1747016.1849711" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="297710.974991222" magical="136429.915395836" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4972.1052631579" magical="2882.40402987667" />
 			<attribute>
@@ -4271,23 +4183,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="30297" min="1" max="2" chance="85.95" /> <!-- Superior Giant's Codex -->
-				<item id="17527" min="2" max="3" chance="79.19" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="2" chance="20.41" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46150" min="1" max="1" chance="10.048" /> <!-- Superior Giant's Codex - Chapter 1 -->
-				<item id="30298" min="1" max="1" chance="2.55" /> <!-- Superior Giant's Codex - Mastery -->
-				<item id="39738" min="1" max="1" chance="2.519" /> <!-- Rune Stone -->
-				<item id="46151" min="1" max="1" chance="2.495" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+				<item id="17527" min="2" max="3" chance="79.87" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="30297" min="1" max="2" chance="84.19" /> <!-- Superior Giant's Codex -->
+				<item id="17526" min="1" max="2" chance="19.88" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="46150" min="1" max="1" chance="10.049" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="30298" min="1" max="1" chance="2.547" /> <!-- Superior Giant's Codex - Mastery -->
+				<item id="39738" min="1" max="1" chance="2.537" /> <!-- Rune Stone -->
+				<item id="46151" min="1" max="1" chance="2.489" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
 				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
 			</drop>
 		</dropLists>
 	</npc>
 	<npc id="23697" level="100" type="Monster" name="Knight Soldier">
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="463935300" sp="927900" />
+		<acquire exp="463935300" sp="927901" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="436753.757225434" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="265208.012205788" magical="119222.958130003" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1771.95767195767" magical="1027.11858487436" />
 			<attribute>
@@ -4337,11 +4249,11 @@
 		</collision>
 	</npc>
 	<npc id="23699" level="100" type="Monster" name="Royal Guard Wizard">
-		<race>HUMAN</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="463935300" sp="927900" />
+		<acquire exp="463935300" sp="927901" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="436753.757225434" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="265208.012205788" magical="119222.958130003" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1771.95767195767" magical="1027.11858487436" />
 			<attribute>

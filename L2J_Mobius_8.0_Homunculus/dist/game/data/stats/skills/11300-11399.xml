@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11300" toLevel="6" name="Yoke Status">
-		<!-- Immobilized midair. P./ M. Def. -$s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Immobilized midair. Additionally, P./ M. Def. -$s1.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1042</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -80,11 +80,11 @@
 		</effects>
 	</skill>
 	<skill id="11302" toLevel="13" name="Servitor Major Heal">
-		<!-- Heals the servitor with $s1 Power. -->
+		<!-- Recovers servitor's HP with $s1 power. -->
 		<icon>icon.skill1127</icon>
 		<operateType>A1</operateType>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
@@ -136,14 +136,14 @@
 		</effects>
 	</skill>
 	<skill id="11303" toLevel="1" name="Mass Servitor Magic Barrier">
-		<!-- Increases all servitor's M. Def. by 30% for 30 min. -->
+		<!-- Increases all servitor's M. Def. by $s2 for $s1 -->
 		<icon>icon.skill1139</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -165,14 +165,14 @@
 		</effects>
 	</skill>
 	<skill id="11304" toLevel="1" name="Mass Servitor Haste">
-		<!-- Increases all servitor's Atk. Spd. by 34% for 30 min. -->
+		<!-- Increases all servitor's Atk. Spd. by $s2 for $s1 -->
 		<icon>icon.skill1141</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -194,14 +194,14 @@
 		</effects>
 	</skill>
 	<skill id="11305" toLevel="1" name="Mass Servitor Shield">
-		<!-- Increases all servitor's P. Def. by 15% for 30 min. -->
+		<!-- Increases all servitor's P. Def. by $s2 for $s1 -->
 		<icon>icon.skill1140</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -223,14 +223,14 @@
 		</effects>
 	</skill>
 	<skill id="11306" toLevel="1" name="Mass Servitor Empower">
-		<!-- Increases all servitor's M. Atk. by 79% for 30 min. -->
+		<!-- Increases all servitor's M. Atk. by $s2 for $s1 -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -252,14 +252,14 @@
 		</effects>
 	</skill>
 	<skill id="11307" toLevel="1" name="Mass Servitor Might">
-		<!-- Increases all servitor's P. Atk. by 17% for 30 min. -->
+		<!-- Increases all servitor's P. Atk. by $s2 for $s1 -->
 		<icon>icon.skill1146</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -281,14 +281,14 @@
 		</effects>
 	</skill>
 	<skill id="11308" toLevel="1" name="Mass Servitor Wind Walk">
-		<!-- Increases all servitor's Speed by 34 for 30 min. -->
+		<!-- For $s1, all servitors' Speed +$s2. -->
 		<icon>icon.skill1144</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -310,12 +310,12 @@
 		</effects>
 	</skill>
 	<skill id="11309" toLevel="1" name="Mass Servitor Blessing">
-		<!-- Dispels debuffs on all servitors and makes them immune to debuffs for 5 sec. -->
+		<!-- Dispels debuffs on all servitors and makes them immune to debuffs for $s1 -->
 		<icon>icon.skill1301</icon>
 		<abnormalTime>5</abnormalTime>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
@@ -335,6 +335,19 @@
 				<max>10</max>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
 				<power>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">1936</value>
@@ -397,7 +410,7 @@
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>600000</reuseDelay>
@@ -436,7 +449,7 @@
 		</effects>
 	</skill>
 	<skill id="11311" toLevel="3" name="Naviarope Strike">
-		<!-- Inflicts $s1 damage. -->
+		<!-- Attacks the enemy with $s1 power. -->
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A1</operateType>
 		<mpConsume>70</mpConsume>
@@ -471,7 +484,7 @@
 		<operateType>A1</operateType>
 		<mpConsume>70</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>1490</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-704</effectPoint>
@@ -581,7 +594,7 @@
 		</effects>
 	</skill>
 	<skill id="11316" toLevel="1" name="Summon Soulshots">
-		<!-- Summons 1900 Beast Soulshots. Consumes 1 Crystal (R-grade). -->
+		<!-- Summons 1900 Beast Soulshots. Consumes 1 R-grade Crystal. -->
 		<icon>icon.skill11316</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17371</itemConsumeId> <!-- Crystal (R-Grade) -->
@@ -592,7 +605,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 		<isMagic>1</isMagic>
-		<staticReuse>true</staticReuse>
+		<staticReuse>false</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -622,7 +635,7 @@
 			<value level="7">303</value>
 			<value level="8">308</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>6500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6000</reuseDelay>
@@ -786,7 +799,7 @@
 		</effects>
 	</skill>
 	<skill id="11323" toLevel="8" name="Feline Aggression">
-		<!-- Provokes nearby enemies. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes nearby enemies into attacking you. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -821,7 +834,7 @@
 		</effects>
 	</skill>
 	<skill id="11324" toLevel="8" name="Feline Stun">
-		<!-- Temporarily stuns nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Temporarily stuns nearby enemies.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -853,7 +866,7 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -974,7 +987,7 @@
 			<value level="7">60</value>
 			<value level="8">62</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2200</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -1013,7 +1026,7 @@
 			<value level="7">90</value>
 			<value level="8">93</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2900</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -1161,7 +1174,7 @@
 		</effects>
 	</skill>
 	<skill id="11332" toLevel="8" name="Unicorn's Aggression">
-		<!-- Provokes nearby enemies. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes nearby enemies into attacking you. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1196,7 +1209,7 @@
 		</effects>
 	</skill>
 	<skill id="11333" toLevel="8" name="Unicorn's Stun">
-		<!-- Temporarily stuns nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Temporarily stuns nearby enemies.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1228,7 +1241,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1349,7 +1362,7 @@
 			<value level="7">60</value>
 			<value level="8">62</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2200</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -1388,7 +1401,7 @@
 			<value level="7">90</value>
 			<value level="8">93</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2900</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -1536,7 +1549,7 @@
 		</effects>
 	</skill>
 	<skill id="11341" toLevel="8" name="Phantom Aggression">
-		<!-- Provokes nearby enemies. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes nearby enemies into attacking you. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1571,7 +1584,7 @@
 		</effects>
 	</skill>
 	<skill id="11342" toLevel="8" name="Phantom Stun">
-		<!-- Temporarily stuns nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Temporarily stuns nearby enemies.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1603,7 +1616,7 @@
 		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1724,7 +1737,7 @@
 			<value level="7">60</value>
 			<value level="8">62</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2200</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -1763,7 +1776,7 @@
 			<value level="7">90</value>
 			<value level="8">93</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2900</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -1813,7 +1826,7 @@
 			<value level="7">88</value>
 			<value level="8">91</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -1893,7 +1906,7 @@
 		</effects>
 	</skill>
 	<skill id="11348" toLevel="8" name="Servitor Death Whisper">
-		<!-- For $s1, all servitor's Critical Damage +$s2. -->
+		<!-- For $s1, all servitors' Critical Damage for standard attacks +$s2. -->
 		<icon>icon.skill11348</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1921,7 +1934,7 @@
 			<value level="7">88</value>
 			<value level="8">91</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -2029,7 +2042,7 @@
 			<value level="7">88</value>
 			<value level="8">91</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -2112,7 +2125,7 @@
 			<value level="8">82</value>
 			<value level="9">85</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2400</reuseDelay>
@@ -2163,7 +2176,7 @@
 		</effects>
 	</skill>
 	<skill id="11351" toLevel="5" name="Link of Loyalty">
-		<!-- Servitor's wrath. P. Atk. +$s1, Critical Rate +$s2, and Critical Damage +$s3. -->
+		<!-- Servitor's Fury. P. Atk. +$s1, Critical Rate for standard attacks +$s2, and Critical Damage for standard attacks +$s3. -->
 		<icon>icon.skill11351</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2179,7 +2192,7 @@
 		<targetType>SUMMON</targetType>
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>4</isMagic>
 		<effects>
@@ -2288,7 +2301,7 @@
 			<value level="6">76</value>
 			<value level="7">79</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2400</reuseDelay>
@@ -2339,7 +2352,7 @@
 		</effects>
 	</skill>
 	<skill id="11354" toLevel="5" name="Elemental Link">
-		<!-- Servitor's wrath. P. Atk. +$s1, Critical Rate +$s2, and Critical Damage +$s3. -->
+		<!-- Servitor's Fury. P. Atk. +$s1, Critical Rate for standard attacks +$s2, and Critical Damage for standard attacks +$s3. -->
 		<icon>icon.skill11354</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2355,7 +2368,7 @@
 		<targetType>SUMMON</targetType>
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<reuseDelay>5000</reuseDelay>
 		<isMagic>4</isMagic>
 		<effects>
@@ -2392,7 +2405,7 @@
 		</effects>
 	</skill>
 	<skill id="11355" toLevel="4" name="Elemental Ability">
-		<!-- Critical Damage +$s1. -->
+		<!-- Critical Damage for standard attacks +$s1. -->
 		<icon>icon.skill11277</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2424,7 +2437,7 @@
 			<value level="8">82</value>
 			<value level="9">85</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>2400</reuseDelay>
@@ -2475,7 +2488,7 @@
 		</effects>
 	</skill>
 	<skill id="11357" toLevel="5" name="Spectral Link">
-		<!-- Servitor's wrath. P. Atk. +$s1, Critical Rate +$s2, and Critical Damage +$s3. -->
+		<!-- Servitor's Fury. P. Atk. +$s1, Critical Rate for standard attacks +$s2, and Critical Damage for standard attacks +$s3. -->
 		<icon>icon.skill11357</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2491,7 +2504,7 @@
 		<targetType>SUMMON</targetType>
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<reuseDelay>5000</reuseDelay>
 		<isMagic>4</isMagic>
 		<effects>
@@ -2528,7 +2541,7 @@
 		</effects>
 	</skill>
 	<skill id="11358" toLevel="4" name="Spectral Ability">
-		<!-- P. Atk. +$s1, PvP Damage -$s2. -->
+		<!-- P. Def. +$s1, Received PvP damage -$s2. -->
 		<icon>icon.skill11277</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2571,7 +2584,7 @@
 		</effects>
 	</skill>
 	<skill id="11359" toLevel="3" name="Summon Protection Stone">
-		<!-- Summons a giant shaman stone to temporarily increase party's abilities. Consumes $s1 Spirit Ore. -->
+		<!-- Temporarily increases all party members' abilities. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill11359</icon>
 		<itemConsumeCount>15</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -2584,7 +2597,7 @@
 			<value level="2">132</value>
 			<value level="3">137</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -2616,7 +2629,7 @@
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>4000</reuseDelay>
@@ -2742,7 +2755,7 @@
 		</effects>
 	</skill>
 	<skill id="11364" toLevel="3" name="Elemental Dash">
-		<!-- Party's Speed +$s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Party's Speed +$s1.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime> <!-- Guessed -->
@@ -2766,7 +2779,7 @@
 		</effects>
 	</skill>
 	<skill id="11365" toLevel="6" name="Summon Demonic Crucifix">
-		<!-- Attacks target and nearby enemies with $s1 Power added to M. Atk. and casts a curse. Atk. Spd./ Casting Spd. -$s2 and Speed -$s3. Consumes $s4 Spirit Ores. -->
+		<!-- Attacks the target and nearby enemies with $s1 power. Their Atk. Spd./ Casting Spd. -$s2, Speed -$s3. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill11365</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2836,7 +2849,7 @@
 		</effects>
 	</skill>
 	<skill id="11366" toLevel="3" name="Spectral Curse">
-		<!-- Temporarily renders nearby enemies helpless. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Temporarily renders nearby enemies helpless.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
@@ -2860,7 +2873,7 @@
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>4000</reuseDelay>
@@ -2939,7 +2952,7 @@
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<reuseDelay>4000</reuseDelay>
 		<isMagic>4</isMagic>
 		<effects>
@@ -3432,7 +3445,7 @@
 		</effects>
 	</skill>
 	<skill id="11376" toLevel="6" name="Commando Double Smash">
-		<!-- Strikes the target with $s1 power knocking them down for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Strikes the target with $s1 power knocking them down for $s2\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10546</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -3493,7 +3506,7 @@
 			<value level="5">176</value> <!-- Guessed -->
 			<value level="6">177</value> <!-- Guessed -->
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -3520,7 +3533,7 @@
 		</effects>
 	</skill>
 	<skill id="11378" toLevel="6" name="Elemental Slam">
-		<!-- Deals physical damage to the target and nearby enemies with $s1 power knocking them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Deals physical damage to the target and nearby enemies with $s1 power knocking them back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1171</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
@@ -3542,7 +3555,7 @@
 			<value level="5">176</value> <!-- Guessed -->
 			<value level="6">177</value> <!-- Guessed -->
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>15000</reuseDelay>
@@ -3575,7 +3588,7 @@
 		</effects>
 	</skill>
 	<skill id="11379" toLevel="6" name="Lancer Rush">
-		<!-- Deals physical damage to the target with $s1 power stunning them for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Deals physical damage to the target with $s1 power stunning them for $s2\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0121</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -3637,12 +3650,12 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11380" toLevel="6" name="Power Stump">
-		<!-- Deals physical damage to nearby enemies with $s1 power lifting them in the air. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Deals physical damage to nearby enemies with $s1 power lifting them in the air.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill30006</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
@@ -3711,7 +3724,7 @@
 			<value level="5">175</value> <!-- Guessed -->
 			<value level="6">175</value> <!-- Guessed -->
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -3884,7 +3897,7 @@
 			<value level="5">88</value>
 			<value level="6">88</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-709</effectPoint>
@@ -3910,7 +3923,7 @@
 		</effects>
 	</skill>
 	<skill id="11386" toLevel="6" name="Phantom Crash">
-		<!-- Deals physical damage to the target with $s1 power. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Deals physical damage to the target with $s1 power.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3923,7 +3936,7 @@
 			<value level="5">88</value>
 			<value level="6">88</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-709</effectPoint>
@@ -3943,7 +3956,7 @@
 		</effects>
 	</skill>
 	<skill id="11387" toLevel="2" name="Arcana's Call">
-		<!-- P. Atk./ P. Def./ M. Atk./ M. Def. +$s2 for $s1 Additionally, servitor's P. Atk. +$s3, P. Accuracy +$s4, Confusion Atk. Rate +$s5. The servitor also becomes immune to debuffs. Consumes 10 Spirit Ores. -->
+		<!-- For $s1, P./ M. Atk. and P./ M. Def. +$s2. Additionally, the servitor's P. Atk. +$s3, P. Accuracy +$s4, Confusion Atk. Rate +$s5. The servitor becomes immune to debuffs. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11387</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3956,7 +3969,7 @@
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -3982,6 +3995,19 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
@@ -4008,7 +4034,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11388" toLevel="2" name="Lord of Arcana">
-		<!-- For $s1, P. Atk./ P. Def./ M. Atk./ M. Def. +$s2. -->
+		<!-- For $s1, P./ M. Atk. and P./ M. Def. +$s2. -->
 		<icon>icon.skill11387</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -4019,7 +4045,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>300</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -4057,7 +4083,7 @@
 		</effects>
 	</skill>
 	<skill id="11389" toLevel="2" name="Elemental's Call">
-		<!-- P. Atk./ P. Def./ M. Atk./ M. Def. +$s2 for $s1 Additionally, servitor's P. Atk. +$s3, Atk. Spd. +$s4, Skill Cooldown +$s5. The servitor also becomes immune to debuffs. Consumes 10 Spirit Ores. -->
+		<!-- For $s1, P./ M. Atk. and P./ M. Def. +$s2. Additionally, the servitor's P. Atk. +$s3, Atk. Spd. +$s4, Skill Cooldown -$s5. The servitor becomes immune to debuffs. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11388</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -4070,7 +4096,7 @@
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -4101,6 +4127,19 @@
 				<magicType>22</magicType>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
@@ -4127,7 +4166,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11390" toLevel="2" name="Lord of Elemental">
-		<!-- For $s1, P. Atk./ P. Def./ M. Atk./ M. Def. +$s2. -->
+		<!-- For $s1, P./ M. Atk. and P./ M. Def. +$s2. -->
 		<icon>icon.skill11388</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -4138,7 +4177,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>300</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -4176,7 +4215,7 @@
 		</effects>
 	</skill>
 	<skill id="11391" toLevel="2" name="Spectral's Call">
-		<!-- P. Atk./ P. Def./ M. Atk./ M. Def. +$s2 for $s1 Additionally, servitor's P. Atk. +$s3, P. Critical Damage +$s4. The servitor also becomes immune to debuffs. Consumes 10 Spirit Ores. -->
+		<!-- For $s1, P./ M. Atk. and P./ M. Def. +$s2. Additionally, the servitor's P. Atk. +$s3, Critical Damage for standard attacks +$s4. The servitor becomes immune to debuffs. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11389</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -4189,7 +4228,7 @@
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -4205,6 +4244,19 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
@@ -4231,7 +4283,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11392" toLevel="2" name="Lord of Spectral">
-		<!-- For $s1, P. Atk./ P. Def./ M. Atk./ M. Def. +$s2. -->
+		<!-- For $s1, P./ M. Atk. and P./ M. Def. +$s2. -->
 		<icon>icon.skill11389</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -4242,7 +4294,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>70</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>300</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -4280,7 +4332,7 @@
 		</effects>
 	</skill>
 	<skill id="11393" toLevel="6" name="Freezing Invoke">
-		<!-- Deals magic damage to the target and nearby enemies with $s1 power. For $s2, enemies' P./ M. Def. -$s3. Consumes $s4 Spirit Ores. -->
+		<!-- Deals magic damage to the target and nearby enemies with $s1 power. For $s2, enemies' P./ M. Def. -$s3. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill11393</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4356,7 +4408,7 @@
 		</effects>
 	</skill>
 	<skill id="11394" toLevel="6" name="Surrender to the Elemental">
-		<!-- Deals magic damage to the target with $s1 power. For $s2, Attribute Resistance -$s3. Consumes $s4 Spirit Ore(s). -->
+		<!-- Deals magic damage to the target with $s1 power. For $s2, enemy's Attribute Resistance -$s3. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill11394</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4392,7 +4444,7 @@
 			<value level="5">94</value>
 			<value level="6">96</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>5000</reuseDelay>
@@ -4447,7 +4499,7 @@
 		</effects>
 	</skill>
 	<skill id="11395" toLevel="6" name="Curse Exposure">
-		<!-- Deals magic damage to the target with $s1 power. For $s2, Vital Spot Resistance -$s3. Consumes $s4 Spirit Ore(s). -->
+		<!-- Deals magic damage to the target with $s1 power. For $s2, enemy's Vital Spot Resistance -$s3. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill11395</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4483,7 +4535,7 @@
 			<value level="5">94</value>
 			<value level="6">96</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>5000</reuseDelay>

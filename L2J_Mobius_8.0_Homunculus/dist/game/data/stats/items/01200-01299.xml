@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="1200" name="Lionel's Covenant" type="EtcItem">
-		<!-- Lionel's pledge not to use the forbidden book again. Give it to Priest Zigaunt and receive the mark of faith. -->
+		<!-- Lionel's pledge not to use forbidden books again. Take it to Priest Zigaunt to get the Mark of Trust. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -17,7 +17,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1201" name="Mark of Faith" type="EtcItem">
-		<!-- Take this token to the high priest of the temple to change your occupation to a Cleric. -->
+		<!-- Take it to the High Priest of the temple to change your class to Cleric. -->
 		<set name="icon" val="icon.accessary_earing_of_wisdom_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -65,7 +65,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1204" name="Elven Knight Brooch" type="EtcItem">
-		<!-- Take this brooch to the Grand Master of the Fighter Guild and he will change your occupation to a Knight. -->
+		<!-- Take it to the Grand Master of the Warrior Guild to change your class to Knight. -->
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -129,7 +129,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1208" name="Prias' 1st Torn Letter" type="EtcItem">
-		<!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
+		<!-- A torn piece of Prias' letter. Collect 4 pieces and take them to Guard Moretti. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -145,7 +145,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1209" name="Prias' 2nd Torn Letter" type="EtcItem">
-		<!-- Torn piece of letter written by Prias and is not legible Collect all four torn pieces and take them to Guard Moretti. -->
+		<!-- A torn piece of Prias' letter. Collect 4 pieces and take them to Guard Moretti. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -161,7 +161,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1210" name="Prias' 3rd Torn Letter" type="EtcItem">
-		<!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
+		<!-- A torn piece of Prias' letter. Collect 4 pieces and take them to Guard Moretti. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -177,7 +177,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1211" name="Prias' 4th Torn Letter" type="EtcItem">
-		<!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
+		<!-- A torn piece of Prias' letter. Collect 4 pieces and take them to Guard Moretti. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -209,7 +209,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1213" name="Guard's Bow" type="Weapon">
-		<!-- Bow given by Guard Moretti. May be efficiently used for some purpose. -->
+		<!-- Bow given to you by Guard Moretti. Perhaps it can be used for something important. -->
 		<set name="icon" val="icon.weapon_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -290,7 +290,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1217" name="Reisa's Recommendation" type="EtcItem">
-		<!-- Take this recommendation to the Grand Master of the Fighter Guild to change your occupation to an Elven Scout. -->
+		<!-- Take it to the Grand Master of the Warrior Guild to change your class to Elven Scout. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -338,7 +338,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1220" name="Ruby of Magic" type="EtcItem">
-		<!-- Ruby that symbolizes fire. Gather 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
+		<!-- A ruby, the symbol of Fire. Gather 4 elemental stones and take them to Rosella to change your class. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -354,7 +354,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1221" name="Pure Aquamarine" type="EtcItem">
-		<!-- Aquamarine that symbolizes water. Gather the 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
+		<!-- An aquamarine, the symbol of Water. Gather 4 elemental stones and take them to Rosella to change your class. -->
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -434,7 +434,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1226" name="Nobility Amethyst" type="EtcItem">
-		<!-- Amethyst that symbolizes wind. Gather 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
+		<!-- An amethyst, the symbol of Wind. Gather 4 elemental stones and take them to Rosella to change your class. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -482,7 +482,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1229" name="Fertility Peridot" type="EtcItem">
-		<!-- Peridot that symbolizes the earth. Gather 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
+		<!-- A peridot, the symbol of Earth. Gather 4 elemental stones and take them to Rosella to change your class. -->
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -498,7 +498,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1230" name="Eternity Diamond" type="EtcItem">
-		<!-- Take this token to the Grand Master of the Magician Guild to change your occupation to an Elven Wizard. -->
+		<!-- Take it to the Grand Master of the Mystic Guild to change your class to Elven Wizard. -->
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -578,7 +578,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1235" name="Leaf of Oracle" type="EtcItem">
-		<!-- Take this to the high priest to change your occupation to an Oracle. -->
+		<!-- Take it to the High Priest to change your class to Oracle. -->
 		<set name="icon" val="icon.etc_leaf_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -610,7 +610,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1237" name="Palus Charm" type="EtcItem">
-		<!-- Charm inscribed with palus runes that symbolize a deep lake. Carry this and hunt lycanthrope in the Neutral Zone. -->
+		<!-- A charm inscribed with runes that symbolize a deep lake. Take it with you while hunting Lycanthropes in the Neutral Zone. -->
 		<set name="icon" val="icon.accessary_earing_of_grace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -626,7 +626,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1238" name="Lycanthrope Skull" type="EtcItem">
-		<!-- Skull obtained after killing lycanthrope. Collect thirteen and take them to Master Virgil. -->
+		<!-- A skull obtained after killing a Lycanthrope. Collect 13 of these and take them to Master Virgil. -->
 		<set name="icon" val="icon.etc_skull_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -770,7 +770,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1247" name="Leikan's Note" type="EtcItem">
-		<!-- Simple contract given by Guard Leikan. Must hunt moonstone beasts and collect their molars. -->
+		<!-- A contract given by Guard Leikan. Hunt Moonstone Beasts and collect their molars. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -786,7 +786,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1248" name="Moonstone Beast's Molar" type="EtcItem">
-		<!-- Molar obtained after killing a moonstone beast. Collect 10 of these to take to Guard Leikan. -->
+		<!-- A molar obtained after killing a Moonstone Beast. Collect 10 of these and take them to Guard Leikan. -->
 		<set name="icon" val="icon.etc_molar_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -850,7 +850,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1252" name="Iron Heart" type="EtcItem">
-		<!-- Take this to the Grand Master of the Dark Elf Guild to change your occupation to an Assassin. -->
+		<!-- Take it to the Grand Master of the Dark Elf Guild to change your class to Assassin. -->
 		<set name="icon" val="icon.accessary_earing_of_mana_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -994,7 +994,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1261" name="Dark Jewel" type="EtcItem">
-		<!-- Take this token to the Grand Master of the Dark Elf guild to change your occupation to a Dark Wizard. -->
+		<!-- Take it to the Grand Master of the Dark Elf Guild to change your class to Dark Wizard. -->
 		<set name="icon" val="icon.accessary_necklace_of_phantom_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1026,7 +1026,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1263" name="Blank Sheet" type="EtcItem">
-		<!-- Blank scroll. Take this and hunt dark Succubus to obtain bloody runes. -->
+		<!-- A blank scroll. Take it and go hunting Dark Succubi to fill it with bloody runes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1042,7 +1042,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1264" name="Bloody Rune" type="EtcItem">
-		<!-- Runes written with the blood of dark Succubus. Collect 5 and take to Magister Talbot. -->
+		<!-- Runes written with the blood of Dark Succubi. Collect 5 of these and take them to Magister Talbot. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1090,7 +1090,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1267" name="Penitent's Badge" type="EtcItem">
-		<!-- A badge that shows one is in the course of repenting one's sins. Carry this and hunt skeletons and zombies in the Ruins of Despair. -->
+		<!-- A badge that shows that its owner is in the course of repenting one's sins. Carry it while hunting Skeletons and Zombies in the Ruins of Despair. -->
 		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1138,7 +1138,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1270" name="Orb of Abyss" type="EtcItem">
-		<!-- Take this token to a Grand Master of a Dark Elf Guild in any major city to change your occupation to a Shillien Oracle. -->
+		<!-- Take it to the Grand Master of the Dark Elf Guild to change your class to Shillien Oracle. -->
 		<set name="icon" val="icon.etc_bead_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1186,7 +1186,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1273" name="Sap of the Mother Tree" type="EtcItem">
-		<!-- Sap of Mother Tree that dryad elders like. Find 5 gold leaves and give them to Thalia. -->
+		<!-- Sap of the Mother Tree favored by Dryad Elders. Collect 5 golden leaves and take them to Thalia. -->
 		<set name="icon" val="icon.etc_potion_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1282,7 +1282,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1279" name="Herb Scent" type="EtcItem">
-		<!-- Fragrant herb potpourri. Obtain 3 Hearts of Lunacy from a skeleton scout and take them to Arkenia. -->
+		<!-- Fragrant herb potpourri. Obtain 3 Hearts of Lunacy from Skeleton Scouts and take them to Arkenia. -->
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1298,7 +1298,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1280" name="Map of Light" type="EtcItem">
-		<!-- Map given by the Flame Salamander. Kill ratman fighters and give the key of flame to the salamander in exchange for the token of fire. -->
+		<!-- A map given by the Flame Salamander. Kill Ratman Warriors to obtain the Key of Flame and take it to the Flame Salamander in exchange for the Token of Fire. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1314,7 +1314,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1281" name="Key of Flame" type="EtcItem">
-		<!-- The key that can be obtained by killing a ratman fighter. When you give it to a salamander, he will give you the token of fire. -->
+		<!-- A key obtained by killing a Ratman Warrior. Take it to the Flame Salamander to get the Token of Fire. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1378,7 +1378,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1285" name="Wind Bangle" type="EtcItem">
-		<!-- The Wind Token given to you by the Wind Spirit Sylph. Collect all four tokens and give them to Parina to receive a special token that will enable you to change occupations. -->
+		<!-- The Wind Token given by the Wind Spirit Sylph. Collect all 4 tokens and take them to Parina to change your class. -->
 		<set name="icon" val="icon.accessary_blue_coral_ring_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1410,7 +1410,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1287" name="Sparkle Pebble" type="EtcItem">
-		<!-- Kill water seer in Lake Fellmere for stones. If you give this to Water Undine, she will give you the token of water. -->
+		<!-- Kill Water Seers in Lake Fellmere for stones. If you give this to Water Undine, she will give you the Token of Water. -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1442,7 +1442,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1289" name="Rusty Coin" type="EtcItem">
-		<!-- The coin given by earth snake. Kill red bear and give red soil to earth snake for Token of Earth. -->
+		<!-- A coin given by the Earth Snake. Kill Red Bears to obtain the Red Soil. Take it to the Earth Snake to get the Token of Earth. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1458,7 +1458,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1290" name="Red Soil" type="EtcItem">
-		<!-- The soil obtained from killing red bear. Give to the earth snake for the token of earth. -->
+		<!-- Soil obtained from killing Red Bears. Give to the Earth Snake for the Token of Earth. -->
 		<set name="icon" val="icon.etc_powder_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1474,7 +1474,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1291" name="Earth Ring" type="EtcItem">
-		<!-- Token of Earth given by earth snake. Collect 4 tokens and give them to Parina to receive the token that enables changing occupations. -->
+		<!-- The token of Earth given by the Earth Snake. Collect 4 tokens and take them to Parina to change your class. -->
 		<set name="icon" val="icon.accessary_ring_of_firefly_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1490,7 +1490,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1292" name="Bead of Season" type="EtcItem">
-		<!-- Take this bead to the high priest of the temple to change your occupation to a Wizard. -->
+		<!-- Take it to the High Priest of the temple to change your class to Wizard. -->
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1522,7 +1522,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1294" name="Spellbook: Defense Aura" type="EtcItem">
-		<!-- Spellbook needed to learn Defense Aura. Used by Elven Fighters and Dark Fighters. Required level: 5 -->
+		<!-- A spellbook for learning the Defense Aura skill. Used by Elven Fighters and Dark Fighters. Required level: 5. -->
 		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

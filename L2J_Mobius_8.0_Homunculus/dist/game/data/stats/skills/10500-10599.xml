@@ -28,7 +28,7 @@
 		</effects>
 	</skill>
 	<skill id="10501" toLevel="10" name="Superior Dagger Mastery">
-		<!-- When equipped with a dagger, P. Atk. +$s1 and +$s2, Atk. Spd. +$s3, P. Accuracy +$s4, and Vital Spot Attack Rate +$s5. Additionally, STR +$s6. Depending on STR, skill cooldown can be reset or skill duration can be increased by $s7 times. -->
+		<!-- When using a dagger, P. Atk. +$s1 and +$s2, Atk. Spd. +$s3, P. Accuracy +$s4, Vital Point Attack Rate +$s5. Additionally, STR +$s6. Depending on STR, P./ M. Skill Cooldown can be reset or its duration can be increased by $s7 times. -->
 		<icon>icon.skill10501</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -112,7 +112,7 @@
 		</effects>
 	</skill>
 	<skill id="10502" toLevel="10" name="Superior Dual Dagger Mastery">
-		<!-- STR +$s6. When a dual dagger is equipped, P. Atk. +$s1 and additionally +$s2, P. Accuracy +$s4, Vital Spot Attack Rate +$s5. -->
+		<!-- STR +$s6. When using dual daggers, P. Atk. +$s1 and +$s2, Atk. Spd. +$s3, P. Accuracy +$s4, Vital Point Attack Rate +$s5. -->
 		<icon>icon.skill10502</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -193,7 +193,7 @@
 		</effects>
 	</skill>
 	<skill id="10503" toLevel="10" name="Superior Light Armor Mastery">
-		<!-- Max HP +$s1, P. Def. +$s2, P. Evasion +$s3, chance of receiving critical attacks -$s4 when equipped with Light Armor. Adjusts Speed/ P. Skill Critical Rate according to DEX. Additionally, STR +$s5 and applies Assassin's Reflex which accelerates Atk. Spd. at a $s6 chance if successfully evaded. -->
+		<!-- Max HP +$s1, P. Def. +$s2, P. Evasion +$s3, Received P. Critical Rate -$s4 when using light armor. Speed and P. Skill Critical Rate depends on DEX. Additionally, STR +$s5. After evading, with a $s6 chance, increases Atk. Spd. and grants Assassin's Reflex. -->
 		<icon>icon.skill10503</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -293,7 +293,7 @@
 		</effects>
 	</skill>
 	<skill id="10504" toLevel="10" name="Superior Movement">
-		<!-- Speed +$s1, HP Recovery Bonus +$s2, MP Recovery Bonus +$s3. STR +$s4. -->
+		<!-- Speed +$s1, HP Recovery Rate +$s2, MP Recovery Rate +$s3, STR +$s4. -->
 		<icon>icon.skill10504</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -340,7 +340,7 @@
 		</effects>
 	</skill>
 	<skill id="10505" toLevel="10" name="Superior Critical Mastery">
-		<!-- P. Critical Rate +$s1, P. Critical Damage +$s2, Skill Master Rate +$s3, P. Skill Power +$s4, P. Skill Critical Rate +$s5. Additionally, STR +$s4. -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Skill Mastery Rate +$s3, P. Skill Power +$s4, P. Skill Critical Rate +$s5, STR +$s6. -->
 		<icon>icon.skill10505</icon>
 		<magicLevel>
 			<value level="1">85</value>
@@ -392,9 +392,8 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp">
-				<amount>10</amount>
+				<amount>2</amount>
 				<stat>STR</stat>
-				<mode>PER</mode>
 			</effect>
 			<effect name="SkillCriticalProbability"> <!-- TODO: Add skill master rate -->
 				<amount>1000</amount>
@@ -431,7 +430,7 @@
 		</effects>
 	</skill>
 	<skill id="10507" toLevel="1" name="Death Clock">
-		<!-- P. Atk. +200. Also, when using Shadow Flash, triggers the Blind Spot effect that increases P. Atk., Critical Rate, Critical Damage, and Vital Spot Attack Rate. -->
+		<!-- P. Atk. +200. When using Shadow Flash, triggers the Blind Spot effect that increases P. Atk., Critical Rate, Critical Damage and Vital Point Attack Rate. -->
 		<icon>icon.skill10507</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
@@ -453,7 +452,7 @@
 		</effects>
 	</skill>
 	<skill id="10508" toLevel="13" name="Blood Stab">
-		<!-- Strikes the enemy from the back with $s1 power. Inflicts bleed dealing $s2 damage per sec. Requires a dagger or a dual dagger. Half-kill. Critical. Over-hit. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Strikes the enemy from the back with $s1 power. Inflicts Bleed dealing $s2 damage per sec. A frontal attack has a very low chance of success. Requires a dagger or dual daggers. Half-kill. Critical. Over-hit.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill10508</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -600,7 +599,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="10509" toLevel="13" name="Heart Breaker">
-		<!-- Stabs the target's heart with 25610 Power added to P. Atk. to inflict a powerful vital spot attack. Increases Speed by 40, Evasion by 5, Critical Damage from the flanks and rear by 30%. Half-kill, Over-hit, and Critical are possible. Requires a dagger or dual dagger. -->
+		<!-- Stabs the target's heart with $s1 Power added to P. Atk. to inflict a powerful vital spot attack. Speed +$s2, P. Evasion +$s3, Critical Damage for standard attacks from flanks and after backstab +$s4. Half-kill, Over-hit, and Critical are possible. Requires a dagger or dual dagger. -->
 		<icon>icon.skill10509</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -702,7 +701,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10510" toLevel="13" name="Chain Blow">
-		<!-- Inflicts damage with $s1 Power added to P. Atk. Increases Skill Power by $s2 if used during Bleed. Half-kill, Over-hit, and Critical are possible. Requires a dagger or dual dagger. -->
+		<!-- Inflicts damage with $s1 power. Skill Power +$s2 and inflicts additional damage if used on the bleeding target. Requires a dagger or dual daggers. Half-kill. Critical. Over-hit. -->
 		<icon>icon.skill10510</icon>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -840,7 +839,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="10511" toLevel="7" name="Reverse">
-		<!-- Attempts a Deadly Attack with $s1 power added to P. Attack. Half-kill is possible. Requires dagger/ dual dagger. -->
+		<!-- Attacks the target with $s1 power, dealing them additional damage. Half-kill. Requires a dagger or dual daggers. -->
 		<icon>icon.skill10511</icon>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -1022,7 +1021,7 @@
 		</effects>
 	</skill>
 	<skill id="10513" toLevel="12" name="Barrage of Nails">
-		<!-- Attacks nearby enemies with $s1 power making them unable to hide for $s2 Their Speed -$s3. Requires a dagger or a dual dagger. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Attacks nearby enemies with $s1 power making them unable to hide for $s2 Their Speed -$s3. Requires a dagger or dual daggers.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10513</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1134,7 +1133,7 @@
 		</effects>
 	</skill>
 	<skill id="10514" toLevel="10" name="Paralyzing Shadow">
-		<!-- Seals the target's shadow making their body gradually stiffen for $s1 After that inflicts paralysis for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Seals the target's shadow making their body gradually stiffen for $s1 After that inflicts Paralysis for $s2\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10514</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1151,7 +1150,7 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="10">80</value>
+			<value fromLevel="1" toLevel="10">60</value>
 			<value fromLevel="4" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -1231,13 +1230,13 @@
 		</selfEffects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>10515</skillId> <!-- Paralyzed -->
+				<skillId>10515</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="10515" toLevel="6" name="Paralysis">
-		<!-- Paralyzes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Paralyzes the target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1281,7 +1280,7 @@
 		</effects>
 	</skill>
 	<skill id="10516" toLevel="11" name="Shadow Chase">
-		<!-- Moves behind the enemy canceling their target and stunning them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Moves behind the enemy canceling their target and stunning them for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10516</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1297,13 +1296,13 @@
 			<value level="11">11</value>
 		</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
+		<abnormalType>CONFUSION</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">100</value>
+			<value fromLevel="1" toLevel="11">80</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>-1</magicCriticalRate>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -1361,7 +1360,7 @@
 			<effect name="TeleportToTarget" />
 			<effect name="TargetCancel" />
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -1371,7 +1370,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10517" toLevel="1" name="Shadow Hide">
-		<!-- Cancels all debuff effects inflicted on you by teleporting to the front a distance of 250 and enter the Stealth mode for 20 sec. Additionally, decreases Speed by 50. -->
+		<!-- Cancels all debuff effects inflicted on you by teleporting to the front a distance of $s1 and enter the Stealth mode for $s2 Additionally, decreases Speed by $s3. -->
 		<icon>icon.skill10517</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -1388,7 +1387,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>180000</reuseDelay>
 		<removedOnDamage>true</removedOnDamage>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -1580,10 +1579,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="TriggerSkillByDeathBlow">
+				<chance>100</chance>
+				<skillId>30868</skillId> <!-- Cheating Death -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10522" toLevel="11" name="Poison Swarm">
-		<!-- Throws a poison bottle at the target point to create a poisonous area for $s1 Enemies within the area suffer P. Atk. -$s2, P./ M. Def. -$s3, Speed -$s4, and Shield Def. -$s5 and cannot use magic skills. -->
+		<!-- Throws a poison bottle at the target point to create a danger zone for $s1 Within the area enemies' P. Atk. -$s2, P./ M. Def. -$s3, Speed -$s4, Shield Defense -$s5, and they cannot use magic skills. Also cancels enemy's invisibility blocking its recast. -->
 		<icon>icon.skill10522</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
@@ -1641,13 +1645,17 @@
 			</effect>
 		</effects>
 		<selfEffects>
+			<effect name="Detection" />
 			<effect name="DispelBySlot">
 				<dispel>HIDE,-1</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HIDE</slot>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="10523" toLevel="11" name="Thrown Poison Swarm">
-		<!-- Shrouds the enemy with a poisonous cloud. Their P. Atk. -$s1, P./ M. Def. -$s2, Speed -$s3, Shield Defense -$s4. Prevents them from using magic skills. Their HP -$s5 per sec. Inflicted status: Danger Zone. -->
+		<!-- Shrouds the enemy with a poisonous cloud. Their P. Atk. -$s1, P./ M. Def. -$s2, Speed -$s3, Shield Defense -$s4. Prevents them from using magic skills. Their HP -$s5 per sec. Also cancels enemy's invisibility blocking its recast.\n\nInflicted status: Danger Zone. -->
 		<icon>icon.skill1167</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1665,7 +1673,7 @@
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
-		<activateRate>130</activateRate>
+		<activateRate>90</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
 		<operateType>A2</operateType>
@@ -1749,12 +1757,12 @@
 		</effects>
 	</skill>
 	<skill id="10524" toLevel="3" name="Counter Stance">
-		<!-- Takes a countering stance for $s1 to evade P. Attack skills and deflects damage at a $s2 probability. -->
+		<!-- Takes a countering stance for $s1 to evade P. Atk. skills and deflects damage at a $s2 probability. -->
 		<icon>icon.skill10524</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
-			<value level="3">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AVOID_SKILL_SPECIAL</abnormalType>
@@ -1819,7 +1827,7 @@
 		</effects>
 	</skill>
 	<skill id="10525" toLevel="9" name="Shadow Dash">
-		<!-- For $s1, increases Speed by $s2, P. Evasion by $s3, and HP Recovery Bonus by $s4. -->
+		<!-- For $s1 Speed +$s2, P. Evasion +$s3, and HP Recovery Bonus +$s4. -->
 		<icon>icon.skill10525</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1832,7 +1840,7 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 		</abnormalLevel>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>120</abnormalTime>
 		<abnormalType>SUPER_MOVE</abnormalType>
 		<operateType>A2</operateType>
 		<isMagic>22</isMagic>
@@ -1872,7 +1880,7 @@
 			<value level="9">719</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<reuseDelay>40000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1918,28 +1926,28 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PAtk" fromLevel="2" toLevel="3" fromSubLevel="1001" toSubLevel="1020">
+			<effect name="PAtk" fromLevel="2" toLevel="9" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="2" toLevel="3" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="2" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="2" toLevel="3" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="2" toLevel="3" fromSubLevel="2001" toSubLevel="2020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="2" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="2" toLevel="3" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="MagicalDefence" fromLevel="2" toLevel="9" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="2" toLevel="3" fromSubLevel="3001" toSubLevel="3020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="2" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10526" toLevel="9" name="Mischief">
-		<!-- Confuses the enemy preventing them from attacking the target with the highest hostility. Speed -$s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Confuses the enemy preventing them from attacking the target with the highest agression value. Speed -$s1.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10526</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2010,13 +2018,13 @@
 		</effects>
 	</skill>
 	<skill id="10527" toLevel="6" name="Mass Trick">
-		<!-- Inflicts confusion, for 20 sec. M. Evasion -10, and chance for M. Critical Rate Received +10% on the target and nearby enemies. -->
+		<!-- Inflicts confusion among nearby enemies. For $s1, target's M. Atk. -$s2, M. Critical Rate -$s3, M. Critical Damage -$s4. -->
 		<icon>icon.skill10527</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CONFUSION</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="6">80</value>
+			<value fromLevel="1" toLevel="6">60</value>
 			<value fromLevel="1" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectRange>80</affectRange>
@@ -2099,7 +2107,7 @@
 		</effects>
 	</skill>
 	<skill id="10529" toLevel="6" name="Shadow Flash">
-		<!-- Moves behind the target. Their Received P. Critical Damage +$s2 for $s1. Prevents them from recovering more than $s3 HP. Makes the target unable to hide. The effect cannot be canceled. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Moves behind the target. For $s1, their Received Critical Damage from standard attacks +$s2, HP cannot be restored higher than $s3. Makes the target unable to hide. The effect cannot be canceled.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10529</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2157,7 +2165,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10530" toLevel="1" name="Blind Spot">
-		<!-- Increases P. Atk., Critical Rate, Critical Damage and Vital Spot Attack Rate. -->
+		<!-- Increases P. Atk, Critical Rate for standard attacks, Critical Damage for standard attacks and Vital Point Attack Rate. -->
 		<icon>icon.skill10529</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2195,7 +2203,7 @@
 		</effects>
 	</skill>
 	<skill id="10531" toLevel="2" name="Angel of Death">
-		<!-- For $s1, Deadly Attack Success Rate +$s2, P. Skill Power +$s3, P. Accuracy +$s4, P. Evasion +$s5, and defends against debuff attacks $s6. Can be used when Dagger/ Dual Dagger is equipped. -->
+		<!-- For $s1, Vital Point Attack Rate +$s2, P. Skill Power +$s3, P. Accuracy +$s4, P. Evasion +$s5. Blocks $s6debuff attack(s). Requires a dagger or dual daggers. -->
 		<icon>icon.skill10531</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -2289,7 +2297,7 @@
 		</effects>
 	</skill>
 	<skill id="10532" toLevel="9" name="Clone Attack">
-		<!-- Hides inside the target's shadow and summons a clone to attack. Requires dagger/ dual dagger. -->
+		<!-- Melts into the target's shadow and summons clones to attack. Requires a dagger or dual daggers. The skill cooldown is fixed. -->
 		<icon>icon.skill10532</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2372,7 +2380,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10534" toLevel="5" name="Trace of Dagger">
-		<!-- Critical damage has been boosted by $s1. -->
+		<!-- P. Critical Damage +$s1. -->
 		<icon>icon.skill1542</icon>
 		<abnormalTime>3</abnormalTime>
 		<operateType>A2</operateType>
@@ -2391,7 +2399,7 @@
 		</effects>
 	</skill>
 	<skill id="10535" toLevel="4" name="Scorpion Poison">
-		<!-- Injects a poison that decreases enemy's Speed during a standard attack and disables magic skills. Increases Infection Atk. Rate. -->
+		<!-- Injects a poison that decreases enemy's Speed after a standard attack and disables magic skills. Increases Infection Atk. Rate. -->
 		<icon>icon.skill10535</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2439,7 +2447,7 @@
 		</effects>
 	</skill>
 	<skill id="10537" toLevel="2" name="Block Magic">
-		<!-- Poisons the enemy decreasing their Speed and preventing them from using magic skills for a time period. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Poisons the enemy decreasing their Speed and preventing them from using magic skills for a time period.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0129</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2478,7 +2486,7 @@
 		</effects>
 	</skill>
 	<skill id="10538" toLevel="4" name="Weakness Critical">
-		<!-- Inflicted with Poison. Increases received Critical Damage by $s1 momentarily. Increases the chance of receiving a critical attack by $s2. -->
+		<!-- Poisons. Received Critical Damage from standard attacks +$s1, Received P. Critical Rate +$s2. -->
 		<icon>icon.skill1222</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2528,7 +2536,7 @@
 		</effects>
 	</skill>
 	<skill id="10539" toLevel="13" name="Throw Dagger">
-		<!-- Throws a dagger at the enemy with $s1 power added to P. Atk. For $s2 Speed -$s3. Requires a dagger/ dual dagger. Over-hit. -->
+		<!-- Throws a dagger at the enemy with $s1 power. For $s2, Speed -$s3. Requires a dagger or dual daggers. Over-hit. The skill cooldown is fixed. -->
 		<icon>icon.skill10539</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2548,7 +2556,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="13">80</value>
+			<value fromLevel="1" toLevel="13">60</value>
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2655,7 +2663,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10540" toLevel="8" name="Throw Sand">
-		<!-- Hurls poisonous sand at the enemy. For $s1, greatly decreases P. Accuracy and lures the enemy to you. Requires a dagger/ dual dagger to be equipped. -->
+		<!-- Hurls sand at the enemy distracting them. Target's P. Accuracy -$s1. Requires a dagger or dual daggers. -->
 		<icon>icon.skill10540</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2810,7 +2818,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10542" toLevel="1" name="Maximum Critical">
-		<!-- Critical Damage +609 and vital spot attack success rate +10%. Side Critical Rate +30% and Critical Damage +40%. Rear Critical Rate +60% and Critical Damage +70%. -->
+		<!-- P. Skill Power +1%, Vital Point Attack Rate +10%, Critical Rate for standard attacks from the flank +30%, Critical Damage for standard attacks from the flank +40%, Critical Rate for standard attacks after backstab +60%, and Critical Damage for standard attacks after backstab +70%. -->
 		<icon>icon.skill10542_1</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
@@ -2840,14 +2848,14 @@
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>609</amount>
-				<mode>DIFF</mode>
+			<effect name="PhysicalSkillPower">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10543" toLevel="1" name="Silent Step">
-		<!-- Allows you to move unnoticed by most monsters. Decreases P. Def. by 20% and increases Speed by 20%. MP is consumed continuously. -->
+		<!-- Allows you to move unnoticed by most monsters. MP is consumed continuously. P. Def. -20%, Speed +60. -->
 		<icon>icon.skill10543</icon>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<operateType>T</operateType>
@@ -2896,7 +2904,7 @@
 		</effects>
 	</skill>
 	<skill id="10545" toLevel="4" name="Crippling Poison">
-		<!-- Gradually makes the enemy's body frozen for $s1 After that inflicts paralysis for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Gradually makes the enemy's body frozen for $s1 After that inflicts Paralysis for $s2\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2951,13 +2959,13 @@
 		<endEffects>
 			<effect name="CallSkill">
 				<!-- Paralyzed -->
-				<skillId>10515</skillId> <!-- Paralyzed -->
+				<skillId>10515</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="10546" toLevel="9" name="Jawbone Blow">
-		<!-- Strikes the enemy with a powerful blow knocking them down for $s1 Requires a dagger or a dual dagger. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Strikes the enemy with a powerful blow knocking them down for $s1 Requires a dagger or dual daggers.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10546</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2974,7 +2982,7 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">90</value>
+			<value fromLevel="1" toLevel="9">70</value>
 			<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<castRange>40</castRange>
@@ -3043,7 +3051,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10547" toLevel="1" name="Shadow Attack">
-		<!-- Not in use. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Not in use.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0263</icon>
 		<operateType>A2</operateType>
 		<mpConsume>114</mpConsume>
@@ -3124,7 +3132,7 @@
 		</effects>
 	</skill>
 	<skill id="10549" toLevel="8" name="Kick">
-		<!-- Kicks the target knocking them down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Kicks the target knocking them down.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10549</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -3202,7 +3210,7 @@
 		</effects>
 	</skill>
 	<skill id="10550" toLevel="9" name="Illusion Step">
-		<!-- Strikes the enemy to a vital spot. Their Speed -$s2 for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Strikes the enemy to a vital spot. Their Speed -$s2 for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10550</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
@@ -3275,7 +3283,7 @@
 		</effects>
 	</skill>
 	<skill id="10551" toLevel="9" name="Illusion Trick">
-		<!-- Cancels the enemy's target and stops them from choosing a new one for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Cancels the enemy's target and stops them from choosing a new one for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10551</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
@@ -3429,6 +3437,21 @@
 				<amount>2</amount>
 				<stat>STR</stat>
 			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10553" toLevel="1" name="Chance of Wind">
@@ -3468,14 +3491,14 @@
 		</effects>
 	</skill>
 	<skill id="10554" toLevel="9" name="Flash Bluff">
-		<!-- Startles the target making them turn backwards and confusing for $s1 Requires a dagger or a dual dagger. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Startles the target making them turn backwards and confusing for $s1 Requires a dagger or dual daggers.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10554</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">120</value>
+			<value fromLevel="1" toLevel="9">70</value>
 			<value fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -3520,12 +3543,12 @@
 				<chance>90</chance>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10555" toLevel="1" name="Impaired">
-		<!-- Holds the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Holds the target for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -3616,7 +3639,7 @@
 		</effects>
 	</skill>
 	<skill id="10557" toLevel="2" name="Maximize Critical">
-		<!-- For $s1, side Critical Rate +$s2 and rear Critical Rate +$s3. During a critical attack, $s4 chance of triggering Critical level $s5. -->
+		<!-- For $s1, Critical Rate from flanks +$s2 and Critical Damage for standard attacks after backstab +$s3. After a critical attack, $s4 chance of triggering Critical level $s5. -->
 		<icon>
 			<value level="1">icon.skill10542</value>
 			<value level="2">icon.skill10542_2</value>
@@ -3668,7 +3691,7 @@
 		</effects>
 	</skill>
 	<skill id="10558" toLevel="1" name="Elusive Mirage">
-		<!-- For 30 sec., has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
+		<!-- For $s1, has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
 		<icon>icon.skill11861</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3698,7 +3721,7 @@
 				<skillId>10559</skillId> <!-- Elusive Mirage -->
 				<skillLevel>1</skillLevel>
 				<chance>80</chance>
-				<targetType>SELF</targetType>
+				<targetType>ENEMY</targetType>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
@@ -3715,7 +3738,7 @@
 		</effects>
 	</skill>
 	<skill id="10559" toLevel="1" name="Elusive Mirage">
-		<!-- Cancels enemy's target preventing them from choosing a new one for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Cancels the enemy's target preventing them from choosing a new one for 2 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11861</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
@@ -3740,7 +3763,7 @@
 		</effects>
 	</skill>
 	<skill id="10560" toLevel="1" name="Maximum Blow">
-		<!-- For 120 sec., Deadly Atk. Rate +10% and resets the cooldown of Heart Breaker/ Chain Blow if Reverse Mana is cast. Requires a dagger or dual dagger to be equipped. -->
+		<!-- For $s1, Vital Point Attack Rate +$s2, Critical Damage for standard attacks +$s3. Resets the cooldown of Heart Breaker/ Chain Blow. Requires a dagger or dual daggers. -->
 		<icon>icon.skill11877</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -3764,7 +3787,11 @@
 		</conditions>
 		<effects>
 			<effect name="FatalBlowRate">
-				<amount>10</amount>
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
@@ -3801,49 +3828,62 @@
 		<effects>
 			<effect name="DefenceTrait">
 				<POISON>
-					<value level="1">4</value>
-					<value level="2">6</value>
-					<value level="3">8</value>
-					<value level="4">10</value>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">13</value>
+					<value level="4">15</value>
 				</POISON>
 				<SHOCK>
-					<value level="1">4</value>
-					<value level="2">6</value>
-					<value level="3">8</value>
-					<value level="4">10</value>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">13</value>
+					<value level="4">15</value>
 				</SHOCK>
 				<BLEED>
-					<value level="1">4</value>
-					<value level="2">6</value>
-					<value level="3">8</value>
-					<value level="4">10</value>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">13</value>
+					<value level="4">15</value>
 				</BLEED>
 			</effect>
 			<effect name="MaxCp">
 				<amount>
-					<value level="1">7</value>
-					<value level="2">9</value>
-					<value level="3">11</value>
-					<value level="4">15</value>
+					<value level="1">10</value>
+					<value level="2">13</value>
+					<value level="3">16</value>
+					<value level="4">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxHp">
 				<amount>
-					<value level="1">7</value>
-					<value level="2">9</value>
-					<value level="3">11</value>
-					<value level="4">15</value>
+					<value level="1">10</value>
+					<value level="2">13</value>
+					<value level="3">16</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">18</value>
+					<value level="4">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10562" toLevel="1" name="Critical Tactics">
-		<!-- For 5 min., increases Critical Damage by 304, Deadly Atk. Rate by 10%, Critical Rate/ Damage from the front and the back by 50%, Critical Rate/ Damage from the flank by 30%. Requires dagger/ dual dagger. -->
+		<!-- For $s1, P. Skill Power +$s2, Vital Point Attack Rate +$s3, Critical Damage/ Rate for standard attacks at the front and after backstab +$s4, Critical Damage/ Rate for standard attacks from the flanks +$s5. Requires a dagger or dual daggers. -->
 		<icon>icon.skill10562</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
 		<operateType>A2</operateType>
 		<isMagic>22</isMagic>
@@ -3874,7 +3914,7 @@
 				<position>SIDE</position>
 			</effect>
 			<effect name="CriticalDamagePosition">
-				<amount>40</amount>
+				<amount>50</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
 			</effect>
@@ -3884,7 +3924,7 @@
 				<position>SIDE</position>
 			</effect>
 			<effect name="CriticalRatePositionBonus">
-				<amount>40</amount>
+				<amount>50</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
 			</effect>
@@ -3896,13 +3936,19 @@
 					<item>DUALDAGGER</item>
 				</weaponType>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>304</amount>
-				<mode>DIFF</mode>
+			<effect name="PhysicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
 				<weaponType>
 					<item>DAGGER</item>
 					<item>DUALDAGGER</item>
 				</weaponType>
+			</effect>
+			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{2 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

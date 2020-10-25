@@ -591,7 +591,7 @@
 		</stats>
 	</item>
 	<item id="33642" name="Kukurin Bracelet" type="Armor">
-		<!-- When equipped, you can mount a Kukurin. -->
+		<!-- Allows to mount Kukurin. -->
 		<set name="icon" val="icon.accessary_blue_coral_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -612,7 +612,7 @@
 		</skills>
 	</item>
 	<item id="33643" name="Scroll: Minion" type="EtcItem">
-		<!-- Scroll that can summon a Minion for 2 hours. -->
+		<!-- Scroll that can summon a Minion for 2 h. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -629,7 +629,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33644" name="Scroll: Superior Minion" type="EtcItem">
-		<!-- Scroll that can summon a Superior Minion for 2 hours. -->
+		<!-- Scroll that can summon a Superior Minion for 2 h. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -646,7 +646,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33645" name="Minion 3-unit Pack" type="EtcItem">
-		<!-- Scroll that can summon a Minion for 2 hours. Contains 3 sheets. -->
+		<!-- Scroll that can summon a Minion for 2 h. Contains 3 sheets. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -666,7 +666,7 @@
 		</capsuled_items>
 	</item>
 	<item id="33646" name="Superior Minion 3-unit Pack" type="EtcItem">
-		<!-- Scroll that can summon a Superior Minion for 2 hours. Contains 3 sheets. -->
+		<!-- Scroll that can summon a Superior Minion for 2 h. Contains 3 sheets. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -686,7 +686,7 @@
 		</capsuled_items>
 	</item>
 	<item id="33647" name="Hero's Gift Box" type="EtcItem">
-		<!-- Can acquire a 5-unit Hero's Blessing Buff Scroll pack, a 3-unit Minion Coupon pack, a 5-unit Noblesse Blessing buff scroll pack, a 30-unit Kukuru mounting scroll pack, and a 3-unit Feather of Blessing pack. -->
+		<!-- Double-click to obtain Hero's Blessed Buff Scroll (5 pcs.), Package: Minion Coupon (3 pcs.), Package: Scroll: Noblesse Blessing (5 pcs.), Package: Scroll: Mount Kukuru (30 pcs.), Package: Feather of Blessing (3 pcs.). -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -702,15 +702,15 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="33504" min="1" max="1" chance="100" /> <!-- Hero's Blessed Buff Scroll 5-unit Pack -->
-			<item id="13275" min="1" max="1" chance="100" /> <!-- Minion Coupon 3-unit Pack -->
-			<item id="33506" min="1" max="1" chance="100" /> <!-- Scroll: Noblesse Blessing 5-unit Pack -->
-			<item id="33508" min="1" max="1" chance="100" /> <!-- Scroll: Mount Kukuru 30-unit Pack -->
-			<item id="13106" min="1" max="1" chance="100" /> <!-- Feather of Blessing 3-unit Pack -->
+			<item id="33504" min="1" max="1" chance="100" /> <!-- Package: Hero's Blessed Buff Scroll (5 pcs.) -->
+			<item id="13275" min="1" max="1" chance="100" /> <!-- Package: Minion Coupon (3 pcs.) -->
+			<item id="33506" min="1" max="1" chance="100" /> <!-- Package: Scroll: Noblesse Blessing (5 pcs.) -->
+			<item id="33508" min="1" max="1" chance="100" /> <!-- Package: Scroll: Mount Kukuru (30 pcs.) -->
+			<item id="13106" min="1" max="1" chance="100" /> <!-- Package: Feather of Blessing (3 pcs.) -->
 		</capsuled_items>
 	</item>
 	<item id="33648" name="Gift Box of Destiny" type="EtcItem">
-		<!-- Can acquire 250 Returning Hero's Marks, 1 Returning Hero's Vitality Replenishing Juice pack of 5, and a Superior Minion coupon pack of 2. -->
+		<!-- Double-click to obtain 250 Returning Hero's Marks, Package: Returning Hero's Vitality Replenishing Juice (5 pcs.), Package: Superior Minion Coupon (2 pcs.). -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -727,8 +727,8 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="33511" min="250" max="250" chance="100" /> <!-- Returning Hero's Mark -->
-			<item id="33513" min="1" max="1" chance="100" /> <!-- Returning Hero's Vitality Replenishing Juice 5-unit Pack -->
-			<item id="14239" min="1" max="1" chance="100" /> <!-- Superior Minion Coupon 2-unit Pack -->
+			<item id="33513" min="1" max="1" chance="100" /> <!-- Package: Returning Hero's Vitality Replenishing Juice (5 pcs.) -->
+			<item id="14239" min="1" max="1" chance="100" /> <!-- Package: Superior Minion Coupon (2 pcs.) -->
 		</capsuled_items>
 	</item>
 	<item id="33649" name="Kukurin Feather Helm" type="Armor">
@@ -750,7 +750,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="33650" name="Shilen Wand" type="Weapon">
-		<!-- Shilen Wand. -->
+		<!-- Shillien Wand. -->
 		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1238,7 +1238,7 @@
 		</skills>
 	</item>
 	<item id="33689" name="Unidentified Stockings of Doom" additionalName="Event" type="EtcItem">
-		<!-- Stockings of Doom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower/ robe) -->
+		<!-- Doom Stockings in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower/ robe) -->
 		<set name="icon" val="icon.armor_t73_l_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="B" />
@@ -1250,7 +1250,7 @@
 		</skills>
 	</item>
 	<item id="33690" name="Unidentified Tunic of Doom" additionalName="Event" type="EtcItem">
-		<!-- Tunic of Doom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper/ robe) -->
+		<!-- Doom Tunic in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: upper/ robe) -->
 		<set name="icon" val="icon.armor_t73_u_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="B" />
@@ -1262,7 +1262,7 @@
 		</skills>
 	</item>
 	<item id="33691" name="Unidentified Leather Armor of Doom" additionalName="Event" type="EtcItem">
-		<!-- Leather Armor of Doom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one piece/ light armor) -->
+		<!-- Doom Leather Armor in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: one piece/ light armor) -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="B" />
@@ -1298,7 +1298,7 @@
 		</skills>
 	</item>
 	<item id="33694" name="Unidentified Doom Shield" additionalName="Event" type="EtcItem">
-		<!-- Doom shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Shield) -->
+		<!-- Doom Shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Shield) -->
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="B" />

@@ -67,7 +67,7 @@
 		</stats>
 	</item>
 	<item id="47003" name="Paulina's Dynasty Ring" additionalName="Critical Damage" type="Armor">
-		<!-- A Dynasty Ring imbued with the energy of Paulina. P./ M. Critical Damage +7%. -->
+		<!-- Dynasty Ring imbued with the energy of Paulina. P. Critical Damage/ M. Skill Critical Damage +7%. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -89,7 +89,7 @@
 		</stats>
 	</item>
 	<item id="47004" name="Paulina's Dynasty Ring" additionalName="Critical Rate" type="Armor">
-		<!-- A Dynasty Ring imbued with the energy of Paulina. P./ M. Critical Rate +20. -->
+		<!-- Dynasty Ring imbued with the energy of Paulina. P. Critical Rate/ M. Skill Critical Rate +20. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -133,7 +133,7 @@
 		</stats>
 	</item>
 	<item id="47006" name="Supply Items for Adventurer" type="EtcItem">
-		<!-- A gift from Tulesir the Minstrel to heroes of the future having safely completed 10 days of adventure. Contains supplies necessary for adventure. -->
+		<!-- A gift from Tulesir the Minstrel to heroes for the 10-day travel. Contains supplies necessary for an adventure. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -199,7 +199,7 @@
 		</stats>
 	</item>
 	<item id="47009" name="Paulina's Apocalypse Slasher" type="Weapon">
-		<!-- An Apocalypse Slasher imbued with the energy of Paulina. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Apocalypse Slasher imbued with the energy of Paulina. <Special properties>. Atk. Spd. +5%, P. Critical Rate +82. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, assigned an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_volver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -366,7 +366,7 @@
 		</stats>
 	</item>
 	<item id="47015" name="Paulina's Apocalypse Buster" additionalName="Not used" type="Weapon">
-		<!-- Apocalypse Buster imbued with the energy of Paulina. -->
+		<!-- Apocalypse Buster imbued with the energy of Paulina. <Special Option>. Casting Spd. +15%. M. Atk. +5%. Enchantment. Augment. Soul Crystal. Crystallization. Appearance Modification. Attribute Assignment not possible. -->
 		<set name="icon" val="icon.weapon_imerose_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -475,7 +475,7 @@
 		</stats>
 	</item>
 	<item id="47019" name="Paulina's Apocalypse Dual Dagger" type="Weapon">
-		<!-- An Apocalypse Dual Dagger imbued with the energy of Paulina. <Special Option>. Atk. Spd. +5%, P. Skill Critical Damage +7%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Apocalypse Dual Daggers imbued with the energy of Paulina. <Special properties>. Atk. Spd. +5%, P. Critical Damage +7%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, assigned an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -503,7 +503,7 @@
 		</stats>
 	</item>
 	<item id="47020" name="Paulina's Apocalypse Dual Blunt" additionalName="Not used" type="Weapon">
-		<!-- An Apocalypse Dual Blunt imbued with the energy of Paulina. -->
+		<!-- An Apocalypse Dual Blunt Weapon imbued with the energy of Paulina. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -983,7 +983,7 @@
 		</stats>
 	</item>
 	<item id="47041" name="Paulina's Twilight Ring" additionalName="Critical Damage" type="Armor">
-		<!-- A Twilight Ring imbued with the energy of Paulina. MP +29, P./ M. Critical Damage +15%. -->
+		<!-- Twilight Ring imbued with the energy of Paulina. MP +29. P. Critical Damage/ M. Skill Critical Damage +15%. -->
 		<set name="icon" val="icon.r2_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1006,7 +1006,7 @@
 		</stats>
 	</item>
 	<item id="47042" name="Paulina's Twilight Ring" additionalName="Critical Rate" type="Armor">
-		<!-- A Twilight Ring imbued with the energy of Paulina. MP +29, P./ M. Critical Rate +40. -->
+		<!-- Twilight Ring imbued with the energy of Paulina. MP +29. P. Critical Rate/ M. Skill Critical Rate +15%. -->
 		<set name="icon" val="icon.r2_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1043,12 +1043,12 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="47084" min="1" max="1" chance="100" /> <!-- Beloa's Gift Box -->
-			<item id="19442" min="2000" max="2000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
-			<item id="17754" min="3000" max="3000" chance="100" /> <!-- Soulshot (R-grade) -->
+			<item id="19442" min="2000" max="2000" chance="100" /> <!-- Blessed R-grade Spiritshot -->
+			<item id="17754" min="3000" max="3000" chance="100" /> <!-- R-grade Soulshot -->
 		</capsuled_items>
 	</item>
 	<item id="47044" name="Commando Belt" type="Armor">
-		<!-- The Commando Belt is the symbol of the Dimensional Commandos, and is given to elite veterans who have completed "Exploring the Dimension - Sealing the Dimension". Damage +2%, Damage Received -2%, Weight +12800, Inventory Slots +18. -->
+		<!-- The Commando Belt is the symbol of the Dimensional Commandos. Damage +2%. Damage Received -2%. Weight +12800. Inventory Slots +18. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1090,7 +1090,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47047" name="Destroyed Gargoyle Fragment" type="EtcItem">
-		<!-- A Broken Gargoyle Fragment obtained after defeating the Hunter Gargoyle in the Outlaw Forest area. Collect these and take them to Captain Mouen in the Town of Oren. -->
+		<!-- A Broken Gargoyle Fragment obtained after defeating the Hunter Gargoyle in the Outlaw Forest area. Take fragments to Paterson at the Town of Aden. -->
 		<set name="icon" val="icon.etc_debris_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1100,7 +1100,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47048" name="Basilisk Scale" type="EtcItem">
-		<!-- A Basilisk Scale obtained after defeating the Tarlk Basilisk or Elder Tarlk Basilisk in the Outlaw Forest area. Collect these and take them to Captain Mouen in the Town of Oren. -->
+		<!-- A Basilisk Scale obtained after defeating the Tarlk Basilisk or Elder Tarlk Basilisk in the Outlaw Forest area. Take scales to Paterson at the Town of Aden. -->
 		<set name="icon" val="icon.etc_scale_of_medusa_red_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1220,7 +1220,7 @@
 		</skills>
 	</item>
 	<item id="47058" name="Scroll of Escape - Kartia's Labyrinth" type="EtcItem">
-		<!-- Teleports to the Kartia Researcher, who can send you to Kartia's Labyrinth. -->
+		<!-- Teleports to the Kartia Researcher who can send you to Kartia's Labyrinth. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="30" />
@@ -1250,7 +1250,7 @@
 		</skills>
 	</item>
 	<item id="47060" name="Scroll of Escape - Seal of Shilen" type="EtcItem">
-		<!-- Teleports to the Seal of Shilen. -->
+		<!-- Teleports to the Seal of Shillien. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="30" />
@@ -1310,7 +1310,7 @@
 		</skills>
 	</item>
 	<item id="47064" name="Blessed Paulina's Seraph Heavy Armor Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Seraph Heavy Armor Set which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Seraph Heavy Armor Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="BranchSys.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1323,16 +1323,16 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46864" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Helmet - Heavy Armor -->
-			<item id="46865" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Breastplate - Heavy Armor -->
-			<item id="46866" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Gaiters - Heavy Armor -->
-			<item id="46867" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Gauntlets - Heavy Armor -->
-			<item id="46868" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Boots - Heavy Armor -->
-			<item id="46869" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Shield - Heavy Armor -->
+			<item id="46864" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Helmet - Heavy armor -->
+			<item id="46865" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Breastplate - Heavy armor -->
+			<item id="46866" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Gaiters - Heavy armor -->
+			<item id="46867" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Gauntlets - Heavy armor -->
+			<item id="46868" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Boots - Heavy armor -->
+			<item id="46869" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Shield -->
 		</capsuled_items>
 	</item>
 	<item id="47065" name="Blessed Paulina's Seraph Light Armor Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Seraph Light Armor Set which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Seraph Light Armor Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="BranchSys.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1345,15 +1345,15 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46870" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Helmet - Light Armor -->
-			<item id="46871" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Armor - Light Armor -->
-			<item id="46872" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Leggings - Light Armor -->
-			<item id="46873" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Gloves - Light Armor -->
-			<item id="46874" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Boots - Light Armor -->
+			<item id="46870" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Helmet - Light armor -->
+			<item id="46871" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Armor - Light armor -->
+			<item id="46872" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Leggings - Light armor -->
+			<item id="46873" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Gloves - Light armor -->
+			<item id="46874" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Boots - Light armor -->
 		</capsuled_items>
 	</item>
 	<item id="47066" name="Blessed Paulina's Seraph Robe Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Seraph Robe Set which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Seraph Robe Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="BranchSys.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1371,11 +1371,11 @@
 			<item id="46877" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Stockings - Robe -->
 			<item id="46878" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Gloves - Robe -->
 			<item id="46879" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Shoes - Robe -->
-			<item id="46880" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Sigil - Robe -->
+			<item id="46880" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Sigil -->
 		</capsuled_items>
 	</item>
 	<item id="47067" name="Blessed Paulina's Seraph Accessory Pack" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Seraph Accessory Set which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Seraph Accessory Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="BranchSys.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1388,7 +1388,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46881" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Necklace - Skill Cooldown -->
+			<item id="46881" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Necklace - Cooldown -->
 			<item id="46882" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Earring - Vampiric Rage -->
 			<item id="46883" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Earring - MP Consumption -->
 			<item id="46884" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Ring - Critical Damage -->
@@ -1396,7 +1396,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47068" name="PA - Paulina's Seraph Heavy Armor Box" additionalName="4-hour" type="EtcItem">
-		<!-- Double-click to obtain a 4-hour Seraph Heavy Armor Set which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain an Adventurer's Blessed Heavy Armor Set for 4 h. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1408,15 +1408,15 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46898" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Breastplate - Heavy Armor -->
-			<item id="46899" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Gaiters - Heavy Armor -->
-			<item id="46897" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Helmet - Heavy Armor -->
-			<item id="46900" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Gauntlets - Heavy Armor -->
-			<item id="46901" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Boots - Heavy Armor -->
+			<item id="46898" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Breastplate (PA) - Heavy armor -->
+			<item id="46899" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Gaiters (PA) - Heavy armor -->
+			<item id="46897" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Helmet (PA) - Heavy armor -->
+			<item id="46900" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Gauntlets (PA) - Heavy armor -->
+			<item id="46901" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Boots (PA) - Heavy armor -->
 		</capsuled_items>
 	</item>
 	<item id="47069" name="PA - Paulina's Seraph Light Armor Box" additionalName="4-hour" type="EtcItem">
-		<!-- Double-click to obtain a 4-hour Seraph Light Armor Set which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain an Adventurer's Blessed Light Armor Set for 4 h. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1428,15 +1428,15 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46904" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Leather Armor - Light Armor -->
-			<item id="46905" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Leather Leggings - Light Armor -->
-			<item id="46903" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Leather Helmet - Light Armor -->
-			<item id="46906" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Leather Gloves - Light Armor -->
-			<item id="46907" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Leather Boots - Light Armor -->
+			<item id="46904" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Leather Armor (PA) - Light armor -->
+			<item id="46905" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Leather Leggings (PA) - Light armor -->
+			<item id="46903" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Leather Helmet (PA) - Light armor -->
+			<item id="46906" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Leather Gloves (PA) - Light armor -->
+			<item id="46907" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Leather Boots (PA) - Light armor -->
 		</capsuled_items>
 	</item>
 	<item id="47070" name="PA - Paulina's Seraph Robe Box" additionalName="4-hour" type="EtcItem">
-		<!-- Double-click to obtain a 4-hour Seraph Robe Set which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain an Adventurer's Blessed Robe Set for 4 h. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1448,16 +1448,16 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46909" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Tunic - Robe -->
-			<item id="46910" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Stockings - Robe -->
-			<item id="46908" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Circlet - Robe -->
-			<item id="46911" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Gloves - Robe -->
-			<item id="46912" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Shoes - Robe -->
-			<item id="46913" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Sigil - Robe -->
+			<item id="46909" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Tunic (PA) - Robe -->
+			<item id="46910" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Stockings (PA) - Robe -->
+			<item id="46908" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Circlet (PA) - Robe -->
+			<item id="46911" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Gloves (PA) - Robe -->
+			<item id="46912" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Shoes (PA) - Robe -->
+			<item id="46913" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Sigil (PA) -->
 		</capsuled_items>
 	</item>
 	<item id="47071" name="PA - Paulina's Seraph Accessory Pack" additionalName="4-hour" type="EtcItem">
-		<!-- Double-click to obtain a 4-hour Seraph Accessory Set which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain an Adventurer's Blessed Accessory Set for 4 h. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1469,15 +1469,15 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46914" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Necklace - Skill Cooldown -->
-			<item id="46915" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Earring - Vampiric Rage -->
-			<item id="46916" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Earring - MP Consumption -->
-			<item id="46917" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Ring - Critical Damage -->
-			<item id="46918" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Ring - Critical Rate -->
+			<item id="46914" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Necklace (PA) - Cooldown -->
+			<item id="46915" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Earring (PA) - Vampiric Rage -->
+			<item id="46916" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Earring (PA) - MP Consumption -->
+			<item id="46917" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Ring (PA) - Critical Damage -->
+			<item id="46918" min="1" max="1" chance="100" /> <!-- Adventurer's Blessed Ring (PA) - Critical Rate -->
 		</capsuled_items>
 	</item>
 	<item id="47072" name="Blessed Paulina's Specter Dual Sword Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Dual Sword which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Blessed Paulina's Specter Dual Swords. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1490,7 +1490,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47073" name="Blessed Paulina's Specter Cutter Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Cutter which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Blessed Paulina's Specter Cutter. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1503,7 +1503,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47074" name="Blessed Paulina's Specter Slasher Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Slasher which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Blessed Paulina's Specter Slasher. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1516,7 +1516,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47075" name="Blessed Paulina's Specter Avenger Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Avenger which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Blessed Paulina's Specter Avenger. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1529,7 +1529,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47076" name="Blessed Paulina's Specter Fighter Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Fighter which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Blessed Paulina's Specter Fighter. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1542,7 +1542,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47077" name="Blessed Paulina's Specter Stormer Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Stormer which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Blessed Paulina's Specter Stormer. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1555,7 +1555,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47078" name="Blessed Paulina's Specter Thrower Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Thrower which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Paulina's Specter Thrower. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1568,7 +1568,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47079" name="Blessed Paulina's Specter Shooter Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Shooter which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Paulina's Specter Shooter. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1581,7 +1581,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47080" name="Blessed Paulina's Specter Dual Dagger Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Dual Dagger which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Paulina's Specter Dual Daggers. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1594,7 +1594,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47081" name="Blessed Paulina's Specter Caster Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Caster which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Paulina's Specter Caster. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1607,7 +1607,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47082" name="Blessed Paulina's Specter Retributer Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Retributer which can be equipped from Lv. 85 upwards. -->
+		<!-- Double-click to obtain a 30-day Paulina's Specter Retributer. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1620,7 +1620,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47083" name="Tulesir's Gift Box" type="EtcItem">
-		<!-- Use to receive 1 random item. -->
+		<!-- Use it to receive one item at random. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1665,7 +1665,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47086" name="Venir's Talisman Box" type="EtcItem">
-		<!-- Use to obtain Venir's Talisman Stage 1, Stage 2, or Stage 3. -->
+		<!-- Double-click to obtain Venir's Talisman Lv. 1-3. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="false" />
@@ -1676,9 +1676,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="39634" min="1" max="1" chance="60" /> <!-- Venir's Talisman - Stage 1 -->
-			<item id="39635" min="1" max="1" chance="35" /> <!-- Venir's Talisman - Stage 2 -->
-			<item id="39636" min="1" max="1" chance="5" /> <!-- Venir's Talisman - Stage 3 -->
+			<item id="39634" min="1" max="1" chance="60" /> <!-- Venir's Talisman Lv. 1 -->
+			<item id="39635" min="1" max="1" chance="35" /> <!-- Venir's Talisman Lv. 2 -->
+			<item id="39636" min="1" max="1" chance="5" /> <!-- Venir's Talisman Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="47087" name="Jewelry Box" type="EtcItem">
@@ -1699,70 +1699,70 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47089" name="Anakim Soul Crystal" additionalName="Stage 1" type="EtcItem">
-		<!-- A special Soul Crystal with Anakim's Soul. Can assign the soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
+		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47090" name="Anakim Soul Crystal" additionalName="Stage 2" type="EtcItem">
-		<!-- A special Soul Crystal with Anakim's Soul. Can assign the soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
+		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47091" name="Anakim Soul Crystal" additionalName="Stage 3" type="EtcItem">
-		<!-- A special Soul Crystal with Anakim's Soul. Can assign the soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
+		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. Can be exchanged for Talisman Pack through Merchant of Mammon. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47092" name="Anakim Soul Crystal" additionalName="Stage 4" type="EtcItem">
-		<!-- A special Soul Crystal with Anakim's Soul. Can assign the soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. Combine it with a Lilith Soul Crystal Stage 4 to obtain a Seven Signs Soul Crystal Stage 4. -->
+		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. Can be exchanged for Talisman Pack through Merchant of Mammon. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. <Enhancing>. Compound with Soul Crystal of Seven Signs Lv. 4. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47093" name="Anakim Soul Crystal" additionalName="Stage 5" type="EtcItem">
-		<!-- A special Soul Crystal with Anakim's Soul. Can assign the soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. Combine it with a Lilith Soul Crystal Stage 5 to obtain a Seven Signs Soul Crystal Stage 5. -->
+		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. <Enhancing>. Compound with Soul Crystal of Seven Signs Lv. 5. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47094" name="Anakim Soul Crystal" additionalName="Stage 6" type="EtcItem">
-		<!-- A special Soul Crystal with Anakim's Soul. Can assign the soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. Combine it with a Lilith Soul Crystal Stage 6 to obtain a Seven Signs Soul Crystal Stage 6. -->
+		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. <Enhancing>. Compound with Soul Crystal of Seven Signs Lv. 6. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47095" name="Anakim Soul Crystal" additionalName="Stage 7" type="EtcItem">
-		<!-- A special Soul Crystal with Anakim's Soul. Can assign the soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
+		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47096" name="Anakim Soul Crystal" additionalName="Stage 8" type="EtcItem">
-		<!-- A special Soul Crystal with Anakim's Soul. Can assign the soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
+		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47097" name="Anakim Soul Crystal" additionalName="Stage 9" type="EtcItem">
-		<!-- A special Soul Crystal with Anakim's Soul. Can assign the soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
+		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Monster Spirit. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47098" name="Anakim Soul Crystal" additionalName="Stage 10" type="EtcItem">
-		<!-- A special Soul Crystal with Anakim's Soul. Can assign the soul crystal enhancement ability to weapons. -->
+		<!-- A special Soul Crystal with Anakim's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.bm_ensoul_stone_pve" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />

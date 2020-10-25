@@ -271,7 +271,7 @@
 		</stats>
 	</item>
 	<item id="31108" name="Bound Saint Spear - Guidance" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Accuracy by about 5. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Features>. P. Accuracy +5. Deals additional PvP damage. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -376,7 +376,7 @@
 		</stats>
 	</item>
 	<item id="31111" name="Bound Saber Tooth - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Berserker Blade. <Special Option>. Increases Critical by 73. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Berserker Blade Conversion. <Special Option>. P. Critical Rate +73. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -411,7 +411,7 @@
 		</stats>
 	</item>
 	<item id="31112" name="Bound Saber Tooth - Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Berserker Blade. <Special Option>. Increases P. Atk. 270 during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Berserker Blade. <Special Option>. Increases P. Atk. 270 after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1177,7 +1177,7 @@
 		</stats>
 	</item>
 	<item id="31135" name="Bound Shamshir - Guidance" type="Weapon">
-		<!-- <Special Option>. Increases Accuracy by 6. No Soul Crystal option. -->
+		<!-- <Special Features>. P. Accuracy +6. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_shamshir_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1313,7 +1313,7 @@
 		</stats>
 	</item>
 	<item id="31139" name="Bound Sharpshooter - Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Eminence Bow. <Special Option>. Increases Accuracy by about 4. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Eminence Bow. <Special Option>. P. Accuracy +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1550,7 +1550,7 @@
 		</stats>
 	</item>
 	<item id="31147" name="Bound Salamander Skin Mail" type="Armor">
-		<!-- Bound salamander leather armor. -->
+		<!-- Bound Salamander Skin Mail. -->
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2016,7 +2016,7 @@
 		</stats>
 	</item>
 	<item id="31162" name="Bound Side - Critical Stun" type="Weapon">
-		<!-- <Special Option>. Has about a 34% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Has about a 34% chance of casting Stun on the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_scythe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2052,7 +2052,7 @@
 		</stats>
 	</item>
 	<item id="31163" name="Bound Side - Light Armor" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
+		<!-- <Special Option>. Increases Weight Limit by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_scythe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2160,7 +2160,7 @@
 		</stats>
 	</item>
 	<item id="31166" name="Bound Sarunga - Focus" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Draconic Bow conversion. <Special Option>. Increases Critical by 88. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Draconic Bow conversion. <Special Option>. Critical Rate for standard attacks +88. Deals additional PvP damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2197,7 +2197,7 @@
 		</stats>
 	</item>
 	<item id="31167" name="Bound Sarunga - Critical Slow" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Draconic Bow conversion. <Special Option>. Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Draconic Bow conversion. <Special Option>. Has a chance of casting Slow after a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2687,7 +2687,7 @@
 		</stats>
 	</item>
 	<item id="31182" name="Bound Blinzlasher - Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. <Special Option>. Increases Accuracy by 5. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Caliburs. <Special Option>. P. Accuracy +5. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2723,7 +2723,7 @@
 		</stats>
 	</item>
 	<item id="31183" name="Bound Blinzlasher - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. <Special Option>. Increases Critical by 77. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Caliburs. <Special Option>. P. Critical Rate +77. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2759,7 +2759,7 @@
 		</stats>
 	</item>
 	<item id="31184" name="Bound Blinzlasher - Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. <Special Option>. P. Atk. +213 during a Critical Attack. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Caliburs. <Special Option>. P. Atk. +213 after a critical attack. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2795,7 +2795,7 @@
 		</stats>
 	</item>
 	<item id="31185" name="Bound Blinzlasher - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Special Option>. Increases Critical by 77. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Special Option>. P. Critical Rate +77. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2831,7 +2831,7 @@
 		</stats>
 	</item>
 	<item id="31186" name="Bound Blinzlasher - Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Special Option>. Increases Max Hip by 77. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Special Option>. Max HP +25%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2867,7 +2867,7 @@
 		</stats>
 	</item>
 	<item id="31187" name="Bound Blinzlasher - Rsk. Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Special Option>. Increases Atk. Spd. 12% when HP drops to 60% or below. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Special Option>. Atk. Spd. +12% when HP < 60%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2903,7 +2903,7 @@
 		</stats>
 	</item>
 	<item id="31188" name="Bound Blinzlasher - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. <Special Option>. Increases Critical by 77. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Tsurugi. <Special Option>. P. Critical Rate +77. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2939,7 +2939,7 @@
 		</stats>
 	</item>
 	<item id="31189" name="Bound Blinzlasher - Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. <Special Option>. P. Atk. +213 during a Critical Attack. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Tsurugi. <Special Option>. P. Atk. +213 after a critical attack. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2975,7 +2975,7 @@
 		</stats>
 	</item>
 	<item id="31190" name="Bound Blinzlasher - Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tsurugi. <Special Option>. Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Tsurugi. <Special Option>. Atk. Spd. +7%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3011,7 +3011,7 @@
 		</stats>
 	</item>
 	<item id="31191" name="Bound Blinzlasher - Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Special Option>. Increases Max Hip by 77. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Sword of Nightmare. <Special Option>. Max HP +25%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3047,7 +3047,7 @@
 		</stats>
 	</item>
 	<item id="31192" name="Bound Blinzlasher - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Nightmare. <Special Option>. Increases Critical by 77. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Sword of Nightmare. <Special Option>. P. Critical Rate +77. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3083,7 +3083,7 @@
 		</stats>
 	</item>
 	<item id="31193" name="Bound Blinzlasher - Light Armor" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Nightmare. <Special Option>. Increases Weight Gauge by 20%. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Sword of Nightmare. <Special Option>. Weight Limit +20%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3119,7 +3119,7 @@
 		</stats>
 	</item>
 	<item id="31194" name="Bound Blinzlasher - Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Ultimate Sword. <Special Option>. Increases Accuracy by 5. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Ultimate Sword. <Special Option>. P. Accuracy +5. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3155,7 +3155,7 @@
 		</stats>
 	</item>
 	<item id="31195" name="Bound Blinzlasher - Critical Drain" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Ultimate Sword. <Special Option>. Absorbs 9 HP from the target during a Critical Attack. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Ultimate Sword. <Special Option>. Absorbs 9 HP from the target after a critical attack. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3191,7 +3191,7 @@
 		</stats>
 	</item>
 	<item id="31196" name="Bound Blinzlasher - Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Special Option>. Increases Max Hip by 77. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Ultimate Sword. <Special Option>. Max HP +25%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3283,7 +3283,7 @@
 		</stats>
 	</item>
 	<item id="31199" name="Bound Bloody Orchid - Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 67. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Critical Rate for standard attacks +67. Deals additional PvP damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

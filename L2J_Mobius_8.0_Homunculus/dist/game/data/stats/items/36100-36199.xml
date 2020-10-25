@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36100" name="Star Agathion - Chic Jaebum" type="Armor">
-		<!-- Bracelet for summoning Agathion - Chic Jaebum (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion Chic Jaebum (7-day). <Active Skills>. 1. Agathion's Blessing. Acquired XP/ SP +30% for 60 min. (Cooldown is 5 min.). 2. Agathion's Teleportation. Lets you teleport to various places. (Cooldown is 30 min.). 3. Agathion's Gift. You can get one of Vitality Replenishing/ Maintaining/ Recovering items at random. (Cooldown: 20 h.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -30,7 +30,7 @@
 		</skills>
 	</item>
 	<item id="36101" name="Star Agathion - Cute Shinyoung" type="Armor">
-		<!-- Bracelet for summoning Agathion - Cute Shinyoung (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion Cute Shinyoung (7-day). <Active Skills>. 1. Agathion's Blessing. Acquired XP/ SP +30% for 60 min. (Cooldown is 5 min.). 2. Agathion's Teleportation. Lets you teleport to various places. (Cooldown is 30 min.). 3. Agathion's Gift. You can get one of Vitality Replenishing/ Maintaining/ Recovering items at random. (Cooldown: 20 h.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -59,7 +59,7 @@
 		</skills>
 	</item>
 	<item id="36102" name="Star Agathion Pack" type="EtcItem">
-		<!-- You can randomly acquire 1 Star Agathion Summoning Bracelet (7-day). -->
+		<!-- Double-click to obtain a random agathion (7-day). -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -79,7 +79,7 @@
 		</skills>
 	</item>
 	<item id="36103" name="Transformation Scroll Pack" type="EtcItem">
-		<!-- You can get 1 Transformation Scroll: Zaken, Gordon, Ranku, and Kechi at a certain probability. -->
+		<!-- Double-click to obtain Transformation Scroll: Zaken/ Gordon/ Ranku/ Kechi. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -175,7 +175,7 @@
 		</skills>
 	</item>
 	<item id="36109" name="Kaliel's Treasure Chest (Low-grade)" type="EtcItem">
-		<!-- Kaliel's Treasure Chest (Low-grade). Double-click to receive a gift. -->
+		<!-- Kaliel's Low-grade Treasure Chest. Double-click to receive a gift. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -186,7 +186,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36110" name="Kaliel's Treasure Chest (Mid-grade)" type="EtcItem">
-		<!-- Kaliel's Treasure Chest (Mid-grade). Double-click to receive a gift. -->
+		<!-- Kaliel's Mid-grade Treasure Chest. Double-click to receive a gift. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -197,7 +197,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36111" name="Kaliel's Treasure Chest (High-grade)" type="EtcItem">
-		<!-- Kaliel's Treasure Chest (High-grade). Double-click to receive a gift. -->
+		<!-- Kaliel's High-grade Treasure Chest. Double-click to receive a gift. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -208,7 +208,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36112" name="Kaliel's Token" type="EtcItem">
-		<!-- Kaliel's Token. Give it to Jolie (Event Manager) to receive a Gift Box or Soul Box. To be deleted on May 23rd when the event ends. -->
+		<!-- Give it to Jolie (Event Manager) to receive a Kaliel's Treasure Chest or Soul Box. -->
 		<set name="icon" val="icon.etc_ev_kalie_token" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -269,7 +269,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36116" name="Scroll of Blessing: (R-grade)" additionalName="Campaign" type="EtcItem">
-		<!-- The Blacksmith of Mammon can exchange standard Requiem, Immortal, Apocalypse or Twilight equipment for Blessed equipment for you at a low probability. Small fee is charged. -->
+		<!-- The Head Blacksmith can exchange standard Requiem/ Immortal, Apocalypse/ Twilight equipment for Blessed equipment at a low probability. Small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r1" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
@@ -279,7 +279,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="36117" name="Scroll of Blessing: (R95-grade)" additionalName="Campaign" type="EtcItem">
-		<!-- The Blacksmith of Mammon can exchange standard Specter or Seraph equipment for Blessed equipment for you at a low probability. Small fee is charged. -->
+		<!-- The Head Blacksmith can exchange standard Requiem/ Immortal, Apocalypse/ Twilight equipment for Blessed equipment at a low probability. Small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r95" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -523,7 +523,7 @@
 		</skills>
 	</item>
 	<item id="36130" name="Scroll: Enchant Armor (R-grade) 5-unit Pack" type="EtcItem">
-		<!-- Double-click to receive 5 Scrolls: Enchant Armor (R-grade). -->
+		<!-- Double-click to obtain Scrolls: Enchant R-grade Armor (5 pcs.). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -533,7 +533,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17527" min="5" max="5" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			<item id="17527" min="5" max="5" chance="100" /> <!-- Scroll: Enchant R-grade Armor -->
 		</capsuled_items>
 	</item>
 	<item id="36131" name="CON/ MEN Pendant Pack" type="EtcItem">
@@ -607,7 +607,7 @@
 		</skills>
 	</item>
 	<item id="36136" name="Critical Pendant Pack" type="EtcItem">
-		<!-- Double-click to receive 1 Critical Rate Pendant or 1 Critical Damage Pendant. -->
+		<!-- Double-click to obtain Critical Rate Pendant, P. Atk. Pendant or M. Atk. Pendant. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -621,7 +621,7 @@
 		</skills>
 	</item>
 	<item id="36137" name="Lv. 5 Legendary MEN Dye 10-unit Pack" type="EtcItem">
-		<!-- Double-click to receive 10 units of Lv. 5 Legendary MEN Dye. -->
+		<!-- Double-click to obtain 10 units of Legendary MEN Dye Lv. 5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -631,11 +631,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17714" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
+			<item id="17714" min="10" max="10" chance="100" /> <!-- Legendary MEN Dye Lv. 5 - MEN +5, INT +1, Holy Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36138" name="Lv. 5 Legendary WIT Dye 10-unit Pack" type="EtcItem">
-		<!-- Double-click to receive 10 units of Lv. 5 Legendary WIT Dye. -->
+		<!-- Double-click to obtain 10 units of Legendary WIT Dye Lv. 5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -645,11 +645,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17713" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
+			<item id="17713" min="10" max="10" chance="100" /> <!-- Legendary WIT Dye Lv. 5 - WIT +5, MEN +1, Wind Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36139" name="Lv. 5 Legendary DEX Dye 10-unit Pack" type="EtcItem">
-		<!-- Double-click to receive 10 units of Lv. 5 Legendary DEX Dye. -->
+		<!-- Double-click to obtain 10 units of Legendary DEX Dye Lv. 5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -659,11 +659,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17710" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+			<item id="17710" min="10" max="10" chance="100" /> <!-- Legendary DEX Dye Lv. 5 - DEX +5, CON +1, Earth Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36140" name="Lv. 5 Legendary CON Dye 10-unit Pack" type="EtcItem">
-		<!-- Double-click to receive 10 units of Lv. 5 Legendary CON Dye. -->
+		<!-- Double-click to obtain 10 units of Legendary CON Dye Lv. 5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -673,11 +673,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17711" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
+			<item id="17711" min="10" max="10" chance="100" /> <!-- Legendary CON Dye Lv. 5 - CON +5, STR +1, Dark Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36141" name="Lv. 5 Legendary INT Dye 10-unit Pack" type="EtcItem">
-		<!-- Double-click to receive 10 units of Lv. 5 Legendary INT Dye. -->
+		<!-- Double-click to receive 10 units of Legendary INT Dye Lv. 5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -687,11 +687,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17712" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
+			<item id="17712" min="10" max="10" chance="100" /> <!-- Legendary INT Dye Lv. 5 - INT +5, WIT +1, Water Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36142" name="Lv. 5 Legendary STR Dye 10-unit Pack" type="EtcItem">
-		<!-- Double-click to receive 10 units of Lv. 5 Legendary STR Dye. -->
+		<!-- Double-click to obtain 10 units of Legendary STR Dye Lv. 5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -701,7 +701,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17709" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
+			<item id="17709" min="10" max="10" chance="100" /> <!-- Legendary STR Dye Lv. 5 - STR +5, DEX +1, Fire Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36143" name="Double Crystal Enhancement Reward: Helios Box (Physical)" type="EtcItem">
@@ -733,7 +733,7 @@
 		</skills>
 	</item>
 	<item id="36145" name="Double Crystal Enhancement Reward: Helios Box (Dual Weapons)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Double Crystal Helios Dual Sword, Dual Dagger, and Dual Blunt. -->
+		<!-- Double-click to obtain one of the following items: Double Crystal Helios Dual Swords/ Dual Daggers/ Dual Blunt Weapon. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -747,7 +747,7 @@
 		</skills>
 	</item>
 	<item id="36146" name="Bloody Helios Weapon Pack" type="EtcItem">
-		<!-- Double-click to receive one of the Bloody Helios Weapons. -->
+		<!-- Double-click to receive one of the Bloody Helios weapons. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -761,7 +761,7 @@
 		</skills>
 	</item>
 	<item id="36147" name="Dark Helios Weapon Pack" type="EtcItem">
-		<!-- Double-click to receive one of the Dark Helios Weapons. -->
+		<!-- Double-click to receive one of the Dark Helios weapons. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -775,7 +775,7 @@
 		</skills>
 	</item>
 	<item id="36148" name="Kaliel's Scroll of Escape Pack" type="EtcItem">
-		<!-- Double-click to receive a Scroll of Escape - Ruins of Ye Sagira, Isle of Souls Harbor, Guillotine Fortress, Bloody Swampland, Crystal Caverns, and Seal of Shilen. -->
+		<!-- Double-click to receive a Scroll of Escape - Ruins of Ye Sagira, Isle of Souls Harbor, Guillotine Fortress, Bloody Swampland, Crystal Caverns, and Seal of Shillien. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -785,12 +785,12 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36170" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Bloody Swampland -->
-			<item id="36171" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Isle of Souls Harbor -->
-			<item id="36172" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Ruins of Ye Sagira -->
-			<item id="36173" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Guillotine Fortress -->
-			<item id="36174" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Parnassus -->
-			<item id="36175" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Seal of Shilen -->
+			<item id="36170" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Bloody Swampland -->
+			<item id="36171" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Isle of Souls Harbor -->
+			<item id="36172" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Ruins of Ye Sagira -->
+			<item id="36173" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Guillotine Fortress -->
+			<item id="36174" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Parnassus -->
+			<item id="36175" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Seal of Shillien -->
 		</capsuled_items>
 	</item>
 	<item id="36149" name="Kaliel's Soul Bottle Box" type="EtcItem">
@@ -808,7 +808,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36150" name="Kaliel's Hourglass" type="EtcItem">
-		<!-- Increases XP obtained through hunting by 50% for 1 hour. -->
+		<!-- When used, acquired XP +50% for 1 h. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -823,7 +823,7 @@
 		</skills>
 	</item>
 	<item id="36151" name="Kaliel's Training Scroll" type="EtcItem">
-		<!-- Increases XP and SP obtained through hunting by 100% for 30 min. Can be used only by characters of level 90 or lower. Temporary event item. -->
+		<!-- When used, Acquired XP/ SP +100% for 30 min. Required level: 1-89. -->
 		<set name="icon" val="icon.etc_training_scroll_kalie_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -926,7 +926,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36158" name="Hair Accessory Spirit Stone Pack" type="EtcItem">
-		<!-- Double-click to receive 1 Spirit Stone for Hair Accessories. The obtained stone cannot be exchanged, dropped, or sold in a store. -->
+		<!-- Double-click to receive 1 Hair Accessory Spirit Stone. The obtained stone cannot be exchanged, dropped, or sold in a store. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -940,7 +940,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36159" name="Scroll of Blessing: (R1-grade)" type="EtcItem">
-		<!-- The Blacksmith of Mammon can exchange standard Requiem or Immortal equipment for Blessed equipment for you. Small fee is charged. -->
+		<!-- Head Blacksmith can exchange standard Requiem/ Immortal equipment for a Blessed one in any town. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -948,7 +948,7 @@
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="36160" name="Scroll of Blessing: (R2-grade)" type="EtcItem">
-		<!-- The Blacksmith of Mammon can exchange standard Apocalypse or Twilight equipment for Blessed equipment for you. Small fee is charged. -->
+		<!-- Head Blacksmith can exchange standard Twilight/ Apocalypse equipment for a Blessed one in any town. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -956,7 +956,7 @@
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="36161" name="Scroll of Blessing: (R95-grade)" type="EtcItem">
-		<!-- The Blacksmith of Mammon can exchange standard Specter or Seraph equipment for Blessed equipment for you. Small fee is charged. -->
+		<!-- Head Blacksmith can exchange standard Specter/ Seraph equipment for a Blessed one in any town. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r95" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -964,7 +964,7 @@
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="36162" name="Scroll of Blessing: (R99-grade)" type="EtcItem">
-		<!-- The Blacksmith of Mammon can exchange standard Helios or Eternal equipment for Blessed equipment for you. Small fee is charged. -->
+		<!-- Head Blacksmith can exchange standard Helios/ Eternal equipment for a Blessed one in any town. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -972,7 +972,7 @@
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="36163" name="Giant's Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. Random enchantment from +1 to +3. -->
+		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). The enchanting is random from +1 to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_r" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -988,7 +988,7 @@
 		</skills>
 	</item>
 	<item id="36164" name="Giant's Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +2 for R-grade armor and accessories. It is greatly increased starting at +4. Can be safely enchanted to +3. When enchanted to +4 or more, HP also increases according to the enchant value. Randomly adds between +1 and +3 enchant value. -->
+		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, P. Def. is greatly increased, Max HP is increased with each enchant value. The enchanting is safe up to +3. The enchanting is random from +1 to +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_r" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
@@ -1004,7 +1004,7 @@
 		</skills>
 	</item>
 	<item id="36165" name="Kaliel's Soul Box" type="EtcItem">
-		<!-- Double-click to receive various items with Kaliel's Blessing that are helpful for obtaining XP and hunting. Temporary event item. -->
+		<!-- Double-click to obtain various items blessed by Kaliel that will help you acquire more XP. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1019,7 +1019,7 @@
 		</skills>
 	</item>
 	<item id="36166" name="Kaliel's Gift Box" type="EtcItem">
-		<!-- Double-click to receive various valuable items with Kaliel's Blessing. Temporary event item. -->
+		<!-- Double-click to obtain various items blessed by Kaliel. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1052,7 +1052,7 @@
 		</stats>
 	</item>
 	<item id="36168" name="Lidia's Belt" type="Armor">
-		<!-- Belt that contains the power of Lidia von Hellmann of the Fortress of the Dead. Increases damage by 5% and decreases received damage by 5%. Increases weight by 12800 and the number of inventory slots by 18. -->
+		<!-- Belt that contains the power of Lidia von Hellmann of the Fortress of the Dead. Inflicted damage +5%, Received damage -5%. Weight limit +12,800, Inventory Slots +18. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1163,7 +1163,7 @@
 		</skills>
 	</item>
 	<item id="36175" name="Scroll of Escape - Seal of Shilen" type="EtcItem">
-		<!-- Teleports you to the Seal of Shilen. -->
+		<!-- Teleports you to the Seal of Shillien. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="150000" />
@@ -1322,7 +1322,7 @@
 		</skills>
 	</item>
 	<item id="36184" name="Kaliel's Energy" additionalName="Annihilation" type="EtcItem">
-		<!-- Kaliel's Energy protects the Talisman - Annihilation from turning into Talisman - Destruction when enchanting to Talisman - Hellfire fails. -->
+		<!-- Take it along with Talisman of Annihilation and Giant's Energy to Seed Talisman Manager to obtain Talisman of Hellfire. -->
 		<set name="icon" val="icon.etc_spirit_kalie_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -1331,7 +1331,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36185" name="Kaliel's Energy" additionalName="Hellfire" type="EtcItem">
-		<!-- Kaliel's Energy protects the Talisman - Hellfire from turning into Talisman - Annihilation when enchanting to Talisman - Desire fails. -->
+		<!-- Take it along with Talisman of Hellfire and Giant's Energy to Seed Talisman Manager to obtain Talisman of Desire. -->
 		<set name="icon" val="icon.etc_spirit_kalie_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -1340,7 +1340,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36186" name="Kaliel's Energy" additionalName="Desire" type="EtcItem">
-		<!-- Kaliel's Energy protects the Talisman - Desire from turning into Talisman - Hellfire when enchanting to Talisman - Longing fails. -->
+		<!-- Take it along with Talisman of Desire and Giant's Energy to Seed Talisman Manager to obtain Talisman of Longing. -->
 		<set name="icon" val="icon.etc_spirit_kalie_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -1435,7 +1435,7 @@
 		</stats>
 	</item>
 	<item id="36191" name="Kaliel's Wish" type="EtcItem">
-		<!-- Makes you eligible to receive a Kaliel's Blessing event reward token and 1st-place winner item for 1 hour. Can be used only by characters of Lv. 40 or higher who have done the 2nd class transfer. Buff gets deleted upon Subclass/ Dual Class change. Temporary event item. -->
+		<!-- For 1 h. makes you eligible to get a reward of Kaliel's Blessing event (the mark and item of 1st-place winner). Can be used only by characters of level 40 or higher who have done the 2nd class transfer. The effect is removed after Dual Class changing. -->
 		<set name="icon" val="icon.etc_blessed_kalie_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1455,7 +1455,7 @@
 		</skills>
 	</item>
 	<item id="36192" name="Kaliel's Wish Pouch" type="EtcItem">
-		<!-- Double-click to receive 3 Kaliel's Wishes. Temporary event item. -->
+		<!-- Double-click to receive 3 Kaliel's Wishes. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1475,7 +1475,7 @@
 		</skills>
 	</item>
 	<item id="36193" name="Shaper Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
+		<!-- A weapon with the sealed power of heroes. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by characters of all levels. Can be used along with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. For 1 day. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1509,7 +1509,7 @@
 		</stats>
 	</item>
 	<item id="36194" name="Cutter Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
+		<!-- A weapon with the sealed power of heroes. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by characters of all levels. Can be used along with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. For 1 day. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1542,7 +1542,7 @@
 		</stats>
 	</item>
 	<item id="36195" name="Slasher Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
+		<!-- A weapon with the sealed power of heroes. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by characters of all levels. Can be used along with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. For 1 day. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1575,7 +1575,7 @@
 		</stats>
 	</item>
 	<item id="36196" name="Avenger Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
+		<!-- A weapon with the sealed power of heroes. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by characters of all levels. Can be used along with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. For 1 day. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1609,7 +1609,7 @@
 		</stats>
 	</item>
 	<item id="36197" name="Fighter Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
+		<!-- A weapon with the sealed power of heroes. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by characters of all levels. Can be used along with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. For 1 day. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -1643,7 +1643,7 @@
 		</stats>
 	</item>
 	<item id="36198" name="Stormer Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
+		<!-- A weapon with the sealed power of heroes. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by characters of all levels. Can be used along with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. For 1 day. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -1677,7 +1677,7 @@
 		</stats>
 	</item>
 	<item id="36199" name="Thrower Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
+		<!-- A weapon with the sealed power of heroes. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by characters of all levels. Can be used along with No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. For 1 day. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />

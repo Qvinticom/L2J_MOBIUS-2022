@@ -4,13 +4,13 @@
 		<skills>
 			<skill id="4165" level="9" triggerRate="25" successRate="30" target="TARGET"> <!-- Icy Air -->
 				<conditions>
-					<hp type="GREATER" percent="30" />
+					<hp type="GREATER" percent="1" />
 					<range value="1000" />
 				</conditions>
 			</skill>
 			<skill id="4053" level="8" triggerRate="25" successRate="30" target="TARGET"> <!-- Cubic Weakness -->
 				<conditions>
-					<hp type="GREATER" percent="30" />
+					<hp type="GREATER" percent="1" />
 					<range value="1000" />
 				</conditions>
 			</skill>

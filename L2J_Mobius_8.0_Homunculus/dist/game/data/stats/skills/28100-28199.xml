@@ -81,7 +81,7 @@
 		<reuseDelayGroup>27356</reuseDelayGroup>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DamOverTime">
 				<power>282</power>
@@ -95,6 +95,19 @@
 			</effect>
 			<effect name="BuffBlock" />
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="28102" toLevel="12" name="Mass Binding Flood">
@@ -162,7 +175,7 @@
 		</effects>
 	</skill>
 	<skill id="28103" toLevel="12" name="Slippery Scale">
-		<!-- For $s1, defends against debuffs $s2 times. -->
+		<!-- For $s1, blocks $s2 debuff attack(s). -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_feb_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
@@ -172,6 +185,7 @@
 		<magicLevel>99</magicLevel>
 		<basicProperty>NONE</basicProperty>
 		<activateRate>0</activateRate>
+		<abnormalTime>60</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -204,12 +218,11 @@
 		<hitTime>15000</hitTime>
 		<effectPoint>467</effectPoint>
 		<isMagic>4</isMagic>
-		<effectRange>-2</effectRange>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>OTHERS</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<staticReuse>true</staticReuse>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">6750000</value>
@@ -226,14 +239,16 @@
 			<value level="12">1800000</value>
 		</reuseDelay>
 		<reuseDelayGroup>27359</reuseDelayGroup>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 		<conditions>
 			<condition name="OpCallPc" />
-			<condition name="TargetMyParty">
-				<includeMe>false</includeMe>
-			</condition>
 		</conditions>
 		<effects>
-			<effect name="CallPc" />
+			<effect name="CallParty" />
 		</effects>
 	</skill>
 	<skill id="28105" toLevel="12" name="Exoskeletal Shield">
@@ -247,7 +262,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -284,7 +299,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13512</npcId>
+				<npcId>13512</npcId> <!-- Virgo -->
 			</effect>
 		</effects>
 	</skill>
@@ -299,7 +314,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13514</npcId>
+				<npcId>13514</npcId> <!-- Capricorn -->
 			</effect>
 		</effects>
 	</skill>
@@ -314,7 +329,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13517</npcId>
+				<npcId>13517</npcId> <!-- Libra -->
 			</effect>
 		</effects>
 	</skill>
@@ -329,7 +344,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13513</npcId>
+				<npcId>13513</npcId> <!-- Aries -->
 			</effect>
 		</effects>
 	</skill>
@@ -344,7 +359,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13520</npcId>
+				<npcId>13520</npcId> <!-- Taurus -->
 			</effect>
 		</effects>
 	</skill>
@@ -359,7 +374,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13516</npcId>
+				<npcId>13516</npcId> <!-- Leo -->
 			</effect>
 		</effects>
 	</skill>
@@ -374,7 +389,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13515</npcId>
+				<npcId>13515</npcId> <!-- Gemini -->
 			</effect>
 		</effects>
 	</skill>
@@ -389,7 +404,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13519</npcId>
+				<npcId>13519</npcId> <!-- Scorpio -->
 			</effect>
 		</effects>
 	</skill>
@@ -404,7 +419,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13510</npcId>
+				<npcId>13510</npcId> <!-- Aquarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -419,7 +434,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13509</npcId>
+				<npcId>13509</npcId> <!-- Pisces -->
 			</effect>
 		</effects>
 	</skill>
@@ -434,7 +449,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13518</npcId>
+				<npcId>13518</npcId> <!-- Sagittarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -449,7 +464,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13511</npcId>
+				<npcId>13511</npcId> <!-- Cancer -->
 			</effect>
 		</effects>
 	</skill>
@@ -464,7 +479,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13553</npcId>
+				<npcId>13553</npcId> <!-- Agathion Virgo -->
 			</effect>
 		</effects>
 	</skill>
@@ -479,7 +494,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13554</npcId>
+				<npcId>13554</npcId> <!-- Agathion Capricorn -->
 			</effect>
 		</effects>
 	</skill>
@@ -494,7 +509,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13555</npcId>
+				<npcId>13555</npcId> <!-- Agathion Libra -->
 			</effect>
 		</effects>
 	</skill>
@@ -509,7 +524,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13556</npcId>
+				<npcId>13556</npcId> <!-- Agathion Aries -->
 			</effect>
 		</effects>
 	</skill>
@@ -524,7 +539,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13557</npcId>
+				<npcId>13557</npcId> <!-- Agathion Taurus -->
 			</effect>
 		</effects>
 	</skill>
@@ -539,7 +554,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13558</npcId>
+				<npcId>13558</npcId> <!-- Agathion Leo -->
 			</effect>
 		</effects>
 	</skill>
@@ -554,7 +569,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13559</npcId>
+				<npcId>13559</npcId> <!-- Agathion Gemini -->
 			</effect>
 		</effects>
 	</skill>
@@ -569,7 +584,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13560</npcId>
+				<npcId>13560</npcId> <!-- Agathion Scorpio -->
 			</effect>
 		</effects>
 	</skill>
@@ -584,7 +599,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13561</npcId>
+				<npcId>13561</npcId> <!-- Agathion Aquarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -599,7 +614,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13562</npcId>
+				<npcId>13562</npcId> <!-- Agathion Pisces -->
 			</effect>
 		</effects>
 	</skill>
@@ -614,7 +629,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13563</npcId>
+				<npcId>13563</npcId> <!-- Agathion Sagittarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -629,7 +644,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13564</npcId>
+				<npcId>13564</npcId> <!-- Agathion Cancer -->
 			</effect>
 		</effects>
 	</skill>
@@ -644,7 +659,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13591</npcId>
+				<npcId>13591</npcId> <!-- Greater Agathion Virgo Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -659,7 +674,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13592</npcId>
+				<npcId>13592</npcId> <!-- Greater Agathion Capricorn Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -674,7 +689,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13593</npcId>
+				<npcId>13593</npcId> <!-- Greater Agathion Libra Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -689,7 +704,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13594</npcId>
+				<npcId>13594</npcId> <!-- Greater Agathion Aries Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -704,7 +719,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13595</npcId>
+				<npcId>13595</npcId> <!-- Greater Agathion Taurus Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -719,7 +734,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13596</npcId>
+				<npcId>13596</npcId> <!-- Greater Agathion Leo Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -734,7 +749,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13597</npcId>
+				<npcId>13597</npcId> <!-- Greater Agathion Gemini Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -749,7 +764,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13598</npcId>
+				<npcId>13598</npcId> <!-- Greater Agathion Scorpio Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -764,7 +779,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13599</npcId>
+				<npcId>13599</npcId> <!-- Greater Agathion Aquarius Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -779,7 +794,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13600</npcId>
+				<npcId>13600</npcId> <!-- Greater Agathion Pisces Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -794,7 +809,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13601</npcId>
+				<npcId>13601</npcId> <!-- Greater Agathion Sagittarius Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -809,7 +824,7 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13602</npcId>
+				<npcId>13602</npcId> <!-- Greater Agathion Cancer Charm -->
 			</effect>
 		</effects>
 	</skill>
@@ -888,8 +903,8 @@
 					<value level="6">0</value>
 					<value level="7">0</value>
 					<value level="8">0</value>
-					<value level="9">5000</value>
-					<value level="10">7000</value>
+					<value level="9">1000</value>
+					<value level="10">2000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -903,23 +918,8 @@
 					<value level="6">0</value>
 					<value level="7">0</value>
 					<value level="8">0</value>
-					<value level="9">5000</value>
-					<value level="10">7000</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="AdditionalPotionMp">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">5000</value>
-					<value level="10">7000</value>
+					<value level="9">1000</value>
+					<value level="10">2000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -983,7 +983,7 @@
 		</effects>
 	</skill>
 	<skill id="28144" toLevel="4" name="Sayha's Grace">
-		<!-- For $s1, Damage Received -$s2. -->
+		<!-- For $s1, Received Damage -$s2. Cannot be stacked with active skills of other talismans. <The character is targeted automatically> -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_g_Lv1</value>
 			<value level="2">icon.sayhas_talisman_g_Lv2</value>
@@ -991,11 +991,13 @@
 			<value level="4">icon.sayhas_talisman_g_Lv4</value>
 		</icon>
 		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>SAYHA_BUFF</abnormalType>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
-		<targetType>SELF</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>
@@ -1008,6 +1010,9 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SAYHA_BUFF,-1;TALISMAN_SPECIAL,-1</dispel>
+			</effect>
 			<effect name="DamageByAttack">
 				<amount>
 					<value level="1">-5</value>
@@ -1026,10 +1031,28 @@
 				</amount>
 				<type>ENEMY_ALL</type>
 			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="28145" toLevel="4" name="Sayha's Encouragement">
-		<!-- For $s1, PvE Damage +$s2. -->
+		<!-- For $s1, PvE Damage +$s2. Cannot be stacked with active skills of other talismans. <The character is targeted automatically> -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_pve_Lv1</value>
 			<value level="2">icon.sayhas_talisman_pve_Lv2</value>
@@ -1037,6 +1060,7 @@
 			<value level="4">icon.sayhas_talisman_pve_Lv4</value>
 		</icon>
 		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>SAYHA_BUFF</abnormalType>
 		<abnormalTime>
 			<value level="1">180</value>
 			<value level="2">180</value>
@@ -1045,8 +1069,9 @@
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
-		<targetType>SELF</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>
@@ -1059,6 +1084,9 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SAYHA_BUFF,-1;TALISMAN_SPECIAL,-1</dispel>
+			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>
 					<value level="1">5</value>
@@ -1089,7 +1117,7 @@
 		</effects>
 	</skill>
 	<skill id="28146" toLevel="4" name="Sayha's Anger">
-		<!-- For $s1, PvP Damage +$s2. -->
+		<!-- For $s1, PvP Damage +$s2. Cannot be stacked with active skills of other talismans. <The character is targeted automatically> -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
 			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
@@ -1097,11 +1125,13 @@
 			<value level="4">icon.sayhas_talisman_pvp_Lv4</value>
 		</icon>
 		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>SAYHA_BUFF</abnormalType>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
-		<targetType>SELF</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>
@@ -1114,6 +1144,9 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SAYHA_BUFF,-1;TALISMAN_SPECIAL,-1</dispel>
+			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>
 					<value level="1">8</value>
@@ -1144,7 +1177,7 @@
 		</effects>
 	</skill>
 	<skill id="28147" toLevel="3" name="Sayha's Support">
-		<!-- Recovers HP by 20%, MP by 20%, and CP by 30%. -->
+		<!-- Recovers HP by $s1, MP by $s2, and CP by $s3. -->
 		<icon>icon.bm_sayhas_talisman</icon>
 		<operateType>A1</operateType>
 		<isMagic>2</isMagic>
@@ -1222,7 +1255,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28154" toLevel="1" name="Talisman - Abundance Pack">
+	<skill id="28154" toLevel="1" name="Talisman of Abundance Pack">
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<itemConsumeId>29077</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1239,68 +1272,66 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="7.45">
-						<item id="26418" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 1 (High-grade) -->
+						<item id="26418" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 1 -->
 					</item>
 					<item chance="5.25">
-						<item id="26419" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 2 (High-grade) -->
+						<item id="26419" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 2 -->
 					</item>
 					<item chance="4.25">
-						<item id="26420" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 3 (High-grade) -->
+						<item id="26420" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 3 -->
 					</item>
 					<item chance="3.25">
-						<item id="26421" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 4 (High-grade) -->
+						<item id="26421" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 4 -->
 					</item>
 					<item chance="7.45">
-						<item id="23833" count="1" /> <!-- Talisman - Abundance -->
+						<item id="23833" count="1" /> <!-- Talisman of Abundance - War -->
 					</item>
 					<item chance="7.45">
-						<item id="23835" count="1" /> <!-- Talisman - Abundance -->
+						<item id="23835" count="1" /> <!-- Talisman of Abundance - Morale -->
 					</item>
 					<item chance="7.45">
-						<item id="23834" count="1" /> <!-- Talisman - Abundance -->
+						<item id="23834" count="1" /> <!-- Talisman of Abundance - Tactics -->
 					</item>
 					<item chance="7.45">
-						<item id="23836" count="1" /> <!-- Talisman - Abundance -->
+						<item id="23836" count="1" /> <!-- Talisman of Abundance - Physique -->
 					</item>
 					<item chance="7.45">
-						<item id="26338" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
+						<item id="26338" count="1" /> <!-- High-grade Talisman of Abundance Lv. 1 -->
 					</item>
 					<item chance="5.25">
-						<item id="26339" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
+						<item id="26339" count="1" /> <!-- High-grade Talisman of Abundance Lv. 2 -->
 					</item>
 					<item chance="4.25">
-						<item id="26340" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
+						<item id="26340" count="1" /> <!-- High-grade Talisman of Abundance Lv. 3 -->
 					</item>
 					<item chance="3.25">
-						<item id="26341" count="1" /> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
+						<item id="26341" count="1" /> <!-- High-grade Talisman of Abundance Lv. 4 -->
 					</item>
 					<item chance="7.45">
-						<item id="23839" count="1" /> <!-- Talisman - Conquerer -->
+						<item id="23839" count="1" /> <!-- Talisman of Conquerer - Abundance -->
 					</item>
 					<item chance="7.45">
-						<item id="23837" count="1" /> <!-- Talisman - Hunter -->
+						<item id="23837" count="1" /> <!-- Talisman of Hunter - Abundance -->
 					</item>
 					<item chance="7.45">
-						<item id="23840" count="1" /> <!-- Talisman - Outlaw -->
+						<item id="23840" count="1" /> <!-- Talisman of Outlaw - Abundance -->
 					</item>
 					<item chance="7.45">
-						<item id="23838" count="1" /> <!-- Talisman - Slaughterer -->
+						<item id="23838" count="1" /> <!-- Talisman of Slaughterer - Abundance -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28155" toLevel="1" name="Wondrous Jewelry Box">
+	<skill id="28155" toLevel="1" name="Ultimate Jewelry Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28156" toLevel="12" name="Virgo Agathion Charm Pack">
-		<!-- Double-click to obtain a +3 Virgo Agathion Charm - Stage 1 (30-day). -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28157" toLevel="12" name="Virgo Agathion Charm Pack">
-		<!-- Double-click to obtain a +3 Virgo Agathion Charm - Stage 1 (15-day). -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28158" toLevel="1" name="Bonfire">
@@ -1323,7 +1354,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28161" toLevel="1" name="Match Sisters' Gratitude">
-		<!-- For 30 min., XP/ SP +30%, Vitality Status Acquired XP/ SP +30%, P./ M. Atk. And P./ M. Def. +15%. -->
+		<!-- For $s1, XP/ SP +$s2, Vitality Status Acquired XP/ SP +$s3, P./ M. Atk. And P./ M. Def. +$s4. -->
 		<icon>icon.etc_candle_white_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1349,14 +1380,14 @@
 		<castRange>1200</castRange>
 	</skill>
 	<skill id="28164" toLevel="1" name="Freya's Charisma Potion">
-		<!-- Changes the appearance to that of a cat doll, and CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown is 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
+		<!-- Changes the appearance to that of a cat doll, and CHA +$s2 for $s1 Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown is 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_freya_charisma_potion1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="28165" toLevel="1" name="Freya's Charisma Potion">
-		<!-- Changes the appearance to that of a panda doll, and CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown is 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
+		<!-- Changes the appearance to that of a panda doll, and CHA +$s2 for $s1 Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown is 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_freya_charisma_potion1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1380,19 +1411,19 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28169" toLevel="1" name="Low-grade Zodiac Agathion">
+	<skill id="28169" toLevel="1" name="Low Quality Starlight Agathion Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="28170" toLevel="1" name="Mid-grade Zodiac Agathion">
+	<skill id="28170" toLevel="1" name="Mid-grade Starlight Agathion Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="28171" toLevel="1" name="High-grade Zodiac Agathion">
+	<skill id="28171" toLevel="1" name="High Quality Starlight Agathion Pack">
 		<itemConsumeId>29152</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1415,46 +1446,46 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.33333333">
-						<item id="24171" count="1" /> <!-- Agathion - Gemini Pack (High-grade) -->
+						<item id="24171" count="1" /> <!-- High Quality Agathion Gemini Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24159" count="1" /> <!-- Agathion - Libra Pack (High-grade) -->
+						<item id="24159" count="1" /> <!-- High Quality Agathion Libra Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24177" count="1" /> <!-- Agathion - Aquarius Pack (High-grade) -->
+						<item id="24177" count="1" /> <!-- High Quality Agathion Aquarius Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24153" count="1" /> <!-- Agathion - Virgo Pack (High-grade) -->
+						<item id="24153" count="1" /> <!-- High Quality Agathion Virgo Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24156" count="1" /> <!-- Agathion - Capricorn Pack (High-grade) -->
+						<item id="24156" count="1" /> <!-- High Quality Agathion Capricorn Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24168" count="1" /> <!-- Agathion - Leo Pack (High-grade) -->
+						<item id="24168" count="1" /> <!-- High Quality Agathion Leo Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24162" count="1" /> <!-- Agathion - Aries Pack (High-grade) -->
+						<item id="24162" count="1" /> <!-- High Quality Agathion Aries Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24186" count="1" /> <!-- Agathion - Cancer Pack (High-grade) -->
+						<item id="24186" count="1" /> <!-- High Quality Agathion Cancer Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24180" count="1" /> <!-- Agathion - Pisces Pack (High-grade) -->
+						<item id="24180" count="1" /> <!-- High Quality Agathion Pisces Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24174" count="1" /> <!-- Agathion - Scorpio Pack (High-grade) -->
+						<item id="24174" count="1" /> <!-- High Quality Agathion Scorpion Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24183" count="1" /> <!-- Agathion - Sagittarius Pack (High-grade) -->
+						<item id="24183" count="1" /> <!-- High Quality Agathion Sagittarius Box -->
 					</item>
 					<item chance="8.33333333">
-						<item id="24165" count="1" /> <!-- Agathion - Taurus Pack (High-grade) -->
+						<item id="24165" count="1" /> <!-- High Quality Agathion Taurus Box -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28172" toLevel="1" name="High-grade Maphr's Rune">
+	<skill id="28172" toLevel="1" name="High-grade Maphr's Rune 300%">
 		<!-- Adena drop amount +300%, item drop rate and spoil acquisition rate +100%. -->
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>
@@ -1498,14 +1529,14 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28178" toLevel="1" name="Agathion Summon - Antharas">
-		<!-- Summons Agathion. -->
+	<skill id="28178" toLevel="1" name="Summon Agathion Antharas">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="28179" toLevel="1" name="Antharas' Cute Tricks">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -1524,7 +1555,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="28183" toLevel="1" name="Summon Agathion Mermaid">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -1534,7 +1565,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28185" toLevel="1" name="Master's Fishing Potion">
-		<!-- For 1 h., Acquired XP/ SP +50% when fishing succeeds. Effect remains after death and cannot be forcefully deleted. -->
+		<!-- For $s1, Acquired XP/ SP +$s2 when fishing succeeds. Effect remains after death and cannot be forcefully deleted. -->
 		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1545,7 +1576,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28187" toLevel="1" name="Shining Fishing Box">
-		<!-- Double click to obtain one of various items with a random chance. -->
+		<!-- Double click to obtain a random item. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1554,8 +1585,8 @@
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="28189" toLevel="11" name="Mermaid Agathion Unique Ability">
-		<!-- Increases Acquired XP/ SP while fishing with growth of Agathion. -->
+	<skill id="28189" toLevel="11" name="Secondary Skill: Agathion Mermaid">
+		<!-- Acquired XP/ SP while fishing are increased, when the agathion grows. -->
 		<icon>icon.agathion_base</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1611,15 +1642,15 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="28197" toLevel="1" name="Teddy Bear Appearance Stone">
-		<!-- Changes appearance to teddy bear. -->
+		<!-- Teddy Bear Outfit -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28198" toLevel="1" name="Cat Soft Toy Appearance Stone">
-		<!-- Changes appearance to cat plushy. -->
+	<skill id="28198" toLevel="1" name="Plush Cat Appearance Stone">
+		<!-- Plush Cat Outfit -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28199" toLevel="1" name="Toy Panda Appearance Stone">
-		<!-- Changes appearance to panda plushy. -->
+		<!-- Toy Panda Outfit -->
 		<operateType>A1</operateType>
 	</skill>
 </list>

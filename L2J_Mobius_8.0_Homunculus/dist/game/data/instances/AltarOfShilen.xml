@@ -19,18 +19,14 @@
 		</condition>
 		<condition type="GroupMin">
 			<param name="html" value="condSmallGroup.html" />
-			<param name="limit" value="5" />
+			<param name="limit" value="2" />
 		</condition>
 		<condition type="GroupMax">
 			<param name="limit" value="7" />
 		</condition>
 		<condition type="Level" showMessageAndHtml="true">
 			<param name="html" value="condNoLevel.html" />
-			<param name="min" value="101" />
-		</condition>
-		<condition type="Level" showMessageAndHtml="true">
-			<param name="html" value="condNoLevel.html" />
-			<param name="max" value="105" />
+			<param name="min" value="103" />
 		</condition>
 		<condition type="Distance" />
 		<condition type="Reenter" />

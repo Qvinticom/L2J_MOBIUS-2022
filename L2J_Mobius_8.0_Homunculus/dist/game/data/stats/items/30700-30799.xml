@@ -128,7 +128,7 @@
 		</stats>
 	</item>
 	<item id="30705" name="Bound Carnage Bow - Light Armor" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Increases Weight Limit by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -270,7 +270,7 @@
 		</stats>
 	</item>
 	<item id="30709" name="Bound Tsurugi - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 77. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +77. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tsurugi_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -304,7 +304,7 @@
 		</stats>
 	</item>
 	<item id="30710" name="Bound Tsurugi - Critical Damage" type="Weapon">
-		<!-- <Special Option>. P. Atk. +213 during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +213 after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tsurugi_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -593,7 +593,7 @@
 		</stats>
 	</item>
 	<item id="30721" name="Bound Chakram - Critical Drain" type="Weapon">
-		<!-- <Special Option>. Absorbs 6 HP from the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Absorbs 6 HP from the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_chakram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1904,7 +1904,7 @@
 		</stats>
 	</item>
 	<item id="30765" name="Bound Imperial Staff - MP Regeneration" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Features>. Increases MP Recovery Rate. Deals additional PvP damage. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2180,7 +2180,7 @@
 		</stats>
 	</item>
 	<item id="30773" name="Bound Infernal Master - Critical Damage" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. +297 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Atk. +297 after a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2214,7 +2214,7 @@
 		</stats>
 	</item>
 	<item id="30774" name="Bound Infernal Master - Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Critical Rate for standard attacks +61. Deals additional PvP damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2248,7 +2248,7 @@
 		</stats>
 	</item>
 	<item id="30775" name="Bound Necklace of Mermaid" type="Armor">
-		<!-- Bound Necklace of Mermaid. -->
+		<!-- Bound Necklace of Mermaid -->
 		<set name="icon" val="icon.accessary_necklace_of_mermaid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2323,7 +2323,7 @@
 		</stats>
 	</item>
 	<item id="30778" name="Bound Immortal Edge - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. <Special Option>. Increases Critical by 77. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. <Special Option>. P. Critical Rate +77. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2393,7 +2393,7 @@
 		</stats>
 	</item>
 	<item id="30780" name="Bound Immortal Edge - Critical Drain" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. <Special Option>. Absorbs 9 HP from the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. <Special Option>. Absorbs 9 HP from the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2566,7 +2566,7 @@
 		</stats>
 	</item>
 	<item id="30785" name="Bound Icarus Dual Sword" type="Weapon">
-		<!-- Bound item. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 109 and Max HP by 10%. Inflicts more damage during PvP. No Soul Crystal option. -->
+		<!-- Bound item. When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. When enchanted to +4 or higher, Critical Rate for standard attacks +109, Max HP +10%. Deals additional PvP damage. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2602,7 +2602,7 @@
 		</stats>
 	</item>
 	<item id="30786" name="Bound Icarus Dual Dagger" type="Weapon">
-		<!-- Bound item. When enchanted, a dual dagger has greater P. Atk. than a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP. Can be equipped by Dagger Masters level 81 and higher. No Soul Crystal option. -->
+		<!-- Bound item. Dual daggers. When enchanted, P. Atk. is increased. When enchanted to +4 or higher, Critical Rate for standard attacks +109. Can be equipped by Dagger Masters of Lv. 81+. Deals additional PvP damage. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2743,7 +2743,7 @@
 		</stats>
 	</item>
 	<item id="30790" name="Bound Widow Maker - Critical Stun" type="Weapon">
-		<!-- <Special Option>. Has about a 31% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Has about a 31% chance of casting Stun on the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_widow_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2917,7 +2917,7 @@
 		</stats>
 	</item>
 	<item id="30795" name="Bound Silver Axe - Rsk. Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 138 when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- <Special Option>. Critical Rate for standard attacks +138 when HP<60%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_war_pick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

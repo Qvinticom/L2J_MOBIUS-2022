@@ -27,9 +27,9 @@ import org.l2jmobius.commons.util.Rnd;
 public class FishingBait
 {
 	private final int _itemId;
-	private final byte _level;
-	private final byte _minPlayerLevel;
-	private final byte _maxPlayerLevel;
+	private final int _level;
+	private final int _minPlayerLevel;
+	private final int _maxPlayerLevel;
 	private final double _chance;
 	private final int _timeMin;
 	private final int _timeMax;
@@ -38,7 +38,7 @@ public class FishingBait
 	private final boolean _isPremiumOnly;
 	private final List<FishingCatch> _rewards = new ArrayList<>();
 	
-	public FishingBait(int itemId, byte level, byte minPlayerLevel, byte maxPlayerLevel, double chance, int timeMin, int timeMax, int waitMin, int waitMax, boolean isPremiumOnly)
+	public FishingBait(int itemId, int level, int minPlayerLevel, int maxPlayerLevel, double chance, int timeMin, int timeMax, int waitMin, int waitMax, boolean isPremiumOnly)
 	{
 		_itemId = itemId;
 		_level = level;
@@ -57,17 +57,17 @@ public class FishingBait
 		return _itemId;
 	}
 	
-	public byte getLevel()
+	public int getLevel()
 	{
 		return _level;
 	}
 	
-	public byte getMinPlayerLevel()
+	public int getMinPlayerLevel()
 	{
 		return _minPlayerLevel;
 	}
 	
-	public byte getMaxPlayerLevel()
+	public int getMaxPlayerLevel()
 	{
 		return _maxPlayerLevel;
 	}

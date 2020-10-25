@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="26800" name="Demon Circlet" additionalName="CON +M. Atk." type="Armor">
-		<!-- CON +3 and M. Atk. +10% when equipped. -->
+		<!-- CON +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -16,7 +16,7 @@
 		</skills>
 	</item>
 	<item id="26801" name="Demon Circlet" additionalName="MEN +M. Atk." type="Armor">
-		<!-- MEN +3 and M. Atk. +10% when equipped. -->
+		<!-- MEN +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -31,7 +31,7 @@
 		</skills>
 	</item>
 	<item id="26802" name="Demon Circlet" additionalName="INT +M. Atk." type="Armor">
-		<!-- INT +3 and M. Atk. +10% when equipped. -->
+		<!-- INT +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -46,7 +46,7 @@
 		</skills>
 	</item>
 	<item id="26803" name="Demon Circlet" additionalName="WIT +M. Atk." type="Armor">
-		<!-- WIT +3 and M. Atk. +10% when equipped. -->
+		<!-- WIT +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -151,7 +151,7 @@
 		</skills>
 	</item>
 	<item id="26810" name="Pirate's Eyepatch" additionalName="STR +Critical Rate" type="Armor">
-		<!-- STR +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, STR +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -166,7 +166,7 @@
 		</skills>
 	</item>
 	<item id="26811" name="Pirate's Eyepatch" additionalName="DEX +Critical Rate" type="Armor">
-		<!-- DEX +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, DEX +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -181,7 +181,7 @@
 		</skills>
 	</item>
 	<item id="26812" name="Pirate's Eyepatch" additionalName="CON +Critical Rate" type="Armor">
-		<!-- CON +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, CON +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -196,7 +196,7 @@
 		</skills>
 	</item>
 	<item id="26813" name="Pirate's Eyepatch" additionalName="MEN +Critical Rate" type="Armor">
-		<!-- MEN +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, MEN +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -211,7 +211,7 @@
 		</skills>
 	</item>
 	<item id="26814" name="Pirate's Eyepatch" additionalName="INT +Critical Rate" type="Armor">
-		<!-- INT +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, INT +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -226,7 +226,7 @@
 		</skills>
 	</item>
 	<item id="26815" name="Pirate's Eyepatch" additionalName="WIT +Critical Rate" type="Armor">
-		<!-- WIT +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, WIT +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -241,7 +241,7 @@
 		</skills>
 	</item>
 	<item id="26816" name="Pirate's Eyepatch" additionalName="STR +Critical Damage" type="Armor">
-		<!-- STR +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, STR +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -256,7 +256,7 @@
 		</skills>
 	</item>
 	<item id="26817" name="Pirate's Eyepatch" additionalName="DEX +Critical Damage" type="Armor">
-		<!-- DEX +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, DEX +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -271,7 +271,7 @@
 		</skills>
 	</item>
 	<item id="26818" name="Pirate's Eyepatch" additionalName="CON +Critical Damage" type="Armor">
-		<!-- CON +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, CON +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -286,7 +286,7 @@
 		</skills>
 	</item>
 	<item id="26819" name="Pirate's Eyepatch" additionalName="MEN +Critical Damage" type="Armor">
-		<!-- MEN +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, MEN +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -301,7 +301,7 @@
 		</skills>
 	</item>
 	<item id="26820" name="Pirate's Eyepatch" additionalName="INT +Critical Damage" type="Armor">
-		<!-- INT +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, INT +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -316,7 +316,7 @@
 		</skills>
 	</item>
 	<item id="26821" name="Pirate's Eyepatch" additionalName="WIT +Critical Damage" type="Armor">
-		<!-- WIT +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, WIT +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -601,7 +601,7 @@
 		</skills>
 	</item>
 	<item id="26840" name="Pirate's Eyepatch" additionalName="STR +P. Atk." type="Armor">
-		<!-- STR +3 and P. Atk. +5% when equipped. -->
+		<!-- STR +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -616,7 +616,7 @@
 		</skills>
 	</item>
 	<item id="26841" name="Pirate's Eyepatch" additionalName="DEX +P. Atk." type="Armor">
-		<!-- DEX +3 and P. Atk. +5% when equipped. -->
+		<!-- DEX +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -631,7 +631,7 @@
 		</skills>
 	</item>
 	<item id="26842" name="Pirate's Eyepatch" additionalName="CON +P. Atk." type="Armor">
-		<!-- CON +3 and P. Atk. +5% when equipped. -->
+		<!-- CON +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -646,7 +646,7 @@
 		</skills>
 	</item>
 	<item id="26843" name="Pirate's Eyepatch" additionalName="MEN +P. Atk." type="Armor">
-		<!-- MEN +3 and P. Atk. +5% when equipped. -->
+		<!-- MEN +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -661,7 +661,7 @@
 		</skills>
 	</item>
 	<item id="26844" name="Pirate's Eyepatch" additionalName="INT +P. Atk." type="Armor">
-		<!-- INT +3 and P. Atk. +5% when equipped. -->
+		<!-- INT +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -676,7 +676,7 @@
 		</skills>
 	</item>
 	<item id="26845" name="Pirate's Eyepatch" additionalName="WIT +P. Atk." type="Armor">
-		<!-- WIT +3 and P. Atk. +5% when equipped. -->
+		<!-- WIT +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -691,7 +691,7 @@
 		</skills>
 	</item>
 	<item id="26846" name="Pirate's Eyepatch" additionalName="STR +M. Atk." type="Armor">
-		<!-- STR +3 and M. Atk. +10% when equipped. -->
+		<!-- STR +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -706,7 +706,7 @@
 		</skills>
 	</item>
 	<item id="26847" name="Pirate's Eyepatch" additionalName="DEX +M. Atk." type="Armor">
-		<!-- DEX +3 and M. Atk. +10% when equipped. -->
+		<!-- DEX +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -721,7 +721,7 @@
 		</skills>
 	</item>
 	<item id="26848" name="Pirate's Eyepatch" additionalName="CON +M. Atk." type="Armor">
-		<!-- CON +3 and M. Atk. +10% when equipped. -->
+		<!-- CON +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -736,7 +736,7 @@
 		</skills>
 	</item>
 	<item id="26849" name="Pirate's Eyepatch" additionalName="MEN +M. Atk." type="Armor">
-		<!-- MEN +3 and M. Atk. +10% when equipped. -->
+		<!-- MEN +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -751,7 +751,7 @@
 		</skills>
 	</item>
 	<item id="26850" name="Pirate's Eyepatch" additionalName="INT +M. Atk." type="Armor">
-		<!-- INT +3 and M. Atk. +10% when equipped. -->
+		<!-- INT +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -766,7 +766,7 @@
 		</skills>
 	</item>
 	<item id="26851" name="Pirate's Eyepatch" additionalName="WIT +M. Atk." type="Armor">
-		<!-- WIT +3 and M. Atk. +10% when equipped. -->
+		<!-- WIT +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -871,7 +871,7 @@
 		</skills>
 	</item>
 	<item id="26858" name="Outlaw's Eyepatch" additionalName="STR +Critical Rate" type="Armor">
-		<!-- STR +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, STR +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -886,7 +886,7 @@
 		</skills>
 	</item>
 	<item id="26859" name="Outlaw's Eyepatch" additionalName="DEX +Critical Rate" type="Armor">
-		<!-- DEX +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, DEX +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -901,7 +901,7 @@
 		</skills>
 	</item>
 	<item id="26860" name="Outlaw's Eyepatch" additionalName="CON +Critical Rate" type="Armor">
-		<!-- CON +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, CON +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -916,7 +916,7 @@
 		</skills>
 	</item>
 	<item id="26861" name="Outlaw's Eyepatch" additionalName="MEN +Critical Rate" type="Armor">
-		<!-- MEN +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, MEN +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -931,7 +931,7 @@
 		</skills>
 	</item>
 	<item id="26862" name="Outlaw's Eyepatch" additionalName="INT +Critical Rate" type="Armor">
-		<!-- INT +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, INT +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -946,7 +946,7 @@
 		</skills>
 	</item>
 	<item id="26863" name="Outlaw's Eyepatch" additionalName="WIT +Critical Rate" type="Armor">
-		<!-- WIT +3 and P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, WIT +3 and Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -961,7 +961,7 @@
 		</skills>
 	</item>
 	<item id="26864" name="Outlaw's Eyepatch" additionalName="STR +Critical Damage" type="Armor">
-		<!-- STR +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, STR +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -976,7 +976,7 @@
 		</skills>
 	</item>
 	<item id="26865" name="Outlaw's Eyepatch" additionalName="DEX +Critical Damage" type="Armor">
-		<!-- DEX +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, DEX +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -991,7 +991,7 @@
 		</skills>
 	</item>
 	<item id="26866" name="Outlaw's Eyepatch" additionalName="CON +Critical Damage" type="Armor">
-		<!-- CON +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, CON +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1006,7 +1006,7 @@
 		</skills>
 	</item>
 	<item id="26867" name="Outlaw's Eyepatch" additionalName="MEN +Critical Damage" type="Armor">
-		<!-- MEN +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, MEN +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1021,7 +1021,7 @@
 		</skills>
 	</item>
 	<item id="26868" name="Outlaw's Eyepatch" additionalName="INT +Critical Damage" type="Armor">
-		<!-- INT +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, INT +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1036,7 +1036,7 @@
 		</skills>
 	</item>
 	<item id="26869" name="Outlaw's Eyepatch" additionalName="WIT +Critical Damage" type="Armor">
-		<!-- WIT +3, P. Critical Damage +90, and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, WIT +3, Critical Damage for standard attacks +90 and M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1321,7 +1321,7 @@
 		</skills>
 	</item>
 	<item id="26888" name="Outlaw's Eyepatch" additionalName="STR +P. Atk." type="Armor">
-		<!-- STR +3 and P. Atk. +5% when equipped. -->
+		<!-- STR +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1336,7 +1336,7 @@
 		</skills>
 	</item>
 	<item id="26889" name="Outlaw's Eyepatch" additionalName="DEX +P. Atk." type="Armor">
-		<!-- DEX +3 and P. Atk. +5% when equipped. -->
+		<!-- DEX +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1351,7 +1351,7 @@
 		</skills>
 	</item>
 	<item id="26890" name="Outlaw's Eyepatch" additionalName="CON +P. Atk." type="Armor">
-		<!-- CON +3 and P. Atk. +5% when equipped. -->
+		<!-- CON +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1366,7 +1366,7 @@
 		</skills>
 	</item>
 	<item id="26891" name="Outlaw's Eyepatch" additionalName="MEN +P. Atk." type="Armor">
-		<!-- MEN +3 and P. Atk. +5% when equipped. -->
+		<!-- MEN +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1381,7 +1381,7 @@
 		</skills>
 	</item>
 	<item id="26892" name="Outlaw's Eyepatch" additionalName="INT +P. Atk." type="Armor">
-		<!-- INT +3 and P. Atk. +5% when equipped. -->
+		<!-- INT +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1396,7 +1396,7 @@
 		</skills>
 	</item>
 	<item id="26893" name="Outlaw's Eyepatch" additionalName="WIT +P. Atk." type="Armor">
-		<!-- WIT +3 and P. Atk. +5% when equipped. -->
+		<!-- WIT +3, P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1411,7 +1411,7 @@
 		</skills>
 	</item>
 	<item id="26894" name="Outlaw's Eyepatch" additionalName="STR +M. Atk." type="Armor">
-		<!-- STR +3 and M. Atk. +10% when equipped. -->
+		<!-- STR +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1426,7 +1426,7 @@
 		</skills>
 	</item>
 	<item id="26895" name="Outlaw's Eyepatch" additionalName="DEX +M. Atk." type="Armor">
-		<!-- DEX +3 and M. Atk. +10% when equipped. -->
+		<!-- DEX +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1441,7 +1441,7 @@
 		</skills>
 	</item>
 	<item id="26896" name="Outlaw's Eyepatch" additionalName="CON +M. Atk." type="Armor">
-		<!-- CON +3 and M. Atk. +10% when equipped. -->
+		<!-- CON +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1456,7 +1456,7 @@
 		</skills>
 	</item>
 	<item id="26897" name="Outlaw's Eyepatch" additionalName="MEN +M. Atk." type="Armor">
-		<!-- MEN +3 and M. Atk. +10% when equipped. -->
+		<!-- MEN +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1471,7 +1471,7 @@
 		</skills>
 	</item>
 	<item id="26898" name="Outlaw's Eyepatch" additionalName="INT +M. Atk." type="Armor">
-		<!-- INT +3 and M. Atk. +10% when equipped. -->
+		<!-- INT +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1486,7 +1486,7 @@
 		</skills>
 	</item>
 	<item id="26899" name="Outlaw's Eyepatch" additionalName="WIT +M. Atk." type="Armor">
-		<!-- WIT +3 and M. Atk. +10% when equipped. -->
+		<!-- WIT +3, M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />

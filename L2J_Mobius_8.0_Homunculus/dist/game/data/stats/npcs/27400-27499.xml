@@ -144,7 +144,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6494" level="13" /> <!-- Holy Attack -->
 			<skill id="6711" level="1" /> <!-- Etis Power Up -->
@@ -186,7 +186,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6494" level="13" /> <!-- Holy Attack -->
 			<skill id="6711" level="1" /> <!-- Etis Power Up -->
@@ -230,7 +230,7 @@
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
@@ -271,7 +271,7 @@
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -314,7 +314,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4563" level="9" /> <!-- Solar Flare -->
 			<skill id="4613" level="9" /> <!-- Clan Heal -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -359,7 +359,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4563" level="9" /> <!-- Solar Flare -->
 			<skill id="5021" level="9" /> <!-- Inspiration of Einhasad -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -373,10 +373,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="77" max="179" chance="70" /> <!-- Adena -->
-				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant S-grade Armor -->
 				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
-				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
-				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Weapon Augmenting Stone -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant S-grade Weapon -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -386,13 +386,13 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -427,7 +427,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6312" level="1" /> <!-- Launch Holy Sword Energy -->
 			<skill id="6313" level="1" /> <!-- Solina Bless -->
@@ -453,7 +453,7 @@
 				<item id="15675" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Shoes Piece -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -492,7 +492,7 @@
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6494" level="13" /> <!-- Holy Attack -->
 			<skill id="6711" level="1" /> <!-- Etis Power Up -->
@@ -518,7 +518,7 @@
 				<item id="15675" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Shoes Piece -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -552,7 +552,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6309" level="1" /> <!-- Pain of the Ascetic -->
 			<skill id="6316" level="1" /> <!-- Execution of Authority -->
@@ -569,14 +569,14 @@
 				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
 				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
 				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
-				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Weapon Augmenting Stone -->
 				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -610,7 +610,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6317" level="1" /> <!-- Divinity Tacit -->
 		</skillList>
@@ -625,14 +625,14 @@
 				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
 				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
 				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
-				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Weapon Augmenting Stone -->
 				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -666,7 +666,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6328" level="1" /> <!-- Fighter Judgement -->
 			<skill id="6329" level="1" /> <!-- Fighter Blow -->
@@ -682,14 +682,14 @@
 				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
 				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
 				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
-				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Weapon Augmenting Stone -->
 				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -724,7 +724,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6320" level="1" /> <!-- Summon Holy Magic Circle -->
 			<skill id="6321" level="1" /> <!-- Divine Flash -->
@@ -740,7 +740,7 @@
 				<item id="57" min="905" max="2114" chance="70" /> <!-- Adena -->
 				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
 				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
-				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Weapon Augmenting Stone -->
 				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
 				<item id="9557" min="1" max="1" chance="0.03" /> <!-- Holy Crystal -->
 				<!-- Also drops herbs. -->
@@ -752,13 +752,13 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="1.071" /> <!-- Holy Stone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -792,7 +792,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6303" level="1" /> <!-- Trial of the Coup -->
 			<skill id="6304" level="1" /> <!-- Stun -->
@@ -807,7 +807,7 @@
 			<drop>
 				<item id="57" min="72" max="168" chance="70" /> <!-- Adena -->
 				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
-				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Weapon Augmenting Stone -->
 				<item id="9557" min="1" max="1" chance="0.003" /> <!-- Holy Crystal -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -818,13 +818,13 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -982,7 +982,7 @@
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="6262" level="1" /> <!-- EMP Power -->
 		</skillList>
@@ -1022,7 +1022,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -1761,7 +1761,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="14676" level="1" /> <!-- Cry of Destiny - Armor Destruction -->
 			<skill id="14677" level="1" /> <!-- Cry of Destiny - Giant Punch -->
@@ -1815,7 +1815,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="14682" level="1" /> <!-- Cry of Destiny - Pinpoint Shot -->
 			<skill id="14683" level="1" /> <!-- Cry of Destiny - Quick Fire -->
@@ -1869,7 +1869,7 @@
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="14688" level="1" /> <!-- Cry of Destiny - Mark of Weakness -->
 			<skill id="14689" level="1" /> <!-- Cry of Destiny - Mark of Plague -->
@@ -1920,7 +1920,7 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="14673" level="1" /> <!-- Cry of Destiny - Shield Charge -->
 			<skill id="14674" level="1" /> <!-- Cry of Destiny - Chain Strike -->
@@ -1974,7 +1974,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="14685" level="1" /> <!-- Cry of Destiny - Elemental Spike -->
 			<skill id="14686" level="1" /> <!-- Cry of Destiny - Elemental Crash -->
@@ -2027,7 +2027,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="14679" level="1" /> <!-- Cry of Destiny - Heart Breaker -->
 		</skillList>
@@ -2080,7 +2080,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="14692" level="1" /> <!-- Cry of Destiny - Death Strike -->
 			<skill id="14693" level="1" /> <!-- Cry of Destiny - Pipe Organ Melody -->
@@ -2112,24 +2112,22 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14449" level="1" /> <!-- Dedicated Blow -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings - Light Armor -->
-				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate - Heavy Armor -->
+				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings - Light armor -->
+				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate - Heavy armor -->
 				<item id="57" min="1218" max="2842" chance="20" /> <!-- Adena -->
-				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="9550" min="1" max="1" chance="0.03" /> <!-- Dark Stone -->
 				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
 				<item id="36876" min="1" max="1" chance="0.003" /> <!-- Recipe: Metallic Fiber - Upgrade -->
-				<item id="36934" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem (Mid-grade) - Upgrade -->
+				<item id="36934" min="1" max="1" chance="0.003" /> <!-- Recipe: Mid-grade Accessory Gem - Upgrade -->
 				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
 				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="36925" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Mid-grade) - Downgrade -->
+				<item id="36925" min="1" max="1" chance="0.0009" /> <!-- Recipe: Mid-grade Armor Fragment - Downgrade -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2139,16 +2137,14 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36557" min="1" max="1" chance="2.845" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2202,7 +2198,7 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="14449" level="1" /> <!-- Dedicated Blow -->
 			<skill id="14609" level="1" /> <!-- Cry of Destiny - Dark Blast -->
 			<skill id="14673" level="1" /> <!-- Cry of Destiny - Shield Charge -->
@@ -2242,7 +2238,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -2254,10 +2250,7 @@
 			<drop>
 				<item id="17293" min="1" max="1" chance="0.003" /> <!-- Requiem Avenger -->
 				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
-				<item id="36517" min="1" max="1" chance="4.243" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
-				<item id="36797" min="1" max="1" chance="0.3" /> <!-- Requiem Avenger Fragment -->
-				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) -->
+				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: R-grade Spiritshot -->
 				<item id="36735" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Avenger (60%) -->
 			</drop>
 			<spoil>
@@ -2265,7 +2258,7 @@
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2296,7 +2289,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -2306,19 +2299,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield - Heavy Armor -->
+				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield -->
 				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
-				<item id="36810" min="1" max="1" chance="5.397" /> <!-- Immortal Shield Ingredient -->
 				<item id="36748" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Shield (60%) -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="7.231" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.419" /> <!-- Synthetic Braid -->
-				<item id="19440" min="1" max="1" chance="0.075" /> <!-- Gemstone (R-grade) -->
+				<item id="19440" min="1" max="1" chance="0.075" /> <!-- R-grade Gemstone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2345,7 +2335,7 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -2357,19 +2347,18 @@
 			<drop>
 				<item id="17292" min="1" max="1" chance="0.003" /> <!-- Requiem Slasher -->
 				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
-				<item id="36796" min="1" max="1" chance="0.3" /> <!-- Requiem Slasher Fragment -->
 				<item id="9547" min="1" max="1" chance="0.03" /> <!-- Water Stone -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant R-grade Armor -->
 				<item id="9553" min="1" max="1" chance="0.003" /> <!-- Water Crystal -->
 				<item id="36734" min="1" max="1" chance="0.003" /> <!-- Recipe: Requiem Slasher (60%) -->
-				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 			<spoil>
 				<item id="40205" min="1" max="1" chance="14.16" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2399,7 +2388,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -2409,18 +2398,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots - Heavy armor -->
 				<item id="57" min="1025" max="2388" chance="20" /> <!-- Adena -->
-				<item id="36809" min="1" max="1" chance="3.898" /> <!-- Immortal Boot Ingredient -->
 				<item id="36747" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Boots (60%) -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant R-grade Armor -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="10.94" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="2.011" /> <!-- Synthetic Braid -->
-			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2450,7 +2434,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -2462,19 +2446,12 @@
 			<drop>
 				<item id="17323" min="1" max="1" chance="0.075" /> <!-- Immortal Ring -->
 				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
-				<item id="36824" min="1" max="1" chance="8.549" /> <!-- Immortal Ring Gem -->
-				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="36762" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Ring (60%) -->
 				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
 				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
 			</drop>
-			<spoil>
-				<item id="36557" min="1" max="1" chance="4.944" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
-			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2630,7 +2607,7 @@
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14609" level="1" /> <!-- Cry of Destiny - Dark Blast -->
 		</skillList>
 	</npc>
@@ -2829,7 +2806,7 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="14095" level="1" /> <!-- Sakum Chaos -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -2873,7 +2850,7 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14673" level="1" /> <!-- Cry of Destiny - Shield Charge -->
 			<skill id="14674" level="1" /> <!-- Cry of Destiny - Chain Strike -->
 		</skillList>
@@ -2886,15 +2863,10 @@
 			<drop>
 				<item id="17292" min="1" max="1" chance="0.003" /> <!-- Requiem Slasher -->
 				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
-				<item id="36796" min="1" max="1" chance="0.3" /> <!-- Requiem Slasher Fragment -->
 				<item id="36734" min="1" max="1" chance="0.03" /> <!-- Recipe: Requiem Slasher (60%) -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="9.197" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.782" /> <!-- Synthetic Braid -->
-			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2933,7 +2905,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14676" level="1" /> <!-- Cry of Destiny - Armor Destruction -->
 			<skill id="14677" level="1" /> <!-- Cry of Destiny - Giant Punch -->
 		</skillList>
@@ -2946,7 +2918,6 @@
 			<drop>
 				<item id="17293" min="1" max="1" chance="0.003" /> <!-- Requiem Avenger -->
 				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
-				<item id="36797" min="1" max="1" chance="0.3" /> <!-- Requiem Avenger Fragment -->
 				<item id="9549" min="1" max="1" chance="0.03" /> <!-- Wind Stone -->
 				<item id="9555" min="1" max="1" chance="0.0075" /> <!-- Wind Crystal -->
 				<item id="36735" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Avenger (60%) -->
@@ -2956,7 +2927,7 @@
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2995,7 +2966,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14679" level="1" /> <!-- Cry of Destiny - Heart Breaker -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -3007,18 +2978,11 @@
 			<drop>
 				<item id="17323" min="1" max="1" chance="0.03" /> <!-- Immortal Ring -->
 				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
-				<item id="36824" min="1" max="1" chance="7.23" /> <!-- Immortal Ring Gem -->
-				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="36762" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Ring (60%) -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant R-grade Armor -->
 			</drop>
-			<spoil>
-				<item id="36557" min="1" max="1" chance="4.254" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
-			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3058,7 +3022,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="9" /> <!-- Bow -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14682" level="1" /> <!-- Cry of Destiny - Pinpoint Shot -->
 			<skill id="14683" level="1" /> <!-- Cry of Destiny - Quick Fire -->
 		</skillList>
@@ -3069,20 +3033,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield - Heavy Armor -->
+				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield -->
 				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
-				<item id="36810" min="1" max="1" chance="4.661" /> <!-- Immortal Shield Ingredient -->
-				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="36748" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Shield (60%) -->
 			</drop>
 			<spoil>
-				<item id="36557" min="1" max="1" chance="2.825" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="19440" min="1" max="1" chance="0.075" /> <!-- Gemstone (R-grade) -->
+				<item id="19440" min="1" max="1" chance="0.075" /> <!-- R-grade Gemstone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3122,7 +3081,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14685" level="1" /> <!-- Cry of Destiny - Elemental Spike -->
 			<skill id="14686" level="1" /> <!-- Cry of Destiny - Elemental Crash -->
 		</skillList>
@@ -3133,9 +3092,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots - Heavy armor -->
 				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
-				<item id="36809" min="1" max="1" chance="3.182" /> <!-- Immortal Boot Ingredient -->
 				<item id="36747" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Boots (60%) -->
 				<item id="9548" min="1" max="1" chance="0.03" /> <!-- Earth Stone -->
 				<item id="9554" min="1" max="1" chance="0.003" /> <!-- Earth Crystal -->
@@ -3145,7 +3103,7 @@
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3185,7 +3143,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14692" level="1" /> <!-- Cry of Destiny - Death Strike -->
 			<skill id="14693" level="1" /> <!-- Cry of Destiny - Pipe Organ Melody -->
 		</skillList>
@@ -3196,21 +3154,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17310" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Helmet - Light Armor -->
+				<item id="17310" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Helmet - Light armor -->
 				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
-				<item id="36517" min="1" max="1" chance="2.599" /> <!-- Leather -->
-				<item id="36811" min="1" max="1" chance="2.244" /> <!-- Immortal Leather Helmet Ingredient -->
-				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<item id="36749" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
-				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="17.72" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="3.493" /> <!-- Durable Leather -->
 				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3250,7 +3203,7 @@
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="14688" level="1" /> <!-- Cry of Destiny - Mark of Weakness -->
 			<skill id="14689" level="1" /> <!-- Cry of Destiny - Mark of Plague -->
 		</skillList>
@@ -3261,18 +3214,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17307" min="1" max="1" chance="0.03" /> <!-- Immortal Gauntlets - Heavy Armor -->
+				<item id="17307" min="1" max="1" chance="0.03" /> <!-- Immortal Gauntlets - Heavy armor -->
 				<item id="57" min="916" max="2136" chance="20" /> <!-- Adena -->
-				<item id="36808" min="1" max="1" chance="4.826" /> <!-- Immortal Gauntlet Ingredient -->
 				<item id="36746" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Gauntlets (60%) -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant R-grade Armor -->
 			</drop>
 			<spoil>
 				<item id="40205" min="1" max="1" chance="12.9" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3308,7 +3260,7 @@
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/ 4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -3317,20 +3269,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17304" min="1" max="1" chance="0.03" /> <!-- Immortal Helmet - Heavy Armor -->
+				<item id="17304" min="1" max="1" chance="0.03" /> <!-- Immortal Helmet - Heavy armor -->
 				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
-				<item id="36517" min="1" max="1" chance="2.509" /> <!-- Leather -->
-				<item id="36805" min="1" max="1" chance="2.038" /> <!-- Immortal Helmet Ingredient -->
-				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<item id="36743" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Helmet (60%) -->
-				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Armor -->
 			</drop>
 			<spoil>
 				<item id="40205" min="1" max="1" chance="12.04" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3582,7 +3531,7 @@
 		<skillList>
 			<skill id="4177" level="1" /> <!-- Cancellation -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -3710,10 +3659,10 @@
 			<param name="MoveAroundSocial1" value="50" />
 			<param name="IsAggressive" value="1" />
 		</parameters>
-		<race>DEMONIC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="70.0315457413249" hpRegen="8.5" mp="1812.65206812652" mpRegen="3" />
+			<vitals hp="70.0315457413249" hpRegen="8.5" mp="1830.49472830495" mpRegen="3" />
 			<speed>
 				<walk ground="22" />
 				<run ground="150" />
@@ -3743,6 +3692,7 @@
 		</collision>
 		<dropLists>
 			<drop>
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3751,7 +3701,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3766,7 +3716,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="10914.0378548896" hpRegen="8.5" mp="1812.65206812652" mpRegen="3" />
+			<vitals hp="87312.3028391167" hpRegen="8.5" mp="1830.49472830495" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
@@ -3781,13 +3731,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="4" /> <!-- Extremely Weak P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -3817,7 +3765,7 @@
 		<status attackable="false" undying="false" />
 		<skillList>
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -4093,10 +4041,6 @@
 				<item id="17391" min="1" max="1" chance="0.0009" /> <!-- Specter Caster -->
 				<item id="57" min="896" max="2091" chance="20" /> <!-- Adena -->
 				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
-				<item id="35326" min="1" max="1" chance="0.03" /> <!-- Seraph Ring Gem -->
-				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="35305" min="1" max="1" chance="0.0075" /> <!-- Specter Caster Fragment -->
-				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="35429" min="1" max="1" chance="0.0009" /> <!-- Recipe: Specter Caster (60%) -->
 				<item id="35450" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Ring (60%) -->
 				<!-- Also drops herbs. -->
@@ -4108,14 +4052,14 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
 				<item id="40206" min="1" max="1" chance="6.312" /> <!-- Specter Fragment -->
 				<item id="40211" min="1" max="1" chance="9" /> <!-- Recipe: R95 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4139,7 +4083,7 @@
 		<status attackable="false" undying="false" />
 		<skillList>
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skillList>
 		<collision>
 			<radius normal="17" />
@@ -4166,7 +4110,7 @@
 		<status attackable="false" undying="false" />
 		<skillList>
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
@@ -4246,7 +4190,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
 			<radius normal="28" />
@@ -4270,7 +4214,7 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
 			<radius normal="29" />
@@ -4311,7 +4255,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>

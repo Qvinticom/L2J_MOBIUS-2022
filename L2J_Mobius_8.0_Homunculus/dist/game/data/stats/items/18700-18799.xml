@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="18700" name="Blessed Requiem Dual Dagger" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -34,7 +34,7 @@
 		</stats>
 	</item>
 	<item id="18701" name="Blessed Requiem Dual Blunt Weapon" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -67,7 +67,7 @@
 		</stats>
 	</item>
 	<item id="18702" name="Blessed Requiem Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -100,7 +100,7 @@
 		</stats>
 	</item>
 	<item id="18703" name="Blessed Requiem Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. P. Atk. +288. Increases PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -133,7 +133,7 @@
 		</stats>
 	</item>
 	<item id="18704" name="Apocalypse Shaper" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -165,7 +165,7 @@
 		</stats>
 	</item>
 	<item id="18705" name="Apocalypse Shaper" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Damage for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -197,7 +197,7 @@
 		</stats>
 	</item>
 	<item id="18706" name="Apocalypse Shaper" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 82.3. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +82.3. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -229,7 +229,7 @@
 		</stats>
 	</item>
 	<item id="18707" name="Apocalypse Cutter" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -260,7 +260,7 @@
 		</stats>
 	</item>
 	<item id="18708" name="Apocalypse Cutter" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -291,7 +291,7 @@
 		</stats>
 	</item>
 	<item id="18709" name="Apocalypse Cutter" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -322,7 +322,7 @@
 		</stats>
 	</item>
 	<item id="18710" name="Apocalypse Slasher" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -353,7 +353,7 @@
 		</stats>
 	</item>
 	<item id="18711" name="Apocalypse Slasher" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -384,7 +384,7 @@
 		</stats>
 	</item>
 	<item id="18712" name="Apocalypse Slasher" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -415,7 +415,7 @@
 		</stats>
 	</item>
 	<item id="18713" name="Apocalypse Avenger" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Damage for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -447,7 +447,7 @@
 		</stats>
 	</item>
 	<item id="18714" name="Apocalypse Avenger" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +1158 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +1158 after a critical attack. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -479,7 +479,7 @@
 		</stats>
 	</item>
 	<item id="18715" name="Apocalypse Avenger" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -511,7 +511,7 @@
 		</stats>
 	</item>
 	<item id="18716" name="Apocalypse Fighter" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 76. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +76. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_kirche_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -543,7 +543,7 @@
 		</stats>
 	</item>
 	<item id="18717" name="Apocalypse Fighter" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_kirche_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -575,7 +575,7 @@
 		</stats>
 	</item>
 	<item id="18718" name="Apocalypse Fighter" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_kirche_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -607,7 +607,7 @@
 		</stats>
 	</item>
 	<item id="18719" name="Apocalypse Stormer" additionalName="HP Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. -->
+		<!-- <Soul Crystal properties>. A chance to absorb 4% of the inflicted damage as HP. Increases PvP damage. When enchanted to +4, increases the number of targets hit with a spear. -->
 		<set name="icon" val="icon.weapon_grave_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -639,7 +639,7 @@
 		</stats>
 	</item>
 	<item id="18720" name="Apocalypse Stormer" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.7. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. -->
+		<!-- <Soul Crystal properties>. P. Accuracy +7.7. Increases PvP damage. When enchanted to +4, increases the number of targets hit with a spear. -->
 		<set name="icon" val="icon.weapon_grave_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -671,7 +671,7 @@
 		</stats>
 	</item>
 	<item id="18721" name="Apocalypse Stormer" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_grave_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -703,7 +703,7 @@
 		</stats>
 	</item>
 	<item id="18722" name="Apocalypse Thrower" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_spina_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -736,7 +736,7 @@
 		</stats>
 	</item>
 	<item id="18723" name="Apocalypse Thrower" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_spina_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -802,7 +802,7 @@
 		</stats>
 	</item>
 	<item id="18725" name="Apocalypse Shooter" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -835,7 +835,7 @@
 		</stats>
 	</item>
 	<item id="18726" name="Apocalypse Shooter" additionalName="Critical Slow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on the target after a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -869,7 +869,7 @@
 		</stats>
 	</item>
 	<item id="18727" name="Apocalypse Shooter" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -902,7 +902,7 @@
 		</stats>
 	</item>
 	<item id="18728" name="Apocalypse Buster" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Casting Spd. +15%. Increases PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_imerose_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -934,7 +934,7 @@
 		</stats>
 	</item>
 	<item id="18729" name="Apocalypse Buster" additionalName="Magic Hold" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target after magic use. Deals additional PvP damage. Has a certain chance to increase Casting Spd. when the character is attacked. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_imerose_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -967,7 +967,7 @@
 		</stats>
 	</item>
 	<item id="18730" name="Apocalypse Buster" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Max MP +30%. Increases PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_imerose_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -999,7 +999,7 @@
 		</stats>
 	</item>
 	<item id="18731" name="Apocalypse Caster" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +322. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. +322. Deals additional PvP damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_yuke_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1032,7 +1032,7 @@
 		</stats>
 	</item>
 	<item id="18732" name="Apocalypse Caster" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Casting Spd. +15%. Increases PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_yuke_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1065,7 +1065,7 @@
 		</stats>
 	</item>
 	<item id="18733" name="Apocalypse Caster" additionalName="Magic Hold" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. A 20% chance to inflict Dryad Root on the target after using M. skills. Increases PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_yuke_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1099,7 +1099,7 @@
 		</stats>
 	</item>
 	<item id="18734" name="Apocalypse Retributer" additionalName="MP Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Increases MP Recovery Rate and PvP damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_herencia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1133,7 +1133,7 @@
 		</stats>
 	</item>
 	<item id="18735" name="Apocalypse Retributer" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Casting Spd. +15%. Increases PvP Damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_herencia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1167,7 +1167,7 @@
 		</stats>
 	</item>
 	<item id="18736" name="Apocalypse Retributer" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +322. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. +322. Deals additional PvP damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_herencia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1201,7 +1201,7 @@
 		</stats>
 	</item>
 	<item id="18737" name="Apocalypse Dual Sword" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1232,7 +1232,7 @@
 		</stats>
 	</item>
 	<item id="18738" name="Apocalypse Dual Sword" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1263,7 +1263,7 @@
 		</stats>
 	</item>
 	<item id="18739" name="Apocalypse Dual Sword" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases Critical Rate for standard attacks Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1294,7 +1294,7 @@
 		</stats>
 	</item>
 	<item id="18740" name="Apocalypse Dual Dagger" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1326,7 +1326,7 @@
 		</stats>
 	</item>
 	<item id="18741" name="Apocalypse Dual Dagger" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1358,7 +1358,7 @@
 		</stats>
 	</item>
 	<item id="18742" name="Apocalypse Dual Dagger" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1390,7 +1390,7 @@
 		</stats>
 	</item>
 	<item id="18743" name="Apocalypse Dual Blunt Weapon" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1422,7 +1422,7 @@
 		</stats>
 	</item>
 	<item id="18744" name="Apocalypse Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.7. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.7. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1454,7 +1454,7 @@
 		</stats>
 	</item>
 	<item id="18745" name="Apocalypse Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1486,7 +1486,7 @@
 		</stats>
 	</item>
 	<item id="18746" name="Bound Apocalypse Shaper" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.7. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1523,7 +1523,7 @@
 		</stats>
 	</item>
 	<item id="18747" name="Bound Apocalypse Shaper" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1560,7 +1560,7 @@
 		</stats>
 	</item>
 	<item id="18748" name="Bound Apocalypse Shaper" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 82.3. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +82.3. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1597,7 +1597,7 @@
 		</stats>
 	</item>
 	<item id="18749" name="Bound Apocalypse Cutter" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1633,7 +1633,7 @@
 		</stats>
 	</item>
 	<item id="18750" name="Bound Apocalypse Cutter" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1669,7 +1669,7 @@
 		</stats>
 	</item>
 	<item id="18751" name="Bound Apocalypse Cutter" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1705,7 +1705,7 @@
 		</stats>
 	</item>
 	<item id="18752" name="Bound Apocalypse Slasher" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Critical Rate +79.2. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1741,7 +1741,7 @@
 		</stats>
 	</item>
 	<item id="18753" name="Bound Apocalypse Slasher" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Atk. +332. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, additionally increases P. Atk. -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1777,7 +1777,7 @@
 		</stats>
 	</item>
 	<item id="18754" name="Bound Apocalypse Slasher" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. Atk. Spd. +15%. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1813,7 +1813,7 @@
 		</stats>
 	</item>
 	<item id="18755" name="Bound Apocalypse Avenger" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1850,7 +1850,7 @@
 		</stats>
 	</item>
 	<item id="18756" name="Bound Apocalypse Avenger" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +1158 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +1158 after a critical attack. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1887,7 +1887,7 @@
 		</stats>
 	</item>
 	<item id="18757" name="Bound Apocalypse Avenger" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1924,7 +1924,7 @@
 		</stats>
 	</item>
 	<item id="18758" name="Bound Apocalypse Fighter" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 76. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Critical Rate +76. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_kirche_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1961,7 +1961,7 @@
 		</stats>
 	</item>
 	<item id="18759" name="Bound Apocalypse Fighter" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Atk. +332. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, additionally increases P. Atk. and Atk. Spd. -->
 		<set name="icon" val="icon.weapon_kirche_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1998,7 +1998,7 @@
 		</stats>
 	</item>
 	<item id="18760" name="Bound Apocalypse Fighter" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. Atk. Spd. +15%. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, additionally increases P. Atk. and Atk. Spd. -->
 		<set name="icon" val="icon.weapon_kirche_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2035,7 +2035,7 @@
 		</stats>
 	</item>
 	<item id="18761" name="Bound Apocalypse Stormer" additionalName="HP Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. Increases Multi Attack when enchanted to +4. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- <Soul Crystal enhancement>. A chance to absorb 4% of the inflicted damage as HP. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases the number of targets attacked with a spear. Cannot be exchanged or dropped. Can be stored in the private warehouse. -->
 		<set name="icon" val="icon.weapon_grave_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2072,7 +2072,7 @@
 		</stats>
 	</item>
 	<item id="18762" name="Bound Apocalypse Stormer" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.7. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Accuracy +7.7. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_grave_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2109,7 +2109,7 @@
 		</stats>
 	</item>
 	<item id="18763" name="Bound Apocalypse Stormer" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Atk. +332. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_grave_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2146,7 +2146,7 @@
 		</stats>
 	</item>
 	<item id="18764" name="Bound Apocalypse Thrower" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Atk. +332. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, additionally increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_spina_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2184,7 +2184,7 @@
 		</stats>
 	</item>
 	<item id="18765" name="Bound Apocalypse Thrower" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Critical Rate +79.2. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_spina_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2222,7 +2222,7 @@
 		</stats>
 	</item>
 	<item id="18766" name="Bound Apocalypse Thrower" additionalName="Long Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases the attack range. Increases damage inflicted during PvP. Can use an Unbind Scroll to change this item into a Standard item. Increases P. Skill Power when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Increases attack range and PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, additionally increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_spina_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2260,7 +2260,7 @@
 		</stats>
 	</item>
 	<item id="18767" name="Bound Apocalypse Shooter" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Critical Rate +79.2. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2298,7 +2298,7 @@
 		</stats>
 	</item>
 	<item id="18768" name="Bound Apocalypse Shooter" additionalName="Critical Slow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. A chance of slowing the target after a critical attack. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2337,7 +2337,7 @@
 		</stats>
 	</item>
 	<item id="18769" name="Bound Apocalypse Shooter" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. Atk. Spd. +15%. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, additionally increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2375,7 +2375,7 @@
 		</stats>
 	</item>
 	<item id="18770" name="Bound Apocalypse Buster" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. Casting Spd. +15%. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_imerose_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2412,7 +2412,7 @@
 		</stats>
 	</item>
 	<item id="18771" name="Bound Apocalypse Buster" additionalName="Magic Hold" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. A 20% chance to inflict Dryad Root on the target after using M. skills. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_imerose_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2450,7 +2450,7 @@
 		</stats>
 	</item>
 	<item id="18772" name="Bound Apocalypse Buster" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. Max MP +30%. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_imerose_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2487,7 +2487,7 @@
 		</stats>
 	</item>
 	<item id="18773" name="Bound Apocalypse Caster" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +322. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. M. Atk. +322. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_yuke_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2525,7 +2525,7 @@
 		</stats>
 	</item>
 	<item id="18774" name="Bound Apocalypse Caster" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. Casting Spd. +15%. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_yuke_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2563,7 +2563,7 @@
 		</stats>
 	</item>
 	<item id="18775" name="Bound Apocalypse Caster" additionalName="Magic Hold" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. A 20% chance to inflict Dryad Root on the target after using M. skills. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_yuke_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2602,7 +2602,7 @@
 		</stats>
 	</item>
 	<item id="18776" name="Bound Apocalypse Retributer" additionalName="MP Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. Increases MP Recovery Rate and PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_herencia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2641,7 +2641,7 @@
 		</stats>
 	</item>
 	<item id="18777" name="Bound Apocalypse Retributer" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. Casting Spd. +15%. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_herencia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2680,7 +2680,7 @@
 		</stats>
 	</item>
 	<item id="18778" name="Bound Apocalypse Retributer" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +322. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. M. Atk. +322. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_herencia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2719,7 +2719,7 @@
 		</stats>
 	</item>
 	<item id="18779" name="Bound Apocalypse Dual Sword" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. Use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2755,7 +2755,7 @@
 		</stats>
 	</item>
 	<item id="18780" name="Bound Apocalypse Dual Sword" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. Use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2791,7 +2791,7 @@
 		</stats>
 	</item>
 	<item id="18781" name="Bound Apocalypse Dual Sword" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. Use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2827,7 +2827,7 @@
 		</stats>
 	</item>
 	<item id="18782" name="Bound Apocalypse Dual Dagger" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. P. Critical Damage and P. Atk. Increases when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. Increases Critical Damage for standard attacks and P. Atk. when enchanted to +4. Use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2864,7 +2864,7 @@
 		</stats>
 	</item>
 	<item id="18783" name="Bound Apocalypse Dual Dagger" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2901,7 +2901,7 @@
 		</stats>
 	</item>
 	<item id="18784" name="Bound Apocalypse Dual Dagger" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.7. Deals additional PvP damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2938,7 +2938,7 @@
 		</stats>
 	</item>
 	<item id="18785" name="Bound Apocalypse Dual Blunt Weapon" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Critical Rate +79.2. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2975,7 +2975,7 @@
 		</stats>
 	</item>
 	<item id="18786" name="Bound Apocalypse Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.7. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Accuracy +7.7. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3012,7 +3012,7 @@
 		</stats>
 	</item>
 	<item id="18787" name="Bound Apocalypse Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- <Soul Crystal enhancement>. P. Atk. +332. Increases PvP Damage. Use Unbind Scroll to change it into a Standard item. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3049,7 +3049,7 @@
 		</stats>
 	</item>
 	<item id="18788" name="Blessed Apocalypse Shaper" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3082,7 +3082,7 @@
 		</stats>
 	</item>
 	<item id="18789" name="Blessed Apocalypse Shaper" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Damage for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3115,7 +3115,7 @@
 		</stats>
 	</item>
 	<item id="18790" name="Blessed Apocalypse Shaper" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 82.3. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +82.3. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3148,7 +3148,7 @@
 		</stats>
 	</item>
 	<item id="18791" name="Blessed Apocalypse Cutter" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3180,7 +3180,7 @@
 		</stats>
 	</item>
 	<item id="18792" name="Blessed Apocalypse Cutter" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3212,7 +3212,7 @@
 		</stats>
 	</item>
 	<item id="18793" name="Blessed Apocalypse Cutter" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3244,7 +3244,7 @@
 		</stats>
 	</item>
 	<item id="18794" name="Blessed Apocalypse Slasher" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3276,7 +3276,7 @@
 		</stats>
 	</item>
 	<item id="18795" name="Blessed Apocalypse Slasher" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +332. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3308,7 +3308,7 @@
 		</stats>
 	</item>
 	<item id="18796" name="Blessed Apocalypse Slasher" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3340,7 +3340,7 @@
 		</stats>
 	</item>
 	<item id="18797" name="Blessed Apocalypse Avenger" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Damage for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3373,7 +3373,7 @@
 		</stats>
 	</item>
 	<item id="18798" name="Blessed Apocalypse Avenger" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +1158 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +1158 after a critical attack. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3406,7 +3406,7 @@
 		</stats>
 	</item>
 	<item id="18799" name="Blessed Apocalypse Avenger" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.2. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.2. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

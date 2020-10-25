@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14100" name="Agathion - Teddy Girl (Event)" additionalName="7-day" type="Armor">
-		<!-- Can summon an Agathion - Teddy Girl when equipped. 7-day. -->
+		<!-- Summons Agathion Mother Bear. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -25,7 +25,7 @@
 		</skills>
 	</item>
 	<item id="14101" name="Agathion - Angry Devil (Event)" additionalName="7-day" type="Armor">
-		<!-- Can summon an Agathion - Angry Devil when equipped. 7-day. -->
+		<!-- Summons Agathion Angry Devil. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -49,7 +49,7 @@
 		</skills>
 	</item>
 	<item id="14102" name="Agathion - Shiny (Event)" additionalName="7-day" type="Armor">
-		<!-- Can summon an Agathion - Shiny when equipped. 7-day. -->
+		<!-- Summons Agathion Shiny. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -73,7 +73,7 @@
 		</skills>
 	</item>
 	<item id="14103" name="Agathion - Sobbing (Event)" additionalName="7-day" type="Armor">
-		<!-- Can summon an Agathion - Sobbing when equipped. 7-day. -->
+		<!-- Summons Agathion Sobbing. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -97,7 +97,7 @@
 		</skills>
 	</item>
 	<item id="14104" name="Shadow Item: Agathion - Essence Collector" type="Armor">
-		<!-- Bracelet that can summon a Collection Agathion. -->
+		<!-- A bracelet for summoning a Vitality-collecting agathion. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -120,7 +120,7 @@
 		</skills>
 	</item>
 	<item id="14105" name="Sealed Vesper Breastplate" type="Armor">
-		<!-- Sealed Vesper Breastplate. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -140,7 +140,7 @@
 		</stats>
 	</item>
 	<item id="14106" name="Sealed Vesper Leather Breastplate" type="Armor">
-		<!-- Sealed Vesper Leather Breastplate. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -160,7 +160,7 @@
 		</stats>
 	</item>
 	<item id="14107" name="Sealed Vesper Tunic" type="Armor">
-		<!-- Sealed Vesper Tunic. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -181,7 +181,7 @@
 		</stats>
 	</item>
 	<item id="14108" name="Sealed Vesper Gaiters" type="Armor">
-		<!-- Sealed Vesper Gaiters. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -201,7 +201,7 @@
 		</stats>
 	</item>
 	<item id="14109" name="Sealed Vesper Gauntlets" type="Armor">
-		<!-- Sealed Vesper Gauntlets. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -220,7 +220,7 @@
 		</stats>
 	</item>
 	<item id="14110" name="Sealed Vesper Boots" type="Armor">
-		<!-- Sealed Vesper Boots. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -239,7 +239,7 @@
 		</stats>
 	</item>
 	<item id="14111" name="Sealed Vesper Shield" type="Armor">
-		<!-- Sealed Vesper Shield. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -260,7 +260,7 @@
 		</stats>
 	</item>
 	<item id="14112" name="Sealed Vesper Leather Leggings" type="Armor">
-		<!-- Sealed Vesper Leather Leggings. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -280,7 +280,7 @@
 		</stats>
 	</item>
 	<item id="14113" name="Sealed Vesper Leather Gloves" type="Armor">
-		<!-- Sealed Vesper Leather Gloves. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -299,7 +299,7 @@
 		</stats>
 	</item>
 	<item id="14114" name="Sealed Vesper Leather Boots" type="Armor">
-		<!-- Sealed Vesper Leather Boots. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -318,7 +318,7 @@
 		</stats>
 	</item>
 	<item id="14115" name="Sealed Vesper Stockings" type="Armor">
-		<!-- Sealed Vesper Stockings. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -339,7 +339,7 @@
 		</stats>
 	</item>
 	<item id="14116" name="Sealed Vesper Gloves" type="Armor">
-		<!-- Sealed Vesper Gloves. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -358,7 +358,7 @@
 		</stats>
 	</item>
 	<item id="14117" name="Sealed Vesper Shoes" type="Armor">
-		<!-- Sealed Vesper Shoes. Seal can be removed by the blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1785,7 +1785,7 @@
 		</stats>
 	</item>
 	<item id="14160" name="Sealed Vesper Earring" type="Armor">
-		<!-- Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, the effect is M. Def. +11 and MP+37. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.vesper_earring_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1802,7 +1802,7 @@
 		</stats>
 	</item>
 	<item id="14161" name="Sealed Vesper Necklace" type="Armor">
-		<!-- Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, the effect is M. Def.+15 and MP+50. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.vesper_necklace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1819,7 +1819,7 @@
 		</stats>
 	</item>
 	<item id="14162" name="Sealed Vesper Ring" type="Armor">
-		<!-- Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, the effect is M. Def.+7 and MP+25. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.vesper_ring_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1890,7 +1890,7 @@
 		</stats>
 	</item>
 	<item id="14166" name="Life Stone - Lv. 84" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 84 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1903,7 +1903,7 @@
 		</cond>
 	</item>
 	<item id="14167" name="Mid-grade Life Stone - Lv. 84" type="EtcItem">
-		<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 84 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1916,7 +1916,7 @@
 		</cond>
 	</item>
 	<item id="14168" name="High-grade Life Stone - Lv. 84" type="EtcItem">
-		<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 84 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1929,7 +1929,7 @@
 		</cond>
 	</item>
 	<item id="14169" name="Top-grade Life Stone - Lv. 84" type="EtcItem">
-		<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 84 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1942,7 +1942,7 @@
 		</cond>
 	</item>
 	<item id="14170" name="Forgotten Scroll: Seed of Revenge" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Hell Knights level 83 or above to learn the Seed of Revenge. -->
+		<!-- A scroll for learning the Seed of Revenge skill. Used by Hell Knights. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1956,7 +1956,7 @@
 		</skills>
 	</item>
 	<item id="14171" name="Forgotten Scroll: Hell Scream" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Hell Knights level 83 or above to learn Hell Scream. -->
+		<!-- A scroll for learning the Hell Scream skill. Used by Hell Knights. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1970,7 +1970,7 @@
 		</skills>
 	</item>
 	<item id="14172" name="Forgotten Scroll: Spirit of the Phoenix" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Phoenix Knights level 83 or above to learn Spirit of the Phoenix. -->
+		<!-- A scroll for learning the Phoenix Spirit skill. Used by Phoenix Knight. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1984,7 +1984,7 @@
 		</skills>
 	</item>
 	<item id="14173" name="Forgotten Scroll: Eva's Will" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Eva's Templars level 83 or above to learn Eva's Will. -->
+		<!-- A scroll for learning the Eva's Will skill. Used by Eva's Templars. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1998,7 +1998,7 @@
 		</skills>
 	</item>
 	<item id="14174" name="Forgotten Scroll: Pain of Shilen" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Shillien Templars level 83 or above to learn Pain of Shilen. -->
+		<!-- A scroll for learning the Pain of Shillien skill. Used by Shillien Templars. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2012,7 +2012,7 @@
 		</skills>
 	</item>
 	<item id="14175" name="Forgotten Scroll: Exciting Adventure" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Adventurers level 83 or above to learn Exciting Adventure. -->
+		<!-- A scroll for learning the Exciting Adventure skill. Used by Adventurers. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2026,7 +2026,7 @@
 		</skills>
 	</item>
 	<item id="14176" name="Forgotten Scroll: Wind Riding" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Wind Riders level 83 or above to learn Wind Riding. -->
+		<!-- A scroll for learning the Wind Riding skill. Used by Wind Riders. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2040,7 +2040,7 @@
 		</skills>
 	</item>
 	<item id="14177" name="Forgotten Scroll: Ghost Walking" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Ghost Hunters level 83 or above to learn Ghost Walking. -->
+		<!-- A scroll for learning the Ghost Walking skill. Used by Ghost Hunters. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2054,7 +2054,7 @@
 		</skills>
 	</item>
 	<item id="14178" name="Forgotten Scroll: Flame Hawk" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Sagittarius level 83 or above to learn Flame Hawk. -->
+		<!-- A scroll for learning the Flame Hawk skill. Used by Sagittarius. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2068,7 +2068,7 @@
 		</skills>
 	</item>
 	<item id="14179" name="Forgotten Scroll: Arrow Rain" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Moonlight Sentinels level 83 or above to learn Arrow Rain. -->
+		<!-- A scroll for learning the Arrow Rain skill. Used by Moonlight Sentinels. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2082,7 +2082,7 @@
 		</skills>
 	</item>
 	<item id="14180" name="Forgotten Scroll: Ghost Piercing" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Ghost Sentinels level 83 or above to learn Ghost Piercing. -->
+		<!-- A scroll for learning the Ghost Piercing skill. Used by Ghost Sentinels. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2096,7 +2096,7 @@
 		</skills>
 	</item>
 	<item id="14181" name="Forgotten Scroll: Dread Pool" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Dreadnoughts level 83 or above to learn Dread Pool. -->
+		<!-- A scroll for learning the Dread Pool skill. Used by Dreadnoughts. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2110,7 +2110,7 @@
 		</skills>
 	</item>
 	<item id="14182" name="Forgotten Scroll: Force of Destruction" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Grand Khavataris level 83 or above to learn Force of Destruction. -->
+		<!-- A scroll for learning the Force of Destruction skill. Used by Grand Khavatari. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2124,7 +2124,7 @@
 		</skills>
 	</item>
 	<item id="14183" name="Forgotten Scroll: Demolition Impact" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Titans level 83 or above to learn Demolition Impact. -->
+		<!-- A scroll for learning the Demolition Impact skill. Used by Titans. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2138,7 +2138,7 @@
 		</skills>
 	</item>
 	<item id="14184" name="Forgotten Scroll: Golem Armor" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Maestros level 83 or above to learn Golem Armor. -->
+		<!-- A scroll for learning the Golem Armor skill. Used by Maestro. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2152,7 +2152,7 @@
 		</skills>
 	</item>
 	<item id="14185" name="Forgotten Scroll: Wild Shot" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Tricksters level 83 or above to learn Wild Shot. -->
+		<!-- A scroll for learning the Wild Shot skill. Used by Tricksters. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2166,7 +2166,7 @@
 		</skills>
 	</item>
 	<item id="14186" name="Forgotten Scroll: Lightning Shock" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Soul Hounds level 83 or above to learn Lightning Shock. -->
+		<!-- A scroll for learning the Lightning skill. Used by Soul Hounds. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2180,7 +2180,7 @@
 		</skills>
 	</item>
 	<item id="14187" name="Forgotten Scroll: Flame Armor" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Archmages level 83 or above to learn Flame Armor. -->
+		<!-- A scroll for learning the Flame Armor skill. Used by Archmages. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2194,7 +2194,7 @@
 		</skills>
 	</item>
 	<item id="14188" name="Forgotten Scroll: Frost Armor" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Mystic Muse level 83 or above to learn Frost Armor. -->
+		<!-- A scroll for learning the Frost Armor skill. Used by Mystic Muses. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2208,7 +2208,7 @@
 		</skills>
 	</item>
 	<item id="14189" name="Forgotten Scroll: Hurricane Armor" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Storm Screamers level 83 or above to learn Hurricane Armor. -->
+		<!-- A scroll for learning the Hurricane Armor skill. Used by Storm Screamers. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2222,7 +2222,7 @@
 		</skills>
 	</item>
 	<item id="14190" name="Forgotten Scroll: Vampiric Mist" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Soul Takers level 83 or above to learn Vampiric Mist. -->
+		<!-- A scroll for learning the Vampiric Mist skill. Used by Souleaters. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2236,7 +2236,7 @@
 		</skills>
 	</item>
 	<item id="14191" name="Forgotten Scroll: Meteor" type="EtcItem">
-		<!-- Archmages and Soul Takers level 81 or above will need a Spellbook in order to learn Meteor from this Forgotten Scroll. -->
+		<!-- A scroll for learning the Meteor skill. Used by Archmages and Soultakers. Required level: 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2264,7 +2264,7 @@
 		</skills>
 	</item>
 	<item id="14193" name="Forgotten Scroll: Sublime Self-sacrifice" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Cardinals level 83 or above to learn Sublime Self-sacrifice. -->
+		<!-- A scroll for learning the Sublime Self-Sacrifice skill. Used by Cardinals. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2278,7 +2278,7 @@
 		</skills>
 	</item>
 	<item id="14194" name="Forgotten Scroll: Blessing of Eva" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Eva's Saints level 83 or above to learn Blessing of Eva. -->
+		<!-- A scroll for learning the Blessing of Eva skill. Used by Eva's Saints. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2292,7 +2292,7 @@
 		</skills>
 	</item>
 	<item id="14195" name="Forgotten Scroll: Lord of Vampires" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Shillien Saints level 83 or above to learn Lord of Vampires. -->
+		<!-- A scroll for learning the Lord of Vampires skill. Used by Shillien Saints. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2306,7 +2306,7 @@
 		</skills>
 	</item>
 	<item id="14196" name="Forgotten Scroll: Thorn Root" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Shillien Saints to learn Thorn Root. -->
+		<!-- A scroll for learning the Thorn Root skill. Used by Shillien Saints. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2325,7 +2325,7 @@
 		</skills>
 	</item>
 	<item id="14197" name="Forgotten Scroll: Seal of Limit" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Dominators level 83 or above to learn Seal of Limit. -->
+		<!-- A scroll for learning the Seal of Limit skill. Used by Dominators. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2339,7 +2339,7 @@
 		</skills>
 	</item>
 	<item id="14198" name="Forgotten Scroll: Song of Purification" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Sword Muses level 83 or above to learn Song of Purification. -->
+		<!-- A scroll for learning the Song of Purification skill. Used by Sword Muses. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2353,7 +2353,7 @@
 		</skills>
 	</item>
 	<item id="14199" name="Forgotten Scroll: Dance of Berserker" type="EtcItem">
-		<!-- This Forgotten Scroll can be used by Spectral Dancers level 83 or above to learn Dance of Berserker. -->
+		<!-- A scroll for learning the Dance of Berserker skill. Used by Spectral Dancers. Required level: 83. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

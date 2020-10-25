@@ -170,7 +170,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
@@ -357,7 +357,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15522" name="Shabby Necklace" type="EtcItem">
-		<!-- Shabby necklace that Watcher of Antharas Theodric supposedly gives only to those who are worthy of going after the Land Dragon Antharas. He says the necklace will transform after you defeat Antharas. -->
+		<!-- Shabby necklace that Watcher of Antharas Theodric supposedly gives only to those who are worthy of going after the Earth Dragon Antharas. He says the necklace will transform after you defeat Antharas. -->
 		<set name="icon" val="icon.armor_neck01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -373,7 +373,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15523" name="Proof of Miracle" type="EtcItem">
-		<!-- After you defeated the Land Dragon Antharas, the shabby necklace that you received from Watcher of Antharas Theodric changed into a this item. Take this necklace to him. -->
+		<!-- After you defeated the Earth Dragon Antharas, the shabby necklace that you received from Watcher of Antharas Theodric changed into this item. Take it to him. -->
 		<set name="icon" val="icon.accessary_necklace_of_protection_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -654,7 +654,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15541" name="Red Soul Crystal - Stage 17" type="EtcItem">
-		<!-- Red crystal containing the light of absorbed souls. stage 17. Special abilities can be applied to the weapon when absorbing certain amount of souls. MP 26 is consumed each time of use. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
+		<!-- Red crystal that contains the light of absorbed souls. Level 17. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -669,7 +669,7 @@
 		</skills>
 	</item>
 	<item id="15542" name="Blue Soul Crystal - Stage 17" type="EtcItem">
-		<!-- Blue crystal containing the light of absorbed souls. stage 17. Special abilities can be applied to the weapon when absorbing certain amount of souls. MP 26 is consumed each time of use. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
+		<!-- Blue crystal that contains the light of absorbed souls. Level 17. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -684,7 +684,7 @@
 		</skills>
 	</item>
 	<item id="15543" name="Green Soul Crystal - Stage 17" type="EtcItem">
-		<!-- Green crystal containing the light of absorbed souls. stage 17. Special abilities can be applied to the weapon when absorbing certain amount of souls. MP 26 is consumed each time of use. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
+		<!-- Green crystal that contains the light of absorbed souls. Level 17. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -699,7 +699,7 @@
 		</skills>
 	</item>
 	<item id="15544" name="Eternal Core Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_incessantcore_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -728,7 +728,7 @@
 		</stats>
 	</item>
 	<item id="15545" name="Mamba Edge" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_mambaedge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -757,7 +757,7 @@
 		</stats>
 	</item>
 	<item id="15546" name="Eversor Mace" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_expowder_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -786,7 +786,7 @@
 		</stats>
 	</item>
 	<item id="15547" name="Contristo Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_pereztear_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -815,7 +815,7 @@
 		</stats>
 	</item>
 	<item id="15548" name="Lava Saw" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_lavamond_saw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -844,7 +844,7 @@
 		</stats>
 	</item>
 	<item id="15549" name="Jade Claw" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_jademice_claw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -873,7 +873,7 @@
 		</stats>
 	</item>
 	<item id="15550" name="Demitelum" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -905,7 +905,7 @@
 		</stats>
 	</item>
 	<item id="15551" name="Sacredium" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sacredumors_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -935,7 +935,7 @@
 		</stats>
 	</item>
 	<item id="15552" name="Cyclic Cane" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -965,7 +965,7 @@
 		</stats>
 	</item>
 	<item id="15553" name="Archangel Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -994,7 +994,7 @@
 		</stats>
 	</item>
 	<item id="15554" name="Recurve Thorne Bow" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1026,7 +1026,7 @@
 		</stats>
 	</item>
 	<item id="15555" name="Heavenstare Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Eternal Core Sword Conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Kamael-exclusive weapon: Eternal Core Sword conversion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. When enchanted to +4 or higher, has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1063,7 +1063,7 @@
 		</stats>
 	</item>
 	<item id="15556" name="Pyseal Blade" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Lava Saw conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Kamael-exclusive weapon: Lava Saw conversion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1096,7 +1096,7 @@
 		</stats>
 	</item>
 	<item id="15557" name="Thorne Crossbow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Recurvethorne Bow conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Kamael-exclusive weapon: Recurve Thorne Bow conversion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1130,7 +1130,7 @@
 		</stats>
 	</item>
 	<item id="15558" name="Periel Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_periwing_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1159,7 +1159,7 @@
 		</stats>
 	</item>
 	<item id="15559" name="Skull Edge" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_skulledge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1188,7 +1188,7 @@
 		</stats>
 	</item>
 	<item id="15560" name="Vigwik Axe" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vigwik_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1217,7 +1217,7 @@
 		</stats>
 	</item>
 	<item id="15561" name="Devilish Maul" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_evildeity_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1246,7 +1246,7 @@
 		</stats>
 	</item>
 	<item id="15562" name="Feather Eye Blade" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_feathereye_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1275,7 +1275,7 @@
 		</stats>
 	</item>
 	<item id="15563" name="Octo Claw" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_octoclaw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1304,7 +1304,7 @@
 		</stats>
 	</item>
 	<item id="15564" name="Doubletop Spear" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_doubletopa_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1336,7 +1336,7 @@
 		</stats>
 	</item>
 	<item id="15565" name="Rising Star" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_cuticle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1366,7 +1366,7 @@
 		</stats>
 	</item>
 	<item id="15566" name="Black Visage" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_blackvisage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1396,7 +1396,7 @@
 		</stats>
 	</item>
 	<item id="15567" name="Veniplant Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_veniplant_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1425,7 +1425,7 @@
 		</stats>
 	</item>
 	<item id="15568" name="Skull Carnium Bow" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_skullgrove_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1457,7 +1457,7 @@
 		</stats>
 	</item>
 	<item id="15569" name="Gemtail Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Periel Sword Conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive weapon: Periel Sword conversion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. When enchanted to +4 or higher, has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_gemtail_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1493,7 +1493,7 @@
 		</stats>
 	</item>
 	<item id="15570" name="Finale Blade" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Feather Eye Blade conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Kamael-exclusive weapon: Feather Eye Blade conversion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_findragon blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1526,7 +1526,7 @@
 		</stats>
 	</item>
 	<item id="15571" name="Dominion Crossbow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Skull Carnium Bow conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Kamael-exclusive weapon: Skull Carnium Bow conversion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />

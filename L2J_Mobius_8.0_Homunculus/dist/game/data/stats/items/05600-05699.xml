@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5600" name="Meteor Shower" additionalName="Critical Bleed" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 42% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. A 42% chance of inflicting Bleed on the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -33,7 +33,7 @@
 		</stats>
 	</item>
 	<item id="5601" name="Meteor Shower" additionalName="Rsk. Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Atk. Spd. +11% when HP is lower than 60%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -64,7 +64,7 @@
 		</stats>
 	</item>
 	<item id="5602" name="Elysian" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Max HP +25%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -95,7 +95,7 @@
 		</stats>
 	</item>
 	<item id="5603" name="Elysian" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. P. Atk. +32, Max HP -15%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -126,7 +126,7 @@
 		</stats>
 	</item>
 	<item id="5604" name="Elysian" additionalName="Critical Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Absorbs 19 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Absorbs 19 HP from the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -158,7 +158,7 @@
 		</stats>
 	</item>
 	<item id="5605" name="Branch of the Mother Tree" additionalName="Conversion" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Max MP +60%, Max HP -40%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -190,7 +190,7 @@
 		</stats>
 	</item>
 	<item id="5606" name="Branch of the Mother Tree" additionalName="Magic Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 30% chance of inflicting an additional power 8 of magical damage on the target during magic use. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. A 30% chance of inflicting additional magical damage (with 8 power) on the target after using a debuff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -223,7 +223,7 @@
 		</stats>
 	</item>
 	<item id="5607" name="Branch of the Mother Tree" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Casting Spd. +15%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -255,7 +255,7 @@
 		</stats>
 	</item>
 	<item id="5608" name="Carnage Bow" additionalName="Light Armor" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Weight limit +20%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -290,7 +290,7 @@
 		</stats>
 	</item>
 	<item id="5609" name="Carnage Bow" additionalName="Critical Bleed" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 35% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. A 35% chance of inflicting Bleed on the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -325,7 +325,7 @@
 		</stats>
 	</item>
 	<item id="5610" name="Carnage Bow" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Max MP +30%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -359,7 +359,7 @@
 		</stats>
 	</item>
 	<item id="5611" name="Soul Bow" additionalName="Cheap Shot" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 38% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. A 38% chance of decreasing MP Consumption to 1 after a standard attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -394,7 +394,7 @@
 		</stats>
 	</item>
 	<item id="5612" name="Soul Bow" additionalName="Quick Recovery" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Decreases cooldown by about 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Skill Cooldown is about -15%. Inflicts additional damage in PvP. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -428,7 +428,7 @@
 		</stats>
 	</item>
 	<item id="5613" name="Soul Bow" additionalName="Critical Poison" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has an 18% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. An 18% chance of poisoning the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -463,7 +463,7 @@
 		</stats>
 	</item>
 	<item id="5614" name="Bloody Orchid" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 67. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Critical Rate for standard attacks +67. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -494,7 +494,7 @@
 		</stats>
 	</item>
 	<item id="5615" name="Bloody Orchid" additionalName="Back Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Critical Rate by 37% when attacking the target from behind. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Critical Rate for standard attacks +37 after a backstab. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -525,7 +525,7 @@
 		</stats>
 	</item>
 	<item id="5616" name="Bloody Orchid" additionalName="Critical Bleed" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 12% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. A 12% chance of inflicting Bleed on the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -557,7 +557,7 @@
 		</stats>
 	</item>
 	<item id="5617" name="Soul Separator" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +4. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -588,7 +588,7 @@
 		</stats>
 	</item>
 	<item id="5618" name="Soul Separator" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +200 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. P. Atk. +200 after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -619,7 +619,7 @@
 		</stats>
 	</item>
 	<item id="5619" name="Soul Separator" additionalName="Rsk. Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Atk. Spd. +11% when HP is lower than 60%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -650,7 +650,7 @@
 		</stats>
 	</item>
 	<item id="5620" name="Blood Tornado" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Atk. Spd. +6%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -681,7 +681,7 @@
 		</stats>
 	</item>
 	<item id="5621" name="Blood Tornado" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Critical Rate for standard attacks +61. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -712,7 +712,7 @@
 		</stats>
 	</item>
 	<item id="5622" name="Blood Tornado" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +38 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. P. Atk. +38, Max HP -15%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -743,7 +743,7 @@
 		</stats>
 	</item>
 	<item id="5623" name="Dragon Grinder" additionalName="Rsk. Evasion" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Evasion +6 when HP is lower than 60%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -774,7 +774,7 @@
 		</stats>
 	</item>
 	<item id="5624" name="Dragon Grinder" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 5. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +5. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -805,7 +805,7 @@
 		</stats>
 	</item>
 	<item id="5625" name="Dragon Grinder" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Max HP +25%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -836,7 +836,7 @@
 		</stats>
 	</item>
 	<item id="5626" name="Halberd" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Atk. Spd. +6%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -867,7 +867,7 @@
 		</stats>
 	</item>
 	<item id="5627" name="Halberd" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. A 25% chance of stunning the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -899,7 +899,7 @@
 		</stats>
 	</item>
 	<item id="5628" name="Halberd" additionalName="Wide Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Widens the angle of attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1020,7 +1020,7 @@
 		</stats>
 	</item>
 	<item id="5632" name="Tallum Glaive" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 4. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +4. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1051,7 +1051,7 @@
 		</stats>
 	</item>
 	<item id="5633" name="Tallum Glaive" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Max HP +25%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1082,7 +1082,7 @@
 		</stats>
 	</item>
 	<item id="5634" name="Tallum Glaive" additionalName="Wide Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Widens the angle of attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1113,7 +1113,7 @@
 		</stats>
 	</item>
 	<item id="5635" name="Tallum Blade" additionalName="Critical Poison" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. A 10% chance of poisoning the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1145,7 +1145,7 @@
 		</stats>
 	</item>
 	<item id="5636" name="Tallum Blade" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Atk. Spd. +6%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1176,7 +1176,7 @@
 		</stats>
 	</item>
 	<item id="5637" name="Tallum Blade" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +31 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. P. Atk. +31, Max HP -15%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1207,7 +1207,7 @@
 		</stats>
 	</item>
 	<item id="5638" name="Elemental Sword" additionalName="M. Atk." type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 153 during magic use. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. M. Skill MP Consumption +15%, M. Atk. +153. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1238,7 +1238,7 @@
 		</stats>
 	</item>
 	<item id="5639" name="Elemental Sword" additionalName="Magic Paralyze" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 5% chance of casting Paralysis on the target during magic use. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. A 5% chance of paralyzing the target after using a debuff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1270,7 +1270,7 @@
 		</stats>
 	</item>
 	<item id="5640" name="Elemental Sword" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +30. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. M. Atk. +30. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1301,7 +1301,7 @@
 		</stats>
 	</item>
 	<item id="5641" name="Sword of Miracles" additionalName="M. Atk." type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 167 during magic use. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. M. Skill MP Consumption +15%, M. Atk. +167. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1332,7 +1332,7 @@
 		</stats>
 	</item>
 	<item id="5642" name="Sword of Miracles" additionalName="Magic Silence" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. A 10% chance of inflicting Silence on the target after using a debuff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1364,7 +1364,7 @@
 		</stats>
 	</item>
 	<item id="5643" name="Sword of Miracles" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Casting Spd. +15%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1395,7 +1395,7 @@
 		</stats>
 	</item>
 	<item id="5644" name="Dragon Slayer" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Max HP +25%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1426,7 +1426,7 @@
 		</stats>
 	</item>
 	<item id="5645" name="Dragon Slayer" additionalName="Critical Bleed" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 24% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. A 24% chance of inflicting Bleed on the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1458,7 +1458,7 @@
 		</stats>
 	</item>
 	<item id="5646" name="Dragon Slayer" additionalName="Critical Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Absorbs 11 HP from the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1490,7 +1490,7 @@
 		</stats>
 	</item>
 	<item id="5647" name="Dark Legion's Edge" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +326 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. P. Atk. +326 after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1521,7 +1521,7 @@
 		</stats>
 	</item>
 	<item id="5648" name="Dark Legion's Edge" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Max HP +25%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1552,7 +1552,7 @@
 		</stats>
 	</item>
 	<item id="5649" name="Dark Legion's Edge" additionalName="Rsk. Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 130 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Critical Rate for standard attacks +130 when HP is lower than 60%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1583,7 +1583,7 @@
 		</stats>
 	</item>
 	<item id="5650" name="Seed: Alternative Dark Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Dark Coda. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 5-15 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1598,7 +1598,7 @@
 		</skills>
 	</item>
 	<item id="5651" name="Seed: Alternative Red Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Coda. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 8-18 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1613,7 +1613,7 @@
 		</skills>
 	</item>
 	<item id="5652" name="Seed: Alternative Chilly Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Chilly Coda. For best results, a level 11- 21 character must plant it on a level 11- 21 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Coda. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 11-21 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1628,7 +1628,7 @@
 		</skills>
 	</item>
 	<item id="5653" name="Seed: Alternative Blue Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14- 24 character must plant it on a level 14- 24 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Coda. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 14-24 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1643,7 +1643,7 @@
 		</skills>
 	</item>
 	<item id="5654" name="Seed: Alternative Golden Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17- 27 character must plant it on a level 17- 27 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Golden Coda. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 17-27 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1658,7 +1658,7 @@
 		</skills>
 	</item>
 	<item id="5655" name="Seed: Alternative Lute Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20- 30 character must plant it on a level 20- 30 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Lute Coda. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 20-30 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1673,7 +1673,7 @@
 		</skills>
 	</item>
 	<item id="5656" name="Seed: Alternative Desert Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23- 33 character must plant it on a level 23- 33 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Desert Coda. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 23-33 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1688,7 +1688,7 @@
 		</skills>
 	</item>
 	<item id="5657" name="Seed: Alternative Blue Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Cobol. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 32-42 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1703,7 +1703,7 @@
 		</skills>
 	</item>
 	<item id="5658" name="Seed: Alternative Blue Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14- 24 character must plant it on a level 14- 24 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Coda. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 14-24 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1718,7 +1718,7 @@
 		</skills>
 	</item>
 	<item id="5659" name="Seed: Alternative Golden Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17- 27 character must plant it on a level 17- 27 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Golden Coda. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 17-27 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1733,7 +1733,7 @@
 		</skills>
 	</item>
 	<item id="5660" name="Seed: Alternative Lute Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20- 30 character must plant it on a level 20- 30 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Lute Coda. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 20-30 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1748,7 +1748,7 @@
 		</skills>
 	</item>
 	<item id="5661" name="Seed: Alternative Desert Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23- 33 character must plant it on a level 23- 33 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Desert Coda. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 23-33 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1763,7 +1763,7 @@
 		</skills>
 	</item>
 	<item id="5662" name="Seed: Alternative Red Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26- 36 character must plant it on a level 26- 36 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Cobol. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 26-36 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1778,7 +1778,7 @@
 		</skills>
 	</item>
 	<item id="5663" name="Seed: Alternative Chilly Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Cobol. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 29-39 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1793,7 +1793,7 @@
 		</skills>
 	</item>
 	<item id="5664" name="Seed: Alternative Thorn Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Thorn Cobol. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 35-45 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1808,7 +1808,7 @@
 		</skills>
 	</item>
 	<item id="5665" name="Seed: Alternative Golden Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Golden Cobol. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 38-48 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1823,7 +1823,7 @@
 		</skills>
 	</item>
 	<item id="5666" name="Seed: Alternative Great Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Great Cobol. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 41-51 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1838,7 +1838,7 @@
 		</skills>
 	</item>
 	<item id="5667" name="Seed: Alternative Red Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26- 36 character must plant it on a level 26- 36 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Cobol. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 26-36 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1853,7 +1853,7 @@
 		</skills>
 	</item>
 	<item id="5668" name="Seed: Alternative Chilly Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Cobol. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 29-39 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1868,7 +1868,7 @@
 		</skills>
 	</item>
 	<item id="5669" name="Seed: Alternative Blue Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Cobol. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 32-42 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1883,7 +1883,7 @@
 		</skills>
 	</item>
 	<item id="5670" name="Seed: Alternative Thorn Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Thorn Cobol. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 35-45 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1898,7 +1898,7 @@
 		</skills>
 	</item>
 	<item id="5671" name="Seed: Alternative Golden Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Golden Cobol. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 38-48 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1913,7 +1913,7 @@
 		</skills>
 	</item>
 	<item id="5672" name="Seed: Alternative Great Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Great Cobol. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 41-51 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1928,7 +1928,7 @@
 		</skills>
 	</item>
 	<item id="5673" name="Seed: Alternative Red Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1943,7 +1943,7 @@
 		</skills>
 	</item>
 	<item id="5674" name="Seed: Alternative Twin Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Twin Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1958,7 +1958,7 @@
 		</skills>
 	</item>
 	<item id="5675" name="Seed: Alternative Desert Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59- 69 character must plant it on a level 59- 69 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Desert Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 59-69 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1973,7 +1973,7 @@
 		</skills>
 	</item>
 	<item id="5676" name="Seed: Alternative Dark Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Dark Coda. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 5-15 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1988,7 +1988,7 @@
 		</skills>
 	</item>
 	<item id="5677" name="Seed: Alternative Red Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Coda. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 8-18 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2003,7 +2003,7 @@
 		</skills>
 	</item>
 	<item id="5678" name="Seed: Alternative Blue Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14- 24 character must plant it on a level 14- 24 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Coda. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 14-24 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2018,7 +2018,7 @@
 		</skills>
 	</item>
 	<item id="5679" name="Seed: Alternative Red Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26- 36 character must plant it on a level 26- 36 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Cobol. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 26-36 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2033,7 +2033,7 @@
 		</skills>
 	</item>
 	<item id="5680" name="Seed: Alternative Chilly Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Cobol. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 29-39 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2048,7 +2048,7 @@
 		</skills>
 	</item>
 	<item id="5681" name="Seed: Alternative Blue Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Cobol. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 32-42 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2063,7 +2063,7 @@
 		</skills>
 	</item>
 	<item id="5682" name="Seed: Alternative Thorn Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Thorn Cobol. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 35-45 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2078,7 +2078,7 @@
 		</skills>
 	</item>
 	<item id="5683" name="Seed: Alternative Sea Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 45- 55 character must plant it on a level 45- 55 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Sea Codran. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 45-55 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2093,7 +2093,7 @@
 		</skills>
 	</item>
 	<item id="5684" name="Seed: Alternative Chilly Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47- 57 character must plant it on a level 47- 57 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Codran. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 47-57 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2108,7 +2108,7 @@
 		</skills>
 	</item>
 	<item id="5685" name="Seed: Alternative Blue Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50- 60 character must plant it on a level 50- 60 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Codran. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 50-60 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2123,7 +2123,7 @@
 		</skills>
 	</item>
 	<item id="5686" name="Seed: Alternative Twin Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Twin Codran. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2138,7 +2138,7 @@
 		</skills>
 	</item>
 	<item id="5687" name="Seed: Alternative Thorn Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Thorn Cobol. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 35-45 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2153,7 +2153,7 @@
 		</skills>
 	</item>
 	<item id="5688" name="Seed: Alternative Golden Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Golden Cobol. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 38-48 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2168,7 +2168,7 @@
 		</skills>
 	</item>
 	<item id="5689" name="Seed: Alternative Great Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Great Cobol. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 41-51 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2183,7 +2183,7 @@
 		</skills>
 	</item>
 	<item id="5690" name="Seed: Alternative Red Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Codran. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2198,7 +2198,7 @@
 		</skills>
 	</item>
 	<item id="5691" name="Seed: Alternative Chilly Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47- 57 character must plant it on a level 47- 57 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Codran. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 47-57 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2213,7 +2213,7 @@
 		</skills>
 	</item>
 	<item id="5692" name="Seed: Alternative Blue Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50- 60 character must plant it on a level 50- 60 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Codran. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 50-60 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2228,7 +2228,7 @@
 		</skills>
 	</item>
 	<item id="5693" name="Seed: Alternative Twin Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Twin Codran. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2243,7 +2243,7 @@
 		</skills>
 	</item>
 	<item id="5694" name="Seed: Alternative Great Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Great Codran. For best results, a level 56- 66 character must plant it on a level 56- 66 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Great Codran. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 56-66 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2258,7 +2258,7 @@
 		</skills>
 	</item>
 	<item id="5695" name="Seed: Alternative Desert Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59- 69 character must plant it on a level 59- 69 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Desert Codran. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 59-69 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2273,7 +2273,7 @@
 		</skills>
 	</item>
 	<item id="5696" name="Seed: Alternative Chilly Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Cobol. To get the fruit, plant this seed onto a monster in the Innadril area. For best results, a level 29-39 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2288,7 +2288,7 @@
 		</skills>
 	</item>
 	<item id="5697" name="Seed: Alternative Blue Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Cobol. To get the fruit, plant this seed onto a monster in the Innadril area. For best results, a level 32-42 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2303,7 +2303,7 @@
 		</skills>
 	</item>
 	<item id="5698" name="Seed: Alternative Thorn Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Thorn Cobol. To get the fruit, plant this seed onto a monster in the Innadril area. For best results, a level 35-45 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -2318,7 +2318,7 @@
 		</skills>
 	</item>
 	<item id="5699" name="Seed: Alternative Golden Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Golden Cobol. To get the fruit, plant this seed onto a monster in the Innadril area. For best results, a level 38-48 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />

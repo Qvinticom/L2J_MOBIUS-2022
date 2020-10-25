@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="14200" toLevel="1" name="Blessing of Garden">
-		<!-- P./ M. Critical Damage +40%. -->
+		<!-- P. Critical Damage/ M. Skill Critical Damage +40%. -->
 		<icon>icon.skill1253</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -66,7 +66,7 @@
 		</effects>
 	</skill>
 	<skill id="14202" toLevel="1" name="Garden Malice">
-		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -101,7 +101,7 @@
 		</effects>
 	</skill>
 	<skill id="14203" toLevel="1" name="Hold">
-		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -129,7 +129,7 @@
 		</effects>
 	</skill>
 	<skill id="14204" toLevel="1" name="Hold">
-		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -290,7 +290,7 @@
 		</effects>
 	</skill>
 	<skill id="14209" toLevel="1" name="Millipede Paralysis">
-		<!-- none Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- none\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<mpConsume>80</mpConsume>
@@ -442,7 +442,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14217" toLevel="1" name="Yoke Status">
-		<!-- Momentarily immobilized. -->
+		<!-- Immobilized. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -508,7 +508,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="RealDamage">
-				<power>1000000</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -606,7 +606,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<magicLevel>99</magicLevel>
-		<channelingSkillId>14225</channelingSkillId> <!-- Control Stage 1 -->
+		<channelingSkillId>14225</channelingSkillId> <!-- Control Lv. 1 -->
 		<channelingStart>1</channelingStart>
 		<mpPerChanneling>15</mpPerChanneling>
 		<channelingTickInterval>2</channelingTickInterval>
@@ -624,8 +624,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="14225" toLevel="8" name="Control Stage 1">
-		<!-- Control Stage $s1 -->
+	<skill id="14225" toLevel="8" name="Control Lv. 1">
+		<!-- Control Lv. $s1 -->
 		<icon>
 			<value level="1">icon.skill14225_1</value>
 			<value level="2">icon.skill14225_2</value>
@@ -695,7 +695,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14228" toLevel="1" name="Energy Regeneration Stage 1">
+	<skill id="14228" toLevel="1" name="Energy Regeneration Lv. 1">
 		<!-- Energy Regeneration -->
 		<icon>icon.skill1229</icon>
 		<operateType>A2</operateType>
@@ -715,7 +715,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="14229" toLevel="1" name="Energy Regeneration Stage 2">
+	<skill id="14229" toLevel="1" name="Energy Regeneration Lv. 2">
 		<!-- Energy Regeneration -->
 		<icon>icon.skill1229</icon>
 		<operateType>A2</operateType>
@@ -735,7 +735,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="14230" toLevel="1" name="Energy Regeneration Stage 3">
+	<skill id="14230" toLevel="1" name="Energy Regeneration Lv. 3">
 		<!-- Energy Regeneration -->
 		<icon>icon.skill1229</icon>
 		<operateType>A2</operateType>
@@ -756,7 +756,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14231" toLevel="1" name="Creation's Rage">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -783,7 +783,7 @@
 				<criticalChance>10</criticalChance>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -885,7 +885,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14236" toLevel="1" name="Ultimate Forcefulness">
-		<!-- Looking at Taklacan with forcefulness. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Looking at Taklacan with forcefulness.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -916,7 +916,7 @@
 		</effects>
 	</skill>
 	<skill id="14237" toLevel="1" name="Earth Vibration">
-		<!-- Vibration spreads through the body and decreases HP continuously. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Vibration spreads through the body and decreases HP continuously.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -950,7 +950,7 @@
 		</effects>
 	</skill>
 	<skill id="14238" toLevel="1" name="Sound Blade">
-		<!-- Physical and magic skills are blocked. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Blocks P./ M. Skills.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1336</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -981,7 +981,7 @@
 		</effects>
 	</skill>
 	<skill id="14239" toLevel="1" name="Sound Prison">
-		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1011,7 +1011,7 @@
 		</effects>
 	</skill>
 	<skill id="14240" toLevel="1" name="Poison Eruption">
-		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1046,7 +1046,7 @@
 		</effects>
 	</skill>
 	<skill id="14241" toLevel="1" name="Poison Fog">
-		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1168,7 +1168,7 @@
 		</endEffects>
 	</skill>
 	<skill id="14245" toLevel="1" name="Rotten Net">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill14245</icon>
 		<operateType>A2</operateType>
 		<mpConsume>87</mpConsume>
@@ -1324,7 +1324,7 @@
 		</effects>
 	</skill>
 	<skill id="14250" toLevel="1" name="Touch of Death">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0260</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1348,7 +1348,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="PhysicalAttack">
 				<power>27227</power>
@@ -1642,7 +1642,7 @@
 		</effects>
 	</skill>
 	<skill id="14263" toLevel="2" name="Electric Attack">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1275</icon>
 		<operateType>
 			<value level="1">A1</value>
@@ -1690,8 +1690,8 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="14264" toLevel="1" name="Poison Cloud">
-		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
+	<skill id="14264" toLevel="1" name="Poisonous Cloud">
+		<!-- Inflicts Poison.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1735,7 +1735,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14266" toLevel="1" name="Yoke">
-		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -1791,8 +1791,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14268" toLevel="1" name="Stun and Fear">
-		<!-- Horrifies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+	<skill id="14268" toLevel="1" name="Fear and Chaos">
+		<!-- Inflicts Fear.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1824,7 +1824,7 @@
 		</effects>
 	</skill>
 	<skill id="14269" toLevel="1" name="Foot Strike">
-		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -1856,7 +1856,7 @@
 		</effects>
 	</skill>
 	<skill id="14270" toLevel="1" name="Spinning Blade of Fear">
-		<!-- Horrifies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Fear.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1885,7 +1885,7 @@
 		</effects>
 	</skill>
 	<skill id="14271" toLevel="1" name="Spinning Blade">
-		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -1943,7 +1943,7 @@
 		</effects>
 	</skill>
 	<skill id="14273" toLevel="1" name="Indiscriminate Rush">
-		<!-- Knockback. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Knockback.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0494</icon>
 		<operateType>DA2</operateType>
 		<mpConsume>1</mpConsume>
@@ -2043,7 +2043,7 @@
 		</effects>
 	</skill>
 	<skill id="14277" toLevel="1" name="Orbis Spawn">
-		<!-- Decaying Darkness. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Decaying Darkness.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11273</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -2063,6 +2063,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14278" toLevel="1" name="Orbis De-spawn">
+		<!-- none\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<hitTime>5000</hitTime>
@@ -2086,7 +2087,7 @@
 		<icon>icon.skill14279</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
-		<hitTime>12000</hitTime>
+		<hitTime>20000</hitTime>
 		<effectPoint>1</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
@@ -2122,7 +2123,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14281" toLevel="1" name="Octavis' Influence">
-		<!-- Octavis' Influence. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Octavis' Influence.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill14279</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -2160,6 +2161,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14283" toLevel="1" name="Golem Connection">
+		<!-- none\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>1</effectPoint>
@@ -2178,6 +2180,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14284" toLevel="1" name="Golem Connection Break">
+		<!-- none\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>1</effectPoint>
@@ -2240,7 +2243,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14288" toLevel="1" name="Agathion Cute Trick - Magmeld">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2417,7 +2420,7 @@
 		</effects>
 	</skill>
 	<skill id="14294" toLevel="7" name="Stun Strike">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<castRange>150</castRange>
@@ -2459,12 +2462,12 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14295" toLevel="7" name="Range Stun Strike">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -2507,7 +2510,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -2546,7 +2549,7 @@
 		</effects>
 	</skill>
 	<skill id="14297" toLevel="7" name="Stun Shot">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2588,12 +2591,12 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14298" toLevel="7" name="Stab">
-		<!-- Bleeding. Speed is decreased. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Bleeding. Speed is decreased.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>150</castRange>

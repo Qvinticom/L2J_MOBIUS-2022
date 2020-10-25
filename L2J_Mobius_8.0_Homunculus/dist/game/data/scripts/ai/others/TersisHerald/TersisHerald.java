@@ -113,7 +113,7 @@ public class TersisHerald extends AbstractNpcAI
 		{
 			case ANTHARAS:
 			{
-				npcStringId = NpcStringId.THE_EVIL_LAND_DRAGON_ANTHARAS_HAS_BEEN_DEFEATED_BY_BRAVE_HEROES;
+				npcStringId = NpcStringId.THE_EVIL_EARTH_DRAGON_ANTHARAS_HAS_BEEN_DEFEATED_BY_BRAVE_HEROES;
 				break;
 			}
 			case VALAKAS:

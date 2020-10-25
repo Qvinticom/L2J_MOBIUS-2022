@@ -59,7 +59,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46406" name="Angel Cat's Energy" type="EtcItem">
-		<!-- For 30 min., P. Atk. +5%, M. Atk. by 20%, P. Def. by 5%, M. Def. by 5%, Atk. Spd. by 5%, Casting Spd. by 5%, Max HP/ MP by 5%, and XP and SP acquired through hunting increase by 30%. Cannot be used in the Olympiad. Cannot be applied along with event buffs such as Angel Cat's Blessing and Letter Collector's Gift. -->
+		<!-- For 30 min. P. Atk. +5%, M. Atk. +20%, P./ M. Def. +5%, Atk. Spd./ Casting Spd. +5%, Max HP/ MP +5%, Acquired XP/ SP +30%. -->
 		<set name="icon" val="icon.skilltransform4" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -225,7 +225,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46418" name="Perfect Charm" additionalName="14-day" type="EtcItem">
-		<!-- If stored in the inventory, will receive STR, INT, CON, DEX, WIT, MEN, LUC, CHA +1. -->
+		<!-- If stored in the inventory, STR/ INT/ CON/ DEX/ WIT/ MEN/ LUC/ CHA +1. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -262,7 +262,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46421" name="R Sheep Bait" type="EtcItem">
-		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters level 85-94. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters of level 85-94. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -277,7 +277,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46422" name="R95 Sheep Bait" type="EtcItem">
-		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters from level 95-98. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters of level 95-98. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -292,7 +292,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46423" name="R99 Sheep Bait" type="EtcItem">
-		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters level 99 or higher. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Required level: 99+. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -307,7 +307,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46424" name="Sheep Hat" additionalName="14-day" type="Armor">
-		<!-- A sheep-shaped hat. Occupies 2 Hair Accessory slots. <Active Skill>. 1. Blessed Resurrection (Cooldown: 60 min). 2. Baa~: Use the skill to obtain 2 Sheep Bait Coupons (can be used only once a day). -->
+		<!-- A sheep-shaped hat. Uses 2 hair accessory slots. <Active Skill>. 1. Blessed Resurrection (Cooldown: 60 min). 2. Baa~: Use the skill to obtain 2 Sheep Bait Coupons (can be used only once a day). -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -321,7 +321,7 @@
 		<set name="time" val="20160" />
 	</item>
 	<item id="46425" name="Sheep Bait Coupon" type="EtcItem">
-		<!-- Can be exchanged for 30 Sheep Bait of your level through the Fishing Guild Member in each town. -->
+		<!-- Can be exchanged for 30 Sheep Bait of your level through the Fishermen's Guild Member in any town. -->
 		<set name="icon" val="branchsys2.action5016" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -471,7 +471,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46435" name="Heine Special Bait (85-89)" type="EtcItem">
-		<!-- Fishing Bait. When used, various types of fish can be caught. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or Seed Bracelet Treasure Chest. Can only be used by Lv.85-Lv.89. -->
+		<!-- Fishing Time: 105 sec. Fishing Wait Time: 15 sec. Fishing Bait. Fish using this bait to catch Ugly Fish. Nimble Fish. Powerful Fish. Has a very low chance of obtaining Wind Vitality Tonic. Heine Treasure Chest. or Seed Bracelet Treasure Chest. Can only be used by Lv. 85-Lv. 89. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -486,7 +486,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46436" name="Heine Special Bait (90-94)" type="EtcItem">
-		<!-- Bait for fishing. Catch fresh fish and whales. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or a Seed Bracelet Treasure Chest. Can be used by characters Lv. 90- 94. -->
+		<!-- Fishing Time: 105 sec. Fishing Wait Time: 15 sec. Fishing Bait. Fish using this bait to catch Ugly Fish. Nimble Fish. Powerful Fish. Has a very low chance of obtaining Wind Vitality Tonic. Heine Treasure Chest. or Seed Bracelet Treasure Chest. Can only be used by Lv. 90-Lv. 94. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -501,7 +501,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46437" name="Heine Special Bait (95-98)" type="EtcItem">
-		<!-- Fishing Bait. When used, various types of fish can be caught. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or Seed Bracelet Treasure Chest. Can only be used by Lv.95-Lv.98. -->
+		<!-- Fishing Time: 105 sec. Fishing Wait Time: 15 sec. Fishing Bait. Fish using this bait to catch Ugly Fish. Nimble Fish. Powerful Fish. Has a very low chance of obtaining Wind Vitality Tonic. Heine Treasure Chest. or Seed Bracelet Treasure Chest. Can only be used by Lv. 95-Lv. 98. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -516,7 +516,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46438" name="Heine Special Bait (99~)" type="EtcItem">
-		<!-- Fishing Bait. When used, various types of fish can be caught. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or Seed Bracelet Treasure Chest. Can only be used above Lv.99. -->
+		<!-- Fishing Time: 105 sec. Fishing Wait Time: 15 sec. Fishing Bait. Fish using this bait to catch Ugly Fish. Nimble Fish. Powerful Fish. Has a very low chance of obtaining Wind Vitality Tonic. Heine Treasure Chest. or Seed Bracelet Treasure Chest. Can only be used by Lv. 99+. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -531,7 +531,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46439" name="Heine Special Bait Coupon" type="EtcItem">
-		<!-- Exchange for 1 Heine Special Bait of your choice through a fishing guild member. -->
+		<!-- Can be exchanged for Heine Exclusive Bait of your choice through a Fishing Guild member in any town. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -545,7 +545,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46441" name="Zodiac Agathion Pack" type="EtcItem">
-		<!-- Double-click to randomly obtain one Zodiac Agathion. -->
+		<!-- Double-click to obtain one of following items: High-grade/ Top-grade/ Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -559,56 +559,56 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46443" name="Heine Special Fishing Tools - 3,000 Pack" type="EtcItem">
-		<!-- Double-click to get 3,000 Heine Special Bait Coupons, 3,000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
+		<!-- Double-click to obtain 3000 Heine Special Bait Coupons, 3000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46444" name="Kain's Soul Crystal - Stage 1" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46445" name="Kain's Soul Crystal - Stage 2" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46446" name="Kain's Soul Crystal - Stage 3" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46447" name="Kain's Soul Crystal - Stage 4" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46448" name="Kain's Soul Crystal - Stage 5" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46449" name="Kain's Soul Crystal - Stage 6" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46450" name="Kain's Soul Crystal - Stage 7" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46451" name="Kain's Soul Crystal - Stage 8" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
@@ -656,49 +656,49 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46459" name="Mermoden's Soul Crystal - Stage 1" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46460" name="Mermoden's Soul Crystal - Stage 2" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46461" name="Mermoden's Soul Crystal - Stage 3" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46462" name="Mermoden's Soul Crystal - Stage 4" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46463" name="Mermoden's Soul Crystal - Stage 5" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46464" name="Mermoden's Soul Crystal - Stage 6" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46465" name="Mermoden's Soul Crystal - Stage 7" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46466" name="Mermoden's Soul Crystal - Stage 8" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
@@ -746,49 +746,49 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46474" name="Leona's Soul Crystal - Stage 1" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46475" name="Leona's Soul Crystal - Stage 2" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46476" name="Leona's Soul Crystal - Stage 3" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46477" name="Leona's Soul Crystal - Stage 4" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46478" name="Leona's Soul Crystal - Stage 5" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46479" name="Leona's Soul Crystal - Stage 6" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46480" name="Leona's Soul Crystal - Stage 7" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46481" name="Leona's Soul Crystal - Stage 8" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
@@ -836,49 +836,49 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46489" name="Pantheon's Soul Crystal - Stage 1" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46490" name="Pantheon's Soul Crystal - Stage 2" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46491" name="Pantheon's Soul Crystal - Stage 3" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46492" name="Pantheon's Soul Crystal - Stage 4" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46493" name="Pantheon's Soul Crystal - Stage 5" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46494" name="Pantheon's Soul Crystal - Stage 6" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Soul Crystal of the same level. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46495" name="Pantheon's Soul Crystal - Stage 7" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46496" name="Pantheon's Soul Crystal - Stage 8" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />

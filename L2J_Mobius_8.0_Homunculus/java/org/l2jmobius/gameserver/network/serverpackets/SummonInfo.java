@@ -346,7 +346,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.SUMMONED))
 		{
-			packet.writeC(_summon.isShowSummonAnimation() ? 0x02 : 00); // 2 - do some animation on spawn
+			packet.writeC(_summon.isShowSummonAnimation() ? 0x02 : 0x00); // 2 - do some animation on spawn
 		}
 		if (containsMask(NpcInfoType.UNKNOWN12))
 		{

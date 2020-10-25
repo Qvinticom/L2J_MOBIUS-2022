@@ -173,7 +173,7 @@
 		</effects>
 	</skill>
 	<skill id="4103" toLevel="2" name="Ultimate Evasion">
-		<!-- Evasion is increased for a certain time. -->
+		<!-- Temporarily increases P. Evasion. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -366,7 +366,7 @@
 		<attributeValue>450</attributeValue>
 		<hitTime>6000</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLevel>110</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -374,7 +374,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -396,7 +396,7 @@
 		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLevel>110</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -404,16 +404,16 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="4108" toLevel="2" name="Antharas Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Frightened into fleeing. -->
 		<icon>icon.skill4108</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>9</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<affectRange>600</affectRange>
@@ -424,9 +424,8 @@
 		</effectPoint>
 		<hitTime>2300</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLevel>110</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
-		<castRange>600</castRange>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -437,7 +436,7 @@
 		</effects>
 	</skill>
 	<skill id="4109" toLevel="1" name="Curse of Antharas">
-		<!-- Puts the curse of Antharas. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Puts the curse of Antharas.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4109</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -447,7 +446,7 @@
 		<effectPoint>-100</effectPoint>
 		<hitTime>2800</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLevel>110</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
@@ -503,8 +502,8 @@
 		<attributeValue>450</attributeValue>
 		<fanRange>0;0;1500;600</fanRange>
 		<hitTime>2300</hitTime>
-		<magicLevel>110</magicLevel>
-		<operateType>A2</operateType>
+		<magicLevel>118</magicLevel>
+		<operateType>A1</operateType>
 		<castRange>500</castRange>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE</affectScope>
@@ -512,17 +511,17 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">10000</value>
-					<value level="2">34255</value>
+					<value level="1">500000</value>
+					<value level="2">534255</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4111" toLevel="2" name="Antharas Dragon Breath">
-		<!-- Petrified and unable to move temporarily. -->
+		<!-- Petrified and unable to move. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<affectRange>300</affectRange>
@@ -538,14 +537,14 @@
 		<hitTime>3200</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLevel>99</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 			<effect name="BlockActions" />
 			<effect name="HpRegen">
@@ -563,14 +562,14 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>450</attributeValue>
 		<hitTime>2200</hitTime>
-		<magicLevel>99</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 		</effects>
 	</skill>
@@ -583,7 +582,7 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>180</attributeValue>
 		<hitTime>2200</hitTime>
-		<magicLevel>99</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -592,7 +591,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>57200</power>
+				<power>557200</power>
 			</effect>
 		</effects>
 	</skill>
@@ -638,7 +637,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4116" toLevel="10" name="Magic Attack Resistance">
+	<skill id="4116" toLevel="10" name="Magic Damage Resistance">
 		<!-- M. Damage Resistance. -->
 		<icon>icon.skill4116_new</icon>
 		<magicLevel>1</magicLevel>
@@ -663,7 +662,7 @@
 		</effects>
 	</skill>
 	<skill id="4117" toLevel="12" name="Paralysis">
-		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -731,7 +730,7 @@
 		</effects>
 	</skill>
 	<skill id="4118" toLevel="12" name="Paralysis">
-		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -801,7 +800,7 @@
 		</effects>
 	</skill>
 	<skill id="4119" toLevel="3" name="Decrease Accuracy">
-		<!-- Accuracy decreases momentarily. Effect $s1. -->
+		<!-- Immediately decreases P. Accuracy. Effect $s1 -->
 		<icon>icon.skill1222</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -847,7 +846,7 @@
 		</effects>
 	</skill>
 	<skill id="4120" toLevel="12" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -933,7 +932,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1101,7 +1100,7 @@
 		</effects>
 	</skill>
 	<skill id="4126" toLevel="1" name="Reduce Delay">
-		<!-- Skill Cooldown decreases temporarily. -->
+		<!-- Temporarily decreases M. Skill Cooldown. -->
 		<icon>icon.skill0164</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1136,7 +1135,7 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<magicLevel>75</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -1154,32 +1153,31 @@
 		<effectPoint>-100</effectPoint>
 		<fanRange>0;0;600;100</fanRange>
 		<hitTime>2300</hitTime>
-		<magicLevel>75</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE_PB</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>61189</power>
+				<power>500000</power>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4129" toLevel="1" name="Baium's Earthquake">
+	<skill id="4129" toLevel="1" name="Earthquake">
 		<affectRange>250</affectRange>
 		<coolTime>2500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1500</hitTime>
-		<magicLevel>75</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>61189</power>
+				<power>500000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1190,7 +1188,7 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>6000</hitTime>
-		<magicLevel>75</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3</hitCancelTime>
@@ -1199,15 +1197,15 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>723</power>
+				<power>25000</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4131" toLevel="1" name="Baium's Paralysis">
-		<!-- You are paralyzed and temporarily immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- You are paralyzed and temporarily immobilized.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>2</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>30</activateRate>
@@ -1220,7 +1218,7 @@
 		<hitTime>3600</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLevel>118</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
@@ -1230,7 +1228,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1238,7 +1236,7 @@
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
-		<magicLevel>75</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1246,7 +1244,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>3885</power>
+				<power>300885</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1255,14 +1253,14 @@
 		<effectPoint>100</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>2000</hitTime>
-		<magicLevel>75</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Heal">
-				<power>1000</power>
+				<power>100000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1282,7 +1280,7 @@
 	<skill id="4135" toLevel="1" name="Baium Heal">
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<magicLevel>75</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1290,7 +1288,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Heal">
-				<power>1000000</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1299,7 +1297,7 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>2000</effectRange>
 		<hitTime>2000</hitTime>
-		<magicLevel>75</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1487,7 +1485,7 @@
 		</effects>
 	</skill>
 	<skill id="4140" toLevel="12" name="Contract Payment">
-		<!-- Your MP is continuously consumed as payment for summoning an unholy creature. Effect $s1. -->
+		<!-- Your MP is continuously consumed as payment for summoning an unholy creature. Effect $s1 -->
 		<icon>icon.skill1100</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1919,7 +1917,7 @@
 		</effects>
 	</skill>
 	<skill id="4148" toLevel="12" name="Poison">
-		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1985,7 +1983,7 @@
 		</effects>
 	</skill>
 	<skill id="4149" toLevel="12" name="Bleed">
-		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -2775,16 +2773,10 @@
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
 		<magicLevel>1</magicLevel>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<reuseDelay>20000</reuseDelay>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="CallPc">
-			</effect>
-		</effects>
 	</skill>
 	<skill id="4162" toLevel="3" name="Decrease Atk. Spd.">
 		<!-- Atk. Spd. decreases momentarily. Effect $s1. -->
@@ -2866,7 +2858,7 @@
 		</effects>
 	</skill>
 	<skill id="4164" toLevel="18" name="Paralysis">
-		<!-- You are stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- You are stunned and immobilized.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -3004,7 +2996,7 @@
 		</effects>
 	</skill>
 	<skill id="4166" toLevel="18" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0279</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3043,7 +3035,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -3133,7 +3125,7 @@
 		</effects>
 	</skill>
 	<skill id="4169" toLevel="12" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -3211,7 +3203,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -3331,7 +3323,7 @@
 		</effects>
 	</skill>
 	<skill id="4172" toLevel="12" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3383,12 +3375,12 @@
 				<power>0</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4173" toLevel="12" name="Might">
-		<!-- P. Atk. is increased. -->
+		<!-- Increases P. Atk. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -3490,7 +3482,7 @@
 		</effects>
 	</skill>
 	<skill id="4175" toLevel="12" name="Haste">
-		<!-- Atk. Spd. is increased. -->
+		<!-- Increases Atk. Spd. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -3749,7 +3741,7 @@
 		</effects>
 	</skill>
 	<skill id="4180" toLevel="12" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -3827,7 +3819,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -3890,7 +3882,7 @@
 		</effects>
 	</skill>
 	<skill id="4182" toLevel="12" name="Poison">
-		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -4127,7 +4119,7 @@
 		</effects>
 	</skill>
 	<skill id="4185" toLevel="12" name="Sleep">
-		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -4189,12 +4181,12 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4186" toLevel="12" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -4336,7 +4328,7 @@
 		</effects>
 	</skill>
 	<skill id="4188" toLevel="12" name="Bleed">
-		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -4417,7 +4409,7 @@
 		</effects>
 	</skill>
 	<skill id="4189" toLevel="12" name="Paralysis">
-		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -4478,7 +4470,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -4921,7 +4913,7 @@
 		</effects>
 	</skill>
 	<skill id="4197" toLevel="12" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -4987,7 +4979,7 @@
 		</effects>
 	</skill>
 	<skill id="4198" toLevel="12" name="Poison">
-		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<abnormalLevel>
 			<value level="1">2</value>

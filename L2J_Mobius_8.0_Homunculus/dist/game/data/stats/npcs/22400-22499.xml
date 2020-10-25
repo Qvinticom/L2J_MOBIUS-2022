@@ -46,7 +46,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -96,7 +96,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -148,7 +148,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -473,7 +473,7 @@
 		<skillList>
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4579" level="5" /> <!-- Bleed -->
 			<skill id="4582" level="5" /> <!-- Poison -->
 		</skillList>
@@ -516,7 +516,7 @@
 		<skillList>
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4579" level="5" /> <!-- Bleed -->
 			<skill id="4582" level="6" /> <!-- Poison -->
 		</skillList>
@@ -560,7 +560,7 @@
 		<skillList>
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4579" level="6" /> <!-- Bleed -->
 			<skill id="4606" level="7" /> <!-- Poison -->
 		</skillList>
@@ -604,7 +604,7 @@
 		<skillList>
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4597" level="8" /> <!-- Bleed -->
 			<skill id="4606" level="8" /> <!-- Poison -->
 		</skillList>
@@ -651,7 +651,7 @@
 			<skill id="4078" level="9" /> <!-- Flame Strike -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4597" level="9" /> <!-- Bleed -->
 			<skill id="4606" level="9" /> <!-- Poison -->
 		</skillList>
@@ -688,9 +688,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="292" /> <!-- Pike -->
-		<acquire exp="1704" sp="0" />
+		<acquire exp="1705" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="460.567823343849" hpRegen="3.5" mp="259.529602595296" mpRegen="1.5" />
+			<vitals hp="459.93690851735" hpRegen="3.5" mp="261.962692619627" mpRegen="1.5" />
 			<attack physical="89.9122807017544" magical="45.9224512507951" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="81.5789473684211" magical="87.8825086187632" />
 			<speed>
@@ -702,10 +702,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -720,7 +719,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="0.954" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.077" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -729,7 +729,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -757,9 +757,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="5285" /> <!-- Heavy Sword -->
-		<acquire exp="1704" sp="0" />
+		<acquire exp="1705" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="460.567823343849" hpRegen="3.5" mp="259.529602595296" mpRegen="1.5" />
+			<vitals hp="459.93690851735" hpRegen="3.5" mp="261.962692619627" mpRegen="1.5" />
 			<attack physical="90.7441016333938" magical="45.9224512507951" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="102.631578947368" magical="74.7001323259487" />
 			<speed>
@@ -771,11 +771,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- Power Strike -->
-			<skill id="4415" level="13" /> <!-- Two-Handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -791,7 +790,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="0.983" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.044" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -800,7 +800,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -829,9 +829,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="236" /> <!-- Soul Separator -->
-		<acquire exp="2194" sp="0" />
+		<acquire exp="2195" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="515.457413249211" hpRegen="3.5" mp="286.293592862936" mpRegen="1.5" />
+			<vitals hp="514.826498422713" hpRegen="3.5" mp="288.726682887267" mpRegen="1.5" />
 			<attack physical="104.868542740124" magical="51.9268098672397" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="108.620689655172" magical="79.7046732108398" />
 			<speed>
@@ -843,12 +843,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- Power Strike -->
-			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -864,7 +863,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.059" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.075" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -873,7 +873,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -899,9 +899,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="2248" sp="0" />
+		<acquire exp="2249" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="604.416403785489" hpRegen="3.5" mp="329.278183292782" mpRegen="1.5" />
+			<vitals hp="603.785488958991" hpRegen="3.5" mp="332.522303325223" mpRegen="1.5" />
 			<attack physical="128.151260504202" magical="63.7012625634263" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="118.487394957983" magical="87.2368412085029" />
 			<speed>
@@ -913,9 +913,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="3" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -930,7 +929,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.224" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.291" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -939,7 +939,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -967,9 +967,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="129" /> <!-- Sword of Revolution -->
-		<acquire exp="2248" sp="0" />
+		<acquire exp="2249" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="604.416403785489" hpRegen="3.5" mp="329.278183292782" mpRegen="1.5" />
+			<vitals hp="603.785488958991" hpRegen="3.5" mp="332.522303325223" mpRegen="1.5" />
 			<attack physical="129.592066711742" magical="63.7012625634263" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="118.487394957983" magical="87.2368412085029" />
 			<speed>
@@ -981,9 +981,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="3" /> <!-- Power Strike -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -999,7 +998,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.252" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.27" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1008,7 +1008,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1037,9 +1037,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7886" /> <!-- Sword of Magic Fog -->
-		<acquire exp="2823" sp="0" />
+		<acquire exp="2824" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="668.13880126183" hpRegen="4.5" mp="358.475263584753" mpRegen="1.8" />
+			<vitals hp="668.13880126183" hpRegen="4.5" mp="361.719383617194" mpRegen="1.8" />
 			<attack physical="148.032044583769" magical="73.4792050408192" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="100.826446280992" magical="108.820749751309" />
 			<speed>
@@ -1051,11 +1051,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="3" /> <!-- Power Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1071,7 +1070,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.41" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.365" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1080,7 +1080,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1105,9 +1105,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3060" sp="0" />
+		<acquire exp="3061" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="772.239747634069" hpRegen="4.5" mp="402.270884022709" mpRegen="1.8" />
+			<vitals hp="772.239747634069" hpRegen="4.5" mp="406.32603406326" mpRegen="1.8" />
 			<attack physical="178.763440860215" magical="88.6845697509428" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="137.096774193548" magical="100.070638097481" />
 			<speed>
@@ -1119,9 +1119,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- Power Strike -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1136,7 +1135,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.643" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.77" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1145,7 +1145,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1172,9 +1172,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3060" sp="0" />
+		<acquire exp="3061" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="772.239747634069" hpRegen="4.5" mp="402.270884022709" mpRegen="1.8" />
+			<vitals hp="772.239747634069" hpRegen="4.5" mp="406.32603406326" mpRegen="1.8" />
 			<attack physical="178.763440860215" magical="88.6845697509428" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="137.096774193548" magical="100.070638097481" />
 			<speed>
@@ -1186,9 +1186,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1204,7 +1203,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.707" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.708" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1213,7 +1213,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1241,9 +1241,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3775" sp="0" />
+		<acquire exp="3776" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="847.318611987382" hpRegen="4.5" mp="432.27899432279" mpRegen="1.8" />
+			<vitals hp="846.687697160883" hpRegen="4.5" mp="436.334144363341" mpRegen="1.8" />
 			<attack physical="203.042328042328" magical="100.335377524539" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="145.238095238095" magical="106.206310585873" />
 			<speed>
@@ -1254,10 +1254,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4032" level="3" /> <!-- Power Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1273,7 +1272,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.847" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.863" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1282,7 +1282,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1308,9 +1308,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- Crokian Blade -->
-		<acquire exp="3997" sp="0" />
+		<acquire exp="3998" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="966.561514195584" hpRegen="4.5" mp="478.507704785077" mpRegen="1.8" />
+			<vitals hp="965.930599369085" hpRegen="4.5" mp="482.562854825629" mpRegen="1.8" />
 			<attack physical="243.540051679587" magical="119.727087227037" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="188.372093023256" magical="100.046168846771" />
 			<speed>
@@ -1322,10 +1322,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1340,7 +1339,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.249" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="2.207" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1349,7 +1349,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1376,9 +1376,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3997" sp="0" />
+		<acquire exp="3998" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="966.561514195584" hpRegen="4.5" mp="478.507704785077" mpRegen="1.8" />
+			<vitals hp="965.930599369085" hpRegen="4.5" mp="482.562854825629" mpRegen="1.8" />
 			<attack physical="243.540051679587" magical="119.727087227037" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="188.372093023256" magical="100.046168846771" />
 			<speed>
@@ -1389,10 +1389,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1408,7 +1407,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.149" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="2.23" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1417,7 +1417,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1446,9 +1446,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5130" /> <!-- Nos Sword -->
-		<acquire exp="4864" sp="1" />
+		<acquire exp="4865" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1050.47318611987" hpRegen="5.5" mp="531.224655312247" mpRegen="2.1" />
+			<vitals hp="1049.84227129338" hpRegen="5.5" mp="536.090835360908" mpRegen="2.1" />
 			<attack physical="274.173027989822" magical="133.469287330486" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="164.885496183206" magical="120.725840901915" />
 			<speed>
@@ -1460,10 +1460,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1479,7 +1478,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.428" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="2.365" /> <!-- Scroll: Enchant D-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1488,7 +1488,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1514,9 +1514,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7887" /> <!-- Mysterious Sword -->
-		<acquire exp="5059" sp="1" />
+		<acquire exp="5060" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<vitals hp="1182.96529968454" hpRegen="5.5" mp="616.382806163828" mpRegen="2.1" />
 			<attack physical="324.626865671642" magical="157.498281240115" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="142.537313432836" magical="153.091704779381" />
 			<speed>
@@ -1528,10 +1528,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1546,7 +1545,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.074" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.101" /> <!-- Scroll: Enchant C-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1555,7 +1555,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1583,9 +1583,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="298" /> <!-- Orcish Glaive -->
-		<acquire exp="5059" sp="1" />
+		<acquire exp="5060" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<vitals hp="1182.96529968454" hpRegen="5.5" mp="616.382806163828" mpRegen="2.1" />
 			<attack physical="324.626865671642" magical="157.498281240115" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="142.537313432836" magical="153.091704779381" />
 			<speed>
@@ -1597,10 +1597,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1616,7 +1615,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.068" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.099" /> <!-- Scroll: Enchant C-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1625,7 +1625,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1654,9 +1654,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="226" /> <!-- Cursed Dagger -->
-		<acquire exp="6091" sp="1" />
+		<acquire exp="6092" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1276.34069400631" hpRegen="5.5" mp="665.044606650446" mpRegen="2.1" />
+			<vitals hp="1275.70977917981" hpRegen="5.5" mp="671.532846715328" mpRegen="2.1" />
 			<attack physical="364.12553527158" magical="174.985030641589" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="150" magical="161.364101959662" />
 			<speed>
@@ -1668,11 +1668,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1688,7 +1687,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.171" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.194" /> <!-- Scroll: Enchant C-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1697,7 +1697,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1723,9 +1723,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="77" /> <!-- Tsurugi -->
-		<acquire exp="5976" sp="1" />
+		<acquire exp="5976" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1421.45110410095" hpRegen="5.5" mp="747.769667477697" mpRegen="2.1" />
+			<vitals hp="1420.82018927445" hpRegen="5.5" mp="754.257907542579" mpRegen="2.1" />
 			<attack physical="422.062350119904" magical="203.073733813267" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.719424460432" magical="147.035656146616" />
 			<speed>
@@ -1737,9 +1737,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="5" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1754,7 +1753,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.384" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.342" /> <!-- Scroll: Enchant C-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1763,7 +1763,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1791,9 +1791,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="75" /> <!-- Caliburs -->
-		<acquire exp="5976" sp="1" />
+		<acquire exp="5976" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1421.45110410095" hpRegen="5.5" mp="747.769667477697" mpRegen="2.1" />
+			<vitals hp="1420.82018927445" hpRegen="5.5" mp="754.257907542579" mpRegen="2.1" />
 			<attack physical="422.062350119904" magical="203.073733813267" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.719424460432" magical="147.035656146616" />
 			<speed>
@@ -1805,9 +1805,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="5" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1823,7 +1822,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.39" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.421" /> <!-- Scroll: Enchant C-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1832,7 +1832,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1861,9 +1861,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
-		<acquire exp="7164" sp="1" />
+		<acquire exp="7165" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1520.5047318612" hpRegen="6.5" mp="804.541768045418" mpRegen="2.4" />
+			<vitals hp="1519.8738170347" hpRegen="6.5" mp="811.84103811841" mpRegen="2.4" />
 			<attack physical="465.721040189125" magical="223.341496558335" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="209.929078014184" magical="153.578022812376" />
 			<speed>
@@ -1875,10 +1875,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="5" /> <!-- Power Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1894,7 +1893,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.457" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.523" /> <!-- Scroll: Enchant C-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1903,7 +1903,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1929,9 +1929,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7888" /> <!-- Ecliptic Sword -->
-		<acquire exp="7230" sp="1" />
+		<acquire exp="7231" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1673.18611987382" hpRegen="6.5" mp="889.699918896999" mpRegen="2.4" />
+			<vitals hp="1673.18611987382" hpRegen="6.5" mp="897.810218978102" mpRegen="2.4" />
 			<attack physical="535.87962962963" magical="256.388987910322" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="224.305555555556" magical="163.89564747229" />
 			<speed>
@@ -1943,9 +1943,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="5" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -1960,7 +1959,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant B-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1969,7 +1969,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1997,9 +1997,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
-		<acquire exp="7230" sp="1" />
+		<acquire exp="7231" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1673.18611987382" hpRegen="6.5" mp="889.699918896999" mpRegen="2.4" />
+			<vitals hp="1673.18611987382" hpRegen="6.5" mp="897.810218978102" mpRegen="2.4" />
 			<attack physical="535.87962962963" magical="256.388987910322" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="224.305555555556" magical="163.89564747229" />
 			<speed>
@@ -2011,9 +2011,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="5" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2029,7 +2028,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant B-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2038,7 +2038,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2067,9 +2067,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="135" /> <!-- Samurai Long Sword -->
-		<acquire exp="8608" sp="2" />
+		<acquire exp="8609" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1776.02523659306" hpRegen="6.5" mp="948.094079480941" mpRegen="2.4" />
+			<vitals hp="1776.02523659306" hpRegen="6.5" mp="957.826439578264" mpRegen="2.4" />
 			<attack physical="585.616438356164" magical="279.289832424352" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="233.561643835616" magical="171.09400171094" />
 			<speed>
@@ -2081,10 +2081,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4032" level="5" /> <!-- Power Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2100,7 +2099,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant B-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2109,7 +2109,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2135,9 +2135,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="8605" sp="2" />
+		<acquire exp="8606" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1036.49635036496" mpRegen="2.4" />
+			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1046.22871046229" mpRegen="2.4" />
 			<attack physical="664.429530201342" magical="315.348233981419" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="198.657718120805" magical="213.243578918855" />
 			<speed>
@@ -2149,10 +2149,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2167,7 +2166,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant B-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2176,7 +2176,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2204,9 +2204,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- Sword of Valhalla -->
-		<acquire exp="8605" sp="2" />
+		<acquire exp="8606" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1036.49635036496" mpRegen="2.4" />
+			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1046.22871046229" mpRegen="2.4" />
 			<attack physical="664.429530201342" magical="315.348233981419" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.651006711409" magical="181.257042081027" />
 			<speed>
@@ -2218,9 +2218,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4032" level="6" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2236,7 +2235,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant B-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2245,7 +2245,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2274,9 +2274,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
-		<acquire exp="10185" sp="2" />
+		<acquire exp="10186" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1097.32360097324" mpRegen="2.7" />
+			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1107.86699107867" mpRegen="2.7" />
 			<attack physical="719.646799116998" magical="340.156785791482" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.615894039735" magical="188.524193938222" />
 			<speed>
@@ -2288,10 +2288,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2307,7 +2306,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant B-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2316,7 +2316,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2342,9 +2342,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="85" /> <!-- Corroded Phantom Sword -->
-		<acquire exp="10099" sp="2" />
+		<acquire exp="10100" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1199.51338199513" mpRegen="2.7" />
 			<attack physical="804.65367965368" magical="378.90274609333" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="326.623376623377" magical="173.105219122357" />
 			<speed>
@@ -2356,10 +2356,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2374,7 +2373,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant A-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2383,7 +2383,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2408,12 +2408,12 @@
 			<skill name="Skill01_ID" id="4032" level="6" />
 			<skill name="Debuff" id="5719" level="1" />
 		</parameters>
-		<race>DEMONIC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6723" /> <!-- Monster Only (Vampire Warrior) -->
-		<acquire exp="10099" sp="2" />
+		<acquire exp="28988" sp="6" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<vitals hp="5536.90851735016" hpRegen="7.5" mp="963.503649635036" mpRegen="2.7" />
 			<attack physical="804.65367965368" magical="378.90274609333" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="272.077922077922" magical="199.07100199071" />
 			<speed>
@@ -2424,9 +2424,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2440,20 +2439,6 @@
 			<radius normal="9" grown="10" />
 			<height normal="31.5" grown="38" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="22478" level="67" type="Monster" name="Fervent Kanabion" title="Void">
 		<parameters>
@@ -2480,9 +2465,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8686" /> <!-- Themis' Tongue -->
-		<acquire exp="11894" sp="2" />
+		<acquire exp="11895" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1263.58475263585" mpRegen="2.7" />
 			<attack physical="862.713675213675" magical="405.60709752719" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="282.051282051282" magical="206.396739243455" />
 			<speed>
@@ -2493,10 +2478,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2512,7 +2496,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant A-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2521,7 +2506,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2546,9 +2531,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="11395" sp="2" />
+		<acquire exp="11396" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1358.47526358475" mpRegen="2.7" />
 			<attack physical="950.733752620545" magical="445.095379897059" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="296.22641509434" magical="216.78475059552" />
 			<speed>
@@ -2560,9 +2545,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="7" /> <!-- Power Strike -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4032" level="7" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2577,7 +2561,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant A-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2586,7 +2571,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2613,9 +2598,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="11395" sp="2" />
+		<acquire exp="11396" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1358.47526358475" mpRegen="2.7" />
 			<attack physical="950.733752620545" magical="445.095379897059" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="296.22641509434" magical="216.78475059552" />
 			<speed>
@@ -2627,9 +2612,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="7" /> <!-- Power Strike -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4032" level="7" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2645,7 +2629,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant A-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2654,7 +2639,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2682,9 +2667,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13397" sp="3" />
+		<acquire exp="13398" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540.06309148265" hpRegen="8.5" mp="1410.38118410381" mpRegen="3" />
+			<vitals hp="2540.06309148265" hpRegen="8.5" mp="1424.16869424169" mpRegen="3" />
 			<attack physical="1009.83436853002" magical="471.565535355007" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="305.590062111801" magical="223.662933913648" />
 			<speed>
@@ -2696,10 +2681,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="7" /> <!-- Power Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2715,7 +2699,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant A-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2724,7 +2709,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2749,9 +2734,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="13081" sp="3" />
+		<acquire exp="13082" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2676.34069400631" hpRegen="8.5" mp="1507.70478507705" mpRegen="3" />
+			<vitals hp="2675.70977917981" hpRegen="8.5" mp="1522.30332522303" mpRegen="3" />
 			<attack physical="1097.05284552846" magical="510.356662972985" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="319.512195121951" magical="233.912923070837" />
 			<speed>
@@ -2763,9 +2748,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="8" /> <!-- Power Strike -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4032" level="8" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2780,7 +2764,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant S-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2789,7 +2774,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2816,9 +2801,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13081" sp="3" />
+		<acquire exp="13082" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2676.34069400631" hpRegen="8.5" mp="1507.70478507705" mpRegen="3" />
+			<vitals hp="2675.70977917981" hpRegen="8.5" mp="1522.30332522303" mpRegen="3" />
 			<attack physical="1105.6209700028" magical="510.356662972985" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="319.512195121951" magical="233.912923070837" />
 			<speed>
@@ -2830,9 +2815,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="8" /> <!-- Power Strike -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4032" level="8" /> <!-- Power Strike -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2848,7 +2832,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant S-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2857,7 +2842,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2885,9 +2870,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="18390" sp="4" />
+		<acquire exp="18391" sp="5" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2856.15141955836" hpRegen="8.5" mp="1574.20924574209" mpRegen="3" />
+			<vitals hp="2856.15141955836" hpRegen="8.5" mp="1589.61881589619" mpRegen="3" />
 			<attack physical="1191.54780039699" magical="548.475213154438" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="328.313253012048" magical="240.377568668836" />
 			<speed>
@@ -2899,11 +2884,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="8" /> <!-- Power Strike -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
 			<skill id="5719" level="1" /> <!-- Kanabion Susceptibility -->
 		</skillList>
@@ -2920,7 +2904,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant S-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2929,7 +2914,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2957,7 +2942,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2981.07255520505" hpRegen="3.5" mp="315.490673154907" mpRegen="1.5" />
+			<vitals hp="2981.07255520505" hpRegen="3.5" mp="317.923763179238" mpRegen="1.5" />
 			<attack physical="273.47036903474" magical="140.243521687815" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="184.745762711864" magical="202.07018846138" />
 			<speed>
@@ -2969,12 +2954,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- Power Strike -->
-			<skill id="4047" level="2" /> <!-- Hold -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
+			<skill id="4047" level="2" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3025,7 +3009,7 @@
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3062,7 +3046,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- StormBringer -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5963.40694006309" hpRegen="3.5" mp="315.490673154907" mpRegen="1.5" />
+			<vitals hp="5962.77602523659" hpRegen="3.5" mp="317.923763179238" mpRegen="1.5" />
 			<attack physical="225.282485875706" magical="112.775135371029" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="184.229918938836" magical="202.576630036471" />
 			<speed>
@@ -3074,12 +3058,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- Power Strike -->
-			<skill id="4098" level="3" /> <!-- Silence -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
+			<skill id="4098" level="3" /> <!-- Silence -->
 			<skill id="4613" level="2" /> <!-- Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -3117,7 +3100,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="68" /> <!-- Falchion -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4390.53627760252" hpRegen="4.5" mp="463.098134630981" mpRegen="1.8" />
+			<vitals hp="4389.90536277603" hpRegen="4.5" mp="467.964314679643" mpRegen="1.8" />
 			<attack physical="789.561170212766" magical="387.953938837697" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="195.3125" magical="315.317732932589" />
 			<speed>
@@ -3129,13 +3112,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- Power Strike -->
-			<skill id="4047" level="3" /> <!-- Hold -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
+			<skill id="4047" level="3" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3187,7 +3169,7 @@
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3224,7 +3206,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="8764.03785488959" hpRegen="4.5" mp="463.098134630981" mpRegen="1.8" />
+			<vitals hp="8764.03785488959" hpRegen="4.5" mp="467.964314679643" mpRegen="1.8" />
 			<attack physical="653.645833333333" magical="320.0619995411" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="195.878623188406" magical="315.82776534868" />
 			<speed>
@@ -3236,13 +3218,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="3" /> <!-- Power Strike -->
-			<skill id="4098" level="4" /> <!-- Silence -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="3" /> <!-- Power Strike -->
+			<skill id="4098" level="4" /> <!-- Silence -->
 			<skill id="4613" level="3" /> <!-- Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -3276,10 +3257,10 @@
 			<skill name="Skill01_ID" id="4032" level="4" />
 			<skill name="Skill02_ID" id="4047" level="4" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9963.40694006309" hpRegen="5.5" mp="720.194647201946" mpRegen="2.1" />
+			<vitals hp="9962.77602523659" hpRegen="5.5" mp="727.493917274939" mpRegen="2.1" />
 			<attack physical="1296.38195086854" magical="626.401440459648" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="376.086956521739" magical="298.961912252379" />
 			<speed>
@@ -3291,13 +3272,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- Power Strike -->
-			<skill id="4047" level="4" /> <!-- Hold -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4047" level="4" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3381,10 +3361,10 @@
 			<skill name="Skill02_ID" id="4613" level="4" />
 			<skill name="Skill03_ID" id="4098" level="5" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="19926.1829652997" hpRegen="5.5" mp="720.194647201946" mpRegen="2.1" />
+			<vitals hp="19926.1829652997" hpRegen="5.5" mp="727.493917274939" mpRegen="2.1" />
 			<attack physical="1089.37198067633" magical="524.87648568351" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="375.971434572569" magical="299.230883833353" />
 			<speed>
@@ -3396,13 +3376,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- Power Strike -->
-			<skill id="4098" level="5" /> <!-- Silence -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4098" level="5" /> <!-- Silence -->
 			<skill id="4613" level="4" /> <!-- Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -3440,7 +3419,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="17981.072555205" hpRegen="6.5" mp="1007.29927007299" mpRegen="2.4" />
+			<vitals hp="17981.072555205" hpRegen="6.5" mp="1017.03163017032" mpRegen="2.4" />
 			<attack physical="2932.71995399655" magical="1393.2682130017" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="388.513513513514" magical="426.886740755354" />
 			<speed>
@@ -3452,12 +3431,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- Power Strike -->
-			<skill id="4047" level="5" /> <!-- Hold -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4047" level="5" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3544,7 +3522,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="35924.2902208202" hpRegen="6.5" mp="1007.29927007299" mpRegen="2.4" />
+			<vitals hp="35924.2902208202" hpRegen="6.5" mp="1017.03163017032" mpRegen="2.4" />
 			<attack physical="2658.78378378378" magical="1262.85830826474" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="311.398354876616" magical="502.18576353579" />
 			<speed>
@@ -3556,13 +3534,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="5" /> <!-- Power Strike -->
-			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4613" level="5" /> <!-- Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -3599,7 +3576,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="20810.094637224" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
+			<vitals hp="20810.094637224" hpRegen="7.5" mp="1326.84509326845" mpRegen="2.7" />
 			<attack physical="2336.25556375237" magical="2084.53893992919" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="466.455696202532" magical="511.770201320234" />
 			<speed>
@@ -3611,12 +3588,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- Power Strike -->
-			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4047" level="6" /> <!-- Hold -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3666,7 +3642,7 @@
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3702,7 +3678,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="41576.0252365931" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
+			<vitals hp="41576.0252365931" hpRegen="7.5" mp="1326.84509326845" mpRegen="2.7" />
 			<attack physical="1991.98923744879" magical="2042.74660015911" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="465.969546872134" magical="511.959315579287" />
 			<speed>
@@ -3714,12 +3690,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- Power Strike -->
-			<skill id="4098" level="7" /> <!-- Silence -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4415" level="6" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4098" level="7" /> <!-- Silence -->
 			<skill id="4613" level="6" /> <!-- Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>

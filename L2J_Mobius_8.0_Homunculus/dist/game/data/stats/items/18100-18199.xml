@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="18100" name="Blessed Eternal Necklace" type="Armor">
-		<!-- Blessed Eternal Necklace. MP +65 effect. -->
+		<!-- Blessed Eternal Necklace. MP +65. -->
 		<set name="icon" val="icon.r991_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -19,7 +19,7 @@
 		</stats>
 	</item>
 	<item id="18101" name="Blessed Eternal Earring" type="Armor">
-		<!-- Blessed Eternal Earring. MP +49 effect. -->
+		<!-- Blessed Eternal Earring. MP +49. -->
 		<set name="icon" val="icon.r991_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -37,7 +37,7 @@
 		</stats>
 	</item>
 	<item id="18102" name="Blessed Eternal Ring" type="Armor">
-		<!-- Blessed Eternal Ring. MP +33 effect. -->
+		<!-- Blessed Eternal Ring. MP +33. -->
 		<set name="icon" val="icon.r991_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -55,7 +55,7 @@
 		</stats>
 	</item>
 	<item id="18103" name="Unidentified Requiem Shaper" type="EtcItem">
-		<!-- A Requiem Shaper in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon/ dagger) -->
+		<!-- Unidentified Requiem Shaper. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon/ dagger) -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -187,7 +187,7 @@
 		</skills>
 	</item>
 	<item id="18114" name="Unidentified Requiem Dual Sword" type="EtcItem">
-		<!-- A Requiem Dual Sword in an unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. -->
+		<!-- Unidentified Requiem Dual Swords. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="DUALSWORD" />
@@ -199,7 +199,7 @@
 		</skills>
 	</item>
 	<item id="18115" name="Unidentified Requiem Dual Dagger" type="EtcItem">
-		<!-- A Requiem Dual Dagger in an unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. -->
+		<!-- Unidentified Requiem Dual Daggers. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
@@ -211,7 +211,7 @@
 		</skills>
 	</item>
 	<item id="18116" name="Unidentified Requiem Dual Blunt Weapon" type="EtcItem">
-		<!-- A Requiem Dual Blunt Weapon in an unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. -->
+		<!-- Unidentified Requiem Dual Blunt Weapons. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
@@ -283,7 +283,7 @@
 		</skills>
 	</item>
 	<item id="18122" name="Unidentified Immortal Shield" additionalName="Heavy Armor" type="EtcItem">
-		<!-- An Immortal Shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Shield/ Heavy armor) -->
+		<!-- Unidentified Immortal Shield. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="SHIELD" />
@@ -415,7 +415,7 @@
 		</skills>
 	</item>
 	<item id="18133" name="Unidentified Immortal Sigil" additionalName="Robe" type="EtcItem">
-		<!-- An Immortal Sigil in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: shield/ robe) -->
+		<!-- Unidentified Immortal Sigil. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. -->
 		<set name="icon" val="icon.weapon_karyen_i00" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="SIGIL" />
@@ -427,7 +427,7 @@
 		</skills>
 	</item>
 	<item id="18134" name="Unidentified Immortal Necklace" type="EtcItem">
-		<!-- An Immortal Necklace in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Necklace) -->
+		<!-- Unidentified Immortal Necklace. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. (Type: Necklace) -->
 		<set name="icon" val="icon.r1_necklace_i00" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -691,7 +691,7 @@
 		</skills>
 	</item>
 	<item id="18156" name="Unidentified Twilight Shield" additionalName="Heavy Armor" type="EtcItem">
-		<!-- A Twilight Shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Shield/ Heavy armor) -->
+		<!-- Unidentified Twilight Shield. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="SHIELD" />
@@ -823,7 +823,7 @@
 		</skills>
 	</item>
 	<item id="18167" name="Unidentified Twilight Sigil" additionalName="Robe" type="EtcItem">
-		<!-- A Twilight Sigil in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Shield/ robe) -->
+		<!-- Unidentified Twilight Sigil. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. -->
 		<set name="icon" val="icon.weapon_dynaksus_i00" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="SIGIL" />
@@ -835,7 +835,7 @@
 		</skills>
 	</item>
 	<item id="18168" name="Unidentified Twilight Necklace" type="EtcItem">
-		<!-- A Twilight Necklace in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Necklace) -->
+		<!-- Unidentified Twilight Necklace. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. (Type: necklace) -->
 		<set name="icon" val="icon.r2_necklace_i00" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -1099,7 +1099,7 @@
 		</skills>
 	</item>
 	<item id="18190" name="Unidentified Seraph Shield" additionalName="Heavy Armor" type="EtcItem">
-		<!-- A Seraph Shield in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Shield/ Heavy armor) -->
+		<!-- Unidentified Seraph Shield. Double-click to identify. The acquired item can be Blessed, Standard, or Bound. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="crystal_type" val="R95" />
 		<set name="commissionItemType" val="SHIELD" />

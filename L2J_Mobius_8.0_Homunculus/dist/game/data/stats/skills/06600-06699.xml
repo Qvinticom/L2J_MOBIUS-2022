@@ -1959,7 +1959,7 @@
 		</effects>
 	</skill>
 	<skill id="6620" toLevel="7" name="Maguen Plasma">
-		<!-- P. Atk. and M. Atk. are increased. -->
+		<!-- P./ M. Atk. are increased. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -2006,7 +2006,7 @@
 		</effects>
 	</skill>
 	<skill id="6621" toLevel="7" name="Maguen Plasma">
-		<!-- P. Atk. and M. Atk. are increased. -->
+		<!-- P./ M. Atk. are increased. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -2053,7 +2053,7 @@
 		</effects>
 	</skill>
 	<skill id="6622" toLevel="1" name="Stun">
-		<!-- Stuns the target for 20 sec. Received Critical Damage Rate +50%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 20 sec. Received P. Critical Rate +50%.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -2097,7 +2097,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6624" toLevel="1" name="Stun">
-		<!-- Stuns the target for 9 sec. Received Critical Damage Rate +50%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 9 sec. Received Critical Damage Rate +50%.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2320,7 +2320,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6635" toLevel="1" name="Energy of Crtical Attack">
-		<!-- Increases Critical attack rate temporarily. Effect 3. -->
+		<!-- Temporarily increases Critical Rate for standard attacks. Effect 3. -->
 		<icon>icon.etc_critical_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>3</abnormalLevel>
@@ -2405,7 +2405,7 @@
 		</effects>
 	</skill>
 	<skill id="6638" toLevel="1" name="Mysterious Aura">
-		<!-- You've got a big head. -->
+		<!-- Makes your head larger. -->
 		<icon>icon.skill2513</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>1</abnormalLevel>
@@ -2442,7 +2442,7 @@
 		</effects>
 	</skill>
 	<skill id="6639" toLevel="1" name="Energy of Crtical Rate: Damage">
-		<!-- Critical Damage is increased temporarily. Effect 3. -->
+		<!-- Temporarily increases Critical Damage for standard attacks. Effect 3. -->
 		<icon>icon.skill2514</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>3</abnormalLevel>
@@ -2469,7 +2469,7 @@
 		</effects>
 	</skill>
 	<skill id="6640" toLevel="1" name="Vitality Replenishing Aura">
-		<!-- Recovers Vitality upon acquiring XP. -->
+		<!-- Recovers Vitality when acquiring XP. -->
 		<icon>icon.skilltransform4</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>1</abnormalLevel>
@@ -2744,28 +2744,28 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6658" toLevel="1" name="84 Lv. Raid Boss">
+	<skill id="6658" toLevel="1" name="Raid Boss (Lv. 84)">
 		<!-- Raid Boss Darnel -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6659" toLevel="1" name="84 Lv. Raid Boss">
+	<skill id="6659" toLevel="1" name="Raid Boss (Lv. 84)">
 		<!-- Raid Boss Kechi -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6660" toLevel="1" name="84 Lv. Raid Boss">
+	<skill id="6660" toLevel="1" name="Raid Boss (Lv. 84)">
 		<!-- Raid Boss Tears -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6661" toLevel="1" name="85 Lv. Raid Boss">
+	<skill id="6661" toLevel="1" name="Raid Boss (Lv. 85)">
 		<!-- Ice warrior created by blowing life into Freya's crystal fragment. It has no understanding of self and only obeys the commands of its master Freya. It will even walk into death if it is her will. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
@@ -2827,14 +2827,14 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="6663" toLevel="1" name="76 Lv. Raid Boss">
-		<!-- Powerful gigantic golem created by Dr. Kaos using the Pael ruins star stone. Dr. Chaos was once the Golem Maestro for all guilds, but he tried to steal the Leader's Blueprints. Was assigned to obtaining revenge for the Black Anvil Guild, and he led the golem army that he made to Pavel's Ruins. When an outsider is found, in order to punish himself, consider it troops from the Black Anvil Guild, and just attack. His ultimate goal is world domination. -->
+	<skill id="6663" toLevel="1" name="Raid Boss (Lv. 76)">
+		<!-- This powerful Chaos Golem was made from Star Stones gathered from the Ruins of Pavel by the mad scientist Dr. Chaos, who styles himself the Emperor of Evil. Once a Golem Maestro, Dr. Chaos was expelled from the Black Anvil Guild for trying to steal a blueprint from the elders. He swore revenge on the Black Anvil Guild, conquering the Ruins of Pavel with the horrifying golem army he created. He views all outsiders as assassins sent by the Guild and will attack immediately. His ultimate goal is world domination. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6664" toLevel="1" name="84 Lv. Raid Boss">
+	<skill id="6664" toLevel="1" name="Raid Boss (Lv. 84)">
 		<!-- Though it appears human, it is actually an archangel who speaks directly with Einhasad. The ancient religious text discovered at the Tower of Insolence gave evidence that the grail was hidden somewhere in the Monastery of Silence. Afterward, extensive searches for the grail took place in the Temple of Bishop, but no one could escape the judgment of the Master of Splendor. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
@@ -2880,7 +2880,7 @@
 		</effects>
 	</skill>
 	<skill id="6667" toLevel="1" name="Feral Wind Walk">
-		<!-- Increases Speed. by 33 for 5 min. -->
+		<!-- Speed +33 for 5 min. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -2907,7 +2907,7 @@
 		</effects>
 	</skill>
 	<skill id="6668" toLevel="1" name="Feral Death Whisper">
-		<!-- Increases Critical Damage by 35% for 5 min. -->
+		<!-- For 5 min., Critical Damage for standard attacks +35%. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -2988,7 +2988,7 @@
 		</effects>
 	</skill>
 	<skill id="6671" toLevel="1" name="Feral Berserker Spirit">
-		<!-- P. Def. decreases momentarily. by 8%, M. Def. by 16%, Evasion by 4 and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed. by 8 for 5 min. -->
+		<!-- For 5 min., P. Def. -8%, M. Def. -16%, and P. Evasion -4. P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Speed +8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -3146,7 +3146,7 @@
 		</effects>
 	</skill>
 	<skill id="6677" toLevel="1" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3214,7 +3214,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6681" toLevel="1" name="Maguen Wind Walk">
-		<!-- Speed. increases by 40 for 20 min. -->
+		<!-- Speed +40 for 20 min. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -3242,7 +3242,7 @@
 		</effects>
 	</skill>
 	<skill id="6682" toLevel="1" name="Elite Maguen Wind Walk">
-		<!-- Speed. increases by 45 for 20 min. -->
+		<!-- Speed +45 for 20 min. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -3355,7 +3355,7 @@
 		</effects>
 	</skill>
 	<skill id="6687" toLevel="1" name="Patience">
-		<!-- Skill Power is increased. -->
+		<!-- P. Skill Power is increased. -->
 		<icon>icon.skill0983</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
@@ -3429,7 +3429,7 @@
 		</effects>
 	</skill>
 	<skill id="6690" toLevel="1" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3593,6 +3593,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6696" toLevel="1" name="Presentation - Quest Done">
+		<!-- none\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -3627,7 +3628,7 @@
 				<power>45257</power>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>6698</skillId> <!-- Freeze - Eternal Ice -->
+				<skillId>6698</skillId> <!-- Freeze -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
@@ -3672,7 +3673,7 @@
 		</endEffects>
 	</skill>
 	<skill id="6699" toLevel="1" name="Ball Trapping Gnosian Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>

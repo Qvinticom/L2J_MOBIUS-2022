@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="8700" toLevel="1" name="Special Talisman (R95-grade) - Shield Defense (Active)">
-		<!-- Increases Shield Defense by 1515 momentarily through the power of the talisman. -->
+	<skill id="8700" toLevel="1" name="Special R95-grade Talisman - Shield Defense (Active)">
+		<!-- Shield Defense +1515, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_pd_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -25,8 +25,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8701" toLevel="1" name="Special Talisman (R99-grade) - Shield Defense (Active)">
-		<!-- Increases Shield Defense by 1638 momentarily through the power of the talisman. -->
+	<skill id="8701" toLevel="1" name="Special R99-grade Talisman - Shield Defense (Active)">
+		<!-- Shield Defense +1638, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_pd_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -50,31 +50,31 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8702" toLevel="1" name="Special Talisman (R-grade) - Momentum">
+	<skill id="8702" toLevel="1" name="Special R-grade Talisman - Momentum">
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="8703" toLevel="1" name="Special Talisman (R90-grade) - Momentum">
+	<skill id="8703" toLevel="1" name="Special R90-grade Talisman - Momentum">
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>90</magicLevel>
 	</skill>
-	<skill id="8704" toLevel="1" name="Special Talisman (R95-grade) - Momentum">
+	<skill id="8704" toLevel="1" name="Special R95-grade Talisman - Momentum">
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>95</magicLevel>
 	</skill>
-	<skill id="8705" toLevel="1" name="Special Talisman (R99-grade) - Momentum">
+	<skill id="8705" toLevel="1" name="Special R99-grade Talisman - Momentum">
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
 	</skill>
-	<skill id="8706" toLevel="1" name="Special Talisman (R-grade) - Momentum (Active)">
+	<skill id="8706" toLevel="1" name="Special R-grade Talisman - Momentum (Active)">
 		<!-- Increases Momentum through the power of the talisman. Up to level 5. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
@@ -98,7 +98,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8707" toLevel="1" name="Special Talisman (R90-grade) - Momentum (Active)">
+	<skill id="8707" toLevel="1" name="Special R90-grade Talisman - Momentum (Active)">
 		<!-- Increases Momentum through the power of the talisman. Up to level 5. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
@@ -122,7 +122,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8708" toLevel="1" name="Special Talisman (R95-grade) - Momentum (Active)">
+	<skill id="8708" toLevel="1" name="Special R95-grade Talisman - Momentum (Active)">
 		<!-- Increases Momentum through the power of the talisman. Up to level 5. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
@@ -146,7 +146,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8709" toLevel="1" name="Special Talisman (R99-grade) - Momentum (Active)">
+	<skill id="8709" toLevel="1" name="Special R99-grade Talisman - Momentum (Active)">
 		<!-- Increases Momentum through the power of the talisman. Up to level 5. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
@@ -170,8 +170,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8710" toLevel="1" name="Special Talisman (R-grade) - Mana Drain (Active)">
-		<!-- Momentarily absorbs 2 MP per attack with the power of Talisman. -->
+	<skill id="8710" toLevel="1" name="Special R-grade Talisman - Mana Drain (Active)">
+		<!-- With a certain chance, absorbs 2 MP per attack, when the talisman is equipped. -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -203,8 +203,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8711" toLevel="1" name="Special Talisman (R90-grade) - Mana Drain (Active)">
-		<!-- Momentarily absorbs 3 MP per attack with the power of Talisman. -->
+	<skill id="8711" toLevel="1" name="Special R90-grade Talisman - Mana Drain (Active)">
+		<!-- With a certain chance, absorbs 3 MP per attack, when the talisman is equipped. -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -236,8 +236,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8712" toLevel="1" name="Special Talisman (R95-grade) - Mana Drain (Active)">
-		<!-- Momentarily absorbs 4 MP per attack with the power of Talisman. -->
+	<skill id="8712" toLevel="1" name="Special R95-grade Talisman - Mana Drain (Active)">
+		<!-- With a certain chance, absorbs 4 MP per attack, when the talisman is equipped. -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -269,8 +269,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8713" toLevel="1" name="Special Talisman (R99-grade) - Mana Drain (Active)">
-		<!-- Momentarily absorbs 5 MP per attack with the power of Talisman. -->
+	<skill id="8713" toLevel="1" name="Special R99-grade Talisman - Mana Drain (Active)">
+		<!-- With a certain chance, absorbs 5 MP per attack, when the talisman is equipped. -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -366,8 +366,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8718" toLevel="1" name="Special Talisman (R-grade) - Blood Siphon (Active)">
-		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
+	<skill id="8718" toLevel="1" name="Special R-grade Talisman - Blood Siphon (Active)">
+		<!-- With a certain chance, absorbs 1% HP per attack, when the talisman is equipped. -->
 		<icon>icon.r_talisman_cr_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -391,8 +391,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8719" toLevel="1" name="Special Talisman (R90-grade) - Blood Siphon (Active)">
-		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
+	<skill id="8719" toLevel="1" name="Special R90-grade Talisman - Blood Siphon (Active)">
+		<!-- With a certain chance, absorbs 1% HP per attack, when the talisman is equipped. -->
 		<icon>icon.r_talisman_cr_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -416,8 +416,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8720" toLevel="1" name="Special Talisman (R95-grade) - Blood Siphon (Active)">
-		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
+	<skill id="8720" toLevel="1" name="Special R95-grade Talisman - Blood Siphon (Active)">
+		<!-- With a certain chance, absorbs 1% HP per attack, when the talisman is equipped. -->
 		<icon>icon.r_talisman_cr_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -441,8 +441,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8721" toLevel="1" name="Special Talisman (R99-grade) - Blood Siphon (Active)">
-		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
+	<skill id="8721" toLevel="1" name="Special R99-grade Talisman - Blood Siphon (Active)">
+		<!-- With a certain chance, absorbs 1% HP per attack, when the talisman is equipped. -->
 		<icon>icon.r_talisman_cr_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -466,8 +466,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8722" toLevel="1" name="Special Talisman (R-grade) - Increase Range">
-		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
+	<skill id="8722" toLevel="1" name="Special R-grade Talisman - Increase Range">
+		<!-- Bow/ crossbow attack range +10, when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -484,8 +484,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8723" toLevel="1" name="Special Talisman (R90-grade) - Increase Range">
-		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
+	<skill id="8723" toLevel="1" name="Special R90-grade Talisman - Increase Range">
+		<!-- Bow/ crossbow attack range +10, when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -502,8 +502,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8724" toLevel="1" name="Special Talisman (R95-grade) - Increase Range">
-		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
+	<skill id="8724" toLevel="1" name="Special R95-grade Talisman - Increase Range">
+		<!-- Bow/ crossbow attack range +10, when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -520,8 +520,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8725" toLevel="1" name="Special Talisman (R99-grade) - Increase Range">
-		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
+	<skill id="8725" toLevel="1" name="Special R99-grade Talisman - Increase Range">
+		<!-- Bow/ crossbow attack range +10, when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -538,8 +538,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8726" toLevel="1" name="Special Talisman (R-grade) - Increase Range (Active)">
-		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
+	<skill id="8726" toLevel="1" name="Special R-grade Talisman - Increase Range (Active)">
+		<!-- Bow/ crossbow attack range +20, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -568,8 +568,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8727" toLevel="1" name="Special Talisman (R90-grade) - Increase Range (Active)">
-		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
+	<skill id="8727" toLevel="1" name="Special R90-grade Talisman - Increase Range (Active)">
+		<!-- Bow/ crossbow attack range +20, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -598,8 +598,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8728" toLevel="1" name="Special Talisman (R95-grade) - Increase Range (Active)">
-		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
+	<skill id="8728" toLevel="1" name="Special R95-grade Talisman - Increase Range (Active)">
+		<!-- Bow/ crossbow attack range +20, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -628,8 +628,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8729" toLevel="1" name="Special Talisman (R99-grade) - Increase Range (Active)">
-		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
+	<skill id="8729" toLevel="1" name="Special R99-grade Talisman - Increase Range (Active)">
+		<!-- Bow/ crossbow attack range +20, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -658,7 +658,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8730" toLevel="1" name="Special Talisman (R-grade) - Increase Servitor Enhancement (Active)">
+	<skill id="8730" toLevel="1" name="Special R-grade Talisman - Increase Servitor Enhancement (Active)">
 		<icon>icon.r85_sp_talisman_sm_st_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -676,7 +676,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8731" toLevel="1" name="Special Talisman (R90-grade) - Increase Servitor Enhancement (Active)">
+	<skill id="8731" toLevel="1" name="Special R90-grade Talisman - Increase Servitor Enhancement (Active)">
 		<icon>icon.r90_sp_talisman_sm_st_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -694,7 +694,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8732" toLevel="1" name="Special Talisman (R95-grade) - Increase Servitor Enhancement (Active)">
+	<skill id="8732" toLevel="1" name="Special R95-grade Talisman - Increase Servitor Enhancement (Active)">
 		<icon>icon.r95_sp_talisman_sm_st_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -712,7 +712,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8733" toLevel="1" name="Special Talisman (R99-grade) - Increase Servitor Enhancement (Active)">
+	<skill id="8733" toLevel="1" name="Special R99-grade Talisman - Increase Servitor Enhancement (Active)">
 		<icon>icon.r99_sp_talisman_sm_st_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -730,7 +730,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8734" toLevel="1" name="Special Talisman (R99-grade) - Increase Servitor Enhancement (Active)">
+	<skill id="8734" toLevel="1" name="Special R99-grade Talisman - Increase Servitor Enhancement (Active)">
 		<icon>icon.r_sp_talisman_sm_rt_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -748,8 +748,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8735" toLevel="1" name="Special Talisman (R-grade) - Interrupt Casting">
-		<!-- Decreases Magic Cancel Rate by 10% when equipped. -->
+	<skill id="8735" toLevel="1" name="Special R-grade Talisman - Interrupt Casting">
+		<!-- Casting Interruption Rate -10%, when equipped. -->
 		<icon>icon.r85_talisman_ma_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -761,8 +761,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8736" toLevel="1" name="Special Talisman (R-grade) - Increase Magic Cancel (Active)">
-		<!-- Prevents magic from being canceled momentarily through the power of the talisman. -->
+	<skill id="8736" toLevel="1" name="Special R-grade Talisman - Interrupt Casting (Active)">
+		<!-- Prevents casting from being interrupted, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -786,8 +786,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8737" toLevel="1" name="Special Talisman (R-grade) - MP Recovery">
-		<!-- MP Recovery Rate +0.66. -->
+	<skill id="8737" toLevel="1" name="Special R-grade Talisman - MP Recovery">
+		<!-- MP Recovery Rate +0.66, when equipped. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -799,8 +799,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8738" toLevel="1" name="Special Talisman (R90-grade) - MP Recovery">
-		<!-- MP Recovery Rate +0.68. -->
+	<skill id="8738" toLevel="1" name="Special R90-grade Talisman - MP Recovery">
+		<!-- MP Recovery Rate +0.68, when equipped. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -812,8 +812,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8739" toLevel="1" name="Special Talisman (R95-grade) - MP Recovery">
-		<!-- MP Recovery Rate +0.70. -->
+	<skill id="8739" toLevel="1" name="Special R95-grade Talisman - MP Recovery">
+		<!-- MP Recovery Rate +0.70, when equipped. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -825,8 +825,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8740" toLevel="1" name="Special Talisman (R99-grade) - MP Recovery">
-		<!-- MP Recovery Rate +0.72. -->
+	<skill id="8740" toLevel="1" name="Special R99-grade Talisman - MP Recovery">
+		<!-- MP Recovery Rate +0.72, when equipped. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -838,8 +838,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8741" toLevel="1" name="Special Talisman (R-grade) - Decrease MP Consumption">
-		<!-- Decreases MP Consumption by 15% when equipped. -->
+	<skill id="8741" toLevel="1" name="Special R-grade Talisman - Decrease MP Consumption">
+		<!-- Skill MP Consumption -15%, when equipped. -->
 		<icon>icon.r85_talisman_mp_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -862,8 +862,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8742" toLevel="1" name="Special Talisman (R-grade) - Enhance Heal">
-		<!-- Increases heal rate by 75 when equipped. -->
+	<skill id="8742" toLevel="1" name="Special R-grade Talisman - Enhance Heal">
+		<!-- Healing Power +75, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -875,8 +875,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8743" toLevel="1" name="Special Talisman (R90-grade) - Enhance Heal">
-		<!-- Increases heal rate by 82 when equipped. -->
+	<skill id="8743" toLevel="1" name="Special R90-grade Talisman - Enhance Heal">
+		<!-- Healing Power +82, when equipped. -->
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -888,8 +888,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8744" toLevel="1" name="Special Talisman (R95-grade) - Enhance Heal">
-		<!-- Increases heal rate by 90 when equipped. -->
+	<skill id="8744" toLevel="1" name="Special R95-grade Talisman - Enhance Heal">
+		<!-- Healing Power +90, when equipped. -->
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -901,8 +901,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8745" toLevel="1" name="Special Talisman (R99-grade) - Enhance Heal">
-		<!-- Increases heal rate by 96 when equipped. -->
+	<skill id="8745" toLevel="1" name="Special R99-grade Talisman - Enhance Heal">
+		<!-- Healing Power +96, when equipped. -->
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -914,8 +914,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8746" toLevel="1" name="Special Talisman (R-grade) - Increase Heal Enhancement (Active)">
-		<!-- Increases heal rate by 225 momentarily through the power of the talisman. -->
+	<skill id="8746" toLevel="1" name="Special R-grade Talisman - Increase Heal Enhancement (Active)">
+		<!-- Healing Power +225, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_hp_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -939,8 +939,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8747" toLevel="1" name="Special Talisman (R90-grade) - Increase Heal Enhancement (Active)">
-		<!-- Increases heal rate by 246 momentarily through the power of the talisman. -->
+	<skill id="8747" toLevel="1" name="Special R90-grade Talisman - Increase Heal Enhancement (Active)">
+		<!-- Healing Power +246, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_hp_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -964,8 +964,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8748" toLevel="1" name="Special Talisman (R95-grade) - Increase Heal Enhancement (Active)">
-		<!-- Increases heal rate by 270 momentarily through the power of the talisman. -->
+	<skill id="8748" toLevel="1" name="Special R95-grade Talisman - Increase Heal Enhancement (Active)">
+		<!-- Healing Power +270, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_hp_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -989,8 +989,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8749" toLevel="1" name="Special Talisman (R99-grade) - Increase Heal Enhancement (Active)">
-		<!-- Increases heal rate by 288 momentarily through the power of the talisman. -->
+	<skill id="8749" toLevel="1" name="Special R99-grade Talisman - Increase Heal Enhancement (Active)">
+		<!-- Healing Power +288, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_hp_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -1015,7 +1015,7 @@
 		</effects>
 	</skill>
 	<skill id="8750" toLevel="1" name="Infinity Cutter Special Ability">
-		<!-- Decreases the enemy's P. Def. during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. -->
+		<!-- Decreases enemy's P. Def. after a critical attack. Also increases Max HP/ MP/ CP, Shield Defense Rate and PvP Damage. Reflects some of the received damage back to the enemy. -->
 		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1039,7 +1039,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8752" toLevel="1" name="Infinity Avenger Special Ability">
-		<!-- Seduces the enemy during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. -->
+		<!-- Blinds and confuses the enemy after a critical attack. Also increases Max HP/ MP/ CP, Shield Defense Rate and PvP Damage. Reflects some of the received damage back to the enemy. -->
 		<icon>icon.weapon_the_axe_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1054,7 +1054,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8754" toLevel="1" name="Infinity Slasher Special Ability">
-		<!-- Increases Critical Rate/ damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<!-- Increases Critical Rate/ Damage for standard attacks, Max HP/ MP, and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1068,7 +1068,7 @@
 		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="8756" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1088,14 +1088,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8757" toLevel="1" name="Infinity Dual Special Ability">
-		<!-- Blocks enemy's ability to use physical skills during a critical attack. Increases Max HP, Max MP, Max CP, Critical Rate. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<!-- Blocks enemy's ability to use physical skills after a critical attack. Increases Max HP/ MP/ CP, Critical Rate for standard attacks, and PvP damage. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_the_dualsword_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="8758" toLevel="1" name="Restrain Physical Skills">
-		<!-- Temporarily blocks physical skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Temporarily blocks physical skills.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1115,14 +1115,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8759" toLevel="1" name="Infinity Fighter Special Ability">
-		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Maximum HP/ MP/ CP, evasion and damage during PvP while reflecting debuff inflicted to the enemy. -->
+		<!-- Inflicts Stun on the enemy after a critical attack. Increases Maximum HP/ MP/ CP, P. Evasion, and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_the_fist_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="8760" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1142,14 +1142,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8761" toLevel="1" name="Infinity Dagger Special Ability">
-		<!-- Momentarily the enemy's magic skills during a critical attack. Increases Max MP/ Max CP/ Atk. Spd./ MP Regeneration, Critical Rate when attacking from behind, and damage inflicted during PvP. restores HP by using some of the damage inflicted upon the enemy with a certain probability. -->
+		<!-- Blocks enemy's magic skills after a critical attack. Increases Max MP/ CP, Atk. Spd., MP Recovery Rate, Critical Rate for standard attacks from behind. Absorbs some of the inflicted damage as HP. Increases PvP Damage. -->
 		<icon>icon.weapon_the_dagger_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="8762" toLevel="1" name="Restrain Magic Skills">
-		<!-- Temporarily blocks magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Temporarily blocks magic skills.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1169,7 +1169,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8763" toLevel="1" name="Infinity Stormer Special Ability">
-		<!-- After a critical attack, removes one or more of the enemy's buffs. Increases Max HP/ CP, Atk. Spd., P. Accuracy and PvP Damage. Reflects debuffs back to the enemy. Allows to attack multiple opponents. -->
+		<!-- After a critical attack, removes one or more of the enemy's buffs. Increases Max HP/ CP, Atk. Spd., P. Accuracy, and PvP Damage. Reflects debuffs back to the enemy. Increases the number of targets attacked with a spear. -->
 		<icon>icon.weapon_the_pole_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1184,7 +1184,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8765" toLevel="1" name="Infinity Thrower Special Ability">
-		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill cooldown is short. Has a chance to decrease MP Consumption. -->
+		<!-- Decreases enemy's Speed after a critical attack. Increases Max MP/ CP and PvP Damage. Decreases Skill Cooldown and MP Consumption. -->
 		<icon>icon.weapon_the_bow_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1210,7 +1210,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="8767" toLevel="1" name="Infinity Retributer Special Ability">
-		<!-- Regenerates HP by 100% when using a good magic. Increases Max HP, Max CP, M. Atk., and Critical Rate of a magic damage. Inflicts additional damage during PvP. Decreases MP Consumption and cancel rate when casting a magic. -->
+		<!-- HP Recovery Rate +100% when using a good magic. Increases Max HP/ CP, M. Atk., M. Skill Critical Damage and PvP Damage. Decreases MP Consumption and cancel rate after magic use. -->
 		<icon>icon.weapon_the_staff_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1242,28 +1242,28 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8771" toLevel="1" name="Infinity Rapier Special Ability">
-		<!-- Decreases the enemy's P. Def. on a critical attack. Increases Max HP, Max MP, Max CP. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. In addition, when a critical hit occurs during a regular attack, there is a chance that the capacity of a party member's skills will be maximized. -->
+		<!-- Decreases enemy's P. Def. after a critical attack. Increases Max HP/ MP/ CP and PvP Damage. Reflects some of the received damage back to the enemy. In addition, when a critical hit occurs after a standard attack, there is a chance that the capacity of a party member's skills will be maximized. -->
 		<icon>icon.weapon_infinity_rapier_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="8772" toLevel="1" name="Infinity Sword Special Ability">
-		<!-- Increases Critical Rate/ damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<!-- Increases Critical Rate/ Damage for standard attacks, Max HP/ MP, and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_infinity_sword_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="8773" toLevel="1" name="Infinity Shooter Special Ability">
-		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill cooldown is short. Has a chance to decrease MP Consumption. -->
+		<!-- Decreases enemy's Speed after a critical attack. Increases Max MP/ CP and PvP Damage. Decreases Skill Cooldown and MP Consumption. -->
 		<icon>icon.weapon_infinity_shooter_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="8774" toLevel="1" name="Special Talisman (R-grade) - Cancel Debuff (Active)">
-		<!-- Cancels all debuffs momentarily through the power of the talisman. -->
+	<skill id="8774" toLevel="1" name="Special R-grade Talisman - Cancel Debuff (Active)">
+		<!-- Momentarily removes all debuffs, when the talisman is equipped. -->
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>A1</operateType>
 		<mpConsume>50</mpConsume>
@@ -1285,7 +1285,7 @@
 		</effects>
 	</skill>
 	<skill id="8775" toLevel="1" name="Immortal Bracelet">
-		<!-- 5 Talisman can be equipped. -->
+		<!-- Unlocks 5 talisman slots. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
@@ -1299,7 +1299,7 @@
 		</effects>
 	</skill>
 	<skill id="8776" toLevel="1" name="Twilight Bracelet">
-		<!-- 5 Talisman can be equipped. -->
+		<!-- Unlocks 5 talisman slots. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>90</magicLevel>
@@ -1313,7 +1313,7 @@
 		</effects>
 	</skill>
 	<skill id="8777" toLevel="1" name="Seraph Bracelet">
-		<!-- 5 Talisman can be equipped. -->
+		<!-- Unlocks 5 talisman slots. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>95</magicLevel>
@@ -1327,7 +1327,7 @@
 		</effects>
 	</skill>
 	<skill id="8778" toLevel="1" name="Eternal Bracelet">
-		<!-- 5 Talisman can be equipped. -->
+		<!-- Unlocks 5 talisman slots. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
@@ -1341,7 +1341,7 @@
 		</effects>
 	</skill>
 	<skill id="8779" toLevel="1" name="Istina's Bracelet">
-		<!-- 5 Talisman can be equipped. -->
+		<!-- Unlocks 5 talisman slots. -->
 		<icon>icon.istina_bracelet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1356,7 +1356,7 @@
 		</effects>
 	</skill>
 	<skill id="8780" toLevel="1" name="Octavis' Bracelet">
-		<!-- 5 Talisman can be equipped. -->
+		<!-- Unlocks 5 talisman slots. -->
 		<icon>icon.octavis_bracelet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1464,7 +1464,7 @@
 		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="8790" toLevel="1" name="Top-grade Royal Guard Earring - Aden">
-		<!-- Max CP +5%, Confusion Resistance +15%, Confusion Atk. Rate +15% and Earth Resistance +10. -->
+		<!-- Max CP +5%, Confusion Resistance and Atk. Rate +15% and Earth Resistance +10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1499,7 +1499,7 @@
 		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="8795" toLevel="1" name="Top-grade Royal Guard Ring - Gludio">
-		<!-- Increases Earth Resistance by 15. -->
+		<!-- Earth Resistance +15. -->
 		<icon>icon.accessory_ring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1538,7 +1538,7 @@
 		</effects>
 	</skill>
 	<skill id="8798" toLevel="1" name="Top-grade Royal Guard Ring - Oren">
-		<!-- Increases Earth Resistance by 15. -->
+		<!-- Earth Resistance +15. -->
 		<icon>icon.accessory_ring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

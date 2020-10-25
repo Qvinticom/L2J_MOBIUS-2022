@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.util.Util;
@@ -61,6 +62,7 @@ public class Q10591_NobleMaterial extends Quest
 	};
 	// Item
 	private static final int FLAME_ENERGY = 80856; // Flame Energy - monster drop
+	private static final ItemHolder SOE_JOACHIM = new ItemHolder(80858, 1);
 	// Rewards
 	private static final int ADENA_AMOUNT = 5050;
 	private static final int ACHIEVEMENT_BOX_LV_100 = 80910;
@@ -318,6 +320,7 @@ public class Q10591_NobleMaterial extends Quest
 			if ((getQuestItemsCount(player, FLAME_ENERGY) >= 1000) && (player.getLevel() >= MIN_LEVEL))
 			{
 				qs.setCond(3, true);
+				giveItems(player, SOE_JOACHIM);
 			}
 		}
 	}

@@ -13,9 +13,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
-		<acquire exp="1342" sp="0" />
+		<acquire exp="1343" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<vitals hp="548.264984227129" hpRegen="7.5" mp="1199.51338199513" mpRegen="2.7" />
 			<attack physical="810.634538192247" magical="378.959428059065" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="272.257862619308" magical="199.235974453633" shield="136" shieldRate="20" />
 			<speed>
@@ -27,18 +27,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/ 4x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -55,10 +53,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="10" max="24" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant A-grade Weapon -->
 			</drop>
 			<spoil>
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant A-grade Weapon -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -74,9 +72,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="1384" sp="0" />
+		<acquire exp="1385" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2246.05678233438" hpRegen="7.5" mp="1219.78913219789" mpRegen="2.7" />
+			<vitals hp="560.883280757098" hpRegen="7.5" mp="1231.14355231144" mpRegen="2.7" />
 			<attack physical="833.555496312095" magical="391.94395092611" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="221.531286436067" magical="238.816362325065" />
 			<speed>
@@ -88,17 +86,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4073" level="6" /> <!-- Stun -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/ 4x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -115,10 +111,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="11" max="25" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Armor -->
 			</drop>
 			<spoil>
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Armor -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -135,9 +131,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="284" /> <!-- Dark Elven Longbow -->
-		<acquire exp="1515" sp="0" />
+		<acquire exp="1516" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2296.52996845426" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<vitals hp="573.501577287066" hpRegen="7.5" mp="1263.58475263585" mpRegen="2.7" />
 			<attack physical="703.779112870022" magical="405.308035287561" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="225.517454433117" magical="242.443868386023" />
 			<speed>
@@ -149,20 +145,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4040" level="6" /> <!-- Power Shot -->
 			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/ 4x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4040" level="6" /> <!-- Power Shot -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -179,10 +173,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="11" max="27" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Armor -->
 			</drop>
 			<spoil>
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Armor -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -199,9 +193,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="96" /> <!-- Scythe -->
-		<acquire exp="1469" sp="0" />
+		<acquire exp="1470" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2347.00315457413" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<vitals hp="586.119873817035" hpRegen="7.5" mp="1295.21492295215" mpRegen="2.7" />
 			<attack physical="891.807478373778" magical="418.643482502829" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="287.007904228378" magical="209.743774639837" />
 			<speed>
@@ -213,18 +207,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4072" level="6" /> <!-- Stun -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/ 4x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -241,10 +233,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant A-grade Weapon -->
 			</drop>
 			<spoil>
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant A-grade Weapon -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -261,9 +253,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
-		<acquire exp="1512" sp="0" />
+		<acquire exp="1513" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2397.47634069401" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
+			<vitals hp="598.738170347003" hpRegen="7.5" mp="1326.84509326845" mpRegen="2.7" />
 			<attack physical="921.470167730237" magical="431.947159244166" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.291749275583" magical="213.363849929887" shield="146" shieldRate="20" />
 			<speed>
@@ -275,18 +267,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4232" level="6" /> <!-- Spinning Slasher -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/ 4x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4232" level="6" /> <!-- Spinning Slasher -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -303,10 +293,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="12" max="27" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Armor -->
 			</drop>
 			<spoil>
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Armor -->
 			</spoil>
 		</dropLists>
 	</npc>

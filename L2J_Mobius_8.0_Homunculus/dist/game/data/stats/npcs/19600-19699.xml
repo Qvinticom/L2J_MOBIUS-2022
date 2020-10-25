@@ -27,14 +27,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
-				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
 				<item id="35473" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Circlet (60%) -->
 			</drop>
-			<spoil>
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -637,7 +633,7 @@
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9218.92998" hpRegen="9.5" mp="2922.844" mpRegen="3.3" />
+			<vitals hp="8446.24277456647" hpRegen="9.5" mp="2378.87788778878" mpRegen="3.3" />
 			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="1985" />
 			<speed>

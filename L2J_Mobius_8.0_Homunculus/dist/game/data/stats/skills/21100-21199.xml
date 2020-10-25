@@ -144,8 +144,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21105" toLevel="1" name="Summon Agathion - Lucky Girl">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21105" toLevel="1" name="Summon Agathion Lucky Girl">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -157,12 +157,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1529</npcId> <!-- Lucky Girl Agathion -->
+				<npcId>1529</npcId> <!-- Agathion Lucky Girl -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21106" toLevel="1" name="Summon Agathion - Lucky Boy">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21106" toLevel="1" name="Summon Agathion Lucky Boy">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -178,8 +178,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21107" toLevel="1" name="Summon Agathion - Dancing Lucky Kid">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21107" toLevel="1" name="Summon Agathion Dancing Lucky Kid">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -191,12 +191,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1531</npcId> <!-- Dancing Lucky Kid Agathion -->
+				<npcId>1531</npcId> <!-- Agathion Dancing Lucky Kid -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21108" toLevel="1" name="Summon Agathion - Monkey King">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21108" toLevel="1" name="Summon Agathion Monkey King">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -208,12 +208,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1532</npcId> <!-- Agathion - Monkey King -->
+				<npcId>1532</npcId> <!-- Agathion Monkey King -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21109" toLevel="1" name="Summon Agathion - Uthanka">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21109" toLevel="1" name="Summon Agathion Uthanka">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -225,12 +225,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1533</npcId> <!-- Uthanka Agathion -->
+				<npcId>1533</npcId> <!-- Agathion Uthanka -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21110" toLevel="1" name="Summon Agathion - Bonus B">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21110" toLevel="1" name="Summon Agathion Bonus B">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1112,8 +1112,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21133" toLevel="1" name="Summon Agathion - Zombie">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21133" toLevel="1" name="Summon Agathion Zombie">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1125,12 +1125,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1535</npcId> <!-- Zombie Agathion -->
+				<npcId>1535</npcId> <!-- Agathion Zombie -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21134" toLevel="1" name="Summon Agathion - Bluebird">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21134" toLevel="1" name="Summon Agathion Bluebird">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1142,12 +1142,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1536</npcId> <!-- Bluebird Agathion -->
+				<npcId>1536</npcId> <!-- Agathion Bluebird -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21135" toLevel="1" name="Summon Agathion - Hatbird">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21135" toLevel="1" name="Summon Agathion Hatbird">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1159,12 +1159,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1537</npcId> <!-- Hatbird Agathion -->
+				<npcId>1537</npcId> <!-- Agathion Hatbird -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="21136" toLevel="1" name="Golden Jack O'Lantern's Authority">
-		<!-- For 10 min., increases party members' Max HP by 40%, Max MP by 40%, Max CP by 40%, P. Def. by 30%, M. Def. by 30%, and Speed by 30. Cooldown is 1 h. -->
+		<!-- For 10 min., a party member's Max HP +40%, Max MP +40%, Max CP +40%, P. Def. +30%, M. Def. +30%, Speed +30. Cooldown: 1 h. -->
 		<icon>BranchSys.icon.br_golden_jack0_mask_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -1445,8 +1445,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21142" toLevel="1" name="Summon Agathion - Guangong">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21142" toLevel="1" name="Summon Agathion Guangong">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1458,12 +1458,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1551</npcId> <!-- Guangong Agathion -->
+				<npcId>1551</npcId> <!-- Agathion Guangong -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21143" toLevel="1" name="Summon Agathion - Gwanseum Nyang Nyang">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21143" toLevel="1" name="Summon Agathion Gwanseum Nyang Nyang">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1475,12 +1475,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1552</npcId> <!-- Gwanseum Nyang Nyang Agathion -->
+				<npcId>1552</npcId> <!-- Agathion Gwanseum Nyang -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21144" toLevel="1" name="Summon Agathion - Blue Opera">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21144" toLevel="1" name="Summon Agathion Blue Opera">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1492,12 +1492,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1553</npcId> <!-- Blue Opera Agathion -->
+				<npcId>1553</npcId> <!-- Agathion Blue Opera -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21145" toLevel="1" name="Summon Agathion - Blue Opera">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21145" toLevel="1" name="Summon Agathion Blue Opera">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1513,8 +1513,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21146" toLevel="1" name="Summon Agathion - Red Opera">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21146" toLevel="1" name="Summon Agathion Red Opera">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1526,12 +1526,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1554</npcId> <!-- Red Opera Agathion -->
+				<npcId>1554</npcId> <!-- Agathion Red Opera -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21147" toLevel="1" name="Summon Agathion - Opera">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21147" toLevel="1" name="Summon Agathion Opera">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1547,8 +1547,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21148" toLevel="1" name="Summon Agathion - Miss Chipao">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21148" toLevel="1" name="Summon Agathion Miss Chipao">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1560,12 +1560,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1556</npcId> <!-- Miss Chipao Agathion -->
+				<npcId>1556</npcId> <!-- Agathion Miss Chipao -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21149" toLevel="1" name="Summon Agathion - Nepal Snow">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21149" toLevel="1" name="Summon Agathion Nepal Snow">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1577,12 +1577,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1557</npcId> <!-- Nepal Snow Agathion -->
+				<npcId>1557</npcId> <!-- Agathion Nepal Snow -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21150" toLevel="1" name="Summon Agathion - Round Ball Snow">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21150" toLevel="1" name="Summon Agathion Round Ball Snow">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1594,12 +1594,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1558</npcId> <!-- Round Ball Snow Agathion -->
+				<npcId>1558</npcId> <!-- Agathion Round Ball Snow -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21151" toLevel="1" name="Summon Agathion - Ladder Snow">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21151" toLevel="1" name="Summon Agathion Ladder Snow">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1611,7 +1611,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1559</npcId> <!-- Ladder Snow Agathion -->
+				<npcId>1559</npcId> <!-- Agathion Ladder Snow -->
 			</effect>
 		</effects>
 	</skill>
@@ -1760,8 +1760,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21157" toLevel="1" name="Summon Agathion - Iken">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21157" toLevel="1" name="Summon Agathion Iken">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1773,12 +1773,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1539</npcId> <!-- Iken Agathion -->
+				<npcId>1539</npcId> <!-- Agathion Iken -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21158" toLevel="1" name="Summon Agathion - Lanya">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21158" toLevel="1" name="Summon Agathion Lanya">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1790,12 +1790,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1540</npcId> <!-- Lanya Agathion -->
+				<npcId>1540</npcId> <!-- Agathion Lanya -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21159" toLevel="1" name="Summon Agathion - Gnosian">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21159" toLevel="1" name="Summon Agathion Gnosian">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1807,12 +1807,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1541</npcId> <!-- Gnosian Agathion -->
+				<npcId>1541</npcId> <!-- Agathion Gnosian -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21160" toLevel="1" name="Summon Agathion - Orodriel">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21160" toLevel="1" name="Summon Agathion Orodriel">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1824,12 +1824,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1542</npcId> <!-- Orodriel Agathion -->
+				<npcId>1542</npcId> <!-- Agathion Orodriel -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21161" toLevel="1" name="Summon Agathion - Lakinos">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21161" toLevel="1" name="Summon Agathion Lakinos">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1841,12 +1841,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1543</npcId> <!-- Lakinos Agathion -->
+				<npcId>1543</npcId> <!-- Agathion Lakinos -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21162" toLevel="1" name="Summon Agathion - Mortia">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21162" toLevel="1" name="Summon Agathion Mortia">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1858,12 +1858,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1544</npcId> <!-- Mortia Agathion -->
+				<npcId>1544</npcId> <!-- Agathion Mortia -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21163" toLevel="1" name="Summon Agathion - Heintz">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21163" toLevel="1" name="Summon Agathion Heintz">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1875,12 +1875,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1545</npcId> <!-- Heintz Agathion -->
+				<npcId>1545</npcId> <!-- Agathion Heintz -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21164" toLevel="1" name="Summon Agathion - Meruril">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21164" toLevel="1" name="Summon Agathion Meruril">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1892,12 +1892,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1546</npcId> <!-- Meruril Agathion -->
+				<npcId>1546</npcId> <!-- Agathion Meruril -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21165" toLevel="1" name="Summon Agathion - Taman Zu Rapatui">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21165" toLevel="1" name="Summon Agathion Taman Zu Rapatui">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1909,12 +1909,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1547</npcId> <!-- Taman Zu Rapatui Agathion -->
+				<npcId>1547</npcId> <!-- Agathion Taman Zu Rapatui -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21166" toLevel="1" name="Summon Agathion - Kaurin">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21166" toLevel="1" name="Summon Agathion Kaurin">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1926,12 +1926,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1548</npcId> <!-- Kaurin Agathion -->
+				<npcId>1548</npcId> <!-- Agathion Kaurin -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21167" toLevel="1" name="Summon Agathion - Ahertbein">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21167" toLevel="1" name="Summon Agathion Ahertbein">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1943,12 +1943,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1549</npcId> <!-- Ahertbein Agathion -->
+				<npcId>1549</npcId> <!-- Agathion Ahertbein -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21168" toLevel="1" name="Summon Agathion - Naonin">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21168" toLevel="1" name="Summon Agathion Naonin">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1960,7 +1960,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1550</npcId> <!-- Naonin Agathion -->
+				<npcId>1550</npcId> <!-- Agathion Naonin -->
 			</effect>
 		</effects>
 	</skill>
@@ -2019,8 +2019,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21171" toLevel="1" name="Ride Jet Bike">
-		<!-- Ride a Jet Bike. -->
+	<skill id="21171" toLevel="1" name="Mount Jet Bike">
+		<!-- Allows to mount Jet Bike. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2393,7 +2393,7 @@
 		</conditions>
 	</skill>
 	<skill id="21190" toLevel="1" name="Soul's Shield">
-		<!-- For 10 sec., increases P. Def. and M. Def. by 60%. Consumes 500 energy. Cooldown 20 min. -->
+		<!-- For 10 sec., increases P./ M. Def. by 60%. Consumes 500 energy. Cooldown 20 min. -->
 		<icon>BranchSys2.icon.br_soulavatar_active_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2418,8 +2418,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="21191" toLevel="1" name="Summon Agathion - Phoenix">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21191" toLevel="1" name="Summon Agathion Phoenix">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2486,8 +2486,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21194" toLevel="1" name="Summon Agathion - Babayaga">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21194" toLevel="1" name="Summon Agathion Hut on Chicken Legs">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2499,7 +2499,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8626</npcId> <!-- Babayaga -->
+				<npcId>8626</npcId> <!-- Hut on Chicken Legs -->
 			</effect>
 		</effects>
 	</skill>
@@ -2634,7 +2634,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="21199" toLevel="1" name="Vitality of Courage">
-		<!-- Restores Vitality by certain amount using the power of Excellence, and for 5 min., maintains the Vitality stage. Cooldown 30 min. Consumes 1 Proof of a Warrior and 2 Vitality Effects upon skill use. -->
+		<!-- Recovers some Vitality and maintains its amount for 5 min. Cooldown: 30 min. Consumes 1 Warrior's Mark and 2 Vitality effects. -->
 		<icon>BranchSys2.icon.br_pekingopera_mask_c_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>

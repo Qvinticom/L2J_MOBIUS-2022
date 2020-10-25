@@ -32,15 +32,13 @@ public class OlyBuffer extends AbstractNpcAI
 	// NPC
 	private static final int OLYMPIAD_BUFFER = 36402;
 	// Skills
-	private static final SkillHolder KNIGHT = new SkillHolder(14744, 1); // Olympiad - Knight's Harmony
-	private static final SkillHolder WARRIOR = new SkillHolder(14745, 1); // Olympiad - Warrior's Harmony
-	private static final SkillHolder WIZARD = new SkillHolder(14746, 1); // Olympiad - Wizard's Harmony
+	private static final SkillHolder BUFF = new SkillHolder(32415, 1); // Fantasia Harmony
 	private static final SkillHolder[] BUFFS =
 	{
-		new SkillHolder(14738, 1), // Olympiad - Horn Melody
-		new SkillHolder(14739, 1), // Olympiad - Drum Melody
-		new SkillHolder(14740, 1), // Olympiad - Pipe Organ Melody
-		new SkillHolder(14741, 1), // Olympiad - Guitar Melody
+		new SkillHolder(32411, 1), // Olympiad - Horn Melody
+		new SkillHolder(32412, 1), // Olympiad - Drum Melody
+		new SkillHolder(32413, 1), // Olympiad - Pipe Organ Melody
+		new SkillHolder(32414, 1), // Olympiad - Guitar Melody
 	};
 	
 	private OlyBuffer()
@@ -66,19 +64,9 @@ public class OlyBuffer extends AbstractNpcAI
 	{
 		switch (event)
 		{
-			case "guardian":
+			case "buff":
 			{
-				applyBuffs(npc, player, KNIGHT);
-				break;
-			}
-			case "berserker":
-			{
-				applyBuffs(npc, player, WARRIOR);
-				break;
-			}
-			case "magician":
-			{
-				applyBuffs(npc, player, WIZARD);
+				applyBuffs(npc, player, BUFF);
 				break;
 			}
 		}

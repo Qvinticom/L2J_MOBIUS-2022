@@ -294,7 +294,7 @@
 			<condition name="ConsumeBody" />
 		</conditions>
 	</skill>
-	<skill id="2914" toLevel="3" name="Equipment Set Pack (10-day)">
+	<skill id="2914" toLevel="3" name="Package: Equipment Set (10-day)">
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -399,10 +399,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="2.77">
-						<item id="9575" count="1" /> <!-- High-grade Life Stone - Lv. 80 -->
+						<item id="9575" count="1" /> <!-- High-grade Life Stone Lv. 80 -->
 					</item>
 					<item chance="2.31">
-						<item id="10485" count="1" /> <!-- High-grade Life Stone - Lv. 82 -->
+						<item id="10485" count="1" /> <!-- High-grade Life Stone Lv. 82 -->
 					</item>
 					<item chance="3.2">
 						<item id="10577" count="1" /> <!-- Forgotten Scroll: Excessive Loyalty -->
@@ -417,7 +417,7 @@
 						<item id="14212" count="1" /> <!-- Forgotten Scroll: Enlightenment - Wizard -->
 					</item>
 					<item chance="6.4">
-						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
+						<item id="960" count="1" /> <!-- Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="3.2">
 						<item id="9625" count="1" /> <!-- Lesser Giant's Codex - Oblivion -->
@@ -426,7 +426,7 @@
 						<item id="9626" count="1" /> <!-- Lesser Giant's Codex - Discipline -->
 					</item>
 					<item chance="0.64">
-						<item id="959" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+						<item id="959" count="1" /> <!-- Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="1.54">
 						<item id="10373" count="1" /> <!-- Recipe: Icarus Sawsword (60%) -->
@@ -479,10 +479,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="2.36">
-						<item id="9575" count="1" /> <!-- High-grade Life Stone - Lv. 80 -->
+						<item id="9575" count="1" /> <!-- High-grade Life Stone Lv. 80 -->
 					</item>
 					<item chance="1.96">
-						<item id="10485" count="1" /> <!-- High-grade Life Stone - Lv. 82 -->
+						<item id="10485" count="1" /> <!-- High-grade Life Stone Lv. 82 -->
 					</item>
 					<item chance="2.72">
 						<item id="10577" count="1" /> <!-- Forgotten Scroll: Excessive Loyalty -->
@@ -497,7 +497,7 @@
 						<item id="14212" count="1" /> <!-- Forgotten Scroll: Enlightenment - Wizard -->
 					</item>
 					<item chance="5.44">
-						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
+						<item id="960" count="1" /> <!-- Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="2.72">
 						<item id="9625" count="1" /> <!-- Lesser Giant's Codex - Oblivion -->
@@ -506,7 +506,7 @@
 						<item id="9626" count="1" /> <!-- Lesser Giant's Codex - Discipline -->
 					</item>
 					<item chance="0.54">
-						<item id="959" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+						<item id="959" count="1" /> <!-- Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="1.31">
 						<item id="10373" count="1" /> <!-- Recipe: Icarus Sawsword (60%) -->
@@ -647,10 +647,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13898" count="1" /> <!-- Sealed Magic Pin (C-grade) -->
+						<item id="13898" count="1" /> <!-- Sealed C-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13899" count="1" /> <!-- Sealed Magic Pin (B-grade) -->
+						<item id="13899" count="1" /> <!-- Sealed B-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -676,10 +676,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13898" count="1" /> <!-- Sealed Magic Pin (C-grade) -->
+						<item id="13898" count="1" /> <!-- Sealed C-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13899" count="1" /> <!-- Sealed Magic Pin (B-grade) -->
+						<item id="13899" count="1" /> <!-- Sealed B-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -705,10 +705,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13898" count="1" /> <!-- Sealed Magic Pin (C-grade) -->
+						<item id="13898" count="1" /> <!-- Sealed C-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13899" count="1" /> <!-- Sealed Magic Pin (B-grade) -->
+						<item id="13899" count="1" /> <!-- Sealed B-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -734,10 +734,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13898" count="1" /> <!-- Sealed Magic Pin (C-grade) -->
+						<item id="13898" count="1" /> <!-- Sealed C-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13899" count="1" /> <!-- Sealed Magic Pin (B-grade) -->
+						<item id="13899" count="1" /> <!-- Sealed B-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -763,10 +763,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13898" count="1" /> <!-- Sealed Magic Pin (C-grade) -->
+						<item id="13898" count="1" /> <!-- Sealed C-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13899" count="1" /> <!-- Sealed Magic Pin (B-grade) -->
+						<item id="13899" count="1" /> <!-- Sealed B-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -792,10 +792,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13898" count="1" /> <!-- Sealed Magic Pin (C-grade) -->
+						<item id="13898" count="1" /> <!-- Sealed C-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13899" count="1" /> <!-- Sealed Magic Pin (B-grade) -->
+						<item id="13899" count="1" /> <!-- Sealed B-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -821,10 +821,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13898" count="1" /> <!-- Sealed Magic Pin (C-grade) -->
+						<item id="13898" count="1" /> <!-- Sealed C-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13899" count="1" /> <!-- Sealed Magic Pin (B-grade) -->
+						<item id="13899" count="1" /> <!-- Sealed B-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -850,10 +850,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13898" count="1" /> <!-- Sealed Magic Pin (C-grade) -->
+						<item id="13898" count="1" /> <!-- Sealed C-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13899" count="1" /> <!-- Sealed Magic Pin (B-grade) -->
+						<item id="13899" count="1" /> <!-- Sealed B-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -879,10 +879,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13898" count="1" /> <!-- Sealed Magic Pin (C-grade) -->
+						<item id="13898" count="1" /> <!-- Sealed C-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13899" count="1" /> <!-- Sealed Magic Pin (B-grade) -->
+						<item id="13899" count="1" /> <!-- Sealed B-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -908,10 +908,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13918" count="1" /> <!-- Sealed Magic Pouch (C-grade) -->
+						<item id="13918" count="1" /> <!-- Sealed C-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13919" count="1" /> <!-- Sealed Magic Pouch (B-grade) -->
+						<item id="13919" count="1" /> <!-- Sealed B-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -937,10 +937,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13918" count="1" /> <!-- Sealed Magic Pouch (C-grade) -->
+						<item id="13918" count="1" /> <!-- Sealed C-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13919" count="1" /> <!-- Sealed Magic Pouch (B-grade) -->
+						<item id="13919" count="1" /> <!-- Sealed B-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -966,10 +966,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13918" count="1" /> <!-- Sealed Magic Pouch (C-grade) -->
+						<item id="13918" count="1" /> <!-- Sealed C-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13919" count="1" /> <!-- Sealed Magic Pouch (B-grade) -->
+						<item id="13919" count="1" /> <!-- Sealed B-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -995,10 +995,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13918" count="1" /> <!-- Sealed Magic Pouch (C-grade) -->
+						<item id="13918" count="1" /> <!-- Sealed C-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13919" count="1" /> <!-- Sealed Magic Pouch (B-grade) -->
+						<item id="13919" count="1" /> <!-- Sealed B-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1024,10 +1024,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13918" count="1" /> <!-- Sealed Magic Pouch (C-grade) -->
+						<item id="13918" count="1" /> <!-- Sealed C-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13919" count="1" /> <!-- Sealed Magic Pouch (B-grade) -->
+						<item id="13919" count="1" /> <!-- Sealed B-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1053,10 +1053,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13918" count="1" /> <!-- Sealed Magic Pouch (C-grade) -->
+						<item id="13918" count="1" /> <!-- Sealed C-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13919" count="1" /> <!-- Sealed Magic Pouch (B-grade) -->
+						<item id="13919" count="1" /> <!-- Sealed B-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1082,10 +1082,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13918" count="1" /> <!-- Sealed Magic Pouch (C-grade) -->
+						<item id="13918" count="1" /> <!-- Sealed C-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13919" count="1" /> <!-- Sealed Magic Pouch (B-grade) -->
+						<item id="13919" count="1" /> <!-- Sealed B-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1111,10 +1111,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13918" count="1" /> <!-- Sealed Magic Pouch (C-grade) -->
+						<item id="13918" count="1" /> <!-- Sealed C-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13919" count="1" /> <!-- Sealed Magic Pouch (B-grade) -->
+						<item id="13919" count="1" /> <!-- Sealed B-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1140,10 +1140,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13918" count="1" /> <!-- Sealed Magic Pouch (C-grade) -->
+						<item id="13918" count="1" /> <!-- Sealed C-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13919" count="1" /> <!-- Sealed Magic Pouch (B-grade) -->
+						<item id="13919" count="1" /> <!-- Sealed B-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1430,10 +1430,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13900" count="1" /> <!-- Sealed Magic Pin (A-grade) -->
+						<item id="13900" count="1" /> <!-- Sealed A-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13901" count="1" /> <!-- Sealed Magic Pin (S-grade) -->
+						<item id="13901" count="1" /> <!-- Sealed S-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -1459,10 +1459,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13900" count="1" /> <!-- Sealed Magic Pin (A-grade) -->
+						<item id="13900" count="1" /> <!-- Sealed A-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13901" count="1" /> <!-- Sealed Magic Pin (S-grade) -->
+						<item id="13901" count="1" /> <!-- Sealed S-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -1488,10 +1488,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13900" count="1" /> <!-- Sealed Magic Pin (A-grade) -->
+						<item id="13900" count="1" /> <!-- Sealed A-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13901" count="1" /> <!-- Sealed Magic Pin (S-grade) -->
+						<item id="13901" count="1" /> <!-- Sealed S-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -1517,10 +1517,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13900" count="1" /> <!-- Sealed Magic Pin (A-grade) -->
+						<item id="13900" count="1" /> <!-- Sealed A-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13901" count="1" /> <!-- Sealed Magic Pin (S-grade) -->
+						<item id="13901" count="1" /> <!-- Sealed S-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -1546,10 +1546,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13900" count="1" /> <!-- Sealed Magic Pin (A-grade) -->
+						<item id="13900" count="1" /> <!-- Sealed A-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13901" count="1" /> <!-- Sealed Magic Pin (S-grade) -->
+						<item id="13901" count="1" /> <!-- Sealed S-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -1575,10 +1575,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13900" count="1" /> <!-- Sealed Magic Pin (A-grade) -->
+						<item id="13900" count="1" /> <!-- Sealed A-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13901" count="1" /> <!-- Sealed Magic Pin (S-grade) -->
+						<item id="13901" count="1" /> <!-- Sealed S-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -1604,10 +1604,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13900" count="1" /> <!-- Sealed Magic Pin (A-grade) -->
+						<item id="13900" count="1" /> <!-- Sealed A-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13901" count="1" /> <!-- Sealed Magic Pin (S-grade) -->
+						<item id="13901" count="1" /> <!-- Sealed S-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -1633,10 +1633,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13900" count="1" /> <!-- Sealed Magic Pin (A-grade) -->
+						<item id="13900" count="1" /> <!-- Sealed A-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13901" count="1" /> <!-- Sealed Magic Pin (S-grade) -->
+						<item id="13901" count="1" /> <!-- Sealed S-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -1662,10 +1662,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13900" count="1" /> <!-- Sealed Magic Pin (A-grade) -->
+						<item id="13900" count="1" /> <!-- Sealed A-grade Magic Pin -->
 					</item>
 					<item chance="15.0">
-						<item id="13901" count="1" /> <!-- Sealed Magic Pin (S-grade) -->
+						<item id="13901" count="1" /> <!-- Sealed S-grade Magic Pin -->
 					</item>
 				</items>
 			</effect>
@@ -1691,10 +1691,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13920" count="1" /> <!-- Sealed Magic Pouch (A-grade) -->
+						<item id="13920" count="1" /> <!-- Sealed A-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13921" count="1" /> <!-- Sealed Magic Pouch (S-grade) -->
+						<item id="13921" count="1" /> <!-- Sealed S-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1720,10 +1720,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13920" count="1" /> <!-- Sealed Magic Pouch (A-grade) -->
+						<item id="13920" count="1" /> <!-- Sealed A-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13921" count="1" /> <!-- Sealed Magic Pouch (S-grade) -->
+						<item id="13921" count="1" /> <!-- Sealed S-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1749,10 +1749,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13920" count="1" /> <!-- Sealed Magic Pouch (A-grade) -->
+						<item id="13920" count="1" /> <!-- Sealed A-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13921" count="1" /> <!-- Sealed Magic Pouch (S-grade) -->
+						<item id="13921" count="1" /> <!-- Sealed S-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1778,10 +1778,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13920" count="1" /> <!-- Sealed Magic Pouch (A-grade) -->
+						<item id="13920" count="1" /> <!-- Sealed A-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13921" count="1" /> <!-- Sealed Magic Pouch (S-grade) -->
+						<item id="13921" count="1" /> <!-- Sealed S-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1807,10 +1807,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13920" count="1" /> <!-- Sealed Magic Pouch (A-grade) -->
+						<item id="13920" count="1" /> <!-- Sealed A-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13921" count="1" /> <!-- Sealed Magic Pouch (S-grade) -->
+						<item id="13921" count="1" /> <!-- Sealed S-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1836,10 +1836,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13920" count="1" /> <!-- Sealed Magic Pouch (A-grade) -->
+						<item id="13920" count="1" /> <!-- Sealed A-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13921" count="1" /> <!-- Sealed Magic Pouch (S-grade) -->
+						<item id="13921" count="1" /> <!-- Sealed S-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1865,10 +1865,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13920" count="1" /> <!-- Sealed Magic Pouch (A-grade) -->
+						<item id="13920" count="1" /> <!-- Sealed A-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13921" count="1" /> <!-- Sealed Magic Pouch (S-grade) -->
+						<item id="13921" count="1" /> <!-- Sealed S-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1894,10 +1894,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13920" count="1" /> <!-- Sealed Magic Pouch (A-grade) -->
+						<item id="13920" count="1" /> <!-- Sealed A-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13921" count="1" /> <!-- Sealed Magic Pouch (S-grade) -->
+						<item id="13921" count="1" /> <!-- Sealed S-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -1923,10 +1923,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="13920" count="1" /> <!-- Sealed Magic Pouch (A-grade) -->
+						<item id="13920" count="1" /> <!-- Sealed A-grade Magic Pouch -->
 					</item>
 					<item chance="15.0">
-						<item id="13921" count="1" /> <!-- Sealed Magic Pouch (S-grade) -->
+						<item id="13921" count="1" /> <!-- Sealed S-grade Magic Pouch -->
 					</item>
 				</items>
 			</effect>
@@ -2213,10 +2213,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14902" count="1" /> <!-- Sealed Magic Rune Clip (A-grade) -->
+						<item id="14902" count="1" /> <!-- Sealed A-grade Magic Rune Clip -->
 					</item>
 					<item chance="10.5">
-						<item id="14903" count="1" /> <!-- Sealed Magic Rune Clip (S-grade) -->
+						<item id="14903" count="1" /> <!-- Sealed S-grade Magic Rune Clip -->
 					</item>
 				</items>
 			</effect>
@@ -2242,10 +2242,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14902" count="1" /> <!-- Sealed Magic Rune Clip (A-grade) -->
+						<item id="14902" count="1" /> <!-- Sealed A-grade Magic Rune Clip -->
 					</item>
 					<item chance="10.5">
-						<item id="14903" count="1" /> <!-- Sealed Magic Rune Clip (S-grade) -->
+						<item id="14903" count="1" /> <!-- Sealed S-grade Magic Rune Clip -->
 					</item>
 				</items>
 			</effect>
@@ -2271,10 +2271,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14902" count="1" /> <!-- Sealed Magic Rune Clip (A-grade) -->
+						<item id="14902" count="1" /> <!-- Sealed A-grade Magic Rune Clip -->
 					</item>
 					<item chance="10.5">
-						<item id="14903" count="1" /> <!-- Sealed Magic Rune Clip (S-grade) -->
+						<item id="14903" count="1" /> <!-- Sealed S-grade Magic Rune Clip -->
 					</item>
 				</items>
 			</effect>
@@ -2300,10 +2300,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14902" count="1" /> <!-- Sealed Magic Rune Clip (A-grade) -->
+						<item id="14902" count="1" /> <!-- Sealed A-grade Magic Rune Clip -->
 					</item>
 					<item chance="10.5">
-						<item id="14903" count="1" /> <!-- Sealed Magic Rune Clip (S-grade) -->
+						<item id="14903" count="1" /> <!-- Sealed S-grade Magic Rune Clip -->
 					</item>
 				</items>
 			</effect>
@@ -2329,10 +2329,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14902" count="1" /> <!-- Sealed Magic Rune Clip (A-grade) -->
+						<item id="14902" count="1" /> <!-- Sealed A-grade Magic Rune Clip -->
 					</item>
 					<item chance="10.5">
-						<item id="14903" count="1" /> <!-- Sealed Magic Rune Clip (S-grade) -->
+						<item id="14903" count="1" /> <!-- Sealed S-grade Magic Rune Clip -->
 					</item>
 				</items>
 			</effect>
@@ -2358,10 +2358,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14902" count="1" /> <!-- Sealed Magic Rune Clip (A-grade) -->
+						<item id="14902" count="1" /> <!-- Sealed A-grade Magic Rune Clip -->
 					</item>
 					<item chance="10.5">
-						<item id="14903" count="1" /> <!-- Sealed Magic Rune Clip (S-grade) -->
+						<item id="14903" count="1" /> <!-- Sealed S-grade Magic Rune Clip -->
 					</item>
 				</items>
 			</effect>
@@ -2387,10 +2387,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14902" count="1" /> <!-- Sealed Magic Rune Clip (A-grade) -->
+						<item id="14902" count="1" /> <!-- Sealed A-grade Magic Rune Clip -->
 					</item>
 					<item chance="10.5">
-						<item id="14903" count="1" /> <!-- Sealed Magic Rune Clip (S-grade) -->
+						<item id="14903" count="1" /> <!-- Sealed S-grade Magic Rune Clip -->
 					</item>
 				</items>
 			</effect>
@@ -2416,10 +2416,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14902" count="1" /> <!-- Sealed Magic Rune Clip (A-grade) -->
+						<item id="14902" count="1" /> <!-- Sealed A-grade Magic Rune Clip -->
 					</item>
 					<item chance="10.5">
-						<item id="14903" count="1" /> <!-- Sealed Magic Rune Clip (S-grade) -->
+						<item id="14903" count="1" /> <!-- Sealed S-grade Magic Rune Clip -->
 					</item>
 				</items>
 			</effect>
@@ -2445,10 +2445,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14902" count="1" /> <!-- Sealed Magic Rune Clip (A-grade) -->
+						<item id="14902" count="1" /> <!-- Sealed A-grade Magic Rune Clip -->
 					</item>
 					<item chance="10.5">
-						<item id="14903" count="1" /> <!-- Sealed Magic Rune Clip (S-grade) -->
+						<item id="14903" count="1" /> <!-- Sealed S-grade Magic Rune Clip -->
 					</item>
 				</items>
 			</effect>
@@ -2474,10 +2474,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14904" count="1" /> <!-- Sealed Magic Ornament (A-grade) -->
+						<item id="14904" count="1" /> <!-- Sealed A-grade Magic Ornament -->
 					</item>
 					<item chance="10.5">
-						<item id="14905" count="1" /> <!-- Sealed Magic Ornament (S-grade) -->
+						<item id="14905" count="1" /> <!-- Sealed S-grade Magic Ornament -->
 					</item>
 				</items>
 			</effect>
@@ -2503,10 +2503,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14904" count="1" /> <!-- Sealed Magic Ornament (A-grade) -->
+						<item id="14904" count="1" /> <!-- Sealed A-grade Magic Ornament -->
 					</item>
 					<item chance="10.5">
-						<item id="14905" count="1" /> <!-- Sealed Magic Ornament (S-grade) -->
+						<item id="14905" count="1" /> <!-- Sealed S-grade Magic Ornament -->
 					</item>
 				</items>
 			</effect>
@@ -2532,10 +2532,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14904" count="1" /> <!-- Sealed Magic Ornament (A-grade) -->
+						<item id="14904" count="1" /> <!-- Sealed A-grade Magic Ornament -->
 					</item>
 					<item chance="10.5">
-						<item id="14905" count="1" /> <!-- Sealed Magic Ornament (S-grade) -->
+						<item id="14905" count="1" /> <!-- Sealed S-grade Magic Ornament -->
 					</item>
 				</items>
 			</effect>
@@ -2561,10 +2561,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14904" count="1" /> <!-- Sealed Magic Ornament (A-grade) -->
+						<item id="14904" count="1" /> <!-- Sealed A-grade Magic Ornament -->
 					</item>
 					<item chance="10.5">
-						<item id="14905" count="1" /> <!-- Sealed Magic Ornament (S-grade) -->
+						<item id="14905" count="1" /> <!-- Sealed S-grade Magic Ornament -->
 					</item>
 				</items>
 			</effect>
@@ -2590,10 +2590,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14904" count="1" /> <!-- Sealed Magic Ornament (A-grade) -->
+						<item id="14904" count="1" /> <!-- Sealed A-grade Magic Ornament -->
 					</item>
 					<item chance="10.5">
-						<item id="14905" count="1" /> <!-- Sealed Magic Ornament (S-grade) -->
+						<item id="14905" count="1" /> <!-- Sealed S-grade Magic Ornament -->
 					</item>
 				</items>
 			</effect>
@@ -2619,10 +2619,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14904" count="1" /> <!-- Sealed Magic Ornament (A-grade) -->
+						<item id="14904" count="1" /> <!-- Sealed A-grade Magic Ornament -->
 					</item>
 					<item chance="10.5">
-						<item id="14905" count="1" /> <!-- Sealed Magic Ornament (S-grade) -->
+						<item id="14905" count="1" /> <!-- Sealed S-grade Magic Ornament -->
 					</item>
 				</items>
 			</effect>
@@ -2648,10 +2648,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14904" count="1" /> <!-- Sealed Magic Ornament (A-grade) -->
+						<item id="14904" count="1" /> <!-- Sealed A-grade Magic Ornament -->
 					</item>
 					<item chance="10.5">
-						<item id="14905" count="1" /> <!-- Sealed Magic Ornament (S-grade) -->
+						<item id="14905" count="1" /> <!-- Sealed S-grade Magic Ornament -->
 					</item>
 				</items>
 			</effect>
@@ -2677,10 +2677,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14904" count="1" /> <!-- Sealed Magic Ornament (A-grade) -->
+						<item id="14904" count="1" /> <!-- Sealed A-grade Magic Ornament -->
 					</item>
 					<item chance="10.5">
-						<item id="14905" count="1" /> <!-- Sealed Magic Ornament (S-grade) -->
+						<item id="14905" count="1" /> <!-- Sealed S-grade Magic Ornament -->
 					</item>
 				</items>
 			</effect>
@@ -2706,10 +2706,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="21.0">
-						<item id="14904" count="1" /> <!-- Sealed Magic Ornament (A-grade) -->
+						<item id="14904" count="1" /> <!-- Sealed A-grade Magic Ornament -->
 					</item>
 					<item chance="10.5">
-						<item id="14905" count="1" /> <!-- Sealed Magic Ornament (S-grade) -->
+						<item id="14905" count="1" /> <!-- Sealed S-grade Magic Ornament -->
 					</item>
 				</items>
 			</effect>
@@ -2770,7 +2770,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2995" toLevel="1" name="PA - Scroll: Enchant Weapon (D-grade)">
+	<skill id="2995" toLevel="1" name="PA - Scroll: Enchant D-grade Weapon">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -2779,7 +2779,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2996" toLevel="1" name="PA - Scroll: Enchant Weapon (C-grade)">
+	<skill id="2996" toLevel="1" name="PA - Scroll: Enchant C-grade Weapon">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -2788,7 +2788,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2997" toLevel="1" name="PA - Scroll: Enchant Weapon (B-grade)">
+	<skill id="2997" toLevel="1" name="PA - Scroll: Enchant B-grade Weapon">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -2797,7 +2797,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2998" toLevel="1" name="PA - Scroll: Enchant Weapon (A-grade)">
+	<skill id="2998" toLevel="1" name="PA - Scroll: Enchant A-grade Weapon">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -2806,7 +2806,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2999" toLevel="1" name="PA - Scroll: Enchant Weapon (S-grade)">
+	<skill id="2999" toLevel="1" name="PA - Scroll: Enchant S-grade Weapon">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>

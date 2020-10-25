@@ -357,7 +357,7 @@
 		</stats>
 	</item>
 	<item id="6611" name="Infinity Blade" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, casts a P. Def.-decreasing de-buff on the target. Also causes Damage Reflection, increases Max HP/ Max MP/ Max CP, and Damage Reflection. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. After a critical attack, casts a P. Def.-decreasing debuff on the target. Also increases Max HP/ MP/ CP and Shield Defense. Has a chance to reflect debuffs back to the enemy. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -398,7 +398,7 @@
 		</stats>
 	</item>
 	<item id="6612" name="Infinity Cleaver" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts additional damage on the target. Also has a chance to reflect skills, increases max HP/ max CP, and increases Critical Damage/ Critical Rate. Adds Holy P. Atk. Inflicts more damage during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. Increases Critical Damage/ Rate for standard attacks, Max HP/ CP. Increases PvP damage. Has a chance to reflect debuffs back to the enemy. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -438,7 +438,7 @@
 		</stats>
 	</item>
 	<item id="6613" name="Infinity Axe" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts discord on the target. Also causes Damage Reflection. Increases Max HP/ Max MP/ Max CP and shield rate. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. After a critical attack, reflects a part of the damage and inflicts Confusion on the target. Increases Shield Defense Rate and Max HP/ MP/ CP. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -480,7 +480,7 @@
 		</stats>
 	</item>
 	<item id="6614" name="Infinity Rod" type="Weapon">
-		<!-- Divine hero's weapon. Recovers HP by 100%. Increases Max MP/ Max CP, Casting Spd., MP Recovery Rate when using magic skills. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. After buff casting, increases HP Recovery by 100%. Increases Max MP/ CP, Casting Spd. and MP Recovery Rate. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -523,7 +523,7 @@
 		</stats>
 	</item>
 	<item id="6615" name="Infinity Crusher" type="Weapon">
-		<!-- Divine hero's weapon. Inflicts Stun on the target during a Critical Attack. Also Has a chance of causing skill reflect and increasing Max HP/ Max CP and Atk. Spd. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. Increases Max HP/ CP and Atk. Spd. Stuns the target after a critical attack. Has a chance to reflect debuffs back to the enemy. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_the_hammer_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -565,7 +565,7 @@
 		</stats>
 	</item>
 	<item id="6616" name="Infinity Scepter" type="Weapon">
-		<!-- Divine hero's weapon. Recovers HP 100% and adds holy P. Atk. Has a chance of increasing Max MP, Max CP, M. Atk., and M. Critical Rate, and of decreasing MP consumption and Magic Cancel Rate while using a magic skill. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. After a buff casting, has a chance of HP Recovery by 100%. Increases Max MP/ CP, M. Atk., M. Skill Critical Rate and decreases MP Consumption and Casting Interruption Rate. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -608,7 +608,7 @@
 		</stats>
 	</item>
 	<item id="6617" name="Infinity Stinger" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts Silence on the target. Also causes Vampiric Rage. Increases success rate when using mortal type skills. Increases Max MP/ Max CP, Atk. Spd. and MP Regeneration Rate. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. Increases Max MP/ Max CP, Atk. Spd. and MP Recovery Rate. Also increases success rate of Mortal Blow when backstabing. after a Critical Attack, inflicts Silence on the target and causes Vampiric Rage. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -650,7 +650,7 @@
 		</stats>
 	</item>
 	<item id="6618" name="Infinity Fang" type="Weapon">
-		<!-- Divine hero's weapon. Inflicts Stun on the target during a Critical Attack. Also Has a chance of causing skill reflect and increasing Max HP/ Max MP/ Max CP and Evasion. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. Increasing Max HP/ MP/ CP and Evasion. Stuns the target after a critical attack and has a chance to reflect debuffs back to the enemy. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -692,7 +692,7 @@
 		</stats>
 	</item>
 	<item id="6619" name="Infinity Bow" type="Weapon">
-		<!-- Divine hero's weapon. Inflicts Slow on the target during a Critical Attack Also causes Cheap Shot. Decreases cooldown. Increases Max MP/ Max CP. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. After a critical attack, inflicts Slow on the target, causes the Cheap Shot effect, and decreases Skill Cooldown. Increases Max MP/ CP. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -736,7 +736,7 @@
 		</stats>
 	</item>
 	<item id="6620" name="Infinity Wing" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts physical skill Silence on the target. Also Has a chance of causing skill reflect and increasing Max HP/ Max MP/ Max CP and P. Critical Rate. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. After a critical attack, inflicts Silence on the target, has a chance to reflect debuffs back to the enemy and increases Max HP/ MP/ CP and P. Critical Rate. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -777,7 +777,7 @@
 		</stats>
 	</item>
 	<item id="6621" name="Infinity Spear" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts cancel on the target. Also Has a chance of causing skill reflect and increasing Max HP/ Max CP, Atk. Spd., and Accuracy. Adds Holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. After a critical attack, dispells buffs on the target, has a chance to reflect debuffs and increases Max HP/ CP, Atk. Spd. and P. Accuracy. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -989,7 +989,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6633" name="Dummy - General Item 1" type="EtcItem">
-		<!-- Testing purpose - General Item -->
+		<!-- Testing purpose - Common Item -->
 		<set name="icon" val="icon.etc_socks_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -997,7 +997,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6634" name="Dummy - General Item 2" type="EtcItem">
-		<!-- Testing purpose - General Item -->
+		<!-- Testing purpose - Common Item -->
 		<set name="icon" val="icon.etc_socks_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1005,7 +1005,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6635" name="Dummy - General Item 3" type="EtcItem">
-		<!-- Testing purpose - General Item -->
+		<!-- Testing purpose - Common Item -->
 		<set name="icon" val="icon.etc_socks_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1013,7 +1013,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6636" name="Dummy - General Item 4" type="EtcItem">
-		<!-- Testing purpose - General Item -->
+		<!-- Testing purpose - Common Item -->
 		<set name="icon" val="icon.etc_socks_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1021,7 +1021,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6637" name="Dummy - General Item 5" type="EtcItem">
-		<!-- Testing purpose - General Item -->
+		<!-- Testing purpose - Common Item -->
 		<set name="icon" val="icon.etc_socks_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1029,7 +1029,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6638" name="Dummy - General Item 6" type="EtcItem">
-		<!-- Testing purpose - General Item -->
+		<!-- Testing purpose - Common Item -->
 		<set name="icon" val="icon.etc_socks_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1037,7 +1037,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6639" name="Dummy - General Item 7" type="EtcItem">
-		<!-- Testing purpose - General Item -->
+		<!-- Testing purpose - Common Item -->
 		<set name="icon" val="icon.etc_socks_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1045,7 +1045,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6640" name="Dummy - General Item 8" type="EtcItem">
-		<!-- Testing purpose - General Item -->
+		<!-- Testing purpose - Common Item -->
 		<set name="icon" val="icon.etc_socks_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1053,7 +1053,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6641" name="Dummy - General Item 9" type="EtcItem">
-		<!-- Testing purpose - General Item -->
+		<!-- Testing purpose - Common Item -->
 		<set name="icon" val="icon.etc_socks_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1061,7 +1061,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6642" name="Dummy - General Item 10" type="EtcItem">
-		<!-- Testing purpose - General Item -->
+		<!-- Testing purpose - Common Item -->
 		<set name="icon" val="icon.etc_socks_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1276,7 +1276,7 @@
 		</skills>
 	</item>
 	<item id="6655" name="Amulet: Slay Valakas" type="EtcItem">
-		<!-- Increases your P. Atk. when fighting against Valakas. -->
+		<!-- Increases P. Atk., when fighting against Valakas. -->
 		<set name="icon" val="icon.etc_blesscharm_slay_val_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1291,7 +1291,7 @@
 		</skills>
 	</item>
 	<item id="6656" name="Antharas' Earring" type="Armor">
-		<!-- MP +37, Bleed Resistance +40%, Bleed Atk. Rate +40%, Vampiric Rage Effect, Stun/ Mental Attack Resistance +30%, Stun/ Mental Atk. Rate +30%, decreases MP consumption. Increases Heal Amount and Earth Resistance. Only one effect is applied when two of the same earrings are equipped. -->
+		<!-- MP +37, Infection Atk. Rate and Resistance +30%, Earth Resistance +15, Vampiric Rage effect +4%, MP consumption -5%. Effects of two identical earrings do not stack. <Enchanting>. Use Scroll: Enchant S-grade Armor. <Enhancing>. Take the item and Bottle of Antharas' Soul to Denign in Giran to get Blessed Antharas' Earring. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1312,7 +1312,7 @@
 		</stats>
 	</item>
 	<item id="6657" name="Valakas' Necklace" type="Armor">
-		<!-- MP +50, Sleep Resistance +40%, Sleep Attack Rate +40%, HP +445. Decreases skill cooldown. Increases P. Atk. and M. Atk. Wild Magic Effect and Damage Reflection effect. Increases Fire Resistance. -->
+		<!-- MP +50, Stupor Resistance and Atk. Rate +40%, HP +445, Fire Resistance +15, P. Atk. +4%, M. Atk. +8%, M. Critical Rate +2, Damage Reflection +5, Skill Cooldown -10%. <Enchanting>. Use Scroll: Enchant S-grade Armor. <Enhancing>. Take a Bottle of Valakas' Soul to Denign in Giran to obtain Blessed Valakas' Necklace. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1333,7 +1333,7 @@
 		</stats>
 	</item>
 	<item id="6658" name="Baium's Ring" type="Armor">
-		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Hold Resistance +30%, Hold Atk. Rate +30%, increases Accuracy, P. Critical Damage, Atk. Spd. and Casting Spd. When two identical rings are equipped, the effect of only one ring will be applied. -->
+		<!-- MP +21, Infection Atk. Rate and Resistance +40%, Obstruction Atk. Rate and Resistance +30%. Increases P. Accuracy, Critical Damage for standard attacks, Atk. Spd. and Casting Spd. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1354,7 +1354,7 @@
 		</stats>
 	</item>
 	<item id="6659" name="Zaken's Earring" type="Armor">
-		<!-- MP+31 -->
+		<!-- MP+31, Bleed Resistance/ Atk. Rate +30%, Confusion Resistance/ Atk. Rate +20%. Increases Received Healing, grants Vampiric Rage effect. Effects of two identical earrings do not stack. When equipped with Blessed Zaken's Earring, only the effect of the latter is applied. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1376,7 +1376,7 @@
 		</stats>
 	</item>
 	<item id="6660" name="Queen Ant's Ring" type="Armor">
-		<!-- MP +21, Poison Resistance +30%, Poison Atk. Rate +30%, increases Accuracy, increases P. Critical Damage, Hold Resistance +20%, and Hold Atk. Rate +20%. When two identical rings are equipped, the effect of only one ring will be applied. -->
+		<!-- MP +21, Infection Atk. Rate and Resistance +30%, Obstruction Atk. Rate and Resistance +20%. Increases P. Accuracy and Critical Damage for standard attacks. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1397,7 +1397,7 @@
 		</stats>
 	</item>
 	<item id="6661" name="Orfen's Earring" type="Armor">
-		<!-- MP +31, Bleed Resistance +20%, chance of Bleed attack +20%. Increases healing effects. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- MP +31, Infection Atk. Rate and Resistance +20%. Increases Received Healing. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1418,7 +1418,7 @@
 		</stats>
 	</item>
 	<item id="6662" name="Ring of Core" type="Armor">
-		<!-- MP +21, Poison Resistance +20%, Poison Atk. Rate +20%. Increases Accuracy. When equipped with two identical rings, the effect of only one ring will be applied. -->
+		<!-- MP +21, Infection Atk. Rate and Resistance +20%. Increases P. Accuracy. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1569,7 +1569,7 @@
 		</skills>
 	</item>
 	<item id="6673" name="Festival Adena" type="EtcItem">
-		<!-- Currency used in the "2005 Lineage II Live" event -->
+		<!-- Currency used in the 2005 Lineage II Live event. -->
 		<set name="icon" val="icon.etc_coin_of_fair_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1583,7 +1583,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6674" name="Sealed Imperial Crusader Breastplate" type="Armor">
-		<!-- Sealed Imperial Crusader Breastplate. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t88_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1603,7 +1603,7 @@
 		</stats>
 	</item>
 	<item id="6675" name="Sealed Imperial Crusader Gaiters" type="Armor">
-		<!-- Sealed Imperial Crusader Gaiters. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t88_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1623,7 +1623,7 @@
 		</stats>
 	</item>
 	<item id="6676" name="Sealed Imperial Crusader Gauntlets" type="Armor">
-		<!-- Sealed Imperial Crusader Gauntlets. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t88_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1642,7 +1642,7 @@
 		</stats>
 	</item>
 	<item id="6677" name="Sealed Imperial Crusader Boots" type="Armor">
-		<!-- Sealed Imperial Crusader Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t88_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1661,7 +1661,7 @@
 		</stats>
 	</item>
 	<item id="6678" name="Sealed Imperial Crusader Shield" type="Armor">
-		<!-- Sealed Imperial Crusader Shield. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1682,7 +1682,7 @@
 		</stats>
 	</item>
 	<item id="6679" name="Sealed Imperial Crusader Helmet" type="Armor">
-		<!-- Sealed Imperial Crusader Helmet. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1700,7 +1700,7 @@
 		</stats>
 	</item>
 	<item id="6680" name="Sealed Draconic Leather Armor" type="Armor">
-		<!-- Sealed Draconic Leather Armor. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t89_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1720,7 +1720,7 @@
 		</stats>
 	</item>
 	<item id="6681" name="Sealed Draconic Leather Gloves" type="Armor">
-		<!-- Sealed Draconic Leather Gloves. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t89_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1739,7 +1739,7 @@
 		</stats>
 	</item>
 	<item id="6682" name="Sealed Draconic Leather Boots" type="Armor">
-		<!-- Sealed Draconic Leather Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t89_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1758,7 +1758,7 @@
 		</stats>
 	</item>
 	<item id="6683" name="Sealed Draconic Leather Helmet" type="Armor">
-		<!-- Sealed Draconic Leather Helmet. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1776,7 +1776,7 @@
 		</stats>
 	</item>
 	<item id="6684" name="Sealed Major Arcana Robe" type="Armor">
-		<!-- Sealed Major Arcana Robe. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t90_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1797,7 +1797,7 @@
 		</stats>
 	</item>
 	<item id="6685" name="Sealed Major Arcana Gloves" type="Armor">
-		<!-- Sealed Major Arcana Gloves. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t90_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1816,7 +1816,7 @@
 		</stats>
 	</item>
 	<item id="6686" name="Sealed Major Arcana Boots" type="Armor">
-		<!-- Sealed Major Arcana Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t90_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1835,7 +1835,7 @@
 		</stats>
 	</item>
 	<item id="6687" name="Sealed Major Arcana Circlet" type="Armor">
-		<!-- Sealed Major Arcana Circlets. Its seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1853,7 +1853,7 @@
 		</stats>
 	</item>
 	<item id="6688" name="Forgotten Blade Edge" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Forgotten Blade. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Forgotten Blade. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1864,7 +1864,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6689" name="Basalt Battlehammer Head" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Basalt Battlehammer. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Basalt Battlehammer. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1875,7 +1875,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6690" name="Imperial Staff Head" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Imperial Staff. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Imperial Staff. Can also be sold in any shop. -->
 		<set name="icon" val="icon.etc_bark_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1886,7 +1886,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6691" name="Angel Slayer Blade" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Angel Slayer. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Angel Slayer. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1907,7 +1907,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6693" name="Dragon Hunter Axe Blade" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a hunter axe. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Dragon Hunter Axe. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1918,7 +1918,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6694" name="Saint Spear Blade" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Saint Spear. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Saint Spear. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1929,7 +1929,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6695" name="Demon Splinter Blade" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Demon Splinter. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Demon Splinter. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1940,7 +1940,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6696" name="Heaven's Divider Edge" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Heaven's Divider. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Heaven's Divider. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1951,7 +1951,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6697" name="Arcana Mace Head" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make the sealed Arcana Mace. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Arcana Mace. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1962,7 +1962,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6698" name="Sealed Tateossian Earring Part" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make the Sealed Tateossian Earring. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Sealed Tateossian Earring. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1973,7 +1973,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6699" name="Sealed Tateossian Ring Gem" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make the Sealed Tateossian Ring. Can also be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Sealed Tateossian Ring. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="icon.etc_crystal_ball_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

@@ -41,6 +41,8 @@ public class MAttackFinalizer implements IStatFunction
 		{
 			// Enchanted chest bonus
 			baseValue += calcEnchantBodyPart(creature, Item.SLOT_CHEST, Item.SLOT_FULL_ARMOR);
+			// Bonus from Homunculus.
+			baseValue += creature.getActingPlayer().getHomunculusAtkBonus();
 		}
 		
 		if (Config.CHAMPION_ENABLE && creature.isChampion())

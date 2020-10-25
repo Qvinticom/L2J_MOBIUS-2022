@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="30700" toLevel="1" name="Novice Vengeful Sniper">
-		<!-- For 30 min. when a bow or crossbow is equipped, P. Atk. +3%, PvP damage +3%, received magic skill damage during PvP -3%. -->
+		<!-- For $s1 when a bow or crossbow is equipped, P. Atk. +$s2, PvP damage +$s3, received magic skill damage during PvP -$s4. -->
 		<icon>icon.skill11873</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -75,7 +75,8 @@
 		</effects>
 	</skill>
 	<skill id="30701" toLevel="2" name="Intermediate Weapon Mastery">
-		<!-- P. Atk. +15%, additional P. Atk. +124, Atk. Spd +10%, P. Accuracy +5 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. STR +1. Depending on your STR, the Cooldown resets or the duration increases by 2 times. -->		<icon>icon.skill10251</icon>
+		<!-- P. Atk. +$s1, additional P. Atk. +$s2, Atk. Spd +$s3, P. Accuracy +$s4 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. STR +$s5. Depending on your STR, the Cooldown resets or the duration increases by $s6 times. -->
+		<icon>icon.skill10251</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -141,7 +142,7 @@
 		</effects>
 	</skill>
 	<skill id="30702" toLevel="2" name="Intermediate Dual Weapon Mastery">
-		<!-- P. Atk. +15%, additional P. Atk. +124, Atk. Spd. +10%, and P. Accuracy +5 when using a dual sword, dual blunt, or fist weapon. STR +1. -->
+		<!-- P. Atk. +$s1, additional P. Atk. +$s2, Atk. Spd. +$s3, and P. Accuracy +$s4 when using a dual sword, dual blunt weapon, or fist weapon. STR +$s5. -->
 		<icon>icon.skill10252</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -201,7 +202,7 @@
 		</effects>
 	</skill>
 	<skill id="30703" toLevel="2" name="Intermediate Polearm Mastery">
-		<!-- When a spear is equipped, P. Atk. +1% and additional P. Atk. +41. -->
+		<!-- When using a spear, P. Atk. +$s1 and additionally +$s2. -->
 		<icon>icon.skill11836</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -230,7 +231,7 @@
 		</effects>
 	</skill>
 	<skill id="30704" toLevel="2" name="Intermediate Two-handed Weapon Mastery">
-		<!-- When a two-handed sword or two-handed blunt is equipped, increases P. Atk. by 1% and additionally by 51. -->
+		<!-- When a two-handed sword or two-handed blunt is equipped, increases P. Atk. by $s1 and additionally by $s2. -->
 		<icon>icon.skill11838</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -264,7 +265,7 @@
 		</effects>
 	</skill>
 	<skill id="30705" toLevel="2" name="Intermediate Dual Sword Mastery">
-		<!-- When a dual sword or dual blunt is equipped, P. Atk. +$s1 and additional +$s2. -->
+		<!-- When using dual swords or a dual blunt weapon, P. Atk. +$s1 and additionally +$s2. -->
 		<icon>icon.skill11835</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -295,7 +296,7 @@
 		</effects>
 	</skill>
 	<skill id="30706" toLevel="2" name="Intermediate Fist Weapon Mastery">
-		<!-- When a fist weapon is equipped, P. Atk. +1% and additional +51. -->
+		<!-- When using a fist weapon, P. Atk. +$s1 and additionally +$s2. -->
 		<icon>icon.skill11837</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -324,7 +325,7 @@
 		</effects>
 	</skill>
 	<skill id="30707" toLevel="2" name="Intermediate Blunt Weapon Mastery">
-		<!-- When a blunt weapon is equipped, P. Atk. increases by 7% and P. Critical Rate by 20. -->
+		<!-- P. Atk. +$s1 and Critical Rate for standard attacks +$s2 when blunt weapon is used. -->
 		<icon>icon.skill10329</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -356,7 +357,7 @@
 		</effects>
 	</skill>
 	<skill id="30708" toLevel="2" name="Intermediate Heavy Armor Mastery">
-		<!-- When heavy armor is equipped, Max HP +200, P. Def. +135, P. Critical Damage Received -20%. Additionally, STR +1. -->
+		<!-- When using heavy armor, Max HP +$s1, P. Def. +$s2, received Critical Damage from standard attacks -$s3. Additionally, STR +$s4. -->
 		<icon>icon.skill10253</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -402,7 +403,7 @@
 		</effects>
 	</skill>
 	<skill id="30709" toLevel="2" name="Intermediate Light Armor Mastery">
-		<!-- Max HP +200, P. Def. +111, Atk. Spd. +5%, P. Accuracy +1, P. Evasion +2, Speed +3. Chance of receiving a critical attack -20% when equipped with Light Armor. STR +1. -->
+		<!-- When using light armor, Max HP +$s1, P. Def. +$s2, Atk. Spd. +$s3, P. Accuracy +$s4, P. Evasion +$s5, Speed +$s6, Received P. Critical Rate -$s7. Additionally, STR +$s8. -->
 		<icon>icon.skill10254</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -478,9 +479,9 @@
 		</effects>
 	</skill>
 	<skill id="30710" toLevel="2" name="Intermediate Force Mastery">
-		<!-- Absorbs Momentum by 10% during a standard attack and 25% during a critical attack. Can absorb up to 10 Momentum levels. 30% chance of triggering Lightning Force during a standard attack. -->
-		<!-- Absorbs Momentum by 15% during a standard attack and 30% during a critical attack. Can absorb up to 10 Momentum levels. 40% chance of triggering Lightning Force during a standard attack. -->
+		<!-- Absorbs Momentum by $s1 after a standard attack and $s2 after a critical attack. Can absorb up to $s3 Momentum levels. $s4 chance of triggering Lightning Force after a standard attack. -->
 		<icon>icon.skill10255</icon>
+		<!-- Absorbs Momentum by 15% during a standard attack and 30% during a critical attack. Can absorb up to 10 Momentum levels. 40% chance of triggering Lightning Force during a standard attack. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -528,8 +529,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30711" toLevel="2" name="Intermediate Sword/Blunt Weapon Mastery">
-		<!-- PvE Damage +10%. P. Atk. 10%, additional P. Atk. +51 when a Sword or Blunt weapon is equipped. P. Accuracy +4. Increases aggression toward yourself on standard attack. STR +1. There is a chance the skill cooldown will reset or the duration will become 2 times shorter depending on your STR. -->
+	<skill id="30711" toLevel="2" name="Intermediate Sword / Blunt Weapon Mastery">
+		<!-- PvE Damage +$s1, P. Atk. +$s2 and additionally +$s3 when using a sword or a blunt weapon. P. Accuracy +$s4. Attacks increase monsters' aggression. STR +$s5. Depending on your STR, the skill cooldown can be reset or its duration can be increased by $s6 times. -->
 		<icon>icon.skill10001</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -592,9 +593,9 @@
 		</effects>
 	</skill>
 	<skill id="30712" toLevel="2" name="Intermediate Heavy Armor Mastery">
-		<!-- When heavy armor is equipped, Max HP +300, P. Def. +165, MP Recovery Bonus +4.4, and P. Critical Damage Received -15%. Additionally, STR +1, and 6% of damage received is returned to the opponent. -->
-		<!-- When heavy armor is equipped, Max HP +900, P. Def. +248, MP Recovery Bonus +6.4, and P. Critical Damage Received -25%. Additionally, STR +1, and 8% of damage received is returned to the opponent. -->
+		<!-- STR +$s5. When using heavy armor, Max HP +$s1, P. Def. +$s2, MP Recovery Rate +$s3, received Critical Damage from standard attacks -$s4. Reflects $s6 of the received damage back to the enemy. -->
 		<icon>icon.skill10002</icon>
+		<!-- When heavy armor is equipped, Max HP +900, P. Def. +248, MP Recovery Bonus +6.4, and P. Critical Damage Received -25%. Additionally, STR +1, and 8% of damage received is returned to the opponent. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -658,7 +659,7 @@
 		</effects>
 	</skill>
 	<skill id="30713" toLevel="2" name="Intermediate Shield Mastery">
-		<!-- Shield defense is possible in every direction. Shield Defense Success Rate +50%, Shield Def. +50%, and Bow Resistance +10%. In addition, STR increases by 1. -->
+		<!-- Shield defense is possible in every direction. Shield Defense Success Rate +$s1, Shield Def. +$s2, and Bow Resistance +$s3. In addition, STR increases by $s4. -->
 		<icon>icon.skill10003</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -695,7 +696,7 @@
 		</effects>
 	</skill>
 	<skill id="30714" toLevel="2" name="Intermediate Dagger Mastery">
-		<!-- When equipped with a dagger, P. Atk. +15% and +52, Atk. Spd. +15%, P. Accuracy +5, and Vital Spot Attack Rate +3%. Additionally, STR +1. Depending on STR, skill cooldown can be reset or skill duration can be increased by 2 times. -->
+		<!-- When using a dagger, P. Atk. +$s1 and +$s2, Atk. Spd. +$s3, P. Accuracy +$s4, Vital Point Attack Rate +$s5. Additionally, STR +$s6. Depending on STR, P./ M. Skill Cooldown can be reset or its duration can be increased by $s7 times. -->
 		<icon>icon.skill10501</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -764,7 +765,7 @@
 		</effects>
 	</skill>
 	<skill id="30715" toLevel="2" name="Intermediate Dual Dagger Mastery">
-		<!-- When a dual dagger is equipped, P. Atk. +15%+62 and P. Accuracy +5. In addition, STR increases by 1. -->
+		<!-- STR +$s4. When using dual daggers, P. Atk. +$s1 and additionally +$s2, P. Accuracy +$s3. -->
 		<icon>icon.skill10502</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -810,9 +811,9 @@
 		</effects>
 	</skill>
 	<skill id="30716" toLevel="2" name="Intermediate Light Armor Mastery">
-		<!-- Max HP +180, P. Def. +111, P. Evasion +10, chance of receiving critical attacks -20% when equipped with Light Armor. Adjusts Speed/ P. Skill Critical Rate according to DEX. Additionally, STR +1 and applies Assassin's Reflex which accelerates Atk. Spd. at a 5% chance if successfully evaded. -->
-		<!-- Max HP +540, P. Def. +167, P. Evasion +15, chance of receiving critical attacks -25% when equipped with Light Armor. Adjusts Speed/ P. Skill Critical Rate according to DEX. Additionally, STR +1 and applies Assassin's Reflex which accelerates Atk. Spd. at a 7% chance if successfully evaded. -->
+		<!-- Max HP +$s1, P. Def. +$s2, P. Evasion +$s3, Received P. Critical Rate -$s4 when using light armor. Speed and P. Skill Critical Rate depends on DEX. Additionally, STR +$s5. After evading, with a $s6 chance, increases Atk. Spd. and grants Assassin's Reflex. -->
 		<icon>icon.skill10503</icon>
+		<!-- Max HP +540, P. Def. +167, P. Evasion +15, chance of receiving critical attacks -25% when equipped with Light Armor. Adjusts Speed/ P. Skill Critical Rate according to DEX. Additionally, STR +1 and applies Assassin's Reflex which accelerates Atk. Spd. at a 7% chance if successfully evaded. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -876,9 +877,9 @@
 		</effects>
 	</skill>
 	<skill id="30717" toLevel="2" name="Intermediate Bow/Crossbow Mastery">
-		<!-- P. Atk. +5%, additional P. Atk. +120, Atk. Spd. +10%, P. Accuracy +5 when using a bow or crossbow. STR +1. Depending on your STR, the Cooldown resets or the abnormal status duration increases 2 times. -->
-		<!-- P. Atk. +7%, additional P. Atk. +240, Atk. Spd. +12%, P. Accuracy +6 when using a bow or crossbow. STR +1. Depending on your STR, the Cooldown resets or the abnormal status duration increases 2 times. -->
+		<!-- P. Atk. +$s1 and additionally +$s2 when using a bow or a crossbow. Atk. Spd. +$s3, P. Accuracy +$s4. STR +$s5. Depending on your STR, the skill cooldown can be reset or its duration can be increases by $s6 times. -->
 		<icon>icon.skill10751</icon>
+		<!-- P. Atk. +7%, additional P. Atk. +240, Atk. Spd. +12%, P. Accuracy +6 when using a bow or crossbow. STR +1. Depending on your STR, the Cooldown resets or the abnormal status duration increases 2 times. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -944,9 +945,9 @@
 		</effects>
 	</skill>
 	<skill id="30718" toLevel="2" name="Intermediate Light Armor Mastery">
-		<!-- Max HP +170, P. Def. +111, P. Evasion +8, MP Recovery Bonus +4, and chance of receiving critical attacks -20% when equipped with Light Armor. Speed and P. Skill Critical Rate change depending on DEX. STR +1. -->
-		<!-- Max HP +510, P. Def. +167, P. Evasion +10, MP Recovery Bonus +5, and chance of receiving critical attacks -25% when equipped with Light Armor. Speed and P. Skill Critical Rate change depending on DEX. STR +1. -->
+		<!-- Max HP +$s1, P. Def. +$s2, P. Evasion +$s3, MP Recovery Rate +$s4, Received P. Critical Rate -$s5 when using light armor. Speed and P. Skill Critical Rate depend on DEX. STR +$s6. -->
 		<icon>icon.skill10752</icon>
+		<!-- Max HP +510, P. Def. +167, P. Evasion +10, MP Recovery Bonus +5, and chance of receiving critical attacks -25% when equipped with Light Armor. Speed and P. Skill Critical Rate change depending on DEX. STR +1. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -1020,7 +1021,7 @@
 		</effects>
 	</skill>
 	<skill id="30719" toLevel="2" name="Intermediate Weapon Mastery">
-		<!-- M. Atk. +8%, additional M. Atk. +70, Casting Spd. +12%. Depending on your INT, the Cooldown resets or the duration increases by 2 times. -->
+		<!-- M. Atk. +$s1, additional M. Atk. +$s2, Casting Spd. +$s3. Depending on your INT, the Cooldown resets or the duration increases by $s4 times. -->
 		<icon>icon.skill11251</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1056,7 +1057,7 @@
 		</effects>
 	</skill>
 	<skill id="30720" toLevel="2" name="Intermediate Robe Mastery">
-		<!-- Max HP +140, P. Def. +98, and M. Def. +6% when equipped with a Robe. -->
+		<!-- Max HP +$s1, P. Def. +$s2, and M. Def. +$s3 when equipped with a Robe. -->
 		<icon>icon.skill11252</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1098,7 +1099,7 @@
 		</effects>
 	</skill>
 	<skill id="30721" toLevel="2" name="Intermediate Sigil Mastery">
-		<!-- M. Atk. +2%, MP Recovery Rate +10% when using a sigil. -->
+		<!-- M. Atk. +$s1, MP Recovery Rate +$s2 when using a sigil. -->
 		<icon>icon.skill11791</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1130,9 +1131,9 @@
 		</effects>
 	</skill>
 	<skill id="30722" toLevel="2" name="Intermediate Dual Weapon Mastery">
-		<!-- P. Atk. +10%, additional P. Atk. +66, Atk. Spd. +15%, P. Critical Damage +8% when a dual sword/ dual blunt is equipped. Normal hit damage to monsters +10%. Chance to activate Physical Pose during a standard attack. Depending on STR, your STR can reset cooldown or double skill effect duration. -->
-		<!-- P. Atk. +20%, additional P. Atk. +132, Atk. Spd. +20%, P. Critical Damage +8% when a dual sword/ dual blunt is equipped. Normal hit damage to monsters +10%. Chance to activate Physical Pose during a standard attack. Depending on STR, your STR can reset cooldown or double skill effect duration. -->
+		<!-- P. Atk. +$s1 and additionally +$s2 when using dual swords or dual blunt weapons. Atk. Spd. +$s3, Critical Damage for standard attacks +$s4. When using all types of weapons, damage to monsters +$s5, has a chance to activate Physical Pose after a standard attack. Depending on your STR, the skill cooldown can be reset, or its duration can be increased by $s6 times. -->
 		<icon>icon.skill10252</icon>
+		<!-- P. Atk. +20%, additional P. Atk. +132, Atk. Spd. +20%, P. Critical Damage +8% when a dual sword/ dual blunt is equipped. Normal hit damage to monsters +10%. Chance to activate Physical Pose during a standard attack. Depending on STR, your STR can reset cooldown or double skill effect duration. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -1207,8 +1208,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30723" toLevel="2" name="Intermediate Sword/Blunt Weapon Mastery">
-		<!-- P. Atk. +10%, additional P. Atk. +66, Atk. Spd. +15%, P. Critical Damage +8% when a sword or blunt weapon is equipped. -->
+	<skill id="30723" toLevel="2" name="Intermediate Sword / Blunt Weapon Mastery">
+		<!-- P. Atk. +$s1 and additionally +$s2, Atk. Spd. +$s3, Critical Damage for standard attacks +$s4, when using a sword or a blunt weapon. -->
 		<icon>icon.skill10001</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1264,7 +1265,7 @@
 		</effects>
 	</skill>
 	<skill id="30724" toLevel="2" name="Intermediate Robe Mastery">
-		<!-- Max HP +140, P. Def. +98 when equipped with a Robe. -->
+		<!-- When using robe, Max HP +$s1, P. Def. +$s2. -->
 		<icon>icon.skill11252</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1296,7 +1297,7 @@
 		</effects>
 	</skill>
 	<skill id="30725" toLevel="2" name="Intermediate Light Armor Mastery">
-		<!-- Max HP +170, P. Def. +111, Atk. Spd. +5%, Speed +5 when equipped with Light Armor. -->
+		<!-- When using light armor, Max HP +$s1, P. Def. +$s2, Atk. Spd. +$s3, Speed +$s4. -->
 		<icon>icon.skill10254</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1348,9 +1349,9 @@
 		</effects>
 	</skill>
 	<skill id="30726" toLevel="2" name="Intermediate Heavy Armor Mastery">
-		<!-- When heavy armor is equipped, Max HP +200, P. Def. +135, P. Critical Damage Received -15%. -->
-		<!-- When heavy armor is equipped, Max HP +600, P. Def. +203, P. Critical Damage Received -25%. -->
+		<!-- When using heavy armor, Max HP +$s1, P. Def. +$s2, received Critical Damage from standard attacks -$s3. -->
 		<icon>icon.skill10002</icon>
+		<!-- When heavy armor is equipped, Max HP +600, P. Def. +203, P. Critical Damage Received -25%. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -1388,7 +1389,7 @@
 		</effects>
 	</skill>
 	<skill id="30727" toLevel="2" name="Intermediate Shield Mastery">
-		<!-- Shield Def. Success Rate +25%, Shield Def. +20%. -->
+		<!-- Shield Def. Success Rate +$s1, Shield Def. +$s2. -->
 		<icon>icon.skill10003</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1414,7 +1415,7 @@
 		</effects>
 	</skill>
 	<skill id="30728" toLevel="2" name="Novice Sigil Mastery">
-		<!-- Max MP +$s1, MP Recovery Rate +$s2 when using a sigil. -->
+		<!-- When using a sigil, Max MP +$s1, MP Recovery Rate +$s2. -->
 		<icon>icon.skill0925</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1442,9 +1443,9 @@
 		</effects>
 	</skill>
 	<skill id="30729" toLevel="2" name="Intermediate Weapon Mastery">
-		<!-- Increases M. Atk. by 8%, additional M. Atk. by 70, Casting Spd. by 12%, M. Critical Rate by 3%. P. Atk. by 80%, additional P. Atk. by 51, P. Accuracy by 1 when a two-handed staff or two-handed blunt is equipped. Increases INT by 1. Depending on INT, the skill cooldown resets or duration increases by 2 times. -->
-		<!-- Increases M. Atk. by 12%, additional M. Atk. by 140, Casting Spd. by 15%, M. Critical Rate by 4%. P. Atk. by 100%, additional P. Atk. by 112, P. Accuracy by 2 when a two-handed staff or two-handed blunt is equipped. Increases INT by 1. Depending on INT, the skill cooldown resets or duration increases by 2 times. -->
+		<!-- M. Atk. +$s1 and additionally +$s2, Casting Spd. +$s3, M. Skill Critical Rate +$s4. When using a two-handed staff or a two-handed blunt weapon, P. Atk. +$s5 and additionally +$s6, P. Accuracy +$s7. INT +$s8. Depending on INT, with a certain chance, resets the skill cooldown or increases the skill duration by $s9 times. -->
 		<icon>icon.skill11251</icon>
+		<!-- Increases M. Atk. by 12%, additional M. Atk. by 140, Casting Spd. by 15%, M. Critical Rate by 4%. P. Atk. by 100%, additional P. Atk. by 112, P. Accuracy by 2 when a two-handed staff or two-handed blunt is equipped. Increases INT by 1. Depending on INT, the skill cooldown resets or duration increases by 2 times. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -1573,7 +1574,7 @@
 		</effects>
 	</skill>
 	<skill id="30730" toLevel="2" name="Intermediate Robe Mastery">
-		<!-- Max HP +140, P. Def. +98, and M. Def. +6% when equipped with a Robe. INT +1. -->
+		<!-- When using robe, Max HP +$s1, P. Def. +$s2, M. Def. +$s3. Additionally INT +$s4. -->
 		<icon>icon.skill11252</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1619,9 +1620,9 @@
 		</effects>
 	</skill>
 	<skill id="30731" toLevel="2" name="Intermediate Light Armor Mastery">
-		<!-- Max HP +170, P. Def. +111 when equipped with Light Armor. Int +1. -->
-		<!-- Max HP +510, P. Def. +111 when equipped with Light Armor. Int +1. -->
+		<!-- INT +$s3. When using light armor, Max HP +$s1, P. Def. +$s2. -->
 		<icon>icon.skill10254</icon>
+		<!-- Max HP +510, P. Def. +111 when equipped with Light Armor. Int +1. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -1653,7 +1654,7 @@
 		</effects>
 	</skill>
 	<skill id="30732" toLevel="2" name="Intermediate Summon Mastery">
-		<!-- A Servitor can be summoned when summon points are 2 or lower. INT +1; When the 4 Mark Skills are used, the Servitor's linked with the ability of wrath. -->
+		<!-- INT +$s2, grants $s1 summon point(s). When a Mark skill is used, the servitor is angered. -->
 		<icon>icon.skill11254</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1697,7 +1698,7 @@
 		</effects>
 	</skill>
 	<skill id="30733" toLevel="2" name="Intermediate Magic Weapon Mastery">
-		<!-- M. Atk. +12%, Additional M. Atk. +70, M. Critical Rate +4%. INT +1. Depending on your INT, the Cooldown resets or the duration increases by 2 times. -->
+		<!-- M. Atk. +$s1, additional M. Atk. +$s2, M. Skill Critical Rate +$s3. INT +$s4. Depending on INT, has a chance to reset Skill Cooldown or extend the duration of the skill effect in $s5 times. -->
 		<icon>icon.skill11251</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1737,7 +1738,7 @@
 		</effects>
 	</skill>
 	<skill id="30734" toLevel="2" name="Intermediate Armor Mastery">
-		<!-- Max HP +140, P. Def. +111, M. Def. +6%, HP Recovery Bonus +1, MP Recovery Bonus +1.6 when equipped with a Robe/ Light Armor. INT +1. -->
+		<!-- When using light armor/ robe, Max HP +$s1, P. Def. +$s2, M. Def. +$s3, HP Recovery Rate +$s4, MP Recovery Rate +$s5. Additionally INT +$s6. -->
 		<icon>icon.skill11787</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1808,7 +1809,7 @@
 		</effects>
 	</skill>
 	<skill id="30735" toLevel="2" name="Intermediate Sigil Mastery">
-		<!-- When a sigil is equipped, MP Recovery Bonus +10% and healing Skill Power +20. In addition, INT increases by 1. -->
+		<!-- When using a sigil, MP Recovery Rate +$s1, Healing Power +$s2. Additionally, INT +$s3. -->
 		<icon>icon.skill11791</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1844,7 +1845,7 @@
 		</effects>
 	</skill>
 	<skill id="30736" toLevel="1" name="Novice Rain of Fire">
-		<!-- Attacks nearby enemies with 2311 power and stuns them for 2 sec. canceling their target. Power -10% when using a sword, a blunt, or a fist weapon. Power +25% when using a spear. Requires a sword, a blunt weapon, a spear, a fist weapon, or a dual sword. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies with $s1 power stunning them for $s2 and cancelling their targets. When using a sword, a blunt weapon, or a fist weapon, Power -$s3. When using a spear, Power +$s4. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10265</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -1890,7 +1891,7 @@
 				<POLE>1.25</POLE>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="TargetCancel">
 				<chance>100</chance>
@@ -1898,7 +1899,7 @@
 		</effects>
 	</skill>
 	<skill id="30737" toLevel="1" name="Novice Hurricane Storm">
-		<!-- Attacks the target and nearby enemies with 2311 power. Power -15% when using a sword, a dual sword, a blunt, or fist weapon. Power +25% when using a spear. Requires a sword, a blunt weapon, a spear, a fist weapon, or a dual sword. Critical. Over-hit. -->
+		<!-- Attacks the target and nearby enemies with $s1 power. When using a sword, dual swords, a blunt weapon or a fist weapon, Power -$s2. When using a spear, Power +$s3. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Critical. Over-hit. -->
 		<icon>icon.skill10288</icon>
 		<operateType>A1</operateType>
 		<castRange>500</castRange>
@@ -1940,7 +1941,7 @@
 		</effects>
 	</skill>
 	<skill id="30738" toLevel="1" name="Novice Hurricane Rush">
-		<!-- Rushes to the enemy attacking them and stunning for 3 sec. Requires a sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or a dual sword. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Rushes to the enemy attacking them and stunning for $s1 Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10267</icon>
 		<operateType>DA2</operateType>
 		<isDebuff>true</isDebuff>
@@ -1980,12 +1981,12 @@
 		</conditions>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30739" toLevel="1" name="Novice Shield Impact">
-		<!-- Attacks enemies at the front with 2062 power and pushes them away for a short distance. Chance to cancel enemies' targets. Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks enemies at the front with $s1 power and pushes them away for a short distance. There is a chance to cancel enemies' targets. Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -2029,7 +2030,7 @@
 		</effects>
 	</skill>
 	<skill id="30740" toLevel="1" name="Novice Final Ultimate Defense">
-		<!-- Activates Shield Block for 30 sec. and reduces the maximum damage received to approximately 500 in inverse proportion to your P. Def. Impossible to use Raise Shield/ Focus Shield. Requires a shield to be equipped. -->
+		<!-- Activates Shield Block for $s1 and reduces the maximum damage received to approximately $s2 in inverse proportion to your P. Def. Impossible to use Raise Shield/ Focus Shield. Requires a shield to be equipped. -->
 		<icon>icon.skill10097</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -2088,7 +2089,7 @@
 		</effects>
 	</skill>
 	<skill id="30741" toLevel="1" name="Novice Superior Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes nearby enemies into attacking you. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -2129,7 +2130,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="30742" toLevel="1" name="Novice Shadow Chase">
-		<!-- Moves behind the enemy canceling their target and stunning them for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Moves behind the enemy canceling their target and stunning them for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10516</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -2155,12 +2156,12 @@
 			<effect name="TeleportToTarget" />
 			<effect name="TargetCancel" />
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30743" toLevel="1" name="Novice Flash Bluff">
-		<!-- Startles the target making them turn backwards and confusing for 3 sec. Requires a dagger or a dual dagger. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Startles the target making them turn backwards and confusing for $s1 Requires a dagger or a dual dagger. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10554</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -2197,12 +2198,12 @@
 				<chance>90</chance>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30744" toLevel="1" name="Novice Critical Wound">
-		<!-- Increases a target's P. Critical Damage Received by 15% for 30 sec. by giving painful wounds. Requires a dagger/ dual dagger. -->
+		<!-- For $s1, target's Received Critical Damage from standard attacks +$s2. Requires a dagger or dual daggers. -->
 		<icon>icon.skill0531</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -2238,7 +2239,7 @@
 		</effects>
 	</skill>
 	<skill id="30745" toLevel="1" name="Novice Heavy Arrow Rain">
-		<!-- Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 4505 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<!-- Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with $s1 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -2274,7 +2275,7 @@
 		</effects>
 	</skill>
 	<skill id="30746" toLevel="1" name="Novice Impact Shot">
-		<!-- Fires an arrow at the enemy with 4966 power stunning them for 5 sec. Requires a bow or a crossbow. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Fires an arrow at the enemy with $s1 power stunning them for $s2 Requires a bow or a crossbow. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10769</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -2314,12 +2315,12 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30747" toLevel="1" name="Novice Bullseye">
-		<!-- Decreases target's Bow/ Crossbow Resistance by 20% and M. Def. by 3%. -->
+		<!-- Decreases target's Bow/ Crossbow Resistance by $s1 and M. Def. by $s2. -->
 		<icon>icon.skill10801</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -2352,7 +2353,7 @@
 		</effects>
 	</skill>
 	<skill id="30748" toLevel="1" name="Novice Elemental Storm">
-		<!-- Deals M. Atk. of 52 power added with attribute damage on the target and the enemies near it. -->
+		<!-- Deals magical attribute damage to the target and nearby enemies with $s1 power. Over-hit. -->
 		<icon>icon.skill11040</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2380,7 +2381,7 @@
 		</effects>
 	</skill>
 	<skill id="30749" toLevel="1" name="Novice Death Howl">
-		<!-- Attacks nearby enemies with 31 power knocking them back. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies with $s1 power knocking them back. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11032</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2413,12 +2414,12 @@
 				<distance>200</distance>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30750" toLevel="1" name="Novice Mass Death Fear">
-		<!-- Inflicts fear on the target and nearby enemies for 10 sec. Their speed -12%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Fear on the target and nearby enemies for $s1 Speed -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11056</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2465,7 +2466,7 @@
 		</effects>
 	</skill>
 	<skill id="30751" toLevel="1" name="Novice Elemental Resistance">
-		<!-- For 30 min., all Defense attributes of party members +15. -->
+		<!-- For $s1, Attribute Resistance of party members +$s2. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -2514,7 +2515,7 @@
 		</effects>
 	</skill>
 	<skill id="30752" toLevel="1" name="Novice Resistance Debuff">
-		<!-- Confusion/ Stupor/ Obstruction/ Infection Resistance +25% for 30 min. -->
+		<!-- Confusion/ Stupor/ Obstruction/ Infection Resistance +$s2 for $s1 -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -2562,7 +2563,7 @@
 		</effects>
 	</skill>
 	<skill id="30753" toLevel="1" name="Novice Mental Attack Resistance">
-		<!-- For 30 min., a party member's Resistance to buff-canceling attacks/ debuff attacks +15. -->
+		<!-- For $s1, a party member's Resistance to buff-canceling attacks/ debuff attacks +$s2. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -2610,7 +2611,7 @@
 		</effects>
 	</skill>
 	<skill id="30754" toLevel="1" name="Novice Celestial Aegis">
-		<!-- Makes all party members invincible for 30 sec. Effect is removed upon attack. -->
+		<!-- Makes all party members invincible for $s1 Effect is removed upon attack. The skill cooldown is fixed. -->
 		<icon>icon.skill11560</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2643,6 +2644,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -2654,7 +2668,7 @@
 		</effects>
 	</skill>
 	<skill id="30755" toLevel="1" name="Novice Mark of Plague">
-		<!-- For 10 sec., inflict damage with 17 Power added to M. Atk. Additionally, decrease heal amount of target. -->
+		<!-- Deals continuous magic damage to the target with $s2 power for $s1 Additionally decreases the target's Received Healing. -->
 		<icon>icon.skill11261</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2690,7 +2704,7 @@
 		</effects>
 	</skill>
 	<skill id="30756" toLevel="1" name="Novice Mark of Trick">
-		<!-- Interrupts target's skill casting and deals continuous magic damage to them with 17 power for 10 sec. -->
+		<!-- Deals continuous magic damage to the target with $s2 power for $s1 Additionally interrupts the target's skill casting. -->
 		<icon>icon.skill11262</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2757,7 +2771,7 @@
 		</effects>
 	</skill>
 	<skill id="30758" toLevel="1" name="Novice Radiant Recharge">
-		<!-- Instantly recovers target's MP with a maximum of 33 Power depending on target's level. Also, for 10 sec., recovers 6 MP per second. Ineffective on classes that have the Recharge skill. -->
+		<!-- Instantly recovers target's MP with a maximum of $s1 Power depending on target's level. Also, for $s2, recovers $s3 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2794,7 +2808,7 @@
 		</effects>
 	</skill>
 	<skill id="30759" toLevel="1" name="Novice Celestial Protection">
-		<!-- Renders the selected party member invincible for 5 sec. This effect cannot be stacked, and a limit applies after its duration is over. -->
+		<!-- For $s1, grants invincibility to a party member. The identical effects do not stack. -->
 		<icon>icon.skill11758</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2828,6 +2842,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -2839,7 +2866,7 @@
 		</effects>
 	</skill>
 	<skill id="30760" toLevel="1" name="Novice Brilliant Heal">
-		<!-- Heals self and surrounding party members with 238 power. If HP is full, CP is restored with the remaining power. -->
+		<!-- Recovers your HP and that of your nearby party members with $s1 power. If HP is full, recovers CP. -->
 		<icon>icon.skill11757</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2910,7 +2937,7 @@
 		</effects>
 	</skill>
 	<skill id="30763" toLevel="2" name="Unicorn's Touch">
-		<!-- Inflicts damage on a single target with 2101 added to P. Atk. -->
+		<!-- Inflicts damage on a single target with $s1 added to P. Atk. -->
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -2934,7 +2961,7 @@
 		</effects>
 	</skill>
 	<skill id="30764" toLevel="2" name="Unicorn's Power">
-		<!-- Inflicts damage on nearby enemies with 2311 Power added to P. Atk. -->
+		<!-- Inflicts damage on nearby enemies with $s1 Power added to P. Atk. -->
 		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -3021,8 +3048,8 @@
 		<icon>icon.skill0007</icon>
 		<operateType>A1</operateType>
 		<castRange>500</castRange>
-		<hitTime>1790</hitTime>
-		<coolTime>300</coolTime>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-709</effectPoint>
 		<effectRange>1000</effectRange>
@@ -3035,7 +3062,6 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>ANCIENTSWORD</item>
 					<item>DUAL</item>
 					<item>POLE</item>
 					<item>SWORD</item>
@@ -3063,19 +3089,19 @@
 		<effects>
 			<effect name="EnergyAttack">
 				<power>
-					<value level="1">15024</value>
-					<value level="2">15542</value>
-					<value level="3">16580</value>
-					<value level="4">17618</value>
-					<value level="5">18656</value>
-					<value level="6">19695</value>
-					<value level="7">20732</value>
-					<value level="8">21771</value>
-					<value level="9">23352</value>
-					<value level="10">24490</value>
-					<value level="11">25628</value>
-					<value level="12">27336</value>
-					<value level="13">29044</value>
+					<value level="1">22536</value>
+					<value level="2">23313</value>
+					<value level="3">24870</value>
+					<value level="4">26427</value>
+					<value level="5">27984</value>
+					<value level="6">29542</value>
+					<value level="7">31098</value>
+					<value level="8">32656</value>
+					<value level="9">35028</value>
+					<value level="10">36735</value>
+					<value level="11">38442</value>
+					<value level="12">41004</value>
+					<value level="13">43566</value>
 					<value fromLevel="1" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
@@ -3095,8 +3121,8 @@
 		<icon>icon.skill0035</icon>
 		<operateType>A1</operateType>
 		<castRange>500</castRange>
-		<hitTime>1790</hitTime>
-		<coolTime>300</coolTime>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-709</effectPoint>
 		<mpConsume>
@@ -3124,7 +3150,6 @@
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
-					<item>ANCIENTSWORD</item>
 					<item>DUAL</item>
 					<item>POLE</item>
 					<item>SWORD</item>
@@ -3137,19 +3162,19 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">15024</value>
-					<value level="2">15542</value>
-					<value level="3">16580</value>
-					<value level="4">17618</value>
-					<value level="5">18656</value>
-					<value level="6">19695</value>
-					<value level="7">20732</value>
-					<value level="8">21771</value>
-					<value level="9">23352</value>
-					<value level="10">24490</value>
-					<value level="11">25628</value>
-					<value level="12">27336</value>
-					<value level="13">29044</value>
+					<value level="1">22536</value>
+					<value level="2">23313</value>
+					<value level="3">24870</value>
+					<value level="4">26427</value>
+					<value level="5">27984</value>
+					<value level="6">29542</value>
+					<value level="7">31098</value>
+					<value level="8">32656</value>
+					<value level="9">35028</value>
+					<value level="10">36735</value>
+					<value level="11">38442</value>
+					<value level="12">41004</value>
+					<value level="13">43566</value>
 					<value fromLevel="1" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
@@ -3165,12 +3190,12 @@
 		</effects>
 	</skill>
 	<skill id="30770" toLevel="9" name="Thunder Storm">
-		<!-- Swings a spear to attack nearby enemies with $s1 power. Inflicts stun for $s2 Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Swings a spear to attack nearby enemies with $s1 power. Inflicts stun for $s2 Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
-		<hitTime>1080</hitTime>
-		<coolTime>720</coolTime>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-167</effectPoint>
 		<abnormalLevel>1</abnormalLevel>
@@ -3178,7 +3203,7 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">50</value>
+			<value fromLevel="1" toLevel="9">40</value>
 			<value fromLevel="1" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>6-12</affectLimit>
@@ -3211,15 +3236,15 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">26003</value>
-					<value level="2">30494</value>
-					<value level="3">35883</value>
-					<value level="4">37680</value>
-					<value level="5">39349</value>
-					<value level="6">40997</value>
-					<value level="7">42645</value>
-					<value level="8">45117</value>
-					<value level="9">47589</value>
+					<value level="1">33803</value>
+					<value level="2">39642</value>
+					<value level="3">46647</value>
+					<value level="4">48984</value>
+					<value level="5">51153</value>
+					<value level="6">53296</value>
+					<value level="7">55438</value>
+					<value level="8">58652</value>
+					<value level="9">61865</value>
 					<value fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<criticalChance>
@@ -3230,12 +3255,12 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30771" toLevel="4" name="Rage">
-		<!-- For $s1, P. Atk. +$s2. Additionally P. Atk. +$s3 when a two-handed sword/ blunt weapon, or spear is equipped. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
+		<!-- For $s1, P. Atk. +$s2. Additionally P. Atk. +$s3 when using a two-handed sword/ blunt weapon, or a spear. Requires a sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or dual swords. -->
 		<icon>icon.skill0094</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -3334,10 +3359,11 @@
 		</effects>
 	</skill>
 	<skill id="30772" toLevel="5" name="Guts">
-		<!-- For $s1, P. Def. +$s2 and Debuff Resistance +$s3. Available when HP is $s4 or lower. -->
+		<!-- For $s1, P. Def. +$s2. Additionally, when using heavy armor, P. Def. +$s3 -->
 		<icon>icon.skill0139</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
+		<abnormalType>PINCH</abnormalType>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>
 			<value level="1">510</value>
@@ -3365,7 +3391,6 @@
 			<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="5" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
-		<abnormalType>PINCH</abnormalType>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -3377,62 +3402,84 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="RemainHpPer">
-				<amount>90</amount>
-				<percentType>LESS</percentType>
-				<affectType>CASTER</affectType>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">150</value>
 					<value level="2">160</value>
-					<value level="3">180</value>
-					<value level="4">200</value>
-					<value level="5">230</value>
+					<value level="3">170</value>
+					<value level="4">185</value>
+					<value level="5">200</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ResistAbnormalByCategory">
+			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">-75</value>
-					<value level="2">-80</value>
-					<value level="3">-85</value>
-					<value level="4">-90</value>
-					<value level="5">-90</value>
+					<value level="1">25</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
 				</amount>
-				<slot>DEBUFF</slot>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
 			</effect>
-			<effect name="Heal" fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">25</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">25</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="Heal" fromLevel="3" toLevel="5" fromSubLevel="2001" toSubLevel="2020">
 				<power>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2001">1936</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2002" toSubLevel="2002">2072</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2003" toSubLevel="2003">2207</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2004" toSubLevel="2004">2342</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2005" toSubLevel="2005">2477</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2006" toSubLevel="2006">2612</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2007" toSubLevel="2007">2747</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2008" toSubLevel="2008">2882</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2009" toSubLevel="2009">3017</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2010" toSubLevel="2010">3152</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2011" toSubLevel="2011">3288</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2012" toSubLevel="2012">3423</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2013" toSubLevel="2013">3558</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2014" toSubLevel="2014">3693</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2015" toSubLevel="2015">3828</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2016" toSubLevel="2016">3964</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2017" toSubLevel="2017">4099</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2018" toSubLevel="2018">4234</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2019" toSubLevel="2019">4369</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2020" toSubLevel="2020">4504</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2001" toSubLevel="2001">1936</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2002" toSubLevel="2002">2072</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2003" toSubLevel="2003">2207</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2004" toSubLevel="2004">2342</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2005" toSubLevel="2005">2477</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2006" toSubLevel="2006">2612</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2007" toSubLevel="2007">2747</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2008" toSubLevel="2008">2882</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2009" toSubLevel="2009">3017</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2010" toSubLevel="2010">3152</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2011" toSubLevel="2011">3288</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2012" toSubLevel="2012">3423</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2013" toSubLevel="2013">3558</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2014" toSubLevel="2014">3693</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2015" toSubLevel="2015">3828</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2016" toSubLevel="2016">3964</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2017" toSubLevel="2017">4099</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2018" toSubLevel="2018">4234</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2019" toSubLevel="2019">4369</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2020" toSubLevel="2020">4504</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30773" toLevel="5" name="Frenzy">
-		<!-- For 60 sec., P. Atk. +15%, Atk. Spd. +22%, P. Critical Rate +15, P. Critical Damage +15%, and Spd. +15. Additionally Accuracy +8 and P. Atk. +10% when using a two-handed sword, two-handed blunt, or spear. Additionally P. Atk. +10% and Critical Rate +100 when HP is 60% or below. Additionally P. Atk. +30% and Critical Rate +300, when HP is 30% or below. Available when HP is 90% or below. -->
+		<!-- For $s1, P. Atk. +$s2. Additionally, P. Atk. +$s3 when using a two-handed sword/ blunt weapon, or a spear. -->
 		<icon>icon.skill0176</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -3458,7 +3505,11 @@
 			<value level="4">4</value>
 			<value level="5">5</value>
 		</abnormalLevel>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="5">60</value>
+			<value fromLevel="3" toLevel="5" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="5" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
+		</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<magicLevel>
 			<value level="1">85</value>
@@ -3471,165 +3522,79 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="RemainHpPer">
-				<amount>90</amount>
-				<percentType>LESS</percentType>
-				<affectType>CASTER</affectType>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>
-					<value level="1">15</value>
-					<value level="2">16</value>
-					<value level="3">18</value>
-					<value level="4">20</value>
-					<value level="5">25</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>
-					<value level="1">22</value>
-					<value level="2">25</value>
-					<value level="3">27</value>
-					<value level="4">30</value>
-					<value level="5">35</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CriticalRate">
-				<amount>
-					<value level="1">15</value>
-					<value level="2">16</value>
-					<value level="3">18</value>
-					<value level="4">20</value>
-					<value level="5">25</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="CriticalDamage">
-				<amount>
-					<value level="1">15</value>
-					<value level="2">16</value>
-					<value level="3">18</value>
-					<value level="4">20</value>
-					<value level="5">25</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>
 					<value level="1">10</value>
-					<value level="2">11</value>
-					<value level="3">12</value>
-					<value level="4">13</value>
-					<value level="5">14</value>
-					<value level="6">15</value>
-					<value level="7">16</value>
-					<value level="8">18</value>
-					<value level="9">20</value>
-					<value level="10">22</value>
+					<value level="2">12</value>
+					<value level="3">14</value>
+					<value level="4">17</value>
+					<value level="5">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="TwoHandedSwordBonus">
 				<pAtkAmount>10</pAtkAmount>
 				<pAtkMode>PER</pAtkMode>
-				<pAccuracyAmount>8</pAccuracyAmount>
-				<pAccuracyMode>DIFF</pAccuracyMode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>10</pAtkAmount>
 				<pAtkMode>PER</pAtkMode>
-				<pAccuracyAmount>8</pAccuracyAmount>
-				<pAccuracyMode>DIFF</pAccuracyMode>
 			</effect>
 			<effect name="PAtk">
 				<amount>10</amount>
 				<mode>PER</mode>
-				<weaponType>				
-					<item>SWORD</item>
-					<item>DUALBLUNT</item>
-					<item>POLE</item>
-				</weaponType>
-			</effect>
-			<effect name="Accuracy">
-				<amount>8</amount>
-				<mode>DIFF</mode>
 				<weaponType>
-					<item>SWORD</item>
-					<item>DUALBLUNT</item>
 					<item>POLE</item>
 				</weaponType>
 			</effect>
-			<effect name="PAtk">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<hpPercent>60</hpPercent>
-			</effect>
-			<effect name="CriticalRate">
-				<amount>100</amount>
-				<mode>DIFF</mode>
-				<hpPercent>60</hpPercent>
-			</effect>
-			<effect name="PAtk">
-				<amount>30</amount>
-				<mode>PER</mode>
-				<hpPercent>30</hpPercent>
-			</effect>
-			<effect name="CriticalRate">
-				<amount>300</amount>
-				<mode>DIFF</mode>
-				<hpPercent>30</hpPercent>
-			</effect>
-			<effect name="Heal" fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="Heal" fromLevel="3" toLevel="5" fromSubLevel="2001" toSubLevel="2020">
 				<power>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2001">1936</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2002" toSubLevel="2002">2072</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2003" toSubLevel="2003">2207</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2004" toSubLevel="2004">2342</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2005" toSubLevel="2005">2477</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2006" toSubLevel="2006">2612</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2007" toSubLevel="2007">2747</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2008" toSubLevel="2008">2882</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2009" toSubLevel="2009">3017</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2010" toSubLevel="2010">3152</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2011" toSubLevel="2011">3288</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2012" toSubLevel="2012">3423</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2013" toSubLevel="2013">3558</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2014" toSubLevel="2014">3693</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2015" toSubLevel="2015">3828</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2016" toSubLevel="2016">3964</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2017" toSubLevel="2017">4099</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2018" toSubLevel="2018">4234</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2019" toSubLevel="2019">4369</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2020" toSubLevel="2020">4504</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2001" toSubLevel="2001">1936</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2002" toSubLevel="2002">2072</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2003" toSubLevel="2003">2207</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2004" toSubLevel="2004">2342</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2005" toSubLevel="2005">2477</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2006" toSubLevel="2006">2612</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2007" toSubLevel="2007">2747</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2008" toSubLevel="2008">2882</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2009" toSubLevel="2009">3017</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2010" toSubLevel="2010">3152</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2011" toSubLevel="2011">3288</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2012" toSubLevel="2012">3423</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2013" toSubLevel="2013">3558</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2014" toSubLevel="2014">3693</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2015" toSubLevel="2015">3828</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2016" toSubLevel="2016">3964</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2017" toSubLevel="2017">4099</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2018" toSubLevel="2018">4234</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2019" toSubLevel="2019">4369</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2020" toSubLevel="2020">4504</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30774" toLevel="2" name="Fury Fists">
-		<!-- Increases your Atk. Spd. Continuously consumes HP. -->
+		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3. Requires fist weapon. Consumes $s4 Soulstone(s). -->
 		<icon>icon.skill0222</icon>
-		<operateType>T</operateType>
-		<mpConsume>8</mpConsume>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>NONE</targetType>
+		<operateType>A2</operateType>
+		<abnormalTime>1800</abnormalTime>
+		<mpConsume>
+			<value level="1">32</value>
+			<value level="2">35</value>
+		</mpConsume>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
+		<itemConsumeCount>5</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
 		<effects>
-			<effect name="DamOverTime">
-				<power>12</power>
-				<ticks>2</ticks>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PAtk">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">10</value> <!-- FIXME: NO RETAIL VALUE -->
+					<value level="1">10</value>
+					<value level="2">15</value>
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -3639,8 +3604,8 @@
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">10</value> <!-- FIXME: NO RETAIL VALUE -->
+					<value level="1">10</value>
+					<value level="2">15</value>
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -3651,11 +3616,11 @@
 		</effects>
 	</skill>
 	<skill id="30775" toLevel="9" name="Triple Sonic Slash">
-		<!-- Gathers Momentum to inflict $s1 damage onto the enemy, increasing the damage as Momentum is consumed. Damage +$s3 at max Momentum consumption of $s2. Requires a sword, blunt, spear, fist, dual blunt, or dual sword. -->
+		<!-- Strikes the target with clot of energy with $s1 power. Consumes up to $s2 Momentum to increase damage by $s3. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapon, or dual swords. -->
 		<icon>icon.skill0261</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
-		<hitTime>1667</hitTime>
+		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>-213</effectPoint>
@@ -3701,21 +3666,30 @@
 		<effects>
 			<effect name="EnergyAttack">
 				<power>
-					<value level="1">22531</value>
-					<value level="2">26017</value>
-					<value level="3">29503</value>
-					<value level="4">33377</value>
-					<value level="5">38441</value>
-					<value level="6">40315</value>
-					<value level="7">42189</value>
-					<value level="8">45001</value>
-					<value level="9">47813</value>
+					<value level="1">29290</value>
+					<value level="2">33822</value>
+					<value level="3">38353</value>
+					<value level="4">43390</value>
+					<value level="5">49973</value>
+					<value level="6">52409</value>
+					<value level="7">54845</value>
+					<value level="8">58501</value>
+					<value level="9">62156</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<chargeConsume>3</chargeConsume>
 				<criticalChance>15</criticalChance>
 				<pDefMod>30</pDefMod>
 				<overHit>true</overHit>
+				<criticalChance>
+					<value fromLevel="1" toLevel="9">15</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="9">1</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -3790,8 +3764,8 @@
 		<icon>icon.skill0320</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
-		<hitTime>1080</hitTime>
-		<coolTime>720</coolTime>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-333</effectPoint>
 		<mpConsume>
@@ -3834,28 +3808,28 @@
 		<effects>
 			<effect name="Cp">
 				<amount>
-					<value level="1">-33</value>
-					<value level="2">-36</value>
-					<value level="3">-40</value>
-					<value level="4">-45</value>
-					<value level="5">-50</value>
-					<value level="6">-55</value>
-					<value level="7">-60</value>
-					<value level="8">-65</value>
-					<value level="9">-70</value>
+					<value level="1">-50</value>
+					<value level="2">-55</value>
+					<value level="3">-60</value>
+					<value level="4">-65</value>
+					<value level="5">-70</value>
+					<value level="6">-75</value>
+					<value level="7">-80</value>
+					<value level="8">-85</value>
+					<value level="9">-90</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30778" toLevel="13" name="Sonic Rage">
-		<!-- Attacks the target with a deadly energy storm, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
+		<!-- Attacks the target with $s1 power, decreasing their P. Def. and absorbing Momentum. Requires a sword, a blunt weapon, a fist weapon, a dual blunt weapon, or dual swords. -->
 		<icon>icon.skill0345</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>600</castRange>
-		<hitTime>1200</hitTime>
-		<coolTime>300</coolTime>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-692</value>
 			<value level="2">-696</value>
@@ -3926,22 +3900,23 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="EnergyAttack">
 				<power>
-					<value level="1">551</value>
-					<value level="2">565</value>
-					<value level="3">598</value>
-					<value level="4">630</value>
-					<value level="5">662</value>
-					<value level="6">693</value>
-					<value level="7">725</value>
-					<value level="8">757</value>
-					<value level="9">812</value>
-					<value level="10">844</value>
-					<value level="11">876</value>
-					<value level="12">876</value>
-					<value level="13">876</value>
-					<value fromLevel="1" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+					<!-- Guessing -->
+					<value level="1">16530</value>
+					<value level="2">16980</value>
+					<value level="3">17940</value>
+					<value level="4">18900</value>
+					<value level="5">19860</value>
+					<value level="6">20790</value>
+					<value level="7">21750</value>
+					<value level="8">22710</value>
+					<value level="9">24360</value>
+					<value level="10">25320</value>
+					<value level="11">26280</value>
+					<value level="12">27720</value>
+					<value level="13">29160</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
@@ -3950,21 +3925,21 @@
 				<amount>-23</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="1" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed" fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="1" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 		<selfEffects>
 			<effect name="FocusMomentum">
-				<maxCharges>8</maxCharges>
+				<maxCharges>20</maxCharges>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="30779" toLevel="13" name="Raging Force">
-		<!-- Attacks the enemy with a devastating burst of wind and gathers Momentum while cutting their defenses. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
+		<!-- Attacks the target with $s1 power, decreasing their P. Def. and absorbing Momentum. Requires a sword, a blunt weapon, a fist weapon, a dual blunt weapon, or dual swords. -->
 		<icon>icon.skill0346</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -4006,7 +3981,7 @@
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="13">80</value>
-			<value fromLevel="1" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="11" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<effectRange>1100</effectRange>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4042,29 +4017,33 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">551</value>
-					<value level="2">565</value>
-					<value level="3">598</value>
-					<value level="4">630</value>
-					<value level="5">662</value>
-					<value level="6">693</value>
-					<value level="7">725</value>
-					<value level="8">757</value>
-					<value level="9">812</value>
-					<value level="10">844</value>
-					<value level="11">876</value>
-					<value level="12">924</value>
-					<value level="13">972</value>
-					<value fromLevel="1" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+					<value level="1">16530</value>
+					<value level="2">16980</value>
+					<value level="3">17940</value>
+					<value level="4">18900</value>
+					<value level="5">19860</value>
+					<value level="6">20790</value>
+					<value level="7">21750</value>
+					<value level="8">22710</value>
+					<value level="9">24360</value>
+					<value level="10">25320</value>
+					<value level="11">26280</value>
+					<value level="12">27720</value>
+					<value level="13">29160</value>
+					<value fromLevel="11" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
 			</effect>
-			<effect name="Speed" fromLevel="1" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed" fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="1" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-23</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -4101,8 +4080,8 @@
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">40</value>
-			<value fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="1" toLevel="9">30</value>
+			<value fromLevel="7" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
@@ -4137,7 +4116,7 @@
 			<value level="13">231</value>
 		</mpConsume>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>TURN_STONE</trait>
+		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4145,6 +4124,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4158,6 +4138,19 @@
 			</effect>
 			<effect name="BuffBlock" />
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="HpRegen">
 				<amount>-100</amount>
 				<mode>PER</mode>
@@ -4168,7 +4161,7 @@
 		</effects>
 	</skill>
 	<skill id="30781" toLevel="4" name="Mortal Strike">
-		<!-- Increases your Vital Spot Attack Rate by $s2 for $s1 Requires a dagger or dual dagger. -->
+		<!-- For $s1, Vital Point Attack Rate +$s2. Requires a dagger. -->
 		<icon>icon.skill0410</icon>
 		<operateType>A2</operateType>
 		<isMagic>22</isMagic>
@@ -4312,7 +4305,7 @@
 		</effects>
 	</skill>
 	<skill id="30783" toLevel="9" name="Song of Silence">
-		<!-- Prevents enemies from using physical/ magic skills for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Prevents enemies from using physical/ magic skills for $s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0437</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -4346,7 +4339,7 @@
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">60</value>
+			<value fromLevel="1" toLevel="9">50</value>
 			<value fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
@@ -4375,10 +4368,11 @@
 		</effects>
 	</skill>
 	<skill id="30784" toLevel="4" name="Sword Shield">
-		<!-- For $s1, increases P. Def. by $s2 and decreases Speed by $s3. -->
+		<!-- For $s1, P. Def. +$s2. -->
 		<icon>icon.skill0483</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>
 			<value level="1">337</value>
@@ -4400,8 +4394,8 @@
 		</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
-			<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<magicLevel>
@@ -4415,34 +4409,25 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Speed">
+			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">-30</value>
-					<value level="2">-20</value>
-					<value level="3">-10</value>
-					<value level="4">0</value>
+					<value level="1">100</value>
+					<value level="2">150</value>
+					<value level="3">200</value>
+					<value level="4">250</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="PAtk" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value level="1">6250</value>
-					<value level="2">6250</value>
-					<value level="3">6250</value>
-					<value level="4">7500</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PAtk" fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
-				<amount>
-					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30785" toLevel="9" name="Disarm">
-		<!-- Disarms the enemy for $s1 Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Disarms the target for $s1, their P./ M. Atk. -$s2. Requires a sword, ancient sword, blunt weapon, spear, fist weapon, or dual swords. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0485</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -4468,7 +4453,7 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">50</value>
-			<value fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>200</effectRange>
@@ -4486,6 +4471,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DISARM</trait>
 		<targetType>ENEMY_ONLY</targetType>
+		<isDebuff>true</isDebuff>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Disarm">
@@ -4494,22 +4480,26 @@
 				<amount>-40</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="MAtk">
+				<amount>-40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="1" toLevel="9" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed" fromLevel="8" toLevel="9" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="1" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30786" toLevel="8" name="Critical Wound">
-		<!-- Increases a target's P. Critical Damage Received by $s2 for $s1 by giving painful wounds. Requires a dagger/ dual dagger. -->
+		<!-- For $s1, target's Received Critical Damage from standard attacks +$s2. Requires a dagger or dual daggers. -->
 		<icon>icon.skill0531</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -4530,13 +4520,13 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="8">30</value>
-			<value fromLevel="1" toLevel="8" fromSubLevel="2001" toSubLevel="2010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="8" fromSubLevel="2011" toSubLevel="2020">{base + 10 + (subIndex - 10 * 0.5)}</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2010">{base + subIndex}</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="2011" toSubLevel="2020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>T_CRT_RATE_UP</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="8">80</value>
-			<value fromLevel="1" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>400</effectRange>
@@ -4585,7 +4575,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="30787" toLevel="9" name="Lightning">
-		<!-- Sends an electric current to attack nearby enemies with $s1 power. Paralyzes them for $s2 Enemies' Received Healing -$s3. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Sends an electric current to attack nearby enemies with $s1 power. Paralyzes them for $s2 Enemies' Received Healing -$s3. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0791</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -4623,10 +4613,7 @@
 		<affectRange>150</affectRange>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<activateRate>
-			<value fromLevel="1" toLevel="9">50</value>
-			<value fromLevel="1" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
-		</activateRate>
+		<activateRate>50</activateRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4675,24 +4662,24 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6092</skillId> <!-- Lightning Shock -->
+				<skillId>6092</skillId> <!-- Lightning -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="30788" toLevel="9" name="Rush Impact">
-		<!-- Rushes forward to attack enemies at the front with $s1 power. Inflicts stun for $s2 Requires an ancient sword, a two-handed sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or a dual sword. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Rushes forward to attack enemies at the front with $s1 power. Inflicts Stun for $s2 Requires an ancient sword, a two-handed sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>600</castRange>
-		<hitTime>800</hitTime>
-		<coolTime>200</coolTime>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
 		<effectPoint>-669</effectPoint>
 		<mpConsume>
 			<value level="1">92</value>
@@ -4720,8 +4707,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">60</value>
-			<value fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="9">40</value>
+			<value fromLevel="4" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>600</affectRange>
@@ -4764,29 +4751,29 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">11557</value>
-					<value level="2">13553</value>
-					<value level="3">15150</value>
-					<value level="4">16747</value>
-					<value level="5">17896</value>
-					<value level="6">18622</value>
-					<value level="7">19348</value>
-					<value level="8">20438</value>
-					<value level="9">21528</value>
+					<value level="1">15024</value>
+					<value level="2">17618</value>
+					<value level="3">19695</value>
+					<value level="4">21771</value>
+					<value level="5">23264</value>
+					<value level="6">24208</value>
+					<value level="7">25152</value>
+					<value level="8">26569</value>
+					<value level="9">27986</value>
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PhysicalDefence" fromLevel="4" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="4" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="MagicalDefence" fromLevel="4" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="4" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4847,7 +4834,7 @@
 		</effects>
 	</skill>
 	<skill id="30790" toLevel="9" name="Freezing Flame">
-		<!-- Creates an intensely cold flame that lowers the enemy's HP by $s2 per second or by $s3 per second during PVP for $s1. Reduces resistance to One-handed Swords / Two-handed Swords / Dualswords / Blunt Weapons / Two-handed Blunt Weapons by $s4. -->
+		<!-- Strikes the target with magical cold flames. For $s1, P./ M. Atk. and P./ M. Def. -$s2, HP -$s3 per sec. Additionally, one-handed sword/ two-handed sword/ dual swords/ blunt weapon/ two-handed blunt weapon resistance -$s4. -->
 		<icon>icon.skill1244</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -4883,7 +4870,7 @@
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">70</value>
+			<value fromLevel="1" toLevel="9">50</value>
 			<value fromLevel="1" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -4905,6 +4892,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<trait>DERANGEMENT</trait>
 		<pvpEffects>
 			<effect name="DamOverTime">
 				<power>
@@ -4925,6 +4913,22 @@
 				<BLUNT>-5</BLUNT>
 				<DUAL>-5</DUAL>
 				<DUALBLUNT>-5</DUALBLUNT>
+			</effect>
+			<effect name="PAtk">
+				<amount>-40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>-40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-40</amount>
+				<mode>PER</mode>
 			</effect>
 		</pvpEffects>
 		<pveEffects>
@@ -4963,7 +4967,7 @@
 		</pveEffects>
 	</skill>
 	<skill id="30791" toLevel="4" name="Transfer Pain">
-		<!-- Transfers $s1 of received damage to a servitor. Consumes MP proportionately to your level. -->
+		<!-- Transfers $s1 of received damage to a servitor. MP Consumption depends on your level. -->
 		<icon>icon.skill1262</icon>
 		<operateType>T</operateType>
 		<mpConsume>
@@ -5114,7 +5118,7 @@
 		</effects>
 	</skill>
 	<skill id="30794" toLevel="1" name="Empowering Echo">
-		<!-- For 30 min., increases your magic MP Consumption +35% and M. Atk. +25%. -->
+		<!-- For $s1, MP Consumption +$s2, M. Atk. +$s3. -->
 		<icon>icon.skill1457</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -5155,6 +5159,7 @@
 		<icon>icon.skill1514</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>
 			<value level="1">144</value>
@@ -5171,8 +5176,8 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
-			<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>PD_UP_BOW</abnormalType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -5209,23 +5214,23 @@
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">120</value>
-					<value level="2">130</value>
-					<value level="3">140</value>
-					<value level="4">150</value>
+					<value level="1">100</value>
+					<value level="2">150</value>
+					<value level="3">200</value>
+					<value level="4">250</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PAtk" fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PAtk" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30796" toLevel="1" name="Novice Crier's Harmony">
-		<!-- For 30 min., the selected party member's P. Atk. +11%, M. Atk. +20%, P./ M. Critical Rate +50%, P. Critical Damage +35%, Atk. Spd./ Casting Spd. +7%, Skill Cooldown -10%, Skill MP Consumption -7%. -->
+		<!-- For $s1, the targeted party member's P. Atk. +$s2, M. Atk. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Atk. Spd./ Casting Spd. +$s6, Skill Cooldown -$s7, Skill MP Consumption -$s8. -->
 		<icon>icon.skill19503</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -5313,7 +5318,7 @@
 		</effects>
 	</skill>
 	<skill id="30797" toLevel="1" name="Wind Strike">
-		<!-- Creates a powerful hurricane and inflicts Wind damage on the enemy with 12 Power added to M. Atk. -->
+		<!-- Magic attack that creates a powerful hurricane inflicting damage on the enemy with $s1 power. -->
 		<icon>icon.skill1177</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -5336,7 +5341,7 @@
 		</effects>
 	</skill>
 	<skill id="30798" toLevel="1" name="Power Strike">
-		<!-- Delivers a powerful blow that strikes the target with 30 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit is possible. -->
+		<!-- Delivers a powerful blow that strikes the target with $s1 power. Requires a sword, or a blunt weapon. Over-hit. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -5367,12 +5372,13 @@
 		</effects>
 	</skill>
 	<skill id="30799" toLevel="1" name="Novice Cubic Fire Bless">
-		<!-- Removes debuffs. Heals 1000 HP and increases Debuff Resistance by 30% for 20 sec. -->
+		<!-- Removes debuffs. Heals $s1 HP and increases Debuff Resistance by $s3 for $s2 The skill cooldown is fixed. -->
 		<icon>icon.skill19565</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>5000</reuseDelay>
-		<effectPoint>408</effectPoint>
+		<castRange>600</castRange>
+		<effectPoint>673</effectPoint>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<canCastWhileDisabled>true</canCastWhileDisabled>

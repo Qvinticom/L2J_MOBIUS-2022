@@ -77,7 +77,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23305" toLevel="1" name="Zinyanzi Agathion - Yunbokhwan">
+	<skill id="23305" toLevel="1" name="Zinyanzi Agathion Yunbokhwan">
 		<!-- Restores all HP/ MP/ CP and becomes invincible for 5 sec. But can only be used when HP is below 30%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A2</operateType>
@@ -235,7 +235,7 @@
 		</effects>
 	</skill>
 	<skill id="23311" toLevel="1" name="Totem's Energy - Fortitude">
-		<!-- Increases M. Def. by 25% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
+		<!-- By the totem's mysterious energy, M. Def. +25%. The effect is cancelled when leaving the totem's range. -->
 		<icon>BranchSys2.icon.totem_of_fortitude</icon>
 		<abnormalTime>300</abnormalTime>
 		<affectRange>400</affectRange>
@@ -265,6 +265,7 @@
 		<castRange>1200</castRange>
 		<isMagic>4</isMagic>
 		<abnormalType>VOTE</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
@@ -273,7 +274,6 @@
 		<abnormalLevel>1</abnormalLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
-		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<abnormalTime>3600</abnormalTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -284,10 +284,16 @@
 			<effect name="SpModify">
 				<amount>100</amount>
 			</effect>
+			<effect name="DispelBySlot">
+				<dispel>BUFF_PCCAFE_EXP1,1</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>BUFF_PCCAFE_EXP1</slot>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="23313" toLevel="5" name="Action Prohibit Immunity">
-		<!-- Confusion/ Stupor/ Petrification Resistance +$s1. -->
+		<!-- Resistance to immobility +$s1. -->
 		<icon>icon.skill0386</icon>
 		<operateType>A4</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
@@ -315,7 +321,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23314" toLevel="5" name="Control Prohibit Immunity">
-		<!-- Obstruction/ Confusion Resistance +$s1. -->
+		<!-- Resistance to control +$s1. -->
 		<icon>icon.skill0388</icon>
 		<operateType>A4</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
@@ -337,7 +343,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23315" toLevel="5" name="Paralysis Immunity Enhance">
-		<!-- Increases Paralysis Resistance by $s1. -->
+		<!-- Paralysis Resistance +$s1. -->
 		<operateType>A2</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -367,7 +373,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23317" toLevel="5" name="Fear Immunity Enhance">
-		<!-- Increases Fear Resistance by $s1. -->
+		<!-- Fear Resistance +$s1. -->
 		<operateType>A2</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -382,7 +388,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23318" toLevel="1" name="Cat the Ranger Boost">
-		<!-- Recovers the master's HP by 10%. For 1 min., receives power from Cat the Ranger to increase the master's Debuff Resistance by 80%, Buff-canceling Attack Resistance by 40%, Speed by 10%, P. Def. by 20%, and M. Def. by 20%. Does not receive preemptive attacks from monsters. Cooldown 10 min. -->
+		<!-- Recovers 10% of the master's HP. For 1 min., Debuff Resistance +80%, Buff Cancel Resistance +40%, Speed +10%, P. Def. +20%, M. Def. +20%. Protects from monsters' preemptive attacks. Cooldown: 10 min. -->
 		<icon>BranchSys2.icon.action5016</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -475,7 +481,7 @@
 		</effects>
 	</skill>
 	<skill id="23321" toLevel="1" name="Draconic Evolver">
-		<!-- Afflicted with Fear and moving against own will. -->
+		<!-- Frightened into fleeing. -->
 		<icon>BranchSys2.icon.br_wp_tiatenon_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -560,7 +566,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>-23</amount>
@@ -745,7 +751,7 @@
 		</effects>
 	</skill>
 	<skill id="23333" toLevel="1" name="Agathion's New Year's Wish">
-		<!-- Through the power of the Lantern Agathion, Vitality is maintained and not consumed. -->
+		<!-- Through the power of Agathion Lantern, Vitality is maintained and not consumed. -->
 		<icon>icon.etc_pi_gift_box_i03</icon>
 		<operateType>A2</operateType>
 		<abnormalType>VP_KEEP</abnormalType>
@@ -809,8 +815,8 @@
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
 	</skill>
-	<skill id="23336" toLevel="1" name="Juju Agathion Cute Trick">
-		<!-- You can see the summoned Juju's cute tricks. -->
+	<skill id="23336" toLevel="1" name="Agathion Chuchu's Cute Trick">
+		<!-- Shows Agathion Chuchu's cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -824,7 +830,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23337" toLevel="1" name="Juju Agathion's Gift 1">
+	<skill id="23337" toLevel="1" name="Agathion Chuchu's Gift 1">
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -845,7 +851,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23338" toLevel="1" name="Juju Agathion's Gift 2">
+	<skill id="23338" toLevel="1" name="Agathion Chuchu's Gift 2">
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -866,7 +872,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23339" toLevel="1" name="Juju Agathion's Gift 3">
+	<skill id="23339" toLevel="1" name="Agathion Chuchu's Gift 3">
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -887,7 +893,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23340" toLevel="1" name="Juju Agathion's Gift 4">
+	<skill id="23340" toLevel="1" name="Agathion Chuchu's Gift 4">
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -961,8 +967,8 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="23344" toLevel="5" name="Weakened Shilen's Breath">
-		<!-- Is killed and poisoned by Shilen's Breath. Increases Dark Attack Resistance by $s1 and HP recovery by $s2. Poison stage increases when killed while poisoned. -->
+	<skill id="23344" toLevel="5" name="Weakened Shillien's Breath">
+		<!-- Poisoned by Shillien's Breath. Dark Resistance +$s1, HP Recovery Rate +$s2. If you die while poisoned, the debuff level will increase. -->
 		<icon>icon.skill5076_c</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
@@ -1015,7 +1021,6 @@
 		</conditions>
 	</skill>
 	<skill id="23347" toLevel="7" name="Valakas Agathion Special Skill: Valakas' Blessing">
-		<!-- Valakas' Blessing. For $s1 h., Fire Attack Power +$s2, Fire Resistance +$s3. Cooldown: $s4 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1049,7 +1054,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23349" toLevel="1" name="Tree's Blessing - Stage 1">
+	<skill id="23349" toLevel="1" name="Tree's Blessing Lv. 1">
 		<!-- For 10 min., increases P. Atk. by 1% and M. Atk. by 2% with the tree's blessing. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1066,7 +1071,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23350" toLevel="1" name="Tree's Blessing - Stage 2">
+	<skill id="23350" toLevel="1" name="Tree's Blessing Lv. 2">
 		<!-- For 15 min., increases P. Atk. by 2% and M. Atk. by 4% with the tree's blessing. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1083,7 +1088,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23351" toLevel="1" name="Tree's Blessing - Stage 3">
+	<skill id="23351" toLevel="1" name="Tree's Blessing Lv. 3">
 		<!-- For 20 min., increases P. Atk. by 3% and M. Atk. by 6% with the tree's blessing. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1100,7 +1105,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23352" toLevel="1" name="Tree's Blessing - Stage 4">
+	<skill id="23352" toLevel="1" name="Tree's Blessing Lv. 4">
 		<!-- For 25 min., increases P. Atk. by 4% and M. Atk. by 8% with the tree's blessing. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1117,7 +1122,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23353" toLevel="1" name="Tree's Blessing - Stage 5">
+	<skill id="23353" toLevel="1" name="Tree's Blessing Lv. 5">
 		<!-- For 60 min., increases P. Atk. by 6% and M. Atk. by 12% with the tree's blessing. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1134,8 +1139,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23354" toLevel="1" name="Lingering Tree's Blessing - Stage 1">
-		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing - Stage 1. -->
+	<skill id="23354" toLevel="1" name="Lingering Tree's Blessing Lv. 1">
+		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing Lv. 1. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1153,8 +1158,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23355" toLevel="1" name="Lingering Tree's Blessing - Stage 2">
-		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing - Stage 2. -->
+	<skill id="23355" toLevel="1" name="Lingering Tree's Blessing Lv. 2">
+		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing Lv. 2. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1172,8 +1177,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23356" toLevel="1" name="Lingering Tree's Blessing - Stage 3">
-		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing - Stage 3. -->
+	<skill id="23356" toLevel="1" name="Lingering Tree's Blessing Lv. 3">
+		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing Lv. 3. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1191,8 +1196,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23357" toLevel="1" name="Lingering Tree's Blessing - Stage 4">
-		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing - Stage 4. -->
+	<skill id="23357" toLevel="1" name="Lingering Tree's Blessing Lv. 4">
+		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing Lv. 4. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1210,8 +1215,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23358" toLevel="1" name="Lingering Tree's Blessing - Stage 5">
-		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing - Stage 5. -->
+	<skill id="23358" toLevel="1" name="Lingering Tree's Blessing Lv. 5">
+		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 h. to receive Tree's Blessing Lv. 5. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1380,7 +1385,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23369" toLevel="1" name="Tree's Blessing - Guitar Melody">
-		<!-- For 10 min., increases P. Critical Rate by 32%, P. Critical Damage by 35%, and M. Critical Rate by 20. Decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and Enchant Skill MP Consumption for Iss Enchanters by 20%. -->
+		<!-- For 10 min., P. Critical Rate +32%, P. Critical Damage +35%, M. Critical Rate +20. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Enchant Skill MP Consumption for Iss Enchanters -20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1395,7 +1400,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23370" toLevel="1" name="Tree's Blessing - Guitar Melody">
-		<!-- For 15 min., increases P. Critical Rate by 32%, P. Critical Damage by 35%, and M. Critical Rate by 20. Decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and Enchant Skill MP Consumption for Iss Enchanters by 20%. -->
+		<!-- For 15 min., P. Critical Rate +32%, P. Critical Damage +35%, M. Critical Rate +20. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Enchant Skill MP Consumption for Iss Enchanters -20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1410,7 +1415,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23371" toLevel="1" name="Tree's Blessing - Guitar Melody">
-		<!-- For 20 min., increases P. Critical Rate by 32%, P. Critical Damage by 35%, and M. Critical Rate by 20. Decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and Enchant Skill MP Consumption for Iss Enchanters by 20%. -->
+		<!-- For 20 min., P. Critical Rate +32%, P. Critical Damage +35%, M. Critical Rate +20. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Enchant Skill MP Consumption for Iss Enchanters -20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1425,7 +1430,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23372" toLevel="1" name="Tree's Blessing - Guitar Melody">
-		<!-- For 25 min., increases P. Critical Rate by 32%, P. Critical Damage by 35%, and M. Critical Rate by 20. Decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and Enchant Skill MP Consumption for Iss Enchanters by 20%. -->
+		<!-- For 25 min., P. Critical Rate +32%, P. Critical Damage +35%, M. Critical Rate +20. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Enchant Skill MP Consumption for Iss Enchanters -20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1440,7 +1445,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23373" toLevel="1" name="Tree's Blessing - Guitar Melody">
-		<!-- For 60 min., increases P. Critical Rate by 32%, P. Critical Damage by 35%, and M. Critical Rate by 20. Decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and Enchant Skill MP Consumption for Iss Enchanters by 20%. -->
+		<!-- For 60 min., P. Critical Rate +32%, P. Critical Damage +35%, M. Critical Rate +20. P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, and Enchant Skill MP Consumption for Iss Enchanters -20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>

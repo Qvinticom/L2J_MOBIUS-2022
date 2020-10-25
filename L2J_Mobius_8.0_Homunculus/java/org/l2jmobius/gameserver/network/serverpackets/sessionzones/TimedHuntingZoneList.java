@@ -44,7 +44,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		
 		final long currentTime = System.currentTimeMillis();
 		long endTime;
-		packet.writeD(2); // zone count
+		packet.writeD(6); // zone count
 		
 		// Storm Isle
 		packet.writeD(1); // required item count
@@ -64,7 +64,8 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD((int) (Config.TIME_LIMITED_MAX_ADDED_TIME / 1000));
 		packet.writeD(3600); // remain refill time
 		packet.writeD(3600); // refill time max
-		packet.writeC(_isInTimedHuntingZone ? 0 : 1); // field activated
+		packet.writeD(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
+		packet.writeH(0); // 245
 		
 		// Primeval Isle
 		packet.writeD(1); // required item count
@@ -84,7 +85,92 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD((int) (Config.TIME_LIMITED_MAX_ADDED_TIME / 1000));
 		packet.writeD(3600); // remain refill time
 		packet.writeD(3600); // refill time max
-		packet.writeC(_isInTimedHuntingZone ? 0 : 1); // field activated
+		packet.writeD(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
+		packet.writeH(0); // 245
+		
+		// Golden Altar
+		packet.writeD(1); // required item count
+		packet.writeD(57); // item id
+		packet.writeQ(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
+		packet.writeD(1); // reset cycle
+		packet.writeD(7); // zone id
+		packet.writeD(107); // min level
+		packet.writeD(120); // max level
+		packet.writeD(0); // remain time base?
+		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 7, 0);
+		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
+		{
+			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+		}
+		packet.writeD((int) (Math.max(endTime - currentTime, 0)) / 1000); // remain time
+		packet.writeD((int) (Config.TIME_LIMITED_MAX_ADDED_TIME / 1000));
+		packet.writeD(3600); // remain refill time
+		packet.writeD(3600); // refill time max
+		packet.writeD(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
+		packet.writeH(0); // 245
+		
+		// Abandoned Coal Mines
+		packet.writeD(1); // required item count
+		packet.writeD(57); // item id
+		packet.writeQ(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
+		packet.writeD(1); // reset cycle
+		packet.writeD(11); // zone id
+		packet.writeD(99); // min level
+		packet.writeD(105); // max level
+		packet.writeD(0); // remain time base?
+		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 11, 0);
+		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
+		{
+			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+		}
+		packet.writeD((int) (Math.max(endTime - currentTime, 0)) / 1000); // remain time
+		packet.writeD((int) (Config.TIME_LIMITED_MAX_ADDED_TIME / 1000));
+		packet.writeD(3600); // remain refill time
+		packet.writeD(3600); // refill time max
+		packet.writeD(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
+		packet.writeH(0); // 245
+		
+		// Tower of Insolence
+		packet.writeD(1); // required item count
+		packet.writeD(57); // item id
+		packet.writeQ(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
+		packet.writeD(1); // reset cycle
+		packet.writeD(8); // zone id
+		packet.writeD(110); // min level
+		packet.writeD(130); // max level
+		packet.writeD(0); // remain time base?
+		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 8, 0);
+		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
+		{
+			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+		}
+		packet.writeD((int) (Math.max(endTime - currentTime, 0)) / 1000); // remain time
+		packet.writeD((int) (Config.TIME_LIMITED_MAX_ADDED_TIME / 1000));
+		packet.writeD(3600); // remain refill time
+		packet.writeD(3600); // refill time max
+		packet.writeD(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
+		packet.writeH(0); // 245
+		
+		// Imperial Tomb
+		packet.writeD(1); // required item count
+		packet.writeD(57); // item id
+		packet.writeQ(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
+		packet.writeD(1); // reset cycle
+		packet.writeD(12); // zone id
+		packet.writeD(105); // min level
+		packet.writeD(130); // max level
+		packet.writeD(0); // remain time base?
+		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 12, 0);
+		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
+		{
+			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+		}
+		packet.writeD((int) (Math.max(endTime - currentTime, 0)) / 1000); // remain time
+		packet.writeD((int) (Config.TIME_LIMITED_MAX_ADDED_TIME / 1000));
+		packet.writeD(3600); // remain refill time
+		packet.writeD(3600); // refill time max
+		packet.writeD(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
+		packet.writeH(0); // 245
 		
 		return true;
 	}

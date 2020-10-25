@@ -21,10 +21,10 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15201" toLevel="1" name="Tauti Ultra Whirlwind">
-		<!-- Being hurled away from shock. -->
+		<!-- Tauti attacks ferociously making you flying away and stunning. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
-		<hitTime>6000</hitTime>
+		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1</effectPoint>
 		<abnormalType>FLY_AWAY</abnormalType>
@@ -62,7 +62,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15203" toLevel="1" name="Tauti Ultra Typhoon">
-		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
+		<!-- Tauti's powerful attack. Inflicts Stun. Nearby characters are fine, but long-range characters are affected by this skill. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<hitTime>6000</hitTime>
@@ -83,7 +83,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15204" toLevel="1" name="Tauti Omega Whirlwind">
-		<!-- The final Tauti's attack. Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- The final Tauti's attack. Knockdown.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -107,7 +107,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15205" toLevel="1" name="Tauti Omega Whirlwind">
-		<!-- The final Tauti's attack. Knockdown. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- The final Tauti's attack. Knockdown.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -143,7 +143,6 @@
 		<affectScope>POINT_BLANK</affectScope>
 	</skill>
 	<skill id="15207" toLevel="1" name="Debuff Immunity">
-		<!-- Immune to debuffs for 9 sec. -->
 		<abnormalTime>9</abnormalTime>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
@@ -157,6 +156,19 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15208" toLevel="9" name="Weakened Chaos Shield">
@@ -207,6 +219,7 @@
 		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
+		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -229,6 +242,7 @@
 		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
+		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -251,6 +265,7 @@
 		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
+		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -273,6 +288,7 @@
 		<magicLevel>85</magicLevel>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
+		<reuseDelay>-1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -307,28 +323,28 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15214" toLevel="1" name="Tauti">
-		<!-- Tauti is the lord who rules over the Seed of Hellfire. It is one of the 9 seeds sown in Gracia by Shilen's command. It is one of Bremnon's weapons that has the appearance of an enormous axe. It uses the conflict between the classes in order to carry out Shilen's command and to grow its own power. It does not personally appear while ruling over the Seed of Hellfire. No one knows the extent of its hidden power. -->
+		<!-- Tauti is the lord who rules over the Seed of Hellfire. It is one of the 9 seeds sown in Gracia by Shillien's command. It is one of Bremnon's weapons that has the appearance of an enormous axe. It uses the conflict between the classes in order to carry out Shillien's command and to grow its own power. It does not personally appear while ruling over the Seed of Hellfire. No one knows the extent of its hidden power. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="15215" toLevel="1" name="Raid Boss (Lv. 97)">
-		<!-- The Guillotine was once an executioner. After drinking the blood of Shilen that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shilen. It is trapped in the illusion of the blood. It manages the criminals near the guillotine and it sends the blood that they have gathered to the spirit world of darkness. -->
+		<!-- The Guillotine was once an executioner. After drinking the blood of Shillien that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shillien. It is trapped in the illusion of the blood. It manages the criminals near the guillotine and it sends the blood that they have gathered to the spirit world of darkness. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="15216" toLevel="1" name="Raid Boss (Lv. 97)">
-		<!-- This is an undead monster that was created through the blood of Shilen from the corpse of a criminal who went insane from the torture in the fortress. It is trapped in the illusion of the blood. It seeks to bring about the resurrection of Shilen by killing everything, thereby taking sacrifices for the darkness. -->
+		<!-- This is an undead monster that was created through the blood of Shillien from the corpse of a criminal who went insane from the torture in the fortress. It is trapped in the illusion of the blood. It seeks to bring about the resurrection of Shillien by killing everything, thereby taking sacrifices for the darkness. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="15217" toLevel="1" name="Raid Boss (Lv. 97)">
-		<!-- The master criminal who resurrected after drinking the blood of Shilen that seeped into the Execution Grounds. It is trapped in the madness of blood. It is a warden who manages the monsters in the Guillotine Fortress. -->
+		<!-- The master criminal who resurrected after drinking the blood of Shillien that seeped into the Execution Grounds. It is trapped in the madness of blood. It is a warden who manages the monsters in the Guillotine Fortress. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -379,7 +395,7 @@
 		</effects>
 	</skill>
 	<skill id="15220" toLevel="1" name="Detonate">
-		<!-- Inflicts damage upon monsters around you and inflicts Bleed for 5 sec. -->
+		<!-- Inflicts damage on nearby monsters and inflicts Bleed for 5 sec.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<hitTime>2000</hitTime>
@@ -496,7 +512,7 @@
 		</effects>
 	</skill>
 	<skill id="15224" toLevel="1" name="Bloody Breath">
-		<!-- Your soul is sucked away, and your P. Def. and M. Def. is decreased. -->
+		<!-- Your soul is sucked away, and your P./ M. Def. is decreased. -->
 		<icon>icon.skill11769</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -831,7 +847,7 @@
 		</effects>
 	</skill>
 	<skill id="15238" toLevel="1" name="Dark Breath">
-		<!-- Absorb the souls of enemies within 180 degrees of you and decrease their P. Def. and M. Def. by 30%. -->
+		<!-- All enemies in front of the character get P./ M. Def. -30%. -->
 		<icon>icon.skill11769</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -954,7 +970,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15247" toLevel="1" name="Nurka Strike">
-		<!-- Attacks and knocks the target down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks and knocks the target down.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1015,7 +1031,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15250" toLevel="1" name="Nurka's Cold Shoulders">
-		<!-- Inflicts Aerial Yoke on nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Aerial Yoke on nearby enemies.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1063,7 +1079,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="15252" toLevel="1" name="With Nurka">
-		<!-- Pulls the target to Nurka. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Pulls a target to Nurka.\n\nInflicted status: Pull. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1243,7 +1259,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15263" toLevel="1" name="Bombing">
-		<!-- Lindvior bombards the area. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Lindvior bombards the area.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1296</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -1325,7 +1341,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15270" toLevel="1" name="Lindvior's Mass Yoke">
-		<!-- Red wind thrown out by furious Lindvior deals powerful damage to the character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Red wind thrown out by furious Lindvior deals powerful damage to the character.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1339,7 +1355,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15271" toLevel="1" name="Body Slam">
-		<!-- Lindvior's stun. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Lindvior's stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -1368,7 +1384,7 @@
 		</effects>
 	</skill>
 	<skill id="15272" toLevel="1" name="Wind Breath">
-		<!-- Lindvior's Landing Breath Skill. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Lindvior's Landing Breath Skill.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -1474,7 +1490,7 @@
 		</effects>
 	</skill>
 	<skill id="15276" toLevel="1" name="Bleed">
-		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts bleed.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1489,7 +1505,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15277" toLevel="1" name="Knock Back">
-		<!-- Knockback. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Knockback.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10549</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1633,7 +1649,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15287" toLevel="1" name="Twister">
-		<!-- Inflicts magical damage on the characters near the target and immobilizes them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts magical damage on the target and nearby characters and immobilizes them.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1715,7 +1731,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15291" toLevel="1" name="Bleed">
-		<!-- Energy is forming in Lidia's room. It doesn't affect Giselle von Hellmann and Alfred von Hellmann. Continuously decreases HP. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Energy is forming in Lidia's room. It doesn't affect Giselle von Hellmann and Alfred von Hellmann. Continuously decreases HP.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -1768,7 +1784,7 @@
 		</effects>
 	</skill>
 	<skill id="15293" toLevel="1" name="Logan's Revenge">
-		<!-- Logan's revenge left in his dying breath. Momentarily invincible. -->
+		<!-- Logan's revenge left in his dying breath. Grants invincibility temporarily. -->
 		<icon>icon.skill11758</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>40</abnormalTime>
@@ -1833,7 +1849,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15296" toLevel="1" name="Logan's Revenge">
-		<!-- Logan's mistake left in his escape. Momentarily invincible. -->
+		<!-- Logan's mistake left in his escape. Grants invincibility temporarily. -->
 		<icon>icon.skill11758</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>

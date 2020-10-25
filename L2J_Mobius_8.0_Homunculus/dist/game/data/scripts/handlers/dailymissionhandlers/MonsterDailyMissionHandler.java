@@ -104,9 +104,9 @@ public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 		}
 		
 		final PlayerInstance player = event.getAttacker();
-		final int monsterLevel = monster.getLevel();
 		if (_minLevel > 0)
 		{
+			final int monsterLevel = monster.getLevel();
 			if ((monsterLevel < _minLevel) || (monsterLevel > _maxLevel) || ((player.getLevel() - monsterLevel) > 5))
 			{
 				return;
@@ -118,13 +118,7 @@ public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 		{
 			final CommandChannel channel = party.getCommandChannel();
 			final List<PlayerInstance> members = channel != null ? channel.getMembers() : party.getMembers();
-			for (PlayerInstance member : members)
-			{
-				if ((member.getLevel() >= (monsterLevel - 5)) && (member.calculateDistance3D(monster) <= Config.ALT_PARTY_RANGE))
-				{
-					processPlayerProgress(member);
-				}
-			}
+			members.stream().filter(member -> member.calculateDistance3D(monster) <= Config.ALT_PARTY_RANGE).forEach(this::processPlayerProgress);
 		}
 		else
 		{

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="45372" name="Agathion - Blessed Pisces" additionalName="30-day" type="Armor">
-		<!-- Summons Pisces. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<!-- Summons Agathion Pisces. <Active Skill>. 1. Agathion Teleport: Teleports you to the Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown: 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -28,7 +28,7 @@
 		</skills>
 	</item>
 	<item id="45373" name="Blessed Pisces Agathion Bracelet Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a Super Advanced Seed Bracelet (30-day). -->
+		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
@@ -43,7 +43,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Pisces - 30-day -->
+			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion Blessed Pisces - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="45374" name="Laser Gun" additionalName="Event" type="Weapon">
@@ -70,7 +70,7 @@
 		</stats>
 	</item>
 	<item id="45375" name="Battle Rations" additionalName="Event" type="EtcItem">
-		<!-- Random basic stat +6 for 30 min. Cannot be stacked with Fish Stew or other Alien Nano Supplements. -->
+		<!-- For 30 min., a random basic stat +6. Cannot be stacked with Fish Stew or other Alien Nano Supplements. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.ev_invasion_buff_box" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -108,7 +108,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45380" name="Depleted Plasma Gun" additionalName="1-hour" type="Weapon">
-		<!-- Looks like the energy pack is nearly drained, but it can use a Knock Back skill! 1-hour. -->
+		<!-- Looks like the energy pack is nearly drained, but it can use Confusion. 1-hour. -->
 		<set name="icon" val="icon.invasion_gun" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -154,7 +154,7 @@
 		</stats>
 	</item>
 	<item id="45382" name="Top Hat" additionalName="15-day" type="Armor">
-		<!-- Magical-looking hat. Uses 2 hair accessory slots. -->
+		<!-- A hat that belonged to a mysterious magician. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_magicial_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />

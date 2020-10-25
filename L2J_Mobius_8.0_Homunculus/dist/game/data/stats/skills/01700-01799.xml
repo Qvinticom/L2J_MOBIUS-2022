@@ -73,7 +73,7 @@
 		</effects>
 	</skill>
 	<skill id="1704" toLevel="1" name="Aggression Aura">
-		<!-- Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- none\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -142,7 +142,7 @@
 		</effects>
 	</skill>
 	<skill id="1708" toLevel="1" name="Bleeding Shot">
-		<!-- Inflicted status: Infection (Bleed, Poison). -->
+		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -170,7 +170,7 @@
 		</effects>
 	</skill>
 	<skill id="1709" toLevel="1" name="Poison Shot">
-		<!-- Inflicted status: Infection (Bleed, Poison). -->
+		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -198,7 +198,7 @@
 		</effects>
 	</skill>
 	<skill id="1710" toLevel="1" name="Bleeding Shot">
-		<!-- Inflicted status: Infection (Bleed, Poison). -->
+		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -229,7 +229,7 @@
 		</effects>
 	</skill>
 	<skill id="1711" toLevel="1" name="Poison Shot">
-		<!-- Inflicted status: Infection (Bleed, Poison). -->
+		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -323,7 +323,7 @@
 		</effects>
 	</skill>
 	<skill id="1715" toLevel="1" name="Unison Rush">
-		<!-- Provokes by the Unison of Light. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes by the Unison of Light.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0245</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -768,7 +768,7 @@
 		</effects>
 	</skill>
 	<skill id="1749" toLevel="1" name="Slow">
-		<!-- 10 second Slow -->
+		<!-- Slows down for 10 sec. -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -817,6 +817,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -944,7 +957,7 @@
 		</effects>
 	</skill>
 	<skill id="1756" toLevel="14" name="Trick">
-		<!-- Cancels target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Cancels the enemy's target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0011</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>
@@ -961,7 +974,7 @@
 		</effects>
 	</skill>
 	<skill id="1757" toLevel="10" name="Attack Enhance">
-		<!-- Enhances P. Atk., M. Atk., Atk. Spd., and Casting Spd. -->
+		<!-- Increases P. Atk., M. Atk., Atk. Spd., and Casting Spd. -->
 		<icon>icon.skill0077</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1054,7 +1067,7 @@
 		</effects>
 	</skill>
 	<skill id="1759" toLevel="1" name="Armor Destroyer">
-		<!-- Cuts the enemy's P. Def. and M. Def. when attacking. -->
+		<!-- Cuts the enemy's P./ M. Def. when attacking. -->
 		<icon>icon.skill0122</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1073,7 +1086,7 @@
 		</effects>
 	</skill>
 	<skill id="1760" toLevel="6" name="Armor Destruction">
-		<!-- P. Def. and M. Def. decreased $s1. Additional $s2 decrease. Evasion $s3 decrease. Accumulates with every incurred attack. -->
+		<!-- P./ M. Def. -$s1. Additional P./ M. Def. -$s2, P. Evasion -$s3. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -1231,7 +1244,7 @@
 		</effects>
 	</skill>
 	<skill id="1762" toLevel="1" name="Boss Multi Resistance">
-		<!-- Immune to knock back, knock down, binding, mutation, sleep, paralysis, hold -->
+		<!-- Obstruction/ Stupor/ Confusion Immunity. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>97</magicLevel>

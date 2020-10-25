@@ -522,8 +522,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17527" min="1" max="1" chance="4.329" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="4.329" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -619,7 +619,7 @@
 		<sex>MALE</sex>
 		<mpReward value="90" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4522.54335260116" hpRegen="8.5" mp="1952.47524752475" mpRegen="3" />
+			<vitals hp="4521.96531791908" hpRegen="8.5" mp="1971.61716171617" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -634,7 +634,6 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 			<skill id="14911" level="1" /> <!-- Dimensional Blow -->
@@ -662,7 +661,7 @@
 		<sex>MALE</sex>
 		<mpReward value="90" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4522.54335260116" hpRegen="8.5" mp="2928.05280528053" mpRegen="3" />
+			<vitals hp="4521.96531791908" hpRegen="8.5" mp="2957.09570957096" mpRegen="3" />
 			<speed>
 				<walk ground="46" />
 				<run ground="120" />
@@ -679,7 +678,6 @@
 		<skillList>
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 			<skill id="14918" level="1" /> <!-- Twisted Dimension Magic -->
@@ -711,7 +709,7 @@
 		<sex>MALE</sex>
 		<mpReward value="90" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="155063.005780347" hpRegen="8.5" mp="1952.47524752475" mpRegen="3" />
+			<vitals hp="155063.005780347" hpRegen="8.5" mp="1971.61716171617" mpRegen="3" />
 			<speed>
 				<walk ground="68" />
 				<run ground="160" />
@@ -728,7 +726,6 @@
 		<skillList>
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 			<skill id="14930" level="1" /> <!-- Dimensional Sweep -->
@@ -755,7 +752,7 @@
 		<sex>FEMALE</sex>
 		<mpReward value="100" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4822.54335260116" hpRegen="8.5" mp="2132.01320132013" mpRegen="3" />
+			<vitals hp="4821.96531791908" hpRegen="8.5" mp="2153.13531353135" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
@@ -770,7 +767,6 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
@@ -799,7 +795,7 @@
 		<sex>FEMALE</sex>
 		<mpReward value="100" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4822.54335260116" hpRegen="8.5" mp="3198.0198019802" mpRegen="3" />
+			<vitals hp="4821.96531791908" hpRegen="8.5" mp="3229.70297029703" mpRegen="3" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -814,7 +810,6 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
@@ -847,7 +842,7 @@
 		<sex>FEMALE</sex>
 		<mpReward value="100" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="165343.352601156" hpRegen="8.5" mp="2132.01320132013" mpRegen="3" />
+			<vitals hp="165342.774566474" hpRegen="8.5" mp="2153.13531353135" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
@@ -862,7 +857,6 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
@@ -893,7 +887,7 @@
 		<equipment rhand="13979" /> <!-- Monster Only (Dragontroop Commando) -->
 		<mpReward value="110" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5253.17919075145" hpRegen="8.5" mp="2317.49174917492" mpRegen="3" />
+			<vitals hp="5253.17919075145" hpRegen="8.5" mp="2339.93399339934" mpRegen="3" />
 			<speed>
 				<walk ground="56" />
 				<run ground="120" />
@@ -908,7 +902,6 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -938,7 +931,7 @@
 		<equipment rhand="13981" /> <!-- Monster Only (Dragontoop Tactician) -->
 		<mpReward value="110" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5253.17919075145" hpRegen="8.5" mp="3476.56765676568" mpRegen="3" />
+			<vitals hp="5253.17919075145" hpRegen="8.5" mp="3510.89108910891" mpRegen="3" />
 			<speed>
 				<walk ground="82" />
 				<run ground="120" />
@@ -953,7 +946,6 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -987,7 +979,7 @@
 		<equipment rhand="13978" /> <!-- Monster Only (Dragontroop Commander) -->
 		<mpReward value="110" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="180135.260115607" hpRegen="8.5" mp="2317.49174917492" mpRegen="3" />
+			<vitals hp="180135.260115607" hpRegen="8.5" mp="2339.93399339934" mpRegen="3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="160" />
@@ -1002,7 +994,6 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -1028,9 +1019,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="1593552" sp="382" />
+		<acquire exp="1593553" sp="383" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430.057803468" hpRegen="8.5" mp="19524.0924092409" mpRegen="3" />
+			<vitals hp="143715.028901734" hpRegen="8.5" mp="19719.4719471947" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -1045,10 +1036,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 			<skill id="14914" level="1" /> <!-- Dimensional Blow -->
@@ -1074,9 +1063,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="1593552" sp="382" />
+		<acquire exp="1593553" sp="383" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430.057803468" hpRegen="8.5" mp="29286.4686468647" mpRegen="3" />
+			<vitals hp="143715.028901734" hpRegen="8.5" mp="29578.8778877888" mpRegen="3" />
 			<speed>
 				<walk ground="46" />
 				<run ground="120" />
@@ -1091,10 +1080,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 			<skill id="14921" level="1" /> <!-- Twisted Dimension Magic -->
@@ -1123,9 +1110,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="13812194" sp="3314" />
+		<acquire exp="13812195" sp="3315" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430.057803468" hpRegen="8.5" mp="19524.0924092409" mpRegen="3" />
+			<vitals hp="1149720.23121387" hpRegen="8.5" mp="19719.4719471947" mpRegen="3" />
 			<speed>
 				<walk ground="68" />
 				<run ground="160" />
@@ -1140,12 +1127,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 			<skill id="14933" level="1" /> <!-- Dimensional Sweep -->
@@ -1172,9 +1157,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1815178" sp="435" />
+		<acquire exp="1815179" sp="436" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312845.086705202" hpRegen="8.5" mp="21324.0924092409" mpRegen="3" />
+			<vitals hp="156421.965317919" hpRegen="8.5" mp="21537.2937293729" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
@@ -1189,10 +1174,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
@@ -1219,9 +1202,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1815178" sp="435" />
+		<acquire exp="1815179" sp="436" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312845.086705202" hpRegen="8.5" mp="31986.1386138614" mpRegen="3" />
+			<vitals hp="156421.965317919" hpRegen="8.5" mp="32305.6105610561" mpRegen="3" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -1236,10 +1219,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
@@ -1269,9 +1250,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="15733145" sp="3775" />
+		<acquire exp="15733146" sp="3776" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312844.075144509" hpRegen="8.5" mp="21324.0924092409" mpRegen="3" />
+			<vitals hp="1251375.72254335" hpRegen="8.5" mp="21537.2937293729" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
@@ -1286,12 +1267,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
@@ -1317,10 +1296,10 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2022627" sp="485" />
+		<acquire exp="2022628" sp="486" />
 		<equipment rhand="13979" /> <!-- Monster Only (Dragontroop Commando) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356012.716763006" hpRegen="8.5" mp="23174.2574257426" mpRegen="3" />
+			<vitals hp="178005.780346821" hpRegen="8.5" mp="23405.9405940594" mpRegen="3" />
 			<speed>
 				<walk ground="56" />
 				<run ground="120" />
@@ -1335,10 +1314,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -1365,10 +1342,10 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2022627" sp="485" />
+		<acquire exp="2022628" sp="486" />
 		<equipment rhand="13981" /> <!-- Monster Only (Dragontoop Tactician) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356012.716763006" hpRegen="8.5" mp="34761.0561056106" mpRegen="3" />
+			<vitals hp="178005.780346821" hpRegen="8.5" mp="35108.9108910891" mpRegen="3" />
 			<speed>
 				<walk ground="82" />
 				<run ground="120" />
@@ -1383,10 +1360,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -1416,10 +1391,10 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="17532224" sp="4207" />
+		<acquire exp="17532225" sp="4208" />
 		<equipment rhand="13978" /> <!-- Monster Only (Dragontroop Commander) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356012.138728324" hpRegen="8.5" mp="23174.2574257426" mpRegen="3" />
+			<vitals hp="1424047.97687861" hpRegen="8.5" mp="23405.9405940594" mpRegen="3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="160" />
@@ -1434,12 +1409,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -1965,8 +1938,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
+		<acquire exp="1218696512" sp="1463616" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1379666.47398844" hpRegen="319.2293199" mp="19524.0924092409" mpRegen="3" />
+			<vitals hp="965765.895953757" hpRegen="319.2293199" mp="19719.4719471947" mpRegen="3" />
 			<speed>
 				<walk ground="34" />
 				<run ground="200" />
@@ -1981,11 +1955,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 			<skill id="14940" level="1" /> <!-- Rage Grand Blow -->
 			<skill id="14943" level="1" /> <!-- Dimensional Wring -->
 			<skill id="14948" level="1" /> <!-- Zellaka's Roar -->
@@ -2018,8 +1991,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
+		<acquire exp="3391073973" sp="4514778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2252481.50289017" hpRegen="8.5" mp="21324.0924092409" mpRegen="3" />
+			<vitals hp="1576735.83815029" hpRegen="8.5" mp="21537.2937293729" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -2034,12 +2008,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="14941" level="1" /> <!-- Bloody Grand Blow -->
 			<skill id="14944" level="1" /> <!-- Dimensional Pierce -->
 			<skill id="14947" level="1" /> <!-- Pelline's Thirst -->
@@ -2073,8 +2046,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
+		<acquire exp="9380582148" sp="22521380" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4101264.16184971" hpRegen="8.5" mp="23174.2574257426" mpRegen="3" />
+			<vitals hp="2870883.8150289" hpRegen="8.5" mp="23405.9405940594" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -2089,12 +2063,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14942" level="1" /> <!-- Destruction Grand Blow -->
 			<skill id="14945" level="1" /> <!-- Dimensional Shock Wave -->
 			<skill id="14946" level="1" /> <!-- Kalios' Rage -->
@@ -2333,9 +2306,11 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="500" aggroRange="450">
 			<clanList>
@@ -2382,9 +2357,11 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="500" aggroRange="450">
 			<clanList>
@@ -2431,9 +2408,11 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="500" aggroRange="450">
 			<clanList>
@@ -2455,7 +2434,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2472,7 +2451,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1877539.30635838" hpRegen="8.5" mp="22800" mpRegen="3" />
+			<vitals hp="1877538.7283237" hpRegen="8.5" mp="23027.7227722772" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="210" />
@@ -2487,8 +2466,7 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -2501,20 +2479,6 @@
 			<radius normal="35" grown="1.2" />
 			<height normal="72" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="19266" level="99" type="Monster" name="Zahak">
 		<parameters>
@@ -2545,7 +2509,7 @@
 		<status attackable="false" undying="false" />
 		<skillList>
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -2653,7 +2617,6 @@
 		</collision>
 	</npc>
 	<npc id="19270" level="99" type="Monster" name="Lesser Zahak">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2666,9 +2629,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="9500684" sp="15201" />
+		<acquire exp="9500685" sp="15202" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="484548.398235" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<vitals hp="443935.838150289" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
@@ -3172,9 +3135,11 @@
 		</ai>
 		<skillList>
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="20" grown="1.5" />
@@ -3357,9 +3322,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="6835477" sp="6140" />
+		<acquire exp="6835478" sp="6141" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467.0520231214" hpRegen="8.5" mp="2132.01320132013" mpRegen="3" />
+			<vitals hp="72335.2601156069" hpRegen="8.5" mp="2153.13531353135" mpRegen="3" />
 			<speed>
 				<walk ground="13" />
 				<run ground="180" />
@@ -3374,12 +3339,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
@@ -3394,7 +3357,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17376" min="1" max="1" chance="4.957" /> <!-- Trace of Kimerian's Cavern -->
+				<item id="17376" min="1" max="1" chance="5.052" /> <!-- Trace of Kimerian's Cavern -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3507,7 +3470,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3562,7 +3525,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920.231213873" hpRegen="8.5" mp="22058.0858085809" mpRegen="30" />
+			<vitals hp="643839.884393064" hpRegen="8.5" mp="22278.5478547855" mpRegen="30" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
@@ -3577,12 +3540,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="14800" toLevel="1" name="Elemental Resistance - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., this blessing increases all Attribute Resistance +30. -->
+		<!-- The GM is always by your side. For 1 h., Attribute Resistance +30. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -129,7 +129,7 @@
 		</effects>
 	</skill>
 	<skill id="14803" toLevel="1" name="Garden Dark Magic">
-		<!-- Inflicts Paralysis. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -147,14 +147,14 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DefenceTrait">
 				<PARALYZE>100</PARALYZE>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14804" toLevel="10" name="Damage Reflection Attack Resistance">
+	<skill id="14804" toLevel="10" name="Damage Reflection Resistance">
 		<!-- Slightly resistant to Damage Reflection attack. -->
 		<icon>icon.skill0350</icon>
 		<operateType>P</operateType>
@@ -786,7 +786,7 @@
 		</conditions>
 	</skill>
 	<skill id="14834" toLevel="1" name="Larva Blow">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -815,7 +815,7 @@
 		</effects>
 	</skill>
 	<skill id="14835" toLevel="1" name="Dwarf Explosion">
-		<!-- Momentarily immobile due to the Stun effect. -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-183</effectPoint>
@@ -837,7 +837,7 @@
 		</effects>
 	</skill>
 	<skill id="14836" toLevel="1" name="Nonsense">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -862,12 +862,12 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14837" toLevel="1" name="Poor and Pitiful Creature">
-		<!-- Immobilized midair. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Immobilized midair.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11052</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -955,7 +955,7 @@
 		</effects>
 	</skill>
 	<skill id="14840" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Provokes nearby enemies and forcefully changes their target to make them attack you. -->
+		<!-- Provokes nearby enemies into attacking you. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -978,7 +978,7 @@
 		</effects>
 	</skill>
 	<skill id="14841" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Provokes nearby enemies and forcefully changes their target to make them attack you. -->
+		<!-- Provokes nearby enemies into attacking you. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -1001,7 +1001,7 @@
 		</effects>
 	</skill>
 	<skill id="14842" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Provokes nearby enemies and forcefully changes their target to make them attack you. -->
+		<!-- Provokes nearby enemies into attacking you. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -1024,7 +1024,7 @@
 		</effects>
 	</skill>
 	<skill id="14843" toLevel="1" name="Adolph's Chain Hydra">
-		<!-- Pulls the target and nearby enemies toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Pulls target and nearby enemies toward you.\n\nInflicted status: Pull. -->
 		<icon>icon.skill10016</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -1058,7 +1058,7 @@
 		</effects>
 	</skill>
 	<skill id="14844" toLevel="1" name="Adolph's Chain Hydra">
-		<!-- Pulls the target and nearby enemies toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Pulls target and nearby enemies toward you.\n\nInflicted status: Pull. -->
 		<icon>icon.skill10016</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -1092,7 +1092,7 @@
 		</effects>
 	</skill>
 	<skill id="14845" toLevel="1" name="Adolph's Chain Hydra">
-		<!-- Pulls the target and nearby enemies toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Pulls target and nearby enemies toward you.\n\nInflicted status: Pull. -->
 		<icon>icon.skill10016</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -1246,7 +1246,7 @@
 		</effects>
 	</skill>
 	<skill id="14849" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the enemies in front with 9516 power and stuns them for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks the enemies in front with 9516 power and stuns them for 9 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1275,12 +1275,12 @@
 				<power>9516</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14850" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the enemies in front with 11162 power and stuns them for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks the enemies in front with 11162 power and stuns them for 9 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1309,12 +1309,12 @@
 				<power>11162</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14851" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the enemies in front with 12809 power and stuns them for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks the enemies in front with 12809 power and stuns them for 9 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1343,12 +1343,12 @@
 				<power>12809</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14852" toLevel="1" name="Adolph's Final Ultimate Defense">
-		<!-- For 30 sec., P. Def. +4000 and M. Def. +4000. Damage received is capped at 300 and 40% of it is reflected back to the attacker. Additionally, +80% Buff-canceling Attack Resistance. -->
+		<!-- For 30 sec., P. Def. +4000, M. Def. +4000. Impossible to receive more than 300 damage at a time, and 40% of it is reflected back to the enemy. Buff Cancel Resistance +80%. -->
 		<icon>icon.skill10017</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1388,7 +1388,7 @@
 		</effects>
 	</skill>
 	<skill id="14853" toLevel="1" name="Adolph's Final Ultimate Defense">
-		<!-- For 30 sec., P. Def. +4000 and M. Def. +4000. Damage received is capped at 300 and 40% of it is reflected back to the attacker. Additionally, +80% Buff-canceling Attack Resistance. -->
+		<!-- For 30 sec., P. Def. +4000, M. Def. +4000. Impossible to receive more than 300 damage at a time, and 40% of it is reflected back to the enemy. Buff Cancel Resistance +80%. -->
 		<icon>icon.skill10017</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1428,7 +1428,7 @@
 		</effects>
 	</skill>
 	<skill id="14854" toLevel="1" name="Adolph's Final Ultimate Defense">
-		<!-- For 30 sec., P. Def. +4000 and M. Def. +4000. Damage received is capped at 300 and 40% of it is reflected back to the attacker. Additionally, +80% Buff-canceling Attack Resistance. -->
+		<!-- For 30 sec., P. Def. +4000, M. Def. +4000. Impossible to receive more than 300 damage at a time, and 40% of it is reflected back to the enemy. Buff Cancel Resistance +80%. -->
 		<icon>icon.skill10017</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1468,7 +1468,7 @@
 		</effects>
 	</skill>
 	<skill id="14855" toLevel="1" name="Barton's Hurricane Rush">
-		<!-- Rushes in with the shoulder to attack the enemy and stuns for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Rushes in with the shoulder to attack the enemy and stuns for 3 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10267</icon>
 		<operateType>DA2</operateType>
 		<castRange>600</castRange>
@@ -1491,12 +1491,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14856" toLevel="1" name="Barton's Hurricane Rush">
-		<!-- Rushes in with the shoulder to attack the enemy and stuns for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Rushes in with the shoulder to attack the enemy and stuns for 3 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10267</icon>
 		<operateType>DA2</operateType>
 		<castRange>600</castRange>
@@ -1519,12 +1519,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14857" toLevel="1" name="Barton's Hurricane Rush">
-		<!-- Rushes in with the shoulder to attack the enemy and stuns for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Rushes in with the shoulder to attack the enemy and stuns for 3 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10267</icon>
 		<operateType>DA2</operateType>
 		<castRange>600</castRange>
@@ -1547,7 +1547,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1681,7 +1681,7 @@
 		</effects>
 	</skill>
 	<skill id="14864" toLevel="1" name="Barton's Power Bomber">
-		<!-- Strikes the target with 11159 power to knock down for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Deals physical damage to the target with 11159 power and knocks it down for 2 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1726,7 +1726,7 @@
 		</effects>
 	</skill>
 	<skill id="14865" toLevel="1" name="Barton's Power Bomber">
-		<!-- Strikes the target with 13102 power to knock down for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Deals physical damage to the target with 13102 power and knocks it down for 2 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1771,7 +1771,7 @@
 		</effects>
 	</skill>
 	<skill id="14866" toLevel="1" name="Barton's Power Bomber">
-		<!-- Strikes the target with 15046 power to knock down for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Deals physical damage to the target with 15046 power and knocks it down for 2 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1816,7 +1816,7 @@
 		</effects>
 	</skill>
 	<skill id="14867" toLevel="1" name="Barton's Berserker Rage">
-		<!-- You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When the target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. When HP falls below 30%, increases P. Atk. by 30% and Critical Rate by an additional 300. -->
+		<!-- You have reached your physical limit. Increases Debuff Resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage for standard attacks. When the target is killed, recovers HP by 20%. When HP<60%, P. Atk. +10% and Critical Rate for standard attacks +100. When HP<30%, P. Atk. +30% and Critical Rate for standard attacks +300. -->
 		<icon>icon.skill10274</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -1889,7 +1889,7 @@
 		</effects>
 	</skill>
 	<skill id="14868" toLevel="1" name="Barton's Berserker Rage">
-		<!-- You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When the target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. When HP falls below 30%, increases P. Atk. by 30% and Critical Rate by an additional 300. -->
+		<!-- You have reached your physical limit. Increases Debuff Resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage for standard attacks. When the target is killed, recovers HP by 20%. When HP<60%, P. Atk. +10% and Critical Rate for standard attacks +100. When HP<30%, P. Atk. +30% and Critical Rate for standard attacks +300. -->
 		<icon>icon.skill10274</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -1963,7 +1963,7 @@
 		</effects>
 	</skill>
 	<skill id="14869" toLevel="1" name="Barton's Berserker Rage">
-		<!-- You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When the target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. When HP falls below 30%, increases P. Atk. by 30% and Critical Rate by an additional 300. -->
+		<!-- You have reached your physical limit. Increases Debuff Resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage for standard attacks. When the target is killed, recovers HP by 20%. When HP<60%, P. Atk. +10% and Critical Rate for standard attacks +100. When HP<30%, P. Atk. +30% and Critical Rate for standard attacks +300. -->
 		<icon>icon.skill10274</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -2127,7 +2127,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14876" toLevel="1" name="Hayuk's Recoil Shot">
-		<!-- Shoots an arrow with 24888 power. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Shoots an arrow with 24888 power.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10770</icon>
 		<operateType>A2</operateType>
 		<castRange>1100</castRange>
@@ -2165,7 +2165,7 @@
 		</effects>
 	</skill>
 	<skill id="14877" toLevel="1" name="Hayuk's Recoil Shot">
-		<!-- Shoots an arrow with 26565 power. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Shoots an arrow with 26565 power.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10770</icon>
 		<operateType>A2</operateType>
 		<castRange>1100</castRange>
@@ -2203,7 +2203,7 @@
 		</effects>
 	</skill>
 	<skill id="14878" toLevel="1" name="Hayuk's Recoil Shot">
-		<!-- Shoots an arrow with 28242 power. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Shoots an arrow with 28242 power.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10770</icon>
 		<operateType>A2</operateType>
 		<castRange>1100</castRange>
@@ -2329,7 +2329,7 @@
 		</effects>
 	</skill>
 	<skill id="14883" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -282 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -282 per second.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2353,7 +2353,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DamOverTime">
 				<power>282</power>
@@ -2369,7 +2369,7 @@
 		</effects>
 	</skill>
 	<skill id="14884" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -296 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -296 per second.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2393,7 +2393,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DamOverTime">
 				<power>296</power>
@@ -2410,7 +2410,7 @@
 		</effects>
 	</skill>
 	<skill id="14885" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -313 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -313 per second.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2434,7 +2434,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DamOverTime">
 				<power>313</power>
@@ -2517,7 +2517,7 @@
 		</effects>
 	</skill>
 	<skill id="14889" toLevel="1" name="Adolph's Aggression">
-		<!-- Provokes the enemy into attacking you with 12439 power. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes the enemy into attacking you with 12439 power.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10026</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -2543,7 +2543,7 @@
 		</effects>
 	</skill>
 	<skill id="14890" toLevel="1" name="Adolph's Aggression">
-		<!-- Provokes the enemy into attacking you with 12660 power. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes the enemy into attacking you with 12660 power.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10026</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -2569,7 +2569,7 @@
 		</effects>
 	</skill>
 	<skill id="14891" toLevel="1" name="Adolph's Aggression">
-		<!-- Provokes the enemy into attacking you with 12772 power. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes the enemy into attacking you with 12772 power.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10026</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>

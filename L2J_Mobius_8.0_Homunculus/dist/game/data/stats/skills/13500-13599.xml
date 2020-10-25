@@ -53,7 +53,7 @@
 		</effects>
 	</skill>
 	<skill id="13515" toLevel="1" name="Giant's Critical Damage">
-		<!-- For 5 min., P. Critical Damage +15%. -->
+		<!-- For 5 min., Critical Damage for standard attacks +15%. -->
 		<icon>icon.skill0482</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -66,6 +66,7 @@
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isMagic>22</isMagic>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>15</amount>
@@ -102,7 +103,7 @@
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MaxMp">
+			<effect name="MaxCp">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
@@ -114,7 +115,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
-		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<hitTime>500</hitTime>
@@ -134,9 +135,18 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
-			<effect name="ResistDispelByCategory">
-				<amount>-100</amount>
-				<slot>ALL</slot>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
 				<amount>-100</amount>
@@ -188,7 +198,7 @@
 		</effects>
 	</skill>
 	<skill id="13520" toLevel="1" name="Giant's Silence">
-		<!-- Blocks the target's P./ M. Skills for 5 sec. Can be used in PvP only. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Blocks the target's P./ M. Skills for 5 sec. Can be used in PvP only.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -204,11 +214,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-379</effectPoint>
-		<activateRate>80</activateRate>
+		<activateRate>100</activateRate>
 		<magicLevel>85</magicLevel>
 		<isMagic>2</isMagic>
 		<isDebuff>true</isDebuff>
-		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND_PC</affectObject>
@@ -218,7 +227,7 @@
 		</effects>
 	</skill>
 	<skill id="13521" toLevel="1" name="Giant's Sleep">
-		<!-- Inflicts Sleep on the target for 5 sec. Can be used in PvP only. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Inflicts Sleep on the target for 5 sec. Can be used in PvP only.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -236,15 +245,15 @@
 		<isMagic>1</isMagic>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-227</effectPoint>
-		<activateRate>80</activateRate>
+		<removedOnDamage>true</removedOnDamage>
+		<activateRate>100</activateRate>
 		<isDebuff>true</isDebuff>
-		<trait>SLEEP</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND_PC</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
@@ -285,7 +294,7 @@
 		</effects>
 	</skill>
 	<skill id="13523" toLevel="1" name="Giant's Critical Weakness">
-		<!-- For 10 sec., increases target's Received Critical Damage and Critical Rate by 90%. -->
+		<!-- For 10 sec., Received P. Critical Rate and Received Critical Damage from standard attacks +90%. -->
 		<icon>icon.skill1222</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -319,7 +328,7 @@
 		</effects>
 	</skill>
 	<skill id="13524" toLevel="1" name="Lindvior's Earring">
-		<!-- P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, Debuff Reflection +10%, M. Damage Reflection +10%. -->
+		<!-- P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, Debuff Reflection +10%, M. Damage Reflection +10%. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -368,17 +377,17 @@
 				<stat>WIT</stat>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>15</amount>
+				<amount>30</amount>
 				<attribute>WIND</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>15</amount>
+				<amount>30</amount>
 				<attribute>DARK</attribute>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="13525" toLevel="1" name="Blessed Lindvior's Earring">
-		<!-- P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, Debuff Reflection +10%, M. Damage Reflection +10%. -->
+		<!-- P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, Debuff Reflection +10%, M. Damage Reflection +10%. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -464,7 +473,7 @@
 		</effects>
 	</skill>
 	<skill id="13527" toLevel="1" name="Enhanced Octavis' Ring (Warrior)">
-		<!-- Atk. Spd. +3%, P. Critical Rate +10, P. Critical Damage +15%. Wearing two of the items will only give the effect of one. -->
+		<!-- Casting Spd. +3%, Critical Rate for standard attacks +10, Critical Damage for standard attacks +15%. The effects of two identical rings do not stack. -->
 		<icon>icon.octavis_ring_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -539,7 +548,7 @@
 		</effects>
 	</skill>
 	<skill id="13530" toLevel="1" name="Enhanced Istina' Ring (Warrior)">
-		<!-- Atk. Spd. +2%, P. Critical Rate +10, P. Critical Damage +10%. Wearing two of the items will only give the effect of one. -->
+		<!-- Atk. Spd. +2%, Critical Rate for standard attacks +10, Critical Damage for standard attacks +10%. The effects of two identical rings do not stack. -->
 		<icon>icon.istina_ring_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -614,7 +623,7 @@
 		</effects>
 	</skill>
 	<skill id="13533" toLevel="1" name="Enhanced Octavis' Ring (Wizard)">
-		<!-- Casting Spd. +2%, M. Critical Rate +10, M. Critical Damage +10%. Wearing two of the items will only give the effect of one. -->
+		<!-- Atk. Spd. +2%, M. Skill Critical Rate +10, M. Skill Critical Damage +10%. The effects of two identical rings do not stack. -->
 		<icon>icon.octavis_ring_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -689,7 +698,7 @@
 		</effects>
 	</skill>
 	<skill id="13536" toLevel="1" name="Enhanced Istina' Ring (Wizard)">
-		<!-- Casting Spd. +3%, M. Critical Rate +10, M. Critical Damage +15%. Wearing two of the items will only give the effect of one. -->
+		<!-- Casting Spd. +3%, M. Skill Critical Rate +10, M. Skill Critical Damage +15%. The effects of two identical rings do not stack. -->
 		<icon>icon.istina_ring_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -764,7 +773,7 @@
 		</effects>
 	</skill>
 	<skill id="13539" toLevel="1" name="Baium's Soul Ring">
-		<!-- P./ M. Accuracy +4, P./ M. Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Confusion Resistance/ Atk. Rate +25%, Obstruction Resistance/ Atk. Rate +25%. -->
+		<!-- P./ M. Accuracy +4, P. Critical Damage/ M. Skill Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Confusion Resistance/ Atk. Rate +25%, Obstruction Resistance/ Atk. Rate +25%. -->
 		<icon>icon.accessory_ring_of_baium_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -956,7 +965,7 @@
 		</effects>
 	</skill>
 	<skill id="13544" toLevel="1" name="Kisung's Mysterious Power">
-		<!-- Magic Skill MP Consumption -3%. -->
+		<!-- Skill MP consumption -3%. -->
 		<icon>icon.skill17085</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1197,7 +1206,7 @@
 		</effects>
 	</skill>
 	<skill id="13552" toLevel="1" name="Mysterious Stormer">
-		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +503, Atk. Spd. +15%, and PvP Damage +15%. Enables the character to attack multiple opponents. -->
+		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +503, Atk. Spd. +15%, PvP Damage +15%. Increases the number of targets attacked with a spear. -->
 		<icon>icon.bm_the_pole_of_hero</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1471,7 +1480,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13560" toLevel="1" name="Mysterious Dual Blunt">
+	<skill id="13560" toLevel="1" name="Mysterious Dual Blunt Weapon">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +612, Atk. Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_r_dualblunt</icon>
 		<operateType>P</operateType>
@@ -1872,7 +1881,7 @@
 		</effects>
 	</skill>
 	<skill id="13563" toLevel="5" name="Einhasad's Wrath">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, Atk. Spd. +$s4, Casting Spd. +$s5. P. Def. and M. Def. -$s6. Cooldown is $s7 -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, Atk. Spd., +$s4, and Casting Spd. +$s5. P. Def./ M. Def. -$s6. Cooldown: $s7. -->
 		<icon>icon.ainhasard_shirt</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1914,7 +1923,7 @@
 		</effects>
 	</skill>
 	<skill id="13564" toLevel="4" name="Einhasad's Protection">
-		<!-- Invincible for $s1 Cooldown is $s2. -->
+		<!-- Grants invincibility for $s1 Attacks do not cancel the effect. Cooldown: $s2 -->
 		<icon>icon.ainhasard_shirt_2</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>5</abnormalTime>
@@ -1978,7 +1987,7 @@
 		</effects>
 	</skill>
 	<skill id="13566" toLevel="2" name="Einhasad's Salvation">
-		<!-- Resurrects when dead and retains all buffs and debuffs. The Noblesse Blessing and Lucky Charm, however, will disappear. Cooldown is $s1. -->
+		<!-- Resurrects from death fully recovered. Buffs/ debuffs remain after death, but Noblesse Blessing and Lucky Charm disappear. Cooldown: $s1. -->
 		<icon>icon.ainhasard_shirt_4</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1992,6 +2001,7 @@
 			<value level="2">1500000</value>
 		</reuseDelay>
 		<staticReuse>true</staticReuse>
+		<isMagic>22</isMagic>
 		<effects>
 			<effect name="ResurrectionSpecial">
 				<power>100</power>
@@ -1999,12 +2009,13 @@
 		</effects>
 	</skill>
 	<skill id="13567" toLevel="1" name="Einhasad's Blessing">
-		<!-- Recovers all your HP, MP, and CP. Has a chance of removing debuffs. Cooldown is 30 min. -->
+		<!-- Recovers all your HP, MP, and CP. Has a chance of removing debuffs. Cooldown: 30 min. -->
 		<icon>icon.ainhasard_shirt_5</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<reuseDelay>1800000</reuseDelay>
 		<staticReuse>true</staticReuse>
+		<isMagic>22</isMagic>
 		<effects>
 			<effect name="ManaHealPercent">
 				<power>100</power>
@@ -2024,7 +2035,7 @@
 		</effects>
 	</skill>
 	<skill id="13568" toLevel="1" name="Talisman Energy">
-		<!-- Resistance for all weapons +3%. When equipped with a weapon that has an attribute, the Atk. Attribute +50. -->
+		<!-- Resistance for all weapons +3%. When equipped with a weapon that has an attribute, Attribute Attack +50. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
 		<magicLevel>3</magicLevel>
@@ -2071,16 +2082,16 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13569" toLevel="3" name="Talisman - Lilith">
+	<skill id="13569" toLevel="4" name="Talisman of Lilith">
 		<!-- Increase M. Def. +$s1, MP recovery +$s2, dark resistance +$s3, and Damage Reflection resistance +$s4. -->
 		<icon>
 			<value level="1">icon.lilith_talisman_i00</value>
 			<value level="2">icon.anakim_talisman_i00</value>
 			<value level="3">icon.sevensign_talisman_i00</value>
+			<value level="4">icon.epic_talisman_i00</value>
 		</icon>
 		<operateType>P</operateType>
 		<magicLevel>3</magicLevel>
-		<operateType>P</operateType>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2089,6 +2100,7 @@
 					<value level="1">0</value>
 					<value level="2">971</value>
 					<value level="3">1126</value>
+					<value level="4">1500</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2097,6 +2109,7 @@
 					<value level="1">552</value>
 					<value level="2">0</value>
 					<value level="3">736</value>
+					<value level="4">1500</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2105,6 +2118,7 @@
 					<value level="1">3</value>
 					<value level="2">0</value>
 					<value level="3">4</value>
+					<value level="4">4</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2113,6 +2127,7 @@
 					<value level="1">0</value>
 					<value level="2">6</value>
 					<value level="3">8</value>
+					<value level="4">8</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2121,6 +2136,7 @@
 					<value level="1">6</value>
 					<value level="2">6</value>
 					<value level="3">14</value>
+					<value level="4">20</value>
 				</amount>
 			</effect>
 			<effect name="DefenceAttribute">
@@ -2128,6 +2144,7 @@
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">10</value>
+					<value level="4">30</value>
 				</amount>
 				<attribute>FIRE</attribute>
 			</effect>
@@ -2136,6 +2153,7 @@
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">10</value>
+					<value level="4">30</value>
 				</amount>
 				<attribute>WIND</attribute>
 			</effect>
@@ -2144,6 +2162,7 @@
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">10</value>
+					<value level="4">30</value>
 				</amount>
 				<attribute>WATER</attribute>
 			</effect>
@@ -2152,6 +2171,7 @@
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">10</value>
+					<value level="4">30</value>
 				</amount>
 				<attribute>EARTH</attribute>
 			</effect>
@@ -2160,6 +2180,7 @@
 					<value level="1">0</value>
 					<value level="2">10</value>
 					<value level="3">10</value>
+					<value level="4">30</value>
 				</amount>
 				<attribute>HOLY</attribute>
 			</effect>
@@ -2168,8 +2189,44 @@
 					<value level="1">10</value>
 					<value level="2">10</value>
 					<value level="3">10</value>
+					<value level="4">30</value>
 				</amount>
 				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">-15</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">-15</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">-15</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">-15</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceSkillCriticalDamage">
+   				<value level="1">0</value>
+    			<value level="2">0</value>
+   				<value level="3">0</value>
+    			<value level="4">-15</value>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2369,7 +2426,7 @@
 		</effects>
 	</skill>
 	<skill id="13575" toLevel="1" name="Hero's Weapon: Spear">
-		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +503, Atk. Spd. +15%, and PvP Damage +15%. Enables the character to attack multiple opponents. -->
+		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +503, Atk. Spd. +15%, PvP Damage +15%. Increases the number of targets attacked with a spear. -->
 		<icon>icon.bm_the_pole_of_hero</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2727,7 +2784,7 @@
 		</effects>
 	</skill>
 	<skill id="13584" toLevel="2" name="Aria's Bracelet: CON">
-		<!-- You can equip 5 Talismans. CON +3. Max HP +531. -->
+		<!-- Unlocks 5 talisman slots. Max HP +531, CON +3. -->
 		<icon>icon.istina_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2750,7 +2807,7 @@
 		</effects>
 	</skill>
 	<skill id="13585" toLevel="2" name="Aria's Bracelet: MEN">
-		<!-- You can equip 5 Talismans. MEN +3. Max HP +531. -->
+		<!-- Unlocks 5 talisman slots. Max HP +531, MEN +3. -->
 		<icon>icon.istina_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2773,7 +2830,7 @@
 		</effects>
 	</skill>
 	<skill id="13586" toLevel="2" name="Aria's Bracelet: DEX">
-		<!-- You can equip 5 Talismans. DEX +3. Max HP +531. -->
+		<!-- Unlocks 5 talisman slots. Max HP +531, DEX +3. -->
 		<icon>icon.octavis_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2796,7 +2853,7 @@
 		</effects>
 	</skill>
 	<skill id="13587" toLevel="2" name="Aria's Bracelet: WIT">
-		<!-- You can equip 5 Talismans. WIT +3. Max HP +531. -->
+		<!-- Unlocks 5 talisman slots. Max HP +531, WIT +3. -->
 		<icon>icon.octavis_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2819,7 +2876,7 @@
 		</effects>
 	</skill>
 	<skill id="13588" toLevel="2" name="Aria's Bracelet: STR">
-		<!-- You can equip 5 Talismans. STR +3. Max HP +531. -->
+		<!-- Unlocks 5 talisman slots. Max HP +531, STR +3. -->
 		<icon>icon.accessory_bangel_of_tauti_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2842,7 +2899,7 @@
 		</effects>
 	</skill>
 	<skill id="13589" toLevel="2" name="Aria's Bracelet: INT">
-		<!-- You can equip 5 Talismans. INT +3. Max HP +531. -->
+		<!-- Unlocks 5 talisman slots. Max HP +531, INT +3. -->
 		<icon>icon.accessory_bangel_of_tauti_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2864,7 +2921,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13590" toLevel="1" name="Augment Option - P. Def.">
+	<skill id="13590" toLevel="1" name="Augment Effect - P. Def.">
 		<!-- Passive: P. Def. +5%. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
@@ -2875,8 +2932,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13591" toLevel="1" name="Augment Option - Elemental Resistance">
-		<!-- Passive: Elemental Resistance +30. -->
+	<skill id="13591" toLevel="1" name="Augment Effect - Elemental Resistance">
+		<!-- Item skill: Fire/ Water/ Wind/ Earth Resistance +30. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2898,8 +2955,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13592" toLevel="1" name="Augment Option - Attribute Resistance">
-		<!-- Passive: Alignment Resistance +30. -->
+	<skill id="13592" toLevel="1" name="Augment Effect - Dark/ Holy Resistance">
+		<!-- Item skill: Dark/ Holy Resistance +30. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2913,7 +2970,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13593" toLevel="1" name="Augment Option - Decrease P. Skill MP Consumption">
+	<skill id="13593" toLevel="1" name="Augment Effect - P. Skill MP Consumption">
 		<!-- Passive: P. Skill MP Consumption -1%. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
@@ -2925,7 +2982,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13594" toLevel="1" name="Augment Option - Decrease M. Skill MP Consumption">
+	<skill id="13594" toLevel="1" name="Augment Effect - M. Skill MP Consumption">
 		<!-- Passive: M. Skill MP Consumption -1%. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
@@ -2933,12 +2990,12 @@
 			<effect name="MagicMpCost">
 				<amount>-1</amount>
 				<mode>PER</mode>
-				<magicType>0</magicType>
+				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13595" toLevel="1" name="Augment Option - Decrease Skill Cooldown">
-		<!-- Passive: Skill Cooldown -1%. -->
+	<skill id="13595" toLevel="1" name="Augment Effect - Cooldown">
+		<!-- Item skill: Skill Cooldown -1%. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2959,8 +3016,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13596" toLevel="1" name="Augment Option - P. Critical Damage">
-		<!-- Passive: P. Skill Critical Damage +1%. -->
+	<skill id="13596" toLevel="1" name="Augment effect: P. Critical Damage +1%.">
+		<!-- Item skill: P. Skill Critical Damage +1%. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2970,7 +3027,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13597" toLevel="1" name="Augment Option - M. Critical Damage">
+	<skill id="13597" toLevel="1" name="Augment effect: M. Critical Damage +1%.">
 		<!-- Passive: M. Skill Critical Damage +1%. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
@@ -2981,8 +3038,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13598" toLevel="1" name="Augment Option - Heal Amount">
-		<!-- Passive: Received Heal Amount +1%. -->
+	<skill id="13598" toLevel="1" name="Augment Effect - Received Healing">
+		<!-- Item skill: Received Healing +1%. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2992,7 +3049,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13599" toLevel="1" name="Augment Option - Fire Resistance">
+	<skill id="13599" toLevel="1" name="Augment Effect - Fire Resistance">
 		<!-- Passive: Fire Resistance +20. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>

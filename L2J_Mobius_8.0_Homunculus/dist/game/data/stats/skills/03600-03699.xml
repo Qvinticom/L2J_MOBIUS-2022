@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3600" toLevel="10" name="Special Ability: Anger">
-		<!-- Decreases Max HP and increases P. Atk. Enables the character to attack multiple opponents. -->
+		<!-- Decreases Max HP and increases P. Atk. and the number of targets hit with a spear. -->
 		<icon>icon.skill1062</icon>
 		<magicLevel>
 			<value level="1">46</value>
@@ -92,7 +92,7 @@
 		</effects>
 	</skill>
 	<skill id="3601" toLevel="10" name="Special Ability: Haste">
-		<!-- Increases Atk. Spd. Enables the character to attack multiple opponents. -->
+		<!-- Increases Atk. Spd. Allows to attack multiple enemies simultaneously. -->
 		<icon>icon.skill1086</icon>
 		<magicLevel>
 			<value level="1">46</value>
@@ -164,7 +164,7 @@
 		</effects>
 	</skill>
 	<skill id="3602" toLevel="10" name="Special Ability: Guidance">
-		<!-- Increases P. Accuracy. Allows to attack multiple opponents. -->
+		<!-- Increases P. Accuracy. Allows to attack multiple enemies simultaneously. -->
 		<icon>icon.skill1240</icon>
 		<magicLevel>
 			<value level="1">46</value>
@@ -254,7 +254,6 @@
 		<!-- The Demon Bremmnon used this mystical sword to slaughter his enemies. The more blood the sword sheds, the more powerful it becomes. -->
 		<icon>icon.weapon_unique_zariche_i00</icon>
 		<magicLevel>78</magicLevel>
-		<minPledgeClass>2</minPledgeClass>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -486,7 +485,7 @@
 		</effects>
 	</skill>
 	<skill id="3604" toLevel="1" name="Frintezza's Necklace">
-		<!-- Increases Dark Resistance, Infection/ Confusion/ Stupor Resistance, Infection/ Confusion/ Stupor Atk. Rate. Decreases skill cooldown. Reflects a part of received damage back to the enemy. -->
+		<!-- Increases Dark/ Infection/ Confusion/ Stupor Atk. Rate and Resistance. Reflects a part of the received damage back to the enemy. -->
 		<icon>icon.accessory_necklace_of_frintessa_i00</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -531,7 +530,7 @@
 		</effects>
 	</skill>
 	<skill id="3605" toLevel="1" name="Clan Oath Heavy Armor Set">
-		<!-- Increases Atk. Spd. and damage of general attacks by 5%. -->
+		<!-- Increases Atk. Spd. and damage of standard attacks by 5%. -->
 		<icon>icon.armor_t1001_ul_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -548,7 +547,7 @@
 		</effects>
 	</skill>
 	<skill id="3606" toLevel="1" name="Clan Oath Light Armor Set">
-		<!-- Increases Atk. Spd. and Critical Damage by 5%. -->
+		<!-- Atk. Spd. and Critical Damage for standard attacks +5%. -->
 		<icon>icon.armor_t1002_ul_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -654,7 +653,7 @@
 		</effects>
 	</skill>
 	<skill id="3609" toLevel="3" name="Apella Light Armor Set">
-		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the player's death XP penalty. Increases Evasion when attacked. Decreases received Critical Damage. -->
+		<!-- Increases Max CP/ CP Recovery Rate, decreases the player's death XP penalty in PvP. When the character is attacked, increases P. Evasion and decreases Received Critical Damage. -->
 		<icon>icon.armor_t1005_ul_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -726,7 +725,7 @@
 		</effects>
 	</skill>
 	<skill id="3610" toLevel="3" name="Apella Robe Set">
-		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the player's death XP penalty. Increases Speed and P. Def. when attacked. -->
+		<!-- Increases Max CP/ CP Recovery Rate, decreases the player's death XP penalty in PvP. When the character is attacked, increases Speed and P. Def. -->
 		<icon>icon.armor_t1006_ul_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -797,7 +796,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3611" toLevel="1" name="Enchant Heavy Armor (D-grade)">
+	<skill id="3611" toLevel="1" name="Enchant D-grade Heavy Armor">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
 		<magicLevel>1</magicLevel>
@@ -823,7 +822,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3612" toLevel="1" name="Enchant Light Armor (D-grade)">
+	<skill id="3612" toLevel="1" name="Enchant D-grade Light Armor">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
 		<magicLevel>1</magicLevel>
@@ -846,7 +845,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3613" toLevel="1" name="Enchant Robe (D-grade)">
+	<skill id="3613" toLevel="1" name="Enchant D-grade Robe">
 		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<icon>icon.skill0234</icon>
 		<magicLevel>1</magicLevel>
@@ -866,7 +865,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3614" toLevel="1" name="Enchant Heavy Armor (C-grade)">
+	<skill id="3614" toLevel="1" name="Enchant ?grade Heavy Armor">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
 		<magicLevel>1</magicLevel>
@@ -892,7 +891,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3615" toLevel="1" name="Enchant Light Armor (C-grade)">
+	<skill id="3615" toLevel="1" name="Enchant C-grade Light Armor">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
 		<magicLevel>1</magicLevel>
@@ -915,7 +914,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3616" toLevel="1" name="Enchant Robe (C-grade)">
+	<skill id="3616" toLevel="1" name="Enchant C-grade Robe">
 		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<icon>icon.skill0234</icon>
 		<magicLevel>1</magicLevel>
@@ -935,7 +934,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3617" toLevel="1" name="Enchant Heavy Armor (B-grade)">
+	<skill id="3617" toLevel="1" name="Enchant B-grade Heavy Armor">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
 		<magicLevel>1</magicLevel>
@@ -961,7 +960,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3618" toLevel="1" name="Enchant Light Armor (B-grade)">
+	<skill id="3618" toLevel="1" name="Enchant B-grade Light Armor">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
 		<magicLevel>1</magicLevel>
@@ -984,7 +983,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3619" toLevel="1" name="Enchant Robe (B-grade)">
+	<skill id="3619" toLevel="1" name="Enchant B-grade Robe">
 		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<icon>icon.skill0234</icon>
 		<magicLevel>1</magicLevel>
@@ -1004,7 +1003,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3620" toLevel="1" name="Enchant Heavy Armor (A-grade)">
+	<skill id="3620" toLevel="1" name="Enchant D-grade Heavy Armor">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
 		<magicLevel>1</magicLevel>
@@ -1030,7 +1029,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3621" toLevel="1" name="Enchant Light Armor (A-grade)">
+	<skill id="3621" toLevel="1" name="Enchant D-grade Light Armor">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
 		<magicLevel>1</magicLevel>
@@ -1053,7 +1052,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3622" toLevel="1" name="Enchant Robe (A-grade)">
+	<skill id="3622" toLevel="1" name="Enchant D-grade Robe">
 		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<icon>icon.skill0234</icon>
 		<magicLevel>1</magicLevel>
@@ -1073,7 +1072,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3623" toLevel="5" name="Enchant Heavy Armor (S-grade)">
+	<skill id="3623" toLevel="5" name="Enchant S-grade Heavy Armor">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
 		<magicLevel>1</magicLevel>
@@ -1099,7 +1098,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3624" toLevel="5" name="Enchant Light Armor (S-grade)">
+	<skill id="3624" toLevel="5" name="Enchant S-grade Light Armor">
 		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<icon>icon.skill0233</icon>
 		<magicLevel>1</magicLevel>
@@ -1122,7 +1121,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3625" toLevel="5" name="Enchant Robe (S-grade)">
+	<skill id="3625" toLevel="5" name="Enchant S-grade Robe">
 		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<icon>icon.skill0234</icon>
 		<magicLevel>1</magicLevel>
@@ -1242,7 +1241,6 @@
 		<!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood. -->
 		<icon>icon.weapon_dual_sword_i00</icon>
 		<magicLevel>78</magicLevel>
-		<minPledgeClass>2</minPledgeClass>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1516,7 +1514,7 @@
 		</effects>
 	</skill>
 	<skill id="3632" toLevel="1" name="Clan Gate">
-		<!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
+		<!-- Active skill: Creates a gate that summons clan members. You cannot move while this skill is active. -->
 		<icon>icon.accessory_crown_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1542,7 +1540,7 @@
 		</effects>
 	</skill>
 	<skill id="3633" toLevel="2" name="Residential Stun Immunity">
-		<!-- Active: Temporarily increases Confusion Resistance. -->
+		<!-- Active skill: Temporarily increases Confusion Resistance. -->
 		<icon>icon.accessory_pledge_cap1_i05</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
@@ -1564,7 +1562,7 @@
 		</effects>
 	</skill>
 	<skill id="3634" toLevel="1" name="Infinity Sword Special Ability">
-		<!-- Increases Critical Rate/ damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<!-- Increases Critical Rate/ Damage for standard attacks, Max HP/ MP, and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_infinity_sword_i00</icon>
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
@@ -1610,7 +1608,7 @@
 		</effects>
 	</skill>
 	<skill id="3635" toLevel="1" name="Infinity Shooter Special Ability">
-		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill cooldown is short. Has a chance to decrease MP Consumption. -->
+		<!-- Decreases enemy's Speed after a critical attack. Increases Max MP/ CP and PvP Damage. Decreases Skill Cooldown and MP Consumption. -->
 		<icon>icon.weapon_infinity_shooter_i00</icon>
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
@@ -1668,7 +1666,7 @@
 		</effects>
 	</skill>
 	<skill id="3637" toLevel="1" name="Dynasty Platinum Plate">
-		<!-- Increases P. Atk, Max HP, Critical Rate, Dark Resistance, and Critical Damage. -->
+		<!-- Increases P. Atk., Max HP, Critical Rate/ Damage for standard attacks, and Dark Resistance. -->
 		<icon>icon.armor_t91_uw_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1752,7 +1750,7 @@
 		</effects>
 	</skill>
 	<skill id="3640" toLevel="1" name="Dynasty Jewel Leather Armor">
-		<!-- Increases Evasion, Max HP, Atk. Spd., and Hold Resistance. -->
+		<!-- Increases P. Evasion, Max HP, Atk. Spd., and Hold Resistance. -->
 		<icon>icon.armor_t92_ud_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1781,7 +1779,7 @@
 		</effects>
 	</skill>
 	<skill id="3641" toLevel="1" name="Dynasty Jewel Leather Armor">
-		<!-- Increases Accuracy/ Max MP/ Atk. Spd./ MP Recovery Rate/ Dark Resistance. -->
+		<!-- Increases P. Accuracy, Max MP, Atk. Spd., MP Recovery Rate, and Dark Resistance. -->
 		<icon>icon.armor_t92_ub_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1802,7 +1800,7 @@
 			</effect>
 			<effect name="MpRegen">
 				<amount>1.066</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>8</amount>
@@ -1838,7 +1836,7 @@
 		</effects>
 	</skill>
 	<skill id="3643" toLevel="1" name="Dynasty Jewel Leather Armor">
-		<!-- Increases P. Atk/ Max HP/ Critical Rate/ Critical Damage/ Dark Resistance. -->
+		<!-- Increases P. Atk., Max HP, Critical Rate/ Damage for standard attacks, and Dark Resistance. -->
 		<icon>icon.armor_t92_ub_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1898,7 +1896,7 @@
 		</effects>
 	</skill>
 	<skill id="3645" toLevel="1" name="Dynasty Silver Satin Tunic">
-		<!-- Increases Casting Spd./ Max MP/ Heal Power/ Dark Resistance, and decreases magic cancel rate against damage. -->
+		<!-- Increases Casting Spd., Max MP, Healing Power, Dark Resistance, and decreases Casting Interruption Rate. -->
 		<icon>icon.armor_t93_uh_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2015,7 +2013,7 @@
 		</effects>
 	</skill>
 	<skill id="3649" toLevel="1" name="Beleth' Ring">
-		<!-- M. Def. +12%, Max HP +105, Max MP +21, MP Recovery +0.23, Confusion Atk. +10, Confusion Resistance +10, Dark Resistance +30. -->
+		<!-- M. Def. +$s1, Max HP +$s2, Max MP +$s3, MP Recovery +$s4, Confusion Atk. +$s5, Confusion Resistance +$s6, Dark Resistance +$s7. -->
 		<icon>icon.accessary_dynasty_ring_i00</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -2176,7 +2174,7 @@
 		</effects>
 	</skill>
 	<skill id="3656" toLevel="1" name="PvP Weapon - Decrease Range">
-		<!-- Has a chance to decrease bow/ crossbow range when attacking. -->
+		<!-- Decreases bow/ crossbow attack range after an attack. -->
 		<icon>icon.skill0486</icon>
 		<magicLevel>80</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2260,7 +2258,7 @@
 		</effects>
 	</skill>
 	<skill id="3660" toLevel="1" name="PvP Armor - Critical Down">
-		<!-- Decreases Critical Rate and Critical Damage when attacked. -->
+		<!-- Decreases Received P. Critical Rate and Received Critical Damage from standard attacks. -->
 		<icon>icon.skill1242</icon>
 		<magicLevel>80</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2338,7 +2336,7 @@
 		</effects>
 	</skill>
 	<skill id="3664" toLevel="1" name="Red Talisman - Max CP">
-		<!-- Increases Max CP and continuously recovers CP with the power of the talisman. -->
+		<!-- Increases Max CP and continuously recovers CP, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -2363,8 +2361,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3665" toLevel="2" name="Red Talisman - CP Regeneration">
-		<!-- Drastically increases CP regeneration with the power of the talisman. -->
+	<skill id="3665" toLevel="2" name="Red Talisman - CP Recovery">
+		<!-- Greatly increases CP Recovery Rate, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -2390,7 +2388,7 @@
 		</effects>
 	</skill>
 	<skill id="3666" toLevel="1" name="Yellow Talisman - Increase Momentum">
-		<!-- Increases your own Momentum Lv. through the power of the Talisman. -->
+		<!-- Increases Momentum, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2410,7 +2408,7 @@
 		</effects>
 	</skill>
 	<skill id="3667" toLevel="1" name="Yellow Talisman - Damage Transition">
-		<!-- Transfers some of one's own damage to the servitor with the power of the talisman. -->
+		<!-- Transfers some of the received damage to the servitor, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -2422,7 +2420,7 @@
 		</effects>
 	</skill>
 	<skill id="3668" toLevel="1" name="Zubei's Leather Gaiters">
-		<!-- Increases Evasion. -->
+		<!-- Increases P. Evasion. -->
 		<icon>icon.armor_t65_l_i00</icon>
 		<magicLevel>58</magicLevel>
 		<operateType>P</operateType>
@@ -2435,7 +2433,7 @@
 		</effects>
 	</skill>
 	<skill id="3669" toLevel="1" name="Zubei's Leather Shirt">
-		<!-- Increases Evasion. -->
+		<!-- Increases P. Evasion. -->
 		<icon>icon.armor_t65_u_i00</icon>
 		<magicLevel>58</magicLevel>
 		<operateType>P</operateType>
@@ -2448,7 +2446,7 @@
 		</effects>
 	</skill>
 	<skill id="3670" toLevel="1" name="Zubei's Gauntlets">
-		<!-- Increases Evasion. -->
+		<!-- Increases P. Evasion. -->
 		<icon>icon.armor_t65_g_i00</icon>
 		<magicLevel>58</magicLevel>
 		<operateType>P</operateType>
@@ -2461,7 +2459,7 @@
 		</effects>
 	</skill>
 	<skill id="3671" toLevel="1" name="Zubei's Boots">
-		<!-- Increases Evasion. -->
+		<!-- Increases P. Evasion. -->
 		<icon>icon.armor_t65_b_i00</icon>
 		<magicLevel>58</magicLevel>
 		<operateType>P</operateType>
@@ -2558,7 +2556,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3677" toLevel="1" name="Tunic of Zubei">
+	<skill id="3677" toLevel="1" name="Zubei's Tunic">
 		<!-- Increases M. Atk. -->
 		<icon>icon.armor_t56_u_i00</icon>
 		<magicLevel>58</magicLevel>
@@ -2571,7 +2569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3678" toLevel="1" name="Stockings of Zubei">
+	<skill id="3678" toLevel="1" name="Zubei's Stockings">
 		<!-- Increases M. Atk. -->
 		<icon>icon.armor_t56_l_i00</icon>
 		<magicLevel>58</magicLevel>
@@ -2611,7 +2609,7 @@
 		</effects>
 	</skill>
 	<skill id="3681" toLevel="1" name="Zubei's Shield">
-		<!-- M. Damage Resistance +2%. -->
+		<!-- M. Damage Resistance +$s1. -->
 		<icon>icon.shield_shrnoens_shield_i00</icon>
 		<magicLevel>58</magicLevel>
 		<operateType>P</operateType>
@@ -2649,7 +2647,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3684" toLevel="1" name="Avadon Circlet">
+	<skill id="3684" toLevel="1" name="Avadon Helm">
 		<!-- Increases Max HP. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLevel>58</magicLevel>
@@ -2689,7 +2687,7 @@
 		</effects>
 	</skill>
 	<skill id="3687" toLevel="1" name="Avadon Shield">
-		<!-- M. Damage Resistance +1%. -->
+		<!-- M. Damage Resistance +$s1. -->
 		<icon>icon.shield_avadon_shield_i00</icon>
 		<magicLevel>58</magicLevel>
 		<operateType>P</operateType>
@@ -2701,7 +2699,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3688" toLevel="1" name="Avadon Circlet">
+	<skill id="3688" toLevel="1" name="Avadon Helm">
 		<!-- Increases M. Def. and weight limit. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLevel>58</magicLevel>
@@ -2765,8 +2763,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3692" toLevel="1" name="Avadon Circlet">
-		<!-- Increases P. Def. -->
+	<skill id="3692" toLevel="1" name="Avadon Helm">
+		<!-- P. Def. is increased. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLevel>58</magicLevel>
 		<operateType>P</operateType>
@@ -2779,7 +2777,7 @@
 		</effects>
 	</skill>
 	<skill id="3693" toLevel="1" name="Avadon Gloves">
-		<!-- Increases P. Def. -->
+		<!-- P. Def. is increased. -->
 		<icon>icon.armor_t59_g_i00</icon>
 		<magicLevel>58</magicLevel>
 		<operateType>P</operateType>
@@ -2809,7 +2807,7 @@
 		</effects>
 	</skill>
 	<skill id="3695" toLevel="1" name="Avadon Boots">
-		<!-- Increases P. Def. -->
+		<!-- P. Def. is increased. -->
 		<icon>icon.armor_t59_b_i00</icon>
 		<magicLevel>58</magicLevel>
 		<operateType>P</operateType>
@@ -2822,7 +2820,7 @@
 		</effects>
 	</skill>
 	<skill id="3696" toLevel="1" name="Doom Gloves">
-		<!-- Increases Max HP and lung capacity. -->
+		<!-- Increases Max HP and breath gauge. -->
 		<icon>icon.armor_t71_g_i00</icon>
 		<magicLevel>61</magicLevel>
 		<operateType>P</operateType>
@@ -2839,7 +2837,7 @@
 		</effects>
 	</skill>
 	<skill id="3697" toLevel="1" name="Doom Boots">
-		<!-- Increases Max HP and lung capacity. -->
+		<!-- Increases Max HP and breath gauge. -->
 		<icon>icon.armor_t71_b_i00</icon>
 		<magicLevel>61</magicLevel>
 		<operateType>P</operateType>
@@ -2856,7 +2854,7 @@
 		</effects>
 	</skill>
 	<skill id="3698" toLevel="1" name="Doom Plate Armor">
-		<!-- Increases Max HP and lung capacity. -->
+		<!-- Increases Max HP and breath gauge. -->
 		<icon>icon.armor_t71_ul_i00</icon>
 		<magicLevel>61</magicLevel>
 		<operateType>P</operateType>
@@ -2873,7 +2871,7 @@
 		</effects>
 	</skill>
 	<skill id="3699" toLevel="1" name="Doom Helmet">
-		<!-- Increases Max HP and lung capacity. -->
+		<!-- Increases Max HP and breath gauge. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<magicLevel>61</magicLevel>
 		<operateType>P</operateType>

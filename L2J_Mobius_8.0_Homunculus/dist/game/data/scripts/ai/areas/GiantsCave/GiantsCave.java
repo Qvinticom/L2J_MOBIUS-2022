@@ -60,27 +60,32 @@ public class GiantsCave extends AbstractNpcAI
 			}
 			case "first_area":
 			{
-				htmltext = "34223-1.html";
+				player.teleToLocation(174501, 52876, -4370);
 				break;
 			}
 			case "second_area":
 			{
-				htmltext = "34223-1.html";
+				player.teleToLocation(178037, 52250, -3993);
 				break;
 			}
 			case "third_area":
 			{
-				htmltext = "34223-1.html";
+				player.teleToLocation(181226, 50418, -4370);
+				break;
+			}
+			case "fourth_area":
+			{
+				player.teleToLocation(183638, 47541, -4370);
 				break;
 			}
 			case "stronghold":
 			{
-				htmltext = "34223-2.html";
+				player.teleToLocation(187467, 60921, -4983);
 				break;
 			}
 			case "relics_rooom":
 			{
-				htmltext = "34223-3.html";
+				player.teleToLocation(186611, 59968, -7236);
 				break;
 			}
 		}

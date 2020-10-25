@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.ItemGrade;
 import org.l2jmobius.gameserver.enums.UserInfoType;
+import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.Party;
@@ -141,7 +142,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		packet.writeD(_player.getObjectId());
 		packet.writeD(_initSize);
-		packet.writeH(25); // 196 - 25
+		packet.writeH(28); // 286 - 28
 		packet.writeB(_masks);
 		
 		if (containsMask(UserInfoType.RELATION))
@@ -151,7 +152,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		if (containsMask(UserInfoType.BASIC_INFO))
 		{
-			packet.writeH(16 + (_player.getAppearance().getVisibleName().length() * 2));
+			packet.writeH(23 + (_player.getAppearance().getVisibleName().length() * 2));
 			packet.writeString(_player.getName());
 			packet.writeC(_player.isGM() ? 0x01 : 0x00);
 			packet.writeC(_player.getRace().ordinal());
@@ -159,6 +160,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(ClassId.getClassId(_player.getBaseTemplate().getClassId().getId()).getRootClassId().getId());
 			packet.writeD(_player.getClassId().getId());
 			packet.writeC(_player.getLevel());
+			packet.writeC(0x00); // 270
+			packet.writeC(0x00); // 270
+			packet.writeC(0x00); // 270
+			packet.writeD(0x00); // 286
 		}
 		
 		if (containsMask(UserInfoType.BASE_STATS))
@@ -220,7 +225,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		if (containsMask(UserInfoType.STATS))
 		{
-			packet.writeH(56);
+			packet.writeH(64); // 270
 			packet.writeH(_player.getActiveWeaponItem() != null ? 40 : 20);
 			packet.writeD(_player.getPAtk());
 			packet.writeD(_player.getPAtkSpd());
@@ -235,6 +240,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(_player.getMDef());
 			packet.writeD(_player.getMagicAccuracy());
 			packet.writeD(_player.getMCriticalHit());
+			packet.writeD(0x00); // 270
+			packet.writeD(0x00); // 270
 		}
 		
 		if (containsMask(UserInfoType.ELEMENTALS))
@@ -319,7 +326,15 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(_player.getPvpKills());
 			packet.writeH(_player.getRecomLeft());
 			packet.writeH(_player.getRecomHave());
-			packet.writeD(0x00); // 196
+			// AFK animation.
+			if ((_player.getClan() != null) && (CastleManager.getInstance().getCastleByOwner(_player.getClan()) != null)) // 196
+			{
+				packet.writeD(_player.isClanLeader() ? 100 : 101);
+			}
+			else
+			{
+				packet.writeD(0x00);
+			}
 			packet.writeD(0x00); // 228
 		}
 		
@@ -409,6 +424,43 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		{
 			packet.writeH(6);
 			packet.writeD(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : 0);
+		}
+		
+		if (containsMask(UserInfoType.STAT_POINTS)) // 235
+		{
+			packet.writeH(16);
+			packet.writeH(0x00); // Usable points?
+			packet.writeH(0x00); // STR points
+			packet.writeH(0x00); // DEX points
+			packet.writeH(0x00); // CON points
+			packet.writeH(0x00); // INT points
+			packet.writeH(0x00); // WIT points
+			packet.writeH(0x00); // MEN points
+		}
+		
+		if (containsMask(UserInfoType.STAT_ABILITIES)) // 235
+		{
+			packet.writeH(18);
+			packet.writeH(0x00); // STR additional
+			packet.writeH(0x00); // DEX additional
+			packet.writeH(0x00); // CON additional
+			packet.writeH(0x00); // INT additional
+			packet.writeH(0x00); // WIT additional
+			packet.writeH(0x00); // MEN additional
+			packet.writeH(0x00); // ?
+			packet.writeH(0x00); // ?
+		}
+		
+		if (containsMask(UserInfoType.ELIXIR_USED)) // 286
+		{
+			packet.writeH(1);
+			packet.writeD(0x00);
+		}
+		
+		// Send exp bonus change.
+		if (containsMask(UserInfoType.VITA_FAME))
+		{
+			_player.sendPacket(new ExUserBoostStat(_player));
 		}
 		
 		return true;

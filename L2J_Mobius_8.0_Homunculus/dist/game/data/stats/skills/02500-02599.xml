@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="2500" toLevel="1" name="Beast Soulshot Compressed Pack">
+	<skill id="2500" toLevel="1" name="Compressed Package: Beast Soulshots">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -21,7 +21,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2501" toLevel="1" name="Beast Spiritshot Compressed Pack">
+	<skill id="2501" toLevel="1" name="Compressed Package: Beast Spiritshots">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -42,7 +42,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2502" toLevel="1" name="Blessed Beast Spiritshot Compressed Pack">
+	<skill id="2502" toLevel="1" name="Compressed Package: Blessed Beast Spiritshots">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -83,12 +83,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="6471" count="20" /> <!-- Large Red Nimble Fish - Not in Use -->
+						<item id="6471" count="20" /> <!-- Large Red Nimble Fish - Not used -->
 						<item id="5094" count="40" /> <!-- Great Codran -->
 						<item id="9814" count="3" /> <!-- Memento Mori -->
 						<item id="9816" count="4" /> <!-- Earth Egg -->
 						<item id="9817" count="4" /> <!-- Nonliving Nucleus -->
-						<item id="9815" count="2" /> <!-- Dragon Heart -->
+						<item id="9815" count="2" /> <!-- Dragon's Heart -->
 						<item id="57" count="6000000" /> <!-- Adena -->
 					</item>
 				</items>
@@ -287,25 +287,25 @@
 						<item id="34852" count="1" /> <!-- Cube Fragment Weapon - R -->
 					</item>
 					<item chance="7">
-						<item id="21098" count="1" /> <!-- Shiny Cube Fragment Armor (B-grade) -->
+						<item id="21098" count="1" /> <!-- Shiny Cube B-grade Armor Fragment -->
 					</item>
 					<item chance="8">
-						<item id="21099" count="1" /> <!-- Shiny Cube Fragment Armor (A-grade) -->
+						<item id="21099" count="1" /> <!-- Shiny Cube A-grade Armor Fragment -->
 					</item>
 					<item chance="2">
-						<item id="21100" count="1" /> <!-- Shiny Cube Fragment Armor (S-grade) -->
+						<item id="21100" count="1" /> <!-- Shiny Cube Fragment S-grade Armor -->
 					</item>
 					<item chance="0.003">
 						<item id="34853" count="1" /> <!-- Shiny Cube Fragment Armor - R -->
 					</item>
 					<item chance="3">
-						<item id="21103" count="1" /> <!-- Shiny Cube Fragment Weapon (B-grade) -->
+						<item id="21103" count="1" /> <!-- Shiny Cube B-grade Weapon Fragment -->
 					</item>
 					<item chance="1">
-						<item id="21104" count="1" /> <!-- Shiny Cube Fragment Weapon (A-grade) -->
+						<item id="21104" count="1" /> <!-- Shiny Cube A-grade Weapon Fragment -->
 					</item>
 					<item chance="0.989">
-						<item id="21105" count="1" /> <!-- Shiny Cube Fragment Weapon (S-grade) -->
+						<item id="21105" count="1" /> <!-- Shiny Cube Fragment S-grade Weapon -->
 					</item>
 					<item chance="0.0015">
 						<item id="34854" count="1" /> <!-- Shiny Cube Fragment Weapon - R -->
@@ -343,7 +343,7 @@
 		</effects>
 	</skill>
 	<skill id="2512" toLevel="1" name="Herb of HP Drain">
-		<!-- Bestows the ability to recover HP using some of the damage inflicted on the enemy with a certain probability. Effect 4. -->
+		<!-- With a certain chance, absorbs some of the inflicted damage as HP. Effect 4. -->
 		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>4</abnormalLevel>
@@ -367,7 +367,7 @@
 		</effects>
 	</skill>
 	<skill id="2513" toLevel="1" name="Mysterious Herb">
-		<!-- Head is enlarged. -->
+		<!-- Makes your head larger. -->
 		<icon>icon.skill2513</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>1</abnormalLevel>
@@ -401,7 +401,7 @@
 		</effects>
 	</skill>
 	<skill id="2514" toLevel="1" name="Herb of Critical Attack - Damage">
-		<!-- Critical Damage is increased temporarily. Effect 3. -->
+		<!-- Temporarily increases Critical Damage for standard attacks. Effect 3. -->
 		<icon>BranchSys2.icon.etc_crt_force_herb_i01</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>3</abnormalLevel>
@@ -424,7 +424,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2515" toLevel="1" name="Lucky Clover (D-grade)">
+	<skill id="2515" toLevel="1" name="D-grade Lucky Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -433,7 +433,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2516" toLevel="1" name="Lucky Clover (C-grade)">
+	<skill id="2516" toLevel="1" name="C-grade Lucky Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -442,7 +442,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2517" toLevel="1" name="Lucky Clover (B-grade)">
+	<skill id="2517" toLevel="1" name="B-grade Lucky Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -451,7 +451,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2518" toLevel="1" name="Lucky Clover (A-grade)">
+	<skill id="2518" toLevel="1" name="A-grade Lucky Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -460,7 +460,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2519" toLevel="1" name="Lucky Clover (S-grade)">
+	<skill id="2519" toLevel="1" name="S-grade Lucky Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -469,7 +469,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2520" toLevel="1" name="Lucky Clover (D-grade)">
+	<skill id="2520" toLevel="1" name="D-grade Lucky Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -478,7 +478,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2521" toLevel="1" name="Lucky Clover (C-grade)">
+	<skill id="2521" toLevel="1" name="C-grade Lucky Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -487,7 +487,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2522" toLevel="1" name="Lucky Clover (B-grade)">
+	<skill id="2522" toLevel="1" name="B-grade Lucky Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -496,7 +496,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2523" toLevel="1" name="Lucky Clover (A-grade)">
+	<skill id="2523" toLevel="1" name="A-grade Lucky Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -505,7 +505,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2524" toLevel="1" name="Lucky Clover (S-grade)">
+	<skill id="2524" toLevel="1" name="S-grade Lucky Clover">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -737,9 +737,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="4" /> <!-- Major Healing Potion -->
-						<item id="1463" count="50" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="50" /> <!-- Spiritshot (D-grade) -->
+						<item id="1539" count="4" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="50" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="50" /> <!-- D-grade Spiritshot -->
 					</item>
 				</items>
 			</effect>
@@ -765,11 +765,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="4" /> <!-- Major Healing Potion -->
-						<item id="1463" count="100" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="100" /> <!-- Spiritshot (D-grade) -->
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
-						<item id="8623" count="3" /> <!-- Elixir of Life (D-grade) -->
+						<item id="1539" count="4" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="100" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="100" /> <!-- D-grade Spiritshot -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
+						<item id="8623" count="3" /> <!-- Elixir of Life -->
 					</item>
 				</items>
 			</effect>
@@ -795,9 +795,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="4" /> <!-- Major Healing Potion -->
-						<item id="1463" count="100" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="100" /> <!-- Spiritshot (D-grade) -->
+						<item id="1539" count="4" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="100" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="100" /> <!-- D-grade Spiritshot -->
 					</item>
 				</items>
 			</effect>
@@ -823,12 +823,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="2" /> <!-- Major Healing Potion -->
-						<item id="1463" count="150" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="150" /> <!-- Spiritshot (D-grade) -->
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
-						<item id="8623" count="3" /> <!-- Elixir of Life (D-grade) -->
-						<item id="8629" count="2" /> <!-- Elixir of Mind (D-grade) -->
+						<item id="1539" count="2" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="150" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="150" /> <!-- D-grade Spiritshot -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
+						<item id="8623" count="3" /> <!-- Elixir of Life -->
+						<item id="8629" count="2" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -854,12 +854,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="5" /> <!-- Major Healing Potion -->
-						<item id="1463" count="210" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="210" /> <!-- Spiritshot (D-grade) -->
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
-						<item id="8623" count="3" /> <!-- Elixir of Life (D-grade) -->
-						<item id="8629" count="3" /> <!-- Elixir of Mind (D-grade) -->
+						<item id="1539" count="5" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="210" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="210" /> <!-- D-grade Spiritshot -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
+						<item id="8623" count="3" /> <!-- Elixir of Life -->
+						<item id="8629" count="3" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -885,13 +885,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="7" /> <!-- Major Healing Potion -->
-						<item id="1463" count="300" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="300" /> <!-- Spiritshot (D-grade) -->
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
-						<item id="955" count="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-						<item id="8623" count="7" /> <!-- Elixir of Life (D-grade) -->
-						<item id="8629" count="7" /> <!-- Elixir of Mind (D-grade) -->
+						<item id="1539" count="7" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="300" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="300" /> <!-- D-grade Spiritshot -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
+						<item id="955" count="1" /> <!-- Scroll: Enchant D-grade Weapon -->
+						<item id="8623" count="7" /> <!-- Elixir of Life -->
+						<item id="8629" count="7" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -917,9 +917,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="5" /> <!-- Major Healing Potion -->
-						<item id="1463" count="140" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="140" /> <!-- Spiritshot (D-grade) -->
+						<item id="1539" count="5" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="140" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="140" /> <!-- D-grade Spiritshot -->
 					</item>
 				</items>
 			</effect>
@@ -945,12 +945,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="7" /> <!-- Major Healing Potion -->
-						<item id="1463" count="250" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="250" /> <!-- Spiritshot (D-grade) -->
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
-						<item id="8623" count="5" /> <!-- Elixir of Life (D-grade) -->
-						<item id="8629" count="4" /> <!-- Elixir of Mind (D-grade) -->
+						<item id="1539" count="7" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="250" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="250" /> <!-- D-grade Spiritshot -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
+						<item id="8623" count="5" /> <!-- Elixir of Life -->
+						<item id="8629" count="4" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -976,9 +976,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="6" /> <!-- Major Healing Potion -->
-						<item id="1463" count="200" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="200" /> <!-- Spiritshot (D-grade) -->
+						<item id="1539" count="6" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="200" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="200" /> <!-- D-grade Spiritshot -->
 					</item>
 				</items>
 			</effect>
@@ -1004,13 +1004,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="11" /> <!-- Major Healing Potion -->
-						<item id="1463" count="500" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="500" /> <!-- Spiritshot (D-grade) -->
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
-						<item id="955" count="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-						<item id="8623" count="10" /> <!-- Elixir of Life (D-grade) -->
-						<item id="8629" count="10" /> <!-- Elixir of Mind (D-grade) -->
+						<item id="1539" count="11" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="500" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="500" /> <!-- D-grade Spiritshot -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
+						<item id="955" count="1" /> <!-- Scroll: Enchant D-grade Weapon -->
+						<item id="8623" count="10" /> <!-- Elixir of Life -->
+						<item id="8629" count="10" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1036,12 +1036,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="7" /> <!-- Major Healing Potion -->
-						<item id="1463" count="400" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="400" /> <!-- Spiritshot (D-grade) -->
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
-						<item id="8623" count="6" /> <!-- Elixir of Life (D-grade) -->
-						<item id="8629" count="6" /> <!-- Elixir of Mind (D-grade) -->
+						<item id="1539" count="7" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="400" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="400" /> <!-- D-grade Spiritshot -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
+						<item id="8623" count="6" /> <!-- Elixir of Life -->
+						<item id="8629" count="6" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1067,12 +1067,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="9" /> <!-- Major Healing Potion -->
-						<item id="1463" count="400" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="400" /> <!-- Spiritshot (D-grade) -->
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
-						<item id="8623" count="9" /> <!-- Elixir of Life (D-grade) -->
-						<item id="8629" count="8" /> <!-- Elixir of Mind (D-grade) -->
+						<item id="1539" count="9" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="400" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="400" /> <!-- D-grade Spiritshot -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
+						<item id="8623" count="9" /> <!-- Elixir of Life -->
+						<item id="8629" count="8" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1098,13 +1098,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="10" /> <!-- Major Healing Potion -->
-						<item id="1463" count="500" /> <!-- Soulshot (D-grade) -->
-						<item id="2510" count="500" /> <!-- Spiritshot (D-grade) -->
-						<item id="956" count="2" /> <!-- Scroll: Enchant Armor (D-grade) -->
-						<item id="955" count="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-						<item id="8623" count="15" /> <!-- Elixir of Life (D-grade) -->
-						<item id="8629" count="15" /> <!-- Elixir of Mind (D-grade) -->
+						<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+						<item id="1463" count="500" /> <!-- D-grade Soulshot -->
+						<item id="2510" count="500" /> <!-- D-grade Spiritshot -->
+						<item id="956" count="2" /> <!-- Scroll: Enchant D-grade Armor -->
+						<item id="955" count="1" /> <!-- Scroll: Enchant D-grade Weapon -->
+						<item id="8623" count="15" /> <!-- Elixir of Life -->
+						<item id="8629" count="15" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1130,9 +1130,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="7" /> <!-- Major Healing Potion -->
-						<item id="1464" count="150" /> <!-- Soulshot (C-grade) -->
-						<item id="2511" count="150" /> <!-- Spiritshot (C-grade) -->
+						<item id="1539" count="7" /> <!-- Major HP Replenishing Potion -->
+						<item id="1464" count="150" /> <!-- C-grade Soulshot -->
+						<item id="2511" count="150" /> <!-- C-grade Spiritshot -->
 					</item>
 				</items>
 			</effect>
@@ -1158,12 +1158,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="5" /> <!-- Major Healing Potion -->
-						<item id="1464" count="120" /> <!-- Soulshot (C-grade) -->
-						<item id="2511" count="120" /> <!-- Spiritshot (C-grade) -->
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
-						<item id="8624" count="5" /> <!-- Elixir of Life (C-grade) -->
-						<item id="8630" count="4" /> <!-- Elixir of Mind (C-grade) -->
+						<item id="1539" count="5" /> <!-- Major HP Replenishing Potion -->
+						<item id="1464" count="120" /> <!-- C-grade Soulshot -->
+						<item id="2511" count="120" /> <!-- C-grade Spiritshot -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor -->
+						<item id="8624" count="5" /> <!-- Elixir of Life -->
+						<item id="8630" count="4" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1189,9 +1189,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="11" /> <!-- Major Healing Potion -->
-						<item id="1464" count="150" /> <!-- Soulshot (C-grade) -->
-						<item id="2511" count="150" /> <!-- Spiritshot (C-grade) -->
+						<item id="1539" count="11" /> <!-- Major HP Replenishing Potion -->
+						<item id="1464" count="150" /> <!-- C-grade Soulshot -->
+						<item id="2511" count="150" /> <!-- C-grade Spiritshot -->
 					</item>
 				</items>
 			</effect>
@@ -1217,13 +1217,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="7" /> <!-- Major Healing Potion -->
-						<item id="1464" count="300" /> <!-- Soulshot (C-grade) -->
-						<item id="2511" count="300" /> <!-- Spiritshot (C-grade) -->
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-						<item id="8624" count="7" /> <!-- Elixir of Life (C-grade) -->
-						<item id="8630" count="7" /> <!-- Elixir of Mind (C-grade) -->
+						<item id="1539" count="7" /> <!-- Major HP Replenishing Potion -->
+						<item id="1464" count="300" /> <!-- C-grade Soulshot -->
+						<item id="2511" count="300" /> <!-- C-grade Spiritshot -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon -->
+						<item id="8624" count="7" /> <!-- Elixir of Life -->
+						<item id="8630" count="7" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1249,11 +1249,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="6" /> <!-- Major Healing Potion -->
-						<item id="1464" count="200" /> <!-- Soulshot (C-grade) -->
-						<item id="2511" count="200" /> <!-- Spiritshot (C-grade) -->
-						<item id="8624" count="7" /> <!-- Elixir of Life (C-grade) -->
-						<item id="8630" count="6" /> <!-- Elixir of Mind (C-grade) -->
+						<item id="1539" count="6" /> <!-- Major HP Replenishing Potion -->
+						<item id="1464" count="200" /> <!-- C-grade Soulshot -->
+						<item id="2511" count="200" /> <!-- C-grade Spiritshot -->
+						<item id="8624" count="7" /> <!-- Elixir of Life -->
+						<item id="8630" count="6" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1279,12 +1279,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="10" /> <!-- Major Healing Potion -->
-						<item id="1464" count="250" /> <!-- Soulshot (C-grade) -->
-						<item id="2511" count="250" /> <!-- Spiritshot (C-grade) -->
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
-						<item id="8624" count="8" /> <!-- Elixir of Life (C-grade) -->
-						<item id="8630" count="7" /> <!-- Elixir of Mind (C-grade) -->
+						<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+						<item id="1464" count="250" /> <!-- C-grade Soulshot -->
+						<item id="2511" count="250" /> <!-- C-grade Spiritshot -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor -->
+						<item id="8624" count="8" /> <!-- Elixir of Life -->
+						<item id="8630" count="7" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1310,13 +1310,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="10" /> <!-- Major Healing Potion -->
-						<item id="1464" count="350" /> <!-- Soulshot (C-grade) -->
-						<item id="2511" count="350" /> <!-- Spiritshot (C-grade) -->
-						<item id="952" count="2" /> <!-- Scroll: Enchant Armor (C-grade) -->
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-						<item id="8624" count="10" /> <!-- Elixir of Life (C-grade) -->
-						<item id="8630" count="10" /> <!-- Elixir of Mind (C-grade) -->
+						<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+						<item id="1464" count="350" /> <!-- C-grade Soulshot -->
+						<item id="2511" count="350" /> <!-- C-grade Spiritshot -->
+						<item id="952" count="2" /> <!-- Scroll: Enchant C-grade Armor -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon -->
+						<item id="8624" count="10" /> <!-- Elixir of Life -->
+						<item id="8630" count="10" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1342,9 +1342,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="6" /> <!-- Major Healing Potion -->
-						<item id="1465" count="100" /> <!-- Soulshot (B-grade) -->
-						<item id="2512" count="100" /> <!-- Spiritshot (B-grade) -->
+						<item id="1539" count="6" /> <!-- Major HP Replenishing Potion -->
+						<item id="1465" count="100" /> <!-- B-grade Soulshot -->
+						<item id="2512" count="100" /> <!-- B-grade Spiritshot -->
 					</item>
 				</items>
 			</effect>
@@ -1370,11 +1370,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="10" /> <!-- Major Healing Potion -->
-						<item id="1465" count="200" /> <!-- Soulshot (B-grade) -->
-						<item id="2512" count="200" /> <!-- Spiritshot (B-grade) -->
-						<item id="8625" count="7" /> <!-- Elixir of Life (B-grade) -->
-						<item id="8631" count="7" /> <!-- Elixir of Mind (B-grade) -->
+						<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+						<item id="1465" count="200" /> <!-- B-grade Soulshot -->
+						<item id="2512" count="200" /> <!-- B-grade Spiritshot -->
+						<item id="8625" count="7" /> <!-- Elixir of Life -->
+						<item id="8631" count="7" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1400,11 +1400,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="8" /> <!-- Major Healing Potion -->
-						<item id="1465" count="120" /> <!-- Soulshot (B-grade) -->
-						<item id="2512" count="120" /> <!-- Spiritshot (B-grade) -->
-						<item id="8625" count="7" /> <!-- Elixir of Life (B-grade) -->
-						<item id="8631" count="7" /> <!-- Elixir of Mind (B-grade) -->
+						<item id="1539" count="8" /> <!-- Major HP Replenishing Potion -->
+						<item id="1465" count="120" /> <!-- B-grade Soulshot -->
+						<item id="2512" count="120" /> <!-- B-grade Spiritshot -->
+						<item id="8625" count="7" /> <!-- Elixir of Life -->
+						<item id="8631" count="7" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1430,13 +1430,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="15" /> <!-- Major Healing Potion -->
-						<item id="1464" count="300" /> <!-- Soulshot (C-grade) -->
-						<item id="2511" count="300" /> <!-- Spiritshot (C-grade) -->
-						<item id="952" count="2" /> <!-- Scroll: Enchant Armor (C-grade) -->
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-						<item id="8624" count="15" /> <!-- Elixir of Life (C-grade) -->
-						<item id="8630" count="14" /> <!-- Elixir of Mind (C-grade) -->
+						<item id="1539" count="15" /> <!-- Major HP Replenishing Potion -->
+						<item id="1464" count="300" /> <!-- C-grade Soulshot -->
+						<item id="2511" count="300" /> <!-- C-grade Spiritshot -->
+						<item id="952" count="2" /> <!-- Scroll: Enchant C-grade Armor -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon -->
+						<item id="8624" count="15" /> <!-- Elixir of Life -->
+						<item id="8630" count="14" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1462,12 +1462,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="4" /> <!-- Major Healing Potion -->
-						<item id="1465" count="200" /> <!-- Soulshot (B-grade) -->
-						<item id="2512" count="200" /> <!-- Spiritshot (B-grade) -->
-						<item id="948" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
-						<item id="8625" count="5" /> <!-- Elixir of Life (B-grade) -->
-						<item id="8631" count="5" /> <!-- Elixir of Mind (B-grade) -->
+						<item id="1539" count="4" /> <!-- Major HP Replenishing Potion -->
+						<item id="1465" count="200" /> <!-- B-grade Soulshot -->
+						<item id="2512" count="200" /> <!-- B-grade Spiritshot -->
+						<item id="948" count="1" /> <!-- Scroll: Enchant B-grade Armor -->
+						<item id="8625" count="5" /> <!-- Elixir of Life -->
+						<item id="8631" count="5" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1493,12 +1493,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="10" /> <!-- Major Healing Potion -->
-						<item id="1465" count="250" /> <!-- Soulshot (B-grade) -->
-						<item id="2512" count="250" /> <!-- Spiritshot (B-grade) -->
-						<item id="948" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
-						<item id="8625" count="6" /> <!-- Elixir of Life (B-grade) -->
-						<item id="8631" count="6" /> <!-- Elixir of Mind (B-grade) -->
+						<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+						<item id="1465" count="250" /> <!-- B-grade Soulshot -->
+						<item id="2512" count="250" /> <!-- B-grade Spiritshot -->
+						<item id="948" count="1" /> <!-- Scroll: Enchant B-grade Armor -->
+						<item id="8625" count="6" /> <!-- Elixir of Life -->
+						<item id="8631" count="6" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1524,12 +1524,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="15" /> <!-- Major Healing Potion -->
-						<item id="1465" count="380" /> <!-- Soulshot (B-grade) -->
-						<item id="2512" count="380" /> <!-- Spiritshot (B-grade) -->
-						<item id="948" count="2" /> <!-- Scroll: Enchant Armor (B-grade) -->
-						<item id="8625" count="12" /> <!-- Elixir of Life (B-grade) -->
-						<item id="8631" count="12" /> <!-- Elixir of Mind (B-grade) -->
+						<item id="1539" count="15" /> <!-- Major HP Replenishing Potion -->
+						<item id="1465" count="380" /> <!-- B-grade Soulshot -->
+						<item id="2512" count="380" /> <!-- B-grade Spiritshot -->
+						<item id="948" count="2" /> <!-- Scroll: Enchant B-grade Armor -->
+						<item id="8625" count="12" /> <!-- Elixir of Life -->
+						<item id="8631" count="12" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1555,9 +1555,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="5" /> <!-- Major Healing Potion -->
-						<item id="1466" count="120" /> <!-- Soulshot (A-grade) -->
-						<item id="2513" count="120" /> <!-- Spiritshot (A-grade) -->
+						<item id="1539" count="5" /> <!-- Major HP Replenishing Potion -->
+						<item id="1466" count="120" /> <!-- A-grade Soulshot -->
+						<item id="2513" count="120" /> <!-- A-grade Spiritshot -->
 					</item>
 				</items>
 			</effect>
@@ -1583,11 +1583,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="10" /> <!-- Major Healing Potion -->
-						<item id="1466" count="250" /> <!-- Soulshot (A-grade) -->
-						<item id="2513" count="250" /> <!-- Spiritshot (A-grade) -->
-						<item id="8626" count="9" /> <!-- Elixir of Life (A-grade) -->
-						<item id="8632" count="9" /> <!-- Elixir of Mind (A-grade) -->
+						<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+						<item id="1466" count="250" /> <!-- A-grade Soulshot -->
+						<item id="2513" count="250" /> <!-- A-grade Spiritshot -->
+						<item id="8626" count="9" /> <!-- Elixir of Life -->
+						<item id="8632" count="9" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1613,9 +1613,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="5" /> <!-- Major Healing Potion -->
-						<item id="1466" count="150" /> <!-- Soulshot (A-grade) -->
-						<item id="2513" count="150" /> <!-- Spiritshot (A-grade) -->
+						<item id="1539" count="5" /> <!-- Major HP Replenishing Potion -->
+						<item id="1466" count="150" /> <!-- A-grade Soulshot -->
+						<item id="2513" count="150" /> <!-- A-grade Spiritshot -->
 					</item>
 				</items>
 			</effect>
@@ -1641,12 +1641,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="4" /> <!-- Major Healing Potion -->
-						<item id="1465" count="100" /> <!-- Soulshot (B-grade) -->
-						<item id="2512" count="100" /> <!-- Spiritshot (B-grade) -->
-						<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
-						<item id="8625" count="3" /> <!-- Elixir of Life (B-grade) -->
-						<item id="8631" count="3" /> <!-- Elixir of Mind (B-grade) -->
+						<item id="1539" count="4" /> <!-- Major HP Replenishing Potion -->
+						<item id="1465" count="100" /> <!-- B-grade Soulshot -->
+						<item id="2512" count="100" /> <!-- B-grade Spiritshot -->
+						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon -->
+						<item id="8625" count="3" /> <!-- Elixir of Life -->
+						<item id="8631" count="3" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1672,11 +1672,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="10" /> <!-- Major Healing Potion -->
-						<item id="1466" count="300" /> <!-- Soulshot (A-grade) -->
-						<item id="2513" count="300" /> <!-- Spiritshot (A-grade) -->
-						<item id="8626" count="10" /> <!-- Elixir of Life (A-grade) -->
-						<item id="8632" count="10" /> <!-- Elixir of Mind (A-grade) -->
+						<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+						<item id="1466" count="300" /> <!-- A-grade Soulshot -->
+						<item id="2513" count="300" /> <!-- A-grade Spiritshot -->
+						<item id="8626" count="10" /> <!-- Elixir of Life -->
+						<item id="8632" count="10" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1702,12 +1702,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="3" /> <!-- Major Healing Potion -->
-						<item id="1466" count="140" /> <!-- Soulshot (A-grade) -->
-						<item id="2513" count="140" /> <!-- Spiritshot (A-grade) -->
-						<item id="730" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
-						<item id="8626" count="5" /> <!-- Elixir of Life (A-grade) -->
-						<item id="8632" count="5" /> <!-- Elixir of Mind (A-grade) -->
+						<item id="1539" count="3" /> <!-- Major HP Replenishing Potion -->
+						<item id="1466" count="140" /> <!-- A-grade Soulshot -->
+						<item id="2513" count="140" /> <!-- A-grade Spiritshot -->
+						<item id="730" count="1" /> <!-- Scroll: Enchant A-grade Armor -->
+						<item id="8626" count="5" /> <!-- Elixir of Life -->
+						<item id="8632" count="5" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1733,12 +1733,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="6" /> <!-- Major Healing Potion -->
-						<item id="1466" count="250" /> <!-- Soulshot (A-grade) -->
-						<item id="2513" count="250" /> <!-- Spiritshot (A-grade) -->
-						<item id="730" count="2" /> <!-- Scroll: Enchant Armor (A-grade) -->
-						<item id="8626" count="6" /> <!-- Elixir of Life (A-grade) -->
-						<item id="8632" count="6" /> <!-- Elixir of Mind (A-grade) -->
+						<item id="1539" count="6" /> <!-- Major HP Replenishing Potion -->
+						<item id="1466" count="250" /> <!-- A-grade Soulshot -->
+						<item id="2513" count="250" /> <!-- A-grade Spiritshot -->
+						<item id="730" count="2" /> <!-- Scroll: Enchant A-grade Armor -->
+						<item id="8626" count="6" /> <!-- Elixir of Life -->
+						<item id="8632" count="6" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1764,9 +1764,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="9" /> <!-- Major Healing Potion -->
-						<item id="1467" count="130" /> <!-- Soulshot (S-grade) -->
-						<item id="2514" count="130" /> <!-- Spiritshot (S-grade) -->
+						<item id="1539" count="9" /> <!-- Major HP Replenishing Potion -->
+						<item id="1467" count="130" /> <!-- S-grade Soulshot -->
+						<item id="2514" count="130" /> <!-- S-grade Spiritshot -->
 					</item>
 				</items>
 			</effect>
@@ -1792,11 +1792,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="10" /> <!-- Major Healing Potion -->
-						<item id="1467" count="350" /> <!-- Soulshot (S-grade) -->
-						<item id="2514" count="350" /> <!-- Spiritshot (S-grade) -->
-						<item id="8627" count="12" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="11" /> <!-- Elixir of Mind (S-grade) -->
+						<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+						<item id="1467" count="350" /> <!-- S-grade Soulshot -->
+						<item id="2514" count="350" /> <!-- S-grade Spiritshot -->
+						<item id="8627" count="12" /> <!-- Elixir of Life -->
+						<item id="8633" count="11" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1822,12 +1822,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="10" /> <!-- Major Healing Potion -->
-						<item id="1466" count="350" /> <!-- Soulshot (A-grade) -->
-						<item id="2513" count="350" /> <!-- Spiritshot (A-grade) -->
-						<item id="730" count="2" /> <!-- Scroll: Enchant Armor (A-grade) -->
-						<item id="8626" count="10" /> <!-- Elixir of Life (A-grade) -->
-						<item id="8632" count="10" /> <!-- Elixir of Mind (A-grade) -->
+						<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+						<item id="1466" count="350" /> <!-- A-grade Soulshot -->
+						<item id="2513" count="350" /> <!-- A-grade Spiritshot -->
+						<item id="730" count="2" /> <!-- Scroll: Enchant A-grade Armor -->
+						<item id="8626" count="10" /> <!-- Elixir of Life -->
+						<item id="8632" count="10" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1853,11 +1853,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="12" /> <!-- Major Healing Potion -->
-						<item id="1467" count="360" /> <!-- Soulshot (S-grade) -->
-						<item id="2514" count="360" /> <!-- Spiritshot (S-grade) -->
-						<item id="8627" count="12" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="12" /> <!-- Elixir of Mind (S-grade) -->
+						<item id="1539" count="12" /> <!-- Major HP Replenishing Potion -->
+						<item id="1467" count="360" /> <!-- S-grade Soulshot -->
+						<item id="2514" count="360" /> <!-- S-grade Spiritshot -->
+						<item id="8627" count="12" /> <!-- Elixir of Life -->
+						<item id="8633" count="12" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1883,12 +1883,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="6" /> <!-- Major Healing Potion -->
-						<item id="1467" count="140" /> <!-- Soulshot (S-grade) -->
-						<item id="2514" count="140" /> <!-- Spiritshot (S-grade) -->
-						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
-						<item id="8627" count="4" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="3" /> <!-- Elixir of Mind (S-grade) -->
+						<item id="1539" count="6" /> <!-- Major HP Replenishing Potion -->
+						<item id="1467" count="140" /> <!-- S-grade Soulshot -->
+						<item id="2514" count="140" /> <!-- S-grade Spiritshot -->
+						<item id="960" count="1" /> <!-- Scroll: Enchant S-grade Armor -->
+						<item id="8627" count="4" /> <!-- Elixir of Life -->
+						<item id="8633" count="3" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1914,12 +1914,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1539" count="15" /> <!-- Major Healing Potion -->
-						<item id="1467" count="360" /> <!-- Soulshot (S-grade) -->
-						<item id="2514" count="360" /> <!-- Spiritshot (S-grade) -->
-						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
-						<item id="8627" count="11" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="11" /> <!-- Elixir of Mind (S-grade) -->
+						<item id="1539" count="15" /> <!-- Major HP Replenishing Potion -->
+						<item id="1467" count="360" /> <!-- S-grade Soulshot -->
+						<item id="2514" count="360" /> <!-- S-grade Spiritshot -->
+						<item id="960" count="1" /> <!-- Scroll: Enchant S-grade Armor -->
+						<item id="8627" count="11" /> <!-- Elixir of Life -->
+						<item id="8633" count="11" /> <!-- Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1945,7 +1945,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="3.2">
-						<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -1971,7 +1971,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="1.6111">
-						<item id="729" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+						<item id="729" count="1" /> <!-- Scroll: Enchant A-grade Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -1997,7 +1997,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="1.14">
-						<item id="959" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+						<item id="959" count="1" /> <!-- Scroll: Enchant S-grade Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -2032,7 +2032,7 @@
 						<item id="9550" count="1" /> <!-- Dark Stone -->
 					</item>
 					<item chance="1.98">
-						<item id="959" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+						<item id="959" count="1" /> <!-- Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="0.1">
 						<item id="9442" count="1" /> <!-- Dynasty Sword -->
@@ -2109,7 +2109,7 @@
 						<item id="9550" count="1" /> <!-- Dark Stone -->
 					</item>
 					<item chance="3.84">
-						<item id="959" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+						<item id="959" count="1" /> <!-- Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="0.13">
 						<item id="10215" count="1" /> <!-- Icarus Sawsword -->
@@ -2164,6 +2164,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -2205,7 +2218,7 @@
 		</effects>
 	</skill>
 	<skill id="2580" toLevel="1" name="Vitality Replenishing Herb">
-		<!-- Restores Vitality points as you gain XP by hunting. -->
+		<!-- Recovers Vitality when acquiring XP. -->
 		<icon>icon.skilltransform4</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -2304,7 +2317,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2587" toLevel="1" name="Increase number of teleport slots.">
+	<skill id="2587" toLevel="1" name="My Teleport Book">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13015</itemConsumeId> <!-- My Teleport Spellbook -->
@@ -2382,7 +2395,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2592" toLevel="1" name="Quick Healing Potion">
+	<skill id="2592" toLevel="1" name="Quick HP Replenishing Potion">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -2396,7 +2409,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2593" toLevel="1" name="Bow/ Crossbow Attack Resistance Potion">
+	<skill id="2593" toLevel="1" name="Bow/ Crossbow Resistance Potion">
 		<!-- Temporarily increases resistance to bow/ crossbow attacks. Effect 4. -->
 		<icon>icon.etc_potion_red_i00</icon>
 		<abnormalLevel>4</abnormalLevel>

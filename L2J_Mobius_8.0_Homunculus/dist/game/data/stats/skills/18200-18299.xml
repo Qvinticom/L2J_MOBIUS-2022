@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="18200" toLevel="1" name="Red Save Card (R-grade)">
+	<skill id="18200" toLevel="1" name="R-grade Red Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18201" toLevel="1" name="Red Save Card (R95-grade)">
+	<skill id="18201" toLevel="1" name="R95-grade Red Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18202" toLevel="1" name="Red Save Card (R99-grade)">
+	<skill id="18202" toLevel="1" name="R99-grade Red Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18203" toLevel="1" name="Royal Blue Save Card (R-grade)">
+	<skill id="18203" toLevel="1" name="Royal R-grade Blue Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18204" toLevel="1" name="Royal Blue Save Card (R95-grade)">
+	<skill id="18204" toLevel="1" name="Royal R95-grade Blue Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18205" toLevel="1" name="Royal Blue Save Card (R99-grade)">
+	<skill id="18205" toLevel="1" name="Royal R99-grade Blue Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18206" toLevel="1" name="Royal Red Save Card (R-grade)">
+	<skill id="18206" toLevel="1" name="Royal R-grade Red Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18207" toLevel="1" name="Royal Red Save Card (R95-grade)">
+	<skill id="18207" toLevel="1" name="Royal R95-grade Red Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18208" toLevel="1" name="Royal Red Save Card (R99-grade)">
+	<skill id="18208" toLevel="1" name="Royal R99-grade Red Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18209" toLevel="1" name="Dandy's Home Run Ball">
@@ -32,7 +32,7 @@
 		<icon>BranchIcon.icon.g_ev_homerunball</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<abnormalType>TRANSFORM</abnormalType>
+		<abnormalType>BUFF_PCCAFE_EXP1</abnormalType>
 		<abnormalVisualEffect>CHANGE_DINOS</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -43,6 +43,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<reuseDelayType>S</reuseDelayType>
@@ -55,8 +56,11 @@
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">CHANGEBODY,-1;VOTE,1</value>
+					<value level="1">VOTE,1</value>
 				</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>VOTE</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -68,13 +72,13 @@
 		<reuseDelay>15000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18211" toLevel="1" name="Entrance Pass: Spezion (Epic)">
+	<skill id="18211" toLevel="1" name="Extra Pass: Spezion (Epic)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18212" toLevel="1" name="Entrance Pass: Baylor">
+	<skill id="18212" toLevel="1" name="Extra Pass: Baylor">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18213" toLevel="1" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party">
+	<skill id="18213" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95 (Party)">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18214" toLevel="1" name="Transformation Potion: L2B2">
@@ -92,6 +96,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<reuseDelayType>S</reuseDelayType>
@@ -150,7 +155,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18218" toLevel="5" name="Fire Stigma">
+	<skill id="18218" toLevel="5" name="Mark of Fire">
 		<!-- A stigma placed on those who are a threat to the Blazing Swamp. An unexpected incident might occur while fighting in the Blazing Swamp. -->
 		<icon>icon.etc_fire_rune_i00</icon>
 		<operateType>A2</operateType>
@@ -163,7 +168,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="18219" toLevel="1" name="Defense Decrease">
-		<!-- The blazing energy weakens and reduces P./ M. Def. by 20% -->
+		<!-- The blazing energy weakens, P./ M. Def. +20%. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -203,7 +208,7 @@
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
 	</skill>
-	<skill id="18222" toLevel="1" name="Extra Pass - Nightmare Kamaloka">
+	<skill id="18222" toLevel="1" name="Extra Pass: Nightmare Kamaloka">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>45463</itemConsumeId> <!-- Entrance Pass: Nightmare Kamaloka -->
@@ -220,7 +225,7 @@
 		</effects>
 	</skill>
 	<skill id="18223" toLevel="1" name="Kokko's Love">
-		<!-- For 30 min., Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk./ Casting Spd. +10%, P./ M. Accuracy +4, Speed +10, Max HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction. Buff remains after death. -->
+		<!-- For 30 min., Attribute Attack +100, P. Atk. +20%, M. Atk. +30%, Atk./ Casting Spd. +10%, P./ M. Accuracy +4, Speed +10, Max HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction. Buff remains after death. -->
 		<icon>icon.event_altair_enchant_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -358,7 +363,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="5">
-						<item id="45572" count="1" /> <!-- Zodiac Agathion Box (15-day) -->
+						<item id="45572" count="1" /> <!-- Mid-grade Seed Bracelet Pack - 15-day -->
 					</item>
 					<item chance="70">
 						<item id="45576" count="1" /> <!-- SP Scroll Pack -->
@@ -387,19 +392,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="80">
-						<item id="45574" count="1" /> <!-- Zodiac Agathion Box (30-day) -->
+						<item id="45574" count="1" /> <!-- Top-grade Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="20">
-						<item id="45573" count="1" /> <!-- Zodiac Agathion Box (30-day) -->
+						<item id="45573" count="1" /> <!-- High-grade Seed Bracelet Pack - 30-day -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18257" toLevel="1" name="Zodiac Agathion Pack (15-day)">
+	<skill id="18257" toLevel="1" name="Zodiac Agathion Box (15-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18258" toLevel="1" name="Zodiac Agathion Pack (30-day">
+	<skill id="18258" toLevel="1" name="Zodiac Agathion Box (30-day">
 		<itemConsumeId>45573</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -415,46 +420,46 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.333">
-						<item id="45537" count="1" /> <!-- Agathion - Radiant Virgo Pack - 30-day -->
+						<item id="45537" count="1" /> <!-- Agathion Radiant Virgo Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45555" count="1" /> <!-- Agathion - Radiant Gemini Pack - 30-day -->
+						<item id="45555" count="1" /> <!-- Agathion Radiant Gemini Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45543" count="1" /> <!-- Agathion - Radiant Libra Pack - 30-day -->
+						<item id="45543" count="1" /> <!-- Agathion Radiant Libra Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45564" count="1" /> <!-- Agathion - Radiant Pisces Pack - 30-day -->
+						<item id="45564" count="1" /> <!-- Agathion Radiant Pisces Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45561" count="1" /> <!-- Agathion - Radiant Aquarius Pack - 30-day -->
+						<item id="45561" count="1" /> <!-- Agathion Radiant Aquarius Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45540" count="1" /> <!-- Agathion - Radiant Capricorn Pack - 30-day -->
+						<item id="45540" count="1" /> <!-- Agathion Radiant Capricorn Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45552" count="1" /> <!-- Agathion - Radiant Leo Pack - 30-day -->
+						<item id="45552" count="1" /> <!-- Agathion Radiant Leo Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45546" count="1" /> <!-- Agathion - Radiant Aries Pack - 30-day -->
+						<item id="45546" count="1" /> <!-- Agathion Radiant Aries Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45570" count="1" /> <!-- Agathion - Radiant Cancer Pack - 30-day -->
+						<item id="45570" count="1" /> <!-- Agathion Radiant Cancer Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45558" count="1" /> <!-- Agathion - Radiant Scorpio Pack - 30-day -->
+						<item id="45558" count="1" /> <!-- Agathion Radiant Scorpio Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45567" count="1" /> <!-- Agathion - Radiant Sagittarius Pack - 30-day -->
+						<item id="45567" count="1" /> <!-- Agathion Radiant Sagittarius Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45549" count="1" /> <!-- Agathion - Radiant Taurus Pack - 30-day -->
+						<item id="45549" count="1" /> <!-- Agathion Radiant Taurus Pack - 30-day -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18259" toLevel="1" name="Zodiac Agathion Pack (30-day)">
+	<skill id="18259" toLevel="1" name="Zodiac Agathion Box (30-day)">
 		<itemConsumeId>45574</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -470,40 +475,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.333">
-						<item id="45536" count="1" /> <!-- Agathion - Twinkling Virgo Pack - 30-day -->
+						<item id="45536" count="1" /> <!-- Agathion Twinkling Virgo Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45554" count="1" /> <!-- Agathion - Twinkling Gemini Pack - 30-day -->
+						<item id="45554" count="1" /> <!-- Agathion Twinkling Gemini Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45542" count="1" /> <!-- Agathion - Twinkling Libra Pack - 30-day -->
+						<item id="45542" count="1" /> <!-- Agathion Twinkling Libra Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45563" count="1" /> <!-- Agathion - Twinkling Pisces Pack - 30-day -->
+						<item id="45563" count="1" /> <!-- Agathion Twinkling Pisces Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45560" count="1" /> <!-- Agathion - Twinkling Aquarius Pack - 30-day -->
+						<item id="45560" count="1" /> <!-- Agathion Twinkling Aquarius Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45539" count="1" /> <!-- Agathion - Twinkling Capricorn Pack - 30-day -->
+						<item id="45539" count="1" /> <!-- Agathion Twinkling Capricorn Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45551" count="1" /> <!-- Agathion - Twinkling Leo Pack - 30-day -->
+						<item id="45551" count="1" /> <!-- Agathion Twinkling Leo Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45545" count="1" /> <!-- Agathion - Twinkling Aries Pack - 30-day -->
+						<item id="45545" count="1" /> <!-- Agathion Twinkling Aries Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45569" count="1" /> <!-- Agathion - Twinkling Cancer Pack - 30-day -->
+						<item id="45569" count="1" /> <!-- Agathion Twinkling Cancer Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45557" count="1" /> <!-- Agathion - Twinkling Scorpio Pack - 30-day -->
+						<item id="45557" count="1" /> <!-- Agathion Twinkling Scorpio Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45566" count="1" /> <!-- Agathion - Twinkling Sagittarius Pack - 30-day -->
+						<item id="45566" count="1" /> <!-- Agathion Twinkling Sagittarius Pack - 30-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45548" count="1" /> <!-- Agathion - Twinkling Taurus Pack - 30-day -->
+						<item id="45548" count="1" /> <!-- Agathion Twinkling Taurus Pack - 30-day -->
 					</item>
 				</items>
 			</effect>
@@ -569,40 +574,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.333">
-						<item id="45556" count="1" /> <!-- Agathion - Gemini Pack - 15-day -->
+						<item id="45556" count="1" /> <!-- Agathion Gemini Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45544" count="1" /> <!-- Agathion - Libra Pack - 15-day -->
+						<item id="45544" count="1" /> <!-- Agathion Libra Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45562" count="1" /> <!-- Agathion - Aquarius Pack - 15-day -->
+						<item id="45562" count="1" /> <!-- Agathion Aquarius Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45538" count="1" /> <!-- Agathion - Virgo Pack - 15-day -->
+						<item id="45538" count="1" /> <!-- Agathion Virgo Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45541" count="1" /> <!-- Agathion - Capricorn Pack - 15-day -->
+						<item id="45541" count="1" /> <!-- Agathion Capricorn Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45553" count="1" /> <!-- Agathion - Leo Pack - 15-day -->
+						<item id="45553" count="1" /> <!-- Agathion Leo Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45547" count="1" /> <!-- Agathion - Aries Pack - 15-day -->
+						<item id="45547" count="1" /> <!-- Agathion Aries Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45571" count="1" /> <!-- Agathion - Cancer Pack - 15-day -->
+						<item id="45571" count="1" /> <!-- Agathion Cancer Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45565" count="1" /> <!-- Agathion - Pisces Pack - 15-day -->
+						<item id="45565" count="1" /> <!-- Agathion Pisces Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45559" count="1" /> <!-- Agathion - Scorpio Pack - 15-day -->
+						<item id="45559" count="1" /> <!-- Agathion Scorpio Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45568" count="1" /> <!-- Agathion - Sagittarius Pack - 15-day -->
+						<item id="45568" count="1" /> <!-- Agathion Sagittarius Package - 15-day -->
 					</item>
 					<item chance="8.333">
-						<item id="45550" count="1" /> <!-- Agathion - Taurus Pack - 15-day -->
+						<item id="45550" count="1" /> <!-- Agathion Taurus Package - 15-day -->
 					</item>
 				</items>
 			</effect>
@@ -632,7 +637,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18265" toLevel="5" name="Pippi's Love">
-		<!-- Buff filled with Pippi's love. Acquired XP/ SP +$s2 for $s1. Once the effect wears off, receive Pippi's Fortune Pocket - Lv. $s3. <Note:> The item can't be obtained if your character is dead or has no free slots in the inventory. Deleted after main/ dual class changing. -->
+		<!-- Buff filled with Pippi's love. Acquired XP/ SP +$s2 for $s1. Once the effect wears off, receive Pippi's Fortune Pocket - Lv. $s3.\n\nNote!\nThe item can't be obtained if your character is dead or has no free slots in the inventory. Deleted after main/ dual class changing. -->
 		<icon>icon.love_mark</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>

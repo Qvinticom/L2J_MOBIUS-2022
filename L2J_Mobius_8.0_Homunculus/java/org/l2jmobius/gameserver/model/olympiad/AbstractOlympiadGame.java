@@ -22,7 +22,6 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
@@ -32,11 +31,9 @@ import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.AbstractScript;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMode;
@@ -408,41 +405,6 @@ public abstract class AbstractOlympiadGame
 			player.setIsPendingRevive(false);
 			player.teleToLocation(loc, null);
 			player.unsetLastLocation();
-		}
-	}
-	
-	// XXX: ML2 Rewards ForGlory, ForHonor and ForVictory quests
-	public static void rewardQuests(PlayerInstance player)
-	{
-		final QuestState qs = player.getQuestState("Q10813_ForGlory");
-		final QuestState qs1 = player.getQuestState("Q10819_ForHonor");
-		final QuestState qs2 = player.getQuestState("Q10825_ForVictory");
-		if ((qs != null) && !qs.isCompleted() && qs.isCond(1))
-		{
-			AbstractScript.giveItems(player, Config.EXALTED_FOR_GLORY_ITEM_MAX.getId(), 1);
-			AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			if (AbstractScript.getQuestItemsCount(player, Config.EXALTED_FOR_GLORY_ITEM_MAX.getId()) >= Config.EXALTED_FOR_GLORY_ITEM_MAX.getCount())
-			{
-				qs.setCond(2, true);
-			}
-		}
-		else if ((qs1 != null) && !qs1.isCompleted() && qs1.isCond(1))
-		{
-			AbstractScript.giveItems(player, Config.EXALTED_FOR_HONOR_ITEM_MAX.getId(), 1);
-			AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			if (AbstractScript.getQuestItemsCount(player, Config.EXALTED_FOR_HONOR_ITEM_MAX.getId()) >= Config.EXALTED_FOR_HONOR_ITEM_MAX.getCount())
-			{
-				qs1.setCond(2, true);
-			}
-		}
-		else if ((qs2 != null) && !qs2.isCompleted() && qs2.isCond(3))
-		{
-			AbstractScript.giveItems(player, Config.EXALTED_FOR_VICTORY_ITEM_MAX.getId(), 1);
-			AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			if (AbstractScript.getQuestItemsCount(player, Config.EXALTED_FOR_VICTORY_ITEM_MAX.getId()) >= Config.EXALTED_FOR_VICTORY_ITEM_MAX.getCount())
-			{
-				qs2.setCond(4, true);
-			}
 		}
 	}
 	

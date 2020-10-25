@@ -9,7 +9,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80001" name="Super Advanced Seed Bracelet - Stage 1" additionalName="30-day" type="Armor">
-		<!-- When equipped, it activates one main Agathion slot and one auxiliary slots. <Active Skill>. 1. Agathion Teleport: Provides a teleport skill to teleport to Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy attacks +50 and defenses +30. 3. XP gain in Vitality state +5%. -->
+		<!-- When equipped, unlocks the agathion's main slot and 1 additional slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50 and Resistance +30. 3. Vitality bonus +5%. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -26,12 +26,12 @@
 			<skill id="17551" level="1" /> <!-- Balanced Power -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
 			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
-			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
 		</skills>
 	</item>
 	<item id="80002" name="Blessed Antharas' Earring" additionalName="30-day" type="Armor">
-		<!-- MP +59, P. Def./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Shock/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active skill: Immediately removes the Stun effect and resists Stun for 5 sec. These effects do not stack with identical earrings. -->
+		<!-- MP +59. P./ M. Def. +15%. CON/ MEN +3. Earth/ Holy Resistance +30. Infection Atk. Rate/ Resistance +50%, Confusion Atk. Rate/ Resistance +40%. Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active skill: removes the Stun effect and grants immune to Confusion for 5 sec. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -44,6 +44,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="equip_reuse_delay" val="7200" />
 		<skills>
 			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
 			<skill id="13314" level="1" /> <!-- Blessed Antharas' Earring -->
@@ -54,7 +55,7 @@
 		</stats>
 	</item>
 	<item id="80003" name="Blessed Valakas' Necklace" additionalName="30-day" type="Armor">
-		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Resistance +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active skill: Immediately removes the Hold effect and resists Hold for 5 sec. -->
+		<!-- MP +79. HP +625. P. Atk. +10%. M. Atk. +20%. M. Skill Critical Rate +20. STR/INT +3. Fire Resistance +30, Dark Resistance +20. Stupor Atk. Rate/ Resistance +50%. P. Skill Power +5%. Skill Cooldown -10%, Damage Reflection +5%. Active skill: removes the Hold effect and grants immune to Obstruction for 5 sec. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -77,7 +78,7 @@
 		</stats>
 	</item>
 	<item id="80004" name="Lindvior's Earring" additionalName="30-day" type="Armor">
-		<!-- MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Resistance +30, Petrify Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active skill: Immediately removes Knock Back/ Knock Down effects and resists Knock Back/ Knock Down for 5 sec. These effects do not stack with identical earrings. -->
+		<!-- MP +59, P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs, and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -198,7 +199,7 @@
 		</stats>
 	</item>
 	<item id="80018" name="Soccer Ball of Victory" type="EtcItem">
-		<!-- A soccer ball prepared for the victory of Korea. When double-clicked, increases Acquired XP/ SP by 100% for 1 hour. Cannot be stacked with the Fall of the Dragon buff/ Nevit's Hourglass/ Dandy's Home Run Ball. -->
+		<!-- A soccer ball prepared for the victory of Korea. For 1 h. acquired XP/ SP +100%. Cannot be stacked with the Fall of the Dragon buff/ Nevit's Hourglass/ Dandy's Home Run Ball. -->
 		<set name="icon" val="icon.ev_2018_soccer_homerunball" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -222,7 +223,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80020" name="White Potion" type="EtcItem">
-		<!-- When used, Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk./ Casting Spd. +10%, Movement Speed 20, Attack/ Attribute Resistance +100, and Skill MP Consumption -15% for 30 min. Acquired XP/ SP +30%. Cooldown 5 min. Cannot be stacked with 'Art of Seduction' or 'Pa agrio s Blessing'. Cannot be used in the Olympiad. -->
+		<!-- For 30 min., Max HP/ MP/ CP +20%, P./ M. Atk. and P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, Skill MP Consumption -15%. Additionally acquired XP/ SP +30%. Cooldown: 5 min. The effect does not stack with the Art of Seduction and Pa'agrio's Blessing effects. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.ev_bm_white_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -230,7 +231,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80021" name="Paulina Helios Shaper" type="Weapon">
-		<!-- Dimensional item. a Helios Shaper whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_dagger" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -260,7 +261,7 @@
 		</stats>
 	</item>
 	<item id="80022" name="Paulina Helios Cutter" type="Weapon">
-		<!-- Dimensional item. a Helios Cutter whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -289,7 +290,7 @@
 		</stats>
 	</item>
 	<item id="80023" name="Paulina Helios Slasher" type="Weapon">
-		<!-- Dimensional item. a Helios Slasher whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_twohand_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -318,7 +319,7 @@
 		</stats>
 	</item>
 	<item id="80024" name="Paulina Helios Avenger" type="Weapon">
-		<!-- Dimensional item. a Helios Avenger whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -348,7 +349,7 @@
 		</stats>
 	</item>
 	<item id="80025" name="Paulina Helios Fighter" type="Weapon">
-		<!-- Dimensional item. a Helios Fighter whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_fist" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -379,7 +380,7 @@
 		</stats>
 	</item>
 	<item id="80026" name="Paulina Helios Stormer" type="Weapon">
-		<!-- Dimensional item. a Helios Stormer whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_spear" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -411,7 +412,7 @@
 		</stats>
 	</item>
 	<item id="80027" name="Paulina Helios Thrower" type="Weapon">
-		<!-- Dimensional item. a Helios Thrower whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_bow" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -443,7 +444,7 @@
 		</stats>
 	</item>
 	<item id="80028" name="Paulina Helios Shooter" type="Weapon">
-		<!-- Dimensional item. a Helios Shooter whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_crossbow" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -473,7 +474,7 @@
 		</stats>
 	</item>
 	<item id="80029" name="Paulina Helios Buster" type="Weapon">
-		<!-- Dimensional item. a Helios Buster whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Casting Spd. +15%, M. Critical Rate +50, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special Features>. Casting Spd. +15%, M. Critical Rate +50, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_onehand_magic_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -503,7 +504,7 @@
 		</stats>
 	</item>
 	<item id="80030" name="Paulina Helios Caster" type="Weapon">
-		<!-- Dimensional item. a Helios Caster whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Casting Spd. +15%, M. Critical Rate +50, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special Features>. Casting Spd. +15%, M. Critical Rate +50, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -535,7 +536,7 @@
 		</stats>
 	</item>
 	<item id="80031" name="Paulina Helios Retributer" type="Weapon">
-		<!-- Dimensional item. a Helios Retributer whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd./ Casting Spd. +15%, P. Critical Damage +10%, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special Option>. Atk./ Casting Spd. +15%, Critical Damage for standard attacks +10%, M. Skill Critical Damage +10%, PvE Damage +10%, Max HP +15%. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_twohand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -567,7 +568,7 @@
 		</stats>
 	</item>
 	<item id="80032" name="Paulina Helios Dual Sword" type="Weapon">
-		<!-- Dimensional item. a Helios Dual Sword whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_dual_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -597,7 +598,7 @@
 		</stats>
 	</item>
 	<item id="80033" name="Paulina Helios Dual Dagger" type="Weapon">
-		<!-- Dimensional item. a Helios Dual Dagger whose grade penalty condition has been eased by Paulina's Blessing Dual Dagger. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_dual_dagger" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -626,7 +627,7 @@
 		</stats>
 	</item>
 	<item id="80034" name="Paulina Helios Dual Blunt Weapon" type="Weapon">
-		<!-- Dimensional item. a Helios Dual Blunt Weapon whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
+		<!-- <Special properties>. Atk. Spd. +15%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Max HP +15%, PvE damage +10%. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_dual_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -655,7 +656,7 @@
 		</stats>
 	</item>
 	<item id="80035" name="Paulina Eternal Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional item. An Eternal Helmet whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -672,7 +673,7 @@
 		</stats>
 	</item>
 	<item id="80036" name="Paulina Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional item. An Eternal Breastplate whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_upbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -690,7 +691,7 @@
 		</stats>
 	</item>
 	<item id="80037" name="Paulina Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional item. Eternal Gaiters whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_downbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -708,7 +709,7 @@
 		</stats>
 	</item>
 	<item id="80038" name="Paulina Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional item. Eternal Gauntlets whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_gloves" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -725,7 +726,7 @@
 		</stats>
 	</item>
 	<item id="80039" name="Paulina Eternal Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional item. Eternal Boots whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_shoes" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -742,7 +743,7 @@
 		</stats>
 	</item>
 	<item id="80040" name="Paulina Eternal Shield" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional item. An Eternal Shield whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment or Crystallization allowed. -->
+		<!-- Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_shield" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -760,7 +761,7 @@
 		</stats>
 	</item>
 	<item id="80041" name="Paulina Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
-		<!-- Dimensional item. An Eternal Leather Helmet whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -777,7 +778,7 @@
 		</stats>
 	</item>
 	<item id="80042" name="Paulina Eternal Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Dimensional item. Eternal Leather Armor whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_light_upbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -796,7 +797,7 @@
 		</stats>
 	</item>
 	<item id="80043" name="Paulina Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
-		<!-- Dimensional item. Eternal Leather Leggings whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_light_downbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -815,7 +816,7 @@
 		</stats>
 	</item>
 	<item id="80044" name="Paulina Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
-		<!-- Dimensional item. Eternal Leather Gloves whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_light_gloves" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -832,7 +833,7 @@
 		</stats>
 	</item>
 	<item id="80045" name="Paulina Eternal Leather Boots" additionalName="Light Armor" type="Armor">
-		<!-- Dimensional item. Eternal Leather Boots whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_light_shoes" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -849,7 +850,7 @@
 		</stats>
 	</item>
 	<item id="80046" name="Paulina Eternal Circlet" additionalName="Robe" type="Armor">
-		<!-- Dimensional item. An Eternal Circlet whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -866,7 +867,7 @@
 		</stats>
 	</item>
 	<item id="80047" name="Paulina Eternal Tunic" additionalName="Robe" type="Armor">
-		<!-- Dimensional item. An Eternal Tunic whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. MP+649. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_upbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -886,7 +887,7 @@
 		</stats>
 	</item>
 	<item id="80048" name="Paulina Eternal Stockings" additionalName="Robe" type="Armor">
-		<!-- Dimensional item. Eternal Stockings whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. MP+427. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_downbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -906,7 +907,7 @@
 		</stats>
 	</item>
 	<item id="80049" name="Paulina Eternal Gloves" additionalName="Robe" type="Armor">
-		<!-- Dimensional item. Eternal Gloves whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_gloves" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -923,7 +924,7 @@
 		</stats>
 	</item>
 	<item id="80050" name="Paulina Eternal Shoes" additionalName="Robe" type="Armor">
-		<!-- Dimensional item. Eternal Shoes whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
+		<!-- Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_shoes" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -940,7 +941,7 @@
 		</stats>
 	</item>
 	<item id="80051" name="Paulina Eternal Sigil" additionalName="Robe" type="Armor">
-		<!-- Dimensional item. An Eternal Sigil whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment or Crystallization allowed. -->
+		<!-- Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_sigil" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -960,7 +961,7 @@
 		</stats>
 	</item>
 	<item id="80052" name="Paulina Eternal Necklace" additionalName="Skill Cooldown" type="Armor">
-		<!-- Dimensional item. An Eternal Necklace whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. MP +65, Skill Cooldown -10%. No Enchantment or Crystallization allowed. -->
+		<!-- MP +65, Skill Cooldown -10%. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_necklace" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -981,7 +982,7 @@
 		</stats>
 	</item>
 	<item id="80053" name="Paulina Eternal Earring" additionalName="MP Consumption" type="Armor">
-		<!-- Dimensional item. Eternal Earrings whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. MP +49, Heal Received +10%, MP Consumption -5%. No Enchantment or Crystallization allowed. -->
+		<!-- MP +49, Received Healing +10%, MP Consumption -5%. Effects of two identical earrings do not stack. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_earring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1002,7 +1003,7 @@
 		</stats>
 	</item>
 	<item id="80054" name="Paulina Eternal Earring" additionalName="Vampiric Rage" type="Armor">
-		<!-- Dimensional item. Eternal Earrings whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. MP +49, HP Drain on hit +5%. No Enchantment or Crystallization allowed. -->
+		<!-- MP +49, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_earring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1023,7 +1024,7 @@
 		</stats>
 	</item>
 	<item id="80055" name="Paulina Eternal Ring" additionalName="Critical Rate" type="Armor">
-		<!-- Dimensional item. An Eternal Ring whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. MP +33, P./ M. Critical Rate +50. No Enchantment or Crystallization allowed. -->
+		<!-- MP +33, P Critical Rate/ M. Skill Critical Rate +50. The effect doesn't stack if two identical earring are equipped. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1044,7 +1045,7 @@
 		</stats>
 	</item>
 	<item id="80056" name="Paulina Eternal Ring" additionalName="Critical Damage" type="Armor">
-		<!-- Dimensional item. An Eternal Ring whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. MP +33, Normal/ P./ M. Critical Damage +15%. No Enchantment or Crystallization allowed. -->
+		<!-- MP +33, P. Critical Damage and P./ M. Skill Critical Damage +15%. The effect doesn't stack if two identical earring are equipped. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1056,6 +1057,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="time" val="20160" />
 		<skills>
 			<skill id="35262" level="1" /> <!-- Paulina's Eternal Ring - Critical Damage -->
 		</skills>
@@ -1065,7 +1068,7 @@
 		</stats>
 	</item>
 	<item id="80057" name="Paulina Eternal Bracelet" type="Armor">
-		<!-- Dimensional item. An Eternal Bracelet whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. MP +225, activates 5 talisman slots when equipped. P. Atk./ M. Atk./ P. Def./ M. Def. +3%. No Enchantment or Crystallization allowed. -->
+		<!-- MP +225, unlocks 6 talisman slots. P./ M. Atk. and P./ M. Def. +3%. Cannot be enchanted or crystallized. -->
 		<set name="icon" val="icon.bm_polyne_R99_bracelet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1093,7 +1096,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80059" name="+5 Reflect Attack T-shirt Box" type="EtcItem">
-		<!-- Double-click to obtain a +5 Enchanted Reflect Attack T-shirt. -->
+		<!-- Double-click to obtain +5 Physical Reflect Shirt. -->
 		<set name="icon" val="icon.reflect_attack_shirt_box_2" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -1101,7 +1104,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80060" name="+5 Reflect Magic T-shirt Box" type="EtcItem">
-		<!-- Double-click to obtain a +5 Enchanted Magical Reflect Shirt. -->
+		<!-- Double-click to obtain +5 Magical Reflect Shirt. -->
 		<set name="icon" val="icon.reflect_magic_shirt_box_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -1109,7 +1112,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80061" name="Emperor's Special Cocktail" additionalName="Attack" type="EtcItem">
-		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Warrior's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 60 min.. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
+		<!-- For 60 min., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Warrior's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_p" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1117,7 +1120,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80062" name="Emperor's Special Cocktail" additionalName="Magic" type="EtcItem">
-		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Wizard's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 60 min.. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
+		<!-- For 60 min., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Wizard's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_m" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1125,7 +1128,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80063" name="Emperor's Special Cocktail" additionalName="Defense" type="EtcItem">
-		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Knight's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 60 min.. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
+		<!-- For 60 min., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Knight's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1133,7 +1136,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80064" name="Challenger's Scroll of Growth" type="EtcItem">
-		<!-- A scroll for challengers growth. Hunting Acquired XP/ SP +200%. Remains active after death. Duration 10 min. Cooldown 9 min. Only for characters Lv. 105 or below. Cannot be stacked with Freya s Wind Scroll or Freya s Storm Scroll. -->
+		<!-- For 10 min., Acquired XP/ SP +200%. The effect remains after death. Cooldown: 9 min. Required level: 1-105. The effect does not stack with those of Freya's Frozen Scroll and Freya's Scroll of Storm. -->
 		<set name="icon" val="icon.bm_challenger_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1145,7 +1148,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80065" name="Entrance Pass: Shilen's Altar of the Emperor" type="EtcItem">
-		<!-- Dimensional item. Extra pass to a daily Instanced Zone Dungeon. Double-click to unbind the Altar of Shilen. Cannot be used if the Instanced Zone is not bound. Can be used only once a day outside of the instanced zone. -->
+		<!-- Additional pass to the Altar of Shillien. Double-click to reset cooldown to the dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1153,7 +1156,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80066" name="Fafurion Avenger" additionalName="Fragment" type="Weapon">
-		<!-- A fragment of the Fafurion Knight. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
+		<!-- Fafurion Avenger Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Lionel Hunter in Heine to get a Fafurion's standard weapon. -->
 		<set name="icon" val="icon.fafurion_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1165,6 +1168,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -1176,7 +1180,7 @@
 		</stats>
 	</item>
 	<item id="80067" name="Fafurion Fighter" additionalName="Fragment" type="Weapon">
-		<!-- A fragment of the Fafurion Fighter. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
+		<!-- Fafurion Fighter Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Lionel Hunter in Heine to get a Fafurion's standard weapon. -->
 		<set name="icon" val="icon.fafurion_fighter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1188,6 +1192,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -1199,7 +1204,7 @@
 		</stats>
 	</item>
 	<item id="80068" name="Fafurion Stormer" additionalName="Fragment" type="Weapon">
-		<!-- A fragment of the Fafurion Stormer. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
+		<!-- Fafurion Stormer Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Lionel Hunter in Heine to get a Fafurion's standard weapon. -->
 		<set name="icon" val="icon.fafurion_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1212,6 +1217,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1226,7 +1232,7 @@
 		</stats>
 	</item>
 	<item id="80069" name="Fafurion Retributer" additionalName="Fragment" type="Weapon">
-		<!-- A fragment of the Fafurion Retributer. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
+		<!-- Fafurion Retributer Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Lionel Hunter in Heine to get a Fafurion's standard weapon. -->
 		<set name="icon" val="icon.fafurion_retributer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1239,6 +1245,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1157</stat>
 			<stat type="mAtk">759</stat>
@@ -1250,7 +1257,7 @@
 		</stats>
 	</item>
 	<item id="80070" name="Fafurion Dual Blunt" additionalName="Fragment" type="Weapon">
-		<!-- A fragment of the Fafurion Dual Blunt Weapon. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
+		<!-- Fafurion Dual Blunt Weapon Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Lionel Hunter in Heine to get a Fafurion's standard weapon. -->
 		<set name="icon" val="icon.fafurion_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1262,6 +1269,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -1273,7 +1281,7 @@
 		</stats>
 	</item>
 	<item id="80071" name="Fafurion Dual Sword" additionalName="Fragment" type="Weapon">
-		<!-- A fragment of the Fafurion Dual Sword. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
+		<!-- Fafurion Dual Swords Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Lionel Hunter in Heine to get a Fafurion's standard weapon. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1285,6 +1293,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -1295,7 +1304,7 @@
 		</stats>
 	</item>
 	<item id="80072" name="Fafurion Avenger" additionalName="Standard" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a high-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1307,6 +1316,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1322,7 +1332,7 @@
 		</stats>
 	</item>
 	<item id="80073" name="Fafurion Fighter" additionalName="Standard" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a high-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1334,6 +1344,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1349,7 +1360,7 @@
 		</stats>
 	</item>
 	<item id="80074" name="Fafurion Stormer" additionalName="Standard" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a high-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1362,6 +1373,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1378,7 +1390,7 @@
 		</stats>
 	</item>
 	<item id="80075" name="Fafurion Retributer" additionalName="Standard" type="Weapon">
-		<!-- A weapon bestowed with the dragon s wisdom. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a high-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1391,6 +1403,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 		</skills>
@@ -1406,7 +1419,7 @@
 		</stats>
 	</item>
 	<item id="80076" name="Fafurion Dual Blunt" additionalName="Standard" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a high-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1418,6 +1431,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1433,7 +1447,7 @@
 		</stats>
 	</item>
 	<item id="80077" name="Fafurion Dual Sword" additionalName="Standard" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a high-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1445,6 +1459,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1459,7 +1474,7 @@
 		</stats>
 	</item>
 	<item id="80078" name="Fafurion Avenger" additionalName="High-Grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1471,6 +1486,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1488,7 +1504,7 @@
 		</stats>
 	</item>
 	<item id="80079" name="Fafurion Fighter" additionalName="High-Grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1500,6 +1516,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1517,7 +1534,7 @@
 		</stats>
 	</item>
 	<item id="80080" name="Fafurion Stormer" additionalName="High-Grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1530,6 +1547,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1548,7 +1566,7 @@
 		</stats>
 	</item>
 	<item id="80081" name="Fafurion Retributer" additionalName="High-Grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s wisdom. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1561,6 +1579,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1578,7 +1597,7 @@
 		</stats>
 	</item>
 	<item id="80082" name="Fafurion Dual Blunt" additionalName="High-Grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1590,6 +1609,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1607,7 +1627,7 @@
 		</stats>
 	</item>
 	<item id="80083" name="Fafurion Dual Sword" additionalName="High-Grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Fafurion's Rising Wave skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Lionel Hunter in Heine to get a top-grade Fafurion's weapon. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1619,6 +1639,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1635,7 +1656,7 @@
 		</stats>
 	</item>
 	<item id="80084" name="Fafurion Avenger" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally, allows to use Dignity, Fafurion Rising Wave and Fafurion's Breath skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, imbued with an attribute. One special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.fafurion_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1647,6 +1668,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1665,7 +1687,7 @@
 		</stats>
 	</item>
 	<item id="80085" name="Fafurion Fighter" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally, allows to use Dignity, Fafurion Rising Wave and Fafurion's Breath skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, imbued with an attribute. One special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.fafurion_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1677,6 +1699,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1695,7 +1718,7 @@
 		</stats>
 	</item>
 	<item id="80086" name="Fafurion Stormer" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally, allows to use Dignity, Fafurion Rising Wave and Fafurion's Breath skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, imbued with an attribute. One special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.fafurion_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1708,6 +1731,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
@@ -1727,7 +1751,7 @@
 		</stats>
 	</item>
 	<item id="80087" name="Fafurion Retributer" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s wisdom. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Casting Spd. +100%, P. Critical Rate +500, M. Skill Critical Rate +50%, M. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Casting Spd. +100%, Critical Rate for standard attacks +500, M. Skill Critical Rate +50%, M. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally, allows to use Dignity, Fafurion Rising Wave and Fafurion's Breath skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, imbued with an attribute. One special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.fafurion_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1740,6 +1764,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8903" level="1" /> <!-- Dragon Wizard -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1758,7 +1783,7 @@
 		</stats>
 	</item>
 	<item id="80088" name="Fafurion Dual Blunt" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally, allows to use Dignity, Fafurion Rising Wave and Fafurion's Breath skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, imbued with an attribute. One special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1770,6 +1795,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1788,7 +1814,7 @@
 		</stats>
 	</item>
 	<item id="80089" name="Fafurion Dual Sword" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally, allows to use Dignity, Fafurion Rising Wave and Fafurion's Breath skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, imbued with an attribute. One special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1800,6 +1826,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1817,7 +1844,7 @@
 		</stats>
 	</item>
 	<item id="80090" name="Krishna Shaper" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Accuracy +4 and P. Skill Critical Damage +2%. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Accuracy +4, P. Skill Critical Damage +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_dagger_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
@@ -1849,7 +1876,7 @@
 		</stats>
 	</item>
 	<item id="80091" name="Krishna Cutter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Accuracy +4 and Normal Attack Critical Rate +30. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Accuracy +4, Critical Rate for standard attacks +30. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1880,7 +1907,7 @@
 		</stats>
 	</item>
 	<item id="80092" name="Krishna Slasher" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +5% -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. +5%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1911,7 +1938,7 @@
 		</stats>
 	</item>
 	<item id="80093" name="Krishna Avenger" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Accuracy +4 and P./ M. Skill Power +2%. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Accuracy +4, P./ M. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1942,7 +1969,7 @@
 		</stats>
 	</item>
 	<item id="80094" name="Krishna Fighter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +2% and Normal Attack Critical Damage +2%. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. +2%, Critical Damage for standard attacks +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_fist_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1974,7 +2001,7 @@
 		</stats>
 	</item>
 	<item id="80095" name="Krishna Stormer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +2% and enables the character to attack multiple enemies. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. +2%, increases the number of targets attacked with a spear. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2007,7 +2034,7 @@
 		</stats>
 	</item>
 	<item id="80096" name="Krishna Thrower" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +2% and Atk. Spd. +2% -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. +2%, Atk. Spd. +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2040,7 +2067,7 @@
 		</stats>
 	</item>
 	<item id="80097" name="Krishna Shooter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +2% and P. Skill Power +2%. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. +2%, P. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2073,7 +2100,7 @@
 		</stats>
 	</item>
 	<item id="80098" name="Krishna Buster" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, M. Accuracy +4 and M. Skill Power +2%. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Accuracy +4, M. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2105,7 +2132,7 @@
 		</stats>
 	</item>
 	<item id="80099" name="Krishna Caster" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, M. Accuracy +4 and Casting Spd. +2%. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Accuracy +4, Casting Spd. +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

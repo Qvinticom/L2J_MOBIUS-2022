@@ -36,6 +36,7 @@ public class ExSendUIEvent implements IClientOutgoingPacket
 	public static final int TYPE_DRACO_INCUBATION_1 = 6;
 	public static final int TYPE_DRACO_INCUBATION_2 = 7;
 	public static final int TYPE_CLAN_PROGRESS_BAR = 8;
+	public static final int TYPE_FAFURION = 9;
 	
 	private final int _objectId;
 	private final int _type;

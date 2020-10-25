@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="29100" name="Leo Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
-		<!-- A charm that activates the power of the Leo Agathion. Its special ability is Maiden's Prayer Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
+		<!-- Activates the power of Agathion Leo. Primary skill: Nemean Lion's Defense Lv. 1. Enables various additional skills when upgraded. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary abilities. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Virgo is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_leo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -18,7 +18,7 @@
 		</skills>
 	</item>
 	<item id="29101" name="Gemini Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
-		<!-- A charm that activates the power of the Gemini Agathion. Its special ability is Bountiful Resurrection Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
+		<!-- Activates the power of Agathion Gemini. Primary skill: Bountiful Resurrection Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Gemini is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -35,7 +35,7 @@
 		</skills>
 	</item>
 	<item id="29102" name="Scorpio Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
-		<!-- A charm that activates the power of the Scorpio Agathion. Its special ability is Scorpion's Mass Exile Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
+		<!-- Activates the power of Agathion Scorpio. Active skill: Scorpion's Mass Exile Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Scorpio is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -52,7 +52,7 @@
 		</skills>
 	</item>
 	<item id="29103" name="Aquarius Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
-		<!-- A charm that activates the power of the Aquarius Agathion. Its special ability is Mass Binding Flood Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
+		<!-- Activates the power of Agathion Aquarius. Active skill: Mass Binding Flood Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Aquarius is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -69,7 +69,7 @@
 		</skills>
 	</item>
 	<item id="29104" name="Pisces Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
-		<!-- A charm that activates the power of the Pisces Agathion. Its special ability is Slippery Scale Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
+		<!-- Contains the power of Agathion Pisces. Primary skill: Slippery Scale Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -86,7 +86,7 @@
 		</skills>
 	</item>
 	<item id="29105" name="Sagittarius Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
-		<!-- A charm that activates the power of the Sagittarius Agathion. Its special ability is Archer's Call Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
+		<!-- Activates the power of Agathion Sagittarius. Active skill: Archer's Call Lv. 1. Depending on the charm level, a unique ability is added. Equipping it in the main slot summons the agathion and activates its active and unique skills. Equipping in an additional slot activates only unique abilities. Note!. 1. The charm level cannot be increased. Active skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Cancer is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -103,7 +103,7 @@
 		</skills>
 	</item>
 	<item id="29106" name="Cancer Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
-		<!-- A charm that activates the power of the Cancer Agathion. Its special ability is Exoskeletal Shield Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
+		<!-- Contains the power of Agathion Cancer. Primary skill: Exoskeletal Shield Lv. 1. Depending on the charm level, a secondary skill is added. Equipping it in the main slot summons the agathion and activates its primary and secondary skills. Equipping in an additional slot activates only secondary skills. Note!. 1. The charm level cannot be increased. Primary skills of agathion charms cannot be used in the Olympiad and the Ceremony of Chaos. 2. If Agathion Leo is also equipped, only secondary skills will be active. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -120,7 +120,7 @@
 		</skills>
 	</item>
 	<item id="29107" name="Virgo Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Virgo Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Virgo Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
@@ -129,11 +129,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29095" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Virgo Agathion Charm - Stage 1 -->
+			<item id="29095" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Virgo Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29108" name="Virgo Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Virgo Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Virgo Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
@@ -142,11 +142,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29083" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Virgo Agathion Charm - Stage 1 -->
+			<item id="29083" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Virgo Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29109" name="Capricorn Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Capricorn Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Capricorn Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -155,11 +155,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29096" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Capricorn Agathion Charm - Stage 1 -->
+			<item id="29096" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Capricorn Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29110" name="Capricorn Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Capricorn Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Capricorn Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -168,11 +168,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29084" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Capricorn Agathion Charm - Stage 1 -->
+			<item id="29084" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Capricorn Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29111" name="Libra Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Libra Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Libra Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -181,11 +181,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29097" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Libra Agathion Charm - Stage 1 -->
+			<item id="29097" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Libra Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29112" name="Libra Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Libra Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Libra Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -194,11 +194,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29085" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Libra Agathion Charm - Stage 1 -->
+			<item id="29085" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Libra Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29113" name="Aries Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Aries Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Aries Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -207,11 +207,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29098" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Aries Agathion Charm - Stage 1 -->
+			<item id="29098" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Aries Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29114" name="Aries Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Aries Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Aries Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -220,11 +220,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29086" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Aries Agathion Charm - Stage 1 -->
+			<item id="29086" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Aries Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29115" name="Taurus Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Taurus Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Taurus Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -233,11 +233,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29099" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Taurus Agathion Charm - Stage 1 -->
+			<item id="29099" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Taurus Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29116" name="Taurus Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Taurus Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Taurus Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -246,11 +246,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29087" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Taurus Agathion Charm - Stage 1 -->
+			<item id="29087" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Taurus Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29117" name="Leo Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Leo Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Leo Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -259,11 +259,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29100" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Leo Agathion Charm - Stage 1 -->
+			<item id="29100" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Leo Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29118" name="Leo Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Leo Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Leo Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -272,11 +272,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29088" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Leo Agathion Charm - Stage 1 -->
+			<item id="29088" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Leo Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29119" name="Gemini Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Gemini Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Gemini Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -285,11 +285,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29101" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Gemini Agathion Charm - Stage 1 -->
+			<item id="29101" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Gemini Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29120" name="Gemini Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Gemini Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Gemini Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -298,11 +298,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29089" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Gemini Agathion Charm - Stage 1 -->
+			<item id="29089" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Gemini Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29121" name="Scorpio Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Scorpio Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Scorpio Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -311,11 +311,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29102" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Scorpio Agathion Charm - Stage 1 -->
+			<item id="29102" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Scorpio Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29122" name="Scorpio Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Scorpio Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Scorpio Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -324,11 +324,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29090" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Scorpio Agathion Charm - Stage 1 -->
+			<item id="29090" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Scorpio Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29123" name="Aquarius Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Aquarius Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Aquarius Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -337,11 +337,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29103" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Aquarius Agathion Charm - Stage 1 -->
+			<item id="29103" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Aquarius Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29124" name="Aquarius Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Aquarius Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Aquarius Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -350,11 +350,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29091" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Aquarius Agathion Charm - Stage 1 -->
+			<item id="29091" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Aquarius Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29125" name="Pisces Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Pisces Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Pisces Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -363,11 +363,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29104" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Pisces Agathion Charm - Stage 1 -->
+			<item id="29104" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Pisces Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29126" name="Pisces Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Pisces Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Pisces Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -376,11 +376,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29092" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Pisces Agathion Charm - Stage 1 -->
+			<item id="29092" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Pisces Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29127" name="Sagittarius Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Sagittarius Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Sagittarius Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -389,11 +389,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29105" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Sagittarius Agathion Charm - Stage 1 -->
+			<item id="29105" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Sagittarius Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29128" name="Sagittarius Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Sagittarius Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Sagittarius Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -402,11 +402,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29093" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Sagittarius Agathion Charm - Stage 1 -->
+			<item id="29093" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Sagittarius Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29129" name="Cancer Agathion Charm Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Cancer Agathion Charm - Stage 1 (30-day). -->
+		<!-- Double-click to obtain +3 Agathion Cancer Charm Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -415,11 +415,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29106" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Cancer Agathion Charm - Stage 1 -->
+			<item id="29106" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Cancer Charm Lv. 1 - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="29130" name="Cancer Agathion Charm Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain a +3 Cancer Agathion Charm - Stage 1 (15-day). -->
+		<!-- Double-click to obtain +3 Agathion Cancer Charm Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -428,39 +428,39 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29094" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Cancer Agathion Charm - Stage 1 -->
+			<item id="29094" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Agathion Cancer Charm Lv. 1 - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="29131" name="Matchstick" type="EtcItem">
-		<!-- Part of the matchsticks that the Match Girls are looking for. It looks like a monster has broken them. Combine with match heads to fix them. -->
+		<!-- Matchstick that the Match Girls are looking for. It seems a monster has broken matches. Combine it with match head to obtain a match. -->
 		<set name="icon" val="BranchIcon.icon.g_event_match_body" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29132" name="Match Head" type="EtcItem">
-		<!-- Part of the matchsticks that the Match Girls are looking for. It looks like a monster has broken them. Combine with match heads to fix them. -->
+		<!-- Match head that the Match Girls are looking for. It seems a monster has broken matches. Combine it with matchstick to obtain a match. -->
 		<set name="icon" val="BranchIcon.icon.g_event_match_head" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29133" name="Well-made Matchstick" type="EtcItem">
-		<!-- A well-made matchstick. Take it to the older match girl. -->
+		<!-- A well-made match. Take it to the Older Sister. -->
 		<set name="icon" val="BranchIcon.icon.g_event_match" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29134" name="Powerful Matchstick" type="EtcItem">
-		<!-- A powerful matchstick. It's too strong to use regularly. Take it to the younger match sister who will exchange it for a bonfire. -->
+		<!-- The match that burns a bit too well. For some unknown reason this match blazes so bright that it's not suitable for domestic use. Take it to the Younger Sister. -->
 		<set name="icon" val="BranchIcon.icon.g_event_white_match" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29135" name="Bonfire" type="EtcItem">
-		<!-- Bonfire made with a powerful matchstick. Use to have a bonfire for 30 sec. Use cooking ingredients on the bonfire to make delicious food. -->
+		<!-- A bonfire made with a Powerful Match. Burns for 30 sec. Use cooking ingredients to cook a Regular Dish or a Very Delicious Dish on the bonfire. -->
 		<set name="icon" val="icon.etc_torchlight_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -468,7 +468,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29136" name="Regular Dish" type="EtcItem">
-		<!-- Regular dish. It looks edible. STR/ DEX/ CON/ INT/ WIT/ MEN +1 and Acquired XP/ SP +10% for 30 min. Cooldown is 5 min. -->
+		<!-- A regular dish. Looks edible. For 30 min., STR/ DEX/ CON/ INT/ WIT/ MEN +1, acquired XP/ SP +10%. -->
 		<set name="icon" val="icon.etc_food_dish_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -476,14 +476,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29137" name="Very Delicious Dish" type="EtcItem">
-		<!-- Very delicious food. Take it to the younger match sister. -->
+		<!-- Very delicious dish. Take it to the Younger Sister. -->
 		<set name="icon" val="BranchIcon.icon.g_event_excellent_cuisine" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29138" name="Match Sisters' Gift" type="EtcItem">
-		<!-- A gift with various items from the match sisters who are thankful for your help. -->
+		<!-- A gift from the Match Girls who are thankful for your help. -->
 		<set name="icon" val="icon.etc_pouch_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -491,7 +491,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29139" name="Match Sisters' Gratitude" type="EtcItem">
-		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P./ M. Atk. And P./ M. Def. +15%. -->
+		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P./ M. Atk. and P./ M. Def. +15%. -->
 		<set name="icon" val="icon.etc_candle_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -499,7 +499,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29140" name="Cooking Ingredient" type="EtcItem">
-		<!-- Cooking ingredients of the Match Sisters. Use it on the bonfire to cook food. <Note> If you use it on a bonfire made by someone else, the ingredients will disappear. -->
+		<!-- Using the ingredients on the bonfire, you can cook food. -->
 		<set name="icon" val="icon.etc_meat_of_monstereye_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -545,7 +545,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29145" name="Freya Winter Card" type="EtcItem">
-		<!-- Double-click to randomly obtain an item from a selection of rare items including rare accessories. -->
+		<!-- Double-click to obtain one of the following items: Tanzanite/ Garnet/ Opal/ Aquamarine/ Cat's Eye/ Pearl/ Vital Stone/ Obsidian/ Emerald/ Sapphire/ Diamond/ Ruby/ Amethyst/ Blue Cat's Eye/ Red Cat's Eye Jewelry Box Lv. 4, Package: +7 Magical/ Physical Reflect Shirt, Package: +7 Shiny Elemental Shirt, Bottle of Antharas'/ Valakas' Soul (2 pcs.), Shadow/ Kelbim/ Tauti Weapon Pack, Bottle of Baium's Soul, Talisman of Anakim, Sayha's Talisman Pack Lv. 7, Blessed Valakas' Necklace, Seven Signs' Energy, Blessed Antharas' Earring, Talisman of Seven Signs, Ruler's Authority, Sealed Talisman of Insanity. -->
 		<set name="icon" val="icon.bm_freya_winter_card" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -553,7 +553,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29146" name="Sirra Winter Card" type="EtcItem">
-		<!-- Double-click to randomly obtain an item from a selection of various equipment enchantment items. -->
+		<!-- Double-click to obtain one of the following items: Giant's Scroll: Enchant R-grade Armor/ Weapon, Package: Scroll: Enchant R-grade Armor/ Weapon, Package: Blessed Lucky Enchant Stone: R-grade Armor/ Weapon, Bloody Eternal/ Helios Enhancement Stone, Top-grade Spirit Stone, Giant's Lucky Enchant Stone: R-grade Armor/ Weapon, Blessed High-grade Lucky Enchant Stone: R-grade Armor/ Weapon, Dark Eternal/ Helios Enhancement Stone, Freya's Lucky Enchant Stone: R-grade Armor/ Weapon, Shadow Ingot, R99-grade Scroll of Blessing, Package: +7 Pa'agrio's/ Eva's/ Sayha's/ Maphr's Shirt, Mystic Soul Crystal Fragment, Life Stone: Giant's Power, Enhanced Shadow Ingot, Destruction Scroll: Enchant R-grade Weapon, Mystic Soul Crystal. -->
 		<set name="icon" val="icon.bm_freya_sirr_winter_card" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -577,7 +577,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29149" name="Sayha's Talisman Stage 6" additionalName="1-day" type="Armor">
-		<!-- When equipped, P. Def. +1126, M. Def. +736, Acquired XP/ SP +10%. If equipped with Venir's Talisman Stage 12 or above, Skill Power +3%, Skill Cooldown -3%. Active Skills. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- Grants Sayha's power: P. Def. +1126, M. Def. +736, Acquired XP/ SP +10%. If equipped with Venir's Talisman Lv. 12 or higher, Skill Power +3%, Skill Cooldown -3%. Active Skills:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -598,7 +598,7 @@
 		</skills>
 	</item>
 	<item id="29150" name="Low-grade Zodiac Agathion Pack" type="EtcItem">
-		<!-- Double-click to randomly obtain one of the 12 Low-grade Zodiac Agathions. -->
+		<!-- Double-click to randomly obtain one of the 12 Low-grade Starlight Agathions. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -612,7 +612,7 @@
 		</skills>
 	</item>
 	<item id="29151" name="Mid-grade Zodiac Agathion Pack" type="EtcItem">
-		<!-- Double-click to randomly obtain one of the 12 Mid-grade Zodiac Agathions. -->
+		<!-- Double-click to randomly obtain one of the 12 Mid-grade Starlight Agathions. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -620,7 +620,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29152" name="High-grade Zodiac Agathion Pack" type="EtcItem">
-		<!-- Double-click to randomly obtain one of the 12 High-grade Zodiac Agathions. -->
+		<!-- Double-click to randomly obtain one of the 12 High-grade Starlight Agathions. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -634,7 +634,7 @@
 		</skills>
 	</item>
 	<item id="29153" name="High-grade Maphr's Rune" additionalName="30-day" type="EtcItem">
-		<!-- While carried in inventory, Adena drop amount +300%, item drop rate and spoil acquisition rate +100%. -->
+		<!-- When in the inventory, adena drop +300%, item drop rate and spoil acquisition rate +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -648,7 +648,7 @@
 		</skills>
 	</item>
 	<item id="29154" name="Mochi" additionalName="Event" type="EtcItem">
-		<!-- Rice cake that restores a certain amount of Vitality. Cooldown is 1 min.. No weekly usage limit. -->
+		<!-- Rice cake that restores a certain amount of Vitality. Cooldown is 1 min. Can be used no more than 5 times a week. -->
 		<set name="icon" val="icon.etc_mochi_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -724,7 +724,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="29161" name="High-grade Maphr's Rune Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a High-grade Maphr's Rune (30-day). -->
+		<!-- Double-click to obtain one High-grade Maphr's Rune 300% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -737,7 +737,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="29162" name="Light Imbued Treasure Chest" type="EtcItem">
-		<!-- A chest containing a starlight. Double-click to obtain one of the following items: Lindvior's Earring, Blessed Antharas' Earring, Seven Signs' Energy, Ring of Creation, Dark Helios/ Eternal Enhancement Stone, Mystic Soul Crystal, Mystic Soul Crystal Fragment, Bottle of Baium's Soul, Dragon Claw, Destruction Scroll: Enchant Elemental Shirt, Freya's Lucky Enchant Stone: Weapon/ Armor (R-grade), Blessed Scroll: Enchant Weapon (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Source of the Emperor, Frenzied Tauti's Small Fragment, Insane Kelbim's Small Fragment, Life Stone Instilled with Giants' Power, Ancient Zodiac Agathion Charm Book of Growth, Low-grade/ Mid-grade/ High-grade Zodiac Agathion Pack, Red Starlight Jar, Agathion Evolution Stone, Starlight Jar, Superior Giant's Codex - Mastery/ Mastery Chapter 1, Superior Giant's Codex - Chapter 1, Ancient Book: Divine Inspiration (Beginner/ Intermediate), Freya's Bloody/ Dark Rune (2-hour) Box, Eva's Rune (3-day) Pack, Elcyum, Giant's Energy 100-unit Pack, Bottle Fragment of Baium's/ Antharas'/ Valakas' Soul x5, Giant's Energy x2, Gemstone (R-grade) x10. -->
+		<!-- A chest containing a starlight. Double-click to obtain one of the following items: R-grade Gemstone (10 pcs.), Giant's Energy (2 pcs.), Bottle Fragment of Valakas' Soul (5 pcs.), Bottle Fragment of Valakas' Soul (5 pcs.), Bottle Fragment of Baium's Soul (5 pcs.), Giant's Energy 100-unit Pack, Elcyum, Package: Eva's Rune (3-day) - Event, Freya's Dark Rune Pack (2-hour), Freya's Bloody Rune Pack (2-hour), Ancient Book: Divine Inspiration (Beginner)/ (Intermediate), Superior Giant's Codex - Chapter 1, Superior Giant's Codex - Mastery/ Mastery Chapter 1, Starlight Jar, Red Starlight Jar, Agathion Evolution Stone, Low-grade/ Mid-grade/ High-grade Zodiac Agathion Box, Ancient Zodiac Agathion Charm Book of Growth, Life Stone: Giant's Power, Insane Kelbim's Small Fragment, Frenzied Tauti's Small Fragment, Source of the Emperor, Giant's Scroll: Enchant R-grade Weapon, Blessed Scroll: Enchant R-grade Weapon, Blessed Scroll: Enchant R-grade Weapon/ Armor, Destruction Scroll: Enchant Elemental Shirt, Dragon Claw, Bottle of Baium's Soul, Mystic Soul Crystal Fragment, Mystic Soul Crystal, Dark Eternal Enhancement Stone, Dark Helios Enhancement Stone, Ring of Creation, Seven Signs' Energy, Blessed Antharas' Earring, Lindvior's Earring. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -745,56 +745,56 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29163" name="Stable Cloak Enchantment Scroll" type="EtcItem">
-		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +1-+10. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
+		<!-- A scroll for enchanting an ancient kingdoms' cloak from +1 to +10. The enchant value goes up by +1 when it succeeds. In case of failure, the enchant value remains the same. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29164" name="Legendary Scroll (High-grade)" type="EtcItem">
-		<!-- Has a high chance to exchange a Elmoreden/ Aden/ Elmore/ Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
+		<!-- Take it to the Game Assistant to bestow the Legendary status on Elmoreden/ Aden/ Elmore/ Ferios Cloak. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_legend_scroll" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29165" name="High-grade Spirit Stone - Ancient Kingdom" type="EtcItem">
-		<!-- High-grade Spirit Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- High-grade Life Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Double-click on the item or speak to a blacksmith to augment what you need. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_normal" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29166" name="High-grade Spirit Stone - Elmoreden" type="EtcItem">
-		<!-- High-grade Legendary Spirit Stone for the Elmoreden Cloak. Can augment Legendary Elmoreden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- Required for augmenting Legendary Elmoreden Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmoreden" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29167" name="High-grade Spirit Stone - Aden" type="EtcItem">
-		<!-- High-grade Legendary Spirit Stone for the Aden Cloak. Can augment Legendary Aden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- Required for augmenting Legendary Aden Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_aden" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29168" name="High-grade Spirit Stone - Elmore" type="EtcItem">
-		<!-- High-grade Legendary Spirit Stone for the Elmore Cloak. Can augment Legendary Elmore kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- Required for augmenting Legendary Elmore Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmore" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29169" name="High-grade Spirit Stone - Ferios" type="EtcItem">
-		<!-- High-grade Legendary Spirit Stone for the Ferios Cloak. Can augment Legendary Ferios kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- Required for augmenting Legendary Ferios Cloak enchanted to +15 or higher. Double-click on the item or speak to a blacksmith to augment what you need. When used, applies a random additional effect. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_perios" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29170" name="High-grade Spirit Stone Pack - Legendary" type="EtcItem">
-		<!-- Double-click to obtain 1 High-grade Spirit Stone - Ancient Kingdom/ Elmoreden/ Aden/ Elmore/ Ferios randomly. -->
+		<!-- Double-click to obtain one of the following items: High-grade Cloak Augmenting Stone - Ancient Kingdom/ Elmoreden/ Aden/ Elmore/ Ferios. -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -802,7 +802,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29171" name="High-grade Spirit Stone Pack - Cloak" type="EtcItem">
-		<!-- Double-click to obtain 1 High-grade Spirit Stone - Ancient Kingdom/ Elmoreden/ Aden/ Elmore/ Ferios randomly. -->
+		<!-- Double-click to obtain one of the following items: High-grade Cloak Augmenting Stone - Ancient Kingdom/ Elmoreden/ Aden/ Elmore/ Ferios. -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -810,14 +810,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29172" name="Red Star Solvent" type="EtcItem">
-		<!-- A solution needed to melt Starlight Jars. Take it along with a Starlight Jar to the Dimensional Merchant to create a Red Stars Bottle. -->
+		<!-- Take it to the Game Assistant to obtain Red Starlight Jar. -->
 		<set name="icon" val="icon.etc_dragon_blood_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29173" name="High-grade Maphr's Rune 300% Pack" additionalName="7-day" type="EtcItem">
-		<!-- Dimensional item. Double-click the item to obtain 1 High-grade Maphr's Rune 300% - 7-day. -->
+		<!-- Double-click to obtain one High-grade Maphr's Rune 300% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -830,7 +830,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="29174" name="High-grade Maphr's Rune 300%" additionalName="7-day" type="EtcItem">
-		<!-- Dimensional item. If stored in inventory, increases Adena gain by 300%, item drop rate and item gain through spoils by 100%. -->
+		<!-- When in the inventory, adena drop +300%, item drop rate and spoil acquisition rate +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -841,7 +841,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 	</item>
 	<item id="29175" name="High-grade Maphr's Rune 300% Pack" additionalName="1-day" type="EtcItem">
-		<!-- Dimensional item. Double-click the item to obtain 1 High-grade Maphr's Rune 300% - 1-day. -->
+		<!-- Double-click to obtain one High-grade Maphr's Rune 300% (1-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -854,7 +854,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="29176" name="High-grade Maphr's Rune 300%" additionalName="1-day" type="EtcItem">
-		<!-- Dimensional item. If stored in inventory, increases Adena gain by 300%, item drop rate and item gain through spoils by 100%. -->
+		<!-- If stored in inventory, adena drop +300%, item drop rate and item gain through spoils +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -865,7 +865,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 	</item>
 	<item id="29177" name="Prestige Cube Pack" additionalName="1-day" type="EtcItem">
-		<!-- Double-click on the box to obtain 1 Prestige Cube - 1-day. -->
+		<!-- Double-click to obtain Prestige Cube (1-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -878,7 +878,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="29178" name="Prestige Cube" additionalName="1-day" type="EtcItem">
-		<!-- Prestige Cube. Double-click it to obtain one of Dark/ Bloody Eternal Enhancement Stone, Scroll: Enchant Weapon Class S to R, Blessed Scroll of Resurrection, High-grade Elixir Pack, Energy of Destruction, Giant's Energy. Can be used once per day. Cannot be used in Olympiad. -->
+		<!-- PA Cube. Double-click to obtain one of the following items: Dark/ Bloody Eternal Enhancement Stone, Scroll: Enchant S-R-grade Weapon, Blessed Scroll of Resurrection, High-grade Elixir Pack, Destructive Energy, Giant's Energy. Can be used once a day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -890,7 +890,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="29179" name="Eva's Rune Pack (1-day)" type="EtcItem">
-		<!-- Dimensional Item Pack. Pack which includes Eva's Rune (1-day). -->
+		<!-- Double-click to obtain Eva's Rune (1-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -902,7 +902,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29180" name="Eva's Rune" additionalName="1-day" type="EtcItem">
-		<!-- Dimensional Item. Ancient charm endowed with mysterious symbols when held in your inventory. It grants the user Eva's Rune passive skill. The remaining time decreases even when logged out. -->
+		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, grants the user Eva's Rune passive skill. The remaining time decreases even when not playing. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -915,7 +915,7 @@
 		</skills>
 	</item>
 	<item id="29181" name="Mermaid Agathion Charm" type="Armor">
-		<!-- Equip to summon Mermaid Agathion. -->
+		<!-- Summons Agathion Mermaid. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -930,7 +930,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="29182" name="Master's Fishing Coin" type="EtcItem">
-		<!-- Currency earned when playing Master Fishing. Take it to Dimensional Merchant to exchange for a Fishing XP Box. -->
+		<!-- A coin that can be obtained while fishing. Can be exchanged for Fishing XP Box through the Game Assistant. -->
 		<set name="icon" val="icon.etc_coins_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -940,7 +940,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29183" name="Scroll: Enchant Mermaid Agathion" type="EtcItem">
-		<!-- Enchant Scroll exclusively for Mermaid Agathion. The scroll increases M. Def. and adds a Special Ability from +4. It can enhance Agathion safely to +3 and enhance up to +10. Unique Abilities level up gradually from +1. -->
+		<!-- A scroll for enchanting Agathion Mermaid. Increases M. Def. Starting from +4, enables primary skills. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -949,14 +949,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29184" name="Mermaid's Trace" type="EtcItem">
-		<!-- Mermaid's Trace. Collect 20 and bring them to Dimensional Merchant to exchange for Mermaid Agathion Charm. -->
+		<!-- Mermaid's traces. Take 20 of these to the Game Assistant to obtain Agathion Mermaid. -->
 		<set name="icon" val="icon.etc_oren_fish_scale_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29185" name="Master's Fishing Potion" additionalName="1-hour" type="EtcItem">
-		<!-- When used, increases Successful Fishing Acquired XP/ SP by 50% for 1 h. Applied to all bait. Can be stacked with Angler's Blessing. -->
+		<!-- When used, for 1 h. Acquired XP/ SP during fishing +50%. Applied to all bait. Can be stacked with Angler's Blessing. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -964,7 +964,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29186" name="Golden Fishing Shot" type="EtcItem">
-		<!-- Soulshot spent on fishing rod. Increases Successful Fishing Rate by 100%. -->
+		<!-- Soulshot spent on fishing rod. Successful Fishing Rate +100%. -->
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i05" />
 		<set name="default_action" val="FISHINGSHOT" />
 		<set name="immediate_effect" val="true" />

@@ -354,7 +354,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2208" toLevel="1" name="Blessed Scroll: Enchant Armor (S-grade)">
+	<skill id="2208" toLevel="1" name="Blessed Scroll: Enchant S-grade Armor">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -363,7 +363,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2209" toLevel="1" name="Blessed Scroll: Enchant Armor (A-grade)">
+	<skill id="2209" toLevel="1" name="Blessed Scroll: Enchant A-grade Armor">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -372,7 +372,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2210" toLevel="1" name="Blessed Scroll: Enchant Armor (B-grade)">
+	<skill id="2210" toLevel="1" name="Blessed Scroll: Enchant B-grade Armor">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -381,7 +381,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2211" toLevel="1" name="Blessed Scroll: Enchant Armor (C-grade)">
+	<skill id="2211" toLevel="1" name="Blessed Scroll: Enchant C-grade Armor">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -390,7 +390,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2212" toLevel="1" name="Blessed Scroll: Enchant Armor (D-grade)">
+	<skill id="2212" toLevel="1" name="Blessed Scroll: Enchant D-grade Armor">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -847,13 +847,13 @@
 							<item id="6708" count="1" /> <!-- Sealed Draconic Leather Glove Fabric -->
 						</item>
 						<item chance="8.5">
-							<item id="6709" count="1" /> <!-- Sealed Draconic Leather Boot Design -->
+							<item id="6709" count="1" /> <!-- Sealed Draconic Leather Boots Design -->
 						</item>
 						<item chance="8.5">
-							<item id="6712" count="1" /> <!-- Sealed Major Arcana Gloves fabric -->
+							<item id="6712" count="1" /> <!-- Sealed Major Arcana Gloves Fabric -->
 						</item>
 						<item chance="8.5">
-							<item id="6713" count="1" /> <!-- Sealed Major Arcana Boot Design -->
+							<item id="6713" count="1" /> <!-- Sealed Major Arcana Boots Design -->
 						</item>
 						<item chance="8.5">
 							<item id="6705" count="1" /> <!-- Sealed Imperial Crusader Shield Fragment -->
@@ -867,7 +867,7 @@
 					</value>
 					<value level="3">
 						<item chance="20">
-							<item id="6702" count="1" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+							<item id="6702" count="1" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
 						</item>
 						<item chance="20">
 							<item id="6701" count="1" /> <!-- Sealed Imperial Crusader Breastplate Part -->
@@ -1006,16 +1006,16 @@
 					</value>
 					<value level="3">
 						<item chance="39">
-							<item id="1060" count="1" /> <!-- Healing Potion -->
+							<item id="1060" count="1" /> <!-- HP Replenishing Potion -->
 						</item>
 						<item chance="11.8">
-							<item id="1061" count="1" /> <!-- Major Healing Potion -->
+							<item id="1061" count="1" /> <!-- Greater HP Replenishing Potion -->
 						</item>
 						<item chance="32.2">
-							<item id="1539" count="1" /> <!-- Major Healing Potion -->
+							<item id="1539" count="1" /> <!-- Major HP Replenishing Potion -->
 						</item>
 						<item chance="3">
-							<item id="1540" count="1" /> <!-- Quick Healing Potion -->
+							<item id="1540" count="1" /> <!-- Quick HP Replenishing Potion -->
 						</item>
 						<item chance="7">
 							<item id="735" count="1" /> <!-- Haste Potion -->
@@ -1921,7 +1921,7 @@
 		</effects>
 	</skill>
 	<skill id="2234" toLevel="1" name="Soul Breaking Arrow">
-		<!-- Stun and immobilization for a short time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a short time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.etc_destory_soul_arrow_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
@@ -1956,7 +1956,7 @@
 				<power>2320</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -2093,7 +2093,7 @@
 		</effects>
 	</skill>
 	<skill id="2239" toLevel="1" name="Scroll: Petrifaction">
-		<!-- Momentarily petrified. -->
+		<!-- Momentarily petrifies the target. -->
 		<icon>icon.ect_piece_of_paper_white_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2246,7 +2246,7 @@
 		</effects>
 	</skill>
 	<skill id="2246" toLevel="1" name="Herb of Power">
-		<!-- Herb increases P. Atk. -->
+		<!-- Increases P. Atk. -->
 		<icon>icon.etc_herb_red_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -2291,7 +2291,7 @@
 		</effects>
 	</skill>
 	<skill id="2247" toLevel="1" name="Herb of Magic">
-		<!-- Herb increases M. Atk. -->
+		<!-- Increases M. Atk. -->
 		<icon>icon.etc_herb_blue_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -2389,7 +2389,7 @@
 		</effects>
 	</skill>
 	<skill id="2251" toLevel="1" name="Blessing of Earth">
-		<!-- Turns normal physical attacks into earth attacks. -->
+		<!-- Earth attribute is bestowed on P. Atk. -->
 		<icon>icon.etc_earth_crystal_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2439,7 +2439,7 @@
 		</effects>
 	</skill>
 	<skill id="2253" toLevel="1" name="Holy Blessing">
-		<!-- Turns normal physical attacks into holy attacks. -->
+		<!-- Turns basic physical attacks into holy attacks. -->
 		<icon>icon.etc_holy_crystal_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2582,7 +2582,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2261" toLevel="9" name="Small Green Nimble Fish (High-grade)">
+	<skill id="2261" toLevel="9" name="High-grade Small Green Nimble Fish">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -2702,7 +2702,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2262" toLevel="9" name="Small Jade Nimble Fish (High-grade)">
+	<skill id="2262" toLevel="9" name="High-grade Small Jade Nimble Fish">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -2822,7 +2822,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2263" toLevel="9" name="Small Blue Nimble Fish (High-grade)">
+	<skill id="2263" toLevel="9" name="High-grade Small Blue Nimble Fish">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -2942,7 +2942,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2264" toLevel="9" name="Small Yellow Nimble Fish (High-grade)">
+	<skill id="2264" toLevel="9" name="High-grade Small Yellow Nimble Fish">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -3062,7 +3062,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2265" toLevel="9" name="Small Orange Nimble Fish (High-grade)">
+	<skill id="2265" toLevel="9" name="High-grade Small Orange Nimble Fish">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -3194,7 +3194,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2266" toLevel="9" name="Small Purple Nimble Fish (High-grade)">
+	<skill id="2266" toLevel="9" name="High-grade Small Purple Nimble Fish">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -3332,7 +3332,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2267" toLevel="9" name="Small Red Nimble Fish (High-grade)">
+	<skill id="2267" toLevel="9" name="High-grade Small Red Nimble Fish">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -3488,7 +3488,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2268" toLevel="9" name="Small White Nimble Fish (High-grade)">
+	<skill id="2268" toLevel="9" name="High-grade Small White Nimble Fish">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -3653,7 +3653,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2269" toLevel="9" name="Small Black Nimble Fish (High-grade)">
+	<skill id="2269" toLevel="9" name="High-grade Small Black Nimble Fish">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -3830,7 +3830,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2270" toLevel="7" name="Adventurer's Box: C-grade Accessory (Low-grade)">
+	<skill id="2270" toLevel="7" name="Adventurer's Box: Low-grade C-grade Accessory">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -3955,10 +3955,10 @@
 						<item id="8034" count="3" /> <!-- Rainbow Springs Clan Hall War Decree -->
 					</item>
 					<item chance="4">
-						<item id="2134" count="3" /> <!-- Gemstone (S-grade) -->
+						<item id="2134" count="3" /> <!-- S-grade Gemstone -->
 					</item>
 					<item chance="11">
-						<item id="2133" count="7" /> <!-- Gemstone (A-grade) -->
+						<item id="2133" count="7" /> <!-- A-grade Gemstone -->
 					</item>
 				</items>
 			</effect>
@@ -4008,22 +4008,22 @@
 						<item id="6407" count="5" /> <!-- Large Firecracker -->
 					</item>
 					<item chance="0.002">
-						<item id="5577" count="1" /> <!-- Red Soul Crystal - Stage 11 -->
+						<item id="5577" count="1" /> <!-- Red Soul Crystal Lv. 11 -->
 					</item>
 					<item chance="0.002">
-						<item id="5578" count="1" /> <!-- Green Soul Crystal - Stage 11 -->
+						<item id="5578" count="1" /> <!-- Green Soul Crystal Lv. 11 -->
 					</item>
 					<item chance="0.002">
-						<item id="5579" count="1" /> <!-- Blue Soul Crystal - Stage 11 -->
+						<item id="5579" count="1" /> <!-- Blue Soul Crystal Lv. 11 -->
 					</item>
 					<item chance="0.001">
-						<item id="5580" count="1" /> <!-- Red Soul Crystal - Stage 12 -->
+						<item id="5580" count="1" /> <!-- Red Soul Crystal Lv. 12 -->
 					</item>
 					<item chance="0.001">
-						<item id="5581" count="1" /> <!-- Green Soul Crystal - Stage 12 -->
+						<item id="5581" count="1" /> <!-- Green Soul Crystal Lv. 12 -->
 					</item>
 					<item chance="0.001">
-						<item id="5582" count="1" /> <!-- Blue Soul Crystal - Stage 12 -->
+						<item id="5582" count="1" /> <!-- Blue Soul Crystal Lv. 12 -->
 					</item>
 				</items>
 			</effect>
@@ -4127,33 +4127,33 @@
 				<items>
 					<value level="1">
 						<item chance="50">
-							<item id="1539" count="10" /> <!-- Major Healing Potion -->
-							<item id="8592" count="1" /> <!-- Weapon Coupon (No-grade) -->
+							<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+							<item id="8592" count="1" /> <!-- No-grade Weapon Coupon -->
 						</item>
 						<item chance="50">
-							<item id="1539" count="10" /> <!-- Major Healing Potion -->
-							<item id="8592" count="1" /> <!-- Weapon Coupon (No-grade) -->
+							<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+							<item id="8592" count="1" /> <!-- No-grade Weapon Coupon -->
 						</item>
 					</value>
 					<value level="2">
 						<item chance="50">
-							<item id="1539" count="10" /> <!-- Major Healing Potion -->
-							<item id="8593" count="1" /> <!-- Weapon Coupon (D-grade) -->
+							<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+							<item id="8593" count="1" /> <!-- D-grade Weapon Coupon -->
 						</item>
 						<item chance="50">
-							<item id="1539" count="10" /> <!-- Major Healing Potion -->
-							<item id="8593" count="1" /> <!-- Weapon Coupon (D-grade) -->
+							<item id="1539" count="10" /> <!-- Major HP Replenishing Potion -->
+							<item id="8593" count="1" /> <!-- D-grade Weapon Coupon -->
 						</item>
 					</value>
 					<value level="3">
 						<item chance="87.00">
-							<item id="1539" count="20" /> <!-- Major Healing Potion -->
+							<item id="1539" count="20" /> <!-- Major HP Replenishing Potion -->
 						</item>
 						<item chance="7.0">
-							<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+							<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor -->
 						</item>
 						<item chance="2.05">
-							<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+							<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon -->
 						</item>
 						<item chance="2.00">
 							<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
@@ -4162,24 +4162,24 @@
 							<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 						</item>
 						<item chance="0.3">
-							<item id="4637" count="1" /> <!-- Red Soul Crystal - Stage 8 -->
+							<item id="4637" count="1" /> <!-- Red Soul Crystal Lv. 8 -->
 						</item>
 						<item chance="0.3">
-							<item id="4659" count="1" /> <!-- Blue Soul Crystal - Stage 8 -->
+							<item id="4659" count="1" /> <!-- Blue Soul Crystal Lv. 8 -->
 						</item>
 						<item chance="0.3">
-							<item id="4648" count="1" /> <!-- Green Soul Crystal - Stage 8 -->
+							<item id="4648" count="1" /> <!-- Green Soul Crystal Lv. 8 -->
 						</item>
 					</value>
 					<value level="4">
 						<item chance="90.70">
-							<item id="1539" count="20" /> <!-- Major Healing Potion -->
+							<item id="1539" count="20" /> <!-- Major HP Replenishing Potion -->
 						</item>
 						<item chance="4.0">
-							<item id="948" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
+							<item id="948" count="1" /> <!-- Scroll: Enchant B-grade Armor -->
 						</item>
 						<item chance="1.5">
-							<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+							<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon -->
 						</item>
 						<item chance="2.00">
 							<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
@@ -4188,24 +4188,24 @@
 							<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 						</item>
 						<item chance="0.25">
-							<item id="4638" count="1" /> <!-- Red Soul Crystal - Stage 9 -->
+							<item id="4638" count="1" /> <!-- Red Soul Crystal Lv. 9 -->
 						</item>
 						<item chance="0.25">
-							<item id="4660" count="1" /> <!-- Blue Soul Crystal - Stage 9 -->
+							<item id="4660" count="1" /> <!-- Blue Soul Crystal Lv. 9 -->
 						</item>
 						<item chance="0.25">
-							<item id="4649" count="1" /> <!-- Green Soul Crystal - Stage 9 -->
+							<item id="4649" count="1" /> <!-- Green Soul Crystal Lv. 9 -->
 						</item>
 					</value>
 					<value level="5">
 						<item chance="93.00">
-							<item id="1539" count="20" /> <!-- Major Healing Potion -->
+							<item id="1539" count="20" /> <!-- Major HP Replenishing Potion -->
 						</item>
 						<item chance="2.0">
-							<item id="730" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+							<item id="730" count="1" /> <!-- Scroll: Enchant A-grade Armor -->
 						</item>
 						<item chance="0.50">
-							<item id="729" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+							<item id="729" count="1" /> <!-- Scroll: Enchant A-grade Weapon -->
 						</item>
 						<item chance="3.00">
 							<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
@@ -4214,24 +4214,24 @@
 							<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 						</item>
 						<item chance="0.03">
-							<item id="4639" count="1" /> <!-- Red Soul Crystal - Stage 10 -->
+							<item id="4639" count="1" /> <!-- Red Soul Crystal Lv. 10 -->
 						</item>
 						<item chance="0.03">
-							<item id="4650" count="1" /> <!-- Green Soul Crystal - Stage 10 -->
+							<item id="4650" count="1" /> <!-- Green Soul Crystal Lv. 10 -->
 						</item>
 						<item chance="0.03">
-							<item id="4661" count="1" /> <!-- Blue Soul Crystal - Stage 10 -->
+							<item id="4661" count="1" /> <!-- Blue Soul Crystal Lv. 10 -->
 						</item>
 					</value>
 					<value level="6">
 						<item chance="93.00">
-							<item id="1539" count="20" /> <!-- Major Healing Potion -->
+							<item id="1539" count="20" /> <!-- Major HP Replenishing Potion -->
 						</item>
 						<item chance="2.0">
-							<item id="730" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+							<item id="730" count="1" /> <!-- Scroll: Enchant A-grade Armor -->
 						</item>
 						<item chance="0.50">
-							<item id="729" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+							<item id="729" count="1" /> <!-- Scroll: Enchant A-grade Weapon -->
 						</item>
 						<item chance="3.00">
 							<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
@@ -4240,13 +4240,13 @@
 							<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 						</item>
 						<item chance="0.03">
-							<item id="4639" count="1" /> <!-- Red Soul Crystal - Stage 10 -->
+							<item id="4639" count="1" /> <!-- Red Soul Crystal Lv. 10 -->
 						</item>
 						<item chance="0.03">
-							<item id="4650" count="1" /> <!-- Green Soul Crystal - Stage 10 -->
+							<item id="4650" count="1" /> <!-- Green Soul Crystal Lv. 10 -->
 						</item>
 						<item chance="0.03">
-							<item id="4661" count="1" /> <!-- Blue Soul Crystal - Stage 10 -->
+							<item id="4661" count="1" /> <!-- Blue Soul Crystal Lv. 10 -->
 						</item>
 					</value>
 				</items>
@@ -4392,7 +4392,7 @@
 		</effects>
 	</skill>
 	<skill id="2284" toLevel="1" name="Herb of Critical Attack">
-		<!-- Temporarily increases Critical Rate. Effect 3. -->
+		<!-- Temporarily increases Critical Rate for standard attacks. Effect 3. -->
 		<icon>icon.etc_critical_herb_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>3</abnormalLevel>
@@ -4439,7 +4439,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2286" toLevel="6" name="Scroll: Recovery (No-grade)">
+	<skill id="2286" toLevel="6" name="No-grade Scroll: Recovery">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -4485,7 +4485,7 @@
 			<effect name="Recovery" />
 		</effects>
 	</skill>
-	<skill id="2287" toLevel="7" name="Elixir of Life (No-grade)">
+	<skill id="2287" toLevel="7" name="No-grade Elixir of Life">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -4536,7 +4536,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2288" toLevel="7" name="Elixir of Mind (No-grade)">
+	<skill id="2288" toLevel="7" name="No-grade Elixir of Mind">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -4595,7 +4595,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2289" toLevel="7" name="Elixir of CP (No-grade)">
+	<skill id="2289" toLevel="7" name="No-grade Elixir of CP">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -4689,22 +4689,22 @@
 						<item id="6407" count="5" /> <!-- Large Firecracker -->
 					</item>
 					<item chance="0.002">
-						<item id="5577" count="1" /> <!-- Red Soul Crystal - Stage 11 -->
+						<item id="5577" count="1" /> <!-- Red Soul Crystal Lv. 11 -->
 					</item>
 					<item chance="0.002">
-						<item id="5578" count="1" /> <!-- Green Soul Crystal - Stage 11 -->
+						<item id="5578" count="1" /> <!-- Green Soul Crystal Lv. 11 -->
 					</item>
 					<item chance="0.002">
-						<item id="5579" count="1" /> <!-- Blue Soul Crystal - Stage 11 -->
+						<item id="5579" count="1" /> <!-- Blue Soul Crystal Lv. 11 -->
 					</item>
 					<item chance="0.001">
-						<item id="5580" count="1" /> <!-- Red Soul Crystal - Stage 12 -->
+						<item id="5580" count="1" /> <!-- Red Soul Crystal Lv. 12 -->
 					</item>
 					<item chance="0.001">
-						<item id="5581" count="1" /> <!-- Green Soul Crystal - Stage 12 -->
+						<item id="5581" count="1" /> <!-- Green Soul Crystal Lv. 12 -->
 					</item>
 					<item chance="0.001">
-						<item id="5582" count="1" /> <!-- Blue Soul Crystal - Stage 12 -->
+						<item id="5582" count="1" /> <!-- Blue Soul Crystal Lv. 12 -->
 					</item>
 				</items>
 			</effect>

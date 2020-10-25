@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="24300" level="85" type="Npc" name="Lurin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -76,14 +76,14 @@
 			<height normal="29.4" />
 		</collision>
 	</npc>
-	<npc id="24304" level="108" type="Monster" name="Groz Kropiora">
+	<npc id="24304" level="112" type="Monster" name="Groz Kropiora">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="2941100928" sp="2636064" />
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7161240.455145" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6269" magical="3641" />
+			<vitals hp="261623.121387283" hpRegen="9.5" mp="2890.42904290429" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -95,45 +95,73 @@
 			<height normal="36.1" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4116" level="10" /> <!-- Magic Attack Resistance -->
-			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
-			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
-			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
 			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
+			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="32677" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17443" min="1" max="1" chance="0.03" /> <!-- Eternal Stockings - Robe -->
-				<item id="57" min="46454" max="108354" chance="70" /> <!-- Adena -->
-				<item id="35351" min="1" max="1" chance="0.75" /> <!-- Eternal Stocking Ingredient -->
-				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-				<item id="35475" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3285" max="7658" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36549" min="1" max="1" chance="2.272" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="81344" min="1" max="1" chance="2.296" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.92" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24305" level="109" type="Monster" name="Groz Krotania">
+	<npc id="24305" level="112" type="Monster" name="Groz Krotania">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3307195160" sp="2970250" />
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7712104.32903" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6625" magical="3848" />
+			<vitals hp="261623.121387283" hpRegen="9.5" mp="2890.42904290429" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -145,45 +173,73 @@
 			<height normal="36.1" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4116" level="10" /> <!-- Magic Attack Resistance -->
-			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
-			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
-			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
 			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
+			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="32677" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17442" min="1" max="1" chance="0.03" /> <!-- Eternal Tunic - Robe -->
-				<item id="57" min="47369" max="110528" chance="70" /> <!-- Adena -->
-				<item id="35350" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Ingredient -->
-				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-				<item id="35474" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3285" max="7658" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36549" min="1" max="1" chance="2.325" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="81344" min="1" max="1" chance="2.281" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.91" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24306" level="109" type="Monster" name="Groz Krophy">
+	<npc id="24306" level="112" type="Monster" name="Groz Krophy">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3307195160" sp="2970250" />
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7712104.32903" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6625" magical="3848" />
+			<vitals hp="261623.121387283" hpRegen="9.5" mp="2890.42904290429" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -195,45 +251,73 @@
 			<height normal="84.75" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4116" level="10" /> <!-- Magic Attack Resistance -->
-			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
-			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
-			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
 			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
+			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="32677" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Helios Shooter -->
-				<item id="57" min="47369" max="110528" chance="70" /> <!-- Adena -->
-				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
-				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-				<item id="35458" min="1" max="1" chance="0.03" /> <!-- Recipe: Helios Shooter (60%) -->
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3285" max="7658" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36549" min="1" max="1" chance="2.335" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="81344" min="1" max="1" chance="2.334" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.22" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24307" level="110" type="Monster" name="Groz Krotany">
+	<npc id="24307" level="112" type="Monster" name="Groz Krotany">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3680457000" sp="3303300" />
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8262970.09566" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6981" magical="4055" />
+			<vitals hp="261623.121387283" hpRegen="9.5" mp="2890.42904290429" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -245,37 +329,63 @@
 			<height normal="80.25" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4116" level="10" /> <!-- Magic Attack Resistance -->
-			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
-			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
-			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
 			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
+			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="32677" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17421" min="1" max="1" chance="0.003" /> <!-- Helios Stormer -->
-				<item id="57" min="48285" max="112817" chance="70" /> <!-- Adena -->
-				<item id="35332" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Fragment -->
-				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-				<item id="19448" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3285" max="7658" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36549" min="1" max="1" chance="1.532" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="45932" min="1" max="1" chance="1.031" /> <!-- Top-grade Spirit Stone -->
-				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="81344" min="1" max="1" chance="2.326" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.34" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24308" level="110" type="Monster" name="Water Drake" title="Fafurion's Henchman">
@@ -314,398 +424,25 @@
 			<drop>
 				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Helios Thrower -->
 				<item id="57" min="48285" max="112817" chance="70" /> <!-- Adena -->
-				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Fragment -->
-				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-				<item id="19448" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="19448" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 				<item id="35457" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Thrower (60%) -->
 			</drop>
 			<spoil>
-				<item id="36549" min="1" max="1" chance="1.528" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="45932" min="1" max="1" chance="1.059" /> <!-- Top-grade Spirit Stone -->
-				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="45932" min="1" max="1" chance="1.059" /> <!-- Top-grade Weapon Augmenting Stone -->
 			</spoil>
 			<lucky>
 				<item id="48979" min="1" max="3" chance="46.18" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24309" level="107" type="Monster" name="Krophy">
-		<parameters>
-			<skill name="Skill01_ID" id="32676" level="1" />
-			<param name="Skill01_Probablity" value="2000" />
-		</parameters>
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<acquire exp="222117927" sp="199899" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="314766.01716" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5913" magical="3434" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>FOS</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="28.8" />
-			<height normal="43.8" />
-		</collision>
-		<skillList>
-			<skill id="32676" level="1" /> <!-- Spiz Strike -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="5684" max="13269" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
-				<item id="35327" min="1" max="1" chance="0.3" /> <!-- Helios Shaper Fragment -->
-				<item id="36520" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather -->
-				<item id="35451" min="1" max="1" chance="0.003" /> <!-- Recipe: Helios Shaper (60%) -->
-			</drop>
-			<spoil>
-				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
-				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.62" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24310" level="107" type="Monster" name="Krotany">
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<acquire exp="222117927" sp="199899" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="314766.01716" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5913" magical="3434" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>FOS</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="46.4" />
-			<height normal="41.4" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy Armor -->
-				<item id="57" min="5684" max="13269" chance="70" /> <!-- Adena -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="35339" min="1" max="1" chance="0.075" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
-			</drop>
-			<spoil>
-				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
-				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.74" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24311" level="106" type="Monster" name="Kropiora">
-		<parameters>
-			<skill name="Skill01_ID" id="32676" level="1" />
-			<param name="Skill01_Probablity" value="2000" />
-		</parameters>
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<acquire exp="192829535" sp="173483" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="288535.726035" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5557" magical="3227" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>FOS</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="30" />
-			<height normal="20" />
-		</collision>
-		<skillList>
-			<skill id="32676" level="1" /> <!-- Spiz Strike -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="17433" min="1" max="1" chance="0.0075" /> <!-- Eternal Gauntlets - Heavy Armor -->
-				<item id="57" min="5570" max="13011" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
-				<item id="35341" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="36520" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather -->
-				<item id="35465" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-			</drop>
-			<spoil>
-				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
-				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.84" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24312" level="106" type="Monster" name="Krotania">
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<acquire exp="192829535" sp="173483" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="288535.726035" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5557" magical="3227" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>FOS</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="30" />
-			<height normal="20" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="17435" min="1" max="1" chance="0.0075" /> <!-- Eternal Shield - Heavy Armor -->
-				<item id="57" min="5570" max="13011" chance="70" /> <!-- Adena -->
-				<item id="35343" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
-				<item id="35467" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shield (60%) -->
-			</drop>
-			<spoil>
-				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
-				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.91" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24313" level="109" type="Monster" name="Spiz Krophy">
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<acquire exp="283699270" sp="255322" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="367227.230325" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6625" magical="3848" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>FOS</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="28.8" />
-			<height normal="43.8" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="5913" max="13797" chance="70" /> <!-- Adena -->
-				<item id="35328" min="1" max="1" chance="0.3" /> <!-- Helios Cutter Fragment -->
-				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
-				<item id="36525" min="1" max="1" chance="0.03" /> <!-- Durandil -->
-				<item id="35452" min="1" max="1" chance="0.003" /> <!-- Recipe: Helios Cutter (60%) -->
-			</drop>
-			<spoil>
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="48.15" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24314" level="109" type="Monster" name="Spiz Krotany">
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<acquire exp="283699270" sp="255322" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="367227.230325" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6625" magical="3848" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>FOS</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="46.4" />
-			<height normal="41.4" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy Armor -->
-				<item id="57" min="5913" max="13797" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-				<item id="35340" min="1" max="1" chance="0.075" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="36545" min="1" max="1" chance="0.0075" /> <!-- Durandil Wire -->
-				<item id="35464" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Gaiters (60%) -->
-			</drop>
-			<spoil>
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.04" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24315" level="108" type="Monster" name="Spiz Kropiora">
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<acquire exp="252403361" sp="227098" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="340997.570115" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6269" magical="3641" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>FOS</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="30" />
-			<height normal="20" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="17430" min="1" max="1" chance="0.003" /> <!-- Eternal Helmet - Heavy Armor -->
-				<item id="57" min="5799" max="13526" chance="70" /> <!-- Adena -->
-				<item id="35338" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Ingredient -->
-				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
-				<item id="36525" min="1" max="1" chance="0.03" /> <!-- Durandil -->
-				<item id="35462" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Helmet (60%) -->
-			</drop>
-			<spoil>
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.91" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24316" level="108" type="Monster" name="Spiz Krotania">
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<acquire exp="252403361" sp="227098" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="340997.570115" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6269" magical="3641" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>FOS</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="30" />
-			<height normal="20" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots - Heavy Armor -->
-				<item id="57" min="5799" max="13526" chance="70" /> <!-- Adena -->
-				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-				<item id="36545" min="1" max="1" chance="0.0075" /> <!-- Durandil Wire -->
-				<item id="35466" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Boots (60%) -->
-			</drop>
-			<spoil>
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.20" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24317" level="115" type="Monster" name="Temple Guard Captain">
+	<npc id="24317" level="120" type="Monster" name="Temple Guard Captain">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="7534890850" sp="54606960" />
+		<acquire exp="1750248000" sp="1575216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="11956767.95688" hpRegen="9.5" mp="36834.809" mpRegen="3.3" />
-			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8761" magical="5090" />
+			<vitals hp="2614895.95375723" hpRegen="9.5" mp="3221.78217821782" mpRegen="3.3" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
@@ -724,23 +461,60 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33086" level="2" /> <!-- Enhanced Dragon Scale -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Night of Temple -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
 			<skill id="16177" level="6" /> <!-- Knock Down Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="54921" max="128184" chance="70" /> <!-- Adena -->
-				<item id="36550" min="1" max="1" chance="0.25" /> <!-- Weapon Fragment (Top-grade) -->
-				<item id="36555" min="1" max="1" chance="0.25" /> <!-- Armor Fragment (Top-grade) -->
-				<item id="80251" min="1" max="1" chance="0.03" /> <!-- Recipe: Krishna Dicing Death (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="3" chance="1.469" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="3" chance="1.463" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="2" max="6" chance="1.41" /> <!-- Angel s Feather -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="81344" min="1" max="1" chance="19.01" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24318" level="120" type="Monster" name="Temple Guard Captain">
@@ -773,117 +547,18 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
-				<item id="36540" min="1" max="1" chance="0.75" /> <!-- Exquisite Leather Braid -->
 				<item id="80251" min="1" max="1" chance="0.075" /> <!-- Recipe: Krishna Cutter (60%) -->
 			</drop>
-			<spoil>
-				<item id="36564" min="1" max="1" chance="2.744" /> <!-- Greater Synthetic Cokes -->
-			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24319" level="113" type="Monster" name="Elite Guardian Warrior">
+	<npc id="24321" level="120" type="Monster" name="Temple Patrol Guard">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="4294636077" sp="3856238" />
+		<acquire exp="1750248000" sp="1575216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7230096.6255" hpRegen="9.5" mp="35881.884" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="75" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>TOF</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="23.8" />
-			<height normal="61.175" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16177" level="10" /> <!-- Knock Down Resistance -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="35184" max="82095" chance="70" /> <!-- Adena -->
-				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
-				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-				<item id="80250" min="1" max="1" chance="0.03" /> <!-- Recipe: Krishna Shaper (60%) -->
-			</drop>
-			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.19" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24320" level="113" type="Monster" name="Elite Guardian Archer">
-		<race>DRAGON</race>
-		<sex>MALE</sex>
-		<equipment rhand="15302" />
-		<acquire exp="4294636077" sp="3856238" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7230096.6255" hpRegen="9.5" mp="35881.884" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="75" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>TOF</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="23.8" />
-			<height normal="61.6" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16177" level="10" /> <!-- Knock Down Resistance -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="35184" max="82095" chance="70" /> <!-- Adena -->
-				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
-				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-				<item id="80251" min="1" max="1" chance="0.03" /> <!-- Recipe: Krishna Dicing Death (60%) -->
-			</drop>
-			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.73" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24321" level="119" type="Monster" name="Temple Patrol Guard">
-		<race>DRAGON</race>
-		<sex>MALE</sex>
-		<acquire exp="4493214495" sp="4035885" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="734083.48263" hpRegen="9.5" mp="3907.398" mpRegen="3.3" />
-			<attack physical="102782" magical="96456" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="10185" magical="5918" />
+			<vitals hp="2614895.95375723" hpRegen="9.5" mp="3221.78217821782" mpRegen="3.3" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
@@ -902,26 +577,66 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33086" level="2" /> <!-- Enhanced Dragon Scale -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Night of Temple -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="37944" max="88743" chance="70" /> <!-- Adena -->
-				<item id="36530" min="1" max="1" chance="1.735" /> <!-- Exquisite Fiber -->
-				<item id="80278" min="1" max="1" chance="1.246" /> <!-- Krishna Shaper Fragment -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="3" chance="1.501" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="2" max="6" chance="1.447" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="3" chance="1.428" /> <!-- Dragon Scales -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36519" min="1" max="1" chance="73.51" /> <!-- Quality Leather -->
+				<item id="81344" min="1" max="1" chance="18.44" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24322" level="119" type="Monster" name="Temple Knight Recruit">
+	<npc id="24322" level="120" type="Monster" name="Temple Knight Recruit">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="4493214495" sp="4035885" />
+		<acquire exp="1750248000" sp="1575216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="734083.48263" hpRegen="9.5" mp="3907.398" mpRegen="3.3" />
-			<attack physical="102782" magical="96456" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="10185" magical="5918" />
+			<vitals hp="2614895.95375723" hpRegen="9.5" mp="3221.78217821782" mpRegen="3.3" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
@@ -940,24 +655,64 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33086" level="2" /> <!-- Enhanced Dragon Scale -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Night of Temple -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="37944" max="88743" chance="70" /> <!-- Adena -->
-				<item id="80279" min="1" max="1" chance="1.273" /> <!-- Krishna Cutter Fragment -->
-				<item id="36535" min="1" max="1" chance="0.75" /> <!-- Quality Braid -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
+				<item id="81219" min="2" max="6" chance="1.441" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="3" chance="1.429" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.4" /> <!-- Dragon Scales -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36539" min="1" max="1" chance="18.25" /> <!-- Quality Leather Braid -->
+				<item id="81344" min="1" max="1" chance="19.67" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="24323" level="120" type="Monster" name="Temple Guard">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="4633012800" sp="4161600" />
+		<acquire exp="1750248000" sp="1575216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<vitals hp="2614895.95375723" hpRegen="9.5" mp="3221.78217821782" mpRegen="3.3" />
 			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="10541" magical="6125" />
 			<speed>
@@ -978,25 +733,64 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33086" level="2" /> <!-- Enhanced Dragon Scale -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Night of Temple -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
-				<item id="80297" min="1" max="1" chance="1.152" /> <!-- Leviathan Leather Leggings Material -->
-				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
-				<item id="80269" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Leather Leggings (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="3" chance="1.504" /> <!-- Dragon Scales -->
+				<item id="81219" min="2" max="6" chance="1.497" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="3" chance="1.447" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36529" min="1" max="1" chance="78.79" /> <!-- Quality Fiber -->
+				<item id="81344" min="1" max="1" chance="18.46" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="24324" level="120" type="Monster" name="Temple Guardian Warrior">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="4633012800" sp="4161600" />
+		<acquire exp="1750248000" sp="1575216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<vitals hp="2614895.95375723" hpRegen="9.5" mp="3221.78217821782" mpRegen="3.3" />
 			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="10541" magical="6125" />
 			<speed>
@@ -1017,16 +811,55 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33086" level="2" /> <!-- Enhanced Dragon Scale -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Night of Temple -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
-				<item id="80298" min="1" max="1" chance="3.072" /> <!-- Leviathan Leather Glove Material -->
-				<item id="36545" min="1" max="1" chance="0.3" /> <!-- Durandil Wire -->
-				<item id="80270" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Leather Gloves (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
+				<item id="81219" min="2" max="6" chance="1.523" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="3" chance="1.488" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="3" chance="1.415" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="24.15" /> <!-- Durable Braid -->
+				<item id="81344" min="1" max="1" chance="19.51" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1037,9 +870,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="4633012800" sp="4161600" />
+		<acquire exp="1750248000" sp="1575216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<vitals hp="2614895.95375723" hpRegen="9.5" mp="3221.78217821782" mpRegen="3.3" />
 			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="10541" magical="6125" />
 			<speed>
@@ -1058,19 +891,59 @@
 			<height normal="36.95" />
 		</collision>
 		<skillList>
-			<skill id="32697" level="1" /> <!-- Aqua Spike -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33086" level="2" /> <!-- Enhanced Dragon Scale -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Night of Temple -->
+			<skill id="32697" level="1" /> <!-- Aqua Spike -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
-				<item id="80295" min="1" max="1" chance="1.985" /> <!-- Leviathan Leather Helmet Material -->
-				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
-				<item id="80267" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Leather Helmet (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="3" chance="1.492" /> <!-- Dragon Scales -->
+				<item id="81219" min="2" max="6" chance="1.478" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="3" chance="1.401" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="28.55" /> <!-- Orichalcum -->
+				<item id="81344" min="1" max="1" chance="19.41" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1081,9 +954,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="4633012800" sp="4161600" />
+		<acquire exp="1750248000" sp="1575216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<vitals hp="2614895.95375723" hpRegen="9.5" mp="3221.78217821782" mpRegen="3.3" />
 			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="10541" magical="6125" />
 			<speed>
@@ -1102,131 +975,74 @@
 			<height normal="36.95" />
 		</collision>
 		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33086" level="2" /> <!-- Enhanced Dragon Scale -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Night of Temple -->
 			<skill id="32697" level="1" /> <!-- Aqua Spike -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
-				<item id="80296" min="1" max="1" chance="0.75" /> <!-- Leviathan Leather Armor Material -->
-				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
-				<item id="80268" min="1" max="1" chance="0.0075" /> <!-- Recipe: Leviathan Leather Armor (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
+				<item id="81219" min="2" max="6" chance="1.512" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="3" chance="1.416" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="3" chance="1.408" /> <!-- Oriharukon Ore -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36544" min="1" max="1" chance="13.23" /> <!-- Orichalcum Wire -->
+				<item id="81344" min="1" max="1" chance="18.85" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24327" level="112" type="Monster" name="Temple Priest">
-		<parameters>
-			<skill name="Skill01_ID" id="32697" level="1" />
-			<param name="Skill01_Probablity" value="2000" />
-		</parameters>
-		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="2739597056" sp="2458624" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3442903.785915" hpRegen="9.5" mp="35405.827" mpRegen="3.3" />
-			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7693" magical="4469" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="HEALER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>TOF</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="14.45" />
-			<height normal="36.95" />
-		</collision>
-		<skillList>
-			<skill id="32697" level="1" /> <!-- Aqua Spike -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="16177" level="6" /> <!-- Knock Down Resistance -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="34540" max="80522" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="5.642" /> <!-- Quality Leather -->
-				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
-				<item id="80298" min="1" max="1" chance="0.075" /> <!-- Leviathan Leather Glove Material -->
-				<item id="80270" min="1" max="1" chance="0.003" /> <!-- Recipe: Leviathan Leather Gloves (60%) -->
-			</drop>
-			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.22" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24328" level="114" type="Monster" name="Temple Guardian Priest">
-		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="3434335956" sp="3080052" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3795799.782015" hpRegen="9.5" mp="36358.752" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<ai type="HEALER" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>TOF</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="14.45" />
-			<height normal="36.95" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="16177" level="6" /> <!-- Knock Down Resistance -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="35899" max="83740" chance="70" /> <!-- Adena -->
-				<item id="36539" min="1" max="1" chance="1.481" /> <!-- Quality Leather Braid -->
-				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
-				<item id="80297" min="1" max="1" chance="0.075" /> <!-- Leviathan Leather Leggings Material -->
-				<item id="80269" min="1" max="1" chance="0.003" /> <!-- Recipe: Leviathan Leather Leggings (60%) -->
-			</drop>
-			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.11" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="24329" level="119" type="Monster" name="Starving Water Dragon">
+	<npc id="24329" level="120" type="Monster" name="Starving Water Dragon">
 		<parameters>
 			<skill name="Skill01_ID" id="32704" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="4493214495" sp="4035885" />
+		<acquire exp="1750248000" sp="1575216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="734083.48263" hpRegen="9.5" mp="3907.398" mpRegen="3.3" />
-			<attack physical="102782" magical="96456" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="10185" magical="5918" />
+			<vitals hp="2614895.95375723" hpRegen="9.5" mp="3221.78217821782" mpRegen="3.3" />
+			<attack physical="617815.429469286" magical="1368.16567732246" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5043.54066985646" magical="1934.40396671246" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1243,19 +1059,58 @@
 			<height normal="25" />
 		</collision>
 		<skillList>
-			<skill id="32704" level="1" /> <!-- Bite Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33086" level="2" /> <!-- Enhanced Dragon Scale -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Night of Temple -->
+			<skill id="32704" level="1" /> <!-- Bite Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="37944" max="88743" chance="70" /> <!-- Adena -->
-				<item id="80299" min="1" max="1" chance="3.0115" /> <!-- Leviathan Leather Boots Material -->
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-				<item id="80271" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Leather Boots (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="3" chance="1.483" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="2" max="6" chance="1.462" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="3" chance="1.425" /> <!-- Dragon Scales -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36549" min="1" max="1" chance="3.678" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="81344" min="1" max="1" chance="19.53" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1333,764 +1188,6 @@
 		<collision>
 			<radius normal="22" />
 			<height normal="55" />
-		</collision>
-	</npc>
-	<npc id="24334" level="103" type="Monster" name="Tanta Lizardman Scout">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="98" /> 
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="13" />
-			<height normal="35" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24335" level="103" type="Monster" name="Tanta Lizardman Warrior">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="8682" /> 
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="20" />
-			<height normal="40" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24336" level="103" type="Monster" name="Tanta Lizardman Soldier">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="20" />
-			<height normal="40.25" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24337" level="103" type="Monster" name="Tanta Lizardman Berserker">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="28" />
-			<height normal="37.5" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24338" level="103" type="Monster" name="Tanta Lizardman Archer">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="15302" /> 
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="20" />
-			<height normal="40.25" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24339" level="103" type="Monster" name="Tanta Lizardman Wizard">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="7" /> 
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="43" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="13" />
-			<height normal="35" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24340" level="103" type="Monster" name="Tanta Lizardman Summoner">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="43" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="29" />
-			<height normal="44" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24341" level="103" type="Monster" name="Tanta Lizardman Guard" title="Ugoros' Escort">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="98" /> 
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="13" />
-			<height normal="35" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24342" level="104" type="Monster" name="Priest Ugoros" title="Tanta Lizardmen">
-		<parameters>
-			<param name="MoveAroundSocial" value="80" />
-			<param name="MoveAroundSocial1" value="80" />
-			<param name="MoveAroundSocial2" value="80" />
-			<minions name="Privates">
-				<npc id="24341" count="5" respawnTime="0" weightPoint="1" />
-			</minions>
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="PhysicalSpecial" id="4073" level="6" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="10172398068" sp="9155033" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1665362.603085" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="90" />
-				<run ground="150" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="60" />
-			<height normal="81.75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24343" level="103" type="Monster" name="Sel Mahum Drill Sergeant">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<collision>
-			<radius normal="27" />
-			<height normal="31.5" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24344" level="103" type="Monster" name="Sel Mahum Training Officer">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<collision>
-			<radius normal="29" />
-			<height normal="33.5" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24345" level="103" type="Monster" name="Sel Mahum Drill Sergeant">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="29" />
-			<height normal="37" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24346" level="103" type="Monster" name="Sel Mahum Drill Sergeant">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="27" />
-			<height normal="31" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24347" level="103" type="Monster" name="Sel Mahum Warrior">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="29" />
-			<height normal="37" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24348" level="103" type="Monster" name="Sel Mahum Recruit">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="27" />
-			<height normal="31.5" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24349" level="103" type="Monster" name="Sel Mahum Soldier">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="29" />
-			<height normal="33.5" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24350" level="103" type="Monster" name="Sel Mahum Recruit">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="60" />
-				<run ground="150" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="29" />
-			<height normal="37" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24351" level="103" type="Monster" name="Sel Mahum Soldier">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="60" />
-				<run ground="150" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="29" />
-			<height normal="37" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24352" level="103" type="Monster" name="Sel Mahum Recruit">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="27" />
-			<height normal="31" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24353" level="103" type="Monster" name="Sel Mahum Soldier">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="60" />
-				<run ground="150" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="27" />
-			<height normal="31" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24354" level="103" type="Monster" name="Sel Mahum Squad Leader">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="29" />
-			<height normal="37" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24355" level="103" type="Monster" name="Sel Mahum Squad Leader">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1408114244" sp="1267196" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="308400.715725" hpRegen="9.5" mp="3600.84" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8049" magical="4676" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="29" />
-			<height normal="37" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4007" max="9350" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24356" level="103" type="Monster" name="Sel Mahum Squad Leader">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1453199724" sp="1307788" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="333072.6468" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="27" />
-			<height normal="31" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24357" level="104" type="Monster" name="Keltron" title="Sel Mahum Chief">
-		<parameters>
-			<param name="MoveAroundSocial" value="80" />
-			<param name="MoveAroundSocial1" value="80" />
-			<param name="MoveAroundSocial2" value="80" />
-			<minions name="Privates">
-				<npc id="24358" count="6" respawnTime="0" weightPoint="1" />
-			</minions>
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="PhysicalSpecial" id="4073" level="6" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="10172398068" sp="9155033" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1665362.603085" hpRegen="9.5" mp="3651.933" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
-			<speed>
-				<walk ground="49" />
-				<run ground="150" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="43.5" />
-			<height normal="51.75" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="4150" max="9680" chance="70" /> <!-- Adena -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="24358" level="103" type="Monster" name="Keltron's Guard" title="Keltron's Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="29" />
-			<height normal="37" />
 		</collision>
 	</npc>
 	<npc id="24359" level="85" type="Npc" name="Fury Tier Weiss">
@@ -2207,25 +1304,6 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="24365" level="85" type="Npc" name="Sel Mahum Chef">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="35" />
-			<height normal="32.5" />
-		</collision>
-	</npc>
 	<npc id="24366" level="85" type="Npc" name="Priest of Purification" title="Zariche">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
@@ -2340,49 +1418,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="24372" level="107" type="Monster" name="Crokian Lad">
-		<parameters>
-			<skill name="Skill01_ID" id="32862" level="1" />
-			<param name="Skill01_Probablity" value="2000" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="5128" /> 
-		<acquire exp="1138774785" sp="1024800" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
-			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5913" magical="3434" />
-			<speed>
-				<walk ground="18" />
-				<run ground="174" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="19.8" />
-			<height normal="32.2" />
-		</collision>
-		<skillList>
-			<skill id="32862" level="1" /> <!-- Critical Strike -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3701" max="8640" chance="70" /> <!-- Adena -->
-				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="36520" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather -->
-				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
-				<item id="35468" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-			</drop>
-			<spoil>
-				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
-		</dropLists>
-	</npc>
-	<npc id="24373" level="107" type="Monster" name="Dailaon Lad">
+	<npc id="24373" level="108" type="Monster" name="Dailaon Lad">
 		<parameters>
 			<skill name="Skill01_ID" id="32861" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -2390,11 +1426,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5127" /> 
-		<acquire exp="1161546846" sp="1045294" />
+		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
-			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
-			<defence physical="5913" magical="3434" />
+			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="316176.675333863" magical="852.565665508686" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
+			<defence physical="3093.40101522843" magical="1187.78375299459" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
@@ -2407,86 +1443,57 @@
 			<height normal="31.1" />
 		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="32861" level="1" /> <!-- Rapid Throw -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="3134" max="7315" chance="70" /> <!-- Adena -->
-				<item id="35338" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Ingredient -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+				<item id="81344" min="1" max="1" chance="2.103" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24374" level="108" type="Monster" name="Crokian Lad Warrior" title="Watcher of Alligator Island">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="1176396048" sp="1058742" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
-			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6269" magical="3641" />
-			<speed>
-				<walk ground="18" />
-				<run ground="174" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="28.8" />
-			<height normal="48.2" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-		</skillList>
-	</npc>
-	<npc id="24375" level="107" type="Monster" name="Farhite Lad">
-		<parameters>
-			<skill name="Skill01_ID" id="32862" level="1" />
-			<param name="Skill01_Probablity" value="2000" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="5131" /> 
-		<acquire exp="1138774785" sp="1024800" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
-			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5913" magical="3434" />
-			<speed>
-				<walk ground="15" />
-				<run ground="174" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="17.6" />
-			<height normal="34.4" />
-		</collision>
-		<skillList>
-			<skill id="32862" level="1" /> <!-- Critical Strike -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3701" max="8640" chance="70" /> <!-- Adena -->
-				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="36520" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather -->
-				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
-				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-			</drop>
-			<spoil>
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
-		</dropLists>
-	</npc>
-	<npc id="24376" level="107" type="Monster" name="Nos Lad">
+	<npc id="24376" level="108" type="Monster" name="Nos Lad">
 		<parameters>
 			<skill name="Skill01_ID" id="32862" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
@@ -2494,11 +1501,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="128" /> 
-		<acquire exp="1161546846" sp="1045294" />
+		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
-			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5913" magical="3434" />
+			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
+			<attack physical="316176.675333863" magical="852.565665508686" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3093.40101522843" magical="1187.78375299459" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
@@ -2510,18 +1517,53 @@
 			<height normal="35.25" />
 		</collision>
 		<skillList>
-			<skill id="32862" level="1" /> <!-- Critical Strike -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32862" level="1" /> <!-- Critical Strike -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="3134" max="7315" chance="70" /> <!-- Adena -->
-				<item id="35339" min="1" max="1" chance="0.075" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="81344" min="1" max="1" chance="2.171" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2535,7 +1577,7 @@
 		<equipment rhand="5131" /> 
 		<acquire exp="8399456352" sp="7559439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1049220.47781" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<vitals hp="961279.768786127" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
 			<speed>
@@ -2549,15 +1591,55 @@
 			<height normal="65" />
 		</collision>
 		<skillList>
-			<skill id="32870" level="1" /> <!-- Stunning Strike -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
 			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="32870" level="1" /> <!-- Stunning Strike -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="80763" min="1" max="1" chance="100" /> <!-- Elite Monster Reward Box -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="2.122" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
@@ -2575,7 +1657,7 @@
 		<equipment rhand="5128" /> 
 		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
 			<speed>
@@ -2589,19 +1671,53 @@
 			<height normal="32.2" />
 		</collision>
 		<skillList>
-			<skill id="32862" level="1" /> <!-- Critical Strike -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32862" level="1" /> <!-- Critical Strike -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17430" min="1" max="1" chance="0.0075" /> <!-- Eternal Helmet -->
-				<item id="57" min="3296" max="7687" chance="70" /> <!-- Adena -->
-				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35462" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
+				<item id="81344" min="1" max="1" chance="2.194" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -2620,7 +1736,7 @@
 		<equipment rhand="5127" /> 
 		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<vitals hp="192256.069364162" hpRegen="9.5" mp="26106.2706270627" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
 			<speed>
@@ -2635,19 +1751,53 @@
 			<height normal="31.1" />
 		</collision>
 		<skillList>
-			<skill id="32861" level="1" /> <!-- Rapid Throw -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32861" level="1" /> <!-- Rapid Throw -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="3296" max="7687" chance="70" /> <!-- Adena -->
-				<item id="35328" min="1" max="1" chance="0.3" /> <!-- Helios Cutter Fragment -->
-				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
 			</drop>
 			<spoil>
-				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="81344" min="1" max="1" chance="2.172" /> <!-- Augmenting Stone Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2656,7 +1806,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="107.886465" hpRegen="2" mp="85.155" mpRegen="0.9" />
+			<vitals hp="107.88643533123" hpRegen="2" mp="85.1581508515815" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="44.44444" magical="32.52252" />
 			<speed>
@@ -2683,7 +1833,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="107.886465" hpRegen="2" mp="85.155" mpRegen="0.9" />
+			<vitals hp="107.88643533123" hpRegen="2" mp="85.1581508515815" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="44.44444" magical="32.52252" />
 			<speed>
@@ -2710,7 +1860,7 @@
 		<sex>MALE</sex>
 		<acquire exp="20" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="230.283975" hpRegen="2" mp="141.114" mpRegen="0.9" />
+			<vitals hp="230.283911671924" hpRegen="2" mp="141.119221411192" mpRegen="0.9" />
 			<attack physical="19.33758" magical="13.20506" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="61.82527" magical="45.24105" />
 			<speed>
@@ -2737,7 +1887,7 @@
 		<sex>MALE</sex>
 		<acquire exp="20" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="230.283975" hpRegen="2" mp="141.114" mpRegen="0.9" />
+			<vitals hp="230.283911671924" hpRegen="2" mp="141.119221411192" mpRegen="0.9" />
 			<attack physical="19.33758" magical="13.20506" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="61.82527" magical="45.24105" />
 			<speed>
@@ -2764,7 +1914,7 @@
 		<sex>MALE</sex>
 		<acquire exp="46" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="341.95593" hpRegen="2.5" mp="193.829" mpRegen="1.2" />
+			<vitals hp="341.955835962145" hpRegen="2.5" mp="193.836171938362" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="86.87049" magical="63.56806" />
 			<speed>
@@ -2791,7 +1941,7 @@
 		<sex>MALE</sex>
 		<acquire exp="46" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="341.95593" hpRegen="2.5" mp="193.829" mpRegen="1.2" />
+			<vitals hp="341.955835962145" hpRegen="2.5" mp="193.836171938362" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="86.87049" magical="63.56806" />
 			<speed>
@@ -2818,7 +1968,7 @@
 		<sex>MALE</sex>
 		<acquire exp="82" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="514.82664" hpRegen="3.5" mp="288.716" mpRegen="1.5" />
+			<vitals hp="514.826498422713" hpRegen="3.5" mp="288.726682887267" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="108.28767" magical="79.24022" />
 			<speed>
@@ -2845,7 +1995,7 @@
 		<sex>MALE</sex>
 		<acquire exp="82" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="514.82664" hpRegen="3.5" mp="288.716" mpRegen="1.5" />
+			<vitals hp="514.826498422713" hpRegen="3.5" mp="288.726682887267" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
 			<defence physical="108.28767" magical="79.24022" />
 			<speed>
@@ -2872,7 +2022,7 @@
 		<sex>MALE</sex>
 		<acquire exp="82" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="514.82664" hpRegen="3.5" mp="288.716" mpRegen="1.5" />
+			<vitals hp="514.826498422713" hpRegen="3.5" mp="288.726682887267" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="108.28767" magical="79.24022" />
 			<speed>
@@ -2899,7 +2049,7 @@
 		<sex>MALE</sex>
 		<acquire exp="232" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="736.277805" hpRegen="4.5" mp="390.902" mpRegen="1.8" />
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="390.916463909165" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="129.23095" magical="94.5656" />
 			<speed>
@@ -2926,7 +2076,7 @@
 		<sex>MALE</sex>
 		<acquire exp="232" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="736.277805" hpRegen="4.5" mp="390.902" mpRegen="1.8" />
+			<vitals hp="736.277602523659" hpRegen="4.5" mp="390.916463909165" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="129.23095" magical="94.5656" />
 			<speed>
@@ -2957,7 +2107,7 @@
 		<sex>MALE</sex>
 		<acquire exp="712" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="965.930865" hpRegen="4.5" mp="482.545" mpRegen="1.8" />
+			<vitals hp="965.930599369085" hpRegen="4.5" mp="482.562854825629" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="156.55035" magical="114.55675" />
 			<speed>
@@ -2971,8 +2121,8 @@
 			<height normal="35" />
 		</collision>
 		<skillList>
-			<skill id="1178" level="8" />
 			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="1178" level="8" /> <!-- Twister -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -2989,7 +2139,7 @@
 		<sex>MALE</sex>
 		<acquire exp="712" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="965.930865" hpRegen="4.5" mp="482.545" mpRegen="1.8" />
+			<vitals hp="965.930599369085" hpRegen="4.5" mp="482.562854825629" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="156.55035" magical="114.55675" />
 			<speed>
@@ -3003,8 +2153,8 @@
 			<height normal="35" />
 		</collision>
 		<skillList>
-			<skill id="1178" level="8" />
 			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="1178" level="8" /> <!-- Twister -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3021,7 +2171,7 @@
 		<sex>MALE</sex>
 		<acquire exp="712" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="965.930865" hpRegen="4.5" mp="482.545" mpRegen="1.8" />
+			<vitals hp="965.930599369085" hpRegen="4.5" mp="482.562854825629" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="156.55035" magical="114.55675" />
 			<speed>
@@ -3035,8 +2185,8 @@
 			<height normal="35" />
 		</collision>
 		<skillList>
-			<skill id="1178" level="8" />
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="1178" level="8" /> <!-- Twister -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -3049,7 +2199,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1366" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1420.82058" hpRegen="5.5" mp="754.23" mpRegen="2.1" />
+			<vitals hp="1420.82018927445" hpRegen="5.5" mp="754.257907542579" mpRegen="2.1" />
 			<attack physical="261.69549" magical="178.7041" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="186.63569" magical="136.5719" />
 			<speed>
@@ -3076,7 +2226,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1366" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1420.82058" hpRegen="5.5" mp="754.23" mpRegen="2.1" />
+			<vitals hp="1420.82018927445" hpRegen="5.5" mp="754.257907542579" mpRegen="2.1" />
 			<attack physical="261.69549" magical="178.7041" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="186.63569" magical="136.5719" />
 			<speed>
@@ -3103,7 +2253,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3412" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1776.025725" hpRegen="6.5" mp="957.791" mpRegen="2.4" />
+			<vitals hp="1776.02523659306" hpRegen="6.5" mp="957.826439578264" mpRegen="2.4" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="160.17851" />
 			<speed>
@@ -3130,7 +2280,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3412" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1776.025725" hpRegen="6.5" mp="957.791" mpRegen="2.4" />
+			<vitals hp="1776.02523659306" hpRegen="6.5" mp="957.826439578264" mpRegen="2.4" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="160.17851" />
 			<speed>
@@ -3157,7 +2307,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3412" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1776.025725" hpRegen="6.5" mp="957.791" mpRegen="2.4" />
+			<vitals hp="1776.02523659306" hpRegen="6.5" mp="957.826439578264" mpRegen="2.4" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="160.17851" />
 			<speed>
@@ -3184,7 +2334,7 @@
 		<sex>MALE</sex>
 		<acquire exp="8149" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2088.959565" hpRegen="7.5" mp="1137.833" mpRegen="2.7" />
+			<vitals hp="2088.95899053628" hpRegen="7.5" mp="1137.87510137875" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="252.49346" magical="184.76376" />
 			<speed>

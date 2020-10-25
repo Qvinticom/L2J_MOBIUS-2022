@@ -40,6 +40,9 @@ public class PCriticalRateFinalizer implements IStatFunction
 		{
 			// Enchanted legs bonus
 			baseValue += calcEnchantBodyPart(creature, Item.SLOT_LEGS);
+			
+			// Bonus from Homunculus.
+			baseValue += creature.getActingPlayer().getHomunculusCritBonus();
 		}
 		final double dexBonus = creature.getDEX() > 0 ? BaseStat.DEX.calcBonus(creature) : 1.;
 		return validateValue(creature, Stat.defaultValue(creature, stat, baseValue * dexBonus * 10), 0, creature.isPlayer() ? Config.MAX_PCRIT_RATE : Double.MAX_VALUE);

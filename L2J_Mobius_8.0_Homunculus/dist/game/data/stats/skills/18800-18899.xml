@@ -5,8 +5,8 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18801" toLevel="2" name="Dancing Cat's Steps - Stage 1">
-		<!-- Dancing Cat's Steps celebrating racial harmony increase Max HP/ MP/ CP and P. Atk./ M. Atk./ P. Def/ M. Def/ Atk. Spd./ Casting Spd. by $s2 for $s1 Parties with new or returning warriors can also receive a Stage 2 buff with a strong effect. -->
+	<skill id="18801" toLevel="2" name="Dancing Cat's Steps">
+		<!-- For $s1, Max HP/ MP/ CP, P./ M. Atk., P./ M. Def., Atk. Spd./ Casting Spd. +$s2. Parties with new or returning warriors can also get a Lv. 2 buff. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -18,8 +18,8 @@
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="18803" toLevel="24" name="Blessing of Bliss - Stage 1">
-		<!-- You can obtain the item after $s1 h. There are $s2 stages. With a premium buff, you have a slightly higher chance of obtaining items. <Notice> If you die when you receive the item, you cannot obtain the $s3 anniversary blessing buff and items. You also cannot obtain the item if you do not have space in your inventory. -->
+	<skill id="18803" toLevel="24" name="Anniversary Blessing Lv. 1">
+		<!-- You can obtain the item after $s1 h. There are $s2 levels. With a premium buff, you have a slightly higher chance of obtaining items. Note!. The $s3 anniversary blessing buff and items can't be obtained if your character is dead or has no free slots in the inventory. -->
 		<icon>icon.ev_13th</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -66,12 +66,12 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="18809" toLevel="1" name="Magic Flame Festival">
-		<!-- 2nd Magic Fire Festival skill after a successful raid. -->
+		<!-- 2nd Magic Flame Festival skill after a successful raid. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="18810" toLevel="1" name="Magic Flame">
-		<!-- Double-click to send a Magic Fire flying for a chance to get a reward. -->
+		<!-- Double-click to send a Magic Flame flying for a chance to get a reward. -->
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -194,91 +194,91 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="18817" toLevel="1" name="Fish Chilli Stew - WIT">
-		<!-- When used, WIT +3 and LUC +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- WIT +3 and LUC +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18818" toLevel="1" name="Fish Chilli Stew - INT">
-		<!-- When used, INT +3 and LUC +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- INT +3 and LUC +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18819" toLevel="1" name="Fish Chilli Stew - MEN">
-		<!-- When used, MEN +3 and LUC +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- MEN +3 and LUC +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18820" toLevel="1" name="Fish Chilli Stew - DEX">
-		<!-- When used, DEX +3 and LUC +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- DEX+3 and LUC+1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18821" toLevel="1" name="Fish Chilli Stew - STR">
-		<!-- When used, STR +3 and LUC +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- STR +3 and LUC +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18822" toLevel="1" name="Fish Chilli Stew - CON">
-		<!-- When used, CON +3 and LUC +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- CON +3 and LUC +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18823" toLevel="1" name="Fish Cream Stew - WIT">
-		<!-- When used, WIT +3 and CHA +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- WIT +3 and CHA +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18824" toLevel="1" name="Fish Cream Stew - INT">
-		<!-- When used, INT +3 and CHA +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- INT +3 and CHA +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18825" toLevel="1" name="Fish Cream Stew - MEN">
-		<!-- When used, MEN +3 CHA +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- MEN +3 and CHA +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18826" toLevel="1" name="Fish Cream Stew - DEX">
-		<!-- When used, DEX +3 and CHA +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- DEX +3 and CHA +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18827" toLevel="1" name="Fish Cream Stew - STR">
-		<!-- When used, STR +3 CHA +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- STR +3 and CHA +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18828" toLevel="1" name="Fish Cream Stew - CON">
-		<!-- When used, CON +3 CHA +1 for 30 min. The effects do not stack even if several different types of Fish Stew are used. Cooldown of 5 min. -->
+		<!-- CON +3 and CHA +1 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18829" toLevel="1" name="The Challenger's Shaper">
-		<!-- P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%. -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_the_dagger_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -297,7 +297,7 @@
 		</effects>
 	</skill>
 	<skill id="18830" toLevel="1" name="The Challenger's Dicing Death">
-		<!-- P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_the_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -316,7 +316,7 @@
 		</effects>
 	</skill>
 	<skill id="18831" toLevel="1" name="The Challenger's Slasher">
-		<!-- P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_the_two_handed_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -335,7 +335,7 @@
 		</effects>
 	</skill>
 	<skill id="18832" toLevel="1" name="The Challenger's Avenger">
-		<!-- P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_the_axe_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -354,7 +354,7 @@
 		</effects>
 	</skill>
 	<skill id="18833" toLevel="1" name="The Challenger's Fighter">
-		<!-- P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_the_fist_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -373,7 +373,7 @@
 		</effects>
 	</skill>
 	<skill id="18834" toLevel="1" name="The Challenger's Stormer">
-		<!-- P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_the_pole_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -392,7 +392,7 @@
 		</effects>
 	</skill>
 	<skill id="18835" toLevel="1" name="The Challenger's Thrower">
-		<!-- P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%. -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_the_bow_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -411,7 +411,7 @@
 		</effects>
 	</skill>
 	<skill id="18836" toLevel="1" name="The Challenger's Shooter">
-		<!-- P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%. -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_infinity_shooter</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -430,7 +430,7 @@
 		</effects>
 	</skill>
 	<skill id="18837" toLevel="1" name="The Challenger's Buster">
-		<!-- M. Critical Rate +50, M. Critical Damage +10%, Casting Spd. +15%. -->
+		<!-- M. Skill Critical Rate +$s1, M. Skill Critical Damage +$s2, Casting Spd. +$s3. -->
 		<icon>icon.bm_infinity_sword</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -449,7 +449,7 @@
 		</effects>
 	</skill>
 	<skill id="18838" toLevel="1" name="The Challenger's Caster">
-		<!-- M. Critical Rate +50, M. Critical Damage +10%, Casting Spd. +15%. -->
+		<!-- M. Skill Critical Rate +$s1, M. Skill Critical Damage +$s2, Casting Spd. +$s3. -->
 		<icon>icon.bm_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -468,7 +468,7 @@
 		</effects>
 	</skill>
 	<skill id="18839" toLevel="1" name="The Challenger's Retributer">
-		<!-- P. Critical Damage +10%, M. Critical Damage +10%, Atk. Spd./ Casting Spd. +15%. -->
+		<!-- Critical Damage for standard attacks +$s1, M. Skill Critical Damage +$s2, Atk. Spd./ Casting Spd. +$s3. -->
 		<icon>icon.bm_the_staff_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -491,7 +491,7 @@
 		</effects>
 	</skill>
 	<skill id="18840" toLevel="1" name="The Challenger's Dual Sword">
-		<!-- P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_the_dualsword_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -509,8 +509,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18841" toLevel="1" name="The Challenger's Dual Dagger">
-		<!-- P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%. -->
+	<skill id="18841" toLevel="1" name="Challenger's Dual Daggers">
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_the_dualdagger_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -528,8 +528,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18842" toLevel="1" name="The Challenger's Dual Blunt">
-		<!-- P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+	<skill id="18842" toLevel="1" name="The Challenger's Dual Blunt Weapon">
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.bm_the_dualblunt_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -548,7 +548,7 @@
 		</effects>
 	</skill>
 	<skill id="18843" toLevel="1" name="The Challenger's Enhanced Shaper">
-		<!-- Max HP +15%, P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_the_dagger_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -571,7 +571,7 @@
 		</effects>
 	</skill>
 	<skill id="18844" toLevel="1" name="The Challenger's Enhanced Dicing Death">
-		<!-- Max HP +15%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_the_sword_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -594,7 +594,7 @@
 		</effects>
 	</skill>
 	<skill id="18845" toLevel="1" name="The Challenger's Enhanced Slasher">
-		<!-- Max HP +15%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_the_two_handed_sword_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -617,7 +617,7 @@
 		</effects>
 	</skill>
 	<skill id="18846" toLevel="1" name="The Challenger's Enhanced Avenger">
-		<!-- Max HP +15%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_the_axe_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -640,7 +640,7 @@
 		</effects>
 	</skill>
 	<skill id="18847" toLevel="1" name="The Challenger's Enhanced Fighter">
-		<!-- Max HP +15%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_the_fist_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -663,7 +663,7 @@
 		</effects>
 	</skill>
 	<skill id="18848" toLevel="1" name="The Challenger's Enhanced Stormer">
-		<!-- Max HP +15%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_the_pole_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -686,7 +686,7 @@
 		</effects>
 	</skill>
 	<skill id="18849" toLevel="1" name="The Challenger's Enhanced Thrower">
-		<!-- Max HP +15%, P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_the_bow_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -709,7 +709,7 @@
 		</effects>
 	</skill>
 	<skill id="18850" toLevel="1" name="The Challenger's Enhanced Shooter">
-		<!-- Max HP +15%, P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_infinity_shooter</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -732,7 +732,7 @@
 		</effects>
 	</skill>
 	<skill id="18851" toLevel="1" name="The Challenger's Enhanced Buster">
-		<!-- Max HP +15%, M. Critical Rate +50, M. Critical Damage +10%, Casting Spd. +15%. -->
+		<!-- Max HP +$s1, M. Skill Critical Rate +$s2, M. Skill Critical Damage +$s3, Casting Spd. +$s4 -->
 		<icon>icon.bm_infinity_sword</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -755,7 +755,7 @@
 		</effects>
 	</skill>
 	<skill id="18852" toLevel="1" name="The Challenger's Enhanced Caster">
-		<!-- Max HP +15%, M. Critical Rate +50, M. Critical Damage +10%, Casting Spd. +15%. -->
+		<!-- Max HP +$s1, M. Skill Critical Rate +$s2, M. Skill Critical Damage +$s3, Casting Spd. +$s4 -->
 		<icon>icon.bm_the_mace_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -778,7 +778,7 @@
 		</effects>
 	</skill>
 	<skill id="18853" toLevel="1" name="The Challenger's Enhanced Retributer">
-		<!-- Max HP +15%, P. Critical Damage +10%, M. Critical Damage +10%, Atk. Spd./ Casting Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Damage for standard attacks +$s2, M. Skill Critical Damage +$s3, Atk. Spd./ Casting Spd. +$s4. -->
 		<icon>icon.bm_the_staff_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -805,7 +805,7 @@
 		</effects>
 	</skill>
 	<skill id="18854" toLevel="1" name="The Challenger's Enhanced Dual Sword">
-		<!-- Max HP +15%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_the_dualsword_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -828,7 +828,7 @@
 		</effects>
 	</skill>
 	<skill id="18855" toLevel="1" name="The Challenger's Enhanced Dual Dagger">
-		<!-- Max HP +15%, P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%. -->
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_the_dualdagger_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -850,8 +850,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18856" toLevel="1" name="The Challenger's Enhanced Dual Blunt">
-		<!-- Max HP +15%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%. -->
+	<skill id="18856" toLevel="1" name="The Challenger's Enhanced Dual Blunt Weapon">
+		<!-- Max HP +$s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, Atk. Spd. +$s4. -->
 		<icon>icon.bm_the_dualblunt_of_hero_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -880,7 +880,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18858" toLevel="1" name="The Challenger's Bracelet">
-		<!-- All basic stats +1 and allows for 5 Talismans to be equipped. -->
+		<!-- All stats +$s1. Unlocks 5 talisman slots. -->
 		<icon>BranchIcon.icon.bracelet_of_explorer_i00</icon>
 		<operateType>P</operateType>
 	</skill>

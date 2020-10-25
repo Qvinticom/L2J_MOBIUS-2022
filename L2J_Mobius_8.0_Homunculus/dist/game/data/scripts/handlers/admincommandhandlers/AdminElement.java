@@ -84,9 +84,9 @@ public class AdminElement implements IAdminCommandHandler
 				final String[] args = command.split(" ");
 				final AttributeType type = AttributeType.findByName(args[1]);
 				final int value = Integer.parseInt(args[2]);
-				if ((type == null) || (value < 0) || (value > 450))
+				if ((type == null) || (value < 0) || (value > 900))
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element> <value>[0-450]");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element> <value>[0-900]");
 					return false;
 				}
 				
@@ -94,7 +94,7 @@ public class AdminElement implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element>[0-5] <value>[0-450]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element>[0-5] <value>[0-900]");
 				return false;
 			}
 		}

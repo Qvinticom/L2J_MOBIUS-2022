@@ -49,7 +49,7 @@ import instances.AbstractInstance;
 public class LastImperialTomb extends AbstractInstance
 {
 	// NPCs
-	private static final int GUIDE = 32011;
+	private static final int GUIDE = 34543;
 	private static final int CUBE = 29061;
 	private static final int HALL_ALARM = 18328;
 	private static final int HALL_KEEPER_SUICIDAL_SOLDIER = 18333;
@@ -85,7 +85,7 @@ public class LastImperialTomb extends AbstractInstance
 	// Items
 	private static final int DEWDROP_OF_DESTRUCTION_ITEM_ID = 8556;
 	private static final int FIRST_SCARLET_WEAPON = 8204;
-	private static final int SECOND_SCARLET_WEAPON = 7903;
+	private static final int SECOND_SCARLET_WEAPON = 7903; // 8222?
 	// Doors
 	private static final int[] FIRST_ROOM_DOORS =
 	{
@@ -145,8 +145,8 @@ public class LastImperialTomb extends AbstractInstance
 	};
 	// @formatter:on
 	// Misc
-	private static final int TEMPLATE_ID = 136;
-	private static final int FRINTEZZA_WAIT_TIME = 10; // minutes
+	private static final int TEMPLATE_ID = 302;
+	private static final int FRINTEZZA_WAIT_TIME = 1; // minutes
 	private static final int RANDOM_SONG_INTERVAL = 90; // seconds
 	private static final int TIME_BETWEEN_DEMON_SPAWNS = 20; // seconds
 	private static final int MAX_DEMONS = 24;
@@ -659,10 +659,16 @@ public class LastImperialTomb extends AbstractInstance
 		if (npc.getId() == GUIDE)
 		{
 			enterInstance(player, npc, TEMPLATE_ID);
+			Instance world = player.getInstanceWorld();
+			if ((world != null) && (world.isStatus(0)))
+			{
+				world.setStatus(4);
+				startQuestTimer("FRINTEZZA_INTRO_START", FRINTEZZA_WAIT_TIME * 60000, null, player);
+			}
 		}
 		else // Teleport Cube
 		{
-			final Instance world = getPlayerInstance(player);
+			Instance world = player.getInstanceWorld();
 			if (world != null)
 			{
 				teleportPlayerOut(player, world);
@@ -728,26 +734,12 @@ public class LastImperialTomb extends AbstractInstance
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final Instance world = killer.getInstanceWorld();
-		if ((npc.getId() == HALL_ALARM) && (world.getStatus() == 0))
-		{
-			world.setStatus(1);
-			world.spawnGroup("room1");
-			final List<MonsterInstance> monsters = world.getAliveNpcs(MonsterInstance.class);
-			world.setParameter("monstersCount", monsters.size() - 1);
-			for (int doorId : FIRST_ROOM_DOORS)
-			{
-				world.openCloseDoor(doorId, true);
-			}
-			for (Npc monster : monsters)
-			{
-				monster.reduceCurrentHp(1, killer, null); // TODO: Find better way for attack
-			}
-		}
-		else if (npc.getId() == SCARLET2)
+		if (npc.getId() == SCARLET2)
 		{
 			final Npc frintezza = world.getParameters().getObject("frintezza", Npc.class);
 			broadcastPacket(world, new MagicSkillCanceld(frintezza.getObjectId()));
 			startQuestTimer("FINISH_CAMERA_1", 500, npc, killer, false);
+			world.finishInstance();
 		}
 		else if (CommonUtil.contains(DEMONS, npc.getId()))
 		{

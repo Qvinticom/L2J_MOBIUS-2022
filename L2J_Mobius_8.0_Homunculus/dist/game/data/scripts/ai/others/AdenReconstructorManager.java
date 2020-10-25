@@ -50,7 +50,7 @@ public class AdenReconstructorManager extends AbstractNpcAI
 			{
 				case "SPAM_TEXT":
 				{
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_LAND_OF_ADEN_IS_IN_NEED_OF_MATERIALS_TO_REBUILD_FROM_SHILEN_S_DESTRUCTION);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_LAND_OF_ADEN_IS_IN_NEED_OF_MATERIALS_TO_REBUILD_FROM_SHILLIEN_S_DESTRUCTION);
 					startQuestTimer("SPAM_TEXT2", 1000, npc, null);
 					break;
 				}

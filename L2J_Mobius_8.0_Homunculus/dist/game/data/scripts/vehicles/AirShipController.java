@@ -160,7 +160,7 @@ public abstract class AirShipController extends AbstractNpcAI
 					ship.executePath(_arrivalPath);
 				}
 				
-				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.THE_AIRSHIP_HAS_BEEN_SUMMONED_IT_WILL_AUTOMATICALLY_DEPART_IN_5_MINUTES);
+				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.THE_AIRSHIP_HAS_BEEN_SUMMONED_IT_WILL_AUTOMATICALLY_DEPART_IN_5_MIN);
 			}
 			else
 			{

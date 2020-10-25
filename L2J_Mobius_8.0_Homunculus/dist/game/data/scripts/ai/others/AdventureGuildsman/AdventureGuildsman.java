@@ -56,9 +56,9 @@ public class AdventureGuildsman extends AbstractNpcAI
 	private static final int SEAL_LEV_95 = 17745;
 	private static final int SEAL_LEV_97 = 17746;
 	// Skills
-	private static final SkillHolder KNIGHT = new SkillHolder(17294, 1); // Player Commendation - Knight's Harmony
-	private static final SkillHolder WARRIOR = new SkillHolder(17295, 1); // Player Commendation - Warrior's Harmony
-	private static final SkillHolder WIZARD = new SkillHolder(17296, 1); // Player Commendation - Wizard's Harmony
+	private static final SkillHolder KNIGHT = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
+	private static final SkillHolder WARRIOR = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
+	private static final SkillHolder WIZARD = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
 	private static final SkillHolder[] GROUP_MELODY =
 	{
 		new SkillHolder(9273, 1), // Player Commendation - Horn Melody

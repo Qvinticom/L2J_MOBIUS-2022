@@ -788,7 +788,7 @@
 		</skills>
 	</item>
 	<item id="32243" name="Talisman (R-grade) - P. Atk. (Passive)" type="Armor">
-		<!-- P. Atk. +2% when equipped. -->
+		<!-- P. Atk. +2%. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -828,7 +828,7 @@
 		</skills>
 	</item>
 	<item id="32245" name="Talisman (R-grade) - M. Atk. (Passive)" type="Armor">
-		<!-- M. Atk. +2% when equipped. -->
+		<!-- M. Atk. +2%. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -868,7 +868,7 @@
 		</skills>
 	</item>
 	<item id="32247" name="Talisman (R-grade) - Remove Debuff (Active)" type="Armor">
-		<!-- Cancels all debuffs when used. -->
+		<!-- When used, cancels all debuffs. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -888,7 +888,7 @@
 		</skills>
 	</item>
 	<item id="32248" name="Talisman (R-grade) - Remove Debuff (Active)" type="Armor">
-		<!-- Cancels all debuffs when used. -->
+		<!-- When used, cancels all debuffs. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -972,7 +972,7 @@
 		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32254" name="Infinite Quiver of Light" type="EtcItem">
-		<!-- This quiver contains arrows made of unknown material. Used with an S-grade bow. -->
+		<!-- This quiver contains arrows made of unknown material. Used with S-grade bows. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_shining_arrows_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -1049,7 +1049,7 @@
 		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32260" name="Infinite Mithril Bolt Container" type="EtcItem">
-		<!-- Container with steel bolts plated in mithril. Used with an A-grade Crossbow. -->
+		<!-- A container of bolts coated by mithril. For A-grade bows. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />
@@ -1062,7 +1062,7 @@
 		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32261" name="Infinite Light Bolt Container" type="EtcItem">
-		<!-- This container Has bolts made of unknown material. Used with an S-grade Crossbow. -->
+		<!-- This container Has bolts made of unknown material. Used with S-grade crossbows. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_shining_bolts_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />
@@ -1287,7 +1287,7 @@
 		</skills>
 	</item>
 	<item id="32273" name="Recipe: Human Male Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Human Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Human Male Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1299,7 +1299,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32274" name="Recipe: Human Female Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Human Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Human Female Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1311,7 +1311,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32275" name="Recipe: Human Male Wizard Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Human Male Wizard Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Human Male Wizard Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1323,7 +1323,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32276" name="Recipe: Human Female Wizard Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Human Female Wizard Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Human Female Wizard Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1335,7 +1335,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32277" name="Recipe: Elf Male Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Elf Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Elven Male Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1347,7 +1347,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32278" name="Recipe: Elf Female Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Elf Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Elven Female Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1359,7 +1359,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32279" name="Recipe: Dark Elf Male Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Dark Elf Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Dark Elven Male Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1371,7 +1371,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32280" name="Recipe: Dark Elf Female Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Dark Elf Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Dark Elven Female Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1383,7 +1383,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32281" name="Recipe: Dwarf Male Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Dwarf Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Dwarven Male Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1395,7 +1395,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32282" name="Recipe: Dwarf Female Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Dwarf Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Dwarven Female Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1407,7 +1407,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32283" name="Recipe: Orc Male Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Orc Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Orc Male Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1419,7 +1419,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32284" name="Recipe: Orc Female Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Orc Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Orc Female Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1431,7 +1431,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32285" name="Recipe: Orc Male Shaman Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Orc Male Shaman Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Orc Male Shaman Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1443,7 +1443,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32286" name="Recipe: Orc Female Shaman Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Orc Female Shaman Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Orc Female Shaman Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1455,7 +1455,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32287" name="Recipe: Kamael Male Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Kamael Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Kamael Male Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1467,7 +1467,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32288" name="Recipe: Kamael Female Wig" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Kamael Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for Kamael Female Wig. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="commissionItemType" val="RECIPE" />
@@ -1539,7 +1539,7 @@
 		</stats>
 	</item>
 	<item id="32292" name="Recipe: Immortal Belt (60%)" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Immortal Belt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
+		<!-- For the 4th classes only. A recipe for Immortal Belt. Requires Create Common Item Lv. 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="199900" />
@@ -1552,7 +1552,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32293" name="Recipe: Immortal Bracelet (60%)" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Immortal Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
+		<!-- For the 4th classes only. A recipe for Immortal Bracelet. Requires Create Common Item Lv. 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="355600" />
@@ -1565,7 +1565,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32294" name="Recipe: Immortal Shirt (60%)" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Immortal Shirt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
+		<!-- For the 4th classes only. A recipe for Immortal Shirt. Requires Create Common Item Lv. 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="399700" />
@@ -1578,7 +1578,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32295" name="Recipe: Twilight Belt (60%)" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Twilight Belt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
+		<!-- For the 4th classes only. A recipe for Twilight Belt. Requires Create Common Item Lv. 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="597000" />
@@ -1591,7 +1591,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32296" name="Recipe: Twilight Bracelet (60%)" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Twilight Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
+		<!-- For the 4th classes only. A recipe for Twilight Bracelet. Requires Create Common Item Lv. 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="355600" />
@@ -1604,7 +1604,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32297" name="Recipe: Twilight Shirt (60%)" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Twilight Shirt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
+		<!-- For the 4th classes only. A recipe for Twilight Shirt. Requires Create Common Item Lv. 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="1194100" />
@@ -1617,7 +1617,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32298" name="Recipe: Seraph Belt (60%)" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Seraph Belt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
+		<!-- For the 4th classes only. A recipe for Seraph Belt. Requires Create Common Item Lv. 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="1364800" />
@@ -1630,7 +1630,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32299" name="Recipe: Seraph Bracelet (60%)" type="EtcItem">
-		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Seraph Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
+		<!-- For the 4th classes only. A recipe for Seraph Bracelet. Requires Create Common Item Lv. 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="355600" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="28300" name="Transcendent Eternal Tunic" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.5% and M. Atk. by 3%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.5%, M. Atk. +3%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -30,7 +30,7 @@
 		</stats>
 	</item>
 	<item id="28301" name="Transcendent Eternal Stockings" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.5% and M. Atk. by 3%. -->
+		<!-- Received damage -5%, P. Atk. +1.5%, M. Atk. +3%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -57,7 +57,7 @@
 		</stats>
 	</item>
 	<item id="28302" name="Transcendent Eternal Gloves" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. -->
+		<!-- Received damage -2%, P. Atk. +1.5%, M. Atk. +3%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -81,7 +81,7 @@
 		</stats>
 	</item>
 	<item id="28303" name="Transcendent Eternal Shoes" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. -->
+		<!-- Received damage -2%, P. Atk. +1.5%, M. Atk. +3%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -105,7 +105,7 @@
 		</stats>
 	</item>
 	<item id="28304" name="Shilen's Ring" type="Armor">
-		<!-- A ring containing Shilen's strength. -->
+		<!-- A ring that contains Shillien's power. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -139,13 +139,13 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28307" name="Shilen's Ring Fragment" type="EtcItem">
-		<!-- Main ingredient for making Shilen's Ring. -->
+		<!-- Key material for making Shillien's Ring. -->
 		<set name="icon" val="icon.etc_r991_ring_piece" />
 		<set name="weight" val="60" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28308" name="Shilen's Necklace - Not Used" type="Armor">
-		<!-- A necklace containing Shilen's strength. -->
+		<!-- A necklace that contains Shillien's power. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -179,13 +179,13 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28311" name="Shilen's Necklace Fragment" type="EtcItem">
-		<!-- Main ingredient for making Shilen's Necklace. -->
+		<!-- Key material for making Shillien's Necklace. -->
 		<set name="icon" val="icon.etc_r991_necklace_piece" />
 		<set name="weight" val="60" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28312" name="Shilen's Earring" type="Armor">
-		<!-- An earring containing Shilen's strength. -->
+		<!-- An earring that contains Shillien's power. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -219,13 +219,13 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28315" name="Shilen's Earring Fragment" type="EtcItem">
-		<!-- Main ingredient for making Shilen's Earring. -->
+		<!-- Key material for making Shillien's Earring. -->
 		<set name="icon" val="icon.etc_r991_earring_piece" />
 		<set name="weight" val="60" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28316" name="Scroll: Shilen's Ring" type="EtcItem">
-		<!-- Enchant scroll exclusive to Shilen's Ring. Unlike regular items, there's a chance of failing from +1 enchant level, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/ INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
+		<!-- A scroll for enchanting Shillien's Ring. There's a chance of failure when enchanting to +1. Can be enchanted up to +5. In case of success, increases M. Def., Dark Resistance, STR/ INT. Staring from +3, gives a special effect, and from +4 - a special skill for an accessory. In case of failure, the item disappears. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="10" />
@@ -233,7 +233,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28317" name="Scroll: Shilen's Necklace" type="EtcItem">
-		<!-- Enchant scroll exclusive to Shilen's Necklace. Unlike regular items, there's a chance of failing from +1 enchant level, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/ INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
+		<!-- A scroll for enchanting Shillien's Necklace. There's a chance of failure when enchanting to +1. Can be enchanted up to +5. In case of success, increases M. Def., Dark Resistance, STR/ INT. Staring from +3, gives a special effect, and from +4 - a special skill for an accessory. In case of failure, the item disappears. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="10" />
@@ -241,7 +241,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28318" name="Scroll: Shilen's Earring" type="EtcItem">
-		<!-- Enchant scroll exclusive to Shilen's Earring. Unlike regular items, there's a chance of failing from +1 enchant level, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/ INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
+		<!-- A scroll for enchanting Shillien's Earring. There's a chance of failure when enchanting to +1. Can be enchanted up to +5. In case of success, increases M. Def., Dark Resistance, STR/ INT. Staring from +3, gives a special effect, and from +4 - a special skill for an accessory. In case of failure, the item disappears. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="10" />
@@ -249,7 +249,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28319" name="Gran Kain's Necklace - Stage 1" type="EtcItem">
-		<!-- Double-click to obtain Grankain's Necklace Stage 1. -->
+		<!-- Double-click to obtain Gran Kain's Necklace Lv. 1. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -257,11 +257,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27678" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 1 -->
+			<item id="27678" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="28320" name="Gran Kain's Necklace - Stage 2" type="EtcItem">
-		<!-- Double-click to obtain Grankain's Necklace Stage 2. -->
+		<!-- Double-click to obtain Gran Kain's Necklace Lv. 2. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -269,11 +269,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27679" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 2 -->
+			<item id="27679" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace Lv. 2 -->
 		</capsuled_items>
 	</item>
 	<item id="28321" name="Gran Kain's Necklace - Stage 3" type="EtcItem">
-		<!-- Double-click to obtain Grankain's Necklace Stage 3. -->
+		<!-- Double-click to obtain Gran Kain's Necklace Lv. 3. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -281,11 +281,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27680" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 3 -->
+			<item id="27680" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="28322" name="Gran Kain's Necklace - Stage 4" type="EtcItem">
-		<!-- Double-click to obtain Grankain's Necklace Stage 4. -->
+		<!-- Double-click to obtain Gran Kain's Necklace Lv. 4. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -293,11 +293,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27681" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 4 -->
+			<item id="27681" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace Lv. 4 -->
 		</capsuled_items>
 	</item>
 	<item id="28323" name="Gran Kain's Necklace - Stage 5" type="EtcItem">
-		<!-- Double-click to obtain Grankain's Necklace Stage 5. -->
+		<!-- Double-click to obtain Gran Kain's Necklace Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -305,11 +305,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27682" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 5 -->
+			<item id="27682" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="28324" name="Gran Kain's Necklace - Stage 6" type="EtcItem">
-		<!-- Double-click to obtain Grankain's Necklace Stage 6. -->
+		<!-- Double-click to obtain Gran Kain's Necklace Lv. 6. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -317,11 +317,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27683" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 6 -->
+			<item id="27683" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace Lv. 6 -->
 		</capsuled_items>
 	</item>
 	<item id="28325" name="Einhasad's Necklace - Stage 1" type="EtcItem">
-		<!-- Double-click to obtain Einhasad's Necklace Stage 1. -->
+		<!-- Double-click to obtain Einhasad's Necklace Lv. 1. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -329,11 +329,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27684" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 1 -->
+			<item id="27684" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="28326" name="Einhasad's Necklace - Stage 2" type="EtcItem">
-		<!-- Double-click to obtain Einhasad's Necklace Stage 2. -->
+		<!-- Double-click to obtain Einhasad's Necklace Lv. 2. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -341,11 +341,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27685" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 2 -->
+			<item id="27685" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace Lv. 2 -->
 		</capsuled_items>
 	</item>
 	<item id="28327" name="Einhasad's Necklace - Stage 3" type="EtcItem">
-		<!-- Double-click to obtain Einhasad's Necklace Stage 3. -->
+		<!-- Double-click to obtain Einhasad's Necklace Lv. 3. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -353,11 +353,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27686" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 3 -->
+			<item id="27686" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="28328" name="Einhasad's Necklace - Stage 4" type="EtcItem">
-		<!-- Double-click to obtain Einhasad's Necklace Stage 4. -->
+		<!-- Double-click to obtain Einhasad's Necklace Lv. 4. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -365,11 +365,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27687" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 4 -->
+			<item id="27687" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace Lv. 4 -->
 		</capsuled_items>
 	</item>
 	<item id="28329" name="Einhasad's Necklace - Stage 5" type="EtcItem">
-		<!-- Double-click to obtain Einhasad's Necklace Stage 5. -->
+		<!-- Double-click to obtain Einhasad's Necklace Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -377,11 +377,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27688" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 5 -->
+			<item id="27688" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="28330" name="Einhasad's Necklace - Stage 6" type="EtcItem">
-		<!-- Double-click to obtain Einhasad's Necklace Stage 6. -->
+		<!-- Double-click to obtain Einhasad's Necklace Lv. 6. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -389,11 +389,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27689" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 6 -->
+			<item id="27689" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace Lv. 6 -->
 		</capsuled_items>
 	</item>
 	<item id="28331" name="Pa'agrio's Earring - Stage 1" type="EtcItem">
-		<!-- Double-click to obtain Pa'agrio's Earring Stage 1. -->
+		<!-- Double-click to obtain Pa'agrio's Earring Lv. 1. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -401,11 +401,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27690" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 1 -->
+			<item id="27690" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="28332" name="Pa'agrio's Earring - Stage 2" type="EtcItem">
-		<!-- Double-click to obtain Pa'agrio's Earring Stage 2. -->
+		<!-- Double-click to obtain Pa'agrio's Earring Lv. 2. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -413,11 +413,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27691" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 2 -->
+			<item id="27691" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring Lv. 2 -->
 		</capsuled_items>
 	</item>
 	<item id="28333" name="Pa'agrio's Earring - Stage 3" type="EtcItem">
-		<!-- Double-click to obtain Pa'agrio's Earring Stage 3. -->
+		<!-- Double-click to obtain Pa'agrio's Earring Lv. 3. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -425,11 +425,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27692" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 3 -->
+			<item id="27692" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="28334" name="Pa'agrio's Earring - Stage 4" type="EtcItem">
-		<!-- Double-click to obtain Pa'agrio's Earring Stage 4. -->
+		<!-- Double-click to obtain Pa'agrio's Earring Lv. 4. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -437,11 +437,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27693" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 4 -->
+			<item id="27693" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring Lv. 4 -->
 		</capsuled_items>
 	</item>
 	<item id="28335" name="Pa'agrio's Earring - Stage 5" type="EtcItem">
-		<!-- Double-click to obtain Pa'agrio's Earring Stage 5. -->
+		<!-- Double-click to obtain Pa'agrio's Earring Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -449,11 +449,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27694" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 5 -->
+			<item id="27694" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="28336" name="Pa'agrio's Earring - Stage 6" type="EtcItem">
-		<!-- Double-click to obtain Pa'agrio's Earring Stage 6. -->
+		<!-- Double-click to obtain Pa'agrio's Earring Lv. 6. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -461,11 +461,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27695" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 6 -->
+			<item id="27695" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring Lv. 6 -->
 		</capsuled_items>
 	</item>
 	<item id="28337" name="Eva's Earring - Stage 1" type="EtcItem">
-		<!-- Double-click to obtain Eva's Earring Stage 1. -->
+		<!-- Double-click to obtain Eva's Earring Lv. 1. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -473,11 +473,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27696" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 1 -->
+			<item id="27696" min="1" max="1" chance="100" /> <!-- Eva's Earring Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="28338" name="Eva's Earring - Stage 2" type="EtcItem">
-		<!-- Double-click to obtain Eva's Earring Stage 2. -->
+		<!-- Double-click to obtain Eva's Earring Lv. 2. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -485,11 +485,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27697" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 2 -->
+			<item id="27697" min="1" max="1" chance="100" /> <!-- Eva's Earring Lv. 2 -->
 		</capsuled_items>
 	</item>
 	<item id="28339" name="Eva's Earring - Stage 3" type="EtcItem">
-		<!-- Double-click to obtain Eva's Earring Stage 3. -->
+		<!-- Double-click to obtain Eva's Earring Lv. 3. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -497,11 +497,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27698" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 3 -->
+			<item id="27698" min="1" max="1" chance="100" /> <!-- Eva's Earring Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="28340" name="Eva's Earring - Stage 4" type="EtcItem">
-		<!-- Double-click to obtain Eva's Earring Stage 4. -->
+		<!-- Double-click to obtain Eva's Earring Lv. 4. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -509,11 +509,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27699" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 4 -->
+			<item id="27699" min="1" max="1" chance="100" /> <!-- Eva's Earring Lv. 4 -->
 		</capsuled_items>
 	</item>
 	<item id="28341" name="Eva's Earring - Stage 5" type="EtcItem">
-		<!-- Double-click to obtain Eva's Earring Stage 5. -->
+		<!-- Double-click to obtain Eva's Earring Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -521,11 +521,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27700" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 5 -->
+			<item id="27700" min="1" max="1" chance="100" /> <!-- Eva's Earring Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="28342" name="Eva's Earring - Stage 6" type="EtcItem">
-		<!-- Double-click to obtain Eva's Earring Stage 6. -->
+		<!-- Double-click to obtain Eva's Earring Lv. 6. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -533,11 +533,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27701" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 6 -->
+			<item id="27701" min="1" max="1" chance="100" /> <!-- Eva's Earring Lv. 6 -->
 		</capsuled_items>
 	</item>
 	<item id="28343" name="Sayha's Ring - Stage 1" type="EtcItem">
-		<!-- Double-click to obtain Sayha's Ring Stage 1. -->
+		<!-- Double-click to obtain Sayha's Ring Lv. 1. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -545,11 +545,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27702" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 1 -->
+			<item id="27702" min="1" max="1" chance="100" /> <!-- Sayha's Ring Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="28344" name="Sayha's Ring - Stage 2" type="EtcItem">
-		<!-- Double-click to obtain Sayha's Ring Stage 2. -->
+		<!-- Double-click to obtain Sayha's Ring Lv. 2. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -557,11 +557,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27703" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 2 -->
+			<item id="27703" min="1" max="1" chance="100" /> <!-- Sayha's Ring Lv. 2 -->
 		</capsuled_items>
 	</item>
 	<item id="28345" name="Sayha's Ring - Stage 3" type="EtcItem">
-		<!-- Double-click to obtain Sayha's Ring Stage 3. -->
+		<!-- Double-click to obtain Sayha's Ring Lv. 3. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -569,11 +569,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27704" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 3 -->
+			<item id="27704" min="1" max="1" chance="100" /> <!-- Sayha's Ring Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="28346" name="Sayha's Ring - Stage 4" type="EtcItem">
-		<!-- Double-click to obtain Sayha's Ring Stage 4. -->
+		<!-- Double-click to obtain Sayha's Ring Lv. 4. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -581,11 +581,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27705" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 4 -->
+			<item id="27705" min="1" max="1" chance="100" /> <!-- Sayha's Ring Lv. 4 -->
 		</capsuled_items>
 	</item>
 	<item id="28347" name="Sayha's Ring - Stage 5" type="EtcItem">
-		<!-- Double-click to obtain Sayha's Ring Stage 5. -->
+		<!-- Double-click to obtain Sayha's Ring Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -593,11 +593,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27706" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 5 -->
+			<item id="27706" min="1" max="1" chance="100" /> <!-- Sayha's Ring Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="28348" name="Sayha's Ring - Stage 6" type="EtcItem">
-		<!-- Double-click to obtain Sayha's Ring Stage 6. -->
+		<!-- Double-click to obtain Sayha's Ring Lv. 6. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -605,11 +605,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27707" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 6 -->
+			<item id="27707" min="1" max="1" chance="100" /> <!-- Sayha's Ring Lv. 6 -->
 		</capsuled_items>
 	</item>
 	<item id="28349" name="Maphr's Ring - Stage 1" type="EtcItem">
-		<!-- Double-click to obtain Maphr's Ring Stage 1. -->
+		<!-- Double-click to obtain Maphr's Ring Lv. 1. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -617,11 +617,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27708" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 1 -->
+			<item id="27708" min="1" max="1" chance="100" /> <!-- Maphr's Ring Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="28350" name="Maphr's Ring - Stage 2" type="EtcItem">
-		<!-- Double-click to obtain Maphr's Ring Stage 2. -->
+		<!-- Double-click to obtain Maphr's Ring Lv. 2. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -629,11 +629,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27709" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 2 -->
+			<item id="27709" min="1" max="1" chance="100" /> <!-- Maphr's Ring Lv. 2 -->
 		</capsuled_items>
 	</item>
 	<item id="28351" name="Maphr's Ring - Stage 3" type="EtcItem">
-		<!-- Double-click to obtain Maphr's Ring Stage 3. -->
+		<!-- Double-click to obtain Maphr's Ring Lv. 3. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -641,11 +641,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27710" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 3 -->
+			<item id="27710" min="1" max="1" chance="100" /> <!-- Maphr's Ring Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="28352" name="Maphr's Ring - Stage 4" type="EtcItem">
-		<!-- Double-click to obtain Maphr's Ring Stage 4. -->
+		<!-- Double-click to obtain Maphr's Ring Lv. 4. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -653,11 +653,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27711" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 4 -->
+			<item id="27711" min="1" max="1" chance="100" /> <!-- Maphr's Ring Lv. 4 -->
 		</capsuled_items>
 	</item>
 	<item id="28353" name="Maphr's Ring - Stage 5" type="EtcItem">
-		<!-- Double-click to obtain Maphr's Ring Stage 5. -->
+		<!-- Double-click to obtain Maphr's Ring Lv. 5. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -665,11 +665,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27712" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 5 -->
+			<item id="27712" min="1" max="1" chance="100" /> <!-- Maphr's Ring Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="28354" name="Maphr's Ring - Stage 6" type="EtcItem">
-		<!-- Double-click to obtain Maphr's Ring Stage 6. -->
+		<!-- Double-click to obtain Maphr's Ring Lv. 6. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_commissionable" val="false" />
@@ -677,11 +677,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27713" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 6 -->
+			<item id="27713" min="1" max="1" chance="100" /> <!-- Maphr's Ring Lv. 6 -->
 		</capsuled_items>
 	</item>
 	<item id="28355" name="Prestige Cube" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to obtain either Dark/ Bloody Eternal Enhancement Stone, various Weapon Enchant Scrolls, Giant's Energy, or Gemstone (R-grade). Once a day. Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain either Dark/ Bloody Eternal Enhancement Stone, various Weapon Enchant Scrolls, Giant's Energy, or R-grade Gemstone. Once a day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -693,7 +693,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="28356" name="Prestige Cube Pack" additionalName="7-day" type="EtcItem">
-		<!-- Wrapped Pack containing 1 Prestige Cube (7-day). -->
+		<!-- Double-click to obtain Prestige Cube (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -705,14 +705,14 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="28357" name="Exclusive Treasure Chest" type="EtcItem">
-		<!-- Exclusive treasure chest. Double-click to receive a random item. -->
+		<!-- Exclusive treasure chest. Double-click to obtain a random item. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28358" name="La Vie En Rose's Elegant Brooch" type="Armor">
-		<!-- Activates 6 jewel slots when equipped. Inventory Slots +12. -->
+		<!-- When equipped, activates 6 Jewel Slots. Inventory Slots +12. <Enhancing>. Can be enhanced to La Vie En Rose's Brooch Lv. 4 through Shadai in Heine. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_brooch_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
@@ -720,6 +720,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="27718" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
 			<skill id="27719" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
@@ -729,7 +730,7 @@
 		</stats>
 	</item>
 	<item id="28359" name="La Vie En Rose's Gemstone Powder" type="EtcItem">
-		<!-- La Vie En Rose's refined gemstone powder. Go find Shadai to use it when exchanging for gemstones. -->
+		<!-- La Vie En Rose's refined jewel powder. Required for exchanging for various jewels through Shadai. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_powder_jewel" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -799,7 +800,7 @@
 		</capsuled_items>
 	</item>
 	<item id="28364" name="Jewel Grinder" type="EtcItem">
-		<!-- A grinder used for refining La Vie En Rose's jewels. Ask Shadai to grind gemstones. -->
+		<!-- Required for grinding La Vie En Rose's jewels. In order to do it, talk to Shadai. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_jewel_grinder" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -833,7 +834,7 @@
 		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26478" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 3 -->
+			<item id="26478" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 3 - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="28367" name="Tanzanite Lv. 3 Jewelry Box" type="EtcItem">
@@ -848,7 +849,7 @@
 		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26488" min="1" max="1" chance="100" /> <!--Tanzanite Lv. 3 -->
+			<item id="26488" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 3 - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="28368" name="Vital Stone Lv. 4 Jewelry Box" type="EtcItem">
@@ -863,7 +864,7 @@
 		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26479" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 4 -->
+			<item id="26479" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 4 - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="28369" name="Tanzanite Lv. 4 Jewelry Box" type="EtcItem">
@@ -878,11 +879,11 @@
 		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26489" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 4 -->
+			<item id="26489" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 4 - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="28370" name="Garnet Lv. 3 Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain a Garnet Lv. 3. -->
+		<!-- Double-click to obtain a Tanzanite Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
@@ -893,11 +894,11 @@
 		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26483" min="1" max="1" chance="100" /> <!--Garnet Lv. 3 -->
+			<item id="26483" min="1" max="1" chance="100" /> <!-- Garnet Lv. 3 - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="28371" name="Garnet Lv. 4 Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain a Garnet Lv. 4. -->
+		<!-- Double-click to obtain a Vital Stone Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
@@ -908,7 +909,7 @@
 		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26484" min="1" max="1" chance="100" /> <!--Garnet Lv. 4 -->
+			<item id="26484" min="1" max="1" chance="100" /> <!-- Garnet Lv. 4 - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="28372" name="Vital Stone Lv. 3 Jewelry Box" type="EtcItem">
@@ -944,7 +945,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28376" name="Greater Cat's Eye" additionalName="Lv. 1" type="Armor">
-		<!-- Damage Reflection Resistance +50 and there's a 10% chance of reflecting debuffs to the enemy. Can use the invincibility skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Damage Reflection Resistance +50%. With a 10% chance, reflects debuffs back to the enemy. Enables the Invincibility skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -957,7 +958,7 @@
 		</skills>
 	</item>
 	<item id="28377" name="Greater Amethyst" additionalName="Lv. 1" type="Armor">
-		<!-- PvP Damage +15%, chance of receiving a critical attack -25%. Can remove invincibility and debuff invincibility. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
+		<!-- PvP Damage +15%, received P. Critical Rate -25%. Enables the Remove Invincibility/ Immunity skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -970,7 +971,7 @@
 		</skills>
 	</item>
 	<item id="28378" name="Greater Vital Stone" additionalName="Lv. 1" type="Armor">
-		<!-- Vitality Bonus +50% and Vitality Point Consumption Speed -15%. Acquired XP/ SP +10%. Can use Vital Wind skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Vitality bonus +50%, Vitality Consumption -15%, acquired XP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -983,7 +984,7 @@
 		</skills>
 	</item>
 	<item id="28379" name="Greater Garnet" additionalName="Lv. 1" type="Armor">
-		<!-- Debuff Resistance +30%, and when receiving damage to a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Debuff Resistance +30%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -996,7 +997,7 @@
 		</skills>
 	</item>
 	<item id="28380" name="Greater Tanzanite" additionalName="Lv. 1" type="Armor">
-		<!-- Creates a protection shield that absorbs 50,000 damage for 15 sec. Recover 15% of Max HP instantly. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Creates a protective barrier that absorbs 50,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1004,11 +1005,11 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="27549" level="6" /> <!-- Tanzanite - Barrier -->
+			<skill id="18565" level="6" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
 	<item id="28381" name="Abundance Box" additionalName="Infinite" type="EtcItem">
-		<!-- Get 1 of the following: 1 type of Talisman - Abundance, Lindvior's Earring, Earth Wyrm Heart Ring, Seven Signs' Energy, Talisman - Lilith, Talisman - Anakim, Talisman - Insanity, Talisman - Longing, Antharas' Earring, Bottle of Antharas' Soul, Valakas' Necklace, Bottle of Valakas' Soul, Baium's Ring, Baium's Soul Ring, Octavis' Ring, Octavis' Earring, Octavis' Necklace, Istina's Necklace, Istina's Ring, Queen Ant's Ring, Superior Giant's Codex Chapter 1, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex - Discipline Chapter 1, Lv. 5 Legendary Dye Pack, Elcyum Regular/ Crystal, Giant's Energy, Orfen's Earring, Tempest Stone, Gemstone, Fortune Pocket - Stage 5, Blessed Zaken, Venir's Talisman Stage 8/ 10/ 14. -->
+		<!-- Double-click to obtain one of the following items: Talisman of Abundance, Lindvior's Earring, Earth Wyrm Heart Ring, Seven Signs' Energy, Talisman of Lilith, Talisman of Anakim, Talisman of Insanity, Talisman of Longing, Antharas' Earring, Bottle of Antharas' Soul, Valakas' Necklace, Bottle of Valakas' Soul, Baium's Ring, Baium's Soul Ring, Octavis' Ring, Octavis' Earring, Octavis' Necklace, Istina's Necklace, Istina's Ring, Queen Ant's Ring, Superior Giant's Codex Chapter 1, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex - Discipline Chapter 1, Lv. 5 Legendary Dye Pack, Elcyum Regular/ Crystal, Giant's Energy, Orfen's Earring, Tempest Stone, Gemstone, Fortune Pocket - Lv. 5, Blessed Zaken, Venir's Talisman Lv. 8/ 10/ 14. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1028,7 +1029,7 @@
 		</skills>
 	</item>
 	<item id="28383" name="Greater Garnet" additionalName="Lv. 1" type="Armor">
-		<!-- Increases Resistance to all Debuffs by 30%, and when receiving damage to a PC, Stun/ Silence are canceled. When used, all debuffs are canceled and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
+		<!-- Debuff Resistance +30%. Removes Confusion/ Obstruction debuffs when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1060,7 +1061,7 @@
 		</stats>
 	</item>
 	<item id="28385" name="Race Change Ticket Pack" type="EtcItem">
-		<!-- Double-click to obtain a Race Change Ticket. -->
+		<!-- Double-click to obtain Race Change Ticket. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1078,7 +1079,7 @@
 		</capsuled_items>
 	</item>
 	<item id="28386" name="Race Change Ticket" type="EtcItem">
-		<!-- After purchasing a Race Change ticket, you can contact support at, support.lineage2.com, with the subject title of "Character Race Change". \Only characters that have reached at least level 85 and who have completed the 4th Class transfer can request a race change. Note that the following race and class restrictions apply to the race change service. 1.) Ertheia and Kamael classes cannot change to a different race. 2.) Human/ Elf/ Dark Elf/ Orc/ Dwarf races cannot change to the Ertheia or Kamael race. 3.) Orc Overlord/ Dominator/ Iss Dominator as a Mainclass/ Dualclass/ Sublcass cannot change to a different race. 4.) Dwarven Warsmith/ Maestro/ Tyrr Maestro as a Mainclass/ Dualclass/ Sublcass cannot change to a different race. 5.) If switching from a Dwarven race to Human/ Elf/ Dark Elf/ Orc, the character will lose the Dwarven inventory/ warehouse/ private shop bonus slots. -->
+		<!-- In order to change your character's race, follow the instructions:. 1. Transfer this item to the chosen character. 2. Send an email with the title 'Race change' to https://eu.4gamesupport.com/. Note!. The race change is not available for Ertheia, Kamael, Tyrr Maestro, and Iss Dominator. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1091,7 +1092,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28387" name="Agathion - Unlimited Vitality Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Unlimited Vitality. -->
+		<!-- Double-click to obtain Agathion Unlimited Vitality. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1105,7 +1106,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28388" name="Agathion - Unlimited Vitality" type="Armor">
-		<!-- Summons Unlimited Vitality Agathion. -->
+		<!-- A bracelet for summoning Agathion Unlimited Vitality. -->
 		<set name="icon" val="BranchSys.icon.br_aga_bonus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1172,7 +1173,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28393" name="Heine Exclusive Bait Coupon" type="EtcItem">
-		<!-- Exchange for 1 Heine Exclusive Bait of your choice through a fishing guild member. -->
+		<!-- Can be exchanged for Heine Exclusive Bait of your choice through a Fishing Guild member in any town. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1186,12 +1187,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="19442" min="1" max="1" chance="50" /> <!-- Exclusive Reward Chest -->
-			<item id="27640" min="1" max="1" chance="100" /> <!-- Soulshot (R-grade) -->
+			<item id="19442" min="1" max="1" chance="50" /> <!-- Blessed R-grade Spiritshot -->
+			<item id="27640" min="1" max="1" chance="100" /> <!-- Heine Fishing Coin -->
 		</capsuled_items>
 	</item>
 	<item id="28395" name="Heine Exclusive Fishing Tools - 300 Pack" type="EtcItem">
-		<!-- Double-click to get 300 Heine Exclusive Bait Coupons and 300 Fishing Shots. -->
+		<!-- Double-click to obtain 300 Heine Special Bait Coupons and 300 Fishing Shots. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1199,12 +1200,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="28393" min="300" max="300" chance="100" /> <!-- Heine Exclusive Bait Coupons -->
-			<item id="38154" min="300" max="300" chance="100" /> <!-- Fishing Shots -->
+			<item id="28393" min="300" max="300" chance="100" /> <!-- Heine Exclusive Bait Coupon -->
+			<item id="38154" min="300" max="300" chance="100" /> <!-- Fishing Shot -->
 		</capsuled_items>
 	</item>
 	<item id="28396" name="Heine Exclusive Fishing Tools - 3,000 Pack" type="EtcItem">
-		<!-- Double-click to get 3,000 Heine Exclusive Bait Coupons, 3,000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
+		<!-- Double-click to obtain 3000 Heine Special Bait Coupons, 3000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1212,13 +1213,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="28393" min="3000" max="3000" chance="100" /> <!-- Heine Exclusive Bait Coupons -->
-			<item id="38154" min="3000" max="3000" chance="100" /> <!-- Fishing Shots -->
+			<item id="28393" min="3000" max="3000" chance="100" /> <!-- Heine Exclusive Bait Coupon -->
+			<item id="38154" min="3000" max="3000" chance="100" /> <!-- Fishing Shot -->
 			<item id="45493" min="1" max="1" chance="100" /> <!-- Fishing Rod Pack (30-day) -->
 		</capsuled_items>
 	</item>
 	<item id="28397" name="2016 World Olympiad Hero XXX's Accessory" type="Armor">
-		<!-- Special hair accessory crafted for the winner of the 2016 World Olympiad, XXX. STR/ INT/ DEX/ WIT/ CON/ MEN +5 when equipped. -->
+		<!-- A special hair accessory crafted for the winner of the 2016 World Olympiad. STR/ INT/ DEX/ WIT/ CON/ MEN +5. -->
 		<set name="icon" val="icon.accessory_ornithomimus_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1233,7 +1234,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28398" name="Today''s To-do Soulshot Box" type="EtcItem">
-		<!-- Double-click to obtain 10,000 Grade C-R Soulshots. -->
+		<!-- Double-click to obtain 10,000 Soulshots. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1244,15 +1245,15 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="33776" min="10000" max="10000" chance="100" /> <!-- Soulshot (C-grade) - Event -->
-			<item id="33777" min="10000" max="10000" chance="100" /> <!-- Soulshot (B-grade) - Event -->
-			<item id="33778" min="10000" max="10000" chance="100" /> <!-- Soulshot (A-grade) - Event -->
-			<item id="33779" min="10000" max="10000" chance="100" /> <!-- Soulshot (S-grade) - Event -->
-			<item id="33780" min="10000" max="10000" chance="100" /> <!-- Soulshot (R-grade) - Event -->
+			<item id="33776" min="10000" max="10000" chance="100" /> <!-- C-grade Soulshot - Event -->
+			<item id="33777" min="10000" max="10000" chance="100" /> <!-- B-grade Soulshot - Event -->
+			<item id="33778" min="10000" max="10000" chance="100" /> <!-- A-grade Soulshot - Event -->
+			<item id="33779" min="10000" max="10000" chance="100" /> <!-- S-grade Soulshot - Event -->
+			<item id="33780" min="10000" max="10000" chance="100" /> <!-- R-grade Soulshot - Event -->
 		</capsuled_items>
 	</item>
 	<item id="28399" name="Today's To-do Blessed Spiritshot Box" type="EtcItem">
-		<!-- Double-click to obtain 10,000 Grade C-R Blessed Spiritshots. -->
+		<!-- Double-click to obtain 10,000 Blessed Spiritshots. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1263,11 +1264,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="33790" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (C-grade) - Event -->
-			<item id="33791" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (B-grade) - Event -->
-			<item id="33792" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (A-grade) - Event -->
-			<item id="33793" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (S-grade) - Event -->
-			<item id="33794" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (R-grade) - Event -->
+			<item id="33790" min="10000" max="10000" chance="100" /> <!-- Blessed C-grade Spiritshot - Event -->
+			<item id="33791" min="10000" max="10000" chance="100" /> <!-- Blessed B-grade Spiritshot - Event -->
+			<item id="33792" min="10000" max="10000" chance="100" /> <!-- Blessed A-grade Spiritshot - Event -->
+			<item id="33793" min="10000" max="10000" chance="100" /> <!-- Blessed S-grade Spiritshot - Event -->
+			<item id="33794" min="10000" max="10000" chance="100" /> <!-- Blessed R-grade Spiritshot - Event -->
 		</capsuled_items>
 	</item>
 </list>

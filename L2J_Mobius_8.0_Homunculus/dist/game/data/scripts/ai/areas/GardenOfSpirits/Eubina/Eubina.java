@@ -16,7 +16,6 @@
  */
 package ai.areas.GardenOfSpirits.Eubina;
 
-import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -47,14 +46,14 @@ public class Eubina extends AbstractNpcAI
 		{
 			case "teleport":
 			{
-				if (player.getFactionLevel(Faction.UNWORLDLY_VISITORS) < 4)
-				{
-					htmltext = "34238-01.html";
-				}
-				else
-				{
+				// if (player.getFactionLevel(Faction.UNWORLDLY_VISITORS) < 4)
+				// {
+				// 	htmltext = "34238-01.html";
+				// }
+				// else
+				// {
 					player.teleToLocation(BLACKBIRD_CAMPSITE);
-				}
+				// }
 				break;
 			}
 		}

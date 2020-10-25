@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10400" name="Icarus Heavy Arms Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Heavy Arms. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Heavy Arms. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10401" name="Icarus Trident Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Trident. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Trident. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -23,7 +23,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10402" name="Icarus Hammer Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Hammer. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Hammer. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -34,7 +34,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10403" name="Icarus Hand Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Hand. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Hand. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -45,7 +45,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10404" name="Icarus Hall Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Hall. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Hall. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -56,7 +56,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10405" name="Icarus Spitter Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Spitter. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Spitter. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -67,7 +67,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10406" name="Icarus Stinger Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Stinger. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Stinger. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -78,7 +78,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10407" name="Icarus Wingblade Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Wingblade. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Wingblade. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -185,7 +185,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10413" name="Dynastic Essence II" type="EtcItem">
-		<!-- Item that can be used to upgrade Dynasty Chest armor. Grants more powerful options than Dynastic Essence. -->
+		<!-- No longer used. Can be sold in any store. -->
 		<set name="icon" val="icon.etc_armor_soul_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -207,7 +207,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10415" name="Icarus Dual Sword" type="Weapon">
-		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -239,7 +239,7 @@
 		</stats>
 	</item>
 	<item id="10416" name="Blue Talisman - Explosion" type="Armor">
-		<!-- Increases P. Atk./ Atk. Spd. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases P. Atk. and Atk. Spd. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -261,7 +261,7 @@
 		</skills>
 	</item>
 	<item id="10417" name="Blue Talisman - Magic Explosion" type="Armor">
-		<!-- Increases M. Atk. and M. Critical Rate. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases M. Atk. and M. Skill Critical Rate. Effects of two identical talismans do not stack. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -283,7 +283,7 @@
 		</skills>
 	</item>
 	<item id="10418" name="White Talisman - Storm" type="Armor">
-		<!-- Increases Wind attribute. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases Wind attributes. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -305,7 +305,7 @@
 		</skills>
 	</item>
 	<item id="10419" name="White Talisman - Darkness" type="Armor">
-		<!-- Increases Dark attribute. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases Dark attributes. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -327,7 +327,7 @@
 		</skills>
 	</item>
 	<item id="10420" name="White Talisman - Water" type="Armor">
-		<!-- Increases Water attribute. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases Water attributes. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -349,7 +349,7 @@
 		</skills>
 	</item>
 	<item id="10421" name="White Talisman - Fire" type="Armor">
-		<!-- Instantly increases Fire. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
+		<!-- Increases Fire attributes. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -371,7 +371,7 @@
 		</skills>
 	</item>
 	<item id="10422" name="White Talisman - Light" type="Armor">
-		<!-- Increases holy attribute. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases holy attributes. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -393,7 +393,7 @@
 		</skills>
 	</item>
 	<item id="10423" name="Blue Talisman - Self-destruction" type="Armor">
-		<!-- Damages a nearby enemy with a powerful explosion. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Damages nearby enemies with a powerful explosion. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -414,7 +414,7 @@
 		</skills>
 	</item>
 	<item id="10424" name="Blue Talisman - Greater Healing" type="Armor">
-		<!-- Increases heal power. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases Healing Power. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -2076,7 +2076,7 @@
 		</stats>
 	</item>
 	<item id="10480" name="Red Soul Crystal - Stage 15" type="EtcItem">
-		<!-- Red crystal containing the light of absorbed souls. stage 15. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
+		<!-- Red crystal that contains the light of absorbed souls. Level 15. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -2091,7 +2091,7 @@
 		</skills>
 	</item>
 	<item id="10481" name="Blue Soul Crystal - Stage 15" type="EtcItem">
-		<!-- Blue crystal containing the light of absorbed souls. stage 15. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
+		<!-- Blue crystal that contains the light of absorbed souls. Level 15. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -2106,7 +2106,7 @@
 		</skills>
 	</item>
 	<item id="10482" name="Green Soul Crystal - Stage 15" type="EtcItem">
-		<!-- Green crystal containing the light of absorbed souls. stage 15. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
+		<!-- Green crystal that contains the light of absorbed souls. Level 15. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -2121,7 +2121,7 @@
 		</skills>
 	</item>
 	<item id="10483" name="Life Stone - Lv. 82" type="EtcItem">
-		<!-- General mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2134,7 +2134,7 @@
 		</cond>
 	</item>
 	<item id="10484" name="Mid-grade Life Stone - Lv. 82" type="EtcItem">
-		<!-- Mid-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2147,7 +2147,7 @@
 		</cond>
 	</item>
 	<item id="10485" name="High-grade Life Stone - Lv. 82" type="EtcItem">
-		<!-- High-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2160,7 +2160,7 @@
 		</cond>
 	</item>
 	<item id="10486" name="Top-grade Life Stone - Lv. 82" type="EtcItem">
-		<!-- Top-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2265,7 +2265,7 @@
 		</stats>
 	</item>
 	<item id="10491" name="Silk Shirt" additionalName="HP" type="Armor">
-		<!-- Increases Max HP by 118 when enchanted to +4 or higher. -->
+		<!-- Max HP +118 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2285,7 +2285,7 @@
 		</stats>
 	</item>
 	<item id="10492" name="Silk Shirt" additionalName="MP" type="Armor">
-		<!-- Increases Max MP by 51 when enchanted to +4 or higher. -->
+		<!-- Max MP +51 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2305,7 +2305,7 @@
 		</stats>
 	</item>
 	<item id="10493" name="Silk Shirt" additionalName="CP" type="Armor">
-		<!-- Increases Max CP by 354 when enchanted to +4 or higher. -->
+		<!-- Max CP +354 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2325,7 +2325,7 @@
 		</stats>
 	</item>
 	<item id="10494" name="Thin Leather Shirt" additionalName="HP" type="Armor">
-		<!-- Increases Max HP by 147 when enchanted to +4 or higher. -->
+		<!-- Max HP +147 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2345,7 +2345,7 @@
 		</stats>
 	</item>
 	<item id="10495" name="Thin Leather Shirt" additionalName="MP" type="Armor">
-		<!-- Increases Max MP by 72 when enchanted to +4 or higher. -->
+		<!-- Max MP +72 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2365,7 +2365,7 @@
 		</stats>
 	</item>
 	<item id="10496" name="Thin Leather Shirt" additionalName="CP" type="Armor">
-		<!-- Increases Max CP by 441 when enchanted to +4 or higher. -->
+		<!-- Max CP +441 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2385,7 +2385,7 @@
 		</stats>
 	</item>
 	<item id="10497" name="Scale Shirt" additionalName="HP" type="Armor">
-		<!-- Increases Max HP by 172 when enchanted to +4 or higher. -->
+		<!-- Max HP +172 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2405,7 +2405,7 @@
 		</stats>
 	</item>
 	<item id="10498" name="Scale Shirt" additionalName="MP" type="Armor">
-		<!-- Increases Max MP by 85 when enchanted to +4 or higher. -->
+		<!-- Max MP +85 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2425,7 +2425,7 @@
 		</stats>
 	</item>
 	<item id="10499" name="Scale Shirt" additionalName="CP" type="Armor">
-		<!-- Increases Max CP by 516 when enchanted to +4 or higher. -->
+		<!-- Max CP +516 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />

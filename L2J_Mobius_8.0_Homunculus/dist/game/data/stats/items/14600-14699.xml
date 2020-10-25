@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14600" name="Schuttgart Dark Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Schuttgart territory. Dark Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- A ring given to the Guardian of Schuttgart. Dark Resistance +12. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -27,7 +27,7 @@
 		</stats>
 	</item>
 	<item id="14601" name="Ancient Cloak" additionalName="Kamaels Only" type="Armor">
-		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. -->
+		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 h. Cannot feed pet to refill hunger gauge. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -56,7 +56,7 @@
 		</stats>
 	</item>
 	<item id="14602" name="Ancient Cloak" type="Armor">
-		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 hours. -->
+		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 h. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -85,7 +85,7 @@
 		</stats>
 	</item>
 	<item id="14603" name="Sealed Ancient Cloak" type="EtcItem">
-		<!-- Sealed Ancient Cloak. The seal can be removed through the weavers Olf Kanore and Olf Adams. It cannot be worn before the seal is removed. Cannot be enchanted, augmented, or assigned an attribute. -->
+		<!-- Old and not very useful equipment. Cannot be used. -->
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -103,7 +103,7 @@
 		</stats>
 	</item>
 	<item id="14604" name="Red Talisman - Territory Guardian" type="Armor">
-		<!-- When used, Max CP is greatly increased and a certain amount of CP is greatly recovered. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
+		<!-- When used, greatly increases CP and CP Recovery. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -125,7 +125,7 @@
 		</skills>
 	</item>
 	<item id="14605" name="Red Talisman - Territory Escort" type="Armor">
-		<!-- When used, Max CP is increased and a certain amount of CP is recovered. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
+		<!-- When used, greatly increases CP and CP Recovery. The effect doesn't stack if two identical talismans are equipped. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -147,7 +147,7 @@
 		</skills>
 	</item>
 	<item id="14606" name="Gracian Soldier Two-handed Sword" type="Weapon">
-		<!-- A Gracian Soldier's two-handed sword. -->
+		<!-- A Gracian Soldier's one-handed sword. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.weapon_mon_gracia_soldier_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -272,7 +272,7 @@
 		</stats>
 	</item>
 	<item id="14611" name="Rudolph's Nose" type="Armor">
-		<!-- Rudolph's Nose. 14-day. -->
+		<!-- Rudolph's nose. Available for 14 d. -->
 		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -327,7 +327,7 @@
 		</skills>
 	</item>
 	<item id="14614" name="Santa's Buff Gift Set" type="EtcItem">
-		<!-- Santa's buff gift set. When used, can feel yourself becoming stronger by Santa's blessing for 1 hour. -->
+		<!-- Santa's buff gift set. When used, can feel yourself becoming stronger by Santa's blessing for 1 h. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -375,7 +375,7 @@
 		</skills>
 	</item>
 	<item id="14617" name="Agathion - Rudolph" type="Armor">
-		<!-- The bracelet which can summon cute Rudolph Agathion. 14-day. -->
+		<!-- A bracelet for summoning Agathion Rudolph. Available for 14 d. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -397,7 +397,7 @@
 		</skills>
 	</item>
 	<item id="14618" name="Agathion - Rudolph" type="EtcItem">
-		<!-- The bracelet which can summon cute Rudolph Agathion. You can wear it only during the winter holidays. -->
+		<!-- A bracelet for summoning Agathion Rudolph. Can be used only during the New Year event. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1595,7 +1595,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14664" name="Gludio Resistance Earring" type="Armor">
-		<!-- Earring given to the guardian of Gludio territory. Stun Attack +15%, Bleed Resistance +15%, Water Resistance +8. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the guardian of Gludio Territory. Confusion Atk. Rate +15%, Infection Resistance +15%, Water Resistance +8. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1621,7 +1621,7 @@
 		</stats>
 	</item>
 	<item id="14665" name="Dion Resistance Earring" type="Armor">
-		<!-- Earring given to the guardian of Dion territory. Hold Attack +15%, Poison Resistance +15%, Holy Resistance +8. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the guardian of Dion Territory. Obstruction Atk. Rate +15%, Infection Resistance +15%, Holy Resistance +8. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1647,7 +1647,7 @@
 		</stats>
 	</item>
 	<item id="14666" name="Giran Resistance Earring" type="Armor">
-		<!-- Earring given to the guardian of Giran territory. Bleed Attack +15%, Paralysis Resistance +15%, Wind Resistance +8. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the guardian of Giran Territory. Infection Atk. Rate +15%, Confusion Resistance +15%, Wind Resistance +8. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1673,7 +1673,7 @@
 		</stats>
 	</item>
 	<item id="14667" name="Oren Resistance Earring" type="Armor">
-		<!-- Earring given to the guardian of Oren territory. Paralysis attack +15%, Hold Resistance +15%, Dark Resistance +8. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the guardian of Oren Territory. Confusion Atk. Rate +15%, Obstruction Resistance +15%, Dark Resistance +8. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1699,7 +1699,7 @@
 		</stats>
 	</item>
 	<item id="14668" name="Aden Resistance Earring" type="Armor">
-		<!-- Earring given to the guardian of Aden territory. Mental Attack +15%, Stun Resistance +15%, Earth Resistance +8. Only one effect is applied when wearing two earrings with the same effect. -->
+		<!-- Earring given to the guardian of Aden. Confusion Resistance/ Atk. Rate +15%, Earth Resistance +8. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1725,7 +1725,7 @@
 		</stats>
 	</item>
 	<item id="14669" name="Innadril Resistance Earring" type="Armor">
-		<!-- Earring given to the guardian of Innadril territory. Sleep Attack +15%, Stun Resistance +15%, Water Resistance +8. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the guardian of Innadril. Stupor Atk. Rate +15%, Confusion Resistance +15%, Water Resistance +8. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1751,7 +1751,7 @@
 		</stats>
 	</item>
 	<item id="14670" name="Goddard Resistance Earring" type="Armor">
-		<!-- Earring given to the guardian of Goddard territory. Stun Attack +15%, Sleep Resistance +15%, Fire Resistance +8. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the guardian of Goddard Territory. Stupor Atk. Rate +15%, Confusion Resistance +15%, Fire Resistance +8. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1777,7 +1777,7 @@
 		</stats>
 	</item>
 	<item id="14671" name="Rune Resistance Earring" type="Armor">
-		<!-- Earring given to the guardian of Rune territory. Poison Attack +15%, Hold Resistance +15%, Fire Resistance +8. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the guardian of Rune. Infection Atk. Rate +15%, Obstruction Resistance +15%, Fire Resistance +8. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1803,7 +1803,7 @@
 		</stats>
 	</item>
 	<item id="14672" name="Schuttgart Resistance Earring" type="Armor">
-		<!-- Earring given to the guardian of Schuttgart. Hold attack +15%, Mental Resistance +15%, Wind Resistance +8. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring given to the guardian of Schuttgart Territory. Obstruction Atk. Rate +15%, Confusion Resistance +15%, Wind Resistance +8. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1829,7 +1829,7 @@
 		</stats>
 	</item>
 	<item id="14673" name="Rudolph's Nose" type="EtcItem">
-		<!-- Rudolph's Nose. Can be used only during the Christmas season. -->
+		<!-- Rudolph's nose. Can be used only during the New Year event. -->
 		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1876,7 +1876,7 @@
 		</stats>
 	</item>
 	<item id="14675" name="Agathion - Neolithica" type="Armor">
-		<!-- Bracelet that can summon an Agathion. Cannot receive the gift if the inventory and weight are full. -->
+		<!-- A bracelet for summoning an agathion. You won't receive any gifts, if your inventory is full. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1928,7 +1928,7 @@
 		</skills>
 	</item>
 	<item id="14678" name="Neolithic Crystal (B-grade)" type="EtcItem">
-		<!-- If you bring it to the Dimensional Merchant, you can exchange a B-grade ordinary item for a Masterwork Item. -->
+		<!-- Take it to the Game Assistant to exchange a standard B-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1937,7 +1937,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="14679" name="Neolithic Crystal (A-grade)" type="EtcItem">
-		<!-- If you bring it to the Dimensional Merchant, you can exchange an A-grade ordinary item for a Masterwork Item. -->
+		<!-- Take it to the Game Assistant to exchange a standard A-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1946,7 +1946,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="14680" name="Neolithic Crystal (S-grade)" type="EtcItem">
-		<!-- If you bring it to the Dimensional Merchant, you can exchange an S-grade ordinary item for a Masterwork Item. -->
+		<!-- Take it to the Game Assistant to exchange a standard S-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1955,7 +1955,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14681" name="Neolithic Crystal (S80-grade)" type="EtcItem">
-		<!-- If you bring it to the Dimensional Merchant, you can exchange a S80-grade ordinary item for a Masterwork Item. -->
+		<!-- Take it to the Game Assistant to exchange a standard S80-grade item for a Masterwork item. -->
 		<set name="icon" val="icon.etc_warding_orb_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

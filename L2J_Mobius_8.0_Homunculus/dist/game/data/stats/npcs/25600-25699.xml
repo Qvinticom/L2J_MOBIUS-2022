@@ -568,7 +568,7 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="5505" level="1" /> <!-- Fire Blossom -->
-			<skill id="5509" level="1" /> <!-- Fire Power -->
+			<skill id="5509" level="1" /> <!-- Blessing of Fire -->
 			<skill id="5513" level="1" /> <!-- Fire Taint -->
 			<skill id="5517" level="1" /> <!-- Nurture -->
 			<skill id="5615" level="1" /> <!-- Raid Boss (Lv. 87) -->
@@ -940,7 +940,7 @@
 			<skill id="4173" level="2" /> <!-- Might -->
 			<skill id="4177" level="2" /> <!-- Cancellation -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4723" level="2" /> <!-- Power Strike -->
 			<skill id="4738" level="2" /> <!-- Spinning Slasher -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -981,7 +981,7 @@
 			<skill id="4177" level="3" /> <!-- Cancellation -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4723" level="3" /> <!-- Power Strike -->
 			<skill id="4738" level="3" /> <!-- Spinning Slasher -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -1100,7 +1100,7 @@
 			<skill id="4173" level="6" /> <!-- Might -->
 			<skill id="4177" level="6" /> <!-- Cancellation -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4723" level="6" /> <!-- Power Strike -->
 			<skill id="4738" level="6" /> <!-- Spinning Slasher -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -1144,7 +1144,7 @@
 			<skill id="4173" level="7" /> <!-- Might -->
 			<skill id="4177" level="7" /> <!-- Cancellation -->
 			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4723" level="7" /> <!-- Power Strike -->
 			<skill id="4738" level="7" /> <!-- Spinning Slasher -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
@@ -1235,9 +1235,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3539612" sp="849" />
+		<acquire exp="3539613" sp="850" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="309907.181856363" hpRegen="319.2293199" mp="1674.32567432567" mpRegen="3" />
+			<vitals hp="309907.181856363" hpRegen="319.2293199" mp="1690.80919080919" mpRegen="3" />
 			<attack physical="820.234060863604" magical="86.1696653856886" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="921.89349112426" magical="449.84601197619" evasion="-18" />
 			<attribute>
@@ -1252,15 +1252,14 @@
 		</stats>
 		<status undying="false" flying="true" noSleepMode="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="5225" level="1" /> <!-- Invincibility -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="6084" level="1" /> <!-- Raid Boss (Lv. 80) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="5225" level="1" /> <!-- Invincibility -->
 			<skill id="5797" level="1" /> <!-- Bursting Flame -->
 			<skill id="5798" level="1" /> <!-- Fireball -->
-			<skill id="6084" level="1" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<corpseTime>4</corpseTime>
@@ -1295,9 +1294,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="3658389" sp="878" />
+		<acquire exp="3658390" sp="879" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="319298.194036119" hpRegen="319.2293199" mp="1777.22277722278" mpRegen="3" />
+			<vitals hp="319298.194036119" hpRegen="319.2293199" mp="1794.70529470529" mpRegen="3" />
 			<attack physical="4928.21128684854" magical="1842.68108619635" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="732.544378698225" magical="354.083786036449" evasion="-18" />
 			<attribute>
@@ -1312,15 +1311,14 @@
 		</stats>
 		<status undying="false" flying="true" noSleepMode="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="6085" level="1" /> <!-- Raid Boss (Lv. 80) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5794" level="1" /> <!-- Decrease Speed -->
 			<skill id="5795" level="1" /> <!-- Poison -->
 			<skill id="5796" level="1" /> <!-- Decrease Speed -->
-			<skill id="6085" level="1" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1374,9 +1372,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="3745533" sp="898" />
+		<acquire exp="3745534" sp="899" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="325715.245695086" hpRegen="319.2293199" mp="1846.15384615385" mpRegen="3" />
+			<vitals hp="325714.825703486" hpRegen="319.2293199" mp="1864.63536463536" mpRegen="3" />
 			<attack physical="887.573964497041" magical="98.7286259527936" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1005.91715976331" magical="490.633626728301" evasion="-18" />
 			<attribute>
@@ -1391,13 +1389,12 @@
 		</stats>
 		<status undying="false" flying="true" noSleepMode="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="6086" level="1" /> <!-- Raid Boss (Lv. 80) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5799" level="1" /> <!-- Bleed -->
-			<skill id="6086" level="1" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1434,9 +1431,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3745533" sp="898" />
+		<acquire exp="3745534" sp="899" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="325715.457413249" hpRegen="319.2293199" mp="1846.10169491525" mpRegen="3" />
+			<vitals hp="325714.826498423" hpRegen="319.2293199" mp="1864.40677966102" mpRegen="3" />
 			<attack physical="10937.3767258383" magical="7517.34045049202" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="579.289940828402" magical="635.442784073814" evasion="-18" />
 			<attribute>
@@ -1451,14 +1448,13 @@
 		</stats>
 		<status undying="false" flying="true" noSleepMode="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="6087" level="1" /> <!-- Raid Boss (Lv. 80) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5801" level="1" /> <!-- Drake Breath -->
 			<skill id="5802" level="1" /> <!-- Stun -->
-			<skill id="6087" level="1" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<corpseTime>5</corpseTime>
@@ -1763,7 +1759,6 @@
 		</collision>
 	</npc>
 	<npc id="25633" level="76" type="Monster" name="Elite Rider" title="Valdstone's Escort">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill03_Target" value="4" />
 			<param name="Skill03_Type" value="3" />
@@ -1774,7 +1769,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="63950.80623" hpRegen="8.5" mp="1910.716" mpRegen="3" />
+			<vitals hp="58590.7514450867" hpRegen="8.5" mp="1555.11551155116" mpRegen="3" />
 			<attack physical="439.902770141518" magical="105.292634546515" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="437.1091425" magical="426.474" evasion="-18" />
 			<attribute>
@@ -1789,11 +1784,11 @@
 		</stats>
 		<status undying="false" flying="true" noSleepMode="true" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4065" level="9" /> <!-- NPC Heal -->
 			<skill id="5804" level="1" /> <!-- Fireball -->
 			<skill id="5808" level="1" /> <!-- Burst Flame -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<corpseTime>4</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -2025,11 +2020,11 @@
 				<item id="6674" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate -->
 				<item id="6367" min="1" max="1" chance="0.3" /> <!-- Angel Slayer -->
 				<item id="6691" min="3" max="9" chance="8.166" /> <!-- Angel Slayer Blade -->
-				<item id="960" min="1" max="1" chance="7.026" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="6702" min="28" max="84" chance="4.725" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="960" min="1" max="1" chance="7.026" /> <!-- Scroll: Enchant S-grade Armor -->
+				<item id="6702" min="28" max="84" chance="4.725" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
 				<item id="6701" min="60" max="180" chance="1.361" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant S-grade Weapon -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2090,10 +2085,10 @@
 				<item id="6695" min="1" max="1" chance="30.72" /> <!-- Demon Splinter Blade -->
 				<item id="6706" min="10" max="30" chance="12.28" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
 				<item id="6710" min="16" max="48" chance="8.161" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-				<item id="960" min="1" max="1" chance="7.096" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="7.096" /> <!-- Scroll: Enchant S-grade Armor -->
 				<item id="6714" min="22" max="66" chance="5.841" /> <!-- Sealed Major Arcana Circlet Pattern -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant S-grade Weapon -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2126,7 +2121,7 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="19" /> <!-- Dual Sword -->
+			<skill id="4415" level="19" /> <!-- Dual Swords -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="5881" level="2" /> <!-- Vicious Mutilation -->
@@ -2151,13 +2146,13 @@
 				<item id="6674" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate -->
 				<item id="6364" min="1" max="1" chance="0.3" /> <!-- Forgotten Blade -->
 				<item id="6372" min="1" max="1" chance="0.3" /> <!-- Heaven's Divider -->
-				<item id="960" min="1" max="1" chance="7.05" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="7.05" /> <!-- Scroll: Enchant S-grade Armor -->
 				<item id="6688" min="3" max="9" chance="6.084" /> <!-- Forgotten Blade Edge -->
 				<item id="6696" min="3" max="9" chance="5.251" /> <!-- Heaven's Divider Edge -->
-				<item id="6702" min="32" max="96" chance="3.006" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6702" min="32" max="96" chance="3.006" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant S-grade Weapon -->
 				<item id="6701" min="67" max="201" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2211,11 +2206,11 @@
 			<drop>
 				<item id="6680" min="1" max="1" chance="1.197" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="7575" min="1" max="1" chance="0.3" /> <!-- Draconic Bow -->
-				<item id="960" min="1" max="1" chance="7.065" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="7.065" /> <!-- Scroll: Enchant S-grade Armor -->
 				<item id="6707" min="15" max="45" chance="6.684" /> <!-- Sealed Draconic Leather Armor Part -->
 				<item id="7579" min="12" max="36" chance="3.092" /> <!-- Draconic Bow Shaft -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant S-grade Weapon -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2280,7 +2275,7 @@
 				<item id="6693" min="3" max="9" chance="4.965" /> <!-- Dragon Hunter Axe Blade -->
 				<item id="6697" min="3" max="9" chance="4.163" /> <!-- Arcana Mace Head -->
 				<item id="6711" min="24" max="72" chance="1.647" /> <!-- Sealed Major Arcana Robe Part -->
-				<item id="6578" min="1" max="1" chance="1.128" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6578" min="1" max="1" chance="1.128" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 				<item id="6689" min="18" max="54" chance="0.75" /> <!-- Basalt Battlehammer Head -->
 			</drop>
 		</dropLists>
@@ -2343,7 +2338,7 @@
 				<item id="6696" min="2" max="6" chance="9.791" /> <!-- Heaven's Divider Edge -->
 				<item id="6711" min="18" max="54" chance="3.718" /> <!-- Sealed Major Arcana Robe Part -->
 				<item id="6688" min="14" max="42" chance="1.682" /> <!-- Forgotten Blade Edge -->
-				<item id="6578" min="1" max="1" chance="1.223" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6578" min="1" max="1" chance="1.223" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2382,7 +2377,7 @@
 			<skill id="5879" level="1" /> <!-- Cruel Expunge -->
 			<skill id="5894" level="1" /> <!-- Mark of Despair -->
 			<skill id="5917" level="1" /> <!-- Shrouding Aura -->
-			<skill id="6074" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6074" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2430,7 +2425,7 @@
 			<skill id="5895" level="1" /> <!-- Mark of Cowardice -->
 			<skill id="5898" level="2" /> <!-- Blast of Anchor -->
 			<skill id="5913" level="1" /> <!-- Putrefaction Cleanse -->
-			<skill id="6075" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6075" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2479,7 +2474,7 @@
 			<skill id="5903" level="1" /> <!-- Burst of Misplace -->
 			<skill id="5905" level="1" /> <!-- Confusing Nuph -->
 			<skill id="5917" level="1" /> <!-- Shrouding Aura -->
-			<skill id="6076" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6076" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2527,7 +2522,7 @@
 			<skill id="5899" level="2" /> <!-- Burst of Pain -->
 			<skill id="5911" level="1" /> <!-- Pestilence Cleanse -->
 			<skill id="5918" level="8" /> <!-- Physical Root Vulnerability -->
-			<skill id="6077" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6077" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2579,7 +2574,7 @@
 			<skill id="5891" level="1" /> <!-- Threatening Bellow -->
 			<skill id="5895" level="1" /> <!-- Mark of Cowardice -->
 			<skill id="5915" level="1" /> <!-- Mummifying Aura -->
-			<skill id="6078" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6078" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2631,7 +2626,7 @@
 			<skill id="5891" level="1" /> <!-- Threatening Bellow -->
 			<skill id="5900" level="1" /> <!-- Burst of Oblivion -->
 			<skill id="5985" level="1" /> <!-- Decaying Aura -->
-			<skill id="6079" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6079" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2673,7 +2668,7 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="19" /> <!-- Dual Sword -->
+			<skill id="4415" level="19" /> <!-- Dual Swords -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -2681,7 +2676,7 @@
 			<skill id="5894" level="1" /> <!-- Mark of Despair -->
 			<skill id="5899" level="2" /> <!-- Burst of Pain -->
 			<skill id="5986" level="1" /> <!-- Vampiric Aura -->
-			<skill id="6080" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6080" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2707,7 +2702,7 @@
 				<item id="3936" min="1" max="1" chance="12.87" /> <!-- Blessed Scroll of Resurrection -->
 				<item id="6710" min="16" max="48" chance="8.156" /> <!-- Sealed Draconic Leather Helmet Pattern -->
 				<item id="6714" min="22" max="66" chance="5.852" /> <!-- Sealed Major Arcana Circlet Pattern -->
-				<item id="6578" min="1" max="1" chance="1.237" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6578" min="1" max="1" chance="1.237" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2746,7 +2741,7 @@
 			<skill id="5888" level="2" /> <!-- Earth Shaker -->
 			<skill id="5894" level="1" /> <!-- Mark of Despair -->
 			<skill id="5913" level="1" /> <!-- Putrefaction Cleanse -->
-			<skill id="6081" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6081" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2772,10 +2767,10 @@
 				<item id="6706" min="10" max="30" chance="12.94" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
 				<item id="6710" min="16" max="48" chance="8.179" /> <!-- Sealed Draconic Leather Helmet Pattern -->
 				<item id="6714" min="22" max="66" chance="5.8" /> <!-- Sealed Major Arcana Circlet Pattern -->
-				<item id="6578" min="1" max="1" chance="1.123" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6578" min="1" max="1" chance="1.123" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="87.53" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="87.53" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2815,7 +2810,7 @@
 			<skill id="5904" level="2" /> <!-- Mist of Souleater -->
 			<skill id="5907" level="2" /> <!-- Ritual of Entombment -->
 			<skill id="5916" level="1" /> <!-- Cruising Aura -->
-			<skill id="6082" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6082" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2865,7 +2860,7 @@
 			<skill id="5901" level="2" /> <!-- Mist of Oblivion -->
 			<skill id="5908" level="2" /> <!-- Ritual of Entombment -->
 			<skill id="5917" level="1" /> <!-- Shrouding Aura -->
-			<skill id="6083" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6083" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2898,7 +2893,7 @@
 		<sex>MALE</sex>
 		<acquire exp="20025867264" sp="18019456" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1175118.38900064" hpRegen="436.263366" mp="48295.8304853042" mpRegen="3.3" />
+			<vitals hp="1679289.79420412" hpRegen="436.263366" mp="51429.0709290709" mpRegen="3.3" />
 			<attack physical="58949.0230882483" magical="5550.25498393345" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="3722.44971696977" magical="2115.88363461181" evasion="-18" />
 			<attribute>
@@ -2914,17 +2909,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4030" level="3" /> <!-- Might -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4172" level="8" /> <!-- Stun -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="8" /> <!-- Angel -->
-			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
 			<skill id="4736" level="8" /> <!-- Spinning Slasher -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2957,7 +2948,7 @@
 		<sex>MALE</sex>
 		<acquire exp="40825674225" sp="36735300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1265783.80391155" hpRegen="9.5" mp="49361.2572994016" mpRegen="3.3" />
+			<vitals hp="1804865.18269635" hpRegen="9.5" mp="52212.7872127872" mpRegen="3.3" />
 			<attack physical="64139.9525456761" magical="6007.32055673886" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3828.7854654928" magical="2198.20480221649" evasion="-18" />
 			<attribute>
@@ -2973,17 +2964,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4461" level="2" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4031" level="3" /> <!-- Might -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
-			<skill id="4461" level="2" /> <!-- Dagger/ Rapier Vulnerability -->
 			<skill id="4766" level="8" /> <!-- Power Shot -->
 			<skill id="4771" level="8" /> <!-- Stun -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3017,7 +3004,7 @@
 		<sex>MALE</sex>
 		<acquire exp="72812268776" sp="65528352" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1309331.29701042" hpRegen="453.2459686" mp="50430.7308852763" mpRegen="3.3" />
+			<vitals hp="2058462.83074339" hpRegen="453.2459686" mp="52981.5184815185" mpRegen="3.3" />
 			<attack physical="69771.496852827" magical="6496.96322549349" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="3152.62083319194" magical="2687.56885879964" evasion="-18" />
 			<attribute>
@@ -3033,18 +3020,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4460" level="2" /> <!-- Sword Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4089" level="1" /> <!-- Spirit Bear -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="8" /> <!-- Angel -->
-			<skill id="4460" level="2" /> <!-- Sword Vulnerability -->
 			<skill id="4721" level="8" /> <!-- Power Strike -->
 			<skill id="4746" level="8" /> <!-- Stun -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3060,47 +3042,45 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17527" min="1" max="1" chance="39.63" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="9.991" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35464" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35465" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35466" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35467" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35468" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35469" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35470" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35471" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35472" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35473" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35474" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35462" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35478" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Sigil (60%) -->
-				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35338" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35339" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35340" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35341" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
-				<item id="35343" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Ingredient -->
-				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35348" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="35349" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35350" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Ingredient -->
-				<item id="35351" min="1" max="1" chance="0.3" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35352" min="1" max="1" chance="0.3" /> <!-- Eternal Glove Ingredient -->
-				<item id="35354" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Ingredient -->
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.003" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.003" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.003" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.003" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17527" min="1" max="1" chance="79.08" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.89" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.682" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.164" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25656" level="93" type="Monster" name="Kanadis Follower">
-		<!-- Confirmed CT2.5 -->
+	<npc id="25656" level="104" type="Monster" name="Kanadis Follower">
 		<parameters>
 			<param name="String_Num1" value="1300149" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -3111,9 +3091,9 @@
 		<sex>MALE</sex>
 		<equipment rhand="152" /> <!-- Heavy Chisel -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
-			<attack physical="5065.71248916851" magical="899.53769081202" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="466.806863913762" magical="262.801587405588" />
+			<vitals hp="671716.184971098" hpRegen="8.5" mp="51429.0429042904" mpRegen="3" />
+			<attack physical="207294.983426603" magical="645.702958761998" random="10" critical="4.75" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="2602.0725388601" magical="994.545050359958" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="150" default="95" />
 			</attribute>
@@ -3126,19 +3106,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4456" level="1" /> <!-- Mental Attack Weak Point -->
-			<skill id="4458" level="2" /> <!-- Spear Weapon Weak Point -->
+			<skill id="4456" level="1" /> <!-- Mental Attack Vulnerability -->
+			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3154,7 +3126,6 @@
 		</collision>
 	</npc>
 	<npc id="25657" level="105" type="Monster" name="Kanadis Layperson">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
 			<skill name="DDSkill_01" id="4066" level="12" />
@@ -3167,7 +3138,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="8212" /> <!-- Monster Only (Solina Brother Mace) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="787992.014805" hpRegen="9.5" mp="64152.533" mpRegen="3.3" />
+			<vitals hp="721946.242774567" hpRegen="9.5" mp="52213.201320132" mpRegen="3.3" />
 			<attack physical="5574.2816024306" magical="986.874609959272" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="388.532688972703" magical="248.495325991196" />
 			<attribute>
@@ -3182,11 +3153,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4461" level="2" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4066" level="8" /> <!-- NPC Twister -->
 			<skill id="4077" level="8" /> <!-- NPC Aura Burn -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="4461" level="2" /> <!-- Dagger/ Rapier Vulnerability -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -3201,7 +3172,6 @@
 		</collision>
 	</npc>
 	<npc id="25658" level="105" type="Monster" name="Kanadis Fanatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -3211,7 +3181,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="898710.65724" hpRegen="9.5" mp="65096.537" mpRegen="3.3" />
+			<vitals hp="823384.971098266" hpRegen="9.5" mp="52981.5181518152" mpRegen="3.3" />
 			<attack physical="6133.84931619787" magical="1082.67036126497" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="505.286762009" magical="290.083779855" />
 			<attribute>
@@ -3227,8 +3197,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4460" level="2" /> <!-- Sword Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -3284,7 +3254,7 @@
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
 			<skill id="4736" level="7" /> <!-- Spinning Slasher -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -3342,7 +3312,7 @@
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4461" level="2" /> <!-- Dagger/ Rapier Vulnerability -->
 			<skill id="4766" level="7" /> <!-- Power Shot -->
 			<skill id="4771" level="7" /> <!-- Stun -->
@@ -3380,7 +3350,7 @@
 		<sex>MALE</sex>
 		<acquire exp="72812268776" sp="65528352" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1309331.29701042" hpRegen="453.2459686" mp="50430.7308852763" mpRegen="3.3" />
+			<vitals hp="2058462.83074339" hpRegen="453.2459686" mp="52981.5184815185" mpRegen="3.3" />
 			<attack physical="69771.496852827" magical="6496.96322549349" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="3152.62083319194" magical="2687.56885879964" evasion="-18" />
 			<attribute>
@@ -3396,18 +3366,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4460" level="2" /> <!-- Sword Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4089" level="1" /> <!-- Spirit Bear -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="8" /> <!-- Angel -->
-			<skill id="4460" level="2" /> <!-- Sword Vulnerability -->
 			<skill id="4721" level="7" /> <!-- Power Strike -->
 			<skill id="4746" level="7" /> <!-- Stun -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3423,47 +3388,45 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17527" min="1" max="1" chance="40.15" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="10.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35464" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35465" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35466" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35467" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35468" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35469" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35470" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35471" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35472" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35473" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35474" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35462" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35478" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Sigil (60%) -->
-				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35338" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35339" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35340" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35341" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
-				<item id="35343" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Ingredient -->
-				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35348" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="35349" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35350" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Ingredient -->
-				<item id="35351" min="1" max="1" chance="0.3" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35352" min="1" max="1" chance="0.3" /> <!-- Eternal Glove Ingredient -->
-				<item id="35354" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Ingredient -->
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.003" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.003" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.003" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.003" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17527" min="1" max="1" chance="79.13" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="20.43" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.791" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.174" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
 	<npc id="25662" level="104" type="Monster" name="Kanadis Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -3474,7 +3437,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="152" /> <!-- Heavy Chisel -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="733166.763135" hpRegen="9.5" mp="63189.065" mpRegen="3.3" />
+			<vitals hp="671716.184971098" hpRegen="9.5" mp="51429.0429042904" mpRegen="3.3" />
 			<attack physical="5065.71248916851" magical="899.53769081202" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="466.806863913762" magical="262.801587405588" />
 			<attribute>
@@ -3490,9 +3453,9 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
 			<skill id="4456" level="1" /> <!-- Mental Attack Vulnerability -->
+			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -3507,7 +3470,6 @@
 		</collision>
 	</npc>
 	<npc id="25663" level="105" type="Monster" name="Kanadis Sniper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
 			<skill name="DDSkill_01" id="4066" level="12" />
@@ -3520,7 +3482,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="8212" /> <!-- Monster Only (Solina Brother Mace) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="787992.014805" hpRegen="9.5" mp="64152.533" mpRegen="3.3" />
+			<vitals hp="721946.242774567" hpRegen="9.5" mp="52213.201320132" mpRegen="3.3" />
 			<attack physical="5574.2816024306" magical="986.874609959272" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="388.532688972703" magical="248.495325991196" />
 			<attribute>
@@ -3535,11 +3497,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4461" level="2" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4066" level="7" /> <!-- NPC Twister -->
 			<skill id="4077" level="8" /> <!-- NPC Aura Burn -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="4461" level="2" /> <!-- Dagger/ Rapier Vulnerability -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -3554,7 +3516,6 @@
 		</collision>
 	</npc>
 	<npc id="25664" level="105" type="Monster" name="Kanadis Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="String_Num1" value="1300149" />
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -3564,7 +3525,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="898710.65724" hpRegen="9.5" mp="65096.537" mpRegen="3.3" />
+			<vitals hp="823384.971098266" hpRegen="9.5" mp="52981.5181518152" mpRegen="3.3" />
 			<attack physical="6133.84931619787" magical="1082.67036126497" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="505.286762009" magical="290.083779855" />
 			<attribute>
@@ -3580,8 +3541,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4460" level="2" /> <!-- Sword Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -3632,7 +3593,7 @@
 			<skill id="4161" level="1" /> <!-- Summon -->
 			<skill id="4232" level="7" /> <!-- Spinning Slasher -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5218" level="1" /> <!-- Teleport -->
 			<skill id="5307" level="4" /> <!-- Stun -->
@@ -3640,7 +3601,7 @@
 			<skill id="5352" level="1" /> <!-- Spinning Slasher -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="5896" level="1" /> <!-- Soulless -->
-			<skill id="6223" level="1" /> <!-- 84 Lv. Raid Boss -->
+			<skill id="6223" level="1" /> <!-- Raid Boss (Lv. 84) -->
 			<skill id="6237" level="1" /> <!-- Decrease Speed -->
 			<skill id="6238" level="1" /> <!-- Decrease Speed -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -3689,14 +3650,14 @@
 			<skill id="4161" level="1" /> <!-- Summon -->
 			<skill id="4232" level="7" /> <!-- Spinning Slasher -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5218" level="1" /> <!-- Teleport -->
 			<skill id="5307" level="4" /> <!-- Stun -->
 			<skill id="5350" level="1" /> <!-- Power Strike -->
 			<skill id="5352" level="1" /> <!-- Spinning Slasher -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="6224" level="1" /> <!-- 84 Lv. Raid Boss -->
+			<skill id="6224" level="1" /> <!-- Raid Boss (Lv. 84) -->
 			<skill id="6237" level="1" /> <!-- Decrease Speed -->
 			<skill id="6238" level="1" /> <!-- Decrease Speed -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -3745,14 +3706,14 @@
 			<skill id="4161" level="1" /> <!-- Summon -->
 			<skill id="4232" level="7" /> <!-- Spinning Slasher -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5218" level="1" /> <!-- Teleport -->
 			<skill id="5307" level="4" /> <!-- Stun -->
 			<skill id="5350" level="1" /> <!-- Power Strike -->
 			<skill id="5352" level="1" /> <!-- Spinning Slasher -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="6225" level="1" /> <!-- 84 Lv. Raid Boss -->
+			<skill id="6225" level="1" /> <!-- Raid Boss (Lv. 84) -->
 			<skill id="6237" level="1" /> <!-- Decrease Speed -->
 			<skill id="6238" level="1" /> <!-- Decrease Speed -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -3801,14 +3762,14 @@
 			<skill id="4161" level="1" /> <!-- Summon -->
 			<skill id="4232" level="7" /> <!-- Spinning Slasher -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5218" level="1" /> <!-- Teleport -->
 			<skill id="5307" level="4" /> <!-- Stun -->
 			<skill id="5350" level="1" /> <!-- Power Strike -->
 			<skill id="5352" level="1" /> <!-- Spinning Slasher -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="6226" level="1" /> <!-- 84 Lv. Raid Boss -->
+			<skill id="6226" level="1" /> <!-- Raid Boss (Lv. 84) -->
 			<skill id="6237" level="1" /> <!-- Decrease Speed -->
 			<skill id="6238" level="1" /> <!-- Decrease Speed -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -3831,9 +3792,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="4292368" sp="1030" />
+		<acquire exp="4292369" sp="1031" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="312521.209575808" hpRegen="96.0880871925918" mp="1812.18781218781" mpRegen="3" />
+			<vitals hp="312521.209575808" hpRegen="96.0880871925918" mp="1830.16983016983" mpRegen="3" />
 			<attack physical="2075.60522653545" magical="221.68871108008" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1288.43930635838" magical="455.438002560395" />
 			<attribute>
@@ -3849,60 +3810,36 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4197" level="9" /> <!-- Hold -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="6227" level="1" /> <!-- 84 Lv. Raid Boss -->
+			<skill id="6227" level="1" /> <!-- Raid Boss (Lv. 84) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4197" level="9" /> <!-- Hold -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="9525" min="1" max="1" chance="1.223" /> <!-- Sealed Dynasty Stockings -->
-				<item id="9514" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Breastplate -->
-				<item id="9515" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Gaiters -->
-				<item id="9524" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Tunic -->
-				<item id="9531" min="6" max="18" chance="11.77" /> <!-- Sealed Dynasty Gaiters Piece -->
-				<item id="960" min="1" max="1" chance="9.963" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="9530" min="10" max="30" chance="6.953" /> <!-- Sealed Dynasty Breastplate Piece -->
-				<item id="9541" min="16" max="48" chance="4.088" /> <!-- Sealed Dynasty Stockings Piece -->
-				<item id="9540" min="22" max="66" chance="1.931" /> <!-- Sealed Dynasty Tunic Piece -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
-				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
-				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
-				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="2970" max="6920" chance="100" /> <!-- Adena -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 3 -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="90.64" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 		<collision>
 			<radius normal="45" />
@@ -3958,16 +3895,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="247" max="578" chance="70" /> <!-- Adena -->
-				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Weapon Augmenting Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.662" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4017,16 +3952,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="247" max="578" chance="70" /> <!-- Adena -->
-				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Weapon Augmenting Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.662" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4062,11 +3995,11 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4743" level="9" /> <!-- Power Strike -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="6228" level="1" /> <!-- 83 Lv. Raid Boss -->
+			<skill id="6228" level="1" /> <!-- Raid Boss (Lv. 83) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4079,22 +4012,22 @@
 				<item id="3936" min="1" max="1" chance="16.7" /> <!-- Blessed Scroll of Resurrection -->
 				<item id="9531" min="24" max="72" chance="4.479" /> <!-- Sealed Dynasty Gaiters Piece -->
 				<item id="9530" min="52" max="156" chance="2.034" /> <!-- Sealed Dynasty Breastplate Piece -->
-				<item id="6578" min="1" max="1" chance="1.507" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
-				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
-				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
-				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="6578" min="1" max="1" chance="1.507" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 3 -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -4104,10 +4037,10 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="92.145" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="92.145" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4234,7 +4167,7 @@
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="6229" level="1" /> <!-- 84 Lv. Raid Boss -->
+			<skill id="6229" level="1" /> <!-- Raid Boss (Lv. 84) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4246,27 +4179,27 @@
 				<item id="9516" min="1" max="1" chance="1.305" /> <!-- Sealed Dynasty Helmet -->
 				<item id="10220" min="1" max="1" chance="0.3" /> <!-- Icarus Hammer -->
 				<item id="10222" min="1" max="1" chance="0.3" /> <!-- Icarus Hall -->
-				<item id="960" min="1" max="1" chance="9.302" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="9.302" /> <!-- Scroll: Enchant S-grade Armor -->
 				<item id="10114" min="14" max="42" chance="4.177" /> <!-- Sealed Dynasty Sigil Piece -->
 				<item id="9545" min="40" max="120" chance="2.564" /> <!-- Sealed Dynasty Shield Fragment -->
 				<item id="9532" min="81" max="243" chance="1.054" /> <!-- Sealed Dynasty Helmet Piece -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
-				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
-				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
-				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant S-grade Weapon -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 3 -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -4276,10 +4209,10 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="86.37" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="86.37" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4422,7 +4355,7 @@
 			<skill id="5334" level="5" /> <!-- Power Strike -->
 			<skill id="5336" level="5" /> <!-- Spinning Slasher -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="6217" level="1" /> <!-- 81 Lv. Raid Boss -->
+			<skill id="6217" level="1" /> <!-- Raid Boss (Lv. 81) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4451,9 +4384,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="3327990" sp="798" />
+		<acquire exp="3327991" sp="799" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="436294.414111718" hpRegen="8.5" mp="18120.3796203796" mpRegen="3" />
+			<vitals hp="436293.994120118" hpRegen="8.5" mp="18301.1988011988" mpRegen="3" />
 			<attack physical="2463.86968920682" magical="773.169759570391" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1074.11764705882" magical="523.887876829053" />
 			<attribute>
@@ -4468,16 +4401,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4173" level="9" /> <!-- Might -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="6218" level="1" /> <!-- Raid Boss (Lv. 81) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4173" level="9" /> <!-- Might -->
 			<skill id="4584" level="10" /> <!-- P. Def.-decreasing Stun -->
 			<skill id="5334" level="5" /> <!-- Power Strike -->
 			<skill id="5336" level="5" /> <!-- Spinning Slasher -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="6218" level="1" /> <!-- 81 Lv. Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4488,21 +4420,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="9454" min="1" max="1" chance="1.799" /> <!-- Sealed Dynasty Ring -->
-				<item id="9452" min="1" max="1" chance="1.202" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9442" min="1" max="1" chance="0.075" /> <!-- Dynasty Sword -->
-				<item id="9443" min="1" max="1" chance="0.075" /> <!-- Dynasty Blade -->
-				<item id="9444" min="1" max="1" chance="0.075" /> <!-- Dynasty Phantom -->
-				<item id="9992" min="2" max="6" chance="8.234" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9993" min="5" max="15" chance="6.016" /> <!-- Sealed Dynasty Ring Gemstone -->
-				<item id="960" min="1" max="1" chance="5.533" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="9991" min="9" max="27" chance="2.391" /> <!-- Sealed Dynasty Earring Gemstone -->
-				<item id="9616" min="3" max="9" chance="1.464" /> <!-- Dynasty Sword Piece -->
-				<item id="9617" min="4" max="12" chance="1.274" /> <!-- Dynasty Blade Piece -->
-				<item id="9618" min="4" max="12" chance="1.07" /> <!-- Dynasty Phantom Piece -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="57" min="2970" max="6920" chance="100" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4525,9 +4443,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="3327990" sp="798" />
+		<acquire exp="3327991" sp="799" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="436294.414111718" hpRegen="8.5" mp="18120.3796203796" mpRegen="3" />
+			<vitals hp="436293.994120118" hpRegen="8.5" mp="18301.1988011988" mpRegen="3" />
 			<attack physical="2463.86968920682" magical="773.169759570391" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1074.11764705882" magical="523.887876829053" />
 			<attribute>
@@ -4542,16 +4460,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4173" level="9" /> <!-- Might -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="6219" level="1" /> <!-- Raid Boss (Lv. 81) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4173" level="9" /> <!-- Might -->
 			<skill id="4584" level="10" /> <!-- P. Def.-decreasing Stun -->
 			<skill id="5334" level="5" /> <!-- Power Strike -->
 			<skill id="5336" level="5" /> <!-- Spinning Slasher -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="6219" level="1" /> <!-- 81 Lv. Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4562,21 +4479,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="9454" min="1" max="1" chance="1.85" /> <!-- Sealed Dynasty Ring -->
-				<item id="9452" min="1" max="1" chance="1.254" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9442" min="1" max="1" chance="0.075" /> <!-- Dynasty Sword -->
-				<item id="9443" min="1" max="1" chance="0.075" /> <!-- Dynasty Blade -->
-				<item id="9444" min="1" max="1" chance="0.075" /> <!-- Dynasty Phantom -->
-				<item id="9992" min="2" max="6" chance="8.165" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9993" min="5" max="15" chance="5.955" /> <!-- Sealed Dynasty Ring Gemstone -->
-				<item id="960" min="1" max="1" chance="5.489" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="9991" min="9" max="27" chance="2.33" /> <!-- Sealed Dynasty Earring Gemstone -->
-				<item id="9616" min="3" max="9" chance="1.494" /> <!-- Dynasty Sword Piece -->
-				<item id="9617" min="4" max="12" chance="1.246" /> <!-- Dynasty Blade Piece -->
-				<item id="9618" min="4" max="12" chance="1.171" /> <!-- Dynasty Phantom Piece -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="57" min="2970" max="6920" chance="100" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4599,9 +4502,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="3327990" sp="798" />
+		<acquire exp="3327991" sp="799" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="436294.414111718" hpRegen="8.5" mp="18120.3796203796" mpRegen="3" />
+			<vitals hp="436293.994120118" hpRegen="8.5" mp="18301.1988011988" mpRegen="3" />
 			<attack physical="2463.86968920682" magical="773.169759570391" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1074.11764705882" magical="523.887876829053" />
 			<attribute>
@@ -4616,16 +4519,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4173" level="9" /> <!-- Might -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="6220" level="1" /> <!-- Raid Boss (Lv. 81) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4173" level="9" /> <!-- Might -->
 			<skill id="4584" level="10" /> <!-- P. Def.-decreasing Stun -->
 			<skill id="5334" level="5" /> <!-- Power Strike -->
 			<skill id="5336" level="5" /> <!-- Spinning Slasher -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="6220" level="1" /> <!-- 81 Lv. Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4636,21 +4538,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="9454" min="1" max="1" chance="1.792" /> <!-- Sealed Dynasty Ring -->
-				<item id="9452" min="1" max="1" chance="1.189" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9442" min="1" max="1" chance="0.075" /> <!-- Dynasty Sword -->
-				<item id="9443" min="1" max="1" chance="0.075" /> <!-- Dynasty Blade -->
-				<item id="9444" min="1" max="1" chance="0.075" /> <!-- Dynasty Phantom -->
-				<item id="9992" min="2" max="6" chance="8.126" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9993" min="5" max="15" chance="5.942" /> <!-- Sealed Dynasty Ring Gemstone -->
-				<item id="960" min="1" max="1" chance="5.525" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="9991" min="9" max="27" chance="2.374" /> <!-- Sealed Dynasty Earring Gemstone -->
-				<item id="9616" min="3" max="9" chance="1.49" /> <!-- Dynasty Sword Piece -->
-				<item id="9617" min="4" max="12" chance="1.215" /> <!-- Dynasty Blade Piece -->
-				<item id="9618" min="4" max="12" chance="1.186" /> <!-- Dynasty Phantom Piece -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="57" min="2970" max="6920" chance="100" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4673,9 +4561,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="37775745" sp="9066" />
+		<acquire exp="37775746" sp="9067" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="436294.414111718" hpRegen="319.2293199" mp="18120.3796203796" mpRegen="3" />
+			<vitals hp="436293.994120118" hpRegen="319.2293199" mp="18301.1988011988" mpRegen="3" />
 			<attack physical="2493.53656433039" magical="772.239675275685" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="1073.68421052632" magical="523.745260587366" />
 			<attribute>
@@ -4690,16 +4578,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4173" level="9" /> <!-- Might -->
-			<skill id="4415" level="19" /> <!-- Dual Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="6221" level="1" /> <!-- Raid Boss (Lv. 82) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4173" level="9" /> <!-- Might -->
 			<skill id="4584" level="10" /> <!-- P. Def.-decreasing Stun -->
 			<skill id="5334" level="5" /> <!-- Power Strike -->
 			<skill id="5336" level="5" /> <!-- Spinning Slasher -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="6221" level="1" /> <!-- 82 Lv. Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4710,15 +4597,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="9452" min="1" max="1" chance="5.524" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="3.173" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9454" min="1" max="1" chance="2.491" /> <!-- Sealed Dynasty Ring -->
-				<item id="9442" min="1" max="1" chance="0.75" /> <!-- Dynasty Sword -->
-				<item id="9444" min="1" max="1" chance="0.75" /> <!-- Dynasty Phantom -->
-				<item id="21955" min="1" max="1" chance="0.75" /> <!-- Aenkinel's Astaroth -->
+				<item id="57" min="2970" max="6920" chance="100" /> <!-- Adena -->
 				<item id="15341" min="1" max="3" chance="100" /> <!-- Guiding Tea Leaves -->
-				<item id="959" min="1" max="1" chance="5.688" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4741,9 +4621,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="42720365" sp="10252" />
+		<acquire exp="42720366" sp="10253" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="449514.069718606" hpRegen="319.2293199" mp="19170.3296703297" mpRegen="3" />
+			<vitals hp="449514.069718606" hpRegen="319.2293199" mp="19361.6383616384" mpRegen="3" />
 			<attack physical="2538.69792581967" magical="804.709223313659" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1108.09248554913" magical="540.788691077708" />
 			<attribute>
@@ -4758,16 +4638,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4173" level="9" /> <!-- Might -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="6222" level="1" /> <!-- Raid Boss (Lv. 84) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4173" level="9" /> <!-- Might -->
 			<skill id="4584" level="10" /> <!-- P. Def.-decreasing Stun -->
 			<skill id="5334" level="5" /> <!-- Power Strike -->
 			<skill id="5336" level="5" /> <!-- Spinning Slasher -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="6222" level="1" /> <!-- 84 Lv. Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -4778,15 +4657,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="9452" min="1" max="1" chance="6.552" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="3.622" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9454" min="1" max="1" chance="2.967" /> <!-- Sealed Dynasty Ring -->
-				<item id="10215" min="1" max="1" chance="0.75" /> <!-- Icarus Sawsword -->
-				<item id="10217" min="1" max="1" chance="0.75" /> <!-- Icarus Spirit -->
-				<item id="10218" min="1" max="1" chance="0.75" /> <!-- Icarus Heavy Arms -->
+				<item id="57" min="2970" max="6920" chance="100" /> <!-- Adena -->
 				<item id="15341" min="2" max="3" chance="100" /> <!-- Guiding Tea Leaves -->
-				<item id="959" min="1" max="1" chance="6.739" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="1.119" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4802,9 +4674,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="386354696" sp="92725" raidPoints="30" />
+		<acquire exp="386354696" sp="92726" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="755377.791777498" hpRegen="319.2293199" mp="18262.8316128316" mpRegen="3" />
+			<vitals hp="763865.182696346" hpRegen="319.2293199" mp="18652.8471528472" mpRegen="3" />
 			<attack physical="31366.081196337" magical="1274.46548075248" random="10" critical="4" accuracy="-11" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="17286.2197392924" magical="8432.75594672243" evasion="-18" />
 			<attribute>
@@ -4823,54 +4695,53 @@
 			<height normal="57.0" />
 		</collision>
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="13" /> <!-- Two-Handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="6652" level="1" /> <!-- Raid Boss (Lv. 89) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5622" level="3" /> <!-- Quadruple Skill Attack -->
 			<skill id="6378" level="1" /> <!-- Earth Shift -->
 			<skill id="6379" level="1" /> <!-- Critical Hit -->
 			<skill id="6380" level="1" /> <!-- Bistakon Roar -->
 			<skill id="6381" level="2" /> <!-- Bistakon Soul Beam -->
 			<skill id="6650" level="1" /> <!-- Tacrakahn's Alienation -->
-			<skill id="6652" level="1" /> <!-- Raid Boss (Lv. 89) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17312" min="1" max="1" chance="4.532" /> <!-- Immortal Leather Leggings - Light Armor -->
-				<item id="17314" min="1" max="1" chance="3.709" /> <!-- Immortal Leather Boots - Light Armor -->
-				<item id="17316" min="1" max="1" chance="2.883" /> <!-- Immortal Tunic - Robe -->
-				<item id="17305" min="1" max="1" chance="2.84" /> <!-- Immortal Breastplate - Heavy Armor -->
-				<item id="17315" min="1" max="1" chance="1.884" /> <!-- Immortal Circlet - Robe -->
-				<item id="17307" min="1" max="1" chance="1.184" /> <!-- Immortal Gauntlets - Heavy Armor -->
+				<item id="17312" min="1" max="1" chance="4.557" /> <!-- Immortal Leather Leggings - Light armor -->
+				<item id="17314" min="1" max="1" chance="3.807" /> <!-- Immortal Leather Boots - Light armor -->
+				<item id="17316" min="1" max="1" chance="2.861" /> <!-- Immortal Tunic - Robe -->
+				<item id="17305" min="1" max="1" chance="2.769" /> <!-- Immortal Breastplate - Heavy armor -->
+				<item id="17315" min="1" max="1" chance="1.852" /> <!-- Immortal Circlet - Robe -->
+				<item id="17307" min="1" max="1" chance="1.188" /> <!-- Immortal Gauntlets - Heavy armor -->
 				<item id="17295" min="1" max="1" chance="0.75" /> <!-- Requiem Stormer -->
 				<item id="17298" min="1" max="1" chance="0.75" /> <!-- Requiem Buster -->
 				<item id="17299" min="1" max="1" chance="0.75" /> <!-- Requiem Caster -->
-				<item id="17526" min="1" max="1" chance="11.11" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46489" min="1" max="1" chance="1.121" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="1.105" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="1.049" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46475" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46490" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
-				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
-				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="17526" min="1" max="1" chance="10.7" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="46504" min="1" max="1" chance="1.162" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46489" min="1" max="1" chance="1.151" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="1.096" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46475" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 4 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4884,9 +4755,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="386354696" sp="92725" raidPoints="30" />
+		<acquire exp="386354696" sp="92726" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="6242791.59550142" hpRegen="319.2293199" mp="18262.8316128316" mpRegen="3" />
+			<vitals hp="6312934.90130197" hpRegen="319.2293199" mp="18652.8471528472" mpRegen="3" />
 			<attack physical="8391.53810427254" magical="1274.46548075248" random="10" critical="4" accuracy="-11" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.41402855369" magical="523.753093585496" evasion="-18" />
 			<attribute>
@@ -4905,51 +4776,50 @@
 			<height normal="64" />
 		</collision>
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="13" /> <!-- Two-Handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="6653" level="1" /> <!-- Raid Boss (Lv. 89) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="6403" level="1" /> <!-- Torumba Numbing Poison -->
 			<skill id="6404" level="1" /> <!-- Torumba Poison Swing -->
 			<skill id="6405" level="1" /> <!-- Torumba Roar -->
-			<skill id="6653" level="1" /> <!-- Raid Boss (Lv. 89) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17317" min="1" max="1" chance="4.465" /> <!-- Immortal Stockings - Robe -->
-				<item id="17309" min="1" max="1" chance="3.732" /> <!-- Immortal Shield - Heavy Armor -->
-				<item id="17311" min="1" max="1" chance="2.768" /> <!-- Immortal Leather Armor - Light Armor -->
-				<item id="17320" min="1" max="1" chance="1.393" /> <!-- Immortal Sigil - Robe -->
+				<item id="17317" min="1" max="1" chance="4.493" /> <!-- Immortal Stockings - Robe -->
+				<item id="17309" min="1" max="1" chance="3.768" /> <!-- Immortal Shield -->
+				<item id="17311" min="1" max="1" chance="2.809" /> <!-- Immortal Leather Armor - Light armor -->
+				<item id="17320" min="1" max="1" chance="1.412" /> <!-- Immortal Sigil -->
 				<item id="17292" min="1" max="1" chance="0.75" /> <!-- Requiem Slasher -->
 				<item id="17293" min="1" max="1" chance="0.75" /> <!-- Requiem Avenger -->
 				<item id="17294" min="1" max="1" chance="0.75" /> <!-- Requiem Fighter -->
 				<item id="17297" min="1" max="1" chance="0.75" /> <!-- Requiem Shooter -->
-				<item id="17306" min="1" max="1" chance="0.75" /> <!-- Immortal Gaiters - Heavy Armor -->
-				<item id="17526" min="1" max="1" chance="10.72" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46489" min="1" max="1" chance="1.165" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="1.128" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="1.038" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46475" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46490" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
-				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
-				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="17306" min="1" max="1" chance="0.75" /> <!-- Immortal Gaiters - Heavy armor -->
+				<item id="17526" min="1" max="1" chance="10.81" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="46504" min="1" max="1" chance="1.155" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46489" min="1" max="1" chance="1.126" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="1.067" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46475" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 4 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4964,9 +4834,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="386354696" sp="92725" raidPoints="30" />
+		<acquire exp="386354696" sp="92726" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="624278.785757618" hpRegen="319.2293199" mp="18262.8316128316" mpRegen="3" />
+			<vitals hp="631293.154136917" hpRegen="319.2293199" mp="18652.8471528472" mpRegen="3" />
 			<attack physical="31366.081196337" magical="1274.46548075248" random="10" critical="4" accuracy="-11" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="17286.2197392924" magical="8432.75594672243" />
 			<attribute>
@@ -4985,54 +4855,53 @@
 			<height normal="75" />
 		</collision>
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4415" level="13" /> <!-- Two-Handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="6654" level="1" /> <!-- Raid Boss (Lv. 89) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5622" level="2" /> <!-- Triple Skill Attack -->
 			<skill id="6376" level="1" /> <!-- Sonic Strike -->
 			<skill id="6390" level="1" /> <!-- Kokracon Sonic Explosion -->
 			<skill id="6391" level="1" /> <!-- Kokracon Sonic Slash -->
 			<skill id="6392" level="1" /> <!-- Kokracon Sonic Shot -->
-			<skill id="6654" level="1" /> <!-- Raid Boss (Lv. 89) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17313" min="1" max="1" chance="5.032" /> <!-- Immortal Leather Gloves - Light Armor -->
-				<item id="17319" min="1" max="1" chance="3.41" /> <!-- Immortal Shoes - Robe -->
-				<item id="17308" min="1" max="1" chance="2.483" /> <!-- Immortal Boots - Heavy Armor -->
-				<item id="17318" min="1" max="1" chance="1.988" /> <!-- Immortal Gloves - Robe -->
-				<item id="17304" min="1" max="1" chance="1.117" /> <!-- Immortal Helmet - Heavy Armor -->
+				<item id="17313" min="1" max="1" chance="5.06" /> <!-- Immortal Leather Gloves - Light armor -->
+				<item id="17319" min="1" max="1" chance="3.386" /> <!-- Immortal Shoes - Robe -->
+				<item id="17308" min="1" max="1" chance="2.547" /> <!-- Immortal Boots - Heavy armor -->
+				<item id="17318" min="1" max="1" chance="2.085" /> <!-- Immortal Gloves - Robe -->
+				<item id="17304" min="1" max="1" chance="1.095" /> <!-- Immortal Helmet - Heavy armor -->
 				<item id="17300" min="1" max="1" chance="0.75" /> <!-- Requiem Retributer -->
 				<item id="17296" min="1" max="1" chance="0.75" /> <!-- Requiem Thrower -->
-				<item id="17310" min="1" max="1" chance="0.75" /> <!-- Immortal Leather Helmet - Light Armor -->
+				<item id="17310" min="1" max="1" chance="0.75" /> <!-- Immortal Leather Helmet - Light armor -->
 				<item id="17291" min="1" max="1" chance="0.75" /> <!-- Requiem Cutter -->
 				<item id="17290" min="1" max="1" chance="0.75" /> <!-- Requiem Shaper -->
-				<item id="17526" min="1" max="1" chance="11.25" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46489" min="1" max="1" chance="1.164" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="1.148" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="1.036" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46475" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46490" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
-				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
-				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="17526" min="1" max="1" chance="10.74" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="46474" min="1" max="1" chance="1.161" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46489" min="1" max="1" chance="1.111" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="1.062" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46475" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 4 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -5064,7 +4933,7 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="6293" level="1" /> <!-- Power Strike -->
@@ -5072,7 +4941,7 @@
 			<skill id="6295" level="1" /> <!-- Point Target -->
 			<skill id="6297" level="1" /> <!-- Cylinder Throw -->
 			<skill id="6298" level="1" /> <!-- Summon Subordinate Knight -->
-			<skill id="6661" level="1" /> <!-- 85 Lv. Raid Boss -->
+			<skill id="6661" level="1" /> <!-- Raid Boss (Lv. 85) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>

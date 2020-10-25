@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="30400" name="Infinity Buster" type="Weapon">
-		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/ MP/ CP +30%, M. Skill Power +10%, Casting Spd. +15%, M. Critical Damage +7%. -->
+		<!-- Olympiad Hero's weapon. PvP Damage +30%, Max HP/ MP/ CP +30%, M. Skill Power +10%, Casting Spd. +15%, M. Skill Critical Damage +7%. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -37,7 +37,7 @@
 		</stats>
 	</item>
 	<item id="30401" name="Infinity Caster" type="Weapon">
-		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/ MP/ CP +30%, M. Skill Power +10%, Casting Spd. +15%, M. Critical Damage +7%. -->
+		<!-- Olympiad Hero's weapon. PvP Damage +30%, Max HP/ MP/ CP +30%, M. Skill Power +10%, Casting Spd. +15%, M. Skill Critical Damage +7%. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -74,7 +74,7 @@
 		</stats>
 	</item>
 	<item id="30402" name="Infinity Retributer" type="Weapon">
-		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/ MP/ CP +30%, M. Skill Power +10%, Atk./ Casting Spd. +15%, M. Critical Damage +7%. -->
+		<!-- Olympiad Hero's weapon. PvP Damage +30%, Max HP/ MP/ CP +30%, M. Skill Power +10%, Atk./ Casting Spd. +15%, M. Skill Critical Damage +7%. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -112,7 +112,7 @@
 		</stats>
 	</item>
 	<item id="30403" name="Infinity Dual Sword" type="Weapon">
-		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Critical Damage +7%. -->
+		<!-- Olympiad Hero's Weapon. PvP Damage +30%. Additionally Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, Critical Damage for standard attacks +7%. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -147,7 +147,7 @@
 		</stats>
 	</item>
 	<item id="30404" name="Infinity Dual Dagger" type="Weapon">
-		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Skill Critical Damage +10%. -->
+		<!-- Olympiad Hero's Weapon. PvP Damage +30%. Additionally Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -183,7 +183,7 @@
 		</stats>
 	</item>
 	<item id="30405" name="Infinity Dual Blunt Weapon" type="Weapon">
-		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Critical Damage +7%. -->
+		<!-- Olympiad Hero's Weapon. PvP damage +30%. Additionally Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, Critical Damage for standard attacks +7%. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -265,7 +265,7 @@
 		</capsuled_items>
 	</item>
 	<item id="30408" name="Dual Sword Crafting Stamp - R-grade" type="EtcItem">
-		<!-- Used to make an R-grade dual sword. -->
+		<!-- Used to craft a dual swords of R-grade or higher. No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="weight" val="20" />
 		<set name="price" val="3000000" />
@@ -289,7 +289,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30411" name="Talisman (R-grade) - Knock Back Resistance (Passive)" type="Armor">
-		<!-- Increases Knock Back Resistance when equipped. Shadow item. -->
+		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -309,7 +309,7 @@
 		</skills>
 	</item>
 	<item id="30412" name="Talisman (R-grade) - Knock Down Resistance (Passive)" type="Armor">
-		<!-- Increases Knock Down Resistance when equipped. Shadow item. -->
+		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -329,7 +329,7 @@
 		</skills>
 	</item>
 	<item id="30413" name="Talisman (R-grade) - Binding Resistance (Passive)" type="Armor">
-		<!-- Increases resistance to binding when equipped. Shadow item. -->
+		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -349,7 +349,7 @@
 		</skills>
 	</item>
 	<item id="30414" name="Talisman (R-grade) - Pulling Resistance (Passive)" type="Armor">
-		<!-- Increases resistance to pulling when equipped. Shadow item. -->
+		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -369,7 +369,7 @@
 		</skills>
 	</item>
 	<item id="30415" name="Talisman (R-grade) - Banishment Resistance (Passive)" type="Armor">
-		<!-- Increases resistance to banishment when equipped. Shadow item. -->
+		<!-- Increases Obstruction Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -389,7 +389,7 @@
 		</skills>
 	</item>
 	<item id="30416" name="Talisman (R-grade) - Mutation Resistance (Passive)" type="Armor">
-		<!-- Increases resistance to mutation when equipped. Shadow item. -->
+		<!-- Increases Stupor Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -409,7 +409,7 @@
 		</skills>
 	</item>
 	<item id="30417" name="Talisman (R-grade) - Knock Back Resistance (Passive)" type="Armor">
-		<!-- Increases Knock Back Resistance when equipped. Shadow item. -->
+		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -429,7 +429,7 @@
 		</skills>
 	</item>
 	<item id="30418" name="Talisman (R-grade) - Knock Down Resistance (Passive)" type="Armor">
-		<!-- Increases Knock Down Resistance when equipped. Shadow item. -->
+		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -449,7 +449,7 @@
 		</skills>
 	</item>
 	<item id="30419" name="Talisman (R-grade) - Binding Resistance (Passive)" type="Armor">
-		<!-- Increases resistance to binding when equipped. Shadow item. -->
+		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -469,7 +469,7 @@
 		</skills>
 	</item>
 	<item id="30420" name="Talisman (R-grade) - Pulling Resistance (Passive)" type="Armor">
-		<!-- Increases resistance to pulling when equipped. Shadow item. -->
+		<!-- Increases Confusion Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -489,7 +489,7 @@
 		</skills>
 	</item>
 	<item id="30421" name="Talisman (R-grade) - Banishment Resistance (Passive)" type="Armor">
-		<!-- Increases resistance to banishment when equipped. Shadow item. -->
+		<!-- Increases Obstruction Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -509,7 +509,7 @@
 		</skills>
 	</item>
 	<item id="30422" name="Talisman (R-grade) - Mutation Resistance (Passive)" type="Armor">
-		<!-- Increases resistance to mutation when equipped. Shadow item. -->
+		<!-- Increases Stupor Resistance. Shadow Item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -529,7 +529,7 @@
 		</skills>
 	</item>
 	<item id="30423" name="Recipe: Soulshot (R-grade)" type="EtcItem">
-		<!-- For dwarves only. Recipe for Soulshot (R-grade). Requires Create Item - Skill Lv. 11. Success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for R-grade Soulshot. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="900000" />
@@ -542,7 +542,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="30424" name="Recipe: Spiritshot (R-grade)" type="EtcItem">
-		<!-- For dwarves only. Recipe for Spiritshot (R-grade). Requires Create Item - Skill Lv. 11. Success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for R-grade Spiritshot. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="900000" />
@@ -555,7 +555,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="30425" name="Recipe: Blessed Spiritshot (R-grade)" type="EtcItem">
-		<!-- For dwarves only. Recipe for Blessed Spiritshot (R-grade). Requires Create Item - Skill Lv. 11. Success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Blessed R-grade Spiritshot. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="900000" />
@@ -568,7 +568,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="30426" name="Recipe: Elixir of Life (R-grade)" type="EtcItem">
-		<!-- For those who have completed the fourth class transfer only. Recipe for Elixir of Life (R-grade). Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for R-grade Elixir of Life. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="6000" />
@@ -581,7 +581,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="30427" name="Recipe: Elixir of Mind (R-grade)" type="EtcItem">
-		<!-- For those who have completed the fourth class transfer only. Recipe for Elixir of Mind (R-grade). Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for R-grade Elixir of Mind. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="6720" />
@@ -594,7 +594,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="30428" name="Recipe: Elixir of CP (R-grade)" type="EtcItem">
-		<!-- For those who have completed the fourth class transfer only. Recipe for Elixir of CP (R-grade). Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for R-grade Elixir of CP. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="2400" />
@@ -951,7 +951,7 @@
 		</stats>
 	</item>
 	<item id="30446" name="Bound Homunkulus' Sword - Acumen" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -985,7 +985,7 @@
 		</stats>
 	</item>
 	<item id="30447" name="Bound Homunkulus' Sword - Conversion" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. No Soul Crystal option. -->
+		<!-- <Special Option>. Max MP +60% and Max HP -40%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1624,7 +1624,7 @@
 		</stats>
 	</item>
 	<item id="30468" name="Bound Hell Hound - Guidance" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Bow of Peril Conversion. <Special Option>. Increases Accuracy by 3. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Bow of Peril Conversion. <Special Features>. P. Accuracy +3. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1660,7 +1660,7 @@
 		</stats>
 	</item>
 	<item id="30469" name="Bound Hell Hound - Quick Recovery" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Bow of Peril Conversion. <Special Option>. Increases cooldown by about 13%. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Bow of Peril Conversion. <Special Option>. Skill Cooldown is about -13%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1829,7 +1829,7 @@
 		</stats>
 	</item>
 	<item id="30474" name="Bound Heavy War Axe - Health" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Max HP +25%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1864,7 +1864,7 @@
 		</stats>
 	</item>
 	<item id="30475" name="Bound Heavy War Axe - Rsk. Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 107 when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Critical Rate +107 when HP < 60%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2272,7 +2272,7 @@
 		</stats>
 	</item>
 	<item id="30487" name="Bound Heaven's Divider - Haste" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Atk. Spd. by about +7%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Atk. Spd. +7%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2307,7 +2307,7 @@
 		</stats>
 	</item>
 	<item id="30488" name="Bound Heaven's Divider - Health" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Max HP +25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2342,7 +2342,7 @@
 		</stats>
 	</item>
 	<item id="30489" name="Bound Heaven's Divider - Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 84. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Critical Rate for standard attacks +84. Deals additional PvP damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2523,7 +2523,7 @@
 		</stats>
 	</item>
 	<item id="30495" name="Bound Halberd - Haste" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Atk. Spd. +6%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

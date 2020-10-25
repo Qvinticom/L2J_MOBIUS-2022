@@ -11,15 +11,15 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35711" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak Box - 3-day (Event) -->
-			<item id="35721" min="1" max="1" chance="100" /> <!-- Santa Girl's Hat Box - 3-day (Event) -->
-			<item id="17526" min="1" max="1" chance="10.04" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			<item id="17527" min="1" max="1" chance="59.19" /> <!-- Scroll: Enchant Armor (R-grade) -->
-			<item id="19447" min="1" max="1" chance="0.54" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-			<item id="19448" min="1" max="1" chance="4.46" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-			<item id="18566" min="1" max="1" chance="13.45" /> <!-- Top-grade Life Stone (R-grade) -->
-			<item id="18571" min="1" max="1" chance="6.72" /> <!-- Top-grade Life Stone (R95-grade) -->
-			<item id="18576" min="1" max="1" chance="5.6" /> <!-- Top-grade Life Stone (R99-grade) -->
+			<item id="35711" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak Box - 3-day / Event -->
+			<item id="35721" min="1" max="1" chance="100" /> <!-- Santa Girl's Hat Box - 3-day / Event -->
+			<item id="17526" min="1" max="1" chance="10.04" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="17527" min="1" max="1" chance="59.19" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="0.54" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="19448" min="1" max="1" chance="4.46" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="18566" min="1" max="1" chance="13.45" /> <!-- Top-grade R-grade Life Stone -->
+			<item id="18571" min="1" max="1" chance="6.72" /> <!-- Top-grade R95-grade Life Stone -->
+			<item id="18576" min="1" max="1" chance="5.6" /> <!-- Top-grade R99-grade Life Stone -->
 		</capsuled_items>
 	</item>
 	<item id="35701" name="Santa Girl's Red Stockings" additionalName="Event" type="EtcItem">
@@ -186,7 +186,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35693" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 1-day (Event) -->
+			<item id="35693" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 1-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="35711" name="Santa Girl's Cloak Box" additionalName="3-day (Event)" type="EtcItem">
@@ -200,7 +200,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35694" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 3-day (Event) -->
+			<item id="35694" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak - 3-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="35712" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Warriors Only" type="Armor">
@@ -267,7 +267,7 @@
 		</skills>
 	</item>
 	<item id="35715" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Warriors Only" type="Armor">
-		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. P. Atk. +5% and P. Critical Rate +50 when equipped. -->
+		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. P. Atk. +5% and Critical Rate for standard attacks +50 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -364,7 +364,7 @@
 		<set name="time" val="4320" />
 	</item>
 	<item id="35720" name="Santa Girl's Hat Box" additionalName="1-day (Event)" type="EtcItem">
-		<!-- Double-click to acquire Santa Girl's Hat (1-day). -->
+		<!-- Double-click to obtain Santa Girl's Hat (1-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -374,7 +374,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35718" min="1" max="1" chance="100" /> <!-- Santa Hat - 1-day (Event) -->
+			<item id="35718" min="1" max="1" chance="100" /> <!-- Santa Hat - 1-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="35721" name="Santa Girl's Hat Box" additionalName="3-day (Event)" type="EtcItem">
@@ -388,7 +388,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35719" min="1" max="1" chance="100" /> <!-- Santa Hat - 3-day (Event) -->
+			<item id="35719" min="1" max="1" chance="100" /> <!-- Santa Hat - 3-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="35722" name="Draco's Hat" additionalName="Event" type="Armor">
@@ -409,7 +409,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="35723" name="Specter Weapon Pack" type="EtcItem">
-		<!-- Pack containing Specter weapon in an Unidentified state. -->
+		<!-- Double-click to obtain an unidentified Specter weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -458,27 +458,27 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="18185" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Helmet - Heavy Armor -->
-			<item id="18186" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Breastplate - Heavy Armor -->
-			<item id="18187" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Gaiters - Heavy Armor -->
-			<item id="18188" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Gauntlets - Heavy Armor -->
-			<item id="18189" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Boots - Heavy Armor -->
-			<item id="18190" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Shield - Heavy Armor -->
-			<item id="18191" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Leather Helmet - Light Armor -->
-			<item id="18192" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Leather Armor - Light Armor -->
-			<item id="18193" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Leather Leggings - Light Armor -->
-			<item id="18194" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Leather Gloves - Light Armor -->
-			<item id="18195" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Leather Boots - Light Armor -->
+			<item id="18185" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Helmet - Heavy armor -->
+			<item id="18186" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Breastplate - Heavy armor -->
+			<item id="18187" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Gaiters - Heavy armor -->
+			<item id="18188" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Gauntlets - Heavy armor -->
+			<item id="18189" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Boots - Heavy armor -->
+			<item id="18190" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Shield -->
+			<item id="18191" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Leather Helmet - Light armor -->
+			<item id="18192" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Leather Armor - Light armor -->
+			<item id="18193" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Leather Leggings - Light armor -->
+			<item id="18194" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Leather Gloves - Light armor -->
+			<item id="18195" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Leather Boots - Light armor -->
 			<item id="18196" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Circlet - Robe -->
 			<item id="18197" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Tunic - Robe -->
 			<item id="18198" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Stockings - Robe -->
 			<item id="18199" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Gloves - Robe -->
 			<item id="18200" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Shoes - Robe -->
-			<item id="18201" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Sigil - Robe -->
+			<item id="18201" min="1" max="1" chance="100" /> <!-- Unidentified Seraph Sigil -->
 		</capsuled_items>
 	</item>
 	<item id="35725" name="Seraph Accessory Pack" type="EtcItem">
-		<!-- Pack containing Seraph accessory in an Unidentified state. -->
+		<!-- Double-click to obtain an unidentified Seraph accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -516,14 +516,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17526" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			<item id="17527" min="33" max="33" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			<item id="17526" min="3" max="3" chance="100" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="17527" min="33" max="33" chance="100" /> <!-- Scroll: Enchant R-grade Armor -->
 			<item id="33493" min="1" max="1" chance="100" /> <!-- Attribute Enchant Support Box -->
-			<item id="18554" min="1" max="1" chance="100" /> <!-- Red Soul Crystal (R95-grade) -->
-			<item id="18555" min="1" max="1" chance="100" /> <!-- Green Soul Crystal (R95-grade) -->
-			<item id="18556" min="1" max="1" chance="100" /> <!-- Blue Soul Crystal (R95-grade) -->
+			<item id="18554" min="1" max="1" chance="100" /> <!-- R95-grade Red Soul Crystal -->
+			<item id="18555" min="1" max="1" chance="100" /> <!-- R95-grade Green Soul Crystal -->
+			<item id="18556" min="1" max="1" chance="100" /> <!-- R95-grade Blue Soul Crystal -->
 			<item id="30306" min="340" max="340" chance="100" /> <!-- Essence of the Lesser Giants -->
-			<item id="18571" min="5" max="5" chance="100" /> <!-- Top-grade Life Stone (R95-grade) -->
+			<item id="18571" min="5" max="5" chance="100" /> <!-- Top-grade R95-grade Life Stone -->
 		</capsuled_items>
 	</item>
 	<item id="35727" name="Seed Talisman Ingredient Box" type="EtcItem">
@@ -543,13 +543,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35562" min="75" max="75" chance="100" /> <!-- Energy of Destruction -->
+			<item id="35562" min="75" max="75" chance="100" /> <!-- Destructive Energy -->
 			<item id="35563" min="100" max="100" chance="100" /> <!-- Giant's Energy -->
 			<item id="19477" min="1" max="1" chance="100" /> <!-- Seraph Bracelet -->
 		</capsuled_items>
 	</item>
 	<item id="35728" name="Hero's Support Box" type="EtcItem">
-		<!-- Double-click to acquire a Specter Weapon Pack, Seraph Armor Pack, Seraph Accessory Pack, Enchantment Pack (R-grade), Seed Talisman Box, Adena, soulshots, blessed spiritshots, and a Scroll: SP. -->
+		<!-- Double-click to obtain one of the following items: Specter Weapon Pack, Seraph Armor Pack, R-grade Enchantment Pack, Seed Talisman Box, adena, Soulshot, Blessed Spiritshot, SP Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -568,11 +568,11 @@
 			<item id="35723" min="1" max="1" chance="100" /> <!-- Specter Weapon Pack -->
 			<item id="35724" min="1" max="1" chance="100" /> <!-- Seraph Armor Pack -->
 			<item id="35725" min="1" max="1" chance="100" /> <!-- Seraph Accessory Pack -->
-			<item id="35726" min="1" max="1" chance="100" /> <!-- Enchantment Pack (R-grade) -->
+			<item id="35726" min="1" max="1" chance="100" /> <!-- R-grade Enchantment Box -->
 			<item id="35727" min="1" max="1" chance="100" /> <!-- Seed Talisman Ingredient Box -->
 			<item id="57" min="300000000" max="300000000" chance="100" /> <!-- Adena -->
-			<item id="30277" min="2" max="2" chance="100" /> <!-- Soulshot Large Pack (R-grade) -->
-			<item id="30281" min="1" max="1" chance="100" /> <!-- Blessed Spiritshot Large Pack (R-grade) -->
+			<item id="30277" min="2" max="2" chance="100" /> <!-- Greater Package: R-grade Soulshots -->
+			<item id="30281" min="1" max="1" chance="100" /> <!-- Greater Package: Blessed R-grade Spiritshots -->
 			<item id="30275" min="40" max="40" chance="100" /> <!-- Scroll: 1,000,000 SP -->
 		</capsuled_items>
 	</item>
@@ -615,7 +615,7 @@
 		</skills>
 	</item>
 	<item id="35731" name="Earth Stone (+60)" additionalName="Event" type="EtcItem">
-		<!-- Increases earth attribute by 60 at once. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<!-- Earth Attribute +60. Additional resistance increasing is impossible. Armor can be enhanced by up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -805,7 +805,7 @@
 		</skills>
 	</item>
 	<item id="35741" name="Scroll: PK (Low-grade)" type="EtcItem">
-		<!-- Double-click to lower PK value by 1. Must be in Floran Village to use. It can only be used when the PK value is above 1. Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. -->
+		<!-- Double-click to decrease the PK count by 1. Can be used only in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -823,7 +823,7 @@
 		</skills>
 	</item>
 	<item id="35742" name="Scroll: Reputation (Low-grade)" type="EtcItem">
-		<!-- Double-click to raise Rep. value by 1000. Can only be used while in a chaotic state (Rep. value is below 0). Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. Must be in Floran Village to use. -->
+		<!-- Double-click to increase reputation points by 1000. Can be used only in Floran Village. Can be used when in the Chaotic state (the reputation is below 0). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -838,7 +838,7 @@
 		</skills>
 	</item>
 	<item id="35743" name="Draco's Health Potion" additionalName="Event" type="EtcItem">
-		<!-- Upon use, it restores 3000 HP and the remaining power restores CP instantly. Instant effect with no duration. -->
+		<!-- Recovers 3000 HP. If HP is full, recovers CP. No cooldown. -->
 		<set name="icon" val="icon.etc_ev_draco_hp_bottle" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -857,7 +857,7 @@
 		</skills>
 	</item>
 	<item id="35744" name="Draco's Mana Potion" additionalName="Event" type="EtcItem">
-		<!-- Magical potion that restores MP by 100. Instant effect with no duration. Cannot be used when MP is full. -->
+		<!-- Instantly recovers 100 MP. No cooldown. Cannot be used when MP is full. -->
 		<set name="icon" val="icon.etc_ev_draco_mp_bottle" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -886,7 +886,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="35746" name="Draco's Hat:'Warrior (7-day)" additionalName="Event" type="Armor">
-		<!-- A cute Draco's Hat. 7-day. STR +2, DEX +2, CON +2. Can use the blessed resurrection skill (1 hour cooldown). Temporary event item. -->
+		<!-- A cute Draco's Hat. 7-day. STR +2, DEX +2, CON +2. Can use the blessed resurrection skill (1 h. cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -906,7 +906,7 @@
 		</skills>
 	</item>
 	<item id="35747" name="Draco's Hat:'Wizard (7-day)" additionalName="Event" type="Armor">
-		<!-- A cute Draco's Hat. 7-day. INT +2, WIT +2, MEN +2. Can use the blessed resurrection skill (1 hour cooldown). Temporary event item. -->
+		<!-- A cute Draco's Hat. 7-day. INT +2, WIT +2, MEN +2. Can use the blessed resurrection skill (1 h. cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -938,7 +938,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="35749" name="Weapon Attribute Change Crystal (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to change the attributes of R, R95, R99 and R110-grade weapons. It can be used when there is an R-grade weapon bestowed in the inventory. -->
+		<!-- Double-click to change the attribute of an R-/ R95-/ R99-/ R110-grade weapon. The weapon imbued with an attribute must be in the inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -949,7 +949,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35750" name="Draco's Blessing (30-min.)" additionalName="Event" type="EtcItem">
-		<!-- For 30 min., increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
+		<!-- For 30 min., increases acquired XP/ SP +200%. Required level: 85-90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -963,7 +963,7 @@
 		</skills>
 	</item>
 	<item id="35751" name="Draco's Shiny Accessory Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to acquire one of the following: Antharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, or Bottle of Valakas' Soul. -->
+		<!-- Double-click to obtain one of the following items: Antharas' Earring, Valakas' Necklace, Earth Wyrm's Heart Ring, Bottle of Antharas' Soul, Bottle of Valakas' Soul. -->
 		<set name="icon" val="icon.etc_ev_draco_gift_box" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -976,7 +976,7 @@
 		</skills>
 	</item>
 	<item id="35752" name="Scroll: PK (Mid-grade)" type="EtcItem">
-		<!-- Double-click to lower PK value by 3. Must be in Floran Village to use. It can only be used when the PK value is above 1. Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. -->
+		<!-- Double-click to decrease the PK count by 3. Can be used only in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -994,7 +994,7 @@
 		</skills>
 	</item>
 	<item id="35753" name="Scroll: PK (High-grade)" type="EtcItem">
-		<!-- Double-click to lower PK value by 5. Must be in Floran Village to use. It can only be used when the PK value is above 1. Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. -->
+		<!-- Double-click to decrease the PK count by 5. Can be used only in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1012,7 +1012,7 @@
 		</skills>
 	</item>
 	<item id="35754" name="Scroll: PK (Top-grade)" type="EtcItem">
-		<!-- Double-click to lower PK value by 10. Must be in Floran Village to use. It can only be used when the PK value is above 1. Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. -->
+		<!-- Double-click to decrease the PK count by 10. Can be used only in Floran Village. Can be used if the PK count is 1 or higher. Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1030,7 +1030,7 @@
 		</skills>
 	</item>
 	<item id="35755" name="Scroll: Reputation (Mid-grade)" type="EtcItem">
-		<!-- Double-click to raise Rep. value by 5000. Can only be used while in a chaotic state (Rep. value is below 0). Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. Must be in Floran Village to use. -->
+		<!-- Double-click to increase reputation points by 5000. Can be used only in Floran Village. Can be used when in the Chaotic state (the reputation is below 0). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1045,7 +1045,7 @@
 		</skills>
 	</item>
 	<item id="35756" name="Scroll: Reputation (High-grade)" type="EtcItem">
-		<!-- Double-click to raise Rep. value by 30000. Can only be used while in a chaotic state (Rep. value is below 0). Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. Must be in Floran Village to use. -->
+		<!-- Double-click to increase reputation points by 30,000. Can be used only in Floran Village. Can be used when in the Chaotic state (the reputation is below 0). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1060,7 +1060,7 @@
 		</skills>
 	</item>
 	<item id="35757" name="Scroll: Reputation (Top-grade)" type="EtcItem">
-		<!-- Double-click to change Rep. value to 0. Can only be used while in a chaotic state (Rep. value is below 0). Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah are in possession. Must be in Floran Village to use. -->
+		<!-- Double-click to reset reputation points to 0. Can be used only in Floran Village. Can be used when in the Chaotic state (the reputation is below 0). Not available when wielding Demonic Sword Zariche or Blood Sword Akamanah. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1075,7 +1075,7 @@
 		</skills>
 	</item>
 	<item id="35758" name="Draco's Blessing (1-hour)" additionalName="Event" type="EtcItem">
-		<!-- For 1 hour, increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
+		<!-- For 1 h., increases acquired XP/ SP +200%. Required level: 85-90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -1089,7 +1089,7 @@
 		</skills>
 	</item>
 	<item id="35759" name="Draco's Blessing (1-hour)" additionalName="Event" type="EtcItem">
-		<!-- For 1 hour, increases XP and SP acquired in hunt by 100% when used by characters level 1 - 95. Temporary event item. -->
+		<!-- For 1 h., acquired XP/ SP +100%. Required level: 1-95. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -1103,7 +1103,7 @@
 		</skills>
 	</item>
 	<item id="35760" name="Draco's Blessing (3-hour)" additionalName="Event" type="EtcItem">
-		<!-- For 3 hours, increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
+		<!-- For 3 h., increases acquired XP/ SP +200%. Required level: 85-90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -1173,7 +1173,7 @@
 		</skills>
 	</item>
 	<item id="35765" name="Rabbit Ears" additionalName="Critical Rate" type="Armor">
-		<!-- P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1187,7 +1187,7 @@
 		</skills>
 	</item>
 	<item id="35766" name="Rabbit Ears" additionalName="Critical Damage" type="Armor">
-		<!-- P. Critical Damage +90 and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1201,7 +1201,7 @@
 		</skills>
 	</item>
 	<item id="35767" name="Rabbit Ears" additionalName="P. Def." type="Armor">
-		<!-- P. Def. +5% when equipped. -->
+		<!-- P. Def. +5%, when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1215,7 +1215,7 @@
 		</skills>
 	</item>
 	<item id="35768" name="Rabbit Ears" additionalName="M. Def." type="Armor">
-		<!-- M. Def. +5% when equipped. -->
+		<!-- M. Def. +5%, when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1229,7 +1229,7 @@
 		</skills>
 	</item>
 	<item id="35769" name="Rabbit Ears" additionalName="Evasion" type="Armor">
-		<!-- Evasion +5 when equipped. -->
+		<!-- Evasion +5, when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1243,7 +1243,7 @@
 		</skills>
 	</item>
 	<item id="35770" name="Rabbit Ears" additionalName="P. Atk." type="Armor">
-		<!-- P. Atk. +5% when equipped. -->
+		<!-- P. Atk. +5%, when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1257,7 +1257,7 @@
 		</skills>
 	</item>
 	<item id="35771" name="Rabbit Ears" additionalName="M. Atk." type="Armor">
-		<!-- M. Atk. +10% when equipped. -->
+		<!-- M. Atk. +10%, when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1271,7 +1271,7 @@
 		</skills>
 	</item>
 	<item id="35772" name="Rabbit Ears" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5 when equipped. -->
+		<!-- P. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -1285,7 +1285,7 @@
 		</skills>
 	</item>
 	<item id="35773" name="Raccoon Ears" additionalName="STR" type="Armor">
-		<!-- STR +3 when equipped. -->
+		<!-- STR +3. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1299,7 +1299,7 @@
 		</skills>
 	</item>
 	<item id="35774" name="Raccoon Ears" additionalName="DEX" type="Armor">
-		<!-- DEX +3 when equipped. -->
+		<!-- DEX +3. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1341,7 +1341,7 @@
 		</skills>
 	</item>
 	<item id="35777" name="Raccoon Ears" additionalName="Critical Rate" type="Armor">
-		<!-- P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1355,7 +1355,7 @@
 		</skills>
 	</item>
 	<item id="35778" name="Raccoon Ears" additionalName="Critical Damage" type="Armor">
-		<!-- P. Critical Damage +90 and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1411,7 +1411,7 @@
 		</skills>
 	</item>
 	<item id="35782" name="Raccoon Ears" additionalName="P. Atk." type="Armor">
-		<!-- P. Atk. +5% when equipped. -->
+		<!-- P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1439,7 +1439,7 @@
 		</skills>
 	</item>
 	<item id="35784" name="Raccoon Ears" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5 when equipped. -->
+		<!-- P. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1453,7 +1453,7 @@
 		</skills>
 	</item>
 	<item id="35785" name="Cat Ears" additionalName="STR" type="Armor">
-		<!-- STR +3 when equipped. -->
+		<!-- STR +3. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1467,7 +1467,7 @@
 		</skills>
 	</item>
 	<item id="35786" name="Cat Ears" additionalName="DEX" type="Armor">
-		<!-- DEX +3 when equipped. -->
+		<!-- DEX +3. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1509,7 +1509,7 @@
 		</skills>
 	</item>
 	<item id="35789" name="Cat Ears" additionalName="Critical Rate" type="Armor">
-		<!-- P. Critical Rate +50 when equipped. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1523,7 +1523,7 @@
 		</skills>
 	</item>
 	<item id="35790" name="Cat Ears" additionalName="Critical Damage" type="Armor">
-		<!-- P. Critical Damage +90 and M. Critical Damage +68 when equipped. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1579,7 +1579,7 @@
 		</skills>
 	</item>
 	<item id="35794" name="Cat Ears" additionalName="P. Atk." type="Armor">
-		<!-- P. Atk. +5% when equipped. -->
+		<!-- P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1607,7 +1607,7 @@
 		</skills>
 	</item>
 	<item id="35796" name="Cat Ears" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5 when equipped. -->
+		<!-- P. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1621,7 +1621,7 @@
 		</skills>
 	</item>
 	<item id="35797" name="Romantic Chapeau" additionalName="STR" type="Armor">
-		<!-- STR +3 when equipped. -->
+		<!-- STR +3. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -1635,7 +1635,7 @@
 		</skills>
 	</item>
 	<item id="35798" name="Romantic Chapeau" additionalName="DEX" type="Armor">
-		<!-- DEX +3 when equipped. -->
+		<!-- DEX +3. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />

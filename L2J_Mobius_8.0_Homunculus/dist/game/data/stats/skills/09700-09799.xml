@@ -42,13 +42,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="55.24">
-						<item id="36184" count="1" /> <!-- Kaliel's Energy - Annihilation -->
+						<item id="36184" count="1" /> <!-- Annihilation Energy -->
 					</item>
 					<item chance="27.62">
-						<item id="36185" count="1" /> <!-- Kaliel's Energy - Hellfire -->
+						<item id="36185" count="1" /> <!-- Hellfire Energy -->
 					</item>
 					<item chance="17.14">
-						<item id="36186" count="1" /> <!-- Kaliel's Energy - Desire -->
+						<item id="36186" count="1" /> <!-- Energy of Desire -->
 					</item>
 				</items>
 			</effect>
@@ -363,7 +363,7 @@
 		</effects>
 	</skill>
 	<skill id="9720" toLevel="1" name="Heroes' Power">
-		<!-- Use to obtain Dual Blunt Imbued with Heroes' Power (2-hr). Needs Scroll Imbued with Heroes' Power. -->
+		<!-- Use to obtain Dual Blunt Weapon Imbued with Heroes' Power (2-hr). Needs Scroll Imbued with Heroes' Power. -->
 		<icon>icon.etc_kalie_hero_scroll</icon>
 		<itemConsumeId>36221</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -423,7 +423,7 @@
 						<item id="36242" count="1" /> <!-- Blessed Valakas' Necklace - 3-hour -->
 					</item>
 					<item chance="1">
-						<item id="36243" count="1" /> <!-- Earth Wyrm Heart Ring - 3-hour -->
+						<item id="36243" count="1" /> <!-- Earth Wyrm's Heart Ring - 3-hour -->
 					</item>
 					<item chance="5">
 						<item id="36244" count="1" /> <!-- Tauti's Ring - 3-hour -->
@@ -472,52 +472,52 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="11">
-						<item id="36223" count="1" /> <!-- Entrance Pass: Emperor's Labyrinth Lv. 85 Solo -->
+						<item id="36223" count="1" /> <!-- Extra Pass: Emperor's Labyrinth Lv. 85 (Solo) -->
 					</item>
 					<item chance="11">
-						<item id="36224" count="1" /> <!-- Entrance Pass: Emperor's Labyrinth Lv. 90 Solo -->
+						<item id="36224" count="1" /> <!-- Extra Pass: Emperor's Labyrinth Lv. 90 (Solo) -->
 					</item>
 					<item chance="11">
-						<item id="36225" count="1" /> <!-- Entrance Pass: Emperor's Labyrinth Lv. 95 Solo -->
+						<item id="36225" count="1" /> <!-- Extra Pass: Emperor's Labyrinth Lv. 95 (Solo) -->
 					</item>
 					<item chance="10">
-						<item id="36226" count="1" /> <!-- Entrance Pass: Emperor's Labyrinth Lv. 85 Party -->
+						<item id="36226" count="1" /> <!-- Extra Pass: Emperor's Labyrinth Lv. 85 (Party) -->
 					</item>
 					<item chance="10">
-						<item id="36268" count="1" /> <!-- Entrance Pass: Emperor's Labyrinth Lv. 90 Party -->
+						<item id="36268" count="1" /> <!-- Extra Pass: Emperor's Labyrinth Lv. 90 (Party) -->
 					</item>
 					<item chance="10">
-						<item id="36269" count="1" /> <!-- Entrance Pass: Emperor's Labyrinth Lv. 95 Party -->
+						<item id="36269" count="1" /> <!-- Extra Pass: Emperor's Labyrinth Lv. 95 (Party) -->
 					</item>
 					<item chance="6">
-						<item id="36270" count="1" /> <!-- Entrance Pass: Teredor -->
+						<item id="36270" count="1" /> <!-- Extra Pass: Teredor -->
 					</item>
 					<item chance="6">
-						<item id="36271" count="1" /> <!-- Entrance Pass: Spezion (Normal) -->
+						<item id="36271" count="1" /> <!-- Extra Pass: Spezion (Normal) -->
 					</item>
 					<item chance="6">
-						<item id="36272" count="1" /> <!-- Entrance Pass: Spezion (Epic) -->
+						<item id="36272" count="1" /> <!-- Extra Pass: Spezion (Epic) -->
 					</item>
 					<item chance="6">
-						<item id="36273" count="1" /> <!-- Entrance Pass: Fortuna -->
+						<item id="36273" count="1" /> <!-- Emperor's Extra Pass: Fortuna -->
 					</item>
 					<item chance="6">
-						<item id="36274" count="1" /> <!-- Entrance Pass: Nornil's Garden -->
+						<item id="36274" count="1" /> <!-- Emperor's Extra Pass: Nornil's Garden -->
 					</item>
 					<item chance="0.5">
-						<item id="36275" count="1" /> <!-- Entrance Pass: Istina (Normal) -->
+						<item id="36275" count="1" /> <!-- Extra Pass: Istina (Normal) -->
 					</item>
 					<item chance="0.5">
-						<item id="36276" count="1" /> <!-- Entrance Pass: Octavis (Normal) -->
+						<item id="36276" count="1" /> <!-- Extra Pass: Octavis (Normal) -->
 					</item>
 					<item chance="6">
-						<item id="36277" count="1" /> <!-- Entrance Pass: Baylor -->
+						<item id="36277" count="1" /> <!-- Emperor's Extra Pass: Baylor -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9725" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85 Solo">
+	<skill id="9725" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -531,7 +531,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9726" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90 Solo">
+	<skill id="9726" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -545,7 +545,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9727" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95 Solo">
+	<skill id="9727" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -559,7 +559,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9728" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85 Party">
+	<skill id="9728" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -573,7 +573,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9729" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90 Party">
+	<skill id="9729" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -587,7 +587,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9730" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95 Party">
+	<skill id="9730" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -601,7 +601,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9731" toLevel="1" name="Entrance Pass: Teredor">
+	<skill id="9731" toLevel="1" name="Extra Pass: Teredor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -615,7 +615,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9732" toLevel="1" name="Entrance Pass: Fortuna">
+	<skill id="9732" toLevel="1" name="Extra Pass: Fortuna">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -629,7 +629,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9733" toLevel="1" name="Entrance Pass: Spezion (Normal)">
+	<skill id="9733" toLevel="1" name="Extra Pass: Spezion (Normal)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -643,7 +643,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9734" toLevel="1" name="Entrance Pass: Spezion (Epic)">
+	<skill id="9734" toLevel="1" name="Extra Pass: Spezion (Epic)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -657,7 +657,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9735" toLevel="1" name="Entrance Pass: Baylor">
+	<skill id="9735" toLevel="1" name="Extra Pass: Baylor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -699,7 +699,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9737" toLevel="1" name="Entrance Pass: Istina">
+	<skill id="9737" toLevel="1" name="Extra Pass: Istina">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -713,7 +713,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9738" toLevel="1" name="Entrance Pass: Nornil's Garden">
+	<skill id="9738" toLevel="1" name="Extra Pass: Nornil's Garden">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -727,7 +727,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9739" toLevel="1" name="Entrance Pass: Octavis">
+	<skill id="9739" toLevel="1" name="Extra Pass: Octavis">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -770,121 +770,121 @@
 						<item id="21185" count="1" /> <!-- Transformation Scroll: Zaken - Event -->
 					</item>
 					<item chance="0.2">
-						<item id="17661" count="1" /> <!-- Lv. 3 Giant STR Dye - STR +5/ DEX -4 -->
+						<item id="17661" count="1" /> <!-- Giant's STR Dye Lv. 3 - STR +5, DEX -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17662" count="1" /> <!-- Lv. 3 Giant DEX Dye - DEX +5/ CON -4 -->
+						<item id="17662" count="1" /> <!-- Giant's DEX Dye Lv. 3 - DEX +5, CON -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17663" count="1" /> <!-- Lv. 3 Giant CON Dye - CON +5/ STR -4 -->
+						<item id="17663" count="1" /> <!-- Giant's CON Dye Lv. 3 - CON +5, STR -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17664" count="1" /> <!-- Lv. 3 Giant INT Dye - INT +5/ WIT -4 -->
+						<item id="17664" count="1" /> <!-- Giant's INT Dye Lv. 3 - INT +5, WIT -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17665" count="1" /> <!-- Lv. 3 Giant WIT Dye - WIT +5/ MEN -4 -->
+						<item id="17665" count="1" /> <!-- Giant's WIT Dye Lv. 3 - WIT +5, MEN -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17666" count="1" /> <!-- Lv. 3 Giant MEN Dye - MEN +5/ INT -4 -->
+						<item id="17666" count="1" /> <!-- Giant's MEN Dye Lv. 3 - MEN +5, INT -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17667" count="1" /> <!-- Lv. 3 Ancient STR Dye - STR +5/ DEX -4/ Fire Resistance +15 -->
+						<item id="17667" count="1" /> <!-- Ancient STR Dye Lv. 3 - STR +5, DEX -4, Fire Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17668" count="1" /> <!-- Lv. 3 Ancient DEX Dye - DEX +5/ CON -4/ Earth Resistance +15 -->
+						<item id="17668" count="1" /> <!-- Ancient DEX Dye Lv. 3 - DEX +5, CON -4, Earth Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17669" count="1" /> <!-- Lv. 3 Ancient CON Dye - CON +5/ STR -4/ Dark Resistance +15 -->
+						<item id="17669" count="1" /> <!-- Ancient CON Dye Lv. 3 - CON +5, STR -4, Dark Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17670" count="1" /> <!-- Lv. 3 Ancient INT Dye - INT +5/ WIT -4/ Water Resistance +15 -->
+						<item id="17670" count="1" /> <!-- Ancient INT Dye Lv. 3 - INT +5, WIT -4, Water Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17671" count="1" /> <!-- Lv. 3 Ancient WIT Dye - WIT +5/ MEN -4/ Wind Resistance +15 -->
+						<item id="17671" count="1" /> <!-- Ancient WIT Dye Lv. 3 - WIT +5, MEN -4, Wind Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17672" count="1" /> <!-- Lv. 3 Ancient MEN Dye - MEN +5/ INT -4/ Holy Resistance +15 -->
+						<item id="17672" count="1" /> <!-- Ancient MEN Dye Lv. 3 - MEN +5, INT -4, Holy Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17673" count="1" /> <!-- Lv. 3 Legendary STR Dye - STR +5/ DEX -3/ Fire Resistance +15 -->
+						<item id="17673" count="1" /> <!-- Legendary STR Dye Lv. 3 - STR +5, DEX -3, Fire Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17674" count="1" /> <!-- Lv. 3 Legendary DEX Dye - DEX +5/ CON -3/ Earth Resistance +15 -->
+						<item id="17674" count="1" /> <!-- Legendary DEX Dye Lv. 3 - DEX +5, CON -3, Earth Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17675" count="1" /> <!-- Lv. 3 Legendary CON Dye - CON +5/ STR -3/ Dark Resistance +15 -->
+						<item id="17675" count="1" /> <!-- Legendary CON Dye Lv. 3 - CON +5, STR -3, Dark Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17676" count="1" /> <!-- Lv. 3 Legendary INT Dye - INT +5/ WIT -3/ Water Resistance +15 -->
+						<item id="17676" count="1" /> <!-- Legendary INT Dye Lv. 3 - INT +5, WIT -3, Water Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17677" count="1" /> <!-- Lv. 3 Legendary WIT Dye - WIT +5/ MEN -3/ Wind Resistance +15 -->
+						<item id="17677" count="1" /> <!-- Legendary WIT Dye Lv. 3 - WIT +5, MEN -3, Wind Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17678" count="1" /> <!-- Lv. 3 Legendary MEN Dye - MEN +5/ INT -3/ Holy Resistance +15 -->
+						<item id="17678" count="1" /> <!-- Legendary MEN Dye Lv. 3 - MEN +5, INT -3, Holy Resistance +15 -->
 					</item>
 					<item chance="0.1">
-						<item id="17679" count="1" /> <!-- Lv. 4 Giant STR Dye - STR +5/ DEX -2 -->
+						<item id="17679" count="1" /> <!-- Giant's STR Dye Lv. 4 - STR +5, DEX -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17680" count="1" /> <!-- Lv. 4 Giant DEX Dye - DEX +5/ CON -2 -->
+						<item id="17680" count="1" /> <!-- Giant's DEX Dye Lv. 4 - DEX +5, CON -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17681" count="1" /> <!-- Lv. 4 Giant CON Dye - CON +5/ STR -2 -->
+						<item id="17681" count="1" /> <!-- Giant's CON Dye Lv. 4 - CON +5, STR -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17682" count="1" /> <!-- Lv. 4 Giant INT Dye - INT +5/ WIT -2 -->
+						<item id="17682" count="1" /> <!-- Giant's INT Dye Lv. 4 - INT +5, WIT -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17683" count="1" /> <!-- Lv. 4 Giant WIT Dye - WIT +5/ MEN -2 -->
+						<item id="17683" count="1" /> <!-- Giant's WIT Dye Lv. 4 - WIT +5, MEN -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17684" count="1" /> <!-- Lv. 4 Giant MEN Dye - MEN +5/ INT -2 -->
+						<item id="17684" count="1" /> <!-- Giant's MEN Dye Lv. 4 - MEN +5, INT -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17685" count="1" /> <!-- Lv. 4 Ancient STR Dye - STR +5/ DEX -2/ Fire Resistance +20 -->
+						<item id="17685" count="1" /> <!-- Ancient STR Dye Lv. 4 - STR +5, DEX -2, Fire Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17686" count="1" /> <!-- Lv. 4 Ancient DEX Dye - DEX +5/ CON -2/ Earth Resistance +20 -->
+						<item id="17686" count="1" /> <!-- Ancient DEX Dye Lv. 4 - DEX +5, CON -2, Earth Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17687" count="1" /> <!-- Lv. 4 Ancient CON Dye - CON +5/ STR -2/ Dark Resistance +20 -->
+						<item id="17687" count="1" /> <!-- Ancient CON Dye Lv. 4 - CON +5, STR -2, Dark Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17688" count="1" /> <!-- Lv. 4 Ancient INT Dye - INT +5/ WIT -2/ Water Resistance +20 -->
+						<item id="17688" count="1" /> <!-- Ancient INT Dye Lv. 4 - INT +5, WIT -2, Water Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17689" count="1" /> <!-- Lv. 4 Ancient WIT Dye - WIT +5/ MEN -2/ Wind Resistance +20 -->
+						<item id="17689" count="1" /> <!-- Ancient WIT Dye Lv. 4 - WIT +5, MEN -2, Wind Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17690" count="1" /> <!-- Lv. 4 Ancient MEN Dye - MEN +5/ INT -2/ Holy Resistance +20 -->
+						<item id="17690" count="1" /> <!-- Ancient MEN Dye Lv. 4 - MEN +5, INT -2, Holy Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17691" count="1" /> <!-- Lv. 4 Legendary STR Dye - STR +5/ DEX -1/ Fire Resistance +20 -->
+						<item id="17691" count="1" /> <!-- Legendary STR Dye Lv. 4 - STR +5, DEX -1, Fire Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17692" count="1" /> <!-- Lv. 4 Legendary DEX Dye - DEX +5/ CON -1/ Earth Resistance +20 -->
+						<item id="17692" count="1" /> <!-- Legendary DEX Dye Lv. 4 - DEX +5, CON -1, Earth Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17693" count="1" /> <!-- Lv. 4 Legendary CON Dye - CON +5/ STR -1/ Dark Resistance +20 -->
+						<item id="17693" count="1" /> <!-- Legendary CON Dye Lv. 4 - CON +5, STR -1, Dark Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17694" count="1" /> <!-- Lv. 4 Legendary INT Dye - INT +5/ WIT -1/ Water Resistance +20 -->
+						<item id="17694" count="1" /> <!-- Legendary INT Dye Lv. 4 - INT +5, WIT -1, Water Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17695" count="1" /> <!-- Lv. 4 Legendary WIT Dye - WIT +5/ MEN -1/ Wind Resistance +20 -->
+						<item id="17695" count="1" /> <!-- Legendary WIT Dye Lv. 4 - WIT +5, MEN -1, Wind Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17696" count="1" /> <!-- Lv. 4 Legendary MEN Dye - MEN +5/ INT -1/ Holy Resistance +20 -->
+						<item id="17696" count="1" /> <!-- Legendary MEN Dye Lv. 4 - MEN +5, INT -1, Holy Resistance +20 -->
 					</item>
 					<item chance="0.14">
-						<item id="36184" count="1" /> <!-- Kaliel's Energy - Annihilation -->
+						<item id="36184" count="1" /> <!-- Annihilation Energy -->
 					</item>
 					<item chance="0.09">
-						<item id="36185" count="1" /> <!-- Kaliel's Energy - Hellfire -->
+						<item id="36185" count="1" /> <!-- Hellfire Energy -->
 					</item>
 					<item chance="0.05">
-						<item id="36186" count="1" /> <!-- Kaliel's Energy - Desire -->
+						<item id="36186" count="1" /> <!-- Energy of Desire -->
 					</item>
 					<item chance="0.08">
 						<item id="35901" count="1" /> <!-- STR Pendant -->
@@ -970,121 +970,121 @@
 						<item id="21185" count="1" /> <!-- Transformation Scroll: Zaken - Event -->
 					</item>
 					<item chance="0.2">
-						<item id="17661" count="1" /> <!-- Lv. 3 Giant STR Dye - STR +5/ DEX -4 -->
+						<item id="17661" count="1" /> <!-- Giant's STR Dye Lv. 3 - STR +5, DEX -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17662" count="1" /> <!-- Lv. 3 Giant DEX Dye - DEX +5/ CON -4 -->
+						<item id="17662" count="1" /> <!-- Giant's DEX Dye Lv. 3 - DEX +5, CON -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17663" count="1" /> <!-- Lv. 3 Giant CON Dye - CON +5/ STR -4 -->
+						<item id="17663" count="1" /> <!-- Giant's CON Dye Lv. 3 - CON +5, STR -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17664" count="1" /> <!-- Lv. 3 Giant INT Dye - INT +5/ WIT -4 -->
+						<item id="17664" count="1" /> <!-- Giant's INT Dye Lv. 3 - INT +5, WIT -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17665" count="1" /> <!-- Lv. 3 Giant WIT Dye - WIT +5/ MEN -4 -->
+						<item id="17665" count="1" /> <!-- Giant's WIT Dye Lv. 3 - WIT +5, MEN -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17666" count="1" /> <!-- Lv. 3 Giant MEN Dye - MEN +5/ INT -4 -->
+						<item id="17666" count="1" /> <!-- Giant's MEN Dye Lv. 3 - MEN +5, INT -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17667" count="1" /> <!-- Lv. 3 Ancient STR Dye - STR +5/ DEX -4/ Fire Resistance +15 -->
+						<item id="17667" count="1" /> <!-- Ancient STR Dye Lv. 3 - STR +5, DEX -4, Fire Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17668" count="1" /> <!-- Lv. 3 Ancient DEX Dye - DEX +5/ CON -4/ Earth Resistance +15 -->
+						<item id="17668" count="1" /> <!-- Ancient DEX Dye Lv. 3 - DEX +5, CON -4, Earth Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17669" count="1" /> <!-- Lv. 3 Ancient CON Dye - CON +5/ STR -4/ Dark Resistance +15 -->
+						<item id="17669" count="1" /> <!-- Ancient CON Dye Lv. 3 - CON +5, STR -4, Dark Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17670" count="1" /> <!-- Lv. 3 Ancient INT Dye - INT +5/ WIT -4/ Water Resistance +15 -->
+						<item id="17670" count="1" /> <!-- Ancient INT Dye Lv. 3 - INT +5, WIT -4, Water Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17671" count="1" /> <!-- Lv. 3 Ancient WIT Dye - WIT +5/ MEN -4/ Wind Resistance +15 -->
+						<item id="17671" count="1" /> <!-- Ancient WIT Dye Lv. 3 - WIT +5, MEN -4, Wind Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17672" count="1" /> <!-- Lv. 3 Ancient MEN Dye - MEN +5/ INT -4/ Holy Resistance +15 -->
+						<item id="17672" count="1" /> <!-- Ancient MEN Dye Lv. 3 - MEN +5, INT -4, Holy Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17673" count="1" /> <!-- Lv. 3 Legendary STR Dye - STR +5/ DEX -3/ Fire Resistance +15 -->
+						<item id="17673" count="1" /> <!-- Legendary STR Dye Lv. 3 - STR +5, DEX -3, Fire Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17674" count="1" /> <!-- Lv. 3 Legendary DEX Dye - DEX +5/ CON -3/ Earth Resistance +15 -->
+						<item id="17674" count="1" /> <!-- Legendary DEX Dye Lv. 3 - DEX +5, CON -3, Earth Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17675" count="1" /> <!-- Lv. 3 Legendary CON Dye - CON +5/ STR -3/ Dark Resistance +15 -->
+						<item id="17675" count="1" /> <!-- Legendary CON Dye Lv. 3 - CON +5, STR -3, Dark Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17676" count="1" /> <!-- Lv. 3 Legendary INT Dye - INT +5/ WIT -3/ Water Resistance +15 -->
+						<item id="17676" count="1" /> <!-- Legendary INT Dye Lv. 3 - INT +5, WIT -3, Water Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17677" count="1" /> <!-- Lv. 3 Legendary WIT Dye - WIT +5/ MEN -3/ Wind Resistance +15 -->
+						<item id="17677" count="1" /> <!-- Legendary WIT Dye Lv. 3 - WIT +5, MEN -3, Wind Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17678" count="1" /> <!-- Lv. 3 Legendary MEN Dye - MEN +5/ INT -3/ Holy Resistance +15 -->
+						<item id="17678" count="1" /> <!-- Legendary MEN Dye Lv. 3 - MEN +5, INT -3, Holy Resistance +15 -->
 					</item>
 					<item chance="0.1">
-						<item id="17679" count="1" /> <!-- Lv. 4 Giant STR Dye - STR +5/ DEX -2 -->
+						<item id="17679" count="1" /> <!-- Giant's STR Dye Lv. 4 - STR +5, DEX -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17680" count="1" /> <!-- Lv. 4 Giant DEX Dye - DEX +5/ CON -2 -->
+						<item id="17680" count="1" /> <!-- Giant's DEX Dye Lv. 4 - DEX +5, CON -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17681" count="1" /> <!-- Lv. 4 Giant CON Dye - CON +5/ STR -2 -->
+						<item id="17681" count="1" /> <!-- Giant's CON Dye Lv. 4 - CON +5, STR -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17682" count="1" /> <!-- Lv. 4 Giant INT Dye - INT +5/ WIT -2 -->
+						<item id="17682" count="1" /> <!-- Giant's INT Dye Lv. 4 - INT +5, WIT -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17683" count="1" /> <!-- Lv. 4 Giant WIT Dye - WIT +5/ MEN -2 -->
+						<item id="17683" count="1" /> <!-- Giant's WIT Dye Lv. 4 - WIT +5, MEN -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17684" count="1" /> <!-- Lv. 4 Giant MEN Dye - MEN +5/ INT -2 -->
+						<item id="17684" count="1" /> <!-- Giant's MEN Dye Lv. 4 - MEN +5, INT -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17685" count="1" /> <!-- Lv. 4 Ancient STR Dye - STR +5/ DEX -2/ Fire Resistance +20 -->
+						<item id="17685" count="1" /> <!-- Ancient STR Dye Lv. 4 - STR +5, DEX -2, Fire Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17686" count="1" /> <!-- Lv. 4 Ancient DEX Dye - DEX +5/ CON -2/ Earth Resistance +20 -->
+						<item id="17686" count="1" /> <!-- Ancient DEX Dye Lv. 4 - DEX +5, CON -2, Earth Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17687" count="1" /> <!-- Lv. 4 Ancient CON Dye - CON +5/ STR -2/ Dark Resistance +20 -->
+						<item id="17687" count="1" /> <!-- Ancient CON Dye Lv. 4 - CON +5, STR -2, Dark Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17688" count="1" /> <!-- Lv. 4 Ancient INT Dye - INT +5/ WIT -2/ Water Resistance +20 -->
+						<item id="17688" count="1" /> <!-- Ancient INT Dye Lv. 4 - INT +5, WIT -2, Water Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17689" count="1" /> <!-- Lv. 4 Ancient WIT Dye - WIT +5/ MEN -2/ Wind Resistance +20 -->
+						<item id="17689" count="1" /> <!-- Ancient WIT Dye Lv. 4 - WIT +5, MEN -2, Wind Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17690" count="1" /> <!-- Lv. 4 Ancient MEN Dye - MEN +5/ INT -2/ Holy Resistance +20 -->
+						<item id="17690" count="1" /> <!-- Ancient MEN Dye Lv. 4 - MEN +5, INT -2, Holy Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17691" count="1" /> <!-- Lv. 4 Legendary STR Dye - STR +5/ DEX -1/ Fire Resistance +20 -->
+						<item id="17691" count="1" /> <!-- Legendary STR Dye Lv. 4 - STR +5, DEX -1, Fire Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17692" count="1" /> <!-- Lv. 4 Legendary DEX Dye - DEX +5/ CON -1/ Earth Resistance +20 -->
+						<item id="17692" count="1" /> <!-- Legendary DEX Dye Lv. 4 - DEX +5, CON -1, Earth Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17693" count="1" /> <!-- Lv. 4 Legendary CON Dye - CON +5/ STR -1/ Dark Resistance +20 -->
+						<item id="17693" count="1" /> <!-- Legendary CON Dye Lv. 4 - CON +5, STR -1, Dark Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17694" count="1" /> <!-- Lv. 4 Legendary INT Dye - INT +5/ WIT -1/ Water Resistance +20 -->
+						<item id="17694" count="1" /> <!-- Legendary INT Dye Lv. 4 - INT +5, WIT -1, Water Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17695" count="1" /> <!-- Lv. 4 Legendary WIT Dye - WIT +5/ MEN -1/ Wind Resistance +20 -->
+						<item id="17695" count="1" /> <!-- Legendary WIT Dye Lv. 4 - WIT +5, MEN -1, Wind Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17696" count="1" /> <!-- Lv. 4 Legendary MEN Dye - MEN +5/ INT -1/ Holy Resistance +20 -->
+						<item id="17696" count="1" /> <!-- Legendary MEN Dye Lv. 4 - MEN +5, INT -1, Holy Resistance +20 -->
 					</item>
 					<item chance="0.14">
-						<item id="36184" count="1" /> <!-- Kaliel's Energy - Annihilation -->
+						<item id="36184" count="1" /> <!-- Annihilation Energy -->
 					</item>
 					<item chance="0.09">
-						<item id="36185" count="1" /> <!-- Kaliel's Energy - Hellfire -->
+						<item id="36185" count="1" /> <!-- Hellfire Energy -->
 					</item>
 					<item chance="0.05">
-						<item id="36186" count="1" /> <!-- Kaliel's Energy - Desire -->
+						<item id="36186" count="1" /> <!-- Energy of Desire -->
 					</item>
 					<item chance="0.08">
 						<item id="35901" count="1" /> <!-- STR Pendant -->
@@ -1170,121 +1170,121 @@
 						<item id="21185" count="1" /> <!-- Transformation Scroll: Zaken - Event -->
 					</item>
 					<item chance="0.2">
-						<item id="17661" count="1" /> <!-- Lv. 3 Giant STR Dye - STR +5/ DEX -4 -->
+						<item id="17661" count="1" /> <!-- Giant's STR Dye Lv. 3 - STR +5, DEX -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17662" count="1" /> <!-- Lv. 3 Giant DEX Dye - DEX +5/ CON -4 -->
+						<item id="17662" count="1" /> <!-- Giant's DEX Dye Lv. 3 - DEX +5, CON -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17663" count="1" /> <!-- Lv. 3 Giant CON Dye - CON +5/ STR -4 -->
+						<item id="17663" count="1" /> <!-- Giant's CON Dye Lv. 3 - CON +5, STR -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17664" count="1" /> <!-- Lv. 3 Giant INT Dye - INT +5/ WIT -4 -->
+						<item id="17664" count="1" /> <!-- Giant's INT Dye Lv. 3 - INT +5, WIT -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17665" count="1" /> <!-- Lv. 3 Giant WIT Dye - WIT +5/ MEN -4 -->
+						<item id="17665" count="1" /> <!-- Giant's WIT Dye Lv. 3 - WIT +5, MEN -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17666" count="1" /> <!-- Lv. 3 Giant MEN Dye - MEN +5/ INT -4 -->
+						<item id="17666" count="1" /> <!-- Giant's MEN Dye Lv. 3 - MEN +5, INT -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17667" count="1" /> <!-- Lv. 3 Ancient STR Dye - STR +5/ DEX -4/ Fire Resistance +15 -->
+						<item id="17667" count="1" /> <!-- Ancient STR Dye Lv. 3 - STR +5, DEX -4, Fire Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17668" count="1" /> <!-- Lv. 3 Ancient DEX Dye - DEX +5/ CON -4/ Earth Resistance +15 -->
+						<item id="17668" count="1" /> <!-- Ancient DEX Dye Lv. 3 - DEX +5, CON -4, Earth Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17669" count="1" /> <!-- Lv. 3 Ancient CON Dye - CON +5/ STR -4/ Dark Resistance +15 -->
+						<item id="17669" count="1" /> <!-- Ancient CON Dye Lv. 3 - CON +5, STR -4, Dark Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17670" count="1" /> <!-- Lv. 3 Ancient INT Dye - INT +5/ WIT -4/ Water Resistance +15 -->
+						<item id="17670" count="1" /> <!-- Ancient INT Dye Lv. 3 - INT +5, WIT -4, Water Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17671" count="1" /> <!-- Lv. 3 Ancient WIT Dye - WIT +5/ MEN -4/ Wind Resistance +15 -->
+						<item id="17671" count="1" /> <!-- Ancient WIT Dye Lv. 3 - WIT +5, MEN -4, Wind Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17672" count="1" /> <!-- Lv. 3 Ancient MEN Dye - MEN +5/ INT -4/ Holy Resistance +15 -->
+						<item id="17672" count="1" /> <!-- Ancient MEN Dye Lv. 3 - MEN +5, INT -4, Holy Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17673" count="1" /> <!-- Lv. 3 Legendary STR Dye - STR +5/ DEX -3/ Fire Resistance +15 -->
+						<item id="17673" count="1" /> <!-- Legendary STR Dye Lv. 3 - STR +5, DEX -3, Fire Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17674" count="1" /> <!-- Lv. 3 Legendary DEX Dye - DEX +5/ CON -3/ Earth Resistance +15 -->
+						<item id="17674" count="1" /> <!-- Legendary DEX Dye Lv. 3 - DEX +5, CON -3, Earth Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17675" count="1" /> <!-- Lv. 3 Legendary CON Dye - CON +5/ STR -3/ Dark Resistance +15 -->
+						<item id="17675" count="1" /> <!-- Legendary CON Dye Lv. 3 - CON +5, STR -3, Dark Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17676" count="1" /> <!-- Lv. 3 Legendary INT Dye - INT +5/ WIT -3/ Water Resistance +15 -->
+						<item id="17676" count="1" /> <!-- Legendary INT Dye Lv. 3 - INT +5, WIT -3, Water Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17677" count="1" /> <!-- Lv. 3 Legendary WIT Dye - WIT +5/ MEN -3/ Wind Resistance +15 -->
+						<item id="17677" count="1" /> <!-- Legendary WIT Dye Lv. 3 - WIT +5, MEN -3, Wind Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17678" count="1" /> <!-- Lv. 3 Legendary MEN Dye - MEN +5/ INT -3/ Holy Resistance +15 -->
+						<item id="17678" count="1" /> <!-- Legendary MEN Dye Lv. 3 - MEN +5, INT -3, Holy Resistance +15 -->
 					</item>
 					<item chance="0.1">
-						<item id="17679" count="1" /> <!-- Lv. 4 Giant STR Dye - STR +5/ DEX -2 -->
+						<item id="17679" count="1" /> <!-- Giant's STR Dye Lv. 4 - STR +5, DEX -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17680" count="1" /> <!-- Lv. 4 Giant DEX Dye - DEX +5/ CON -2 -->
+						<item id="17680" count="1" /> <!-- Giant's DEX Dye Lv. 4 - DEX +5, CON -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17681" count="1" /> <!-- Lv. 4 Giant CON Dye - CON +5/ STR -2 -->
+						<item id="17681" count="1" /> <!-- Giant's CON Dye Lv. 4 - CON +5, STR -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17682" count="1" /> <!-- Lv. 4 Giant INT Dye - INT +5/ WIT -2 -->
+						<item id="17682" count="1" /> <!-- Giant's INT Dye Lv. 4 - INT +5, WIT -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17683" count="1" /> <!-- Lv. 4 Giant WIT Dye - WIT +5/ MEN -2 -->
+						<item id="17683" count="1" /> <!-- Giant's WIT Dye Lv. 4 - WIT +5, MEN -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17684" count="1" /> <!-- Lv. 4 Giant MEN Dye - MEN +5/ INT -2 -->
+						<item id="17684" count="1" /> <!-- Giant's MEN Dye Lv. 4 - MEN +5, INT -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17685" count="1" /> <!-- Lv. 4 Ancient STR Dye - STR +5/ DEX -2/ Fire Resistance +20 -->
+						<item id="17685" count="1" /> <!-- Ancient STR Dye Lv. 4 - STR +5, DEX -2, Fire Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17686" count="1" /> <!-- Lv. 4 Ancient DEX Dye - DEX +5/ CON -2/ Earth Resistance +20 -->
+						<item id="17686" count="1" /> <!-- Ancient DEX Dye Lv. 4 - DEX +5, CON -2, Earth Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17687" count="1" /> <!-- Lv. 4 Ancient CON Dye - CON +5/ STR -2/ Dark Resistance +20 -->
+						<item id="17687" count="1" /> <!-- Ancient CON Dye Lv. 4 - CON +5, STR -2, Dark Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17688" count="1" /> <!-- Lv. 4 Ancient INT Dye - INT +5/ WIT -2/ Water Resistance +20 -->
+						<item id="17688" count="1" /> <!-- Ancient INT Dye Lv. 4 - INT +5, WIT -2, Water Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17689" count="1" /> <!-- Lv. 4 Ancient WIT Dye - WIT +5/ MEN -2/ Wind Resistance +20 -->
+						<item id="17689" count="1" /> <!-- Ancient WIT Dye Lv. 4 - WIT +5, MEN -2, Wind Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17690" count="1" /> <!-- Lv. 4 Ancient MEN Dye - MEN +5/ INT -2/ Holy Resistance +20 -->
+						<item id="17690" count="1" /> <!-- Ancient MEN Dye Lv. 4 - MEN +5, INT -2, Holy Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17691" count="1" /> <!-- Lv. 4 Legendary STR Dye - STR +5/ DEX -1/ Fire Resistance +20 -->
+						<item id="17691" count="1" /> <!-- Legendary STR Dye Lv. 4 - STR +5, DEX -1, Fire Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17692" count="1" /> <!-- Lv. 4 Legendary DEX Dye - DEX +5/ CON -1/ Earth Resistance +20 -->
+						<item id="17692" count="1" /> <!-- Legendary DEX Dye Lv. 4 - DEX +5, CON -1, Earth Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17693" count="1" /> <!-- Lv. 4 Legendary CON Dye - CON +5/ STR -1/ Dark Resistance +20 -->
+						<item id="17693" count="1" /> <!-- Legendary CON Dye Lv. 4 - CON +5, STR -1, Dark Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17694" count="1" /> <!-- Lv. 4 Legendary INT Dye - INT +5/ WIT -1/ Water Resistance +20 -->
+						<item id="17694" count="1" /> <!-- Legendary INT Dye Lv. 4 - INT +5, WIT -1, Water Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17695" count="1" /> <!-- Lv. 4 Legendary WIT Dye - WIT +5/ MEN -1/ Wind Resistance +20 -->
+						<item id="17695" count="1" /> <!-- Legendary WIT Dye Lv. 4 - WIT +5, MEN -1, Wind Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17696" count="1" /> <!-- Lv. 4 Legendary MEN Dye - MEN +5/ INT -1/ Holy Resistance +20 -->
+						<item id="17696" count="1" /> <!-- Legendary MEN Dye Lv. 4 - MEN +5, INT -1, Holy Resistance +20 -->
 					</item>
 					<item chance="0.14">
-						<item id="36184" count="1" /> <!-- Kaliel's Energy - Annihilation -->
+						<item id="36184" count="1" /> <!-- Annihilation Energy -->
 					</item>
 					<item chance="0.09">
-						<item id="36185" count="1" /> <!-- Kaliel's Energy - Hellfire -->
+						<item id="36185" count="1" /> <!-- Hellfire Energy -->
 					</item>
 					<item chance="0.05">
-						<item id="36186" count="1" /> <!-- Kaliel's Energy - Desire -->
+						<item id="36186" count="1" /> <!-- Energy of Desire -->
 					</item>
 					<item chance="0.08">
 						<item id="35901" count="1" /> <!-- STR Pendant -->
@@ -1367,121 +1367,121 @@
 						<item id="21185" count="1" /> <!-- Transformation Scroll: Zaken - Event -->
 					</item>
 					<item chance="0.2">
-						<item id="17661" count="1" /> <!-- Lv. 3 Giant STR Dye - STR +5/ DEX -4 -->
+						<item id="17661" count="1" /> <!-- Giant's STR Dye Lv. 3 - STR +5, DEX -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17662" count="1" /> <!-- Lv. 3 Giant DEX Dye - DEX +5/ CON -4 -->
+						<item id="17662" count="1" /> <!-- Giant's DEX Dye Lv. 3 - DEX +5, CON -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17663" count="1" /> <!-- Lv. 3 Giant CON Dye - CON +5/ STR -4 -->
+						<item id="17663" count="1" /> <!-- Giant's CON Dye Lv. 3 - CON +5, STR -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17664" count="1" /> <!-- Lv. 3 Giant INT Dye - INT +5/ WIT -4 -->
+						<item id="17664" count="1" /> <!-- Giant's INT Dye Lv. 3 - INT +5, WIT -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17665" count="1" /> <!-- Lv. 3 Giant WIT Dye - WIT +5/ MEN -4 -->
+						<item id="17665" count="1" /> <!-- Giant's WIT Dye Lv. 3 - WIT +5, MEN -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17666" count="1" /> <!-- Lv. 3 Giant MEN Dye - MEN +5/ INT -4 -->
+						<item id="17666" count="1" /> <!-- Giant's MEN Dye Lv. 3 - MEN +5, INT -4 -->
 					</item>
 					<item chance="0.2">
-						<item id="17667" count="1" /> <!-- Lv. 3 Ancient STR Dye - STR +5/ DEX -4/ Fire Resistance +15 -->
+						<item id="17667" count="1" /> <!-- Ancient STR Dye Lv. 3 - STR +5, DEX -4, Fire Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17668" count="1" /> <!-- Lv. 3 Ancient DEX Dye - DEX +5/ CON -4/ Earth Resistance +15 -->
+						<item id="17668" count="1" /> <!-- Ancient DEX Dye Lv. 3 - DEX +5, CON -4, Earth Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17669" count="1" /> <!-- Lv. 3 Ancient CON Dye - CON +5/ STR -4/ Dark Resistance +15 -->
+						<item id="17669" count="1" /> <!-- Ancient CON Dye Lv. 3 - CON +5, STR -4, Dark Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17670" count="1" /> <!-- Lv. 3 Ancient INT Dye - INT +5/ WIT -4/ Water Resistance +15 -->
+						<item id="17670" count="1" /> <!-- Ancient INT Dye Lv. 3 - INT +5, WIT -4, Water Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17671" count="1" /> <!-- Lv. 3 Ancient WIT Dye - WIT +5/ MEN -4/ Wind Resistance +15 -->
+						<item id="17671" count="1" /> <!-- Ancient WIT Dye Lv. 3 - WIT +5, MEN -4, Wind Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17672" count="1" /> <!-- Lv. 3 Ancient MEN Dye - MEN +5/ INT -4/ Holy Resistance +15 -->
+						<item id="17672" count="1" /> <!-- Ancient MEN Dye Lv. 3 - MEN +5, INT -4, Holy Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17673" count="1" /> <!-- Lv. 3 Legendary STR Dye - STR +5/ DEX -3/ Fire Resistance +15 -->
+						<item id="17673" count="1" /> <!-- Legendary STR Dye Lv. 3 - STR +5, DEX -3, Fire Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17674" count="1" /> <!-- Lv. 3 Legendary DEX Dye - DEX +5/ CON -3/ Earth Resistance +15 -->
+						<item id="17674" count="1" /> <!-- Legendary DEX Dye Lv. 3 - DEX +5, CON -3, Earth Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17675" count="1" /> <!-- Lv. 3 Legendary CON Dye - CON +5/ STR -3/ Dark Resistance +15 -->
+						<item id="17675" count="1" /> <!-- Legendary CON Dye Lv. 3 - CON +5, STR -3, Dark Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17676" count="1" /> <!-- Lv. 3 Legendary INT Dye - INT +5/ WIT -3/ Water Resistance +15 -->
+						<item id="17676" count="1" /> <!-- Legendary INT Dye Lv. 3 - INT +5, WIT -3, Water Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17677" count="1" /> <!-- Lv. 3 Legendary WIT Dye - WIT +5/ MEN -3/ Wind Resistance +15 -->
+						<item id="17677" count="1" /> <!-- Legendary WIT Dye Lv. 3 - WIT +5, MEN -3, Wind Resistance +15 -->
 					</item>
 					<item chance="0.2">
-						<item id="17678" count="1" /> <!-- Lv. 3 Legendary MEN Dye - MEN +5/ INT -3/ Holy Resistance +15 -->
+						<item id="17678" count="1" /> <!-- Legendary MEN Dye Lv. 3 - MEN +5, INT -3, Holy Resistance +15 -->
 					</item>
 					<item chance="0.1">
-						<item id="17679" count="1" /> <!-- Lv. 4 Giant STR Dye - STR +5/ DEX -2 -->
+						<item id="17679" count="1" /> <!-- Giant's STR Dye Lv. 4 - STR +5, DEX -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17680" count="1" /> <!-- Lv. 4 Giant DEX Dye - DEX +5/ CON -2 -->
+						<item id="17680" count="1" /> <!-- Giant's DEX Dye Lv. 4 - DEX +5, CON -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17681" count="1" /> <!-- Lv. 4 Giant CON Dye - CON +5/ STR -2 -->
+						<item id="17681" count="1" /> <!-- Giant's CON Dye Lv. 4 - CON +5, STR -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17682" count="1" /> <!-- Lv. 4 Giant INT Dye - INT +5/ WIT -2 -->
+						<item id="17682" count="1" /> <!-- Giant's INT Dye Lv. 4 - INT +5, WIT -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17683" count="1" /> <!-- Lv. 4 Giant WIT Dye - WIT +5/ MEN -2 -->
+						<item id="17683" count="1" /> <!-- Giant's WIT Dye Lv. 4 - WIT +5, MEN -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17684" count="1" /> <!-- Lv. 4 Giant MEN Dye - MEN +5/ INT -2 -->
+						<item id="17684" count="1" /> <!-- Giant's MEN Dye Lv. 4 - MEN +5, INT -2 -->
 					</item>
 					<item chance="0.1">
-						<item id="17685" count="1" /> <!-- Lv. 4 Ancient STR Dye - STR +5/ DEX -2/ Fire Resistance +20 -->
+						<item id="17685" count="1" /> <!-- Ancient STR Dye Lv. 4 - STR +5, DEX -2, Fire Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17686" count="1" /> <!-- Lv. 4 Ancient DEX Dye - DEX +5/ CON -2/ Earth Resistance +20 -->
+						<item id="17686" count="1" /> <!-- Ancient DEX Dye Lv. 4 - DEX +5, CON -2, Earth Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17687" count="1" /> <!-- Lv. 4 Ancient CON Dye - CON +5/ STR -2/ Dark Resistance +20 -->
+						<item id="17687" count="1" /> <!-- Ancient CON Dye Lv. 4 - CON +5, STR -2, Dark Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17688" count="1" /> <!-- Lv. 4 Ancient INT Dye - INT +5/ WIT -2/ Water Resistance +20 -->
+						<item id="17688" count="1" /> <!-- Ancient INT Dye Lv. 4 - INT +5, WIT -2, Water Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17689" count="1" /> <!-- Lv. 4 Ancient WIT Dye - WIT +5/ MEN -2/ Wind Resistance +20 -->
+						<item id="17689" count="1" /> <!-- Ancient WIT Dye Lv. 4 - WIT +5, MEN -2, Wind Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17690" count="1" /> <!-- Lv. 4 Ancient MEN Dye - MEN +5/ INT -2/ Holy Resistance +20 -->
+						<item id="17690" count="1" /> <!-- Ancient MEN Dye Lv. 4 - MEN +5, INT -2, Holy Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17691" count="1" /> <!-- Lv. 4 Legendary STR Dye - STR +5/ DEX -1/ Fire Resistance +20 -->
+						<item id="17691" count="1" /> <!-- Legendary STR Dye Lv. 4 - STR +5, DEX -1, Fire Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17692" count="1" /> <!-- Lv. 4 Legendary DEX Dye - DEX +5/ CON -1/ Earth Resistance +20 -->
+						<item id="17692" count="1" /> <!-- Legendary DEX Dye Lv. 4 - DEX +5, CON -1, Earth Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17693" count="1" /> <!-- Lv. 4 Legendary CON Dye - CON +5/ STR -1/ Dark Resistance +20 -->
+						<item id="17693" count="1" /> <!-- Legendary CON Dye Lv. 4 - CON +5, STR -1, Dark Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17694" count="1" /> <!-- Lv. 4 Legendary INT Dye - INT +5/ WIT -1/ Water Resistance +20 -->
+						<item id="17694" count="1" /> <!-- Legendary INT Dye Lv. 4 - INT +5, WIT -1, Water Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17695" count="1" /> <!-- Lv. 4 Legendary WIT Dye - WIT +5/ MEN -1/ Wind Resistance +20 -->
+						<item id="17695" count="1" /> <!-- Legendary WIT Dye Lv. 4 - WIT +5, MEN -1, Wind Resistance +20 -->
 					</item>
 					<item chance="0.1">
-						<item id="17696" count="1" /> <!-- Lv. 4 Legendary MEN Dye - MEN +5/ INT -1/ Holy Resistance +20 -->
+						<item id="17696" count="1" /> <!-- Legendary MEN Dye Lv. 4 - MEN +5, INT -1, Holy Resistance +20 -->
 					</item>
 					<item chance="0.14">
-						<item id="36184" count="1" /> <!-- Kaliel's Energy - Annihilation -->
+						<item id="36184" count="1" /> <!-- Annihilation Energy -->
 					</item>
 					<item chance="0.09">
-						<item id="36185" count="1" /> <!-- Kaliel's Energy - Hellfire -->
+						<item id="36185" count="1" /> <!-- Hellfire Energy -->
 					</item>
 					<item chance="0.05">
-						<item id="36186" count="1" /> <!-- Kaliel's Energy - Desire -->
+						<item id="36186" count="1" /> <!-- Energy of Desire -->
 					</item>
 					<item chance="0.08">
 						<item id="35901" count="1" /> <!-- STR Pendant -->
@@ -1526,7 +1526,7 @@
 						<item id="35914" count="1" /> <!-- Accuracy Pendant -->
 					</item>
 					<item chance="0.01">
-						<item id="36257" count="1" /> <!-- Lilith's Soul Necklace -->
+						<item id="36257" count="1" /> <!-- Lilith' Soul Necklace -->
 					</item>
 				</items>
 			</effect>
@@ -1682,25 +1682,25 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="93.915">
-						<item id="19310" count="3" /> <!-- Corroded Greater Synthetic Cokes -->
+						<item id="19310" count="3" /> <!-- Corroded High-grade Synthetic Cokes -->
 					</item>
 					<item chance="0.409">
-						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="17526" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="5.229">
-						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="17527" count="1" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.044">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.363">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.004">
-						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) - Event -->
+						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant R-grade Weapon - Event -->
 					</item>
 					<item chance="0.036">
-						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) - Event -->
+						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant R-grade Armor - Event -->
 					</item>
 				</items>
 			</effect>
@@ -1868,7 +1868,7 @@
 		</effects>
 	</skill>
 	<skill id="9757" toLevel="1" name="Horn Melody (Battleground)">
-		<!-- For 30 min., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. Buff remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1910,7 +1910,7 @@
 		</effects>
 	</skill>
 	<skill id="9758" toLevel="1" name="Drum Melody (Battleground)">
-		<!-- For 30 min., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. Buff remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, M. Skill Critical Rate +$s4, Received Critical Damage from standard attacks -$s5. Also has a chance to increase P. Critical Damage when hit. The effect remains after death and cannot be forcibly removed. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2001,7 +2001,7 @@
 		</effects>
 	</skill>
 	<skill id="9760" toLevel="1" name="Pipe Organ Melody (Battleground)">
-		<!-- For 30 min., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. Buff remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2047,7 +2047,7 @@
 		</effects>
 	</skill>
 	<skill id="9761" toLevel="1" name="Guitar Melody (Battleground)">
-		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, Movement Speed +, all Skill MP Consumption -10%. Remains active after death and cannot be forcibly removed. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Skill MP Consumption -$s4. The effect remains after death and cannot be forcibly removed. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2105,7 +2105,7 @@
 		</effects>
 	</skill>
 	<skill id="9762" toLevel="1" name="Harp Melody (Battleground)">
-		<!-- For 30 min., P. Accuracy +5, P. Evasion/ M. Evasion +5, and Speed +34. Received Critical Damage -30%. Buff remains even after death, and cannot be forcefully deleted. -->
+		<!-- For 30 min., P. Accuracy +5, P. Evasion/ M. Evasion +5, and Speed +34. Received Critical Damage from standard attacks -30%. Buff remains even after death, and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2197,7 +2197,7 @@
 		</effects>
 	</skill>
 	<skill id="9765" toLevel="1" name="Battleground Scroll: Sleep">
-		<!-- Inflicts Sleep on the target for 10 sec. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Inflicts Sleep on the target for 10 sec.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>36313</itemConsumeId>
@@ -2223,7 +2223,7 @@
 		<trait>SLEEP</trait>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -2309,34 +2309,34 @@
 						<item id="36322" count="1" /> <!-- Lyn Draco's Accessory Pack - Event -->
 					</item>
 					<item chance="6.9045">
-						<item id="19445" count="1" /> <!-- Unbind Scroll (R95-grade) -->
+						<item id="19445" count="1" /> <!-- R95-grade Unbind Scroll -->
 					</item>
 					<item chance="3.0484">
-						<item id="19446" count="1" /> <!-- Unbind Scroll (R99-grade) -->
+						<item id="19446" count="1" /> <!-- R99-grade Unbind Scroll -->
 					</item>
 					<item chance="13.8091">
-						<item id="17709" count="1" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
+						<item id="17709" count="1" /> <!-- Legendary STR Dye Lv. 5 - STR +5, DEX +1, Fire Resistance +25 -->
 					</item>
 					<item chance="13.8091">
-						<item id="17710" count="1" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+						<item id="17710" count="1" /> <!-- Legendary DEX Dye Lv. 5 - DEX +5, CON +1, Earth Resistance +25 -->
 					</item>
 					<item chance="13.8091">
-						<item id="17711" count="1" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
+						<item id="17711" count="1" /> <!-- Legendary CON Dye Lv. 5 - CON +5, STR +1, Dark Resistance +25 -->
 					</item>
 					<item chance="13.8091">
-						<item id="17712" count="1" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
+						<item id="17712" count="1" /> <!-- Legendary INT Dye Lv. 5 - INT +5, WIT +1, Water Resistance +25 -->
 					</item>
 					<item chance="13.8091">
-						<item id="17713" count="1" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
+						<item id="17713" count="1" /> <!-- Legendary WIT Dye Lv. 5 - WIT +5, MEN +1, Wind Resistance +25 -->
 					</item>
 					<item chance="13.8091">
-						<item id="17714" count="1" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
+						<item id="17714" count="1" /> <!-- Legendary MEN Dye Lv. 5 - MEN +5, INT +1, Holy Resistance +25 -->
 					</item>
 					<item chance="2.5107">
-						<item id="33811" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) - Event -->
+						<item id="33811" count="1" /> <!-- Giant's Scroll: Enchant R-grade Weapon - Event -->
 					</item>
 					<item chance="4.603">
-						<item id="33817" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) - Event -->
+						<item id="33817" count="1" /> <!-- Giant's Scroll: Enchant R-grade Armor - Event -->
 					</item>
 				</items>
 			</effect>
@@ -2362,7 +2362,7 @@
 						<item id="19464" count="1" /> <!-- Blessed Valakas' Necklace -->
 					</item>
 					<item chance="25">
-						<item id="17623" count="1" /> <!-- Earth Wyrm Heart Ring -->
+						<item id="17623" count="1" /> <!-- Earth Wyrm's Heart Ring -->
 					</item>
 					<item chance="25">
 						<item id="35570" count="1" /> <!-- Tauti's Ring -->
@@ -2391,16 +2391,16 @@
 						<item id="35744" count="1" /> <!-- Draco's Mana Potion - Event -->
 					</item>
 					<item chance="2.6041">
-						<item id="35742" count="1" /> <!-- Scroll: Reputation (Low-grade) -->
+						<item id="35742" count="1" /> <!-- Low-grade Scroll: Reputation -->
 					</item>
 					<item chance="0.4421">
-						<item id="35755" count="1" /> <!-- Scroll: Reputation (Mid-grade) -->
+						<item id="35755" count="1" /> <!-- Mid-grade Scroll: Reputation -->
 					</item>
 					<item chance="1.4623">
-						<item id="35741" count="1" /> <!-- Scroll: PK (Low-grade) -->
+						<item id="35741" count="1" /> <!-- Low-grade Scroll: PK -->
 					</item>
 					<item chance="0.4421">
-						<item id="35752" count="1" /> <!-- Scroll: PK (Mid-grade) -->
+						<item id="35752" count="1" /> <!-- Mid-grade Scroll: PK -->
 					</item>
 				</items>
 			</effect>
@@ -2423,7 +2423,7 @@
 						<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
 					</item>
 					<item chance="0.0601">
-						<item id="19444" count="1" /> <!-- Unbind Scroll (R-grade) -->
+						<item id="19444" count="1" /> <!-- R-grade Unbind Scroll -->
 					</item>
 					<item chance="26.1772">
 						<item id="22204" count="1" /> <!-- Attribute Stone Pack - Event -->
@@ -2450,16 +2450,16 @@
 						<item id="35751" count="1" /> <!-- Draco's Shiny Accessory Pack - Event -->
 					</item>
 					<item chance="0.0378">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.0883">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.0255">
-						<item id="19445" count="1" /> <!-- Unbind Scroll (R95-grade) -->
+						<item id="19445" count="1" /> <!-- R95-grade Unbind Scroll -->
 					</item>
 					<item chance="0.0113">
-						<item id="19446" count="1" /> <!-- Unbind Scroll (R99-grade) -->
+						<item id="19446" count="1" /> <!-- R99-grade Unbind Scroll -->
 					</item>
 					<item chance="1.3612">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
@@ -2468,22 +2468,22 @@
 						<item id="22205" count="1" /> <!-- Attribute Crystal Pack - Event -->
 					</item>
 					<item chance="0.051">
-						<item id="17709" count="1" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
+						<item id="17709" count="1" /> <!-- Legendary STR Dye Lv. 5 - STR +5, DEX +1, Fire Resistance +25 -->
 					</item>
 					<item chance="0.051">
-						<item id="17710" count="1" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+						<item id="17710" count="1" /> <!-- Legendary DEX Dye Lv. 5 - DEX +5, CON +1, Earth Resistance +25 -->
 					</item>
 					<item chance="0.051">
-						<item id="17711" count="1" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
+						<item id="17711" count="1" /> <!-- Legendary CON Dye Lv. 5 - CON +5, STR +1, Dark Resistance +25 -->
 					</item>
 					<item chance="0.051">
-						<item id="17712" count="1" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
+						<item id="17712" count="1" /> <!-- Legendary INT Dye Lv. 5 - INT +5, WIT +1, Water Resistance +25 -->
 					</item>
 					<item chance="0.051">
-						<item id="17713" count="1" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
+						<item id="17713" count="1" /> <!-- Legendary WIT Dye Lv. 5 - WIT +5, MEN +1, Wind Resistance +25 -->
 					</item>
 					<item chance="0.0511">
-						<item id="17714" count="1" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
+						<item id="17714" count="1" /> <!-- Legendary MEN Dye Lv. 5 - MEN +5, INT +1, Holy Resistance +25 -->
 					</item>
 				</items>
 			</effect>
@@ -2509,7 +2509,7 @@
 						<item id="6657" count="1" /> <!-- Valakas' Necklace -->
 					</item>
 					<item chance="0.1068">
-						<item id="17623" count="1" /> <!-- Earth Wyrm Heart Ring -->
+						<item id="17623" count="1" /> <!-- Earth Wyrm's Heart Ring -->
 					</item>
 					<item chance="2.4911">
 						<item id="19465" count="1" /> <!-- Bottle of Antharas' Soul -->
@@ -2663,24 +2663,24 @@
 		<!-- Mysterious box. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9782" toLevel="1" name="Summon Agathion - Jr. Cocoring">
-		<!-- Summons Agathion. -->
+	<skill id="9782" toLevel="1" name="Summon Agathion Jr. Cocoring">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="9783" toLevel="1" name="Agathion's Gift: Jr. Cocoring">
-		<!-- Receive Jr. Cocoring Agathion's gift. -->
+		<!-- Receive Agathion Jr. Cocoring's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
 	</skill>
 	<skill id="9784" toLevel="1" name="Jr. Cocoring's Gift">
-		<!-- Vitality is replenished in peace zones. -->
+		<!-- Restores Vitality when in a peaceful zone. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="9785" toLevel="1" name="Scroll of Glory">
-		<!-- For 30 min., Acquired XP/ SP +30%. -->
+		<!-- For 30 min., acquired XP/ SP +30%. -->
 		<icon>icon.etc_london_olympic_scroll_i01</icon>
 		<itemConsumeId>36347</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2700,7 +2700,6 @@
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<abnormalTime>1800</abnormalTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
 		<effects>
 			<effect name="Speed">
 				<amount>15</amount>
@@ -2720,7 +2719,6 @@
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<abnormalTime>1800</abnormalTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
 		<effects>
 			<effect name="StatUp">
 				<stat>DEX</stat>
@@ -2740,7 +2738,6 @@
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<abnormalTime>1800</abnormalTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
 		<effects>
 			<effect name="StatUp">
 				<stat>STR</stat>
@@ -2760,7 +2757,6 @@
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<abnormalTime>1800</abnormalTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
 		<effects>
 			<effect name="StatUp">
 				<stat>INT</stat>
@@ -2780,7 +2776,6 @@
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<abnormalTime>1800</abnormalTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
 		<effects>
 			<effect name="StatUp">
 				<stat>WIT</stat>
@@ -2788,7 +2783,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9791" toLevel="1" name="Golden Chest">
+	<skill id="9791" toLevel="1" name="Golden Pack">
 		<!-- Golden Chest. -->
 		<operateType>A1</operateType>
 	</skill>
@@ -2797,25 +2792,25 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="9793" toLevel="2" name="Agathion's Gift: Jr. Cocoring">
-		<!-- Receive Jr. Cocoring Agathion's gift. -->
+		<!-- Receive Agathion Jr. Cocoring's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9794" toLevel="3" name="Agathion's Gift: Jr. Cocoring">
-		<!-- Receive Jr. Cocoring Agathion's gift. -->
+		<!-- Receive Agathion Jr. Cocoring's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9795" toLevel="4" name="Agathion's Gift: Jr. Cocoring">
-		<!-- Receive Jr. Cocoring Agathion's gift. -->
+		<!-- Receive Agathion Jr. Cocoring's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="9796" toLevel="5" name="Agathion's Gift: Jr. Cocoring">
-		<!-- Receive Jr. Cocoring Agathion's gift. -->
+		<!-- Receive Agathion Jr. Cocoring's gift. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
 		<isDebuff>false</isDebuff>
@@ -2829,7 +2824,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="9799" toLevel="1" name="Pendant Pack">
-		<!-- Pendant Pack. -->
+		<!-- Pendant Pack -->
 		<operateType>A1</operateType>
 	</skill>
 </list>

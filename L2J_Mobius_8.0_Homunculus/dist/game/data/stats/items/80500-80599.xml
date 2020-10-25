@@ -9,14 +9,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80501" name="Royal Gold Save Card" type="EtcItem">
-		<!-- Enchant success rate +20% for weapons (R-grade and higher) with a normal enchant scroll. When enchant succeeds, it increases randomly by 1-3. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
+		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R-grade Weapons. When Enchant succeeds, it increases by 1-3. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_gold_ticket_all" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80502" name="Gran Kain's Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- When used to enchant. increases P. Def. of R-grade armor and accessories by 2, and higher quality armor by 4. Can enchant safely up to +3. From +4. the enchanted armor's HP also increases according to the enchant level. If enchanting fails. Gran Kain's power prevents the item from being reset and allows retaining its prior enchant value. Cannot be used on armor above +12. -->
+		<!-- For R-grade armor and accessories. P. Def. +2. When enchanted to +4, P. Def. is greatly increased and HP is increased with each enchant value. The enchanting is safe up to +3. In case of failure, the item is not crystallized, and its enchant value remains the same. Cannot be used with equipment enchanted to +12 or higher. -->
 		<set name="icon" val="icon.ev_shilen_scroll_of_enchant_am" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -125,7 +125,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80515" name="+12 Bloody Helios Dualsword Capsule" type="EtcItem">
-		<!-- Use it to obtain an exchangeable +12 Bloody Helios Dualsword. -->
+		<!-- Double-click to obtain +12 Bloody Helios Dual Swords. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -133,7 +133,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80516" name="+12 Bloody Helios Dual Dagger Capsule" type="EtcItem">
-		<!-- Use it to obtain an exchangeable +12 Bloody Helios Dual Dagger. -->
+		<!-- Double-click to obtain +12 Bloody Helios Dual Daggers. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -269,7 +269,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80533" name="Golden Pig's Entrance Pass - Kartia's Labyrinth Lv. 85 Party" additionalName="Event" type="EtcItem">
-		<!-- Golden Pig's entrance pass. Use to reset the binding of Kartia's Labyrinth Lv. 85 party dungeon. Cannot be used if the instanced zone is not bound. Can be used once a day outside of the instanced zone. -->
+		<!-- Double-click to reset the instance zone timer for Kartia's Labyrinth Lv. 95 (Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -280,7 +280,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80534" name="Golden Pig's Entrance Pass - Kartia's Labyrinth Lv. 90 Party" additionalName="Event" type="EtcItem">
-		<!-- Golden Pig's entrance pass. Use to reset the binding of Kartia's Labyrinth Lv. 90 party dungeon. Cannot be used if the instanced zone is not bound. Can be used once a day outside of the instanced zone. -->
+		<!-- Double-click to reset the instance zone timer for Kartia's Labyrinth Lv. 90 (Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -291,7 +291,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80535" name="Golden Pig's Entrance Pass - Kartia's Labyrinth Lv. 95 Party" additionalName="Event" type="EtcItem">
-		<!-- Golden Pig's entrance pass. Use to reset the binding of Kartia's Labyrinth Lv. 95 party dungeon. Cannot be used if the instanced zone is not bound. Can be used once a day outside of the instanced zone. -->
+		<!-- Double-click to reset the instance zone timer for Kartia's Labyrinth Lv. 95 (Party). Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -302,7 +302,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80536" name="Golden Pig's Entrance Pass - Emperor's Baylor" additionalName="Event" type="EtcItem">
-		<!-- Golden Pig's entrance pass. Use to reset the binding of Emperor's Baylor dungeon. Cannot be used if the instanced zone is not bound. Can be used once a day outside of the instanced zone. -->
+		<!-- Double-click to reset the instance zone timer for Emperor's Labyrinth. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -313,7 +313,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80537" name="Golden Pig's Entrance Pass - Nightmare Kamaloka" additionalName="Event" type="EtcItem">
-		<!-- Golden Pig's entrance pass. Use to reset the binding of Nightmare Kamaloka dungeon. Cannot be used if the instanced zone is not bound. Can be used once a day outside of the instanced zone. -->
+		<!-- Double-click to reset the instance zone timer for Nightmare Kamaloka. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -325,7 +325,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80538" name="Golden Pig's Entrance Pass - Embryo Command Post" additionalName="Event" type="EtcItem">
-		<!-- Golden Pig's entrance pass. Use to reset the binding of Embryo Command Post. Cannot be used if the instanced zone is not bound. Can be used once a day outside of the instanced zone. -->
+		<!-- Double-click to reset the instance zone timer for Embryo Command Post. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -336,7 +336,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80539" name="Golden Pig's Entrance Pass - Altar of Shilen" additionalName="Event" type="EtcItem">
-		<!-- Golden Pig's entrance pass. Use to reset the binding of Altar of Shilen. Cannot be used if the instanced zone is not bound. Can be used once a day outside of the instanced zone. -->
+		<!-- Double-click to reset the instance zone timer for Altar of Shillien. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -347,7 +347,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80540" name="Golden Pig's Entrance Pass - Fallen Emperor's Throne" additionalName="Event" type="EtcItem">
-		<!-- Golden Pig's entrance pass. Use to reset the binding of Fallen Emperor's Throne. Cannot be used if the instanced zone is not bound. Can be used once a day outside of the instanced zone. -->
+		<!-- Double-click to reset the instance zone timer for Fallen Emperor's Throne. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -358,7 +358,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80541" name="Golden Pig's Entrance Pass - Fall of Etina" additionalName="Event" type="EtcItem">
-		<!-- Golden Pig's entrance pass. Use to reset the binding of Fall of Etina. Cannot be used if the instanced zone is not bound. Can be used once a day outside of the instanced zone. -->
+		<!-- Double-click to reset the instance zone timer for the Hall of Etina. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -369,7 +369,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80542" name="Golden Pig's Entrance Pass - Krofin's Nest" additionalName="Event" type="EtcItem">
-		<!-- Golden Pig's entrance pass. Use to reset the binding of Krofin's Nest. Cannot be used if the instanced zone is not bound. Can be used once a day outside of the instanced zone. -->
+		<!-- Double-click to reset the instance zone timer for Krofin's Nest. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -380,7 +380,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80543" name="Anakim's Protection Rune" additionalName="Event" type="EtcItem">
-		<!-- A blessed rune carrying Anakim's protection. When stored in the inventory. decreases PVP Damage Received by 90%. Cannot be used in the Olympiad. -->
+		<!-- When in inventory, Received PvP Damage -90%. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_dark_rune" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -425,7 +425,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80547" name="Snow's Plea for Help - Seal of Shilen" type="EtcItem">
-		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Seal of Shilen. Characters of level 90-99 can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Seal of Shillien. Characters of level 90-99 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -605,7 +605,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80562" name="Snow's Plea for Help - Kartia Labyrinth (Lv. 95 party)" type="EtcItem">
-		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Incarnation of Gluttony Kalios in Kartia's Labyrinth (Lv. 95 party). Characters of level 95-105 can receive the request by double-clicking the item. Can be played twice a day. -->
+		<!-- A request from Snow for the 15th Anniversary to defeat Kalios in Kartia's Labyrinth Lv. 95 (Party). Required level: 95-105. Double-click to obtain a quest. The instance zone is available twice a day. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -653,7 +653,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80566" name="Snow's Plea for Help - Altar of Shilen" type="EtcItem">
-		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Maliss and Isadora at the Altar of Shilen. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Maliss and Isadora at the Altar of Shillien. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -677,7 +677,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80568" name="Snow's Plea for Help - Fall of Etina" type="EtcItem">
-		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wants you to vanquish Etis van Etina in the Fall of Etina. Characters of level 104 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
+		<!-- A request from Snow to eliminate Etis van Etina in celebration of the game's anniversary. Required level: 104+. Double-click to obtain a quest. The instance zone is available twice a day. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -731,7 +731,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80573" name="Snow's Plea for Help - Seal of Shilen" type="EtcItem">
-		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Seal of Shilen. -->
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by eradicating monsters in the Seal of Shillien. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -881,7 +881,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80588" name="Snow's Plea for Help - Kartia Labyrinth (Lv. 95 party)" type="EtcItem">
-		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Incarnation of Gluttony Kalios in Kartia's Labyrinth (Lv. 95 party). -->
+		<!-- A request from Snow for the 15th Anniversary to defeat Kalios in Kartia's Labyrinth Lv. 95 (Party). -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -921,7 +921,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80592" name="Snow's Plea for Help - Altar of Shilen" type="EtcItem">
-		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Maliss and Isadora at the Altar of Shilen. -->
+		<!-- A purifying mission requested by Snow for the 15th Anniversary. Snow wishes to celebrate the 15th Anniversary of Lineage by defeating Maliss and Isadora at the Altar of Shillien. -->
 		<set name="icon" val="icon.ev_commission_paper" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -961,7 +961,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80596" name="11th Anniversary Coin" type="EtcItem">
-		<!-- Coins that can be exchanged for gifts prepared by Snow for the 15th Anniversary. Can be used at the 15th Anniversary Gift Shop. -->
+		<!-- An event coin for Lineage II Anniversary. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

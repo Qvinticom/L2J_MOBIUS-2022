@@ -55,7 +55,7 @@
 		</stats>
 	</item>
 	<item id="32502" name="Fantasy Dynasty Dual Dagger" additionalName="Not in Use" type="Weapon">
-		<!-- A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. When enchanted to 4 or higher, increases Critical by 19. Inflicts more damage during PvP. Can be equipped by Dagger Masters level 81 and higher. -->
+		<!-- Dual daggers. When enchanted, P. Atk. is increased. When enchanted to +4 or higher, Critical Rate for standard attacks +19. Deals additional PvP damage. Can be equipped by Dagger Masters of Lv. 81+. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -138,7 +138,7 @@
 		</stats>
 	</item>
 	<item id="32505" name="Fantasy Laevateinn" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Forgotten Blade Conversion. Bestows one of the following functions: Haste, Health or Focus. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Forgotten Blade Conversion. Bestows one of the following functions: Haste, Health or Focus. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -168,7 +168,7 @@
 		</stats>
 	</item>
 	<item id="32506" name="Fantasy Dynasty Rapier" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. Bestows one of the following functions: Focus, Health or Light. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive weapon: Dynasty Sword conversion. Bestows one of the following functions: Focus, Health or Decrease Weight. When enchanted to +4 or higher, has a chance of increasing P./ M. Atk. and Received Healing, and decreasing Skill MP Consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -224,7 +224,7 @@
 		</stats>
 	</item>
 	<item id="32508" name="Fantasy Dynasty Blade" additionalName="Not in Use" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Health or Light. -->
+		<!-- Bestows one of the following functions: Focus, Health or Decrease Weight. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -277,7 +277,7 @@
 		</stats>
 	</item>
 	<item id="32510" name="Fantasy Dynasty Ancient Sword" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. Bestows one of the following functions: Focus, Health or Light. -->
+		<!-- Kamael-exclusive weapon: Dynasty Blade conversion. Bestows one of the following functions: Focus, Health or Decrease Weight. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -470,7 +470,7 @@
 		</stats>
 	</item>
 	<item id="32517" name="Fantasy Imperial Staff" additionalName="Not in Use" type="Weapon">
-		<!-- Bestows one of the following functions: Empower, MP Regeneration, or Magic Hold. -->
+		<!-- Bestows one of the following effects: Empower, MP Regeneration, or Magic Hold. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -554,7 +554,7 @@
 		</stats>
 	</item>
 	<item id="32520" name="Fantasy Dynasty Halberd" additionalName="Not in Use" type="Weapon">
-		<!-- Bestows one of the following functions: Anger, Critical Stun or Light. -->
+		<!-- Bestows one of the following functions: Anger, Critical Stun or Decrease Weight. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -663,7 +663,7 @@
 		</stats>
 	</item>
 	<item id="32524" name="Fantasy Dynasty Dual Sword" additionalName="Not in Use" type="Weapon">
-		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 19 and Max HP by 1%. Inflicts more damage during PvP. -->
+		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. When enchanted to +4 or higher, Critical Rate for standard attacks +19, Max HP +1%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -778,7 +778,7 @@
 		</stats>
 	</item>
 	<item id="32530" name="Fantasy Draconic Leather Armor" additionalName="Not in Use" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t89_ul_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -796,7 +796,7 @@
 		</stats>
 	</item>
 	<item id="32531" name="Fantasy Major Arcana Robe" additionalName="Not in Use" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t90_ul_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1025,7 +1025,7 @@
 		</stats>
 	</item>
 	<item id="32544" name="Fantasy Icarus Dual Dagger" additionalName="Not in Use" type="Weapon">
-		<!-- A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. When enchanted to 4 or higher, increases Critical by 19. Inflicts more damage during PvP. Can be equipped by Dagger Masters level 81 and higher. -->
+		<!-- Dual daggers. When enchanted, P. Atk. is increased. When enchanted to +4 or higher, Critical Rate for standard attacks +19. Deals additional PvP damage. Can be equipped by Dagger Masters of Lv. 81+. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1082,7 +1082,7 @@
 		</stats>
 	</item>
 	<item id="32546" name="Fantasy Icarus Sawsword" additionalName="Not in Use" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Health or Light. -->
+		<!-- Bestows one of the following functions: Focus, Health or Decrease Weight. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1108,7 +1108,7 @@
 		</stats>
 	</item>
 	<item id="32547" name="Fantasy Icarus Stinger" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Icarus Sawsword Conversion. Bestows one of the following functions: Focus, Health or Light. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive weapon: Icarus Sawsword conversion. Bestows one of the following functions: Focus, Health or Decrease Weight. When enchanted to +4 or higher, has a chance of increasing P./ M. Atk. and Received Healing, and decreasing Skill MP Consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1138,7 +1138,7 @@
 		</stats>
 	</item>
 	<item id="32548" name="Fantasy Icarus Heavy Arms" additionalName="Not in Use" type="Weapon">
-		<!-- Bestows one of the following functions: Focus, Health or Light. -->
+		<!-- Bestows one of the following functions: Focus, Health or Decrease Weight. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1164,7 +1164,7 @@
 		</stats>
 	</item>
 	<item id="32549" name="Fantasy Icarus Wingblade" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. Bestows one of the following functions: Focus, Health or Light. -->
+		<!-- Kamael-exclusive weapon: Icarus Heavy Arms conversion. Bestows one of the following functions: Focus, Health or Decrease Weight. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1274,7 +1274,7 @@
 		</stats>
 	</item>
 	<item id="32553" name="Fantasy Icarus Trident" additionalName="Not in Use" type="Weapon">
-		<!-- Bestows one of the following functions: Anger, Critical Stun or Light. -->
+		<!-- Bestows one of the following functions: Anger, Critical Stun or Decrease Weight. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1331,7 +1331,7 @@
 		</stats>
 	</item>
 	<item id="32555" name="Fantasy Icarus Dual Sword" additionalName="Not in Use" type="Weapon">
-		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 19 and Max HP by 1%. Inflicts more damage during PvP. -->
+		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. When enchanted to +4 or higher, Critical Rate for standard attacks +19, Max HP +1%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1649,7 +1649,7 @@
 		</stats>
 	</item>
 	<item id="32573" name="Fantasy Vesper Dual Dagger" additionalName="Not in Use" type="Weapon">
-		<!-- A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. When enchanted to 4 or higher, increases Critical by 19. Inflicts more damage during PvP. Can be equipped by Dagger Masters level 81 and higher. -->
+		<!-- Dual daggers. When enchanted, P. Atk. is increased. When enchanted to +4 or higher, Critical Rate for standard attacks +19. Deals additional PvP damage. Can be equipped by Dagger Masters of Lv. 81+. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1732,7 +1732,7 @@
 		</stats>
 	</item>
 	<item id="32576" name="Fantasy Vesper Pincer" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion. Bestows one of the following functions: Haste, Focus or Health. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion. Bestows one of the following functions: Haste, Focus or Health. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1925,7 +1925,7 @@
 		</stats>
 	</item>
 	<item id="32583" name="Fantasy Vesper Singer" additionalName="Not in Use" type="Weapon">
-		<!-- Bestows one of the following functions: Empower, MP Regeneration, or Magic Hold. -->
+		<!-- Bestows one of the following effects: Empower, MP Regeneration, or Magic Hold. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2036,7 +2036,7 @@
 		</stats>
 	</item>
 	<item id="32587" name="Fantasy Vesper Dual Sword" additionalName="Not in Use" type="Weapon">
-		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 19 and Max HP by 1%. Inflicts more damage during PvP. -->
+		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. When enchanted to +4 or higher, Critical Rate for standard attacks +19, Max HP +1%. Deals additional PvP damage. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

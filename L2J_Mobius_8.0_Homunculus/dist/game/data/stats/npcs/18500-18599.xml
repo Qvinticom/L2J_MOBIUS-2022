@@ -1676,10 +1676,10 @@
 			<skill name="Skill03_ID" id="4359" level="3" />
 			<skill name="Skill04_ID" id="4354" level="3" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1183.59621451104" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<vitals hp="295.89905362776" hpRegen="5.5" mp="616.382806163828" mpRegen="2.1" />
 			<attack physical="319.279889213725" magical="157.320182919828" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="551.090700344432" magical="130.447489021171" />
 			<speed>
@@ -1690,18 +1690,14 @@
 		</stats>
 		<status canMove="false" />
 		<skillList>
+			<skill id="4412" level="4" /> <!-- Extremely Weak P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4354" level="3" /> <!-- Vampiric Rage -->
 			<skill id="4357" level="2" /> <!-- Haste -->
 			<skill id="4358" level="3" /> <!-- Guidance -->
 			<skill id="4359" level="3" /> <!-- Focus -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/ 4x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="4" /> <!-- Extremely Weak P. Def. -->
-			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
@@ -1712,6 +1708,7 @@
 		</collision>
 		<dropLists>
 			<drop>
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1720,7 +1717,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1741,7 +1738,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1183.04416403785" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<vitals hp="9463.72239747634" hpRegen="5.5" mp="616.382806163828" mpRegen="2.1" />
 			<attack physical="384.722350978029" magical="278.618454797266" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="156.920875076671" magical="115.459294845566" />
 			<speed>
@@ -1753,17 +1750,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- Might -->
-			<skill id="4032" level="5" /> <!-- Power Strike -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4032" level="5" /> <!-- Power Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
@@ -1774,10 +1769,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="381" min="1" max="1" chance="1.159" /> <!-- Chain Gaiters -->
-				<item id="354" min="1" max="1" chance="0.75" /> <!-- Chain Mail Shirt -->
-				<item id="1960" min="105" max="315" chance="78.66" /> <!-- Chain Gaiter Fragment -->
-				<item id="1959" min="96" max="288" chance="37.31" /> <!-- Chain Mail Shirt Material -->
+				<item id="57" min="48" max="113" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1798,10 +1790,10 @@
 			<skill name="Skill02_ID" id="4157" level="4" />
 			<skill name="SpawnSkill" id="4028" level="2" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="12601.261829653" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<vitals hp="12601.261829653" hpRegen="5.5" mp="616.382806163828" mpRegen="2.1" />
 			<attack physical="1866.48991882692" magical="360.225054960631" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="284.601835542783" magical="312.397300797098" />
 			<speed>
@@ -1813,20 +1805,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="2" /> <!-- Might -->
 			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4077" level="5" /> <!-- Aura Burn -->
-			<skill id="4157" level="4" /> <!-- Blaze -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
 			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4028" level="2" /> <!-- Might -->
+			<skill id="4077" level="5" /> <!-- Aura Burn -->
+			<skill id="4157" level="4" /> <!-- Blaze -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="450" />
@@ -1836,10 +1824,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="226" min="1" max="1" chance="0.3" /> <!-- Cursed Dagger -->
-				<item id="232" min="1" max="1" chance="0.3" /> <!-- Dark Elven Dagger -->
-				<item id="2070" min="192" max="576" chance="7.613" /> <!-- Cursed Dagger Blade -->
-				<item id="2072" min="52" max="156" chance="7.588" /> <!-- Dark Elven Dagger Edge -->
+				<item id="57" min="48" max="113" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1866,7 +1851,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="37803.1545741325" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<vitals hp="37803.1545741325" hpRegen="5.5" mp="616.382806163828" mpRegen="2.1" />
 			<attack physical="806.196291270918" magical="225.167162076628" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="284.601835542783" magical="312.397300797098" />
 			<speed>
@@ -1878,15 +1863,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4028" level="2" /> <!-- Might -->
 			<skill id="4077" level="4" /> <!-- Aura Burn -->
 			<skill id="4157" level="4" /> <!-- Blaze -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="450" />
@@ -1896,24 +1877,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="62" min="1" max="1" chance="0.3" /> <!-- Reinforced Mithril Boots -->
-				<item id="2429" min="1" max="1" chance="0.3" /> <!-- Chain Boots -->
-				<item id="2430" min="1" max="1" chance="0.3" /> <!-- Karmian Boots -->
-				<item id="2431" min="1" max="1" chance="0.3" /> <!-- Plated Leather Boots -->
-				<item id="2432" min="1" max="1" chance="0.3" /> <!-- Dwarven Chain Boots -->
-				<item id="2433" min="1" max="1" chance="0.3" /> <!-- Boots of Seal -->
-				<item id="2452" min="1" max="1" chance="0.3" /> <!-- Reinforced Mithril Gloves -->
-				<item id="2453" min="1" max="1" chance="0.3" /> <!-- Chain Gloves -->
-				<item id="2454" min="1" max="1" chance="0.3" /> <!-- Karmian Gloves -->
-				<item id="2941" min="3" max="9" chance="18.44" /> <!-- Boots of Seal Pattern -->
-				<item id="2937" min="1" max="3" chance="17.93" /> <!-- Chain Boot Fragment -->
-				<item id="2940" min="3" max="9" chance="17.91" /> <!-- Dwarven Chain Boot Fragment -->
-				<item id="2942" min="4" max="12" chance="17.67" /> <!-- Reinforced Mithril Glove Design -->
-				<item id="2943" min="4" max="12" chance="17.43" /> <!-- Chain Glove Design -->
-				<item id="2939" min="2" max="6" chance="17.34" /> <!-- Plated Leather Boot Lining -->
-				<item id="2944" min="1" max="1" chance="17.13" /> <!-- Karmian Glove Fabric -->
-				<item id="1958" min="1" max="3" chance="17.07" /> <!-- Reinforced Mithril Boot Design -->
-				<item id="2938" min="2" max="6" chance="17.02" /> <!-- Karmian Boot Fabric -->
+				<item id="57" min="48" max="113" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1931,7 +1895,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="12601.8927444795" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<vitals hp="6300.31545741325" hpRegen="5.5" mp="616.382806163828" mpRegen="2.1" />
 			<attack physical="731.202236241473" magical="360.225054960631" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="284.601835542783" magical="415.669135771345" />
 			<speed>
@@ -1943,16 +1907,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="4" /> <!-- Power Strike -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4453" level="2" /> <!-- Sleep Vulnerability -->
 			<skill id="4454" level="1" /> <!-- Hold Vulnerability -->
+			<skill id="4032" level="4" /> <!-- Power Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
@@ -1966,9 +1925,9 @@
 				<item id="96" min="1" max="1" chance="0.3" /> <!-- Scythe -->
 				<item id="298" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive -->
 				<item id="302" min="1" max="1" chance="0.3" /> <!-- Body Slasher -->
-				<item id="2076" min="14" max="42" chance="22.93" /> <!-- Body Slasher Blade -->
-				<item id="2075" min="81" max="243" chance="22.28" /> <!-- Orcish Glaive Blade -->
-				<item id="2062" min="40" max="120" chance="21.61" /> <!-- Scythe Edge -->
+				<item id="2075" min="81" max="243" chance="22.81" /> <!-- Orcish Glaive Blade -->
+				<item id="2062" min="40" max="120" chance="22.62" /> <!-- Scythe Edge -->
+				<item id="2076" min="14" max="42" chance="21.13" /> <!-- Body Slasher Blade -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1991,7 +1950,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="12601.8927444795" hpRegen="5.5" mp="610.705596107056" mpRegen="2.1" />
+			<vitals hp="6300.31545741325" hpRegen="5.5" mp="616.382806163828" mpRegen="2.1" />
 			<attack physical="3018.15391129459" magical="935.104765959446" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="503.526324421847" magical="415.669135771345" />
 			<speed>
@@ -2003,16 +1962,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="4" /> <!-- Heal -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4453" level="1" /> <!-- Sleep Vulnerability -->
 			<skill id="4454" level="2" /> <!-- Hold Vulnerability -->
+			<skill id="4065" level="4" /> <!-- Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
@@ -2021,6 +1978,28 @@
 			<radius normal="14" grown="17" />
 			<height normal="14.5" grown="18" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="62" min="1" max="1" chance="0.3" /> <!-- Reinforced Mithril Boots -->
+				<item id="2429" min="1" max="1" chance="0.3" /> <!-- Chain Boots -->
+				<item id="2430" min="1" max="1" chance="0.3" /> <!-- Karmian Boots -->
+				<item id="2431" min="1" max="1" chance="0.3" /> <!-- Plated Leather Boots -->
+				<item id="2432" min="1" max="1" chance="0.3" /> <!-- Dwarven Chain Boots -->
+				<item id="2433" min="1" max="1" chance="0.3" /> <!-- Boots of Seal -->
+				<item id="2452" min="1" max="1" chance="0.3" /> <!-- Reinforced Mithril Gloves -->
+				<item id="2453" min="1" max="1" chance="0.3" /> <!-- Chain Gloves -->
+				<item id="2454" min="1" max="1" chance="0.3" /> <!-- Karmian Gloves -->
+				<item id="2938" min="2" max="6" chance="18.56" /> <!-- Karmian Boot Fabric -->
+				<item id="1958" min="1" max="3" chance="18.45" /> <!-- Reinforced Mithril Boot Design -->
+				<item id="2939" min="2" max="6" chance="18.13" /> <!-- Plated Leather Boot Lining -->
+				<item id="2940" min="3" max="9" chance="18.13" /> <!-- Dwarven Chain Boot Fragment -->
+				<item id="2937" min="1" max="3" chance="17.96" /> <!-- Chain Boot Fragment -->
+				<item id="2944" min="1" max="1" chance="17.88" /> <!-- Karmian Glove Fabric -->
+				<item id="2942" min="4" max="12" chance="17.73" /> <!-- Reinforced Mithril Glove Design -->
+				<item id="2941" min="3" max="9" chance="17.7" /> <!-- Boot of Seal Pattern -->
+				<item id="2943" min="4" max="12" chance="16.95" /> <!-- Chain Glove Design -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18550" level="50" type="Monster" name="Cruma Phantom" title="Event Monster">
 		<parameters>
@@ -2247,9 +2226,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="4" /> <!-- Club -->
-		<acquire exp="533850" sp="128" />
+		<acquire exp="533851" sp="129" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="51638.1703470032" hpRegen="43.83686774" mp="1159.77291159773" mpRegen="1.5" />
+			<vitals hp="103275.70977918" hpRegen="43.83686774" mp="1170.31630170316" mpRegen="1.5" />
 			<attack physical="94.4940476190476" magical="47.7519850627545" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="153.061224489796" magical="168.238636215147" />
 			<speed>
@@ -2261,13 +2240,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4172" level="2" /> <!-- Stun -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4172" level="2" /> <!-- Stun -->
 			<skill id="4719" level="1" /> <!-- Power Strike -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
 		</skillList>
@@ -2280,12 +2257,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="32" min="1" max="1" chance="14.69" /> <!-- Piece Bone Gaiters -->
-				<item id="34" min="1" max="1" chance="9.447" /> <!-- Bronze Gaiters -->
-				<item id="25" min="1" max="1" chance="9.175" /> <!-- Piece Bone Breastplate -->
-				<item id="26" min="1" max="1" chance="5.918" /> <!-- Bronze Breastplate -->
-				<item id="1926" min="7" max="21" chance="100" /> <!-- Piece Bone Breastplate Fragment -->
-				<item id="1928" min="24" max="72" chance="100" /> <!-- Piece Bone Gaiter Fragment -->
+				<item id="57" min="16" max="37" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2297,9 +2269,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="67" lhand="633" /> <!-- Orcish Sword / Zubei's Shield -->
-		<acquire exp="595907" sp="143" />
+		<acquire exp="595908" sp="144" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="60567.1924290221" hpRegen="3.5" mp="1365.77453365775" mpRegen="1.5" />
+			<vitals hp="121133.753943218" hpRegen="3.5" mp="1378.75101378751" mpRegen="1.5" />
 			<attack physical="136.95652173913" magical="68.6946666061227" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="168.68257600523" magical="184.529874352654" />
 			<speed>
@@ -2311,12 +2283,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4736" level="2" /> <!-- Spinning Slasher -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
 		</skillList>
@@ -2329,8 +2299,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="465" min="1" max="1" chance="2.149" /> <!-- Cursed Stockings -->
-				<item id="432" min="1" max="1" chance="1.358" /> <!-- Cursed Tunic -->
+				<item id="57" min="19" max="43" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2359,7 +2328,7 @@
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4719" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2380,7 +2349,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2397,9 +2366,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- Winged Spear -->
-		<acquire exp="595906" sp="143" />
+		<acquire exp="595908" sp="144" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="60567.1924290221" hpRegen="12.1792353154195" mp="1365.77453365775" mpRegen="4.8" />
+			<vitals hp="60567.1924290221" hpRegen="12.1792353154195" mp="1378.75101378751" mpRegen="4.8" />
 			<attack physical="136.95652173913" magical="68.6946666061227" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="168.68257600523" magical="184.529874352654" />
 			<speed>
@@ -2411,11 +2380,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4740" level="2" /> <!-- Power Strike -->
 			<skill id="4741" level="3" /> <!-- Power Strike -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
@@ -2428,16 +2396,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="19" max="43" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2448,9 +2407,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="823757" sp="197" />
+		<acquire exp="823758" sp="198" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="77012.61829653" hpRegen="4.5" mp="1864.55798864558" mpRegen="1.8" />
+			<vitals hp="77011.9873817035" hpRegen="4.5" mp="1882.40064882401" mpRegen="1.8" />
 			<attack physical="265.027322404372" magical="131.463043086705" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="207.075064710958" magical="227.424290453708" />
 			<speed>
@@ -2462,12 +2421,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4175" level="3" /> <!-- Haste -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4175" level="3" /> <!-- Haste -->
 			<skill id="4737" level="3" /> <!-- Spinning Slasher -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
 			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
@@ -2480,13 +2438,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="2446" min="1" max="1" chance="15.36" /> <!-- Reinforced Leather Gloves -->
-				<item id="2423" min="1" max="1" chance="15.11" /> <!-- Boots of Knowledge -->
-				<item id="2447" min="1" max="1" chance="14.71" /> <!-- Gloves of Knowledge -->
-				<item id="2422" min="1" max="1" chance="14.55" /> <!-- Reinforced Leather Boots -->
-				<item id="553" min="1" max="1" chance="14.16" /> <!-- Iron Boots -->
-				<item id="63" min="1" max="1" chance="14.13" /> <!-- Gauntlets -->
-				<item id="1940" min="60" max="180" chance="100" /> <!-- Iron Boot Design -->
+				<item id="57" min="27" max="62" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2497,11 +2449,11 @@
 			<skill name="Skill01" id="4194" level="3" />
 			<skill name="Skill02" id="4192" level="4" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="930378" sp="223" />
+		<acquire exp="930379" sp="224" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="94225.2365930599" hpRegen="4.5" mp="2088.40227088402" mpRegen="1.8" />
+			<vitals hp="94225.2365930599" hpRegen="4.5" mp="2108.67802108678" mpRegen="1.8" />
 			<attack physical="340" magical="167.694457389266" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="224.962406015038" magical="247.333662623712" />
 			<speed>
@@ -2513,13 +2465,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4192" level="4" /> <!-- Vampiric Touch -->
 			<skill id="4194" level="3" /> <!-- Aura Burn -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2530,8 +2481,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="628" min="1" max="2" chance="5.024" /> <!-- Hoplon -->
-				<item id="47" min="1" max="2" chance="3.623" /> <!-- Helmet -->
+				<item id="57" min="31" max="73" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2580,7 +2530,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2594,11 +2544,11 @@
 			<skill name="Skill01" id="4191" level="3" />
 			<skill name="Skill02" id="4188" level="3" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="930378" sp="223" />
+		<acquire exp="930379" sp="224" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="94225.2365930599" hpRegen="17.4317272564291" mp="2088.40227088402" mpRegen="6.48" />
+			<vitals hp="94225.2365930599" hpRegen="17.4317272564291" mp="2108.67802108678" mpRegen="6.48" />
 			<attack physical="340" magical="167.694457389266" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="225.6" magical="247.201946472019" />
 			<speed>
@@ -2610,11 +2560,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4188" level="3" /> <!-- Bleed -->
 			<skill id="4191" level="3" /> <!-- (Wind Strike) -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
@@ -2624,16 +2573,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="31" max="73" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2649,9 +2589,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="131" /> <!-- Spirit Sword -->
-		<acquire exp="1176574" sp="282" />
+		<acquire exp="1176575" sp="283" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="132634.069400631" hpRegen="5.5" mp="2787.5101378751" mpRegen="2.1" />
+			<vitals hp="132634.069400631" hpRegen="5.5" mp="2815.08515815085" mpRegen="2.1" />
 			<attack physical="498.737373737374" magical="242.559075592925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.132376395534" magical="297.045053095764" />
 			<speed>
@@ -2663,13 +2603,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4087" level="4" /> <!-- Blaze -->
 			<skill id="4178" level="4" /> <!-- Flame Strike -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4641" level="4" /> <!-- Super Strike -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
 		</skillList>
@@ -2681,10 +2620,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="380" min="1" max="2" chance="22.8" /> <!-- Plate Gaiters -->
-				<item id="353" min="1" max="2" chance="12.97" /> <!-- Half Plate Armor -->
-				<item id="1950" min="16" max="114" chance="100" /> <!-- Half Plate Temper -->
-				<item id="1951" min="6" max="48" chance="100" /> <!-- Plate Gaiter Fragment -->
+				<item id="57" min="44" max="103" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2715,7 +2651,7 @@
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -2735,7 +2671,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2749,9 +2685,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1272170" sp="305" />
+		<acquire exp="1272171" sp="306" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="165222.082018927" hpRegen="5.5" mp="3189.78102189781" mpRegen="2.1" />
+			<vitals hp="330444.164037855" hpRegen="5.5" mp="3220.600162206" mpRegen="2.1" />
 			<attack physical="650" magical="314.612400630324" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="291.840712893344" magical="320.256349624173" />
 			<speed>
@@ -2762,16 +2698,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4137" level="4" /> <!-- Hydro Screw -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5620" level="4" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4137" level="4" /> <!-- Hydro Screw -->
 			<skill id="5249" level="4" /> <!-- Dark Circle -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
-			<skill id="5620" level="4" /> <!-- Melee Attack Vulnerability -->
 			<skill id="5625" level="1" /> <!-- Soul Confinement -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2783,8 +2717,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="281" min="1" max="2" chance="0.75" /> <!-- Crystallized Ice Bow -->
-				<item id="2074" min="192" max="732" chance="37.58" /> <!-- Crystallized Ice Bow Shaft -->
+				<item id="57" min="51" max="118" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2803,9 +2736,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="298" /> <!-- Orcish Glaive -->
-		<acquire exp="1272170" sp="305" />
+		<acquire exp="1272171" sp="306" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="165222.082018927" hpRegen="5.5" mp="3189.78102189781" mpRegen="2.1" />
+			<vitals hp="165222.082018927" hpRegen="5.5" mp="3220.600162206" mpRegen="2.1" />
 			<attack physical="650" magical="314.612400630324" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.851851851852" magical="320.206662461326" />
 			<speed>
@@ -2817,11 +2750,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4101" level="10" /> <!-- Spinning Slasher -->
 			<skill id="4187" level="4" /> <!-- Decrease Speed -->
-			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="11" /> <!-- Giant -->
 			<skill id="5203" level="4" /> <!-- Fear -->
 			<skill id="5218" level="1" /> <!-- Teleport -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
@@ -2834,12 +2766,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="631" min="1" max="1" chance="61.35" /> <!-- Eldarake -->
-				<item id="2495" min="1" max="1" chance="60.19" /> <!-- Chain Shield -->
-				<item id="2413" min="1" max="1" chance="42.83" /> <!-- Chain Hood -->
-				<item id="1964" min="40" max="120" chance="100" /> <!-- Eldarake Temper -->
-				<item id="2936" min="14" max="42" chance="100" /> <!-- Chain Hood Pattern -->
-				<item id="2945" min="81" max="243" chance="100" /> <!-- Chain Shield Fragment -->
+				<item id="57" min="51" max="118" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2852,9 +2779,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="1451887" sp="348" />
+		<acquire exp="1451888" sp="349" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="294174.132492114" hpRegen="6.5" mp="4162.20600162206" mpRegen="2.4" />
+			<vitals hp="294174.132492114" hpRegen="6.5" mp="4203.56853203569" mpRegen="2.4" />
 			<attack physical="1111.50234741784" magical="532.389646202451" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="343.111299375199" magical="376.184627292504" />
 			<speed>
@@ -2866,11 +2793,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5043" level="5" /> <!-- Supersonic Blaster -->
 			<skill id="5260" level="5" /> <!-- Disarm -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
@@ -2883,8 +2809,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="266" min="1" max="2" chance="0.3" /> <!-- Great Pata -->
-				<item id="2120" min="192" max="732" chance="21.53" /> <!-- Great Pata Blade -->
+				<item id="57" min="68" max="158" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2932,7 +2857,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2947,9 +2872,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
-		<acquire exp="1503915" sp="360" />
+		<acquire exp="1503916" sp="361" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="318250.47318612" hpRegen="6.5" mp="4594.48499594485" mpRegen="2.4" />
+			<vitals hp="318249.842271293" hpRegen="6.5" mp="4639.90267639903" mpRegen="2.4" />
 			<attack physical="1538.50574712644" magical="733.877457848561" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="365.569095151672" magical="401.204370099677" />
 			<speed>
@@ -2961,11 +2886,10 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="5043" level="7" /> <!-- Supersonic Blaster -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
 		</skillList>
@@ -2977,14 +2901,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="2379" min="1" max="2" chance="3.719" /> <!-- Avadon Gaiters -->
-				<item id="383" min="1" max="2" chance="3.683" /> <!-- Zubei's Gaiters -->
-				<item id="357" min="1" max="2" chance="2.354" /> <!-- Zubei's Breastplate -->
-				<item id="2376" min="1" max="2" chance="2.296" /> <!-- Avadon Breastplate -->
-				<item id="4056" min="3" max="21" chance="100" /> <!-- Zubei's Breastplate Part -->
-				<item id="4057" min="2" max="12" chance="100" /> <!-- Zubei's Gaiter Material -->
-				<item id="4064" min="3" max="21" chance="100" /> <!-- Avadon Breastplate Part -->
-				<item id="4065" min="1" max="6" chance="100" /> <!-- Avadon Gaiter Material -->
+				<item id="57" min="76" max="177" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3027,7 +2944,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3043,9 +2960,9 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="1503915" sp="360" />
+		<acquire exp="1503916" sp="361" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="318250.157728707" hpRegen="6.5" mp="4594.48499594485" mpRegen="2.4" />
+			<vitals hp="636500.315457413" hpRegen="6.5" mp="4639.90267639903" mpRegen="2.4" />
 			<attack physical="1538.50574712644" magical="733.877457848561" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="365.569095151672" magical="401.204370099677" />
 			<speed>
@@ -3057,14 +2974,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4169" level="5" /> <!-- Stun -->
 			<skill id="4187" level="5" /> <!-- Decrease Speed -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3076,12 +2991,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="78" min="1" max="1" chance="1.508" /> <!-- Great Sword -->
-				<item id="148" min="1" max="1" chance="1.495" /> <!-- Sword of Valhalla -->
-				<item id="142" min="1" max="1" chance="1.457" /> <!-- Keshanberk -->
-				<item id="4104" min="40" max="120" chance="100" /> <!-- Great Sword Blade -->
-				<item id="4107" min="81" max="243" chance="100" /> <!-- Keshanberk Blade -->
-				<item id="4108" min="14" max="42" chance="100" /> <!-- Sword of Valhalla Blade -->
+				<item id="57" min="76" max="177" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3093,9 +3003,9 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="73" /> <!-- Shamshir -->
-		<acquire exp="1569699" sp="376" />
+		<acquire exp="1569700" sp="377" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="420501.577287066" hpRegen="7.5" mp="5637.4695863747" mpRegen="2.7" />
+			<vitals hp="420500.94637224" hpRegen="7.5" mp="5693.43065693431" mpRegen="2.7" />
 			<attack physical="2584.97807017544" magical="1221.08996871882" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="419.736842105263" magical="460.472958552098" />
 			<speed>
@@ -3107,10 +3017,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4171" level="6" /> <!-- Spinning Slasher -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3121,14 +3030,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="2403" min="1" max="2" chance="4.222" /> <!-- Blue Wolf Stockings -->
-				<item id="2404" min="1" max="2" chance="4.216" /> <!-- Stockings of Doom -->
-				<item id="2398" min="1" max="2" chance="2.645" /> <!-- Blue Wolf Tunic -->
-				<item id="2399" min="1" max="2" chance="2.598" /> <!-- Tunic of Doom -->
-				<item id="4084" min="3" max="21" chance="100" /> <!-- Blue Wolf Tunic Fabric -->
-				<item id="4085" min="3" max="21" chance="100" /> <!-- Tunic of Doom Pattern -->
-				<item id="4086" min="1" max="9" chance="100" /> <!-- Blue Wolf Stocking Pattern -->
-				<item id="4087" min="1" max="9" chance="100" /> <!-- Stockings of Doom Pattern -->
+				<item id="57" min="98" max="228" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3158,7 +3060,7 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4723" level="5" /> <!-- Power Strike -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3179,7 +3081,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3195,9 +3097,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="75" /> <!-- Caliburs -->
-		<acquire exp="1578091" sp="378" />
+		<acquire exp="1578092" sp="379" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="445990.536277603" hpRegen="7.5" mp="6099.75669099757" mpRegen="2.7" />
+			<vitals hp="445989.905362776" hpRegen="7.5" mp="6159.77291159773" mpRegen="2.7" />
 			<attack physical="2939.24731182796" magical="1382.81178564112" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="443.225806451613" magical="486.094759699657" />
 			<speed>
@@ -3209,10 +3111,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4244" level="6" /> <!-- Wild Sweep -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4748" level="6" /> <!-- Stun -->
 			<skill id="5203" level="6" /> <!-- Fear -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
@@ -3225,14 +3126,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="2475" min="1" max="2" chance="7.95" /> <!-- Sealed Doom Gloves -->
-				<item id="2439" min="1" max="2" chance="7.948" /> <!-- Sealed Blue Wolf Boots -->
-				<item id="2487" min="1" max="2" chance="7.888" /> <!-- Sealed Blue Wolf Gloves -->
-				<item id="601" min="1" max="2" chance="7.877" /> <!-- Sealed Doom Boots -->
-				<item id="4090" min="1" max="12" chance="100" /> <!-- Sealed Blue Wolf Boot Design -->
-				<item id="4091" min="2" max="18" chance="100" /> <!-- Sealed Doom Glove Fragment -->
-				<item id="4096" min="2" max="18" chance="100" /> <!-- Sealed Blue Wolf Glove Fabric -->
-				<item id="4099" min="1" max="12" chance="100" /> <!-- Sealed Doom Boot Fragment -->
+				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3262,7 +3156,7 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -3282,7 +3176,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3299,9 +3193,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8686" /> <!-- Themis' Tongue -->
-		<acquire exp="1578091" sp="378" />
+		<acquire exp="1578092" sp="379" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="445991.167192429" hpRegen="7.5" mp="6099.75669099757" mpRegen="2.7" />
+			<vitals hp="222994.952681388" hpRegen="7.5" mp="6159.77291159773" mpRegen="2.7" />
 			<attack physical="2939.24731182796" magical="1382.81178564112" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="443.225806451613" magical="486.094759699657" />
 			<speed>
@@ -3312,11 +3206,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4188" level="7" /> <!-- Bleed -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4738" level="6" /> <!-- Spinning Slasher -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
 		</skillList>
@@ -3329,16 +3221,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="171" min="1" max="2" chance="0.3" /> <!-- Deadman's Glory -->
-				<item id="175" min="1" max="2" chance="0.3" /> <!-- Art of Battle Axe -->
-				<item id="210" min="1" max="2" chance="0.3" /> <!-- Staff of Evil Spirits -->
-				<item id="7893" min="1" max="2" chance="0.3" /> <!-- Kaim Vanul's Bones -->
-				<item id="7901" min="1" max="2" chance="0.3" /> <!-- Star Buster -->
-				<item id="4116" min="1" max="12" chance="66.26" /> <!-- Deadman's Glory Stone -->
-				<item id="4117" min="1" max="15" chance="65.12" /> <!-- Art of Battle Axe Blade -->
-				<item id="8348" min="3" max="10" chance="64.82" /> <!-- Star Buster Head -->
-				<item id="4118" min="2" max="18" chance="64.21" /> <!-- Evil Spirit Head -->
-				<item id="8340" min="2" max="7" chance="64.05" /> <!-- Bones Head of Kaim Vanul -->
+				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3388,7 +3271,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3399,11 +3282,11 @@
 			<skill name="Skill01" id="4200" level="7" />
 			<skill name="Skill02" id="4196" level="7" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="1753614" sp="420" />
+		<acquire exp="1753615" sp="421" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="475289.589905363" hpRegen="8.5" mp="7212.4898621249" mpRegen="3" />
+			<vitals hp="475288.958990536" hpRegen="8.5" mp="7283.8605028386" mpRegen="3" />
 			<attack physical="4056.58436213992" magical="1890.78809155432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="496.147776849531" magical="544.676701817323" />
 			<speed>
@@ -3415,13 +3298,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4196" level="7" /> <!-- Decrease Speed -->
 			<skill id="4200" level="7" /> <!-- Decrease Atk. Spd. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="5597" level="1" /> <!-- Cancel Invalid Skill -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3432,12 +3314,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6325" min="1" max="1" chance="4.002" /> <!-- Sealed Phoenix Ring -->
-				<item id="6324" min="1" max="1" chance="2.625" /> <!-- Sealed Phoenix Earring -->
-				<item id="6323" min="1" max="1" chance="1.919" /> <!-- Sealed Phoenix Necklace -->
-				<item id="6341" min="81" max="243" chance="100" /> <!-- Sealed Phoenix Earring Gemstone -->
-				<item id="6343" min="14" max="42" chance="100" /> <!-- Sealed Phoenix Necklace Beads -->
-				<item id="6345" min="40" max="120" chance="100" /> <!-- Sealed Phoenix Ring Gemstone -->
+				<item id="57" min="135" max="314" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3484,7 +3361,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3541,7 +3418,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3601,7 +3478,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3659,7 +3536,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3723,7 +3600,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3781,7 +3658,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3840,7 +3717,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3900,7 +3777,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3958,7 +3835,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4019,7 +3896,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4080,7 +3957,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4138,7 +4015,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4199,7 +4076,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4258,7 +4135,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4322,7 +4199,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4385,7 +4262,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4448,7 +4325,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4514,7 +4391,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4577,7 +4454,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4643,7 +4520,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4711,7 +4588,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4777,7 +4654,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 		<collision>

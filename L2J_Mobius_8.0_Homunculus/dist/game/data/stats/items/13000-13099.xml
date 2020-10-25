@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13000" name="Sealed Helm of Nightmare" additionalName="Light Armor" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -18,7 +18,7 @@
 		</stats>
 	</item>
 	<item id="13001" name="Sealed Helm of Nightmare" additionalName="Robe" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -145,7 +145,7 @@
 		</skills>
 	</item>
 	<item id="13008" name="Spellbook: Blessed Blood" type="EtcItem">
-		<!-- Spellbook needed to learn Blessed Blood. Used by Shillien Elders. Required level: 40 -->
+		<!-- A spellbook for learning the Blessed Blood skill. Used by Shillien Elders. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -169,7 +169,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13010" name="Extra Pass: Kamaloka (Hall of the Abyss)" type="EtcItem">
-		<!-- Extra pass that can cancel the time limit restriction to enter the Kamaloka (Hall of the Abyss). Can only be used once a day outside the instance. After the item is consumed, be sure to enter the instance before its next daily timer reset. -->
+		<!-- An extra pass to Kamaloka (Hall of the Abyss). Double-click to reset the instance zone timer. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. The effect expires when the instance zone timer is reset. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -190,7 +190,7 @@
 		</skills>
 	</item>
 	<item id="13011" name="Extra Pass: Near Kamaloka" type="EtcItem">
-		<!-- Extra entrance pass that lets you enter Near Kamaloka. Can cancel the limit on entrance if used while a limit on entrance to Near Kamaloka exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. -->
+		<!-- An extra pass to Near Kamaloka. Double-click to reset the instance zone timer. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. The effect expires when the instance zone timer is reset. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -211,7 +211,7 @@
 		</skills>
 	</item>
 	<item id="13012" name="Extra Pass: Kamaloka (Labyrinth of the Abyss)" type="EtcItem">
-		<!-- Extra pass that can cancel the time limit restriction to enter the Kamaloka (Labyrinth of the Abyss). Can only be used once a day outside the instance. After the item is consumed, be sure to enter the instance before its next daily timer reset. -->
+		<!-- An extra pass to Kamaloka (Labyrinth of the Abyss). Double-click to reset the instance zone timer. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. The effect expires when the instance zone timer is reset. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -259,7 +259,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="13015" name="My Teleport Book" type="EtcItem">
-		<!-- Increases My Teleport locations by 3 slots, which can be used to save specific locations. My Teleport locations can be expanded up to 18 slots. -->
+		<!-- My Teleport locations +3 (maximum - 18 slots). -->
 		<set name="icon" val="icon.bookmark_book_i00" />
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="material" val="PAPER" />
@@ -290,7 +290,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13017" name="White Weasel Minion Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a minion who temporarily casts warrior support magic. Hunger gauge lasts 5 hours. -->
+		<!-- Item that allows you to summon a minion who temporarily casts warrior support magic. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -315,7 +315,7 @@
 		</skills>
 	</item>
 	<item id="13018" name="Fairy Princess Minion Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. Hunger gauge lasts 5 hours. -->
+		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -340,7 +340,7 @@
 		</skills>
 	</item>
 	<item id="13019" name="Wild Beast Fighter Minion Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a warrior minion that uses physical attacks. Hunger gauge lasts 5 hours. -->
+		<!-- Item that allows you to summon a warrior minion that uses physical attacks. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -365,7 +365,7 @@
 		</skills>
 	</item>
 	<item id="13020" name="Fox Shaman Minion Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a magician minion that uses magic attacks. Hunger gauge lasts 5 hours. -->
+		<!-- Item that allows you to summon a magician minion that uses magic attacks. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -390,7 +390,7 @@
 		</skills>
 	</item>
 	<item id="13021" name="Color Title" type="EtcItem">
-		<!-- Item that allows you to change your character's title color. You can change back to the original color by using the "/ resetname" command after changing the title color. -->
+		<!-- Item that can change the color of a character's title. After changing the color of the title, the original title color can be restored through the command '/ resetname'. If there was no original title, the title disappears. -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
 		<set name="immediate_effect" val="true" />
@@ -405,7 +405,7 @@
 		<set name="handler" val="NicknameColor" />
 	</item>
 	<item id="13022" name="Mount - Darkmane Pacer" additionalName="7-day" type="Armor">
-		<!-- Can mount a Darkmane Pacer when equipped. 7-day. -->
+		<!-- Allows to mount a Darkmane Pacer when equipped. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -428,7 +428,7 @@
 		</skills>
 	</item>
 	<item id="13023" name="Agathion - Love" additionalName="30-day" type="Armor">
-		<!-- Can summon an Love Agathion when equipped. 30-day. -->
+		<!-- Available for 30 days. Summons Agathion Love. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -452,7 +452,7 @@
 		</skills>
 	</item>
 	<item id="13024" name="Agathion - Angry Devil" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Angry Devil when equipped. 30-day. -->
+		<!-- Summons Agathion Angry Devil. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -476,7 +476,7 @@
 		</skills>
 	</item>
 	<item id="13025" name="Agathion - Shiny" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Shiny when equipped. 30-day. -->
+		<!-- Summons Agathion Shiny. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -500,7 +500,7 @@
 		</skills>
 	</item>
 	<item id="13026" name="Agathion - Sobbing" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Sobbing when equipped. 30-day. -->
+		<!-- Summons Agathion Sobbing. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -524,7 +524,7 @@
 		</skills>
 	</item>
 	<item id="13027" name="Gran Kain's Gift Box" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack that gives you an item once a day. 30-day. -->
+		<!-- Double-click to obtain a free item once a day. Available for 30 d. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -776,7 +776,7 @@
 		</skills>
 	</item>
 	<item id="13038" name="Essence of Water" type="EtcItem">
-		<!-- If you bring it along with a Spirit's Sword to the Temple Inspector, you can exchange them for an Reinforced Spirit's Sword. -->
+		<!-- Take it along with Spirit Sword to the Temple Inspector to obtain Reinforced Spirit Sword. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -818,7 +818,7 @@
 		</cond>
 	</item>
 	<item id="13040" name="Fire Attribute Enhancer" type="EtcItem">
-		<!-- Temporarily increases P. Def. for fire-related attributes. Can only be used in the Pailaka instant dungeon. -->
+		<!-- Temporarily increases Fire Resistance. Can only be used in the Pailaka instant zone. -->
 		<set name="icon" val="icon.etc_fire_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -844,7 +844,7 @@
 		</skills>
 	</item>
 	<item id="13041" name="Water Attribute Enhancer" type="EtcItem">
-		<!-- Temporarily increases P. Def. for water-related attributes. Can only be used in the Pailaka instant dungeon. -->
+		<!-- Temporarily increases Water Resistance. Can only be used in the Pailaka instant zone. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1010,7 +1010,7 @@
 		</skills>
 	</item>
 	<item id="13046" name="Pailaka Weapon Upgrade Stage 1" type="EtcItem">
-		<!-- If you bring it along with an Ancient Legacy Sword to the Dwarf Adventurer, you can exchange them for an Ancient Legacy Sword Stage 2. -->
+		<!-- Take it along with Ancient Legacy Sword to the Dwarf Adventurer to obtain Reinforced Ancient Legacy Sword. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1031,7 +1031,7 @@
 		</cond>
 	</item>
 	<item id="13047" name="Pailaka Weapon Upgrade Stage 2" type="EtcItem">
-		<!-- If you bring it along with an Ancient Legacy Sword Stage 2 to the Dwarf Adventurer, you can exchange them for an Ancient Legacy Sword Stage 3. -->
+		<!-- Take it along with Reinforced Ancient Legacy Sword to the Dwarf Adventurer to obtain Complete Ancient Legacy Sword. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1290,7 +1290,7 @@
 		</skills>
 	</item>
 	<item id="13056" name="Weapon Upgrade Stage 1" type="EtcItem">
-		<!-- If you bring it along with a Spear of Silenos to the Ketra Orc Intelligence Officer, you can exchange them for Spear of Silenos Stage 2. -->
+		<!-- Take it along with Spear of Silenos to the Ketra Orc Intelligence Officer to obtain Reinforced Spear of Silenos. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1311,7 +1311,7 @@
 		</cond>
 	</item>
 	<item id="13057" name="Weapon Upgrade Stage 2" type="EtcItem">
-		<!-- If you bring it along with a Spear of Silenos Stage 2 to the Ketra Orc Intelligence Officer, you can exchange them for Spear of Silenos Stage 3. -->
+		<!-- Take it along with Reinforced Spear of Silenos to the Ketra Orc Intelligence Officer to obtain Complete Spear of Silenos. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1536,7 +1536,7 @@
 		<set name="is_premium" val="true" />
 	</item>
 	<item id="13071" name="Red Soul Crystal - Stage 16" type="EtcItem">
-		<!-- Red crystal containing the light of absorbed souls. stage 16. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
+		<!-- Red crystal that contains the light of absorbed souls. Level 16. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1550,7 +1550,7 @@
 		</skills>
 	</item>
 	<item id="13072" name="Blue Soul Crystal - Stage 16" type="EtcItem">
-		<!-- Blue crystal containing the light of absorbed souls. stage 16. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
+		<!-- Blue crystal that contains the light of absorbed souls. Level 16. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1564,7 +1564,7 @@
 		</skills>
 	</item>
 	<item id="13073" name="Green Soul Crystal - Stage 16" type="EtcItem">
-		<!-- Green crystal containing the light of absorbed souls. stage 16. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. A crystal of this level is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
+		<!-- Green crystal that contains the light of absorbed souls. Level 16. Once saturated, it bestows special abilities to a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1629,7 +1629,7 @@
 		<set name="duration" val="10080" />
 	</item>
 	<item id="13077" name="Foundation Arcana Sigil" type="EtcItem">
-		<!-- Rare Arcana Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare item that requires a thorough varnishing. Old and not very useful equipment. -->
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1643,7 +1643,7 @@
 		</stats>
 	</item>
 	<item id="13078" name="Arcana Sigil" type="Armor">
-		<!-- Increases M. Def. Decreases Magic Cancel Rate. -->
+		<!-- Increases M. Def. and decreases Casting Interruption Rate. -->
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -1666,7 +1666,7 @@
 		</stats>
 	</item>
 	<item id="13079" name="My Teleport Book Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Free Teleporter's Scroll. -->
+		<!-- Double-click to obtain My Teleport Book. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1683,11 +1683,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="13015" min="1" max="1" chance="100" /> <!-- My Teleport Book -->
+			<item id="13015" min="1" max="1" chance="100" /> <!-- My Teleport Book Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="13080" name="My Teleport Scroll 30-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 30 sheets of Free Teleporter's Spellbooks. -->
+		<!-- Double-click to obtain 30 My Teleport Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1708,7 +1708,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13081" name="Entrance Pass: Kamaloka Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 3 sheets of the Feather of Blessing. -->
+		<!-- Double-click to obtain Extra Passes: Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1724,7 +1724,7 @@
 		<set name="is_premium" val="true" />
 	</item>
 	<item id="13082" name="Feather of Blessing 3-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Love Agathion Seal Bracelet (30-day). -->
+		<!-- Double-click to obtain 3 Feathers of Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1745,7 +1745,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13083" name="Agathion - Love Pack (30-day)" type="EtcItem">
-		<!-- Dimensional Item Pack. A pack containing a Love Agathion Bracelet (30-day). -->
+		<!-- Double-click to obtain Agathion Love Charm (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1762,11 +1762,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="13023" min="1" max="1" chance="100" /> <!-- Agathion - Love - 30-day -->
+			<item id="13023" min="1" max="1" chance="100" /> <!-- Agathion Love - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="13084" name="Pumpkin Transformation Stick Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Kat the Cat Hat (30-day). -->
+		<!-- Double-click to obtain Pumpkin Transformation Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1787,7 +1787,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13085" name="Entrance Pass: Kamaloka 3-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 5 Sheets of Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). -->
+		<!-- Double-click to obtain Extra Passes: Kamaloka (Hall of the Abyss)/ Near Kamaloka/ Kamaloka (Labyrinth of the Abyss) - 5 of each type. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1810,7 +1810,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13086" name="Kat the Cat Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Monster Eye Hat (30-day). -->
+		<!-- Double-click to obtain Kat the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1831,7 +1831,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13087" name="Feline Queen Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Brown Bear Hat (30-day). -->
+		<!-- Double-click to obtain Feline Queen Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1852,7 +1852,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13088" name="Monster Eye Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Fungus Hat (30-day). -->
+		<!-- Double-click to obtain Monster Eye Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1873,7 +1873,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13089" name="Brown Bear Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Skull Hat (30-day). -->
+		<!-- Double-click to obtain Brown Bear Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1894,7 +1894,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13090" name="Fungus Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Ornithomimus Hat (30-day). -->
+		<!-- Double-click to obtain Fungus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1915,7 +1915,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13091" name="Skull Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Feline King Hat (30-day). -->
+		<!-- Double-click to obtain Skull Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1936,7 +1936,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13092" name="Ornithomimus Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Kai the Cat Hat (30-day). -->
+		<!-- Double-click to obtain Ornithomimus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1957,7 +1957,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13093" name="Feline King Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing OX Stick (30-day). -->
+		<!-- Double-click to obtain Feline King Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1978,7 +1978,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13094" name="Kai the Cat Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Rock-Paper-Scissors Stick (30-day). -->
+		<!-- Double-click to obtain Kai the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1999,7 +1999,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13095" name="OX Stick Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing bracelet that summons a Darkmane Pacer (7-day). -->
+		<!-- Double-click to obtain OX Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2021,7 +2021,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13096" name="Rock-Paper-Scissors Stick Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Color Title. -->
+		<!-- Double-click to obtain Rock, Paper and Scissors Sticks (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2044,7 +2044,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13097" name="Darkmane Pacer Bracelet Pack" type="EtcItem">
-		<!-- Wrapped Pack containing bracelet that summons a Darkmane Pacer (7-day). -->
+		<!-- Double-click to obtain Darkmane Pacer Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2061,11 +2061,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="13022" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer - 7-day -->
+			<item id="13022" min="1" max="1" chance="100" /> <!-- Darkmane Pacer Bracelet - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="13098" name="Color Title 3-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Color Title. -->
+		<!-- Double-click to obtain Color Title. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2086,7 +2086,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13099" name="Sealed Arcana Sigil Piece" type="EtcItem">
-		<!-- Ingredient needed for a Dwarf to make a Sealed Arcana Sigil. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Sealed Arcana Sigil. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

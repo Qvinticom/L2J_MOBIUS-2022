@@ -38,7 +38,7 @@
 	</xs:complexType>
 
 	<xs:complexType name="capsuledItemType">
-		<xs:attribute name="id" type="xs:positiveInteger" />
+		<xs:attribute name="id" type="xs:integer" />
 		<xs:attribute name="min" type="xs:positiveInteger" />
 		<xs:attribute name="max" type="xs:positiveInteger" />
 		<xs:attribute name="chance" type="xs:double" />

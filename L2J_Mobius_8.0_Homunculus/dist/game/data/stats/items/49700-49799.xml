@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="49783" name="Sibi's Coin" type="EtcItem">
-		<!-- A coin paid for activity while disguised as a Balthus Knight. Balthus Knights' Supply Officer Sibi will be able to exchange them for Sibi's Suspicious Supply Box. This item will be deleted after the event is over. -->
+		<!-- Can be exchanged through the Festival Fairy for various items. -->
 		<set name="icon" val="icon.ev_balthus_coin" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -20,7 +20,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />

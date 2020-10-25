@@ -27,12 +27,10 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 import instances.AbstractInstance;
-import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
 
 /**
  * Ice Queen's Castle instance zone.
@@ -111,13 +109,7 @@ public class IceQueensCastle extends AbstractInstance
 			}
 			case "TIMER_PC_LEAVE":
 			{
-				final QuestState qs = player.getQuestState(Q10285_MeetingSirra.class.getSimpleName());
-				if (qs != null)
-				{
-					qs.setMemoState(3);
-					qs.setCond(10, true);
-					finishInstance(player, 0);
-				}
+				finishInstance(player, 0);
 				break;
 			}
 		}

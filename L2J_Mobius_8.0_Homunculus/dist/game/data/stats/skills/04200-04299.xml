@@ -79,7 +79,7 @@
 		</effects>
 	</skill>
 	<skill id="4201" toLevel="12" name="Sleep">
-		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -141,12 +141,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4202" toLevel="12" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -288,7 +288,7 @@
 		</effects>
 	</skill>
 	<skill id="4204" toLevel="12" name="Bleed">
-		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -369,7 +369,7 @@
 		</effects>
 	</skill>
 	<skill id="4205" toLevel="12" name="Paralysis">
-		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -430,7 +430,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -570,7 +570,7 @@
 		</effects>
 	</skill>
 	<skill id="4208" toLevel="12" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -647,7 +647,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -709,7 +709,7 @@
 		</effects>
 	</skill>
 	<skill id="4210" toLevel="12" name="Chant of Life">
-		<!-- HP is recovered. -->
+		<!-- HP is restored. -->
 		<icon>icon.skill1229</icon>
 		<abnormalLevel>
 			<value level="1">11</value>
@@ -842,7 +842,7 @@
 		</effects>
 	</skill>
 	<skill id="4212" toLevel="12" name="Shield">
-		<!-- P. Def. +$s1 -->
+		<!-- P. Def. +$s1. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -944,7 +944,7 @@
 		</effects>
 	</skill>
 	<skill id="4214" toLevel="12" name="Reflect Damage">
-		<!-- Received damage is reflected by $s1. -->
+		<!-- Reflects $s1 of the received damage. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -994,7 +994,7 @@
 		</effects>
 	</skill>
 	<skill id="4215" toLevel="1" name="Raid Curse">
-		<!-- You have been cursed by a Guardian Spirit. No magic or physical skills can be used at this time. This curse befalls those who attempt to challenge a raid boss who is 9 or more Lv.s below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
+		<!-- You are cursed by the Raid Boss guardian spirit. You can't use P./ M. skills for a certain time period. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill1064</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1071,7 +1071,7 @@
 		</effects>
 	</skill>
 	<skill id="4219" toLevel="1" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2497,7 +2497,7 @@
 		</effects>
 	</skill>
 	<skill id="4259" toLevel="12" name="Toxic Smoke">
-		<!-- A deadly toxin gradually reducing HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- A deadly toxin gradually reducing HP. Effect $s1.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -2806,7 +2806,7 @@
 		</effects>
 	</skill>
 	<skill id="4264" toLevel="1" name="Holiday Empower">
-		<!-- M. Atk. increases temporarily. Effect 1. -->
+		<!-- Temporarily increases M. Atk. Effect 1. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -3169,7 +3169,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4283" toLevel="1" name="Greater Magic Attack Resistance">
+	<skill id="4283" toLevel="1" name="Greater Magic Damage Resistance">
 		<!-- Very resistant to magic attack. -->
 		<icon>icon.skill4283_new</icon>
 		<magicLevel>1</magicLevel>
@@ -3219,7 +3219,7 @@
 		</effects>
 	</skill>
 	<skill id="4286" toLevel="1" name="Greater Sleep Resistance">
-		<!-- Very resistant to Sleep attacks. -->
+		<!-- Highly resistant to Sleep. -->
 		<icon>icon.skill4286</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3249,7 +3249,7 @@
 		</effects>
 	</skill>
 	<skill id="4288" toLevel="1" name="Greater Hold Resistance">
-		<!-- Very resistant to Hold attack. -->
+		<!-- Highly resistant to Hold. -->
 		<icon>icon.skill4288</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3296,63 +3296,63 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4291" toLevel="1" name="Race">
-		<!-- Construct -->
+		<!-- Magical Creatures -->
 		<icon>icon.skill4291</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4292" toLevel="1" name="Race">
-		<!-- Beast -->
+		<!-- Beasts -->
 		<icon>icon.skill4292</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4293" toLevel="1" name="Race">
-		<!-- Animal -->
+		<!-- Animals -->
 		<icon>icon.skill4293</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4294" toLevel="1" name="Race">
-		<!-- Plant -->
+		<!-- Plants -->
 		<icon>icon.skill4294</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4295" toLevel="1" name="Race">
-		<!-- Humanoid -->
+		<!-- Humanoids -->
 		<icon>icon.skill4295</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4296" toLevel="1" name="Race">
-		<!-- Spirit -->
+		<!-- Spirits -->
 		<icon>icon.skill4296</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4297" toLevel="1" name="Race">
-		<!-- Divine -->
+		<!-- Angels -->
 		<icon>icon.skill4297</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4298" toLevel="1" name="Race">
-		<!-- Demonic -->
+		<!-- Demons -->
 		<icon>icon.skill4298</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4299" toLevel="1" name="Race">
-		<!-- Dragon -->
+		<!-- Dragons -->
 		<icon>icon.skill4299</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>

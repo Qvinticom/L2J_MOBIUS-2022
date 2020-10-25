@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="21300" toLevel="1" name="Summon Agathion - Velarin">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21300" toLevel="1" name="Summon Agathion Velarin">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -12,8 +12,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21301" toLevel="1" name="Summon Agathion - Dulcinel">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21301" toLevel="1" name="Summon Agathion Dulcinel">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -24,8 +24,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21302" toLevel="1" name="Summon Agathion - Chimeros">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21302" toLevel="1" name="Summon Agathion Chimeros">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -36,8 +36,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21303" toLevel="1" name="Summon Agathion - Niveri">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21303" toLevel="1" name="Summon Agathion Niveri">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -48,8 +48,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21304" toLevel="1" name="Summon Agathion - Hamell">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21304" toLevel="1" name="Summon Agathion Hamell">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -60,8 +60,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21305" toLevel="1" name="Summon Agathion - Joriya">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21305" toLevel="1" name="Summon Agathion Joriya">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -72,8 +72,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21306" toLevel="1" name="Summon Agathion - Ralmak">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21306" toLevel="1" name="Summon Agathion Ralmak">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -84,8 +84,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21307" toLevel="1" name="Summon Agathion - Goras">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21307" toLevel="1" name="Summon Agathion Goras">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -96,8 +96,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21308" toLevel="1" name="Summon Agathion - Vensar">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21308" toLevel="1" name="Summon Agathion Vensar">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -108,8 +108,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21309" toLevel="1" name="Summon Agathion - Kiela">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21309" toLevel="1" name="Summon Agathion Kiela">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -145,7 +145,7 @@
 		</conditions>
 	</skill>
 	<skill id="21311" toLevel="1" name="Reinforced Authority">
-		<!-- All stats +1, Max HP/ MP/ CP +300, HP/ MP Recovery Rate +10%, all attribute resistance 10. 4 Energy consumed every sec. -->
+		<!-- All stats +1, Max HP/ MP/ CP +300, HP/ MP Recovery Rate +10%, Attribute Resistance +10. Consumes 4 energy points per sec. -->
 		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -335,8 +335,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 	</skill>
-	<skill id="21325" toLevel="1" name="Summon Agathion - Uthanka">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21325" toLevel="1" name="Summon Agathion Uthanka">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -347,7 +347,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21326" toLevel="1" name="Enchant Effect - Elemental Shirt">
+	<skill id="21326" toLevel="1" name="Enchant Effect: Elemental Shirt">
 		<!-- M. Def. +8. -->
 		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i01</icon>
 		<operateType>P</operateType>
@@ -362,7 +362,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21327" toLevel="10" name="Enchant Effect - Elemental Shirt">
+	<skill id="21327" toLevel="10" name="Enchant Effect: Elemental Shirt">
 		<!-- M. Def. +$s1. -->
 		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i00</icon>
 		<operateType>P</operateType>
@@ -580,7 +580,7 @@
 		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="21333" toLevel="2" name="Adenia's Vampiric Rage">
-		<!-- Passive: Has a chance of absorbing $s1 of damage inflicted on enemy as HP when equipped. -->
+		<!-- Item skill: With a certain chance, absorbs $s1 of the inflicted damage as HP, when equipped. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -590,7 +590,7 @@
 		</magicLevel>
 	</skill>
 	<skill id="21334" toLevel="2" name="Adenia's Vampiric Rage">
-		<!-- Active: For $s1, has a chance of absorbing $s2 of damage inflicted on enemy as HP when used. -->
+		<!-- Active skill: For $s1, has a chance of absorbing $s2 of the inflicted damage as HP. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>7200000</reuseDelay>
@@ -609,7 +609,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21335" toLevel="2" name="Adenia's Damage Reflection">
-		<!-- Passive: Reflects $s1 of received damage back to enemy. -->
+		<!-- Item skill: Reflects $s1 of the received damage back to the enemy, when equipped. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
 		<effectPoint>379</effectPoint>
@@ -621,7 +621,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="21336" toLevel="2" name="Adenia's Damage Reflection">
-		<!-- Active: For $s1, reflects $s2 of received damage back to enemy. -->
+		<!-- Active skill: For $s1, reflects $s2 of the received damage back to the enemy. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
 		<mpConsume>25</mpConsume>
@@ -642,28 +642,28 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21337" toLevel="1" name="Adenia's Duel Might">
-		<!-- In case of success: Increases P. Atk. in PvP when the character is attacked. -->
+		<!-- When triggered: Increases P. Atk. in PvP when hit. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>46</magicLevel>
 	</skill>
 	<skill id="21338" toLevel="1" name="Adenia's Duel Might">
-		<!-- Passive: Increases PvP Damage when equipped. -->
+		<!-- Item skill: Increases P. Atk. in PvP, when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>46</magicLevel>
 	</skill>
 	<skill id="21339" toLevel="1" name="Adenia's Doom">
-		<!-- In case of success: Instantly blocks the target's P./ M. Skills, when the character is attacked. -->
+		<!-- When triggered: Momentarily blocks the target's P./ M. skills when hit. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>61</magicLevel>
 	</skill>
 	<skill id="21340" toLevel="2" name="Adenia's Instant Recovery">
-		<!-- Active: Recovers $s1 HP, $s2 MP, and $s3 CP. Usable in the Olympiad. -->
+		<!-- Active skill: Recovers $s1 HP, $s2 MP and $s3 CP. Can be used in the Olympiad. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -679,7 +679,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21341" toLevel="1" name="Adenia's Shield">
-		<!-- Active: For some time, P. Def. +10%. -->
+		<!-- Active skill: Temporarily P. Def. +10%. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
 		<mpConsume>48</mpConsume>
@@ -697,7 +697,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21342" toLevel="1" name="Adenia's Magic Barrier">
-		<!-- Active: For some time, M. Def. +10%. -->
+		<!-- Active skill: Temporarily M. Def. +10%. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
 		<mpConsume>48</mpConsume>
@@ -715,7 +715,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21343" toLevel="1" name="Adenia's Barrier">
-		<!-- Active: For some time, P. Def./ M. Def. +10%. -->
+		<!-- Active skill: Temporarily P./ M. Def. +10%. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
 		<mpConsume>48</mpConsume>
@@ -733,7 +733,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21344" toLevel="2" name="Adenia's Invincibility">
-		<!-- Active: Removes all abnormal states and grants invincibility for $s1 Cannot use when rendered immobile. Usable in the Olympiad. -->
+		<!-- Active skill: Removes all debuffs and grants invincibility for $s1 Cannot be used while stunned. Can be used in the Olympiad. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -759,7 +759,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21345" toLevel="2" name="Adenia's Return">
-		<!-- Active: Teleport to town. Unusable in special places such as GM Consultation Room. -->
+		<!-- Active skill: Teleports to the nearest village. Cannot be used in special places such as the GM Consultation Service. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -789,14 +789,14 @@
 		</conditions>
 	</skill>
 	<skill id="21346" toLevel="1" name="Adenia's Weight Limit">
-		<!-- Passive: Weight gauge x 2 when equipped. -->
+		<!-- Active skill: Increases weight limit for weapons by 2 times when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>46</magicLevel>
 	</skill>
-	<skill id="21347" toLevel="1" name="Summon Agathion - Griffin">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21347" toLevel="1" name="Summon Agathion Griffin">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -808,7 +808,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21348" toLevel="1" name="Summon Friend">
-		<!-- Summons your friend. The target to be summoned must be equipped with a Mysterious Friend Summon Bracelet and be a party member. -->
+		<!-- Summons a friend. The target must be in the same party and wear Mysterious Friend Summon Bracelet. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>10000</hitTime>
@@ -845,7 +845,7 @@
 		<magicLevel>50</magicLevel>
 	</skill>
 	<skill id="21351" toLevel="2" name="Modified Set Effect Test">
-		<!-- For testing the modified set effects. Skill: Teleport to town. -->
+		<!-- For testing the modified set effects. Active skill: Teleport to town. -->
 		<icon>BranchSys3.Icon.g_beam_sword</icon>
 		<operateType>A1</operateType>
 		<mpConsume>110</mpConsume>
@@ -860,8 +860,8 @@
 			<condition name="OpCanEscape" />
 		</conditions>
 	</skill>
-	<skill id="21352" toLevel="1" name="Summon Agathion - Hussar">
-		<!-- Summons Agathion. -->
+	<skill id="21352" toLevel="1" name="Summon Agathion Hussar">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -954,7 +954,6 @@
 		<effects>
 			<effect name="VitalityExpRate">
 				<amount>100</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1152,10 +1151,22 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21364" toLevel="12" name="Talisman - Abundance">
-		<!-- P. Atk. +154, M. Atk. +181, P./ M. Evasion +4. -->
-		<icon>BranchSys2.icon.g_giant_gem</icon>
-		<magicLevel>55</magicLevel>
+	<skill id="21364" toLevel="12" name="Talisman of Abundance">
+		<!-- P. Atk. +$s1, M. Atk. +$s2, P./ M. Evasion +$s3. Note!. Effects of two identical talismans do not stack. -->
+		<icon>
+			<value level="1">BranchSys2.icon.g_giant_gem</value> <!-- Talisman - Abundance War -->
+			<value level="2">BranchSys2.icon.g_giant_gem</value> <!-- Talisman - Abundance Tactics -->
+			<value level="3">BranchSys2.icon.g_giant_gem</value> <!-- Talisman - Abundance Morale -->
+			<value level="4">BranchSys2.icon.g_giant_gem</value> <!-- Talisman - Abundance Physique -->
+			<value level="5">BranchSys2.icon.g_twilight_gem</value> <!-- Talisman - Hunter -->
+			<value level="6">BranchSys2.icon.g_twilight_gem</value> <!-- Talisman - Slaughterer -->
+			<value level="7">BranchSys2.icon.g_twilight_gem</value> <!-- Talisman - Conquerer -->
+			<value level="8">BranchSys2.icon.g_twilight_gem</value> <!-- Talisman - Outlaw -->
+			<value level="9">BranchIcon.Icon.g_therich_i00</value> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
+			<value level="10">BranchIcon.Icon.g_therich_i01</value> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
+			<value level="11">BranchIcon.Icon.g_therich_i02</value> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
+			<value level="12">BranchIcon.Icon.g_therich_i03</value> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
+		</icon>
 		<abnormalLevel>
 			<value level="1">1</value> <!-- Talisman - Abundance War -->
 			<value level="2">2</value> <!-- Talisman - Abundance Tactics -->
@@ -1170,6 +1181,7 @@
 			<value level="11">11</value> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
 			<value level="12">12</value> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
 		</abnormalLevel>
+		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
@@ -1432,16 +1444,16 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">10</value>
+					<value level="3">-10</value>
 					<value level="4">0</value>
-					<value level="5">15</value>
+					<value level="5">-15</value>
 					<value level="6">0</value>
-					<value level="7">15</value>
-					<value level="8">15</value>
-					<value level="9">15</value>
-					<value level="10">15</value>
-					<value level="11">15</value>
-					<value level="12">15</value>
+					<value level="7">-15</value>
+					<value level="8">-15</value>
+					<value level="9">-15</value>
+					<value level="10">-15</value>
+					<value level="11">-15</value>
+					<value level="12">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1600,8 +1612,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21365" toLevel="5" name="Talisman - Hunter">
-		<!-- The Talisman - Hunter effect has increased. -->
+	<skill id="21365" toLevel="5" name="Talisman of Hunter">
+		<!-- Boosts the effect of Talisman of Hunter. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1795,7 +1807,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21365</skillId> <!-- Talisman - Hunter -->
+				<skillId>21365</skillId> <!-- Talisman of Hunter -->
 				<skillLevel>2</skillLevel>
 				<chance>50</chance>
 				<isCritical>false</isCritical>
@@ -1807,7 +1819,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21365</skillId> <!-- Talisman - Hunter -->
+				<skillId>21365</skillId> <!-- Talisman of Hunter -->
 				<skillLevel>3</skillLevel>
 				<chance>30</chance>
 				<isCritical>false</isCritical>
@@ -1819,7 +1831,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21365</skillId> <!-- Talisman - Hunter -->
+				<skillId>21365</skillId> <!-- Talisman of Hunter -->
 				<skillLevel>4</skillLevel>
 				<chance>10</chance>
 				<isCritical>false</isCritical>
@@ -1831,7 +1843,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21365</skillId> <!-- Talisman - Hunter -->
+				<skillId>21365</skillId> <!-- Talisman of Hunter -->
 				<skillLevel>5</skillLevel>
 				<chance>5</chance>
 				<isCritical>false</isCritical>
@@ -1842,7 +1854,7 @@
 			</effect>
 		</pvpEffects>
 	</skill>
-	<skill id="21366" toLevel="1" name="Wondrous Hunt Dye">
+	<skill id="21366" toLevel="1" name="Mysterious Hunt Dye">
 		<!-- When HP is 90% or above, P. Def. +20% and Speed +33 in the Olympiad and the Ceremony of Chaos. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_defence</icon>
 		<operateType>P</operateType>
@@ -1866,7 +1878,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21367" toLevel="1" name="Wondrous Slaughter Dye">
+	<skill id="21367" toLevel="1" name="Mysterious Slaughter Dye">
 		<!-- In a battlefield, Received Damage -2% and Damage Reflection Resistance +2. Skill Lv. up with each PC kill. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
 		<operateType>P</operateType>
@@ -1875,12 +1887,12 @@
 		<effects>
 			<effect name="TriggerSkillByKill">
 				<chance>100</chance>
-				<skillId>21368</skillId> <!-- Wondrous Slaughter Dye -->
+				<skillId>21368</skillId> <!-- Mysterious Slaughter Dye -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21368" toLevel="5" name="Wondrous Slaughter Dye">
+	<skill id="21368" toLevel="5" name="Mysterious Slaughter Dye">
 		<!-- Received Damage -$s1 and Damage Reflection Resistance +$s2. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
 		<abnormalLevel>
@@ -1917,7 +1929,7 @@
 					<value level="4">100</value>
 					<value level="5">100</value>
 				</chance>
-				<skillId>21368</skillId> <!-- Wondrous Slaughter Dye -->
+				<skillId>21368</skillId> <!-- Mysterious Slaughter Dye -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1967,13 +1979,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21369" toLevel="1" name="Cancel Wondrous Dye Effect">
+	<skill id="21369" toLevel="1" name="Cancel Mysterious Dye's Effect">
 		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="21370" toLevel="5" name="Talisman - Slaughterer">
-		<!-- The Talisman - Slaughterer effect has increased. -->
+	<skill id="21370" toLevel="5" name="Talisman of Slaughterer">
+		<!-- Boosts the effect of Talisman of Slaughterer. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2167,7 +2179,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21370</skillId> <!-- Talisman - Slaughterer -->
+				<skillId>21370</skillId> <!-- Talisman of Slaughterer -->
 				<skillLevel>2</skillLevel>
 				<chance>50</chance>
 				<isCritical>false</isCritical>
@@ -2179,7 +2191,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21370</skillId> <!-- Talisman - Slaughterer -->
+				<skillId>21370</skillId> <!-- Talisman of Slaughterer -->
 				<skillLevel>3</skillLevel>
 				<chance>30</chance>
 				<isCritical>false</isCritical>
@@ -2191,7 +2203,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21370</skillId> <!-- Talisman - Slaughterer -->
+				<skillId>21370</skillId> <!-- Talisman of Slaughterer -->
 				<skillLevel>4</skillLevel>
 				<chance>10</chance>
 				<isCritical>false</isCritical>
@@ -2203,7 +2215,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21370</skillId> <!-- Talisman - Slaughterer -->
+				<skillId>21370</skillId> <!-- Talisman of Slaughterer -->
 				<skillLevel>5</skillLevel>
 				<chance>5</chance>
 				<isCritical>false</isCritical>
@@ -2214,8 +2226,8 @@
 			</effect>
 		</pvpEffects>
 	</skill>
-	<skill id="21371" toLevel="5" name="Talisman - Conquerer">
-		<!-- The Talisman - Conquerer effect has increased. -->
+	<skill id="21371" toLevel="5" name="Talisman of Conquerer">
+		<!-- Boosts the effect of Talisman of Conquerer. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2389,7 +2401,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21371</skillId> <!-- Talisman - Conquerer -->
+				<skillId>21371</skillId> <!-- Talisman of Conquerer -->
 				<skillLevel>2</skillLevel>
 				<chance>50</chance>
 				<isCritical>false</isCritical>
@@ -2401,7 +2413,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21371</skillId> <!-- Talisman - Conquerer -->
+				<skillId>21371</skillId> <!-- Talisman of Conquerer -->
 				<skillLevel>3</skillLevel>
 				<chance>30</chance>
 				<isCritical>false</isCritical>
@@ -2413,7 +2425,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21371</skillId> <!-- Talisman - Conquerer -->
+				<skillId>21371</skillId> <!-- Talisman of Conquerer -->
 				<skillLevel>4</skillLevel>
 				<chance>10</chance>
 				<isCritical>false</isCritical>
@@ -2425,7 +2437,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21371</skillId> <!-- Talisman - Conquerer -->
+				<skillId>21371</skillId> <!-- Talisman of Conquerer -->
 				<skillLevel>5</skillLevel>
 				<chance>5</chance>
 				<isCritical>false</isCritical>
@@ -2436,8 +2448,8 @@
 			</effect>
 		</pvpEffects>
 	</skill>
-	<skill id="21372" toLevel="5" name="Talisman - Outlaw">
-		<!-- The Talisman - Outlaw effect has increased. -->
+	<skill id="21372" toLevel="5" name="Talisman of Outlaw">
+		<!-- Boosts the effect of Talisman of Outlaw. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2641,7 +2653,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21372</skillId> <!-- Talisman - Outlaw -->
+				<skillId>21372</skillId> <!-- Talisman of Outlaw -->
 				<skillLevel>2</skillLevel>
 				<chance>50</chance>
 				<isCritical>false</isCritical>
@@ -2653,7 +2665,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21372</skillId> <!-- Talisman - Outlaw -->
+				<skillId>21372</skillId> <!-- Talisman of Outlaw -->
 				<skillLevel>3</skillLevel>
 				<chance>30</chance>
 				<isCritical>false</isCritical>
@@ -2665,7 +2677,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21372</skillId> <!-- Talisman - Outlaw -->
+				<skillId>21372</skillId> <!-- Talisman of Outlaw -->
 				<skillLevel>4</skillLevel>
 				<chance>10</chance>
 				<isCritical>false</isCritical>
@@ -2677,7 +2689,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Talisman - Hunter -->
 				<minDamage>1</minDamage>
-				<skillId>21372</skillId> <!-- Talisman - Outlaw -->
+				<skillId>21372</skillId> <!-- Talisman of Outlaw -->
 				<skillLevel>5</skillLevel>
 				<chance>5</chance>
 				<isCritical>false</isCritical>
@@ -2688,7 +2700,7 @@
 			</effect>
 		</pvpEffects>
 	</skill>
-	<skill id="21373" toLevel="1" name="Unequip Talisman - Hunter">
+	<skill id="21373" toLevel="1" name="Unequip Talisman of Hunter">
 		<!-- The Talisman's power fades. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
@@ -2706,7 +2718,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21374" toLevel="1" name="Unequip Talisman - Slaughterer">
+	<skill id="21374" toLevel="1" name="Unequip Talisman of Slaughterer">
 		<!-- The Talisman's power fades. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
@@ -2724,7 +2736,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21375" toLevel="1" name="Unequip Talisman - Conquerer">
+	<skill id="21375" toLevel="1" name="Unequip Talisman of Conquerer">
 		<!-- The Talisman's power fades. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
@@ -2742,7 +2754,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21376" toLevel="1" name="Unequip Talisman - Outlaw">
+	<skill id="21376" toLevel="1" name="Unequip Talisman of Outlaw">
 		<!-- The Talisman's power fades. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
@@ -2761,7 +2773,7 @@
 		</effects>
 	</skill>
 	<skill id="21377" toLevel="3" name="Adenian Tattoo: Protection">
-		<!-- Active Skill: P./ M. Def. +$s1, Max HP/ CP +$s2. Lasts $s3. Cooldown is $s4 h. Can be used in the Olympiad. -->
+		<!-- Active skill: For $s3, P./ M. Def. +$s1, Max HP/ CP +$s2. Cooldown: $s4 h. Can be used in the Olympiad. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i01</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2853,7 +2865,7 @@
 		</effects>
 	</skill>
 	<skill id="21378" toLevel="3" name="Adenian Tattoo: Valor">
-		<!-- Active Skill: P. Atk. +$s1, M. Atk. +$s2 . Lasts $s3. Cooldown is $s4 h. Can be used in the Olympiad. -->
+		<!-- Active skill: For $s3, P. Atk. +$s1, M. Atk. +$s2. Cooldown: $s4 h. Can be used in the Olympiad. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i02</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2889,7 +2901,7 @@
 		</effects>
 	</skill>
 	<skill id="21379" toLevel="3" name="Adenian Tattoo: Deviance">
-		<!-- Active Skill: P./ M. Def. +$s1, P. Atk. +$s2, M. Atk. +$s3. Lasts $s4. Cooldown is $s5 h. Can be used in the Olympiad. -->
+		<!-- Active skill: For $s4, P./ M. Def. +$s1, P. Atk. +$s2, M. Atk. +$s3. Cooldown: $s5 h. Can be used in the Olympiad. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i03</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2968,7 +2980,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21383" toLevel="1" name="Transform: Uthanka">
+	<skill id="21383" toLevel="1" name="Uthanka Transformation">
 		<!-- Transforms into Pirate Captain Uthanka. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -2981,7 +2993,7 @@
 		<effectPoint>10</effectPoint>
 		<hitTime>2500</hitTime>
 	</skill>
-	<skill id="21385" toLevel="1" name="Cancel Dye Effect">
+	<skill id="21385" toLevel="1" name="Cancel Dye's Effect">
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -2994,14 +3006,14 @@
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="21387" toLevel="1" name="Release Agathion's Seal - Van Halter's Memory">
-		<!-- Releases Agathion's seal. -->
+	<skill id="21387" toLevel="1" name="Agathion - Van Halter's Memory">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="21388" toLevel="1" name="Release Agathion's Seal - Anakim">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21388" toLevel="1" name="Summon Agathion Anakim">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -3080,8 +3092,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21395" toLevel="1" name="Mysterious Abnormal State Resistance Dye">
-		<!-- Increases Hold, Sleep, Paralyze, Poison, Bleed, Stun and Mental Resistance by 20. Increases resistance to buff-canceling attack by 20. Reflects P./ M. abnormal state at a 5% probability. -->
+	<skill id="21395" toLevel="1" name="Mysterious Debuff Resistance Dye">
+		<!-- Obstruction/ Infection/ Stupor/ Confusion Resistance +20, Buff Cancel Resistance +20 and P./ M. Debuff Reflection Rate is 5%. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_debuff</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3113,17 +3125,17 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21397" toLevel="1" name="Mysterious World Boss Defense Dye">
-		<!-- P. Def. and M. Def. +15% when fighting Antharas, Valakas, or Lindvior. -->
+		<!-- P./ M. Def. +15% when fighting Antharas, Valakas, or Lindvior. -->
 		<icon>BranchSys3.iconitem.g_premium_hena_dragon_boss</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21398" toLevel="1" name="Mysterious Antharas Defense Dye">
-		<!-- P. Def. and M. Def. +20% when fighting Antharas. -->
+		<!-- P./ M. Def. +20% when fighting Antharas. -->
 		<icon>BranchSys3.icon1.g_premium_hena_boss_antaras</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21399" toLevel="1" name="Mysterious Valakas Defense Dye">
-		<!-- P. Def. and M. Def. +20% when fighting Valakas. -->
+		<!-- P./ M. Def. +20% when fighting Valakas. -->
 		<icon>BranchSys3.icon1.g_premium_hena_boss_valakas</icon>
 		<operateType>P</operateType>
 	</skill>

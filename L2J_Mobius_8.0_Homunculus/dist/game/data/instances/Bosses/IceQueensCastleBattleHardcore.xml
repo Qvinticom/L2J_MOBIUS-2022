@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Ice Queen's Castle (Epic) -->
-<instance id="144" maxWorlds="80" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
+<instance id="288" maxWorlds="80" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
 	<time duration="120" empty="0" />
-	<removeBuffs type="ALL" />
 	<locations>
 		<enter type="RANDOM">
 			<location x="114185" y="-112435" z="-11210" />
@@ -16,24 +15,23 @@
 	</locations>
 	<conditions>
 		<condition type="Party" />
-		<condition type="CommandChannel" />
-		<condition type="CommandChannelLeader" />
 		<condition type="GroupMin">
-			<param name="limit" value="14" />
+			<param name="limit" value="2" />
 		</condition>
 		<condition type="GroupMax">
 			<param name="limit" value="21" />
 		</condition>
 		<condition type="Level">
-			<param name="min" value="90" />
+			<param name="min" value="103" />
 		</condition>
 		<condition type="Distance" />
 		<condition type="Reenter" />
 		<condition type="Reenter">
-			<param name="instanceId" value="139" />
+			<param name="instanceId" value="288" />
 		</condition>
 	</conditions>
 	<reenter apply="ON_FINISH">
+		<reset day="MONDAY" hour="6" minute="30" />
 		<reset day="WEDNESDAY" hour="6" minute="30" />
 		<reset day="SATURDAY" hour="6" minute="30" />
 	</reenter>

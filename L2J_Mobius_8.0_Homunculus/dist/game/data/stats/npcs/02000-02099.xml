@@ -22,9 +22,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="12708" sp="3" />
+		<acquire exp="12709" sp="4" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3976.02633" hpRegen="8.5" mp="2162.937" mpRegen="3" />
+			<vitals hp="3642.77456647399" hpRegen="8.5" mp="1760.39603960396" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -37,9 +37,9 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="5565" level="1" /> <!-- Expose Weak Point -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<ai clanHelpRange="200" aggroRange="300">
 			<clanList>
@@ -53,7 +53,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant S-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -62,7 +63,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -90,9 +91,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="12708" sp="3" />
+		<acquire exp="12709" sp="4" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3976.02633" hpRegen="8.5" mp="2162.937" mpRegen="3" />
+			<vitals hp="3642.77456647399" hpRegen="8.5" mp="1760.39603960396" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -105,9 +106,9 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="5565" level="1" /> <!-- Expose Weak Point -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<ai clanHelpRange="200" aggroRange="300">
 			<clanList>
@@ -122,7 +123,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant S-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -131,7 +133,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -160,9 +162,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13020" sp="3" />
+		<acquire exp="13021" sp="4" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4186.121025" hpRegen="8.5" mp="2205.109" mpRegen="3" />
+			<vitals hp="3835.26011560694" hpRegen="8.5" mp="1794.71947194719" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -175,10 +177,10 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
 			<skill id="5565" level="1" /> <!-- Expose Weak Point -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -193,7 +195,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant S-grade Armor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -202,7 +205,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>

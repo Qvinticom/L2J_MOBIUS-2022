@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36400" name="XP Buff 50% (1-hour)" type="EtcItem">
-		<!-- Hourglass that increases acquired XP by additional 50% for 1 h. Available for all levels. -->
+		<!-- When used, acquired XP +50% for 1 h. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -33,7 +33,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36402" name="Lucky Pouch (High-grade)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get 6 Scrolls: Midsummer Passion, 2 Vitality Replenishing Star Candies, 2 Feathers of Blessing, 2 Heavenly Cocktails, and 1 High-grade Lucky Enchant Stone: Armor (R-grade). -->
+		<!-- Double-click to obtain Scroll: Midsummer Passion (6 pcs.), Vitality Replenishing Star Candy (2 pcs.), Feather of Blessing (2 pcs.), Heavenly Cocktail (2 pcs.), and High-grade Lucky Enchant Stone: R-grade Armor. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -45,7 +45,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36403" name="Lucky Pouch (Top-grade)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get 12 Scrolls: Midsummer Passion, 2 Vitality Replenishing Star Candies, 3 Feathers of Blessing, 2 Heavenly Cocktails, 2 units of Energy of Destruction, and a Rare Accessory Pack (Expiratory). If you are very lucky, you might get a Rare Accessory Pack (Permanent), a Weapon Pack (R99-grade), and an Unbind Scroll Pack additionally. -->
+		<!-- Double-click to obtain Scroll: Midsummer Passion (12 pcs.), Vitality Replenishing Star Candy (2 pcs.), Feather of Blessing (3 pcs.), Heavenly Cocktail (2 pcs.), Destructive Energy (2 pcs.), and Rare Accessory Pack (Expiratory). If you are very lucky, you might also get Rare Accessory Pack (Permanent), R99-grade Weapon Pack, and Unbind Scroll Pack. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -57,7 +57,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36404" name="Scroll: Midsummer Passion" additionalName="Event" type="EtcItem">
-		<!-- Increases acquired XP and SP by 30% for 1 hour. -->
+		<!-- Acquired XP/ SP +30% for 1 h. The effect does not stack with those of Freya's Frozen Scroll, Freya's Scroll of Storm, Maphr's Wind Scroll, Dandy's Scroll: Challenge, Emperor's Growth Scroll, Vital Wind, Wind of Bard. -->
 		<set name="icon" val="icon.etc_aidcharm_cancel_deathfire_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -107,7 +107,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36409" name="Blessed Antharas' Earring" additionalName="14-day" type="Armor">
-		<!-- MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Cancels Stun and gives Stun Resistance for 5 secs. Does not stack with identical earrings. -->
+		<!-- MP +59. P./ M. Def. +15%. CON/ MEN +3. Earth/ Holy Resistance +30. Infection Atk. Rate/ Resistance +50%, Confusion Atk. Rate/ Resistance +40%. Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active skill: removes the Stun effect and grants immune to Confusion for 5 sec. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -130,7 +130,7 @@
 		</stats>
 	</item>
 	<item id="36410" name="Blessed Valakas' Necklace" additionalName="14-day" type="Armor">
-		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Resistance +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. -->
+		<!-- MP +79. HP +625. P. Atk. +10%. M. Atk. +20%. M. Skill Critical Rate +20. STR/INT +3. Fire Resistance +30, Dark Resistance +20. Stupor Atk. Rate/ Resistance +50%. P. Skill Power +5%. Skill Cooldown -10%, Damage Reflection +5%. Active skill: removes the Hold effect and grants immune to Obstruction for 5 sec. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -153,7 +153,7 @@
 		</stats>
 	</item>
 	<item id="36411" name="Tauti's Ring (14-day)" additionalName="Event" type="Armor">
-		<!-- Tauti's Ring. Fire/ Dark Resistance +25, MP +38, Critical Damage +15%, Skill Power +5%, PvP damage +5%, Paralysis/ Binding/ Banishment Resistance +10, Damage Reflection Resistance +5, Absorption Resistance +5, received PvP damage -5%, and P. Critical Rate +54 when equipped with blunt. Only one effect is applied when two identical rings are worn (excluding Attributes/ M. Def.). -->
+		<!-- Fire/ Dark Resistance +25, MP +38, Critical Damage for standard attacks +15%, P. Skill Power +5%, PvP damage +5%, Confusion/ Obstruction Resistance +10, Damage Reflection Resistance +5, Blood Siphon Resistance +5, received PvP damage -5%. When using a blunt weapon, P. Critical Rate +54. Effects of two identical rings do not stack (excluding M. Def. and Attribute Resistance). -->
 		<set name="icon" val="icon.accessary_tauti_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -175,7 +175,7 @@
 		</stats>
 	</item>
 	<item id="36412" name="Earth Wyrm Heart Ring (14-day)" additionalName="Event" type="Armor">
-		<!-- MP +38, P./ M. Debuff Resistance +15, MP Regeneration +3, P. Critical Damage +20%, and P. Accuracy +5. Poison Resistance +50%, Poison Atk. Rate +50%, Knock Back, Knock Down, Pulling, Danger Zone Resistance +20%, Atk. Spd. and Casting Spd. +6%, and Wind/ Water Resistance +30. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP +38, P./ M. Debuff Resistance +15, MP Recovery Rate +3, Critical Damage for standard attacks +20%, P. Accuracy +5, Infection Atk. Rate and Resistance +50%, Confusion Resistance +20%, Atk. Spd./ Casting Spd. +6%, Wind/ Water Resistance +30. Effects of two identical rings do not stack. Cannot be used in the Olympiad. <Active skills>. Heartbeat Accelerate: For 5 min., party members' Atk. Spd./ Casting Spd. +5%, Vampiric Rage effect +2% (cooldown: 2 h.). Blue Blood: Removes Infection debuffs (cooldown: 2 h.). -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -222,26 +222,27 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36415" name="Dragon Blood" type="EtcItem">
-		<!-- Item consumed when using a skill of a dragon weapon. -->
+		<!-- Required for using dragon weapon's skills. -->
 		<set name="icon" val="icon.etc_blood_gragon" />
 		<set name="weight" val="2" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36416" name="Dragon Tooth" type="EtcItem">
-		<!-- Item consumed when using a skill of a dragon weapon. -->
+		<!-- Required for using dragon weapon's skills. -->
 		<set name="icon" val="icon.etc_tooth_gragon" />
 		<set name="weight" val="2" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36417" name="Antharas Shaper" additionalName="Fragment" type="Weapon">
-		<!-- Antharas' Shaper Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
+		<!-- Antharas Shaper Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -258,12 +259,13 @@
 		</stats>
 	</item>
 	<item id="36418" name="Antharas Slasher" additionalName="Fragment" type="Weapon">
-		<!-- Antharas' Slasher Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Antharas Slasher Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -279,13 +281,14 @@
 		</stats>
 	</item>
 	<item id="36419" name="Antharas Thrower" additionalName="Fragment" type="Weapon">
-		<!-- Antharas' Thrower Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Antharas Thrower Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -303,12 +306,13 @@
 		</stats>
 	</item>
 	<item id="36420" name="Antharas Buster" additionalName="Fragment" type="Weapon">
-		<!-- Antharas' Buster Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Antharas Buster Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -325,11 +329,12 @@
 		</stats>
 	</item>
 	<item id="36421" name="Antharas Cutter" additionalName="Fragment" type="Weapon">
-		<!-- Antharas' Cutter Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Antharas Buster Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -345,13 +350,14 @@
 		</stats>
 	</item>
 	<item id="36422" name="Antharas Stormer" additionalName="Fragment" type="Weapon">
-		<!-- Antharas' Stormer Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Antharas Stormer Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -371,12 +377,13 @@
 		</stats>
 	</item>
 	<item id="36423" name="Antharas Fighter" additionalName="Fragment" type="Weapon">
-		<!-- Antharas' Fighter Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Antharas Fighter Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -393,12 +400,13 @@
 		</stats>
 	</item>
 	<item id="36424" name="Antharas Avenger" additionalName="Fragment" type="Weapon">
-		<!-- Antharas' Avenger Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Antharas Avenger Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -415,12 +423,13 @@
 		</stats>
 	</item>
 	<item id="36425" name="Antharas Dual Blunt Weapon" additionalName="Fragment" type="Weapon">
-		<!-- Antharas' Dual Blunt Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Antharas Dual Blunt Weapon Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i00" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -437,12 +446,13 @@
 		</stats>
 	</item>
 	<item id="36426" name="Antharas Dual Sword" additionalName="Fragment" type="Weapon">
-		<!-- Antharas' Dual Sword Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Antharas Dual Swords' fragment. Max HP can increase by more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Theodric in the Dragon Valley to enhance it to an Antharas' standard weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -458,12 +468,13 @@
 		</stats>
 	</item>
 	<item id="36427" name="Valakas Shaper" additionalName="Fragment" type="Weapon">
-		<!-- Valakas' Shaper Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Valakas Shaper Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Klein in the Forge of the Gods to enhance it to a Valakas' standard weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -480,12 +491,13 @@
 		</stats>
 	</item>
 	<item id="36428" name="Valakas Cutter" additionalName="Fragment" type="Weapon">
-		<!-- Valakas' Cutter Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Valakas Cutter Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Klein in the Forge of the Gods to enhance it to a Valakas' standard weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -501,12 +513,13 @@
 		</stats>
 	</item>
 	<item id="36429" name="Valakas Slasher" additionalName="Fragment" type="Weapon">
-		<!-- Valakas' Slasher Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Valakas Slasher Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Klein in the Forge of the Gods to enhance it to a Valakas' standard weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -522,13 +535,14 @@
 		</stats>
 	</item>
 	<item id="36430" name="Valakas Thrower" additionalName="Fragment" type="Weapon">
-		<!-- Valakas' Thrower Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Valakas Thrower Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Klein in the Forge of the Gods to enhance it to a Valakas' standard weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -546,12 +560,13 @@
 		</stats>
 	</item>
 	<item id="36431" name="Valakas Buster" additionalName="Fragment" type="Weapon">
-		<!-- Valakas' Buster Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Valakas Buster Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Klein in the Forge of the Gods to enhance it to a Valakas' standard weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -568,12 +583,13 @@
 		</stats>
 	</item>
 	<item id="36432" name="Valakas Caster" additionalName="Fragment" type="Weapon">
-		<!-- Valakas' Caster Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Valakas Buster Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Klein in the Forge of the Gods to enhance it to a Valakas' standard weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -591,12 +607,13 @@
 		</stats>
 	</item>
 	<item id="36433" name="Valakas Retributer" additionalName="Fragment" type="Weapon">
-		<!-- Valakas' Retributer Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Valakas Retributer Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Klein in the Forge of the Gods to enhance it to a Valakas' standard weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -615,12 +632,13 @@
 		</stats>
 	</item>
 	<item id="36434" name="Lindvior Shaper" additionalName="Fragment" type="Weapon">
-		<!-- Lindvior's Shaper Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Lindvior Shaper Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Jenna in Rune to enhance it to a Lindvior's standard weapon. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -637,13 +655,14 @@
 		</stats>
 	</item>
 	<item id="36435" name="Lindvior Thrower" additionalName="Fragment" type="Weapon">
-		<!-- Lindvior's Thrower Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Lindvior Thrower Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Jenna in Rune to enhance it to a Lindvior's standard weapon. -->
 		<set name="icon" val="icon.weapon_lind_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -661,12 +680,13 @@
 		</stats>
 	</item>
 	<item id="36436" name="Lindvior Slasher" additionalName="Fragment" type="Weapon">
-		<!-- Lindvior's Slasher Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Lindvior Slasher Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Jenna in Rune to enhance it to a Lindvior's standard weapon. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -682,12 +702,13 @@
 		</stats>
 	</item>
 	<item id="36437" name="Lindvior Caster" additionalName="Fragment" type="Weapon">
-		<!-- Lindvior's Caster Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Lindvior Caster Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Jenna in Rune to enhance it to a Lindvior's standard weapon. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -704,12 +725,13 @@
 		</stats>
 	</item>
 	<item id="36438" name="Lindvior Cutter" additionalName="Fragment" type="Weapon">
-		<!-- Lindvior's Cutter Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Lindvior Cutter Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Jenna in Rune to enhance it to a Lindvior's standard weapon. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -725,7 +747,7 @@
 		</stats>
 	</item>
 	<item id="36439" name="Lindvior Shooter" additionalName="Fragment" type="Weapon">
-		<!-- Lindvior's Shooter Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Lindvior Shooter Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Jenna in Rune to enhance it to a Lindvior's standard weapon. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -733,6 +755,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
@@ -749,13 +772,14 @@
 		</stats>
 	</item>
 	<item id="36440" name="Lindvior Dual Dagger" additionalName="Fragment" type="Weapon">
-		<!-- Lindvior's Dual Dagger Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
+		<!-- Lindvior Dual Daggers Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Jenna in Rune to enhance it to a Lindvior's standard weapon. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -771,7 +795,7 @@
 		</stats>
 	</item>
 	<item id="36441" name="Antharas Shaper" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -779,6 +803,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -798,7 +823,7 @@
 		</stats>
 	</item>
 	<item id="36442" name="Antharas Slasher" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -806,6 +831,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -824,7 +850,7 @@
 		</stats>
 	</item>
 	<item id="36443" name="Antharas Thrower" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -832,6 +858,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -853,7 +880,7 @@
 		</stats>
 	</item>
 	<item id="36444" name="Antharas Buster" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be crystallized, enchanted, augmented, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -861,6 +888,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -880,7 +908,7 @@
 		</stats>
 	</item>
 	<item id="36445" name="Antharas Cutter" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute.Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -888,6 +916,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -906,7 +935,7 @@
 		</stats>
 	</item>
 	<item id="36446" name="Antharas Stormer" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute.Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -914,6 +943,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
@@ -934,7 +964,7 @@
 		</stats>
 	</item>
 	<item id="36447" name="Antharas Fighter" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -942,6 +972,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
@@ -961,7 +992,7 @@
 		</stats>
 	</item>
 	<item id="36448" name="Antharas Avenger" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -969,6 +1000,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -988,7 +1020,7 @@
 		</stats>
 	</item>
 	<item id="36449" name="Antharas Dual Blunt Weapon" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -996,6 +1028,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -1015,7 +1048,7 @@
 		</stats>
 	</item>
 	<item id="36450" name="Antharas Dual Sword" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1023,6 +1056,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1042,7 +1076,7 @@
 		</stats>
 	</item>
 	<item id="36451" name="Valakas Shaper" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a high-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1050,6 +1084,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1069,7 +1104,7 @@
 		</stats>
 	</item>
 	<item id="36452" name="Valakas Cutter" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a high-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1077,6 +1112,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1095,7 +1131,7 @@
 		</stats>
 	</item>
 	<item id="36453" name="Valakas Slasher" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a high-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1103,6 +1139,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -1121,7 +1158,7 @@
 		</stats>
 	</item>
 	<item id="36454" name="Valakas Thrower" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a high-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1129,6 +1166,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1150,7 +1188,7 @@
 		</stats>
 	</item>
 	<item id="36455" name="Valakas Buster" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a high-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1158,6 +1196,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1177,7 +1216,7 @@
 		</stats>
 	</item>
 	<item id="36456" name="Valakas Caster" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a high-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1185,6 +1224,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
@@ -1205,7 +1245,7 @@
 		</stats>
 	</item>
 	<item id="36457" name="Valakas Retributer" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a high-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1213,6 +1253,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
@@ -1233,7 +1274,7 @@
 		</stats>
 	</item>
 	<item id="36458" name="Lindvior Shaper" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a high-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1241,6 +1282,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1260,7 +1302,7 @@
 		</stats>
 	</item>
 	<item id="36459" name="Lindvior Thrower" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a high-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1268,6 +1310,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1289,7 +1332,7 @@
 		</stats>
 	</item>
 	<item id="36460" name="Lindvior Slasher" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a high-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1297,6 +1340,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -1315,7 +1359,7 @@
 		</stats>
 	</item>
 	<item id="36461" name="Lindvior Caster" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a high-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1323,6 +1367,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1343,7 +1388,7 @@
 		</stats>
 	</item>
 	<item id="36462" name="Lindvior Cutter" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a high-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1351,6 +1396,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1369,7 +1415,7 @@
 		</stats>
 	</item>
 	<item id="36463" name="Lindvior Shooter" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a high-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -1377,6 +1423,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="soulshots" val="1" />
@@ -1397,7 +1444,7 @@
 		</stats>
 	</item>
 	<item id="36464" name="Lindvior Dual Dagger" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be enchanted, crystallized, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a high-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1405,6 +1452,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="soulshots" val="1" />
@@ -1424,7 +1472,7 @@
 		</stats>
 	</item>
 	<item id="36465" name="Antharas Shaper" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a top-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1432,6 +1480,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1453,7 +1502,7 @@
 		</stats>
 	</item>
 	<item id="36466" name="Antharas Slasher" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a top-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1461,6 +1510,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -1481,7 +1531,7 @@
 		</stats>
 	</item>
 	<item id="36467" name="Antharas Thrower" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a top-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1489,6 +1539,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1512,7 +1563,7 @@
 		</stats>
 	</item>
 	<item id="36468" name="Antharas Buster" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Cannot be crystallized, enchanted, augmented, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a high-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1520,6 +1571,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1541,7 +1593,7 @@
 		</stats>
 	</item>
 	<item id="36469" name="Antharas Cutter" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a top-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1549,6 +1601,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1569,7 +1622,7 @@
 		</stats>
 	</item>
 	<item id="36470" name="Antharas Stormer" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a top-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1577,6 +1630,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
@@ -1599,7 +1653,7 @@
 		</stats>
 	</item>
 	<item id="36471" name="Antharas Fighter" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a top-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1607,6 +1661,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
@@ -1628,7 +1683,7 @@
 		</stats>
 	</item>
 	<item id="36472" name="Antharas Avenger" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a top-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1636,6 +1691,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -1657,7 +1713,7 @@
 		</stats>
 	</item>
 	<item id="36473" name="Antharas Dual Blunt Weapon" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a top-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1665,6 +1721,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -1686,7 +1743,7 @@
 		</stats>
 	</item>
 	<item id="36474" name="Antharas Dual Sword" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Enables the Dignity and Antharas' Lash skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. <Enhancing>. Take the weapon and Dragon Claw to Theodric in the Dragon Valley to enhance it to a top-grade Antharas' weapon. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1694,6 +1751,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1715,7 +1773,7 @@
 		</stats>
 	</item>
 	<item id="36475" name="Valakas Shaper" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Valakas' Bite. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Allows to use Dignity and Valakas' Bite. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a top-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1723,6 +1781,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1744,7 +1803,7 @@
 		</stats>
 	</item>
 	<item id="36476" name="Valakas Cutter" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Valakas' Bite. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Allows to use Dignity and Valakas' Bite. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a top-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1752,6 +1811,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1772,7 +1832,7 @@
 		</stats>
 	</item>
 	<item id="36477" name="Valakas Slasher" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Valakas' Bite. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Allows to use Dignity and Valakas' Bite. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a top-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1780,6 +1840,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -1800,7 +1861,7 @@
 		</stats>
 	</item>
 	<item id="36478" name="Valakas Thrower" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Valakas' Bite. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Allows to use Dignity and Valakas' Bite. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a top-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1808,6 +1869,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1831,7 +1893,7 @@
 		</stats>
 	</item>
 	<item id="36479" name="Valakas Buster" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Valakas' Bite. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Valakas' Bite skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a top-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1839,6 +1901,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1860,7 +1923,7 @@
 		</stats>
 	</item>
 	<item id="36480" name="Valakas Caster" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Valakas' Bite. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Valakas' Bite skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a top-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1868,6 +1931,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
@@ -1890,7 +1954,7 @@
 		</stats>
 	</item>
 	<item id="36481" name="Valakas Retributer" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Valakas' Bite. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Valakas' Bite skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Klein in the Forge of the Gods to enhance it to a top-grade Valakas' weapon. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1898,10 +1962,12 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1920,7 +1986,7 @@
 		</stats>
 	</item>
 	<item id="36482" name="Lindvior Shaper" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Lindvior's Wingbeat. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Lindvior's Wingbeat skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a top-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1928,6 +1994,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1949,7 +2016,7 @@
 		</stats>
 	</item>
 	<item id="36483" name="Lindvior Thrower" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Lindvior's Wingbeat. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Lindvior's Wingbeat skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a top-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1957,6 +2024,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -1980,7 +2048,7 @@
 		</stats>
 	</item>
 	<item id="36484" name="Lindvior Slasher" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Lindvior's Wingbeat. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Lindvior's Wingbeat skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a top-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1988,6 +2056,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -2008,7 +2077,7 @@
 		</stats>
 	</item>
 	<item id="36485" name="Lindvior Caster" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Lindvior's Wingbeat. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, Critical Rate for standard attacks +100, M. Skill Critical Rate +100, M. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Lindvior's Wingbeat skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a top-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2016,6 +2085,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -2038,7 +2108,7 @@
 		</stats>
 	</item>
 	<item id="36486" name="Lindvior Cutter" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Lindvior's Wingbeat. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Lindvior's Wingbeat skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a top-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2046,6 +2116,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -2066,7 +2137,7 @@
 		</stats>
 	</item>
 	<item id="36487" name="Lindvior Shooter" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Lindvior's Wingbeat. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Lindvior's Wingbeat skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a top-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -2074,6 +2145,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="soulshots" val="1" />
@@ -2096,7 +2168,7 @@
 		</stats>
 	</item>
 	<item id="36488" name="Lindvior Dual Dagger" additionalName="High-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Lindvior's Wingbeat. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, Critical Rate for standard attacks +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage to dragons +100%. Enables the Dignity and Lindvior's Wingbeat skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, given another appearance, or assigned an attribute. 1 special Soul Crystal can be inserted. <Enhancing>. Take the weapon and Dragon Claw to Jenna in Rune to enhance it to a top-grade Lindvior's weapon. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -2104,6 +2176,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="soulshots" val="1" />
@@ -2125,7 +2198,7 @@
 		</stats>
 	</item>
 	<item id="36489" name="Antharas Shaper" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2133,6 +2206,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -2155,7 +2229,7 @@
 		</stats>
 	</item>
 	<item id="36490" name="Antharas Slasher" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2163,6 +2237,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -2184,7 +2259,7 @@
 		</stats>
 	</item>
 	<item id="36491" name="Antharas Thrower" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2192,6 +2267,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -2216,7 +2292,7 @@
 		</stats>
 	</item>
 	<item id="36492" name="Antharas Buster" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Casting Spd. +100%, M. Critical Rate +500, M. Skill Critical Rate +50%, M. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Casting Spd. +100%, Critical Rate for standard attacks +500, M. Skill Critical Rate +500, M. Skill Critical Damage +50%, damage to dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. The item's appearance cannot be modified. Cannot be crystallized, enchanted, augmented, or assigned an attribute. 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2224,6 +2300,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -2246,7 +2323,7 @@
 		</stats>
 	</item>
 	<item id="36493" name="Antharas Cutter" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2254,6 +2331,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -2275,7 +2353,7 @@
 		</stats>
 	</item>
 	<item id="36494" name="Antharas Stormer" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2283,6 +2361,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
@@ -2306,7 +2385,7 @@
 		</stats>
 	</item>
 	<item id="36495" name="Antharas Fighter" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2314,6 +2393,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
@@ -2336,7 +2416,7 @@
 		</stats>
 	</item>
 	<item id="36496" name="Antharas Avenger" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2344,6 +2424,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -2366,7 +2447,7 @@
 		</stats>
 	</item>
 	<item id="36497" name="Antharas Dual Blunt Weapon" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -2374,6 +2455,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
@@ -2396,7 +2478,7 @@
 		</stats>
 	</item>
 	<item id="36498" name="Antharas Dual Sword" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Enables the Dignity, Antharas' Lash, and Antharas' Breath skills. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. You can insert 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2404,6 +2486,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
@@ -2426,7 +2509,7 @@
 		</stats>
 	</item>
 	<item id="36499" name="Valakas Shaper" additionalName="Top-grade" type="Weapon">
-		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Valakas' Bite and Valakas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, Critical Rate for standard attacks +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Allows to use the Dignity, Valakas' Bite and Valakas' Breath skills. Max HP can be more than 150,000. Cannot be enchanted, crystallized, appearance modified, assigned an attribute. One special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2434,6 +2517,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />

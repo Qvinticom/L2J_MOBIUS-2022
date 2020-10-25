@@ -229,7 +229,7 @@
 		</skills>
 	</item>
 	<item id="10314" name="Beleth's Ring" type="Armor">
-		<!-- A ring made by Tully at the command of Beleth, imbued with Beleth's magic powers. Effects: MP +21, M. Def. +12%, Max HP +105, Mental Atk. +10, Mental Attack Resistance +10, MP Recovery +0.23, Dark Attack Def. +30. Effect does not stack with identical ones. -->
+		<!-- A ring made by Tully at the command of Beleth, imbued with Beleth' magic powers. MP +21, M. Def. +12%, Max HP +105, Confusion Resistance/ Atk. Rate +10, MP Recovery Rate +0.23, Dark Resistance +30. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1238,7 +1238,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10373" name="Recipe: Icarus Sawsword (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Icarus Sawsword. Requires Create Item Skill (Lv. 9). 60% success rate. -->
+		<!-- For Dwarves only. A recipe for Icarus Sawsword. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1252,7 +1252,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10374" name="Recipe: Icarus Disperser (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Icarus Disperser. Requires Create Item Skill (Lv. 9). 60% success rate. -->
+		<!-- For Dwarves only. A recipe for Icarus Disperser. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1266,7 +1266,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10375" name="Recipe: Icarus Spirit (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Icarus Spirit. Requires Create Item Skill (Lv. 9). 60% success rate. -->
+		<!-- For Dwarves only. A recipe for Icarus Spirit. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1280,7 +1280,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10376" name="Recipe: Icarus Heavy Arms (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Icarus Heavy Arms. Requires Create Item Skill (Lv. 9). 60% success rate. -->
+		<!-- For Dwarves only. A recipe for Icarus Heavy Arms. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1294,7 +1294,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10377" name="Recipe: Icarus Trident (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Icarus Trident. Requires Create Item Skill (Lv. 9). 60% success rate. -->
+		<!-- For Dwarves only. A recipe for Icarus Trident. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1308,7 +1308,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10378" name="Recipe: Icarus Hammer (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Icarus Hammer. Requires Create Item Skill (Lv. 9). 60% success rate. -->
+		<!-- For Dwarves only. A recipe for Icarus Hammer. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1322,7 +1322,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10379" name="Recipe: Icarus Hand (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Icarus Hand. Requires Create Item Skill (Lv. 9). 60% success rate. -->
+		<!-- For Dwarves only. A recipe for Icarus Hand. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1336,7 +1336,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10380" name="Recipe: Icarus Hall (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Icarus Hall. Requires Create Item Skill (Lv. 9). 60% success rate. -->
+		<!-- For Dwarves only. A recipe for Icarus Hall. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1350,7 +1350,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10381" name="Recipe: Icarus Spitter (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Icarus Spitter. Requires Create Item Skill (Lv. 9). 60% success rate. -->
+		<!-- For Dwarves only. A recipe for Icarus Spitter. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1364,7 +1364,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10382" name="Recipe: Icarus Stinger (60%)" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. Requires Create Item - Skill Lv. 9. The success rate is 60%. -->
+		<!-- For Dwarves only. A recipe for Icarus Stinger. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1378,7 +1378,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10383" name="Recipe: Icarus Wingblade (60%)" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Wingblade. Requires Create Item - Skill Lv. 9. The success rate is 60%. -->
+		<!-- For Dwarves only. A recipe for Icarus Wingblade. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1392,7 +1392,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10384" name="Recipe: Icarus Shooter (60%)" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. Requires Create Item - Skill Lv. 9. The success rate is 60%. -->
+		<!-- For Dwarves only. A recipe for Icarus Shooter. Requires Create Item Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1405,7 +1405,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10385" name="Recipe: Icarus Sawsword" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Sawsword. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Sawsword. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1418,7 +1418,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10386" name="Recipe: Icarus Disperser" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Disperser. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Disperser. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1431,7 +1431,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10387" name="Recipe: Icarus Spirit" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spirit. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Spirit. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1444,7 +1444,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10388" name="Recipe: Icarus Heavy Arms" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Heavy Arms. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Heavy Arms. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1457,7 +1457,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10389" name="Recipe: Icarus Trident" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Trident. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Trident. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1470,7 +1470,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10390" name="Recipe: Icarus Hammer" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Hammer. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Hammer. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1483,7 +1483,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10391" name="Recipe: Icarus Hand" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Hand. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Hand. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1496,7 +1496,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10392" name="Recipe: Icarus Hall" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Hall. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Hall. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1509,7 +1509,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10393" name="Recipe: Icarus Spitter" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Spitter. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1522,7 +1522,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10394" name="Recipe: Icarus Stinger" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Stinger. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1535,7 +1535,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10395" name="Recipe: Icarus Wingblade" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Wingblade. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Wingblade. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1548,7 +1548,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10396" name="Recipe: Icarus Shooter" type="EtcItem">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Icarus Stinger. Requires Create Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1561,7 +1561,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10397" name="Icarus Sawsword Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Sawsword. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Sawsword. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1572,7 +1572,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10398" name="Icarus Disperser Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Disperser. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Disperser. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1583,7 +1583,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10399" name="Icarus Spirit Piece" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make Icarus Spirit. It can be sold to public stores. -->
+		<!-- Key material for Dwarves to make Icarus Spirit. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

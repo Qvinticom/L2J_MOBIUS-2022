@@ -102,7 +102,7 @@
 		</skills>
 	</item>
 	<item id="34606" name="Mysterious Soulshot (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. -->
+		<!-- Increases a weapon's attack power. Used with B-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="B" />
@@ -116,7 +116,7 @@
 		</skills>
 	</item>
 	<item id="34607" name="Mysterious Soulshot (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with an A-grade weapon. -->
+		<!-- Increases a weapon's attack power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="A" />
@@ -201,7 +201,7 @@
 		</skills>
 	</item>
 	<item id="34613" name="Mysterious Blessed Spiritshot (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with B-grade weapons. -->
+		<!-- Increases a weapon's magic power. Used with B-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="B" />
@@ -215,7 +215,7 @@
 		</skills>
 	</item>
 	<item id="34614" name="Mysterious Blessed Spiritshot (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with A-grade weapons. -->
+		<!-- Increases a weapon's magic power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="A" />
@@ -229,7 +229,7 @@
 		</skills>
 	</item>
 	<item id="34615" name="Mysterious Blessed Spiritshot (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with S-grade weapons. -->
+		<!-- Increases a weapon's magical power. Used with S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="S" />
@@ -348,7 +348,7 @@
 		</skills>
 	</item>
 	<item id="34621" name="Talisman (R-grade) - Half-kill/ Lethal Strike Resistance (Passive)" type="Armor">
-		<!-- Increases resistance to half-kill and lethal strike when equipped. Shadow weapon. -->
+		<!-- Increases Half-kill/ Lethal Strike Resistance. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -368,7 +368,7 @@
 		</skills>
 	</item>
 	<item id="34622" name="Talisman (R-grade) - Half-kill/ Lethal Strike Resistance (Active)" type="Armor">
-		<!-- Increases resistance to half-kill and lethal strike when used. Shadow weapon. -->
+		<!-- When used, increases Half-kill/ Lethal Strike Resistance. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -389,7 +389,7 @@
 		</skills>
 	</item>
 	<item id="34623" name="Pa'agrio's Shirt" type="Armor">
-		<!-- Magic shirt filled with the power of Pa'agrio, the god of fire. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can remove abnormal conditions and use the ultimate invincibility skill for a certain amount of time. -->
+		<!-- Magic shirt filled with the power of Pa'agrio, the god of fire. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or higher, removes debuffs and grants Invincibility. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_fire" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -410,7 +410,7 @@
 		</stats>
 	</item>
 	<item id="34624" name="Sayha's Shirt" type="Armor">
-		<!-- Magic shirt filled with the power of Sayha, the god of wind. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can use a portal teleport skill that allows you to create a portal at a selected location and teleport to that portal. No effect in the Olympiad. -->
+		<!-- Magic shirt filled with the power of Sayha, the god of wind. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or higher, grants a portal teleport skill that allows you to create a portal at a selected location and teleport to that portal. No effect in the Olympiad. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_wind" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -431,7 +431,7 @@
 		</stats>
 	</item>
 	<item id="34625" name="Eva's Shirt" type="Armor">
-		<!-- Magic shirt filled with the power of Eva, the goddess of water. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can use HP/ MP/ CP recovering skills. -->
+		<!-- Magic shirt filled with the power of Eva, the goddess of water. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or higher, recovers HP/ MP/ CP. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_water" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -452,7 +452,7 @@
 		</stats>
 	</item>
 	<item id="34626" name="Maphr's Shirt" type="Armor">
-		<!-- Magic shirt filled with the power of Maphr, the goddess of earth. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, the enchant success rate is increased. No effect in the Olympiad. -->
+		<!-- Magic shirt filled with the power of Maphr, the goddess of earth. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or higher, the enchant success rate is increased. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_earth" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -472,7 +472,7 @@
 		</stats>
 	</item>
 	<item id="34627" name="Scroll: Enchant Elemental Shirt" type="EtcItem">
-		<!-- Enchant scroll for t-shirts. When enchanted, increases P. Def. and M. Def. by 1. P. Def. +3 starting from +4. Can be safely enchanted to +3 and up to a maximum of +10. From +4, basic abilities (CON, MEN, STR, INT, DEX, WT) are raised in stages. Depending on the shirt type, various additional options can be applied from +4 to +10. -->
+		<!-- For Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, Shiny Elemental Shirt, and Physical/ Magical Reflect Shirt. P./ M. Def. +1. When enchanted to +4 and higher, P. Def. +3, basic stats (CON, MEN, STR, INT, DEX, and WIT) are increasing with each enchant value. The enchanting is safe up to +3. The maximum enchant value is +10. Depending on the shirt type and its enchant value, additional bonuses are added. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -489,7 +489,7 @@
 		</skills>
 	</item>
 	<item id="34628" name="Einhasad's Energy" type="EtcItem">
-		<!-- Vitality is replenished for 1 h. -->
+		<!-- Grants the effect of Vitality Recovering Potion for 1 h. Cannot be traded, dropped, or sold in the private store. Can be transferred within the account throught the Game Assistant. Can be stored in the private warehouse. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -657,7 +657,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="34646" name="Refined Devil Horn - P. Atk. Pendant" type="EtcItem">
-		<!-- Can P. Atk. +equipping a Refined Devil Horn. -->
+		<!-- Combine with Refined Devil Horn to obtain Refined Devil Horn - P. Atk. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
@@ -896,7 +896,7 @@
 		</skills>
 	</item>
 	<item id="34663" name="Earth Stone (+60)" type="EtcItem">
-		<!-- Can bestow earth attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<!-- Earth Attribute +60. Additional resistance increasing is impossible. Armor can be enhanced by up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />

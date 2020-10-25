@@ -60,8 +60,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27702" toLevel="6" name="Shilen's Ring">
-		<!-- M. Def. $s1, Dark Attribute Resistance +$s2, STR/ INT +$s3, Skill Critical Damage +$s4. Effects do not stack with additional rings. -->
+	<skill id="27702" toLevel="6" name="Shillien's Ring">
+		<!-- M. Def. $s1, Dark Resistance +$s2, STR/ INT +$s3, Skill Critical Damage +$s4. Effects of two identical rings do not stack, the higher-level ring takes precedence. -->
 		<icon>BranchIcon.Icon.ring_of_shilen_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -143,13 +143,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27703" toLevel="1" name="Shilen's Harshness">
+	<skill id="27703" toLevel="1" name="Shillien's Harshness">
 		<!-- When killing another character, there's a 70% chance that the PK count will not increase. -->
 		<icon>BranchIcon.Icon.ring_of_shilen_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 	</skill>
-	<skill id="27704" toLevel="1" name="Shilen's Will">
+	<skill id="27704" toLevel="1" name="Shillien's Will">
 		<!-- Increases P./ M. Atk. by 100% for 60 sec. -->
 		<icon>BranchIcon.Icon.ring_of_shilen_i00</icon>
 		<operateType>A2</operateType>
@@ -157,7 +157,7 @@
 		<hitTime>200</hitTime>
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
-	<skill id="27705" toLevel="6" name="Shilen's Necklace">
+	<skill id="27705" toLevel="6" name="Shillien's Necklace">
 		<!-- M. Def. +$s1, Dark Resistance +$s2, STR/ INT +$s3, Obstruction/ Confusion/ Stupor/ Petrification Atk. Rate +$s4. When two rings are equipped the effect of the highest level ring is active. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>P</operateType>
@@ -229,12 +229,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27706" toLevel="1" name="Shilen's Strength">
+	<skill id="27706" toLevel="1" name="Shillien's Strength">
 		<!-- When being attacked, there's a chance that the amount of PvP damage received will be reduced. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27707" toLevel="1" name="Shilen's Dignity">
+	<skill id="27707" toLevel="1" name="Shillien's Dignity">
 		<!-- Stuns the target for 30 sec. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>A1</operateType>
@@ -243,7 +243,7 @@
 		<reuseDelay>7200000</reuseDelay>
 		<effectPoint>-999</effectPoint>
 	</skill>
-	<skill id="27708" toLevel="6" name="Shilen's Earring">
+	<skill id="27708" toLevel="6" name="Shillien's Earring">
 		<!-- M. Def. +$s1, Dark Resistance +$s2, STR/ INT +$s3, Obstruction/ Confusion/ Stupor/ Petrification Atk. Rate +$s4, Speed +$s5. When two rings are equipped the effect of the highest level ring is active. -->
 		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<operateType>P</operateType>
@@ -334,7 +334,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27709" toLevel="1" name="Shilen's Energy">
+	<skill id="27709" toLevel="1" name="Shillien's Energy">
 		<!-- CHA +10. -->
 		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<operateType>P</operateType>
@@ -346,7 +346,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27710" toLevel="1" name="Shilen's Protection">
+	<skill id="27710" toLevel="1" name="Shillien's Protection">
 		<!-- Creates a space that cancels all ranged attacks and debuffs for 60 sec. -->
 		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<operateType>A1</operateType>
@@ -355,16 +355,16 @@
 		<reuseDelay>7200000</reuseDelay>
 		<effectPoint>379</effectPoint>
 	</skill>
-	<skill id="27711" toLevel="1" name="Scroll: Enchant Shilen's Ring">
+	<skill id="27711" toLevel="1" name="Scroll: Enchant Shillien's Ring">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27712" toLevel="1" name="Scroll: Shilen's Necklace">
+	<skill id="27712" toLevel="1" name="Scroll: Enchant Shillien's Necklace">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27713" toLevel="1" name="Scroll: Enchant Shilen's Earring">
+	<skill id="27713" toLevel="1" name="Scroll: Enchant Shillien's Earring">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27714" toLevel="1" name="Shilen's Strength">
+	<skill id="27714" toLevel="1" name="Shillien's Strength">
 		<!-- When being attacked, there's a chance that the amount of PvP damage received will be reduced. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
@@ -374,7 +374,7 @@
 	<skill id="27715" toLevel="1" name="Prestige Cube">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27716" toLevel="1" name="Zodiac Agathion Pack">
+	<skill id="27716" toLevel="1" name="Starlight Agathion Pack">
 		<icon>icon.etc_treasure_box_i02</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -395,40 +395,40 @@
 			<effect name="RestorationRandom">
 			<items>
 				<item chance="8.3333333333333">
-					<item id="24175" count="1" /> <!-- Agathion - Aquarius Pack (Low-grade) -->
+					<item id="24175" count="1" /> <!-- Low Quality Agathion Aquarius Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24160" count="1" /> <!-- Agathion - Aries Pack (Low-grade) -->
+					<item id="24160" count="1" /> <!-- Low Quality Agathion Aries Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24184" count="1" /> <!-- Agathion - Cancer Pack (Low-grade) -->
+					<item id="24184" count="1" /> <!-- Low Quality Agathion Cancer Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24154" count="1" /> <!-- Agathion - Capricorn Pack (Low-grade) -->
+					<item id="24154" count="1" /> <!-- Low Quality Agathion Capricorn Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24169" count="1" /> <!-- Agathion - Gemini Pack (Low-grade) -->
+					<item id="24169" count="1" /> <!-- Low Quality Agathion Gemini Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24166" count="1" /> <!-- Agathion - Leo Pack (Low-grade) -->
+					<item id="24166" count="1" /> <!-- Low Quality Agathion Leo Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24157" count="1" /> <!-- Agathion - Libra Pack (Low-grade) -->
+					<item id="24157" count="1" /> <!-- Low Quality Agathion Libra Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24178" count="1" /> <!-- Agathion - Pisces Pack (Low-grade) -->
+					<item id="24178" count="1" /> <!-- Low Quality Agathion Pisces Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24181" count="1" /> <!-- Agathion - Sagittarius Pack (Low-grade) -->
+					<item id="24181" count="1" /> <!-- Low Quality Agathion Sagittarius Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24172" count="1" /> <!-- Agathion - Scorpio Pack (Low-grade) -->
+					<item id="24172" count="1" /> <!-- Low Quality Agathion Scorpion Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24163" count="1" /> <!-- Agathion - Taurus Pack (Low-grade) -->
+					<item id="24163" count="1" /> <!-- Low Quality Agathion Taurus Box -->
 				</item>
 				<item chance="8.3333333333333">
-					<item id="24151" count="1" /> <!-- Agathion - Virgo Pack (Low-grade) -->
+					<item id="24151" count="1" /> <!-- Low Quality Agathion Virgo Box -->
 				</item>
 			</items>
 			</effect>	
@@ -860,13 +860,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27746" toLevel="1" name="Item Skill: Agathion - Unlimited Vitality">
-		<!-- When equipped, XP +3%. -->
+	<skill id="27746" toLevel="1" name="Item Skill: Agathion Unlimited Vitality">
+		<!-- When equipped, XP +$s1. -->
 		<icon>BranchSys.icon.br_aga_bonus_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="27747" toLevel="1" name="2016 World Olympiad Hero">
-		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +5 -->
+		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +5. -->
 		<icon>icon.accessory_ornithomimus_cap_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -988,7 +988,7 @@
 				<allowNormalAttack>false</allowNormalAttack>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>46715</skillId>
+				<skillId>46715</skillId> <!-- Pa'agrio - Reliable Hit -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -1009,13 +1009,13 @@
 				<allowNormalAttack>true</allowNormalAttack>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>46715</skillId>
+				<skillId>46715</skillId> <!-- Pa'agrio - Reliable Hit -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="27752" toLevel="6" name="Eva's Earring">
-		<!-- P. Def. and M. Def. become $s1 for 40 sec. -->
+		<!-- P./ M. Def. become $s1 for 40 sec. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<abnormalTime>40</abnormalTime>
 		<abnormalLevel>
@@ -1165,7 +1165,7 @@
 				<allowNormalAttack>false</allowNormalAttack>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>46797</skillId>
+				<skillId>46797</skillId> <!-- Sayha - Restrain Physical and Magic -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -1186,7 +1186,7 @@
 				<allowNormalAttack>true</allowNormalAttack>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>46797</skillId>
+				<skillId>46797</skillId> <!-- Sayha - Restrain Physical and Magic -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
@@ -1214,7 +1214,7 @@
 				<allowNormalAttack>false</allowNormalAttack>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>46798</skillId>
+				<skillId>46798</skillId> <!-- Maphr - Yoke -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -1235,30 +1235,30 @@
 				<allowNormalAttack>true</allowNormalAttack>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>46798</skillId>
+				<skillId>46798</skillId> <!-- Maphr - Yoke -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27755" toLevel="1" name="Shilen's Necklace">
+	<skill id="27755" toLevel="1" name="Shillien's Necklace">
 		<!-- Makes the character invisible. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<effectPoint>679</effectPoint>
 	</skill>
-	<skill id="27756" toLevel="1" name="Shilen's Earring">
+	<skill id="27756" toLevel="1" name="Shillien's Earring">
 		<!-- 90% chance of PK count not increasing after killing another character. -->
 		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27757" toLevel="1" name="Shilen's Ring">
-		<!-- Resets all cooldowns. -->
+	<skill id="27757" toLevel="1" name="Shillien's Ring">
+		<!-- Resets skill cooldowns. -->
 		<icon>BranchIcon.Icon.ring_of_shilen_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
-	<skill id="27758" toLevel="1" name="Entrance Pass: Embryo Command Post">
+	<skill id="27758" toLevel="1" name="Extra Pass: Embryo Command Post">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27759" toLevel="1" name="Eva's Rune">
@@ -1330,50 +1330,50 @@
 	<skill id="27766" toLevel="1" name="+10 Maphr's Shirt Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27767" toLevel="1" name="Shiny Elemental Shirt Special Pack">
+	<skill id="27767" toLevel="1" name="Shiny Elemental Shirt Special Package">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27768" toLevel="1" name="Special Physical Reflect Shirt Pack">
+	<skill id="27768" toLevel="1" name="Physical Reflect Shirt Special Package">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27769" toLevel="1" name="Special Magical Reflect Shirt Pack">
+	<skill id="27769" toLevel="1" name="Magical Reflect Shirt Special Package">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27770" toLevel="1" name="Royal White Save Card (R)">
+	<skill id="27770" toLevel="1" name="Royal R-grade White Save Ticket - Armor">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27771" toLevel="1" name="Royal White Save Card (R95)">
+	<skill id="27771" toLevel="1" name="Royal R95-grade White Save Ticket - Armor">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27772" toLevel="1" name="Royal White Save Card (R99)">
+	<skill id="27772" toLevel="1" name="Royal R99-grade White Save Ticket - Armor">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27773" toLevel="1" name="Royal Purple Save Card (R)">
+	<skill id="27773" toLevel="1" name="Royal R-grade Purple Save Ticket">
 		<!-- When using an R-grade Weapon Enchantment Standard Weapon Enchant Scroll, increases the chance by 20%. Can only be used with a 12 or higher Enchantment Item. On success, Enchantment count increases by 1. In case of Enchantment failure, the item is not Crystallized, but the base Enchantment count decreases by 1. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27774" toLevel="1" name="Royal Purple Save Card (R95)">
-		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R95-grade Armor. Can only be used on 12+enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+	<skill id="27774" toLevel="1" name="Royal R95-grade Purple Save Ticket">
+		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R95-grade Armor. Can only be used on 12+enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27775" toLevel="1" name="Royal Purple Save Card (R99)">
-		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R99-grade Armor. Can only be used on 12+enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+	<skill id="27775" toLevel="1" name="Royal R99-grade Purple Save Ticket">
+		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R99-grade Armor. Can only be used on 12+enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27776" toLevel="1" name="Entrance Pass: Embryo Command Post">
+	<skill id="27776" toLevel="1" name="Extra Pass: Embryo Command Post">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27777" toLevel="1" name="Abundant Seven Signs Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27778" toLevel="1" name="Summon Agathion - Babayaga">
-		<!-- The Agathion - Babayaga seal is released. -->
+	<skill id="27778" toLevel="1" name="Summon Agathion Hut on Chicken Legs">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="27779" toLevel="1" name="Babayaga Teleport: Town of Aden">
-		<!-- Teleport to the Town of Aden. Usable only when Agathion's Seal is released. -->
+	<skill id="27779" toLevel="1" name="Hut on Chicken Legs' Teleport: Aden">
+		<!-- Teleports to Aden. Can be used only when the agathion is summoned. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
@@ -1392,8 +1392,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27780" toLevel="1" name="Babayaga Teleport - Town of Rune">
-		<!-- Teleport to the Town of Rune. Usable only when Agathion's Seal is released. -->
+	<skill id="27780" toLevel="1" name="Hut on Chicken Legs' Teleport: Rune">
+		<!-- Teleports to Rune. Can be used only when the agathion is summoned. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
@@ -1412,8 +1412,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27781" toLevel="1" name="Babayaga Teleport - Town of Giran">
-		<!-- Teleport to the Town of Giran. Usable only when Agathion's Seal is released. -->
+	<skill id="27781" toLevel="1" name="Hut on Chicken Legs' Teleport: Giran">
+		<!-- Teleports to Giran. Can be used only when the agathion is summoned. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
@@ -1433,7 +1433,7 @@
 		</effects>
 	</skill>
 	<skill id="27782" toLevel="1" name="Agathion's Blessing: Dash">
-		<!-- For 10sec., a Babayaga's power boosts Speed by 100%. Cooldown is 10min. -->
+		<!-- For 10 sec., Speed +100%. -->
 		<icon>icon.skill_transform_buff</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1479,7 +1479,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27784" toLevel="1" name="Agathion's Blessing: Featherweight">
+	<skill id="27784" toLevel="1" name="Agathion's Blessing: Decrease Weight">
 		<!-- Weight Limit +9000, and Inventory Slots +9. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
@@ -1495,8 +1495,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27785" toLevel="1" name="Agathion Cute Trick - Babayaga">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="27785" toLevel="1" name="Agathion Cute Trick - Hut on Chicken Legs">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -1603,8 +1603,8 @@
 					<value level="6">0</value>
 					<value level="7">0</value>
 					<value level="8">0</value>
-					<value level="9">5000</value>
-					<value level="10">7000</value>
+					<value level="9">1000</value>
+					<value level="10">2000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1618,23 +1618,8 @@
 					<value level="6">0</value>
 					<value level="7">0</value>
 					<value level="8">0</value>
-					<value level="9">5000</value>
-					<value level="10">7000</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="AdditionalPotionMp">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">5000</value>
-					<value level="10">7000</value>
+					<value level="9">1000</value>
+					<value level="10">2000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1698,7 +1683,7 @@
 		</effects>
 	</skill>
 	<skill id="27789" toLevel="4" name="Sayha's Protection">
-		<!-- For $s1, Damage Received -$s2. -->
+		<!-- For $s1, Received Damage -$s2. Cannot be stacked with active skills of other talismans. <The character is targeted automatically> -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_g_Lv1</value>
 			<value level="2">icon.sayhas_talisman_g_Lv2</value>
@@ -1706,12 +1691,15 @@
 			<value level="4">icon.sayhas_talisman_g_Lv4</value>
 		</icon>
 		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>SAYHA_BUFF</abnormalType>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
+		<isMagic>2</isMagic>
 		<reuseDelay>
 			<value level="1">600000</value>
 			<value level="2">420000</value>
@@ -1721,8 +1709,10 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
-		<reuseDelayGroup>13973</reuseDelayGroup>
 		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SAYHA_BUFF,-1;TALISMAN_SPECIAL,-1</dispel>
+			</effect>
 			<effect name="DamageByAttack">
 				<amount>
 					<value level="1">-5</value>
@@ -1744,7 +1734,7 @@
 		</effects>
 	</skill>
 	<skill id="27790" toLevel="4" name="Sayha's Encouragement">
-		<!-- For $s1, PvE Damage +$s2. -->
+		<!-- For $s1, PvE Damage +$s2. Cannot be stacked with active skills of other talismans. <The character is targeted automatically> -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_pve_Lv1</value>
 			<value level="2">icon.sayhas_talisman_pve_Lv2</value>
@@ -1752,6 +1742,7 @@
 			<value level="4">icon.sayhas_talisman_pve_Lv4</value>
 		</icon>
 		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>SAYHA_BUFF</abnormalType>
 		<abnormalTime>
 			<value level="1">180</value>
 			<value level="2">180</value>
@@ -1759,8 +1750,9 @@
 			<value level="4">600</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>
@@ -1772,8 +1764,11 @@
 		<staticReuse>true</staticReuse>
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
-		<reuseDelayGroup>13973</reuseDelayGroup>
+		<isMagic>2</isMagic>
 		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SAYHA_BUFF,-1;TALISMAN_SPECIAL,-1</dispel>
+			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>
 					<value level="1">5</value>
@@ -1804,7 +1799,7 @@
 		</effects>
 	</skill>
 	<skill id="27791" toLevel="4" name="Sayha's Anger">
-		<!-- For $s1, PvP Damage +$s2. -->
+		<!-- For $s1, PvP Damage +$s2. Cannot be stacked with active skills of other talismans. <The character is targeted automatically> -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
 			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
@@ -1812,12 +1807,15 @@
 			<value level="4">icon.sayhas_talisman_pvp_Lv4</value>
 		</icon>
 		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>SAYHA_BUFF</abnormalType>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
+		<isMagic>2</isMagic>
 		<reuseDelay>
 			<value level="1">600000</value>
 			<value level="2">420000</value>
@@ -1828,6 +1826,9 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SAYHA_BUFF,-1;TALISMAN_SPECIAL,-1</dispel>
+			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>
 					<value level="1">8</value>
@@ -1903,7 +1904,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="27794" toLevel="1" name="Seed Talisman Enhancement Pack">
+	<skill id="27794" toLevel="1" name="Enchant Kit: Seed Talisman">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>

@@ -36,7 +36,6 @@ public class RequestRefine extends AbstractRefinePacket
 {
 	private int _targetItemObjId;
 	private int _mineralItemObjId;
-	private int _feeItemObjId;
 	private long _feeCount;
 	
 	@Override
@@ -44,7 +43,7 @@ public class RequestRefine extends AbstractRefinePacket
 	{
 		_targetItemObjId = packet.readD();
 		_mineralItemObjId = packet.readD();
-		_feeItemObjId = packet.readD();
+		packet.readD(); // _feeItemObjId
 		_feeCount = packet.readQ();
 		return true;
 	}
@@ -70,13 +69,18 @@ public class RequestRefine extends AbstractRefinePacket
 			return;
 		}
 		
-		final ItemInstance feeItem = player.getInventory().getItemByObjectId(_feeItemObjId);
+		final VariationFee fee = VariationData.getInstance().getFee(targetItem.getId(), mineralItem.getId());
+		if (fee == null)
+		{
+			return;
+		}
+		
+		final ItemInstance feeItem = player.getInventory().getItemByItemId(fee.getItemId());
 		if (feeItem == null)
 		{
 			return;
 		}
 		
-		final VariationFee fee = VariationData.getInstance().getFee(targetItem.getId(), mineralItem.getId());
 		if (!isValid(player, targetItem, mineralItem, feeItem, fee))
 		{
 			player.sendPacket(new ExVariationResult(0, 0, false));
@@ -84,7 +88,9 @@ public class RequestRefine extends AbstractRefinePacket
 			return;
 		}
 		
-		if (_feeCount != fee.getItemCount())
+		// TODO: Update XMLs.
+		// if (_feeCount != fee.getItemCount())
+		if (_feeCount <= 0)
 		{
 			player.sendPacket(new ExVariationResult(0, 0, false));
 			player.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);

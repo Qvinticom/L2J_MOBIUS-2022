@@ -256,8 +256,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22614" toLevel="5" name="XP Rune III (Lv. 1-100+) 50%">
-		<!-- Obtained XP +50%. -->
+	<skill id="22614" toLevel="5" name="XP Rune 50%">
+		<!-- Acquired XP +50%. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_5</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -270,7 +270,7 @@
 		</effects>
 	</skill>
 	<skill id="22615" toLevel="1" name="Honeymoon Ticket - Joy of Vitality">
-		<!-- Maintains Vitality Lv.. -->
+		<!-- Maintains the Vitality amount. -->
 		<icon>BranchSys2.Icon.br_weddin_ticket_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -290,6 +290,11 @@
 			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22616" toLevel="1" name="Summon Big Wedding Cake">
 		<operateType>A1</operateType>
@@ -318,6 +323,8 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>22966</itemConsumeId>
 		<isMagic>2</isMagic>
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -326,8 +333,13 @@
 			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="22618" toLevel="1" name="STR Dye Pack (R-grade)">
+	<skill id="22618" toLevel="1" name="STR R-grade Dye Pack">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -341,55 +353,55 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25">
-						<item id="22982" count="1" /> <!-- Lv. 1 Giant STR Dye - STR +3/ DEX -2 -->
+						<item id="22982" count="1" /> <!-- Giant's STR Dye Lv. 1 - STR +3, DEX -2 -->
 					</item>
 					<item chance="20">
-						<item id="22988" count="1" /> <!-- Lv. 1 Ancient STR Dye - STR +3/ DEX -2/ Fire Resistance +5 -->
+						<item id="22988" count="1" /> <!-- Ancient STR Dye Lv. 1 - STR +3, DEX -2, Fire Resistance +5 -->
 					</item>
 					<item chance="17">
-						<item id="22994" count="1" /> <!-- Lv. 1 Legendary STR Dye - STR +3/ DEX -1/ Fire Resistance +5 -->
+						<item id="22994" count="1" /> <!-- Legendary STR Dye Lv. 1 - STR +3, DEX -1, Fire Resistance +5 -->
 					</item>
 					<item chance="14">
-						<item id="23000" count="1" /> <!-- Lv. 2 Giant STR Dye - STR +4/ DEX -3 -->
+						<item id="23000" count="1" /> <!-- Giant's STR Dye Lv. 2 - STR +4, DEX -3 -->
 					</item>
 					<item chance="8">
-						<item id="23006" count="1" /> <!-- Lv. 2 Ancient STR Dye - STR +4/ DEX -3/ Fire Resistance +10 -->
+						<item id="23006" count="1" /> <!-- Ancient STR Dye Lv. 2 - STR +4, DEX -3, Fire Resistance +10 -->
 					</item>
 					<item chance="6">
-						<item id="23012" count="1" /> <!-- Lv. 2 Legendary STR Dye - STR +4/ DEX -2/ Fire Resistance +10 -->
+						<item id="23012" count="1" /> <!-- Legendary STR Dye Lv. 2 - STR +4, DEX -2, Fire Resistance +10 -->
 					</item>
 					<item chance="4">
-						<item id="23018" count="1" /> <!-- Lv. 3 Giant STR Dye - STR +5/ DEX -4 -->
+						<item id="23018" count="1" /> <!-- Giant's STR Dye Lv. 3 - STR +5, DEX -4 -->
 					</item>
 					<item chance="3">
-						<item id="23024" count="1" /> <!-- Lv. 3 Ancient STR Dye - STR +5/ DEX -4/ Fire Resistance +15 -->
+						<item id="23024" count="1" /> <!-- Ancient STR Dye Lv. 3 - STR +5, DEX -4, Fire Resistance +15 -->
 					</item>
 					<item chance="1">
-						<item id="23030" count="1" /> <!-- Lv. 3 Legendary STR Dye - STR +5/ DEX -3/ Fire Resistance +15 -->
+						<item id="23030" count="1" /> <!-- Legendary STR Dye Lv. 3 - STR +5, DEX -3, Fire Resistance +15 -->
 					</item>
 					<item chance="0.7">
-						<item id="23036" count="1" /> <!-- Lv. 4 Giant STR Dye - STR +5/ DEX -2 -->
+						<item id="23036" count="1" /> <!-- Giant's STR Dye Lv. 4 - STR +5, DEX -2 -->
 					</item>
 					<item chance="0.55">
-						<item id="23042" count="1" /> <!-- Lv. 4 Ancient STR Dye - STR +5/ DEX -2/ Fire Resistance +20 -->
+						<item id="23042" count="1" /> <!-- Ancient STR Dye Lv. 4 - STR +5, DEX -2, Fire Resistance +20 -->
 					</item>
 					<item chance="0.34">
-						<item id="23048" count="1" /> <!-- Lv. 4 Legendary STR Dye - STR +5/ DEX -1/ Fire Resistance +20 -->
+						<item id="23048" count="1" /> <!-- Legendary STR Dye Lv. 4 - STR +5, DEX -1, Fire Resistance +20 -->
 					</item>
 					<item chance="0.2">
-						<item id="23054" count="1" /> <!-- Lv. 5 Giant STR Dye - STR +5 -->
+						<item id="23054" count="1" /> <!-- Giant's STR Dye Lv. 5 - STR +5 -->
 					</item>
 					<item chance="0.15">
-						<item id="23060" count="1" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+						<item id="23060" count="1" /> <!-- Ancient STR Dye Lv. 5 - STR +5, Fire Resistance +25 -->
 					</item>
 					<item chance="0.06">
-						<item id="23066" count="1" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
+						<item id="23066" count="1" /> <!-- Legendary STR Dye Lv. 5 - STR +5, DEX +1, Fire Resistance +25 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22619" toLevel="1" name="DEX Dye Pack (R-grade)">
+	<skill id="22619" toLevel="1" name="DEX R-grade Dye Pack">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -403,55 +415,55 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25">
-						<item id="22983" count="1" /> <!-- Lv. 1 Giant DEX Dye - DEX +3/ CON -2 -->
+						<item id="22983" count="1" /> <!-- Giant's DEX Dye Lv. 1 - DEX +3, CON -2 -->
 					</item>
 					<item chance="20">
-						<item id="22989" count="1" /> <!-- Lv. 1 Ancient DEX Dye - DEX +3/ CON -2/ Earth Resistance +5 -->
+						<item id="22989" count="1" /> <!-- Ancient DEX Dye Lv. 1 - DEX +3, CON -2, Earth Resistance +5 -->
 					</item>
 					<item chance="17">
-						<item id="22995" count="1" /> <!-- Lv. 1 Legendary DEX Dye - DEX +3/ CON -1/ Earth Resistance +5 -->
+						<item id="22995" count="1" /> <!-- Legendary DEX Dye Lv. 1 - DEX +3, CON -1, Earth Resistance +5 -->
 					</item>
 					<item chance="14">
-						<item id="23001" count="1" /> <!-- Lv. 2 Giant DEX Dye - DEX +4/ CON -3 -->
+						<item id="23001" count="1" /> <!-- Giant's DEX Dye Lv. 2 - DEX +4, CON -3 -->
 					</item>
 					<item chance="8">
-						<item id="23007" count="1" /> <!-- Lv. 2 Ancient DEX Dye - DEX +4/ CON -3/ Earth Resistance +10 -->
+						<item id="23007" count="1" /> <!-- Ancient DEX Dye Lv. 2 - DEX +4, CON -3, Earth Resistance +10 -->
 					</item>
 					<item chance="6">
-						<item id="23013" count="1" /> <!-- Lv. 2 Legendary DEX Dye - DEX +4/ CON -2/ Earth Resistance +10 -->
+						<item id="23013" count="1" /> <!-- Legendary DEX Dye Lv. 2 - DEX +4, CON -2, Earth Resistance +10 -->
 					</item>
 					<item chance="4">
-						<item id="23019" count="1" /> <!-- Lv. 3 Giant DEX Dye - DEX +5/ CON -4 -->
+						<item id="23019" count="1" /> <!-- Giant's DEX Dye Lv. 3 - DEX +5, CON -4 -->
 					</item>
 					<item chance="3">
-						<item id="23025" count="1" /> <!-- Lv. 3 Ancient DEX Dye - DEX +5/ CON -4/ Earth Resistance +15 -->
+						<item id="23025" count="1" /> <!-- Ancient DEX Dye Lv. 3 - DEX +5, CON -4, Earth Resistance +15 -->
 					</item>
 					<item chance="1">
-						<item id="23031" count="1" /> <!-- Lv. 3 Legendary DEX Dye - DEX +5/ CON -3/ Earth Resistance +15 -->
+						<item id="23031" count="1" /> <!-- Legendary DEX Dye Lv. 3 - DEX +5, CON -3, Earth Resistance +15 -->
 					</item>
 					<item chance="0.7">
-						<item id="23037" count="1" /> <!-- Lv. 4 Giant DEX Dye - DEX +5/ CON -2 -->
+						<item id="23037" count="1" /> <!-- Giant's DEX Dye Lv. 4 - DEX +5, CON -2 -->
 					</item>
 					<item chance="0.55">
-						<item id="23043" count="1" /> <!-- Lv. 4 Ancient DEX Dye - DEX +5/ CON -2/ Earth Resistance +20 -->
+						<item id="23043" count="1" /> <!-- Ancient DEX Dye Lv. 4 - DEX +5, CON -2, Earth Resistance +20 -->
 					</item>
 					<item chance="0.34">
-						<item id="23049" count="1" /> <!-- Lv. 4 Legendary DEX Dye - DEX +5/ CON -1/ Earth Resistance +20 -->
+						<item id="23049" count="1" /> <!-- Legendary DEX Dye Lv. 4 - DEX +5, CON -1, Earth Resistance +20 -->
 					</item>
 					<item chance="0.2">
-						<item id="23055" count="1" /> <!-- Lv. 5 Giant DEX Dye - DEX +5 -->
+						<item id="23055" count="1" /> <!-- Giant's DEX Dye Lv. 5 - DEX +5 -->
 					</item>
 					<item chance="0.15">
-						<item id="23061" count="1" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+						<item id="23061" count="1" /> <!-- Ancient DEX Dye Lv. 5 - DEX +5, Earth Resistance +25 -->
 					</item>
 					<item chance="0.06">
-						<item id="23067" count="1" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+						<item id="23067" count="1" /> <!-- Legendary DEX Dye Lv. 5 - DEX +5, CON +1, Earth Resistance +25 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22620" toLevel="1" name="CON Dye Pack (R-grade)">
+	<skill id="22620" toLevel="1" name="CON R-grade Dye Pack">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -465,55 +477,55 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25">
-						<item id="22984" count="1" /> <!-- Lv. 1 Giant CON Dye - CON +3/ STR -2 -->
+						<item id="22984" count="1" /> <!-- Giant's CON Dye Lv. 1 - CON +3, STR -2 -->
 					</item>
 					<item chance="20">
-						<item id="22990" count="1" /> <!-- Lv. 1 Ancient CON Dye - CON +3/ STR -2/ Dark Resistance +5 -->
+						<item id="22990" count="1" /> <!-- Ancient CON Dye Lv. 1 - CON +3, STR -2, Dark Resistance +5 -->
 					</item>
 					<item chance="17">
-						<item id="22996" count="1" /> <!-- Lv. 1 Legendary CON Dye - CON +3/ STR -1/ Dark Resistance +5 -->
+						<item id="22996" count="1" /> <!-- Legendary CON Dye Lv. 1 - CON +3, STR -1, Dark Resistance +5 -->
 					</item>
 					<item chance="14">
-						<item id="23002" count="1" /> <!-- Lv. 2 Giant CON Dye - CON +4/ STR -3 -->
+						<item id="23002" count="1" /> <!-- Giant's CON Dye Lv. 2 - CON +4, STR -3 -->
 					</item>
 					<item chance="8">
-						<item id="23008" count="1" /> <!-- Lv. 2 Ancient CON Dye - CON +4/ STR -3/ Dark Resistance +10 -->
+						<item id="23008" count="1" /> <!-- Ancient CON Dye Lv. 2 - CON +4, STR -3, Dark Resistance +10 -->
 					</item>
 					<item chance="6">
-						<item id="23014" count="1" /> <!-- Lv. 2 Legendary CON Dye - CON +4/ STR -2/ Dark Resistance +10 -->
+						<item id="23014" count="1" /> <!-- Legendary CON Dye Lv. 2 - CON +4, STR -2, Dark Resistance +10 -->
 					</item>
 					<item chance="4">
-						<item id="23020" count="1" /> <!-- Lv. 3 Giant CON Dye - CON +5/ STR -4 -->
+						<item id="23020" count="1" /> <!-- Giant's CON Dye Lv. 3 - CON +5, STR -4 -->
 					</item>
 					<item chance="3">
-						<item id="23026" count="1" /> <!-- Lv. 3 Ancient CON Dye - CON +5/ STR -4/ Dark Resistance +15 -->
+						<item id="23026" count="1" /> <!-- Ancient CON Dye Lv. 3 - CON +5, STR -4, Dark Resistance +15 -->
 					</item>
 					<item chance="1">
-						<item id="23032" count="1" /> <!-- Lv. 3 Legendary CON Dye - CON +5/ STR -3/ Dark Resistance +15 -->
+						<item id="23032" count="1" /> <!-- Legendary CON Dye Lv. 3 - CON +5, STR -3, Dark Resistance +15 -->
 					</item>
 					<item chance="0.7">
-						<item id="23038" count="1" /> <!-- Lv. 4 Giant CON Dye - CON +5/ STR -2 -->
+						<item id="23038" count="1" /> <!-- Giant's CON Dye Lv. 4 - CON +5, STR -2 -->
 					</item>
 					<item chance="0.55">
-						<item id="23044" count="1" /> <!-- Lv. 4 Ancient CON Dye - CON +5/ STR -2/ Dark Resistance +20 -->
+						<item id="23044" count="1" /> <!-- Ancient CON Dye Lv. 4 - CON +5, STR -2, Dark Resistance +20 -->
 					</item>
 					<item chance="0.34">
-						<item id="23050" count="1" /> <!-- Lv. 4 Legendary CON Dye - CON +5/ STR -1/ Dark Resistance +20 -->
+						<item id="23050" count="1" /> <!-- Legendary CON Dye Lv. 4 - CON +5, STR -1, Dark Resistance +20 -->
 					</item>
 					<item chance="0.2">
-						<item id="23056" count="1" /> <!-- Lv. 5 Giant CON Dye - CON +5 -->
+						<item id="23056" count="1" /> <!-- Giant's CON Dye Lv. 5 - CON +5 -->
 					</item>
 					<item chance="0.15">
-						<item id="23062" count="1" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+						<item id="23062" count="1" /> <!-- Ancient CON Dye Lv. 5 - CON +5, Dark Resistance +25 -->
 					</item>
 					<item chance="0.06">
-						<item id="23068" count="1" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
+						<item id="23068" count="1" /> <!-- Legendary CON Dye Lv. 5 - CON +5, STR +1, Dark Resistance +25 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22621" toLevel="1" name="INT Dye Pack (R-grade)">
+	<skill id="22621" toLevel="1" name="INT R-grade Dye Pack">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -527,55 +539,55 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25">
-						<item id="22985" count="1" /> <!-- Lv. 1 Giant INT Dye - INT +3/ WIT -2 -->
+						<item id="22985" count="1" /> <!-- Giant's INT Dye Lv. 1 - INT +3, WIT -2 -->
 					</item>
 					<item chance="20">
-						<item id="22991" count="1" /> <!-- Lv. 1 Ancient INT Dye - INT +3/ WIT -2/ Water Resistance +5 -->
+						<item id="22991" count="1" /> <!-- Ancient INT Dye Lv. 1 - INT +3, WIT -2, Water Resistance +5 -->
 					</item>
 					<item chance="17">
-						<item id="22997" count="1" /> <!-- Lv. 1 Legendary INT Dye - INT +3/ WIT -1/ Water Resistance +5 -->
+						<item id="22997" count="1" /> <!-- Legendary INT Dye Lv. 1 - INT +3, WIT -1, Water Resistance +5 -->
 					</item>
 					<item chance="14">
-						<item id="23003" count="1" /> <!-- Lv. 2 Giant INT Dye - INT +4/ WIT -3 -->
+						<item id="23003" count="1" /> <!-- Giant's INT Dye Lv. 2 - INT +4, WIT -3 -->
 					</item>
 					<item chance="8">
-						<item id="23009" count="1" /> <!-- Lv. 2 Ancient INT Dye - INT +4/ WIT -3/ Water Resistance +10 -->
+						<item id="23009" count="1" /> <!-- Ancient INT Dye Lv. 2 - INT +4, WIT -3, Water Resistance +10 -->
 					</item>
 					<item chance="6">
-						<item id="23015" count="1" /> <!-- Lv. 2 Legendary INT Dye - INT +4/ WIT -2/ Water Resistance +10 -->
+						<item id="23015" count="1" /> <!-- Legendary INT Dye Lv. 2 - INT +4, WIT -2, Water Resistance +10 -->
 					</item>
 					<item chance="4">
-						<item id="23021" count="1" /> <!-- Lv. 3 Giant INT Dye - INT +5/ WIT -4 -->
+						<item id="23021" count="1" /> <!-- Giant's INT Dye Lv. 3 - INT +5, WIT -4 -->
 					</item>
 					<item chance="3">
-						<item id="23027" count="1" /> <!-- Lv. 3 Ancient INT Dye - INT +5/ WIT -4/ Water Resistance +15 -->
+						<item id="23027" count="1" /> <!-- Ancient INT Dye Lv. 3 - INT +5, WIT -4, Water Resistance +15 -->
 					</item>
 					<item chance="1">
-						<item id="23033" count="1" /> <!-- Lv. 3 Legendary INT Dye - INT +5/ WIT -3/ Water Resistance +15 -->
+						<item id="23033" count="1" /> <!-- Legendary INT Dye Lv. 3 - INT +5, WIT -3, Water Resistance +15 -->
 					</item>
 					<item chance="0.7">
-						<item id="23039" count="1" /> <!-- Lv. 4 Giant INT Dye - INT +5/ WIT -2 -->
+						<item id="23039" count="1" /> <!-- Giant's INT Dye Lv. 4 - INT +5, WIT -2 -->
 					</item>
 					<item chance="0.55">
-						<item id="23045" count="1" /> <!-- Lv. 4 Ancient INT Dye - INT +5/ WIT -2/ Water Resistance +20 -->
+						<item id="23045" count="1" /> <!-- Ancient INT Dye Lv. 4 - INT +5, WIT -2, Water Resistance +20 -->
 					</item>
 					<item chance="0.34">
-						<item id="23051" count="1" /> <!-- Lv. 4 Legendary INT Dye - INT +5/ WIT -1/ Water Resistance +20 -->
+						<item id="23051" count="1" /> <!-- Legendary INT Dye Lv. 4 - INT +5, WIT -1, Water Resistance +20 -->
 					</item>
 					<item chance="0.2">
-						<item id="23057" count="1" /> <!-- Lv. 5 Giant INT Dye - INT +5 -->
+						<item id="23057" count="1" /> <!-- Giant's INT Dye Lv. 5 - INT +5 -->
 					</item>
 					<item chance="0.15">
-						<item id="23063" count="1" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+						<item id="23063" count="1" /> <!-- Ancient INT Dye Lv. 5 - INT +5, Water Resistance +25 -->
 					</item>
 					<item chance="0.06">
-						<item id="23069" count="1" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
+						<item id="23069" count="1" /> <!-- Legendary INT Dye Lv. 5 - INT +5, WIT +1, Water Resistance +25 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22622" toLevel="1" name="WIT Dye Pack (R-grade)">
+	<skill id="22622" toLevel="1" name="WIT R-grade Dye Pack">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -589,55 +601,55 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25">
-						<item id="22986" count="1" /> <!-- Lv. 1 Giant WIT Dye - WIT +3/ MEN -2 -->
+						<item id="22986" count="1" /> <!-- Giant's WIT Dye Lv. 1 - WIT +3, MEN -2 -->
 					</item>
 					<item chance="20">
-						<item id="22992" count="1" /> <!-- Lv. 1 Ancient WIT Dye - WIT +3/ MEN -2/ Wind Resistance +5 -->
+						<item id="22992" count="1" /> <!-- Ancient WIT Dye Lv. 1 - WIT +3, MEN -2, Wind Resistance +5 -->
 					</item>
 					<item chance="17">
-						<item id="22998" count="1" /> <!-- Lv. 1 Legendary WIT Dye - WIT +3/ MEN -1/ Wind Resistance +5 -->
+						<item id="22998" count="1" /> <!-- Legendary WIT Dye Lv. 1 - WIT +3, MEN -1, Wind Resistance +5 -->
 					</item>
 					<item chance="14">
-						<item id="23004" count="1" /> <!-- Lv. 2 Giant WIT Dye - WIT +4/ MEN -3 -->
+						<item id="23004" count="1" /> <!-- Giant's WIT Dye Lv. 2 - WIT +4, MEN -3 -->
 					</item>
 					<item chance="8">
-						<item id="23010" count="1" /> <!-- Lv. 2 Ancient WIT Dye - WIT +4/ MEN -3/ Wind Resistance +10 -->
+						<item id="23010" count="1" /> <!-- Ancient WIT Dye Lv. 2 - WIT +4, MEN -3, Wind Resistance +10 -->
 					</item>
 					<item chance="6">
-						<item id="23016" count="1" /> <!-- Lv. 2 Legendary WIT Dye - WIT +4/ MEN -2/ Wind Resistance +10 -->
+						<item id="23016" count="1" /> <!-- Legendary WIT Dye Lv. 2 - WIT +4, MEN -2, Wind Resistance +10 -->
 					</item>
 					<item chance="4">
-						<item id="23022" count="1" /> <!-- Lv. 3 Giant WIT Dye - WIT +5/ MEN -4 -->
+						<item id="23022" count="1" /> <!-- Giant's WIT Dye Lv. 3 - WIT +5, MEN -4 -->
 					</item>
 					<item chance="3">
-						<item id="23028" count="1" /> <!-- Lv. 3 Ancient WIT Dye - WIT +5/ MEN -4/ Wind Resistance +15 -->
+						<item id="23028" count="1" /> <!-- Ancient WIT Dye Lv. 3 - WIT +5, MEN -4, Wind Resistance +15 -->
 					</item>
 					<item chance="1">
-						<item id="23034" count="1" /> <!-- Lv. 3 Legendary WIT Dye - WIT +5/ MEN -3/ Wind Resistance +15 -->
+						<item id="23034" count="1" /> <!-- Legendary WIT Dye Lv. 3 - WIT +5, MEN -3, Wind Resistance +15 -->
 					</item>
 					<item chance="0.7">
-						<item id="23040" count="1" /> <!-- Lv. 4 Giant WIT Dye - WIT +5/ MEN -2 -->
+						<item id="23040" count="1" /> <!-- Giant's WIT Dye Lv. 4 - WIT +5, MEN -2 -->
 					</item>
 					<item chance="0.55">
-						<item id="23046" count="1" /> <!-- Lv. 4 Ancient WIT Dye - WIT +5/ MEN -2/ Wind Resistance +20 -->
+						<item id="23046" count="1" /> <!-- Ancient WIT Dye Lv. 4 - WIT +5, MEN -2, Wind Resistance +20 -->
 					</item>
 					<item chance="0.34">
-						<item id="23052" count="1" /> <!-- Lv. 4 Legendary WIT Dye - WIT +5/ MEN -1/ Wind Resistance +20 -->
+						<item id="23052" count="1" /> <!-- Legendary WIT Dye Lv. 4 - WIT +5, MEN -1, Wind Resistance +20 -->
 					</item>
 					<item chance="0.2">
-						<item id="23058" count="1" /> <!-- Lv. 5 Giant WIT Dye - Wit +5 -->
+						<item id="23058" count="1" /> <!-- Giant's WIT Dye Lv. 5 - WIT +5 -->
 					</item>
 					<item chance="0.15">
-						<item id="23064" count="1" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+						<item id="23064" count="1" /> <!-- Ancient WIT Dye Lv. 5 - WIT +5, Wind Resistance +25 -->
 					</item>
 					<item chance="0.06">
-						<item id="23070" count="1" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
+						<item id="23070" count="1" /> <!-- Legendary WIT Dye Lv. 5 - WIT +5, MEN +1, Wind Resistance +25 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22623" toLevel="1" name="MEN Dye Pack (R-grade)">
+	<skill id="22623" toLevel="1" name="MEN R-grade Dye Pack">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -651,49 +663,49 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25">
-						<item id="22987" count="1" /> <!-- Lv. 1 Giant MEN Dye - MEN +3/ INT -2 -->
+						<item id="22987" count="1" /> <!-- Giant's MEN Dye Lv. 1 - MEN +3, INT -2 -->
 					</item>
 					<item chance="20">
-						<item id="22993" count="1" /> <!-- Lv. 1 Ancient MEN Dye - MEN +3/ INT -2/ Holy Resistance +5 -->
+						<item id="22993" count="1" /> <!-- Ancient MEN Dye Lv. 1 - MEN +3, INT -2, Holy Resistance +5 -->
 					</item>
 					<item chance="17">
-						<item id="22999" count="1" /> <!-- Lv. 1 Legendary MEN Dye - MEN +3/ INT -1/ Holy Resistance +5 -->
+						<item id="22999" count="1" /> <!-- Legendary MEN Dye Lv. 1 - MEN +3, INT -1, Holy Resistance +5 -->
 					</item>
 					<item chance="14">
-						<item id="23005" count="1" /> <!-- Lv. 2 Giant MEN Dye - MEN +4/ INT -3 -->
+						<item id="23005" count="1" /> <!-- Giant's MEN Dye Lv. 2 - MEN +4, INT -3 -->
 					</item>
 					<item chance="8">
-						<item id="23011" count="1" /> <!-- Lv. 2 Ancient MEN Dye - MEN +4/ INT -3/ Holy Resistance +10 -->
+						<item id="23011" count="1" /> <!-- Ancient MEN Dye Lv. 2 - MEN +4, INT -3, Holy Resistance +10 -->
 					</item>
 					<item chance="6">
-						<item id="23017" count="1" /> <!-- Lv. 2 Legendary MEN Dye - MEN +4/ INT -2/ Holy Resistance +10 -->
+						<item id="23017" count="1" /> <!-- Legendary MEN Dye Lv. 2 - MEN +4, INT -2, Holy Resistance +10 -->
 					</item>
 					<item chance="4">
-						<item id="23023" count="1" /> <!-- Lv. 3 Giant MEN Dye - MEN +5/ INT -4 -->
+						<item id="23023" count="1" /> <!-- Giant's MEN Dye Lv. 3 - MEN +5, INT -4 -->
 					</item>
 					<item chance="3">
-						<item id="23029" count="1" /> <!-- Lv. 3 Ancient MEN Dye - MEN +5/ INT -4/ Holy Resistance +15 -->
+						<item id="23029" count="1" /> <!-- Ancient MEN Dye Lv. 3 - MEN +5, INT -4, Holy Resistance +15 -->
 					</item>
 					<item chance="1">
-						<item id="23035" count="1" /> <!-- Lv. 3 Legendary MEN Dye - MEN +5/ INT -3/ Holy Resistance +15 -->
+						<item id="23035" count="1" /> <!-- Legendary MEN Dye Lv. 3 - MEN +5, INT -3, Holy Resistance +15 -->
 					</item>
 					<item chance="0.7">
-						<item id="23041" count="1" /> <!-- Lv. 4 Giant MEN Dye - MEN +5/ INT -2 -->
+						<item id="23041" count="1" /> <!-- Giant's MEN Dye Lv. 4 - MEN +5, INT -2 -->
 					</item>
 					<item chance="0.55">
-						<item id="23047" count="1" /> <!-- Lv. 4 Ancient MEN Dye - MEN +5/ INT -2/ Holy Resistance +20 -->
+						<item id="23047" count="1" /> <!-- Ancient MEN Dye Lv. 4 - MEN +5, INT -2, Holy Resistance +20 -->
 					</item>
 					<item chance="0.34">
-						<item id="23053" count="1" /> <!-- Lv. 4 Legendary MEN Dye - MEN +5/ INT -1/ Holy Resistance +20 -->
+						<item id="23053" count="1" /> <!-- Legendary MEN Dye Lv. 4 - MEN +5, INT -1, Holy Resistance +20 -->
 					</item>
 					<item chance="0.2">
-						<item id="23059" count="1" /> <!-- Lv. 5 Giant MEN Dye - Men +5 -->
+						<item id="23059" count="1" /> <!-- Giant's MEN Dye Lv. 5 - MEN +5 -->
 					</item>
 					<item chance="0.15">
-						<item id="23065" count="1" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+						<item id="23065" count="1" /> <!-- Ancient MEN Dye Lv. 5 - MEN +5, Holy Resistance +25 -->
 					</item>
 					<item chance="0.06">
-						<item id="23071" count="1" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
+						<item id="23071" count="1" /> <!-- Legendary MEN Dye Lv. 5 - MEN +5, INT +1, Holy Resistance +25 -->
 					</item>
 				</items>
 			</effect>
@@ -725,13 +737,13 @@
 						<item id="21712" count="1" /> <!-- Blessed Zaken's Earring -->
 					</item>
 					<item chance="0.0147">
-						<item id="23087" count="1" /> <!-- Enhanced Power Shirt Pack - Event -->
+						<item id="23087" count="1" /> <!-- Package: Enchanted Power Shirt - Event -->
 					</item>
 					<item chance="0.0441">
-						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
+						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.1029">
-						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant Armor (R-grade) -->
+						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.2941">
 						<item id="34954" count="1" /> <!-- Lv. 5 Legendary Dye Pack - Event -->
@@ -740,10 +752,10 @@
 						<item id="22279" count="1" /> <!-- PA Vitality (1-hour) - Event -->
 					</item>
 					<item chance="2.2059">
-						<item id="22968" count="1" /> <!-- Mount - Black Bear Pack (30-day) -->
+						<item id="22968" count="1" /> <!-- Package: Black Bear Bracelet (30-day) -->
 					</item>
 					<item chance="4.4118">
-						<item id="13383" count="1" /> <!-- Minion Coupon (5-hour) (Event) -->
+						<item id="13383" count="1" /> <!-- Minion Coupon (5-hour) - Event -->
 					</item>
 					<item chance="5.8824">
 						<item id="21185" count="1" /> <!-- Transformation Scroll: Zaken - Event -->
@@ -752,7 +764,7 @@
 						<item id="30297" count="1" /> <!-- Superior Giant's Codex -->
 					</item>
 					<item chance="10.2941">
-						<item id="19440" count="1" /> <!-- Gemstone (R-grade) -->
+						<item id="19440" count="1" /> <!-- R-grade Gemstone -->
 					</item>
 					<item chance="12.5000">
 						<item id="9157" count="1" /> <!-- Blessed Scroll of Resurrection (Event) -->
@@ -801,7 +813,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.06">
-						<item id="19444" count="1" /> <!-- Unbind Scroll (R-grade) -->
+						<item id="19444" count="1" /> <!-- R-grade Unbind Scroll -->
 					</item>
 					<item chance="22.72">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
@@ -828,7 +840,7 @@
 						<item id="30297" count="1" /> <!-- Superior Giant's Codex -->
 					</item>
 					<item chance="6">
-						<item id="19440" count="1" /> <!-- Gemstone (R-grade) -->
+						<item id="19440" count="1" /> <!-- R-grade Gemstone -->
 					</item>
 					<item chance="19">
 						<item id="23208" count="1" /> <!-- Red Potion of Regeneration -->
@@ -840,10 +852,10 @@
 						<item id="22204" count="1" /> <!-- Attribute Stone Pack - Event -->
 					</item>
 					<item chance="4">
-						<item id="35742" count="1" /> <!-- Scroll: Reputation (Low-grade) -->
+						<item id="35742" count="1" /> <!-- Low-grade Scroll: Reputation -->
 					</item>
 					<item chance="0.6">
-						<item id="35755" count="1" /> <!-- Scroll: Reputation (Mid-grade) -->
+						<item id="35755" count="1" /> <!-- Mid-grade Scroll: Reputation -->
 					</item>
 					<item chance="4">
 						<item id="23147" count="1" /> <!-- Ghost Potion - Event -->
@@ -873,16 +885,16 @@
 						<item id="23201" count="1" /> <!-- Dark Accessory Pack - Event -->
 					</item>
 					<item chance="0.075">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.5">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.04">
-						<item id="19445" count="1" /> <!-- Unbind Scroll (R95-grade) -->
+						<item id="19445" count="1" /> <!-- R95-grade Unbind Scroll -->
 					</item>
 					<item chance="0.07">
-						<item id="35749" count="1" /> <!-- Weapon Attribute Change Crystal (R-grade) - Event -->
+						<item id="35749" count="1" /> <!-- R-grade Weapon Attribute Change Crystal - Event -->
 					</item>
 					<item chance="0.15">
 						<item id="23223" count="1" /> <!-- Monster Weapon Appearance Stone Pack A -->
@@ -894,19 +906,19 @@
 						<item id="22205" count="1" /> <!-- Attribute Crystal Pack - Event -->
 					</item>
 					<item chance="0.19">
-						<item id="17709" count="1" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
+						<item id="17709" count="1" /> <!-- Legendary STR Dye Lv. 5 - STR +5, DEX +1, Fire Resistance +25 -->
 					</item>
 					<item chance="0.19">
-						<item id="17713" count="1" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
+						<item id="17713" count="1" /> <!-- Legendary WIT Dye Lv. 5 - WIT +5, MEN +1, Wind Resistance +25 -->
 					</item>
 					<item chance="0.19">
-						<item id="17714" count="1" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
+						<item id="17714" count="1" /> <!-- Legendary MEN Dye Lv. 5 - MEN +5, INT +1, Holy Resistance +25 -->
 					</item>
 					<item chance="0.008">
-						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
+						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.014">
-						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant Armor (R-grade) -->
+						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="18">
 						<item id="23208" count="5" /> <!-- Red Potion of Regeneration -->
@@ -915,25 +927,25 @@
 						<item id="23209" count="5" /> <!-- Blue Potion of Recovery -->
 					</item>
 					<item chance="2.5">
-						<item id="35741" count="1" /> <!-- Scroll: PK (Low-grade) -->
+						<item id="35741" count="1" /> <!-- Low-grade Scroll: PK -->
 					</item>
 					<item chance="0.67">
-						<item id="35752" count="1" /> <!-- Scroll: PK (Mid-grade) -->
+						<item id="35752" count="1" /> <!-- Mid-grade Scroll: PK -->
 					</item>
 					<item chance="0.4">
 						<item id="30298" count="1" /> <!-- Superior Giant's Codex - Mastery -->
 					</item>
 					<item chance="2">
-						<item id="30381" count="1" /> <!-- Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="30381" count="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="8">
-						<item id="30382" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="30382" count="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22629" toLevel="1" name="Shilen's Gift">
+	<skill id="22629" toLevel="1" name="Shillien's Gift">
 		<icon>icon.event_big_july_seven_park_i00</icon>
 		<itemConsumeId>23151</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -954,16 +966,16 @@
 						<item id="23201" count="1" /> <!-- Dark Accessory Pack - Event -->
 					</item>
 					<item chance="0.075">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.5">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.04">
-						<item id="19445" count="1" /> <!-- Unbind Scroll (R95-grade) -->
+						<item id="19445" count="1" /> <!-- R95-grade Unbind Scroll -->
 					</item>
 					<item chance="0.07">
-						<item id="35749" count="1" /> <!-- Weapon Attribute Change Crystal (R-grade) - Event -->
+						<item id="35749" count="1" /> <!-- R-grade Weapon Attribute Change Crystal - Event -->
 					</item>
 					<item chance="0.15">
 						<item id="23224" count="1" /> <!-- Monster Weapon Appearance Stone Pack B -->
@@ -975,19 +987,19 @@
 						<item id="22205" count="1" /> <!-- Attribute Crystal Pack - Event -->
 					</item>
 					<item chance="0.19">
-						<item id="17712" count="1" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
+						<item id="17712" count="1" /> <!-- Legendary INT Dye Lv. 5 - INT +5, WIT +1, Water Resistance +25 -->
 					</item>
 					<item chance="0.19">
-						<item id="17710" count="1" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+						<item id="17710" count="1" /> <!-- Legendary DEX Dye Lv. 5 - DEX +5, CON +1, Earth Resistance +25 -->
 					</item>
 					<item chance="0.19">
-						<item id="17711" count="1" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
+						<item id="17711" count="1" /> <!-- Legendary CON Dye Lv. 5 - CON +5, STR +1, Dark Resistance +25 -->
 					</item>
 					<item chance="0.008">
-						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
+						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.014">
-						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant Armor (R-grade) -->
+						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="18">
 						<item id="23208" count="5" /> <!-- Red Potion of Regeneration -->
@@ -996,19 +1008,19 @@
 						<item id="23209" count="5" /> <!-- Blue Potion of Recovery -->
 					</item>
 					<item chance="2.5">
-						<item id="35741" count="1" /> <!-- Scroll: PK (Low-grade) -->
+						<item id="35741" count="1" /> <!-- Low-grade Scroll: PK -->
 					</item>
 					<item chance="0.67">
-						<item id="35752" count="1" /> <!-- Scroll: PK (Mid-grade) -->
+						<item id="35752" count="1" /> <!-- Mid-grade Scroll: PK -->
 					</item>
 					<item chance="0.4">
 						<item id="30298" count="1" /> <!-- Superior Giant's Codex - Mastery -->
 					</item>
 					<item chance="2">
-						<item id="30381" count="1" /> <!-- Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="30381" count="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="8">
-						<item id="30382" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="30382" count="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
 					</item>
 				</items>
 			</effect>
@@ -1089,10 +1101,10 @@
 						<item id="23173" count="1" /> <!-- Alluring Swimsuit -->
 					</item>
 					<item chance="15">
-						<item id="23177" count="1" /> <!-- Brilliant Beach Sun Cap Pack (30-day) - Event -->
+						<item id="23177" count="1" /> <!-- Package: Brilliant Beach Sun Cap (30-day) - Event -->
 					</item>
 					<item chance="15">
-						<item id="23178" count="1" /> <!-- Stylish Straw Hat Pack (30-day) - Event -->
+						<item id="23178" count="1" /> <!-- Package: Stylish Straw Hat (30-day) - Event -->
 					</item>
 				</items>
 			</effect>
@@ -1225,7 +1237,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22646" toLevel="1" name="Shiny Reanimated Corpse Mask">
+	<skill id="22646" toLevel="1" name="Reanimated Corpse Mask">
 		<!-- STR +1, CON +1, and DEX +1. -->
 		<icon>icon.etc_ev_draco_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1310,7 +1322,7 @@
 		</effects>
 	</skill>
 	<skill id="22650" toLevel="1" name="Transformation Scroll: Zombie">
-		<!-- Transformed into a Festering Zombie. -->
+		<!-- Transformation Scroll: Zombie -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1410,7 +1422,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22657" toLevel="1" name="Ron's Dual Blunt Appearance Stone">
+	<skill id="22657" toLevel="1" name="Ron's Dual Blunt Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1586,6 +1598,11 @@
 			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22668" toLevel="1" name="Roasted Sausage">
 		<!-- For 30 min., Vitality is replenished with XP gain through hunting. -->
@@ -1701,7 +1718,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22675" toLevel="1" name="Blessed Scroll: Enchant Elemental Shirt Pack">
+	<skill id="22675" toLevel="1" name="Package: Blessed Scroll: Enchant Elemental Shirt">
 		<itemConsumeId>23238</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1718,7 +1735,7 @@
 						<item id="23241" count="30" /> <!-- Blessed Scroll: Enchant Elemental Shirt -->
 					</item>
 					<item chance="0.1">
-						<item id="23239" count="1" /> <!-- Enchanted Pa'agrio's Shirt Pack -->
+						<item id="23239" count="1" /> <!-- Package: Enchanted Pa'agrio's Shirt -->
 					</item>
 				</items>
 			</effect>
@@ -2208,7 +2225,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="3.58">
-						<item id="2404" count="1" /> <!-- Stockings of Doom -->
+						<item id="2404" count="1" /> <!-- Doom Stockings -->
 					</item>
 					<item chance="1.68">
 						<item id="358" count="1" /> <!-- Blue Wolf Breastplate -->
@@ -2235,10 +2252,10 @@
 						<item id="2380" count="1" /> <!-- Blue Wolf Gaiters -->
 					</item>
 					<item chance="2.24">
-						<item id="2399" count="1" /> <!-- Tunic of Doom -->
+						<item id="2399" count="1" /> <!-- Doom Tunic -->
 					</item>
 					<item chance="1.38">
-						<item id="2392" count="1" /> <!-- Leather Armor of Doom -->
+						<item id="2392" count="1" /> <!-- Doom Leather Armor -->
 					</item>
 					<item chance="4.48">
 						<item id="2417" count="1" /> <!-- Doom Helmet -->
@@ -2419,7 +2436,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22686" toLevel="1" name="Blessed Scroll: Enchant Elemental Shirt Pack">
+	<skill id="22686" toLevel="1" name="Package: Blessed Scroll: Enchant Elemental Shirt">
 		<itemConsumeId>23299</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2436,13 +2453,13 @@
 						<item id="23241" count="30" /> <!-- Blessed Scroll: Enchant Elemental Shirt -->
 					</item>
 					<item chance="0.1">
-						<item id="23300" count="1" /> <!-- Enchanted Sayha's Shirt Pack -->
+						<item id="23300" count="1" /> <!-- Package: Enchanted Sayha's Shirt -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22687" toLevel="1" name="Blessed Scroll: Enchant Elemental Shirt Pack">
+	<skill id="22687" toLevel="1" name="Package: Blessed Scroll: Enchant Elemental Shirt">
 		<itemConsumeId>23302</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2459,13 +2476,13 @@
 						<item id="23241" count="30" /> <!-- Blessed Scroll: Enchant Elemental Shirt -->
 					</item>
 					<item chance="0.1">
-						<item id="23303" count="1" /> <!-- Enchanted Eva's Shirt Pack -->
+						<item id="23303" count="1" /> <!-- Package: Enchanted Eva's Shirt -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22688" toLevel="1" name="Blessed Scroll: Enchant Elemental Shirt Pack">
+	<skill id="22688" toLevel="1" name="Package: Blessed Scroll: Enchant Elemental Shirt">
 		<itemConsumeId>23305</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2482,7 +2499,7 @@
 						<item id="23241" count="30" /> <!-- Blessed Scroll: Enchant Elemental Shirt -->
 					</item>
 					<item chance="0.1">
-						<item id="23306" count="1" /> <!-- Enchanted Maphr's Shirt Pack -->
+						<item id="23306" count="1" /> <!-- Package: Enchanted Maphr's Shirt -->
 					</item>
 				</items>
 			</effect>
@@ -2550,7 +2567,7 @@
 						<item id="22562" count="4" /> <!-- Elixir of Life - Event -->
 					</item>
 					<item chance="20">
-						<item id="21040" count="3" /> <!-- Superior Quick Healing Potion -->
+						<item id="21040" count="3" /> <!-- Superior Quick HP Replenishing Potion -->
 					</item>
 					<item chance="25">
 						<item id="23310" count="1" /> <!-- Dion Pilsner - Event -->
@@ -2573,13 +2590,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="10">
-						<item id="22550" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) - Event -->
+						<item id="22550" count="1" /> <!-- Scroll: Enchant A-grade Weapon - Event -->
 					</item>
 					<item chance="23">
-						<item id="34001" count="1" /> <!-- High-grade Life Stone (R-grade) - Event -->
+						<item id="34001" count="1" /> <!-- High-grade R-grade Life Stone - Event -->
 					</item>
 					<item chance="37">
-						<item id="22551" count="1" /> <!-- Scroll: Enchant Armor (A-grade) - Event -->
+						<item id="22551" count="1" /> <!-- Scroll: Enchant A-grade Armor - Event -->
 					</item>
 					<item chance="30">
 						<item id="23311" count="1" /> <!-- Dwarven Royal Blue Cocktail - Event -->
@@ -2602,13 +2619,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="10">
-						<item id="17264" count="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) - Event -->
+						<item id="17264" count="1" /> <!-- Blessed Scroll: Enchant S-grade Armor - Event -->
 					</item>
 					<item chance="23">
-						<item id="34002" count="1" /> <!-- Top-grade Life Stone (R-grade) - Event -->
+						<item id="34002" count="1" /> <!-- Top-grade R-grade Life Stone - Event -->
 					</item>
 					<item chance="37">
-						<item id="22559" count="1" /> <!-- Scroll: Enchant Armor (S-grade) - Event -->
+						<item id="22559" count="1" /> <!-- Scroll: Enchant S-grade Armor - Event -->
 					</item>
 					<item chance="30">
 						<item id="23312" count="1" /> <!-- Aden White Beer - Event -->
@@ -2631,16 +2648,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="5">
-						<item id="22560" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) - Event -->
+						<item id="22560" count="1" /> <!-- Scroll: Enchant R-grade Weapon - Event -->
 					</item>
 					<item chance="12">
-						<item id="22561" count="1" /> <!-- Scroll: Enchant Armor (R-grade) - Event -->
+						<item id="22561" count="1" /> <!-- Scroll: Enchant R-grade Armor - Event -->
 					</item>
 					<item chance="20">
-						<item id="17263" count="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) - Event -->
+						<item id="17263" count="1" /> <!-- Blessed Scroll: Enchant S-grade Weapon - Event -->
 					</item>
 					<item chance="63">
-						<item id="22558" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) - Event -->
+						<item id="22558" count="1" /> <!-- Scroll: Enchant S-grade Weapon - Event -->
 					</item>
 				</items>
 			</effect>
@@ -2666,23 +2683,23 @@
 						<item id="6658" count="1" /> <!-- Baium's Ring -->
 					</item>
 					<item chance="31">
-						<item id="22302" count="1" /> <!-- Antharas' Earring - 3-day (Event) -->
+						<item id="22302" count="1" /> <!-- Antharas' Earring - 3-day / Event -->
 					</item>
 					<item chance="8.6">
-						<item id="22303" count="1" /> <!-- Antharas' Earring - 7-day (Event) -->
+						<item id="22303" count="1" /> <!-- Antharas' Earring - 7-day / Event -->
 					</item>
 					<item chance="42.893">
-						<item id="22304" count="1" /> <!-- Baium's Ring - 3-day (Event) -->
+						<item id="22304" count="1" /> <!-- Baium's Ring - 3-day / Event -->
 					</item>
 					<item chance="17.4">
-						<item id="22305" count="1" /> <!-- Baium's Ring - 7-day (Event) -->
+						<item id="22305" count="1" /> <!-- Baium's Ring - 7-day / Event -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="22695" toLevel="1" name="Harp's Sealed Rune of Power">
-		<!-- STR +7 permanently, and has a 5% chance of Stunning all enemies within 400 grids for 3 sec. during a standard attack. -->
+		<!-- STR +7 permanently, and has a 5% chance of Stunning all enemies within 400 grids for 3 sec. after a standard attack. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
 		<passiveConditions>

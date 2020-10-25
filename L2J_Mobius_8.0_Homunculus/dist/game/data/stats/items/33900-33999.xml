@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="33900" name="Immortal Circlet" additionalName="Robe (Event)" type="Armor">
-		<!-- Bestows a magic or recovery type set option. -->
+		<!-- Robe, can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -22,7 +22,7 @@
 		</stats>
 	</item>
 	<item id="33901" name="Immortal Tunic" additionalName="Robe (Event)" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Robe, can be enhanced by a blacksmith in any town. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, and decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -51,7 +51,7 @@
 		</stats>
 	</item>
 	<item id="33902" name="Immortal Stockings" additionalName="Robe (Event)" type="Armor">
-		<!-- Bestows a magic or recovery type set option. -->
+		<!-- Robe, can be enhanced by a Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t503_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -76,7 +76,7 @@
 		</stats>
 	</item>
 	<item id="33903" name="Immortal Gloves" additionalName="Robe (Event)" type="Armor">
-		<!-- Bestows a magic or recovery type set option. -->
+		<!-- Robe, can be enhanced by a Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t503_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -98,7 +98,7 @@
 		</stats>
 	</item>
 	<item id="33904" name="Immortal Shoes" additionalName="Robe (Event)" type="Armor">
-		<!-- Bestows a magic or recovery type set option. -->
+		<!-- Robe, can be enhanced by a Blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t503_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -142,7 +142,7 @@
 		</stats>
 	</item>
 	<item id="33906" name="Immortal Necklace" additionalName="Event" type="Armor">
-		<!-- Immortal Necklace. MP +53 effect. -->
+		<!-- Immortal Necklace. MP +53. -->
 		<set name="icon" val="icon.r1_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -162,7 +162,7 @@
 		</stats>
 	</item>
 	<item id="33907" name="Immortal Earring" additionalName="Event" type="Armor">
-		<!-- Immortal Earring. MP +40 effect. -->
+		<!-- Immortal Earring. MP +40. -->
 		<set name="icon" val="icon.r1_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -182,7 +182,7 @@
 		</stats>
 	</item>
 	<item id="33908" name="Immortal Ring" additionalName="Event" type="Armor">
-		<!-- Immortal Ring. MP +26 effect. -->
+		<!-- Immortal Ring. MP +26. -->
 		<set name="icon" val="icon.r1_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -202,7 +202,7 @@
 		</stats>
 	</item>
 	<item id="33909" name="Requiem Shaper" additionalName="Guidance (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -238,7 +238,7 @@
 		</stats>
 	</item>
 	<item id="33910" name="Requiem Shaper" additionalName="Haste (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Damage for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -274,7 +274,7 @@
 		</stats>
 	</item>
 	<item id="33911" name="Requiem Shaper" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Critical +82.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +82.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -310,7 +310,7 @@
 		</stats>
 	</item>
 	<item id="33912" name="Requiem Cutter" additionalName="Haste (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -345,7 +345,7 @@
 		</stats>
 	</item>
 	<item id="33913" name="Requiem Cutter" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -380,7 +380,7 @@
 		</stats>
 	</item>
 	<item id="33914" name="Requiem Cutter" additionalName="Health (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -415,7 +415,7 @@
 		</stats>
 	</item>
 	<item id="33915" name="Requiem Slasher" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -450,7 +450,7 @@
 		</stats>
 	</item>
 	<item id="33916" name="Requiem Slasher" additionalName="Damage Up (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -485,7 +485,7 @@
 		</stats>
 	</item>
 	<item id="33917" name="Requiem Slasher" additionalName="Haste (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -520,7 +520,7 @@
 		</stats>
 	</item>
 	<item id="33918" name="Requiem Avenger" additionalName="Haste (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Damage for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -556,7 +556,7 @@
 		</stats>
 	</item>
 	<item id="33919" name="Requiem Avenger" additionalName="Critical Damage (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 1108 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +1108 after a critical attack. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -592,7 +592,7 @@
 		</stats>
 	</item>
 	<item id="33920" name="Requiem Avenger" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -628,7 +628,7 @@
 		</stats>
 	</item>
 	<item id="33921" name="Requiem Fighter" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Critical +76.3. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. P. Critical Rate +76.3. Increases PvP Damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -664,7 +664,7 @@
 		</stats>
 	</item>
 	<item id="33922" name="Requiem Fighter" additionalName="Damage Up (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -700,7 +700,7 @@
 		</stats>
 	</item>
 	<item id="33923" name="Requiem Fighter" additionalName="Haste (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -736,7 +736,7 @@
 		</stats>
 	</item>
 	<item id="33924" name="Requiem Stormer" additionalName="HP Drain (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- <Soul Crystal Enhancement>. Absorbs 4% of the inflicted melee damage as HP. Inflicts additional PvP Damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -772,7 +772,7 @@
 		</stats>
 	</item>
 	<item id="33925" name="Requiem Stormer" additionalName="Guidance (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.6. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -808,7 +808,7 @@
 		</stats>
 	</item>
 	<item id="33926" name="Requiem Stormer" additionalName="Damage Up (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Inflicts additional PvP Damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -844,7 +844,7 @@
 		</stats>
 	</item>
 	<item id="33927" name="Requiem Thrower" additionalName="Damage Up (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -881,7 +881,7 @@
 		</stats>
 	</item>
 	<item id="33928" name="Requiem Thrower" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -955,7 +955,7 @@
 		</stats>
 	</item>
 	<item id="33930" name="Requiem Shooter" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -992,7 +992,7 @@
 		</stats>
 	</item>
 	<item id="33931" name="Requiem Shooter" additionalName="Critical Slow (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on the target after a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1030,7 +1030,7 @@
 		</stats>
 	</item>
 	<item id="33932" name="Requiem Shooter" additionalName="Haste (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1067,7 +1067,7 @@
 		</stats>
 	</item>
 	<item id="33933" name="Requiem Buster" additionalName="Acumen (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Casting Spd. +15%. Increases PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_kaynon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1103,7 +1103,7 @@
 		</stats>
 	</item>
 	<item id="33934" name="Requiem Buster" additionalName="Magic Hold (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target after magic use. Deals additional PvP damage. Has a certain chance to increase Casting Spd. when the character is attacked. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_kaynon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1140,7 +1140,7 @@
 		</stats>
 	</item>
 	<item id="33935" name="Requiem Buster" additionalName="Mana Up (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Max MP +30%. Increases PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. -->
 		<set name="icon" val="icon.weapon_kaynon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1176,7 +1176,7 @@
 		</stats>
 	</item>
 	<item id="33936" name="Requiem Caster" additionalName="Empower (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +296. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. M. Atk. +296. Increases PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_anatrian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1213,7 +1213,7 @@
 		</stats>
 	</item>
 	<item id="33937" name="Requiem Caster" additionalName="Acumen (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Casting Spd. +15%. Increases PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_anatrian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1250,7 +1250,7 @@
 		</stats>
 	</item>
 	<item id="33938" name="Requiem Caster" additionalName="Magic Hold (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. A 20% chance to inflict Dryad Root on the target after using M. skills. Increases PvP Damage. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.weapon_anatrian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1288,7 +1288,7 @@
 		</stats>
 	</item>
 	<item id="33939" name="Requiem Retributer" additionalName="MP Regeneration (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Increases MP Recovery Rate and PvP damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1326,7 +1326,7 @@
 		</stats>
 	</item>
 	<item id="33940" name="Requiem Retributer" additionalName="Acumen (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Casting Spd. +15%. Increases PvP Damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1364,7 +1364,7 @@
 		</stats>
 	</item>
 	<item id="33941" name="Requiem Retributer" additionalName="Empower (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +296. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. M. Atk. +296. Increases PvP Damage. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1402,7 +1402,7 @@
 		</stats>
 	</item>
 	<item id="33942" name="Requiem Dual Sword" additionalName="Haste (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Rate for standard attacks and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1437,7 +1437,7 @@
 		</stats>
 	</item>
 	<item id="33943" name="Requiem Dual Sword" additionalName="Damage Up (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1472,7 +1472,7 @@
 		</stats>
 	</item>
 	<item id="33944" name="Requiem Dual Sword" additionalName="Health (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases Critical Rate for standard attacks Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1507,7 +1507,7 @@
 		</stats>
 	</item>
 	<item id="33945" name="Requiem Dual Dagger" additionalName="Damage Up (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Deals additional PvP damage. When enchanted to +4, increases P. Atk. and Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1543,7 +1543,7 @@
 		</stats>
 	</item>
 	<item id="33946" name="Requiem Dual Dagger" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1579,7 +1579,7 @@
 		</stats>
 	</item>
 	<item id="33947" name="Requiem Dual Dagger" additionalName="Guidance (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1615,7 +1615,7 @@
 		</stats>
 	</item>
 	<item id="33948" name="Requiem Dual Blunt Weapon" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Skill Power. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1651,7 +1651,7 @@
 		</stats>
 	</item>
 	<item id="33949" name="Requiem Dual Blunt Weapon" additionalName="Guidance (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Skill Power. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1687,7 +1687,7 @@
 		</stats>
 	</item>
 	<item id="33950" name="Requiem Dual Blunt Weapon" additionalName="Damage Up (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases P. Skill Power. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. P. Atk. +288. Increases PvP Damage. When enchanted to +4, increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1743,7 +1743,7 @@
 		</stats>
 	</item>
 	<item id="33952" name="Immortal Breastplate" additionalName="Attack Type/ Heavy (Event)" type="Armor">
-		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
+		<!-- When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1880,7 +1880,7 @@
 		</stats>
 	</item>
 	<item id="33958" name="Immortal Leather Armor" additionalName="Assassin Type/ Light (Event)" type="Armor">
-		<!-- When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1995,7 +1995,7 @@
 		</stats>
 	</item>
 	<item id="33963" name="Immortal Tunic" additionalName="Magic Type/ Robe (Event)" type="Armor">
-		<!-- When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
+		<!-- When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2110,7 +2110,7 @@
 		</stats>
 	</item>
 	<item id="33968" name="Immortal Breastplate" additionalName="Defense Type/ Heavy (Event)" type="Armor">
-		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
+		<!-- When enchanted to +4, decreases received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2247,7 +2247,7 @@
 		</stats>
 	</item>
 	<item id="33974" name="Immortal Leather Armor" additionalName="Enchant Type/ Light (Event)" type="Armor">
-		<!-- When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2362,7 +2362,7 @@
 		</stats>
 	</item>
 	<item id="33979" name="Immortal Tunic" additionalName="Recovery Type/ Robe (Event)" type="Armor">
-		<!-- When enchanted to +4, increases M. Evasion and Resistance to Mental Attacks. -->
+		<!-- When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2457,7 +2457,7 @@
 		</stats>
 	</item>
 	<item id="33983" name="Lv. 5 Giant STR Dye" additionalName="STR +5/ DEX +1 (Event)" type="EtcItem">
-		<!-- Lv. 5 Giant STR Dye (Str +5 Dex -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- DEX +5, CON -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_str" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2471,7 +2471,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33984" name="Lv. 5 Giant DEX Dye" additionalName="DEX +5/ CON -1 (Event)" type="EtcItem">
-		<!-- Lv. 5 Giant DEX Dye (Dex +5 Con -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- CON +5, STR -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_dex" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2485,7 +2485,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33985" name="Lv. 5 Giant CON Dye" additionalName="CON +5/ STR -1 (Event)" type="EtcItem">
-		<!-- Lv. 5 Giant CON Dye (Con +5 Str -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- CON +5, STR -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_con" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2499,7 +2499,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33986" name="Lv. 5 Giant INT Dye" additionalName="INT +5/ WIT +1 (Event)" type="EtcItem">
-		<!-- Lv. 5 Giant INT Dye (Int +5 Wit -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- INT +5, WIT -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_int" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2513,7 +2513,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33987" name="Lv. 5 Giant WIT Dye" additionalName="Wit +5 Men -1 (Event)" type="EtcItem">
-		<!-- Lv. 5 Giant WIT Dye (Wit +5 Men -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- WIT +5, MEN -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_wit" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2527,7 +2527,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33988" name="Lv. 5 Giant MEN Dye" additionalName="MEN +5/ INT +1 (Event)" type="EtcItem">
-		<!-- Lv. 5 Giant MEN Dye (Men +5 Int -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- MEN +5, INT -1. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_1_dye_men" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2541,7 +2541,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33989" name="Lv. 5 Ancient STR Dye" additionalName="STR +5/ DEX -1/ Fire Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Ancient STR Dye (Str +5 Dex -1 Fire Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- STR +5, DEX -1, Fire Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_str" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2555,7 +2555,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33990" name="Lv. 5 Ancient DEX Dye" additionalName="DEX +5/ CON -1/ Earth Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Ancient DEX Dye (Dex +5 Con -1 Earth Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- DEX +5, CON -1, Earth Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_dex" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2569,7 +2569,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33991" name="Lv. 5 Ancient CON Dye" additionalName="CON +5/ STR -1/ Dark Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Ancient CON Dye (Con +5 Str -1 Dark Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- CON +5, STR -1, Dark Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_con" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2583,7 +2583,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33992" name="Lv. 5 Ancient INT Dye" additionalName="INT +5/ WIT -1/ Water Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Ancient INT Dye (Int +5 Wit -1 Water Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- INT +5, WIT -1, Water Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_int" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2597,7 +2597,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33993" name="Lv. 5 Ancient WIT Dye" additionalName="WIT +5/ MEN -1/ Wind Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Ancient WIT Dye (Wit +5 Men -1 Wind Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- WIT +5, MEN -1, Wind Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_wit" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2611,7 +2611,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33994" name="Lv. 5 Ancient MEN Dye" additionalName="MEN +5/ INT -1/ Holy Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Ancient MEN Dye (Men +5 Int -1 Holy Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- MEN +5, INT -1, Holy Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_2_dye_men" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2625,7 +2625,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33995" name="Lv. 5 Legendary STR Dye" additionalName="STR +5/ DEX +1/ Fire Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Legendary STR Dye (Str +5 Dex +1 Fire Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- STR +5, DEX +1, Fire Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_str" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2639,7 +2639,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33996" name="Lv. 5 Legendary DEX Dye" additionalName="DEX +5/ CON +1/ Earth Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Legendary DEX Dye (Dex +5 Con +1 Earth Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- DEX +5, CON +1, Earth Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_dex" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2653,7 +2653,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33997" name="Lv. 5 Legendary CON Dye" additionalName="CON +5/ STR +1/ Dark Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Legendary CON Dye (Con +5 Str +1 Dark Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- CON +5, STR +1, Dark Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_con" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2667,7 +2667,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33998" name="Lv. 5 Legendary INT Dye" additionalName="INT +5/ WIT +1/ Water Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Legendary INT Dye (Int +5 Wit +1 Water Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- INT +5, WIT +1, Water Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_int" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2681,7 +2681,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33999" name="Lv. 5 Legendary WIT Dye" additionalName="WIT +5/ MEN +1/ Wind Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Legendary WIT Dye (Wit +5 Men +1 Wind Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- WIT +5, MEN +1, Wind Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_wit" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />

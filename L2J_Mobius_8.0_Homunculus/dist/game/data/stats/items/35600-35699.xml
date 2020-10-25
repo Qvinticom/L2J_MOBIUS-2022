@@ -17,7 +17,7 @@
 		</stats>
 	</item>
 	<item id="35601" name="Water Royal Guard Ring" type="Armor">
-		<!-- Ring purchased at the Mysterious Mansion. Water Resistance +15, MP +23. Only one effect is applied when two rings with the same effect are equipped. -->
+		<!-- A ring purchased at the Mysterious Mansion. Water Resistance +15, MP +23. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -35,7 +35,7 @@
 		</stats>
 	</item>
 	<item id="35602" name="Earth Royal Guard Ring" type="Armor">
-		<!-- Ring purchased at the Mysterious Mansion. Earth Resistance +15, MP +23. Only one effect is applied when two rings with the same effect are equipped. -->
+		<!-- A ring purchased at the Mysterious Mansion. Earth Resistance +15, MP +23. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -53,7 +53,7 @@
 		</stats>
 	</item>
 	<item id="35603" name="Fire Royal Guard Ring" type="Armor">
-		<!-- Ring purchased at the Mysterious Mansion. Fire Resistance +15, MP +23. Only one effect is applied when two rings with the same effect are equipped. -->
+		<!-- A ring purchased at the Mysterious Mansion. Fire Resistance +15, MP +23. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -71,7 +71,7 @@
 		</stats>
 	</item>
 	<item id="35604" name="Holy Royal Guard Ring" type="Armor">
-		<!-- Ring purchased at the Mysterious Mansion. Holy Resistance +15, MP +23. Only one effect is applied when two rings with the same effect are equipped. -->
+		<!-- A ring purchased at the Mysterious Mansion. Holy Resistance +15, MP +23. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -89,7 +89,7 @@
 		</stats>
 	</item>
 	<item id="35605" name="Dark Royal Guard Ring" type="Armor">
-		<!-- Ring purchased at the Mysterious Mansion. Dark Resistance +15, MP +23. Only one effect is applied when two rings with the same effect are equipped. -->
+		<!-- A ring purchased at the Mysterious Mansion. Dark Resistance +15, MP +23. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -107,7 +107,7 @@
 		</stats>
 	</item>
 	<item id="35606" name="Wind Royal Guard Ring" type="Armor">
-		<!-- Ring purchased at the Mysterious Mansion. Wind Resistance +15, MP +23. Only one effect is applied when two rings with the same effect are equipped. -->
+		<!-- A ring purchased at the Mysterious Mansion. Wind Resistance +15, MP +23. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -125,7 +125,7 @@
 		</stats>
 	</item>
 	<item id="35607" name="Resistance Earring A" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Stun attack +15%, Bleed Resistance +15%, Water Resistance +8, MP +25. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Confusion Atk. Rate +15%, Infection Resistance +15%, Water Resistance +8. MP +25. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -143,7 +143,7 @@
 		</stats>
 	</item>
 	<item id="35608" name="Resistance Earring B" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Hold attack +15%, Poison Resistance +15%, Holy Resistance +8, MP +25. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Obstruction Atk. Rate +15%, Infection Resistance +15%, Holy Resistance +8. MP +25. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -161,7 +161,7 @@
 		</stats>
 	</item>
 	<item id="35609" name="Resistance Earring C" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Bleed attack +15%, Paralysis Resistance +15%, Wind Resistance +8, MP +25. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Infection Atk. Rate +15%, Confusion Resistance +15%, Wind Resistance +8. MP +25. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -179,7 +179,7 @@
 		</stats>
 	</item>
 	<item id="35610" name="Resistance Earring D" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Paralysis attack +15%, Hold Resistance +15%, Dark Resistance +8, MP +25. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Confusion Atk. Rate +15%, Obstruction Resistance +15%, Dark Resistance +8. MP +25. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -197,7 +197,7 @@
 		</stats>
 	</item>
 	<item id="35611" name="Resistance Earring E" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Mental attack +15%, Stun Resistance +15%, Earth Resistance +8, MP +25. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Confusion Atk. Rate/ Resistance +15%, Earth Resistance +8. MP +25. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -215,7 +215,7 @@
 		</stats>
 	</item>
 	<item id="35612" name="Resistance Earring F" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Sleep attack +15%, Stun Resistance +15%, Water Resistance +8, MP +25. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Stupor Atk. Rate +15%, Confusion Resistance +15%, Water Resistance +8. MP +25. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -233,7 +233,7 @@
 		</stats>
 	</item>
 	<item id="35613" name="Resistance Earring G" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Stun attack +15%, Sleep Resistance +15%, Fire Resistance +8, MP +25. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Confusion Atk. Rate +15%, Stupor Resistance +15%, Fire Resistance +8. MP +25. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -251,7 +251,7 @@
 		</stats>
 	</item>
 	<item id="35614" name="Resistance Earring H" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Poison attack +15%, Hold Resistance +15%, Fire Resistance +8, MP +25. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Infection Atk. Rate +15%, Obstruction Resistance +15%, Fire Resistance +8. MP +25. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -269,7 +269,7 @@
 		</stats>
 	</item>
 	<item id="35615" name="Resistance Earring I" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Mental Attack Resistance +15%, hold attack 15%, Wind Resistance +8, MP +25. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Confusion Atk. Rate +15%, Obstruction Resistance +15%, Wind Resistance +8. MP +25. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -287,7 +287,7 @@
 		</stats>
 	</item>
 	<item id="35616" name="Top-grade Resistance Earring - Stun" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Increases shock attack/ resistance by 20%. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Confusion Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -306,7 +306,7 @@
 		</stats>
 	</item>
 	<item id="35617" name="Top-grade Resistance Earring - Hold" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Increases hold attack/ resistance by 20%. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%, Obstruction Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -325,7 +325,7 @@
 		</stats>
 	</item>
 	<item id="35618" name="Top-grade Resistance Earring - Bleed" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Increases bleed attack/ resistance by 20%. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%, Infection Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -344,7 +344,7 @@
 		</stats>
 	</item>
 	<item id="35619" name="Top-grade Resistance Earring - Paralyze" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Increases paralysis attack/ resistance by 20%. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Confusion Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -363,7 +363,7 @@
 		</stats>
 	</item>
 	<item id="35620" name="Top-grade Resistance Earring - Mental Attack" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Increases Mental attack/ resistance by 20%. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Confusion Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -382,7 +382,7 @@
 		</stats>
 	</item>
 	<item id="35621" name="Top-grade Resistance Earring - Sleep" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Increases sleep attack/ resistance by 20%. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Stupor Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -401,7 +401,7 @@
 		</stats>
 	</item>
 	<item id="35622" name="Top-grade Resistance Earring - Poison" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Increases poison attack/ resistance by 20%. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%, Infection Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -420,7 +420,7 @@
 		</stats>
 	</item>
 	<item id="35623" name="Top-grade Resistance Earring - Knock Back/ Knock Down" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Increases Knock Back and Knock Down attack/ resistance by 20%. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Confusion Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -439,7 +439,7 @@
 		</stats>
 	</item>
 	<item id="35624" name="Top-grade Resistance Earring - Aerial Yoke" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Increases aerial yoke attack/ resistance by 20%. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. MP +46, CP +5%. Confusion Atk. Rate/ Resistance +20%. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -458,7 +458,7 @@
 		</stats>
 	</item>
 	<item id="35625" name="Royal Guard Earring A" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Stun attack +15%, Bleed Resistance +15%, Water Resistance +10. CP +5%, MP +35. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Infection Resistance+15%, Confusion Atk. Rate +15%, Water Resistance +10. CP +5%, MP +35. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -476,7 +476,7 @@
 		</stats>
 	</item>
 	<item id="35626" name="Royal Guard Earring B" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Hold attack +15%, Poison Resistance +15%, Holy Resistance +10. CP +5%, MP +35. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Infection Resistance+15%, Obstruction Atk. Rate +15%, Holy Resistance +10. CP +5%, MP +35. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -494,7 +494,7 @@
 		</stats>
 	</item>
 	<item id="35627" name="Royal Guard Earring C" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Bleed attack +15%, Paralysis Resistance +15%, Wind Resistance +10. CP +5%, MP +35. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Confusion Resistance +15%, Infection Atk. Rate +15%, Wind Resistance +10. CP +5%, Max MP +35. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -512,7 +512,7 @@
 		</stats>
 	</item>
 	<item id="35628" name="Royal Guard Earring D" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Paralysis attack +15%, Hold Resistance +15%, Dark Resistance +10. CP +5%, MP +35. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Obstruction Resistance +15%, Confusion Atk. Rate +15%, Dark Resistance +10. CP +5%, MP +35. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -530,7 +530,7 @@
 		</stats>
 	</item>
 	<item id="35629" name="Royal Guard Earring E" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Mental attack +15%, Stun Resistance +15%, Earth Resistance +10. CP +5%, MP +35. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Confusion Resistance/ Atk. Rate+15%, Wind Resistance +10. CP +5%, MP +35. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -548,7 +548,7 @@
 		</stats>
 	</item>
 	<item id="35630" name="Royal Guard Earring F" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Sleep attack +15%, Stun Resistance +15%, Water Resistance +10. CP +5%, MP +35. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Confusion Resistance +15%, Stupor Atk. Rate +15%, Water Resistance +10. CP +5%, MP +35. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -566,7 +566,7 @@
 		</stats>
 	</item>
 	<item id="35631" name="Royal Guard Earring G" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Stun attack +15%, Sleep Resistance +15%, Fire Resistance +10. CP +5%, MP +35. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Stupor Resistance +15%, Confusion Atk. Rate +15%, Fire Resistance +10. CP +5%, MP +35. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -584,7 +584,7 @@
 		</stats>
 	</item>
 	<item id="35632" name="Royal Guard Earring H" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Poison attack +15%, Hold Resistance +15%, Fire Resistance +10. CP +5%, MP +35. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Obstruction Resistance +15%, Infection Atk. Rate +15%, Fire Resistance +10. CP +5%, MP +35. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -602,7 +602,7 @@
 		</stats>
 	</item>
 	<item id="35633" name="Royal Guard Earring I" type="Armor">
-		<!-- Earring purchased at the Mysterious Mansion. Hold attack +15%, Mental Resistance +15%, Wind Resistance +10. CP +5%, MP +35. Only one effect is applied when two earrings with the same effect are equipped. -->
+		<!-- Earring purchased at the Mysterious Mansion. Confusion Resistance +15%, Obstruction Atk. Rate +15%, Wind Resistance +10. CP +5%, Max MP +35. The effect doesn't stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -820,7 +820,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="35641" name="Mysterious Supply Box - Magic Pin (B, C-grade)" type="EtcItem">
-		<!-- Box carved with mysterious symbols. Chance of acquiring a low grade magic pin that can be attached to a belt. -->
+		<!-- Box carved with mysterious symbols. Gives a certain chance to obtain Low-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -834,7 +834,7 @@
 		</skills>
 	</item>
 	<item id="35642" name="Mysterious Supply Box - Magic Pouch (B, C-grade)" type="EtcItem">
-		<!-- Box carved with mysterious symbols. Chance of acquiring a low grade magic pin that can be attached to a belt. -->
+		<!-- Box carved with mysterious symbols. Gives a certain chance to obtain Low-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -862,7 +862,7 @@
 		</skills>
 	</item>
 	<item id="35644" name="Mysterious Supply Box - Magic Pin (S, A-grade)" type="EtcItem">
-		<!-- Box carved with mysterious symbols. Chance of acquiring a high grade magic pin that can be attached to a belt. -->
+		<!-- Box carved with mysterious symbols. Gives a certain chance to obtain High-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -876,7 +876,7 @@
 		</skills>
 	</item>
 	<item id="35645" name="Mysterious Supply Box - Magic Pouch (S, A-grade)" type="EtcItem">
-		<!-- Box carved with mysterious symbols. Chance of acquiring a high grade magic pouch that can be attached to a belt. -->
+		<!-- Box carved with mysterious symbols. Gives a certain chance to obtain High-grade Magic Pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -904,7 +904,7 @@
 		</skills>
 	</item>
 	<item id="35647" name="Mysterious Supply Box - Magic Rune Clip (S, A-grade)" type="EtcItem">
-		<!-- Box carved with mysterious symbols. Chance of acquiring a high grade magic rune clip that can be attached to a belt. -->
+		<!-- Box carved with mysterious symbols. Gives a certain chance to obtain High-grade Magic Rune Clip that can be attached to a belt. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -918,7 +918,7 @@
 		</skills>
 	</item>
 	<item id="35648" name="Mysterious Supply Box - Magic Ornament (S, A-grade)" type="EtcItem">
-		<!-- Box carved with mysterious symbols. Chance of acquiring a high grade magic ornament that can be attached to a belt. -->
+		<!-- Box carved with mysterious symbols. Gives a certain chance to obtain High-grade Magic Ornament that can be attached to a belt. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -932,7 +932,7 @@
 		</skills>
 	</item>
 	<item id="35649" name="Sealed Talisman - Longing" type="EtcItem">
-		<!-- Can be used at level 85 or above. Double-click to acquire the Talisman - Longing. The acquired Talisman - Longing cannot be exchanged, dropped or sold in a private store. -->
+		<!-- Required level: 85+. Double-click to obtain Talisman of Longing. The acquired item cannot be exchanged, dropped, or sold in the private store. -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -942,7 +942,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34989" min="1" max="1" chance="100" /> <!-- Talisman - Longing -->
+			<item id="34989" min="1" max="1" chance="100" /> <!-- Talisman of Longing -->
 		</capsuled_items>
 	</item>
 	<item id="35650" name="Summon Scroll: Bratty Angma" type="EtcItem">
@@ -1277,7 +1277,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="35669" name="Angel Cat's Blessing" type="EtcItem">
-		<!-- For 60 min., P. Atk. +5%, M. Atk. by 20%, P. Def. by 5%, M. Def. by 5%, Atk. Spd. by 5%, Casting Spd. by 5%, Max HP/ MP by 5%, and XP and SP acquired through hunting by 30%. Cannot be used in the Olympiad. Cannot be applied along with event buffs such as Letter Collector's Gift. -->
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack +100, Skill MP Consumption -15%, acquired XP/ SP +50%. Cannot be used in the Olympiad. The effect does not stack with Art of Seduction and Pa'agrio's Blessing. The effect remains after death. -->
 		<set name="icon" val="icon.skilltransform4" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -2037,28 +2037,28 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35710" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak Box - 1-day (Event) -->
-			<item id="35720" min="1" max="1" chance="100" /> <!-- Santa Girl's Hat Box - 1-day (Event) -->
-			<item id="1461" min="1" max="1" chance="8.13" /> <!-- Crystal (A-grade) -->
-			<item id="1462" min="1" max="1" chance="4.91" /> <!-- Crystal (S-grade) -->
-			<item id="17371" min="1" max="1" chance="3.28" /> <!-- Crystal (R-grade) -->
-			<item id="17526" min="1" max="1" chance="0.01" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			<item id="17527" min="1" max="1" chance="0.1" /> <!-- Scroll: Enchant Armor (R-grade) -->
-			<item id="19447" min="1" max="1" chance="0.01" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-			<item id="19448" min="1" max="1" chance="0.01" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-			<item id="30360" min="1" max="1" chance="3.51" /> <!-- Superior Elixir of Life (R-grade) -->
-			<item id="30361" min="1" max="1" chance="3.27" /> <!-- Superior Elixir of Mind (R-grade) -->
-			<item id="30362" min="1" max="1" chance="8.78" /> <!-- Superior Elixir of CP (R-grade) -->
-			<item id="18566" min="1" max="1" chance="0.02" /> <!-- Top-grade Life Stone (R-grade) -->
-			<item id="18571" min="1" max="1" chance="0.01" /> <!-- Top-grade Life Stone (R95-grade) -->
-			<item id="18576" min="1" max="1" chance="0.01" /> <!-- Top-grade Life Stone (R99-grade) -->
+			<item id="35710" min="1" max="1" chance="100" /> <!-- Santa Girl's Cloak Box - 1-day / Event -->
+			<item id="35720" min="1" max="1" chance="100" /> <!-- Santa Girl's Hat Box - 1-day / Event -->
+			<item id="1461" min="1" max="1" chance="8.13" /> <!-- A-grade Crystal -->
+			<item id="1462" min="1" max="1" chance="4.91" /> <!-- S-grade Crystal -->
+			<item id="17371" min="1" max="1" chance="3.28" /> <!-- R-grade Crystal -->
+			<item id="17526" min="1" max="1" chance="0.01" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="17527" min="1" max="1" chance="0.1" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="0.01" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="19448" min="1" max="1" chance="0.01" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="30360" min="1" max="1" chance="3.51" /> <!-- Superior Elixir of Life -->
+			<item id="30361" min="1" max="1" chance="3.27" /> <!-- Superior Elixir of Mind -->
+			<item id="30362" min="1" max="1" chance="8.78" /> <!-- Superior Elixir of CP -->
+			<item id="18566" min="1" max="1" chance="0.02" /> <!-- Top-grade R-grade Life Stone -->
+			<item id="18571" min="1" max="1" chance="0.01" /> <!-- Top-grade R95-grade Life Stone -->
+			<item id="18576" min="1" max="1" chance="0.01" /> <!-- Top-grade R99-grade Life Stone -->
 			<item id="15439" min="1" max="1" chance="1.23" /> <!-- Scroll: 1,000 SP -->
 			<item id="17184" min="1" max="1" chance="0.25" /> <!-- Scroll: 5,000 SP -->
 			<item id="17185" min="1" max="1" chance="0.12" /> <!-- Scroll: 10,000 SP -->
-			<item id="1540" min="1" max="1" chance="50" /> <!-- Quick Healing Potion -->
-			<item id="14701" min="1" max="1" chance="14.66" /> <!-- Superior Quick Healing Potion -->
+			<item id="1540" min="1" max="1" chance="50" /> <!-- Quick HP Replenishing Potion -->
+			<item id="14701" min="1" max="1" chance="14.66" /> <!-- Superior Quick HP Replenishing Potion -->
 			<item id="3936" min="1" max="1" chance="0.09" /> <!-- Blessed Scroll of Resurrection -->
-			<item id="19440" min="1" max="1" chance="0.1" /> <!-- Gemstone (R-grade) -->
+			<item id="19440" min="1" max="1" chance="0.1" /> <!-- R-grade Gemstone -->
 			<item id="9546" min="1" max="1" chance="0.25" /> <!-- Fire Stone -->
 			<item id="9547" min="1" max="1" chance="0.25" /> <!-- Water Stone -->
 			<item id="9548" min="1" max="1" chance="0.25" /> <!-- Earth Stone -->

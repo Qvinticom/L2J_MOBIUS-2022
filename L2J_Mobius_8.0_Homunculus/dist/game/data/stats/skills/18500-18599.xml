@@ -43,40 +43,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.333333333333333">
-						<item id="46357" count="1" /> <!-- Blessed Virgo Agathion Pack - 30-day -->
+						<item id="46357" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46358" count="1" /> <!-- Blessed Capricorn Agathion Pack - 30-day -->
+						<item id="46358" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46359" count="1" /> <!-- Blessed Libra Agathion Pack - 30-day -->
+						<item id="46359" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46360" count="1" /> <!-- Blessed Aries Agathion Pack - 30-day -->
+						<item id="46360" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46361" count="1" /> <!-- Blessed Taurus Agathion Pack - 30-day -->
+						<item id="46361" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46362" count="1" /> <!-- Blessed Leo Agathion Pack - 30-day -->
+						<item id="46362" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46363" count="1" /> <!-- Blessed Gemini Agathion Pack - 30-day -->
+						<item id="46363" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46364" count="1" /> <!-- Blessed Scorpio Agathion Pack - 30-day -->
+						<item id="46364" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46365" count="1" /> <!-- Blessed Aquarius Agathion Pack - 30-day -->
+						<item id="46365" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46366" count="1" /> <!-- Blessed Pisces Agathion Pack - 30-day -->
+						<item id="46366" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46367" count="1" /> <!-- Blessed Sagittarius Agathion Pack - 30-day -->
+						<item id="46367" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 					<item chance="8.333333333333333">
-						<item id="46368" count="1" /> <!-- Blessed Cancer Agathion Pack - 30-day -->
+						<item id="46368" count="1" /> <!-- Superior Seed Bracelet Pack - 30-day -->
 					</item>
 				</items>
 			</effect>
@@ -140,19 +140,19 @@
 		<coolTime>500</coolTime>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
-		<hitTime>120000</hitTime>
+		<hitTime>60000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18515" toLevel="3" name="Weakened Defense">
-		<!-- P./M. Def. is decreased by Lvl 1 - 10%. -->
+		<!-- P./ M. Def. -10%. -->
+		<icon>icon.skill1042</icon>
 		<!-- P./M. Def. is decreased by Lvl 2 - 30%. -->
 		<!-- P./M. Def. is decreased by Lvl 3 - 50%. -->
-		<icon>icon.skill1042</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<operateType>A2</operateType>
-		<castRange>600</castRange>
+		<castRange>500</castRange>
 		<effectPoint>-692</effectPoint>
 		<isDebuff>true</isDebuff>
 		<targetType>TARGET</targetType>
@@ -175,19 +175,19 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>16571</skillId>
+				<skillId>16571</skillId> <!-- Weakened Defense -->
 				<skillLevel>1</skillLevel>
 			</effect>			
 		</effects>
 	</skill>
-	<skill id="18516" toLevel="1" name="Seal Altar of Wind">
+	<skill id="18516" toLevel="1" name="Seal Wind Altar">
 		<!-- The seal of the ruler is engraved on the ancient relic protecting the fort. -->
 		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
-		<hitTime>120000</hitTime>
+		<hitTime>60000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18517" toLevel="1" name="Top-grade Love Potion - Party">
@@ -266,7 +266,7 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="18531" toLevel="1" name="Rare Accessory Pack">
-		<!-- Double click to receive one of the following 7-day accessory chests: Blessed Antharas Earring/ Blessed Valakas Necklace/ Tauti's Ring/ Earth Wyrm Heart Ring/ Blessed Zaken's Earring. Cannot use in Olympiad. Will be deleted at the time of the scheduled server check on June 3, 2015. -->
+		<!-- Double-click to obtain one of the following 7-day accessories: Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm's Heart Ring, Blessed Zaken's Earring. Cannot be used in the Olympiad. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -291,7 +291,7 @@
 						<item id="37734" count="1" /> <!-- Tauti's Ring - 7-day -->
 					</item>
 					<item chance="20">
-						<item id="37735" count="1" /> <!-- Earth Wyrm Heart Ring - 7-day -->
+						<item id="37735" count="1" /> <!-- Earth Wyrm's Heart Ring - 7-day -->
 					</item>
 					<item chance="20">
 						<item id="37736" count="1" /> <!-- Blessed Zaken's Earring - 7-day -->
@@ -301,7 +301,7 @@
 		</effects>
 	</skill>
 	<skill id="18532" toLevel="1" name="Expertise Rune Pack">
-		<!-- Double click to receive one of the following: Expertise Rune Pack R, R95, or R99. Will be deleted at the time of the scheduled server check on June 3, 2015. -->
+		<!-- Double click to receive one of the following: Expertise Rune Pack R, R95, or R99. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -317,13 +317,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33.33333333333333">
-						<item id="38410" count="1" /> <!-- Expertise Rune Pack - R-grade -->
+						<item id="38410" count="1" /> <!-- Expertise Rune Pack - R -->
 					</item>
 					<item chance="33.33333333333333">
-						<item id="38412" count="1" /> <!-- Expertise Rune Pack - R95-grade -->
+						<item id="38412" count="1" /> <!-- Expertise Rune Pack - R95 -->
 					</item>
 					<item chance="33.33333333333333">
-						<item id="38414" count="1" /> <!-- Expertise Rune Pack - R99-grade -->
+						<item id="38414" count="1" /> <!-- Expertise Rune Pack - R99 -->
 					</item>
 				</items>
 			</effect>
@@ -409,7 +409,7 @@
 	<skill id="18552" toLevel="1" name="Freya's Shoes Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18553" toLevel="1" name="Leona's Reward Box (High-grade)">
+	<skill id="18553" toLevel="1" name="Leona's High-grade Reward Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18554" toLevel="1" name="Leona's Reward Box">
@@ -429,16 +429,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="5">
-						<item id="36554" count="1" /> <!-- Armor Fragment (High-grade) -->
+						<item id="36554" count="1" /> <!-- Corroded High-grade Armor Fragment -->
 					</item>
 					<item chance="10">
-						<item id="36553" count="1" /> <!-- Armor Fragment (Mid-grade) -->
+						<item id="36553" count="1" /> <!-- Corroded Mid-grade Armor Fragment -->
 					</item>
 					<item chance="5">
-						<item id="36549" count="1" /> <!-- Weapon Fragment (High-grade) -->
+						<item id="36549" count="1" /> <!-- Corroded High-grade Weapon Fragment -->
 					</item>
 					<item chance="10">
-						<item id="36548" count="1" /> <!-- Weapon Fragment (Mid-grade) -->
+						<item id="36548" count="1" /> <!-- Corroded Mid-grade Weapon Fragment -->
 					</item>
 					<item chance="10">
 						<item id="9555" count="1" /> <!-- Wind Crystal -->
@@ -459,16 +459,16 @@
 						<item id="9554" count="1" /> <!-- Earth Crystal -->
 					</item>
 					<item chance="4">
-						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="17527" count="1" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="3">
-						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="17526" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="2">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="1">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -478,8 +478,8 @@
 		<!-- An appearance stone that changes appearance to that of Blue Dynasty Armor. Can be used on upper and full-body costumes. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18557" toLevel="1" name="Red Zubei Armor Appearance Stone">
-		<!-- An appearance stone that changes appearance to that of Red Zubei Armor. Can be used on upper and full-body costumes. -->
+	<skill id="18557" toLevel="1" name="Red Zubei's Armor Appearance Stone">
+		<!-- Changes the armor appearance to that of Red Zubei. Can be used on upper and full-body costumes. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18558" toLevel="1" name="White Assassin Suit Appearance Stone">
@@ -492,10 +492,10 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="18559" toLevel="1" name="Entrance Pass: Nightmare Kamaloka">
+	<skill id="18559" toLevel="1" name="Extra Pass: Nightmare Kamaloka">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18560" toLevel="1" name="Entrance Pass: Embryo Command Post">
+	<skill id="18560" toLevel="1" name="Extra Pass: Embryo Command Post">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18561" toLevel="1" name="Assistant Roa's Gift">
@@ -503,7 +503,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18562" toLevel="1" name="Entrance Pass: Crystal Caverns">
+	<skill id="18562" toLevel="1" name="Extra Pass: Crystal Caverns">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18563" toLevel="5" name="Red Libra Supplies Lv. 1">
@@ -574,7 +574,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18565" toLevel="10" name="Tanzanite - Barrier">
+	<skill id="18565" toLevel="20" name="Tanzanite - Barrier">
 		<!-- Creates a barrier that absorbs $s2 damage for $s1 -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_tanzanite</value>
@@ -599,6 +599,16 @@
 			<value level="8">15</value>
 			<value level="9">15</value>
 			<value level="10">15</value>
+			<value level="11">15</value>
+			<value level="12">15</value>
+			<value level="13">15</value>
+			<value level="14">15</value>
+			<value level="15">15</value>
+			<value level="16">15</value>
+			<value level="17">15</value>
+			<value level="18">15</value>
+			<value level="19">15</value>
+			<value level="20">15</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<effectPoint>1000</effectPoint>
@@ -607,6 +617,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
+		<isMagic>22</isMagic>
 		<effects>
 			<effect name="AbsorbDamage">
 				<damage>
@@ -620,10 +631,23 @@
 					<value level="8">60000</value>
 					<value level="9">65000</value>
 					<value level="10">70000</value>
+					<value level="11">70000</value>
+					<value level="12">75000</value>
+					<value level="13">80000</value>
+					<value level="14">85000</value>
+					<value level="15">90000</value>
+					<value level="16">95000</value>
+					<value level="17">100000</value>
+					<value level="18">105000</value>
+					<value level="19">110000</value>
+					<value level="20">115000</value>
 				</damage>
 			</effect>
 			<effect name="HealPercent" fromLevel="6" toLevel="10">
 				<power>15</power>
+			</effect>
+			<effect name="HealPercent" fromLevel="11" toLevel="20">
+				<power>20</power>
 			</effect>
 		</effects>
 	</skill>
@@ -655,6 +679,16 @@
 					<value level="8">30</value>
 					<value level="9">30</value>
 					<value level="10">30</value>
+					<value level="11">35</value>
+					<value level="12">35</value>
+					<value level="13">35</value>
+					<value level="14">35</value>
+					<value level="15">35</value>
+					<value level="16">35</value>
+					<value level="17">35</value>
+					<value level="18">35</value>
+					<value level="19">35</value>
+					<value level="20">35</value>
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
@@ -665,6 +699,16 @@
 					<value level="8">6</value>
 					<value level="9">9</value>
 					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">16</value>
+					<value level="13">17</value>
+					<value level="14">18</value>
+					<value level="15">20</value>
+					<value level="16">21</value>
+					<value level="17">22</value>
+					<value level="18">23</value>
+					<value level="19">24</value>
+					<value level="20">25</value>
 				</amount>
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="10">
@@ -681,10 +725,24 @@
 				<skillId>18721</skillId> <!-- Greater Garnet - Cancel Stun/ Silence -->
 				<skillLevel>1</skillLevel>
 			</effect>
+			<effect name="TriggerSkillByDamage" fromLevel="11" toLevel="20">
+				<!-- Superior Garnet - Cancel Stun -->
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>18721</skillId> <!-- Greater Garnet - Cancel Stun/ Silence -->
+				<skillLevel>2</skillLevel>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="18567" toLevel="2" name="Garnet - Purge">
-		<!-- Cancel all debuffs. -->
+	<skill id="18567" toLevel="3" name="Garnet - Purge">
+		<!-- Removes all debuffs. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_garnet</value>
 			<value level="2">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
@@ -698,10 +756,7 @@
 			<value level="1">2</value>
 			<value level="2">3</value>
 		</abnormalLevel>
-		<abnormalTime>
-			<value level="1">1</value>
-			<value level="2">7</value>
-		</abnormalTime>
+		<abnormalTime>7</abnormalTime>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
@@ -713,17 +768,18 @@
 				<dispel>
 					<value level="1">SKILL_IGNORE,9</value>
 					<value level="2">ABNORMAL_INVINCIBILITY,9</value>
+					<value level="3">ABNORMAL_INVINCIBILITY,9</value>
 				</dispel>
 			</effect>
-			<effect name="DispelByCategory" fromLevel="1" toLevel="2">
+			<effect name="DispelByCategory" fromLevel="1" toLevel="3">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
 				<max>10</max>
 			</effect>
-			<effect name="DebuffBlock" fromLevel="2" toLevel="2" />
+			<effect name="DebuffBlock" fromLevel="2" toLevel="3" />
 		</effects>
 	</skill>
-	<skill id="18568" toLevel="10" name="Vital Stone">
+	<skill id="18568" toLevel="20" name="Vital Stone">
 		<!-- Vitality Bonus +$s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_vital</value>
@@ -744,15 +800,24 @@
 					<value level="1">3</value>
 					<value level="2">6</value>
 					<value level="3">12</value>
-					<value level="4">20</value>
-					<value level="5">30</value>
-					<value level="6">30</value>
-					<value level="7">32</value>
-					<value level="8">34</value>
-					<value level="9">36</value>
-					<value level="10">40</value>
+					<value level="4">25</value>
+					<value level="5">50</value>
+					<value level="6">50</value>
+					<value level="7">52</value>
+					<value level="8">54</value>
+					<value level="9">56</value>
+					<value level="10">60</value>
+					<value level="11">61</value>
+					<value level="12">62</value>
+					<value level="13">63</value>
+					<value level="14">64</value>
+					<value level="15">65</value>
+					<value level="16">66</value>
+					<value level="17">67</value>
+					<value level="18">68</value>
+					<value level="19">69</value>
+					<value level="20">70</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="VitalityPointsRate">
 				<amount>
@@ -766,6 +831,16 @@
 					<value level="8">-17</value>
 					<value level="9">-18</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-20</value>
+					<value level="16">-20</value>
+					<value level="17">-20</value>
+					<value level="18">-20</value>
+					<value level="19">-20</value>
+					<value level="20">-20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -781,6 +856,16 @@
 					<value level="8">10</value>
 					<value level="9">10</value>
 					<value level="10">10</value>
+					<value level="11">15</value>
+					<value level="12">15</value>
+					<value level="13">15</value>
+					<value level="14">15</value>
+					<value level="15">15</value>
+					<value level="16">15</value>
+					<value level="17">15</value>
+					<value level="18">15</value>
+					<value level="19">15</value>
+					<value level="20">15</value>
 				</amount>
 			</effect>
 		</effects>
@@ -791,7 +876,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18570" toLevel="1" name="Scroll: Energy of Harmony">
-		<!-- Increases XP and SP acquisition by 50% for 30 min. -->
+		<!-- Increases XP and SP acquisition by $s2 for $s1 min. -->
 		<icon>icon.etc_london_olympic_scroll_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -866,7 +951,7 @@
 		</effects>
 	</skill>
 	<skill id="18575" toLevel="1" name="Hunting Cry I">
-		<!-- P. Atk. +5%, M. Atk. +5%, P. Critical Rate +20, M. Critical Rate +20, Bow/ Crossbow Range +100. -->
+		<!-- P. Atk. +5%, M. Atk. +5%, Critical Rate for standard attacks +20, M. Skill Critical Rate +20, Bow/ crossbow attack range +100. -->
 		<icon>icon.skill18575</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -918,7 +1003,7 @@
 		</effects>
 	</skill>
 	<skill id="18577" toLevel="1" name="Roar of the Battlefield">
-		<!-- PvP Damage Received -5%, Debuff Resistance +10%. -->
+		<!-- Received PvP Damage -5%, Debuff Resistance +10%. -->
 		<icon>icon.skill18577</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -945,14 +1030,14 @@
 		<icon>icon.skill18578</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="18579" toLevel="1" name="Entrance Pass: Embryo Command Post">
+	<skill id="18579" toLevel="1" name="Extra Pass: Embryo Command Post">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18580" toLevel="1" name="Entrance Pass: Nightmare Kamaloka">
+	<skill id="18580" toLevel="1" name="Extra Pass: Nightmare Kamaloka">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18581" toLevel="1" name="Pa'agrio's Blessing">
-		<!-- Receives the following effects for 30 min.: increased Maximum HP/ MP/ CP by 10%, Attack by 20%, M. Atk. by 30%, P. Defense/ M. Def. by 10%, P. Accuracy by 4, M. Accuracy by 4, Atk. Spd./ Casting Spd. by 10%, Speed by 10, Attack attribute by 100 with decreased MP consumption by skills by 10%. This buff remains effective even when you're dead. -->
+	<skill id="18581" toLevel="1" name="Power of Pa'agrio">
+		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attribute Attack +100, Skill MP Consumption -10%. The effect remains after death. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1076,7 +1161,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18593" toLevel="1" name="Mentor's Harmony">
-		<!-- With your mentor's help, increases your P. Atk. by 22%, M. Atk. by 40%, P. Def. +45%, M. Def. +15%, P./M. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. +10%, Casting Spd. by 15%, Shield Defense Rate +30%, Shield Defense +22%0, and decreases Skill Cooldown by 22%1, and all Skill MP Consumption by 22%2. Buff is triggered only when your mentor is online. Buff persists for 5 min after your mentor goes offline. -->
+		<!-- With your mentor's help, your P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, P./ M. Critical Rate +$s5, Critical Damage for standard attacks +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, Shield Defense Rate +$s9, Shield Defense +$s10, Skill Cooldown -$s11, and Skill MP Consumption -$s12. Buff is triggered only when your mentor is online. Buff persists for 5 min after your mentor has gone offline. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>-1</abnormalTime>
@@ -1234,7 +1319,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="18597" toLevel="6" name="Paulina's Equipment Set (D-grade)">
+	<skill id="18597" toLevel="7" name="Paulina's D-grade Equipment Set">
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>

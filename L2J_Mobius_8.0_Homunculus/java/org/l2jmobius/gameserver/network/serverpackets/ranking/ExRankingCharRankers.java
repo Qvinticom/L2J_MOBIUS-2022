@@ -33,11 +33,9 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExRankingCharRankers implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
-	
-	private final int _race;
 	private final int _group;
 	private final int _scope;
-	
+	private final int _race;
 	private final Map<Integer, StatSet> _playerList;
 	private final Map<Integer, StatSet> _snapshotList;
 	
@@ -59,6 +57,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 		packet.writeC(_group);
 		packet.writeC(_scope);
 		packet.writeD(_race);
+		packet.writeD(_player.getClassId().getId());
 		
 		if (_playerList.size() > 0)
 		{
@@ -89,12 +88,14 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									{
 										packet.writeD(id2); // server rank snapshot
 										packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+										packet.writeD(0); // TODO: nClassRank_Snapshot
 									}
 								}
 							}
 							else
 							{
 								packet.writeD(id);
+								packet.writeD(0);
 								packet.writeD(0);
 							}
 						}
@@ -137,6 +138,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 											{
 												packet.writeD(id3); // server rank snapshot
 												packet.writeD(snapshot.getInt("raceRank", 0));
+												packet.writeD(0); // TODO: nClassRank_Snapshot
 											}
 										}
 									}
@@ -197,6 +199,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 										{
 											packet.writeD(id2); // server rank snapshot
 											packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+											packet.writeD(0); // TODO: nClassRank_Snapshot
 										}
 									}
 								}
@@ -204,6 +207,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								{
 									packet.writeD(i);
 									packet.writeD(i);
+									packet.writeD(i); // TODO: Check this. nClassRank_Snapshot?
 								}
 								i++;
 							}
@@ -252,6 +256,7 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									packet.writeD(id2); // server rank
 									packet.writeD(id2);
 									packet.writeD(id2);
+									packet.writeD(id2); // TODO: Check this. nClassRank_Snapshot?
 								}
 							}
 						}
@@ -298,12 +303,14 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 									{
 										packet.writeD(id2); // server rank snapshot
 										packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+										packet.writeD(0); // TODO: nClassRank_Snapshot
 									}
 								}
 							}
 							else
 							{
 								packet.writeD(id);
+								packet.writeD(0);
 								packet.writeD(0);
 							}
 						}
@@ -356,12 +363,14 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 										{
 											packet.writeD(id2); // server rank snapshot
 											packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+											packet.writeD(0); // TODO: nClassRank_Snapshot
 										}
 									}
 								}
 								else
 								{
 									packet.writeD(id);
+									packet.writeD(0);
 									packet.writeD(0);
 								}
 							}
@@ -393,11 +402,13 @@ public class ExRankingCharRankers implements IClientOutgoingPacket
 								{
 									packet.writeD(id); // server rank snapshot
 									packet.writeD(snapshot.getInt("raceRank", 0)); // race rank snapshot
+									packet.writeD(0); // TODO: nClassRank_Snapshot
 								}
 							}
 						}
 						else
 						{
+							packet.writeD(0);
 							packet.writeD(0);
 							packet.writeD(0);
 						}

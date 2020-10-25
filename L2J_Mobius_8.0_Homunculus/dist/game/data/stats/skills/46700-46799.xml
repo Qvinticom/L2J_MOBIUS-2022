@@ -18,13 +18,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46716" toLevel="2" name="Pa'agrio - Reliable Hit">
+	<skill id="46716" toLevel="1" name="Pa'agrio - Reliable Hit">
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
 		<effectPoint>-1000</effectPoint>
 	</skill>
-	<skill id="46717" toLevel="1" name="Equip Gran Kain's Necklace - Necklace Stage 1">
+	<skill id="46717" toLevel="1" name="Equip Gran Kain's Necklace Lv. 1">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -40,7 +40,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46718" toLevel="1" name="Unequip Gran Kain's Necklace - Necklace Stage 1">
+	<skill id="46718" toLevel="1" name="Unequip Gran Kain's Necklace Lv. 1">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<operateType>A1</operateType>
@@ -55,7 +55,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46719" toLevel="1" name="Equip Pa'agrio's Earring - Earring Stage 1">
+	<skill id="46719" toLevel="1" name="Equip Pa'agrio's Earring Lv. 1">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -71,7 +71,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46720" toLevel="1" name="Unequip Pa'agrio's Earring - Earring Stage 1">
+	<skill id="46720" toLevel="1" name="Unequip Pa'agrio's Earring Lv. 1">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<operateType>A1</operateType>
@@ -86,7 +86,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46721" toLevel="1" name="Equip Sayha's Ring - Ring Stage 1">
+	<skill id="46721" toLevel="1" name="Equip Sayha's Ring Lv. 1">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -102,7 +102,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46722" toLevel="1" name="Unequip Sayha's Ring - Ring Stage 1">
+	<skill id="46722" toLevel="1" name="Unequip Sayha's Ring Lv. 1">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<operateType>A1</operateType>
@@ -117,7 +117,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46723" toLevel="1" name="Equip Gran Kain's Necklace - Necklace Stage 2">
+	<skill id="46723" toLevel="1" name="Equip Gran Kain's Necklace Lv. 2">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -133,7 +133,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46724" toLevel="1" name="Unequip Gran Kain's Necklace - Necklace Stage 2">
+	<skill id="46724" toLevel="1" name="Unequip Gran Kain's Necklace Lv. 2">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<operateType>A1</operateType>
@@ -148,7 +148,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46725" toLevel="1" name="Equip Pa'agrio's Earring - Earring Stage 2">
+	<skill id="46725" toLevel="1" name="Equip Pa'agrio's Earring Lv. 2">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -164,7 +164,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46726" toLevel="1" name="Unequip Pa'agrio's Earring - Earring Stage 2">
+	<skill id="46726" toLevel="1" name="Unequip Pa'agrio's Earring Lv. 2">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<operateType>A1</operateType>
@@ -179,7 +179,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46727" toLevel="1" name="Equip Sayha's Ring - Ring Stage 2">
+	<skill id="46727" toLevel="1" name="Equip Sayha's Ring Lv. 2">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -195,7 +195,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46728" toLevel="1" name="Unequip Sayha's Ring - Ring Stage 2">
+	<skill id="46728" toLevel="1" name="Unequip Sayha's Ring Lv. 2">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<operateType>A1</operateType>
@@ -210,7 +210,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46729" toLevel="1" name="Equip Gran Kain's Necklace - Necklace Stage 3">
+	<skill id="46729" toLevel="1" name="Equip Gran Kain's Necklace Lv. 3">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -226,7 +226,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46730" toLevel="1" name="Unequip Gran Kain's Necklace - Necklace Stage 3">
+	<skill id="46730" toLevel="1" name="Unequip Gran Kain's Necklace Lv. 3">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<operateType>A1</operateType>
@@ -241,7 +241,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46731" toLevel="1" name="Equip Pa'agrio's Earring - Earring Stage 3">
+	<skill id="46731" toLevel="1" name="Equip Pa'agrio's Earring Lv. 3">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -257,7 +257,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46732" toLevel="1" name="Unequip Pa'agrio's Earring - Earring Stage 3">
+	<skill id="46732" toLevel="1" name="Unequip Pa'agrio's Earring Lv. 3">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<operateType>A1</operateType>
@@ -272,7 +272,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46733" toLevel="1" name="Equip Sayha's Ring - Ring Stage 3">
+	<skill id="46733" toLevel="1" name="Equip Sayha's Ring Lv. 3">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -288,7 +288,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46734" toLevel="1" name="Unequip Sayha's Ring - Ring Stage 3">
+	<skill id="46734" toLevel="1" name="Unequip Sayha's Ring Lv. 3">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<operateType>A1</operateType>
@@ -303,7 +303,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46735" toLevel="1" name="Equip Einhasad's Necklace - Necklace Stage 1">
+	<skill id="46735" toLevel="1" name="Equip Einhasad's Necklace Lv. 1">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -319,7 +319,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46736" toLevel="1" name="Unequip Einhasad's Necklace - Necklace Stage 1">
+	<skill id="46736" toLevel="1" name="Unequip Einhasad's Necklace Lv. 1">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>A1</operateType>
@@ -334,7 +334,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46737" toLevel="1" name="Equip Eva's Earring - Earring Stage 1">
+	<skill id="46737" toLevel="1" name="Equip Eva's Earring Lv. 1">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -350,7 +350,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46738" toLevel="1" name="Unequip Eva's Earring - Earring Stage 1">
+	<skill id="46738" toLevel="1" name="Unequip Eva's Earring Lv. 1">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<operateType>A1</operateType>
@@ -365,7 +365,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46739" toLevel="1" name="Equip Maphr's Ring - Ring Stage 1">
+	<skill id="46739" toLevel="1" name="Equip Maphr's Ring Lv. 1">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -381,7 +381,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46740" toLevel="1" name="Unequip Maphr's Ring - Ring Stage 1">
+	<skill id="46740" toLevel="1" name="Unequip Maphr's Ring Lv. 1">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<operateType>A1</operateType>
@@ -396,7 +396,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46741" toLevel="1" name="Equip Einhasad's Necklace - Necklace Stage 2">
+	<skill id="46741" toLevel="1" name="Equip Einhasad's Necklace Lv. 2">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -412,7 +412,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46742" toLevel="1" name="Unequip Einhasad's Necklace - Necklace Stage 2">
+	<skill id="46742" toLevel="1" name="Unequip Einhasad's Necklace Lv. 2">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>A1</operateType>
@@ -427,7 +427,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46743" toLevel="1" name="Equip Eva's Earring - Earring Stage 2">
+	<skill id="46743" toLevel="1" name="Equip Eva's Earring Lv. 2">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -443,7 +443,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46744" toLevel="1" name="Unequip Eva's Earring - Earring Stage 2">
+	<skill id="46744" toLevel="1" name="Unequip Eva's Earring Lv. 2">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<operateType>A1</operateType>
@@ -458,7 +458,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46745" toLevel="1" name="Equip Maphr's Ring - Ring Stage 2">
+	<skill id="46745" toLevel="1" name="Equip Maphr's Ring Lv. 2">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -474,7 +474,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46746" toLevel="1" name="Unequip Maphr's Ring - Ring Stage 2">
+	<skill id="46746" toLevel="1" name="Unequip Maphr's Ring Lv. 2">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<operateType>A1</operateType>
@@ -489,7 +489,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46747" toLevel="1" name="Equip Einhasad's Necklace - Necklace Stage 3">
+	<skill id="46747" toLevel="1" name="Equip Einhasad's Necklace Lv. 3">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -505,7 +505,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46748" toLevel="1" name="Unequip Einhasad's Necklace - Necklace Stage 3">
+	<skill id="46748" toLevel="1" name="Unequip Einhasad's Necklace Lv. 3">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>A1</operateType>
@@ -520,7 +520,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46749" toLevel="1" name="Equip Eva's Earring - Earring Stage 3">
+	<skill id="46749" toLevel="1" name="Equip Eva's Earring Lv. 3">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -536,7 +536,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46750" toLevel="1" name="Unequip Eva's Earring - Earring Stage 3">
+	<skill id="46750" toLevel="1" name="Unequip Eva's Earring Lv. 3">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<operateType>A1</operateType>
@@ -551,7 +551,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46751" toLevel="1" name="Equip Maphr's Ring - Ring Stage 3">
+	<skill id="46751" toLevel="1" name="Equip Maphr's Ring Lv. 3">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -567,7 +567,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46752" toLevel="1" name="Unequip Maphr's Ring - Ring Stage 3">
+	<skill id="46752" toLevel="1" name="Unequip Maphr's Ring Lv. 3">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<operateType>A1</operateType>
@@ -582,7 +582,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46753" toLevel="1" name="Equip Shilen's Necklace - Stage 1">
+	<skill id="46753" toLevel="1" name="Equip Shillien's Necklace Lv. 1">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -598,7 +598,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46754" toLevel="1" name="Unequip Shilen's Necklace - Stage 1">
+	<skill id="46754" toLevel="1" name="Unequip Shillien's Necklace Lv. 1">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>A1</operateType>
@@ -613,7 +613,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46755" toLevel="1" name="Equip Shilen's Earring - Stage 1">
+	<skill id="46755" toLevel="1" name="Equip Shillien's Earring Lv. 1">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -629,7 +629,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46756" toLevel="1" name="Unequip Shilen's Earring - Stage 1">
+	<skill id="46756" toLevel="1" name="Unequip Shillien's Earring Lv. 1">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<operateType>A1</operateType>
@@ -644,7 +644,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46757" toLevel="1" name="Equip Shilen's Ring - Stage 1">
+	<skill id="46757" toLevel="1" name="Equip Shillien's Ring Lv. 1">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_shilen_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -660,7 +660,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46758" toLevel="1" name="Unequip Shilen's Ring - Stage 1">
+	<skill id="46758" toLevel="1" name="Unequip Shillien's Ring Lv. 1">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_shilen_i00</icon>
 		<operateType>A1</operateType>
@@ -675,7 +675,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46759" toLevel="1" name="Equip Gran Kain's Necklace - Necklace Stage 4">
+	<skill id="46759" toLevel="1" name="Equip Gran Kain's Necklace Lv. 4">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
@@ -691,7 +691,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46760" toLevel="1" name="Unequip Gran Kain's Necklace - Necklace Stage 4">
+	<skill id="46760" toLevel="1" name="Unequip Gran Kain's Necklace Lv. 4">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<operateType>A1</operateType>
@@ -706,7 +706,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46761" toLevel="1" name="Equip Pa'agrio's Earring - Earring Stage 4">
+	<skill id="46761" toLevel="1" name="Equip Pa'agrio's Earring Lv. 4">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
@@ -722,7 +722,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46762" toLevel="1" name="Unequip Pa'agrio's Earring - Earring Stage 4">
+	<skill id="46762" toLevel="1" name="Unequip Pa'agrio's Earring Lv. 4">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<operateType>A1</operateType>
@@ -737,7 +737,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46763" toLevel="1" name="Equip Sayha's Ring - Ring Stage 4">
+	<skill id="46763" toLevel="1" name="Equip Sayha's Ring Lv. 4">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
@@ -753,7 +753,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46764" toLevel="1" name="Unequip Sayha's Ring - Ring Stage 4">
+	<skill id="46764" toLevel="1" name="Unequip Sayha's Ring Lv. 4">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<operateType>A1</operateType>
@@ -768,7 +768,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46765" toLevel="1" name="Equip Gran Kain's Necklace - Necklace Stage 5">
+	<skill id="46765" toLevel="1" name="Equip Gran Kain's Necklace Lv. 5">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -784,7 +784,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46766" toLevel="1" name="Unequip Gran Kain's Necklace - Necklace Stage 5">
+	<skill id="46766" toLevel="1" name="Unequip Gran Kain's Necklace Lv. 5">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<operateType>A1</operateType>
@@ -799,7 +799,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46767" toLevel="1" name="Equip Pa'agrio's Earring - Earring Stage 5">
+	<skill id="46767" toLevel="1" name="Equip Pa'agrio's Earring Lv. 5">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -815,7 +815,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46768" toLevel="1" name="Unequip Pa'agrio's Earring - Earring Stage 5">
+	<skill id="46768" toLevel="1" name="Unequip Pa'agrio's Earring Lv. 5">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<operateType>A1</operateType>
@@ -830,7 +830,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46769" toLevel="1" name="Equip Sayha's Ring - Ring Stage 5">
+	<skill id="46769" toLevel="1" name="Equip Sayha's Ring Lv. 5">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -846,7 +846,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46770" toLevel="1" name="Unequip Sayha's Ring - Ring Stage 5">
+	<skill id="46770" toLevel="1" name="Unequip Sayha's Ring Lv. 5">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<operateType>A1</operateType>
@@ -861,7 +861,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46771" toLevel="1" name="Equip Gran Kain's Necklace - Necklace Stage 6">
+	<skill id="46771" toLevel="1" name="Equip Gran Kain's Necklace Lv. 6">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<abnormalLevel>6</abnormalLevel>
@@ -877,7 +877,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46772" toLevel="1" name="Unequip Gran Kain's Necklace - Necklace Stage 6">
+	<skill id="46772" toLevel="1" name="Unequip Gran Kain's Necklace Lv. 6">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<operateType>A1</operateType>
@@ -892,7 +892,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46773" toLevel="1" name="Equip Pa'agrio's Earring - Earring Stage 6">
+	<skill id="46773" toLevel="1" name="Equip Pa'agrio's Earring Lv. 6">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<abnormalLevel>6</abnormalLevel>
@@ -908,7 +908,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46774" toLevel="1" name="Unequip Pa'agrio's Earring - Earring Stage 6">
+	<skill id="46774" toLevel="1" name="Unequip Pa'agrio's Earring Lv. 6">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<operateType>A1</operateType>
@@ -923,7 +923,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46775" toLevel="1" name="Equip Sayha's Ring - Ring Stage 6">
+	<skill id="46775" toLevel="1" name="Equip Sayha's Ring Lv. 6">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<abnormalLevel>6</abnormalLevel>
@@ -939,7 +939,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46776" toLevel="1" name="Unequip Sayha's Ring - Ring Stage 6">
+	<skill id="46776" toLevel="1" name="Unequip Sayha's Ring Lv. 6">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<operateType>A1</operateType>
@@ -954,7 +954,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46777" toLevel="1" name="Equip Einhasad's Necklace - Necklace Stage 4">
+	<skill id="46777" toLevel="1" name="Equip Einhasad's Necklace Lv. 4">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
@@ -970,7 +970,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46778" toLevel="1" name="Unequip Einhasad's Necklace - Necklace Stage 4">
+	<skill id="46778" toLevel="1" name="Unequip Einhasad's Necklace Lv. 4">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>A1</operateType>
@@ -985,7 +985,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46779" toLevel="1" name="Equip Eva's Earring - Earring Stage 4">
+	<skill id="46779" toLevel="1" name="Equip Eva's Earring Lv. 4">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
@@ -1001,7 +1001,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46780" toLevel="1" name="Unequip Eva's Earring - Earring Stage 4">
+	<skill id="46780" toLevel="1" name="Unequip Eva's Earring Lv. 4">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<operateType>A1</operateType>
@@ -1016,7 +1016,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46781" toLevel="1" name="Equip Maphr's Ring - Ring Stage 4">
+	<skill id="46781" toLevel="1" name="Equip Maphr's Ring Lv. 4">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
@@ -1032,7 +1032,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46782" toLevel="1" name="Unequip Maphr's Ring - Ring Stage 4">
+	<skill id="46782" toLevel="1" name="Unequip Maphr's Ring Lv. 4">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<operateType>A1</operateType>
@@ -1047,7 +1047,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46783" toLevel="1" name="Equip Einhasad's Necklace - Necklace Stage 5">
+	<skill id="46783" toLevel="1" name="Equip Einhasad's Necklace Lv. 5">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -1063,7 +1063,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46784" toLevel="1" name="Unequip Einhasad's Necklace - Necklace Stage 5">
+	<skill id="46784" toLevel="1" name="Unequip Einhasad's Necklace Lv. 5">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>A1</operateType>
@@ -1078,7 +1078,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46785" toLevel="1" name="Equip Eva's Earring - Earring Stage 5">
+	<skill id="46785" toLevel="1" name="Equip Eva's Earring Lv. 5">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -1094,7 +1094,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46786" toLevel="1" name="Unequip Eva's Earring - Earring Stage 5">
+	<skill id="46786" toLevel="1" name="Unequip Eva's Earring Lv. 5">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<operateType>A1</operateType>
@@ -1109,7 +1109,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46787" toLevel="1" name="Equip Maphr's Ring - Ring Stage 5">
+	<skill id="46787" toLevel="1" name="Equip Maphr's Ring Lv. 5">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -1125,7 +1125,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46788" toLevel="1" name="Unequip Maphr's Ring - Ring Stage 5">
+	<skill id="46788" toLevel="1" name="Unequip Maphr's Ring Lv. 5">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<operateType>A1</operateType>
@@ -1140,7 +1140,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46789" toLevel="1" name="Equip Einhasad's Necklace - Necklace Stage 6">
+	<skill id="46789" toLevel="1" name="Equip Einhasad's Necklace Lv. 6">
 		<!-- A necklace that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<abnormalLevel>6</abnormalLevel>
@@ -1156,7 +1156,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46790" toLevel="1" name="Unequip Einhasad's Necklace - Necklace Stage 6">
+	<skill id="46790" toLevel="1" name="Unequip Einhasad's Necklace Lv. 6">
 		<!-- The light fades from the necklace containing a god's soul. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>A1</operateType>
@@ -1171,7 +1171,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46791" toLevel="1" name="Equip Eva's Earring - Earring Stage 6">
+	<skill id="46791" toLevel="1" name="Equip Eva's Earring Lv. 6">
 		<!-- A pair of earrings that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<abnormalLevel>6</abnormalLevel>
@@ -1187,7 +1187,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46792" toLevel="1" name="Unequip Eva's Earring - Earring Stage 6">
+	<skill id="46792" toLevel="1" name="Unequip Eva's Earring Lv. 6">
 		<!-- The light fades from a pair of earrings containing a god's soul. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<operateType>A1</operateType>
@@ -1202,7 +1202,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46793" toLevel="1" name="Equip Maphr's Ring - Ring Stage 6">
+	<skill id="46793" toLevel="1" name="Equip Maphr's Ring Lv. 6">
 		<!-- A ring that contains the soul of a god is glowing. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<abnormalLevel>6</abnormalLevel>
@@ -1218,7 +1218,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="46794" toLevel="1" name="Unequip Maphr's Ring - Ring Stage 6">
+	<skill id="46794" toLevel="1" name="Unequip Maphr's Ring Lv. 6">
 		<!-- The light fades from a ring containing a god's soul. -->
 		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
 		<operateType>A1</operateType>
@@ -1281,7 +1281,7 @@
 		<effects>
 			<effect name="AirBind" />
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="BlockControl" />
 			<effect name="DefenceTrait">
@@ -1297,7 +1297,7 @@
 		</effects>
 	</skill>
 	<skill id="46799" toLevel="6" name="Sayha's Ring">
-		<!-- Speed $s1, PvP P. Atk. $s2, P. Atk./ M. Atk. $s3, P. Critical Rate $s4, Physical and Magic Defense $s5. -->
+		<!-- Speed $s1, PvP Damage $s2, P./ M. Atk. $s3, P. Critical Rate $s4, P./ M. Def. $s5. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1407,7 +1407,7 @@
 			</effect>
 			<effect name="CallSkillOnActionTime">
 				<!-- Sayha's Ring -->
-				<skillId>46800</skillId>
+				<skillId>46800</skillId> <!-- Sayha's Ring -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>

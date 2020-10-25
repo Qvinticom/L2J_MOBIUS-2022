@@ -75,6 +75,17 @@ import org.l2jmobius.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExt
 import org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade.RequestUpgradeSystemResult;
 import org.l2jmobius.gameserver.network.clientpackets.faction.RequestUserFactionInfo;
 import org.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusCreateStart;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusDeleteData;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusEnchantExperience;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusEnchantPoint;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusEnchantSkill;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusEvolve;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusInitPoint;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusInsert;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExHomunculusSummon;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExRequestHomonculusList;
+import org.l2jmobius.gameserver.network.clientpackets.homunculus.ExRequestHomunculusActivate;
 import org.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import org.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.ConfirmMenteeAdd;
@@ -82,9 +93,6 @@ import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeAdd
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeWaitingList;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorCancel;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorList;
-import org.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookClose;
-import org.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookOpen;
-import org.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookReward;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeAnnounce;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeItemBuy;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeItemList;
@@ -117,6 +125,10 @@ import org.l2jmobius.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreI
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
+import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTeleport;
+import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTeleportFavoriteList;
+import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTeleportFavoritesAddDel;
+import org.l2jmobius.gameserver.network.clientpackets.teleports.ExRequestTeleportFavoritesUIToggle;
 import org.l2jmobius.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
 
 /**
@@ -423,9 +435,9 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_RAID_SERVER_INFO(0x129, RequestRaidServerInfo::new, ConnectionState.IN_GAME),
 	REQUEST_SHOW_AGIT_SIEGE_INFO(0x12A, null, ConnectionState.IN_GAME),
 	REQUEST_ITEM_AUCTION_STATUS(0x12B, null, ConnectionState.IN_GAME),
-	REQUEST_MONSTER_BOOK_OPEN(0x12C, RequestMonsterBookOpen::new, ConnectionState.IN_GAME),
-	REQUEST_MONSTER_BOOK_CLOSE(0x12D, RequestMonsterBookClose::new, ConnectionState.IN_GAME),
-	REQUEST_MONSTER_BOOK_REWARD(0x12E, RequestMonsterBookReward::new, ConnectionState.IN_GAME),
+	REQUEST_MONSTER_BOOK_OPEN(0x12C, null, ConnectionState.IN_GAME),
+	REQUEST_MONSTER_BOOK_CLOSE(0x12D, null, ConnectionState.IN_GAME),
+	REQUEST_MONSTER_BOOK_REWARD(0x12E, null, ConnectionState.IN_GAME),
 	EXREQUEST_MATCH_GROUP(0x12F, null, ConnectionState.IN_GAME),
 	EXREQUEST_MATCH_GROUP_ASK(0x130, null, ConnectionState.IN_GAME),
 	EXREQUEST_MATCH_GROUP_ANSWER(0x131, null, ConnectionState.IN_GAME),
@@ -513,36 +525,81 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_RANKING_CHAR_INFO(0x181, RequestRankingCharInfo::new, ConnectionState.IN_GAME),
 	EX_RANKING_CHAR_HISTORY(0x182, null, ConnectionState.IN_GAME),
 	EX_RANKING_CHAR_RANKERS(0x183, RequestRankingCharRankers::new, ConnectionState.IN_GAME),
-	EX_PLEDGE_MERCENARY_RECRUIT_INFO_SET(0x184, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_MERCENARY_CASTLEWAR_CASTLE_INFO(0x185, null, ConnectionState.IN_GAME),
-	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_INFO(0x186, null, ConnectionState.IN_GAME),
-	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x187, null, ConnectionState.IN_GAME),
-	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_DEFENDER_LIST(0x188, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_MERCENARY_MEMBER_LIST(0x189, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_MERCENARY_MEMBER_JOIN(0x18A, null, ConnectionState.IN_GAME),
-	EX_PVP_BOOK_LIST(0x18B, ExPvpBookList::new, ConnectionState.IN_GAME),
-	EX_PVP_BOOK_KILLER_LOCATION(0x18C, null, ConnectionState.IN_GAME),
-	EX_PVP_BOOK_TELEPORT_TO_KILLER(0x18D, null, ConnectionState.IN_GAME),
-	EX_LETTER_COLLECTOR_TAKE_REWARD(0x18E, null, ConnectionState.IN_GAME),
-	EX_SET_STATUS_BONUS(0x18F, null, ConnectionState.IN_GAME),
-	EX_RESET_STATUS_BONUS(0x190, null, ConnectionState.IN_GAME),
-	EX_OLYMPIAD_MY_RANKING_INFO(0x191, RequestOlympiadMyRankingInfo::new, ConnectionState.IN_GAME),
-	EX_OLYMPIAD_RANKING_INFO(0x192, RequestOlympiadRankingInfo::new, ConnectionState.IN_GAME),
-	EX_OLYMPIAD_HERO_AND_LEGEND_INFO(0x193, RequestOlympiadHeroAndLegendInfo::new, ConnectionState.IN_GAME),
-	EX_CASTLEWAR_OBSERVER_START(0x194, null, ConnectionState.IN_GAME),
-	EX_RAID_TELEPORT_INFO(0x195, null, ConnectionState.IN_GAME),
-	EX_TELEPORT_TO_RAID_POSITION(0x196, null, ConnectionState.IN_GAME),
-	EX_CRAFT_EXTRACT(0x197, null, ConnectionState.IN_GAME),
-	EX_CRAFT_RANDOM_INFO(0x198, null, ConnectionState.IN_GAME),
-	EX_CRAFT_RANDOM_LOCK_SLOT(0x199, null, ConnectionState.IN_GAME),
-	EX_CRAFT_RANDOM_REFRESH(0x19A, null, ConnectionState.IN_GAME),
-	EX_CRAFT_RANDOM_MAKE(0x19B, null, ConnectionState.IN_GAME),
-	EX_MULTI_SELL_LIST(0x19C, null, ConnectionState.IN_GAME),
-	EX_SAVE_ITEM_ANNOUNCE_SETTING(0x19D, null, ConnectionState.IN_GAME),
-	EX_ANTIBOT(0x19E, null, ConnectionState.IN_GAME),
-	EX_DPSVR(0x19F, null, ConnectionState.IN_GAME),
-	EX_TENPROTECT_DECRYPT_ERROR(0x1A0, null, ConnectionState.IN_GAME),
-	EX_MAX(0x1A1, null, ConnectionState.IN_GAME);
+	EX_RANKING_CHAR_SPAWN_BUFFZONE_NPC(0x184, null, ConnectionState.IN_GAME),
+	EX_RANKING_CHAR_BUFFZONE_NPC_POSITION(0x185, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MERCENARY_RECRUIT_INFO_SET(0x186, null, ConnectionState.IN_GAME),
+	EX_MERCENARY_CASTLEWAR_CASTLE_INFO(0x187, null, ConnectionState.IN_GAME),
+	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_INFO(0x188, null, ConnectionState.IN_GAME),
+	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x189, null, ConnectionState.IN_GAME),
+	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_DEFENDER_LIST(0x18A, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MERCENARY_MEMBER_LIST(0x18B, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MERCENARY_MEMBER_JOIN(0x18C, null, ConnectionState.IN_GAME),
+	EX_PVP_BOOK_LIST(0x18D, ExPvpBookList::new, ConnectionState.IN_GAME),
+	EX_PVPBOOK_KILLER_LOCATION(0x18E, null, ConnectionState.IN_GAME),
+	EX_PVPBOOK_TELEPORT_TO_KILLER(0x18F, null, ConnectionState.IN_GAME),
+	EX_LETTER_COLLECTOR_TAKE_REWARD(0x190, null, ConnectionState.IN_GAME),
+	EX_SET_STATUS_BONUS(0x191, null, ConnectionState.IN_GAME),
+	EX_RESET_STATUS_BONUS(0x192, null, ConnectionState.IN_GAME),
+	EX_OLYMPIAD_MY_RANKING_INFO(0x193, RequestOlympiadMyRankingInfo::new, ConnectionState.IN_GAME),
+	EX_OLYMPIAD_RANKING_INFO(0x194, RequestOlympiadRankingInfo::new, ConnectionState.IN_GAME),
+	EX_OLYMPIAD_HERO_AND_LEGEND_INFO(0x195, RequestOlympiadHeroAndLegendInfo::new, ConnectionState.IN_GAME),
+	EX_CASTLEWAR_OBSERVER_START(0x196, null, ConnectionState.IN_GAME),
+	EX_RAID_TELEPORT_INFO(0x197, null, ConnectionState.IN_GAME),
+	EX_TELEPORT_TO_RAID_POSITION(0x198, null, ConnectionState.IN_GAME),
+	EX_CRAFT_EXTRACT(0x199, null, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_INFO(0x19A, null, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_LOCK_SLOTEX_CRAFT_RANDOM_INFO(0x19B, null, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_REFRESH(0x19C, null, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_MAKE(0x19D, null, ConnectionState.IN_GAME),
+	EX_MULTI_SELL_LIST(0x19E, null, ConnectionState.IN_GAME),
+	EX_SAVE_ITEM_ANNOUNCE_SETTING(0x19F, null, ConnectionState.IN_GAME),
+	EX_OLYMPIAD_UI(0x1A0, null, ConnectionState.IN_GAME),
+	// 270
+	EX_SHARED_POSITION_SHARING_UI(0x1A1, null, ConnectionState.IN_GAME),
+	EX_SHARED_POSITION_TELEPORT_UI(0x1A2, null, ConnectionState.IN_GAME),
+	EX_SHARED_POSITION_TELEPORT(0x1A3, null, ConnectionState.IN_GAME),
+	EX_AUTH_RECONNECT(0x1A4, null, ConnectionState.IN_GAME),
+	EX_PET_EQUIP_ITEM(0x1A5, null, ConnectionState.IN_GAME),
+	EX_PET_UNEQUIP_ITEM(0x1A6, null, ConnectionState.IN_GAME),
+	EX_SHOW_HOMUNCULUS_INFO(0x1A7, ExRequestHomonculusList::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_CREATE_START(0x1A8, ExHomunculusCreateStart::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_INSERT(0x1A9, ExHomunculusInsert::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_SUMMON(0x1AA, ExHomunculusSummon::new, ConnectionState.IN_GAME),
+	EX_DELETE_HOMUNCULUS_DATA(0x1AB, ExHomunculusDeleteData::new, ConnectionState.IN_GAME),
+	EX_REQUEST_ACTIVATE_HOMUNCULUS(0x1AC, ExRequestHomunculusActivate::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_GET_ENCHANT_POINT(0x1AD, ExHomunculusEnchantPoint::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_INIT_POINT(0x1AE, ExHomunculusInitPoint::new, ConnectionState.IN_GAME),
+	EX_EVOLVE_PET(0x1AF, ExHomunculusEvolve::new, ConnectionState.IN_GAME),
+	EX_ENCHANT_HOMUNCULUS_SKILL(0x1B0, ExHomunculusEnchantSkill::new, ConnectionState.IN_GAME),
+	EX_HOMUNCULUS_ENCHANT_EXP(0x1B1, ExHomunculusEnchantExperience::new, ConnectionState.IN_GAME),
+	EX_TELEPORT_FAVORITES_LIST(0x1B2, ExRequestTeleportFavoriteList::new, ConnectionState.IN_GAME),
+	EX_TELEPORT_FAVORITES_UI_TOGGLE(0x1B3, ExRequestTeleportFavoritesUIToggle::new, ConnectionState.IN_GAME),
+	EX_TELEPORT_FAVORITES_ADD_DEL(0x1B4, ExRequestTeleportFavoritesAddDel::new, ConnectionState.IN_GAME),
+	EX_ANTIBOT(0x1B5, null, ConnectionState.IN_GAME),
+	EX_DPSVR(0x1B6, null, ConnectionState.IN_GAME),
+	EX_TENPROTECT_DECRYPT_ERROR(0x1B7, null, ConnectionState.IN_GAME),
+	EX_NET_LATENCY(0x1B8, null, ConnectionState.IN_GAME),
+	EX_MABLE_GAME_OPEN(0x1B9, null, ConnectionState.IN_GAME),
+	EX_MABLE_GAME_ROLL_DICE(0x1BA, null, ConnectionState.IN_GAME),
+	EX_MABLE_GAME_POPUP_OK(0x1BB, null, ConnectionState.IN_GAME),
+	EX_MABLE_GAME_RESET(0x1BC, null, ConnectionState.IN_GAME),
+	EX_MABLE_GAME_CLOSE(0x1BD, null, ConnectionState.IN_GAME),
+	EX_RETURN_TO_ORIGIN(0x1BE, null, ConnectionState.IN_GAME),
+	EX_BLESS_OPTION_PUT_ITEM(0x1BF, null, ConnectionState.IN_GAME),
+	EX_BLESS_OPTION_ENCHANT(0x1C0, null, ConnectionState.IN_GAME),
+	EX_BLESS_OPTION_CANCEL(0x1C1, null, ConnectionState.IN_GAME),
+	EX_PVP_RANKING_MY_INFO(0x1C2, null, ConnectionState.IN_GAME),
+	EX_PVP_RANKING_LIST(0x1C3, null, ConnectionState.IN_GAME),
+	EX_ACQUIRE_PET_SKILL(0x1C4, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_V3_INFO(0x1C5, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_ENEMY_INFO_LIST(0x1C6, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_ENEMY_REGISTER(0x1C7, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_ENEMY_DELETE(0x1C8, null, ConnectionState.IN_GAME),
+	EX_PK_PENALTY_LIST(0x1C9, null, ConnectionState.IN_GAME),
+	EX_PK_PENALTY_LIST_ONLY_LOC(0x1CA, null, ConnectionState.IN_GAME),
+	EX_TRY_PET_EXTRACT_SYSTEM(0x1CB, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_V3_SET_ANNOUNCE(0x1CC, null, ConnectionState.IN_GAME),
+	EX_MAX(0x1CD, null, ConnectionState.IN_GAME);
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
 	

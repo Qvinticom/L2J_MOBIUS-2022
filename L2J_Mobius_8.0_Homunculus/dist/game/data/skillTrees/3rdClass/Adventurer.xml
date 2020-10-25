@@ -18,7 +18,9 @@
 		</skill>
 		<skill skillName="Intermediate Dagger Mastery" skillId="30714" skillLevel="2" getLevel="76" levelUpSp="100">
 		</skill>
-		<skill skillName="Intermediate Light Armor Mastery" skillId="30716" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30716" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+		</skill>
 		<skill skillName="Intermediate Light Armor Mastery" skillId="30716" skillLevel="2" getLevel="76" levelUpSp="100" />
 		<skill skillName="Intermediate Dual Dagger Mastery" skillId="30715" skillLevel="1" getLevel="76" levelUpSp="30">
 			<removeSkill id="30636" /> <!-- Bow/Crossbow Mastery -->

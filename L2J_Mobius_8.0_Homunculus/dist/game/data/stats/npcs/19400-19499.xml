@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="19400" level="90" type="Monster" name="Cocoon Destroyer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14040" level="4" />
@@ -10,9 +9,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1458000" sp="349" />
+		<acquire exp="1458000" sp="350" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="45468.78222" hpRegen="8.5" mp="2510.045" mpRegen="3" />
+			<vitals hp="41657.8034682081" hpRegen="8.5" mp="2042.90429042904" mpRegen="3" />
 			<speed>
 				<walk ground="13" />
 				<run ground="180" />
@@ -27,10 +26,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -43,7 +42,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17375" min="1" max="1" chance="4.952" /> <!-- Kimerian's Trace -->
+				<item id="17375" min="1" max="1" chance="4.987" /> <!-- Kimerian's Trace -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -436,17 +435,16 @@
 			<drop>
 				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
-				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -497,17 +495,16 @@
 			<drop>
 				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
-				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1776,12 +1773,11 @@
 		</collision>
 	</npc>
 	<npc id="19455" level="98" type="Monster" name="Aden Raider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8368445" sp="7491" />
+		<acquire exp="27615822" sp="24779" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="34405.687695" hpRegen="8.5" mp="2874.995" mpRegen="3" />
+			<vitals hp="31521.9653179191" hpRegen="8.5" mp="2339.93399339934" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1802,36 +1798,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="994" max="2317" chance="70" /> <!-- Adena -->
-				<item id="35337" min="1" max="1" chance="0.03" /> <!-- Helios Retributer Fragment -->
-				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Helios Caster Fragment -->
-				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Helios Buster Fragment -->
-				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
-				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
-				<item id="9554" min="1" max="1" chance="0.003" /> <!-- Earth Crystal -->
-				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
-				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="35461" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Retributer (60%) -->
-				<item id="19448" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="57" min="333" max="776" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
-				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
-				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="19456" level="99" type="Monster" name="Te Ochdumann" title="Commander">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="34091700" sp="30677" />
+		<acquire exp="112502543" sp="101245" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="172901.624835" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<vitals hp="158409.826589595" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1844,13 +1820,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -1858,32 +1834,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="2160" max="5031" chance="70" /> <!-- Adena -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Helios Buster Fragment -->
-				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Helios Caster Fragment -->
-				<item id="35337" min="1" max="1" chance="0.03" /> <!-- Helios Retributer Fragment -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="35461" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Retributer (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
-				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
-				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
-				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
-				<item id="36887" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Braid - Upgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="19457" level="99" type="Monster" name="Travis" title="Deceased King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="34091700" sp="30677" />
+		<acquire exp="112502543" sp="101245" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="172901.624835" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<vitals hp="158409.826589595" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1896,13 +1856,13 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 		</skillList>
 		<collision>
 			<radius normal="25" />
@@ -1910,23 +1870,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="2160" max="5031" chance="70" /> <!-- Adena -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Helios Buster Fragment -->
-				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Helios Caster Fragment -->
-				<item id="35337" min="1" max="1" chance="0.03" /> <!-- Helios Retributer Fragment -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="35461" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Retributer (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
-				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
-				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
-				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
-				<item id="36887" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Braid - Upgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="19458" level="99" type="Npc" name="Treasure Dealer Kaysen">
@@ -2003,11 +1948,10 @@
 		</collision>
 	</npc>
 	<npc id="19471" level="99" type="Monster" name="Mysterious Assassin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1659857.238795" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<vitals hp="1520735.83815029" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2026,22 +1970,12 @@
 			<radius normal="24" />
 			<height normal="57" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="35567" min="1" max="1" chance="1.2" /> <!-- Dark Eternal Enhancement Stone -->
-				<item id="35569" min="1" max="1" chance="1.2" /> <!-- Bloody Eternal Enhancement Stone -->
-				<item id="37097" min="1" max="1" chance="100" /> <!-- High-grade Elixir of Life (R-grade) -->
-				<item id="37098" min="1" max="1" chance="100" /> <!-- High-grade Elixir of Mind (R-grade) -->
-				<item id="37099" min="1" max="1" chance="100" /> <!-- High-grade Elixir of CP (R-grade) -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="19472" level="99" type="Monster" name="Mysterious Assassin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1659857.238795" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<vitals hp="1520735.83815029" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<speed>
 				<walk ground="25" />
 				<run ground="180" />
@@ -2060,22 +1994,12 @@
 			<radius normal="30" />
 			<height normal="43" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="35567" min="1" max="1" chance="1.2" /> <!-- Dark Eternal Enhancement Stone -->
-				<item id="35569" min="1" max="1" chance="1.2" /> <!-- Bloody Eternal Enhancement Stone -->
-				<item id="37097" min="1" max="1" chance="100" /> <!-- High-grade Elixir of Life (R-grade) -->
-				<item id="37098" min="1" max="1" chance="100" /> <!-- High-grade Elixir of Mind (R-grade) -->
-				<item id="37099" min="1" max="1" chance="100" /> <!-- High-grade Elixir of CP (R-grade) -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="19473" level="99" type="Monster" name="Mysterious Assassin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1659857.238795" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<vitals hp="1520735.83815029" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -2094,15 +2018,6 @@
 			<radius normal="18" />
 			<height normal="38" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="35567" min="1" max="1" chance="1.2" /> <!-- Dark Eternal Enhancement Stone -->
-				<item id="35569" min="1" max="1" chance="1.2" /> <!-- Bloody Eternal Enhancement Stone -->
-				<item id="37097" min="1" max="1" chance="100" /> <!-- High-grade Elixir of Life (R-grade) -->
-				<item id="37098" min="1" max="1" chance="100" /> <!-- High-grade Elixir of Mind (R-grade) -->
-				<item id="37099" min="1" max="1" chance="100" /> <!-- High-grade Elixir of CP (R-grade) -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="19474" level="99" type="Monster" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

@@ -20,6 +20,7 @@ import java.util.Set;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.VariationInstance;
@@ -262,7 +263,18 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeC(_player.getAbilityPointsUsed()); // Used Ability Points
 		
 		packet.writeD(0x00);
-		packet.writeD(0x00);
+		
+		// AFK animation.
+		if ((_player.getClan() != null) && (CastleManager.getInstance().getCastleByOwner(_player.getClan()) != null))
+		{
+			packet.writeD(_player.isClanLeader() ? 100 : 101);
+		}
+		else
+		{
+			packet.writeD(0x00);
+		}
+		
+		// Rank.
 		packet.writeC(RankManager.getInstance().getPlayerGlobalRank(_player) == 1 ? 1 : RankManager.getInstance().getPlayerRaceRank(_player) == 1 ? 2 : 0);
 		
 		return true;

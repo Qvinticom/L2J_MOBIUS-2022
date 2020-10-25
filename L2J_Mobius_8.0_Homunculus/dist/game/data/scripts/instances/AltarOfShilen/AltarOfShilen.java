@@ -372,7 +372,7 @@ public class AltarOfShilen extends AbstractInstance
 				{
 					for (PlayerInstance player : _playersInside)
 					{
-						player.sendPacket(new ExShowScreenMessage(NpcStringId.ALTAR_OF_SHILEN_HAS_BEEN_DESTROYED_YOU_VE_WON, ExShowScreenMessage.TOP_CENTER, 5000, true));
+						player.sendPacket(new ExShowScreenMessage(NpcStringId.ALTAR_OF_SHILLIEN_HAS_BEEN_DESTROYED_YOU_VE_WON, ExShowScreenMessage.TOP_CENTER, 5000, true));
 					}
 					_playersInside.clear();
 					_killedMonsters.clear();
@@ -630,7 +630,7 @@ public class AltarOfShilen extends AbstractInstance
 							{
 								if (_time == ALTAR_TIME)
 								{
-									player.sendPacket(new ExShowScreenMessage(NpcStringId.ALTAR_OF_SHILEN_IS_STARTING_MUST_FOCUS_FIRE_THE_ALTAR, ExShowScreenMessage.MIDDLE_CENTER, 5000));
+									player.sendPacket(new ExShowScreenMessage(NpcStringId.SOMETHING_IS_GOING_ON_AT_THE_ALTAR_OF_SHILLIEN_FOCUS_FIRE_ON_THE_ALTAR, ExShowScreenMessage.MIDDLE_CENTER, 5000));
 								}
 								player.sendPacket(new ExSendUIEvent(player, ExSendUIEvent.TYPE_NORNIL, (_time--), 0, 0, 0, 0, 2518008));
 							}
@@ -640,7 +640,7 @@ public class AltarOfShilen extends AbstractInstance
 						{
 							for (PlayerInstance player : _playersInside)
 							{
-								player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_ALTAR_OF_SHILEN_WILL_BECOME_ACTIVATED_IN_10_SECONDS, ExShowScreenMessage.MIDDLE_CENTER, 5000));
+								player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_ALTAR_OF_SHILLIEN_WILL_BE_ACTIVATED_IN_10_SEC, ExShowScreenMessage.MIDDLE_CENTER, 5000));
 							}
 						}
 						
@@ -648,7 +648,7 @@ public class AltarOfShilen extends AbstractInstance
 						{
 							for (PlayerInstance player : _playersInside)
 							{
-								player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_ALTAR_OF_SHILEN_WILL_BECOME_ACTIVATED_IN_5_SECONDS, ExShowScreenMessage.MIDDLE_CENTER, 5000));
+								player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_ALTAR_OF_SHILLIEN_WILL_BE_ACTIVATED_IN_5_SEC, ExShowScreenMessage.MIDDLE_CENTER, 5000));
 							}
 						}
 						
@@ -656,7 +656,7 @@ public class AltarOfShilen extends AbstractInstance
 						{
 							for (PlayerInstance player : _playersInside)
 							{
-								player.sendPacket(new ExShowScreenMessage(NpcStringId.FOCUS_FIRE_THE_ALTAR_TO_STOP_BLESSING_OF_SHILEN, ExShowScreenMessage.MIDDLE_CENTER, 5000));
+								player.sendPacket(new ExShowScreenMessage(NpcStringId.FOCUS_FIRE_ON_THE_ALTAR_TO_STOP_BLESSING_OF_SHILLIEN, ExShowScreenMessage.MIDDLE_CENTER, 5000));
 							}
 							
 							if (isInInstance(world))

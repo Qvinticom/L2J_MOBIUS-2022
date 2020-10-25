@@ -141,7 +141,7 @@
 		</stats>
 	</item>
 	<item id="30804" name="Bound Orcish Poleaxe - Critical Stun" type="Weapon">
-		<!-- <Special Option>. Has about a 29% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Has about a 29% chance of casting Stun on the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -318,7 +318,7 @@
 		</stats>
 	</item>
 	<item id="30809" name="Bound Orcish Glaive - Critical Stun" type="Weapon">
-		<!-- <Special Option>. Has about a 34% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Has about a 34% chance of casting Stun on the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_orcish_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -530,7 +530,7 @@
 		</stats>
 	</item>
 	<item id="30817" name="Bound Soul Bow - Cheap Shot" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a 38% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Has a 38% chance of decreasing MP consumption to 1 after a standard attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -567,7 +567,7 @@
 		</stats>
 	</item>
 	<item id="30818" name="Bound Soul Bow - Quick Recovery" type="Weapon">
-		<!-- Bound Item. <Special Option>. Decreases cooldown by about 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Skill Cooldown is about -15%. Inflicts additional PvP Damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1469,7 +1469,7 @@
 		</stats>
 	</item>
 	<item id="30849" name="Bound Elysian - Critical Drain" type="Weapon">
-		<!-- Bound Item. <Special Option>. Absorbs 19 HP from the target during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Absorbs 19 HP from the target after a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1673,7 +1673,7 @@
 		</stats>
 	</item>
 	<item id="30855" name="Bound Elemental Bow - Guidance" type="Weapon">
-		<!-- <Special Option>. Increases Accuracy by 5. No Soul Crystal option. -->
+		<!-- <Special Features>. P. Accuracy +5. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_elemental_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1743,7 +1743,7 @@
 		</stats>
 	</item>
 	<item id="30857" name="Bound Elemental Bow - Quick Recovery" type="Weapon">
-		<!-- <Special Option>. Decreases cooldown by about 20%. No Soul Crystal option. -->
+		<!-- <Special Option>. Skill Cooldown is about -20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_elemental_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1834,7 +1834,7 @@
 		</stats>
 	</item>
 	<item id="30860" name="Bound Angel Slayer - Critical Damage" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. +265 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Atk. +265 after a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1942,7 +1942,7 @@
 		</stats>
 	</item>
 	<item id="30863" name="Bound Épée" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Revolution, Bound Épée. -->
+		<!-- Kamael-exclusive Weapon: Sword of Revolution, Bound ?p?e. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2084,7 +2084,7 @@
 		</stats>
 	</item>
 	<item id="30867" name="Bound Eminence Bow - Guidance" type="Weapon">
-		<!-- <Special Option>. Increases Accuracy by about 4. No Soul Crystal option. -->
+		<!-- <Special Features>. P. Accuracy +5. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2154,7 +2154,7 @@
 		</stats>
 	</item>
 	<item id="30869" name="Bound Eminence Bow - Cheap Shot" type="Weapon">
-		<!-- <Special Option>. Has a 42% chance of decreasing MP consumption to 1 during a standard attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Has a 42% chance of decreasing MP consumption to 1 after a standard attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2222,7 +2222,7 @@
 		</stats>
 	</item>
 	<item id="30871" name="Bound Crystallized Ice Bow - Guidance" type="Weapon">
-		<!-- <Special Option>. Increases Accuracy by 5. No Soul Crystal option. -->
+		<!-- <Special Features>. P. Accuracy +5. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2294,7 +2294,7 @@
 		</stats>
 	</item>
 	<item id="30873" name="Bound Crystallized Ice Bow - Quick Recovery" type="Weapon">
-		<!-- <Special Option>. Decreases cooldown by about 17%. No Soul Crystal option. -->
+		<!-- <Special Option>. Skill Cooldown is about -17%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2395,7 +2395,7 @@
 		</stats>
 	</item>
 	<item id="30876" name="Bound Military Fleuret - Guidance" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Keshanberk. <Special Option>. Increases Accuracy by 5. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Keshanberk. <Special Features>. P. Accuracy +5. When enchanted to +4 or higher, has a chance after a critical attack to increase P./ M. Atk. and Received Healing, and decrease Skill MP Consumption for you and your party members. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2431,7 +2431,7 @@
 		</stats>
 	</item>
 	<item id="30877" name="Bound Military Fleuret - Focus" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Keshanberk. <Special Option>. Increases Critical by 68. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Keshanberk. <Special Option>. P. Critical Rate +68. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2467,7 +2467,7 @@
 		</stats>
 	</item>
 	<item id="30878" name="Bound Military Fleuret - Back Blow" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Keshanberk. <Special Option>. Increases P. Critical Rate 56 when attacking the target from behind. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Keshanberk. <Special Option>. P. Critical Rate +56 when attacking the target from behind. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2671,7 +2671,7 @@
 		</stats>
 	</item>
 	<item id="30884" name="Bound Yaksa Mace - Rsk. Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 115 when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +115 when HP < 60%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2796,7 +2796,7 @@
 		</stats>
 	</item>
 	<item id="30888" name="Bound Arbalest - Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow Conversion. <Special Option>. Increases Accuracy by 5. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow Conversion. <Special Option>. P. Accuracy +5. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2868,7 +2868,7 @@
 		</stats>
 	</item>
 	<item id="30890" name="Bound Arbalest - Quick Recovery" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow. <Special Option>. Decreases cooldown by about 17%. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow Conversion. <Special Option>. Skill Cooldown is about -17%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2944,7 +2944,7 @@
 		</stats>
 	</item>
 	<item id="30893" name="Bound Boots of Nightmare" additionalName="Heavy Armor" type="Armor">
-		<!-- Part of the Heavy Nightmare set. -->
+		<!-- Part of the heavy armor set of Nightmare. -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="A" />
@@ -2966,7 +2966,7 @@
 		</stats>
 	</item>
 	<item id="30894" name="Bound Boots of Nightmare" additionalName="Light Armor" type="Armor">
-		<!-- Part of the Light Nightmare set. -->
+		<!-- A piece of the light armor set of Nightmare. -->
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2988,7 +2988,7 @@
 		</stats>
 	</item>
 	<item id="30895" name="Bound Boots of Nightmare" additionalName="Robe" type="Armor">
-		<!-- Part of the Nightmare Robe set. -->
+		<!-- A piece of the robe set of Nightmare. -->
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -3010,7 +3010,7 @@
 		</stats>
 	</item>
 	<item id="30896" name="Bound Robe of Nightmare" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t82_ul_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -3033,7 +3033,7 @@
 		</stats>
 	</item>
 	<item id="30897" name="Bound Leather Armor of Nightmare" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t81_ul_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />

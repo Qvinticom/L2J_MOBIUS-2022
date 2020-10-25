@@ -19,7 +19,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17303" toLevel="1" name="Prevailing Sonata - Enhanced Cocktail">
-		<!-- For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, Casting Interruption Rate -40. A chance to add 8% to the Vampiric Rage effect. PA only. -->
+		<!-- For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, Casting Interruption Rate -$s5. With a certain chance, absorbs $s6 of the inflicted damage as HP. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
@@ -73,7 +73,7 @@
 		</effects>
 	</skill>
 	<skill id="17304" toLevel="1" name="Daring Sonata - Enhanced Cocktail">
-		<!-- For 1 h., Atk. Spd. +40%, Casting Spd. +30%, Damage Reflection +10%, Skill Cooldown -10%. PA only. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Damage Reflection +$s4, Skill Cooldown -$s5. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
@@ -133,7 +133,7 @@
 		</effects>
 	</skill>
 	<skill id="17305" toLevel="1" name="Refreshing Sonata - Enhanced Cocktail">
-		<!-- For 1 h., HP Recovery Rate +75%, MP Recovery Rate +100%, P./ M. Evasion +5, M. Skill MP Consumption -22%. PA only. -->
+		<!-- For $s1, HP Recovery Rate +$s2, MP Recovery Rate +$s3, P./ M. Evasion +$s4, M. Skill MP Consumption -$s5. PA only. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
@@ -188,8 +188,8 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17307" toLevel="24" name="Real Tor's Blessing Stage 1">
-		<!-- Can acquire a Territory Card in $s1 h. Can acquire up to $s2 cards ($s3 stages total). Return to the Real Tor for a new buff when it disappears. <Note> Cannot acquire buff or card if you're dead at the time of distribution, or if your inventory is full. -->
+	<skill id="17307" toLevel="24" name="Real Tor's Blessing Lv. 1">
+		<!-- Allows to acquire a Territory Card $s1 times an hour. There are $s3 levels, so you can acquire up to $s2 cards. Return to the Real Tor for a new buff when it disappears.\n\nNote!\nThe Real Tor's Blessing or cards can't be obtained if your character is dead or has no free slots in the inventory. -->
 		<icon>icon.etc_cycle_point_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -236,7 +236,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17310" toLevel="1" name="Sliver of Truth">
-		<!-- For 30 min., attribute resistance +50. -->
+		<!-- For 30 min., Attribute Resistance +50. -->
 		<icon>icon.card_angel_blue</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -254,8 +254,8 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17313" toLevel="24" name="Real Tor's Blessing Stage 1 (Premium)">
-		<!-- Can acquire a Territory Card in $s1 h. Can acquire up to $s2 cards ($s3 stages total). Return to the Real Tor for a new buff when it disappears. Has a chance of acquiring a different gift.<Note> Cannot acquire buff or card if you're dead at the time of distribution, or if your inventory is full. -->
+	<skill id="17313" toLevel="24" name="Real Tor's Blessing Lv. 1 (Premium)">
+		<!-- Allows to acquire a Territory Card $s1 times an hour. There are $s3 levels, so you can acquire up to $s2 cards. Return to the Real Tor for a new buff when it disappears. There is a chance to obtain a gift instead of a Territory Card.\n\nNote!\nThe Real Tor's Blessing or cards can't be obtained if your character is dead or has no free slots in the inventory. -->
 		<icon>icon.etc_cycle_point_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -306,7 +306,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17320" toLevel="1" name="Leona's Scroll: Buffs">
-		<!-- For 30 min., Acquired XP/ SP +30%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction. Cooldown is 30 min. -->
+		<!-- For 30 min., acquired XP/ SP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot be used with the Art of Seduction buff. Cooldown: 30 min. -->
 		<icon>icon.event_altair_enchant_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
@@ -322,6 +322,14 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="ExpModify">
 				<amount>30</amount>
 			</effect>
@@ -622,8 +630,8 @@
 	<skill id="17386" toLevel="1" name="High-grade Fishing Shot">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17387" toLevel="1" name="Fish Stew: WIT">
-		<!-- For 30 min./ WIT +3. Effect does not stack. Cooldown is 5 min. -->
+	<skill id="17387" toLevel="1" name="Fish Stew - WIT">
+		<!-- WIT +3 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -642,8 +650,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17388" toLevel="1" name="Fish Stew: INT">
-		<!-- For 30 min./ INT +3. Effect does not stack. Cooldown is 5 min. -->
+	<skill id="17388" toLevel="1" name="Fish Stew - INT">
+		<!-- INT +3 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -662,8 +670,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17389" toLevel="1" name="Fish Stew: MEN">
-		<!-- For 30 min./ MEN +3. Effect does not stack. Cooldown is 5 min. -->
+	<skill id="17389" toLevel="1" name="Fish Stew - MEN">
+		<!-- MEN +3 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -682,8 +690,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17390" toLevel="1" name="Fish Stew: DEX">
-		<!-- For 30 min./ DEX +3. Effect does not stack. Cooldown is 5 min. -->
+	<skill id="17390" toLevel="1" name="Fish Stew - DEX">
+		<!-- DEX+3 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -702,8 +710,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17391" toLevel="1" name="Fish Stew: STR">
-		<!-- For 30 min./ STR +3. Effect does not stack. Cooldown is 5 min. -->
+	<skill id="17391" toLevel="1" name="Fish Stew - STR">
+		<!-- STR +3 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -722,8 +730,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17392" toLevel="1" name="Fish Stew: CON">
-		<!-- For 30 min./ CON +3. Effect does not stack. Cooldown is 5 min. -->
+	<skill id="17392" toLevel="1" name="Fish Stew - CON">
+		<!-- CON +3 for 30 min. The effects do not stack even when several different types of fish stew are used. Can be stacked with Honey Vitality Beer. Cooldown: 5 min. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -809,7 +817,7 @@
 		</effects>
 	</skill>
 	<skill id="17399" toLevel="1" name="Lady's Hairpin: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>

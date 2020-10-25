@@ -81,7 +81,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14008" name="Life Stone: Accessory - Lv. 84" type="EtcItem">
-		<!-- Enhance Stone that raises up the power of a Vesper item. Can be exchanged with a Vesper Noble item through Maestro Ishuma. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -328,7 +328,7 @@
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="14027" name="Agathion - Essence Collector" type="Armor">
-		<!-- Bracelet used to summon a Collection Agathion. -->
+		<!-- A bracelet for summoning a Vitality-collecting agathion. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -349,7 +349,7 @@
 		</skills>
 	</item>
 	<item id="14028" name="Design: Stone of Stamina" type="EtcItem">
-		<!-- Design for making a Stone of Stamina exclusively for flying transformed objects. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- A design for Stone of Stamina (can be used only when flying). Requires Create Common Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i01" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -363,7 +363,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="14029" name="Design: Stone of Mana" type="EtcItem">
-		<!-- Design for making a Stone of Mana exclusively for flying transformed objects. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- A design for Stone of Mana (can be used only when flying). Requires Create Common Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i02" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -377,7 +377,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="14030" name="Design: Stone of Recovery" type="EtcItem">
-		<!-- Design for making a Stone of Recovery exclusively for flying transformed objects. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- A design for Stone of Recovery (can be used only when flying). Requires Create Common Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i03" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -391,7 +391,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="14031" name="Design: Stone of Destruction" type="EtcItem">
-		<!-- Design for making a Stone of Destruction exclusively for flying transformed objects. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- A design for Stone of Destruction (can be used only when flying). Requires Create Common Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i04" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -405,7 +405,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="14032" name="Design: Stone of Invincibility" type="EtcItem">
-		<!-- Design for making a Stone of Invincibility exclusively for flying transformed objects. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- A design for Stone of Invincibility (can be used only when flying). Requires Create Common Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i05" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -419,7 +419,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="14033" name="Design: Stone of Great Speed" type="EtcItem">
-		<!-- Design for making a Stone of Great Speed exclusively for flying transformed objects. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- A design for Stone of Great Speed (can be used only when flying). Requires Create Common Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i06" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -433,7 +433,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="14034" name="Design: Stone of Speed" type="EtcItem">
-		<!-- Design for making a Stone of Speed exclusively for flying transformed objects. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- A design for Stone of Speed (can be used only when flying). Requires Create Common Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i07" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -447,7 +447,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="14035" name="Design: Stone of Concentration" type="EtcItem">
-		<!-- Design for making a Stone of Concentration exclusively for flying transformed objects. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- A design for Stone of Concentration (can be used only when flying). Requires Create Common Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i08" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -461,7 +461,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="14036" name="Design: Stone of Ease" type="EtcItem">
-		<!-- Design for making a Stone of Ease exclusively for flying transformed objects. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- A design for Stone of Ease (can be used only when flying). Requires Create Common Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i09" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -475,7 +475,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="14037" name="Design: Stone of Abundance" type="EtcItem">
-		<!-- Design for making a Stone of Abundance exclusively for flying transformed objects. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- A design for Stone of Abundance (can be used only when flying). Requires Create Common Item Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i05" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -573,7 +573,7 @@
 		</skills>
 	</item>
 	<item id="14042" name="Stone of Recovery" type="EtcItem">
-		<!-- Restores stamina and mana during use. Item exclusively for flying transformed objects. -->
+		<!-- Restores HP and MP. Can be used only while flying. -->
 		<set name="icon" val="icon.stone_11_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -594,7 +594,7 @@
 		</skills>
 	</item>
 	<item id="14043" name="Greater Stone of Recovery" type="EtcItem">
-		<!-- Greatly restores stamina and mana during use. Item exclusively for flying transformed objects. -->
+		<!-- Fully restores HP/ MP. Can be used only while flying. -->
 		<set name="icon" val="icon.stone_11_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -615,7 +615,7 @@
 		</skills>
 	</item>
 	<item id="14044" name="Stone of Destruction" type="EtcItem">
-		<!-- P. Atk. Increases for 20 min. during use. Item exclusively for flying transformed objects. -->
+		<!-- Increases P. Atk. for 20 min. Can be used only while flying. -->
 		<set name="icon" val="icon.stone_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -636,7 +636,7 @@
 		</skills>
 	</item>
 	<item id="14045" name="Stone of Invincibility" type="EtcItem">
-		<!-- P. Def. increases for 20 min. during use. Item exclusively for flying transformed objects. -->
+		<!-- Increases P. Def. for 20 min. Can be used only while flying. -->
 		<set name="icon" val="icon.stone_2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -657,7 +657,7 @@
 		</skills>
 	</item>
 	<item id="14046" name="Stone of Great Speed" type="EtcItem">
-		<!-- Atk. Spd. and Casting Spd. Increases for 20 min. during use. Item exclusively for flying transformed objects. -->
+		<!-- Increases Atk. Spd. and Casting Spd. for 20 min. Can be used only when flying. -->
 		<set name="icon" val="icon.stone_3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -678,7 +678,7 @@
 		</skills>
 	</item>
 	<item id="14047" name="Stone of Speed" type="EtcItem">
-		<!-- Speed increases for 20 min. during use. Item exclusively for flying transformed objects. -->
+		<!-- Increases Speed for 20 min. Can be used only while flying. -->
 		<set name="icon" val="icon.stone_8_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -699,7 +699,7 @@
 		</skills>
 	</item>
 	<item id="14048" name="Stone of Concentration" type="EtcItem">
-		<!-- P. Critical Rate increases for 20 min. during use. Item exclusively for flying transformed objects. -->
+		<!-- Increases Critical Rate for standard attacks for 20 min. Can be used only while flying. -->
 		<set name="icon" val="icon.stone_7_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -720,7 +720,7 @@
 		</skills>
 	</item>
 	<item id="14049" name="Stone of Ease" type="EtcItem">
-		<!-- Max HP increases for 20 min. during use. Item exclusively for flying transformed objects. -->
+		<!-- Increases Max HP for 20 min. Can be used only while flying. -->
 		<set name="icon" val="icon.stone_4_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -741,7 +741,7 @@
 		</skills>
 	</item>
 	<item id="14050" name="Stone of Abundance" type="EtcItem">
-		<!-- Max MP increases for 20 min. during use. Item exclusively for flying transformed objects. -->
+		<!-- Increases Max MP for 20 min. Can be used only while flying. -->
 		<set name="icon" val="icon.stone_5_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -782,7 +782,7 @@
 		</skills>
 	</item>
 	<item id="14052" name="Vesper Noble Enhancement Stone" type="EtcItem">
-		<!-- Item needed to upgrade Vesper armor to Noble Vesper armor through Maestro Ishuma. -->
+		<!-- No longer used. Can be sold in any store. -->
 		<set name="icon" val="icon.energy_condenser_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -792,7 +792,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="14053" name="Mount - Gold Maned Lion" additionalName="7-day" type="Armor">
-		<!-- Can mount a Golden Maned Lion when equipped. 7-day. -->
+		<!-- Allows to mount a Golden Maned Lion. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -816,7 +816,7 @@
 		</skills>
 	</item>
 	<item id="14054" name="Mount - Steam Beetle" additionalName="7-day" type="Armor">
-		<!-- Can mount a Steam Beetle when equipped. 7-day. -->
+		<!-- Allows to mount a Steam Beetle. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -840,7 +840,7 @@
 		</skills>
 	</item>
 	<item id="14055" name="Vitality Replenishing Potion" type="EtcItem">
-		<!-- Replenishes some Vitality upon use. Cooldown is 60 min. -->
+		<!-- Replenishes some vitality upon use. Cooldown is 60 min. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -861,7 +861,7 @@
 		</skills>
 	</item>
 	<item id="14056" name="Snow Man Transformation Stick" additionalName="30-day" type="Weapon">
-		<!-- Transformation stick that turns you into a Snow Man. 30-day. -->
+		<!-- Stick that turns you into a Snowman. 30-day. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -957,7 +957,7 @@
 		</stats>
 	</item>
 	<item id="14059" name="Agathion - Teddy Boy" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Teddy Boy when equipped. 30-day. -->
+		<!-- Summons Agathion Baby Bear. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -981,7 +981,7 @@
 		</skills>
 	</item>
 	<item id="14060" name="Agathion - Teddy Girl" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Teddy Girl when equipped. 30-day. -->
+		<!-- Summons Agathion Mother Bear. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1005,7 +1005,7 @@
 		</skills>
 	</item>
 	<item id="14061" name="Toy Knight Summon Whistle" type="EtcItem">
-		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. -->
+		<!-- Item that allows you to summon a Toy Knight. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1030,7 +1030,7 @@
 		</skills>
 	</item>
 	<item id="14062" name="Spirit Shaman Summon Whistle" type="EtcItem">
-		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 hours. -->
+		<!-- Item that allows you to summon a Spirit Shaman. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1080,7 +1080,7 @@
 		</skills>
 	</item>
 	<item id="14064" name="Turtle Ascetic Summon Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a Turtle Ascetic. Hunger gauge lasts 5 hours. -->
+		<!-- Item that allows you to summon a Turtle Ascetic. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1105,7 +1105,7 @@
 		</skills>
 	</item>
 	<item id="14065" name="Superior Minion Coupon" additionalName="5-hour" type="EtcItem">
-		<!-- Coupon that can be exchanged for a necklace (5-hour) that summons a Superior Minion. -->
+		<!-- A coupon that can be exchanged for Superior Minion Necklace (5-hour) through the Game Assistant. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1121,7 +1121,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="14066" name="Mount - Gold Maned Lion (Event)" additionalName="7-day" type="Armor">
-		<!-- Can mount a Golden Maned Lion when equipped. 7-day. -->
+		<!-- Allows to mount a Golden Maned Lion. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1145,7 +1145,7 @@
 		</skills>
 	</item>
 	<item id="14067" name="Mount - Steam Beetle (Event)" additionalName="7-day" type="Armor">
-		<!-- Can mount a Steam Beetle when equipped. 7-day. -->
+		<!-- Allows to mount a Steam Beetle. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1169,7 +1169,7 @@
 		</skills>
 	</item>
 	<item id="14068" name="Vitality Replenishing Potion (Event)" type="EtcItem">
-		<!-- Replenishes some Vitality upon use. Cooldown is 60 min. -->
+		<!-- Replenishes some vitality upon use. Cooldown is 60 min. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1190,7 +1190,7 @@
 		</skills>
 	</item>
 	<item id="14069" name="Snow Man Transformation Stick (Event)" additionalName="30-day" type="Weapon">
-		<!-- Transformation stick that turns you into a Snow Man. 30-day. -->
+		<!-- Stick that turns you into a Snowman. 30-day. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1286,7 +1286,7 @@
 		</stats>
 	</item>
 	<item id="14072" name="Agathion - Teddy Boy (Event)" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Teddy Boy when equipped. 30-day. -->
+		<!-- Summons Agathion Baby Bear. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1310,7 +1310,7 @@
 		</skills>
 	</item>
 	<item id="14073" name="Agathion - Teddy Girl (Event)" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Teddy Girl when equipped. 30-day. -->
+		<!-- Summons Agathion Mother Bear. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1334,7 +1334,7 @@
 		</skills>
 	</item>
 	<item id="14074" name="Superior Minion Coupon (Event)" additionalName="5-hour" type="EtcItem">
-		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hour). -->
+		<!-- A coupon that can be exchanged for Superior Minion Necklace (5-hour) through the Game Assistant. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1350,7 +1350,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="14075" name="Agathion - Angry Devil (Event)" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Angry Devil when equipped. 30-day. -->
+		<!-- Summons Agathion Angry Devil. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1374,7 +1374,7 @@
 		</skills>
 	</item>
 	<item id="14076" name="Agathion - Shiny (Event)" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Shiny when equipped. 30-day. -->
+		<!-- Summons Agathion Shiny. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1398,7 +1398,7 @@
 		</skills>
 	</item>
 	<item id="14077" name="Agathion - Sobbing (Event)" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Sobbing when equipped. 30-day. -->
+		<!-- Summons Agathion Sobbing. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1422,7 +1422,7 @@
 		</skills>
 	</item>
 	<item id="14078" name="Lucky Enchant Stone: Weapon (D-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate +20% for weapons (D-grade). Only for items enchanted between +3 and +9. -->
+		<!-- Enchant success rate +20% for D-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1443,7 +1443,7 @@
 		</skills>
 	</item>
 	<item id="14079" name="Lucky Enchant Stone: Weapon (C-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate +18% for weapons (C-grade). Only for items enchanted between +3 and +9. -->
+		<!-- Enchant success rate +18% for C-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1464,7 +1464,7 @@
 		</skills>
 	</item>
 	<item id="14080" name="Lucky Enchant Stone: Weapon (B-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate +15% for weapons (B-grade). Only for items enchanted between +3 and +9. -->
+		<!-- Enchant success rate +15% for B-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1485,7 +1485,7 @@
 		</skills>
 	</item>
 	<item id="14081" name="Lucky Enchant Stone: Weapon (A-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate +12% for weapons (A-grade). Only for items enchanted between +3 and +9. -->
+		<!-- Enchant success rate +12% for A-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1506,7 +1506,7 @@
 		</skills>
 	</item>
 	<item id="14082" name="Lucky Enchant Stone: Weapon (S-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate +10% for weapons (S-grade). Only for items enchanted between +3 and +9. -->
+		<!-- Enchant success rate +10% for S-grade weapons. Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1527,7 +1527,7 @@
 		</skills>
 	</item>
 	<item id="14083" name="Lucky Enchant Stone: Armor (D-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate +35% for armor (D-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<!-- Enchant success rate +35% for D-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1548,7 +1548,7 @@
 		</skills>
 	</item>
 	<item id="14084" name="Lucky Enchant Stone: Armor (C-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate +27% for armor (C-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<!-- Enchant success rate +27% for C-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1569,7 +1569,7 @@
 		</skills>
 	</item>
 	<item id="14085" name="Lucky Enchant Stone: Armor (B-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate +23% for armor (B-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<!-- Enchant success rate +23% for B-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1590,7 +1590,7 @@
 		</skills>
 	</item>
 	<item id="14086" name="Lucky Enchant Stone: Armor (A-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate +18% for armor (A-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<!-- Enchant success rate +18% for A-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1611,7 +1611,7 @@
 		</skills>
 	</item>
 	<item id="14087" name="Lucky Enchant Stone: Armor (S-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate +15% for armor (S-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<!-- Enchant success rate +15% for S-grade armor. Only for items enchanted between +3 and +9 (from +4 to +9 for one-piece armor). -->
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1632,7 +1632,7 @@
 		</skills>
 	</item>
 	<item id="14088" name="Snow Man Transformation Stick" additionalName="7-day" type="Weapon">
-		<!-- Transformation stick that turns you into a Snow Man. 7-day. -->
+		<!-- Stick that turns you into a Snowman. 7-day. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1728,7 +1728,7 @@
 		</stats>
 	</item>
 	<item id="14091" name="Agathion - Teddy Boy" additionalName="7-day" type="Armor">
-		<!-- Can summon an Agathion - Teddy Boy when equipped. 7-day. -->
+		<!-- Summons Agathion Baby Bear. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1752,7 +1752,7 @@
 		</skills>
 	</item>
 	<item id="14092" name="Agathion - Teddy Girl" additionalName="7-day" type="Armor">
-		<!-- Can summon an Agathion - Teddy Girl when equipped. 7-day. -->
+		<!-- Summons Agathion Mother Bear. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1776,7 +1776,7 @@
 		</skills>
 	</item>
 	<item id="14093" name="Agathion - Angry Devil" additionalName="7-day" type="Armor">
-		<!-- Can summon an Agathion - Angry Devil when equipped. 7-day. -->
+		<!-- Summons Agathion Angry Devil. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1800,7 +1800,7 @@
 		</skills>
 	</item>
 	<item id="14094" name="Agathion - Shiny" additionalName="7-day" type="Armor">
-		<!-- Can summon an Agathion - Shiny when equipped. 7-day. -->
+		<!-- Summons Agathion Shiny. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1824,7 +1824,7 @@
 		</skills>
 	</item>
 	<item id="14095" name="Agathion - Sobbing" additionalName="7-day" type="Armor">
-		<!-- Can summon an Agathion - Sobbing when equipped. 7-day. -->
+		<!-- Summons Agathion Sobbing. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1848,7 +1848,7 @@
 		</skills>
 	</item>
 	<item id="14096" name="Snow Man Transformation Stick (Event)" additionalName="7-day" type="Weapon">
-		<!-- Transformation stick that turns you into a Snow Man. 7-day. -->
+		<!-- Stick that turns you into a Snowman. 7-day. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1944,7 +1944,7 @@
 		</stats>
 	</item>
 	<item id="14099" name="Agathion - Teddy Boy (Event)" additionalName="7-day" type="Armor">
-		<!-- Can summon an Agathion - Teddy Boy when equipped. 7-day. -->
+		<!-- Summons Agathion Baby Bear. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />

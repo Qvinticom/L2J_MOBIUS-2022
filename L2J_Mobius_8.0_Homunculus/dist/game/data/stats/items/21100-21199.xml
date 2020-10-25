@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="21100" name="Shiny Cube Fragment Armor (S-grade)" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for an S-grade Blessed Scroll: Enchant Armor. -->
+		<!-- Go to Warehouse Keeper to exchange it for Blessed Scroll: Enchant S-grade Armor. -->
 		<set name="icon" val="Branchsys2.icon.shine_cubic_a_piece_i04" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
@@ -9,7 +9,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="21101" name="Shiny Cube Fragment Weapon (D-grade)" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for a D-grade Blessed Scroll: Enchant Weapon. -->
+		<!-- Go to Warehouse Keeper to exchange it for Blessed Scroll: Enchant D-grade Weapon. -->
 		<set name="icon" val="icon.event_cubic_piece_i02" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -17,7 +17,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21102" name="Shiny Cube Fragment Weapon (C-grade)" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for a C-grade Blessed Scroll: Enchant Weapon. -->
+		<!-- Speak to Warehouse Keeper to exchange it for Blessed Scroll: Enchant C-grade Weapon. -->
 		<set name="icon" val="icon.event_cubic_piece_i03" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -25,7 +25,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21103" name="Shiny Cube Fragment Weapon (B-grade)" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for a B-grade Blessed Scroll: Enchant Weapon. -->
+		<!-- Speak to Warehouse Keeper to exchange it for Blessed Scroll: Enchant B-grade Weapon. -->
 		<set name="icon" val="Branchsys2.icon.shine_cubic_w_piece_i02" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
@@ -33,7 +33,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="21104" name="Shiny Cube Fragment Weapon (A-grade)" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for an A-grade Blessed Scroll: Enchant Weapon. -->
+		<!-- Go to Warehouse Keeper to exchange it for Blessed Scroll: Enchant A-grade Weapon. -->
 		<set name="icon" val="Branchsys2.icon.shine_cubic_w_piece_i03" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
@@ -41,7 +41,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="21105" name="Shiny Cube Fragment Weapon (S-grade)" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for an S-grade Blessed Scroll: Enchant Weapon. -->
+		<!-- Go to Warehouse Keeper to exchange it for Blessed Scroll: Enchant S-grade Weapon. -->
 		<set name="icon" val="Branchsys2.icon.shine_cubic_w_piece_i04" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
@@ -455,7 +455,7 @@
 		</skills>
 	</item>
 	<item id="21128" name="Warm Bear Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing warm bear hat. -->
+		<!-- Double-click to obtain Warm Bear Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -476,7 +476,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21129" name="Warm Bear Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing warm bear hat (7-day). -->
+		<!-- Double-click to obtain Warm Bear Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -497,7 +497,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21130" name="Warm Bear Paws Pack" type="EtcItem">
-		<!-- Wrapped Pack containing warm bear paws. -->
+		<!-- Double-click to obtain Warm Bear Paws. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -518,7 +518,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21131" name="Warm Bear Paws Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing warm beat paws (7-day). -->
+		<!-- Double-click to obtain Warm Bear Paws (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -539,7 +539,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21132" name="Stag Beetle Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing stag beetle hat. -->
+		<!-- Double-click to obtain Stag Beetle Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -560,7 +560,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21133" name="Stag Beetle Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing stag beetle hat (7-day). -->
+		<!-- Double-click to obtain Stag Beetle Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -581,7 +581,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21134" name="Beetle Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing beetle hat. -->
+		<!-- Double-click to obtain Beetle Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -602,7 +602,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21135" name="Beetle Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing beetle hat (7-day). -->
+		<!-- Double-click to obtain Beetle Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -623,7 +623,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21136" name="Ladybug Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing ladybug hat. -->
+		<!-- Double-click to obtain Ladybug Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -644,7 +644,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21137" name="Ladybug Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing ladybug hat (7-day). -->
+		<!-- Double-click to obtain Ladybug Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -665,7 +665,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21138" name="Praying Mantis Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing praying mantis hat. -->
+		<!-- Double-click to obtain Praying Mantis Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -686,7 +686,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21139" name="Praying Mantis Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing praying mantis hat (7-day). -->
+		<!-- Double-click to obtain Praying Mantis Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -707,7 +707,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21140" name="Grasshopper Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing grasshopper hat. -->
+		<!-- Double-click to obtain Grasshopper Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -728,7 +728,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21141" name="Grasshopper Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing grasshopper hat (7-day). -->
+		<!-- Double-click to obtain Grasshopper Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -749,7 +749,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21142" name="Gold-rimmed Glasses Pack" type="EtcItem">
-		<!-- Wrapped Pack containing gold-rimmed glasses. -->
+		<!-- Double-click to obtain Gold-rimmed Glasses. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -770,7 +770,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21143" name="Gold-rimmed Glasses Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing gold-rimmed glasses (7-day). -->
+		<!-- Double-click to obtain Gold-rimmed Glasses (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -791,7 +791,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21144" name="White Uniform Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing white uniform hat. -->
+		<!-- Double-click to obtain White Uniform Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -812,7 +812,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21145" name="White Uniform Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing white uniform hat (7-day). -->
+		<!-- Double-click to obtain White Uniform Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -833,7 +833,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21146" name="Warrior's Helmet Pack" type="EtcItem">
-		<!-- Wrapped Pack containing warrior's helmet. -->
+		<!-- Double-click to obtain Warrior's Helmet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -854,7 +854,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21147" name="Warrior's Helmet Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Warrior's Helmet (7-day). -->
+		<!-- Double-click to obtain Warrior's Helmet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -875,7 +875,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21148" name="Transformation Scroll: Dragon Master Lee" type="EtcItem">
-		<!-- Scroll for transforming into a Dragon Master Lee. The effect lasts for 1 hour. -->
+		<!-- Scroll for transforming into a Dragon Master Lee. The effect lasts for 1 h. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -897,7 +897,7 @@
 		</skills>
 	</item>
 	<item id="21149" name="Transformation Scroll: Dragon Master Karin" type="EtcItem">
-		<!-- Scroll for transforming into a Dragon Master Karin. The effect lasts for 1 hour. -->
+		<!-- Scroll for transforming into a Dragon Master Karin. The effect lasts for 1 h. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -962,7 +962,7 @@
 		</skills>
 	</item>
 	<item id="21152" name="Agathion - Singer and Dancer" type="Armor">
-		<!-- Can summon Agathion - Singer and Dancer that gleefully sings and dances when equipped. -->
+		<!-- A bracelet for summoning Agathion Singer & Dancer. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -985,7 +985,7 @@
 		</skills>
 	</item>
 	<item id="21153" name="Agathion - Singer and Dancer" additionalName="7-day" type="Armor">
-		<!-- Can summon Agathion - Singer and Dancer that gleefully sings and dances when equipped. -->
+		<!-- A bracelet for summoning Agathion Singer & Dancer. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1009,7 +1009,7 @@
 		</skills>
 	</item>
 	<item id="21154" name="Agathion - Singer and Dancer Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Singer and Dancer. -->
+		<!-- Double-click to obtain Agathion Singer & Dancer. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -1026,11 +1026,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21152" min="1" max="1" chance="100" /> <!-- Agathion - Singer and Dancer -->
+			<item id="21152" min="1" max="1" chance="100" /> <!-- Agathion Singer & Dancer -->
 		</capsuled_items>
 	</item>
 	<item id="21155" name="Agathion - Singer and Dancer Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Singer and Dancer (7-day). -->
+		<!-- Double-click to obtain Agathion Singer & Dancer (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -1047,7 +1047,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21153" min="1" max="1" chance="100" /> <!-- Agathion - Singer and Dancer - 7-day -->
+			<item id="21153" min="1" max="1" chance="100" /> <!-- Agathion Singer & Dancer - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="21156" name="Big Wedding Cake" type="EtcItem">
@@ -1160,7 +1160,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="21163" name="Wedding Bouquet" type="Weapon">
-		<!-- Beautiful wedding bouquet. Female only. -->
+		<!-- A Wedding Bouquet composed of lovely flowers, intended for female characters only. -->
 		<set name="icon" val="BranchSys2.icon.br_wedding_bouquet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -1190,7 +1190,7 @@
 		</stats>
 	</item>
 	<item id="21164" name="Honeymoon Ticket" additionalName="7-day" type="EtcItem">
-		<!-- Honeymoon ticket given to the bride and groom as a gift. When used, Vitality is maintained for 1 hour. Vitality item with limited usage. -->
+		<!-- Honeymoon ticket given to the bride and groom as a gift. When used, Vitality is maintained for 1 h. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
@@ -1233,7 +1233,7 @@
 		</skills>
 	</item>
 	<item id="21166" name="Agathion - Zaken's Spirit Swords" additionalName="7-day" type="Armor">
-		<!-- Can summon Zaken's Spirit Swords when equipped. Cooldown is 2 hours. 7-day. -->
+		<!-- Can summon Zaken's Spirit Swords when equipped. Cooldown is 2 h. 7-day. -->
 		<set name="icon" val="BranchSys2.Icon.br_aga_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1257,7 +1257,7 @@
 		</skills>
 	</item>
 	<item id="21167" name="Agathion - Zaken's Spirit Swords Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Zaken's Spirit Swords. -->
+		<!-- Double-click to obtain Agathion Zaken's Spirit Swords. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -1274,11 +1274,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21165" min="1" max="1" chance="100" /> <!-- Agathion - Zaken's Spirit Swords -->
+			<item id="21165" min="1" max="1" chance="100" /> <!-- Agathion Zaken's Spirit Swords -->
 		</capsuled_items>
 	</item>
 	<item id="21168" name="Agathion - Zaken's Spirit Swords Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Zaken's Spirit Swords (7-day). -->
+		<!-- Double-click to obtain Agathion Zaken's Spirit Swords (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -1295,7 +1295,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21166" min="1" max="1" chance="100" /> <!-- Agathion - Zaken's Spirit Swords - 7-day -->
+			<item id="21166" min="1" max="1" chance="100" /> <!-- Agathion Zaken's Spirit Swords - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="21169" name="Birthday Present Pack" type="EtcItem">
@@ -1321,7 +1321,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21170" name="Birthday Vitality Potion" type="EtcItem">
-		<!-- Upon use, for 12 hours, when XP is acquired through hunting, Vitality is recovered. Vitality item with limited usage. -->
+		<!-- When used, for 12 h. Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1665,7 +1665,7 @@
 		</skills>
 	</item>
 	<item id="21192" name="Dimensional Diamond Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 50 Dimensional Diamonds. -->
+		<!-- Double-click to obtain 50 Dimensional Diamonds. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1685,7 +1685,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21193" name="Dimensional Diamond" additionalName="Event" type="EtcItem">
-		<!-- Magic crystal needed when casting instant moving magic. If you collect them and bring them to the Gatekeeper, you can exchange them for various types of escape scrolls. -->
+		<!-- Crystal that is filled with magical power. It is needed when casting Teleportation magic. If you collect this item and take them to a gatekeeper, you can trade them for various types of Scroll of Escape. -->
 		<set name="icon" val="icon.etc_gem_clear_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1701,7 +1701,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21194" name="Blessed Scroll of Escape Pack" type="EtcItem">
-		<!-- Wrapped Pack containing blessed scroll of escape. -->
+		<!-- Double-click to obtain Blessed Scroll of Escape. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1721,7 +1721,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21195" name="Blessed Scroll of Escape" type="EtcItem">
-		<!-- Magic scroll that moves you to the nearest village. -->
+		<!-- Magical scroll that relocates you to the nearest village -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1744,7 +1744,7 @@
 		</skills>
 	</item>
 	<item id="21196" name="Superior Quick Healing Potion Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 5 Superior Quick Healing Potions. -->
+		<!-- Double-click to obtain 5 Superior Quick HP Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1760,11 +1760,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21197" min="5" max="5" chance="100" /> <!-- Superior Quick Healing Potion -->
+			<item id="21197" min="5" max="5" chance="100" /> <!-- Superior Quick HP Replenishing Potion -->
 		</capsuled_items>
 	</item>
 	<item id="21197" name="Superior Quick Healing Potion" type="EtcItem">
-		<!-- Magic potion that instantly restores a significant amount of HP. -->
+		<!-- Magic potion that instantly restores a significant amount of HP. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="180" />
@@ -1789,7 +1789,7 @@
 		</skills>
 	</item>
 	<item id="21198" name="Mysterious Scroll: Drum Melody 2-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 2 Mysterious Scroll: Drum Melody. -->
+		<!-- Double-click to obtain 2 Mysterious Scrolls: Drum Melody. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1809,7 +1809,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21199" name="Mysterious Scroll: Drum Melody 8-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 8 Mysterious Scroll: Drum Melody. -->
+		<!-- Double-click to obtain 8 Mysterious Scrolls: Drum Melody. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />

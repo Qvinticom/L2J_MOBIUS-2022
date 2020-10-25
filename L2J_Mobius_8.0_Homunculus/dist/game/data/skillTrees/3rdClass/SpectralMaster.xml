@@ -14,11 +14,22 @@
 		<skill skillName="Novice Invoke" skillId="30625" skillLevel="1" getLevel="76" levelUpSp="4">
 			<removeSkill id="30797" /> <!-- Wind Strike -->
 		</skill>
-		<skill skillName="Intermediate Light Armor Mastery" skillId="30731" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30731" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+			<removeSkill id="30631" /> <!-- Robe Mastery -->
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+		</skill>
 		<skill skillName="Intermediate Light Armor Mastery" skillId="30731" skillLevel="2" getLevel="76" levelUpSp="100" />
-		<skill skillName="Intermediate Robe Mastery" skillId="30730" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Intermediate Robe Mastery" skillId="30730" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+			<removeSkill id="30631" /> <!-- Robe Mastery -->
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+		</skill>
 		<skill skillName="Intermediate Robe Mastery" skillId="30730" skillLevel="2" getLevel="76" levelUpSp="100" />
-		<skill skillName="Intermediate Weapon Mastery" skillId="30729" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Intermediate Weapon Mastery" skillId="30729" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
 		<skill skillName="Intermediate Weapon Mastery" skillId="30729" skillLevel="2" getLevel="76" levelUpSp="100" />
 		<skill skillName="Intermediate Summon Mastery" skillId="30732" skillLevel="1" getLevel="76" levelUpSp="30" />
 		<skill skillName="Intermediate Summon Mastery" skillId="30732" skillLevel="2" getLevel="76" levelUpSp="100" />

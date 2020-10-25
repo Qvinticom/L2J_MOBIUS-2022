@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19503" toLevel="1" name="Crier's Harmony">
-		<!-- For 30 min., the selected party member's P. Atk. +22%, M. Atk. +40%, P./ M. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd./ Casting Spd. +15%, Skill Cooldown -20%, Skill MP Consumption -15%. -->
+		<!-- For $s1, the targeted party member's P. Atk. +$s2, M. Atk. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Atk. Spd./ Casting Spd. +$s6. Skill Cooldown -$s7, Skill MP Consumption -$s8. -->
 		<icon>icon.skill19503</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -90,7 +90,7 @@
 		</effects>
 	</skill>
 	<skill id="19504" toLevel="1" name="Tempted">
-		<!-- Plays the Chaos Symphony charming the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Plays the Chaos Symphony charming the target for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11533</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -111,7 +111,7 @@
 		</effects>
 	</skill>
 	<skill id="19506" toLevel="1" name="Spectral Wound">
-		<!-- The Spectral Sword attacks the target with 100 Power added to P. Atk. -->
+		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. -->
 		<icon>icon.skill19435</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -147,7 +147,7 @@
 		</effects>
 	</skill>
 	<skill id="19509" toLevel="1" name="Elemental Endurance">
-		<!-- For 30 min., all defense attributes of nearby clan members +30. -->
+		<!-- For $s1, Attribute Resistance of nearby clan members +$s2. -->
 		<icon>icon.skill19509</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -198,7 +198,7 @@
 		</effects>
 	</skill>
 	<skill id="19510" toLevel="1" name="Debuff Endurance">
-		<!-- Nearby clan members' Confusion/ Stupor/ Obstruction/ Infection Resistance +50% for 30 min. -->
+		<!-- Nearby clan members' Confusion/ Stupor/ Obstruction/ Infection Resistance +$s2 for $s1 -->
 		<icon>icon.skill19510</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -245,7 +245,7 @@
 		</effects>
 	</skill>
 	<skill id="19511" toLevel="1" name="Mental Endurance">
-		<!-- For 30 min., nearby clan members' Resistance to buff-canceling attacks/ debuff attacks +30. -->
+		<!-- For $s1, nearby clan members' Resistance to buff-canceling attacks/ debuff attacks +$s2. -->
 		<icon>icon.skill19511</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -293,7 +293,7 @@
 		</effects>
 	</skill>
 	<skill id="19522" toLevel="13" name="Repeat Mark Somersault">
-		<!-- Strikes the target with 21701 power. For 8 seconds, their P./ M. Def. -20% -150 Speed. Moves the character back for 400. Can be used in the Triad state. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. -->
+		<!-- Strikes the target with $s1 power. For $s2, P./ M. Def. -$s3, Speed -$s4. Moves the character back for $s5. Can be used in the Triad state. -->
 		<icon>icon.skill19434</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>
@@ -386,7 +386,7 @@
 		</effects>
 	</skill>
 	<skill id="19524" toLevel="1" name="Immortal Soul">
-		<!-- Immune to damage caused by Soul Bomber. Cannot receive other Invincibility effects. -->
+		<!-- Immune to damage caused by Soul Bomber. Cannot receive other Invincibility effects. The skill cooldown is fixed. -->
 		<icon>icon.skill11758</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic>
@@ -429,7 +429,7 @@
 		</effects>
 	</skill>
 	<skill id="19528" toLevel="9" name="Right Angle Reverse">
-		<!-- Strikes the target stunning them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Strikes the target stunning them for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill19303</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -448,9 +448,10 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>30</activateRate>
+		<activateRate>5</activateRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<trait>SHOCK</trait>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
@@ -468,12 +469,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ReuseSkillById">
-				<skillId>11057</skillId> <!-- M. Evasion -->
+				<skillId>11057</skillId> <!-- Magical Evasion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19530" toLevel="1" name="Battle Prelude">
-		<!-- For 15 sec., all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. +150%. -->
+		<!-- For $s1, all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. +$s2. -->
 		<icon>icon.skill11544</icon>
 		<abnormalTime>15</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -574,7 +575,7 @@
 		</effects>
 	</skill>
 	<skill id="19532" toLevel="3" name="Clan Elemental">
-		<!-- All clan members' defense attributes +$s1. -->
+		<!-- All clan members' Attribute Resistance +$s1. -->
 		<icon>icon.skill19003</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -630,7 +631,7 @@
 		</effects>
 	</skill>
 	<skill id="19533" toLevel="1" name="Clan Rating">
-		<!-- Points obtained at the end of the Throne of Heroes Boss Battle +25%. -->
+		<!-- Points obtained at the end of the Throne of Heroes Boss Battle +$s1. -->
 		<icon>icon.skill19533</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -658,7 +659,7 @@
 		</effects>
 	</skill>
 	<skill id="19535" toLevel="3" name="Clan Resistance">
-		<!-- Clan members' Resistance to Stun/ Paralysis/ MEN/ Aerial Yoke/ Knock Back/ Knock Down +$s1. -->
+		<!-- Clan members Confusion Resistance +$s1. -->
 		<icon>icon.skill19004</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -698,7 +699,7 @@
 		</effects>
 	</skill>
 	<skill id="19536" toLevel="1" name="Clan Battlefield">
-		<!-- For 5 min., Max HP/ MP/ CP +5%, P. Atk. +5%, M. Atk. +10%, and Speed +7. Consumes 5 Spirit Ore. Only available in the battlefield. -->
+		<!-- For $s1, Max HP/ MP/ CP +$s2, P. Atk. +$s3, M. Atk. +$s4, and Speed +$s5. Consumes $s6 Spirit Ore. Only available in the battlefield. -->
 		<icon>icon.skill19536</icon>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>5</itemConsumeCount>
@@ -772,7 +773,7 @@
 		</effects>
 	</skill>
 	<skill id="19538" toLevel="1" name="Clan Vitality">
-		<!-- Clan members' XP and SP +10%. -->
+		<!-- Clan members acquired XP/ SP +$s1. -->
 		<icon>icon.skill19538</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -786,7 +787,7 @@
 		</effects>
 	</skill>
 	<skill id="19539" toLevel="1" name="Clan Battle">
-		<!-- Clan members' P. Atk. +5% and M. Atk. +10%. -->
+		<!-- Clan members' P. Atk. +$s1 and M. Atk. +$s2. -->
 		<icon>icon.skill19539</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -802,7 +803,7 @@
 		</effects>
 	</skill>
 	<skill id="19540" toLevel="1" name="Clan Blood">
-		<!-- Clan members' PvE Damage +5%. -->
+		<!-- Clan members' PvE Damage +$s1. -->
 		<icon>icon.skill19540</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -825,7 +826,7 @@
 		</effects>
 	</skill>
 	<skill id="19541" toLevel="1" name="Clan Cry">
-		<!-- Clan members' Skill Power +5%. -->
+		<!-- Clan members P./ M. Skill Power +$s1. -->
 		<icon>icon.skill19541</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -841,7 +842,7 @@
 		</effects>
 	</skill>
 	<skill id="19542" toLevel="1" name="Clan Darkness">
-		<!-- Clan members' PvP Damage +5%. -->
+		<!-- Clan members' PvP Damage +$s1. -->
 		<icon>icon.skill19542</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -933,7 +934,7 @@
 		</effects>
 	</skill>
 	<skill id="19544" toLevel="6" name="Clan Will">
-		<!-- Clan members' XP and SP +$s1. -->
+		<!-- Clan members acquired XP/ SP +$s1. -->
 		<icon>icon.skill19544</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1155,7 +1156,7 @@
 		</effects>
 	</skill>
 	<skill id="19551" toLevel="1" name="Superior Summon Mastery">
-		<!-- Allows summoning a Servitor when summon points are below 2. -->
+		<!-- Allows summoning a Servitor when summon points are below $s1. -->
 		<icon>icon.skill11254</icon>
 		<magicLevel>
 			<value level="1">85</value>
@@ -1173,14 +1174,14 @@
 		</effects>
 	</skill>
 	<skill id="19552" toLevel="11" name="Burning Chain Lash">
-		<!-- Wields the burning chain to draw nearby enemies to you with $s1 power. Ignites them for $s2 Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Wields the burning chain to draw nearby enemies to you with $s1 power. Ignites them for $s2 Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Pull. -->
 		<icon>icon.skill19556</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
-		<activateRate>80</activateRate>
+		<activateRate>60</activateRate>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>200</affectRange>
+		<affectRange>600</affectRange>
 		<lvlBonusRate>2</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1236,7 +1237,6 @@
 			<effect name="PullBack">
 				<speed>600</speed>
 			</effect>
-			<effect name="BlockActions" />
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">15166</value>
@@ -1253,10 +1253,15 @@
 				</power>
 				<criticalChance>5</criticalChance>
 			</effect>
+			<effect name="CallSkill">
+				<skillId>11139</skillId> <!-- Ignite -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19553" toLevel="7" name="Revenging Thorn">
-		<!-- Attacks nearby enemies with thorns with $s1 power pulling them to you. Recovers $s2 HP. If cast while Grand Fortress Lv. 5 is active, the skill has increased power and range. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies with thorns with $s1 power pulling them to you. Recovers $s2 HP. If cast while Grand Fortress Lv. 5 is active, the skill has increased power and range. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Pull. -->
 		<icon>icon.skill19553</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -1329,7 +1334,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="19554" toLevel="7" name="Revenging Black Thorn">
-		<!-- Attacks nearby enemies with thorns with $s1 power pulling them to you. Recovers $s2 HP. If cast while Grand Fortress Lv. 5 is active, the skill has increased power and range. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies with thorns with $s1 power pulling them to you. Recovers $s2 HP. If cast while Grand Fortress Lv. 5 is active, the skill has increased power and range. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Pull. -->
 		<icon>icon.skill19553</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -1402,7 +1407,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="19555" toLevel="7" name="Maelstrom">
-		<!-- Creates a cyclone that pulls nearby enemies to you with $s1 power. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Creates a cyclone that pulls nearby enemies to you with $s1 power. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Pull. -->
 		<icon>icon.skill19554</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -1410,7 +1415,7 @@
 		<activateRate>60</activateRate>
 		<affectRange>400</affectRange>
 		<affectLimit>10-10</affectLimit>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-5000</effectPoint>
 		<effectRange>400</effectRange>
 		<isDebuff>true</isDebuff>
@@ -1470,7 +1475,7 @@
 		</effects>
 	</skill>
 	<skill id="19556" toLevel="7" name="Inhale Soul">
-		<!-- Creates a pit of darkness that pulls nearby enemies to you with $s1 power. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Creates a pit of darkness that pulls nearby enemies to you with $s1 power. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Pull. -->
 		<icon>icon.skill19555</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -1536,7 +1541,7 @@
 		</effects>
 	</skill>
 	<skill id="19557" toLevel="5" name="Inhale Soul">
-		<!-- Creates a pit of darkness that pulls nearby enemies to you. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Creates a pit of darkness that pulls nearby enemies to you. Requires a sword or a blunt weapon. Inflicted status: Pull. -->
 		<icon>icon.skill19555</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -1668,7 +1673,7 @@
 		</effects>
 	</skill>
 	<skill id="19559" toLevel="11" name="Black Thorn Chain Strike">
-		<!-- Swings the black thorn chain to attack the target and nearby enemies with $s1 power pulling them to you. Restores $s2 HP. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Swings the black thorn chain to attack the target and nearby enemies with $s1 power pulling them to you. Restores $s2 HP. Requires a sword or a blunt weapon. Inflicted status: Pull. -->
 		<icon>icon.skill19557</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -1854,15 +1859,15 @@
 		</effects>
 	</skill>
 	<skill id="19561" toLevel="11" name="Chained Death Scythe">
-		<!-- Summons a scythe to attack the target and nearby enemies with $s1 power pulling them to you. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Summons a scythe to attack the target and nearby enemies with $s1 power pulling them to you. Requires a sword or a blunt weapon. Inflicted status: Pull. -->
 		<icon>icon.skill19559</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<lvlBonusRate>2</lvlBonusRate>
+		<abnormalTime>1</abnormalTime>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>PULL</trait>
-		<isDebuff>true</isDebuff>
 		<magicLevel>
 			<value level="1">89</value>
 			<value level="2">91</value>
@@ -1932,7 +1937,7 @@
 		</effects>
 	</skill>
 	<skill id="19562" toLevel="7" name="Reborn from Ashes">
-		<!-- Becomes invincible for $s1 and recovers $s2 HP under the Protection of Phoenix. -->
+		<!-- Becomes invincible for $s1 and recovers $s2 HP under the Protection of Phoenix. The skill cooldown is fixed. -->
 		<icon>icon.skill19565</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1969,7 +1974,7 @@
 		</effects>
 	</skill>
 	<skill id="19563" toLevel="1" name="Wave Reflection">
-		<!-- Damage Reflection Trigger -->
+		<!-- Activates Damage Reflection. -->
 		<icon>icon.skill3584</icon>
 		<operateType>A2</operateType>
 		<castRange>1500</castRange>
@@ -1986,7 +1991,7 @@
 		</effects>
 	</skill>
 	<skill id="19564" toLevel="1" name="Wave Barrier">
-		<!-- For 10 sec., P. Def. +50% and reflects damage when hit. Cannot be applied together with any Shield Block skill. -->
+		<!-- For $s1, P. Def. +$s2 and reflects damage when hit. Cannot be applied together with any Shield Block skill. -->
 		<icon>icon.skill3584</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -2019,7 +2024,7 @@
 		</effects>
 	</skill>
 	<skill id="19565" toLevel="13" name="Shield Bash">
-		<!-- Strikes the target with a shield disabling their normal attacks for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Strikes the target with a shield disabling their standard attacks for $s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1462</icon>
 		<operateType>A1</operateType>
 		<castRange>80</castRange>
@@ -2044,10 +2049,9 @@
 		</effects>
 	</skill>
 	<skill id="19566" toLevel="4" name="Grand Shillien Shadow">
-		<!-- P. Atk. +2%, Shield Def. +5%, and Attack Attribute +15, and activates Shillien Shadow on the caster. 6% chance to activate Shilen's Presence on allies. -->
+		<!-- P. Atk. +$s1, Shield Def. +$s2, and Attribute Attack +$s3, and activates Shillien Shadow on the caster. $s4 chance to activate Shillien's Presence on allies. -->
 		<icon>icon.skill19560</icon>
 		<operateType>P</operateType>
-		<mpConsume>8</mpConsume>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -2074,7 +2078,7 @@
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>10078</skillId> <!-- Shilen's Presence -->
+				<skillId>10078</skillId> <!-- Shillien's Presence -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -2157,7 +2161,7 @@
 		</effects>
 	</skill>
 	<skill id="19567" toLevel="11" name="Gigantic Wave">
-		<!-- Summons a huge wave that attacks the target and nearby enemies with $s1 power pulling them to you. Requires a sword or a blunt weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Summons a huge wave that attacks the target and nearby enemies with $s1 power pulling them to you. Requires a sword or a blunt weapon. Inflicted status: Pull. -->
 		<icon>icon.skill19558</icon>
 		<affectLimit>5-12</affectLimit>
 		<abnormalTime>1</abnormalTime>
@@ -2166,7 +2170,7 @@
 		<nextAction>ATTACK</nextAction>
 		<affectRange>600</affectRange>
 		<affectLimit>10-10</affectLimit>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-5000</effectPoint>
 		<effectRange>600</effectRange>
 		<isDebuff>true</isDebuff>
@@ -2245,7 +2249,7 @@
 		</effects>
 	</skill>
 	<skill id="19568" toLevel="1" name="Nine Aegis">
-		<!-- P. Def/ M. Def/ Bow Resistance +50% and Reflect Magic +25% under the Protection of Barrier, and becomes immune to Pull Up/ Knock Back/ Knock Down/ Danger Zone debuffs. -->
+		<!-- P. Def./ M. Def./ Bow Attack Resistance +$s2 and Reflect Magic +$s3 under the Protection of Barrier, and gives immunity to Confusion/ Danger Zone. -->
 		<icon>icon.skill10107</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -2390,13 +2394,13 @@
 		</effects>
 	</skill>
 	<skill id="19571" toLevel="1" name="Lightning Strike">
-		<!-- Paralyzes the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Paralyzes the target for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>10000</reuseDelay>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>3</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>100</activateRate>
@@ -2407,20 +2411,22 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19572" toLevel="1" name="Shillien Shadow">
-		<!-- Removes debuffs and limits the maximum damage received for 6 sec. to 6666. -->
+		<!-- Removes debuffs and limits the maximum damage received for $s1 to 6666. The skill cooldown is fixed. -->
 		<icon>icon.skill5242</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalVisualEffect>RO_GHOST_REFLECT</abnormalVisualEffect>
 		<reuseDelay>66000</reuseDelay>
 		<effectPoint>337</effectPoint>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<abnormalTime>6</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<canBeDispelled>false</canBeDispelled>
 		<effects>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
@@ -2433,7 +2439,7 @@
 		</effects>
 	</skill>
 	<skill id="19573" toLevel="9" name="Cubic Fire Bless">
-		<!-- Removes debuffs, recovering $s1 CON and increasing Debuff Resistance by $s3 for $s2 Activates the Reborn from Ashes, which recovers $s4 HP to prevent death in critical condition once for 30 min. -->
+		<!-- Removes debuffs, recovering $s1 CON and increasing Debuff Resistance by $s3 for $s2 Activates the Reborn from Ashes, which recovers $s4 HP to prevent death in critical condition once for 30 min. The skill cooldown is fixed. -->
 		<icon>icon.skill19565</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2484,7 +2490,7 @@
 		<effectPoint>2</effectPoint>
 	</skill>
 	<skill id="19575" toLevel="13" name="Vanishing Stun">
-		<!-- Silenced by Vanishing Stun for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Silenced by Vanishing Stun for $s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10010</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -2495,14 +2501,14 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<trait>DERANGEMENT</trait>
 		<effects>
-			<effect name="BlockSkill">
-				<magicTypes>0;1;2;3;4;5;7;22;</magicTypes>
-			</effect>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
 	<skill id="19576" toLevel="1" name="Two-Hand Smash">
-		<!-- Strikes hard to decrease P. Def. by 30% for 7 sec. -->
+		<!-- Strikes hard to decrease P. Def. by $s2 for $s1 -->
 		<icon>icon.skill10009</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>

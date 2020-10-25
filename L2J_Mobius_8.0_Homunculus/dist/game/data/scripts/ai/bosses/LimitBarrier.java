@@ -49,55 +49,13 @@ public final class LimitBarrier extends AbstractNpcAI
 		29325, // Orfen
 		29001, // Queen Ant
 		29006, // Core
-		26044, // Evil Magikus
-		26045, // Kerfaus
-		26046, // Milinaus
-		26047, // Sarkaus
-		26048, // Shimeus
-		26049, // Evil Kinigos
 		26131, // Isabella
 		26137, // Mimir
-		26162, // Demon Worshipper Dorgon
-		26163, // Demon Worshipper Zarka
-		26164, // Demon Worshipper Kultaan
-		26165, // Demon Worshipper Nortan
-		26170, // Valac
-		26171, // Kurion
-		26172, // Atluum
-		26173, // Lebruum
-		26178, // Berserker Hard
-		26179, // Patrol Commander Pho
-		26180, // Guardian Gastra
-		26181, // Dark Wizard Ruby
-		26186, // Wandering Croamis
-		26187, // Wandering Harpe
-		26188, // Wandering Barrena
-		26189, // Wandering Purka
 		26277, // Ashen Shadow Expeditionary Force Leaders Kantu
 		26278, // Ashen Shadow Expeditionary Force Leaders Kai
 		26279, // Ashen Shadow Expeditionary Force Leaders Heine
 		26280, // Ashen Shadow Expeditionary Force Leaders Xenon
-		26285, // Blood Devil Brutal
-		26286, // Blood Devil Akun
-		26287, // Blood Devil Epica
-		26288, // Blood Devil Julia
-		26293, // Valiant Edgar
-		26294, // Vicious Blood
-		26295, // Coquette Morrigan
-		26296, // Cunning Croby
-		26301, // Evil Spirit Knight Tretan
-		26302, // Evil Spirit Knight Boros
-		26303, // Evil Spirit Alusion
-		26304, // Evil Spirits Puppet Graff
 		26312, // Lithra
-		26372, // Corrupted Atrofa
-		26373, // Corrupted Arbor
-		26374, // Corrupted Falena
-		26375, // Corrupted Arimus
-		26380, // Spirit of Time Arachine
-		26381, // Spirit of Time Tisraki
-		26382, // Spirit of Time Nympia
-		26383, // Spirit of Time Lafros
 		29374, // Cyrax
 		26431, // Avenger Alusion
 		26432, // Avenger Graff
@@ -109,6 +67,10 @@ public final class LimitBarrier extends AbstractNpcAI
 		26438, // Berserker Tabris
 		26439, // Ferocious Valac
 		26440, // Arrogant Lebruum
+		26441, // Witch Moira
+		26442, // Mad Cullan
+		26443, // Akrikhin Charon
+		26444, // Scorpion King Votan
 	};
 	// Skill
 	private static final SkillHolder LIMIT_BARRIER = new SkillHolder(32203, 1);

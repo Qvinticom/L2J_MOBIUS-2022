@@ -9,9 +9,13 @@
 		<skill skillName="Novice Shield Impact" skillId="30739" skillLevel="1" getLevel="76" levelUpSp="100" />
 		<skill skillName="Novice Final Ultimate Defense" skillId="30740" skillLevel="1" getLevel="76" levelUpSp="100" />
 		<skill skillName="Novice Summon Phoenix Cubic" skillId="30662" skillLevel="1" getLevel="76" levelUpSp="30" />
-		<skill skillName="Intermediate Sword/Blunt Weapon Mastery" skillId="30711" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Intermediate Sword/Blunt Weapon Mastery" skillId="30711" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30802" /> <!-- Sword / Blunt Weapon Mastery -->
+		</skill>
 		<skill skillName="Intermediate Sword/Blunt Weapon Mastery" skillId="30711" skillLevel="2" getLevel="76" levelUpSp="100" />
-		<skill skillName="Intermediate Heavy Armor Mastery" skillId="30712" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Intermediate Heavy Armor Mastery" skillId="30712" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+		</skill>
 		<skill skillName="Intermediate Heavy Armor Mastery" skillId="30712" skillLevel="2" getLevel="76" levelUpSp="100" />
 		<skill skillName="Intermediate Shield Mastery" skillId="30713" skillLevel="1" getLevel="76" levelUpSp="30">
 			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->

@@ -63,6 +63,14 @@ public class PlayerVariables extends AbstractVariables
 	public static final String FORTUNE_TELLING_BLACK_CAT_VARIABLE = "FortuneTellingBlackCat";
 	public static final String DELUSION_RETURN = "DELUSION_RETURN";
 	public static final String HUNTING_ZONE_RESET_TIME = "HUNTING_ZONE_RESET_TIME_";
+	public static final String FAVORITE_TELEPORTS = "FAVORITE_TELEPORTS";
+	public static final String HOMUNCULUS_STATUS = "HOMUNCULUS_STATUS";
+	public static final String HOMUNCULUS_TIME = "HOMUNCULUS_TIME";
+	public static final String HOMUNCULUS_HP = "HOMUNCULUS_HP";
+	public static final String HOMUNCULUS_SP = "HOMUNCULUS_SP";
+	public static final String HOMUNCULUS_VP = "HOMUNCULUS_VP";
+	public static final String HOMUNCULUS_ID = "HOMUNCULUS";
+	public static final String HOMUNCULUS_QUALITY = "HOMUNCULUS_QUALITY";
 	
 	private final int _objectId;
 	

@@ -69,7 +69,7 @@
 		</skills>
 	</item>
 	<item id="38304" name="Daisy Hairpin" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. Female only. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. Female only. -->
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -86,7 +86,7 @@
 		</skills>
 	</item>
 	<item id="38305" name="Daisy Hairpin" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. Female only. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. Female only. -->
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -188,7 +188,7 @@
 		</skills>
 	</item>
 	<item id="38311" name="Daisy Hairpin" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. Female only. -->
+		<!-- P. Accuracy +5. Female only. -->
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -289,7 +289,7 @@
 		</skills>
 	</item>
 	<item id="38318" name="Little Angel Wings" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -303,7 +303,7 @@
 		</skills>
 	</item>
 	<item id="38319" name="Little Angel Wings" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -387,7 +387,7 @@
 		</skills>
 	</item>
 	<item id="38325" name="Little Angel Wings" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5, when equipped. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -485,7 +485,7 @@
 		</skills>
 	</item>
 	<item id="38332" name="Fairy Antennae" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -499,7 +499,7 @@
 		</skills>
 	</item>
 	<item id="38333" name="Fairy Antennae" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -583,7 +583,7 @@
 		</skills>
 	</item>
 	<item id="38339" name="Fairy Antennae" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -681,7 +681,7 @@
 		</skills>
 	</item>
 	<item id="38346" name="Chapeau" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -695,7 +695,7 @@
 		</skills>
 	</item>
 	<item id="38347" name="Chapeau" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -779,7 +779,7 @@
 		</skills>
 	</item>
 	<item id="38353" name="Chapeau" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -877,7 +877,7 @@
 		</skills>
 	</item>
 	<item id="38360" name="Artisan's Goggles" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -891,7 +891,7 @@
 		</skills>
 	</item>
 	<item id="38361" name="Artisan's Goggles" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -975,7 +975,7 @@
 		</skills>
 	</item>
 	<item id="38367" name="Artisan's Goggles" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1073,7 +1073,7 @@
 		</skills>
 	</item>
 	<item id="38374" name="Arrow-pierced Apple" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate +50. -->
+		<!-- When equipped, Critical Rate for standard attacks +50. -->
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1087,7 +1087,7 @@
 		</skills>
 	</item>
 	<item id="38375" name="Arrow-pierced Apple" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage +90, M. Critical Damage +68. -->
+		<!-- When equipped, Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1171,7 +1171,7 @@
 		</skills>
 	</item>
 	<item id="38381" name="Arrow-pierced Apple" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1422,7 +1422,7 @@
 		</skills>
 	</item>
 	<item id="38398" name="Expertise Rune Pack" additionalName="D-grade" type="EtcItem">
-		<!-- Wrapped Pack containing Expertise Rune (D-grade) (2-hour). -->
+		<!-- Can be exchanged for Powerful Fish through the Fishing Guild members. Double-click to obtain D-grade Expertise Rune (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1432,7 +1432,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38397" min="1" max="1" chance="100" /> <!-- Expertise Rune (D-grade) - 2-hour -->
+			<item id="38397" min="1" max="1" chance="100" /> <!-- D-grade Expertise Rune - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="38399" name="Expertise Rune (C-grade)" additionalName="2-hour" type="EtcItem">

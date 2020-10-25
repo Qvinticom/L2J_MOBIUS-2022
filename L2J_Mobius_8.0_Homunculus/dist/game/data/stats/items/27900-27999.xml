@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="27900" name="Ultimate Eternal Breastplate" additionalName="Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an attack or defense type set option. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -28,7 +28,7 @@
 		</stats>
 	</item>
 	<item id="27901" name="Ultimate Eternal Gaiters" additionalName="Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -53,7 +53,7 @@
 		</stats>
 	</item>
 	<item id="27902" name="Ultimate Eternal Gauntlets" additionalName="Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -77,7 +77,7 @@
 		</stats>
 	</item>
 	<item id="27903" name="Ultimate Eternal Boots" additionalName="Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -101,7 +101,7 @@
 		</stats>
 	</item>
 	<item id="27904" name="Ultimate Eternal Leather Helmet" additionalName="Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -124,7 +124,7 @@
 		</stats>
 	</item>
 	<item id="27905" name="Ultimate Eternal Leather Armor" additionalName="Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%. P. Atk. +1.3%, M. Atk. +2.6%. Light Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -152,7 +152,7 @@
 		</stats>
 	</item>
 	<item id="27906" name="Ultimate Eternal Leather Leggings" additionalName="Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -178,7 +178,7 @@
 		</stats>
 	</item>
 	<item id="27907" name="Ultimate Eternal Leather Gloves" additionalName="Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -202,7 +202,7 @@
 		</stats>
 	</item>
 	<item id="27908" name="Ultimate Eternal Leather Boots" additionalName="Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -226,7 +226,7 @@
 		</stats>
 	</item>
 	<item id="27909" name="Ultimate Eternal Circlet" additionalName="Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -249,7 +249,7 @@
 		</stats>
 	</item>
 	<item id="27910" name="Ultimate Eternal Tunic" additionalName="Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Robe, can be enhanced by Blacksmith in any town. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -278,7 +278,7 @@
 		</stats>
 	</item>
 	<item id="27911" name="Ultimate Eternal Stockings" additionalName="Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -305,7 +305,7 @@
 		</stats>
 	</item>
 	<item id="27912" name="Ultimate Eternal Gloves" additionalName="Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -329,7 +329,7 @@
 		</stats>
 	</item>
 	<item id="27913" name="Ultimate Eternal Shoes" additionalName="Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -353,7 +353,7 @@
 		</stats>
 	</item>
 	<item id="27914" name="Ultimate Eternal Helmet" additionalName="Attack Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -376,7 +376,7 @@
 		</stats>
 	</item>
 	<item id="27915" name="Ultimate Eternal Breastplate" additionalName="Attack Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received Damage -8%. P. Atk. +1.3% and M. Atk. +2.6%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -403,7 +403,7 @@
 		</stats>
 	</item>
 	<item id="27916" name="Ultimate Eternal Gaiters" additionalName="Attack Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -428,7 +428,7 @@
 		</stats>
 	</item>
 	<item id="27917" name="Ultimate Eternal Gauntlets" additionalName="Attack Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -452,7 +452,7 @@
 		</stats>
 	</item>
 	<item id="27918" name="Ultimate Eternal Boots" additionalName="Attack Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -476,7 +476,7 @@
 		</stats>
 	</item>
 	<item id="27919" name="Ultimate Eternal Leather Helmet" additionalName="Assassin Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -499,7 +499,7 @@
 		</stats>
 	</item>
 	<item id="27920" name="Ultimate Eternal Leather Armor" additionalName="Assassin Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -527,7 +527,7 @@
 		</stats>
 	</item>
 	<item id="27921" name="Ultimate Eternal Leather Leggings" additionalName="Assassin Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -553,7 +553,7 @@
 		</stats>
 	</item>
 	<item id="27922" name="Ultimate Eternal Leather Gloves" additionalName="Assassin Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -577,7 +577,7 @@
 		</stats>
 	</item>
 	<item id="27923" name="Ultimate Eternal Leather Boots" additionalName="Assassin Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -601,7 +601,7 @@
 		</stats>
 	</item>
 	<item id="27924" name="Ultimate Eternal Circlet" additionalName="Magic Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -624,7 +624,7 @@
 		</stats>
 	</item>
 	<item id="27925" name="Ultimate Eternal Tunic" additionalName="Magic Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -653,7 +653,7 @@
 		</stats>
 	</item>
 	<item id="27926" name="Ultimate Eternal Stockings" additionalName="Magic Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -680,7 +680,7 @@
 		</stats>
 	</item>
 	<item id="27927" name="Ultimate Eternal Gloves" additionalName="Magic Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -704,7 +704,7 @@
 		</stats>
 	</item>
 	<item id="27928" name="Ultimate Eternal Shoes" additionalName="Magic Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -728,7 +728,7 @@
 		</stats>
 	</item>
 	<item id="27929" name="Ultimate Eternal Helmet" additionalName="Defense Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -751,7 +751,7 @@
 		</stats>
 	</item>
 	<item id="27930" name="Ultimate Eternal Breastplate" additionalName="Defense Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received Damage -8%. P. Atk. +1.3% and M. Atk. +2.6%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -778,7 +778,7 @@
 		</stats>
 	</item>
 	<item id="27931" name="Ultimate Eternal Gaiters" additionalName="Defense Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -803,7 +803,7 @@
 		</stats>
 	</item>
 	<item id="27932" name="Ultimate Eternal Gauntlets" additionalName="Defense Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -827,7 +827,7 @@
 		</stats>
 	</item>
 	<item id="27933" name="Ultimate Eternal Boots" additionalName="Defense Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -851,7 +851,7 @@
 		</stats>
 	</item>
 	<item id="27934" name="Ultimate Eternal Leather Helmet" additionalName="Enchant Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -874,7 +874,7 @@
 		</stats>
 	</item>
 	<item id="27935" name="Ultimate Eternal Leather Armor" additionalName="Enchant Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -902,7 +902,7 @@
 		</stats>
 	</item>
 	<item id="27936" name="Ultimate Eternal Leather Leggings" additionalName="Enchant Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -928,7 +928,7 @@
 		</stats>
 	</item>
 	<item id="27937" name="Ultimate Eternal Leather Gloves" additionalName="Enchant Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -952,7 +952,7 @@
 		</stats>
 	</item>
 	<item id="27938" name="Ultimate Eternal Leather Boots" additionalName="Enchant Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -976,7 +976,7 @@
 		</stats>
 	</item>
 	<item id="27939" name="Ultimate Eternal Circlet" additionalName="Recovery Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -999,7 +999,7 @@
 		</stats>
 	</item>
 	<item id="27940" name="Ultimate Eternal Tunic" additionalName="Recovery Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1028,7 +1028,7 @@
 		</stats>
 	</item>
 	<item id="27941" name="Ultimate Eternal Stockings" additionalName="Recovery Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1055,7 +1055,7 @@
 		</stats>
 	</item>
 	<item id="27942" name="Ultimate Eternal Gloves" additionalName="Recovery Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1079,7 +1079,7 @@
 		</stats>
 	</item>
 	<item id="27943" name="Ultimate Eternal Shoes" additionalName="Recovery Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1103,7 +1103,7 @@
 		</stats>
 	</item>
 	<item id="27944" name="Ultimate Eternal Helmet" additionalName="Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1126,7 +1126,7 @@
 		</stats>
 	</item>
 	<item id="27945" name="Ultimate Eternal Breastplate" additionalName="Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows an attack or defense type set option. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Heavy Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1153,7 +1153,7 @@
 		</stats>
 	</item>
 	<item id="27946" name="Ultimate Eternal Gaiters" additionalName="Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1178,7 +1178,7 @@
 		</stats>
 	</item>
 	<item id="27947" name="Ultimate Eternal Gauntlets" additionalName="Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1202,7 +1202,7 @@
 		</stats>
 	</item>
 	<item id="27948" name="Ultimate Eternal Boots" additionalName="Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1226,7 +1226,7 @@
 		</stats>
 	</item>
 	<item id="27949" name="Ultimate Eternal Leather Helmet" additionalName="Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1249,7 +1249,7 @@
 		</stats>
 	</item>
 	<item id="27950" name="Ultimate Eternal Leather Armor" additionalName="Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%. P. Atk. +1.4%, M. Atk. +2.8%. Light Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1277,7 +1277,7 @@
 		</stats>
 	</item>
 	<item id="27951" name="Ultimate Eternal Leather Leggings" additionalName="Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1303,7 +1303,7 @@
 		</stats>
 	</item>
 	<item id="27952" name="Ultimate Eternal Leather Gloves" additionalName="Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1327,7 +1327,7 @@
 		</stats>
 	</item>
 	<item id="27953" name="Ultimate Eternal Leather Boots" additionalName="Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1351,7 +1351,7 @@
 		</stats>
 	</item>
 	<item id="27954" name="Ultimate Eternal Circlet" additionalName="Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1374,7 +1374,7 @@
 		</stats>
 	</item>
 	<item id="27955" name="Ultimate Eternal Tunic" additionalName="Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. Robe, can be enhanced by Blacksmith in any town. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1403,7 +1403,7 @@
 		</stats>
 	</item>
 	<item id="27956" name="Ultimate Eternal Stockings" additionalName="Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1430,7 +1430,7 @@
 		</stats>
 	</item>
 	<item id="27957" name="Ultimate Eternal Gloves" additionalName="Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1454,7 +1454,7 @@
 		</stats>
 	</item>
 	<item id="27958" name="Ultimate Eternal Shoes" additionalName="Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1478,7 +1478,7 @@
 		</stats>
 	</item>
 	<item id="27959" name="Ultimate Eternal Helmet" additionalName="Attack Type/ Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1501,7 +1501,7 @@
 		</stats>
 	</item>
 	<item id="27960" name="Ultimate Eternal Breastplate" additionalName="Attack Type/ Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received Damage -8%. P. Atk. +1.4% and M. Atk. +2.8%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1528,7 +1528,7 @@
 		</stats>
 	</item>
 	<item id="27961" name="Ultimate Eternal Gaiters" additionalName="Attack Type/ Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1553,7 +1553,7 @@
 		</stats>
 	</item>
 	<item id="27962" name="Ultimate Eternal Gauntlets" additionalName="Attack Type/ Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1577,7 +1577,7 @@
 		</stats>
 	</item>
 	<item id="27963" name="Ultimate Eternal Boots" additionalName="Attack Type/ Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1601,7 +1601,7 @@
 		</stats>
 	</item>
 	<item id="27964" name="Ultimate Eternal Leather Helmet" additionalName="Assassin Type/ Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1624,7 +1624,7 @@
 		</stats>
 	</item>
 	<item id="27965" name="Ultimate Eternal Leather Armor" additionalName="Assassin Type/ Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1652,7 +1652,7 @@
 		</stats>
 	</item>
 	<item id="27966" name="Ultimate Eternal Leather Leggings" additionalName="Assassin Type/ Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1678,7 +1678,7 @@
 		</stats>
 	</item>
 	<item id="27967" name="Ultimate Eternal Leather Gloves" additionalName="Assassin Type/ Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1702,7 +1702,7 @@
 		</stats>
 	</item>
 	<item id="27968" name="Ultimate Eternal Leather Boots" additionalName="Assassin Type/ Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1726,7 +1726,7 @@
 		</stats>
 	</item>
 	<item id="27969" name="Ultimate Eternal Circlet" additionalName="Magic Type/ Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1749,7 +1749,7 @@
 		</stats>
 	</item>
 	<item id="27970" name="Ultimate Eternal Tunic" additionalName="Magic Type/ Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1778,7 +1778,7 @@
 		</stats>
 	</item>
 	<item id="27971" name="Ultimate Eternal Stockings" additionalName="Magic Type/ Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1805,7 +1805,7 @@
 		</stats>
 	</item>
 	<item id="27972" name="Ultimate Eternal Gloves" additionalName="Magic Type/ Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1829,7 +1829,7 @@
 		</stats>
 	</item>
 	<item id="27973" name="Ultimate Eternal Shoes" additionalName="Magic Type/ Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1853,7 +1853,7 @@
 		</stats>
 	</item>
 	<item id="27974" name="Ultimate Eternal Helmet" additionalName="Defense Type/ Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1876,7 +1876,7 @@
 		</stats>
 	</item>
 	<item id="27975" name="Ultimate Eternal Breastplate" additionalName="Defense Type/ Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received Damage -8%. P. Atk. +1.4% and M. Atk. +2.8%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1903,7 +1903,7 @@
 		</stats>
 	</item>
 	<item id="27976" name="Ultimate Eternal Gaiters" additionalName="Defense Type/ Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1928,7 +1928,7 @@
 		</stats>
 	</item>
 	<item id="27977" name="Ultimate Eternal Gauntlets" additionalName="Defense Type/ Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1952,7 +1952,7 @@
 		</stats>
 	</item>
 	<item id="27978" name="Ultimate Eternal Boots" additionalName="Defense Type/ Heavy Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1976,7 +1976,7 @@
 		</stats>
 	</item>
 	<item id="27979" name="Ultimate Eternal Leather Helmet" additionalName="Enchant Type/ Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1999,7 +1999,7 @@
 		</stats>
 	</item>
 	<item id="27980" name="Ultimate Eternal Leather Armor" additionalName="Enchant Type/ Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2027,7 +2027,7 @@
 		</stats>
 	</item>
 	<item id="27981" name="Ultimate Eternal Leather Leggings" additionalName="Enchant Type/ Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2053,7 +2053,7 @@
 		</stats>
 	</item>
 	<item id="27982" name="Ultimate Eternal Leather Gloves" additionalName="Enchant Type/ Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2077,7 +2077,7 @@
 		</stats>
 	</item>
 	<item id="27983" name="Ultimate Eternal Leather Boots" additionalName="Enchant Type/ Light Armor/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2101,7 +2101,7 @@
 		</stats>
 	</item>
 	<item id="27984" name="Ultimate Eternal Circlet" additionalName="Recovery Type/ Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -3%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2124,7 +2124,7 @@
 		</stats>
 	</item>
 	<item id="27985" name="Ultimate Eternal Tunic" additionalName="Recovery Type/ Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.4%, M. Atk. +2.8%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2153,7 +2153,7 @@
 		</stats>
 	</item>
 	<item id="27986" name="Ultimate Eternal Stockings" additionalName="Recovery Type/ Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -5%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2180,7 +2180,7 @@
 		</stats>
 	</item>
 	<item id="27987" name="Ultimate Eternal Gloves" additionalName="Recovery Type/ Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2204,7 +2204,7 @@
 		</stats>
 	</item>
 	<item id="27988" name="Ultimate Eternal Shoes" additionalName="Recovery Type/ Robe/ Lv. 5" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.4% and M. Atk. by 2.8%. -->
+		<!-- Received damage -2%, P. Atk. +1.4%, M. Atk. +2.8%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2228,7 +2228,7 @@
 		</stats>
 	</item>
 	<item id="27989" name="Ultimate Eternal Helmet" additionalName="Heavy Armor/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.5%, M. Atk. +3%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2251,7 +2251,7 @@
 		</stats>
 	</item>
 	<item id="27990" name="Ultimate Eternal Breastplate" additionalName="Heavy Armor/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows an attack or defense type set option. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received damage -8%, P. Atk. +1.5%, M. Atk. +3%. Heavy Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2278,7 +2278,7 @@
 		</stats>
 	</item>
 	<item id="27991" name="Ultimate Eternal Gaiters" additionalName="Heavy Armor/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.5%, M. Atk. +3%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2303,7 +2303,7 @@
 		</stats>
 	</item>
 	<item id="27992" name="Ultimate Eternal Gauntlets" additionalName="Heavy Armor/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.5%, M. Atk. +3%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2327,7 +2327,7 @@
 		</stats>
 	</item>
 	<item id="27993" name="Ultimate Eternal Boots" additionalName="Heavy Armor/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.5%, M. Atk. +3%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2351,7 +2351,7 @@
 		</stats>
 	</item>
 	<item id="27994" name="Ultimate Eternal Leather Helmet" additionalName="Light Armor/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.5%, M. Atk. +3%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2374,7 +2374,7 @@
 		</stats>
 	</item>
 	<item id="27995" name="Ultimate Eternal Leather Armor" additionalName="Light Armor/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%. P. Atk. +1.5%, M. Atk. +3%. Light Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2402,7 +2402,7 @@
 		</stats>
 	</item>
 	<item id="27996" name="Ultimate Eternal Leather Leggings" additionalName="Light Armor/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.5%, M. Atk. +3%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2428,7 +2428,7 @@
 		</stats>
 	</item>
 	<item id="27997" name="Ultimate Eternal Leather Gloves" additionalName="Light Armor/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.5%, M. Atk. +3%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2452,7 +2452,7 @@
 		</stats>
 	</item>
 	<item id="27998" name="Ultimate Eternal Leather Boots" additionalName="Light Armor/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.5%, M. Atk. +3%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2476,7 +2476,7 @@
 		</stats>
 	</item>
 	<item id="27999" name="Ultimate Eternal Circlet" additionalName="Robe/ Lv. 6" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.5%, M. Atk. +3%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />

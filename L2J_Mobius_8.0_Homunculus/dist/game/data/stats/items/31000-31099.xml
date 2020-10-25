@@ -475,7 +475,7 @@
 		</stats>
 	</item>
 	<item id="31014" name="Bound Stormbringer - Critical Anger" type="Weapon">
-		<!-- <Special Option>. P. Atk. +248 and decreases HP by 12 during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +248 and decreases HP by 12 after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -510,7 +510,7 @@
 		</stats>
 	</item>
 	<item id="31015" name="Bound Stormbringer - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 86. No Soul Crystal option. -->
+		<!-- <Special Option>. Critical Rate for standard attacks +86. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -544,7 +544,7 @@
 		</stats>
 	</item>
 	<item id="31016" name="Bound Stormbringer - Light Armor" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
+		<!-- <Special Option>. Increases Weight Limit by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -680,7 +680,7 @@
 		</stats>
 	</item>
 	<item id="31020" name="Bound Star Buster - Rsk. Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 99 when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Critical Rate +99 when HP < 60%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -786,7 +786,7 @@
 		</stats>
 	</item>
 	<item id="31023" name="Bound Scorpion - Critical Stun" type="Weapon">
-		<!-- <Special Option>. Has about a 31% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Has about a 31% chance of casting Stun on the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_scorpion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1041,7 +1041,7 @@
 		</stats>
 	</item>
 	<item id="31031" name="Bound Skull Graver - Rsk. Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 138 when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- <Special Option>. Critical Rate for standard attacks +138 when HP<60%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_skull_graver_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1286,7 +1286,7 @@
 		</stats>
 	</item>
 	<item id="31038" name="Bound Chevalier Rapier - Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shamshir. <Special Option>. Increases Accuracy by 6. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Shamshir. <Special Option>. P. Accuracy +6. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1322,7 +1322,7 @@
 		</stats>
 	</item>
 	<item id="31039" name="Bound Chevalier Rapier - Back Blow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Keshanberk. <Special Option>. Increases P. Critical Rate by 67 when attacking the target from behind. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Shamshir. <Special Option>. P. Critical Rate +67 when attacking the target from behind. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1358,7 +1358,7 @@
 		</stats>
 	</item>
 	<item id="31040" name="Bound Chevalier Rapier - Rsk. Evasion" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shamshir. <Special Option>. Increases Evasion 7 when HP drops to 60% or below. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Shamshir. <Special Option>. P. Evasion +7 when HP < 60%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1394,7 +1394,7 @@
 		</stats>
 	</item>
 	<item id="31041" name="Bound Chevalier Rapier - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Katana. <Special Option>. Increases Critical by 82. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Katana. <Special Option>. P. Critical Rate +82. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1430,7 +1430,7 @@
 		</stats>
 	</item>
 	<item id="31042" name="Bound Chevalier Rapier - Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Katana. <Special Option>. P. Atk. +194 during a Critical Attack. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Katana. <Special Option>. P. Atk. +194 after a critical attack. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1466,7 +1466,7 @@
 		</stats>
 	</item>
 	<item id="31043" name="Bound Chevalier Rapier - Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Katana. <Special Option>. Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Katana. <Special Option>. Atk. Spd. +7%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1502,7 +1502,7 @@
 		</stats>
 	</item>
 	<item id="31044" name="Bound Chevalier Rapier - Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spirit Sword. <Special Option>. P. Atk. +194 during a Critical Attack. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Spirit Sword. <Special Option>. P. Atk. +194 after a critical attack. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1538,7 +1538,7 @@
 		</stats>
 	</item>
 	<item id="31045" name="Bound Chevalier Rapier - Critical Poison" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spirit Sword. <Special Option>. Has a 15% chance of casting Poison on the target during a standard Critical Attack. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Spirit Sword. <Special Option>. Has a 15% chance to poison the target after a standard critical attack. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1574,7 +1574,7 @@
 		</stats>
 	</item>
 	<item id="31046" name="Bound Chevalier Rapier - Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spirit Sword. <Special Option>. Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Spirit Sword. <Special Option>. Atk. Spd. +7%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1610,7 +1610,7 @@
 		</stats>
 	</item>
 	<item id="31047" name="Bound Chevalier Rapier - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Raid Sword. <Special Option>. Increases Critical by 82. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Raid Sword. <Special Option>. P. Critical Rate +82. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1646,7 +1646,7 @@
 		</stats>
 	</item>
 	<item id="31048" name="Bound Chevalier Rapier - Critical Drain" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Raid Sword. <Special Option>. Absorbs 9 HP from the target during a Critical Attack. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Raid Sword. <Special Option>. Absorbs 9 HP from the target after a critical attack. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1682,7 +1682,7 @@
 		</stats>
 	</item>
 	<item id="31049" name="Bound Chevalier Rapier - Critical Poison" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spirit Sword. <Special Option>. Has a 15% chance of casting Poison on the target during a standard Critical Attack. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical. No Soul Crystal option.Attack. -->
+		<!-- Kamael-exclusive Weapon: Raid Sword. <Special Option>. Has a 15% chance to poison the target after a standard critical attack. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1751,7 +1751,7 @@
 		</stats>
 	</item>
 	<item id="31051" name="Bound Schlager - Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Flamberge conversion. <Special Option>. P. Atk. +174 during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Flamberge conversion. <Special Option>. Critical Damage for standard attacks +174. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1786,7 +1786,7 @@
 		</stats>
 	</item>
 	<item id="31052" name="Bound Schlager - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Flamberge conversion. <Special Option>. Increases Critical by 86. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Flamberge conversion. <Special Option>. Critical Rate for standard attacks +86. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1821,7 +1821,7 @@
 		</stats>
 	</item>
 	<item id="31053" name="Bound Schlager - Light Armor" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Flamberge Conversion. <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Flamberge Conversion. <Special Option>. Increases Weight Limit by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1921,7 +1921,7 @@
 		</stats>
 	</item>
 	<item id="31057" name="Bound Zubei's Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- Part of the Heavy Zubei's set. -->
+		<!-- Part of the heavy Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="B" />
@@ -1943,7 +1943,7 @@
 		</stats>
 	</item>
 	<item id="31058" name="Bound Zubei's Boots" additionalName="Light Armor" type="Armor">
-		<!-- Part of the Light Zubei's set. -->
+		<!-- Part of the light Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1965,7 +1965,7 @@
 		</stats>
 	</item>
 	<item id="31059" name="Bound Zubei's Boots" additionalName="Robe" type="Armor">
-		<!-- Part of the Zubei's Robe set. -->
+		<!-- Part of the Zubei's robe set. -->
 		<set name="icon" val="icon.armor_t64_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1987,7 +1987,7 @@
 		</stats>
 	</item>
 	<item id="31060" name="Bound Zubei's Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- Part of the Heavy Zubei's set. -->
+		<!-- Part of the heavy Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2009,7 +2009,7 @@
 		</stats>
 	</item>
 	<item id="31061" name="Bound Zubei's Gauntlets" additionalName="Light Armor" type="Armor">
-		<!-- Part of the Light Zubei's set. -->
+		<!-- Part of the light Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2031,7 +2031,7 @@
 		</stats>
 	</item>
 	<item id="31062" name="Bound Zubei's Gauntlets" additionalName="Robe" type="Armor">
-		<!-- Part of the Zubei's Robe set. -->
+		<!-- Part of the Zubei's robe set. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2327,7 +2327,7 @@
 		</stats>
 	</item>
 	<item id="31075" name="Bound Soldat Estoc - Critical Anger" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Stormbringer conversion. <Special Option>\Decreases HP by 12 during a Critical Attack. P. Atk. +248. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Bound Soldat Estoc, Stormbringer Conversion. <Special Option>. HP -12, P. Atk. +248 after a critical attack. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2364,7 +2364,7 @@
 		</stats>
 	</item>
 	<item id="31076" name="Bound Soldat Estoc - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Stormbringer conversion. <Special Option>. Increases Critical by 86. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Bound Soldat Estoc, Stormbringer Conversion. <Special Option>. Critical Rate for standard attacks +86. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2400,7 +2400,7 @@
 		</stats>
 	</item>
 	<item id="31077" name="Bound Soldat Estoc - Light Armor" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Stormbringer conversion. <Special Option>. Increases Weight Gauge by 20%. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Bound Soldat Estoc, Stormbringer Conversion. <Special Option>. Weight limit +20%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2468,7 +2468,7 @@
 		</stats>
 	</item>
 	<item id="31079" name="Bound Soul Separator - Guidance" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Accuracy by about 4. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Features>. P. Accuracy +4. Deals additional PvP damage. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2503,7 +2503,7 @@
 		</stats>
 	</item>
 	<item id="31080" name="Bound Soul Separator - Critical Damage" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. +200 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Atk. +200 after a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2643,7 +2643,7 @@
 		</stats>
 	</item>
 	<item id="31084" name="Bound Reaper - Quick Recovery" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Soul Bow Conversion. <Special Option>. Decreases cooldown by about 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Soul Bow Conversion. <Special Option>. Skill Cooldown is about -15%. Inflicts additional PvP Damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2748,7 +2748,7 @@
 		</stats>
 	</item>
 	<item id="31087" name="Bound Pa'agrian Sword - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 77. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +77. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2816,7 +2816,7 @@
 		</stats>
 	</item>
 	<item id="31089" name="Bound Pa'agrian Sword - Critical Drain" type="Weapon">
-		<!-- <Special Option>. Absorbs 9 HP from the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Absorbs 9 HP from the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

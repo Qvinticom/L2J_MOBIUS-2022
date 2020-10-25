@@ -27,7 +27,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22803" toLevel="1" name="Fantasy Top Appearance Stone Pack">
+	<skill id="22803" toLevel="1" name="Package: Fantasy Top Appearance Stone">
 		<itemConsumeId>23575</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -41,16 +41,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="50">
-						<item id="23546" count="1" /> <!-- Vesper Noble Light Armor Top Appearance Stone - 7-day (Event) -->
+						<item id="23546" count="1" /> <!-- Vesper Noble Light Armor Top Appearance Stone - 7-day / Event -->
 					</item>
 					<item chance="50">
-						<item id="23585" count="1" /> <!-- Vorpal Light Armor Top Appearance Stone - 7-day (Event) -->
+						<item id="23585" count="1" /> <!-- Vorpal Light Armor Top Appearance Stone - 7-day / Event -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22804" toLevel="1" name="Fantasy Pants Appearance Stone Pack">
+	<skill id="22804" toLevel="1" name="Package: Fantasy Bottom Appearance Stone">
 		<itemConsumeId>23576</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -64,16 +64,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="50">
-						<item id="23547" count="1" /> <!-- Vesper Noble Light Armor Pants Appearance Stone - 7-day (Event) -->
+						<item id="23547" count="1" /> <!-- Vesper Noble Light Armor Pants Appearance Stone - 7-day / Event -->
 					</item>
 					<item chance="50">
-						<item id="23586" count="1" /> <!-- Vorpal Light Armor Pants Appearance Stone - 7-day (Event) -->
+						<item id="23586" count="1" /> <!-- Vorpal Light Armor Pants Appearance Stone - 7-day / Event -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22805" toLevel="1" name="Fantasy Gloves Appearance Stone Pack">
+	<skill id="22805" toLevel="1" name="Package: Fantasy Gloves Appearance Stone">
 		<itemConsumeId>23577</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -87,16 +87,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="50">
-						<item id="23548" count="1" /> <!-- Vesper Noble Light Armor Gloves Appearance Stone - 7-day (Event) -->
+						<item id="23548" count="1" /> <!-- Vesper Noble Light Armor Gloves Appearance Stone - 7-day / Event -->
 					</item>
 					<item chance="50">
-						<item id="23587" count="1" /> <!-- Vorpal Light Armor Gloves Appearance Stone - 7-day (Event) -->
+						<item id="23587" count="1" /> <!-- Vorpal Light Armor Gloves Appearance Stone - 7-day / Event -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22806" toLevel="1" name="Fantasy Shoes Appearance Stone Pack">
+	<skill id="22806" toLevel="1" name="Package: Fantasy Shoes Appearance Stone">
 		<itemConsumeId>23578</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -110,10 +110,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="50">
-						<item id="23549" count="1" /> <!-- Vesper Noble Light Armor Shoes Appearance Stone - 7-day (Event) -->
+						<item id="23549" count="1" /> <!-- Vesper Noble Light Armor Shoes Appearance Stone - 7-day / Event -->
 					</item>
 					<item chance="50">
-						<item id="23588" count="1" /> <!-- Vorpal Light Armor Shoes Appearance Stone - 7-day (Event) -->
+						<item id="23588" count="1" /> <!-- Vorpal Light Armor Shoes Appearance Stone - 7-day / Event -->
 					</item>
 				</items>
 			</effect>
@@ -465,22 +465,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6666">
-						<item id="23590" count="1" /> <!-- Hellblade Appearance Stone - 7-day (Event) -->
+						<item id="23590" count="1" /> <!-- Hellblade Appearance Stone - 7-day / Event -->
 					</item>
 					<item chance="16.6666">
-						<item id="23591" count="1" /> <!-- Tiat's Tiatenon Appearance Stone - 7-day (Event) -->
+						<item id="23591" count="1" /> <!-- Tiat's Tiatenon Appearance Stone - 7-day / Event -->
 					</item>
 					<item chance="16.6667">
-						<item id="23592" count="1" /> <!-- Doll's Butcher Blades Appearance Stone - 7-day (Event) -->
+						<item id="23592" count="1" /> <!-- Doll's Butcher Blades Appearance Stone - 7-day / Event -->
 					</item>
 					<item chance="16.6667">
-						<item id="23593" count="1" /> <!-- Aenkinel's Astaroth Appearance Stone - 7-day (Event) -->
+						<item id="23593" count="1" /> <!-- Aenkinel's Astaroth Appearance Stone - 7-day / Event -->
 					</item>
 					<item chance="16.6667">
-						<item id="23594" count="1" /> <!-- Yehan Klanikus' Tirbing Appearance Stone - 7-day (Event) -->
+						<item id="23594" count="1" /> <!-- Yehan Klanikus' Tirbing Appearance Stone - 7-day / Event -->
 					</item>
 					<item chance="16.6667">
-						<item id="23595" count="1" /> <!-- Mardil's Wind Appearance Stone - 7-day (Event) -->
+						<item id="23595" count="1" /> <!-- Mardil's Wind Appearance Stone - 7-day / Event -->
 					</item>
 				</items>
 			</effect>
@@ -540,7 +540,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22842" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85 Solo">
+	<skill id="22842" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -556,7 +556,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22843" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90 Solo">
+	<skill id="22843" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -572,7 +572,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22844" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95 Solo">
+	<skill id="22844" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -588,7 +588,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22845" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85 Party">
+	<skill id="22845" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -604,7 +604,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22846" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90 Party">
+	<skill id="22846" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -620,7 +620,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22847" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95 Party">
+	<skill id="22847" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -637,7 +637,7 @@
 		</effects>
 	</skill>
 	<skill id="22848" toLevel="1" name="Vitality Maintaining Potion">
-		<!-- Maintains Vitality. -->
+		<!-- Maintains the Vitality amount. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -993,37 +993,37 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.05">
-						<item id="36162" count="1" /> <!-- Scroll of Blessing: (R99-grade) -->
+						<item id="36162" count="1" /> <!-- R99-grade Scroll of Blessing -->
 					</item>
 					<item chance="0.1">
-						<item id="36161" count="1" /> <!-- Scroll of Blessing: (R95-grade) -->
+						<item id="36161" count="1" /> <!-- R95-grade Scroll of Blessing -->
 					</item>
 					<item chance="0.4">
-						<item id="36160" count="1" /> <!-- Scroll of Blessing: (R2-grade) -->
+						<item id="36160" count="1" /> <!-- Scroll of Blessing (R2-grade) -->
 					</item>
 					<item chance="0.4">
-						<item id="19446" count="1" /> <!-- Unbind Scroll (R99-grade) -->
+						<item id="19446" count="1" /> <!-- R99-grade Unbind Scroll -->
 					</item>
 					<item chance="0.8">
-						<item id="19445" count="1" /> <!-- Unbind Scroll (R95-grade) -->
+						<item id="19445" count="1" /> <!-- R95-grade Unbind Scroll -->
 					</item>
 					<item chance="1.5">
-						<item id="36159" count="1" /> <!-- Scroll of Blessing: (R1-grade) -->
+						<item id="36159" count="1" /> <!-- Scroll of Blessing (R1-grade) -->
 					</item>
 					<item chance="2">
-						<item id="19444" count="1" /> <!-- Unbind Scroll (R-grade) -->
+						<item id="19444" count="1" /> <!-- R-grade Unbind Scroll -->
 					</item>
 					<item chance="12">
-						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) - Event -->
+						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant R-grade Weapon - Event -->
 					</item>
 					<item chance="13">
-						<item id="36164" count="3" /> <!-- Giant's Scroll: Enchant Armor (R-grade) - Event -->
+						<item id="36164" count="3" /> <!-- Giant's Scroll: Enchant R-grade Armor - Event -->
 					</item>
 					<item chance="12.75">
-						<item id="36008" count="1" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="36008" count="1" /> <!-- High-grade Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="13">
-						<item id="36009" count="1" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="36009" count="1" /> <!-- High-grade Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="11">
 						<item id="30298" count="3" /> <!-- Superior Giant's Codex - Mastery -->
@@ -1035,13 +1035,13 @@
 						<item id="30297" count="7" /> <!-- Superior Giant's Codex -->
 					</item>
 					<item chance="11">
-						<item id="19440" count="15" /> <!-- Gemstone (R-grade) -->
+						<item id="19440" count="15" /> <!-- R-grade Gemstone -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22863" toLevel="1" name="Blessed Weapon Appearance Stone (R-grade)">
+	<skill id="22863" toLevel="1" name="Blessed R-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1050,7 +1050,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22864" toLevel="1" name="Blessed Weapon Appearance Stone (S-grade)">
+	<skill id="22864" toLevel="1" name="Blessed S-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1059,7 +1059,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22865" toLevel="1" name="Blessed Weapon Appearance Stone (A-grade)">
+	<skill id="22865" toLevel="1" name="Blessed A-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1068,7 +1068,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22866" toLevel="1" name="Blessed Weapon Appearance Stone (B-grade)">
+	<skill id="22866" toLevel="1" name="Blessed B-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1077,7 +1077,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22867" toLevel="1" name="Blessed Weapon Appearance Stone (C-grade)">
+	<skill id="22867" toLevel="1" name="Blessed C-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1086,7 +1086,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22868" toLevel="1" name="Blessed Weapon Appearance Stone (D-grade)">
+	<skill id="22868" toLevel="1" name="Blessed D-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1095,7 +1095,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22869" toLevel="1" name="Blessed Weapon Appearance Stone (R-grade)">
+	<skill id="22869" toLevel="1" name="Blessed R-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1104,7 +1104,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22870" toLevel="1" name="Blessed Weapon Appearance Stone (S-grade)">
+	<skill id="22870" toLevel="1" name="Blessed S-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1113,7 +1113,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22871" toLevel="1" name="Blessed Weapon Appearance Stone (A-grade)">
+	<skill id="22871" toLevel="1" name="Blessed A-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1122,7 +1122,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22872" toLevel="1" name="Blessed Weapon Appearance Stone (B-grade)">
+	<skill id="22872" toLevel="1" name="Blessed B-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1131,7 +1131,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22873" toLevel="1" name="Blessed Weapon Appearance Stone (C-grade)">
+	<skill id="22873" toLevel="1" name="Blessed C-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1140,7 +1140,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22874" toLevel="1" name="Blessed Weapon Appearance Stone (D-grade)">
+	<skill id="22874" toLevel="1" name="Blessed D-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1149,7 +1149,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22875" toLevel="1" name="Blessed Weapon Appearance Stone (R-grade)">
+	<skill id="22875" toLevel="1" name="Blessed R-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1158,7 +1158,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22876" toLevel="1" name="Blessed Weapon Appearance Stone (S-grade)">
+	<skill id="22876" toLevel="1" name="Blessed S-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1167,7 +1167,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22877" toLevel="1" name="Blessed Weapon Appearance Stone (A-grade)">
+	<skill id="22877" toLevel="1" name="Blessed A-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1176,7 +1176,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22878" toLevel="1" name="Blessed Weapon Appearance Stone (B-grade)">
+	<skill id="22878" toLevel="1" name="Blessed B-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1185,7 +1185,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22879" toLevel="1" name="Blessed Weapon Appearance Stone (C-grade)">
+	<skill id="22879" toLevel="1" name="Blessed C-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1194,7 +1194,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22880" toLevel="1" name="Blessed Weapon Appearance Stone (D-grade)">
+	<skill id="22880" toLevel="1" name="Blessed D-grade Weapon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1203,7 +1203,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22881" toLevel="1" name="Blessed Scroll: Modify Armor (R-grade)">
+	<skill id="22881" toLevel="1" name="Blessed Scroll: Modify R-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1212,7 +1212,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22882" toLevel="1" name="Blessed Scroll: Modify Armor (S-grade)">
+	<skill id="22882" toLevel="1" name="Blessed Scroll: Modify S-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1221,7 +1221,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22883" toLevel="1" name="Blessed Scroll: Modify Armor (A-grade)">
+	<skill id="22883" toLevel="1" name="Blessed Scroll: Modify A-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1230,7 +1230,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22884" toLevel="1" name="Blessed Scroll: Modify Armor (B-grade)">
+	<skill id="22884" toLevel="1" name="Blessed Scroll: Modify B-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1239,7 +1239,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22885" toLevel="1" name="Blessed Scroll: Modify Armor (C-grade)">
+	<skill id="22885" toLevel="1" name="Blessed Scroll: Modify C-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1248,7 +1248,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22886" toLevel="1" name="Blessed Scroll: Modify Armor (D-grade)">
+	<skill id="22886" toLevel="1" name="Blessed Scroll: Modify D-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1257,7 +1257,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22887" toLevel="1" name="Blessed Scroll: Modify Armor (R-grade)">
+	<skill id="22887" toLevel="1" name="Blessed Scroll: Modify R-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1266,7 +1266,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22888" toLevel="1" name="Blessed Scroll: Modify Armor (S-grade)">
+	<skill id="22888" toLevel="1" name="Blessed Scroll: Modify S-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1275,7 +1275,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22889" toLevel="1" name="Blessed Scroll: Modify Armor (A-grade)">
+	<skill id="22889" toLevel="1" name="Blessed Scroll: Modify A-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1284,7 +1284,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22890" toLevel="1" name="Blessed Scroll: Modify Armor (B-grade)">
+	<skill id="22890" toLevel="1" name="Blessed Scroll: Modify B-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1293,7 +1293,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22891" toLevel="1" name="Blessed Scroll: Modify Armor (C-grade)">
+	<skill id="22891" toLevel="1" name="Blessed Scroll: Modify C-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1302,7 +1302,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22892" toLevel="1" name="Blessed Scroll: Modify Armor (D-grade)">
+	<skill id="22892" toLevel="1" name="Blessed Scroll: Modify D-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1311,7 +1311,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22893" toLevel="1" name="Blessed Scroll: Modify Armor (R-grade)">
+	<skill id="22893" toLevel="1" name="Blessed Scroll: Modify R-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1320,7 +1320,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22894" toLevel="1" name="Blessed Scroll: Modify Armor (S-grade)">
+	<skill id="22894" toLevel="1" name="Blessed Scroll: Modify S-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1329,7 +1329,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22895" toLevel="1" name="Blessed Scroll: Modify Armor (A-grade)">
+	<skill id="22895" toLevel="1" name="Blessed Scroll: Modify A-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1338,7 +1338,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22896" toLevel="1" name="Blessed Scroll: Modify Armor (B-grade)">
+	<skill id="22896" toLevel="1" name="Blessed Scroll: Modify B-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1347,7 +1347,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22897" toLevel="1" name="Blessed Scroll: Modify Armor (C-grade)">
+	<skill id="22897" toLevel="1" name="Blessed Scroll: Modify C-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1356,7 +1356,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22898" toLevel="1" name="Blessed Scroll: Modify Armor (D-grade)">
+	<skill id="22898" toLevel="1" name="Blessed Scroll: Modify D-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

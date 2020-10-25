@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="47700" name="Greater Blue Cat's Eye" additionalName="Lv. 1" type="Armor">
-		<!-- When equipped, M. Skill Critical Damage +12% and M. Skill Power +5%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- M. Skill Critical Damage +12%, M. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Equip various greater jewels to get additional effects. <Enchanting>. Compounding with Jewel Energy. -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -26,7 +26,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="47677" min="1" max="1" chance="100" /> <!-- Red Cat's Eye - Lv. 1 -->
+			<item id="47677" min="1" max="1" chance="100" /> <!-- Red Cat's Eye Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="47702" name="La Vie En Rose's Blue Cat's Eye Box" type="EtcItem">
@@ -43,7 +43,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="47682" min="1" max="1" chance="100" /> <!-- Blue Cat's Eye - Lv. 1 -->
+			<item id="47682" min="1" max="1" chance="100" /> <!-- Blue Cat's Eye Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="47703" name="Red Cat's Eye Lv. 3 Jewelry Box" type="EtcItem">
@@ -60,7 +60,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="47679" min="1" max="1" chance="100" /> <!-- Red Cat's Eye - Lv. 3 -->
+			<item id="47679" min="1" max="1" chance="100" /> <!-- Red Cat's Eye Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="47704" name="Red Cat's Eye Lv. 4 Jewelry Box" type="EtcItem">
@@ -77,7 +77,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="47680" min="1" max="1" chance="100" /> <!-- Red Cat's Eye - Lv. 4 -->
+			<item id="47680" min="1" max="1" chance="100" /> <!-- Red Cat's Eye Lv. 4 -->
 		</capsuled_items>
 	</item>
 	<item id="47705" name="Blue Cat's Eye Lv. 3 Jewelry Box" type="EtcItem">
@@ -94,7 +94,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="47684" min="1" max="1" chance="100" /> <!-- Blue Cat's Eye - Lv. 3 -->
+			<item id="47684" min="1" max="1" chance="100" /> <!-- Blue Cat's Eye Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="47706" name="Blue Cat's Eye Lv. 4 Jewelry Box" type="EtcItem">
@@ -111,7 +111,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="47685" min="1" max="1" chance="100" /> <!-- Blue Cat's Eye - Lv. 4 -->
+			<item id="47685" min="1" max="1" chance="100" /> <!-- Blue Cat's Eye Lv. 4 -->
 		</capsuled_items>
 	</item>
 	<item id="47707" name="Ultimate Jewelry Box" type="EtcItem">
@@ -128,22 +128,22 @@
 			<item id="47704" min="1" max="1" chance="3.57142" /> <!-- Red Cat's Eye Lv. 4 Jewelry Box -->
 			<item id="47705" min="1" max="1" chance="3.57142" /> <!-- Blue Cat's Eye Lv. 3 Jewelry Box -->
 			<item id="47706" min="1" max="1" chance="3.57142" /> <!-- Blue Cat's Eye Lv. 4 Jewelry Box -->
-			<item id="47626" min="1" max="1" chance="3.57142" /> <!-- Ruby Lv. 3 Jewelry Box -->
+			<item id="47626" min="1" max="1" chance="3.57142" /> <!-- Ruby Jewelry Box Lv. 3 -->
 			<item id="47627" min="1" max="1" chance="3.57142" /> <!-- Sapphire Lv. 3 Jewelry Box -->
 			<item id="47628" min="1" max="1" chance="3.57142" /> <!-- Topaz Lv. 3 Jewelry Box -->
-			<item id="47629" min="1" max="1" chance="3.57142" /> <!-- Opal Lv. 3 Jewelry Box -->
+			<item id="47629" min="1" max="1" chance="3.57142" /> <!-- Opal Jewelry Box Lv. 3 -->
 			<item id="47630" min="1" max="1" chance="3.57142" /> <!-- Obsidian Lv. 3 Jewelry Box -->
-			<item id="47631" min="1" max="1" chance="3.57142" /> <!-- Diamond Lv. 3 Jewelry Box -->
+			<item id="47631" min="1" max="1" chance="3.57142" /> <!-- Diamond Jewelry Box Lv. 3 -->
 			<item id="47632" min="1" max="1" chance="3.57142" /> <!-- Emerald Lv. 3 Jewelry Box -->
 			<item id="47633" min="1" max="1" chance="3.57142" /> <!-- Aquamarine Lv. 3 Jewelry Box -->
-			<item id="47634" min="1" max="1" chance="3.57142" /> <!-- Pearl Lv. 3 Jewelry Box -->
+			<item id="47634" min="1" max="1" chance="3.57142" /> <!-- Pearl Jewelry Box Lv. 3 -->
 			<item id="47635" min="1" max="1" chance="3.57142" /> <!-- Vital Stone Lv. 3 Jewelry Box -->
-			<item id="47636" min="1" max="1" chance="3.57142" /> <!-- Garnet Lv. 3 Jewelry Box -->
-			<item id="47637" min="1" max="1" chance="3.57142" /> <!-- Tanzanite Lv. 3 Jewelry Box -->
+			<item id="47636" min="1" max="1" chance="3.57142" /> <!-- Garnet Jewelry Box Lv. 3 -->
+			<item id="47637" min="1" max="1" chance="3.57142" /> <!-- Tanzanite Jewelry Box Lv. 3 -->
 			<item id="47638" min="1" max="1" chance="3.57142" /> <!-- Ruby Lv. 4 Jewelry Box -->
 			<item id="47639" min="1" max="1" chance="3.57142" /> <!-- Sapphire Lv. 4 Jewelry Box -->
 			<item id="47640" min="1" max="1" chance="3.57142" /> <!-- Topaz Lv. 4 Jewelry Box -->
-			<item id="47641" min="1" max="1" chance="3.57142" /> <!-- Opal Lv. 4 Jewelry Box -->
+			<item id="47641" min="1" max="1" chance="3.57142" /> <!-- Opal Jewelry Box Lv. 4 -->
 			<item id="47642" min="1" max="1" chance="3.57142" /> <!-- Obsidian Lv. 4 Jewelry Box -->
 			<item id="47643" min="1" max="1" chance="3.57142" /> <!-- Diamond Lv. 4 Jewelry Box -->
 			<item id="47644" min="1" max="1" chance="3.57142" /> <!-- Emerald Lv. 4 Jewelry Box -->
@@ -151,7 +151,7 @@
 			<item id="47646" min="1" max="1" chance="3.57142" /> <!-- Pearl Lv. 4 Jewelry Box -->
 			<item id="47647" min="1" max="1" chance="3.57142" /> <!-- Vital Stone Lv. 4 Jewelry Box -->
 			<item id="47648" min="1" max="1" chance="3.57142" /> <!-- Garnet Lv. 4 Jewelry Box -->
-			<item id="47649" min="1" max="1" chance="3.57142" /> <!-- Tanzanite Lv. 4 Jewelry Box -->
+			<item id="47649" min="1" max="1" chance="3.57142" /> <!-- Tanzanite Jewelry Box Lv. 4 -->
 		</capsuled_items>
 	</item>
 	<item id="47708" name="Ultimate Fortune Jewelry Box" type="EtcItem">
@@ -190,11 +190,11 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="47677" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 1 -->
-			<item id="47678" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 2 -->
-			<item id="47679" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 3 -->
-			<item id="47680" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 4 -->
-			<item id="47681" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 5 -->
+			<item id="47677" min="1" max="1" chance="20" /> <!-- Red Cat's Eye Lv. 1 -->
+			<item id="47678" min="1" max="1" chance="20" /> <!-- Red Cat's Eye Lv. 2 -->
+			<item id="47679" min="1" max="1" chance="20" /> <!-- Red Cat's Eye Lv. 3 -->
+			<item id="47680" min="1" max="1" chance="20" /> <!-- Red Cat's Eye Lv. 4 -->
+			<item id="47681" min="1" max="1" chance="20" /> <!-- Red Cat's Eye Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="47710" name="Blue Cat's Eye Fortune Box" type="EtcItem">
@@ -207,15 +207,15 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="47682" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 1 -->
-			<item id="47683" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 2 -->
-			<item id="47684" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 3 -->
-			<item id="47685" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 4 -->
-			<item id="47686" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 5 -->
+			<item id="47682" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye Lv. 1 -->
+			<item id="47683" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye Lv. 2 -->
+			<item id="47684" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye Lv. 3 -->
+			<item id="47685" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye Lv. 4 -->
+			<item id="47686" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="47711" name="Ultimate Lv. 3 Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain 1 of the Lv. 3 jewels. -->
+		<!-- Double-click to obtain a Lv. 3 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -232,7 +232,7 @@
 		</skills>
 	</item>
 	<item id="47712" name="Ultimate Lv. 4 Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain 1 of the Lv. 4 jewels. -->
+		<!-- Double-click to obtain a Lv. 4 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -258,7 +258,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47714" name="Rare Accessory Spirit Stone" type="EtcItem">
-		<!-- Ordinary Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 46 or above when augmenting Rare items. -->
+		<!-- Ordinary Mineral that has been petrified by a creature's physical or magical damage. Used when augmenting Rare accessories. Double-click on the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="icon.renewal_mineral_rareacc" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
@@ -534,7 +534,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47734" name="Freya's Art of Seduction - Barrier" additionalName="Event" type="EtcItem">
-		<!-- When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P./ M. Def. 30%, and Movement Speed by 20, and reduces Skill MP Consumption by 15% for 30 min. Additionally reduces damage taken by 10%, and increases all property Defense by 100. Enchantment Effect persists through death. Cooldown 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, received damage -10%, Attribute Resistance +100. The effect remains after death. Cooldown: 5 min. Does not stack with the Art of Seduction and Pa'agrio's Blessing effects. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -557,7 +557,7 @@
 		</skills>
 	</item>
 	<item id="47735" name="Freya's Art of Seduction - EXP" additionalName="Event" type="EtcItem">
-		<!-- When used, for 30 min. Max HP/ MP/ CP +30%, P. Atk +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally Acquired XP +30% and Vitality Bonus +12%. Effect remains after death. Cooldown is 5 min. Cannot be stacked with Art of Seduction. Cannot be used in the Olympiad. -->
+		<!-- Dimensional Item. For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, Acquired XP/ SP +30%, Vitality Bonus +12. Buff remains in place after death. Cooldown is 5 min. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -580,12 +580,13 @@
 		</skills>
 	</item>
 	<item id="47736" name="Pa'agrio's Blessing - Might" additionalName="Event" type="EtcItem">
-		<!-- When used, Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy by +4, Atk. Spd./ Casting Spd. +10%, Movement Speed +10, Attack Attribute +100, and Skill MP Consumption -10% for 30 min. Additional damage +10%, and grants 10% Skill Power. Enchantment Effect persists through death. Cooldown 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
+		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P./ M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Speed +10, Attribute Attack +100, Skill MP Consumption -10%. Additionally, damage +10%, Skill Power +10. The effect remains after death. Cooldown: 5 min. The effect does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -600,12 +601,13 @@
 		</skills>
 	</item>
 	<item id="47737" name="Pa'agrio's Blessing - EXP" additionalName="Event" type="EtcItem">
-		<!-- When used, Max HP/ MP/ CP+10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy +4, Atk. Spd./ Casting Spd. +10%, Movement Speed +10, Attack Attribute +100, and Skill MP Consumption -10% for 30 min. Additional XP +30%, and grants 12% bonus Vitality. Enchantment Effect persists through death. Cooldown 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
+		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def. +10%, P./ M. Accuracy +4, Atk./ Casting Spd. +10%, Speed +10, Attribute Attack +100, Skill MP Consumption -10%. Additionally, Acquired XP +30%, Vitality Bonus +12%. Buff remains after death. Cooldown: 5 min. Cannot be stacked with Art of Seduction and Pa'agrio's Blessing. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -643,7 +645,7 @@
 		</stats>
 	</item>
 	<item id="47739" name="Hunter's Amulet" type="EtcItem">
-		<!-- Can be purchased with Raid Points from Black Cat NPC in Hunter's Village by members of Hunter's Guild Faction - Level 2 and above. Can be exchanged with a Faction NPC when upgrading a Faction Talisman. The Hunter's Amulet adds an alternative upgrade path which keeps the current Faction Talisman stage even if the exchange fails. -->
+		<!-- An amulet that prevents a talisman's level from resetting to Lv. 1 when upgrading. In case of failure, a talisman's level remains the same. -->
 		<set name="icon" val="icon.etc_mark_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -654,7 +656,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47740" name="Advanced Aria's Bracelet" additionalName="CON+4" type="Armor">
-		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 CON+4 functions. -->
+		<!-- High-grade Aria's Bracelet. When equipped, unlocks 5 talisman slots. HP +531, CON +4. -->
 		<set name="icon" val="icon.istina_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -668,12 +670,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13584" level="2" /> <!-- Advanced Aria's Bracelet CON -->
 		</skills>
 	</item>
 	<item id="47741" name="Advanced Aria's Bracelet" additionalName="MEN+4" type="Armor">
-		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 MEN+4 functions. -->
+		<!-- High-grade Aria's Bracelet. When equipped, unlocks 5 talisman slots. HP +531, MEN +4. -->
 		<set name="icon" val="icon.istina_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -687,12 +690,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13585" level="2" /> <!-- Advanced Aria's Bracelet MEN -->
 		</skills>
 	</item>
 	<item id="47742" name="Advanced Aria's Bracelet" additionalName="DEX+4" type="Armor">
-		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 DEX+4 functions. -->
+		<!-- High-grade Aria's Bracelet. When equipped, unlocks 5 talisman slots. HP +531, DEX +4. -->
 		<set name="icon" val="icon.octavis_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -706,12 +710,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13586" level="2" /> <!-- Advanced Aria's Bracelet DEX -->
 		</skills>
 	</item>
 	<item id="47743" name="Advanced Aria's Bracelet" additionalName="WIT+4" type="Armor">
-		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 WIT+4 functions. -->
+		<!-- High-grade Aria's Bracelet. When equipped, unlocks 5 talisman slots. HP +531, WIT +4. -->
 		<set name="icon" val="icon.octavis_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -725,12 +730,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13587" level="2" /> <!-- Advanced Aria's Bracelet WIT -->
 		</skills>
 	</item>
 	<item id="47744" name="Advanced Aria's Bracelet" additionalName="STR+4" type="Armor">
-		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 STR+4 functions. -->
+		<!-- High-grade Aria's Bracelet. When equipped, unlocks 5 talisman slots. HP +531, STR +4. -->
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -744,12 +750,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13588" level="2" /> <!-- Advanced Aria's Bracelet STR -->
 		</skills>
 	</item>
 	<item id="47745" name="Advanced Aria's Bracelet" additionalName="INT+4" type="Armor">
-		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 INT+4 functions. -->
+		<!-- High-grade Aria's Bracelet. When equipped, unlocks 5 talisman slots. HP +531, INT +4. -->
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -763,12 +770,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13589" level="2" /> <!-- Advanced Aria's Bracelet INT -->
 		</skills>
 	</item>
 	<item id="47746" name="+10 Blessed Helios Weapon Supply Box" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Box. When used, a +10 Blessed Helios Weapon can be obtained. This item will be deleted after the event is over. -->
+		<!-- Freya's lucky gift. When used, a +10 Blessed Helios Weapon can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -785,7 +793,7 @@
 		</skills>
 	</item>
 	<item id="47747" name="+8 Blessed Eternal Armor Supply Box" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Box. When used, a +8 Blessed Eternal Armor item can be obtained. This item will be deleted after the event is over. -->
+		<!-- Freya's lucky draw gift. When used, a +8 Blessed Eternal Armor Set item can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -802,7 +810,7 @@
 		</skills>
 	</item>
 	<item id="47748" name="Rare Weapon Fragment Supply Box" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Box. When used, a Shadow Ingot/ Tauti's Fragment/ Kelbim's Atelia Fragment can be obtained. This item will be deleted after the event is over. -->
+		<!-- Top-grade Balthus Knights Supply Box. When used, a Shadow Ingot/ Tauti's Fragment/ Kelbim's Atelia Fragment can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
@@ -825,7 +833,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47749" name="Dark Eternal Enhancement Stones Box" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Box. When used, 2 Dark Eternal Enhancement Stones can be obtained. This item will be deleted after the event is over. -->
+		<!-- Festival Fairy's gift. Double-click to obtain 2 Dark Eternal Enhancement Stones. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -840,7 +848,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47750" name="Zodiac Agathion Stage 5 Supply Box" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Box. When used, a Zodiac Agathion Stage 5 Bracelet can be obtained. This item will be deleted after the event is over. -->
+		<!-- Freya's lucky draw gift. Double-click to obtain one of Top-grade/ Superior Seed Bracelets. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
@@ -858,59 +866,59 @@
 		<set name="is_commissionable" val="false" />
 		<!-- Dimmensional Bracelet (Couldn't find Zodiac Stage 5) -->
 		<capsuled_items>
-			<item id="39943" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - Basic -->
-			<item id="39944" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - STR -->
-			<item id="39945" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - DEX -->
-			<item id="39946" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CON -->
-			<item id="39947" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - INT -->
-			<item id="39948" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - MEN -->
-			<item id="39949" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - WIT -->
-			<item id="39950" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - LUC -->
-			<item id="39951" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CHA -->
-			<item id="39952" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - STR+1 -->
-			<item id="39953" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - STR+2 -->
-			<item id="39954" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - STR+3 -->
-			<item id="39955" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - STR+4 -->
-			<item id="39956" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - STR+5 -->
-			<item id="39957" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - DEX+1 -->
-			<item id="39958" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - DEX+2 -->
-			<item id="39959" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - DEX+3 -->
-			<item id="39960" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - DEX+4 -->
-			<item id="39961" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - DEX+5 -->
-			<item id="39962" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CON+1 -->
-			<item id="39963" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CON+2 -->
-			<item id="39964" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CON+3 -->
-			<item id="39965" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CON+4 -->
-			<item id="39966" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CON+5 -->
-			<item id="39967" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - INT+1 -->
-			<item id="39968" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - INT+2 -->
-			<item id="39969" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - INT+3 -->
-			<item id="39970" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - INT+4 -->
-			<item id="39971" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - INT+5 -->
-			<item id="39972" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - MEN+1 -->
-			<item id="39973" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - MEN+2 -->
-			<item id="39974" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - MEN+3 -->
-			<item id="39975" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - MEN+4 -->
-			<item id="39976" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - MEN+5 -->
-			<item id="39977" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - WIT+1 -->
-			<item id="39978" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - WIT+2 -->
-			<item id="39979" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - WIT+3 -->
-			<item id="39980" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - WIT+4 -->
-			<item id="39981" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - WIT+5 -->
-			<item id="39982" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - LUC+1 -->
-			<item id="39983" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - LUC+2 -->
-			<item id="39984" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - LUC+3 -->
-			<item id="39985" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - LUC+4 -->
-			<item id="39986" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - LUC+5 -->
-			<item id="39987" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CHA +1 -->
-			<item id="39988" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CHA +2 -->
-			<item id="39989" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CHA +3 -->
-			<item id="39990" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CHA +4 -->
-			<item id="39991" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet - Stage 5 - CHA +5 -->
+			<item id="39943" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - Basic -->
+			<item id="39944" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR -->
+			<item id="39945" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX -->
+			<item id="39946" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON -->
+			<item id="39947" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT -->
+			<item id="39948" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN -->
+			<item id="39949" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT -->
+			<item id="39950" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC -->
+			<item id="39951" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA -->
+			<item id="39952" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR+1 -->
+			<item id="39953" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR+2 -->
+			<item id="39954" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR+3 -->
+			<item id="39955" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR+4 -->
+			<item id="39956" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - STR +5 -->
+			<item id="39957" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX+1 -->
+			<item id="39958" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX+2 -->
+			<item id="39959" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX+3 -->
+			<item id="39960" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX+4 -->
+			<item id="39961" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - DEX +5 -->
+			<item id="39962" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON+1 -->
+			<item id="39963" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON+2 -->
+			<item id="39964" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON+3 -->
+			<item id="39965" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON+4 -->
+			<item id="39966" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CON +5 -->
+			<item id="39967" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT+1 -->
+			<item id="39968" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT+2 -->
+			<item id="39969" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT+3 -->
+			<item id="39970" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT+4 -->
+			<item id="39971" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - INT +5 -->
+			<item id="39972" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN+1 -->
+			<item id="39973" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN+2 -->
+			<item id="39974" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN+3 -->
+			<item id="39975" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN+4 -->
+			<item id="39976" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - MEN +5 -->
+			<item id="39977" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT+1 -->
+			<item id="39978" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT+2 -->
+			<item id="39979" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT+3 -->
+			<item id="39980" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT+4 -->
+			<item id="39981" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - WIT +5 -->
+			<item id="39982" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC +1 -->
+			<item id="39983" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC +2 -->
+			<item id="39984" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC +3 -->
+			<item id="39985" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC +4 -->
+			<item id="39986" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - LUC +5 -->
+			<item id="39987" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +1 -->
+			<item id="39988" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +2 -->
+			<item id="39989" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +3 -->
+			<item id="39990" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +4 -->
+			<item id="39991" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - CHA +5 -->
 	</capsuled_items>
 	</item>
 	<item id="47751" name="+8 Blessed Eternal Armor Heavy Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a +8 Blessed Eternal Armor Heavy Set. -->
+		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Heavy Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -923,7 +931,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47752" name="+8 Blessed Eternal Armor Light Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a +8 Blessed Eternal Armor Light Set. -->
+		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Light Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -936,7 +944,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47753" name="+8 Blessed Eternal Armor Robe Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a +8 Blessed Eternal Armor Robe Set. -->
+		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Robe Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -949,7 +957,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47754" name="Dragon's Treasure Chest" type="EtcItem">
-		<!-- Double-click to receive a random item. -->
+		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -965,7 +973,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47756" name="Dragon's Attribute Potion" type="EtcItem">
-		<!-- When used, Atk. Attribute +30, and Attribute Resistance +30 for 30 min. Effect remains after death. Cooldown is 5 min. Cannot be used in the Olympiad. -->
+		<!-- When used, Attribute Attack +30, and Attribute Resistance +30 for 30 min. The effect remains after death. Cooldown is 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -974,7 +982,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47757" name="Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
-		<!-- When used, Atk. Attribute +50, and Attribute Resistance +50, as well as Acquired XP/ SP +10% for 30 min. Effect remains after death. Cooldown is 5 min. Cannot be used in the Olympiad. -->
+		<!-- When used, Attribute Attack +50, and Attribute Resistance +50, as well as Acquired XP/ SP +10% for 30 min. The effect remains after death. Cooldown is 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_brave" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -983,7 +991,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47758" name="Dragon's Breath" type="EtcItem">
-		<!-- If you take this to the Dimensional Merchant, you will receive items based on the number. -->
+		<!-- Can be exchanged for a special item through the Game Assistant. -->
 		<set name="icon" val="icon.bm_dragon_breath" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -995,7 +1003,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47759" name="Dragon's Gold Key" type="EtcItem">
-		<!-- Take this to the Dimensional Merchant to exchange for various items. -->
+		<!-- Can be exchanged for various goods through the Game Assistant. -->
 		<set name="icon" val="icon.bm_dragon_key" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1015,7 +1023,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47761" name="+7 T-shirt Chest (Sparkle/ Attack/ Magic)" type="EtcItem">
-		<!-- Double-click to obtain one of Shiny +7 Einhasad/ Reflect Attack/ Reflect Magic Shirt. -->
+		<!-- Double-click to obtain one of the following +7 shirts: Shiny Elemental/ Physical Reflect/ Magical Reflect. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -1032,7 +1040,7 @@
 		</skills>
 	</item>
 	<item id="47762" name="Lindvior's Earring" additionalName="7-day" type="Armor">
-		<!-- MP+59, Petrification P. Atk./ Def. Success Rate +50%, Knock Back/ Knock Down P. Atk. and Resistance +40%, Pull Success Rate +40%, Pull/ Danger Zone Resistance +40%, P. Critical Damage +10%, M. Critical Damage +10%, P./ M. Atk. Abnormal Status Reflection +10%, Reflect Damage Magic +10%, Movement Speed +5, DEX +3, WIT +3, Wind/ Dark Attribute Resistance +30. Active Skill: Can use a Knock Back/ Knock Down cancellation skill, and receive Knock Back/ Knock Down resistance for 5 sec. Does not stack with identical earrings. -->
+		<!-- MP +59, P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs, and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1057,7 +1065,7 @@
 		</stats>
 	</item>
 	<item id="47763" name="Dragon's Treasure Chest - 10" type="EtcItem">
-		<!-- Top-grade Top-grade Sibi's Lucky Draw Supply Items. When used, 10 Dragon's Treasure Chests can be obtained. -->
+		<!-- Top-grade Balthus Knights' supplies. Double-click to obtain 10 Dragon's Treasure Chests. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1109,7 +1117,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47767" name="Red Libra Request - Seal of Shilen" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Seal of Shilen. Characters of level 90 to level 99 can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Seal of Shillien. Characters of level 90 to level 99 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -1122,7 +1130,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47768" name="Red Libra Request - Monsters from Three Areas" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Cemetery, the Pagan Temple, and Blazing Swamp. Characters of level 95 to level 101 can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Cemetery. the Pagan Temple, and Blazing Swamp. Characters of level 95 to level 101 can receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -1161,7 +1169,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47771" name="Red Libra Request - Enchanted Valley" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Enchanted Valley. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Enchanted Valley. Receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -1174,7 +1182,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47772" name="Red Libra Request - Giant's Cave" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Giant's Cave. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Giant's Cave. Receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -1187,7 +1195,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47773" name="Red Libra Request - Garden of Spirits" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Garden of Spirits. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Garden of Spirits. Receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -1200,7 +1208,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47774" name="Red Libra Request - Atelia Fortress" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Atelia Fortress. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Atelia Fortress. Receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -1213,7 +1221,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47775" name="Red Libra Request - Superion" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Superion. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Superion. Receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -1259,7 +1267,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47779" name="Red Libra Request - Seal of Shilen" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Seal of Shilen. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Seal of Shillien. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1270,7 +1278,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47780" name="Red Libra Request - Monsters from Three Areas" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Cemetery, the Pagan Temple, and Blazing Swamp. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Cemetery. the Pagan Temple, and Blazing Swamp. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1358,7 +1366,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47788" name="Pink's Style Potion - Kelbim Light Armor" type="EtcItem">
-		<!-- Pink's style potion. Transforms your appearance to wearing a Kelbim Light Armor for 1 hour. -->
+		<!-- Changes the appearance into that of Kelbim (Light Armor) for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1366,7 +1374,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47789" name="Pink's Style Potion - Freya Robe" type="EtcItem">
-		<!-- Pink's style potion. Transforms your appearance to wearing a Freya Robe for 1 hour. -->
+		<!-- Changes the appearance into that of Freya (Light Armor) for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1374,7 +1382,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47790" name="Pink's Style Potion - Blue Dynasty Armor" type="EtcItem">
-		<!-- Pink's style potion. Transforms your appearance to wearing Blue Dynasty Armor for 1 hour. -->
+		<!-- Pink's style potion. Transforms your appearance to wearing Blue Dynasty Armor for 24 hour. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1382,7 +1390,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47791" name="Pink's Style Potion - White Assassin Costume" type="EtcItem">
-		<!-- Pink's style potion. Transforms your appearance to wearing White Assassin Costume for 1 hour. -->
+		<!-- A potion bought from Grocer Pink. Changes the armor appearance to White Assassin Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1390,7 +1398,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47792" name="Pink's Style Potion - Formal Wear" type="EtcItem">
-		<!-- Pink's style potion. Transforms your appearance to wearing Formal Wear for 1 hour. -->
+		<!-- Appearance changed by wearing the Formal Wear for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1398,7 +1406,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47793" name="Pink's Style Potion - Vampiric Outfit" type="EtcItem">
-		<!-- Pink's style potion. Transforms your appearance to wearing a Vampiric Outfit for 1 hour. -->
+		<!-- Appearance changed by wearing the Vampiric Outfit for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1406,7 +1414,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47794" name="Pink's Style Potion - Robin Hood Costume" type="EtcItem">
-		<!-- Pink's style potion. Transforms your appearance to wearing a Robin Hood Costume for 1 hour. -->
+		<!-- A potion bought from Grocer Pink. Changes the armor appearance to Robin Hood Costume for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1414,7 +1422,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47795" name="Pink's Style Potion - Magician Garment" type="EtcItem">
-		<!-- Pink style potion. Use to wear a Magician Garment for 1 hour. It will be deleted when the Red Libra merchants leave. -->
+		<!-- Changes the armor appearance to Magician Garment for 24 h. -->
 		<set name="icon" val="icon.dragon_dye_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1422,7 +1430,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47796" name="Red Libra Request - Kartia Labyrinth (Lv. 95 party)" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate Incarnation of Gluttony Kalios (Group) in Kartia's Labyrinth (level 95 party). Characters of level 95 to level 105 can receive the request by double-clicking the item. Can be played twice a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate Kalios in Kartia's Labyrinth (Lv. 95, Party). Required level: 95-105. Double-click to obtain a quest. The instance zone is available twice a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />

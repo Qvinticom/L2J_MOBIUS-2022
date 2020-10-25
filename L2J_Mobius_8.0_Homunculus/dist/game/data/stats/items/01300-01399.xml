@@ -773,7 +773,7 @@
 		</stats>
 	</item>
 	<item id="1333" name="Brandish" type="Weapon">
-		<!-- Beginner's Two-handed Sword -->
+		<!-- Two-handed sword for beginners. -->
 		<set name="icon" val="icon.weapon_brandish_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -839,7 +839,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1338" name="Blue Onyx" type="EtcItem">
-		<!-- Blue jewel. Can be sold in any shop. -->
+		<!-- Blue jewel. Can be sold in shops. -->
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -850,7 +850,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1339" name="Onyx" type="EtcItem">
-		<!-- Black jewel. Can be sold in any shop. -->
+		<!-- Black jewel. Can be sold in shops. -->
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -861,7 +861,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1340" name="Silvery Leaf" type="EtcItem">
-		<!-- The leaf of a silvery mistletoe. Can be sold in any shop. -->
+		<!-- The leaf of a silvery mistletoe. Can be sold in shops. -->
 		<set name="icon" val="icon.etc_feather_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -917,7 +917,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1344" name="Mithril Arrow" type="EtcItem">
-		<!-- Steel arrow plated with Mithril. -->
+		<!-- Steel Arrow coated by mithril. For A-grade bows. -->
 		<set name="icon" val="icon.etc_mithril_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -932,7 +932,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1345" name="Arrow of Light" type="EtcItem">
-		<!-- A light arrow used for bows (S-grade). Material is unknown. -->
+		<!-- Very hard arrow made of unknown material. For S-grade bows. -->
 		<set name="icon" val="icon.etc_shining_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -963,7 +963,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1347" name="Monster Eye Meat" type="EtcItem">
-		<!-- The carcass of monster eye. Take this to Trader Sarien. -->
+		<!-- The meat of monster eye. Take this to Grocer Sarien. -->
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -979,7 +979,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1348" name="Basilisk's Gizzard" type="EtcItem">
-		<!-- The digestive organ of a basilisk. Take this to Trader Sarien. -->
+		<!-- The digestive organ of a basilisk. Take this to Grocer Sarien. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1267,7 +1267,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1366" name="Monster Eye's Lens" type="EtcItem">
-		<!-- The transparent part of monster eye. Take this to Trader Sarien. -->
+		<!-- The transparent part of monster eye. Take this to Grocer Sarien. -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1331,7 +1331,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1370" name="Spellbook: Aqua Swirl" type="EtcItem">
-		<!-- Spellbook needed to learn Aqua Swirl. Used by Elven Wizards. Required level: 20 -->
+		<!-- A spellbook for learning the Aqua Swirl skill. Used by Elven Wizards. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1341,7 +1341,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1371" name="Spellbook: Twister" type="EtcItem">
-		<!-- Spellbook needed to learn Twister. Used by Dark Wizards. Required level: 20 -->
+		<!-- A spellbook for learning the Twister skill. Used by Dark Wizards. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1351,7 +1351,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1372" name="Spellbook: Blaze" type="EtcItem">
-		<!-- Spellbook needed to learn Blaze. Used by Human Wizards. Required level: 20 -->
+		<!-- A spellbook for learning the Blaze skill. Used by Human Wizards. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1371,7 +1371,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1374" name="Greater Wind Walk Potion" type="EtcItem">
-		<!-- Magical potion that increases movement Speed dramatically -->
+		<!-- A magical potion that increases Speed. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1446,7 +1446,7 @@
 		</stats>
 	</item>
 	<item id="1377" name="Spellbook: Poison Recovery" type="EtcItem">
-		<!-- Spellbook needed to learn Poison Recovery. Used by Elven Knights and Elven Scouts. Required level: Elven Knight - 20, Elven Scout - 24 -->
+		<!-- A spellbook for learning the Poison Recovery skill. Used by Elven Knights and Elven Scouts. Required level: Elven Knight - 20, Elven Scout - 24. -->
 		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1456,7 +1456,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1378" name="Spellbook: Divine Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Divine Heal. Used by Human Knights. Required level: 28 -->
+		<!-- A spellbook for learning the Divine Heal skill. Used by Human Knights. Required level: 28. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1466,7 +1466,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1379" name="Spellbook: Cure Bleeding" type="EtcItem">
-		<!-- Spellbook needed to learn Cure Bleeding. Used by Elven Knights and Elven Scouts. Required level: 24 -->
+		<!-- A spellbook for learning the Cure Bleeding skill. Used by Elven Knights and Elven Scouts. Required level: 24. -->
 		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1476,7 +1476,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1380" name="Spellbook: Entangle" type="EtcItem">
-		<!-- Spellbook needed to learn Entangle. Used by Elven Knights and Elven Scouts. Required level: 36 -->
+		<!-- A spellbook for learning the Entangle skill. Used by Elven Knights and Elven Scouts. Required level: 36. -->
 		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1486,7 +1486,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1381" name="Spellbook: Freezing Strike" type="EtcItem">
-		<!-- Spellbook needed to learn Freezing Strike. Used by Palus Knights and Assassins. Required level: 36 -->
+		<!-- A spellbook for learning the Freezing Strike skill. Used by Palus Knights and Assassins. Required level: 36. -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1496,7 +1496,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1382" name="Spellbook: Power Break" type="EtcItem">
-		<!-- Spellbook needed to learn Power Break. Used by Palus Knights and Assassins. Required level: 32 -->
+		<!-- A spellbook for learning the Power Break skill. Used by Palus Knights and Assassins. Required level: 32. -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1506,7 +1506,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1383" name="Spellbook: Poison" type="EtcItem">
-		<!-- Spellbook needed to learn Poison. Used by Palus Knights and Assassins. Required level: 20 -->
+		<!-- A spellbook for learning the Poison skill. Used by Palus Knights and Assassins. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1516,7 +1516,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1384" name="Spellbook: Sprint" type="EtcItem">
-		<!-- Spellbook needed to learn Sprint. Used by Elven Knights and Elven Scouts. Required level: 32 -->
+		<!-- A spellbook for learning the Sprint skill. Used by Elven Knights and Elven Scouts. Required level: 32. -->
 		<set name="icon" val="icon.etc_spell_books_efighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1526,7 +1526,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1385" name="Spellbook: Recharge" type="EtcItem">
-		<!-- Spellbook needed to learn Recharge. Used by Elven Oracles and Shillien Oracles. Required level: 30 -->
+		<!-- A spellbook for learning the Recharge skill. Used by Elven Oracles and Shillien Oracles. Required level: 30. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1536,7 +1536,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1386" name="Spellbook: Disrupt Undead" type="EtcItem">
-		<!-- Spellbook needed to learn Disrupt Undead. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 20 -->
+		<!-- A spellbook for learning the Disrupt Undead skill. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1546,7 +1546,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1387" name="Spellbook: Poison Resistance" type="EtcItem">
-		<!-- Spellbook needed to learn Poison Resistance. Used by Oracles and Prophets. Required level: Oracle - 35, Prophet - 60 -->
+		<!-- A spellbook for learning the Poison Resistance skill. Used by Oracles and Prophets. Required level: Oracle - 35, Prophet - 60. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1556,7 +1556,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1388" name="Spellbook: Mental Shield" type="EtcItem">
-		<!-- Spellbook needed to learn Mental Shield. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 25 -->
+		<!-- A spellbook for learning the Mental Shield skill. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1566,7 +1566,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1389" name="Spellbook: Holy Weapon" type="EtcItem">
-		<!-- Spellbook needed to learn Holy Weapon. Used by Clerics and Elven Oracles. Required level: 25 -->
+		<!-- A spellbook for learning the Holy Weapon skill. Used by Clerics and Elven Oracles. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1576,7 +1576,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1390" name="Spellbook: Regeneration" type="EtcItem">
-		<!-- Spellbook needed to learn Regeneration. Used by Clerics and Elven Oracles. Required level: 35 -->
+		<!-- A spellbook for learning the Regeneration skill. Used by Clerics and Elven Oracles. Required level: 35. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1586,7 +1586,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1391" name="Spellbook: Empower" type="EtcItem">
-		<!-- Spellbook needed to learn Empower. Used by Shillien Oracles. Required level: 25 -->
+		<!-- A spellbook for learning the Empower skill. Used by Shillien Oracles. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1596,7 +1596,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1392" name="Spellbook: Berserker Spirit" type="EtcItem">
-		<!-- Spellbook needed to learn Berserker Spirit. Used by Clerics. Required level: 35 -->
+		<!-- A spellbook for learning the Berserker Spirit skill. Used by Clerics. Required level: 35. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1606,7 +1606,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1393" name="Spellbook: Quickness" type="EtcItem">
-		<!-- Spellbook needed to learn Quickness. -->
+		<!-- A spellbook for learning the Quickness skill. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1616,7 +1616,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1394" name="Spellbook: Sleep" type="EtcItem">
-		<!-- Spellbook needed to learn Sleep. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards, and Shillien Oracles. Required level: 25 -->
+		<!-- A spellbook for learning the Sleep skill. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards and Shillien Oracles. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1626,7 +1626,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1395" name="Spellbook: Surrender to Water" type="EtcItem">
-		<!-- Spellbook needed to learn Surrender to Water. -->
+		<!-- A spellbook for learning the Surrender to Water skill. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1635,7 +1635,7 @@
 		<set name="price" val="1250" />
 	</item>
 	<item id="1396" name="Spellbook: Surrender to Wind" type="EtcItem">
-		<!-- Spellbook needed to learn Surrender to Water -->
+		<!-- A spellbook for learning the Surrender to Wind skill. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1644,7 +1644,7 @@
 		<set name="price" val="1250" />
 	</item>
 	<item id="1397" name="Spellbook: Peace" type="EtcItem">
-		<!-- Spellbook needed to learn Peace. Used by Clerics. Required level: 35 -->
+		<!-- A spellbook for learning the Peace skill. Used by Clerics. Required level: 35. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1654,7 +1654,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1398" name="Spellbook: Focus" type="EtcItem">
-		<!-- Spellbook needed to learn Focus. Used by Clerics and Shillien Oracles. Required level: 25 -->
+		<!-- A spellbook for learning the Focus skill. Used by Clerics and Shillien Oracles. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1664,7 +1664,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1399" name="Spellbook: Concentration" type="EtcItem">
-		<!-- Spellbook needed to learn Concentration. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards, and Shillien Oracles. Required level: 20 -->
+		<!-- A spellbook for learning the Concentration skill. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards and Shillien Oracles. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

@@ -50,7 +50,7 @@
 		</effects>
 	</skill>
 	<skill id="6402" toLevel="5" name="Torumba Poison Strike">
-		<!-- Poisons the target, causing them to lose $s2 HP per sec. for $s1 Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Poisons the target, causing them to lose $s2 HP per sec. for $s1\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0129</icon>
 		<abnormalLevel>
 			<value level="1">11</value>
@@ -287,7 +287,7 @@
 		</effects>
 	</skill>
 	<skill id="6410" toLevel="1" name="Reptilikon Rush">
-		<!-- Stuns the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -370,7 +370,7 @@
 		</effects>
 	</skill>
 	<skill id="6414" toLevel="1" name="Reptilikon Charge">
-		<!-- Stunned for 20 sec. to momentarily decrease Atk.Spd. and Speed by 30%, and P. Defense and M. Def. by 10%. Additionally, decreases by 500 and Evasion is decreased by 4. Armor is destroyed. Cumulative if continuously hit. -->
+		<!-- Stuns for 20 sec. Atk. Spd. and Speed -30%, and P./ M. Def. -10%, P. Evasion -4. Does not stack if the character is hit. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -402,7 +402,7 @@
 		</effects>
 	</skill>
 	<skill id="6415" toLevel="1" name="Reptilikon Scratch">
-		<!-- Armor is destroyed. P. Def. and M. Def. decreased 10%. Additional 500 decrease. Evasion 4 decrease. Accumulates with every incurred attack. -->
+		<!-- Armor is destroyed. P./ M. Def. -10%. Additional P./ M. Def. -500. P. Evasion -4. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0122</icon>
 		<affectRange>300</affectRange>
 		<coolTime>500</coolTime>
@@ -605,7 +605,7 @@
 		</effects>
 	</skill>
 	<skill id="6423" toLevel="1" name="Stun">
-		<!-- Stuns the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 3 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -632,7 +632,7 @@
 				<power>2738</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -712,7 +712,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="6428" toLevel="1" name="Restore HP">
-		<!-- Recovers HP by 90%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Recovers HP by 90%.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -827,7 +827,7 @@
 		</effects>
 	</skill>
 	<skill id="6432" toLevel="1" name="Feral Focus">
-		<!-- Critical attack rate increases by 35% for 5 min. -->
+		<!-- For 5 min., Critical Rate for standard attacks +35%. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -854,7 +854,7 @@
 		</effects>
 	</skill>
 	<skill id="6433" toLevel="1" name="Feral Guidance">
-		<!-- Accuracy increases by 7 for 5 min. -->
+		<!-- For 5 min., P. Accuracy +7. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -907,8 +907,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6435" toLevel="3" name="Curse of the Plains">
-		<!-- Increases Bow/ Crossbow Critical Rate by $s1, Critical Damage by $s2. -->
+	<skill id="6435" toLevel="3" name="Curse of Abyss">
+		<!-- When Bow/ Crossbow is used, Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2. -->
 		<icon>icon.skill6435</icon>
 		<abnormalLevel>
 			<value level="1">7</value>
@@ -977,7 +977,7 @@
 		</effects>
 	</skill>
 	<skill id="6436" toLevel="1" name="Curse of the Dark Abyss">
-		<!-- HP decreases over time, Bow/Crossbow Critical Rate +90%, and Critical Damage +50%. -->
+		<!-- HP decreases over time, Bow/Crossbow Critical Rate for standard attacks +90%, and Critical Damage for standard attacks +50%. -->
 		<icon>icon.skill6435</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1019,7 +1019,7 @@
 		</effects>
 	</skill>
 	<skill id="6437" toLevel="7" name="Freezing Core Area">
-		<!-- HP -$s1 per sec. because of cold. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- HP -$s1 per sec. because of cold.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1183</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1056,7 +1056,7 @@
 		</effects>
 	</skill>
 	<skill id="6438" toLevel="1" name="Penalty Area">
-		<!-- HP -1000 per sec. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- HP -1000 per sec.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1077,7 +1077,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6439" toLevel="1" name="Energy of Wisdom">
-		<!-- none Inflicted status: Infection (Bleed, Poison). -->
+		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6439</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -1112,7 +1112,7 @@
 		</effects>
 	</skill>
 	<skill id="6440" toLevel="1" name="Energy of Strength">
-		<!-- none Inflicted status: Infection (Bleed, Poison). -->
+		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6440</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -1147,7 +1147,7 @@
 		</effects>
 	</skill>
 	<skill id="6441" toLevel="1" name="Energy of Agility">
-		<!-- none Inflicted status: Infection (Bleed, Poison). -->
+		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6441</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -1182,7 +1182,7 @@
 		</effects>
 	</skill>
 	<skill id="6442" toLevel="1" name="Energy of Wisdom">
-		<!-- Your character can inflict major magic damage on monsters in the Seed of Annihilation. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Your character can inflict major magic damage on monsters in the Seed of Annihilation.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6439</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -1207,7 +1207,7 @@
 		</effects>
 	</skill>
 	<skill id="6443" toLevel="1" name="Energy of Strength">
-		<!-- Your character can inflict major physical melee damage on monsters in the Seed of Annihilation. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Your character can inflict major physical melee damage on monsters in the Seed of Annihilation.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6440</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -1236,7 +1236,7 @@
 		</effects>
 	</skill>
 	<skill id="6444" toLevel="1" name="Energy of Agility">
-		<!-- Your character can inflict major physical damage by ranged attack on monsters in the Seed of Annihilation. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Your character can inflict major physical damage by ranged attack on monsters in the Seed of Annihilation.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6441</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>

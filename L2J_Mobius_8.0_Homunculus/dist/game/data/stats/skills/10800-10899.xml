@@ -92,7 +92,7 @@
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="10">70</value>
+			<value fromLevel="1" toLevel="10">60</value>
 			<value fromLevel="4" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<operateType>A2</operateType>
@@ -120,7 +120,7 @@
 			<value level="9">28</value>
 			<value level="10">29</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>500</hitTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>
@@ -243,7 +243,7 @@
 			<value level="6">109</value>
 		</magicLevel>
 		<mpConsume>93</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>180000</reuseDelay>
@@ -462,7 +462,7 @@
 		</effects>
 	</skill>
 	<skill id="10807" toLevel="6" name="Gravity Trap">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0518</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-2</effectPoint>
@@ -499,7 +499,7 @@
 		</effects>
 	</skill>
 	<skill id="10808" toLevel="4" name="Decoy Provocation">
-		<!-- Decoy's provocation. Cannot change target. -->
+		<!-- Prevents the enemy from changing their target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>-2</effectPoint>
@@ -582,6 +582,7 @@
 		</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
+		<isMagic>2</isMagic>
 		<reuseDelay>30000</reuseDelay>
 		<effects>
 			<effect name="PAtk">
@@ -701,7 +702,7 @@
 		</effects>
 	</skill>
 	<skill id="10813" toLevel="3" name="Sneak Shot: Stun">
-		<!-- Stuns the enemy for $s1. Has a chance of canceling enemy's targeting. Requires a bow/ crossbow. Over-hit. -->
+		<!-- Stuns the enemy for $s1 There is a chance of cancelling the enemy's target. Requires a bow or a crossbow. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<operateType>A2</operateType>
 		<castRange>1100</castRange>
 		<reuseDelay>5000</reuseDelay>
@@ -741,6 +742,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>687</effectPoint>
+		<isMagic>2</isMagic>
 		<reuseDelay>30000</reuseDelay>
 		<effects>
 			<effect name="PAtk">
@@ -757,7 +759,7 @@
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
-			<effect name="DefenceCriticalRate">
+			<effect name="DefenceMagicCriticalRate">
 				<amount>
 					<value level="1">-5</value>
 					<value level="2">-7</value>

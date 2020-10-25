@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10000" name="Wind Potion" type="EtcItem">
-		<!-- Increases Wind Resistance by 30 for 10 min. -->
+		<!-- For 10 min. Wind Resistance +30. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -18,7 +18,7 @@
 		</skills>
 	</item>
 	<item id="10001" name="Dark Potion" type="EtcItem">
-		<!-- Increases Dark Resistance by 30 for 10 min. -->
+		<!-- For 10 min. Dark Resistance +30. -->
 		<set name="icon" val="icon.etc_unholy_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -35,7 +35,7 @@
 		</skills>
 	</item>
 	<item id="10002" name="Holy Potion" type="EtcItem">
-		<!-- Increases Holy Resistance by 30 for 10 min. -->
+		<!-- For 10 min., Holy Resistance +30. -->
 		<set name="icon" val="icon.etc_holy_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -52,7 +52,7 @@
 		</skills>
 	</item>
 	<item id="10003" name="Fleuret" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Knight Sword Conversion. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Knight's sword Conversion. When enchanted to +4 or higher, has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -87,7 +87,7 @@
 		</stats>
 	</item>
 	<item id="10004" name="Dynasty Dual Sword" type="Weapon">
-		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -439,7 +439,7 @@
 		</skills>
 	</item>
 	<item id="10018" name="Agathion - Fortress" type="Armor">
-		<!-- Bracelet that can summon an Agathion. Wearable only by members of a clan that owns a fortress. -->
+		<!-- A bracelet for summoning an agathion. Only for members of the clan that owns a fortress. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -598,7 +598,7 @@
 		</stats>
 	</item>
 	<item id="10025" name="Battle Manual - Fallen Arrow" type="EtcItem">
-		<!-- Battle Manual needed to learn Fallen Arrow. Used by Kamael soldiers. Required level: 5 -->
+		<!-- A battle manual for learning the Fallen Arrow skill. Used by Kamael Soldiers. Required level: 5. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -608,7 +608,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10026" name="Battle Manual - Fallen Attack" type="EtcItem">
-		<!-- Battle Manual needed to learn Fallen Attack. Used by Kamael soldiers. Required level: 5 -->
+		<!-- A battle manual for learning the Fallen Attack skill. Used by Kamael Soldiers. Required level: 5. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -618,7 +618,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10027" name="Battle Manual - Detect Trap" type="EtcItem">
-		<!-- Battle Manual needed to learn Detect Trap. Used by female Kamael soldiers. Required level: 15 -->
+		<!-- A battle manual for learning the Detect Trap skill. Used by Kamael Soldiers. Required level: 15. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -628,7 +628,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10028" name="Battle Manual - Defuse Trap" type="EtcItem">
-		<!-- Battle Manual needed to learn Defuse Trap. Used by female Kamael soldiers. Required level: 15 -->
+		<!-- A battle manual for learning the Defuse Trap skill. Used by Kamael Soldiers. Required level: 15. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -638,7 +638,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10029" name="Battle Manual - Dark Strike" type="EtcItem">
-		<!-- Battle Manual needed to learn Dark Strike. Used by Troopers. Required level: 20 -->
+		<!-- A battle manual for learning the Dark Strike skill. Used by Troopers. Required level: 20. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -648,7 +648,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10030" name="Battle Manual - Dark Smash" type="EtcItem">
-		<!-- Battle Manual needed to learn Dark Smash. Used by Berserkers. Required level: 40 -->
+		<!-- A battle manual for learning the Crushing Dark Strike skill. Used by Berserkers. Required level: 40. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -658,7 +658,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10031" name="Battle Manual - Double Thrust" type="EtcItem">
-		<!-- Battle Manual needed to learn Double Thrust. Used by Troopers, and Warders. Required level: 20 -->
+		<!-- A battle manual for learning the Double Thrust skill. Used by Troopers and Warders. Required level: 20. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -668,7 +668,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10032" name="Battle Manual - Abyssal Blaze" type="EtcItem">
-		<!-- Battle Manual needed to learn Abyssal Blaze. Used by Troopers, and Warders. Required level: 20 -->
+		<!-- A battle manual for learning the Abyssal Blaze skill. Used by Troopers and Warders. Required level: 20. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -678,7 +678,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10033" name="Battle Manual - Dark Explosion" type="EtcItem">
-		<!-- Battle Manual needed to learn Dark Explosion Used by Troopers and Warders. Required level: 24 -->
+		<!-- A battle manual for learning the Dark Explosion skill. Used by Troopers and Warders. Required level: 24. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -688,7 +688,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10034" name="Battle Manual - Shift Target" type="EtcItem">
-		<!-- Battle Manual needed to learn Shift Target. Used by Arbalesters. Required level: 40 -->
+		<!-- A battle manual for learning the Shift Target skill. Used by Arbalesters. Required level: 40. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -708,7 +708,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10036" name="Battle Manual - Spread Wing" type="EtcItem">
-		<!-- Battle Manual needed to learn Spread Wing. Used by Berserkers and Soul Breakers. Required level: 52 -->
+		<!-- A battle manual for learning the Spread Wing skill. Used by Berserkers and Soul Breakers. Required level: 52. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -718,7 +718,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10037" name="Battle Manual - Slashing Blade" type="EtcItem">
-		<!-- Battle Manual needed to learn Slashing Blade. Used by Berserkers. Required level: 46 -->
+		<!-- A battle manual for learning the Slashing Blade skill. Used by Berserkers. Required level: 46. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -728,7 +728,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10038" name="Battle Manual - Crushing Pain" type="EtcItem">
-		<!-- Battle Manual needed to learn Crushing Pain. Used by Berserkers. Required level: 60 -->
+		<!-- A battle manual for learning the Crushing Pain skill. Used by Berserkers. Required level: 60. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -738,7 +738,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10039" name="Battle Manual - Contagion" type="EtcItem">
-		<!-- Battle Manual needed to learn Contagion. Used by Berserkers. Required level: 64 -->
+		<!-- A battle manual for learning the Contagion skill. Used by Berserkers. Required level: 64. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -748,7 +748,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10040" name="Battle Manual - Life to Soul" type="EtcItem">
-		<!-- Battle Manual needed to learn Life to Soul. Used by Berserkers, Soul Breakers, and Arbalesters. Required level: 40 -->
+		<!-- A battle manual for learning the Life to Soul skill. Used by Berserkers, Soul Breakers and Arbalesters. Required level: 40. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -758,7 +758,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10041" name="Battle Manual - Scorn" type="EtcItem">
-		<!-- Battle Manual needed to learn Scorn. Used by Berserkers. Required level: 43 -->
+		<!-- A battle manual for learning the Scorn skill. Used by Berserkers. Required level: 43. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -768,7 +768,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10042" name="Battle Manual - Triple Thrust" type="EtcItem">
-		<!-- Battle Manual needed to learn Triple Thrust. Used by Soul Breakers. Required level: 40 -->
+		<!-- A battle manual for learning the Triple Thrust skill. Used by Soul Breakers. Required level: 40. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -778,7 +778,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10043" name="Battle Manual - Shining Edge" type="EtcItem">
-		<!-- Battle Manual needed to learn Shining Edge. Used by Soul Breakers. Required level: 49 -->
+		<!-- A battle manual for learning the Shining Edge skill. Used by Soul Breakers. Required level: 49. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -788,7 +788,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10044" name="Battle Manual - Checkmate" type="EtcItem">
-		<!-- Battle Manual needed to learn Checkmate. Used by Soul Breakers. Required level: 52 -->
+		<!-- A battle manual for learning the Checkmate skill. Used by Soul Breakers. Required level: 52. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -798,7 +798,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10045" name="Battle Manual - Soul of Pain" type="EtcItem">
-		<!-- Battle Manual needed to learn Soul of Pain. Used by Soul Breakers. Required level: 40 -->
+		<!-- A battle manual for learning the Soul of Pain skill. Used by Soul Breakers. Required level: 40. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -808,7 +808,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10046" name="Battle Manual - Dark Flame" type="EtcItem">
-		<!-- Battle Manual needed to learn Dark Flame. Used by Soul Breakers. Required level: 46 -->
+		<!-- A battle manual for learning the Dark Flame skill. Used by Soul Breakers. Required level: 46. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -818,7 +818,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10047" name="Battle Manual - Annihilation Circle" type="EtcItem">
-		<!-- Battle Manual needed to learn Annihilation Circle. Used by Soul Breakers. Required level: 58 -->
+		<!-- A battle manual for learning the Annihilation Circle skill. Used by Soul Breakers. Required level: 58. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -828,7 +828,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10048" name="Battle Manual - Curse of Divinity" type="EtcItem">
-		<!-- Battle Manual needed to learn Curse of Divinity. Used by Soul Breakers. Required level: 66 -->
+		<!-- A battle manual for learning the Curse of Divinity skill. Used by Soul Breakers. Required level: 66. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -838,7 +838,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10049" name="Battle Manual - Steal Divinity" type="EtcItem">
-		<!-- Battle Manual needed to learn Steal Divinity. Used by Soul Breakers. Required level: 55 -->
+		<!-- A battle manual for learning the Steal Divinity skill. Used by Soul Breakers. Required level: 55. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -848,7 +848,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10050" name="Battle Manual - Blink" type="EtcItem">
-		<!-- Battle Manual needed to learn Blink. Used by Soul Breakers. Required level: 60 -->
+		<!-- A battle manual for learning the Blink skill. Used by Soul Breakers. Required level: 60. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -858,7 +858,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10051" name="Battle Manual - Transfer Soul" type="EtcItem">
-		<!-- Battle Manual needed to learn Transfer Soul. Used by Soul Breakers. -->
+		<!-- A battle manual for learning the Transfer Soul skill. Used by Soul Breakers. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -868,7 +868,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10052" name="Battle Manual - Twin Shot" type="EtcItem">
-		<!-- Battle Manual needed to learn Twin Shot. Used by Arbalesters. Required level: 40 -->
+		<!-- A battle manual for learning the Twin Shot skill. Used by Arbalesters. Required level: 40. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -878,7 +878,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10053" name="Battle Manual - Rising Shot" type="EtcItem">
-		<!-- Battle Manual needed to learn Rising Shot. Used by Arbalesters. Required level: 46 -->
+		<!-- A battle manual for learning the Rising Shot skill. Used by Arbalesters. Required level: 46. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -888,7 +888,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10054" name="Battle Manual - Deadly Roulette" type="EtcItem">
-		<!-- Battle Manual needed to learn Deadly Roulette. Used by Arbalesters. Required level: 66 -->
+		<!-- A battle manual for learning the Deadly Roulette skill. Used by Arbalesters. Required level: 66. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -898,7 +898,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10055" name="Battle Manual - Temptation" type="EtcItem">
-		<!-- Battle Manual needed to learn Temptation. Used by Arbalesters. Required level: 49 -->
+		<!-- A battle manual for learning the Temptation skill. Used by Arbalesters. Required level: 49. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -908,7 +908,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10056" name="Battle Manual - Create Bio Potion" type="EtcItem">
-		<!-- Battle Manual needed to learn Create Bio Potion. Used by Warders. -->
+		<!-- A battle manual for learning the Create Bio Potion skill. Used by Warders. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -918,7 +918,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10057" name="Battle Manual - Create Dark Seed" type="EtcItem">
-		<!-- Battle Manual needed to learn Create Dark Seed. Used by Arbalesters. Required level: 62 -->
+		<!-- A battle manual for learning the Create Dark Seed skill. Used by Arbalesters. Required level: 62. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -928,7 +928,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10058" name="Battle Manual - Fire Trap" type="EtcItem">
-		<!-- Battle Manual needed to learn Fire Trap. Used by Warders. Required level: 28 -->
+		<!-- A battle manual for learning the Fire Trap skill. Used by Warders. Required level: 28. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -938,7 +938,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10059" name="Battle Manual - Poison Trap" type="EtcItem">
-		<!-- Battle Manual needed to learn Poison Trap. Used by Arbalesters. Required level: 49 -->
+		<!-- A battle manual for learning the Poison Trap skill. Used by Arbalesters. Required level: 49. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -948,7 +948,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10060" name="Battle Manual - Slow Trap" type="EtcItem">
-		<!-- Battle Manual needed to learn Slow Trap. Used by Arbalesters. Required level: 52 -->
+		<!-- A battle manual for learning the Slow Trap skill. Used by Arbalesters. Required level: 52. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -958,7 +958,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10061" name="Battle Manual - Flash Trap" type="EtcItem">
-		<!-- Battle Manual needed to learn Flash Trap. Used by Arbalesters. Required level: 55 -->
+		<!-- A battle manual for learning the Flash Trap skill. Used by Arbalesters. Required level: 55. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -968,7 +968,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10062" name="Battle Manual - Binding Trap" type="EtcItem">
-		<!-- Battle Manual needed to learn Binding Trap. Used by Arbalesters. Required level: 40 -->
+		<!-- A battle manual for learning the Binding Trap skill. Used by Arbalesters. Required level: 40. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -978,7 +978,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10063" name="Battle Manual - Quiver of Bolts (A-grade)" type="EtcItem">
-		<!-- Battle Manual needed to learn Quiver of Bolts (A-grade). Used by Arbalesters. Required level: 60 -->
+		<!-- A battle manual for learning the A-grade Quiver of Bolts skill. Used by Arbalesters. Required level: 60. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -988,7 +988,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10064" name="Battle Manual - Quiver of Bolts (S-grade)" type="EtcItem">
-		<!-- Battle Manual needed to learn Quiver of Bolts (S-grade). Used by Arbalesters. Required level: 74 -->
+		<!-- A battle manual for learning the S-grade Quiver of Bolts skill. Used by Arbalesters. Required level: 74. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -998,7 +998,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10065" name="Battle Manual - Cure Dark Seed" type="EtcItem">
-		<!-- Battle Manual needed to learn Cure Dark Seed. Used by Arbalesters. Required level: 64 -->
+		<!-- A battle manual for learning the Cure Dark Seed skill. Used by Arbalesters. Required level: 64. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1008,7 +1008,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10066" name="Battle Manual - Decoy" type="EtcItem">
-		<!-- Battle Manual needed to learn Decoy. Used by Arbalesters. Required level: 43 -->
+		<!-- A battle manual for learning the Decoy skill. Used by Arbalesters. Required level: 43. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1018,7 +1018,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10067" name="Battle Manual - Chain Lightning" type="EtcItem">
-		<!-- Battle Manual needed to learn Chain Lightning. -->
+		<!-- A battle manual for learning the Chain Lightning skill. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1028,7 +1028,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10068" name="Battle Manual - Enuma Elish" type="EtcItem">
-		<!-- Battle Manual needed to learn Enuma Elish. Used by Doombringers. -->
+		<!-- A battle manual for learning the Enuma Elish skill. Used by Doombringers. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1038,7 +1038,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10069" name="Battle Manual - Leopold" type="EtcItem">
-		<!-- Battle Manual needed to learn Leopold. Used by Soul Hounds. -->
+		<!-- A battle manual for learning the Leopold skill. Used by Soul Hounds. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1048,7 +1048,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10070" name="Battle Manual - Change Weapon" type="EtcItem">
-		<!-- Battle Manual needed to learn Change Weapon. Used by Troopers and Warders. Required level: 20 -->
+		<!-- A battle manual for learning the Change Weapon skill. Used by Troopers and Warders. Required level: 20. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1058,7 +1058,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10071" name="Battle Manual - Quiver of Bolts (B-grade)" type="EtcItem">
-		<!-- Battle Manual needed to learn Quiver of Bolts (B-grade). Used by Arbalesters. Required level: 52 -->
+		<!-- A battle manual for learning the B-grade Quiver of Bolts skill. Used by Arbalesters. Required level: 52. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1068,7 +1068,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10072" name="Battle Manual - Increase Power" type="EtcItem">
-		<!-- Battle Manual needed to learn increases Power. Used by male Kamael soldiers. Required level: 10 -->
+		<!-- A battle manual for learning the Increase Power skill. Used by Kamael Soldiers (M). Required level: 10. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1078,7 +1078,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10073" name="Battle Manual - Rapid Attack" type="EtcItem">
-		<!-- Battle Manual needed to learn Rapid Attack. Used by female Kamael soldiers. Required level: 10 -->
+		<!-- A battle manual for learning the Rapid Attack skill. Used by Kamael soldiers (F). Required level: 10. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1088,7 +1088,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10074" name="Battle Manual - Furious Soul" type="EtcItem">
-		<!-- Battle Manual needed to learn Furious Soul. Used by Troopers. Required level: 24 -->
+		<!-- A battle manual for learning the Furious Soul skill. Used by Troopers. Required level: 24. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1098,7 +1098,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10075" name="Battle Manual - Sword Shield" type="EtcItem">
-		<!-- Battle Manual needed to learn Sword Shield. Used by Troopers. Required level: 36 -->
+		<!-- A battle manual for learning the Sword Shield skill. Used by Troopers. Required level: 36. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1108,7 +1108,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10076" name="Battle Manual - Disarm" type="EtcItem">
-		<!-- Battle Manual needed to learn Disarm. Used by Troopers. Required level: 36 -->
+		<!-- A battle manual for learning the Disarm skill. Used by Troopers. Required level: 36. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1118,7 +1118,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10077" name="Battle Manual - Fast Shot" type="EtcItem">
-		<!-- Battle Manual needed to learn Fast Shot. Used by Warders. Required level: 32 -->
+		<!-- A battle manual for learning the Fast Shot skill. Used by Warders. Required level: 32. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1128,7 +1128,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10078" name="Battle Manual - Death Mark" type="EtcItem">
-		<!-- Battle Manual needed to learn Death Mark. Used by Troopers and Warders. Required level: 24 -->
+		<!-- A battle manual for learning the Death Mark skill. Used by Troopers and Warders. Required level: 24. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1138,7 +1138,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10079" name="Battle Manual - Courage" type="EtcItem">
-		<!-- Battle Manual needed to learn Courage. Used by Troopers. Required level: 36 -->
+		<!-- A battle manual for learning the Courage skill. Used by Troopers. Required level: 36. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1148,7 +1148,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10080" name="Battle Manual - Violent Temper" type="EtcItem">
-		<!-- Battle Manual needed to learn Violent Temper. Used by Berserkers. Required level: 49 -->
+		<!-- A battle manual for learning the Violent Temper skill. Used by Berserkers. Required level: 49. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1158,7 +1158,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10081" name="Battle Manual - Soul to Empower" type="EtcItem">
-		<!-- Battle Manual needed to learn Soul to Empower. Used by Soul Breakers. Required level: 43 -->
+		<!-- A battle manual for learning the Soul to Empower skill. Used by Soul Breakers. Required level: 43. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1168,7 +1168,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10082" name="Battle Manual - Darkness Protection" type="EtcItem">
-		<!-- Battle Manual needed to learn Darkness Protection. Used by Soul Breakers. Required level: 58 -->
+		<!-- A battle manual for learning the Darkness Protection skill. Used by Soul Breakers. Required level: 58. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1178,7 +1178,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10083" name="Battle Manual - Dark Weapon" type="EtcItem">
-		<!-- Battle Manual needed to learn Dark Weapon. Used by Soul Breakers. Required level: 46 -->
+		<!-- A battle manual for learning the Dark Weapon skill. Used by Soul Breakers. Required level: 46. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1188,7 +1188,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10084" name="Battle Manual - Pride of Kamael" type="EtcItem">
-		<!-- Battle Manual needed to learn Pride of Kamael. Used by Soul Breakers. Required level: 49 -->
+		<!-- A battle manual for learning the Pride of Kamael skill. Used by Soul Breakers. Required level: 49. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1198,7 +1198,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10085" name="Battle Manual - Surrender to Dark" type="EtcItem">
-		<!-- Battle Manual needed to learn Surrender to Dark. Used by Troopers and Warders. Required level: 28 -->
+		<!-- A battle manual for learning the Surrender to Dark skill. Used by Troopers and Warders. Required level: 28. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1208,7 +1208,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10086" name="Battle Manual - Bleeding Shot" type="EtcItem">
-		<!-- Battle Manual needed to learn Bleeding Shot. Used by Arbalesters. Required level: 43 -->
+		<!-- A battle manual for learning the Bleeding Shot skill. Used by Arbalesters. Required level: 43. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1218,7 +1218,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10087" name="Battle Manual - Sharpshooting" type="EtcItem">
-		<!-- Battle Manual needed to learn Sharpshooting. Used by Arbalesters. Required level: 60 -->
+		<!-- A battle manual for learning the Sharpshooting skill. Used by Arbalesters. Required level: 60. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1228,7 +1228,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10088" name="Battle Manual - Real Target" type="EtcItem">
-		<!-- Battle Manual needed to learn Real Target. Used by Arbalesters. Required level: 40 -->
+		<!-- A battle manual for learning the Real Target skill. Used by Arbalesters. Required level: 40. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1238,7 +1238,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10089" name="Battle Manual - Imbue Dark Seed" type="EtcItem">
-		<!-- Battle Manual needed to learn Imbue Dark Seed. Used by Arbalesters. Required level: 62 -->
+		<!-- A battle manual for learning the Imbue Dark Seed skill. Used by Arbalesters. Required level: 62. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1248,7 +1248,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10090" name="Battle Manual - Prahnah" type="EtcItem">
-		<!-- Battle Manual needed to learn Prahnah. Used by Tricksters. -->
+		<!-- A battle manual for learning the Prahnah skill. Used by Tricksters. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1258,7 +1258,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10091" name="Battle Manual - Final Form" type="EtcItem">
-		<!-- Battle Manual needed to learn Final Form. Used by Soul Hounds, Doombringers, and Tricksters. -->
+		<!-- A battle manual for learning the Final Form skill. Used by Soul Hounds, Doombringers and Tricksters. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1268,7 +1268,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10092" name="Battle Manual - Shadow Bind" type="EtcItem">
-		<!-- Battle Manual needed to learn Shadow Bind. Used by Soul Breakers. Required level: 52 -->
+		<!-- A battle manual for learning the Shadow Bind skill. Used by Soul Breakers. Required level: 52. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1278,7 +1278,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10093" name="Battle Manual - Voice Bind" type="EtcItem">
-		<!-- Battle Manual needed to learn Voice Bind. Used by Soul Breakers. Required level: 58 -->
+		<!-- A battle manual for learning the Voice Bind skill. Used by Soul Breakers. Required level: 58. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1288,7 +1288,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10094" name="Battle Manual - Rush" type="EtcItem">
-		<!-- Battle Manual needed to learn Rush. Used by Troopers. Required level: 32 -->
+		<!-- A battle manual for learning the Rush skill. Used by Troopers. Required level: 32. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1298,7 +1298,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10095" name="Battle Manual - Storm Assault" type="EtcItem">
-		<!-- Battle Manual needed to learn Storm Assault. Used by Berserkers. Required level: 49 -->
+		<!-- A battle manual for learning the Storm Assault skill. Used by Berserkers. Required level: 49. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1308,7 +1308,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10096" name="Battle Manual - Wing Assault" type="EtcItem">
-		<!-- Battle Manual needed to learn Wing Assault. -->
+		<!-- A battle manual for learning the Wing Assault skill. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1318,7 +1318,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10097" name="Battle Manual - Shoulder Charge" type="EtcItem">
-		<!-- Battle Manual needed to learn Shoulder Charge. Used by Berserkers. Required level: 40 -->
+		<!-- A battle manual for learning the Shoulder Charge skill. Used by Berserkers. Required level: 40. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1328,7 +1328,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10098" name="Battle Manual - Blade Rush" type="EtcItem">
-		<!-- Battle Manual needed to learn Blade Rush. Used by Berserkers. Required level: 55 -->
+		<!-- A battle manual for learning the Blade Rush skill. Used by Berserkers. Required level: 55. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1338,7 +1338,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10099" name="Spellbook: Count of Fire" type="EtcItem">
-		<!-- Spellbook needed to learn Count of Fire. Used by Archmages. -->
+		<!-- A spellbook for learning the Count of Fire skill. Used by Archmages. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

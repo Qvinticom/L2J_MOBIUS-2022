@@ -146,7 +146,7 @@ public class CrystalCavernsCoralGarden extends AbstractInstance
 			npc.setScriptValue(1);
 			npc.getVariables().set("PLAYER_OBJECT", player);
 			npc.setNameString(NpcStringId.TRAITOR_CRYSTALLINE_GOLEM);
-			npc.setTitleString(NpcStringId.GIVEN_TO_S1);
+			npc.setTitleString(NpcStringId.S1_A_TREASON);
 			npc.setTitle(player.getName());
 			npc.broadcastInfo();
 			WalkingManager.getInstance().startMoving(npc, npc.getId() == GOLEM_1 ? "gd_golem_1" : "gd_golem_2");

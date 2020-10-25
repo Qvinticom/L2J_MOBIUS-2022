@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11400" toLevel="30" name="Forgotten Power - Physical Attack">
-		<!-- Increases P. Atk. by $s1. -->
+		<!-- P. Atk. +$s1. -->
 		<icon>icon.skill11400</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
@@ -84,7 +84,7 @@
 		</effects>
 	</skill>
 	<skill id="11401" toLevel="30" name="Forgotten Power - Magical Attack">
-		<!-- Increases M. Atk. by $s1. -->
+		<!-- M. Atk. +$s1. -->
 		<icon>icon.skill11401</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
@@ -167,7 +167,7 @@
 		</effects>
 	</skill>
 	<skill id="11402" toLevel="30" name="Forgotten Power - Armor Defense">
-		<!-- Increases P. Def./ M. Def. by $s1. -->
+		<!-- P./ M. Def. +$s1. -->
 		<icon>icon.skill11402</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
@@ -242,7 +242,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceCriticalRate">
+			<effect name="ImmobileDamageResist">
 				<amount>
 					<value level="11">1</value>
 					<value level="12">1</value>
@@ -281,6 +281,39 @@
 					<value level="30">-10</value>
 				</amount>
 				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="21">-1</value>
+					<value level="22">-2</value>
+					<value level="23">-3</value>
+					<value level="24">-4</value>
+					<value level="25">-5</value>
+					<value level="26">-6</value>
+					<value level="27">-7</value>
+					<value level="28">-8</value>
+					<value level="29">-9</value>
+					<value level="30">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="21">-1</value>
+					<value level="22">-2</value>
+					<value level="23">-3</value>
+					<value level="24">-4</value>
+					<value level="25">-5</value>
+					<value level="26">-6</value>
+					<value level="27">-7</value>
+					<value level="28">-8</value>
+					<value level="29">-9</value>
+					<value level="30">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -323,7 +356,6 @@
 					<value level="29">19</value>
 					<value level="30">20</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="VitalityPointsRate">
 				<amount>
@@ -366,7 +398,7 @@
 		</effects>
 	</skill>
 	<skill id="11404" toLevel="30" name="Forgotten Power - Elemental Guard">
-		<!-- All defense attributes +$s1. -->
+		<!-- Attribute Resistance +$s1. -->
 		<icon>icon.skill11404</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
@@ -408,7 +440,7 @@
 				<attribute>FIRE</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-					<amount>
+				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">15</value>
@@ -672,7 +704,7 @@
 		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="11498" toLevel="1" name="Summoner - Individual">
-		<!-- For 5 sec., increases P. Atk., M. Atk., Critical rate, and critical damage by 10%. -->
+		<!-- For 5 sec., P./ M. Atk., Critical Rate for standard attacks, Critical Damage for standard attacks +10%. -->
 		<icon>icon.skill1543</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -713,7 +745,7 @@
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
 		<mpConsume>71</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>10000</reuseDelay>

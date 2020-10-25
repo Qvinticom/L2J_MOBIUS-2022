@@ -6782,6 +6782,15 @@
 			<skill id="13568" level="1" minimumPieces="2" /> <!-- Talisman Energy -->
 		</skills>
 	</set>
+	<set id="288" minimumPieces="2">
+		<requiredItems>
+			<item id="37717" /> <!-- Talisman Seven Signs -->
+			<item id="80957" /> <!-- Heavenly Talisman -->
+		</requiredItems>
+		<skills>
+			<skill id="13568" level="1" minimumPieces="2" /> <!-- Talisman Energy -->
+		</skills>
+	</set>
 	<set id="292" minimumPieces="5">
 	<!-- Paulina's Heavy Armor set D garde in 5 piaces -->
 		<requiredItems>
@@ -7393,6 +7402,23 @@
 			<item id="48983" /> <!-- Artifact - P. Skill Power Balance -->
 			<item id="48984" /> <!-- Artifact - M. Skill Power Balance -->
 			<item id="48985" /> <!-- Artifact - Fixed Damage Reduction Balance -->
+			<item id="80647" /> <!-- Artifact - Normal Attack Critical Damage Fighting Spirit -->
+			<item id="80648" /> <!-- Artifact - P. Skill Critical Damage Fighting Spirit -->
+			<item id="80649" /> <!-- Artifact - M. Skill Critical Damage Fighting Spirit -->
+			<item id="80650" /> <!-- Artifact - Bow Resistance Protection -->
+			<item id="80651" /> <!-- Artifact - Dagger Resistance Protection -->
+			<item id="80652" /> <!-- Artifact - Sword Resistance Protection -->
+			<item id="80653" /> <!-- Artifact - Vitality Bonus Support -->
+			<item id="80654" /> <!-- Artifact - Vitality Consumption Rate Reduction Support -->
+			<item id="80655" /> <!-- Artifact - Skill MP Consumption Reduction Support -->
+			<item id="80656" /> <!-- Artifact - P. Def. Balance -->
+			<item id="80657" /> <!-- Artifact - M. Def. Balance -->
+			<item id="80658" /> <!-- Artifact - Normal Attack Critical Damage Balance -->
+			<item id="80659" /> <!-- Artifact - P. Skill Critical Damage Balance -->
+			<item id="80660" /> <!-- Artifact - M. Skill Critical Damage Balance -->
+			<item id="80661" /> <!-- Artifact - Atk. Spd. Balance -->
+			<item id="80662" /> <!-- Artifact - Casting Spd. Balance -->
+			<item id="81430" />
 		</requiredItems>
 		<skills>
 			<!-- {slotMask;bookSlot;} used only for Artifact System -->
@@ -7428,6 +7454,23 @@
 			<item id="48983" /> <!-- Artifact - P. Skill Power Balance -->
 			<item id="48984" /> <!-- Artifact - M. Skill Power Balance -->
 			<item id="48985" /> <!-- Artifact - Fixed Damage Reduction Balance -->
+			<item id="80647" /> <!-- Artifact - Normal Attack Critical Damage Fighting Spirit -->
+			<item id="80648" /> <!-- Artifact - P. Skill Critical Damage Fighting Spirit -->
+			<item id="80649" /> <!-- Artifact - M. Skill Critical Damage Fighting Spirit -->
+			<item id="80650" /> <!-- Artifact - Bow Resistance Protection -->
+			<item id="80651" /> <!-- Artifact - Dagger Resistance Protection -->
+			<item id="80652" /> <!-- Artifact - Sword Resistance Protection -->
+			<item id="80653" /> <!-- Artifact - Vitality Bonus Support -->
+			<item id="80654" /> <!-- Artifact - Vitality Consumption Rate Reduction Support -->
+			<item id="80655" /> <!-- Artifact - Skill MP Consumption Reduction Support -->
+			<item id="80656" /> <!-- Artifact - P. Def. Balance -->
+			<item id="80657" /> <!-- Artifact - M. Def. Balance -->
+			<item id="80658" /> <!-- Artifact - Normal Attack Critical Damage Balance -->
+			<item id="80659" /> <!-- Artifact - P. Skill Critical Damage Balance -->
+			<item id="80660" /> <!-- Artifact - M. Skill Critical Damage Balance -->
+			<item id="80661" /> <!-- Artifact - Atk. Spd. Balance -->
+			<item id="80662" /> <!-- Artifact - Casting Spd. Balance -->
+			<item id="81430" />
 		</requiredItems>
 		<skills>
 			<!-- {slotMask;bookSlot;} used only for Artifact System -->
@@ -7464,6 +7507,23 @@
 			<item id="48983" /> <!-- Artifact - P. Skill Power Balance -->
 			<item id="48984" /> <!-- Artifact - M. Skill Power Balance -->
 			<item id="48985" /> <!-- Artifact - Fixed Damage Reduction Balance -->
+			<item id="80647" /> <!-- Artifact - Normal Attack Critical Damage Fighting Spirit -->
+			<item id="80648" /> <!-- Artifact - P. Skill Critical Damage Fighting Spirit -->
+			<item id="80649" /> <!-- Artifact - M. Skill Critical Damage Fighting Spirit -->
+			<item id="80650" /> <!-- Artifact - Bow Resistance Protection -->
+			<item id="80651" /> <!-- Artifact - Dagger Resistance Protection -->
+			<item id="80652" /> <!-- Artifact - Sword Resistance Protection -->
+			<item id="80653" /> <!-- Artifact - Vitality Bonus Support -->
+			<item id="80654" /> <!-- Artifact - Vitality Consumption Rate Reduction Support -->
+			<item id="80655" /> <!-- Artifact - Skill MP Consumption Reduction Support -->
+			<item id="80656" /> <!-- Artifact - P. Def. Balance -->
+			<item id="80657" /> <!-- Artifact - M. Def. Balance -->
+			<item id="80658" /> <!-- Artifact - Normal Attack Critical Damage Balance -->
+			<item id="80659" /> <!-- Artifact - P. Skill Critical Damage Balance -->
+			<item id="80660" /> <!-- Artifact - M. Skill Critical Damage Balance -->
+			<item id="80661" /> <!-- Artifact - Atk. Spd. Balance -->
+			<item id="80662" /> <!-- Artifact - Casting Spd. Balance -->
+			<item id="81430" />
 		</requiredItems>
 		<skills>
 			<!-- {slotMask;bookSlot;} used only for Artifact System -->
@@ -7578,8 +7638,81 @@
 			<skill id="13341" level="5" minimumPieces="5" minimumEnchant="10" /> <!-- Enchant Robe Armor Set + 10 (R-grade) -->
 		</skills>
 	</set>
+	<set id="421" minimumPieces="5">
+		<requiredItems>
+			<item id="81181" /> <!-- Exalted Helmet (Heavy armor) -->
+			<item id="81182" /> <!-- Exalted Breastplate(Heavy armor) -->
+			<item id="81183" /> <!-- Exalted Gaiters(Heavy armor) -->
+			<item id="81184" /> <!-- Exalted Gauntlets(Heavy armor) -->
+			<item id="81185" /> <!-- Exalted Boots(Heavy armor) -->
+		</requiredItems>
+		<skills>
+			<skill id="35617" level="1" minimumPieces="5" /> <!-- Set Effect - Exalted Heavy Armor -->
+		</skills>
+	</set>
+	<set id="422" minimumPieces="5">
+		<requiredItems>
+			<item id="81187" /> <!-- Exalted Leather Helmet(Light armor) -->
+			<item id="81188" /> <!-- Exalted Leather Armor(Light armor) -->
+			<item id="81189" /> <!-- Exalted Leather Leggings(Light armor) -->
+			<item id="81190" /> <!-- Exalted Leather Gloves(Light armor) -->
+			<item id="81191" /> <!-- Exalted Leather Boots(Light armor) -->
+		</requiredItems>
+		<skills>
+			<skill id="35618" level="1" minimumPieces="5" /> <!-- Set Effect - Exalted Light Armor -->
+		</skills>
+	</set>
+	<set id="423" minimumPieces="5">
+		<requiredItems>
+			<item id="81192" /> <!-- Exalted Circlet(Robe) -->
+			<item id="81193" /> <!-- Exalted Tunic(Robe) -->
+			<item id="81194" /> <!-- Exalted Stockings(Robe) -->
+			<item id="81195" /> <!-- Exalted Gloves(Robe) -->
+			<item id="81196" /> <!-- Exalted Shoes(Robe) -->
+		</requiredItems>
+		<skills>
+			<skill id="35619" level="1" minimumPieces="5" /> <!-- Set Effect - Exalted Robe -->
+		</skills>
+	</set>
+	<set id="998" minimumPieces="1">
+		<requiredItems>
+			<item id="80959" /> <!-- Epic Talisman -->
+		</requiredItems>
+		<optionalItems>
+			<item id="80957" /> <!-- Heavenly Talisman -->
+			<item id="34989" /> <!-- Talisman Longing -->
+			<item id="39572" /> <!-- Talisman Insanity -->
+		</optionalItems>
+		<skills>
+			<skill id="13568" level="1" minimumPieces="1" optional="true" /> <!-- Talisman Energy -->
+		</skills>
+	</set>
 	<set id="999" minimumPieces="1">
 		<requiredItems>
+			<item id="29439" /> <!-- Greater Vital Stone -->
+			<item id="29440" /> <!-- Greater Vital Stone -->
+			<item id="29441" /> <!-- Greater Vital Stone -->
+			<item id="29442" /> <!-- Greater Vital Stone -->
+			<item id="29443" /> <!-- Greater Garnet -->
+			<item id="29444" /> <!-- Greater Garnet -->
+			<item id="29445" /> <!-- Greater Garnet -->
+			<item id="29446" /> <!-- Greater Garnet -->
+			<item id="29447" /> <!-- Greater Garnet -->
+			<item id="29448" /> <!-- Greater Garnet -->
+			<item id="29449" /> <!-- Greater Garnet -->
+			<item id="29450" /> <!-- Greater Garnet -->
+			<item id="29451" /> <!-- Greater Tanzanite -->
+			<item id="29452" /> <!-- Greater Tanzanite -->
+			<item id="29453" /> <!-- Greater Tanzanite -->
+			<item id="29454" /> <!-- Greater Tanzanite -->
+			<item id="29455" /> <!-- Greater Cat's Eye -->
+			<item id="29456" /> <!-- Greater Cat's Eye -->
+			<item id="29457" /> <!-- Greater Cat's Eye -->
+			<item id="29458" /> <!-- Greater Cat's Eye -->
+			<item id="29459" /> <!-- Greater Amethyst -->
+			<item id="29460" /> <!-- Greater Amethyst -->
+			<item id="29461" /> <!-- Greater Amethyst -->
+			<item id="29462" /> <!-- Greater Amethyst -->
 			<item id="28376" /> <!-- Greater Cat's Eye -->
 			<item id="28377" /> <!-- Greater Amethyst -->
 			<item id="28378" /> <!-- Greater Vital Stone -->
@@ -7600,11 +7733,221 @@
 			<item id="47698" /> <!-- Greater Tanzanite -->
 			<item id="47699" /> <!-- Greater Red Cat's Eye -->
 			<item id="47700" /> <!-- Greater Blue Cat's Eye -->
-			<item id="47920" /> <!-- Greater Vital Stone(30-day) -->
-			<item id="47921" /> <!-- Greater Red Cat's Eye(30-day) -->
-			<item id="47922" /> <!-- Greater Blue Cat's Eye(30-day) -->
-			<item id="47923" /> <!-- Greater Tanzanite(30-day) -->
-			<item id="29078" /> <!-- Greater Vital Stone (30-day) -->
+			<item id="48767" /> <!-- Greater Topaz (Lv. 2) -->
+			<item id="48768" /> <!-- Greater Topaz (Lv. 3) -->
+			<item id="48769" /> <!-- Greater Topaz (Lv. 4) -->
+			<item id="48770" /> <!-- Greater Topaz (Lv. 5) -->
+			<item id="48771" /> <!-- Greater Ruby (Lv. 2) -->
+			<item id="48772" /> <!-- Greater Ruby (Lv. 3) -->
+			<item id="48773" /> <!-- Greater Ruby (Lv. 4) -->
+			<item id="48774" /> <!-- Greater Ruby (Lv. 5) -->
+			<item id="48775" /> <!-- Greater Sapphire (Lv. 2) -->
+			<item id="48776" /> <!-- Greater Sapphire (Lv. 3) -->
+			<item id="48777" /> <!-- Greater Sapphire (Lv. 4) -->
+			<item id="48778" /> <!-- Greater Sapphire (Lv. 5) -->
+			<item id="48779" /> <!-- Greater Obsidian (Lv. 2) -->
+			<item id="48780" /> <!-- Greater Obsidian (Lv. 3) -->
+			<item id="48781" /> <!-- Greater Obsidian (Lv. 4) -->
+			<item id="48782" /> <!-- Greater Obsidian (Lv. 5) -->
+			<item id="48783" /> <!-- Greater Opal (Lv. 2) -->
+			<item id="48784" /> <!-- Greater Opal (Lv. 3) -->
+			<item id="48785" /> <!-- Greater Opal (Lv. 4) -->
+			<item id="48786" /> <!-- Greater Opal (Lv. 5) -->
+			<item id="48787" /> <!-- Greater Emerald (Lv. 2) -->
+			<item id="48788" /> <!-- Greater Emerald (Lv. 3) -->
+			<item id="48789" /> <!-- Greater Emerald (Lv. 4) -->
+			<item id="48790" /> <!-- Greater Emerald (Lv. 5) -->
+			<item id="48791" /> <!-- Greater Aquamarine (Lv. 2) -->
+			<item id="48792" /> <!-- Greater Aquamarine (Lv. 3) -->
+			<item id="48793" /> <!-- Greater Aquamarine (Lv. 4) -->
+			<item id="48794" /> <!-- Greater Aquamarine (Lv. 5) -->
+			<item id="48795" /> <!-- Greater Diamond (Lv. 2) -->
+			<item id="48796" /> <!-- Greater Diamond (Lv. 3) -->
+			<item id="48797" /> <!-- Greater Diamond (Lv. 4) -->
+			<item id="48798" /> <!-- Greater Diamond (Lv. 5) -->
+			<item id="48799" /> <!-- Greater Pearl (Lv. 2) -->
+			<item id="48800" /> <!-- Greater Pearl (Lv. 3) -->
+			<item id="48801" /> <!-- Greater Pearl (Lv. 4) -->
+			<item id="48802" /> <!-- Greater Pearl (Lv. 5) -->
+			<item id="48803" /> <!-- Greater Vital Stone (Lv. 2) -->
+			<item id="48804" /> <!-- Greater Vital Stone (Lv. 3) -->
+			<item id="48805" /> <!-- Greater Vital Stone (Lv. 4) -->
+			<item id="48806" /> <!-- Greater Vital Stone (Lv. 5) -->
+			<item id="48807" /> <!-- Greater Garnet (Lv. 2) -->
+			<item id="48808" /> <!-- Greater Garnet (Lv. 3) -->
+			<item id="48809" /> <!-- Greater Garnet (Lv. 4) -->
+			<item id="48810" /> <!-- Greater Garnet (Lv. 5) -->
+			<item id="48811" /> <!-- Greater Tanzanite (Lv. 2) -->
+			<item id="48812" /> <!-- Greater Tanzanite (Lv. 3) -->
+			<item id="48813" /> <!-- Greater Tanzanite (Lv. 4) -->
+			<item id="48815" /> <!-- Greater Red Cat's Eye (Lv. 2) -->
+			<item id="48816" /> <!-- Greater Red Cat's Eye (Lv. 3) -->
+			<item id="48817" /> <!-- Greater Red Cat's Eye (Lv. 4) -->
+			<item id="48818" /> <!-- Greater Red Cat's Eye (Lv. 5) -->
+			<item id="48819" /> <!-- Greater Blue Cat's Eye (Lv. 2) -->
+			<item id="48820" /> <!-- Greater Blue Cat's Eye (Lv. 3) -->
+			<item id="48821" /> <!-- Greater Blue Cat's Eye (Lv. 4) -->
+			<item id="48822" /> <!-- Greater Blue Cat's Eye (Lv. 5) -->
+			<item id="29796" /> <!-- Superior Amethyst (Lv. 1) -->
+			<item id="29797" /> <!-- Superior Amethyst (Lv. 2) -->
+			<item id="29798" /> <!-- Superior Amethyst (Lv. 3) -->
+			<item id="29799" /> <!-- Superior Amethyst (Lv. 4) -->
+			<item id="29800" /> <!-- Superior Amethyst (Lv. 5) -->
+			<item id="29801" /> <!-- Superior Amethyst (Lv. 6) -->
+			<item id="29802" /> <!-- Superior Amethyst (Lv. 7) -->
+			<item id="29803" /> <!-- Superior Amethyst (Lv. 8) -->
+			<item id="29804" /> <!-- Superior Amethyst (Lv. 9) -->
+			<item id="29805" /> <!-- Superior Amethyst (Lv. 10) -->
+			<item id="29806" /> <!-- Superior Cat's Eye (Lv. 1) -->
+			<item id="29807" /> <!-- Superior Cat's Eye (Lv. 2) -->
+			<item id="29808" /> <!-- Superior Cat's Eye (Lv. 3) -->
+			<item id="29809" /> <!-- Superior Cat's Eye (Lv. 4) -->
+			<item id="29810" /> <!-- Superior Cat's Eye (Lv. 5) -->
+			<item id="29811" /> <!-- Superior Cat's Eye (Lv. 6) -->
+			<item id="29812" /> <!-- Superior Cat's Eye (Lv. 7) -->
+			<item id="29813" /> <!-- Superior Cat's Eye (Lv. 8) -->
+			<item id="29814" /> <!-- Superior Cat's Eye (Lv. 9) -->
+			<item id="29815" /> <!-- Superior Cat's Eye (Lv. 10) -->
+			<item id="81495" /> <!-- Superior Topaz (Lv. 1) -->
+			<item id="81496" /> <!-- Superior Topaz (Lv. 2) -->
+			<item id="81497" /> <!-- Superior Topaz (Lv. 3) -->
+			<item id="81498" /> <!-- Superior Topaz (Lv. 4) -->
+			<item id="81499" /> <!-- Superior Topaz (Lv. 5) -->
+			<item id="81500" /> <!-- Superior Topaz (Lv. 6) -->
+			<item id="81501" /> <!-- Superior Topaz (Lv. 7) -->
+			<item id="81502" /> <!-- Superior Topaz (Lv. 8) -->
+			<item id="81503" /> <!-- Superior Topaz (Lv. 9) -->
+			<item id="81504" /> <!-- Superior Topaz (Lv. 10) -->
+			<item id="81505" /> <!-- Superior Ruby (Lv. 1) -->
+			<item id="81506" /> <!-- Superior Ruby (Lv. 2) -->
+			<item id="81507" /> <!-- Superior Ruby (Lv. 3) -->
+			<item id="81508" /> <!-- Superior Ruby (Lv. 4) -->
+			<item id="81509" /> <!-- Superior Ruby (Lv. 5) -->
+			<item id="81510" /> <!-- Superior Ruby (Lv. 6) -->
+			<item id="81511" /> <!-- Superior Ruby (Lv. 7) -->
+			<item id="81512" /> <!-- Superior Ruby (Lv. 8) -->
+			<item id="81513" /> <!-- Superior Ruby (Lv. 9) -->
+			<item id="81514" /> <!-- Superior Ruby (Lv. 10) -->
+			<item id="81515" /> <!-- Superior Sapphire (Lv. 1) -->
+			<item id="81516" /> <!-- Superior Sapphire (Lv. 2) -->
+			<item id="81517" /> <!-- Superior Sapphire (Lv. 3) -->
+			<item id="81518" /> <!-- Superior Sapphire (Lv. 4) -->
+			<item id="81519" /> <!-- Superior Sapphire (Lv. 5) -->
+			<item id="81520" /> <!-- Superior Sapphire (Lv. 6) -->
+			<item id="81521" /> <!-- Superior Sapphire (Lv. 7) -->
+			<item id="81522" /> <!-- Superior Sapphire (Lv. 8) -->
+			<item id="81523" /> <!-- Superior Sapphire (Lv. 9) -->
+			<item id="81524" /> <!-- Superior Sapphire (Lv. 10) -->
+			<item id="81525" /> <!-- Superior Obsidian (Lv. 1) -->
+			<item id="81526" /> <!-- Superior Obsidian (Lv. 2) -->
+			<item id="81527" /> <!-- Superior Obsidian (Lv. 3) -->
+			<item id="81528" /> <!-- Superior Obsidian (Lv. 4) -->
+			<item id="81529" /> <!-- Superior Obsidian (Lv. 5) -->
+			<item id="81530" /> <!-- Superior Obsidian (Lv. 6) -->
+			<item id="81531" /> <!-- Superior Obsidian (Lv. 7) -->
+			<item id="81532" /> <!-- Superior Obsidian (Lv. 8) -->
+			<item id="81533" /> <!-- Superior Obsidian (Lv. 9) -->
+			<item id="81534" /> <!-- Superior Obsidian (Lv. 10) -->
+			<item id="81535" /> <!-- Superior Opal (Lv. 1) -->
+			<item id="81536" /> <!-- Superior Opal (Lv. 2) -->
+			<item id="81537" /> <!-- Superior Opal (Lv. 3) -->
+			<item id="81538" /> <!-- Superior Opal (Lv. 4) -->
+			<item id="81539" /> <!-- Superior Opal (Lv. 5) -->
+			<item id="81540" /> <!-- Superior Opal (Lv. 6) -->
+			<item id="81541" /> <!-- Superior Opal (Lv. 7) -->
+			<item id="81542" /> <!-- Superior Opal (Lv. 8) -->
+			<item id="81543" /> <!-- Superior Opal (Lv. 9) -->
+			<item id="81544" /> <!-- Superior Opal (Lv. 10) -->
+			<item id="81545" /> <!-- Superior Emerald (Lv. 1) -->
+			<item id="81546" /> <!-- Superior Emerald (Lv. 2) -->
+			<item id="81547" /> <!-- Superior Emerald (Lv. 3) -->
+			<item id="81548" /> <!-- Superior Emerald (Lv. 4) -->
+			<item id="81549" /> <!-- Superior Emerald (Lv. 5) -->
+			<item id="81550" /> <!-- Superior Emerald (Lv. 6) -->
+			<item id="81551" /> <!-- Superior Emerald (Lv. 7) -->
+			<item id="81552" /> <!-- Superior Emerald (Lv. 8) -->
+			<item id="81553" /> <!-- Superior Emerald (Lv. 9) -->
+			<item id="81554" /> <!-- Superior Emerald (Lv. 10) -->
+			<item id="81555" /> <!-- Superior Aquamarine (Lv. 1) -->
+			<item id="81556" /> <!-- Superior Aquamarine (Lv. 2) -->
+			<item id="81557" /> <!-- Superior Aquamarine (Lv. 3) -->
+			<item id="81558" /> <!-- Superior Aquamarine (Lv. 4) -->
+			<item id="81559" /> <!-- Superior Aquamarine (Lv. 5) -->
+			<item id="81560" /> <!-- Superior Aquamarine (Lv. 6) -->
+			<item id="81561" /> <!-- Superior Aquamarine (Lv. 7) -->
+			<item id="81562" /> <!-- Superior Aquamarine (Lv. 8) -->
+			<item id="81563" /> <!-- Superior Aquamarine (Lv. 9) -->
+			<item id="81564" /> <!-- Superior Aquamarine (Lv. 10) -->
+			<item id="81565" /> <!-- Superior Diamond (Lv. 1) -->
+			<item id="81566" /> <!-- Superior Diamond (Lv. 2) -->
+			<item id="81567" /> <!-- Superior Diamond (Lv. 3) -->
+			<item id="81568" /> <!-- Superior Diamond (Lv. 4) -->
+			<item id="81569" /> <!-- Superior Diamond (Lv. 5) -->
+			<item id="81570" /> <!-- Superior Diamond (Lv. 6) -->
+			<item id="81571" /> <!-- Superior Diamond (Lv. 7) -->
+			<item id="81572" /> <!-- Superior Diamond (Lv. 8) -->
+			<item id="81573" /> <!-- Superior Diamond (Lv. 9) -->
+			<item id="81574" /> <!-- Superior Diamond (Lv. 10) -->
+			<item id="81575" /> <!-- Superior Pearl (Lv. 1) -->
+			<item id="81576" /> <!-- Superior Pearl (Lv. 2) -->
+			<item id="81577" /> <!-- Superior Pearl (Lv. 3) -->
+			<item id="81578" /> <!-- Superior Pearl (Lv. 4) -->
+			<item id="81579" /> <!-- Superior Pearl (Lv. 5) -->
+			<item id="81580" /> <!-- Superior Pearl (Lv. 6) -->
+			<item id="81581" /> <!-- Superior Pearl (Lv. 7) -->
+			<item id="81582" /> <!-- Superior Pearl (Lv. 8) -->
+			<item id="81583" /> <!-- Superior Pearl (Lv. 9) -->
+			<item id="81584" /> <!-- Superior Pearl (Lv. 10) -->
+			<item id="81585" /> <!-- Superior Vital Stone (Lv. 1) -->
+			<item id="81586" /> <!-- Superior Vital Stone (Lv. 2) -->
+			<item id="81587" /> <!-- Superior Vital Stone (Lv. 3) -->
+			<item id="81588" /> <!-- Superior Vital Stone (Lv. 4) -->
+			<item id="81589" /> <!-- Superior Vital Stone (Lv. 5) -->
+			<item id="81590" /> <!-- Superior Vital Stone (Lv. 6) -->
+			<item id="81591" /> <!-- Superior Vital Stone (Lv. 7) -->
+			<item id="81592" /> <!-- Superior Vital Stone (Lv. 8) -->
+			<item id="81593" /> <!-- Superior Vital Stone (Lv. 9) -->
+			<item id="81594" /> <!-- Superior Vital Stone (Lv. 10) -->
+			<item id="81595" /> <!-- Superior Garnet (Lv. 1) -->
+			<item id="81596" /> <!-- Superior Garnet (Lv. 2) -->
+			<item id="81597" /> <!-- Superior Garnet (Lv. 3) -->
+			<item id="81598" /> <!-- Superior Garnet (Lv. 4) -->
+			<item id="81599" /> <!-- Superior Garnet (Lv. 5) -->
+			<item id="81600" /> <!-- Superior Garnet (Lv. 6) -->
+			<item id="81601" /> <!-- Superior Garnet (Lv. 7) -->
+			<item id="81602" /> <!-- Superior Garnet (Lv. 8) -->
+			<item id="81603" /> <!-- Superior Garnet (Lv. 9) -->
+			<item id="81604" /> <!-- Superior Garnet (Lv. 10) -->
+			<item id="81605" /> <!-- Superior Tanzanite (Lv. 1) -->
+			<item id="81606" /> <!-- Superior Tanzanite (Lv. 2) -->
+			<item id="81607" /> <!-- Superior Tanzanite (Lv. 3) -->
+			<item id="81608" /> <!-- Superior Tanzanite (Lv. 4) -->
+			<item id="81609" /> <!-- Superior Tanzanite (Lv. 5) -->
+			<item id="81610" /> <!-- Superior Tanzanite (Lv. 6) -->
+			<item id="81611" /> <!-- Superior Tanzanite (Lv. 7) -->
+			<item id="81612" /> <!-- Superior Tanzanite (Lv. 8) -->
+			<item id="81613" /> <!-- Superior Tanzanite (Lv. 9) -->
+			<item id="81614" /> <!-- Superior Tanzanite (Lv. 10) -->
+			<item id="81615" /> <!-- Superior Red Cat's Eye (Lv. 1) -->
+			<item id="81616" /> <!-- Superior Red Cat's Eye (Lv. 2) -->
+			<item id="81617" /> <!-- Superior Red Cat's Eye (Lv. 3) -->
+			<item id="81618" /> <!-- Superior Red Cat's Eye (Lv. 4) -->
+			<item id="81619" /> <!-- Superior Red Cat's Eye (Lv. 5) -->
+			<item id="81620" /> <!-- Superior Red Cat's Eye (Lv. 6) -->
+			<item id="81621" /> <!-- Superior Red Cat's Eye (Lv. 7) -->
+			<item id="81622" /> <!-- Superior Red Cat's Eye (Lv. 8) -->
+			<item id="81623" /> <!-- Superior Red Cat's Eye (Lv. 9) -->
+			<item id="81624" /> <!-- Superior Red Cat's Eye (Lv. 10) -->
+			<item id="81625" /> <!-- Superior Blue Cat's Eye (Lv. 1) -->
+			<item id="81626" /> <!-- Superior Blue Cat's Eye (Lv. 2) -->
+			<item id="81627" /> <!-- Superior Blue Cat's Eye (Lv. 3) -->
+			<item id="81628" /> <!-- Superior Blue Cat's Eye (Lv. 4) -->
+			<item id="81629" /> <!-- Superior Blue Cat's Eye (Lv. 5) -->
+			<item id="81630" /> <!-- Superior Blue Cat's Eye (Lv. 6) -->
+			<item id="81631" /> <!-- Superior Blue Cat's Eye (Lv. 7) -->
+			<item id="81632" /> <!-- Superior Blue Cat's Eye (Lv. 8) -->
+			<item id="81633" /> <!-- Superior Blue Cat's Eye (Lv. 9) -->
+			<item id="81634" /> <!-- Superior Blue Cat's Eye (Lv. 10) -->
 		</requiredItems>
 		<skills>
 			<skill id="27717" level="1" minimumPieces="1" /> <!-- Greater Jewel's Blessing -->
@@ -7617,6 +7960,84 @@
 			<skill id="27722" level="1" minimumPieces="4" /> <!-- Lv.2 La Vie En Rose's Energy -->
 			<skill id="27723" level="1" minimumPieces="5" /> <!-- Lv.3 La Vie En Rose's Energy -->
 			<skill id="27724" level="1" minimumPieces="6" /> <!-- Lv.4 La Vie En Rose's Energy -->
+		</skills>
+	</set>
+	<set id="316" minimumPieces="5">
+		<!-- Exalted's Heavy Armor set R grade in 5 piaces -->
+		<requiredItems>
+			<item id="81181" /> <!-- Exalted Breastplate Heavy Armor -->
+			<item id="81182" /> <!-- Exalted Gaiters Heavy Armor -->
+			<item id="81183" /> <!-- Exalted Boots Heavy Armor -->
+			<item id="81184" /> <!-- Exalted Gauntlets Heavy Armor -->
+			<item id="81185" /> <!-- Exalted Helmet Heavy Armor -->
+		</requiredItems>
+		<skills>
+			<skill id="35617" level="1" minimumPieces="5" /> <!-- Set Effect - Exalted Heavy Armor, 5-piece -->
+		</skills>
+	</set>
+	<set id="317" minimumPieces="5">
+		<!-- Exalted's Leather Armor set R grade in 5 piaces -->
+		<requiredItems>
+			<item id="81187" /> <!-- Exalted Leather Armor Light Armor -->
+			<item id="81188" /> <!-- Exalted Leather Leggings Light Armor -->
+			<item id="81189" /> <!-- Exalted Leather Boots Light Armor -->
+			<item id="81190" /> <!-- Exalted Leather Gloves Light Armor -->
+			<item id="81191" /> <!-- Exalted Leather Helmet Light Armor -->
+		</requiredItems>
+		<skills>
+			<skill id="35618" level="1" minimumPieces="5" /> <!-- Set Effect - Exalted Light Armor, 5-piece -->
+		</skills>
+	</set>
+	<set id="318" minimumPieces="5">
+		<!-- Exalted's Robe set R grade in 5 piaces -->
+		<requiredItems>
+			<item id="81192" /> <!-- Exalted Tunic Robe Armor -->
+			<item id="81193" /> <!-- Exalted Stockings Robe Armor -->
+			<item id="81194" /> <!-- Exalted Boots Robe Armor -->
+			<item id="81195" /> <!-- Exalted Gloves Robe Armor -->
+			<item id="81196" /> <!-- Exalted Circlet Robe Armor -->
+		</requiredItems>
+		<skills>
+			<skill id="35619" level="1" minimumPieces="5" /> <!-- Set Effect - Exalted Robe Armor, 5-piece -->
+		</skills>
+	</set>	
+	<set id="319" minimumPieces="5">
+		<!-- Blessed Exalted's Heavy Armor set R grade in 5 piaces -->
+		<requiredItems>
+			<item id="81467" /> <!-- Blessed Exalted Breastplate Heavy Armor -->
+			<item id="81468" /> <!-- Blessed Exalted Gaiters Heavy Armor -->
+			<item id="81469" /> <!-- Blessed Exalted Boots Heavy Armor -->
+			<item id="81470" /> <!-- Blessed Exalted Gauntlets Heavy Armor -->
+			<item id="81471" /> <!-- Blessed Exalted Helmet Heavy Armor -->
+		</requiredItems>
+		<skills>
+			<skill id="35636" level="1" minimumPieces="5" /> <!-- Set Effect - Blessed Exalted Heavy Armor, 5-piece -->
+		</skills>
+	</set>
+	<set id="320" minimumPieces="5">
+		<!-- Blessed Exalted's Leather Armor set R grade in 5 piaces -->
+		<requiredItems>
+			<item id="81473" /> <!-- Blessed Exalted Leather Armor Light Armor -->
+			<item id="81474" /> <!-- Blessed Exalted Leather Leggings Light Armor -->
+			<item id="81475" /> <!-- Blessed Exalted Leather Boots Light Armor -->
+			<item id="81476" /> <!-- Blessed Exalted Leather Gloves Light Armor -->
+			<item id="81477" /> <!-- Blessed Exalted Leather Helmet Light Armor -->
+		</requiredItems>
+		<skills>
+			<skill id="35637" level="1" minimumPieces="5" /> <!-- Set Effect - Blessed Exalted Light Armor, 5-piece -->
+		</skills>
+	</set>
+	<set id="321" minimumPieces="5">
+		<!-- Blessed Exalted's Robe set R grade in 5 piaces -->
+		<requiredItems>
+			<item id="81478" /> <!-- Blessed Exalted Tunic Robe Armor -->
+			<item id="81479" /> <!-- Blessed Exalted Stockings Robe Armor -->
+			<item id="81480" /> <!-- Blessed Exalted Boots Robe Armor -->
+			<item id="81481" /> <!-- Blessed Exalted Gloves Robe Armor -->
+			<item id="81482" /> <!-- Blessed Exalted Circlet Robe Armor -->
+		</requiredItems>
+		<skills>
+			<skill id="35638" level="1" minimumPieces="5" /> <!-- Set Effect - Blessed Exalted Robe Armor, 5-piece -->
 		</skills>
 	</set>
 </list>

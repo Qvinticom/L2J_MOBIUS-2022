@@ -119,7 +119,7 @@
 		</skills>
 	</item>
 	<item id="5805" name="Lucky Charm (B-grade)" type="EtcItem">
-		<!-- Bestows blessing on its owner such that when the owner dies during a boss/ raid war, his/ her abilities will not be diminished. This item can only be used on self by characters level 52 - 60. -->
+		<!-- Bestows blessing on its owner such that when the owner dies during a boss fight, his/ her abilities will not be diminished. This item can only be used on self by characters of Lv. 52-60. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -179,7 +179,7 @@
 		</skills>
 	</item>
 	<item id="5808" name="Party Mask" type="Armor">
-		<!-- Fashion item used to display a unique appearance. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- A fashion item used to display a unique appearance. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -192,7 +192,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="5809" name="Spellbook: Aqua Splash" type="EtcItem">
-		<!-- Spellbook needed to learn Aqua Splash. Used by Spellsingers. Required level: 58 -->
+		<!-- A spellbook for learning the Aqua Splash skill. Used by Spellsingers. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -202,7 +202,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5810" name="Spellbook: Rain of Fire" type="EtcItem">
-		<!-- Spellbook needed to learn Rain of Fire. Used by Sorcerers and Spellsingers. Required level: 58 -->
+		<!-- A spellbook for learning the Rain of Fire skill. Used by Sorcerers and Spellsingers. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -212,7 +212,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5811" name="Spellbook: Mass Slow" type="EtcItem">
-		<!-- Spellbook needed to learn Mass Slow. Used by Necromancers. Required level: 62 -->
+		<!-- A spellbook for learning the Mass Slow skill. Used by Necromancers. Required level: 62. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -222,7 +222,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5812" name="Spellbook: Servitor Empowerment" type="EtcItem">
-		<!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52 -->
+		<!-- A spellbook for learning the Servitor Empowerment skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -232,7 +232,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5813" name="Spellbook: Servitor Cure" type="EtcItem">
-		<!-- Spellbook needed to learn Servitor Cure. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
+		<!-- A spellbook for learning the Servitor Cure skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -242,7 +242,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5814" name="Spellbook: Servitor Blessing" type="EtcItem">
-		<!-- Spellbook needed to learn Servitor Blessing. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 62 -->
+		<!-- A spellbook for learning the Servitor Blessing skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 62. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -252,7 +252,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5815" name="Spellbook: Wild Magic" type="EtcItem">
-		<!-- Spellbook needed to learn Wild. Used by Elven Elders and Shillien Elders. Required level: 62 -->
+		<!-- A spellbook for learning the Wild Magic skill. Used by Elven Elders and Shillien Elders. Required level: 62. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -262,7 +262,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5816" name="Spellbook: Advanced Block" type="EtcItem">
-		<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 58 -->
+		<!-- A spellbook for learning the Advanced Block skill. Used by Elven Elders. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -272,7 +272,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5817" name="Chrono Campana" type="Weapon">
-		<!-- Chronicle III Souvenir!!! -->
+		<!-- Chronicle III Souvenir! -->
 		<set name="icon" val="icon.weapon_chrono_campana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -706,6 +706,7 @@
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<cond addName="1" msgId="113">
@@ -725,6 +726,7 @@
 		<set name="price" val="80000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<cond addName="1" msgId="113">

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="27600" name="Scroll of Blessing: Armor (R95-grade)" type="EtcItem">
-		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Seraph equipment for Blessed equipment. -->
+		<!-- There is a high chance that Head Blacksmith whom you can find in any town will exchange standard Seraph equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r95" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -14,7 +14,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27601" name="Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
-		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Eternal equipment for Blessed equipment. -->
+		<!-- There is a high chance that Head Blacksmith whom you can find in any town will exchange standard Eternal equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -27,13 +27,13 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27602" name="Abundance Box" type="EtcItem">
-		<!-- Get 1 of the following: 1 type of Talisman - Abundance, Seven Signs' Energy, Antharas' Earring, Talisman - Lilith, Talisman - Anakim, Baium's Soul Ring, Valakas' Necklace, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Baium's Ring, Octavis' Ring, Bottle of Queen Ant's Soul, Istina's Earring, Queen Ant's Ring, Istina's Necklace, Bottle of Orfen's Soul, Octavis' Earring, Istina's Earring, Octavis' Necklace, Immortal Scroll Chapter 1, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex Chapter 1, Lv. 5 Legendary Dye Pack, Elcyum x2, Superior Giant's Codex - Discipline Chapter 1, Giant's Energy x10, Orfen's Earring, Elcyum Crystal x8, Tempest Stone, Gemstone (R-grade) x40, 1 of 5 Fortune Pocket - Stage 5. -->
+		<!-- Double-click to obtain one of the following items: Talisman of Abundance, Seven Signs' Energy, Antharas' Earring, Talisman of Lilith, Talisman of Anakim, Baium's Soul Ring, Valakas' Necklace, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Baium's Ring, Octavis' Ring, Bottle of Queen Ant's Soul, Istina's Earring, Queen Ant's Ring, Istina's Necklace, Bottle of Orfen's Soul, Octavis' Earring, Istina's Earring, Octavis' Necklace, Immortal Scroll Chapter 1, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex Chapter 1, Lv. 5 Legendary Dye Pack, Elcyum (2 pcs.), Superior Giant's Codex - Discipline Chapter 1, Giant's Energy (10 pcs.), Orfen's Earring, Elcyum Crystal (8 pcs.), Tempest Stone, R-grade Gemstone (40 pcs.), Fortune Pocket Lv. 5 (5 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27603" name="Daily Mission Reward Chest" type="EtcItem">
-		<!-- Reward chest for completing daily missions. You can obtain one of various rewards. -->
+		<!-- Double-click to obtain a reward for completing daily quests. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -79,7 +79,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27607" name="Blessed Helios Pack (Dual Weapons)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Blessed Helios Dual Sword, Dual Dagger, Dual Blunt. -->
+		<!-- Double-click to obtain one of the following items: Blessed Helios Dual Swords/ Dual Daggers/ Dual Blunt Weapon. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -204,7 +204,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27627" name="Agathion - Matryoshka (7-day)" type="EtcItem">
-		<!-- Can summon Agathion - Matryoshka (7-day). -->
+		<!-- Double-click to obtain Agathion Matryoshka (7-day). -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -213,7 +213,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27628" name="Agathion - Matryoshka (30-day)" type="EtcItem">
-		<!-- Can summon Agathion - Matryoshka (30-day). -->
+		<!-- Double-click to obtain Agathion Matryoshka (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -222,7 +222,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27629" name="Agathion - Minion Eye (7-day)" type="EtcItem">
-		<!-- Can summon Agathion - Minion Eye (7-day). -->
+		<!-- Double-click to obtain Agathion Minion Eye (7-day). -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -231,7 +231,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27630" name="Agathion - Minion Eye (30-day)" type="EtcItem">
-		<!-- Can summon Agathion - Minion Eye (30-day). -->
+		<!-- Double-click to obtain Agathion Minion Eye (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -240,7 +240,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27631" name="High-grade Maphr's Rune 100% Pack" additionalName="1-hour" type="EtcItem">
-		<!-- Double-click to obtain a High-grade Maphr's Rune 100% (1-hour). -->
+		<!-- Double-click to obtain High-grade Maphr's Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
@@ -427,7 +427,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27645" name="Heine Exclusive Bait Coupon" type="EtcItem">
-		<!-- Exchange for 1 Heine Exclusive Bait of your choice through a fishing guild member. -->
+		<!-- Can be exchanged for Heine Exclusive Bait of your choice through a Fishing Guild member in any town. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -447,13 +447,13 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27648" name="Heine Exclusive Fishing Tools - 300 Pack" type="EtcItem">
-		<!-- Double-click to get 300 Heine Exclusive Bait Coupons and 300 Fishing Shots. -->
+		<!-- Double-click to obtain 300 Heine Special Bait Coupons and 300 Fishing Shots. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27649" name="Heine Exclusive Fishing Tools - 3,000 Pack" type="EtcItem">
-		<!-- Double-click to get 3,000 Heine Exclusive Bait Coupons, 3,000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
+		<!-- Double-click to obtain 3000 Heine Special Bait Coupons, 3000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -503,7 +503,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27654" name="Heine Exclusive Bait Coupon" type="EtcItem">
-		<!-- Exchange for 1 Heine Exclusive Bait of your choice through a fishing guild member. -->
+		<!-- Can be exchanged for Heine Exclusive Bait of your choice through a Fishing Guild member in any town. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -523,13 +523,13 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27657" name="Heine Exclusive Fishing Tools - 300 Pack" type="EtcItem">
-		<!-- Double-click to get 300 Heine Exclusive Bait Coupons and 300 Fishing Shots. -->
+		<!-- Double-click to obtain 300 Heine Special Bait Coupons and 300 Fishing Shots. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27658" name="Heine Exclusive Fishing Tools - 3,000 Pack" type="EtcItem">
-		<!-- Double-click to get 3,000 Heine Exclusive Bait Coupons, 3,000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
+		<!-- Double-click to obtain 3000 Heine Special Bait Coupons, 3000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -546,7 +546,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27660" name="Shadai's Jewelry Box" type="EtcItem">
-		<!-- Double-click to get 1 of the La Vie En Rose's Jewelry Boxes. Has a very low chance of obtaining a Radiant Gemstone Fragment or a La Vie En Rose's Radiant Brooch. -->
+		<!-- Double-click to obtain La Vie En Rose's Jewelry Box. Low chance to obtain Radiant Gemstone Fragment or La Vie En Rose's Brooch Lv. 2. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -572,7 +572,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27662" name="La Vie En Rose's Brilliant Brooch Pack" type="EtcItem">
-		<!-- Double-click to acquire 55 La Vie En Rose's Jewelry Boxes and 1 Noble Brooch Chest. Cannot be used in the auction house. -->
+		<!-- Double-click to acquire 30 La Vie En Rose's Jewelry Boxes and one Lv. 1 La Vie En Rose's Brooch Pack. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -586,7 +586,7 @@
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="38941" min="55" max="30" chance="100" /> <!-- La Vie En Rose's Jewelry Box -->
-			<item id="38943" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Noble Brooch Chest -->
+			<item id="38943" min="1" max="1" chance="100" /> <!-- Enhanced Brooch Pack -->
 		</capsuled_items>
 	</item>
 	<item id="27663" name="Supply Box" additionalName="Top-grade" type="EtcItem">
@@ -612,7 +612,7 @@
 		</capsuled_items>
 	</item>
 	<item id="27664" name="Tauti's Ring" additionalName="7-day" type="Armor">
-		<!-- Tauti's Ring. Fire/ Dark Resistance +25, MP +38, Critical Damage +15%, Skill Power +5%, PvP damage +5%, Paralysis/ Binding/ Banishment Resistance +10, Damage Reflection Resistance +5, Absorption Resistance +5, received PvP damage -5%, and critical +54 when a blunt is equipped. Even if you wear two identical rings, only the effects of one apply (excluding attributes/ M. Def.). -->
+		<!-- Temporary item. Fire/ Dark Resistance +25, MP +38, P. Critical Damage +15%, P. Skill Power +5%, PvP damage +5%, Confusion/ Obstruction Resistance +10, Damage Reflection Resistance +5, Blood Siphon Resistance +5, received PvP damage -5%. When using a blunt weapon, P. Critical Rate +54. Effects of two identical rings do not stack (excluding M. Def. and Attribute Resistance). -->
 		<set name="icon" val="icon.accessary_tauti_ring" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -631,7 +631,7 @@
 		</stats>
 	</item>
 	<item id="27665" name="Earth Wyrm Heart Ring" additionalName="7-day" type="Armor">
-		<!-- MP +38, P./ M. Debuff Resistance +15, MP Regeneration +3, P. Critical Damage +20%, and P. Accuracy +5. Poison Resistance +50%, Poison Atk. Rate +50%, Knock Back, Knock Down, Pulling, Danger Zone Resistance +20%, Atk. Spd. and Casting Spd. +6%, and Wind/ Water Resistance +30. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied when two identical rings are worn. -->
+		<!-- Temporary item. MP +38, P./ M. Debuff Resistance +15, MP Recovery Rate +3, P. Critical Damage +20%, P. Accuracy +5, Infection Resistance +50%, Confusion/ Danger Zone Resistance +20%, Atk. Spd./ Casting Spd. +6%, Wind/ Water Resistance +30. Effects of two identical rings do not stack. <Active skills> Heartbeat Accelerate: For 5 min., party members' Atk. Spd./ Casting Spd. +5%, Vampiric Rage effect +2% (cooldown: 2 h.). Pure Blood: Removes Infection debuff (cooldown: 2 h.). -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -672,7 +672,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27669" name="Sirra's Gift Box" type="EtcItem">
-		<!-- Wrapped Pack containing 1 random item for enchantment. -->
+		<!-- Double-click to obtain 1 random item for enchantment. -->
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -686,21 +686,21 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27671" name="Freya's Fated Support Box" type="EtcItem">
-		<!-- Wrapped Pack containing 1 random item out of the following: Freya's Scroll of Storm, Freya's Bloody Rune (2 hr). -->
+		<!-- Double-click to obtain 1 random item out of the following: Freya's Scroll of Storm, Freya's Bloody Rune (2 hr). -->
 		<set name="icon" val="icon.sa_cube" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27672" name="Black Freya's Kindness" type="EtcItem">
-		<!-- Wrapped Pack containing 1 random item out of the following: Dark/ White Assassin Suit, Red/ White Noblesse Garment, Pirate Red/ Crew Outfit, Cowboy Purple Outfit Appearance Stone. -->
+		<!-- Double-click to obtain 1 random item out of the following: Dark/ White Assassin Suit, Red/ White Noblesse Garment, Pirate Red/ Crew Outfit, Cowboy Purple Outfit Appearance Stone. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27673" name="Freya's Scroll of Storm" type="EtcItem">
-		<!-- Vitality consumption +150% and Acquired XP/ SP +150%. Does not disappear upon death. Duration 10 min. Cooldown 10 min. Only usable when 1 or more Vitality slot is full. -->
+		<!-- For 10 min., Vitality Consumption +150%, acquired XP/ SP +150%. The effect remains after death. Cooldown: 10 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. The effect does not stack with those of Freya's Frozen Scroll, Maphr's Wind Scroll, Dandy's Scroll: Challenge, Emperor's Growth Scroll, Scroll: Midsummer Passion, Vital Wind, Wind of Bard. -->
 		<set name="icon" val="icon.bm_freya_storm_scroll" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -727,7 +727,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27675" name="Freya's Wish-filled Gift" type="EtcItem">
-		<!-- Wrapped Pack containing 1 random rare item. -->
+		<!-- Double-click to obtain 1 random rare item. -->
 		<set name="icon" val="icon.freya_box_i01" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -735,7 +735,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27676" name="Sirra's Wish-filled Gift" type="EtcItem">
-		<!-- Wrapped Pack containing 1 random item for enchantment. -->
+		<!-- Double-click to obtain 1 random item for enchantment. -->
 		<set name="icon" val="icon.freya_box_i02" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -743,7 +743,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27677" name="Snowman's Wish-filled Gift" type="EtcItem">
-		<!-- Wrapped Pack containing 1 random item for skill enchantment. -->
+		<!-- Double-click to obtain 1 random item for skill enchantment. -->
 		<set name="icon" val="icon.freya_box_i03" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -751,7 +751,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27678" name="Gran Kain's Necklace - Stage 1" type="Armor">
-		<!-- MP +107, Dark Attack Resistance +50, STR +3, INT +3, CON +3, Skill Cooldown -10%, Damage Reflection +5%, P. Atk. +15%, M. Atk. +10%, Skill Power +15%, Max HP +3%, Max MP +5% Resistance to the following abnormal statuses: Stun +25%, Aggression +25%, Windstorm +25%, Banishment +25%, Disarm +15%, Sleep +15%. -->
+		<!-- MP +107, Dark Resistance +50, STR/ INT/ CON +3, Skill Cooldown -10%, Damage Reflection +5%, P. Atk. +15%, M. Atk. +10%, Skill Power +15%, Max HP +3%, Max MP +5%. Confusion/ Obstruction Resistance +25% and Stupor Resistance +15%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -768,10 +768,11 @@
 		</skills>
 		<stats>
 			<stat type="mDef">292.0</stat>
+			<stat type="maxMp">107</stat>
 		</stats>
 	</item>
 	<item id="27679" name="Gran Kain's Necklace - Stage 2" type="Armor">
-		<!-- MP +114, Dark Attack Resistance +50, STR +3, INT +3, CON +3, Skill Cooldown -11%, Damage Reflection +6%, P. Atk. +16%, M. Atk. +11%, Skill Power +17%, Max HP +3%, Max MP +5% Resistance to the following abnormal statuses: Stun +26%, Aggression +26%, Windstorm +26%, Banishment +26%, Disarm +16%, Sleep +16%, When used, ignores target's invincibility for 7 sec. -->
+		<!-- MP +114, Dark Resistance +50, STR/ INT/ CON +3, Skill Cooldown -11%, Damage Reflection +6%, P. Atk. +16%, M. Atk. +11%, Skill Power +17%, Max HP +3%, Max MP +5%. Confusion/ Obstruction Resistance +26% and Stupor Resistance +16%. When used, ignores target's invincibility for 7 sec. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -785,14 +786,15 @@
 			<skill id="46723" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 2 -->
 			<skill id="46724" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 2 -->
 			<skill id="27634" level="2" /> <!-- Gran Kain's Necklace -->
-			<skill id="27749" level="2" />
+			<skill id="27749" level="2" /> <!-- Gran Kain's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">333.0</stat>
+			<stat type="maxMp">114</stat>
 		</stats>
 	</item>
 	<item id="27680" name="Gran Kain's Necklace - Stage 3" type="Armor">
-		<!-- MP +121, Dark Attack Resistance +60, STR +4, INT +4, CON +4, Skill Cooldown -12%, Damage Reflection +7%, P. Atk. +17%, M. Atk. +12%, Skill Power +25%, Max HP +5%, Max MP +7% Resistance to the following abnormal statuses: Stun +27%, Aggression +27%, Windstorm +27%, Banishment +27%, Disarm +17%, Sleep +17%, When used, ignores target's invincibility for 8 sec. -->
+		<!-- MP +121, Dark Resistance +60, STR/ INT/ CON +4, Skill Cooldown -12%, Damage Reflection +7%, P. Atk. +17%, M. Atk. +12%, Skill Power +25%, Max HP +5%, Max MP +7%. Confusion/ Obstruction Resistance +27% and Stupor Resistance +17%. When used, ignores target's invincibility for 8 sec. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -806,14 +808,15 @@
 			<skill id="46729" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 3 -->
 			<skill id="46730" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 3 -->
 			<skill id="27634" level="3" /> <!-- Gran Kain's Necklace -->
-			<skill id="27749" level="3" />
+			<skill id="27749" level="3" /> <!-- Gran Kain's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">374.0</stat>
+			<stat type="maxMp">121</stat>
 		</stats>
 	</item>
 	<item id="27681" name="Gran Kain's Necklace - Stage 4" type="Armor">
-		<!-- MP +126, Dark Attack Resistance +60, STR +4, INT +4, CON +4, Skill Cooldown -13%, Damage Reflection +8%, P. Atk. +18%, M. Atk. +13%, Skill Power +29%, Max HP +5%, Max MP +7% Resistance to the following abnormal statuses: Stun +28%, Aggression +28%, Windstorm +28%, Banishment +28%, Disarm +18%, Sleep +18%, When used, ignores target's invincibility for 10 sec. -->
+		<!-- MP +126, Dark Resistance +60, STR/ INT/ CON +4, Skill Cooldown -13%, Damage Reflection +8%, P. Atk. +18%, M. Atk. +13%, Skill Power +29%, Max HP +5%, Max MP +7%. Confusion/ Obstruction Resistance +28% and Stupor Resistance +18%. When used, ignores target's invincibility for 10 sec. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -827,14 +830,15 @@
 			<skill id="46759" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 4 -->
 			<skill id="46760" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 4 -->
 			<skill id="27634" level="4" /> <!-- Gran Kain's Necklace -->
-			<skill id="27749" level="4" />
+			<skill id="27749" level="4" /> <!-- Gran Kain's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">407.0</stat>
+			<stat type="maxMp">126</stat>
 		</stats>
 	</item>
 	<item id="27682" name="Gran Kain's Necklace - Stage 5" type="Armor">
-		<!-- MP +131, Dark Attack Resistance +70, STR +5, INT +5, CON +5, Skill Cooldown -14%, Damage Reflection +9%, P. Atk. +19%, M. Atk. +14%, Skill Power +35%, Max HP +7%, Max MP +10% Resistance to the following abnormal statuses: Stun +29%, Aggression +29%, Windstorm +29%, Banishment +29%, Disarm +19%, Sleep +19%, When used, ignores target's invincibility for 12 sec. -->
+		<!-- MP +131, Dark Resistance +70, STR/ INT/ CON +5, Skill Cooldown -14%, Damage Reflection +9%, P. Atk. +19%, M. Atk. +14%, Skill Power +35%, Max HP +7%, Max MP +10%. Confusion/ Obstruction Resistance +29% and Stupor Resistance +19%. When used, ignores target's invincibility for 12 sec. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -848,14 +852,15 @@
 			<skill id="46765" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 5 -->
 			<skill id="46766" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 5 -->
 			<skill id="27634" level="5" /> <!-- Gran Kain's Necklace -->
-			<skill id="27749" level="5" />
+			<skill id="27749" level="5" /> <!-- Gran Kain's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">437.0</stat>
+			<stat type="maxMp">131</stat>
 		</stats>
 	</item>
 	<item id="27683" name="Gran Kain's Necklace - Stage 6" type="Armor">
-		<!-- MP +136, Dark Attack Resistance +70, STR +5, INT +5, CON +5, Skill Cooldown -15%, Damage Reflection +10%, P. Atk. +20%, M. Atk. +15%, Skill Power +50%, Max HP +7%, Max MP +10% Resistance to the following abnormal statuses: Stun +30%, Aggression +30%, Windstorm +30%, Banishment +30%, Disarm +20%, Sleep +20%, When used, ignores target's invincibility for 15 sec. -->
+		<!-- MP +136, Dark Resistance +70, STR/ INT/ CON +5, Skill Cooldown -15%, Damage Reflection +10%, P. Atk. +20%, M. Atk. +15%, Skill Power +50%, Max HP +7%, Max MP +10%. Confusion/ Obstruction Resistance +30% and Stupor Resistance +20%. When used, ignores target's invincibility for 15 sec. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -869,14 +874,15 @@
 			<skill id="46771" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 6 -->
 			<skill id="46772" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 6 -->
 			<skill id="27634" level="6" /> <!-- Gran Kain's Necklace -->
-			<skill id="27749" level="6" />
+			<skill id="27749" level="6" /> <!-- Gran Kain's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">479.0</stat>
+			<stat type="maxMp">136</stat>
 		</stats>
 	</item>
 	<item id="27684" name="Einhasad's Necklace - Stage 1" type="Armor">
-		<!-- MP +107, Divinity Resistance +50, STR +3, INT +3, CON +3, Skill Cooldown -10%, Damage Reflection +5%, P. Atk. +10%, M. Atk. +15%, Skill Power +15%, Max HP +5%, Max MP +3% Resistance to the following abnormal statuses: Stun +25%, Aggression +25%, Disarm +25%, Sleep +25%, Windstorm +15%, Banishment +15%. -->
+		<!-- MP +107, Holy Resistance +50, STR/ INT/ CON +3, Skill Cooldown -10%, Damage Reflection +5%, P. Atk. +10%, M. Atk. +15%, Skill Power +15%, Max HP +5%, Max MP +3%. Confusion/ Obstruction/ Stupor Resistance +25%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -893,10 +899,11 @@
 		</skills>
 		<stats>
 			<stat type="mDef">292.0</stat>
+			<stat type="maxMp">107</stat>
 		</stats>
 	</item>
 	<item id="27685" name="Einhasad's Necklace - Stage 2" type="Armor">
-		<!-- MP +114, Divinity Resistance +50, STR +3, INT +3, CON +3, Skill Cooldown -11%, Damage Reflection +6%, P. Atk. +11%, M. Atk. +16%, Skill Power +17%, Max HP +5%, Max MP +3% Resistance to the following abnormal statuses: Stun +26%, Aggression +26%, Disarm +26%, Sleep +26%, Windstorm +16%, Banishment +16%, When used, Damage Reflection Resistance becomes 20% for 30 sec. -->
+		<!-- MP +114, Holy Resistance +50, STR/ INT/ CON +3, Skill Cooldown -11%, Damage Reflection +6%, P. Atk. +11%, M. Atk. +16%, Skill Power +17%, Max HP +5%, Max MP +3%. Confusion/ Obstruction/ Stupor Resistance +26%. When used, Damage Reflection Resistance +20% for 30 sec. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -910,14 +917,15 @@
 			<skill id="46741" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 2 -->
 			<skill id="46742" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 2 -->
 			<skill id="27640" level="2" /> <!-- Einhasad's Necklace -->
-			<skill id="27750" level="2" />
+			<skill id="27750" level="2" /> <!-- Einhasad's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">333.0</stat>
+			<stat type="maxMp">114</stat>
 		</stats>
 	</item>
 	<item id="27686" name="Einhasad's Necklace - Stage 3" type="Armor">
-		<!-- MP +121, Divinity Resistance +60, STR +4, INT +4, CON +4, Skill Cooldown -12%, Damage Reflection +7%, P. Atk. +12%, M. Atk. +17%, Skill Power +25%, Max HP +7%, Max MP +5% Resistance to the following abnormal statuses: Stun +27%, Aggression +27%, Disarm +27%, Sleep +27%, Windstorm +17%, Banishment +17%, When used, Damage Reflection Resistance becomes 35% for 30 sec. -->
+		<!-- MP +121, Holy Resistance +60, STR/ INT/ CON +4, Skill Cooldown -12%, Damage Reflection +7%, P. Atk. +12%, M. Atk. +17%, Skill Power +25%, Max HP +7%, Max MP +5%. Confusion/ Obstruction/ Stupor Resistance +27%. When used, Damage Reflection Resistance +35% for 30 sec. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -931,14 +939,15 @@
 			<skill id="46747" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 3 -->
 			<skill id="46748" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 3 -->
 			<skill id="27640" level="3" /> <!-- Einhasad's Necklace -->
-			<skill id="27750" level="3" />
+			<skill id="27750" level="3" /> <!-- Einhasad's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">374.0</stat>
+			<stat type="maxMp">121</stat>
 		</stats>
 	</item>
 	<item id="27687" name="Einhasad's Necklace - Stage 4" type="Armor">
-		<!-- MP +126, Divinity Resistance +60, STR +4, INT +4, CON +4, Skill Cooldown -13%, Damage Reflection +8%, P. Atk. +13%, M. Atk. +18%, Skill Power +29%, Max HP +7%, Max MP +5% Resistance to the following abnormal statuses: Stun +28%, Aggression +28%, Disarm +28%, Sleep +28%, Windstorm +18%, Banishment +18%, When used, Damage Reflection Resistance becomes 60% for 30 sec. -->
+		<!-- MP +126, Holy Resistance +60, STR/ INT/ CON +4, Skill Cooldown -13%, Damage Reflection +8%, P. Atk. +13%, M. Atk. +18%, Skill Power +29%, Max HP +7%, Max MP +5%. Confusion/ Obstruction/ Stupor Resistance +28%. When used, Damage Reflection Resistance +60% for 30 sec. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -952,14 +961,15 @@
 			<skill id="46777" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 4 -->
 			<skill id="46778" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 4 -->
 			<skill id="27640" level="4" /> <!-- Einhasad's Necklace -->
-			<skill id="27750" level="4" />
+			<skill id="27750" level="4" /> <!-- Einhasad's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">407.0</stat>
+			<stat type="maxMp">126</stat>
 		</stats>
 	</item>
 	<item id="27688" name="Einhasad's Necklace - Stage 5" type="Armor">
-		<!-- MP +131, Divinity Resistance +70, STR +5, INT +5, CON +5, Skill Cooldown -14%, Damage Reflection +9%, P. Atk. +14%, M. Atk. +19%, Skill Power +35%, Max HP +10%, Max MP +7% Resistance to the following abnormal statuses: Stun +29%, Aggression +29%, Disarm +29%, Sleep +29%, Windstorm +19%, Banishment +19%, When used, Damage Reflection Resistance becomes 80% for 30 sec. -->
+		<!-- MP +131, Holy Resistance +70, STR/ INT/ CON +5, Skill Cooldown -14%, Damage Reflection +9%, P. Atk. +14%, M. Atk. +19%, Skill Power +35%, Max HP +10%, Max MP +7%. Confusion/ Obstruction/ Stupor Resistance +29%. When used, Damage Reflection Resistance +80% for 30 sec. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -973,14 +983,15 @@
 			<skill id="46783" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 5 -->
 			<skill id="46784" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 5 -->
 			<skill id="27640" level="5" /> <!-- Einhasad's Necklace -->
-			<skill id="27750" level="5" />
+			<skill id="27750" level="5" /> <!-- Einhasad's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">437.0</stat>
+			<stat type="maxMp">131</stat>
 		</stats>
 	</item>
 	<item id="27689" name="Einhasad's Necklace - Stage 6" type="Armor">
-		<!-- MP +136, Divinity Resistance +70, STR +5, INT +5, CON +5, Skill Cooldown -15%, Damage Reflection +10%, P. Atk. +15%, M. Atk. +20%, Skill Power +50%, Max HP +10%, Max MP +7% Resistance to the following abnormal statuses: Stun +30%, Aggression +30%, Disarm +30%, Sleep +30%, Windstorm +20%, Banishment +20%, When used, Damage Reflection Resistance becomes 100% for 30 sec. -->
+		<!-- MP +136, Holy Resistance +70, STR/ INT/ CON +5, Skill Cooldown -15%, Damage Reflection +10%, P. Atk. +15%, M. Atk. +20%, Skill Power +50%, Max HP +10%, Max MP +7%. Confusion/ Obstruction/ Stupor Resistance +30%. When used, Damage Reflection Resistance +100% for 30 sec. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -994,14 +1005,15 @@
 			<skill id="46789" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 6 -->
 			<skill id="46790" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 6 -->
 			<skill id="27640" level="6" /> <!-- Einhasad's Necklace -->
-			<skill id="27750" level="6" />
+			<skill id="27750" level="6" /> <!-- Einhasad's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">479.0</stat>
+			<stat type="maxMp">136</stat>
 		</stats>
 	</item>
 	<item id="27690" name="Pa'agrio's Earring - Stage 1" type="Armor">
-		<!-- MP +80, Fire Resistance +70, DEX +3, WIT +3, MEN +3, Vampiric effect 5%, MP Consumption -5%, P. Def. +15%, M. Def. +10%, Physical and Magic Atk. Abnormal Status Reflection +13%, Reflect Damage Magic chance 13%, Physical Skill Evasion 5%, P. Skill Power +2%, Movement Speed +2, Received Heal +10%, Recovery Skill Power +80 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Sleep +10%, Aerial Yoke/ Change +10%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +30%, Petrification Bleed +40%. -->
+		<!-- MP +80, Fire Resistance +70, DEX/ WIT/ MEN +3, Vampiric Rage effect +5%, MP Consumption -5%, P. Def. +15%, M. Def. +10%, P./ M. Debuff Reflection Rate +13%, M. Damage Reflection Rate +13%, P. Skill Evasion +5%, P. Skill Power +2%, Speed +2, Received Healing +10%, Healing Power +80, Obstruction/ Stupor Resistance +10%, Confusion/ Vital Point Attack Resistance +30%, Petrification/ Infection Resistance +40%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1018,10 +1030,11 @@
 		</skills>
 		<stats>
 			<stat type="mDef">219.0</stat>
+			<stat type="maxMp">80</stat>
 		</stats>
 	</item>
 	<item id="27691" name="Pa'agrio's Earring - Stage 2" type="Armor">
-		<!-- MP +86, Fire Resistance +75, DEX +3, WIT +3, MEN +3, Vampiric effect 5%, MP Consumption -5%, P. Def. +16%, M. Def. +11%, Physical and Magic Atk. Abnormal Status Reflection +14%, Reflect Damage Magic chance 14%, Physical Skill Evasion 6%, P. Skill Power +3%, Movement Speed +3, Received Heal +12%, Recovery Skill Power +88 effect, P. Atk. Resistance to the following abnormal statuses Paralysis/ Bluff/ Sleep +12%, Aerial Yoke/ Change +11%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +32%, Petrification Bleed +42%. Additionally, 1% chance for General Attacks and 2% when casting a skill to deal fixed damage. -->
+		<!-- MP +86, Fire Resistance +75, DEX/ WIT/ MEN +3, Vampiric Rage effect +5%, MP Consumption -5%, P. Def. +16%, M. Def. +11%, P./ M. Debuff Reflection Rate +14%, M. Damage Reflection Rate +14%, P. Skill Evasion +6%, P. Skill Power +3%, Speed +3, Received Healing +12%, Healing Power +88, Obstruction/ Stupor Resistance +12%, Confusion/ Vital Point Attack Resistance +32%, Petrification/ Infection Resistance +42%. Inflicts damage over time with a chance of 1% for standard attacks and 2% for skill casting. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1035,14 +1048,15 @@
 			<skill id="46725" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 2 -->
 			<skill id="46726" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 2 -->
 			<skill id="27646" level="2" /> <!-- Pa'agrio's Earring -->
-			<skill id="27751" level="2" />
+			<skill id="27751" level="2" /> <!-- Pa'agrio's Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">250.0</stat>
+			<stat type="maxMp">86</stat>
 		</stats>
 	</item>
 	<item id="27692" name="Pa'agrio's Earring - Stage 3" type="Armor">
-		<!-- MP +91, Fire Resistance +80, DEX +4, WIT +4, MEN +4, Vampiric effect 6%, MP Consumption -6%, P. Def. +17%, M. Def. +12%, Physical and Magic Atk. Abnormal Status Reflection +15%, Reflect Damage Magic chance 15%, Physical Skill Evasion 6%, P. Skill Power +3%, Movement Speed +3, Received Heal +14%, Recovery Skill Power +96 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Sleep +14%, Aerial Yoke/ Change +12%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +34%, Petrification Bleed +44%. Additionally, 2% chance for regular attacks and 3% when casting a skill to deal fixed damage. -->
+		<!-- MP +91, Fire Resistance +80, DEX/ WIT/ MEN +4, Vampiric Rage effect +6%, MP Consumption -6%, P. Def. +17%, M. Def. +12%, P./ M. Debuff Reflection Rate +15%, M. Damage Reflection Rate +15%, P. Skill Evasion +6%, P. Skill Power +3%, Speed +3, Received Healing +14%, Healing Power +96, Obstruction/ Stupor Resistance +14%, Confusion/ Vital Point Attack Resistance +34%, Petrification/ Infection Resistance +44%. Inflicts damage over time with a chance of 2% for standard attacks and 3% for skill casting. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1056,14 +1070,15 @@
 			<skill id="46731" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 3 -->
 			<skill id="46732" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 3 -->
 			<skill id="27646" level="3" /> <!-- Pa'agrio's Earring -->
-			<skill id="27751" level="3" />
+			<skill id="27751" level="3" /> <!-- Pa'agrio's Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">280.0</stat>
+			<stat type="maxMp">91</stat>
 		</stats>
 	</item>
 	<item id="27693" name="Pa'agrio's Earring - Stage 4" type="Armor">
-		<!-- MP +94, Fire Resistance +85, DEX +4, WIT +4, MEN +4, Vampiric effect 6%, MP Consumption -6%, P. Def. +18%, M. Def. +13%, Physical and Magic Atk. Abnormal Status Reflection +16%, Reflect Damage Magic chance 16%, Physical Skill Evasion 8%, P. Skill Power +4%, Movement Speed +4, Received Heal +16%, Recovery Skill Power +104 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Sleep +16%, Aerial Yoke/ Change +13%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +36%, Petrification Bleed +46%. Additionally, 3% chance for regular attacks and 5% when casting a skill to deal fixed damage. -->
+		<!-- MP +94, Fire Resistance +85, DEX/ WIT/ MEN +4, Vampiric Rage effect +6%, MP Consumption -6%, P. Def. +18%, M. Def. +13%, P./ M. Debuff Reflection Rate +16%, M. Damage Reflection Rate +16%, P. Skill Evasion +8%, P. Skill Power +4%, Speed +4, Received Healing +16%, Healing Power +104, Obstruction/ Stupor Resistance +16%, Confusion/ Vital Point Attack Resistance +36%, Petrification/ Infection Resistance +46%. Inflicts damage over time with a chance of 3% for standard attacks and 5% for skill casting. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1077,14 +1092,15 @@
 			<skill id="46761" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 4 -->
 			<skill id="46762" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 4 -->
 			<skill id="27646" level="4" /> <!-- Pa'agrio's Earring -->
-			<skill id="27751" level="4" />
+			<skill id="27751" level="4" /> <!-- Pa'agrio's Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">300.0</stat>
+			<stat type="maxMp">94</stat>
 		</stats>
 	</item>
 	<item id="27694" name="Pa'agrio's Earring - Stage 5" type="Armor">
-		<!-- MP +98, Fire Resistance +90, DEX +5, WIT +5, MEN +5, Vampiric effect 7%, MP Consumption -7%, P. Def. +19%, M. Def. +14%, Physical and Magic Atk. Abnormal Status Reflection +18%, Reflect Damage Magic chance 18%, Physical Skill Evasion 9%, P. Skill Power +4%, Movement Speed +4, Received Heal +18%, Recovery Skill Power +108 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Sleep +18%, Aerial Yoke/ Change +14%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +38%, Petrification Bleed +48%. Additionally, 5% chance for regular attacks and 7% when casting a skill to deal fixed damage. -->
+		<!-- MP +98, Fire Resistance +90, DEX/ WIT/ MEN +5, Vampiric Rage effect +7%, MP Consumption -7%, P. Def. +19%, M. Def. +14%, P./ M. Debuff Reflection Rate +18%, M. Damage Reflection Rate +18%, P. Skill Evasion +9%, P. Skill Power +4%, Speed +4, Received Healing +18%, Healing Power +108, Obstruction/ Stupor Resistance +18%, Confusion/ Vital Point Attack Resistance +38%, Petrification/ Infection Resistance +48%. Inflicts damage over time with a chance of 5% for standard attacks and 7% for skill casting. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1098,14 +1114,15 @@
 			<skill id="46767" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 5 -->
 			<skill id="46768" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 5 -->
 			<skill id="27646" level="5" /> <!-- Pa'agrio's Earring -->
-			<skill id="27751" level="5" />
+			<skill id="27751" level="5" /> <!-- Pa'agrio's Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">320.0</stat>
+			<stat type="maxMp">98</stat>
 		</stats>
 	</item>
 	<item id="27695" name="Pa'agrio's Earring - Stage 6" type="Armor">
-		<!-- MP +102, Fire Resistance +100, DEX +5, WIT +5, MEN +5, Vampiric effect 8%, MP Consumption -7%, P. Def. +20%, M. Def. +15%, Physical and Magic Atk. Abnormal Status Reflection +20%, Reflect Damage Magic chance 20%, Physical Skill Evasion 10%, P. Skill Power +5%, Movement Speed +5, Received Heal +20%, Recovery Skill Power +112 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Sleep +20%, Aerial Yoke/ Change +15%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +40%, Petrification Bleed +50%. Additionally, 7% chance for regular attacks and 10% when casting a skill to deal fixed damage. -->
+		<!-- MP +102, Fire Resistance +100, DEX/ WIT/ MEN +5, Vampiric Rage effect +8%, MP Consumption -7%, P. Def. +20%, M. Def. +15%, P./ M. Debuff Reflection Rate +20%, M. Damage Reflection Rate +20%, P. Skill Evasion +10%, P. Skill Power +5%, Speed +5, Received Healing +20%, Healing Power +112, Obstruction/ Stupor Resistance +20%, Confusion/ Vital Point Attack Resistance +40%, Petrification/ Infection Resistance +50%. Inflicts damage over time with a chance of 7% for standard attacks and 10% for skill casting. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1119,14 +1136,15 @@
 			<skill id="46773" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 6 -->
 			<skill id="46774" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 6 -->
 			<skill id="27646" level="6" /> <!-- Pa'agrio's Earring -->
-			<skill id="27751" level="6" />
+			<skill id="27751" level="6" /> <!-- Pa'agrio's Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">359.0</stat>
+			<stat type="maxMp">102</stat>
 		</stats>
 	</item>
 	<item id="27696" name="Eva's Earring - Stage 1" type="Armor">
-		<!-- MP +80, Water Resistance +70, DEX +3, WIT +3, MEN +3, Vampiric effect 5%, MP Consumption -5%, P. Def. +10%, M. Def. +15%, Physical and Magic Atk. Abnormal Status Reflection +13%, Reflect Damage Magic chance 13%, Physical Skill Evasion 5%, P. Skill Power +2%, Movement Speed +2, Received Heal +5%, Recovery Skill Power +160 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Aerial Yoke +10%, Sleep/ Change +10%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +30%, Petrification Bleed +40%. -->
+		<!-- MP +160, Water Resistance +70, DEX/ WIT/ MEN +3, Vampiric Rage effect +5%, MP Consumption -5%, P. Def. +10%, M. Def. +15%, P./ M. Debuff Reflection Rate +13%, M. Damage Reflection Rate +13%, P. Skill Evasion +5%, P. Skill Power +2%, Speed +2, Received Healing +5%, Healing Power +160, Obstruction/ Stupor Resistance +10%, Confusion/ Vital Point Attack Resistance +30%, Petrification/ Infection Resistance +40%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1143,10 +1161,11 @@
 		</skills>
 		<stats>
 			<stat type="mDef">219.0</stat>
+			<stat type="maxMp">80</stat>
 		</stats>
 	</item>
 	<item id="27697" name="Eva's Earring - Stage 2" type="Armor">
-		<!-- MP +86, Water Resistance +75, DEX +3, WIT +3, MEN +3, Vampiric effect 5%, MP Consumption -5%, P. Def. +11%, M. Def. +16%, Physical and Magic Atk. Abnormal Status Reflection +14%, Reflect Damage Magic chance 14%, Physical Skill Evasion 6%, P. Skill Power +3%, Movement Speed +3, Received Heal +7%, Recovery Skill Power +168 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Aerial Yoke +12%, Sleep/ Change +11%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +32%, Petrification Bleed +42%. When used, the opponent's P. Def. and M. Def. decrease by 20% for 40 sec. -->
+		<!-- MP +86, Water Resistance +75, DEX/ WIT/ MEN +3, Vampiric Rage effect +5%, MP Consumption -5%, P. Def. +11%, M. Def. +16%, P./ M. Debuff Reflection Rate +14%, M. Damage Reflection Rate +14%, P. Skill Evasion +6%, P. Skill Power +3%, Speed +3, Received Healing +7%, Healing Power +168, Obstruction/ Stupor Resistance +12%, Confusion/ Vital Point Attack Resistance +32%, Petrification/ Infection Resistance +42%. For 40 sec., P./ M. Def. +20%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1160,14 +1179,15 @@
 			<skill id="46743" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring - Earring Stage 2 -->
 			<skill id="46744" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring - Earring Stage 2 -->
 			<skill id="27652" level="2" /> <!-- Eva's Earring -->
-			<skill id="27752" level="2" />
+			<skill id="27752" level="2" /> <!-- Eva's Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">250.0</stat>
+			<stat type="maxMp">86</stat>
 		</stats>
 	</item>
 	<item id="27698" name="Eva's Earring - Stage 3" type="Armor">
-		<!-- MP +91, Water Resistance +80, DEX +4, WIT +4, MEN +4, Vampiric effect 6%, MP Consumption -6%, P. Def. +12%, M. Def. +17%, Physical and Magic Atk. Abnormal Status Reflection +15%, Reflect Damage Magic chance 15%, Physical Skill Evasion 6%, P. Skill Power +3%, Movement Speed +3, Received Heal +9%, Recovery Skill Power +176 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Aerial Yoke +14%, Sleep/ Change +12%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +34%, Petrification Bleed +44%. When used, P. Def. and M. Def. are decreased by 25% and PvP Def. effect is reduced by 10% for 40 sec. -->
+		<!-- MP +91, Water Resistance +80, DEX/ WIT/ MEN +4, Vampiric Rage effect +6%, MP Consumption -6%, P. Def. +12%, M. Def. +17%, P./ M. Debuff Reflection Rate +15%, M. Damage Reflection Rate +15%, P. Skill Evasion +6%, P. Skill Power +3%, Speed +3, Received Healing +9%, Healing Power +176, Obstruction/ Stupor Resistance +14%, Confusion/ Vital Point Attack Resistance +34%, Petrification/ Infection Resistance +44%. For 40 sec., P./ M. Def. +25%, PvP defense -10%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1181,14 +1201,15 @@
 			<skill id="46749" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring - Earring Stage 3 -->
 			<skill id="46750" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring - Earring Stage 3 -->
 			<skill id="27652" level="3" /> <!-- Eva's Earring -->
-			<skill id="27752" level="3" />
+			<skill id="27752" level="3" /> <!-- Eva's Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">280.0</stat>
+			<stat type="maxMp">91</stat>
 		</stats>
 	</item>
 	<item id="27699" name="Eva's Earring - Stage 4" type="Armor">
-		<!-- MP +94, Water Resistance +85, DEX +4, WIT +4, MEN +4, Vampiric effect 6%, MP Consumption -6%, P. Def. +13%, M. Def. +18%, Physical and Magic Atk. Abnormal Status Reflection +16%, Reflect Damage Magic chance 16%, Physical Skill Evasion 8%, P. Skill Power +4%, Movement Speed +4, Received Heal +11%, Recovery Skill Power +184 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Aerial Yoke +16%, Sleep/ Change +13%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +36%, Petrification Bleed +46%. When used, P. Def. and M. Def. are decreased by 30% and PvP Def. effect is reduced by 12% for 40 sec. -->
+		<!-- MP +94, Water Resistance +85, DEX/ WIT/ MEN +4, Vampiric Rage effect +6%, MP Consumption -6%, P. Def. +13%, M. Def. +18%, P./ M. Debuff Reflection Rate +16%, M. Damage Reflection Rate +16%, P. Skill Evasion +8%, P. Skill Power +4%, Speed +4, Received Healing +11%, Healing Power +184, Obstruction/ Stupor Resistance +16%, Confusion/ Vital Point Attack Resistance +36%, Petrification/ Infection Resistance +46%. For 40 sec., P./ M. Def. +30%, PvP defense -12%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1202,10 +1223,11 @@
 			<skill id="46779" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring - Earring Stage 4 -->
 			<skill id="46780" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring - Earring Stage 4 -->
 			<skill id="27652" level="4" /> <!-- Eva's Earring -->
-			<skill id="27752" level="4" />
+			<skill id="27752" level="4" /> <!-- Eva's Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">300.0</stat>
+			<stat type="maxMp">94</stat>
 		</stats>
 	</item>
 </list>

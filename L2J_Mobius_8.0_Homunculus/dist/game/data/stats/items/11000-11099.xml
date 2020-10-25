@@ -34,7 +34,7 @@
 		</stats>
 	</item>
 	<item id="11001" name="Colichemarde - Earth" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Masterwork item that increases Max HP. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. When enchanted to +4 or higher, has a chance of increasing P. Atk., M. Atk. and Received Healing, and of decreasing Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -181,7 +181,7 @@
 		</stats>
 	</item>
 	<item id="11005" name="Wizard's Tear - Cleverness" type="Weapon">
-		<!-- Masterwork Item that increases MP Recovery Rate. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases MP Recovery Rate. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -308,7 +308,7 @@
 		</stats>
 	</item>
 	<item id="11009" name="Bow of Peril - Earth" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases Max HP. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -446,7 +446,7 @@
 		</stats>
 	</item>
 	<item id="11013" name="Hell Hound - Earth" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases Max HP. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -592,7 +592,7 @@
 		</stats>
 	</item>
 	<item id="11017" name="Dasparion's Staff - Hail" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases M. Atk. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -624,7 +624,7 @@
 		</stats>
 	</item>
 	<item id="11018" name="Dasparion's Staff - Hail" additionalName="Mana Up" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Max MP +30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -657,7 +657,7 @@
 		</stats>
 	</item>
 	<item id="11019" name="Dasparion's Staff - Hail" additionalName="Conversion" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Max MP +60% and Max HP -40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -690,7 +690,7 @@
 		</stats>
 	</item>
 	<item id="11020" name="Dasparion's Staff - Hail" additionalName="Acumen" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Casting Spd. +15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -723,7 +723,7 @@
 		</stats>
 	</item>
 	<item id="11021" name="Doomchanter - Concentration" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases P. Accuracy. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -759,7 +759,7 @@
 		</stats>
 	</item>
 	<item id="11022" name="Doomchanter - Concentration" additionalName="Light Armor" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Weight Gauge increases by 20%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Weight Limit +20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -835,7 +835,7 @@
 		</stats>
 	</item>
 	<item id="11024" name="Doomchanter - Concentration" additionalName="Mana Up" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Max MP +30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -872,7 +872,7 @@
 		</stats>
 	</item>
 	<item id="11025" name="White Lightning - Destruction" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Masterwork item that increases P. Atk. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. When enchanted to +4 or higher, has a chance of increasing P. Atk., M. Atk. and Received Healing, and of decreasing Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -908,7 +908,7 @@
 		</stats>
 	</item>
 	<item id="11026" name="White Lightning - Destruction" additionalName="Critical Poison" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. Poisons the target with a 10% chance during a standard Critical Attack. Increases damage inflicted during PvP. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. Has a 10% chance to poison the target after a standard critical attack. Inflicts additional PvP Damage. When enchanted to +4 or higher, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and Received Healing, and decreased Skill MP consumption after a critical attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -947,7 +947,7 @@
 		</stats>
 	</item>
 	<item id="11027" name="White Lightning - Destruction" additionalName="Haste" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. Atk. Spd. +6%. Inflicts additional PvP Damage. When enchanted to +4 or higher, there is a chance of increasing P. Atk., M. Atk., and Received Healing, and decreasing Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -984,7 +984,7 @@
 		</stats>
 	</item>
 	<item id="11028" name="White Lightning - Destruction" additionalName="Anger" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. P. Atk. +31 and decreases Max HP by 15%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. Max HP -15%, P. Atk. +31. Inflicts additional PvP Damage. When enchanted to +4 or higher, there is a chance of increasing P. Atk., M. Atk., and Received Healing, and decreasing Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1021,7 +1021,7 @@
 		</stats>
 	</item>
 	<item id="11029" name="Meteor Shower - Earth" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases Max HP. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1052,7 +1052,7 @@
 		</stats>
 	</item>
 	<item id="11030" name="Meteor Shower - Earth" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases Max HP. <Soul Crystal properties>. Critical Rate for standard attacks +61. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1117,7 +1117,7 @@
 		</stats>
 	</item>
 	<item id="11032" name="Meteor Shower - Earth" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases Max HP. <Soul Crystal properties>. Atk. Spd. +11% when HP is lower than 60%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1149,7 +1149,7 @@
 		</stats>
 	</item>
 	<item id="11033" name="Blood Tornado - Destruction" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases P. Atk. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1180,7 +1180,7 @@
 		</stats>
 	</item>
 	<item id="11034" name="Blood Tornado - Destruction" additionalName="Haste" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases P. Atk. <Soul Crystal properties>. Atk. Spd. +6%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1212,7 +1212,7 @@
 		</stats>
 	</item>
 	<item id="11035" name="Blood Tornado - Destruction" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. P. Critical Rate +61. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1244,7 +1244,7 @@
 		</stats>
 	</item>
 	<item id="11036" name="Blood Tornado - Destruction" additionalName="Anger" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. P. Atk. +38 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases P. Atk. <Soul Crystal properties>. P. Atk. +38, Max HP -15%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1276,7 +1276,7 @@
 		</stats>
 	</item>
 	<item id="11037" name="Bloody Orchid - Confusion" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases P. Evasion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1307,7 +1307,7 @@
 		</stats>
 	</item>
 	<item id="11038" name="Bloody Orchid - Confusion" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. <Soul Crystal Enhancement>. Increases Critical by 67. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Evasion. <Soul Crystal Enhancement>. P. Critical Rate +67. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1339,7 +1339,7 @@
 		</stats>
 	</item>
 	<item id="11039" name="Bloody Orchid - Confusion" additionalName="Back Blow" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. <Soul Crystal Enhancement>. Increases P. Critical Rate by 37% when attacking the target from behind. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Evasion. <Soul Crystal Enhancement>. P. Critical Rate +37% when attacking the target from behind. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1371,7 +1371,7 @@
 		</stats>
 	</item>
 	<item id="11040" name="Bloody Orchid - Confusion" additionalName="Critical Bleed" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. <Soul Crystal Enhancement>. Inflicts Bleed on the target with a 12% chance during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Evasion. <Soul Crystal Enhancement>. Has a 12% chance to inflict Bleed on the target after a standard critical attack. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1404,7 +1404,7 @@
 		</stats>
 	</item>
 	<item id="11041" name="Elemental Sword - Hail" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases M. Atk. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1435,7 +1435,7 @@
 		</stats>
 	</item>
 	<item id="11042" name="Elemental Sword - Hail" additionalName="M. Atk." type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 153 during magic use. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. M. Skill MP Consumption +15% and M. Atk. +153. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1532,7 +1532,7 @@
 		</stats>
 	</item>
 	<item id="11045" name="Spiritual Eye - Hail" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases M. Atk. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1564,7 +1564,7 @@
 		</stats>
 	</item>
 	<item id="11046" name="Spiritual Eye - Hail" additionalName="Mana Up" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Max MP +30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1631,7 +1631,7 @@
 		</stats>
 	</item>
 	<item id="11048" name="Spiritual Eye - Hail" additionalName="Acumen" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Casting Spd. +15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1664,7 +1664,7 @@
 		</stats>
 	</item>
 	<item id="11049" name="Infernal Master - Concentration" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases P. Accuracy. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1695,7 +1695,7 @@
 		</stats>
 	</item>
 	<item id="11050" name="Infernal Master - Concentration" additionalName="Haste" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases P. Accuracy. <Soul Crystal properties>. Atk. Spd. +6%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1727,7 +1727,7 @@
 		</stats>
 	</item>
 	<item id="11051" name="Infernal Master - Concentration" additionalName="Critical Damage" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. P. Atk. +297 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases P. Accuracy. <Soul Crystal properties>. Critical Damage for standard attacks +297. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1759,7 +1759,7 @@
 		</stats>
 	</item>
 	<item id="11052" name="Infernal Master - Concentration" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases P. Accuracy. <Soul Crystal properties>. Critical Rate for standard attacks +61. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1791,7 +1791,7 @@
 		</stats>
 	</item>
 	<item id="11053" name="Carnage Bow - Concentration" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases P. Accuracy. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1825,7 +1825,7 @@
 		</stats>
 	</item>
 	<item id="11054" name="Carnage Bow - Concentration" additionalName="Light Armor" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Weight Limit +20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1897,7 +1897,7 @@
 		</stats>
 	</item>
 	<item id="11056" name="Carnage Bow - Concentration" additionalName="Mana Up" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Max MP +30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1932,7 +1932,7 @@
 		</stats>
 	</item>
 	<item id="11057" name="Keshanberk*Keshanberk - Destruction" type="Weapon">
-		<!-- Masterwork item that increases P. Atk. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases P. Atk. When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1963,7 +1963,7 @@
 		</stats>
 	</item>
 	<item id="11058" name="Tallum Blade - Destruction" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases P. Atk. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2027,7 +2027,7 @@
 		</stats>
 	</item>
 	<item id="11060" name="Tallum Blade - Destruction" additionalName="Haste" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases P. Atk. <Soul Crystal properties>. Atk. Spd. +6%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2059,7 +2059,7 @@
 		</stats>
 	</item>
 	<item id="11061" name="Tallum Blade - Destruction" additionalName="Anger" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. P. Atk. +31 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases P. Atk. <Soul Crystal properties>. P. Atk. +31, Max HP -15%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2091,7 +2091,7 @@
 		</stats>
 	</item>
 	<item id="11062" name="Destroyer Hammer - Lightning" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases Critical Rate. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2122,7 +2122,7 @@
 		</stats>
 	</item>
 	<item id="11063" name="Destroyer Hammer - Lightning" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Max HP +25%. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2154,7 +2154,7 @@
 		</stats>
 	</item>
 	<item id="11064" name="Destroyer Hammer - Lightning" additionalName="Haste" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Atk. Spd. +6%. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2186,7 +2186,7 @@
 		</stats>
 	</item>
 	<item id="11065" name="Destroyer Hammer - Lightning" additionalName="Critical Drain" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Absorbs 18 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Absorbs 18 HP of the target after a physical critical attack. Inflicts additional PvP Damage. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2219,7 +2219,7 @@
 		</stats>
 	</item>
 	<item id="11066" name="Divine Pain - Concentration" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases P. Accuracy. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2254,7 +2254,7 @@
 		</stats>
 	</item>
 	<item id="11067" name="Divine Pain - Concentration" additionalName="Haste" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Infernal Master Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases P. Accuracy. Kamael-exclusive weapon: Infernal Master conversion. <Soul Crystal properties>. Atk. Spd. +6%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2290,7 +2290,7 @@
 		</stats>
 	</item>
 	<item id="11068" name="Divine Pain - Concentration" additionalName="Critical Damage" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Infernal Master Conversion. <Soul Crystal Enhancement>. P. Atk. +297 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases P. Accuracy. Kamael-exclusive weapon: Infernal Master conversion. <Soul Crystal properties>. Critical Damage for standard attacks +297. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2326,7 +2326,7 @@
 		</stats>
 	</item>
 	<item id="11069" name="Divine Pain - Concentration" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Infernal Master Conversion. <Soul Crystal Enhancement>. Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases P. Accuracy. Kamael-exclusive weapon: Infernal Master conversion. <Soul Crystal properties>. Critical Rate for standard attacks +61. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2362,7 +2362,7 @@
 		</stats>
 	</item>
 	<item id="11070" name="Halberd - Lightning" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases Critical Rate for standard attacks. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2394,7 +2394,7 @@
 		</stats>
 	</item>
 	<item id="11071" name="Halberd - Lightning" additionalName="Haste" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases Critical Rate for standard attacks. <Soul Crystal properties>. Atk. Spd. +6%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2426,7 +2426,7 @@
 		</stats>
 	</item>
 	<item id="11072" name="Halberd - Lightning" additionalName="Critical Stun" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases Critical Rate for standard attacks. <Soul Crystal properties>. With a 25% chance, stuns the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2459,7 +2459,7 @@
 		</stats>
 	</item>
 	<item id="11073" name="Halberd - Lightning" additionalName="Wide Blow" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Widens the angle of attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases Critical Rate for standard attacks. <Soul Crystal properties>. Widens the angle of attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2491,7 +2491,7 @@
 		</stats>
 	</item>
 	<item id="11074" name="Keshanberk*Damascus - Destruction" type="Weapon">
-		<!-- Masterwork item that increases P. Atk. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases P. Atk. When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2522,7 +2522,7 @@
 		</stats>
 	</item>
 	<item id="11075" name="Lacerator - Thunder" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or higher, it has a chance to increase P. Atk., M. Atk., and Received Heal Amount, and decrease Skill MP Consumption for you and your party members. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. When enchanted to +4 or higher, has a chance of increasing P. Atk., M. Atk. and Received Healing, and of decreasing Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2558,7 +2558,7 @@
 		</stats>
 	</item>
 	<item id="11076" name="Lacerator - Thunder" additionalName="Critical Damage" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. Kamael-exclusive Weapon: Dark Legion's Edge Transmutation. <Soul Crystal Option>. On a critical hit, increases P. Atk. by 326. Inflicts more damage during PvP. When enchanted to 4 or higher, it has a chance to increase P. Atk., M. Atk., and Received Heal Amount, and decrease Skill MP Consumption for you and your party members. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. Kamael-exclusive weapon: Dark Legion's Edge conversion. <Soul Crystal properties>. P. Atk. +326 after a critical attack. Increases PvP damage. When enchanted to +4 or higher, there is a chance of increasing P. Atk., M. Atk., and Received Healing, and of decreasing Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2595,7 +2595,7 @@
 		</stats>
 	</item>
 	<item id="11077" name="Lacerator - Thunder" additionalName="Health" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. Kamael-exclusive Weapon: Dark Legion's Edge Transmutation. <Soul Crystal Option>. Increases Max HP by 25%. Inflicts more damage during PvP. When enchanted to 4 or higher, it has a chance to increase P. Atk., M. Atk., and Received Heal Amount, and decrease Skill MP Consumption for you and your party members. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. Kamael-exclusive weapon: Dark Legion's Edge conversion. <Soul Crystal properties>. Max HP +25%. Increases PvP damage. When enchanted to +4 or higher, there is a chance of increasing P. Atk., M. Atk., and Received Healing, and of decreasing Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2632,7 +2632,7 @@
 		</stats>
 	</item>
 	<item id="11078" name="Lacerator - Thunder" additionalName="Rsk. Focus" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. Kamael-exclusive Weapon: Dark Legion's Edge Transmutation. <Soul Crystal Option>. Increases Critical by 130 when HP drops below 60%. Inflicts more damage during PvP. When enchanted to 4 or higher, it has a chance to increase P. Atk., M. Atk., and Received Heal Amount, and decrease Skill MP Consumption for you and your party members. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. Kamael-exclusive weapon: Dark Legion's Edge conversion. <Soul Crystal properties>. Critical Rate for standard attacks +130 when HP is lower than 60%. Increases PvP damage. When enchanted to +4 or higher, has a chance of increasing P. Atk., M. Atk., and Received Healing, and of decreasing Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2669,7 +2669,7 @@
 		</stats>
 	</item>
 	<item id="11079" name="Damascus*Damascus - Thunder" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2700,7 +2700,7 @@
 		</stats>
 	</item>
 	<item id="11080" name="Dark Legion's Edge - Thunder" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2731,7 +2731,7 @@
 		</stats>
 	</item>
 	<item id="11081" name="Dark Legion's Edge - Thunder" additionalName="Critical Damage" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. <Soul Crystal Option>. On a critical hit, increases P. Atk. by 326. Inflicts more damage during PvP. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. <Soul Crystal properties>. P. Atk. +326 after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2763,7 +2763,7 @@
 		</stats>
 	</item>
 	<item id="11082" name="Dark Legion's Edge - Thunder" additionalName="Health" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. <Soul Crystal Option>. Increases Max HP by 25%. Inflicts more damage during PvP. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. <Soul Crystal properties>. Max HP +25%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2795,7 +2795,7 @@
 		</stats>
 	</item>
 	<item id="11083" name="Dark Legion's Edge - Thunder" additionalName="Rsk. Focus" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. <Soul Crystal Option>. Increases Critical by 130 when HP drops below 60%. Inflicts more damage during PvP. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. <Soul Crystal properties>. Critical Rate for standard attacks +130 when HP is lower than 60%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2827,7 +2827,7 @@
 		</stats>
 	</item>
 	<item id="11084" name="Undertaker - Evil Spirit" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that has a chance to absorb HP after an attack. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2935,7 +2935,7 @@
 		</stats>
 	</item>
 	<item id="11087" name="Undertaker - Evil Spirit" additionalName="Critical Drain" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. Exclusive Weapon: Dragon Slayer Conversion. <Soul Crystal Enhancement>. Absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack. Exclusive Weapon: Dragon Slayer Conversion. <Soul Crystal Enhancement>. Absorbs 11 HP from the target after a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2972,7 +2972,7 @@
 		</stats>
 	</item>
 	<item id="11088" name="Doom Crusher - Thunder" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3003,7 +3003,7 @@
 		</stats>
 	</item>
 	<item id="11089" name="Doom Crusher - Thunder" additionalName="Health" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. <Soul Crystal Option>. Increases Max HP by 25%. Inflicts more damage during PvP. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. <Soul Crystal properties>. Max HP +25%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3035,7 +3035,7 @@
 		</stats>
 	</item>
 	<item id="11090" name="Doom Crusher - Thunder" additionalName="Anger" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. <Soul Crystal Option>. Decreases Max HP by 15% and P. Atk. increases by 32. Inflicts more damage during PvP. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. <Soul Crystal properties>. Max HP -15%, P. Atk. +32. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3067,7 +3067,7 @@
 		</stats>
 	</item>
 	<item id="11091" name="Doom Crusher - Thunder" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Masterwork item that increases Critical Damage. <Soul Crystal Option>. Increases Atk. Spd. by 11% when HP drops below 60%. Inflicts more damage during PvP. -->
+		<!-- Masterwork item that increases Critical Damage for standard attacks. <Soul Crystal properties>. Atk. Spd. +11% when HP is lower than 60%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3099,7 +3099,7 @@
 		</stats>
 	</item>
 	<item id="11092" name="Dragon Grinder - Earth" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases Max HP. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3130,7 +3130,7 @@
 		</stats>
 	</item>
 	<item id="11093" name="Dragon Grinder - Earth" additionalName="Rsk. Evasion" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Evasion by 6 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Evasion +6 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3162,7 +3162,7 @@
 		</stats>
 	</item>
 	<item id="11094" name="Dragon Grinder - Earth" additionalName="Guidance" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Accuracy by about 5. Increases damage inflicted during PvP. -->
+		<!-- Masterwork item that increases Max HP. <Soul Crystal properties>. P. Accuracy +5. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3194,7 +3194,7 @@
 		</stats>
 	</item>
 	<item id="11095" name="Dragon Grinder - Earth" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Max HP +25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3226,7 +3226,7 @@
 		</stats>
 	</item>
 	<item id="11096" name="Dragon Slayer - Evil Spirit" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that has a chance to absorb HP after an attack. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -3322,7 +3322,7 @@
 		</stats>
 	</item>
 	<item id="11099" name="Dragon Slayer - Evil Spirit" additionalName="Critical Drain" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. <Soul Crystal Enhancement>. Absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack. <Soul Crystal Enhancement>. Absorbs 11 HP from the target after a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

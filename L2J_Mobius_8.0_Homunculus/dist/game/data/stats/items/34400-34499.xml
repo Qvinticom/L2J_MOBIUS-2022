@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="34400" name="PA - Tallum Blade*Damascus (Dark)" additionalName="PA exclusive" type="Weapon">
-		<!-- Tallum Blade*Damascus (Dark) with limited enchantment options. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Atk. Spd. by 8%. Inflicts more damage during PvP. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Tallum Blade*Damascus (Dark), upgrade options are limited. When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Atk. Spd. +8%, PvP damage is increased. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -476,7 +476,7 @@
 		</stats>
 	</item>
 	<item id="34413" name="PA - Vesper Nagan (Earth) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Nagan (Earth) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Nagan (Earth), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -513,7 +513,7 @@
 		</stats>
 	</item>
 	<item id="34414" name="PA - Vesper Nagan (Water) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Nagan (Water) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Nagan (Water), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -550,7 +550,7 @@
 		</stats>
 	</item>
 	<item id="34415" name="PA - Vesper Nagan (Wind) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Nagan (Wind) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Nagan (Wind), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -587,7 +587,7 @@
 		</stats>
 	</item>
 	<item id="34416" name="PA - Vesper Nagan (Fire) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Nagan (Fire) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Nagan (Fire), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -624,7 +624,7 @@
 		</stats>
 	</item>
 	<item id="34417" name="PA - Vesper Nagan (Holy) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Nagan (Holy) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Nagan (Holy), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -661,7 +661,7 @@
 		</stats>
 	</item>
 	<item id="34418" name="PA - Vesper Nagan (Dark) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Nagan (Dark) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Nagan (Dark), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -698,7 +698,7 @@
 		</stats>
 	</item>
 	<item id="34419" name="PA - Vesper Dual Dagger (Earth)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Dagger (Earth) with limited enchantment options. When enchanted, P. Atk. of dual dagger increases more than that of a standard one-handed sword. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP. Can be equipped from level 81 and by Dagger Masters. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Daggers (Earth), upgrade options are limited. When enchanting dual weapons, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, PvP damage is increased. Can be equipped by Dagger Masters, required level: 81+. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -736,7 +736,7 @@
 		</stats>
 	</item>
 	<item id="34420" name="PA - Vesper Dual Dagger (Water)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Dagger (Water) with limited enchantment options. When enchanted, P. Atk. of dual dagger increases more than that of a standard one-handed sword. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP. Can be equipped from level 81 and by Dagger Masters. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Daggers (Water), upgrade options are limited. When enchanting dual weapons, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, PvP damage is increased. Can be equipped by Dagger Masters, required level: 81+. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -774,7 +774,7 @@
 		</stats>
 	</item>
 	<item id="34421" name="PA - Vesper Dual Dagger (Wind)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Dagger (Wind) with limited enchantment options. When enchanted, P. Atk. of dual dagger increases more than that of a standard one-handed sword. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP. Can be equipped from level 81 and by Dagger Masters. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Daggers (Wind), upgrade options are limited. When enchanting dual weapons, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, PvP damage is increased. Can be equipped by Dagger Masters, required level: 81+. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -812,7 +812,7 @@
 		</stats>
 	</item>
 	<item id="34422" name="PA - Vesper Dual Dagger (Fire)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Dagger (Fire) with limited enchantment options. When enchanted, P. Atk. of dual dagger increases more than that of a standard one-handed sword. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP. Can be equipped from level 81 and by Dagger Masters. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Daggers (Fire), upgrade options are limited. When enchanting dual weapons, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, PvP damage is increased. Can be equipped by Dagger Masters, required level: 81+. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -850,7 +850,7 @@
 		</stats>
 	</item>
 	<item id="34423" name="PA - Vesper Dual Dagger (Holy)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Dagger (Holy) with limited enchantment options. When enchanted, P. Atk. of dual dagger increases more than that of a standard one-handed sword. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP. Can be equipped from level 81 and by Dagger Masters. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Daggers (Holy), upgrade options are limited. When enchanting dual weapons, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, PvP damage is increased. Can be equipped by Dagger Masters, required level: 81+. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -888,7 +888,7 @@
 		</stats>
 	</item>
 	<item id="34424" name="PA - Vesper Dual Dagger (Dark)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Dagger (Dark) with limited enchantment options. When enchanted, P. Atk. of dual dagger increases more than that of a standard one-handed sword. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP. Can be equipped from level 81 and by Dagger Masters. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Daggers (Dark), upgrade options are limited. When enchanting dual weapons, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, PvP damage is increased. Can be equipped by Dagger Masters, required level: 81+. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -926,7 +926,7 @@
 		</stats>
 	</item>
 	<item id="34425" name="PA - Vesper Dual Sword (Earth)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Sword (Earth) with limited enchantment options. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 109 and Max HP by 10%. Inflicts more damage during PvP. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Swords (Earth), upgrade options are limited. When enchanting two-handed/ dual weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, Max HP +10%, PvP damage is increased. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -963,7 +963,7 @@
 		</stats>
 	</item>
 	<item id="34426" name="PA - Vesper Dual Sword (Water)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Sword (Water) with limited enchantment options. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 109 and Max HP by 10%. Inflicts more damage during PvP. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Swords (Water), upgrade options are limited. When enchanting two-handed/ dual weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, Max HP +10%, PvP damage is increased. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1000,7 +1000,7 @@
 		</stats>
 	</item>
 	<item id="34427" name="PA - Vesper Dual Sword (Wind)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Sword (Wind) with limited enchantment options. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 109 and Max HP by 10%. Inflicts more damage during PvP. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Swords (Wind), upgrade options are limited. When enchanting two-handed/ dual weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, Max HP +10%, PvP damage is increased. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1037,7 +1037,7 @@
 		</stats>
 	</item>
 	<item id="34428" name="PA - Vesper Dual Sword (Fire)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Sword (Fire) with limited enchantment options. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 109 and Max HP by 10%. Inflicts more damage during PvP. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Swords (Fire), upgrade options are limited. When enchanting two-handed/ dual weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, Max HP +10%, PvP damage is increased. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1074,7 +1074,7 @@
 		</stats>
 	</item>
 	<item id="34429" name="PA - Vesper Dual Sword (Holy)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Sword (Holy) with limited enchantment options. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 109 and Max HP by 10%. Inflicts more damage during PvP. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Swords (Holy), upgrade options are limited. When enchanting two-handed/ dual weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, Max HP +10%, PvP damage is increased. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1111,7 +1111,7 @@
 		</stats>
 	</item>
 	<item id="34430" name="PA - Vesper Dual Sword (Dark)" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Dual Sword (Dark) with limited enchantment options.. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 109 and Max HP by 10%. Inflicts more damage during PvP. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Vesper Dual Swords (Dark), upgrade options are limited. When enchanting two-handed/ dual weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Critical Rate for standard attacks +109, Max HP +10%, PvP damage is increased. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1586,7 +1586,7 @@
 		</stats>
 	</item>
 	<item id="34443" name="PA - Vesper Shaper (Earth) - Critical Damage" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shaper (Earth) with limited ability enhancement. <Special Option>. P. Atk. +906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shaper (Earth) with limited ability enhancement. <Special Option>. P. Atk. +906 after a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1623,7 +1623,7 @@
 		</stats>
 	</item>
 	<item id="34444" name="PA - Vesper Shaper (Water) - Critical Damage" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shaper (Water) with limited ability enhancement. <Special Option>. P. Atk. +906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shaper (Water) with limited ability enhancement. <Special Option>. P. Atk. +906 after a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1660,7 +1660,7 @@
 		</stats>
 	</item>
 	<item id="34445" name="PA - Vesper Shaper (Wind) - Critical Damage" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shaper (Wind) with limited ability enhancement. <Special Option>. P. Atk. +906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shaper (Wind) with limited ability enhancement. <Special Option>. P. Atk. +906 after a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1697,7 +1697,7 @@
 		</stats>
 	</item>
 	<item id="34446" name="PA - Vesper Shaper (Fire) - Critical Damage" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shaper (Fire) with limited ability enhancement. <Special Option>. P. Atk. +906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shaper (Fire) with limited ability enhancement. <Special Option>. P. Atk. +906 after a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1734,7 +1734,7 @@
 		</stats>
 	</item>
 	<item id="34447" name="PA - Vesper Shaper (Holy) - Critical Damage" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shaper (Holy) with limited ability enhancement. <Special Option>. P. Atk. +906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shaper (Holy) with limited ability enhancement. <Special Option>. P. Atk. +906 after a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1771,7 +1771,7 @@
 		</stats>
 	</item>
 	<item id="34448" name="PA - Vesper Shaper (Dark) - Critical Damage" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shaper (Dark) with limited ability enhancement. <Special Option>. P. Atk. +906 during a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shaper (Dark) with limited ability enhancement. <Special Option>. P. Atk. +906 after a Critical Attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1808,7 +1808,7 @@
 		</stats>
 	</item>
 	<item id="34449" name="PA - Vesper Shooter (Earth) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shooter (Earth) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shooter (Earth), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1846,7 +1846,7 @@
 		</stats>
 	</item>
 	<item id="34450" name="PA - Vesper Shooter (Water) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shooter (Water) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shooter (Water), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1884,7 +1884,7 @@
 		</stats>
 	</item>
 	<item id="34451" name="PA - Vesper Shooter (Wind) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shooter (Wind) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shooter (Wind), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1922,7 +1922,7 @@
 		</stats>
 	</item>
 	<item id="34452" name="PA - Vesper Shooter (Fire) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shooter (Fire) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shooter (Fire), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1960,7 +1960,7 @@
 		</stats>
 	</item>
 	<item id="34453" name="PA - Vesper Shooter (Holy) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shooter (Holy) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shooter (Holy), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1998,7 +1998,7 @@
 		</stats>
 	</item>
 	<item id="34454" name="PA - Vesper Shooter (Dark) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Shooter (Dark) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Shooter (Dark), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2036,7 +2036,7 @@
 		</stats>
 	</item>
 	<item id="34455" name="PA - Vesper Thrower (Earth) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Thrower (Earth) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Thrower (Earth), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2074,7 +2074,7 @@
 		</stats>
 	</item>
 	<item id="34456" name="PA - Vesper Thrower (Water) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Thrower (Water) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Thrower (Water), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2112,7 +2112,7 @@
 		</stats>
 	</item>
 	<item id="34457" name="PA - Vesper Thrower (Wind) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Thrower (Wind) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Thrower (Wind), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2150,7 +2150,7 @@
 		</stats>
 	</item>
 	<item id="34458" name="PA - Vesper Thrower (Fire) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Thrower (Fire) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Thrower (Fire), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2188,7 +2188,7 @@
 		</stats>
 	</item>
 	<item id="34459" name="PA - Vesper Thrower (Holy) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Thrower (Holy) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Thrower (Holy), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2226,7 +2226,7 @@
 		</stats>
 	</item>
 	<item id="34460" name="PA - Vesper Thrower (Dark) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Thrower (Dark) with limited ability enhancement. <Special Option>. Critical +133. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Thrower (Dark), upgrade options are limited. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2486,7 +2486,7 @@
 		</stats>
 	</item>
 	<item id="34467" name="PA - Vesper Slasher (Earth) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Slasher (Earth) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Slasher (Earth), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2522,7 +2522,7 @@
 		</stats>
 	</item>
 	<item id="34468" name="PA - Vesper Slasher (Water) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Slasher (Water) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Slasher (Water), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2558,7 +2558,7 @@
 		</stats>
 	</item>
 	<item id="34469" name="PA - Vesper Slasher (Wind) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Slasher (Wind) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Slasher (Wind), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2594,7 +2594,7 @@
 		</stats>
 	</item>
 	<item id="34470" name="PA - Vesper Slasher (Fire) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Slasher (Fire) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Slasher (Fire), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2630,7 +2630,7 @@
 		</stats>
 	</item>
 	<item id="34471" name="PA - Vesper Slasher (Holy) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Slasher (Holy) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Slasher (Holy), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2666,7 +2666,7 @@
 		</stats>
 	</item>
 	<item id="34472" name="PA - Vesper Slasher (Dark) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Slasher (Dark) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Slasher (Dark), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3368,7 +3368,7 @@
 		</stats>
 	</item>
 	<item id="34491" name="PA - Vesper Cutter (Earth) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Cutter (Earth) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Cutter (Earth), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3404,7 +3404,7 @@
 		</stats>
 	</item>
 	<item id="34492" name="PA - Vesper Cutter (Water) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Cutter (Water) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Cutter (Water), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3440,7 +3440,7 @@
 		</stats>
 	</item>
 	<item id="34493" name="PA - Vesper Cutter (Wind) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Cutter (Wind) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Cutter (Wind), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3476,7 +3476,7 @@
 		</stats>
 	</item>
 	<item id="34494" name="PA - Vesper Cutter (Fire) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Cutter (Fire) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Cutter (Fire), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3512,7 +3512,7 @@
 		</stats>
 	</item>
 	<item id="34495" name="PA - Vesper Cutter (Holy) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Cutter (Holy) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Cutter (Holy), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3548,7 +3548,7 @@
 		</stats>
 	</item>
 	<item id="34496" name="PA - Vesper Cutter (Dark) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Cutter (Dark) with limited ability enhancement. <Special Option>. Critical +131. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Cutter (Dark), upgrade options are limited. <Special Option>. P. Critical Rate +131. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3584,7 +3584,7 @@
 		</stats>
 	</item>
 	<item id="34497" name="PA - Vesper Fighter (Earth) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Fighter (Earth) with limited ability enhancement. <Special Option>. Critical +123. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Fighter (Earth), upgrade options are limited. <Special Option>. P. Critical Rate +123. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3621,7 +3621,7 @@
 		</stats>
 	</item>
 	<item id="34498" name="PA - Vesper Fighter (Water) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Fighter (Water) with limited ability enhancement. <Special Option>. Critical +123. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Fighter (Water), upgrade options are limited. <Special Option>. P. Critical Rate +123. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3658,7 +3658,7 @@
 		</stats>
 	</item>
 	<item id="34499" name="PA - Vesper Fighter (Wind) - Focus" additionalName="PA exclusive" type="Weapon">
-		<!-- Vesper Fighter (Wind) with limited ability enhancement. <Special Option>. Critical +123. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Vesper Fighter (Wind), upgrade options are limited. <Special Option>. P. Critical Rate +123. Inflicts additional PvP Damage. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

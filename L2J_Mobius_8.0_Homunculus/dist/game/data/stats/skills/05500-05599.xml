@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5500" toLevel="1" name="Black Dragon Claw">
-		<!-- Your character is temporarily losing HP because of bleeding. Power 10. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Your character is temporarily losing HP because of bleeding. Power 10.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -37,7 +37,7 @@
 		</effects>
 	</skill>
 	<skill id="5501" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -62,7 +62,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="TargetCancel">
 				<chance>80</chance>
@@ -70,7 +70,7 @@
 		</effects>
 	</skill>
 	<skill id="5502" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -92,7 +92,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="TargetCancel">
 				<chance>80</chance>
@@ -852,7 +852,7 @@
 		</effects>
 	</skill>
 	<skill id="5530" toLevel="12" name="Blood Storm">
-		<!-- Deals damage and inflicts bleed on the target. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Deals damage and inflicts bleed on the target. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -960,7 +960,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5535" toLevel="1" name="Little Angel Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -975,7 +975,7 @@
 		</conditions>
 	</skill>
 	<skill id="5536" toLevel="1" name="Little Devil Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -990,7 +990,7 @@
 		</conditions>
 	</skill>
 	<skill id="5537" toLevel="1" name="Rudolph Cuteness Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1171,7 +1171,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5547" toLevel="1" name="Maximum Ability">
-		<!-- Increases P. Atk., M. Atk., and received heal amount. -->
+		<!-- Increases P./ M. Atk., and Received Healing. Decreases Skill MP consumption. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>MAXIMUM_ABILITY</abnormalType>
@@ -1213,7 +1213,7 @@
 		</effects>
 	</skill>
 	<skill id="5548" toLevel="4" name="Critical Momentum Attack">
-		<!-- Absorbs Soul after Critical Hit. -->
+		<!-- Absorbs a soul after a critical attack. -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLevel>
 			<value level="1">20</value>
@@ -1301,7 +1301,7 @@
 		</effects>
 	</skill>
 	<skill id="5551" toLevel="12" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -1337,7 +1337,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="TargetCancel">
 				<chance>80</chance>
@@ -1571,7 +1571,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5559" toLevel="1" name="Physical Pose">
-		<!-- Critical rate and P. Atk. skill power are increased. -->
+		<!-- Critical Rate for standard attacks and P. Skill Power are increased. -->
 		<icon>icon.skill0758</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1680,7 +1680,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5562" toLevel="3" name="Spirit of the Phoenix">
+	<skill id="5562" toLevel="3" name="Phoenix Spirit">
 		<!-- Growing Spirit of the Phoenix. Increases P. Def. -->
 		<icon>
 			<value level="1">icon.skill0784</value>
@@ -1717,7 +1717,7 @@
 				</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5562</skillId> <!-- Spirit of the Phoenix -->
+				<skillId>5562</skillId> <!-- Phoenix Spirit -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1820,8 +1820,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5564" toLevel="3" name="Pain of Shilen">
-		<!-- Shilen's Growing Pain - Critical Damage is increased. -->
+	<skill id="5564" toLevel="3" name="Pain of Shillien">
+		<!-- Shillien's Growing Pain. Increases Critical Damage for standard attacks. -->
 		<icon>
 			<value level="1">icon.skill0788</value>
 			<value level="2">icon.skill0788_2</value>
@@ -1857,7 +1857,7 @@
 				</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5564</skillId> <!-- Pain of Shilen -->
+				<skillId>5564</skillId> <!-- Pain of Shillien -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1883,7 +1883,7 @@
 		</effects>
 	</skill>
 	<skill id="5565" toLevel="1" name="Expose Vulnerability">
-		<!-- The probability of Critical hit has been increased, and defense power has been decreased. -->
+		<!-- Decreases Received P. Critical Rate when the talisman is equipped. -->
 		<icon>icon.skill0767</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1927,7 +1927,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5567" toLevel="1" name="Flame Armor">
+	<skill id="5567" toLevel="1" name="Flaming Armor">
 		<icon>icon.skill1492</icon>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
@@ -2077,7 +2077,7 @@
 		</effects>
 	</skill>
 	<skill id="5573" toLevel="1" name="Knight Ability: Defense">
-		<!-- Knight's P. Def. P. Def. and M. Def. increases momentarily. -->
+		<!-- Knight's P. Def. P./ M. Def. increases momentarily. -->
 		<icon>icon.skill0110</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -2105,7 +2105,7 @@
 		</effects>
 	</skill>
 	<skill id="5574" toLevel="1" name="Rogue Ability: Critical Chance">
-		<!-- Rogue's Critical. Critical Rate increases momentarily. -->
+		<!-- Instantly increases Critical Rate for standard attacks. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -2174,6 +2174,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5577" toLevel="1" name="Healer Ability: Heal">
@@ -2269,7 +2282,7 @@
 		</effects>
 	</skill>
 	<skill id="5581" toLevel="1" name="Divine Beast Stun Attack">
-		<!-- Attacks and stuns the enemy with 704 power. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks and stuns the enemy with 704 power. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -2292,7 +2305,7 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions"> <!-- using 1 second due abnormal don't have abnormal time -->
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -2519,7 +2532,7 @@
 		</effects>
 	</skill>
 	<skill id="5588" toLevel="3" name="Pet Focus">
-		<!-- Momentarily increase the probability of Critical P. Atk. Effect $s1. -->
+		<!-- Temporarily increases Critical Rate for standard attacks. Effect $s1 -->
 		<icon>icon.skill1077</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2570,7 +2583,7 @@
 		</effects>
 	</skill>
 	<skill id="5589" toLevel="3" name="Pet Death Whisper">
-		<!-- Temporarily increases Critical Damage. Effect $s1 -->
+		<!-- Temporarily increases Critical Damage for standard attacks. Effect $s1 -->
 		<icon>icon.skill1242</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2742,7 +2755,7 @@
 		</effects>
 	</skill>
 	<skill id="5592" toLevel="16" name="Lightning Barrier">
-		<!-- Paralyzes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Instant petrification.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1515</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2800,7 +2813,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -2831,7 +2844,7 @@
 		</effects>
 	</skill>
 	<skill id="5594" toLevel="1" name="Poison">
-		<!-- Inflicts Poison on the target and decreases HP. Effect 11. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect 11.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2852,7 +2865,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5595" toLevel="1" name="Bleed">
-		<!-- Inflicts Bleed on the target and decreases HP. Effect 11. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect 11.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2948,8 +2961,22 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5599" toLevel="12" name="Stun Resistance">
-		<!-- Slightly resistant to Sleep. -->
+	<skill id="5599" toLevel="12" name="Confusion Resistance">
+		<!-- Slightly increases Confusion Resistance. -->
+		<icon>
+			<value level="1">icon.skill4225</value>
+			<value level="2">icon.skill4225</value>
+			<value level="3">icon.skill4225</value>
+			<value level="4">icon.skill4225</value>
+			<value level="5">icon.skill4225</value>
+			<value level="6">icon.skill4225</value>
+			<value level="7">icon.skill4225</value>
+			<value level="8">icon.skill4225</value>
+			<value level="9">icon.skill4225</value>
+			<value level="10">icon.skill4225</value>
+			<value level="11">icon.skill4435</value>
+			<value level="12">icon.skill4435</value>
+		</icon>
 		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>

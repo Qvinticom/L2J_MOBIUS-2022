@@ -239,7 +239,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23117" toLevel="1" name="Zombie Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -273,7 +273,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23119" toLevel="1" name="Bluebird Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -288,7 +288,7 @@
 		</conditions>
 	</skill>
 	<skill id="23120" toLevel="1" name="Hatbird Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -332,8 +332,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23123" toLevel="1" name="Guangong Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23123" toLevel="1" name="God of War Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -348,7 +348,7 @@
 		</conditions>
 	</skill>
 	<skill id="23124" toLevel="1" name="Guangong Agathion Special Skill: Aura of Fury">
-		<!-- Stimulates the attacking desire of the enemy by 6983 Power. Cooldown 1 min. -->
+		<!-- Provokes the enemy. Cooldown: 1 min. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -372,8 +372,8 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23125" toLevel="1" name="Gwanseum Nyang Nyang Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23125" toLevel="1" name="Goddess of Mercy Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -400,7 +400,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23127" toLevel="1" name="Blue Opera Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -438,7 +438,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23130" toLevel="1" name="Red Opera Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -463,7 +463,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23132" toLevel="1" name="Opera Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -478,7 +478,7 @@
 		</conditions>
 	</skill>
 	<skill id="23133" toLevel="1" name="Miss Chipao Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -493,7 +493,7 @@
 		</conditions>
 	</skill>
 	<skill id="23134" toLevel="1" name="Miss Chipao Agathion Special Skill: Decrease Weight">
-		<!-- Increases the weight penalty interval by 9000 for 1 h. Cooldown is 4 h. -->
+		<!-- For 1 h., overweight limit +9000. Cooldown: 4 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -518,7 +518,7 @@
 		</effects>
 	</skill>
 	<skill id="23135" toLevel="1" name="Nepal Snow Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -561,7 +561,7 @@
 		</effects>
 	</skill>
 	<skill id="23137" toLevel="1" name="Round Ball Snow Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -604,7 +604,7 @@
 		</effects>
 	</skill>
 	<skill id="23139" toLevel="1" name="Ladder Snow Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -619,7 +619,7 @@
 		</conditions>
 	</skill>
 	<skill id="23140" toLevel="1" name="Ladder Snow Agathion Special Skill: Snow's Wind Walk">
-		<!-- Increases Spd. by 33 for 20 min. Cooldown is 1 h. -->
+		<!-- For 20 min., Speed +33. Skill Cooldown: 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -647,8 +647,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23141" toLevel="1" name="Lancet Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23141" toLevel="1" name="Iken Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -662,8 +662,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23142" toLevel="1" name="Liposa Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23142" toLevel="1" name="Lanya Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -677,8 +677,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23143" toLevel="1" name="Velarin Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23143" toLevel="1" name="Gnosian Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -692,8 +692,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23144" toLevel="1" name="Dulcinel Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23144" toLevel="1" name="Cheerleader Orodriel Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -707,8 +707,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23145" toLevel="1" name="Chimeros Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23145" toLevel="1" name="Lakinos Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -722,8 +722,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23146" toLevel="1" name="Niveri Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23146" toLevel="1" name="Mortia Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -737,8 +737,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23147" toLevel="1" name="Hamell Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23147" toLevel="1" name="Heintz Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -752,8 +752,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23148" toLevel="1" name="Joriya Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23148" toLevel="1" name="Meruril Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -767,8 +767,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23149" toLevel="1" name="Ralmak Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23149" toLevel="1" name="Taman Zu Rapatui Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -782,8 +782,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23150" toLevel="1" name="Goras Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23150" toLevel="1" name="Kaurin Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -797,8 +797,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23151" toLevel="1" name="Vensar Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23151" toLevel="1" name="Ahertbein Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -812,8 +812,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23152" toLevel="1" name="Kiela Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23152" toLevel="1" name="Naonin Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -848,7 +848,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23154" toLevel="1" name="Kadomas Special Skill: Fireworks">
-		<!-- Shoots flames up. -->
+		<!-- Ignites firecrackers. -->
 		<icon>BranchSys.icon.br_kadomatsu_i00</icon>
 		<hitTime>6300</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -893,7 +893,7 @@
 		</effects>
 	</skill>
 	<skill id="23156" toLevel="1" name="Gift of Thanks">
-		<!-- Vitality Stage is maintained for 10 min. Cooldown is 2 h. -->
+		<!-- Maintains the Vitality amount for 10 min. Cooldown: 2 h. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -925,7 +925,7 @@
 		</effects>
 	</skill>
 	<skill id="23157" toLevel="1" name="Donateloph's Blessing">
-		<!-- For 1 h., increases Max HP, MP, and CP by 40%. Increases P. Def. and M. Def. by 20%. Increases Speed by 20%. Increases P. Atk. by 10%. Increases physical Atk. Spd. by 20%. Bestows the ability to recover as HP 10% of the physical damage inflicted on the enemy with a certain probability. -->
+		<!-- For 1 h., increases Max HP, MP, and CP by 40%. Increases P./ M. Def. by 20%. Increases Speed by 20%. Increases P. Atk. by 10%. Increases physical Atk. Spd. by 20%. Bestows the ability to recover as HP 10% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>BranchSys.icon.br_xmas_present_luck_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -996,7 +996,7 @@
 		</effects>
 	</skill>
 	<skill id="23158" toLevel="1" name="Raphaeloph's Blessing">
-		<!-- For 1 h., increases Max HP, MP, and CP by 40%, P. Def. and M. Def. by 20%, Speed by 20%, P. Atk. by 10%, Critical Attack Rate by 30%, and Critical Damage by 10%. -->
+		<!-- For 1 h., increases Max HP, MP, and CP by 40%, P./ M. Def. by 20%, Speed by 20%, P. Atk. by 10%, Critical Attack Rate by 30%, and Critical Damage by 10%. -->
 		<icon>BranchSys.icon.br_xmas_present_joy_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1055,7 +1055,7 @@
 		</effects>
 	</skill>
 	<skill id="23159" toLevel="1" name="Leonardoph's Blessing">
-		<!-- For 1 h., increases Max HP, MP, and CP by 40%. Increases P. Def. and M. Def. by 20%. Increases Speed by 20%. Increases M. Atk. by 10%. Increases magic Casting Spd. by 20%. -->
+		<!-- For 1 h., increases Max HP, MP, and CP by 40%. Increases P./ M. Def. by 20%. Increases Speed by 20%. Increases M. Atk. by 10%. Increases magic Casting Spd. by 20%. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1110,7 +1110,7 @@
 		</effects>
 	</skill>
 	<skill id="23160" toLevel="1" name="Michelangeloph's Blessing">
-		<!-- For 1 h., increases Max HP, MP, and CP by 40%. Increases P. Def. and M. Def. by 20%. Increases Speed by 20%. Increases the power of Prominent Damage through magic damage by 20%. Raises by 2 the occurrence rate of Prominent Damage through magic damage. -->
+		<!-- For 1 h., increases Max HP, MP, and CP by 40%. Increases P./ M. Def. by 20%. Increases Speed by 20%. Increases the power of Prominent Damage through magic damage by 20%. Raises by 2 the occurrence rate of Prominent Damage through magic damage. -->
 		<icon>BranchSys.icon.br_xmas_weapon_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1165,7 +1165,7 @@
 		</effects>
 	</skill>
 	<skill id="23161" toLevel="1" name="Rudolphina's Blessing - Maintain Vitality">
-		<!-- State in which the Vitality Stage is maintained. -->
+		<!-- Maintains the Vitality amount. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1218,7 +1218,7 @@
 		</effects>
 	</skill>
 	<skill id="23163" toLevel="1" name="Turkey's Big Mistake">
-		<!-- Increases Max HP, MP, and CP by 50% for 1 h. Increases P. Atk., M. Atk., P. Def., and M. Def. by 20%. Increases Speed by 30%. -->
+		<!-- For 1 h., Max HP/ MP/ CP +50%, P./ M. Atk. and P./ M. Def. +20%, Speed +30%. -->
 		<icon>BranchSys.icon.br_turkey_buff_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1379,7 +1379,7 @@
 		</effects>
 	</skill>
 	<skill id="23168" toLevel="1" name="Art of Seduction">
-		<!-- Increases party members' Max HP by 30%, Max MP by 30%, Max CP by 30%, P. Def. by 30%, M. Def. by 30%, Spd. by 20, and P. Atk. by 10%, and M. Atk. by 20%, and decreases MP consumption during skill use by 15% for 20 min. Cooldown 5 min. Consumes 10 Rose Essences during skill use. -->
+		<!-- For 30 min., a party member's Max HP +30%, Max MP +30%, Max CP +30%, P. Def. +30%, M. Def. +30%, Speed +20, P. Atk. +10%, M. Atk. +20%, Skill MP Consumption -15%. Cooldown: 5 min. Consumes 10 Rose Essences. -->
 		<icon>BranchSys2.icon.br_rosalia_rose_red_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1497,8 +1497,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23171" toLevel="1" name="Agathion Cute Trick - Phoenix">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23171" toLevel="1" name="Phoenix Agathion Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1513,7 +1513,7 @@
 		</conditions>
 	</skill>
 	<skill id="23172" toLevel="1" name="Phoenix Agathion Special Skill: Nirvana Cycle">
-		<!-- Momentarily restores all HP, MP, and CP using the power of the phoenix, and becomes invincible for 5 sec. Can only be used when HP is below 30%. Cooldown is 12 h. -->
+		<!-- Instantly restores HP/ MP/ CP and grants invincibility for 5 sec. Can be used only when HP is lower than 30%. Cooldown: 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1570,8 +1570,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23173" toLevel="1" name="Phoenix Agathion Special Skill: Mountain Echoes">
-		<!-- Cancels all debuffs using the power of the phoenix. Cooldown is 4 h. -->
+	<skill id="23173" toLevel="1" name="Agathion Phoenix' Special Skill: Phoenix Cleanse">
+		<!-- Removes all debuffs using the power of the phoenix. Cooldown: 4 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
@@ -1623,7 +1623,7 @@
 		</effects>
 	</skill>
 	<skill id="23175" toLevel="1" name="Soul Stealth">
-		<!-- Hides for 5 sec., then for 2 min., bestows the ability not to receive preemptive attacks from monsters. Decreases Speed by 50% while the skill is in effect. Soul Stealth can only be used when selecting then "Zombie Agathion Resurrection" while dead. Cooldown is 12 h. -->
+		<!-- The character becomes invisible for 5 sec. after resurrection, and is not attacked by monsters for 2 min. Speed -50%. Can only be used when selecting Zombie Agathion Resurrection while dead. Cooldown: 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1673,7 +1673,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23177" toLevel="1" name="Soul Stealth">
-		<!-- For 2 min., bestows the ability not to receive preemptive attacks from monsters. Decreases Speed by 50% while the skill is in effect. -->
+		<!-- The character is not attacked by monsters for 2 min. Speed -50%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1698,7 +1698,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23178" toLevel="1" name="Soul Stealth">
-		<!-- For 2 min., bestows the ability not to receive preemptive attacks from monsters. Decreases Speed by 50% while the skill is in effect. -->
+		<!-- The character is not attacked by monsters for 2 min. Speed -50%. -->
 		<icon>icon.skill0411</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1765,8 +1765,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23181" toLevel="1" name="Three-headed Dragon Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23181" toLevel="1" name="Agathion Three-headed Dragon: Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1781,7 +1781,7 @@
 		</conditions>
 	</skill>
 	<skill id="23182" toLevel="1" name="Three-headed Dragon Agathion Special Skill: Wind Walk">
-		<!-- Increases Spd. by 33 for 20 min. Cooldown is 1 h. -->
+		<!-- For 20 min., Speed +33. Skill Cooldown: 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>

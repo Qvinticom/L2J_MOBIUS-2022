@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6700" toLevel="1" name="Ball Trapping Orodriel Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
@@ -17,7 +17,7 @@
 		</conditions>
 	</skill>
 	<skill id="6701" toLevel="1" name="Penalty Kick Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
@@ -100,7 +100,7 @@
 		</effects>
 	</skill>
 	<skill id="6705" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>50</activateRate>
@@ -196,7 +196,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6710" toLevel="1" name="Etis Haste">
-		<!-- Atk. Spd. increases by 10%. -->
+		<!-- Atk. Spd. +10%. -->
 		<abnormalTime>30</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>1000</effectPoint>
@@ -306,7 +306,7 @@
 		</effects>
 	</skill>
 	<skill id="6717" toLevel="1" name="Berserker Spirit of Elcadia">
-		<!-- For 10 min., reduces party members' P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
+		<!-- For 10 min., a party member's P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -359,7 +359,7 @@
 		</effects>
 	</skill>
 	<skill id="6718" toLevel="1" name="Death Whisper of Elcadia">
-		<!-- Increases Critical Damage by 35% for 10 min. -->
+		<!-- For 10 min., Critical Damage for standard attacks +35%. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -384,7 +384,7 @@
 		</effects>
 	</skill>
 	<skill id="6719" toLevel="1" name="Guidance of Elcadia">
-		<!-- Increases Accuracy by 4 for 10 min. -->
+		<!-- For 10 min., P. Accuracy +4. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -409,7 +409,7 @@
 		</effects>
 	</skill>
 	<skill id="6720" toLevel="1" name="Focus of Elcadia">
-		<!-- Increases critical attack rate by 30% for 10 min. -->
+		<!-- For 10 min., Critical Rate for standard attacks +30%. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -484,7 +484,7 @@
 		</effects>
 	</skill>
 	<skill id="6723" toLevel="1" name="Concentration of Elcadia">
-		<!-- Decreases magic cancel damage by 53 for 20 min. -->
+		<!-- Casting Interruption Rate -53 for 20 min. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -743,8 +743,8 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6734" toLevel="1" name="Energy of Destruction">
-		<!-- The character is poisoned, for 5 sec. the enemy's HP -800 per sec. Inflicted status: Infection (Bleed, Poison). -->
+	<skill id="6734" toLevel="1" name="Destructive Energy">
+		<!-- The character is poisoned, for 5 sec. the enemy's HP -800 per sec.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0129</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -766,7 +766,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6735" toLevel="1" name="Petrifies the target.">
-		<!-- Petrified and unable to move temporarily. -->
+		<!-- Petrified and unable to move. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-1000</effectPoint>
@@ -827,7 +827,7 @@
 		</effects>
 	</skill>
 	<skill id="6738" toLevel="1" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>80</mpConsume>
@@ -895,7 +895,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6743" toLevel="1" name="Dark Wound">
-		<!-- Dark Resistance is decreased. HP -200 every sec. because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Dark Resistance is decreased. HP -200 every sec. because of bleeding.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1026,7 +1026,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6748" toLevel="1" name="Stun Attack">
-		<!-- Stuns the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1055,7 +1055,7 @@
 				<criticalChance>20</criticalChance>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1166,7 +1166,7 @@
 		</effects>
 	</skill>
 	<skill id="6754" toLevel="1" name="Bleed">
-		<!-- HP -200 every sec. because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- HP -200 every sec. because of bleeding.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1495,7 +1495,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6768" toLevel="1" name="Stun Attack">
-		<!-- Stuns the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1525,12 +1525,12 @@
 				<criticalChance>20</criticalChance>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6769" toLevel="1" name="Petrify">
-		<!-- Petrified and unable to move temporarily. -->
+		<!-- Petrified and unable to move. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1661,7 +1661,7 @@
 		</effects>
 	</skill>
 	<skill id="6774" toLevel="1" name="Stun Attack">
-		<!-- Stuns the target for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 10 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1690,7 +1690,7 @@
 				<criticalChance>20</criticalChance>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1719,7 +1719,7 @@
 		</effects>
 	</skill>
 	<skill id="6776" toLevel="1" name="Paralysis">
-		<!-- Gradually freezes the enemy's body for 10 sec. When it's frozen, inflicts Paralysis for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Gradually freezes the enemy's body for 10 sec. When it's frozen, inflicts Paralysis for 10 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>80</activateRate>
@@ -1765,7 +1765,7 @@
 		</endEffects>
 	</skill>
 	<skill id="6777" toLevel="1" name="Bleeding Gash">
-		<!-- The enemy slows down for 20 sec., HP -200 every sec. because of bleeding, after that the enemy is paralyzed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- The enemy slows down for 20 sec., their HP -200 per sec. because of the bleeding. After that the enemy is paralyzed for 10 sec.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -1796,7 +1796,7 @@
 				<ticks>1</ticks>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="Speed">
 				<amount>-20</amount>
@@ -1825,7 +1825,7 @@
 		</effects>
 	</skill>
 	<skill id="6779" toLevel="1" name="Paralysis">
-		<!-- Inflicts Paralysis. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime> <!-- FIXME: value unconfirmed -->
@@ -1844,7 +1844,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>

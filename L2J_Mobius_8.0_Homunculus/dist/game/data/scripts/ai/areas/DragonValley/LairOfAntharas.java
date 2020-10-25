@@ -79,7 +79,7 @@ public class LairOfAntharas extends AbstractNpcAI
 			{
 				npc.setScriptValue(1);
 			}
-			npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.WHO_S_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU);
+			npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.WHO_S_THERE_IF_YOU_DISTURB_THE_GREAT_EARTH_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU);
 		}
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}

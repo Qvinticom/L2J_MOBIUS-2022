@@ -9,8 +9,13 @@
 	</item>
 	<item>
 		<ingredient count="1" id="48954" /> <!-- Artifact Book - Level 1 -->
-		<ingredient count="560000000" id="57" /> <!-- Adena -->
+		<ingredient count="100" id="80000" /> <!-- Artifact Fragment -->
 		<production count="1" id="48955" /> <!-- Artifact Book - Level 2 -->
+	</item>
+	<item>
+		<ingredient count="1" id="48955" /> <!-- Artifact Book - Level 2 -->
+		<ingredient count="100" id="80000" /> <!-- Artifact Fragment -->
+		<production count="1" id="48956" /> <!-- Artifact Book - Level 3 -->
 	</item>
 	<item>
 		<ingredient count="600000000" id="57" /> <!-- Adena -->
@@ -19,5 +24,13 @@
 	<item>
 		<ingredient count="600000000" id="57" /> <!-- Adena -->
 		<production count="1" id="48981" /> <!-- Artifact - Defense Attribute Balance -->
+	</item>
+	<item>
+		<ingredient count="1" id="48980" /> <!-- Artifact - Attack Attribute Balance -->
+		<production count="600000000" id="57" /> <!-- Adena -->
+	</item>
+	<item>
+		<ingredient count="1" id="48981" /> <!-- Artifact - Defense Attribute Balance -->
+		<production count="600000000" id="57" /> <!-- Adena -->
 	</item>
 </list>

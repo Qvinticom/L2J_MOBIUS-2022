@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="15400" name="Vitality Belt (Event)" additionalName="60-day" type="Armor">
-		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
+		<!-- Vitality Belt. Can be enchanted with Scroll: Enchant Vitality Belt. When enchanted, increases the duration of Vitality Maintenance effect and decreases its cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -21,7 +21,7 @@
 		<set name="time" val="86400" />
 	</item>
 	<item id="15401" name="Vitality Belt (Event)" additionalName="90-day" type="Armor">
-		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
+		<!-- Vitality Belt. Can be enchanted with Scroll: Enchant Vitality Belt. When enchanted, increases the duration of Vitality Maintenance effect and decreases its cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -41,7 +41,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="15402" name="Vitality Belt (Event)" additionalName="Permanent" type="Armor">
-		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
+		<!-- Vitality Belt. Can be enchanted with Scroll: Enchant Vitality Belt. When enchanted, increases the duration of Vitality Maintenance effect and decreases its cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -95,7 +95,7 @@
 		</stats>
 	</item>
 	<item id="15404" name="6th Anniversary Party Gift Box (2003)" additionalName="Event" type="EtcItem">
-		<!-- Contains the 6th Anniversary Party Cube, a 30-day expiratory item. -->
+		<!-- Double-click to obtain Anniversary Party Cube (30-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -112,11 +112,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="15418" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 30-day -->
+			<item id="15418" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="15405" name="6th Anniversary Party Gift Box (2004)" additionalName="Event" type="EtcItem">
-		<!-- Contains the 6th Anniversary Party Cube, a 25-day expiratory item. -->
+		<!-- Double-click to obtain Anniversary Party Cube (25-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -133,11 +133,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="15419" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 25-day -->
+			<item id="15419" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 25-day -->
 		</capsuled_items>
 	</item>
 	<item id="15406" name="6th Anniversary Party Gift Box (2005)" additionalName="Event" type="EtcItem">
-		<!-- Contains the 6th Anniversary Party Cube, a 20-day expiratory item. -->
+		<!-- Double-click to obtain Anniversary Party Cube (20-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -154,11 +154,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="15420" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 20-day -->
+			<item id="15420" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 20-day -->
 		</capsuled_items>
 	</item>
 	<item id="15407" name="6th Anniversary Party Gift Box (2006)" additionalName="Event" type="EtcItem">
-		<!-- Contains the 6th Anniversary Party Cube, a 15-day expiratory item. -->
+		<!-- Double-click to obtain Anniversary Party Cube (15-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -175,11 +175,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="15421" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 15-day -->
+			<item id="15421" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="15408" name="6th Anniversary Party Gift Box (2007)" additionalName="Event" type="EtcItem">
-		<!-- Contains the 6th Anniversary Party Cube, a 10-day expiratory item. -->
+		<!-- Double-click to obtain Anniversary Party Cube (10-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -197,11 +197,11 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="14400" />
 		<capsuled_items>
-			<item id="15422" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 10-day -->
+			<item id="15422" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 10-day -->
 		</capsuled_items>
 	</item>
 	<item id="15409" name="6th Anniversary Party Gift Box (2008)" additionalName="Event" type="EtcItem">
-		<!-- Contains the 6th Anniversary Party Cube, a 5-day expiratory item. -->
+		<!-- Double-click to obtain Anniversary Party Cube (5-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -219,11 +219,11 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="7200" />
 		<capsuled_items>
-			<item id="15423" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 5-day -->
+			<item id="15423" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 5-day -->
 		</capsuled_items>
 	</item>
 	<item id="15410" name="6th Anniversary Party Gift Box (2009)" additionalName="Event" type="EtcItem">
-		<!-- Contains the 6th Anniversary Party Cube, a 3-day expiratory item. -->
+		<!-- Double-click to obtain Anniversary Party Cube (3-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -241,11 +241,11 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
 		<capsuled_items>
-			<item id="15424" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 3-day -->
+			<item id="15424" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 3-day -->
 		</capsuled_items>
 	</item>
 	<item id="15411" name="6th Anniversary Party Gift Set (2003)" additionalName="Event" type="EtcItem">
-		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 30-day expiratory item. -->
+		<!-- Hero's Treasure Chest. Double-click to obtain Anniversary Party Cube (30-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -264,11 +264,11 @@
 		<set name="time" val="43200" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
-			<item id="15418" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 30-day -->
+			<item id="15418" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="15412" name="6th Anniversary Party Gift Set (2004)" additionalName="Event" type="EtcItem">
-		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 25-day expiratory item. -->
+		<!-- Hero's Treasure Chest. Double-click to obtain Anniversary Party Cube (25-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -287,11 +287,11 @@
 		<set name="time" val="36000" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
-			<item id="15419" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 25-day -->
+			<item id="15419" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 25-day -->
 		</capsuled_items>
 	</item>
 	<item id="15413" name="6th Anniversary Party Gift Set (2005)" additionalName="Event" type="EtcItem">
-		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 20-day expiratory item. -->
+		<!-- Hero's Treasure Chest. Double-click to obtain Anniversary Party Cube (20-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -310,11 +310,11 @@
 		<set name="time" val="28800" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
-			<item id="15420" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 20-day -->
+			<item id="15420" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 20-day -->
 		</capsuled_items>
 	</item>
 	<item id="15414" name="6th Anniversary Party Gift Set (2006)" additionalName="Event" type="EtcItem">
-		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 15-day expiratory item. -->
+		<!-- Hero's Treasure Chest. Double-click to obtain Anniversary Party Cube (15-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -333,11 +333,11 @@
 		<set name="time" val="21600" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
-			<item id="15421" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 15-day -->
+			<item id="15421" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="15415" name="6th Anniversary Party Gift Set (2007)" additionalName="Event" type="EtcItem">
-		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 10-day expiratory item. -->
+		<!-- Hero's Treasure Chest. Double-click to obtain Anniversary Party Cube (10-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -356,11 +356,11 @@
 		<set name="time" val="14400" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
-			<item id="15422" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 10-day -->
+			<item id="15422" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 10-day -->
 		</capsuled_items>
 	</item>
 	<item id="15416" name="6th Anniversary Party Gift Set (2008)" additionalName="Event" type="EtcItem">
-		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 5-day expiratory item. -->
+		<!-- Hero's Treasure Chest. Double-click to obtain Anniversary Party Cube (5-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -379,11 +379,11 @@
 		<set name="time" val="7200" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
-			<item id="15423" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 5-day -->
+			<item id="15423" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 5-day -->
 		</capsuled_items>
 	</item>
 	<item id="15417" name="6th Anniversary Party Gift Set (2009)" additionalName="Event" type="EtcItem">
-		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 3-day expiratory item. -->
+		<!-- Hero's Treasure Chest. Double-click to obtain Anniversary Party Cube (3-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -402,11 +402,11 @@
 		<set name="time" val="4320" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
-			<item id="15424" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 3-day -->
+			<item id="15424" min="1" max="1" chance="100" /> <!-- Anniversary Party Cube (Event) - 3-day -->
 		</capsuled_items>
 	</item>
 	<item id="15418" name="6th Anniversary Party Cube (Event)" additionalName="30-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- Double-click to obtain a gift. What will you receive? That depends on how lucky you are. Can be used once per day. Cooldown: 23 h. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -425,7 +425,7 @@
 		</skills>
 	</item>
 	<item id="15419" name="6th Anniversary Party Cube (Event)" additionalName="25-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- Double-click to obtain a gift. What will you receive? That depends on how lucky you are. Can be used once per day. Cooldown: 23 h. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -444,7 +444,7 @@
 		</skills>
 	</item>
 	<item id="15420" name="6th Anniversary Party Cube (Event)" additionalName="20-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- Double-click to obtain a gift. What will you receive? That depends on how lucky you are. Can be used once per day. Cooldown: 23 h. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -463,7 +463,7 @@
 		</skills>
 	</item>
 	<item id="15421" name="6th Anniversary Party Cube (Event)" additionalName="15-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- Double-click to obtain a gift. What will you receive? That depends on how lucky you are. Can be used once per day. Cooldown: 23 h. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -482,7 +482,7 @@
 		</skills>
 	</item>
 	<item id="15422" name="6th Anniversary Party Cube (Event)" additionalName="10-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- Double-click to obtain a gift. What will you receive? That depends on how lucky you are. Can be used once per day. Cooldown: 23 h. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -501,7 +501,7 @@
 		</skills>
 	</item>
 	<item id="15423" name="6th Anniversary Party Cube (Event)" additionalName="5-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- Double-click to obtain a gift. What will you receive? That depends on how lucky you are. Can be used once per day. Cooldown: 23 h. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -520,7 +520,7 @@
 		</skills>
 	</item>
 	<item id="15424" name="6th Anniversary Party Cube (Event)" additionalName="3-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- Double-click to obtain a gift. What will you receive? That depends on how lucky you are. Can be used once per day. Cooldown: 23 h. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -539,7 +539,7 @@
 		</skills>
 	</item>
 	<item id="15425" name="Hero's Treasure Chest" additionalName="Event" type="EtcItem">
-		<!-- Contains an armor set Pack (30-day), a Minion Coupon, and a Hero's Escape Point item. -->
+		<!-- Double-click to obtain Package: Equipment Set (30-day), Minion Coupon and Hero's Escape Point. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -553,13 +553,13 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="15211" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
+			<item id="15211" min="1" max="1" chance="100" /> <!-- Package: Equipment Set (30-day) - 30-day -->
 			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
 			<item id="15426" min="1" max="1" chance="100" /> <!-- Hero's Escape Point - Event -->
 		</capsuled_items>
 	</item>
 	<item id="15426" name="Hero's Escape Point" additionalName="Event" type="EtcItem">
-		<!-- When Double-clicked, 10000 PA Points can be acquired. Cooldown is 7 days. -->
+		<!-- Double-clicked to obtain 10,000 PA Points. Cooldown: 7 days. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -578,7 +578,7 @@
 		</skills>
 	</item>
 	<item id="15427" name="6th Anniversary Party Cake" additionalName="Event" type="EtcItem">
-		<!-- For 1 hour, Vitality is recovered when acquiring XP. Cooldown is 12 hours. Vitality item with limited usage. -->
+		<!-- For 1 h., Vitality is recovered when acquiring XP. Cooldown is 12 h. Vitality item with limited usage. -->
 		<set name="icon" val="icon.event_six_party_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -597,7 +597,7 @@
 		</skills>
 	</item>
 	<item id="15428" name="6th Anniversary Party Earring (Event)" additionalName="30-day" type="Armor">
-		<!-- 30-day. Increases MP by 31 and Stun/ Mental Attack Resistance by 20%. Increases Stun/ Mental Atk. Rate by 20%. Has the Vampiric Rage Effect. Only one effect is applied even when the two identical earrings are worn. -->
+		<!-- Available for 30 d. Max MP +31, Stun Atk. Rate/ Resistance +20%, Mental Atk. Rate/ Resistance +20%. Activates Vampiric Rage effect. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.event_six_party_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -624,7 +624,7 @@
 		</stats>
 	</item>
 	<item id="15429" name="6th Anniversary Party Belt (Event)" additionalName="7-day" type="Armor">
-		<!-- Vitality is maintained for 30 min. 7-day. Cooldown is 23 hours. Vitality item with limited usage. -->
+		<!-- Maintains the Vitality amount for 30 min. Cooldown: 23 h. Available for 7 d. Vitality item with limited usage. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -766,7 +766,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
@@ -782,7 +782,7 @@
 		</stats>
 	</item>
 	<item id="15437" name="Transformation Scroll Pack" type="EtcItem">
-		<!-- Gives a chance to acquire one of the following transformation scrolls: Onyx Beast, Doom Wraith, and Grail Apostle. -->
+		<!-- A chance to get one of transformation scroll: Onyx Beast, Doom Wraith, Grail Apostle. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -802,7 +802,7 @@
 		</skills>
 	</item>
 	<item id="15438" name="Vitality Maintaining Potion (10-min.)" type="EtcItem">
-		<!-- Vitality is maintained for 10 min. Cooldown is 30 min. Vitality item with limited usage. -->
+		<!-- Maintains the Vitality amount for 10 min. Cooldown: 30 min. -->
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -837,7 +837,7 @@
 		</skills>
 	</item>
 	<item id="15440" name="Vitality Maintaining Potion (30-min.)" type="EtcItem">
-		<!-- Vitality is maintained for 30 min. Cooldown is 60 min. Vitality item with limited usage. Effect remains even after death. -->
+		<!-- Maintains the Vitality amount for 30 min. Cooldown: 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -899,7 +899,7 @@
 		</skills>
 	</item>
 	<item id="15443" name="Super Strong Giant's Mask" type="Armor">
-		<!-- Super Strong Giant's Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Super Strong Giant's Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 h. -->
 		<set name="icon" val="icon.br_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -922,7 +922,7 @@
 		</skills>
 	</item>
 	<item id="15444" name="Shriek Mask" type="Armor">
-		<!-- Shriek Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Shriek Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 h. -->
 		<set name="icon" val="icon.ev_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -945,7 +945,7 @@
 		</skills>
 	</item>
 	<item id="15445" name="Red Devil Mask" type="Armor">
-		<!-- Red Devil Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Red Devil Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 h. -->
 		<set name="icon" val="icon.ev_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -968,7 +968,7 @@
 		</skills>
 	</item>
 	<item id="15446" name="Mummy Mask" type="Armor">
-		<!-- Mummy Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Mummy Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown: 1 h. -->
 		<set name="icon" val="icon.ev_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -991,7 +991,7 @@
 		</skills>
 	</item>
 	<item id="15447" name="Alien Mask" type="Armor">
-		<!-- Can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 h. -->
 		<set name="icon" val="icon.ev_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1033,7 +1033,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15449" name="Shiny Alien Mask" type="Armor">
-		<!-- Can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 h. -->
 		<set name="icon" val="icon.ev_shiny_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1056,7 +1056,7 @@
 		</skills>
 	</item>
 	<item id="15450" name="Shiny Reanimated Corpse Mask" type="Armor">
-		<!-- Shiny Reanimated Corpse Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 2 hours. -->
+		<!-- Shiny Reanimated Corpse Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 2 h. -->
 		<set name="icon" val="icon.ev_shiny_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1079,7 +1079,7 @@
 		</skills>
 	</item>
 	<item id="15451" name="Shiny Shriek Mask" type="Armor">
-		<!-- Shiny Shriek Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Shiny Shriek Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 h. -->
 		<set name="icon" val="icon.ev_shiny_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1102,7 +1102,7 @@
 		</skills>
 	</item>
 	<item id="15452" name="Shiny Red Devil Mask" type="Armor">
-		<!-- Shiny Red Devil Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Shiny Red Devil Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 h. -->
 		<set name="icon" val="icon.ev_shiny_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1125,7 +1125,7 @@
 		</skills>
 	</item>
 	<item id="15453" name="Shiny Mummy Mask" type="Armor">
-		<!-- Shiny Mummy Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Shiny Mummy Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 h. -->
 		<set name="icon" val="icon.ev_shiny_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1148,7 +1148,7 @@
 		</skills>
 	</item>
 	<item id="15454" name="Shiny Alien Mask Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Alien Mask. -->
+		<!-- Double-click to obtain Shiny Alien Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1168,7 +1168,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15455" name="Shiny Reanimated Corpse Mask Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Reanimated Corpse Mask. -->
+		<!-- Double-click to obtain Shiny Reanimated Corpse Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1188,7 +1188,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15456" name="Shiny Shriek Mask Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Shriek Mask. -->
+		<!-- Double-click to obtain Shiny Shriek Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1208,7 +1208,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15457" name="Shiny Red Devil Mask Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Red Devil Mask. -->
+		<!-- Double-click to obtain Shiny Red Devil Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1228,7 +1228,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15458" name="Shiny Mummy Mask Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Mummy Mask. -->
+		<!-- Double-click to obtain Shiny Mummy Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1248,7 +1248,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15459" name="Halloween Nectar Pumpkin Pack" additionalName="Event" type="EtcItem">
-		<!-- Halloween Nectar Pumpkin Pack. Contains 1 Halloween nectar pumpkin. -->
+		<!-- Double-click to obtain Halloween Nectar Pumpkin. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1268,7 +1268,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15460" name="Halloween King Pumpkin Pack" additionalName="Event" type="EtcItem">
-		<!-- Halloween King Pumpkin Pack. Contains 1 Halloween king pumpkin. -->
+		<!-- Double-click to obtain Halloween King Pumpkin. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1343,7 +1343,7 @@
 		</skills>
 	</item>
 	<item id="15464" name="Golden Jack O'Lantern Mask" additionalName="7-day" type="Armor">
-		<!-- Golden Jack O'Lantern Mask. Shines brightly. Cooldown is 23 hour. -->
+		<!-- Golden Jack O'Lantern Mask. Shines brightly. Cooldown is 23 h. -->
 		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1364,7 +1364,7 @@
 		</skills>
 	</item>
 	<item id="15465" name="Halloween Nectar Pumpkin Pack (Event)" additionalName="Event" type="EtcItem">
-		<!-- Halloween Nectar Pumpkin Pack. Contains 1 Halloween nectar pumpkin. -->
+		<!-- Double-click to obtain Halloween Nectar Pumpkin. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1384,7 +1384,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15466" name="Halloween King Pumpkin Pack (Event)" additionalName="Event" type="EtcItem">
-		<!-- Halloween King Pumpkin Pack. Contains 1 Halloween king pumpkin. -->
+		<!-- Double-click to obtain Halloween King Pumpkin. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1565,7 +1565,7 @@
 		</skills>
 	</item>
 	<item id="15476" name="Blessed Golden Spice" type="EtcItem">
-		<!-- Better quality feed that has a chance to tame animals on the Beast Farm with just one application. -->
+		<!-- Better quality feed that has a strong chance to tame animals on the Beast Farm. -->
 		<set name="icon" val="icon.etc_golden_spice_blessed_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
@@ -1585,7 +1585,7 @@
 		</skills>
 	</item>
 	<item id="15477" name="Blessed Crystal Spice" type="EtcItem">
-		<!-- Better quality feed that has a chance to tame animals on the Beast Farm with just one application. -->
+		<!-- Better quality feed that has a strong chance to tame animals on the Beast Farm. -->
 		<set name="icon" val="icon.etc_crystal_spice_blessed_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
@@ -1669,7 +1669,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15482" name="Golden Spice Crate" type="EtcItem">
-		<!-- This box hold up to 50 Golden Spices. When converted, there is also a chance that Special Feed will be received. -->
+		<!-- Double-click to obtain Golden Spice (50 pcs.). There is a chance to get better spice. -->
 		<set name="icon" val="icon.etc_golden_spice_comp_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
@@ -1687,7 +1687,7 @@
 		</skills>
 	</item>
 	<item id="15483" name="Crystal Spice Compressed Pack" type="EtcItem">
-		<!-- Small pack with a compressed Crystal Spice. When you use it, it changes into a 50 Crystal Spices. Special Feed may also come out. -->
+		<!-- Double-click to obtain Crystal Spice (50 pcs.). There is a chance to get better spice. -->
 		<set name="icon" val="icon.etc_crystal_spice_comp_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />

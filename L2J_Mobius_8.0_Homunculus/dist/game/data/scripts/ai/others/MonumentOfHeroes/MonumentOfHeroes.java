@@ -49,6 +49,7 @@ public class MonumentOfHeroes extends AbstractNpcAI
 	private static final int HERO_CLOAK = 30372;
 	private static final int GLORIOUS_CLOAK = 30373;
 	private static final int WINGS_OF_DESTINY_CIRCLET = 6842;
+	private static final int HERO_RUNE = 48551;
 	private static final int[] WEAPONS =
 	{
 		30392, // Infinity Shaper (dagger)
@@ -179,6 +180,29 @@ public class MonumentOfHeroes extends AbstractNpcAI
 				else
 				{
 					htmltext = "MonumentOfHeroes-circletNo.html";
+				}
+				break;
+			}
+			case "heroRune":
+			{
+				if (Hero.getInstance().isHero(player.getObjectId()))
+				{
+					if (hasQuestItems(player, HERO_RUNE))
+					{
+						htmltext = "MonumentOfHeroes-runeHave.html";
+					}
+					else if (!player.isInventoryUnder80(false))
+					{
+						player.sendPacket(SystemMessageId.NOT_ENOUGH_SPACE_IN_THE_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+					}
+					else
+					{
+						giveItems(player, HERO_RUNE, 1);
+					}
+				}
+				else
+				{
+					htmltext = "MonumentOfHeroes-runeNo.html";
 				}
 				break;
 			}

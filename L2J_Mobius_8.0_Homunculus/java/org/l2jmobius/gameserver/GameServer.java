@@ -76,7 +76,6 @@ import org.l2jmobius.gameserver.data.xml.impl.InitialShortcutData;
 import org.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
 import org.l2jmobius.gameserver.data.xml.impl.KarmaData;
 import org.l2jmobius.gameserver.data.xml.impl.LuckyGameData;
-import org.l2jmobius.gameserver.data.xml.impl.MonsterBookData;
 import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
@@ -326,7 +325,6 @@ public class GameServer
 		FakePlayerData.getInstance();
 		FakePlayerChatManager.getInstance();
 		SpawnData.getInstance();
-		MonsterBookData.getInstance();
 		WalkingManager.getInstance();
 		StaticObjectData.getInstance();
 		ItemAuctionManager.getInstance();

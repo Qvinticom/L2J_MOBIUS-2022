@@ -755,7 +755,7 @@ public class Trasken extends AbstractNpcAI
 				_collapseTask = null;
 			}
 			final int time = 540000;
-			zone.getPlayersInside().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 540, 0, NpcStringId.REMAINING_TIME)));
+			zone.getPlayersInside().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 540, 0, NpcStringId.TIME_LEFT)));
 			_collapseTask = ThreadPool.schedule(() -> Fail(true), time);
 		}
 		return super.onEnterZone(creature, zone);

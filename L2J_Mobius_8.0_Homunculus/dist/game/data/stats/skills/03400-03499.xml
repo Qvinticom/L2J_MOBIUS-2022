@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3400" toLevel="1" name="Stat Enhancing Earring">
-		<!-- Increases the power of mental attacks. -->
+		<!-- Increases Confusion Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -12,7 +12,7 @@
 		</effects>
 	</skill>
 	<skill id="3401" toLevel="1" name="Dynasty Resistance Necklace">
-		<!-- Increases mental Attack Resistance. -->
+		<!-- Increases Confusion Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -23,7 +23,7 @@
 		</effects>
 	</skill>
 	<skill id="3402" toLevel="1" name="Dynasty Resistance Ring">
-		<!-- Increases mental Attack Resistance. -->
+		<!-- Increases Confusion Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -34,7 +34,7 @@
 		</effects>
 	</skill>
 	<skill id="3403" toLevel="1" name="Dynasty Resistance Earring">
-		<!-- Increases mental Attack Resistance. -->
+		<!-- Increases Confusion Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -45,7 +45,7 @@
 		</effects>
 	</skill>
 	<skill id="3404" toLevel="1" name="Mysterious Effect">
-		<!-- Enlarges the user's head. -->
+		<!-- Makes your head larger. -->
 		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
@@ -160,7 +160,7 @@
 		</effects>
 	</skill>
 	<skill id="3410" toLevel="1" name="Blue Talisman - Damage Reflection">
-		<!-- Reflects a portion of physical melee damage received back onto the enemy when using a Talisman. -->
+		<!-- Reflects some of the received damage back to the enemy. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
@@ -184,7 +184,7 @@
 		</effects>
 	</skill>
 	<skill id="3411" toLevel="1" name="Special Ability: Focus">
-		<!-- Increases Max HP by 10%, and Critical Rate. Inflicts additional damage during PvP. -->
+		<!-- Max HP +10%, PvP damage +$s1. Increases Critical Rate for standard attacks. -->
 		<icon>icon.ensoul_big_old</icon>
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
@@ -235,7 +235,7 @@
 		</effects>
 	</skill>
 	<skill id="3413" toLevel="1" name="Dynasty Leather Armor">
-		<!-- Increases P. Atk./ Evasion Rate/ Max HP/ Dark Resistance. -->
+		<!-- Increases P. Accuracy, P. Evasion, Max HP, and Dark Resistance. -->
 		<icon>icon.armor_t92_u_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -288,7 +288,7 @@
 		</effects>
 	</skill>
 	<skill id="3415" toLevel="1" name="Dynasty Leather Armor">
-		<!-- Increases P. Atk/ Max HP/ Critical Rate/ Critical Damage/ Dark Resistance. -->
+		<!-- Increases P. Atk., Max HP, Critical Rate/ Damage for standard attacks, and Dark Resistance. -->
 		<icon>icon.armor_t92_ub_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -379,7 +379,7 @@
 		</effects>
 	</skill>
 	<skill id="3419" toLevel="1" name="Magic Immunity">
-		<!-- Increases M. Def. when equipped with a shirt -->
+		<!-- Increases M. Def. when using a shirt. -->
 		<icon>icon.etc_stripe_shirts_s_i05</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -440,7 +440,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="3423" toLevel="1" name="Agathion Summon - Little Angel">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -457,7 +457,7 @@
 		</effects>
 	</skill>
 	<skill id="3424" toLevel="1" name="Agathion Summon - Little Devil">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -474,7 +474,7 @@
 		</effects>
 	</skill>
 	<skill id="3425" toLevel="1" name="Agathion Summon - Rudolph">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -491,7 +491,7 @@
 		</effects>
 	</skill>
 	<skill id="3426" toLevel="1" name="Maximum Ability">
-		<!-- A critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP Consumption during skill use, for you and your party members. -->
+		<!-- With a certain chance, increases all party members' P./ M. Atk., Received Healing, and decreases MP Consumption after a critical attack. -->
 		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
@@ -512,7 +512,7 @@
 		</effects>
 	</skill>
 	<skill id="3427" toLevel="1" name="Infinity Rapier Special Ability">
-		<!-- Decreases the enemy's P. Def. on a critical attack. Increases Max HP, Max MP, Max CP. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. In addition, when a critical hit occurs during a regular attack, there is a chance that the capacity of a party member's skills will be maximized. -->
+		<!-- Decreases enemy's P. Def. after a critical attack. Increases Max HP/ MP/ CP and PvP Damage. Reflects some of the received damage back to the enemy. In addition, when a critical hit occurs after a standard attack, there is a chance that the capacity of a party member's skills will be maximized. -->
 		<icon>icon.weapon_infinity_rapier_i00</icon>
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
@@ -561,7 +561,7 @@
 		</effects>
 	</skill>
 	<skill id="3428" toLevel="1" name="Blue Talisman - Explosion">
-		<!-- Increases the attacking power/ speed momentarily with the power of Talisman. -->
+		<!-- Momentarily increases P. Atk. and Speed, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -591,7 +591,7 @@
 		</effects>
 	</skill>
 	<skill id="3429" toLevel="1" name="Red Talisman - Life Force">
-		<!-- Regenerate HP and MP completely with the power of Talisman. -->
+		<!-- Fully restores HP/ MP, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -612,7 +612,7 @@
 		</effects>
 	</skill>
 	<skill id="3430" toLevel="1" name="White Talisman - Darkness">
-		<!-- Momentarily and greatly increases Dark Resistance with the power of Talisman. -->
+		<!-- Greatly increases Dark Resistance, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -638,7 +638,7 @@
 		</effects>
 	</skill>
 	<skill id="3431" toLevel="1" name="White Talisman - Storm">
-		<!-- Momentarily and greatly increases Wind Resistance with the power of Talisman. -->
+		<!-- Greatly increases Wind Resistance, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -664,7 +664,7 @@
 		</effects>
 	</skill>
 	<skill id="3432" toLevel="1" name="White Talisman - Water">
-		<!-- Momentarily and greatly increases Water Resistance with the power of Talisman. -->
+		<!-- Greatly increases Water Resistance, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -690,7 +690,7 @@
 		</effects>
 	</skill>
 	<skill id="3433" toLevel="1" name="White Talisman - Fire">
-		<!-- Momentarily and greatly increases Fire Resistance with the power of Talisman. -->
+		<!-- Greatly increases Fire Resistance, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -716,7 +716,7 @@
 		</effects>
 	</skill>
 	<skill id="3434" toLevel="1" name="White Talisman - Earth">
-		<!-- Momentarily and greatly increases Earth Resistance with the power of Talisman. -->
+		<!-- Greatly increases Earth Resistance, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -742,7 +742,7 @@
 		</effects>
 	</skill>
 	<skill id="3435" toLevel="1" name="White Talisman - Light">
-		<!-- Momentarily and greatly increases Holy Resistance with the power of Talisman. -->
+		<!-- Greatly increases Holy Resistance with the power of Talisman. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -791,7 +791,7 @@
 		</effects>
 	</skill>
 	<skill id="3437" toLevel="1" name="Blue Talisman - Magic Explosion">
-		<!-- Momentarily and greatly increases M. Atk. and M. Critical Rate with the power of Talisman. -->
+		<!-- Increases M. Atk. and M. Skill Critical Rate, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -821,7 +821,7 @@
 		</effects>
 	</skill>
 	<skill id="3438" toLevel="1" name="Blue Talisman - Greater Healing">
-		<!-- Momentarily and greatly increases the power of HP regeneration magic with the power of Talisman. -->
+		<!-- Increases Healing Power, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1519,7 +1519,7 @@
 		</effects>
 	</skill>
 	<skill id="3487" toLevel="1" name="Blue Talisman - P. Atk.">
-		<!-- Increases P. Atk. with the power of Talisman. -->
+		<!-- Increases P. Atk., when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1545,7 +1545,7 @@
 		</effects>
 	</skill>
 	<skill id="3488" toLevel="1" name="Blue Talisman - Shield Defense">
-		<!-- Increases Shield Defense with the power of Talisman. -->
+		<!-- Increases Shield Defense, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1597,7 +1597,7 @@
 		</effects>
 	</skill>
 	<skill id="3491" toLevel="1" name="Yellow Talisman - Evasion">
-		<!-- Increases Evasion when equipped. -->
+		<!-- Increases P. Evasion, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -1610,7 +1610,7 @@
 		</effects>
 	</skill>
 	<skill id="3492" toLevel="1" name="Yellow Talisman - Speed">
-		<!-- Increases Speed when equipped. -->
+		<!-- Increases Speed, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -1623,7 +1623,7 @@
 		</effects>
 	</skill>
 	<skill id="3493" toLevel="1" name="Yellow Talisman - HP Regeneration">
-		<!-- Increases HP Recovery Bonus when a talisman is equipped. -->
+		<!-- Increases HP Recovery Rate, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -1636,7 +1636,7 @@
 		</effects>
 	</skill>
 	<skill id="3494" toLevel="1" name="Yellow Talisman - CP Regeneration">
-		<!-- Increases CP Recovery Bonus when a talisman is equipped. -->
+		<!-- Increases CP Recovery Rate, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -1649,7 +1649,7 @@
 		</effects>
 	</skill>
 	<skill id="3495" toLevel="1" name="Yellow Talisman - Healing">
-		<!-- Increases power of HP regeneration magic when equipped. -->
+		<!-- Increases Healing Power, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -1661,8 +1661,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3496" toLevel="1" name="Red Talisman - HP/ CP Recovery">
-		<!-- Recover HP/ CP with the power of Talisman. -->
+	<skill id="3496" toLevel="1" name="Red Talisman - HP/CP Recovery">
+		<!-- Recovers HP/ CP, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i00</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
@@ -1687,7 +1687,7 @@
 		</effects>
 	</skill>
 	<skill id="3497" toLevel="1" name="Yellow Talisman - MP Regeneration">
-		<!-- Increases MP Recovery Bonus when a talisman is equipped. -->
+		<!-- Increases MP Recovery Rate, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -1699,8 +1699,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3498" toLevel="2" name="Special Ability: Light">
-		<!-- Increases Weight Gauge by 20%. -->
+	<skill id="3498" toLevel="2" name="Special Ability: Decrease Weight">
+		<!-- Increases Weight Limit by 20%. -->
 		<icon>icon.ensoul_big_old</icon>
 		<magicLevel>46</magicLevel>
 		<operateType>P</operateType>

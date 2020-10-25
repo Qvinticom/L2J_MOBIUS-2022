@@ -27,7 +27,7 @@
 		<skillList>
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -98,7 +98,7 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
@@ -644,13 +644,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6034" max="14063" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="1.531" /> <!-- Synthetic Cokes -->
-				<item id="37724" min="1" max="1" chance="0.075" /> <!-- Shilen's Energy -->
+				<item id="37724" min="1" max="1" chance="0.075" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="10.98" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="3.15" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27357" level="86" type="Monster" name="Lilim Priest">
@@ -696,12 +691,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3431" max="7996" chance="70" /> <!-- Adena -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
 			<spoil>
-				<item id="36558" min="1" max="1" chance="3.628" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="1.007" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Weapon Augmenting Stone -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -751,13 +744,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
-				<item id="19440" min="1" max="1" chance="1.233" /> <!-- Gemstone (R-grade) -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="19440" min="1" max="1" chance="1.233" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="7.127" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="2.153" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27359" level="87" type="Monster" name="Lilim Slayer">
@@ -799,13 +788,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="2.286" /> <!-- Synthetic Cokes -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="7.148" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="2.043" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27360" level="88" type="Monster" name="Lilim Great Magus">
@@ -851,13 +835,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5569" max="13008" chance="70" /> <!-- Adena -->
-				<item id="19440" min="1" max="1" chance="0.975" /> <!-- Gemstone (R-grade) -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="19440" min="1" max="1" chance="0.975" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="6.167" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="1.838" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27361" level="89" type="Monster" name="Lilim Royal Knight">
@@ -906,12 +886,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4516" max="10527" chance="70" /> <!-- Adena -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
 			<spoil>
-				<item id="36558" min="1" max="1" chance="4.793" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="1.383" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Weapon Augmenting Stone -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1076,13 +1054,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6034" max="14063" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="1.531" /> <!-- Synthetic Cokes -->
-				<item id="37724" min="1" max="1" chance="0.075" /> <!-- Shilen's Energy -->
+				<item id="37724" min="1" max="1" chance="0.075" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="10.98" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="3.15" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27366" level="86" type="Monster" name="Lilim Priest">
@@ -1128,12 +1101,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3431" max="7996" chance="70" /> <!-- Adena -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
 			<spoil>
-				<item id="36558" min="1" max="1" chance="3.628" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="1.007" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Weapon Augmenting Stone -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1183,13 +1154,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
-				<item id="19440" min="1" max="1" chance="1.233" /> <!-- Gemstone (R-grade) -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="19440" min="1" max="1" chance="1.233" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="7.127" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="2.153" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27368" level="87" type="Monster" name="Lilim Slayer">
@@ -1231,13 +1198,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="2.286" /> <!-- Synthetic Cokes -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="7.148" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="2.043" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27369" level="88" type="Monster" name="Lilim Great Magus">
@@ -1283,13 +1245,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5569" max="13008" chance="70" /> <!-- Adena -->
-				<item id="19440" min="1" max="1" chance="0.975" /> <!-- Gemstone (R-grade) -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="19440" min="1" max="1" chance="0.975" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="6.167" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="1.838" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27370" level="89" type="Monster" name="Lilim Royal Knight">
@@ -1338,12 +1296,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4516" max="10527" chance="70" /> <!-- Adena -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
 			<spoil>
-				<item id="36558" min="1" max="1" chance="4.793" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="1.383" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Weapon Augmenting Stone -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1646,13 +1602,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
-				<item id="19440" min="1" max="1" chance="1.233" /> <!-- Gemstone (R-grade) -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="19440" min="1" max="1" chance="1.233" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="7.127" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="2.153" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27377" level="87" type="Monster" name="Lilim Slayer">
@@ -1704,13 +1656,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="2.286" /> <!-- Synthetic Cokes -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="7.148" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="2.043" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27378" level="88" type="Monster" name="Lilim Great Magus">
@@ -1768,13 +1715,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5569" max="13008" chance="70" /> <!-- Adena -->
-				<item id="19440" min="1" max="1" chance="0.975" /> <!-- Gemstone (R-grade) -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="19440" min="1" max="1" chance="0.975" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
-			<spoil>
-				<item id="36558" min="1" max="1" chance="6.167" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="1.838" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="27379" level="89" type="Monster" name="Lilim Royal Knight">
@@ -1829,12 +1772,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4516" max="10527" chance="70" /> <!-- Adena -->
-				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
 			</drop>
 			<spoil>
-				<item id="36558" min="1" max="1" chance="4.793" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="1.383" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Weapon Augmenting Stone -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2041,7 +1982,7 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -2082,15 +2023,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
-				<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater MEN Dye <Men +3 Int -3> -->
-				<item id="45929" min="1" max="4" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater MEN Dye <MEN +3 INT -3> -->
+				<item id="45929" min="1" max="4" chance="0.003" /> <!-- Weapon Augmenting Stone -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="8.535" /> <!-- Thread -->
 				<item id="36880" min="1" max="1" chance="9" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>

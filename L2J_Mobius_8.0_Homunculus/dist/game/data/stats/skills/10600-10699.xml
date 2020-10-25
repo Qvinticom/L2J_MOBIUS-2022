@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10606" toLevel="1" name="Gust Movement">
-		<!-- Evades all physical attack skills for 5 sec. Requires a dagger or dual dagger to be equipped. -->
+		<!-- Evades all physical attack skills for $s1 Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill11862</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
 		<operateType>A2</operateType>
 		<isMagic>22</isMagic>
@@ -44,7 +44,7 @@
 		</effects>
 	</skill>
 	<skill id="10607" toLevel="1" name="Maximum Mortality">
-		<!-- For 1 min., Vital Spot Attack Rate +20%. Requires a dagger or dual dagger. -->
+		<!-- For 1 min., Vital Point Attack Rate +20%. Requires a dagger or dual daggers. -->
 		<icon>icon.skill10607</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -78,7 +78,7 @@
 		</effects>
 	</skill>
 	<skill id="10608" toLevel="4" name="Superior Haste">
-		<!-- P. Skill Cooldown -5%, Infection Atk. Rate +10%. Also doubles the duration of Shadow Dash. -->
+		<!-- P. Skill Cooldown -$s1, Infection Atk. Rate +$s2. Also doubles the duration of Shadow Dash. -->
 		<icon>icon.skill10608</icon>
 		<magicLevel>
 			<value level="1">85</value>
@@ -119,10 +119,14 @@
 		</effects>
 	</skill>
 	<skill id="10609" toLevel="1" name="Critical Chances">
-		<!-- For 5 min., increases Critical Damage by 304, Deadly Atk. Rate by 15%, Critical Rate/ Damage from the flank and back by 65% and 50%, respectively. Decreases Critical Damage from the front by 30%. Requires dagger/ dual dagger. -->
+		<!-- For $s1, P. Skill Power +$s2, Vital Point Attack Rate +$s3, Critical Damage/ Rate for standard attacks from the flanks +$s4, Critical Damage/ Rate for standard attacks after backstab +$s5, Critical Damage for standard attacks at the front -$s6. Requires a dagger or dual daggers. -->
 		<icon>icon.skill10878</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
 		<operateType>A2</operateType>
 		<isMagic>22</isMagic>
@@ -175,9 +179,30 @@
 					<item>DUALDAGGER</item>
 				</weaponType>
 			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</effect>
+			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{2 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10610" toLevel="1" name="Critical Expansions">
+		<!-- Increases the maximum value of P. Critical Rate. Additionally, Critical Damage for standard attacks +$s1. Requires a dagger or dual daggers. -->
+		<icon>icon.skill0819</icon>
+		<operateType>P</operateType>
+		<effects>
 			<effect name="CriticalDamage">
-				<amount>304</amount>
-				<mode>DIFF</mode>
+				<amount>5</amount>
+				<mode>PER</mode>
 				<weaponType>
 					<item>DAGGER</item>
 					<item>DUALDAGGER</item>
@@ -185,13 +210,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10610" toLevel="1" name="Critical Expansions">
-		<!-- Max P. Critical increases. Applies when a dagger or dual dagger is equipped. -->
-		<icon>icon.skill0819</icon>
-		<operateType>P</operateType>
-	</skill>
 	<skill id="10653" toLevel="1" name="Shadow Evasion">
-		<!-- For 10 sec., becomes immune from all disruption effects and evades Physical and Magic skills at a 50% probability. Unable to cast Shadow Hide. Requires dagger/ dual dagger. -->
+		<!-- For $s1, becomes immune from all disruption effects and evades Physical and Magic skills at a $s2 probability. Unable to cast Shadow Hide. Requires dagger/ dual dagger. -->
 		<icon>icon.skill5242</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -215,8 +235,23 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CounterPhysicalSkill">
-				<amount>90</amount>
+			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
+			<effect name="SkillEvasion">
+				<amount>50</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
@@ -236,7 +271,7 @@
 		</effects>
 	</skill>
 	<skill id="10654" toLevel="1" name="Maximum Mortality">
-		<!-- For 1 min., Vital Spot Attack Rate +20%. Requires a dagger or dual dagger. -->
+		<!-- For 1 min., Vital Point Attack Rate +20%. Requires a dagger or dual daggers. -->
 		<icon>icon.skill10607</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -270,7 +305,7 @@
 		</effects>
 	</skill>
 	<skill id="10655" toLevel="4" name="Brutal Stab Expert">
-		<!-- P. Atk. +$s1, Critical Damage +$s2. -->
+		<!-- P. Atk. +$s1, Critical Damage for standard attacks +$s2. -->
 		<icon>icon.skill10655</icon>
 		<magicLevel>
 			<value level="1">85</value>
@@ -301,10 +336,14 @@
 		</effects>
 	</skill>
 	<skill id="10656" toLevel="1" name="Shadow Hunter">
-		<!-- For 5 min., increases Critical Damage by 608, Deadly Atk. Rate by 5%, Critical Rate/ Damage from the flank by 30%, Critical Rate from the back by 50% and Critical Damage by 65%. Decreases Critical Damage from the front by 30%. Requires dagger/ dual dagger. -->
+		<!-- For $s1, P. Skill Power +$s2, Vital Point Attack Rate +$s3, Critical Damage/ Rate for standard attacks from the flanks +$s4, Critical Damage/ Rate for standard attacks after backstab +$s5, Critical Damage for standard attacks +$s6, Critical Damage for standard attacks at the front -$s7. Requires a dagger or dual daggers. -->
 		<icon>icon.skill10656</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -364,6 +403,12 @@
 					<item>DAGGER</item>
 					<item>DUALDAGGER</item>
 				</weaponType>
+			</effect>
+			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{2 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

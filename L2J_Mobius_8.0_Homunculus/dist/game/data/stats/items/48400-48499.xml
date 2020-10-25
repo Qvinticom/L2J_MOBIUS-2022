@@ -92,7 +92,7 @@
 		</stats>
 	</item>
 	<item id="48408" name="Blackish Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Appearance Stone that gives a shield Blackish Scarab appearance for 30 days. -->
+		<!-- Appearance Stone that gives a shield Blackish Scarab appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -103,7 +103,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="48409" name="Scarlet Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Appearance Stone that gives a shield Scarlet Scarab appearance for 30 days. -->
+		<!-- Appearance Stone that gives a shield Scarlet Scarab appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -114,7 +114,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="48410" name="Gold Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Appearance Stone that gives a shield Gold Scarab appearance for 30 days. -->
+		<!-- Appearance Stone that gives a shield Gold Scarab appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -196,7 +196,7 @@
 		</stats>
 	</item>
 	<item id="48416" name="Clan Hall Belt Stage 2" type="Armor">
-		<!-- Belt imbued with the concentrated energies of Nurka, Gustav, and Lidia. Max HP/ MP/ CP +500, Damage +7%, Received Damage -7%, Weight +12800, Inventory Slots +18, and all Attribute Resistance +10. -->
+		<!-- A belt imbued with the concentrated energies of Nurka, Gustav, and Lidia. Max HP/ MP/ CP +500, damage +7%, received damage -7%, weight limit +12,800, inventory slots +18, Attribute Resistance +10. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="waist" />
@@ -208,7 +208,7 @@
 		</stats>
 	</item>
 	<item id="48417" name="Enhanced Ruler's Authority" type="Armor">
-		<!-- Enhanced Ruler's Authority. Max HP/ MP/ CP +1000, Weight +25600, Damage +10%, Received Damage -10%, Damage Reflection Resistance +10%, Fixed Damage Resistance +10%, Inventory Slots +36, and all Attribute Resistance +20. -->
+		<!-- Max HP/ MP/ CP +1000, weight limit +25,600, damage +10%, received damage -10%, Damage Reflection Resistance +10%, Fixed Damage Resistance +10%, inventory slots +36, Attribute Resistance +20. -->
 		<set name="icon" val="icon.grankain_powerbelt2" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -223,13 +223,13 @@
 			<skill id="15145" level="2" /> <!-- Ruler's Authority -->
 		</skills>
 		<stats>
-			<stat type="pDef">50</stat>
-			<stat type="fireRes">15</stat>
-			<stat type="waterRes">15</stat>
-			<stat type="windRes">15</stat>
-			<stat type="earthRes">15</stat>
-			<stat type="holyRes">15</stat>
-			<stat type="darkRes">15</stat>
+			<stat type="pDef">100</stat>
+			<stat type="fireRes">20</stat>
+			<stat type="waterRes">20</stat>
+			<stat type="windRes">20</stat>
+			<stat type="earthRes">20</stat>
+			<stat type="holyRes">20</stat>
+			<stat type="darkRes">20</stat>
 		</stats>
 	</item>
 	<item id="48418" name="Authority Ornament" type="EtcItem">
@@ -259,7 +259,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48422" name="Talisman - Wind Box" type="EtcItem">
-		<!-- Double-click to obtain a box containing a Talisman - Wind (30-day). -->
+		<!-- Double-click to obtain Talisman of Wind (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -268,16 +268,15 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
-		<set name="time" val="43200" />
 		<capsuled_items>
-			<item id="48423" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - P. Skill Critical Damage -->
-			<item id="48424" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - M. Skill Critical Damage -->
-			<item id="48425" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - Defense -->
-			<item id="48426" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - Debuff Defense -->
+			<item id="48423" min="1" max="1" chance="25" /> <!-- Talisman of Wind Pack - P. Skill Critical Damage -->
+			<item id="48424" min="1" max="1" chance="25" /> <!-- Talisman of Wind Pack - M. Skill Critical Damage -->
+			<item id="48425" min="1" max="1" chance="25" /> <!-- Talisman of Wind Pack - Defense -->
+			<item id="48426" min="1" max="1" chance="25" /> <!-- Talisman of Wind Pack - Debuff Defense -->
 		</capsuled_items>
 	</item>
 	<item id="48423" name="Talisman - Wind Box" additionalName="P. Skill Critical Damage" type="EtcItem">
-		<!-- Double-click to obtain a Talisman - Wind: P. Critical Damage (30-day). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain Talisman of Wind - P. Skill Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -287,12 +286,13 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="48427" min="1" max="1" chance="100" /> <!-- Talisman - Wind: P. Critical Damage - Passive -->
+			<item id="48427" min="1" max="1" chance="100" /> <!-- Talisman of Wind - P. Skill Critical Damage - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="48424" name="Talisman - Wind Box" additionalName="M. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain a Talisman- Wind: M. Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -300,11 +300,11 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="48428" min="1" max="1" chance="100" /> <!-- Talisman - Wind: M. Critical Damage - Passive -->
+			<item id="48428" min="1" max="1" chance="100" /> <!-- Talisman- Wind: M. Critical Damage - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="48425" name="Talisman - Wind Box" additionalName="Defense" type="EtcItem">
-		<!-- Double-click to obtain a Talisman - Wind: Defense (30-day). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain Talisman of Wind - Defense (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -314,11 +314,11 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="48429" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Defense - Active -->
+			<item id="48429" min="1" max="1" chance="100" /> <!-- Talisman of Wind - Defense - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="48426" name="Talisman - Wind Box" additionalName="Debuff Defense" type="EtcItem">
-		<!-- Double-click to obtain a Talisman - Wind: Debuff Resistance (30-day). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain Talisman of Wind - Debuff Resistance (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -328,11 +328,11 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="48430" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Debuff Resistance - Active -->
+			<item id="48430" min="1" max="1" chance="100" /> <!-- Talisman of Wind - Debuff Resistance - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="48427" name="Talisman - Wind: P. Critical Damage" additionalName="30-day" type="Armor">
-		<!-- When equipped, P. Skill Critical Damage +10%. -->
+		<!-- P. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -341,7 +341,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -349,7 +349,7 @@
 		</skills>
 	</item>
 	<item id="48428" name="Talisman- Wind: M. Critical Damage" additionalName="30-day" type="Armor">
-		<!-- When equipped, M. Skill Critical Damage +10%. -->
+		<!-- M. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -358,7 +358,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -366,7 +366,7 @@
 		</skills>
 	</item>
 	<item id="48429" name="Talisman - Wind: Defense" additionalName="30-day" type="Armor">
-		<!-- When used, Physical and Magic Def. are maximized for 15 sec. Cooldown of 20 min. -->
+		<!-- For 15 sec., greatly increases P./ M. Def. when used. Cooldown: 20 min. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -375,7 +375,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -392,7 +392,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -400,111 +400,167 @@
 		</skills>
 	</item>
 	<item id="48431" name="PA Talisman- STR" additionalName="2-hour" type="Armor">
-		<!-- When equipped, STR +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, STR +5, P. Atk. +450. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="time" val="240" />
+		<skills>
+			<skill id="18380" level="2" /> <!-- Mysterious Talisman - STR -->
+		</skills>
 	</item>
 	<item id="48432" name="PA Talisman - INT" additionalName="2-hour" type="Armor">
-		<!-- When equipped, INT +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, INT +5, M. Atk. +260. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="time" val="240" />
+		<skills>
+			<skill id="18381" level="2" /> <!-- Mysterious Talisman - INT -->
+		</skills>
 	</item>
 	<item id="48433" name="PA Talisman - DEX" additionalName="2-hour" type="Armor">
-		<!-- When equipped, DEX +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, DEX +5, Atk. Spd. +25. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="time" val="240" />
+		<skills>
+			<skill id="18382" level="2" /> <!-- Mysterious Talisman - DEX -->
+		</skills>
 	</item>
 	<item id="48434" name="PA Talisman - WIT" additionalName="2-hour" type="Armor">
-		<!-- When equipped, WIT +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, WIT +5, Casting Spd. +25. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="time" val="240" />
+		<skills>
+			<skill id="18383" level="2" /> <!-- Mysterious Talisman - WIT -->
+		</skills>
 	</item>
 	<item id="48435" name="PA Talisman - CON" additionalName="2-hour" type="Armor">
-		<!-- When equipped, CON +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, CON +5, Max HP +500. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="time" val="240" />
+		<skills>
+			<skill id="18384" level="2" /> <!-- Mysterious Talisman - CON -->
+		</skills>
 	</item>
 	<item id="48436" name="PA Talisman - MEN" additionalName="2-hour" type="Armor">
-		<!-- When equipped, MEN +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, MEN +5, Max MP +250. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="time" val="240" />
+		<skills>
+			<skill id="18385" level="2" /> <!-- Mysterious Talisman - MEN -->
+		</skills>
 	</item>
 	<item id="48437" name="PA Talisman - Atk. Attribute Boost" additionalName="2-hour" type="Armor">
-		<!-- When equipped, Attack Attribute +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, Attribute Attack +50. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="time" val="240" />
+		<skills>
+			<skill id="18386" level="2" /> <!-- PA Talisman Attribute Attack -->
+		</skills>
 	</item>
 	<item id="48438" name="PA Talisman - Attribute Resistance Boost" additionalName="2-hour" type="Armor">
-		<!-- When equipped, P. Def. +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, Attribute Resistance +50. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="time" val="240" />
+		<skills>
+			<skill id="18650" level="2" /> <!-- PA Talisman Defense Attribute -->
+		</skills>
 	</item>
 	<item id="48439" name="Fortress Talisman - Vitality" additionalName="15-day" type="Armor">
-		<!-- When equipped, Vitality Bonus +10%. -->
+		<!-- Vitality Bonus +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -522,7 +578,7 @@
 		</skills>
 	</item>
 	<item id="48440" name="Fortress Talisman - P. Skill Power" additionalName="15-day" type="Armor">
-		<!-- When equipped, P. Skill Power +5%. -->
+		<!-- P. Skill Power +5%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -540,7 +596,7 @@
 		</skills>
 	</item>
 	<item id="48441" name="Fortress Talisman - M. Skill Power" additionalName="15-day" type="Armor">
-		<!-- When equipped, M. Skill Power +5%. -->
+		<!-- M. Skill Power +5%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -558,7 +614,7 @@
 		</skills>
 	</item>
 	<item id="48442" name="Fortress Talisman - P. Atk." additionalName="15-day" type="Armor">
-		<!-- When equipped, P. Atk. +5%. -->
+		<!-- P. Atk. +5%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -575,7 +631,7 @@
 		</skills>
 	</item>
 	<item id="48443" name="Fortress Talisman - M. Atk." additionalName="15-day" type="Armor">
-		<!-- When equipped, M. Atk. +5%. -->
+		<!-- M. Atk. +5%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -607,11 +663,11 @@
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
 		<skills>
-			<skill id="35172" level="1" /> <!-- Fortress Talisman - P. Def-->
+			<skill id="35172" level="1" /> <!-- Fortress Talisman - P. Def -->
 		</skills>
 	</item>
 	<item id="48445" name="Fortress Talisman - M. Def." additionalName="15-day" type="Armor">
-		<!-- When equipped, M. Def. +10%. -->
+		<!-- M. Def. +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -683,7 +739,7 @@
 		</skills>
 	</item>
 	<item id="48449" name="Fortress Talisman - M. Accuracy" additionalName="15-day" type="Armor">
-		<!-- When equipped, M. Accuracy +16. -->
+		<!-- M. Accuracy +16. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -719,7 +775,7 @@
 		</skills>
 	</item>
 	<item id="48451" name="Fortress Talisman - Max HP" additionalName="15-day" type="Armor">
-		<!-- When equipped, Max HP +10%. -->
+		<!-- Max HP +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -755,7 +811,7 @@
 		</skills>
 	</item>
 	<item id="48453" name="Fortress Talisman - Movement Speed" additionalName="15-day" type="Armor">
-		<!-- When equipped, Movement Speed +15. -->
+		<!-- Speed +15. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -801,7 +857,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48455" name="Fortress Talisman- Vitality Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - Vitality (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - Vitality (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -825,7 +881,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48457" name="Fortress Talisman - M. Skill Power Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - M. Skill Power (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - M. Skill Power (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -837,7 +893,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48458" name="Fortress Talisman - P. Atk. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - P. Atk. (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - P. Atk. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -849,7 +905,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48459" name="Fortress Talisman - M. Atk. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - M. Atk. (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - M. Atk. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -861,7 +917,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48460" name="Fortress Talisman - P. Def. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - P. Def. (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - P. Def. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -873,7 +929,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48461" name="Fortress Talisman - M. Def. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - M. Def. (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - M. Def. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -885,7 +941,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48462" name="Fortress Talisman - Atk. Spd. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - Atk. Spd. (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - Atk. Spd. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -897,7 +953,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48463" name="Fortress Talisman - Casting Spd. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - Casting Spd. (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - Casting Spd. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -909,7 +965,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48464" name="Fortress Talisman - P. Accuracy Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - P. Accuracy (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - P. Accuracy (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -921,7 +977,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48465" name="Fortress Talisman - M. Accuracy Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - M. Accuracy (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - M. Accuracy (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -933,7 +989,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48466" name="Fortress Talisman - Shield Def. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - Shield Def. (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - Shield Defense (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -945,7 +1001,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48467" name="Fortress Talisman - Max HP Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - Max HP (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - Max HP (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -957,7 +1013,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48468" name="Fortress Talisman - Max MP Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - Max MP (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - Max MP (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -969,7 +1025,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48469" name="Fortress Talisman - Movement Speed Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman - Movement Speed (15-day). -->
+		<!-- Double-click to obtain Fortress Talisman - Speed (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -988,7 +1044,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48471" name="Adventure Guild Supply Box" type="EtcItem">
@@ -999,49 +1055,49 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48472" name="Night Goblin Coin" type="EtcItem">
-		<!-- Special coins imbued with the Night Goblin's power. Can be used with the Black Marketeer of Mammon. -->
+		<!-- Contains Night Goblin's power. Can be used through the Black Marketeer of Mammon. -->
 		<set name="icon" val="icon.bm_goblin_coin" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48473" name="Night Goblin Coin (500) Box" additionalName="Event" type="EtcItem">
-		<!-- Use it to obtain 500 Night Goblin Coins. -->
+		<!-- Double-click to obtain 500 Night Goblin's Coins. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48474" name="Night Goblin Coin (800) Box" additionalName="Event" type="EtcItem">
-		<!-- Use to obtain 800 Night Goblin Coins. -->
+		<!-- Double-click to obtain 800 Night Goblin's Coins. -->
 		<set name="icon" val="icon.etc_treasure_box_i09" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48475" name="Night Goblin Coin (2000) Box" additionalName="Event" type="EtcItem">
-		<!-- Use to obtain 2000 Night Goblin Coins. -->
+		<!-- Double-click to obtain 2000 Night Goblin's Coins. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1052,7 +1108,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1063,7 +1119,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48478" name="Knights' Basic Supplies" additionalName="Event" type="EtcItem">
@@ -1073,19 +1129,19 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48479" name="Knights' Enchant Scroll Supply Items" additionalName="Event" type="EtcItem">
-		<!-- Use to obtain 1 Scroll: Enchant Weapon (R-grade) and 1 Scroll: Enchant Armor (R-grade). -->
+		<!-- You can obtain a Scroll: Enchant R-grade Weapon and a Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1099,7 +1155,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48481" name="+8 Reflect Attack T-shirt Pack" type="EtcItem">
-		<!-- Double-click to obtain a +8 Reflect Attack T-shirt. -->
+		<!-- Double-click to obtain +8 Physical Reflect Shirt. -->
 		<set name="icon" val="icon.reflect_attack_shirt_box_2" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1108,7 +1164,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48482" name="+8 Reflect Magic T-shirt Pack" type="EtcItem">
-		<!-- Double-click to obtain a +8 Reflect Magic T-shirt. -->
+		<!-- Double-click to obtain +8 Magical Reflect Shirt. -->
 		<set name="icon" val="icon.reflect_magic_shirt_box_3" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1117,7 +1173,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48483" name="+7 Shiny Elemental Shirt" additionalName="1-day" type="Armor">
-		<!-- A magical t-shirt infused with Einhasad's energy. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Skill MP Consumption -3%. Damage Reflection Resistance +5. Vampiric Rage +5%. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. <Active Skills>. Einhasad's Wrath/ Einhasad's Protection.. Cannot be enchanted. -->
+		<!-- PA. Magical t-shirt infused with Einhasad's energy. <Item skill>. M. Def. +15. Speed +7. Max HP/ MP +536, Skill MP Consumption -3%, Damage Reflection Resistance +5, Vampiric Rage effect +5%. Water/ Fire/ Wind/ Earth/ Holy/ Dark Resistance +24. STR/ DEX/ CON/ INT/ WIT/ MEN +3. <Active skills>. Einhasad's Wrath/ Einhasad's Protection. Cannot be enchanted. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1125,7 +1181,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 		<stats>
@@ -1133,7 +1189,7 @@
 		</stats>
 	</item>
 	<item id="48484" name="+7 Reflect Attack T-shirt" additionalName="1-day" type="Armor">
-		<!-- A magical t-shirt specialized for physical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. P. Def. +8%, Received P. Critical Damage -12%, 7% chance to reflect physical skill debuffs.. Cannot be enchanted. -->
+		<!-- PA. A magical t-shirt specialized for physical defense. <Item Skill>. M. Def. +15. Speed +7. Max HP/ MP +536. Water/ Fire/ Wind/ Earth/ Holy/ Dark Resistance +24. STR/ DEX/ CON/ INT/ WIT/ MEN +3. P. Def. +8%. Received Critical Damage from standard attacks -12%. Has a 7% chance to reflect physical skill debuffs. Cannot be enchanted. -->
 		<set name="icon" val="icon.reflect_attack_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1141,7 +1197,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 		<stats>
@@ -1149,7 +1205,7 @@
 		</stats>
 	</item>
 	<item id="48485" name="+7 Reflect Magic T-shirt" additionalName="1-day" type="Armor">
-		<!-- A magical t-shirt specialized for magical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. M. Def. +8%, Received M. Critical Damage -12%, 7% chance to reflect magical skill debuffs.. Cannot be enchanted. -->
+		<!-- PA. A magical t-shirt for M. Def. <Item Skill>. M. Def. +15. Speed +7. Max HP/ MP +536. Water/ Fire/ Wind/ Earth/ Holy/ Dark Resistance +24. STR/ DEX/ CON/ INT/ WIT/ MEN +3. M. Def. +8%. Received M. Skill Critical Damage -12%. Has a 7% chance to reflect magical skill debuffs. Cannot be enchanted. -->
 		<set name="icon" val="icon.reflect_magic_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1158,7 +1214,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 		<stats>
@@ -1166,7 +1222,7 @@
 		</stats>
 	</item>
 	<item id="48486" name="Sayha Talisman Stage 6" additionalName="1-day" type="Armor">
-		<!-- When equipped, Sayha's power increases P. Def. by 1126, M. Def. by 736, and Acquired XP/ SP by 10%. Equipping it with Venir Talisman Stage 10 or higher increases Skill Power by 3% and reduces cooldown by 3%. <Active Skills>. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. When identical Talismans are equipped, only the effect of the highest level Talisman is applies. -->
+		<!-- P. Def. +1126. M. Def. +736, and Acquired XP/ SP +10%. When equipped with Venir s Talisman Lv. 10 or higher, Skill Power +3% Skill Cooldown -3%. <Active Skills>. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. When identical Talismans are equipped, only the effect of the highest level Talisman is active. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1175,7 +1231,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 	</item>
@@ -1185,8 +1241,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1196,8 +1252,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1209,7 +1265,7 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48490" name="Merlot's Gift" type="EtcItem">
@@ -1219,12 +1275,12 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48491" name="Dragon Skin Shirt" type="Armor">
-		<!-- A Dragon Skin Shirt. <Upgrade Condition>. Can be upgraded to a Dragon Leather Shirt when enchanted to +5. For characters Lv. 85 or above. -->
+		<!-- Valuable Dragon Skin Shirt. <Enchanting>. Use Blessed Scroll: Enchant Dragon Shirt. <Enhancing>. Take the shirt enchanted to +5 and Noble Leather Upgrade Stone to Head Blacksmith in any town to get Dragon Leather Shirt. -->
 		<set name="icon" val="icon.bm_dragon_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1233,7 +1289,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="8" />
 		<cond>
@@ -1242,10 +1298,16 @@
 		<stats>
 			<stat type="mDef">23</stat>
 			<stat type="pDef">46</stat>
+			<stat type="fireRes">30</stat>
+			<stat type="waterRes">30</stat>
+			<stat type="earthRes">30</stat>
+			<stat type="windRes">30</stat>
+			<stat type="holyRes">30</stat>
+			<stat type="darkRes">30</stat>
 		</stats>
 	</item>
 	<item id="48492" name="Dragon Leather Shirt" type="Armor">
-		<!-- A Dragon Leather Shirt. <Upgrade Condition>. Can be upgraded to a Dragon Rind Leather Shirt when enchanted to +5. For characters Lv. 99 or above. -->
+		<!-- Valuable Dragon Leather Shirt. <Enchanting>. Use Blessed Scroll: Enchant Dragon Shirt. <Enhancing>. Take the shirt enchanted to +5 and Radiant Rind Upgrade Stone to Head Blacksmith in any town to get Dragon Rind Leather Shirt. -->
 		<set name="icon" val="icon.bm_dragon_leather_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1254,7 +1316,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="8" />
 		<cond>
@@ -1263,10 +1325,16 @@
 		<stats>
 			<stat type="mDef">27</stat>
 			<stat type="pDef">54</stat>
+			<stat type="fireRes">40</stat>
+			<stat type="waterRes">40</stat>
+			<stat type="earthRes">40</stat>
+			<stat type="windRes">40</stat>
+			<stat type="holyRes">40</stat>
+			<stat type="darkRes">40</stat>
 		</stats>
 	</item>
 	<item id="48493" name="Dragon Rind Leather Shirt" type="Armor">
-		<!-- A Dragon Rind Leather Shirt. For characters Lv. 105 or above. -->
+		<!-- Valuable Dragon Rind Leather Shirt. <Enchanting>. Use Blessed Scroll: Enchant Dragon Shirt. -->
 		<set name="icon" val="icon.bm_dragon_rind_leather_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1281,10 +1349,16 @@
 		<stats>
 			<stat type="mDef">31</stat>
 			<stat type="pDef">62</stat>
+			<stat type="fireRes">50</stat>
+			<stat type="waterRes">50</stat>
+			<stat type="earthRes">50</stat>
+			<stat type="windRes">50</stat>
+			<stat type="holyRes">50</stat>
+			<stat type="darkRes">50</stat>
 		</stats>
 	</item>
 	<item id="48494" name="Mysterious Dragon Slayer" type="Weapon">
-		<!-- The Mysterious Dragon Slayer contains the power of an ancient dragon, which can be drawn by enchanting. Enchant it to a high level and take it to Event NPC Luna to receive a special reward. -->
+		<!-- ?ntains the power of an ancient dragon, which can be drawn by enchanting. Enchant it to a high level and take it to Luna to obtain a special reward. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1305,7 +1379,7 @@
 		</stats>
 	</item>
 	<item id="48495" name="Noble Leather Upgrade Stone" type="EtcItem">
-		<!-- Material needed to upgrade a Dragon Skin Shirt to a Dragon Leather Shirt. Talk to Head Blacksmith Ferris in the Town of Aden to upgrade a +5 Dragon Skin Shirt to a Dragon Leather Shirt. -->
+		<!-- Material needed to upgrade a Dragon Skin Shirt to a Dragon Leather Shirt. Talk to Head Blacksmith in any town to upgrade a +5 Dragon Skin Shirt to a Dragon Leather Shirt. -->
 		<set name="icon" val="icon.bm_dragon_shirt_upgrade_1" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="material" val="PAPER" />
@@ -1313,7 +1387,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48496" name="Radiant Rind Upgrade Stone" type="EtcItem">
-		<!-- Material needed to upgrade a Dragon Leather Shirt to a Dragon Rind Leather Shirt. Talk to Head Blacksmith Ferris in the Town of Aden to upgrade a +5 Dragon Leather Shirt to a Dragon Rind Leather Shirt. -->
+		<!-- Material needed to upgrade a Dragon Leather Shirt to a Dragon Rind Leather Shirt. Talk to Head Blacksmith in any town to upgrade a +5 Dragon Leather Shirt to a Dragon Rind Leather Shirt. -->
 		<set name="icon" val="icon.bm_dragon_shirt_upgrade_2" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="material" val="PAPER" />
@@ -1321,16 +1395,24 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48497" name="Glowing Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
-		<!-- When used, Attack Attribute +70, all Attribute Resistance +70, and Acquired XP/ SP +30% for 30 min. Effect remains after death. Cooldown is 5 min. Cannot be used in Olympiad. -->
+		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for +30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39205" level="1" /> <!-- Glowing Dragon's Attribute Potion -->
+		</skills>
 	</item>
 	<item id="48498" name="Blessed Scroll: Enchant Dragon Shirt" type="EtcItem">
-		<!-- Enchant Scroll that is exclusively for Dragon Shirts. The scroll can enchant up to +5. Failure to enchant resets the enchantment level of the Dragon Shirt. -->
+		<!-- A scroll for Dragon Skin Shirt/ Dragon Leather Shirt/ Dragon Rind Leather Shirt enchanting. If the process fails, the shirt's enchantment level is reset, but the shirt's type is unchanged. -->
 		<set name="icon" val="icon.bm_blessed_scrl_of_ench_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
@@ -1338,10 +1420,10 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="EnchantScrolls" />
 		<skills>
 			<skill id="39203" level="1" /> <!-- Blessed Scroll: Enchant Dragon Shirt -->
 		</skills>

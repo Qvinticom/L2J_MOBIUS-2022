@@ -17,7 +17,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39203" toLevel="1" name="Blessed Scroll: Enchant Dragon Shirt">
-		<!-- A Dragon Shirt Enchant Scroll. If enchantment to the Blessed Enchant Scroll fails, its enchant level will be reset. -->
+		<!-- A Dragon Shirt Enchant Scroll. If enchantment to the Blessed Enchant Scroll fails, its enchant value will be reset. -->
 		<icon>icon.bm_blessed_scrl_of_ench_shirt</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -38,7 +38,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39205" toLevel="1" name="Glowing Dragon's Attribute Potion">
-		<!-- For 30 min., Attack Attribute +70, all Attribute Resistance +70, and Acquired XP/ SP +30%. Buff effects persist even after death. -->
+		<!-- For $s1 Attribute Attack +$s2, Attribute Resistance +$s3, Acquired XP/ SP +$s4. The effect remains after death. -->
 		<icon>icon.bm_dragon_posion_special</icon>
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
@@ -96,7 +96,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39207" toLevel="1" name="Red Libra's Fortune Scroll">
-		<!-- For 30 min., XP/SP Bonus +30%, XP/SP gain in Vitality state +30%, P. Atk./M. Atk./P. Def/M. Def. +15%. -->
+		<!-- For 30 min., damage +5%, Vitality bonus +50%. -->
 		<icon>icon.etc_charm_of_luck_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -109,7 +109,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39209" toLevel="1" name="Fried Fish">
-		<!-- Increases P. Atk. by 4% for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<!-- For 10 min., P. Atk. +$s1. The effect stacks with that of Honey Vitality Beer. -->
 		<icon>icon.fishing_buff_p_dmg</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -131,7 +131,7 @@
 		</effects>
 	</skill>
 	<skill id="39210" toLevel="1" name="Steamed Fish">
-		<!-- Increases M. Atk. by 5% for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<!-- Increases M. Atk. by $s1 for 10 min. Can be stacked with Honey Vitality Beer. -->
 		<icon>icon.fishing_buff_m_dmg</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -153,7 +153,7 @@
 		</effects>
 	</skill>
 	<skill id="39211" toLevel="1" name="Grilled Fish">
-		<!-- Increases Atk. Spd./ Casting Spd. by 4%, Speed by 6 for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<!-- Increases Atk. Spd./ Casting Spd. by $s1, Speed by $s2 for 10 min. Can be stacked with Honey Vitality Beer. -->
 		<icon>icon.fishing_buff_pm_speed</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -183,7 +183,7 @@
 		</effects>
 	</skill>
 	<skill id="39212" toLevel="1" name="Braised Fish">
-		<!-- Increases Max HP/ MP by 8% for 10 min. Can be stacked with Honey Vitality Beer. -->
+		<!-- Increases Max HP/ MP by $s1 for 10 min. Can be stacked with Honey Vitality Beer. -->
 		<icon>icon.fishing_buff_hp_mp</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -208,14 +208,47 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39213" toLevel="1" name="Royal Fish Soup">
-		<!-- Increases P. Atk./ M. Atk., Atk./ Casting Spd., Max HP/ MP by 3% for 10 min. Can be stacked with Honey Vitality Beer. -->
+	<skill id="39213" toLevel="1" name="Royal Santiago's Soup">
+		<!-- P./ M. Atk., Atk./ Casting Spd., Max HP/ MP +$s1 for 10 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
 		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
+		<abnormalTime>600</abnormalTime>
+		<targetType>SELF</targetType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>80670</itemConsumeId>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39214" toLevel="2" name="Fried Fish">
 		<!-- Increases P. Atk. by $s1 for 10 min. Can be stacked with Honey Vitality Beer. -->
@@ -282,15 +315,17 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="39219" toLevel="1" name="Olympiad Class Winner's Rune">
-		<!-- If stored in the inventory, increases Acquired Acquired XP/ SP in Vitality state by 30%, P. Def. by 1986, M. Def. by 1150, Speed by 7, Skill Power by 5%. -->
+		<!-- Vitality Bonus +$s1, P. Def. +$s2, M. Def. +$s3, Speed +$s4, P./ M. Skill Power +$s5. -->
 		<icon>icon.rune_olympiad_legend_server</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>80</magicLevel>
+		<passiveConditions>
+			<condition name="OpNotOlympiad" />
+		</passiveConditions>
 		<effects>
 			<effect name="VitalityExpRate">
 				<amount>30</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>1986</amount>
@@ -315,17 +350,17 @@
 		</effects>
 	</skill>
 	<skill id="39220" toLevel="1" name="Olympiad Class Runner-up's Rune">
-		<!-- If stored in the inventory, increases Acquired Acquired XP/ SP in Vitality state by 20%, P. Def. by 1428, M. Def. by 821, Speed by 3, Skill Power by 3%. -->
+		<!-- Vitality Bonus +$s1, P. Def. +$s2, M. Def. +$s3, Speed +$s4, P./ M. Skill Power +$s5. -->
 		<icon>icon.rune_olympiad_legend_server</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39221" toLevel="1" name="Legend Celebration Rune">
-		<!-- If stored in the inventory, increases Acquired Acquired XP/ SP in Vitality state by 10%, P. Def. by 567, M. Def. by 328, Speed by 1, Skill Power by 1%. -->
+		<!-- Vitality Bonus +$s1, P. Def. +$s2, M. Def. +$s3, Speed +$s4, P./ M. Skill Power +$s5. -->
 		<icon>icon.rune_olympiad_legend_server</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39222" toLevel="1" name="Summon Masia's Guard Agathion">
-		<!-- Summons Masia's Guard Agathion. -->
+	<skill id="39222" toLevel="1" name="Summon Agathion Masia's Guard">
+		<!-- Summons Agathion Masia's Guard. -->
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>3000</hitTime>
@@ -335,100 +370,24 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13570</npcId> <!-- Masia's Guard-->
+				<npcId>13570</npcId> <!-- Masia's Guard -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="39223" toLevel="11" name="Masia's Guard Unique Ability">
-		<!-- Unique Ability activates only when +8 or higher heavy armor set effects are active. As Agathion grows, P. Def. increases and Skill Cooldown decreases. -->
+		<!-- Secondary skills are enabled only when a heavy armor set enchanted to +8 or higher is equipped. As the agathion grows, P. Def. is increased and Skill Cooldown decreased. -->
 		<icon>icon.agathion_masia_guard_1</icon>
 		<operateType>P</operateType>
-		<passiveConditions>
-			<condition name="OpSkillAcquire">
-				<!-- TODO: Enchant has to be higher than +8 13339 lvl 3-4-5 -->
-				<skillId>13339</skillId> <!-- Enchant Heavy Armor Set + 6 (R-grade) -->
-				<hasLearned>true</hasLearned>
-			</condition>
-		</passiveConditions>
-		<effects>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">321</value>
-					<value level="3">377</value>
-					<value level="4">445</value>
-					<value level="5">523</value>
-					<value level="6">615</value>
-					<value level="7">724</value>
-					<value level="8">851</value>
-					<value level="9">1002</value>
-					<value level="10">1179</value>
-					<value level="11">1387</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Reuse">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">-1</value>
-					<value level="8">-2</value>
-					<value level="9">-3</value>
-					<value level="10">-4</value>
-					<value level="11">-5</value>
-				</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">-1</value>
-					<value level="8">-2</value>
-					<value level="9">-3</value>
-					<value level="10">-4</value>
-					<value level="11">-5</value>
-				</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">-1</value>
-					<value level="8">-2</value>
-					<value level="9">-3</value>
-					<value level="10">-4</value>
-					<value level="11">-5</value>
-				</amount>
-				<mode>PER</mode>
-				<magicType>22</magicType>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="39224" toLevel="11" name="Masia's Guard Unique Ability">
-		<!-- Unique Ability activates only when +8 or higher heavy armor set effects are active. As Agathion grows, P. Def. increases and Skill Cooldown decreases. -->
+		<!-- Special skills activate only when a heavy armor set enchanted to +8 or higher is equipped. As the agathion grows, P. Def. is increased and Skill Cooldown decreased. -->
 		<icon>icon.agathion_masia_guard_1</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpSkillAcquire">
-				<!-- TODO: Enchant has to be higher than +8 13339 lvl 3-4-5 -->
-				<skillId>13339</skillId> <!-- Enchant Heavy Armor Set + 6 (R-grade) -->
-				<hasLearned>true</hasLearned>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</condition>
 		</passiveConditions>
 		<effects>
@@ -463,7 +422,7 @@
 					<value level="11">-5</value>
 				</amount>
 				<mode>PER</mode>
-				<magicType>0</magicType>
+				<magicType>1</magicType>
 			</effect>
 			<effect name="Reuse">
 				<amount>
@@ -480,7 +439,7 @@
 					<value level="11">-5</value>
 				</amount>
 				<mode>PER</mode>
-				<magicType>1</magicType>
+				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
 				<amount>
@@ -502,23 +461,23 @@
 		</effects>
 	</skill>
 	<skill id="39225" toLevel="4" name="Masia's Guard Special Ability">
-		<!-- As Agathion grows, Fixed Damage Resistance increases. -->
+		<!-- As the agathion grows, Fixed Damage Resistance is increased. -->
 		<icon>icon.agathion_masia_guard_1</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">321</value>
-					<value level="2">321</value>
-					<value level="3">321</value>
-					<value level="4">321</value>
-				</amount>
-				<mode>DIFF</mode>
+			<effect name="RealDamageResist">
+				<damage>
+					<value level="1">0</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">7</value>
+				</damage>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="39226" toLevel="1" name="Summon Paulina's Guard Agathion">
-		<!-- Summons Paulina's Guard Agathion. -->
+		<!-- Summons Agathion Paulina's Guard. -->
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<hitTime>3000</hitTime>
@@ -528,112 +487,23 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13571</npcId> <!-- Pollyne's Guard-->
+				<npcId>13571</npcId> <!-- Paulina's Guard -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="39227" toLevel="11" name="Paulina's Guard Unique Ability">
-		<!-- Unique Ability activates only when +8 or higher light armor set effects are active. As Agathion grows, P. Def. and Skill Power increases. -->
+		<!-- Secondary skills are enabled only when a light armor set enchanted to +8 or higher is equipped. As the agathion grows, P. Def. and Skill Power are increased. -->
 		<icon>icon.agathion_pollyne_guard_1</icon>
 		<operateType>P</operateType>
-		<passiveConditions>
-			<condition name="OpSkillAcquire">
-				<!-- TODO: Enchant has to be higher than +8 13340 lvl 3-4-5 -->
-				<skillId>13340</skillId> <!-- Enchant Light Armor Set + 6 (R-grade) -->
-				<hasLearned>true</hasLearned>
-			</condition>
-		</passiveConditions>
-		<effects>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">321</value>
-					<value level="3">377</value>
-					<value level="4">445</value>
-					<value level="5">523</value>
-					<value level="6">615</value>
-					<value level="7">724</value>
-					<value level="8">851</value>
-					<value level="9">1002</value>
-					<value level="10">1179</value>
-					<value level="11">1387</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">1</value>
-					<value level="8">2</value>
-					<value level="9">3</value>
-					<value level="10">4</value>
-					<value level="11">5</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PveMagicalSkillDamageBonus">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">1</value>
-					<value level="8">2</value>
-					<value level="9">3</value>
-					<value level="10">4</value>
-					<value level="11">5</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">1</value>
-					<value level="8">2</value>
-					<value level="9">3</value>
-					<value level="10">4</value>
-					<value level="11">5</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">1</value>
-					<value level="8">2</value>
-					<value level="9">3</value>
-					<value level="10">4</value>
-					<value level="11">5</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="39228" toLevel="11" name="Paulina's Guard Unique Ability">
-		<!-- Unique Ability activates only when +8 or higher light armor set effects are active. As Agathion grows, P. Def. and Skill Power increases. -->
+		<!-- Special skills activate only when a light armor set enchanted to +8 or higher is equipped. As the agathion grows, P. Def. and Skill Power are increased. -->
 		<icon>icon.agathion_pollyne_guard_1</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
 			<condition name="OpSkillAcquire">
 				<!-- TODO: Enchant has to be higher than +8 13340 lvl 3-4-5 -->
-				<skillId>13340</skillId> <!-- Enchant Light Armor Set + 6 (R-grade) -->
+				<skillId>13340</skillId> <!-- Enchant R-grade Light Armor Set +6 -->
 				<hasLearned>true</hasLearned>
 			</condition>
 		</passiveConditions>
@@ -653,8 +523,11 @@
 					<value level="11">1387</value>
 				</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
 			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
+			<effect name="PhysicalSkillPower">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -669,68 +542,34 @@
 					<value level="11">5</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="PveMagicalSkillDamageBonus">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">1</value>
-					<value level="8">2</value>
-					<value level="9">3</value>
-					<value level="10">4</value>
-					<value level="11">5</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">1</value>
-					<value level="8">2</value>
-					<value level="9">3</value>
-					<value level="10">4</value>
-					<value level="11">5</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">1</value>
-					<value level="8">2</value>
-					<value level="9">3</value>
-					<value level="10">4</value>
-					<value level="11">5</value>
-				</amount>
-				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39229" toLevel="4" name="Paulina's Guard Special Ability">
-		<!-- As Agathion grows, Fixed Damage Resistance increases. -->
+	<skill id="39229" toLevel="4" name="Primary Skill: Agathion Paulina's Guard">
+		<!-- As the agathion grows, Fixed Damage Resistance is increased. -->
 		<icon>icon.agathion_pollyne_guard_1</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="RealDamageResist">
+				<damage>
+					<value level="1">0</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">7</value>
+				</damage>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39230" toLevel="3" name="Shining Fortune Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="39231" toLevel="4" name="Master Fisherman's Blessing - 1-hr">
+	<skill id="39231" toLevel="4" name="Master Fisherman's Blessing (1-hour)">
 		<!-- Increases Fishing Success Rate by $s2 for $s1 h. Effect remains after death and cannot be deleted. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A1</operateType>
@@ -739,7 +578,7 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="39232" toLevel="4" name="Blue Potion - Fishing XP Bonus">
-		<!-- When used, increases Successful Fishing XP by $s2 for $s1 Applies to all bait. Can be stacked with Angler's Blessing. -->
+		<!-- When used, increases Successful Fishing XP/ SP by $s2 for $s1 Applied to all bait. Can be stacked with Angler's Blessing. -->
 		<icon>BranchIcon.etc_sign_agathion_feed_blue_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -751,7 +590,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
 	</skill>
-	<skill id="39234" toLevel="1" name="Guard Agathion Scroll of Growth">
+	<skill id="39234" toLevel="1" name="Guard Agathion's Book of Growth">
 		<icon>icon.star_scrl_of_ench_ag</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -761,7 +600,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="39235" toLevel="1" name="Ancient Guard Agathion Scroll of Growth">
+	<skill id="39235" toLevel="1" name="Ancient Guard Agathion's Book of Growth">
 		<icon>icon.star_giantscrl_of_ench_ag</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -772,7 +611,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39236" toLevel="1" name="Tipsy">
-		<!-- The power of the liquor grips your mind, but you feel happy for some reason. For 2 min., increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. by 100%, Acquired XP/ SP by 10%. The effect disappears on restart. -->
+		<!-- The power of the liquor grips your mind, but you feel happy for some reason. For $s1, increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. by $s2, Acquired XP/ SP by $s3. The effect disappears on restart. -->
 		<icon>icon.bm_goblin_buff_herong</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -857,7 +696,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="39242" toLevel="2" name="Rudolph's Red Potion">
-		<!-- When used, increases Acquired XP/ SP by $s2, Acquired XP/ SP in Vitality state by $s3, and P. Atk./ P. Def./ M. Atk./ M. Def. by $s4 for $s1 -->
+		<!-- For $s1, acquired XP/ SP +$s2, SP/ Vitality bonus +$s3, P. Atk./ P. Def./ M. Atk./ M. Def. +$s4. -->
 		<icon>
 			<value level="1">BranchIcon.etc_sign_agathion_feed_red_i00</value>
 			<value level="2">BranchIcon.etc_sign_agathion_feed_purple_i00</value>
@@ -867,7 +706,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="39243" toLevel="1" name="Hero's Rune">
-		<!-- If stored in the inventory, increases Acquired XP/ SP by 20%. -->
+		<!-- If stored in the inventory, increases Acquired XP/ SP by $s1. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -879,13 +718,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39244" toLevel="2" name="Deton's Gift Bundle">
+	<skill id="39244" toLevel="2" name="Peeves' Gift Bundle">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="39245" toLevel="1" name="Shining Nevit's Gold Hourglass">
-		<!-- During hunting acquired XP/ SP +100% for 30 min. Cannot stack with the Nevit's Gold Hourglass, Fall of the Dragon, or Dandy's Home Run Ball. Cooldown is 5 min. -->
+		<!-- During hunting acquired XP/ SP +$s2 for $s1. Cannot stack with the Nevit's Gold Hourglass, Fall of the Dragon, or Dandy's Home Run Ball. Cooldown is 5 min. -->
 		<icon>icon.bm_nebit_bonus_time_up</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>

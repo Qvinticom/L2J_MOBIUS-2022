@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1600" toLevel="1" name="Soul Instinct">
-		<!-- For 15 sec., awakens party members' destructive instincts to increase P. Atk., P. Critical Rate, M. Atk., and M. Critical Rate by 50%, and Atk. Spd. and Casting Spd. by 20%. -->
+		<!-- For 15 sec., P./ M. Atk., Critical Rate for standard attacks, M. Skill Critical Rate +50%, Atk. Spd. and Casting Spd. +20%. The skill cooldown is fixed. -->
 		<icon>icon.skill1600</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -111,7 +111,7 @@
 		</effects>
 	</skill>
 	<skill id="1629" toLevel="1" name="Might">
-		<!-- Increases P. Atk. by 100%. -->
+		<!-- P. Atk. +100%. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -133,7 +133,7 @@
 		</effects>
 	</skill>
 	<skill id="1630" toLevel="1" name="Focus">
-		<!-- Increases Critical Rate/ Critical Damage by 100%. -->
+		<!-- Critical Rate/ Damage for standard attacks +100%. -->
 		<icon>icon.skill1077</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -159,7 +159,7 @@
 		</effects>
 	</skill>
 	<skill id="1631" toLevel="1" name="Absolute Defense">
-		<!-- Monster absolute defense. P. Def. and M. Def. +5000. -->
+		<!-- Monster's absolute defense. P./ M. Def. +5000. -->
 		<icon>icon.skill0110</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -191,7 +191,7 @@
 		</effects>
 	</skill>
 	<skill id="1632" toLevel="1" name="Shield">
-		<!-- P. Def. and M. Def. +20%. -->
+		<!-- P./ M. Def. +20%. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -278,7 +278,7 @@
 		</effects>
 	</skill>
 	<skill id="1636" toLevel="1" name="(Petrify)">
-		<!-- Petrification. Inflicted status: Petrification. -->
+		<!-- Petrification.\n\n Inflicted status: Petrification. -->
 		<icon>icon.skill1540</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -304,6 +304,19 @@
 			</effect>
 			<effect name="BuffBlock" />
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="HpRegen">
 				<amount>-100</amount>
 				<mode>PER</mode>
@@ -311,7 +324,7 @@
 		</effects>
 	</skill>
 	<skill id="1637" toLevel="1" name="Stun">
-		<!-- Stuns the target for 7 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 7 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -334,12 +347,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1638" toLevel="1" name="Stun">
-		<!-- Stuns the target for 7 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 7 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -363,12 +376,12 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1639" toLevel="1" name="Stun">
-		<!-- Stuns the target for 7 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 7 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -390,12 +403,12 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1640" toLevel="1" name="Hold">
-		<!-- Holds the enemy for 15 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the enemy for 15 sec.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -424,7 +437,7 @@
 		</effects>
 	</skill>
 	<skill id="1641" toLevel="1" name="Hold">
-		<!-- Holds the enemy for 15 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the enemy for 15 sec.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -454,7 +467,7 @@
 		</effects>
 	</skill>
 	<skill id="1642" toLevel="1" name="Hold">
-		<!-- Holds the enemy for 15 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the enemy for 15 sec.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -482,7 +495,7 @@
 		</effects>
 	</skill>
 	<skill id="1643" toLevel="1" name="Paralysis">
-		<!-- Gradually freezes the enemy's body for 15 sec. When it's frozen, inflicts Paralysis for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Gradually freezes the enemy's body for 15 sec. When it's frozen, inflicts Paralysis for 10 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -562,6 +575,19 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1646" toLevel="1" name="Mana Burn">
@@ -629,7 +655,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1649" toLevel="1" name="MP Regen">
+	<skill id="1649" toLevel="1" name="Recover MP">
 		<!-- Increases MP recovery for 10 sec. -->
 		<icon>icon.skill4106</icon>
 		<operateType>A2</operateType>
@@ -653,7 +679,7 @@
 		</effects>
 	</skill>
 	<skill id="1650" toLevel="1" name="Absolute Defense">
-		<!-- Monster absolute defense. Defense increased 50000. -->
+		<!-- Monster absolute defense. P. Def. +50,000. -->
 		<icon>icon.skill0110</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1060,7 +1086,7 @@
 		</effects>
 	</skill>
 	<skill id="1669" toLevel="1" name="Sleep">
-		<!-- Sleep. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Sleep.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1669</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -1080,7 +1106,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
@@ -1088,7 +1114,7 @@
 		</effects>
 	</skill>
 	<skill id="1670" toLevel="1" name="Silence">
-		<!-- Blocks magic use. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Blocks magic use.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1670</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -1113,7 +1139,7 @@
 		</effects>
 	</skill>
 	<skill id="1671" toLevel="1" name="Disarm">
-		<!-- Disarms. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Disarms.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill01671</icon>
 		<operateType>A2</operateType>
 		<trait>DISARM</trait>
@@ -1159,7 +1185,7 @@
 		</effects>
 	</skill>
 	<skill id="1673" toLevel="1" name="Death">
-		<!-- After 15 sec. the enemy has 1 HP. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- After 15 sec. the enemy has 1 HP.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1673</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -1202,7 +1228,7 @@
 		</effects>
 	</skill>
 	<skill id="1675" toLevel="1" name="Flood">
-		<!-- Increases P. Atk., Critical rage/ damage, and Atk. Spd. by 100%. -->
+		<!-- P. Atk., Critical Rate/ Damage for standard attacks, Atk. Spd. +100%. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1242,7 +1268,7 @@
 		</endEffects>
 	</skill>
 	<skill id="1676" toLevel="1" name="Crazy After-effect">
-		<!-- Aftereffect of going insane. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Aftereffect of going insane.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1260,7 +1286,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>-50</amount>
@@ -1377,7 +1403,7 @@
 		</effects>
 	</skill>
 	<skill id="1682" toLevel="1" name="Aggression">
-		<!-- Hostile stare full of rage! Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Hostile stare full of rage!\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -1764,7 +1790,7 @@
 		</effects>
 	</skill>
 	<skill id="1699" toLevel="1" name="Blink">
-		<!-- Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- none\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1448</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -1806,7 +1832,7 @@
 				<power>1</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>

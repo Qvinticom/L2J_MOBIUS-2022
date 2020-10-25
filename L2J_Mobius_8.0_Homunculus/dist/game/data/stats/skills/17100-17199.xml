@@ -23,19 +23,19 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17104" toLevel="1" name="Bae Kisung Teleport - Town of Aden">
-		<!-- Teleport to the Town of Aden. Usable only when Agathion's Seal is released. -->
+		<!-- Teleports to Aden. Can be used only when the agathion is summoned. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17105" toLevel="1" name="Bae Kisung Teleport - Town of Rune">
-		<!-- Teleport to the Town of Rune. Usable only when Agathion's Seal is released. -->
+		<!-- Teleports to Rune. Can be used only when the agathion is summoned. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17106" toLevel="1" name="Bae Kisung Teleport - Talking Island Village">
-		<!-- Teleport to the Talking Island Village. Usable only when Agathion's Seal is released. -->
+		<!-- Teleports to the Talking Island Village. Usable only when the agathion is summoned. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
@@ -48,8 +48,8 @@
 		<effectPoint>-2</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="17108" toLevel="1" name="Christmas Blessing">
-		<!-- Restores energy when in a peaceful zone. -->
+	<skill id="17108" toLevel="1" name="Holiday Blessing">
+		<!-- Restores Vitality when in a peaceful zone. -->
 		<icon>icon.weapon_snowman_stick_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -87,8 +87,8 @@
 	<skill id="17116" toLevel="1" name="Promise Cube Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17117" toLevel="2" name="Rune of Bountiful Growth">
-		<!-- Increases acquired XP and SP by $s1. -->
+	<skill id="17117" toLevel="2" name="Growth Rune">
+		<!-- Acquired XP/ SP +$s1. -->
 		<icon>
 			<value level="1">icon.ev_charge_run</value>
 			<value level="2">br_cashtex.item.br_cash_rune_of_feather_i00</value>
@@ -110,7 +110,7 @@
 		</effects>
 	</skill>
 	<skill id="17118" toLevel="1" name="Emperor's Growth Scroll">
-		<!-- Acquired XP/ SP +30% for 1 h. -->
+		<!-- For 1 h., acquired XP/ SP +30%. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -187,7 +187,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17124" toLevel="24" name="Snake's Blessing Lv. 1">
-		<!-- Have a happy $s1. You can obtain a card in $s2 hour. There are $s4 stages, so you can acquire up to $s3 cards. If the buff disappears, you can get it again from Snake. <Note:> If your character is dead while the item is given, you cannot acquire the cards or level up the Snake's Blessing. You also cannot acquire the cards if your inventory is full. -->
+		<!-- Have a happy $s1 year! You can obtain a card in $s2 h. There are $s4 levels, so you can acquire up to $s3 cards. If the buff disappears, you can get it again from Snake.\n\nNote!\nThe cards can't be obtained and the Snake's Blessing can't be leveled up if your character is dead. Also you can't obtain the cards if your inventory is full. -->
 		<icon>icon.card_event_everyday_gift</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -225,7 +225,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17126" toLevel="24" name="Lucky Box 2">
-		<!-- Happy $s1! You can obtain a card in $s2 h. There are $s3 stages, so you can acquire up to $s4 cards. <Note:> If you're dead while the item is given, you cannot acquire the Snake's Blessing buff or the cards. You also cannot acquire the cards if your inventory is full. -->
+		<!-- Have a happy $s1 year! You can obtain a card in $s2 h. There are $s4 levels, so you can acquire up to $s3 cards. If the buff disappears, you can get it again from Snake.\n\nNote!\nThe cards can't be obtained and the Snake's Blessing can't be leveled up if your character is dead. Also you can't obtain the cards if your inventory is full. -->
 		<icon>icon.card_event_everyday_gift</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -339,13 +339,13 @@
 	<skill id="17148" toLevel="1" name="Top-grade Life Stone Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17149" toLevel="1" name="Legendary Card Pouch: Dragon">
+	<skill id="17149" toLevel="1" name="Legendary Card Pouch - Dragon">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17150" toLevel="1" name="Legendary Card Pouch: Hero">
+	<skill id="17150" toLevel="1" name="Legendary Card Pouch - Hero">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17151" toLevel="1" name="Legendary Card Pouch: Demon">
+	<skill id="17151" toLevel="1" name="Legendary Card Pouch - Evil">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17152" toLevel="1" name="Mysterious Healthy Juice">
@@ -388,7 +388,7 @@
 		</effects>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
-		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing,. For 5 min., P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. increases by 50%. Effect disappears upon logout. -->
+		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing.\nFor $s1, P./ M. Atk., Atk. Spd. and Casting Spd. are increased by $s2. The effect disappears after logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<itemConsumeId>37704</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -427,7 +427,7 @@
 		</effects>
 	</skill>
 	<skill id="17155" toLevel="1" name="Coco's Magic">
-		<!-- Equipped weapon changes shape for 5 min. Is it the sweet magic Coco emits? The effect disappears upon logout. -->
+		<!-- Equipped weapon changes shape for $s1. Is it the sweet magic Coco emits? The effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -459,7 +459,7 @@
 		</effects>
 	</skill>
 	<skill id="17156" toLevel="1" name="Decadence">
-		<!-- A deliciously dark flavor surrounds you. For 2 h., STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +2, Vitality Bonus +10%. -->
+		<!-- A deliciously dark flavor surrounds you.\nFor $s1, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +$s2, Vitality Bonus +$s3. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -516,7 +516,7 @@
 		</effects>
 	</skill>
 	<skill id="17157" toLevel="1" name="Sugar Rush">
-		<!-- An exhilarating thrill of sweet energy. For 2 h., STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +2, Vitality Bonus +10%. -->
+		<!-- An exhilarating thrill of sweet energy.\nFor $s1, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +$s2, Vitality Bonus +$s3. -->
 		<icon>icon.etc_whiteday_candy</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -554,7 +554,7 @@
 		</effects>
 	</skill>
 	<skill id="17158" toLevel="1" name="Forever Alone">
-		<!-- Activating shield of self-built perfection. For 2 h., STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +2, Vitality Bonus +10%. -->
+		<!-- Activating shield of self-built perfection.\nFor $s1, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +$s2, Vitality Bonus +$s3. -->
 		<icon>icon.etc_whiteday_cookie</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -592,7 +592,7 @@
 		</effects>
 	</skill>
 	<skill id="17159" toLevel="1" name="Transformation Skill">
-		<!-- For 1 h., you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry tow, and Sleepy Tow. -->
+		<!-- For $s1, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry tow, and Sleepy Tow. -->
 		<icon>icon.skill11540</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -623,7 +623,7 @@
 		</effects>
 	</skill>
 	<skill id="17160" toLevel="1" name="Summon Friend">
-		<!-- You can summon a selected target. Only possible while in a party. Cooldown is 30 min. -->
+		<!-- You can summon a selected target. Only possible while in a party. Cooldown is $s1. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1000</effectPoint>
@@ -728,7 +728,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="17166" toLevel="1" name="Knight's Harmony- GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., this blessing increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, and Shield Defense Rate/ P. Def. by 30%, and decreases the chance of receiving Physical/ Magic Critical Hit by 50%. -->
+		<!-- The GM is always by your side. For $s1, this blessing increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, and Shield Defense Rate/ P. Def. by $s6, and decreases the chance of receiving Physical/ Magic Critical Hit by $s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -781,7 +781,7 @@
 		</effects>
 	</skill>
 	<skill id="17167" toLevel="1" name="Warrior's Harmony- GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., this blessing increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. There is also a chance to add the Spectral Slash effect to the target. -->
+		<!-- The GM is always by your side. For $s1, P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, Speed +$s6. With a certain chance, adds the Spectral Slash effect after a standard attack. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -832,13 +832,13 @@
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>7009</skillId> <!-- Test skill calls Spectral Slash -->
+				<skillId>7009</skillId> <!-- not_used -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17168" toLevel="1" name="Wizard's Harmony- GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., this blessing increases M. Atk. by 45%, M. Critical Rate by 100%, M. Critical Damage by 10%, Casting Spd. by 15%, and Attack Attribute by 100. Decreases Skill Cooldown by 20% and Skill MP Consumption by 15%. -->
+		<!-- The GM is always by your side. For $s1, this blessing increases M. Atk. by $s2, M. Critical Rate by $s3, M. Critical Damage by $s4, Casting Spd. by $s5, and Attribute Attack by $s6. Decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -924,7 +924,7 @@
 		</effects>
 	</skill>
 	<skill id="17169" toLevel="1" name="Horn Melody- GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. -->
+		<!-- The GM is always by your side. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -965,7 +965,7 @@
 		</effects>
 	</skill>
 	<skill id="17170" toLevel="1" name="Drum Melody- GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
+		<!-- The GM is always by your side. For $s1, P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1016,7 +1016,7 @@
 		</effects>
 	</skill>
 	<skill id="17171" toLevel="1" name="Pipe Organ Melody- GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. -->
+		<!-- The GM is always by your side. For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1061,7 +1061,7 @@
 		</effects>
 	</skill>
 	<skill id="17172" toLevel="1" name="Guitar Melody- GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., Atk. Spd. +63%, Casting Spd. +61%, Speed +25, Skill MP Consumption -10%. -->
+		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1132,7 +1132,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="17175" toLevel="1" name="GM's Blessing - Prevailing Sonata">
-		<!-- The GM is always by your side. For 1 h., Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
+		<!-- The GM is always by your side. For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, Casting Interruption Rate -$s5. With a certain chance, Vampiric Rage effect +$s6. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1177,7 +1177,7 @@
 		</effects>
 	</skill>
 	<skill id="17176" toLevel="1" name="Daring Sonata - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., this blessing increases Atk. Spd. by 40%, Casting Spd. by 30%, Damage Reflection by 10%, and decreases Skill Cooldown by 10%. -->
+		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Damage Reflection +$s4, Skill Cooldown -$s5. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1232,7 +1232,7 @@
 		</effects>
 	</skill>
 	<skill id="17177" toLevel="1" name="Refreshing Sonata - GM's Blessing">
-		<!-- The GM is always by your side. For 1 h., HP Recovery Rate +75%, MP Recovery Rate +100%, P./M. Evasion +5, and M. Skill MP Consumption -22%. -->
+		<!-- The GM is always by your side. For $s1, HP Recovery Rate +$s2, MP Recovery Rate +$s3, P./M. Evasion +$s4, and M. Skill MP Consumption -$s5. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1314,7 +1314,7 @@
 		<icon>icon.shirt_special_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17184" toLevel="1" name="Maphr's Special Pack">
+	<skill id="17184" toLevel="1" name="Pa'agrio's Special Pack">
 		<icon>icon.shirt_special_box_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1323,7 +1323,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17186" toLevel="1" name="Dandy's Cheers">
-		<!-- For 2 h., increases P. Atk. +5%, Atk. Spd. +5%, P. Critical Rate +30, M. Atk. +10%, Casting Spd. +5%, M. Critical Rate +20. MP consumption -3%, Cooldown -3%. Does not apply at the same time as the Dandy's Passion and Dandy's Faith buffs. Armor's appearance changes to that of the NC Dinos Uniform. -->
+		<!-- For 2 h., P. Atk. +5%, Atk. Spd. +5%, Critical Rate for standard attacks +30, M. Atk. +10%, Casting Spd. +5%, M. Skill Critical Rate +20. Skill MP consumption -3%, Skill Cooldown -3%. Does not stack with the Dandy's Passion and Dandy's Faith buffs. Armor's appearance changes to that of the NC Dinos Uniform. -->
 		<icon>BranchSys2.icon.br_worldcup_stick_i04</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -1398,7 +1398,7 @@
 		</effects>
 	</skill>
 	<skill id="17187" toLevel="1" name="Dandy's Challenge">
-		<!-- For 60 min., increases acquired XP and SP by 30%. Does not apply at the same time as Scroll: Energy of Glory. -->
+		<!-- For 60 min., acquired XP and SP +30%. Does not stack with Scroll of Glory. -->
 		<icon>BranchSys.icon.br_xmas_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -1424,7 +1424,7 @@
 		</effects>
 	</skill>
 	<skill id="17188" toLevel="1" name="Dandy's Faith">
-		<!-- For 60 min., increases P. Atk. +5%, Atk. Spd. +5%, P. Critical Rate +30, M. Atk. +10%, Casting Spd. +5%, M. Critical Rate +20. MP consumption -3%, Cooldown -3%. Does not apply at the same time as the Dandy's Cheer and Dandy's Faith buffs. -->
+		<!-- For 60 h., P. Atk. +5%, Atk. Spd. +5%, Critical Rate for standard attacks +30, M. Atk. +10%, Casting Spd. +5%, M. Skill Critical Rate +20. Skill MP consumption -3%, Skill Cooldown -3%. Does not stack with the Dandy's Passion and Dandy's Cheers buffs. -->
 		<icon>BranchSys.icon.br_xmas_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -1546,10 +1546,10 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17190" toLevel="1" name="Reinforced Soulshot (D-grade)">
+	<skill id="17190" toLevel="1" name="Reinforced D-grade Soulshot">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17191" toLevel="1" name="Reinforced Soulshot (C-grade)">
+	<skill id="17191" toLevel="1" name="Reinforced C-grade Soulshot">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17192" toLevel="1" name="Change Hair Accessory">
@@ -1574,8 +1574,8 @@
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="17195" toLevel="1" name="Potion of Protection: Stun (Low-grade)">
-		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. -->
+	<skill id="17195" toLevel="1" name="Low-grade Potion of Protection: Stun">
+		<!-- Confusion Resistance +$s1. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i01</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37792</itemConsumeId>
@@ -1596,8 +1596,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17196" toLevel="1" name="Potion of Protection: Hold (Low-grade)">
-		<!-- Obstruction Resistance +5%. Cannot be used in the Olympiad. -->
+	<skill id="17196" toLevel="1" name="Low-grade Potion of Protection: Hold">
+		<!-- Obstruction Resistance +$s1. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i06</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37793</itemConsumeId>
@@ -1618,8 +1618,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17197" toLevel="1" name="Potion of Protection: Bleed (Low-grade)">
-		<!-- Infection Resistance +5%. Cannot be used in the Olympiad. -->
+	<skill id="17197" toLevel="1" name="Low-grade Potion of Protection: Bleed">
+		<!-- Infection Resistance +$s1. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i00</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37794</itemConsumeId>
@@ -1640,8 +1640,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17198" toLevel="1" name="Potion of Protection: Paralyze (Low-grade)">
-		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. -->
+	<skill id="17198" toLevel="1" name="Low-grade Potion of Protection - Paralysis">
+		<!-- Confusion Resistance +$s1. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i07</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37795</itemConsumeId>
@@ -1662,8 +1662,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17199" toLevel="1" name="Potion of Protection: Mental (Low-grade)">
-		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. -->
+	<skill id="17199" toLevel="1" name="Low-grade Potion of Protection: Mental">
+		<!-- Confusion Resistance +$s1. Cannot be used in the Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i04</icon>
 		<operateType>A2</operateType>
 		<itemConsumeId>37796</itemConsumeId>

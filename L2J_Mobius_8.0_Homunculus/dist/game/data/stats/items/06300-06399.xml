@@ -377,7 +377,7 @@
 		</skills>
 	</item>
 	<item id="6317" name="Mixing Manual" type="EtcItem">
-		<!-- Manual received from Magic Trader Wesley, with instructions for using the material mixing urn located in the basement of the Ivory Tower. -->
+		<!-- A manual received from Magic Trader Wesley. Contains the instructions for using the Mixing Urn located in the basement of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -458,7 +458,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6323" name="Sealed Phoenix Necklace" type="Armor">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +4 and MP+26. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -475,7 +475,7 @@
 		</stats>
 	</item>
 	<item id="6324" name="Sealed Phoenix Earring" type="Armor">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +3 and MP+20. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -492,7 +492,7 @@
 		</stats>
 	</item>
 	<item id="6325" name="Sealed Phoenix Ring" type="Armor">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +2 and MP+13. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -509,7 +509,7 @@
 		</stats>
 	</item>
 	<item id="6326" name="Sealed Majestic Necklace" type="Armor">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +5 and MP+33. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -526,7 +526,7 @@
 		</stats>
 	</item>
 	<item id="6327" name="Sealed Majestic Earring" type="Armor">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +3 and MP+25. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -543,7 +543,7 @@
 		</stats>
 	</item>
 	<item id="6328" name="Sealed Majestic Ring" type="Armor">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +2 and MP+17. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -560,7 +560,7 @@
 		</stats>
 	</item>
 	<item id="6329" name="Recipe: Sealed Phoenix Necklace(70%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Phoenix Necklace. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
+		<!-- For Dwarves only. A recipe for Sealed Phoenix Necklace. Requires Create Item Lv. 7. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -574,7 +574,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6330" name="Recipe: Sealed Phoenix Necklace" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Phoenix Necklace. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Sealed Phoenix Necklace. Requires Create Item Lv. 7. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -588,7 +588,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6331" name="Recipe: Sealed Phoenix Earring(70%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the sealed Phoenix Earring. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
+		<!-- For Dwarves only. A recipe for Sealed Phoenix Earring. Requires Create Item Lv. 7. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -602,7 +602,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6332" name="Recipe: Sealed Phoenix Earring" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the sealed Phoenix Earring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Sealed Phoenix Earring. Requires Create Item Lv. 7. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -616,7 +616,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6333" name="Recipe: Sealed Phoenix Ring(70%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Phoenix Ring. Requires Create Item - Skill Lv. 7. The success rate is 70%. -->
+		<!-- For Dwarves only. A recipe for Sealed Phoenix Ring. Requires Create Item Lv. 7. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -630,7 +630,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6334" name="Recipe: Sealed Phoenix Ring" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Phoenix Ring. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Sealed Phoenix Ring. Requires Create Item Lv. 7. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -644,7 +644,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6335" name="Recipe: Sealed Majestic Necklace(70%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Majestic Necklace. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
+		<!-- For Dwarves only. A recipe for Sealed Majestic Necklace. Requires Create Item Lv. 8. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -658,7 +658,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6336" name="Recipe: Sealed Majestic Necklace" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Majestic Necklace. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Sealed Majestic Necklace. Requires Create Item Lv. 8. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -672,7 +672,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6337" name="Recipe: Sealed Majestic Earring(70%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Majestic Earring. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
+		<!-- For Dwarves only. A recipe for Sealed Majestic Earring. Requires Create Item Lv. 8. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -686,7 +686,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6338" name="Recipe: Sealed Majestic Earring" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Majestic Earring. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Sealed Majestic Earring. Requires Create Item Lv. 8. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -700,7 +700,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6339" name="Recipe: Sealed Majestic Ring(70%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Majestic Ring. Requires Create Item - Skill Lv. 8. The success rate is 70%. -->
+		<!-- For Dwarves only. A recipe for Sealed Majestic Ring. Requires Create Item Lv. 8. The success rate is 70%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -714,7 +714,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6340" name="Recipe: Sealed Majestic Ring" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Majestic Ring. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Sealed Majestic Ring. Requires Create Item Lv. 8. The success rate is 100%. A useless recipe for crafting old equipment. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -728,7 +728,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6341" name="Sealed Phoenix Earring Gemstone" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a Sealed Phoenix Earring. It can be sold at any store. -->
+		<!-- Key material for Dwarves to make Sealed Phoenix Earring. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -739,7 +739,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6342" name="Sealed Majestic Earring Gemstone" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a Sealed Majestic Earring. It can be sold at any store. -->
+		<!-- Key material for Dwarves to make Sealed Majestic Earring. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -750,7 +750,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6343" name="Sealed Phoenix Necklace Beads" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a Sealed Phoenix Necklace. It can be sold at any store. -->
+		<!-- Key material for Dwarves to make Sealed Phoenix Necklace. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="BranchSys2.icon.etc_sealed_phoenixbeads_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -761,7 +761,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6344" name="Sealed Majestic Necklace Beads" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a Sealed Majestic Necklace. It can be sold at any store. -->
+		<!-- Key material for Dwarves to make Sealed Majestic Necklace. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="BranchSys2.icon.etc_sealed_majesticbeads_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -772,7 +772,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6345" name="Sealed Phoenix Ring Gemstone" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a Sealed Phoenix Ring. It can be sold at any store. -->
+		<!-- Key material for Dwarves to make Sealed Phoenix Ring. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -783,7 +783,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6346" name="Sealed Majestic Ring Gemstone" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a Sealed Majestic Ring. It can be sold at any store. -->
+		<!-- Key material for Dwarves to make Sealed Majestic Ring. Not valuable material for crafting old equipment. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -887,7 +887,7 @@
 		</stats>
 	</item>
 	<item id="6350" name="Amulet: Pa'agrio's Honor" type="EtcItem">
-		<!-- Amulet required for the Pa'agrio's Honor spell. Used by Overlords. Required level: 66 -->
+		<!-- An amulet for learning the Pa'agrio's Honor skill. Used by Overlords. Required level: 66. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -897,7 +897,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6351" name="Amulet: Ritual of Life" type="EtcItem">
-		<!-- Amulet required for the Ritual of Life spell. Used by Overlords. Required level: 64 -->
+		<!-- An amulet for learning the Ritual of Life skill. Used by Overlords. Required level: 64. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -907,7 +907,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6352" name="Spellbook: Prayer" type="EtcItem">
-		<!-- Spellbook needed to learn Prayer. Used by Bishops. Required level: 66 -->
+		<!-- A spellbook for learning the Prayer skill. Used by Bishops. Required level: 66. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1148,7 +1148,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6364" name="Forgotten Blade" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1177,7 +1177,7 @@
 		</stats>
 	</item>
 	<item id="6365" name="Basalt Battlehammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1206,7 +1206,7 @@
 		</stats>
 	</item>
 	<item id="6366" name="Imperial Staff" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1236,7 +1236,7 @@
 		</stats>
 	</item>
 	<item id="6367" name="Angel Slayer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1295,7 +1295,7 @@
 		</stats>
 	</item>
 	<item id="6369" name="Dragon Hunter Axe" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1324,7 +1324,7 @@
 		</stats>
 	</item>
 	<item id="6370" name="Saint Spear" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1356,7 +1356,7 @@
 		</stats>
 	</item>
 	<item id="6371" name="Demon Splinter" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1385,7 +1385,7 @@
 		</stats>
 	</item>
 	<item id="6372" name="Heaven's Divider" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1525,7 +1525,7 @@
 		</stats>
 	</item>
 	<item id="6379" name="Draconic Leather Armor" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t89_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1598,7 +1598,7 @@
 		</stats>
 	</item>
 	<item id="6383" name="Major Arcana Robe" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t90_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1688,7 +1688,7 @@
 		</skills>
 	</item>
 	<item id="6388" name="Lord's Certificate of Approval" type="EtcItem">
-		<!-- This certificate allows the bearer to join the Lords of Dawn without belonging to a castle-owning clan. -->
+		<!-- When one possesses this item, although one does not belong to a castle owning clan, one can join the Lords of Dawn. -->
 		<set name="icon" val="icon.etc_permit_card_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1696,7 +1696,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6389" name="Squash Seed" type="EtcItem">
-		<!-- Double-click to make a Young Squash appear. -->
+		<!-- Autumn Harvest Event - double-click to make a Young Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1709,7 +1709,7 @@
 		</skills>
 	</item>
 	<item id="6390" name="Large Squash Seed" type="EtcItem">
-		<!-- Double-click to make a Large Young Squash appear. -->
+		<!-- Autumn Harvest Event - double-click to make a Large Young Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1722,7 +1722,7 @@
 		</skills>
 	</item>
 	<item id="6391" name="Nectar" type="EtcItem">
-		<!-- Used to exchange with Puss the Cat for watermelon seeds or for growing watermelons. -->
+		<!-- Watermelon event. Used to exchange with Puss the Cat for watermelon seeds and anniversary weapons or for growing watermelons. -->
 		<set name="icon" val="icon.etc_nectar_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1742,14 +1742,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6393" name="Event - Glittering Medal" type="EtcItem">
-		<!-- L2 Medal Collection Event - Used to raise the grade of a collector during the event. -->
+		<!-- L2 Medal Collection Event - If you take it to an Event Manager, he will trade it for a prize item of your choice. -->
 		<set name="icon" val="icon.etc_event_glitter_medal_i00" />
 		<set name="material" val="STEEL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6394" name="Red Party Mask" type="Armor">
-		<!-- Fashion accessory item that allows you to show a unique appearance. -->
+		<!-- A fashion item used to display a unique appearance. -->
 		<set name="icon" val="icon.etc_party_mask_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1761,7 +1761,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="6395" name="Amulet: Chant of Predator" type="EtcItem">
-		<!-- Amulet required for the Chant of Predator spell. Used by Warcryers. Required level: 48 -->
+		<!-- An amulet for learning the Chant of Predator skill. Used by Warcryers. Required level: 48. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1771,7 +1771,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6396" name="Amulet: Chant of Eagle" type="EtcItem">
-		<!-- Amulet needed to learn the Chant of Eagle incantation. Used by Warcryers. Required level: 48 -->
+		<!-- An amulet for learning the Chant of Eagle skill. Used by Warcryers. Required level: 48. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1781,7 +1781,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6397" name="Amulet: Chant of Vampire" type="EtcItem">
-		<!-- Amulet required for the Chant of Vampire spell. Used by Warcryers. Required level: 44 -->
+		<!-- An amulet for learning the Chant of Vampire skill. Used by Warcryers. Required level: 44. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1791,7 +1791,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6398" name="Spellbook: Body of Avatar" type="EtcItem">
-		<!-- Spellbook needed to learn Body of Avatar. Used by Bishops. Required level: 48 -->
+		<!-- A spellbook for learning the Body of Avatar skill. Used by Bishops. Required level: 48. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1801,7 +1801,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6399" name="Rabbit Crest" type="EtcItem">
-		<!-- The crest that indicates that its bearer's event collector is "rabbit." Without this badge, one cannot prove one's grade. -->
+		<!-- The badge indicating that its bearer's event collector is "rabbit." Without this badge, one cannot prove one's grade. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="8900" name="Ancient Spellbook: Cyclone" type="EtcItem">
-		<!-- Ancient Spellbook needed to learn Cyclone. Can be used by a Storm Screamer. -->
+		<!-- An ancient spellbook for learning the Cyclone skill. Used by Storm Screamers. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -11,7 +11,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8901" name="Ancient Spellbook: Raging Waves" type="EtcItem">
-		<!-- Ancient Spellbook needed to learn Raging Waves. Used by Mystic Muses. -->
+		<!-- An ancient spellbook for learning the Raging Waves skill. Used by Mystic Muses. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -21,7 +21,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8902" name="Ancient Spellbook: Day of Doom" type="EtcItem">
-		<!-- Ancient Spellbook needed to learn Day of Doom. Can be used by a Soultaker. -->
+		<!-- An ancient spellbook for learning the Day of Doom skill. Used by Soultakers. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -31,7 +31,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8903" name="Ancient Spellbook: Gehenna" type="EtcItem">
-		<!-- Ancient Spellbook needed to learn Gehenna. Can be used by a Soultaker. -->
+		<!-- An ancient spellbook for learning the Gehenna skill. Used by Soultakers. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -41,7 +41,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8904" name="Ancient Spellbook: Anti-summoning Field" type="EtcItem">
-		<!-- Ancient Spellbook needed to learn Anti-summoning Field. Can be used by an Arcana Lord, Elemental Master, and Spectral Master. -->
+		<!-- An ancient spellbook for learning the Anti-summoning Field skill. Used by Arcana Lords, Elemental Masters and Spectral Masters. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -51,7 +51,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8905" name="Ancient Spellbook: Purification Field" type="EtcItem">
-		<!-- Ancient Spellbook needed to learn Purification Field. Used by a Cardinal. -->
+		<!-- An ancient spellbook for learning the Purification Field skill. Used by Cardinals. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -61,7 +61,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8906" name="Ancient Spellbook: Miracle" type="EtcItem">
-		<!-- Ancient Spellbook needed to learn Miracle. Used by a Cardinal. -->
+		<!-- An ancient spellbook for learning the Miracle skill. Used by Cardinals. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -71,7 +71,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8907" name="Ancient Spellbook: Flames of Invincibility" type="EtcItem">
-		<!-- Ancient Spellbook needed to learn Flames of Invincibility. Used by a Dominator. -->
+		<!-- An ancient spellbook for learning the Flames of Invincibility skill. Used by Dominators. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -81,7 +81,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8908" name="Ancient Spellbook: Mass Recharge" type="EtcItem">
-		<!-- Ancient Spellbook needed to learn Mass Recharge. Can be used by an Eva's Saint and Shillien Saint. -->
+		<!-- An ancient spellbook for learning the Mass Recharge skill. Used by Eva's Saints and Shillien Saints. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -91,7 +91,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8909" name="Blueprint: Summon Swoop Cannon" type="EtcItem">
-		<!-- Blueprint needed to learn the Summon Swoop Cannon technique. Can be used by a Warsmith. Required level: 68 -->
+		<!-- A blueprint for learning the Summon Swoop Cannon skill. Used by Warsmiths. Required level: 68. -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -202,7 +202,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8917" name="Goddess Circlet" type="Armor">
-		<!-- The goddess' circlet. This is a female-use hair accessory. It uses 2 hair accessory slots. -->
+		<!-- The goddess' circlet. Female only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.Accessary_goddess_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -676,7 +676,7 @@
 		</stats>
 	</item>
 	<item id="8938" name="Tallum Blade*Damascus" type="Weapon">
-		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -803,7 +803,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8945" name="Spellbook: Celestial Shield" type="EtcItem">
-		<!-- Spellbook needed to learn Celestial Shield. Used by Bishops. Required level: 64 -->
+		<!-- A spellbook for learning the Celestial Shield skill. Used by Bishops. Required level: 64. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -813,7 +813,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8946" name="Spellbook: Invocation" type="EtcItem">
-		<!-- Spellbook need to learn Invocation. Used by Bishops, Elders, and Shillien Elders. Required level: 56 -->
+		<!-- A spellbook need to learn Invocation. Used by Bishops, Elders and Shillien Elders. Required level: 56. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -919,7 +919,7 @@
 		</skills>
 	</item>
 	<item id="8954" name="Blue Primeval Crystal" type="EtcItem">
-		<!-- Increases SP by 500 when used. Can only be used by characters level 76 or above. -->
+		<!-- SP +500 when used. Can only be used by characters level 76 or above. -->
 		<set name="icon" val="icon.etc_sp_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -935,7 +935,7 @@
 		</skills>
 	</item>
 	<item id="8955" name="Green Primeval Crystal" type="EtcItem">
-		<!-- Increases SP by 1000 when used. Can only be used by characters level 76 or above. -->
+		<!-- SP +1000 when used. Can only be used by characters level 76 or above. -->
 		<set name="icon" val="icon.etc_sp_crystal_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -951,7 +951,7 @@
 		</skills>
 	</item>
 	<item id="8956" name="Red Primeval Crystal" type="EtcItem">
-		<!-- Increases SP by 2000 when used. Can only be used by characters level 76 or above. -->
+		<!-- SP +2000 when used. Can only be used by characters level 76 or above. -->
 		<set name="icon" val="icon.etc_sp_crystal_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1009,7 +1009,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8960" name="Shadow Armor Set Pack (No-grade)" type="EtcItem">
-		<!-- One can receive a no-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- One can receive a no-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Limit is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1029,7 +1029,7 @@
 		</skills>
 	</item>
 	<item id="8961" name="Shadow Armor Set Pack (D-grade)" type="EtcItem">
-		<!-- One can receive a D-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- One can receive a D-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Limit is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1049,7 +1049,7 @@
 		</skills>
 	</item>
 	<item id="8962" name="Shadow Armor Set Pack (C-grade)" type="EtcItem">
-		<!-- One can receive a C-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- One can receive a C-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Limit is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1069,7 +1069,7 @@
 		</skills>
 	</item>
 	<item id="8963" name="Shadow Armor Set Pack (B-grade)" type="EtcItem">
-		<!-- One can receive a B-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- One can receive a B-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Limit is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1089,7 +1089,7 @@
 		</skills>
 	</item>
 	<item id="8964" name="Shadow Armor Set Pack (A-grade)" type="EtcItem">
-		<!-- One can receive an A-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- One can receive an A-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Limit is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1109,7 +1109,7 @@
 		</skills>
 	</item>
 	<item id="8965" name="Shadow Armor Set Pack (S-grade)" type="EtcItem">
-		<!-- One can receive an S-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
+		<!-- Double-click to obtain S-grade shadow armor set. Can be used when the weight limit is below 60% and there are at least 20 empty inventory slots. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1129,7 +1129,7 @@
 		</skills>
 	</item>
 	<item id="8966" name="Item Set Pack (No-grade) (Warrior)" type="EtcItem">
-		<!-- One can receive no-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
+		<!-- One can receive no-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Limit is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1149,7 +1149,7 @@
 		</skills>
 	</item>
 	<item id="8967" name="Item Set Pack (D-grade) (Warrior)" type="EtcItem">
-		<!-- One can receive D-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
+		<!-- One can receive D-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Limit is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1169,7 +1169,7 @@
 		</skills>
 	</item>
 	<item id="8968" name="Item Set Pack (C-grade) (Warrior)" type="EtcItem">
-		<!-- One can receive C-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
+		<!-- One can receive C-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Limit is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1189,7 +1189,7 @@
 		</skills>
 	</item>
 	<item id="8969" name="Item Set Pack (B-grade) (Warrior)" type="EtcItem">
-		<!-- One can receive B-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
+		<!-- One can receive B-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Limit is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1209,7 +1209,7 @@
 		</skills>
 	</item>
 	<item id="8970" name="Item Set Pack (A-grade) (Warrior)" type="EtcItem">
-		<!-- One can receive A-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
+		<!-- One can receive A-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Limit is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1229,7 +1229,7 @@
 		</skills>
 	</item>
 	<item id="8971" name="Item Set Pack (A/ S-grade) (Warrior)" type="EtcItem">
-		<!-- One can receive A- and S-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
+		<!-- Double-click to obtain A- and S-grade supplies for warriors. Can be used when the weight limit is below 80% and there are at least 10 empty inventory slots. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

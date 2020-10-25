@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1" toLevel="37" name="Triple Slash">
-		<!-- Attacks the enemy with $s1 power. Requires a dual sword. Ignores Shield Defense. Critical. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power. Requires dual swords. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0001</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -186,7 +186,7 @@
 		</effects>
 	</skill>
 	<skill id="2" toLevel="19" name="Confusion">
-		<!-- Throws the enemy into confusion, changing their target of attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Throws the enemy into confusion, changing their target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0002</icon>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
@@ -268,7 +268,7 @@
 		</effects>
 	</skill>
 	<skill id="3" toLevel="9" name="Power Strike">
-		<!-- Delivers a powerful blow that strikes the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. -->
+		<!-- Delivers a powerful blow that strikes the target with $s1 power. Requires a sword, or a blunt weapon. Over-hit. -->
 		<icon>icon.skill0003</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -339,7 +339,7 @@
 		</effects>
 	</skill>
 	<skill id="4" toLevel="2" name="Dash">
-		<!-- Increases Speed by $s2 for $s1 -->
+		<!-- For $s1, Speed +$s2. -->
 		<icon>icon.skill0004</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -377,7 +377,7 @@
 		</effects>
 	</skill>
 	<skill id="5" toLevel="31" name="Double Sonic Slash">
-		<!-- Recharges the sword's energy and attacks the enemy with $s1 added to P. Atk. Increases Power upon consumption of up to $s2 Momentum levels. Over-hit and Critical are possible. -->
+		<!-- Recharges the sword's energy and attacks the enemy with $s1 power. Consumes up to $s2 Momentum to increase damage. Requires dual swords. Critical. Over-hit. -->
 		<icon>icon.skill0005</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -538,7 +538,7 @@
 		</effects>
 	</skill>
 	<skill id="6" toLevel="37" name="Sonic Blaster">
-		<!-- Hurls a deadly blast of force from the sword with $s1 power. Requires a dual sword, sword, or blunt weapon. Increases power upon consumption of up to $s2 Momentum. Critical. Over-hit. -->
+		<!-- Hurls a deadly energy blast with $s1 power. Consumes up to $s2 Momentum to increase damage. Requires a sword, a blunt weapon, or dual swords. Critical. Over-hit. -->
 		<icon>icon.skill0006</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -724,7 +724,7 @@
 		</effects>
 	</skill>
 	<skill id="7" toLevel="46" name="Sonic Storm">
-		<!-- Attacks nearby enemies with $s1 power. Requires a sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or a dual sword. Critical. Over-hit. -->
+		<!-- Attacks nearby enemies with $s1 power. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Critical. Over-hit. -->
 		<icon>icon.skill0007</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1014,7 +1014,7 @@
 		</effects>
 	</skill>
 	<skill id="9" toLevel="34" name="Sonic Buster">
-		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a dual sword, sword or blunt weapon. Increases Power upon consumption of up to $s2 Momentum levels. Consumes $s3 Momentum Stones. Over-hit and Critical are possible. -->
+		<!-- Hurls a powerful burst of energy at enemies in the front with $s1 power. Consumes up to $s3 Momentum to increase damage. Requires a sword, a blunt weapon, or dual swords. Consumes $s2 Momentum Stones. Critical. Over-hit. -->
 		<icon>icon.skill0009</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1264,7 +1264,7 @@
 		</effects>
 	</skill>
 	<skill id="11" toLevel="12" name="Trick">
-		<!-- Reduces the enemy's aggressiveness, cancelling their target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Reduces the enemy's aggressiveness, cancelling their target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0011</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -1327,7 +1327,7 @@
 		</effects>
 	</skill>
 	<skill id="12" toLevel="14" name="Switch">
-		<!-- Confuses the enemy, cancelling their target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Confuses the enemy, cancelling their target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0012</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1417,13 +1417,13 @@
 			<effect name="Summon">
 				<npcId>14737</npcId> <!-- Siege Golem -->
 				<lifeTime>1200</lifeTime>
-				<consumeItemId>2131</consumeItemId> <!-- Gemstone (C-grade) -->
+				<consumeItemId>2131</consumeItemId> <!-- C-grade Gemstone -->
 				<consumeItemCount>40</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="15" toLevel="52" name="Charm">
-		<!-- Enemy's aggression -$s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Decreases the enemy's aggression. Power $s1.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0015</icon>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
@@ -1658,7 +1658,7 @@
 		</effects>
 	</skill>
 	<skill id="16" toLevel="24" name="Mortal Blow">
-		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Requires a dagger. Over-hit is possible. Cannot be used with Dual Daggers. -->
+		<!-- Attacks the target's vital points with $s1 power. Requires a dagger. Over-hit. -->
 		<icon>icon.skill0016</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -1789,7 +1789,7 @@
 		</effects>
 	</skill>
 	<skill id="17" toLevel="34" name="Force Burst">
-		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consuming Momentum, and consumes up to $s3. Consumes $s2 Momentum Stones. Over-hit and Critical are possible. -->
+		<!-- Hurls a powerful burst of energy at enemies in the front with $s1 power. Consumes up to $s3 Momentum to increase damage. Requires a fist weapon. Consumes $s2 Momentum Stones. Critical. Over-hit. -->
 		<icon>icon.skill0017</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1966,7 +1966,7 @@
 		</effects>
 	</skill>
 	<skill id="18" toLevel="37" name="Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you with $s1 power. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes nearby enemies into attacking you. Power $s1. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2106,7 +2106,7 @@
 		</effects>
 	</skill>
 	<skill id="19" toLevel="37" name="Double Shot">
-		<!-- Shoots $s1 arrows in succession to attack the enemy with $s2 Power added to P. Atk. Requires a bow. Over-hit and Critical are possible. -->
+		<!-- Shoots $s1 arrows in succession to attack the enemy with $s2 power. Requires a bow. Critical. Over-hit. -->
 		<icon>icon.skill0019</icon>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
@@ -2740,7 +2740,7 @@
 		</effects>
 	</skill>
 	<skill id="28" toLevel="49" name="Aggression">
-		<!-- Provokes the selected target with $s1 power into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes the selected target into attacking you. Power $s1. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -3069,7 +3069,7 @@
 		</effects>
 	</skill>
 	<skill id="30" toLevel="37" name="Backstab">
-		<!-- Strikes the enemy from the back with $s1 power. Requires a dagger or a dual dagger. Half-kill. Critical. Over-hit. -->
+		<!-- Strikes the enemy from the back with $s1 power. Requires a dagger or dual daggers. Half-kill. Critical. Over-hit. -->
 		<icon>icon.skill0030</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3437,7 +3437,7 @@
 		</effects>
 	</skill>
 	<skill id="35" toLevel="46" name="Force Storm">
-		<!-- Attacks nearby enemies with $s1 power. Requires a sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or a dual sword. Critical. Over-hit. -->
+		<!-- Attacks nearby enemies with $s1 power. Requires a sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Critical. Over-hit. -->
 		<icon>icon.skill0035</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3849,7 +3849,7 @@
 		</effects>
 	</skill>
 	<skill id="42" toLevel="1" name="Sweeper">
-		<!-- Use on the corpses of Spoiled monsters to obtain extra items. -->
+		<!-- Use it on the corpses of Spoiled monsters to obtain extra items. -->
 		<icon>icon.skill0042</icon>
 		<castRange>20</castRange>
 		<effectRange>400</effectRange>
@@ -3912,7 +3912,7 @@
 		</effects>
 	</skill>
 	<skill id="45" toLevel="9" name="Divine Heal">
-		<!-- Restores the target's HP with $s1 Power. -->
+		<!-- Restores HP. Power $s1. -->
 		<icon>icon.skill0045</icon>
 		<effectPoint>
 			<value level="1">204</value>
@@ -4071,7 +4071,7 @@
 		</effects>
 	</skill>
 	<skill id="48" toLevel="51" name="Thunder Storm">
-		<!-- Swings a spear to attack nearby enemies with $s1 power. Inflicts stun for $s2 Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Swings a spear to attack nearby enemies with $s1 power. Inflicts stun for $s2 Requires a spear. Ignores Shield Defense. Critical. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0048</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -4325,12 +4325,12 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="49" toLevel="26" name="Holy Strike">
-		<!-- Inflicts holy damage on the undead with $s1 Power added to M. Atk. -->
+		<!-- Deal holy damage to Undead with $s1 power. -->
 		<icon>icon.skill0049</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -4549,7 +4549,7 @@
 		</effects>
 	</skill>
 	<skill id="51" toLevel="1" name="Lure">
-		<!-- Quietly lures the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Quietly lures the enemy.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0051</icon>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
@@ -4569,7 +4569,7 @@
 		</effects>
 	</skill>
 	<skill id="54" toLevel="49" name="Force Blaster">
-		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consumption of Momentum, and consumes up to $s2. Over-hit and Critical are possible. -->
+		<!-- Discharges a powerful energy beam at the enemy with $s1 power. Consumes up to $s2 Momentum to increase damage. Requires a fist weapon. Critical. Over-hit. -->
 		<icon>icon.skill0054</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -5287,7 +5287,7 @@
 		</effects>
 	</skill>
 	<skill id="65" toLevel="13" name="Horror">
-		<!-- Frightens the enemy into fleeing for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Fear on the enemy forcing them to flee for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0065</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -5373,7 +5373,7 @@
 		</effects>
 	</skill>
 	<skill id="67" toLevel="7" name="Summon Life Cubic">
-		<!-- Summons a Life Cubic. The Life Cubic uses magic to regenerate HP to its owner and party members. Requires $s1 Spirit Ore. -->
+		<!-- Summons Life Cubic that casts regenerating spells on its owner and their party members. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill0067</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -5438,7 +5438,7 @@
 		</effects>
 	</skill>
 	<skill id="69" toLevel="37" name="Sacrifice">
-		<!-- Consumes your HP to recover the target's HP by $s1. -->
+		<!-- Consumes your HP to recover $s1 HP of the target. -->
 		<icon>icon.skill0069</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -5612,7 +5612,7 @@
 		</effects>
 	</skill>
 	<skill id="70" toLevel="53" name="Drain Energy">
-		<!-- Inflicts dark damage on the target with $s1 Power added to M. Atk. Absorbs $s2 of the damage inflicted on target as HP. -->
+		<!-- Inflicts dark damage on the target with $s1 Power. Absorbs $s2 of the inflicted damage as HP. -->
 		<icon>icon.skill0070</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -5907,7 +5907,7 @@
 		</effects>
 	</skill>
 	<skill id="72" toLevel="3" name="Iron Will">
-		<!-- Increases M. Def. by $s2 for $s1 -->
+		<!-- For $s1, M. Def. +$s2. -->
 		<icon>icon.skill0072</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -5978,7 +5978,7 @@
 		</effects>
 	</skill>
 	<skill id="76" toLevel="1" name="Bear Spirit Totem">
-		<!-- Possessed by a Bear's soul, Increases P. Atk. and Critical Damage by 20%, and decreases Speed by 30% for 5 min. Requires a fist weapon. -->
+		<!-- Summons a Bear's Spirit. For 5 min., P. Atk. and Critical Damage for standard attacks +20%, Speed -30%. Requires a fist weapon. -->
 		<icon>icon.skill0076</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -6022,7 +6022,7 @@
 		</effects>
 	</skill>
 	<skill id="77" toLevel="2" name="Attack Aura">
-		<!-- Increases P. Atk. by $s2 for $s1 -->
+		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.skill0077</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -6065,7 +6065,7 @@
 		</effects>
 	</skill>
 	<skill id="78" toLevel="2" name="War Cry">
-		<!-- Increases P. Atk. by $s2 for $s1 -->
+		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.skill0078</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -6125,7 +6125,7 @@
 		</effects>
 	</skill>
 	<skill id="81" toLevel="3" name="Punch of Doom">
-		<!-- Inflicts great damage on the enemy with iron-fist. Requires a fist weapon. Ignores Shield Defense. Over-hit and Critical are possible. Power $s1. -->
+		<!-- Strikes at the enemy dealing great damage. Power $s1 Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit. The skill cooldown is fixed. -->
 		<icon>icon.skill0081</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>STUN</abnormalType>
@@ -6178,7 +6178,7 @@
 		</effects>
 	</skill>
 	<skill id="82" toLevel="3" name="Majesty">
-		<!-- Increases P. Def. by $s2 and decreases Evasion by $s3 for $s1 -->
+		<!-- For $s1, P. Def. +$s2, P. Evasion -$s3. -->
 		<icon>icon.skill0082</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -6229,7 +6229,7 @@
 		</effects>
 	</skill>
 	<skill id="83" toLevel="1" name="Wolf Spirit Totem">
-		<!-- Possessed by a Wolf's soul, Speed +20% and Accuracy +3 for 5 min. Requires a fist weapon. -->
+		<!-- Summons a Wolf's spirit. P. Accuracy +3, Speed +20% for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0083</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -6266,7 +6266,7 @@
 		</effects>
 	</skill>
 	<skill id="84" toLevel="3" name="Poison Blade Dance">
-		<!-- Swords emit a toxic cloud that poisons nearby enemies, dealing them $s1 damage per second. Requires a dual sword. Effect $s2. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Swords emit a toxic cloud that poisons nearby enemies, dealing them $s1 damage per sec. Requires dual swords. Effect $s2\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0084</icon>
 		<abnormalLevel>
 			<value level="1">6</value>
@@ -6330,7 +6330,7 @@
 		</effects>
 	</skill>
 	<skill id="86" toLevel="3" name="Reflect Damage">
-		<!-- For $s1, returns $s2 of received damage back to the enemy. -->
+		<!-- For $s1, reflects $s2 of the received damage back to the enemy. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -6378,7 +6378,7 @@
 		</effects>
 	</skill>
 	<skill id="87" toLevel="1" name="Detect Animal Weakness">
-		<!-- For 10 min., increases damage against animals +5%. -->
+		<!-- For 10 min., damage to animals +5%. -->
 		<icon>icon.skill0087</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -6400,7 +6400,7 @@
 		</effects>
 	</skill>
 	<skill id="88" toLevel="1" name="Detect Dragon Weakness">
-		<!-- For 10 min., increases damage against dragons +5%. -->
+		<!-- For 10 min., damage to dragons +5%. -->
 		<icon>icon.skill0088</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -6422,7 +6422,7 @@
 		</effects>
 	</skill>
 	<skill id="91" toLevel="2" name="Defense Aura">
-		<!-- Increases P. Def. by $s2 for $s1 -->
+		<!-- For $s1, P. Def. +$s2. -->
 		<icon>icon.skill0091</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -6465,7 +6465,7 @@
 		</effects>
 	</skill>
 	<skill id="92" toLevel="52" name="Shield Stun">
-		<!-- Uses a shield to shock the enemy. Inflicts stun on the target for $s1 Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Uses a shield to shock the enemy. Inflicts stun on the target for $s1 Requires a shield.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0092</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -6653,12 +6653,12 @@
 		</conditions>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="94" toLevel="8" name="Rage">
-		<!-- P. Atk. +$s2 for $s1 Requires a sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or a dual sword. -->
+		<!-- P. Atk. +$s2 for $s1 Requires a sword, a blunt weapon, a spear, a fist weapon, a dual blunt weapon, or dual swords. -->
 		<icon>icon.skill0094</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -6770,7 +6770,7 @@
 		</effects>
 	</skill>
 	<skill id="95" toLevel="20" name="Cripple">
-		<!-- Decreases the enemy's Speed by $s2 for $s1 Requires a fist weapon. -->
+		<!-- For $s1, the enemy's Speed -$s2. Requires a fist weapon. -->
 		<icon>icon.skill0095</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -6911,7 +6911,7 @@
 		</effects>
 	</skill>
 	<skill id="96" toLevel="6" name="Bleed">
-		<!-- Enemy's Speed -$s2 for $s1 Inflicts Bleed, causing them to lose $s3 HP per sec. Requires a dagger, or dual dagger. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Enemy's Speed -$s2 for $s1 Inflicts Bleed, causing them to lose $s3 HP per sec. Requires a dagger, or dual dagger.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -7056,7 +7056,7 @@
 		</effects>
 	</skill>
 	<skill id="98" toLevel="5" name="Sword Symphony">
-		<!-- Attacks the enemy with $s1 power. Prevents them from using magic skills for $s2 Critical. Over-hit. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Attacks the enemy with $s1 power. Prevents them from using magic skills for $s2 Critical. Over-hit.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0098</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>

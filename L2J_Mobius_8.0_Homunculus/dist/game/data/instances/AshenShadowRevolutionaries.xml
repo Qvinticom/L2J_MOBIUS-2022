@@ -14,7 +14,7 @@
 		</condition>
 		<condition type="GroupMin">
 			<param name="html" value="condSmallGroup.html" />
-			<param name="limit" value="5" />
+			<param name="limit" value="2" />
 		</condition>
 		<condition type="GroupMax">
 			<param name="limit" value="7" />
@@ -23,16 +23,17 @@
 			<param name="html" value="condNoLevel.html" />
 			<param name="min" value="99" />
 		</condition>
-		<condition type="Level" showMessageAndHtml="true">
-			<param name="html" value="condOverLevel.html" />
-			<param name="max" value="104" />
-		</condition>
 		<condition type="Distance" />
 		<condition type="Reenter" />
 	</conditions>
 	<reenter apply="ON_ENTER">
+		<reset day="MONDAY" hour="6" minute="30" />
+		<reset day="TUESDAY" hour="6" minute="30" />
 		<reset day="WEDNESDAY" hour="6" minute="30" />
+		<reset day="THURSDAY" hour="6" minute="30" />
+		<reset day="FRIDAY" hour="6" minute="30" />
 		<reset day="SATURDAY" hour="6" minute="30" />
+		<reset day="SUNDAY" hour="6" minute="30" />
 	</reenter>
 	<spawnlist>
 		<group>

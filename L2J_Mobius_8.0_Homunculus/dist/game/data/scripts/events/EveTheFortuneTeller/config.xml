@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<event name="Eve the Fortune Teller" active="11 11 1015-18 12 2015" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
+<event name="Eve the Fortune Teller" active="11 11 1015-18 12 2029" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
 	<spawnlist>
 		<!-- Eve -->
 		<add npc="8542" x="-114178" y="255031" z="-1538" heading="16383" /> <!-- Talking Island -->
@@ -15,8 +15,4 @@
 		<add npc="8542" x="146301" y="-57974" z="-2985" heading="44000" /> <!-- Goddard -->
 		<add npc="8542" x="88792" y="-140711" z="-1544" heading="11500" /> <!-- Schuttgart -->
 	</spawnlist>
-	<messages>
-		<add type="onEnd" text="Eve the Fortune Teller: Event end!" />
-		<add type="onEnter" text="Eve the Fortune Teller: Event ongoing!" />
-	</messages>
 </event>

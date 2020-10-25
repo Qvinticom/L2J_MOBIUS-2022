@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="21400" name="Mount - Gold Maned Lion Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Gold Maned Lion (30-day). -->
+		<!-- Double-click to obtain Gold Maned Lion Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -17,11 +17,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21406" min="1" max="1" chance="100" /> <!-- Mount - Gold Maned Lion - 30-day (Event) -->
+			<item id="21406" min="1" max="1" chance="100" /> <!-- Gold Maned Lion Bracelet - 30-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21401" name="Mount - Gold Maned Lion Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Gold Maned Lion. -->
+		<!-- Double-click to obtain Gold Maned Lion Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
@@ -34,11 +34,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21407" min="1" max="1" chance="100" /> <!-- Mount - Gold Maned Lion -->
+			<item id="21407" min="1" max="1" chance="100" /> <!-- Gold Maned Lion Bracelet -->
 		</capsuled_items>
 	</item>
 	<item id="21402" name="Mount - Gold Maned Lion Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Gold Maned Lion. -->
+		<!-- Double-click to obtain Gold Maned Lion Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -54,11 +54,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21408" min="1" max="1" chance="100" /> <!-- Mount - Gold Maned Lion - Event -->
+			<item id="21408" min="1" max="1" chance="100" /> <!-- Gold Maned Lion Bracelet - Event -->
 		</capsuled_items>
 	</item>
 	<item id="21403" name="Mount - Gold Maned Lion" additionalName="7-day" type="Armor">
-		<!-- Can mount a Gold Maned Lion when equipped. 7-day. -->
+		<!-- Allows to mount a Gold Maned Lion. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -81,7 +81,7 @@
 		</skills>
 	</item>
 	<item id="21404" name="Mount - Gold Maned Lion" additionalName="7-day (Event)" type="Armor">
-		<!-- Can mount a Gold Maned Lion when equipped. 7-day. -->
+		<!-- Allows to mount a Gold Maned Lion. 7-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -104,7 +104,7 @@
 		</skills>
 	</item>
 	<item id="21405" name="Mount - Gold Maned Lion" additionalName="30-day" type="Armor">
-		<!-- Can mount a Gold Maned lion when equipped. 30-day. -->
+		<!-- Allows to mount a Gold Maned Lion. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -127,7 +127,7 @@
 		</skills>
 	</item>
 	<item id="21406" name="Mount - Gold Maned Lion" additionalName="30-day (Event)" type="Armor">
-		<!-- Can mount a Gold Maned Lion when equipped. 30-day. -->
+		<!-- Allows to mount a Gold Maned Lion. 30-day. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -150,7 +150,7 @@
 		</skills>
 	</item>
 	<item id="21407" name="Mount - Gold Maned Lion" type="Armor">
-		<!-- Can ride a Gold Maned Lion when equipped. -->
+		<!-- Allows to mount a Gold Maned Lion. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -169,7 +169,7 @@
 		</skills>
 	</item>
 	<item id="21408" name="Mount - Gold Maned Lion" additionalName="Event" type="Armor">
-		<!-- Can mount a Gold Maned Lion when equipped. -->
+		<!-- Allows to mount a Gold Maned Lion. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -191,7 +191,7 @@
 		</skills>
 	</item>
 	<item id="21409" name="Mount - Jet Bike Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Jet Bike (7-day). -->
+		<!-- Double-click to obtain Jet Bike Bracelet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -207,11 +207,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21415" min="1" max="1" chance="100" /> <!-- Mount - Jet Bike - 7-day -->
+			<item id="21415" min="1" max="1" chance="100" /> <!-- Jet Bike Bracelet - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="21410" name="Mount - Jet Bike Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Jet Bike (7-day). -->
+		<!-- Double-click to obtain Jet Bike Bracelet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -227,11 +227,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21416" min="1" max="1" chance="100" /> <!-- Mount - Jet Bike - 7-day (Event) -->
+			<item id="21416" min="1" max="1" chance="100" /> <!-- Jet Bike Bracelet - 7-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21411" name="Mount - Jet Bike Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Jet Bike (30-day). -->
+		<!-- Double-click to obtain Jet Bike Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -247,11 +247,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21417" min="1" max="1" chance="100" /> <!-- Mount - Jet Bike - 30-day -->
+			<item id="21417" min="1" max="1" chance="100" /> <!-- Jet Bike Bracelet - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="21412" name="Mount - Jet Bike Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Jet Bike (30-day). -->
+		<!-- Double-click to obtain Jet Bike Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -267,11 +267,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21418" min="1" max="1" chance="100" /> <!-- Mount - Jet Bike - 30-day (Event) -->
+			<item id="21418" min="1" max="1" chance="100" /> <!-- Jet Bike Bracelet - 30-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21413" name="Mount - Jet Bike Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Jet Bike. -->
+		<!-- Double-click to obtain Jet Bike Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
@@ -284,11 +284,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21419" min="1" max="1" chance="100" /> <!-- Mount - Jet Bike -->
+			<item id="21419" min="1" max="1" chance="100" /> <!-- Jet Bike Bracelet -->
 		</capsuled_items>
 	</item>
 	<item id="21414" name="Mount - Jet Bike Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Jet Bike. -->
+		<!-- Double-click to obtain Jet Bike Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -304,11 +304,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21420" min="1" max="1" chance="100" /> <!-- Mount - Jet Bike - Event -->
+			<item id="21420" min="1" max="1" chance="100" /> <!-- Jet Bike Bracelet - Event -->
 		</capsuled_items>
 	</item>
 	<item id="21415" name="Mount - Jet Bike" additionalName="7-day" type="Armor">
-		<!-- Can ride a Jet Bike when equipped. 7-day. -->
+		<!-- Allows to ride a Jet Bike. 7-day. -->
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -332,7 +332,7 @@
 		</skills>
 	</item>
 	<item id="21416" name="Mount - Jet Bike" additionalName="7-day (Event)" type="Armor">
-		<!-- Can mount a Jet Bike when equipped. 7-day. -->
+		<!-- Allows to ride a Jet Bike. 7-day. -->
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -356,7 +356,7 @@
 		</skills>
 	</item>
 	<item id="21417" name="Mount - Jet Bike" additionalName="30-day" type="Armor">
-		<!-- Can ride a Jet Bike when equipped. 30-day. -->
+		<!-- Allows to ride a Jet Bike. 30-day. -->
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -380,7 +380,7 @@
 		</skills>
 	</item>
 	<item id="21418" name="Mount - Jet Bike" additionalName="30-day (Event)" type="Armor">
-		<!-- Can mount a Jet Bike when equipped. 30-day. -->
+		<!-- Allows to ride a Jet Bike. 30-day. -->
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -404,7 +404,7 @@
 		</skills>
 	</item>
 	<item id="21419" name="Mount - Jet Bike" type="Armor">
-		<!-- Can mount a Jet Bike when equipped. -->
+		<!-- Allows to mount a Jet Bike. -->
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -424,7 +424,7 @@
 		</skills>
 	</item>
 	<item id="21420" name="Mount - Jet Bike" additionalName="Event" type="Armor">
-		<!-- Can mount a Jet Bike when equipped. -->
+		<!-- Allows to mount a Jet Bike. -->
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -447,7 +447,7 @@
 		</skills>
 	</item>
 	<item id="21421" name="Color Title Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Color Title. -->
+		<!-- Double-click to obtain a Color Title item. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -467,7 +467,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21422" name="Color Title Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Color Title item. -->
+		<!-- Double-click to obtain a Color Title item. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -487,7 +487,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21423" name="Brown Bear Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing brown bear hat (7-day). -->
+		<!-- Double-click to obtain Brown Bear Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -507,7 +507,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21424" name="Brown Bear Hat Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing brown bear hat (7-day). -->
+		<!-- Double-click to obtain Brown Bear Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -523,11 +523,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21430" min="1" max="1" chance="100" /> <!-- Brown Bear Hat - 7-day (Event) -->
+			<item id="21430" min="1" max="1" chance="100" /> <!-- Brown Bear Hat - 7-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21425" name="Brown Bear Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing brown bear hat (30-day). -->
+		<!-- Double-click to obtain Brown Bear Hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -547,7 +547,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21426" name="Brown Bear Hat Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing brown bear hat (30-day). -->
+		<!-- Double-click to obtain Brown Bear Hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -563,11 +563,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21432" min="1" max="1" chance="100" /> <!-- Brown Bear Hat - 30-day (Event) -->
+			<item id="21432" min="1" max="1" chance="100" /> <!-- Brown Bear Hat - 30-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21427" name="Brown Bear Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing brown bear hat. -->
+		<!-- Double-click to obtain Brown Bear Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -587,7 +587,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21428" name="Brown Bear Hat Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing brown bear hat. -->
+		<!-- Double-click to obtain Brown Bear Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -723,7 +723,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21435" name="Chicken Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Chicken Hat (7-day). -->
+		<!-- Double-click to obtain Chicken Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -743,7 +743,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21436" name="Chicken Hat Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing chicken hat (7-day). -->
+		<!-- Double-click to obtain Chicken Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -759,11 +759,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21442" min="1" max="1" chance="100" /> <!-- Chicken Hat - 7-day (Event) -->
+			<item id="21442" min="1" max="1" chance="100" /> <!-- Chicken Hat - 7-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21437" name="Chicken Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing chicken hat (30-day). -->
+		<!-- Double-click to obtain Chicken Hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -783,7 +783,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21438" name="Chicken Hat Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing chicken hat (30-day). -->
+		<!-- Double-click to obtain Chicken Hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -799,11 +799,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21444" min="1" max="1" chance="100" /> <!-- Chicken Hat - 30-day (Event) -->
+			<item id="21444" min="1" max="1" chance="100" /> <!-- Chicken Hat - 30-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21439" name="Chicken Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing chicken hat. -->
+		<!-- Double-click to obtain Chicken Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -823,7 +823,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21440" name="Chicken Hat Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing chicken hat. -->
+		<!-- Double-click to obtain Chicken Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -843,7 +843,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21441" name="Chicken Hat" additionalName="7-day" type="Armor">
-		<!-- Hat that looks like a chicken. Uses 2 hair accessory slots. -->
+		<!-- Hat that looks like a chicken. Uses 2 hair accessory slots. 7-day. -->
 		<set name="icon" val="icon.accessory_chicken_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -862,7 +862,7 @@
 		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21442" name="Chicken Hat" additionalName="7-day (Event)" type="Armor">
-		<!-- Hat that looks like a chicken. 7-day. Uses 2 hair accessory slots. -->
+		<!-- Hat that looks like a chicken. Uses 2 hair accessory slots. 7-day. -->
 		<set name="icon" val="icon.accessory_chicken_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -881,7 +881,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21443" name="Chicken Hat" additionalName="30-day" type="Armor">
-		<!-- Hat that looks like a chicken. 30-day. Uses 2 hair accessory slots. -->
+		<!-- Hat that looks like a chicken. Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="icon.accessory_chicken_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -900,7 +900,7 @@
 		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21444" name="Chicken Hat" additionalName="30-day (Event)" type="Armor">
-		<!-- Hat that looks like a chicken. 30-day. Uses 2 hair accessory slots. -->
+		<!-- Hat that looks like a chicken. Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="icon.accessory_chicken_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -959,7 +959,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21447" name="Coronet Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing coronet (7-day). -->
+		<!-- Double-click to obtain Coronet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -979,7 +979,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21448" name="Coronet Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing coronet (7-day). -->
+		<!-- Double-click to obtain Coronet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -995,11 +995,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21454" min="1" max="1" chance="100" /> <!-- Coronet - 7-day (Event) -->
+			<item id="21454" min="1" max="1" chance="100" /> <!-- Coronet - 7-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21449" name="Coronet Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing coronet (30-day). -->
+		<!-- Double-click to obtain Coronet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1019,7 +1019,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21450" name="Coronet Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing coronet (30-day). -->
+		<!-- Double-click to obtain Coronet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1035,11 +1035,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21456" min="1" max="1" chance="100" /> <!-- Coronet - 30-day (Event) -->
+			<item id="21456" min="1" max="1" chance="100" /> <!-- Coronet - 30-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21451" name="Coronet Pack" type="EtcItem">
-		<!-- Wrapped Pack containing coronet. -->
+		<!-- Double-click to obtain Coronet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
@@ -1056,7 +1056,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21452" name="Coronet Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing coronet. -->
+		<!-- Double-click to obtain Coronet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1152,7 +1152,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21457" name="Coronet" type="Armor">
-		<!-- Bride's hair accessory. Females only. Uses 2 hair accessory slots. -->
+		<!-- Wedding hall bride's hair accessory. Females only. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_flower_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1189,7 +1189,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21459" name="White Sheep Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing white sheep hat (7-day). -->
+		<!-- Double-click to obtain a white sheep hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1209,7 +1209,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21460" name="White Sheep Hat Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing white sheep hat (7-day). -->
+		<!-- Double-click to obtain a white sheep hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1225,11 +1225,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21466" min="1" max="1" chance="100" /> <!-- White Sheep Hat - 7-day (Event) -->
+			<item id="21466" min="1" max="1" chance="100" /> <!-- White Sheep Hat - 7-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21461" name="White Sheep Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing white sheep hat (30-day). -->
+		<!-- Double-click to obtain a white sheep hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1249,7 +1249,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21462" name="White Sheep Hat Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing white sheep hat (30-day). -->
+		<!-- Double-click to obtain a white sheep hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1265,11 +1265,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21468" min="1" max="1" chance="100" /> <!-- White Sheep Hat - 30-day (Event) -->
+			<item id="21468" min="1" max="1" chance="100" /> <!-- White Sheep Hat - 30-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21463" name="White Sheep Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing white sheep hat. -->
+		<!-- Double-click to obtain a white sheep hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1289,7 +1289,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21464" name="White Sheep Hat Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing white sheep hat. -->
+		<!-- Double-click to obtain a white sheep hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1425,7 +1425,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21471" name="Frog Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing frog hat (7-day). -->
+		<!-- Double-click to obtain Frog Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1445,7 +1445,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21472" name="Frog Hat Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing frog hat (7-day). -->
+		<!-- Double-click to obtain Frog Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1461,11 +1461,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21478" min="1" max="1" chance="100" /> <!-- Frog Hat - 7-day (Event) -->
+			<item id="21478" min="1" max="1" chance="100" /> <!-- Frog Hat - 7-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21473" name="Frog Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing frog hat (30-day). -->
+		<!-- Double-click to obtain Frog Hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1485,7 +1485,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21474" name="Frog Hat Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing frog hat (30-day). -->
+		<!-- Double-click to obtain Frog Hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1501,11 +1501,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21480" min="1" max="1" chance="100" /> <!-- Frog Hat - 30-day (Event) -->
+			<item id="21480" min="1" max="1" chance="100" /> <!-- Frog Hat - 30-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21475" name="Frog Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing frog hat. -->
+		<!-- Double-click to obtain Frog Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1525,7 +1525,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21476" name="Frog Hat Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing frog hat. -->
+		<!-- Double-click to obtain Frog Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1661,7 +1661,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21483" name="Kat the Cat Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Kat the Cat hat (7-day). -->
+		<!-- Double-click to obtain Kat the Cat Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1681,7 +1681,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21484" name="Kat the Cat Hat Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Kat the Cat hat (7-day). -->
+		<!-- Double-click to obtain Kat the Cat Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1697,11 +1697,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21490" min="1" max="1" chance="100" /> <!-- Kat the Cat Hat - 7-day (Event) -->
+			<item id="21490" min="1" max="1" chance="100" /> <!-- Kat the Cat Hat - 7-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21485" name="Kat the Cat Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Kat the Cat hat (30-day). -->
+		<!-- Double-click to obtain Kat the Cat Hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1721,7 +1721,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21486" name="Kat the Cat Hat Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Kat the Cat hat (30-day). -->
+		<!-- Double-click to obtain Kat the Cat Hat (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1737,11 +1737,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21492" min="1" max="1" chance="100" /> <!-- Kat the Cat Hat - 30-day (Event) -->
+			<item id="21492" min="1" max="1" chance="100" /> <!-- Kat the Cat Hat - 30-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21487" name="Kat the Cat Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Kat the Cat hat. -->
+		<!-- Double-click to obtain Kat the Cat Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1761,7 +1761,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21488" name="Kat the Cat Hat Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Kat the Cat hat. -->
+		<!-- Double-click to obtain Kat the Cat Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1781,7 +1781,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21489" name="Kat the Cat Hat" additionalName="7-day" type="Armor">
-		<!-- Hat that looks like Kat the Cat. 7-day. Uses 2 hair accessory slots. -->
+		<!-- Uses 2 hair accessory slots. 7-day. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1800,7 +1800,7 @@
 		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21490" name="Kat the Cat Hat" additionalName="7-day (Event)" type="Armor">
-		<!-- Hat that looks like Kat the Cat. 7-day. Uses 2 hair accessory slots. -->
+		<!-- Uses 2 hair accessory slots. 7-day. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1819,7 +1819,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="21491" name="Kat the Cat Hat" additionalName="30-day" type="Armor">
-		<!-- Hat that looks like Kat the Cat. 30-day. Uses 2 hair accessory slots. -->
+		<!-- Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1838,7 +1838,7 @@
 		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21492" name="Kat the Cat Hat" additionalName="30-day (Event)" type="Armor">
-		<!-- Hat that looks like Kat the Cat. 30-day. Uses 2 hair accessory slots. -->
+		<!-- Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1857,7 +1857,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="21493" name="Kat the Cat Hat" type="Armor">
-		<!-- Hat that looks like Kat the Cat. Uses 2 hair accessory slots. -->
+		<!-- Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1877,7 +1877,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21494" name="Kat the Cat Hat" additionalName="Event" type="Armor">
-		<!-- Hat that looks like Kat the Cat. Uses 2 hair accessory slots. -->
+		<!-- Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1897,7 +1897,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21495" name="Kai the Cat Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Kai the Cat hat (7-day). -->
+		<!-- Double-click to obtain Kai the Cat Hat. Uses 2 hair accessory slots. 7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1917,7 +1917,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21496" name="Kai the Cat Hat Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Kai the Cat hat (7-day). -->
+		<!-- Double-click to obtain Kai the Cat Hat. Uses 2 hair accessory slots. 7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1933,11 +1933,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21502" min="1" max="1" chance="100" /> <!-- Kai the Cat Hat - 7-day (Event) -->
+			<item id="21502" min="1" max="1" chance="100" /> <!-- Kai the Cat Hat - 7-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21497" name="Kai the Cat Hat Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Kai the Cat hat (30-day). -->
+		<!-- Double-click to obtain Kai the Cat Hat. Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1957,7 +1957,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21498" name="Kai the Cat Hat Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Kai the Cat hat (30-day). -->
+		<!-- Double-click to obtain Kai the Cat Hat. Uses 2 hair accessory slots. 30-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1973,11 +1973,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21504" min="1" max="1" chance="100" /> <!-- Kai the Cat Hat - 30-day (Event) -->
+			<item id="21504" min="1" max="1" chance="100" /> <!-- Kai the Cat Hat - 30-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="21499" name="Kai the Cat Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Kai the Cat hat. -->
+		<!-- Double-click to obtain Kai the Cat Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />

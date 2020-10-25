@@ -25,7 +25,7 @@
 		</effects>
 	</skill>
 	<skill id="23201" toLevel="1" name="Ball Trapping Gnosian Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>7000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -40,7 +40,7 @@
 		</conditions>
 	</skill>
 	<skill id="23202" toLevel="1" name="Ball Trapping Orodriel Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>7000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -55,7 +55,7 @@
 		</conditions>
 	</skill>
 	<skill id="23203" toLevel="1" name="Penalty Kick Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>7000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -70,7 +70,7 @@
 		</conditions>
 	</skill>
 	<skill id="23204" toLevel="1" name="Ball Trapping Gnosian Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>7000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -85,7 +85,7 @@
 		</conditions>
 	</skill>
 	<skill id="23205" toLevel="1" name="Ball Trapping Orodriel Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>7000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -100,7 +100,7 @@
 		</conditions>
 	</skill>
 	<skill id="23206" toLevel="1" name="Penalty Kick Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>7000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -115,7 +115,7 @@
 		</conditions>
 	</skill>
 	<skill id="23207" toLevel="1" name="Ball Trapping Gnosian Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>7000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -130,7 +130,7 @@
 		</conditions>
 	</skill>
 	<skill id="23208" toLevel="1" name="Ball Trapping Orodriel Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>7000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -145,7 +145,7 @@
 		</conditions>
 	</skill>
 	<skill id="23209" toLevel="1" name="Penalty Kick Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>7000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -439,7 +439,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23211" toLevel="85" name="Prominence">
-		<!-- Condenses air to burst flames. Power $s1 -->
+		<!-- Detonates a fireball by compressing the air around the caster. Power $s1 -->
 		<icon>icon.skill1230</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>
@@ -1057,8 +1057,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23216" toLevel="1" name="Granny Tiger Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23216" toLevel="1" name="Agathion Granny Tiger: Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1072,7 +1072,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23217" toLevel="1" name="Granny Tiger Agathion Special Skill: Fundamentals">
+	<skill id="23217" toLevel="1" name="Agathion Granny Tiger's Special Skill: Fundamentals">
 		<!-- For 1 min., 50% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
@@ -1095,7 +1095,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23218" toLevel="1" name="Flower Fairy Spirit Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1110,7 +1110,7 @@
 		</conditions>
 	</skill>
 	<skill id="23219" toLevel="1" name="Flower Fairy Spirit Agathion Special Skill: Fairy's Blessing">
-		<!-- For 5 min., increases Atk. Spd. by 30% and all Attribute Resistance by 10. Cooldown is 1 h. -->
+		<!-- For 5 min., Atk. Spd. +30%, Attribute Resistance +10. Cooldown: 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1132,7 +1132,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23220" toLevel="1" name="Cheerleader Orodriel Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1169,7 +1169,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23222" toLevel="1" name="Cheerleader Lanya Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1206,7 +1206,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23224" toLevel="1" name="Cheerleader Naonin Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1243,7 +1243,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23226" toLevel="1" name="Cheerleader Mortia Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1280,7 +1280,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23228" toLevel="1" name="Cheerleader Kaurin Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1317,7 +1317,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23230" toLevel="1" name="Cheerleader Meruril Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1353,8 +1353,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23232" toLevel="1" name="Handy Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23232" toLevel="1" name="Agathion Handy: Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1368,7 +1368,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23233" toLevel="1" name="Handy Agathion Special Skill: Halloween's Blessing">
+	<skill id="23233" toLevel="1" name="Agathion Handy's Special Skill: Halloween's Blessing">
 		<!-- For 1 h., increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases Dark Attack Resistance by 20. Cooldown is 2 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
@@ -1391,7 +1391,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23234" toLevel="1" name="Singer and Dancer Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1424,7 +1424,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23236" toLevel="1" name="Agathion Cute Trick - Zaken's Spirit Swords">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1529,7 +1529,7 @@
 		</effects>
 	</skill>
 	<skill id="23240" toLevel="1" name="Master's Blessing - Chant of Magnus">
-		<!-- The GM is always by your side. For 1 h., receives help from a great spirit to increase Max MP of all party members by 15%, MP recovery bonus by 1.5 when wearing light/ heavy armor, MP recovery bonus by 4 when wearing a robe, M. Def. by 30%, M. Atk. by 30%, Casting Spd. by 20%, Fire/ Water/ Wind/ Earth Resistance by 10, Debuff Resistance by 25, and Buff-canceling Attack Resistance by 40. -->
+		<!-- The GM is always by your side. For 1 h., all party members receive help from a great spirit. Their Max MP +15%, MP Recovery Rate +1.5 when using light/ heavy armor, MP Recovery Rate +4 when using robe, M. Def. +30%, M. Atk. +30%, Casting Spd. +20%, Fire/ Water/ Wind/ Earth Resistance +10, Debuff Resistance +25, Buff Cancel Resistance +40. -->
 		<icon>icon.skill1413</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1868,7 +1868,7 @@
 		</effects>
 	</skill>
 	<skill id="23248" toLevel="1" name="Master's Blessing - Arcane Protection">
-		<!-- The GM is always by your side. For 1 h., increases Buff-canceling Attack Resistance by 30 and Debuff Resistance by 20. -->
+		<!-- The GM is always by your side. For 1 h., Buff Cancel Resistance +30, Debuff Resistance +20. -->
 		<icon>icon.skill1354</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1918,7 +1918,7 @@
 		</effects>
 	</skill>
 	<skill id="23250" toLevel="1" name="Agathion Cute Trick - Cow">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1933,7 +1933,7 @@
 		</conditions>
 	</skill>
 	<skill id="23251" toLevel="1" name="Agathion Cute Trick - Makeshift Bat">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1948,7 +1948,7 @@
 		</conditions>
 	</skill>
 	<skill id="23252" toLevel="1" name="Agathion Cute Trick - Griffin">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2171,7 +2171,7 @@
 		</effects>
 	</skill>
 	<skill id="23261" toLevel="1" name="Master's Blessing - Decrease Weight">
-		<!-- The GM is always by your side. Increases the weight penalty interval by 9000 for 1 h. -->
+		<!-- The GM is always by your side. For 1 h., overweight limit +9000. -->
 		<icon>icon.skill1257</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2248,7 +2248,7 @@
 		</effects>
 	</skill>
 	<skill id="23264" toLevel="1" name="Master's Blessing - Magic Barrier">
-		<!-- The GM is always by your side. Increases M. Def. by 30% for 1 h. -->
+		<!-- The GM is always by your side. For 1 h., M. Def. +30%. -->
 		<icon>icon.skill1036</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2352,7 +2352,7 @@
 		</effects>
 	</skill>
 	<skill id="23268" toLevel="1" name="Master's Blessing - Berserker Spirit">
-		<!-- The GM is always by your side. For 1 h., decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
+		<!-- The GM is always by your side. For 1 h., a party member's P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2672,7 +2672,7 @@
 		</effects>
 	</skill>
 	<skill id="23275" toLevel="1" name="Master's Blessing - Prophecy of Wind">
-		<!-- The GM is always by your side. With the Great Spirit's blessing for 1 hour, Max HP/ Critical Rate/ M. Critical Damage/ P. Def./ Atk. Spd./ Casting Spd./ M. Atk./ M. Def. +20%, P. Atk. +10% and Debuff Resistance +10%. Speed -20%. With a certain chance, absorbs 5% of the inflicted physical melee damage as HP. -->
+		<!-- The GM is always by your side. With the Great Spirit's blessing for 1 h., Max HP +20%, Critical Rate +20%, M. Critical Damage +20%, P. Atk. +10%, Atk. Spd./ Casting Spd. +20%, M. Atk. +20%, P./ M. Def. +20%, Debuff Resistance +10%. Speed -20%. With a certain chance, absorbs 5% of the inflicted physical melee damage as HP. -->
 		<icon>icon.skill1357</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -3217,7 +3217,7 @@
 		</effects>
 	</skill>
 	<skill id="23288" toLevel="1" name="Master's Blessing - Chant of Magnus">
-		<!-- The GM is always by your side. For 1 h., receives help from a great spirit to increase Max MP of all party members by 15%, MP recovery bonus by 1.5 when wearing light/ heavy armor, MP recovery bonus by 4 when wearing a robe, M. Def. by 30%, M. Atk. by 30%, Casting Spd. by 20%, Fire/ Water/ Wind/ Earth Resistance by 10, Debuff Resistance by 25, and Buff-canceling Attack Resistance by 40. -->
+		<!-- The GM is always by your side. For 1 h., all party members receive help from a great spirit. Their Max MP +15%, MP Recovery Rate +1.5 when using light/ heavy armor, MP Recovery Rate +4 when using robe, M. Def. +30%, M. Atk. +30%, Casting Spd. +20%, Fire/ Water/ Wind/ Earth Resistance +10, Debuff Resistance +25, Buff Cancel Resistance +40. -->
 		<icon>icon.skill1413</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -3556,7 +3556,7 @@
 		</effects>
 	</skill>
 	<skill id="23296" toLevel="1" name="Master's Blessing - Arcane Protection">
-		<!-- The GM is always by your side. For 1 h., increases Buff-canceling Attack Resistance by 30 and Debuff Resistance by 20. -->
+		<!-- The GM is always by your side. For 1 h., Buff Cancel Resistance +30, Debuff Resistance +20. -->
 		<icon>icon.skill1354</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>

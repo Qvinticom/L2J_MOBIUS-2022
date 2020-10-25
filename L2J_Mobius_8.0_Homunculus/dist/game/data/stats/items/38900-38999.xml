@@ -92,7 +92,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38913" name="Secret Fragment 7" additionalName="The" type="EtcItem">
-		<!-- "Does your soul sing with sorrow in this chaotic time? Lend us your strength, and we will certainly win.". "Forgive us, but we cannot hold your bloodied hand. The wind is indiscriminate, and does not favor one side over another." -->
+		<!-- Does your soul sing with sorrow in this chaotic time? Lend us your strength, and we will certainly win.. "Forgive us, but we cannot hold your bloodied hand. The wind is indiscriminate, and does not favor one side over another." -->
 		<set name="icon" val="icon.ev_ertheia7" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -162,14 +162,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38923" name="Squash Seed" type="EtcItem">
-		<!-- Solo-type squash seed. Double-click to make a High Quality Squash or a Defective Squash appear. -->
+		<!-- A squash seed for playing solo. Double-click to summon Ripe Squash or Defective Squash. -->
 		<set name="icon" val="icon.etc_gourd_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38924" name="Large Squash Seed" type="EtcItem">
-		<!-- Party-type squash seed. Double-click to make a High Quality Large Squash or a Defective Large Squash appear. -->
+		<!-- A large squash seed for playing in party. Double-click to summon Large Ripe Squash or Large Defective Squash. -->
 		<set name="icon" val="icon.etc_gourd_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -202,7 +202,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38927" name="Sapphire" additionalName="Lv. 1" type="Armor">
-		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 1%. Effect does not stack with additional jewels of the same type. -->
+		<!-- Spiritshot and Blessed Spiritshot damage +1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -214,13 +214,9 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<!-- Effect is hardcoded - This is only for the passive skill (visual) -->
-		<skills>
-			<skill id="17818" level="1" /> <!-- Sapphire -->
-		</skills>
 	</item>
 	<item id="38928" name="Sapphire" additionalName="Lv. 2" type="Armor">
-		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 3.5%. Effect does not stack with additional jewels of the same type. -->
+		<!-- Spiritshot and Blessed Spiritshot damage +3.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -232,13 +228,9 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<!-- Effect is hardcoded - This is only for the passive skill (visual) -->
-		<skills>
-			<skill id="17818" level="2" /> <!-- Sapphire -->
-		</skills>
 	</item>
 	<item id="38929" name="Sapphire" additionalName="Lv. 3" type="Armor">
-		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
+		<!-- Spiritshot and Blessed Spiritshot damage +7.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -250,12 +242,9 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<skills>
-			<skill id="17819" level="2" /> <!-- Sapphire -->
-		</skills>
 	</item>
 	<item id="38930" name="Sapphire" additionalName="Lv. 4" type="Armor">
-		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 12.5%. Effect does not stack with additional jewels of the same type. -->
+		<!-- Spiritshot and Blessed Spiritshot damage +12.5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. 1. Compounding of two jewels of the same level. 2. Compounding with Jewel Energy. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -267,12 +256,9 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<skills>
-			<skill id="17820" level="2" /> <!-- Sapphire -->
-		</skills>
 	</item>
 	<item id="38931" name="Sapphire" additionalName="Lv. 5" type="Armor">
-		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 20%. Effect does not stack with additional jewels of the same type. -->
+		<!-- Spiritshot and Blessed Spiritshot damage +20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -281,9 +267,6 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<skills>
-			<skill id="17821" level="2" /> <!-- Sapphire -->
-		</skills>
 	</item>
 	<item id="38932" name="La Vie En Rose's Ruby Box" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Ruby. -->
@@ -299,7 +282,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38855" min="1" max="1" chance="100" /> <!-- Ruby - Lv. 1 -->
+			<item id="38855" min="1" max="1" chance="100" /> <!-- Ruby Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38933" name="La Vie En Rose's Sapphire Box" type="EtcItem">
@@ -316,7 +299,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38927" min="1" max="1" chance="100" /> <!-- Sapphire - Lv. 1 -->
+			<item id="38927" min="1" max="1" chance="100" /> <!-- Sapphire Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38934" name="La Vie En Rose's Topaz Box" type="EtcItem">
@@ -333,11 +316,11 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38850" min="1" max="1" chance="100" /> <!-- Topaz - Lv. 1 -->
+			<item id="38850" min="1" max="1" chance="100" /> <!-- Topaz Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38935" name="La Vie En Rose's Opal Box" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 1 Opal. -->
+		<!-- Double-click to acquire Opal Lv. 1. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -350,7 +333,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38875" min="1" max="1" chance="100" /> <!-- Opal - Lv. 1 -->
+			<item id="38875" min="1" max="1" chance="100" /> <!-- Opal Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38936" name="La Vie En Rose's Obsidian Box" type="EtcItem">
@@ -367,7 +350,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38870" min="1" max="1" chance="100" /> <!-- Obsidian - Lv. 1 -->
+			<item id="38870" min="1" max="1" chance="100" /> <!-- Obsidian Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38937" name="La Vie En Rose's Diamond Box" type="EtcItem">
@@ -384,7 +367,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38890" min="1" max="1" chance="100" /> <!-- Diamond - Lv. 1 -->
+			<item id="38890" min="1" max="1" chance="100" /> <!-- Diamond Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38938" name="La Vie En Rose's Emerald Box" type="EtcItem">
@@ -401,7 +384,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38880" min="1" max="1" chance="100" /> <!-- Emerald - Lv. 1 -->
+			<item id="38880" min="1" max="1" chance="100" /> <!-- Emerald Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38939" name="La Vie En Rose's Aquamarine Box" type="EtcItem">
@@ -418,7 +401,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38885" min="1" max="1" chance="100" /> <!-- Aquamarine - Lv. 1 -->
+			<item id="38885" min="1" max="1" chance="100" /> <!-- Aquamarine Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38940" name="La Vie En Rose's Pearl Box" type="EtcItem">
@@ -435,7 +418,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38895" min="1" max="1" chance="100" /> <!-- Pearl - Lv. 1 -->
+			<item id="38895" min="1" max="1" chance="100" /> <!-- Pearl Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38941" name="La Vie En Rose's Jewelry Box" type="EtcItem">
@@ -473,7 +456,7 @@
 		</capsuled_items>
 	</item>
 	<item id="38943" name="La Vie En Rose's Noble Brooch Chest" type="EtcItem">
-		<!-- Double-click to acquire 1 La Vie En Rose's Noble Brooch. -->
+		<!-- Double-click to obtain Enhanced Brooch. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -486,11 +469,11 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38767" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Noble Brooch -->
+			<item id="38767" min="1" max="1" chance="100" /> <!-- Enhanced Brooch -->
 		</capsuled_items>
 	</item>
 	<item id="38944" name="La Vie En Rose's Brilliant Brooch Chest" type="EtcItem">
-		<!-- Double-click to acquire 1 La Vie En Rose's Brilliant Brooch. -->
+		<!-- Double-click to obtain La Vie En Rose's Brooch Lv. 1. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -503,7 +486,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38768" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Brilliant Brooch -->
+			<item id="38768" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Brooch Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38945" name="La Vie En Rose's Noble Brooch Pack" type="EtcItem">
@@ -521,7 +504,7 @@
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="38941" min="30" max="30" chance="100" /> <!-- La Vie En Rose's Jewelry Box -->
-			<item id="38943" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Noble Brooch Chest -->
+			<item id="38943" min="1" max="1" chance="100" /> <!-- Enhanced Brooch Pack -->
 		</capsuled_items>
 	</item>
 	<item id="38946" name="La Vie En Rose's Brilliant Brooch Pack" type="EtcItem">
@@ -539,11 +522,11 @@
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="38941" min="55" max="30" chance="100" /> <!-- La Vie En Rose's Jewelry Box -->
-			<item id="38943" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Noble Brooch Chest -->
+			<item id="38943" min="1" max="1" chance="100" /> <!-- Enhanced Brooch Pack -->
 		</capsuled_items>
 	</item>
 	<item id="38947" name="10th Anniversary Time Capsule" type="EtcItem">
-		<!-- Dimensional Item Pack. Lineage II 10th Anniversary item. Can acquire a Shiny Elemental Shirt and a 10th Anniversary Festival's Cloak pack. Cannot be shared once opened. -->
+		<!-- A gift on the Lineage II 10th Anniversary. Double-click to obtain Shiny Elemental Shirt and 10th Anniversary Festival's Cloak Pack. Once the pack is open, its contents cannot be transferred to other characters within the account. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -557,7 +540,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="38948" name="10th Anniversary Cake Pack" type="EtcItem">
-		<!-- Lineage II 10th Anniversary item. It contains the 10th Anniversary Cake. Can only be opened by characters above level 85. -->
+		<!-- Lineage II present on the occasion of 10th Anniversary. It contains the Anniversary Cake. Can be opened by characters of level 85 and higher. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -718,7 +701,7 @@
 		<set name="handler" val="Appearance" />
 	</item>
 	<item id="38960" name="+4 Helios Shaper Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Shaper. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Shaper +4. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -730,7 +713,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38961" name="+4 Helios Cutter Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Cutter. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Cutter +4. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -742,7 +725,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38962" name="+4 Helios Slasher Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Slasher -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Slasher +4. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -754,7 +737,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38963" name="+4 Helios Avenger Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Avenger. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Avenger +4. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -766,7 +749,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38964" name="+4 Helios Fighter Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Fighter. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Fighter +4. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -778,7 +761,7 @@
 		<set name="weight" val="1550" />
 	</item>
 	<item id="38965" name="+4 Helios Stormer Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Stormer. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Stormer +4. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -790,7 +773,7 @@
 		<set name="weight" val="2010" />
 	</item>
 	<item id="38966" name="+4 Helios Thrower Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Thrower. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Thrower +4. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -802,7 +785,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38967" name="+4 Helios Shooter Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Shooter. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Shooter +4. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -813,7 +796,7 @@
 		<set name="weight" val="1580" />
 	</item>
 	<item id="38968" name="+4 Helios Buster Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Buster. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Buster +4. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -825,7 +808,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38969" name="+4 Helios Caster Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Caster. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Caster +4. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -837,7 +820,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38970" name="+4 Helios Retributer Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Retributer. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Retributer +4. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -849,7 +832,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38971" name="+4 Helios Dual Sword Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Dual Sword. -->
+		<!-- If you have Yogi's Staff, take this coupon to the Goddess of Destruction to exchange it for +4 Helios Dual Swords. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -861,7 +844,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38972" name="+4 Helios Dual Dagger Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Dual Dagger. -->
+		<!-- If you have Yogi's Staff, take this coupon to the Goddess of Destruction to exchange it for +4 Helios Dual Daggers. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -873,7 +856,7 @@
 		<set name="weight" val="2050" />
 	</item>
 	<item id="38973" name="+4 Helios Dual Blunt Weapon Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Dual Blunt Weapon. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Dual Blunt Weapon +4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -886,7 +869,7 @@
 		<set name="spiritshots" val="1" />
 	</item>
 	<item id="38974" name="+5 Helios Shaper Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Shaper. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Shaper +5. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -898,7 +881,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38975" name="+5 Helios Cutter Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Cutter. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Cutter +5. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -910,7 +893,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38976" name="+5 Helios Slasher Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Slasher -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Slasher +5. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -922,7 +905,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38977" name="+5 Helios Avenger Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Avenger. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Avenger +5. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -934,7 +917,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38978" name="+5 Helios Fighter Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Fighter. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Fighter +5. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -946,7 +929,7 @@
 		<set name="weight" val="1550" />
 	</item>
 	<item id="38979" name="+5 Helios Stormer Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Stormer. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Stormer +5. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -958,7 +941,7 @@
 		<set name="weight" val="2010" />
 	</item>
 	<item id="38980" name="+5 Helios Thrower Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Thrower. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Thrower +5. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -970,7 +953,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38981" name="+5 Helios Shooter Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Shooter. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Shooter +5. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -981,7 +964,7 @@
 		<set name="weight" val="1580" />
 	</item>
 	<item id="38982" name="+5 Helios Buster Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Buster. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Buster +5. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -993,7 +976,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38983" name="+5 Helios Caster Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Caster. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Caster +5. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1005,7 +988,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38984" name="+5 Helios Retributer Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Retributer. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Retributer +5. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1017,7 +1000,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38985" name="+5 Helios Dual Sword Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Dual Sword. -->
+		<!-- If you have Yogi's Staff, take this coupon to the Goddess of Destruction to exchange it for +5 Helios Dual Swords. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -1029,7 +1012,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38986" name="+5 Helios Dual Dagger Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Dual Dagger. -->
+		<!-- If you have Yogi's Staff, take this coupon to the Goddess of Destruction to exchange it for +5 Helios Dual Daggers. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1041,7 +1024,7 @@
 		<set name="weight" val="2050" />
 	</item>
 	<item id="38987" name="+5 Helios Dual Blunt Weapon Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Dual Blunt Weapon. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Dual Blunt Weapon +5. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1054,7 +1037,7 @@
 		<set name="spiritshots" val="1" />
 	</item>
 	<item id="38988" name="+6 Helios Shaper Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Shaper. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Shaper +6. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1066,7 +1049,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38989" name="+6 Helios Cutter Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Cutter. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Cutter +6. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1078,7 +1061,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38990" name="+6 Helios Slasher Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Slasher -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Slasher +6. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1090,7 +1073,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38991" name="+6 Helios Avenger Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Avenger. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Avenger +6. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1102,7 +1085,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38992" name="+6 Helios Fighter Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Fighter. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Fighter +6. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -1114,7 +1097,7 @@
 		<set name="weight" val="1550" />
 	</item>
 	<item id="38993" name="+6 Helios Stormer Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Stormer. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Stormer +6. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -1126,7 +1109,7 @@
 		<set name="weight" val="2010" />
 	</item>
 	<item id="38994" name="+6 Helios Thrower Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Thrower. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Thrower +6. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1138,7 +1121,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38995" name="+6 Helios Shooter Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Shooter. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Shooter +6. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1149,7 +1132,7 @@
 		<set name="weight" val="1580" />
 	</item>
 	<item id="38996" name="+6 Helios Buster Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Buster. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Buster +6. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1161,7 +1144,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38997" name="+6 Helios Caster Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Caster. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Caster +6. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1173,7 +1156,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38998" name="+6 Helios Retributer Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Retributer. -->
+		<!-- If you have the Yogi's Staff take this coupon to the Goddess of Destruction to exchange it for a Helios Retributer +6. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1185,7 +1168,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38999" name="+6 Helios Dual Sword Coupon" type="Weapon">
-		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Dual Sword. -->
+		<!-- If you have Yogi's Staff, take this coupon to the Goddess of Destruction to exchange it for +6 Helios Dual Swords. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />

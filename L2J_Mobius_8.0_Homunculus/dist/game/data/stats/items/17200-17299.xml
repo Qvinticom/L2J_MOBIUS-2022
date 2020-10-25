@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="17200" name="Olympic Athlete's Earring" type="Armor">
-		<!-- Olympic Athlete's Earring. MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20% and Vampiric Rage. Only one effect is applied even when the two identical earrings are worn. -->
+		<!-- MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20%. Grants Vampiric Rage effect. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -39,7 +39,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="17202" name="Mark of Cheers 10-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 10 proofs of cheers. -->
+		<!-- Double-click to obtain 10 Marks of Cheers. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -265,7 +265,7 @@
 		</skills>
 	</item>
 	<item id="17212" name="Nevit's Voice" type="EtcItem">
-		<!-- Seashell containing Nevit's voice. Item that raises your evaluation value by 10. Can acquire 100,000 Adena by Double-clicking. -->
+		<!-- A seashell that contains Nevit's voice. Increases the evaluation value by 10. Double-click to obtain 100,000 adena. -->
 		<set name="icon" val="icon.etc_fish_scale_i01" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -284,7 +284,7 @@
 		</skills>
 	</item>
 	<item id="17213" name="Solina's Biography" type="EtcItem">
-		<!-- Biography containing the life story of Solina, a saintess of the Elmoreden kingdom. This text Has been banned throughout the kingdom and is incredibly difficult to find and intact copy. Double-click for more information. -->
+		<!-- Biography containing the life story of Solina, a saintess of the Elmoreden kingdom. The text has been banned throughout the kingdom and is incredibly difficult to obtain. Double-click for more information. -->
 		<set name="icon" val="icon.etc_old_evil_book_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -589,7 +589,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="17232" name="Agathion - Ball Trapping Gnosian Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Ball Trapping Gnosian. -->
+		<!-- Double-click to obtain Agathion Ball Trapping Gnosian. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -604,11 +604,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17203" min="1" max="1" chance="100" /> <!-- Agathion - Ball Trapping Gnosian -->
+			<item id="17203" min="1" max="1" chance="100" /> <!-- Agathion Ball Trapping Gnosian -->
 		</capsuled_items>
 	</item>
 	<item id="17233" name="Agathion - Ball Trapping Orodriel Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Ball Trapping Orodriel. -->
+		<!-- Double-click to obtain Agathion Ball Trapping Orodriel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -623,11 +623,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17204" min="1" max="1" chance="100" /> <!-- Agathion - Ball Trapping Orodriel -->
+			<item id="17204" min="1" max="1" chance="100" /> <!-- Agathion Ball Trapping Orodriel -->
 		</capsuled_items>
 	</item>
 	<item id="17234" name="Agathion - Penalty Kick Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Penalty Kick. -->
+		<!-- Double-click to obtain Agathion Penalty Kick. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -642,7 +642,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17205" min="1" max="1" chance="100" /> <!-- Agathion - Penalty Kick -->
+			<item id="17205" min="1" max="1" chance="100" /> <!-- Agathion Penalty Kick -->
 		</capsuled_items>
 	</item>
 	<item id="17235" name="World Cup Special Gift" type="EtcItem">
@@ -660,7 +660,7 @@
 		</skills>
 	</item>
 	<item id="17236" name="Gift of Victory Box" type="EtcItem">
-		<!-- Gift in commemoration of the World Cup victory. Can obtain XP Buff 50% and Nevit's Voice by using it. -->
+		<!-- Gift in commemoration of the World Cup victory. When used, you can obtain Nevit's Voice and Nevit's Hourglass. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_clan_depositable" val="false" />
@@ -675,12 +675,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17208" min="1" max="1" chance="100" /> <!-- XP Buff 50% (2-hour) -->
+			<item id="17208" min="1" max="1" chance="100" /> <!-- Nevit's Hourglass (2-hour) -->
 			<item id="17212" min="1" max="1" chance="100" /> <!-- Nevit's Voice -->
 		</capsuled_items>
 	</item>
 	<item id="17237" name="Luxury Gift of Victory Box" type="EtcItem">
-		<!-- Gift in commemoration of the World Cup victory. Can obtain XP Buff 50% and Nevit's Voice by using it. -->
+		<!-- Gift in commemoration of the World Cup victory. When used, you can obtain Nevit's Voice and Nevit's Hourglass. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_clan_depositable" val="false" />
@@ -695,7 +695,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17211" min="1" max="1" chance="100" /> <!-- XP Buff 50% (4-hour) -->
+			<item id="17211" min="1" max="1" chance="100" /> <!-- Nevit's Hourglass - 4 h. -->
 			<item id="17212" min="1" max="1" chance="100" /> <!-- Nevit's Voice -->
 		</capsuled_items>
 	</item>
@@ -860,7 +860,7 @@
 		</skills>
 	</item>
 	<item id="17248" name="Large Dragon Bone" type="EtcItem">
-		<!-- Summoning item, you can call a raid monster at a certain location in the Dragon Valley. But if the raid monster Has already been summoned, it cannot be called. -->
+		<!-- Summoning item, you can call a raid monster at a certain location in the Dragon Valley. If the raid monster has already been summoned, it cannot be called. -->
 		<set name="icon" val="icon.big_dragon_bone_summon" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
@@ -961,7 +961,7 @@
 		</skills>
 	</item>
 	<item id="17255" name="Blessed Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -977,7 +977,7 @@
 		</skills>
 	</item>
 	<item id="17256" name="Blessed Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for A-grade armor and accessories. Increases by 3 when enchanted to +4 or higher. It can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. If enchanting fails, the item is not crystallized but the enchant value is reset to 0. HP is gradually increased with each enchant value when enchanted to +4 or higher. Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -993,7 +993,7 @@
 		</skills>
 	</item>
 	<item id="17257" name="Blessed Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 3 for B-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1009,7 +1009,7 @@
 		</skills>
 	</item>
 	<item id="17258" name="Blessed Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for B-grade armor and accessories. When enchanted to +4 or higher, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. If enchanting fails, the item is not crystallized but the enchant value is reset to 0. HP is gradually increased with each enchant value when enchanted to +4 or higher. Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1025,7 +1025,7 @@
 		</skills>
 	</item>
 	<item id="17259" name="Blessed Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 3 for C-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1041,7 +1041,7 @@
 		</skills>
 	</item>
 	<item id="17260" name="Blessed Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 when enchanted to +4 or higher. It can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. HP is gradually increased with each enchant value when enchanted to +4 or higher. If enchanting fails, the item is not crystallized but the enchant value is reset to 0. Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1057,7 +1057,7 @@
 		</skills>
 	</item>
 	<item id="17261" name="Blessed Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 2 for D-grade one-handed sword, one-handed blunt, one-handed staff, dagger, spear, other weapons, two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 4 for bow weapons. Increases M. Atk. by 2 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears, two-handed swords/ blunts/ staffs, dual daggers, dual swords, and fist weapons. P. Atk. +4 for bows. M. Atk. +2 for all weapons. When enchanted to +4 and higher, P./ M. Atk. doubles. In case of failure the item does not disappear, but its enchant value resets to 0.. Cannot be used on weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1073,7 +1073,7 @@
 		</skills>
 	</item>
 	<item id="17262" name="Blessed Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 when enchanted to +4 or higher. It can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. HP is gradually increased with each enchant value when enchanted to +4 or higher. If enchanting fails, the item is not crystallized but the enchant value is reset to 0. Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1089,7 +1089,7 @@
 		</skills>
 	</item>
 	<item id="17263" name="Blessed Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 5 for S-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 6 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1105,7 +1105,7 @@
 		</skills>
 	</item>
 	<item id="17264" name="Blessed Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. increases by 1 for S-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1121,7 +1121,7 @@
 		</skills>
 	</item>
 	<item id="17265" name="Certificate of Dawn" type="EtcItem">
-		<!-- Certificate received from the Witness of Dawn Franz. It says that if you show this certificate to Priest Wood, he will exchange it for an occupation specific Forgotten Scroll that can be learned at level 81. -->
+		<!-- Certificate received from the Witness of Dawn Franz. No longer used. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1152,7 +1152,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="17268" name="Antharas Blood Crystal" type="EtcItem">
-		<!-- Using the power held within the blood of Antharas, this crystal can revive and fully restore XP of all dead characters in the Command Channel. Can only be used while inside the Lair of Antharas. Cooldown is 1 hour. -->
+		<!-- Using the power held within the blood of Antharas, this crystal can revive and fully restore XP of all dead characters in the Command Channel. Can only be used while inside the Lair of Antharas. Cooldown is 1 h. -->
 		<set name="icon" val="icon.etc_fire_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1170,7 +1170,7 @@
 		</skills>
 	</item>
 	<item id="17269" name="Agathion - Antharas" type="Armor">
-		<!-- Bracelet that summons a cute Agathion - Antharas. -->
+		<!-- A bracelet for summoning Agathion Antharas. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1192,7 +1192,7 @@
 		</skills>
 	</item>
 	<item id="17270" name="Agathion - Nevit's Messenger Kanna" type="Armor">
-		<!-- Bracelet that summons an Agathion - Nevit's Messenger Kanna. -->
+		<!-- A bracelet for summoning Agathion Nevit's Herald Kanna. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1214,7 +1214,7 @@
 		</skills>
 	</item>
 	<item id="17271" name="Agathion - Guardian of Dawn Kallesin" type="Armor">
-		<!-- Bracelet that summons an Agathion - Guardian of Dawn Kallesin. -->
+		<!-- A bracelet for summoning Agathion Guardian of Dawn Kallesin. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1236,7 +1236,7 @@
 		</skills>
 	</item>
 	<item id="17272" name="Agathion - Antharas Pack" type="EtcItem">
-		<!-- Special gift that commemorates the conquest of Dragon Valley. When used, you can obtain an Agathion - Antharas. -->
+		<!-- A special gift given for conquering the Dragon Valley. Double-click to obtain Agathion Antharas Charm. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_clan_depositable" val="false" />
@@ -1251,11 +1251,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17269" min="1" max="1" chance="100" /> <!-- Agathion - Antharas -->
+			<item id="17269" min="1" max="1" chance="100" /> <!-- Agathion Antharas -->
 		</capsuled_items>
 	</item>
 	<item id="17273" name="Agathion - Nevit's Messenger Kanna Pack" type="EtcItem">
-		<!-- Special gift that commemorates the completion of the Seven Signs quest. When used, you can obtain an Agathion - Nevit's Messenger Kanna. -->
+		<!-- A special gift given for completing the Seven Signs quest. Double-click to obtain Agathion Nevit's Messenger Kanna Charm. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_clan_depositable" val="false" />
@@ -1270,11 +1270,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17270" min="1" max="1" chance="100" /> <!-- Agathion - Nevit's Messenger Kanna -->
+			<item id="17270" min="1" max="1" chance="100" /> <!-- Agathion Nevit's Messenger Kanna -->
 		</capsuled_items>
 	</item>
 	<item id="17274" name="Agathion - Guardian of Dawn Kallesin Pack" type="EtcItem">
-		<!-- Special gift that commemorates the completion of the Seven Sign quest. When used, you can obtain an Agathion - Guardian of Dawn Kallesin. -->
+		<!-- A special gift given for completing the Seven Signs quest. Double-click to obtain Agathion Guardian of Dawn Kallesin. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_clan_depositable" val="false" />
@@ -1289,7 +1289,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17271" min="1" max="1" chance="100" /> <!-- Agathion - Guardian of Dawn Kallesin -->
+			<item id="17271" min="1" max="1" chance="100" /> <!-- Agathion Guardian of Dawn Kallesin -->
 		</capsuled_items>
 	</item>
 	<item id="17275" name="Strider Pet Coupon" type="EtcItem">
@@ -1337,7 +1337,7 @@
 		</skills>
 	</item>
 	<item id="17278" name="Strider Pet Exchange Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Strider pet coupon. -->
+		<!-- Double-click to obtain Strider Pet Coupon. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1356,7 +1356,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17279" name="Transformation Scroll: Anakim Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Anakim Transformation Scroll. When used, you can obtain a Transformation Sealbook: Anakim. -->
+		<!-- Double-click to obtain Transformation Scroll: Anakim. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1375,7 +1375,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17280" name="Transformation Sealbook: Anakim Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Anakim Transformation Sealbook. When used, you can obtain a Transformation Sealbook: Anakim. -->
+		<!-- Double-click to obtain Anakim Transformation Sealbook. When used, you can obtain a Transformation Sealbook: Anakim. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1410,7 +1410,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17282" name="2010 Summer Special Pack" type="EtcItem">
-		<!-- Wrapped Pack containing XP Buff 50%, Freya's Refreshing Breeze, and Ice Watermelon Hat. -->
+		<!-- Double-click to obtain Nevit's Hourglass, Freya's Refreshing Breeze and Ice Watermelon Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1426,13 +1426,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17283" min="5" max="5" chance="100" /> <!-- XP Buff 50% (4-hour) -->
+			<item id="17283" min="5" max="5" chance="100" /> <!-- Nevit's Hourglass (4-hour) -->
 			<item id="17285" min="5" max="5" chance="100" /> <!-- Freya's Refreshing Breeze -->
 			<item id="17289" min="1" max="1" chance="100" /> <!-- Ice Watermelon Hat -->
 		</capsuled_items>
 	</item>
 	<item id="17283" name="XP Buff 50% (4-hour)" type="EtcItem">
-		<!-- Hourglass that increases acquired XP by an additional 50% for 4 hours. All levels. -->
+		<!-- When used, acquired XP +50% for 4 h. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1456,7 +1456,7 @@
 		</skills>
 	</item>
 	<item id="17284" name="XP Buff 50% (4-hour)" additionalName="Event" type="EtcItem">
-		<!-- Hourglass that increases acquired XP by an additional 50% for 4 hours. All levels. -->
+		<!-- When used, acquired XP +50% for 4 h. For all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1480,7 +1480,7 @@
 		</skills>
 	</item>
 	<item id="17285" name="Freya's Refreshing Breeze" type="EtcItem">
-		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<!-- Upon use, for 4 h., you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the Birthday Joy buff is active. Cooldown is 60 min. Vitality item with limited usage. The effect remains after death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1502,7 +1502,7 @@
 		</skills>
 	</item>
 	<item id="17286" name="Freya's Refreshing Breeze" additionalName="Event" type="EtcItem">
-		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<!-- Upon use, for 4 h., you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the Birthday Joy buff is active. Cooldown is 60 min. Vitality item with limited usage. The effect remains after death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1524,7 +1524,7 @@
 		</skills>
 	</item>
 	<item id="17287" name="2010 Summer Special Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing XP Buff 50%, Freya's Refreshing Breeze, and Ice Watermelon Hat. -->
+		<!-- Double-click to obtain Nevit's Hourglass, Freya's Refreshing Breeze and Ice Watermelon Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1540,8 +1540,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17284" min="5" max="5" chance="100" /> <!-- XP Buff 50% (4-hour) - Event -->
-			<item id="17286" min="5" max="5" chance="100" /> <!-- Freya's Refreshing Breeze - Event] -->
+			<item id="17284" min="5" max="5" chance="100" /> <!-- Nevit's Hourglass (4-hour) - Event -->
+			<item id="17286" min="5" max="5" chance="100" /> <!-- Freya's Refreshing Breeze - Event -->
 			<item id="17288" min="1" max="1" chance="100" /> <!-- Ice Watermelon Hat - Event -->
 		</capsuled_items>
 	</item>
@@ -1586,7 +1586,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="17290" name="Requiem Shaper" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1617,7 +1617,7 @@
 		</stats>
 	</item>
 	<item id="17291" name="Requiem Cutter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Accuracy and Critical Rate for standard attacks. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1647,7 +1647,7 @@
 		</stats>
 	</item>
 	<item id="17292" name="Requiem Slasher" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Atk. when enchanted to +4. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_polion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1677,7 +1677,7 @@
 		</stats>
 	</item>
 	<item id="17293" name="Requiem Avenger" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Critical Damage for standard attacks. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_batista_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1708,7 +1708,7 @@
 		</stats>
 	</item>
 	<item id="17294" name="Requiem Fighter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases Atk. Spd. and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_fantasma_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1739,7 +1739,7 @@
 		</stats>
 	</item>
 	<item id="17295" name="Requiem Stormer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Multi Attack when enchanted to +4. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases the number of targets attacked with a spear. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_soryu_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1771,7 +1771,7 @@
 		</stats>
 	</item>
 	<item id="17296" name="Requiem Thrower" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Skill Power when enchanted to +4. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases P. Skill Power. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_grabathus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1803,7 +1803,7 @@
 		</stats>
 	</item>
 	<item id="17297" name="Requiem Shooter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Atk. Spd. when enchanted to +4. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1835,7 +1835,7 @@
 		</stats>
 	</item>
 	<item id="17298" name="Requiem Buster" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to +4. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases M. Accuracy and M. Skill Critical Rate. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_kaynon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1866,7 +1866,7 @@
 		</stats>
 	</item>
 	<item id="17299" name="Requiem Caster" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to +4. -->
+		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
 		<set name="icon" val="icon.weapon_anatrian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

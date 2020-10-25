@@ -79,6 +79,9 @@ public class PDefenseFinalizer implements IStatFunction
 					}
 				}
 				baseValue *= BaseStat.CHA.calcBonus(creature);
+				
+				// Bonus from Homunculus.
+				baseValue += player.getHomunculusDefBonus();
 			}
 		}
 		if (creature.isRaid())

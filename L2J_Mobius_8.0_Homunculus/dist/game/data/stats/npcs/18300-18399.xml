@@ -25,7 +25,7 @@
 		<skillList>
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4572" level="3" /> <!-- Triple Sonic Slash -->
@@ -100,7 +100,7 @@
 		<skillList>
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4572" level="4" /> <!-- Triple Sonic Slash -->
@@ -175,7 +175,7 @@
 		<skillList>
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4572" level="5" /> <!-- Triple Sonic Slash -->
@@ -250,7 +250,7 @@
 		<skillList>
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4572" level="6" /> <!-- Triple Sonic Slash -->
@@ -325,7 +325,7 @@
 		<skillList>
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4572" level="8" /> <!-- Triple Sonic Slash -->
@@ -400,7 +400,7 @@
 		<skillList>
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4572" level="3" /> <!-- Triple Sonic Slash -->
@@ -475,7 +475,7 @@
 		<skillList>
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4572" level="4" /> <!-- Triple Sonic Slash -->
@@ -550,7 +550,7 @@
 		<skillList>
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4572" level="5" /> <!-- Triple Sonic Slash -->
@@ -625,7 +625,7 @@
 		<skillList>
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4572" level="6" /> <!-- Triple Sonic Slash -->
@@ -700,7 +700,7 @@
 		<skillList>
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
 			<skill id="4572" level="8" /> <!-- Triple Sonic Slash -->
@@ -722,9 +722,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="632" sp="16" />
+		<acquire exp="633" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="163.406940063091" hpRegen="2" mp="108.67802108678" mpRegen="0.9" />
+			<vitals hp="162.776025236593" hpRegen="2" mp="108.67802108678" mpRegen="0.9" />
 			<attack physical="26.9360269360269" magical="14.1072371222234" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="42.4242424242424" magical="44.2287586122222" evasion="10" />
 			<speed>
@@ -736,13 +736,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4382" level="1" /> <!-- Curse of Lake Ghost -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4382" level="1" /> <!-- Curse of Lake Ghost -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -750,20 +749,6 @@
 			<radius normal="20" />
 			<height normal="10" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="18320" level="20" type="Monster" name="Caught Undine">
 		<parameters>
@@ -775,9 +760,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1265" sp="44" />
+		<acquire exp="1266" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="342.586750788644" hpRegen="2.5" mp="192.214111922141" mpRegen="1.2" />
+			<vitals hp="341.955835962145" hpRegen="2.5" mp="193.836171938362" mpRegen="1.2" />
 			<attack physical="61.9266055045872" magical="31.688209507759" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="59.6330275229358" magical="62.3551004616514" evasion="10" />
 			<speed>
@@ -789,13 +774,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4382" level="2" /> <!-- Curse of Lake Ghost -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4382" level="2" /> <!-- Curse of Lake Ghost -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -803,20 +787,6 @@
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="18321" level="30" type="Monster" name="Caught Rakul">
 		<parameters>
@@ -829,9 +799,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="156" /> <!-- Hand Axe -->
-		<acquire exp="2324" sp="102" />
+		<acquire exp="2326" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="604.416403785489" hpRegen="3.5" mp="329.278183292782" mpRegen="1.5" />
+			<vitals hp="603.785488958991" hpRegen="3.5" mp="332.522303325223" mpRegen="1.5" />
 			<attack physical="128.151260504202" magical="63.7012625634263" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="80.672268907563" magical="84.5743953094118" evasion="10" />
 			<speed>
@@ -843,13 +813,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4382" level="3" /> <!-- Curse of Lake Ghost -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4382" level="3" /> <!-- Curse of Lake Ghost -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -857,20 +826,6 @@
 			<radius normal="30" />
 			<height normal="39" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="18322" level="40" type="Monster" name="Caught Sea Giant">
 		<parameters>
@@ -883,9 +838,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="131" /> <!-- Spirit Sword -->
-		<acquire exp="4133" sp="213" />
+		<acquire exp="4134" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="966.561514195584" hpRegen="4.5" mp="478.507704785077" mpRegen="1.8" />
+			<vitals hp="965.930599369085" hpRegen="4.5" mp="482.562854825629" mpRegen="1.8" />
 			<attack physical="243.540051679587" magical="119.727087227037" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="106.976744186047" magical="111.96124142969" evasion="10" />
 			<speed>
@@ -897,13 +852,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4382" level="4" /> <!-- Curse of Lake Ghost -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4382" level="4" /> <!-- Curse of Lake Ghost -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -911,20 +865,6 @@
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="18323" level="50" type="Monster" name="Caught Sea Horse Soldier">
 		<parameters>
@@ -937,9 +877,9 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- Trident -->
-		<acquire exp="6458" sp="1" />
+		<acquire exp="6459" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1421.45110410095" hpRegen="5.5" mp="747.769667477697" mpRegen="2.1" />
+			<vitals hp="1420.82018927445" hpRegen="5.5" mp="754.257907542579" mpRegen="2.1" />
 			<attack physical="422.062350119904" magical="203.073733813267" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="136.690647482014" magical="142.930174937554" evasion="10" />
 			<speed>
@@ -951,13 +891,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4382" level="5" /> <!-- Curse of Lake Ghost -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4382" level="5" /> <!-- Curse of Lake Ghost -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -965,20 +904,6 @@
 			<radius normal="9" />
 			<height normal="32" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="18324" level="60" type="Monster" name="Caught Homunculus">
 		<parameters>
@@ -988,11 +913,11 @@
 			<param name="SayType" value="5" />
 			<skill name="PhysicalSpecial" id="4382" level="6" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="9299" sp="2" />
+		<acquire exp="9301" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1036.49635036496" mpRegen="2.4" />
+			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1046.22871046229" mpRegen="2.4" />
 			<attack physical="664.429530201342" magical="315.348233981419" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="168.456375838926" magical="176.759970184497" evasion="10" />
 			<speed>
@@ -1004,13 +929,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4382" level="6" /> <!-- Curse of Lake Ghost -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4382" level="6" /> <!-- Curse of Lake Ghost -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -1018,20 +942,6 @@
 			<radius normal="12" />
 			<height normal="32.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="18325" level="70" type="Monster" name="Caught Flava">
 		<parameters>
@@ -1043,9 +953,9 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="12657" sp="3" />
+		<acquire exp="12659" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1358.47526358475" mpRegen="2.7" />
 			<attack physical="950.733752620545" magical="445.095379897059" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="201.25786163522" magical="211.266742771195" evasion="10" />
 			<speed>
@@ -1057,13 +967,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4382" level="7" /> <!-- Curse of Lake Ghost -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4382" level="7" /> <!-- Curse of Lake Ghost -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -1071,20 +980,6 @@
 			<radius normal="18" />
 			<height normal="34" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="18326" level="78" type="Monster" name="Caught Gigantic Eye">
 		<parameters>
@@ -1094,11 +989,11 @@
 			<param name="SayType" value="7" />
 			<skill name="PhysicalSpecial" id="4382" level="9" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="19839" sp="4" />
+		<acquire exp="19841" sp="5" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2880.1261829653" hpRegen="8.5" mp="1674.77696674777" mpRegen="3" />
+			<vitals hp="2880.1261829653" hpRegen="8.5" mp="1690.99756690998" mpRegen="3" />
 			<attack physical="1235.02994011976" magical="595.130420574302" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="232.335329341317" magical="243.410358193174" evasion="12" />
 			<speed>
@@ -1110,13 +1005,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4382" level="9" /> <!-- Curse of Lake Ghost -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
+			<skill id="4382" level="9" /> <!-- Curse of Lake Ghost -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -1124,20 +1018,6 @@
 			<radius normal="21" />
 			<height normal="55" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="18327" level="58" type="Monster" name="Freya's Servant">
 		<parameters>
@@ -1169,7 +1049,7 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4417" level="5" /> <!-- Beast -->
+			<skill id="4417" level="5" /> <!-- Beasts -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>8</sNpcPropHpRate>
@@ -1185,20 +1065,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="179" max="418" chance="70" /> <!-- Adena -->
-				<item id="36546" min="1" max="1" chance="4.77" /> <!-- Weapon Fragment (Low-grade) -->
-				<item id="36517" min="1" max="1" chance="2.069" /> <!-- Leather -->
-				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
-				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
-				<item id="36552" min="1" max="1" chance="0.075" /> <!-- Armor Fragment -->
-				<item id="36562" min="1" max="1" chance="0.075" /> <!-- Greater Cokes -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="66.13" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="1.413" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1898,7 +1770,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="44" sp="0" />
+		<acquire exp="45" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="39.1167192429022" hpRegen="2" mp="40.551500405515" mpRegen="0.9" />
 			<attack physical="12.037037037037" magical="7.73786917593707" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1912,7 +1784,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1921,20 +1792,6 @@
 			<radius normal="10" />
 			<height normal="15" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="18343" level="99" type="Monster" name="Gatekeeper Zombie">
 		<parameters>
@@ -1992,7 +1849,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2041,7 +1898,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2088,8 +1945,6 @@
 				<item id="8787" min="1" max="1" chance="17.49" /> <!-- Sprigant's Fruit -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -2138,8 +1993,6 @@
 				<item id="8787" min="1" max="1" chance="17.39" /> <!-- Sprigant's Fruit -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -2174,7 +2027,7 @@
 		<skillList>
 			<skill id="4078" level="2" /> <!-- Flame Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2197,7 +2050,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2229,7 +2082,7 @@
 		<skillList>
 			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2252,7 +2105,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2284,7 +2137,7 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5492" level="2" /> <!-- Power Shot -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2308,7 +2161,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2342,7 +2195,7 @@
 			<skill id="4001" level="2" /> <!-- Gust -->
 			<skill id="4077" level="2" /> <!-- Aura Burn -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2365,7 +2218,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2403,7 +2256,7 @@
 			<skill id="4033" level="2" /> <!-- Aura Burn -->
 			<skill id="4066" level="2" /> <!-- Twister -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2426,7 +2279,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2466,7 +2319,7 @@
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2490,7 +2343,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2532,7 +2385,7 @@
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5260" level="2" /> <!-- Disarm -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2557,7 +2410,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2597,7 +2450,7 @@
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2621,7 +2474,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2665,7 +2518,7 @@
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -2689,7 +2542,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2731,7 +2584,7 @@
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5262" level="2" /> <!-- Rising Shot -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2756,7 +2609,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2778,9 +2631,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3601" sp="99" />
+		<acquire exp="3602" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="387.066246056782" hpRegen="3.5" mp="218.167072181671" mpRegen="1.5" />
+			<vitals hp="580.441640378549" hpRegen="3.5" mp="219.789132197891" mpRegen="1.5" />
 			<attack physical="71.9727992455265" magical="36.5300136324317" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="93.0682748864567" magical="67.9511628416738" />
 			<speed>
@@ -2793,10 +2646,7 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5263" level="2" /> <!-- Chain Lightning -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -2812,16 +2662,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="9708" min="1" max="1" chance="100" /> <!-- Gate Key: Rodenpicula -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2858,7 +2699,7 @@
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2882,7 +2723,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2922,7 +2763,7 @@
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -2946,7 +2787,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2968,9 +2809,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="2711" sp="68" />
+		<acquire exp="2712" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="387.066246056782" hpRegen="3.5" mp="218.167072181671" mpRegen="1.5" />
+			<vitals hp="387.066246056782" hpRegen="3.5" mp="219.789132197891" mpRegen="1.5" />
 			<attack physical="71.9727992455265" magical="36.5300136324317" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="93.0682748864567" magical="67.9511628416738" />
 			<speed>
@@ -2982,12 +2823,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3002,16 +2840,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="9710" min="1" max="1" chance="100" /> <!-- Gate Key: Katenar -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3052,7 +2881,7 @@
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5264" level="2" /> <!-- Death Mark -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -3077,7 +2906,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3109,7 +2938,7 @@
 		<skillList>
 			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -3132,7 +2961,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3164,7 +2993,7 @@
 		</stats>
 		<status undying="false" canMove="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5492" level="2" /> <!-- Power Shot -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
@@ -3188,7 +3017,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3203,7 +3032,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2842.01892744479" hpRegen="8.5" mp="1641.52473641525" mpRegen="3" />
+			<vitals hp="14210.094637224" hpRegen="8.5" mp="1657.74533657745" mpRegen="3" />
 			<attack physical="1208.33333333333" magical="559.045851869162" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="337.5" magical="246.68829413355" />
 			<speed>
@@ -3217,10 +3046,8 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4095" level="1" /> <!-- Damage Shield -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4471" level="10" /> <!-- Anger -->
 			<skill id="5334" level="2" /> <!-- Power Strike -->
 		</skillList>
@@ -3231,20 +3058,6 @@
 			<radius normal="14" />
 			<height normal="14.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="18365" level="79" type="Monster" name="Witch Warder">
 		<parameters>
@@ -3275,7 +3088,7 @@
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4471" level="10" /> <!-- Anger -->
 			<skill id="5374" level="2" /> <!-- Flame Strike -->
 			<skill id="5393" level="2" /> <!-- Mana Burn -->
@@ -3298,7 +3111,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3330,7 +3143,7 @@
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="5334" level="3" /> <!-- Power Strike -->
 			<skill id="5374" level="3" /> <!-- Flame Strike -->
 		</skillList>

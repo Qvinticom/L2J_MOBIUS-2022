@@ -269,7 +269,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="15310" name="Einhasad's Sacred Sword" type="Weapon">
-		<!-- Einhasad's Sacred Sword given by the Emperor of Elmoreden Shunaiman. -->
+		<!-- Einhasad's sacred sword given to Shunaiman, the Emperor of Elmoreden. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -318,7 +318,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="15312" name="Dawn's Bracelet" type="Armor">
-		<!-- Dawn's bracelet given from the Priest Franz. Precious looking bracelet. Increases Weight Limit of 5000. -->
+		<!-- Dawn's bracelet given from the Priest Franz. Precious looking bracelet. Weight Limit +5000. -->
 		<set name="icon" val="icon.accessory_lbracelet_of_dawn" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -339,7 +339,7 @@
 		</skills>
 	</item>
 	<item id="15313" name="PA - Forgotten Blade" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Forgotten Blade with limited ability enhancement. <Special Option>. Critical +84. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Forgotten Blade, upgrade options are limited. <Special properties>. Critical Rate for standard attacks +84. Increases PvP damage. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -375,7 +375,7 @@
 		</stats>
 	</item>
 	<item id="15314" name="PA - Basalt Battlehammer" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Basalt Battlehammer with limited ability enhancement. <Special Option>. Max HP increases by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Basalt Battlehammer with limited ability enhancement. <Special Option>. Max HP +25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -412,7 +412,7 @@
 		</stats>
 	</item>
 	<item id="15315" name="PA - Imperial Staff" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Imperial Staff with limited ability enhancement. <Special Option>. MP Recovery Rate increases. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Imperial Staff, upgrade options are limited. <Special Features>. Increases MP Recovery Rate. Deals additional PvP damage. Temporary item. Cannot be crystallized. Can be enchanted only. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -450,7 +450,7 @@
 		</stats>
 	</item>
 	<item id="15316" name="PA - Angel Slayer" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Angel Slayer with limited ability enhancement. <Special Option>. P. Atk. Increases by 265 during a critical attack. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Angel Slayer, upgrade options are limited. <Special properties>. Critical Damage for standard attacks +265. Increases PvP damage. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -524,7 +524,7 @@
 		</stats>
 	</item>
 	<item id="15318" name="PA - Saint Spear" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Saint Spear with limited ability enhancement. <Special Option>. Max HP increases by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Saint Spear with limited ability enhancement. <Special Option>. Max HP +25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -561,7 +561,7 @@
 		</stats>
 	</item>
 	<item id="15319" name="PA - Demon Splinter" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Demon Splinter with limited ability enhancement. <Special Option>. Critical +80. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Demon Splinter, upgrade options are limited. <Special properties>. Critical Rate for standard attacks +80. Increases PvP damage. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -598,7 +598,7 @@
 		</stats>
 	</item>
 	<item id="15320" name="PA - Heaven's Divider" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Heaven's Divider with limited ability enhancement. <Special Option>. Critical +84. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Heaven's Divider, upgrade options are limited. <Special properties>. Critical Rate for standard attacks +84. Increases PvP damage. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -634,7 +634,7 @@
 		</stats>
 	</item>
 	<item id="15321" name="PA - Arcana Mace" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Arcana Mace with limited ability enhancement. <Special Option>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Arcana Mace with limited ability enhancement. <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -672,7 +672,7 @@
 		</stats>
 	</item>
 	<item id="15322" name="PA - Draconic Bow" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Draconic Bow with limited ability enhancement. <Special Option>. Critical +88. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Draconic Bow, upgrade options are limited. <Special properties>. Critical Rate for standard attacks +88. Increases PvP damage. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -711,7 +711,7 @@
 		</stats>
 	</item>
 	<item id="15323" name="PA - Laevateinn" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Laevateinn with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 7%. Increases damage inflicted during PvP. When enchanted to 4 or more, chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Laevateinn, upgrade options are limited. <Special Option>. Atk. Spd. +7%. Inflicts additional PvP Damage. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. Expiratory. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -752,7 +752,7 @@
 		</stats>
 	</item>
 	<item id="15324" name="PA - Gram" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Gram with limited ability enhancement. <Special Option>. Critical +84. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Gram, upgrade options are limited. <Special properties>. Critical Rate for standard attacks +84. Increases PvP damage. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -792,7 +792,7 @@
 		</stats>
 	</item>
 	<item id="15325" name="PA - Sarunga" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Sarunga with limited ability enhancement. <Special Option>. Critical +88. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
+		<!-- Sarunga, upgrade options are limited. <Special properties>. Critical Rate for standard attacks +88. Increases PvP damage. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -833,7 +833,7 @@
 		</stats>
 	</item>
 	<item id="15326" name="PA - Tallum Blade*Dark Legion's Edge" additionalName="PA exclusive Weapon" type="Weapon">
-		<!-- Tallum Blade*Dark Legion's Edge with limited enchantment options. When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Atk. Spd. by 8%. Inflicts more damage during PvP. Limited time item. Cannot be crystallized, and can only be enhanced with enchantment options. -->
+		<!-- Tallum Blade*Dark Legion's Edge, upgrade options are limited. When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. Starting from +4, Atk. Spd. +8%, PvP damage is increased. Temporary item. Cannot be crystallized. Can only be enchanted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -869,7 +869,7 @@
 		</stats>
 	</item>
 	<item id="15327" name="Seed: Sea Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -884,7 +884,7 @@
 		</skills>
 	</item>
 	<item id="15328" name="Seed: Sea Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -899,7 +899,7 @@
 		</skills>
 	</item>
 	<item id="15329" name="Seed: Twin Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -914,7 +914,7 @@
 		</skills>
 	</item>
 	<item id="15330" name="Seed: Twin Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -929,7 +929,7 @@
 		</skills>
 	</item>
 	<item id="15331" name="Seed: Twin Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -944,7 +944,7 @@
 		</skills>
 	</item>
 	<item id="15332" name="Seed: Twin Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -959,7 +959,7 @@
 		</skills>
 	</item>
 	<item id="15333" name="Seed: Great Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Great Coba. For best results, a level 80+character must plant the seed on a level 80-90 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Great Coba. For best results, a level 80-90 character must plant the seed on a level 80-90 monster. -->
 		<set name="icon" val="icon.etc_great_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -974,7 +974,7 @@
 		</skills>
 	</item>
 	<item id="15334" name="Seed: Alternative Sea Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -989,7 +989,7 @@
 		</skills>
 	</item>
 	<item id="15335" name="Seed: Alternative Sea Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="icon" val="icon.etc_sea_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1004,7 +1004,7 @@
 		</skills>
 	</item>
 	<item id="15336" name="Seed: Alternative Twin Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1019,7 +1019,7 @@
 		</skills>
 	</item>
 	<item id="15337" name="Seed: Alternative Twin Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1034,7 +1034,7 @@
 		</skills>
 	</item>
 	<item id="15338" name="Seed: Alternative Twin Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1049,7 +1049,7 @@
 		</skills>
 	</item>
 	<item id="15339" name="Seed: Alternative Twin Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="icon" val="icon.etc_twin_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1064,7 +1064,7 @@
 		</skills>
 	</item>
 	<item id="15340" name="Seed: Alternative Great Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Great Coba. For best results, a level 80-90 character must plant it on a level 80-90 monster. Cannot be transferred between servers. -->
+		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Great Coba. For best results, a level 80-90 character must plant it on a level 80-90 monster. -->
 		<set name="icon" val="icon.etc_great_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1086,7 +1086,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15342" name="Aqua Elf Transformation Harp" additionalName="60-day" type="Weapon">
-		<!-- Transformation stick that turns you into an Aqua Elf. 60 days. -->
+		<!-- A harp that turns you into Aqua Elf for 60 d. -->
 		<set name="icon" val="icon.harp_of_transform_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1118,7 +1118,7 @@
 		</stats>
 	</item>
 	<item id="15343" name="Aqua Elf Transformation Harp Pack (60-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Aqua Elf Transformation Stick (60-day). -->
+		<!-- Double-click to obtain Aqua Elf Transformation Harp (60-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1138,7 +1138,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15344" name="Aqua Elf Transformation Harp (Event)" additionalName="60-day" type="Weapon">
-		<!-- Transformation stick that turns you into an Aqua Elf. 60 days. -->
+		<!-- A harp that turns you into Aqua Elf for 60 d. -->
 		<set name="icon" val="icon.harp_of_transform_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1170,7 +1170,7 @@
 		</stats>
 	</item>
 	<item id="15345" name="Aqua Elf Transformation Harp Pack (60-day) (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing Aqua Elf Transformation Stick (60-day). -->
+		<!-- Double-click to obtain Aqua Elf Transformation Harp (60-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1186,11 +1186,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="15344" min="1" max="1" chance="100" /> <!-- Aqua Elf Transformation Harp (Event) - 60-day -->
+			<item id="15344" min="1" max="1" chance="100" /> <!-- Aqua Elf Transformation Harp - Event - 60-day -->
 		</capsuled_items>
 	</item>
 	<item id="15346" name="PA - Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- Can only be used to enchant S-grade PA Weapons. Normal enchant rules apply. -->
+		<!-- Can only be used to enchant S-grade PA weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1473,7 +1473,7 @@
 		</skills>
 	</item>
 	<item id="15359" name="Winning Lottery Ticket: 10,000 PA Points" additionalName="30-day" type="EtcItem">
-		<!-- Bring it to an Adventure Guildsman in any town to receive 10,000 PA Points. Disappears if not used within 30 days. -->
+		<!-- Double-click to obtain 10,000 PA points. You cannot gain more than 200,000 points using it. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1488,7 +1488,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15360" name="Winning Lottery Ticket: 1,000 PA Points" additionalName="30-day" type="EtcItem">
-		<!-- Bring it to an Adventure Guildsman in any town to receive 1,000 PA Points. Disappears if not used within 30 days. -->
+		<!-- Double-click to obtain 1,000 PA points. You cannot gain more than 200,000 points using it. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1503,7 +1503,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15361" name="Winning Lottery Ticket: 200 PA Points" additionalName="30-day" type="EtcItem">
-		<!-- Bring it to an Adventure Guildsman in any town to receive 200 PA Points. Disappears if not used within 30 days. -->
+		<!-- Double-click to obtain 200 PA points. You cannot gain more than 200,000 points using it. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1518,7 +1518,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15362" name="Winning Lottery Ticket: 100 PA Points" additionalName="30-day" type="EtcItem">
-		<!-- Bring it to an Adventure Guildsman in any town to receive 100 PA Points. Disappears if not used within 30 days. -->
+		<!-- Double-click to obtain 100 PA points. You cannot gain more than 200,000 points using it. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1533,7 +1533,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15363" name="Winning Lottery Ticket: 10 PA Points" additionalName="30-day" type="EtcItem">
-		<!-- Bring it to an Adventure Guildsman in any town to receive 10 PA Points. Disappears if not used within 30 days. -->
+		<!-- Double-click to obtain 10 PA points. You cannot gain more than 200,000 points using it. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1591,7 +1591,7 @@
 		</skills>
 	</item>
 	<item id="15367" name="Honey Watermelon Seed" type="EtcItem">
-		<!-- Double-click to make a Growing Honey Watermelon appear. -->
+		<!-- For the Giant Watermelon event. Double-click to summon Young Watermelon. -->
 		<set name="icon" val="icon.event_watermelon_seed_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1604,7 +1604,7 @@
 		</skills>
 	</item>
 	<item id="15368" name="Copied Watermelon Seed" type="EtcItem">
-		<!-- Double-click to make a Growing Watermelon appear. -->
+		<!-- For the Giant Watermelon event. Double-click to summon Young Watermelon. -->
 		<set name="icon" val="icon.event_honey_watermelon_seed_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1623,7 +1623,7 @@
 		</skills>
 	</item>
 	<item id="15369" name="Copied Honey Watermelon Seed" type="EtcItem">
-		<!-- Double-click to make a Growing Honey Watermelon appear. -->
+		<!-- For the Giant Watermelon event. Double-click to summon Young Honey Watermelon. -->
 		<set name="icon" val="icon.event_watermelon_seed_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1642,7 +1642,7 @@
 		</skills>
 	</item>
 	<item id="15370" name="Special July 7th Package" type="EtcItem">
-		<!-- Special July 7th package. Contains a Special July 7th parcel. -->
+		<!-- Double-click to obtain Special July 7th Kit. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1663,7 +1663,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15371" name="July 7th Package" type="EtcItem">
-		<!-- July 7th package. Contains a July 7th parcel. -->
+		<!-- Double-click to obtain July 7th Parcel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1720,7 +1720,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15374" name="Special July 7th Package (Event)" type="EtcItem">
-		<!-- Special July 7th package. Contains a Special July 7th parcel. -->
+		<!-- Double-click to obtain Special July 7th Kit. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1741,7 +1741,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15375" name="July 7th Package (Event)" type="EtcItem">
-		<!-- July 7th package. Contains a July 7th parcel. -->
+		<!-- Double-click to obtain Gift July 7th Kit. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1859,7 +1859,7 @@
 		</skills>
 	</item>
 	<item id="15381" name="Event - Herdsman's Love Scroll" additionalName="Event" type="EtcItem">
-		<!-- July 7th event. Enchant scroll exclusively for the Weaver's Colorful Dress. Increases the P. Def. and M. Def. of the Weaver's Colorful Dress. Can be safely enchanted to +3, and the item disappears when the enchant fails. When the Weaver's Colorful Dress is enchanted above +4, attributes, STR, CON, INT, and MEN also increases according to the enhancement value. Can only be used during the event period. -->
+		<!-- July 7th event. Enchant scroll exclusively for the Weaver's Colorful Dress. Increases the P./ M. Def. of the Weaver's Colorful Dress. Can be safely enchanted to +3, and the item disappears when the enchant fails. When the Weaver's Colorful Dress is enchanted above +4, attributes, STR, CON, INT, and MEN also increases according to the enhancement value. Can only be used during the event period. -->
 		<set name="icon" val="icon.event_altair_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -1876,7 +1876,7 @@
 		</skills>
 	</item>
 	<item id="15382" name="Event - Scroll: Enchant Vitality Belt" additionalName="Event" type="EtcItem">
-		<!-- Enchant scroll exclusively for the Vitality Belt. Increases the Vitality Belt's P. Def. and M. Def. Maintains Vitality. Vitality maintenance cooldown reduced. Can be safely enchanted to +3, and the item disappears when the enchant fails. When the Vitality Belt is enchanted above +4, Vitality maintenance duration increases, and the decreases Vitality maintenance cooldown. Can only be used during the event period. -->
+		<!-- Enchant scroll exclusively for the Vitality Belt. Increases the Vitality Belt's P./ M. Def. Maintains Vitality. Vitality maintenance cooldown reduced. Can be safely enchanted to +3, and the item disappears when the enchant fails. When the Vitality Belt is enchanted above +4, Vitality maintenance duration increases, and the decreases Vitality maintenance cooldown. Can only be used during the event period. -->
 		<set name="icon" val="icon.event_energy_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -2061,7 +2061,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="15393" name="Vitality Belt" additionalName="7-day" type="Armor">
-		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
+		<!-- Vitality Belt. Can be enchanted with Scroll: Enchant Vitality Belt. When enchanted, increases the duration of Vitality Maintenance effect and decreases its cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2081,7 +2081,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="15394" name="Vitality Belt" additionalName="30-day" type="Armor">
-		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
+		<!-- Vitality Belt. Can be enchanted with Scroll: Enchant Vitality Belt. When enchanted, increases the duration of Vitality Maintenance effect and decreases its cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2101,7 +2101,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15395" name="Vitality Belt" additionalName="60-day" type="Armor">
-		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
+		<!-- Vitality Belt. Can be enchanted with Scroll: Enchant Vitality Belt. When enchanted, increases the duration of Vitality Maintenance effect and decreases its cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2121,7 +2121,7 @@
 		<set name="time" val="86400" />
 	</item>
 	<item id="15396" name="Vitality Belt" additionalName="90-day" type="Armor">
-		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
+		<!-- Vitality Belt. Can be enchanted with Scroll: Enchant Vitality Belt. When enchanted, increases the duration of Vitality Maintenance effect and decreases its cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2141,7 +2141,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="15397" name="Vitality Belt" additionalName="Permanent" type="Armor">
-		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
+		<!-- Vitality Belt. Can be enchanted with Scroll: Enchant Vitality Belt. When enchanted, increases the duration of Vitality Maintenance effect and decreases its cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2159,7 +2159,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15398" name="Vitality Belt (Event)" additionalName="7-day" type="Armor">
-		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
+		<!-- Vitality Belt. Can be enchanted with Scroll: Enchant Vitality Belt. When enchanted, increases the duration of Vitality Maintenance effect and decreases its cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2179,7 +2179,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="15399" name="Vitality Belt (Event)" additionalName="30-day" type="Armor">
-		<!-- Vitality Belt. Can be enchanted using the Scroll: Enchant Vitality Belt. When enchanted, increases Vitality maintenance effect, and decreases Vitality maintenance cooldown. -->
+		<!-- Vitality Belt. Can be enchanted with Scroll: Enchant Vitality Belt. When enchanted, increases the duration of Vitality Maintenance effect and decreases its cooldown. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />

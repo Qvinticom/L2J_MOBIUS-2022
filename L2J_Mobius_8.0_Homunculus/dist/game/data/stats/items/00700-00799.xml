@@ -564,7 +564,7 @@
 		</skills>
 	</item>
 	<item id="729" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -581,7 +581,7 @@
 		</skills>
 	</item>
 	<item id="730" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- Increases P. Def. by 1 for A-grade armor and accessories. When enchanted to +4 or higher, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. HP is gradually increased with each enchant value when enchanted to +4 or higher. Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -643,7 +643,7 @@
 		</skills>
 	</item>
 	<item id="734" name="Wind Walk Potion" type="EtcItem">
-		<!-- Magical potion that increases movement Speed -->
+		<!-- A magical potion that increases Speed. -->
 		<set name="icon" val="icon.etc_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -666,7 +666,7 @@
 		</skills>
 	</item>
 	<item id="735" name="Haste Potion" type="EtcItem">
-		<!-- Magical potion that increases Atk. Spd. -->
+		<!-- A magical potion that increases Atk. Spd. -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -747,7 +747,7 @@
 		</stats>
 	</item>
 	<item id="739" name="Broken Sword Handle" type="EtcItem">
-		<!-- The handle portion of the sword of solidarity. Take this to Blacksmith Altran. -->
+		<!-- The handle part of the sword of solidarity. Take this to Blacksmith Altran. -->
 		<set name="icon" val="icon.weapon_small_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -763,7 +763,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="740" name="Broken Blade Bottom" type="EtcItem">
-		<!-- Take this, and the upper portion of the blade to Blacksmith Altran. -->
+		<!-- Take this, and the upper part of the blade to Blacksmith Altran. -->
 		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -779,7 +779,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="741" name="Broken Blade Top" type="EtcItem">
-		<!-- Take this, and the lower portion of the blade to Blacksmith Altran. -->
+		<!-- Take this, and the lower part of the blade to Blacksmith Altran. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1006,7 +1006,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="752" name="Orc Amulet" type="EtcItem">
-		<!-- Amulet that the Orcs carry for magical purposes. Take this to Captain Gilbert. -->
+		<!-- An amulet that Orc shamans use in their rituals. Take it to Captain Gilbert. -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

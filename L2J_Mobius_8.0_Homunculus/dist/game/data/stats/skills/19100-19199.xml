@@ -8,7 +8,7 @@
 		<magicLevel>99</magicLevel>
 	</skill>
 	<skill id="19101" toLevel="1" name="Chain Blow - Test">
-		<!-- Inflicts damage with 33717 Power added to P. Atk. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. Additional damage occurs with Bleed. -->
+		<!-- Inflicts damage with 33,717 power, making the target bleed. Requires a dagger or dual daggers. Half-kill. Critical. Over-hit. -->
 		<icon>icon.skill19101</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -55,6 +55,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -197,20 +210,39 @@
 		</effects>
 	</skill>
 	<skill id="19109" toLevel="4" name="Siege Golem's Spirit">
-		<!-- Merge with a powerful Siege Golem. For $s1, P./ M. Def. +$s2, and Bow/ Crossbow Resistance +$s3. Consumes $s4 Crystals (R-grade). -->
+		<!-- The effect is the same as that of a powerful Siege Golem. For $s1, P./ M. Def. +$s2, Bow/ Crossbow Resistance +$s3. Consumes $s4 R-grade Crystals. The skill cooldown is fixed. -->
 		<icon>icon.skill19109</icon>
 		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
 		<mpConsume>70</mpConsume>
 		<hitTime>10000</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>1200000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic>
+		<staticReuse>true</staticReuse>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>17371</itemConsumeId> <!-- Crystal (R-Grade) -->
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>TRANSFORM</abnormalType>
+		<conditions>
+			<condition name="CanUseInBattlefield" />
+		</conditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>50</BOW>
+				<CROSSBOW>50</CROSSBOW>
+				<TWOHANDCROSSBOW>50</TWOHANDCROSSBOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19110" toLevel="5" name="Clan Resilience">
 		<!-- Clan members' Confusion Resistance +$s1. Affects characters of Elder rank or higher. -->
@@ -252,7 +284,7 @@
 		</effects>
 	</skill>
 	<skill id="19112" toLevel="1" name="Clan Escape">
-		<!-- Teleports nearby clan members to the town. Consumes 300 Spirit Ore. Available only to the clan leader and elite clan members. -->
+		<!-- Teleports nearby clan members to the town. Consumes 300 Spirit Ore. Available only to the clan leader and elite clan members. The skill cooldown is fixed. -->
 		<icon>icon.skill_pledge_party_recall</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
@@ -270,7 +302,7 @@
 		<conditions>
 			<condition name="OpCanEscape" />
 			<condition name="OpSocialClass">
-				<socialClass>8</socialClass>
+				<socialClass>100</socialClass>
 			</condition>
 		</conditions>
 		<effects>
@@ -280,7 +312,7 @@
 		</effects>
 	</skill>
 	<skill id="19113" toLevel="1" name="Clan Block">
-		<!-- Prevents the target from using the Scroll of Escape for 60 sec. Consumes 300 Spirit Ore. Available only to the clan leader and elite clan members. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Prevents the target from using the Scroll of Escape for 60 sec. Consumes 300 Spirit Ore. Available only to the clan leader and elite clan members. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_recall</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -299,10 +331,11 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<stayAfterDeath>true</stayAfterDeath>
+		<staticReuse>true</staticReuse>
 		<conditions>
 			<condition name="OpTargetPc" />
 			<condition name="OpSocialClass">
-				<socialClass>8</socialClass>
+				<socialClass>100</socialClass>
 			</condition>
 		</conditions>
 		<effects>
@@ -310,27 +343,31 @@
 		</effects>
 	</skill>
 	<skill id="19114" toLevel="1" name="Clan Exclusion">
-		<!-- Prevents the target from resurrecting for 60 sec. Consumes 300 Spirit Ore. Available only to the clan leader and elite clan members. -->
+		<!-- Prevents the target from resurrecting for 60 sec. Consumes 300 Spirit Ore. Available only to the clan leader and elite clan members. The skill cooldown is fixed. -->
 		<icon>icon.skill_resurrection</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>BLOCK_RESURRECTION</abnormalType>
+		<effectRange>600</effectRange>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
 		<reuseDelay>1800000</reuseDelay>
-		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>300</itemConsumeCount>
-		<targetType>PC_BODY</targetType>
+		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<stayAfterDeath>true</stayAfterDeath>
+		<staticReuse>true</staticReuse>
+		<isMagic>1</isMagic>
 		<conditions>
+			<condition name="OpTargetPc" />
 			<condition name="OpSocialClass">
-				<socialClass>8</socialClass>
+				<socialClass>100</socialClass>
 			</condition>
 		</conditions>
 		<effects>
@@ -367,7 +404,7 @@
 		</effects>
 	</skill>
 	<skill id="19116" toLevel="1" name="Summon Lyn Draco">
-		<!-- Can mount a Lind Rider. -->
+		<!-- Allows to mount Lind Rider. -->
 		<icon>icon.etc_lind_vehicle</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -536,7 +573,7 @@
 		</effects>
 	</skill>
 	<skill id="19125" toLevel="2" name="Noble Critical Focus">
-		<!-- Physical Skill Critical Rate +$s1. -->
+		<!-- P. Skill Critical Rate +$s1. -->
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -591,7 +628,7 @@
 		</effects>
 	</skill>
 	<skill id="19128" toLevel="2" name="Noble Sting">
-		<!-- Physical Skill Critical Damage +$s1. -->
+		<!-- P. Skill Critical Damage +$s1. -->
 		<icon>icon.skill10655</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -605,7 +642,7 @@
 		</effects>
 	</skill>
 	<skill id="19129" toLevel="2" name="Noble Protection">
-		<!-- Critical rate in a standard attack -$s1. -->
+		<!-- Received P. Critical Rate -$s1. -->
 		<icon>icon.skill19129</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -619,7 +656,7 @@
 		</effects>
 	</skill>
 	<skill id="19130" toLevel="2" name="Noble Attributes">
-		<!-- Attack Attribute +$s1. $s2 Attributes Resistance +$s3. -->
+		<!-- Attribute Attack +$s1, $s2 Attribute Resistance +$s3. -->
 		<icon>icon.skill19130</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -668,7 +705,7 @@
 		</effects>
 	</skill>
 	<skill id="19131" toLevel="2" name="Noble Expertise">
-		<!-- P. Atk. +$s1 when a melee two-handed weapon is equipped. Atk. Spd. +$s2 when a shield is equipped. -->
+		<!-- When using a two-handed melee weapon, P. Atk. +$s1. When using a shield, Atk. Spd. +$s2. -->
 		<icon>icon.skill19131</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -904,7 +941,7 @@
 		</effects>
 	</skill>
 	<skill id="19143" toLevel="2" name="Noble Focus">
-		<!-- P. Critical Rate +$s1. -->
+		<!-- Critical Rate for standard attacks +$s1. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -933,7 +970,7 @@
 		</effects>
 	</skill>
 	<skill id="19145" toLevel="2" name="Noble Death Whisper">
-		<!-- Physical Critical Damage +$s1. -->
+		<!-- Critical Damage for standard attacks +$s1. -->
 		<icon>icon.skill4278</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -947,7 +984,7 @@
 		</effects>
 	</skill>
 	<skill id="19146" toLevel="2" name="Noble Protection Magic">
-		<!-- Chance of receiving an M. Critical attack -$s1. -->
+		<!-- Received M. Skill Critical Rate -$s1. -->
 		<icon>icon.skill19146</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1047,13 +1084,13 @@
 		</effects>
 	</skill>
 	<skill id="19152" toLevel="1" name="Noble Endurance">
-		<!-- Damage received while immobile decreases -21%. -->
+		<!-- Received damage when immobilized -21%. -->
 		<icon>icon.skill19152</icon>
 		<operateType>P</operateType>
 		<!-- TODO: Handle this skill -->
 	</skill>
 	<skill id="19153" toLevel="1" name="Noble Critical Boost">
-		<!-- P. Critical Rate +50, M. Critical Rate +20, Skill Mastery +50%. -->
+		<!-- Critical Rate for standard attacks +50, M. Skill Critical Rate +20, Skill Mastery Rate +50%. -->
 		<icon>icon.skill19153</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1072,7 +1109,7 @@
 		</effects>
 	</skill>
 	<skill id="19154" toLevel="4" name="Noble Empower">
-		<!-- M. Atk. +$s1 and recovery magic Power +$s2. -->
+		<!-- M. Atk. +$s1, Healing Power +$s2. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1138,7 +1175,7 @@
 		</effects>
 	</skill>
 	<skill id="19157" toLevel="2" name="Noble Wild Magic">
-		<!-- M. Critical Rate +$s1. -->
+		<!-- M. Skill Critical Rate +$s1. -->
 		<icon>icon.skill1303</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1180,7 +1217,7 @@
 		</effects>
 	</skill>
 	<skill id="19160" toLevel="2" name="Noble Magic Death">
-		<!-- M. Critical Damage +$s1 and recovery magic Power +$s2. -->
+		<!-- M. Skill Critical Damage +$s1, Healing Power +$s2. -->
 		<icon>icon.skill19160</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1201,7 +1238,7 @@
 		</effects>
 	</skill>
 	<skill id="19161" toLevel="2" name="Noble Protection Armor">
-		<!-- Critical Damage during a standard attack -$s1. -->
+		<!-- Received Critical Damage from standard attacks -$s1. -->
 		<icon>icon.skill19161</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1230,7 +1267,7 @@
 		</effects>
 	</skill>
 	<skill id="19163" toLevel="2" name="Noble Skill Mastery">
-		<!-- Skill Master Rate +$s1. -->
+		<!-- Skill Mastery Rate +$s1. -->
 		<icon>icon.skill0330</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1284,7 +1321,7 @@
 		</effects>
 	</skill>
 	<skill id="19166" toLevel="4" name="Noble Robe Attack">
-		<!-- When equipped with a Robe, M. Atk. +$s1 and recovery skill Power +$s2. -->
+		<!-- When using robe, M. Atk. +$s1, Healing Power +$s2. -->
 		<icon>icon.skill19166</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1405,7 +1442,7 @@
 		</effects>
 	</skill>
 	<skill id="19173" toLevel="2" name="Noble Emblem">
-		<!-- Attack Attribute +$s1. $s2 Attributes Resistance +$s3. -->
+		<!-- Attribute Attack +$s1, $s2 Attribute Resistance +$s3. -->
 		<icon>icon.skill19130</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1511,7 +1548,7 @@
 		</effects>
 	</skill>
 	<skill id="19177" toLevel="2" name="Noble Spirit">
-		<!-- Attack Attribute +$s1. $s2 Attributes Resistance +$s3. -->
+		<!-- Attribute Attack +$s1, $s2 Attribute Resistance +$s3. -->
 		<icon>icon.skill19130</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1631,7 +1668,7 @@
 		<icon>icon.skill19192</icon>
 		<operateType>A2</operateType>
 		<mpConsume>67</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -1639,7 +1676,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="19193" toLevel="1" name="Divine Blessing">
-		<!-- Healing power and magic power increases when using Radiant Heal. Requires Abilities. -->
+		<!-- Increases Healing Power and M. Atk. when using Radiant Heal. Requires abilities activated. -->
 		<icon>icon.skill19193</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1654,7 +1691,7 @@
 		</conditions>
 	</skill>
 	<skill id="19197" toLevel="1" name="Divine Blessing">
-		<!-- For 15 sec., M. Atk. +16%, and Healing power +242. -->
+		<!-- For 15 sec., M. Atk. +16%, Healing Power +242. -->
 		<icon>icon.skill19193</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -1663,7 +1700,7 @@
 	<skill id="19198" toLevel="1" name="Cancel target">
 		<icon>icon.skill0445</icon>
 		<operateType>A1</operateType>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="19199" toLevel="1" name="Hurricane Sign">

@@ -107,6 +107,9 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
+import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomonculusBirthInfo;
+import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusPointInfo;
+import org.l2jmobius.gameserver.network.serverpackets.homunculus.ExHomunculusReady;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -320,6 +323,11 @@ public class EnterWorld implements IClientIncomingPacket
 			player.sendPacket(new ExVitalityEffectInfo(player));
 		}
 		
+		// Enable Homunculus system.
+		player.sendPacket(new ExHomonculusBirthInfo(player));
+		player.sendPacket(new ExHomunculusPointInfo(player));
+		player.sendPacket(new ExHomunculusReady(player));
+		
 		// Send time.
 		player.sendPacket(new ExEnterWorld());
 		
@@ -390,9 +398,6 @@ public class EnterWorld implements IClientIncomingPacket
 		// Send Adena / Inventory Count Info
 		player.sendPacket(new ExAdenaInvenCount(player));
 		
-		// Send Equipped Items
-		player.sendPacket(new ExUserInfoEquipSlot(player));
-		
 		// Send Unread Mail Count
 		if (MailManager.getInstance().hasUnreadPost(player))
 		{
@@ -455,6 +460,9 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Expand Skill
 		player.sendPacket(new ExStorageMaxCount(player));
+		
+		// Send Equipped Items
+		player.sendPacket(new ExUserInfoEquipSlot(player));
 		
 		// Friend list
 		client.sendPacket(new L2FriendList(player));
@@ -658,6 +666,10 @@ public class EnterWorld implements IClientIncomingPacket
 			final long currentTime = System.currentTimeMillis();
 			final long stormIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
 			final long primevalIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 6, 0);
+			final long goldenAltarExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 7, 0);
+			final long coalMinesExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 11, 0);
+			final long toiExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 8, 0);
+			final long imperialTombExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 12, 0);
 			if ((stormIsleExitTime > currentTime) && player.isInTimedHuntingZone(1))
 			{
 				player.startTimedHuntingZone(1, stormIsleExitTime - currentTime);
@@ -665,6 +677,22 @@ public class EnterWorld implements IClientIncomingPacket
 			else if ((primevalIsleExitTime > currentTime) && player.isInTimedHuntingZone(6))
 			{
 				player.startTimedHuntingZone(6, primevalIsleExitTime - currentTime);
+			}
+			else if ((goldenAltarExitTime > currentTime) && player.isInTimedHuntingZone(7))
+			{
+				player.startTimedHuntingZone(7, goldenAltarExitTime - currentTime);
+			}
+			else if ((coalMinesExitTime > currentTime) && player.isInTimedHuntingZone(11))
+			{
+				player.startTimedHuntingZone(11, coalMinesExitTime - currentTime);
+			}
+			else if ((toiExitTime > currentTime) && player.isInTimedHuntingZone(11))
+			{
+				player.startTimedHuntingZone(8, toiExitTime - currentTime);
+			}
+			else if ((imperialTombExitTime > currentTime) && player.isInTimedHuntingZone(11))
+			{
+				player.startTimedHuntingZone(12, imperialTombExitTime - currentTime);
 			}
 			else
 			{

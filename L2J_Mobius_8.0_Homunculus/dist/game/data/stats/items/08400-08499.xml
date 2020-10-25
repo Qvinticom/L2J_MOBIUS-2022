@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="8400" name="Spellbook: Turn Undead" type="EtcItem">
-		<!-- Spellbook needed to learn Turn Undead. Used by Bishops and Elven Elders. Required level: 56 -->
+		<!-- A spellbook for learning the Turn Undead skill. Used by Bishops and Elven Elders. Required level: 56. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -11,7 +11,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8401" name="Spellbook: Major Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Major Heal. Used by Bishops and Elven Elders. Required level: 56 -->
+		<!-- A spellbook for learning the Major Heal skill. Used by Bishops and Elven Elders. Required level: 56. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -21,7 +21,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8402" name="Spellbook: Major Group Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Major Group Heal. Used by Bishops. Required level: 58 -->
+		<!-- A spellbook for learning the Major Group Heal skill. Used by Bishops. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1246,7 +1246,7 @@
 		</skills>
 	</item>
 	<item id="8484" name="Corroded Prize-Winning Bait" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1258,7 +1258,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8485" name="Corroded Prize-Winning Bait (Night Fishing)" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1270,7 +1270,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8486" name="Corroded Prize-Winning Bait (Novice)" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1282,7 +1282,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8487" name="Recipe: Destroyer Hammer (60%)" type="EtcItem">
-		<!-- This formula for manufacturing a Destroyer Hammer can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<!-- For Dwarves only. A recipe for Destroyer Hammer. Requires Create Item Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1416,7 +1416,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8496" name="Corroded Gludio Luminous Bait" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1428,7 +1428,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8497" name="Corroded Dion Luminous Bait" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1440,7 +1440,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8498" name="Corroded Giran Luminous Bait" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -1452,7 +1452,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8499" name="Corroded Oren Luminous Bait" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />

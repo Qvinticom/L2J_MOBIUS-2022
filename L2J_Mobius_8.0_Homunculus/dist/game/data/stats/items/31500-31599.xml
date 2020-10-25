@@ -71,7 +71,7 @@
 		</stats>
 	</item>
 	<item id="31502" name="Bound Shilen Knife" type="Weapon">
-		<!-- Bound Shilen Knife. -->
+		<!-- Bound Shillien Knife. -->
 		<set name="icon" val="icon.weapon_knife_o'_silenus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -474,7 +474,7 @@
 		</stats>
 	</item>
 	<item id="31515" name="Bound Ultimate Sword - Guidance" type="Weapon">
-		<!-- <Special Option>. Increases Accuracy by 5. No Soul Crystal option. -->
+		<!-- <Special Features>. P. Accuracy +5. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -508,7 +508,7 @@
 		</stats>
 	</item>
 	<item id="31516" name="Bound Ultimate Sword - Critical Drain" type="Weapon">
-		<!-- <Special Option>. Absorbs 9 HP from the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Absorbs 9 HP from the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -611,7 +611,7 @@
 		</stats>
 	</item>
 	<item id="31519" name="Bound Lacerator - Critical Damage" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Dark Legion Conversion. <Special Option>. P. Atk. by 326 during a Critical Attack. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dark Legion's Edge Conversion. <Special Option>. P. Atk. +326 after a critical attack. Inflicts additional PvP Damage. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -647,7 +647,7 @@
 		</stats>
 	</item>
 	<item id="31520" name="Bound Lacerator - Health" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Dark Legion Conversion. <Special Option>. Increases Max HP by about 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dark Legion's Edge Conversion. <Special Option>. Max HP +25%. Inflicts additional PvP Damage. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -683,7 +683,7 @@
 		</stats>
 	</item>
 	<item id="31521" name="Bound Lacerator - Rsk. Focus" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Dark Legion Conversion. <Special Option>. Increases Critical by 130 when HP drops to 60% or below. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dark Legion's Edge Conversion. <Special Option>. Critical Rate for standard attacks +130 when HP < 60%. Deals additional PvP damage. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -752,7 +752,7 @@
 		</stats>
 	</item>
 	<item id="31523" name="Bound Great Pata - Critical Drain" type="Weapon">
-		<!-- <Special Option>. Absorbs 10 HP from the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Absorbs 10 HP from the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -949,7 +949,7 @@
 		</stats>
 	</item>
 	<item id="31529" name="Bound Great Axe - Critical Stun" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a 27% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Has a 27% chance of casting Stun on the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -985,7 +985,7 @@
 		</stats>
 	</item>
 	<item id="31530" name="Bound Great Axe - Light Armor" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Increases Weight Limit by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1086,7 +1086,7 @@
 		</stats>
 	</item>
 	<item id="31533" name="Bound Great Sword - Critical Damage" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. +247 during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Atk. +247 after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1120,7 +1120,7 @@
 		</stats>
 	</item>
 	<item id="31534" name="Bound Great Sword - Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 68. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Critical Rate +68. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1222,7 +1222,7 @@
 		</stats>
 	</item>
 	<item id="31537" name="Bound Grace Dagger - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 81. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +81. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_grace_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1433,7 +1433,7 @@
 		</stats>
 	</item>
 	<item id="31543" name="Bound Gram - Focus" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Heaven's Divider Conversion. <Special Option>. Increases Critical by 84. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Heaven's Divider Conversion. <Special Option>. Critical Rate for standard attacks +84. Deals additional PvP damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1849,7 +1849,7 @@
 		</stats>
 	</item>
 	<item id="31555" name="Bound Noble Elven Bow - Cheap Shot" type="Weapon">
-		<!-- <Special Option>. Has a 47% chance of decreasing MP consumption to 1 during a standard attack. -->
+		<!-- <Special Option>. Has a 47% chance of decreasing MP consumption to 1 after a standard attack. -->
 		<set name="icon" val="icon.weapon_noble_elven_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2398,7 +2398,7 @@
 		</stats>
 	</item>
 	<item id="31576" name="Bound Guardian's Sword - Critical Drain" type="Weapon">
-		<!-- Bound Item. <Special Option>. Absorbs 8 HP from the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. Absorbs 8 HP from the target after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2611,7 +2611,7 @@
 		</skills>
 	</item>
 	<item id="31588" name="Unidentified Stockings of Zubei" type="EtcItem">
-		<!-- Stockings of Zubei in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower/ robe) -->
+		<!-- Double-click to identify. The obtained item can be Standard or Bound. (Type: lower robe.) -->
 		<set name="icon" val="icon.armor_t56_l_i00" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
@@ -2623,7 +2623,7 @@
 		</skills>
 	</item>
 	<item id="31589" name="Unidentified Stockings of Doom" type="EtcItem">
-		<!-- Stockings of doom in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower/ robe) -->
+		<!-- Doom Stockings in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: lower/ robe) -->
 		<set name="icon" val="icon.armor_t73_l_i00" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />

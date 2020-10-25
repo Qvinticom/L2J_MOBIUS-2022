@@ -38,18 +38,12 @@ public class SelMahumDrill extends AbstractNpcAI
 {
 	private static final int[] MAHUM_CHIEFS =
 	{
-		24343, // Sel Mahum Drill Sergeant
-		24344 // Sel Mahum Training Officer
+		24493, // Sel Mahum Squad Leader
 	};
 	private static final int[] MAHUM_SOLDIERS =
 	{
-		24348, // Sel Mahum Recruit
-		24350, // Sel Mahum Recruit
-		24351, // Sel Mahum Soldier
-		24352, // Sel Mahum Recruit
-		24353, // Sel Mahum Soldier
-		24354, // Sel Mahum Soldier
-		24355, // Sel Mahum Soldier
+		24492, // Sel Mahum Soldier
+		// 24494, // Sel Mahum Warrior
 	};
 	private static final int[] CHIEF_SOCIAL_ACTIONS =
 	{

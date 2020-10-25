@@ -16,7 +16,7 @@
 		</effects>
 	</skill>
 	<skill id="39102" toLevel="1" name="Sneak">
-		<!-- Do not receive preemptive attacks from monsters. -->
+		<!-- Makes you invisible for monsters. -->
 		<icon>icon.skill10518</icon>
 		<operateType>T</operateType>
 		<mpConsume>1</mpConsume>
@@ -127,6 +127,12 @@
 		<affectObject>INVISIBLE</affectObject>
 		<effects>
 			<effect name="Detection" />
+			<effect name="TrapRemove">
+				<power>99</power>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,9</dispel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="39174" toLevel="1" name="Valor Recovery Potion">
@@ -201,7 +207,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39178" toLevel="1" name="Resolute Attack Scroll">
-		<!-- For 30 min., all clan members' P. Atk./ M. Atk. +3%, P. Skill Power/ M. Skill Power +3%, XP and SP gain +5%. -->
+		<!-- For $s1, clan members' P. Atk./ M. Atk. +$s2, P. Skill Power/ M. Skill Power +$s3, acquired XP/ SP +$s4. -->
 		<icon>icon.skill19015</icon>
 		<operateType>A1</operateType>
 		<hitTime>2500</hitTime>
@@ -209,7 +215,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="39179" toLevel="1" name="Resolute Defense Scroll">
-		<!-- For 30 min., nearby clan members' P./ M. Def. +5%, debuff resistance +5%, XP and SP gain +5%. -->
+		<!-- For $s1, clan members' P./ M. Def. +$s2, Debuff Resistance +$s3, acquired XP/ SP +$s4. -->
 		<icon>icon.skill19015</icon>
 		<operateType>A1</operateType>
 		<hitTime>2500</hitTime>
@@ -231,7 +237,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39182" toLevel="1" name="Festival Fairy's Summon Friend Scroll">
+	<skill id="39182" toLevel="1" name="Festival Fairy's Scroll: Summon Friend">
 		<!-- Summons a selected target. Only available while you're in a party. Cooldown 30 min. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -259,7 +265,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="39185" toLevel="1" name="Divine Zodiac Agathion Book of Growth">
+	<skill id="39185" toLevel="1" name="Divine Zodiac Agathion's Book of Growth">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39186" toLevel="1" name="Zodiac Agathion Box">
@@ -269,13 +275,19 @@
 	</skill>
 	<skill id="39187" toLevel="21" name="Burnstein's Aufgabe Shield Appearance Stone (30-day)">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39188" toLevel="1" name="Red Libra Kaliel's Energy Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="39189" toLevel="2" name="Clan Hall Belt - Stage 1">
+	<skill id="39189" toLevel="2" name="Clan Hall Belt Lv. 1">
 		<!-- When equipped, Max HP/ MP/ CP +$s1, weight +$s2, damage dealt +$s3, Received Damage -$s4, Inventory Slots +$s5. -->
 		<icon>icon.event_energy_belt_i00</icon>
 		<operateType>P</operateType>
@@ -285,12 +297,12 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="39191" toLevel="1" name="Talisman - Wind Pack">
+	<skill id="39191" toLevel="1" name="Talisman of Wind Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="39192" toLevel="1" name="Talisman - Fortress Pack">
+	<skill id="39192" toLevel="1" name="Fortress Talisman Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -315,22 +327,22 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39197" toLevel="1" name="+8 Shiny Elemental T-shirt Pack">
+	<skill id="39197" toLevel="1" name="Package: +8 Shiny Elemental Shirt">
 		<!-- Obtains an Elemental Shirt enchanted to +8 on use. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39198" toLevel="1" name="+8 Physical Reflect Shirt Pack">
-		<!-- Obtains a Reflect Attack T-shirt enchanted to +8 on use. -->
+	<skill id="39198" toLevel="1" name="Package: +8 Physical Reflect Shirt">
+		<!-- Double-click to obtain +8 Physical Reflect Shirt. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39199" toLevel="1" name="+8 Magical Reflect Shirt Pack">
-		<!-- Obtains a Reflect Magic T-shirt enchanted to +8 on use. -->
+	<skill id="39199" toLevel="1" name="Package: +8 Magical Reflect Shirt">
+		<!-- Double-click to obtain +8 Magical Reflect Shirt. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>

@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9900" toLevel="1" name="Armor Appearance Stone (B-grade)">
+	<skill id="9900" toLevel="1" name="B-grade Armor Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9901" toLevel="1" name="Armor Appearance Stone (C-grade)">
+	<skill id="9901" toLevel="1" name="C-grade Armor Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9902" toLevel="1" name="Armor Appearance Stone (D-grade)">
+	<skill id="9902" toLevel="1" name="D-grade Armor Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9903" toLevel="1" name="Blessed Armor Appearance Stone (R-grade)">
+	<skill id="9903" toLevel="1" name="Blessed R-grade Armor Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9904" toLevel="1" name="Blessed Armor Appearance Stone (S-grade)">
+	<skill id="9904" toLevel="1" name="Blessed S-grade Armor Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9905" toLevel="1" name="Blessed Armor Appearance Stone (A-grade)">
+	<skill id="9905" toLevel="1" name="Blessed A-grade Armor Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9906" toLevel="1" name="Blessed Armor Appearance Stone (B-grade)">
+	<skill id="9906" toLevel="1" name="Blessed B-grade Armor Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9907" toLevel="1" name="Blessed Armor Appearance Stone (C-grade)">
+	<skill id="9907" toLevel="1" name="Blessed C-grade Armor Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9908" toLevel="1" name="Blessed Armor Appearance Stone (D-grade)">
+	<skill id="9908" toLevel="1" name="Blessed D-grade Armor Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="9909" toLevel="1" name="Hair Accessory Appearance Stone">
@@ -111,7 +111,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9917" toLevel="3" name="Mentor's Encouragement: Focus">
-		<!-- P. Critical Rate +$s1. Buff remains for $s2 after the mentor has logged out. -->
+		<!-- Critical Rate for standard attacks +$s1. Buff remains for $s2 after the mentor has logged out. -->
 		<icon>icon.skill1077</icon>
 		<operateType>A2</operateType>
 		<effectPoint>
@@ -170,7 +170,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9922" toLevel="2" name="Mentor's Encouragement: Berserker Spirit">
-		<!-- P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, and Casting Spd. +$s7. P. Def. -$s1, M. Def. -$s2, P. Evasion -$s3. The effect remains for $s9 after the mentor has logged out. -->
+		<!-- P. Def. -$s1, M. Def. -$s2, P. Evasion -$s3, P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, Casting Spd. +$s7, Speed +$s8. The effect remains for $s9 after the mentor has logged out. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A2</operateType>
 		<effectPoint>
@@ -181,7 +181,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9923" toLevel="3" name="Mentor's Encouragement: Death Whisper">
-		<!-- Increases Critical Damage by $s1. Effect remains for $s2 after the mentor goes offline. -->
+		<!-- Critical Damage for standard attacks +$s1. Buff remains for $s2 after the mentor has logged out. -->
 		<icon>icon.skill1242</icon>
 		<operateType>A2</operateType>
 		<effectPoint>
@@ -204,7 +204,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9925" toLevel="1" name="Mentor's Encouragement: Prophecy of Water">
-		<!-- For 2 h., selected mentee's M. Critical Rate +2, MP Recovery Bonus +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%, and Skill MP Consumption -5%. -->
+		<!-- For 2 h., a mentee's M. Critical Rate +2, MP Recovery Rate +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, Speed -20%, Skill MP Consumption -5%. -->
 		<icon>icon.skill1355</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -225,7 +225,7 @@
 		</effects>
 	</skill>
 	<skill id="9926" toLevel="1" name="Mentor's Encouragement: Prophecy of Fire">
-		<!-- For 2 h., selected mentee's Max MP +20%, HP Recovery Bonus +20%, the chance of prominent magic damage +2, Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Decreases Speed -20%. -->
+		<!-- For 2 h., mentee's Max MP +20%, HP Recovery Rate +20%, M. Skill Critical Rate +2, Critical Damage for standard attacks +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%. Speed -20%. -->
 		<icon>icon.skill1356</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -246,7 +246,7 @@
 		</effects>
 	</skill>
 	<skill id="9927" toLevel="1" name="Mentor's Encouragement: Prophecy of Wind">
-		<!-- For 2 hours, selected mentee's Max HP +20%, P. Critical Rate +20%, M. Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%. Has a chance of absorbing 5% of damage inflicted on the enemy as HP. -->
+		<!-- For 2 h., mentee's Max HP +20%, Critical Rate for standard attacks +20%, M. Skill Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%. Has a chance to recover 5% of inflicted damage as HP. -->
 		<icon>icon.skill1357</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -500,20 +500,20 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9946" toLevel="1" name="9th Anniversary Cube (30-day) (Event)">
-		<!-- 9th Anniversary Cube. 30-day. -->
+	<skill id="9946" toLevel="1" name="Anniversary Cube - Event (30-day)">
+		<!-- Anniversary Cube (30-day) -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9947" toLevel="1" name="9th Anniversary Cube (20-day) (Event)">
-		<!-- 9th Anniversary Cube. 20-day. -->
+	<skill id="9947" toLevel="1" name="Anniversary Cube - Event (20-day)">
+		<!-- Anniversary Cube (20-day) -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9948" toLevel="1" name="9th Anniversary Cube (10-day) (Event)">
-		<!-- 9th Anniversary Cube. 10-day. -->
+	<skill id="9948" toLevel="1" name="Anniversary Cube - Event (10-day)">
+		<!-- Anniversary Cube (10-day) -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9949" toLevel="1" name="9th Anniversary Cube (5-day) (Event)">
-		<!-- 9th Anniversary Cube. 5-day. -->
+	<skill id="9949" toLevel="1" name="Anniversary Cube - Event (5-day)">
+		<!-- Anniversary Cube (5-day) -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="9950" toLevel="1" name="Letter Collector's Pouch: TOGETHER">
@@ -560,7 +560,7 @@
 		</effects>
 	</skill>
 	<skill id="9956" toLevel="1" name="Blueberry Cake (MP)">
-		<!-- Restores 20% of MP. Cooldown is 2 min. -->
+		<!-- Restores 20% of MP. Cooldown: 2 min. -->
 		<itemConsumeId>37009</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -584,7 +584,7 @@
 		</effects>
 	</skill>
 	<skill id="9957" toLevel="1" name="Cheesecake (CP)">
-		<!-- Restores 50% of CP. Cooldown is 2 min. -->
+		<!-- Restores 50% of CP. Cooldown: 2 min. -->
 		<itemConsumeId>37010</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -607,7 +607,7 @@
 		</effects>
 	</skill>
 	<skill id="9958" toLevel="1" name="Horn Melody (9th Anniversary)">
-		<!-- For 30 min., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -661,7 +661,7 @@
 		</effects>
 	</skill>
 	<skill id="9959" toLevel="1" name="Drum Melody (9th Anniversary)">
-		<!-- For 30 min., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For $s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, M. Skill Critical Rate +$s4, Received Critical Damage from standard attacks -$s5. Also has a chance to increase P. Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -678,7 +678,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9961" toLevel="1" name="Pipe Organ Melody (9th Anniversary)">
-		<!-- For 30 min., Max HP +37%, Max MP +62%, Max CP +37%. With a certain chance, absorbs 9% of the inflicted damage as HP. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4. With a certain chance, absorbs $s5 of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -686,7 +686,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9962" toLevel="1" name="Guitar Melody (9th Anniversary)">
-		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -694,7 +694,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9963" toLevel="1" name="Harp Melody (9th Anniversary)">
-		<!-- For 30 min., P. Accuracy +5, P. Evasion/ M. Evasion +5, and Speed +34. Received Critical Damage -30%. -->
+		<!-- For 30 min., P. Accuracy +5, P./ M. Evasion +5, and Speed +34. Received Critical Damage from standard attacks -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -702,7 +702,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9964" toLevel="1" name="Warrior's Harmony (9th Anniversary)">
-		<!-- For 30 min., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
+		<!-- For $s1, P. Atk. +$s2, Critical Rate for standard attacks +$s3, Critical Damage for standard attacks +$s4, Atk. Spd. +$s5. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -710,7 +710,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9965" toLevel="1" name="Knight's Harmony (9th Anniversary)">
-		<!-- For 30 min., increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, and Shield Defense by 50%. -->
+		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Shield Defense Rate +$s6, and Shield Defense +$s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -718,7 +718,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9966" toLevel="1" name="Wizard's Harmony (9th Anniversary)">
-		<!-- For 30 min., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
+		<!-- For $s1, M. Atk. +$s2, M. Skill Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, Skill MP Consumption -$s6. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -1139,11 +1139,11 @@
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="9984" toLevel="1" name="9th Anniversary Cube (1-time use)">
-		<!-- 9th Anniversary Cube. 1-time use. -->
+	<skill id="9984" toLevel="1" name="Anniversary Cube (1-time)">
+		<!-- Anniversary Cube (1-time) -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="9985" toLevel="7" name="High-grade Elixir of Life (R-grade)">
+	<skill id="9985" toLevel="7" name="High-grade R-grade Elixir of Life">
 		<itemConsumeId>37097</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1162,7 +1162,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9986" toLevel="7" name="High-grade Elixir of Mind (R-grade)">
+	<skill id="9986" toLevel="7" name="High-grade R-grade Elixir of Mind">
 		<itemConsumeId>37098</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1181,7 +1181,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9987" toLevel="7" name="High-grade Elixir of CP (R-grade)">
+	<skill id="9987" toLevel="7" name="High-grade R-grade Elixir of CP">
 		<itemConsumeId>37099</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1201,7 +1201,7 @@
 		</effects>
 	</skill>
 	<skill id="9988" toLevel="1" name="Elixir of Aggression">
-		<!-- For 30 min., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
+		<!-- For $s1, P. Atk. +$s2, Critical Rate for standard attacks +$s3, Critical Damage for standard attacks +$s4, Atk. Spd. +$s5. -->
 		<icon>icon.skill11524</icon>
 		<itemConsumeId>37102</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1211,7 +1211,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9989" toLevel="1" name="Elixir of Protection">
-		<!-- For 30 min., increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, and Shield Defense by 50%. -->
+		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Shield Defense Rate +$s6, and Shield Defense +$s7. -->
 		<icon>icon.skill11523</icon>
 		<itemConsumeId>37100</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1221,7 +1221,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9990" toLevel="1" name="Elixir of Magic">
-		<!-- For 30 min., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
+		<!-- For $s1, M. Atk. +$s2, M. Skill Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, Skill MP Consumption -$s6. -->
 		<icon>icon.skill11525</icon>
 		<itemConsumeId>37101</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1348,7 +1348,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="9997" toLevel="1" name="Steel Door Guild Reward Box (Low-grade)">
+	<skill id="9997" toLevel="1" name="Steel Door Guild Low-grade Reward Pack">
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37391</itemConsumeId>
@@ -1364,22 +1364,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25">
-						<item id="36517" count="1" /> <!-- Leather -->
+						<item id="36517" count="1" /> <!-- Corroded Leather -->
 					</item>
 					<item chance="25">
-						<item id="36522" count="1" /> <!-- Silver -->
+						<item id="36522" count="1" /> <!-- Corroded Silver Nugget -->
 					</item>
 					<item chance="25">
-						<item id="36527" count="1" /> <!-- Synthetic Fiber -->
+						<item id="36527" count="1" /> <!-- Corroded Synthetic Fiber -->
 					</item>
 					<item chance="25">
-						<item id="36562" count="1" /> <!-- Greater Cokes -->
+						<item id="36562" count="1" /> <!-- Corroded Greater Cokes -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9998" toLevel="1" name="Steel Door Guild Reward Box (Mid-grade)">
+	<skill id="9998" toLevel="1" name="Steel Door Guild Mid-grade Reward Box">
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37392</itemConsumeId>
@@ -1395,22 +1395,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25">
-						<item id="36523" count="1" /> <!-- Adamantite -->
+						<item id="36523" count="1" /> <!-- Corroded Adamantite Nugget -->
 					</item>
 					<item chance="25">
-						<item id="36528" count="1" /> <!-- Metallic Fiber -->
+						<item id="36528" count="1" /> <!-- Corroded Metallic Fiber -->
 					</item>
 					<item chance="25">
-						<item id="36563" count="1" /> <!-- Synthetic Cokes -->
+						<item id="36563" count="1" /> <!-- Corroded Synthetic Cokes -->
 					</item>
 					<item chance="25">
-						<item id="36518" count="1" /> <!-- Durable Leather -->
+						<item id="36518" count="1" /> <!-- Corroded Durable Leather -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9999" toLevel="1" name="Steel Door Guild Reward Box (High-grade)">
+	<skill id="9999" toLevel="1" name="Steel Door Guild High-grade Reward Box">
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37393</itemConsumeId>
@@ -1426,16 +1426,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25">
-						<item id="36557" count="1" /> <!-- Accessory Gem -->
+						<item id="36557" count="1" /> <!-- Corroded Accessory Gem -->
 					</item>
 					<item chance="25">
-						<item id="36562" count="1" /> <!-- Greater Cokes -->
+						<item id="36562" count="1" /> <!-- Corroded Greater Cokes -->
 					</item>
 					<item chance="25">
-						<item id="36552" count="1" /> <!-- Armor Fragment -->
+						<item id="36552" count="1" /> <!-- Corroded Armor Fragment -->
 					</item>
 					<item chance="25">
-						<item id="36547" count="1" /> <!-- Weapon Fragment -->
+						<item id="36547" count="1" /> <!-- Corroded Weapon Fragment -->
 					</item>
 				</items>
 			</effect>

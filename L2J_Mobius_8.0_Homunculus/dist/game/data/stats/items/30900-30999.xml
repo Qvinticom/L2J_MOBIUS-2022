@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="30900" name="Bound Sword of Nightmare - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 77. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +77. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_nightmare_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -35,7 +35,7 @@
 		</stats>
 	</item>
 	<item id="30901" name="Bound Sword of Nightmare - Light Armor" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
+		<!-- <Special Option>. Increases Weight Limit by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_nightmare_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -69,7 +69,7 @@
 		</stats>
 	</item>
 	<item id="30902" name="Bound Gauntlets of Nightmare" additionalName="Heavy Armor" type="Armor">
-		<!-- Part of the Heavy Nightmare set. -->
+		<!-- Part of the heavy armor set of Nightmare. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -91,7 +91,7 @@
 		</stats>
 	</item>
 	<item id="30903" name="Bound Gauntlets of Nightmare" additionalName="Light Armor" type="Armor">
-		<!-- Part of the Light Nightmare set. -->
+		<!-- A piece of the light armor set of Nightmare. -->
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -113,7 +113,7 @@
 		</stats>
 	</item>
 	<item id="30904" name="Bound Gauntlets of Nightmare" additionalName="Robe" type="Armor">
-		<!-- Part of the Nightmare Robe set. -->
+		<!-- A piece of the robe set of Nightmare. -->
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -135,7 +135,7 @@
 		</stats>
 	</item>
 	<item id="30905" name="Bound Armor of Nightmare" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -559,7 +559,7 @@
 		</stats>
 	</item>
 	<item id="30919" name="Bound Demon's Dagger - Critical Damage" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. +160 during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Atk. +160 after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -661,7 +661,7 @@
 		</stats>
 	</item>
 	<item id="30922" name="Bound Art of Battle Axe - Rsk. Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 99 when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Critical Rate +99 when HP < 60%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -915,7 +915,7 @@
 		</stats>
 	</item>
 	<item id="30931" name="Bound Akat Longbow - Guidance" type="Weapon">
-		<!-- <Special Option>. Increases Accuracy by about 4. No Soul Crystal option. -->
+		<!-- <Special Features>. P. Accuracy +4. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_akat_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1053,7 +1053,7 @@
 		</stats>
 	</item>
 	<item id="30935" name="Bound Ice Storm Hammer - Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 68. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Option>. P. Critical Rate +68. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1407,7 +1407,7 @@
 		</stats>
 	</item>
 	<item id="30947" name="Bound Avadon Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- Part of the Heavy Avadon set. -->
+		<!-- A part of the Avadon heavy armor set. -->
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="B" />
@@ -1429,7 +1429,7 @@
 		</stats>
 	</item>
 	<item id="30948" name="Bound Avadon Boots" additionalName="Light Armor" type="Armor">
-		<!-- Part of the Light Avadon set. -->
+		<!-- A part of the Avadon light armor set. -->
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1451,7 +1451,7 @@
 		</stats>
 	</item>
 	<item id="30949" name="Bound Avadon Boots" additionalName="Robe" type="Armor">
-		<!-- Part of the Avadon Robe set. -->
+		<!-- A part of the Avadon robe set. -->
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1473,7 +1473,7 @@
 		</stats>
 	</item>
 	<item id="30950" name="Bound Avadon Robe" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1496,7 +1496,7 @@
 		</stats>
 	</item>
 	<item id="30951" name="Bound Avadon Leather Armor" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t67_ul_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1519,7 +1519,7 @@
 		</stats>
 	</item>
 	<item id="30952" name="Bound Avadon Gloves" additionalName="Heavy Armor" type="Armor">
-		<!-- Part of the Heavy Avadon set. -->
+		<!-- A part of the Avadon heavy armor set. -->
 		<set name="icon" val="icon.armor_t66_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1541,7 +1541,7 @@
 		</stats>
 	</item>
 	<item id="30953" name="Bound Avadon Gloves" additionalName="Light Armor" type="Armor">
-		<!-- Part of the Light Avadon set. -->
+		<!-- A part of the Avadon light armor set. -->
 		<set name="icon" val="icon.armor_t66_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1563,7 +1563,7 @@
 		</stats>
 	</item>
 	<item id="30954" name="Bound Avadon Gloves" additionalName="Robe" type="Armor">
-		<!-- Part of the Avadon Robe set. -->
+		<!-- A part of the Avadon robe set. -->
 		<set name="icon" val="icon.armor_t66_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1621,7 +1621,7 @@
 		</stats>
 	</item>
 	<item id="30956" name="Bound Admiral's Estoc - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Samurai Long Sword. <Special Option>. Increases Critical by 73. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Samurai Long Sword. <Special Option>. P. Critical Rate +73. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1657,7 +1657,7 @@
 		</stats>
 	</item>
 	<item id="30957" name="Bound Admiral's Estoc - Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Samurai Long Sword. <Special Option>. P. Atk. +231 during a Critical Attack. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Samurai Long Sword. <Special Option>. P. Atk. +231 after a critical attack. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1693,7 +1693,7 @@
 		</stats>
 	</item>
 	<item id="30958" name="Bound Admiral's Estoc - Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Samurai long sword. <Special Option>. Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Samurai Long Sword. <Special Option>. Atk. Spd. +7%. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1821,7 +1821,7 @@
 		</stats>
 	</item>
 	<item id="30962" name="Bound Arcana Mace - MP Regeneration" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. <Special Features>. Increases MP Recovery Rate. Deals additional PvP damage. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2079,7 +2079,7 @@
 		</stats>
 	</item>
 	<item id="30972" name="Bound Samurai Long Sword - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 73. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +73. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2113,7 +2113,7 @@
 		</stats>
 	</item>
 	<item id="30973" name="Bound Samurai Long Sword - Critical Damage" type="Weapon">
-		<!-- <Special Option>. P. Atk. +231 during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +231 after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2589,7 +2589,7 @@
 		</stats>
 	</item>
 	<item id="30988" name="Bound Spirit Sword - Critical Damage" type="Weapon">
-		<!-- <Special Option>. P. Atk. +194 during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +194 after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_spirits_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

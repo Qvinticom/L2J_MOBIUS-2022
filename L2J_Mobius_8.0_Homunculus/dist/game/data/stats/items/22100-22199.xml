@@ -52,7 +52,7 @@
 		</skills>
 	</item>
 	<item id="22103" name="Spiritshot Pack (S-grade)" type="EtcItem">
-		<!-- If used, five thousand Spiritshots in S-grade are acquired. -->
+		<!-- Double-click to obtain 5,000 S-grade Spiritshots. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_s_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -137,7 +137,7 @@
 		</skills>
 	</item>
 	<item id="22108" name="Soulshot Pack (S-grade)" type="EtcItem">
-		<!-- If used, five thousand Soulshots in S-grade are acquired. -->
+		<!-- Double-click to obtain 5,000 S-grade Soulshots. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_soulshot_s_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -222,7 +222,7 @@
 		</skills>
 	</item>
 	<item id="22113" name="Blessed Spiritshot Large Pack (S-grade)" type="EtcItem">
-		<!-- If used, ten thousand Blessed Spiritshots in S-grade are acquired. -->
+		<!-- Double-click to obtain 10,000 Blessed S-grade Spiritshots. -->
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_s_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -307,7 +307,7 @@
 		</skills>
 	</item>
 	<item id="22118" name="Spiritshot Large Pack (S-grade)" type="EtcItem">
-		<!-- If used, ten thousand Spiritshots in S-grade are acquired. -->
+		<!-- Double-click to obtain 10,000 S-grade Spiritshots. -->
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_spiritshot_s_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -392,7 +392,7 @@
 		</skills>
 	</item>
 	<item id="22123" name="Soulshot Large Pack (S-grade)" type="EtcItem">
-		<!-- If used, ten thousand Soulshots in S-grade are acquired. -->
+		<!-- Double-click to obtain 10,000 S-grade Soulshots. -->
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_soulshot_s_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -455,7 +455,7 @@
 		</skills>
 	</item>
 	<item id="22126" name="Wrapped Outlaw's Eyepatch" type="EtcItem">
-		<!-- If used, an outlaw's eyepatch is acquired. -->
+		<!-- Double-click to obtain Outlaw's Eyepatch. -->
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -478,7 +478,7 @@
 		</skills>
 	</item>
 	<item id="22127" name="Wrapped Pirate's Eyepatch" type="EtcItem">
-		<!-- If used, an pirate's eyepatch is acquired. -->
+		<!-- Double-click to obtain Pirate's Eyepatch. -->
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -662,7 +662,7 @@
 		</skills>
 	</item>
 	<item id="22135" name="Wrapped Raccoon Ear" type="EtcItem">
-		<!-- If used, a Raccoon Ear is acquired. -->
+		<!-- Double-click to obtain Raccoon Ears. -->
 		<set name="icon" val="br_cashtex.item.br_cash_wrapped_accessary_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1459,7 +1459,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="22173" name="Reinforced Baium's Ring" type="Armor">
-		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Hold Resistance +30%, Hold Atk. Rate +30%. Increases Accuracy, P. Critical Damage, Atk. Spd., and Casting Spd. Only one effect is applied when wearing two of the same ring. -->
+		<!-- MP +21, Infection Atk. Rate and Resistance +40%, Obstruction Atk. Rate and Resistance +30%. Increases P. Accuracy, Critical Damage, Atk. Spd. and Casting Spd. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1482,7 +1482,7 @@
 		</stats>
 	</item>
 	<item id="22174" name="Reinforced Queen Ant's Ring" type="Armor">
-		<!-- MP +21, Poison Resistance +30%, Poison Atk. Rate +30%, Hold Resistance +20%, Hold Atk. Rate +20%. Increases Accuracy and P. Critical Damage. Only one effect is applied when wearing two of the same ring. -->
+		<!-- MP +21, Infection Atk. Rate and Resistance +30%, Obstruction Atk. Rate and Resistance +20%. Increases P. Accuracy and Critical Damage. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1505,7 +1505,7 @@
 		</stats>
 	</item>
 	<item id="22175" name="Reinforced Blessed Zaken's Earring" type="Armor">
-		<!-- MP +37, Bleed Resistance +30%, Bleed Atk. Rate +30%, Heal Amount +15%, Vampiric Rage Effect, Stun/ Mental Attack Resistance +30%, Stun/ Metal Atk. Rate +30%, and Dark Resistance +15. Only one effect is applied even when the same two earrings are worn. If it is equipped together with a standard Zaken's Earring, only the effect of Blessed Zaken's Earring will be applied. -->
+		<!-- MP +37, Infection Resistance/ Atk. Rate +30%, Confusion Resistance/ Atk. Rate +30%, Received Healing +15%, Dark Resistance +15. Grants Vampiric Rage effect. Effects of two identical earrings do not stack. When equipped with Zaken's Earring, only the effect of the Blessed item is applied. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1542,7 +1542,7 @@
 		</skills>
 	</item>
 	<item id="22177" name="Event - Summon Scroll: Liverless Bunny" type="EtcItem">
-		<!-- Scroll that summons a Liverless Bunny. While the Liverless Bunny is being recovered, it can sometimes transform into a Big Liver Bunny. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
+		<!-- A scroll that summons a Gloomy Bunny. When it recovers its energy, it transforms into a Happy Bunny. (Can be recovered only with Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="BranchSys2.icon2.g_ev_rabbit" />
 		<set name="material" val="PAPER" />
 		<set name="is_oly_restricted" val="true" />
@@ -1572,7 +1572,7 @@
 		</skills>
 	</item>
 	<item id="22179" name="Event - Summon Scroll: Liverless Bunny Captain" type="EtcItem">
-		<!-- Scroll that summons a Liverless Bunny Captain. While the Liverless Bunny Captain is being recovered, it can sometimes transform into a Big Liver Bunny Captain. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
+		<!-- A scroll that summons a Gloomy Bunny Captain. When it recovers its energy, it transforms into a Happy Bunny Captain. (Can be recovered only with Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
 		<set name="icon" val="BranchSys2.icon2.g_ev_rabbit_boss" />
 		<set name="material" val="PAPER" />
 		<set name="is_oly_restricted" val="true" />
@@ -1587,7 +1587,7 @@
 		</skills>
 	</item>
 	<item id="22180" name="Event - Bad Bunny Rehab Event Pack" type="EtcItem">
-		<!-- Event pack that can be obtained once every 12 hours per account. If you Double-click it, you will obtain a Summon Scroll: Bad Bunny and "Cupid's Fatigue Relief Potion" that are needed for the event. -->
+		<!-- Available only once every 12 h. per account. Double-click to obtain Scroll: Summon Bad Bunny and a Cupid's potion for the event. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1" />
@@ -1606,8 +1606,8 @@
 		<capsuled_items>
 			<item id="22181" min="60" max="60" chance="100" /> <!-- Event - Cupid's Fatigue Relief Potion -->
 			<item id="22182" min="15" max="15" chance="100" /> <!-- Event - Cupid's Major Fatigue Relief Potion -->
-			<item id="22176" min="1" max="1" chance="100" /> <!-- Event - Summon Scroll: Bad Bunny -->
-			<item id="22178" min="1" max="1" chance="100" /> <!-- Event - Summon Scroll: Bad Bunny Captain -->
+			<item id="22176" min="1" max="1" chance="100" /> <!-- Scroll: Summon Bad Bunny - Event -->
+			<item id="22178" min="1" max="1" chance="100" /> <!-- Scroll: Summon Bad Bunny Captain - Event -->
 		</capsuled_items>
 	</item>
 	<item id="22181" name="Event - Cupid's Fatigue Relief Potion" type="EtcItem">
@@ -1686,7 +1686,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22186" name="Cat the Ranger Summon Necklace Coupon" type="EtcItem">
-		<!-- Coupon that can be exchanged for a necklace (5-hour) that summons a Cat the Ranger. -->
+		<!-- A coupon that can be exchanged for Cat the Ranger Minion Necklace (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
@@ -1725,7 +1725,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22188" name="Birthday Vitality Potion" type="EtcItem">
-		<!-- Upon use, for 4 hours, Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
+		<!-- When used, for 4 h. Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1786,7 +1786,7 @@
 		<set name="enchant_enabled" val="7" />
 	</item>
 	<item id="22191" name="Mount - Rocking Horse" additionalName="7-day" type="Armor">
-		<!-- Can mount a Rocking Horse when equipped. 7-day. -->
+		<!-- Allows to mount a Rocking Horse. 7-day. -->
 		<set name="icon" val="branchsys2.icon.g_wooen_house" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1809,7 +1809,7 @@
 		</skills>
 	</item>
 	<item id="22192" name="Mount - Rocking Horse" additionalName="30-day" type="Armor">
-		<!-- Can mount a Rocking Horse when equipped. 30-day. -->
+		<!-- Allows to mount a Rocking Horse. 30-day. -->
 		<set name="icon" val="branchsys2.icon.g_wooen_house" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1832,7 +1832,7 @@
 		</skills>
 	</item>
 	<item id="22193" name="Mount - Rocking Horse" type="Armor">
-		<!-- Can mount a Rocking Horse when equipped. -->
+		<!-- Allows to mount a Rocking Horse. -->
 		<set name="icon" val="branchsys2.icon.g_wooen_house" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1853,7 +1853,7 @@
 		</skills>
 	</item>
 	<item id="22194" name="1st Place Treasure Sack" type="EtcItem">
-		<!-- When Double-clicked, a random 1st Place prize is granted. -->
+		<!-- Double-click to obtain a random 1st place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_1_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1866,7 +1866,7 @@
 		</skills>
 	</item>
 	<item id="22195" name="2nd Place Treasure Sack" type="EtcItem">
-		<!-- When Double-clicked, a random 2nd Place prize is granted. -->
+		<!-- Double-click to obtain a random 2nd place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_2_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1879,7 +1879,7 @@
 		</skills>
 	</item>
 	<item id="22196" name="3rd Place Treasure Sack" type="EtcItem">
-		<!-- When Double-clicked, a random 3rd Place prize is granted. -->
+		<!-- Double-click to obtain a random 3rd place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_3_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1892,7 +1892,7 @@
 		</skills>
 	</item>
 	<item id="22197" name="4th Place Treasure Sack" type="EtcItem">
-		<!-- When Double-clicked, a random 4th Place prize is granted. -->
+		<!-- Double-click to obtain a random 4th place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_4_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1905,7 +1905,7 @@
 		</skills>
 	</item>
 	<item id="22198" name="5th Place Treasure Sack" type="EtcItem">
-		<!-- When Double-clicked, a random 5th Place prize is granted. -->
+		<!-- Double-click to obtain a random 5th place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_5_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1918,7 +1918,7 @@
 		</skills>
 	</item>
 	<item id="22199" name="6th Place Treasure Sack" type="EtcItem">
-		<!-- When Double-clicked, a random 6th Place prize is granted. -->
+		<!-- Double-click to obtain a random 6th place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_6_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />

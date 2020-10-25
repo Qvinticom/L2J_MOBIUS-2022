@@ -2688,8 +2688,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27548" toLevel="2" name="Garnet - Purge">
-		<!-- Cancel all debuffs. -->
+	<skill id="27548" toLevel="3" name="Garnet - Purge">
+		<!-- Removes all debuffs. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_garnet</value>
 			<value level="2">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
@@ -2731,6 +2731,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>180000</reuseDelay>
 		<targetType>SELF</targetType>
+		<isMagic>22</isMagic>
 		<effects>
 			<effect name="AbsorbDamage">
 				<damage>
@@ -2780,7 +2781,6 @@
 					<value level="9">56</value>
 					<value level="10">60</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="VitalityPointsRate">
 				<amount>
@@ -2823,7 +2823,7 @@
 						<item id="26475" count="1" /> <!-- Radiant Gemstone Fragment -->
 					</item>
 					<item chance="0.50">
-						<item id="26494" count="1" /> <!-- La Vie En Rose's Radiant Brooch Chest -->
+						<item id="26494" count="1" /> <!-- Kit: La Vie En Rose's Brooch Lv. 2 -->
 					</item>
 					<item chance="8.1">
 						<item id="38939" count="1" /> <!-- La Vie En Rose's Aquamarine Box -->
@@ -2963,7 +2963,7 @@
 						<item id="16026" count="1" /> <!-- Blessed Freya's Necklace -->
 					</item>
 					<item chance="0.2">
-						<item id="17623" count="1" /> <!-- Earth Wyrm Heart Ring -->
+						<item id="17623" count="1" /> <!-- Earth Wyrm's Heart Ring -->
 					</item>
 					<item chance="0.7">
 						<item id="19463" count="1" /> <!-- Blessed Antharas' Earring -->
@@ -2984,7 +2984,7 @@
 						<item id="36255" count="1" /> <!-- Orfen's Soul Earring -->
 					</item>
 					<item chance="2.0">
-						<item id="36257" count="1" /> <!-- Lilith's Soul Necklace -->
+						<item id="36257" count="1" /> <!-- Lilith' Soul Necklace -->
 					</item>
 					<item chance="0.2">
 						<item id="36946" count="1" /> <!-- Lindvior's Earring -->
@@ -3063,25 +3063,25 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="60.0">
-						<item id="46565" count="1" /> <!-- Soul Crystal Coupon - Stage 1 -->
+						<item id="46565" count="1" /> <!-- Soul Crystal Lv. 1 Coupon -->
 					</item>
 					<item chance="20.0">
-						<item id="46566" count="1" /> <!-- Soul Crystal Coupon - Stage 2 -->
+						<item id="46566" count="1" /> <!-- Soul Crystal Lv. 2 Coupon -->
 					</item>
 					<item chance="10.0">
-						<item id="46567" count="1" /> <!-- Soul Crystal Coupon - Stage 3 -->
+						<item id="46567" count="1" /> <!-- Soul Crystal Lv. 3 Coupon -->
 					</item>
 					<item chance="8.0">
-						<item id="46568" count="1" /> <!-- Soul Crystal Coupon - Stage 4 -->
+						<item id="46568" count="1" /> <!-- Soul Crystal Lv. 4 Coupon -->
 					</item>
 					<item chance="2.0">
-						<item id="46569" count="1" /> <!-- Soul Crystal Coupon - Stage 5 -->
+						<item id="46569" count="1" /> <!-- Soul Crystal Lv. 5 Coupon -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27567" toLevel="1" name="Talisman - Abundance Pack">
+	<skill id="27567" toLevel="1" name="Talisman of Abundance Pack">
 		<itemConsumeId>27495</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -3101,52 +3101,52 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="15.0">
-						<item id="23833" count="1" /> <!-- Talisman - Abundance - War -->
+						<item id="23833" count="1" /> <!-- Talisman of Abundance - War -->
 					</item>
 					<item chance="15.0">
-						<item id="23834" count="1" /> <!-- Talisman - Abundance - Tactics -->
+						<item id="23834" count="1" /> <!-- Talisman of Abundance - Tactics -->
 					</item>
 					<item chance="15.0">
-						<item id="23835" count="1" /> <!-- Talisman - Abundance - Morale -->
+						<item id="23835" count="1" /> <!-- Talisman of Abundance - Morale -->
 					</item>
 					<item chance="15.0">
-						<item id="23836" count="1" /> <!-- Talisman - Abundance - Physique -->
+						<item id="23836" count="1" /> <!-- Talisman of Abundance - Physique -->
 					</item>
 					<item chance="6.8">
-						<item id="23833" count="1" /> <!-- Talisman - Abundance - War -->
+						<item id="23833" count="1" /> <!-- Talisman of Abundance - War -->
 					</item>
 					<item chance="6.8">
-						<item id="23834" count="1" /> <!-- Talisman - Abundance - Tactics -->
+						<item id="23834" count="1" /> <!-- Talisman of Abundance - Tactics -->
 					</item>
 					<item chance="6.8">
-						<item id="23835" count="1" /> <!-- Talisman - Abundance - Morale -->
+						<item id="23835" count="1" /> <!-- Talisman of Abundance - Morale -->
 					</item>
 					<item chance="6.8">
-						<item id="23836" count="1" /> <!-- Talisman - Abundance - Physique -->
+						<item id="23836" count="1" /> <!-- Talisman of Abundance - Physique -->
 					</item>
 					<item chance="4.0">
-						<item id="26418" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 1 (High-grade) -->
+						<item id="26418" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 1 -->
 					</item>
 					<item chance="3.0">
-						<item id="26419" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 2 (High-grade) -->
+						<item id="26419" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 2 -->
 					</item>
 					<item chance="2.0">
-						<item id="26420" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 3 (High-grade) -->
+						<item id="26420" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 3 -->
 					</item>
 					<item chance="1.0">
-						<item id="26421" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 4 (High-grade) -->
+						<item id="26421" count="1" /> <!-- Recipe: High-grade Talisman of Abundance Lv. 4 -->
 					</item>
 					<item chance="1.0">
-						<item id="26338" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
+						<item id="26338" count="1" /> <!-- High-grade Talisman of Abundance Lv. 1 -->
 					</item>
 					<item chance="0.8">
-						<item id="26339" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
+						<item id="26339" count="1" /> <!-- High-grade Talisman of Abundance Lv. 2 -->
 					</item>
 					<item chance="0.6">
-						<item id="26340" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
+						<item id="26340" count="1" /> <!-- High-grade Talisman of Abundance Lv. 3 -->
 					</item>
 					<item chance="0.4">
-						<item id="26341" count="1" /> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
+						<item id="26341" count="1" /> <!-- High-grade Talisman of Abundance Lv. 4 -->
 					</item>
 				</items>
 			</effect>
@@ -3172,25 +3172,25 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30.0">
-						<item id="45929" count="1" /> <!-- Spirit Stone -->
+						<item id="45929" count="1" /> <!-- Weapon Augmenting Stone -->
 					</item>
 					<item chance="10.0">
-						<item id="45930" count="1" /> <!-- Mid-grade Spirit Stone -->
+						<item id="45930" count="1" /> <!-- Mid-grade Weapon Augmenting Stone -->
 					</item>
 					<item chance="3.0">
-						<item id="45931" count="1" /> <!-- High-grade Spirit Stone -->
+						<item id="45931" count="1" /> <!-- High-grade Weapon Augmenting Stone -->
 					</item>
 					<item chance="2.0">
-						<item id="45932" count="1" /> <!-- Top-grade Spirit Stone -->
+						<item id="45932" count="1" /> <!-- Top-grade Weapon Augmenting Stone -->
 					</item>
 					<item chance="30.0">
 						<item id="45933" count="1" /> <!-- Accessory Spirit Stone -->
 					</item>
 					<item chance="10.0">
-						<item id="45934" count="1" /> <!-- Mid-grade Accessory Spirit Stone -->
+						<item id="45934" count="1" /> <!-- Intermediate Accessory Spirit Stone -->
 					</item>
 					<item chance="3.0">
-						<item id="45935" count="1" /> <!-- High-grade Accessory Spirit Stone -->
+						<item id="45935" count="1" /> <!-- Advanced Accessory Spirit Stone -->
 					</item>
 					<item chance="2.0">
 						<item id="45936" count="1" /> <!-- Top-grade Accessory Spirit Stone -->
@@ -3234,7 +3234,7 @@
 						<item id="8565" count="1" /> <!-- Romantic Chapeau -->
 					</item>
 					<item chance="3.0">
-						<item id="8920" count="1" /> <!-- Angel Halo -->
+						<item id="8920" count="1" /> <!-- Angel Circlet -->
 					</item>
 					<item chance="4.0">
 						<item id="8921" count="1" /> <!-- Demon Circlet -->
@@ -3388,58 +3388,58 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.0">
-						<item id="36523" count="1" /> <!-- Adamantite -->
+						<item id="36523" count="1" /> <!-- Corroded Adamantite Nugget -->
 					</item>
 					<item chance="6.0">
-						<item id="36524" count="1" /> <!-- Orichalcum -->
+						<item id="36524" count="1" /> <!-- Corroded Orichalcum -->
 					</item>
 					<item chance="2.0">
-						<item id="36525" count="1" /> <!-- Durandil -->
+						<item id="36525" count="1" /> <!-- Corroded Durandil -->
 					</item>
 					<item chance="12.0">
-						<item id="36543" count="1" /> <!-- Adamantite Wire -->
+						<item id="36543" count="1" /> <!-- Corroded Adamantite Wire -->
 					</item>
 					<item chance="6.0">
-						<item id="36544" count="1" /> <!-- Orichalcum Wire -->
+						<item id="36544" count="1" /> <!-- Corroded Orichalcum Wire -->
 					</item>
 					<item chance="2.0">
-						<item id="36545" count="1" /> <!-- Durandil Wire -->
+						<item id="36545" count="1" /> <!-- Corroded Durandil Wire -->
 					</item>
 					<item chance="10.0">
-						<item id="36562" count="1" /> <!-- Greater Cokes -->
+						<item id="36562" count="1" /> <!-- Corroded Greater Cokes -->
 					</item>
 					<item chance="7.0">
-						<item id="36563" count="1" /> <!-- Synthetic Cokes -->
+						<item id="36563" count="1" /> <!-- Corroded Synthetic Cokes -->
 					</item>
 					<item chance="2.0">
-						<item id="36564" count="1" /> <!-- Greater Synthetic Cokes -->
+						<item id="36564" count="1" /> <!-- Corroded High-grade Synthetic Cokes -->
 					</item>
 					<item chance="1.0">
-						<item id="36565" count="1" /> <!-- Exquisite Synthetic Cokes -->
+						<item id="36565" count="1" /> <!-- Corroded Top-grade Synthetic Cokes -->
 					</item>
 					<item chance="10.0">
-						<item id="36552" count="1" /> <!-- Armor Fragment -->
+						<item id="36552" count="1" /> <!-- Corroded Armor Fragment -->
 					</item>
 					<item chance="7.0">
-						<item id="36553" count="1" /> <!-- Armor Fragment (Mid-grade) -->
+						<item id="36553" count="1" /> <!-- Corroded Mid-grade Armor Fragment -->
 					</item>
 					<item chance="2.0">
-						<item id="36554" count="1" /> <!-- Armor Fragment (High-grade) -->
+						<item id="36554" count="1" /> <!-- Corroded High-grade Armor Fragment -->
 					</item>
 					<item chance="1.0">
-						<item id="36555" count="1" /> <!-- Armor Fragment (Top-grade) -->
+						<item id="36555" count="1" /> <!-- Corroded Top-grade Fragment Armor -->
 					</item>
 					<item chance="10.0">
-						<item id="36547" count="1" /> <!-- Weapon Fragment -->
+						<item id="36547" count="1" /> <!-- Corroded Weapon Fragment -->
 					</item>
 					<item chance="7.0">
-						<item id="36548" count="1" /> <!-- Weapon Fragment (Mid-grade) -->
+						<item id="36548" count="1" /> <!-- Corroded Mid-grade Weapon Fragment -->
 					</item>
 					<item chance="2.0">
-						<item id="36549" count="1" /> <!-- Weapon Fragment (High-grade) -->
+						<item id="36549" count="1" /> <!-- Corroded High-grade Weapon Fragment -->
 					</item>
 					<item chance="1.0">
-						<item id="36550" count="1" /> <!-- Weapon Fragment (Top-grade) -->
+						<item id="36550" count="1" /> <!-- Corroded Top-grade Weapon Fragment -->
 					</item>
 				</items>
 			</effect>
@@ -3595,28 +3595,28 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="15.0">
-						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="17526" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="40.0">
-						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="17527" count="1" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="5.0">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="10.0">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="8.0">
-						<item id="36386" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+						<item id="36386" count="1" /> <!-- Giant's Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="12.0">
-						<item id="36389" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+						<item id="36389" count="1" /> <!-- Giant's Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="2.0">
-						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
+						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="8.0">
-						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant Armor (R-grade) -->
+						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant R-grade Armor -->
 					</item>
 				</items>
 			</effect>
@@ -3642,16 +3642,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25.0">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="45.0">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="10.0">
-						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
+						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="20.0">
-						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant Armor (R-grade) -->
+						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant R-grade Armor -->
 					</item>
 				</items>
 			</effect>
@@ -3671,22 +3671,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="15.0">
-						<item id="46077" count="1" /> <!-- Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="46077" count="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="35.0">
-						<item id="46078" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="46078" count="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="10.0">
-						<item id="37566" count="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="37566" count="1" /> <!-- Blessed Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="20.0">
-						<item id="37567" count="1" /> <!-- Blessed Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="37567" count="1" /> <!-- Blessed Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="12.0">
-						<item id="39462" count="1" /> <!-- Giant's Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="39462" count="1" /> <!-- Giant's Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="8.0">
-						<item id="39463" count="1" /> <!-- Giant's Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="39463" count="1" /> <!-- Giant's Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -3712,40 +3712,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.0">
-						<item id="23646" count="1" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="23646" count="1" /> <!-- High-grade Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="12.0">
-						<item id="23647" count="1" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="23647" count="1" /> <!-- High-grade Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="10.0">
-						<item id="46077" count="1" /> <!-- Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="46077" count="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="20.0">
-						<item id="46078" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="46078" count="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="2.0">
-						<item id="37566" count="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="37566" count="1" /> <!-- Blessed Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="8.0">
-						<item id="37567" count="1" /> <!-- Blessed Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="37567" count="1" /> <!-- Blessed Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="2.0">
-						<item id="38757" count="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="38757" count="1" /> <!-- Blessed High-grade Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="3.0">
-						<item id="38758" count="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="38758" count="1" /> <!-- Blessed High-grade Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="12.0">
-						<item id="39462" count="1" /> <!-- Giant's Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="39462" count="1" /> <!-- Giant's Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="8.0">
-						<item id="39463" count="1" /> <!-- Giant's Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="39463" count="1" /> <!-- Giant's Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="10.0">
-						<item id="39464" count="1" /> <!-- Windy Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="39464" count="1" /> <!-- Windy Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="5.0">
-						<item id="39465" count="1" /> <!-- Windy Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="39465" count="1" /> <!-- Windy Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -3777,10 +3777,10 @@
 						<item id="27494" count="1" /> <!-- Soul Crystal Coupon Pack - Underground -->
 					</item>
 					<item chance="1.0">
-						<item id="27495" count="1" /> <!-- Talisman - Abundance Pack - Underground -->
+						<item id="27495" count="1" /> <!-- Talisman of Abundance Pack - Underground -->
 					</item>
 					<item chance="10.0">
-						<item id="27496" count="1" /> <!-- Spirit Stone Pack - Underground -->
+						<item id="27496" count="1" /> <!-- Weapon Augmenting Stone Pack - Underground -->
 					</item>
 					<item chance="4.0">
 						<item id="27497" count="1" /> <!-- Hair Accessory Pack - Underground -->
@@ -3833,7 +3833,7 @@
 						<item id="27493" count="1" /> <!-- Soul Bottle Pack - Underground -->
 					</item>
 					<item chance="1.0">
-						<item id="27495" count="1" /> <!-- Talisman - Abundance Pack - Underground -->
+						<item id="27495" count="1" /> <!-- Talisman of Abundance Pack - Underground -->
 					</item>
 					<item chance="6.0">
 						<item id="27498" count="1" /> <!-- Pendant Pack - Underground -->
@@ -3852,7 +3852,7 @@
 		</effects>
 	</skill>
 	<skill id="27580" toLevel="1" name="Wind of Bard">
-		<!-- XP/ SP +100% for 1 h. Cannot be stacked with Maphr's Wind Scroll. Buff remains after death. -->
+		<!-- For 1 h., acquired XP/ SP +100%. The effect remains after death. The effect does not stack with those of Freya's Frozen Scroll, Freya's Scroll of Storm, Maphr's Wind Scroll, Dandy's Scroll: Challenge, Emperor's Growth Scroll, Scroll: Midsummer Passion, Vital Wind. -->
 		<icon>icon.skill_sing</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -3872,7 +3872,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27581" toLevel="1" name="Talisman - Abundance Pack">
+	<skill id="27581" toLevel="1" name="Talisman of Abundance Pack">
 		<itemConsumeId>27508</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -3892,16 +3892,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25.0">
-						<item id="23833" count="1" /> <!-- Talisman - Abundance - War -->
+						<item id="23833" count="1" /> <!-- Talisman of Abundance - War -->
 					</item>
 					<item chance="25.0">
-						<item id="23834" count="1" /> <!-- Talisman - Abundance - Tactics -->
+						<item id="23834" count="1" /> <!-- Talisman of Abundance - Tactics -->
 					</item>
 					<item chance="25.0">
-						<item id="23835" count="1" /> <!-- Talisman - Abundance - Morale -->
+						<item id="23835" count="1" /> <!-- Talisman of Abundance - Morale -->
 					</item>
 					<item chance="25.0">
-						<item id="23836" count="1" /> <!-- Talisman - Abundance - Physique -->
+						<item id="23836" count="1" /> <!-- Talisman of Abundance - Physique -->
 					</item>
 				</items>
 			</effect>
@@ -3933,10 +3933,10 @@
 						<item id="27494" count="1" /> <!-- Soul Crystal Coupon Pack - Underground -->
 					</item>
 					<item chance="1.0">
-						<item id="27495" count="1" /> <!-- Talisman - Abundance Pack - Underground -->
+						<item id="27495" count="1" /> <!-- Talisman of Abundance Pack - Underground -->
 					</item>
 					<item chance="10.0">
-						<item id="27496" count="1" /> <!-- Spirit Stone Pack - Underground -->
+						<item id="27496" count="1" /> <!-- Weapon Augmenting Stone Pack - Underground -->
 					</item>
 					<item chance="4.0">
 						<item id="27497" count="1" /> <!-- Hair Accessory Pack - Underground -->
@@ -3989,7 +3989,7 @@
 						<item id="27493" count="1" /> <!-- Soul Bottle Pack - Underground -->
 					</item>
 					<item chance="1.0">
-						<item id="27495" count="1" /> <!-- Talisman - Abundance Pack - Underground -->
+						<item id="27495" count="1" /> <!-- Talisman of Abundance Pack - Underground -->
 					</item>
 					<item chance="6.0">
 						<item id="27498" count="1" /> <!-- Pendant Pack - Underground -->
@@ -4008,7 +4008,7 @@
 		</effects>
 	</skill>
 	<skill id="27584" toLevel="1" name="Novice Adventurer's Shirt">
-		<!-- CON +2. -->
+		<!-- CON +$s1. -->
 		<icon>icon.etc_shirts_c_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -4019,7 +4019,7 @@
 		</effects>
 	</skill>
 	<skill id="27585" toLevel="1" name="Adventurer's Shirt">
-		<!-- INT +2, STR +2, Speed +7 -->
+		<!-- INT +$s1, STR +$s2, Speed +$s3 -->
 		<icon>BranchIcon.icon.shirt_of_explorer_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -4038,7 +4038,7 @@
 		</effects>
 	</skill>
 	<skill id="27586" toLevel="1" name="Novice Adventurer's Circlet - Critical Rate">
-		<!-- Critical Rate +10. -->
+		<!-- Critical Rate +$s1. -->
 		<icon>icon.accessory_au_karm_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -4049,7 +4049,7 @@
 		</effects>
 	</skill>
 	<skill id="27587" toLevel="1" name="Experienced Adventurer's Circlet - Critical Rate">
-		<!-- Critical Rate +20. -->
+		<!-- Critical Rate +$s1. -->
 		<icon>icon.accessory_ar_karm_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -4060,7 +4060,7 @@
 		</effects>
 	</skill>
 	<skill id="27588" toLevel="1" name="Adventurer's Circlet">
-		<!-- P. Atk. +3%, M. Atk. +6% -->
+		<!-- P. Atk. +$s1, M. Atk. +$s2 -->
 		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -4127,46 +4127,46 @@
 						<item id="17392" count="1" /> <!-- Specter Retributer -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17393" count="1" /> <!-- Specter Dual Sword -->
+						<item id="17393" count="1" /> <!-- Specter Dual Swords -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17394" count="1" /> <!-- Specter Dual Dagger -->
+						<item id="17394" count="1" /> <!-- Specter Dual Daggers -->
 					</item>
 					<item chance="2.325581395348837">
 						<item id="17395" count="1" /> <!-- Specter Dual Blunt Weapon -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17396" count="1" /> <!-- Seraph Helmet - Heavy Armor -->
+						<item id="17396" count="1" /> <!-- Seraph Helmet - Heavy armor -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17397" count="1" /> <!-- Seraph Breastplate - Heavy Armor -->
+						<item id="17397" count="1" /> <!-- Seraph Breastplate - Heavy armor -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17398" count="1" /> <!-- Seraph Gaiters - Heavy Armor -->
+						<item id="17398" count="1" /> <!-- Seraph Gaiters - Heavy armor -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17399" count="1" /> <!-- Seraph Gauntlets - Heavy Armor -->
+						<item id="17399" count="1" /> <!-- Seraph Gauntlets - Heavy armor -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17400" count="1" /> <!-- Seraph Boots - Heavy Armor -->
+						<item id="17400" count="1" /> <!-- Seraph Boots - Heavy armor -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17401" count="1" /> <!-- Seraph Shield - Heavy Armor -->
+						<item id="17401" count="1" /> <!-- Seraph Shield -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17402" count="1" /> <!-- Seraph Leather Helmet - Light Armor -->
+						<item id="17402" count="1" /> <!-- Seraph Leather Helmet - Light armor -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17403" count="1" /> <!-- Seraph Leather Armor - Light Armor -->
+						<item id="17403" count="1" /> <!-- Seraph Leather Armor - Light armor -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17404" count="1" /> <!-- Seraph Leather Leggings - Light Armor -->
+						<item id="17404" count="1" /> <!-- Seraph Leather Leggings - Light armor -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17405" count="1" /> <!-- Seraph Leather Gloves - Light Armor -->
+						<item id="17405" count="1" /> <!-- Seraph Leather Gloves - Light armor -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17406" count="1" /> <!-- Seraph Leather Boots - Light Armor -->
+						<item id="17406" count="1" /> <!-- Seraph Leather Boots - Light armor -->
 					</item>
 					<item chance="2.325581395348837">
 						<item id="17407" count="1" /> <!-- Seraph Circlet - Robe -->
@@ -4184,7 +4184,7 @@
 						<item id="17411" count="1" /> <!-- Seraph Shoes - Robe -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="17412" count="1" /> <!-- Seraph Sigil - Robe -->
+						<item id="17412" count="1" /> <!-- Seraph Sigil -->
 					</item>
 					<item chance="2.325581395348837">
 						<item id="17413" count="1" /> <!-- Seraph Necklace -->
@@ -4196,13 +4196,13 @@
 						<item id="17415" count="1" /> <!-- Seraph Ring -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="2.325581395348837">
-						<item id="45929" count="1" /> <!-- Spirit Stone -->
+						<item id="45929" count="1" /> <!-- Weapon Augmenting Stone -->
 					</item>
 					<item chance="2.325581395348837">
 						<item id="9552" count="1" /> <!-- Fire Crystal -->
@@ -4226,7 +4226,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27590" toLevel="1" name="Talisman - Abundance Pack">
+	<skill id="27590" toLevel="1" name="Talisman of Abundance Pack">
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -4249,16 +4249,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25">
-						<item id="23833" count="1" /> <!-- Talisman - Abundance - War -->
+						<item id="23833" count="1" /> <!-- Talisman of Abundance - War -->
 					</item>
 					<item chance="25">
-						<item id="23834" count="1" /> <!-- Talisman - Abundance - Tactics -->
+						<item id="23834" count="1" /> <!-- Talisman of Abundance - Tactics -->
 					</item>
 					<item chance="25">
-						<item id="23835" count="1" /> <!-- Talisman - Abundance - Morale -->
+						<item id="23835" count="1" /> <!-- Talisman of Abundance - Morale -->
 					</item>
 					<item chance="25">
-						<item id="23836" count="1" /> <!-- Talisman - Abundance - Physique -->
+						<item id="23836" count="1" /> <!-- Talisman of Abundance - Physique -->
 					</item>
 				</items>
 			</effect>

@@ -46,6 +46,7 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		_nextTargetMode = packet.readH();
 		_longRange = packet.readC() == 0;
 		_potionPercent = packet.readD();
+		packet.readD(); // 272
 		_respectfulHunting = packet.readC() == 1;
 		return true;
 	}

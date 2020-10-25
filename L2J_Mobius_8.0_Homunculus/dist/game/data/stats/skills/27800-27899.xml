@@ -29,10 +29,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17701</item> <!-- Topaz -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17701</skillId> <!-- Topaz - Spiritshot -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -68,10 +66,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18717</item> <!-- Ruby -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18717</skillId> <!-- Ruby -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -91,10 +87,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18719</item> <!-- Sapphire -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18719</skillId> <!-- Sapphire -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -114,10 +108,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17704</item> <!-- Obsidian -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17704</skillId> <!-- Obsidian -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -133,14 +125,12 @@
 		</effects>
 	</skill>
 	<skill id="27808" toLevel="3" name="Opal Augment">
-		<!-- When Opal Lv. 4 or higher is equipped, Attack Attribute Bonus +$s1. -->
+		<!-- When Opal Lv. 4 or higher is equipped, Attribute Attack Bonus +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17705</item> <!-- Opal -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17705</skillId> <!-- Opal -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -160,10 +150,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17825</item> <!-- Emerald -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17825</skillId> <!-- Emerald -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -207,10 +195,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17823</item> <!-- Aquamarine -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17823</skillId> <!-- Aquamarine -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -230,10 +216,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17708</item> <!-- Diamond -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17708</skillId> <!-- Diamond -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -253,10 +237,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17709</item> <!-- Pearl -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17709</skillId> <!-- Pearl -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -276,10 +258,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18565</item> <!-- Tanzanite -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18565</skillId> <!-- Tanzanite - Barrier -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -307,10 +287,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18566</item> <!-- Garnet -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18566</skillId> <!-- Garnet -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -330,10 +308,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18568</item> <!-- Vital Stone -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18568</skillId> <!-- Vital Stone -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -344,7 +320,6 @@
 					<value level="2">2</value>
 					<value level="3">5</value>
 				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -353,10 +328,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18713</item> <!-- Red Cat's Eye -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18713</skillId> <!-- Red Cat's Eye -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -392,10 +365,8 @@
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18714</item> <!-- Blue Cat's Eye -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18714</skillId> <!-- Blue Cat's Eye -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -423,10 +394,8 @@
 		<icon>icon.etc_bm_jewel_topaz_i00</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17701</item> <!-- Topaz -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17701</skillId> <!-- Topaz - Spiritshot -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -462,10 +431,8 @@
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18717</item> <!-- Ruby -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18717</skillId> <!-- Ruby -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -485,10 +452,8 @@
 		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18719</item> <!-- Sapphire -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18719</skillId> <!-- Sapphire -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -508,10 +473,8 @@
 		<icon>icon.etc_bm_jewel_obsidian_i00</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17704</item> <!-- Obsidian -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17704</skillId> <!-- Obsidian -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -543,14 +506,12 @@
 		</effects>
 	</skill>
 	<skill id="27822" toLevel="3" name="Opal Augment">
-		<!-- Attack Attribute Bonus +$s1. -->
+		<!-- Attribute Attack +$s1. -->
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17705</item> <!-- Opal -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17705</skillId> <!-- Opal -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -570,10 +531,8 @@
 		<icon>icon.etc_bm_jewel_emerald_i00</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17825</item> <!-- Emerald -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17825</skillId> <!-- Emerald -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -617,10 +576,8 @@
 		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17823</item> <!-- Aquamarine -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17823</skillId> <!-- Aquamarine -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -640,10 +597,8 @@
 		<icon>icon.etc_bm_jewel_diamond_i00</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17708</item> <!-- Diamond -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17708</skillId> <!-- Diamond -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -663,10 +618,8 @@
 		<icon>icon.etc_bm_jewel_pearl_i00</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>17709</item> <!-- Pearl -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>17709</skillId> <!-- Pearl -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -682,14 +635,12 @@
 		</effects>
 	</skill>
 	<skill id="27827" toLevel="3" name="Tanzanite Augment">
-		<!-- Received Damage -$s1. -->
+		<!-- Received damage -$s1. -->
 		<icon>icon.etc_bm_jewel_tanzanite</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18565</item> <!-- Tanzanite -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18565</skillId> <!-- Tanzanite - Barrier -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -717,10 +668,8 @@
 		<icon>icon.etc_bm_jewel_garnet</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18566</item> <!-- Garnet -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18566</skillId> <!-- Garnet -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -740,10 +689,8 @@
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18568</item> <!-- Vital Stone -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18568</skillId> <!-- Vital Stone -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -763,10 +710,8 @@
 		<icon>icon.bm_jewel_red_catseye</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18713</item> <!-- Red Cat's Eye -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18713</skillId> <!-- Red Cat's Eye -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -802,10 +747,8 @@
 		<icon>Icon.bm_jewel_blue_catseye</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpCheckSkillList">
-				<skillIds>
-					<item>18714</item> <!-- Blue Cat's Eye -->
-				</skillIds>
+			<condition name="OpCheckSkill">
+				<skillId>18714</skillId> <!-- Blue Cat's Eye -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -918,11 +861,11 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="27837" toLevel="1" name="Giant's Lucky Enchant Stone: Weapon (R-grade)">
+	<skill id="27837" toLevel="1" name="Windy Lucky Enchant Stone: R-grade Weapon">
 		<icon>icon.giant_ench_wp_stone_r_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27838" toLevel="1" name="Royal Red Save Card (R99-grade)">
+	<skill id="27838" toLevel="1" name="Royal R99-grade Red Save Ticket">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27839" toLevel="3" name="Amethyst Augment">
@@ -1002,7 +945,7 @@
 		</effects>
 	</skill>
 	<skill id="27842" toLevel="3" name="Cat's Eye Augment">
-		<!-- When Cat's Eye Lv. 4 or higher is equipped, Damage Reflection +$s1. -->
+		<!-- When using Cat's Eye Lv. 4+, Damage Reflection +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1022,7 +965,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27844" toLevel="1" name="Noble Tears">
-		<!-- It contain's Frintezza's feelings. Doubles P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. and it changes the appearance of your weapon. Does not disappear when dying. -->
+		<!-- Contains Frintezza's feelings. For 2 min., doubles P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. and changes the appearance of your weapon. The effect remains after death. -->
 		<icon>BranchSys2.icon.g_illumination_skyblue</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1116,7 +1059,7 @@
 		<effectPoint>1000</effectPoint>
 	</skill>
 	<skill id="27851" toLevel="1" name="Noble Chocolate">
-		<!-- Vitality is replenished in peace zones. -->
+		<!-- Restores Vitality when in a peaceful zone. -->
 		<icon>icon.etc_whiteday_choco_long</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1124,7 +1067,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27852" toLevel="1" name="Noble Candy">
-		<!-- Vitality is replenished in peace zones. -->
+		<!-- Restores Vitality when in a peaceful zone. -->
 		<icon>icon.etc_whiteday_candy_long</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1132,7 +1075,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="27853" toLevel="1" name="Noble Cookie">
-		<!-- Vitality is replenished in peace zones. -->
+		<!-- Restores Vitality when in a peaceful zone. -->
 		<icon>icon.etc_whiteday_cookie_long</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1163,7 +1106,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="27860" toLevel="1" name="Royal White Save Ticket (R99-grade) - Armor">
+	<skill id="27860" toLevel="1" name="Royal R99-grade White Save Ticket - Armor">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27861" toLevel="1" name="Embryo Reward Box">
@@ -1188,8 +1131,8 @@
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="27865" toLevel="24" name="Blessing of Bliss - Stage 1">
-		<!-- You can obtain the item after $s1 h. There are $s2 stages. <Notice> If you die when you receive the item, you cannot obtain the $s3 anniversary blessing buff and items. You also cannot obtain the item if you do not have space in your inventory. -->
+	<skill id="27865" toLevel="24" name="Blessing of Bliss Lv. 1">
+		<!-- You can obtain the reward in $s1 h. There are $s2 buff levels. When the Lv. 1 buff expires, the Lv. 2 one applies, and so on. The effect remains after death, dual class/ subclass change, and after teleporting to the Olympiad and the Ceremony of Chaos. Note!. If you're dead when the buff expired, you won't get a reward and a new buff. Also you must have free space in your inventory. -->
 		<icon>icon.ev_L2_soul_ore</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1224,13 +1167,13 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="27871" toLevel="1" name="Elmoreden Cloak Basic Effect">
+	<skill id="27871" toLevel="1" name="Elmoreden Cloak: Basic Effect">
 		<!-- Increases PvP Attack Damage when enchanted and bestows various passive and active skills. -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27872" toLevel="20" name="Enchantment Effect: Elmoreden Cloak">
-		<!-- PvP Attack Damage $s1. -->
+	<skill id="27872" toLevel="20" name="Elmoreden Cloak: Enchant Effect">
+		<!-- PvP Damage +$s1. -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>P</operateType>
 		<effects> <!-- TODO: Inmobilize target from lv18 to lv20 -->
@@ -1567,7 +1510,7 @@
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27874" toLevel="20" name="Enchantment Effect: Aden Cloak">
+	<skill id="27874" toLevel="20" name="Enchant Effect: Aden Cloak">
 		<!-- Magic PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>P</operateType>
@@ -1704,12 +1647,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27875" toLevel="1" name="Elmore Cloak Basic Effect">
+	<skill id="27875" toLevel="1" name="Elmore Cloak: Basic Effect">
 		<!-- Increases Physical Attack PvE Damage when enchanted and bestows various passive and active skills. -->
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27876" toLevel="20" name="Enchantment Effect: Elmore Cloak">
+	<skill id="27876" toLevel="20" name="Elmore Cloak: Enchant Effect">
 		<!-- Physical PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
 		<operateType>P</operateType>
@@ -1871,13 +1814,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27877" toLevel="1" name="Ferios Cloak Basic Effect">
+	<skill id="27877" toLevel="1" name="Ferios Cloak: Basic Effect">
 		<!-- Increases resistance to all attributes when enchanted and bestows various passive and active skills. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27878" toLevel="20" name="Enchantment Effect: Ferios Cloak">
-		<!-- All Attribute Resistance +$s1. -->
+	<skill id="27878" toLevel="20" name="Ferios Cloak: Enchant Effect">
+		<!-- Attribute Resistance +$s1. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2164,7 +2107,7 @@
 		</effects>
 	</skill>
 	<skill id="27879" toLevel="1" name="Ignore Damage">
-		<!-- Makes you invincible to fixed damage for 10 sec. -->
+		<!-- Makes you invincible to fixed damage for $s1 -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -2172,7 +2115,7 @@
 		<effectPoint>867</effectPoint>
 	</skill>
 	<skill id="27880" toLevel="1" name="Blessing of Elmoreden">
-		<!-- Makes you invincible for 10 sec. and increases Speed by 100. -->
+		<!-- Makes you invincible for $s1 and increases Speed by 100. -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2198,6 +2141,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -2265,7 +2221,7 @@
 		</effects>
 	</skill>
 	<skill id="27883" toLevel="1" name="Spirit of Aden">
-		<!-- Increases PvE Damage by 100% when dealing magic attack. -->
+		<!-- Increases PvE Damage by $s1 when dealing magic attack. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2289,7 +2245,7 @@
 		</pveEffects>
 	</skill>
 	<skill id="27884" toLevel="1" name="Spirit of Elmore">
-		<!-- Increases PvE Damage by 100% when dealing physical attack. -->
+		<!-- Increases PvE Damage by $s1 when dealing physical attack. -->
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2317,7 +2273,7 @@
 		</pveEffects>
 	</skill>
 	<skill id="27885" toLevel="1" name="Blessing of Ferios">
-		<!-- Makes you invincible for 20 sec -->
+		<!-- Grants invincibility for $s1 -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2343,6 +2299,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -2564,7 +2533,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AbsorbDamage">
-				<amount>
+				<damage>
 					<value level="1">30000</value>
 					<value level="2">31500</value>
 					<value level="3">33075</value>
@@ -2579,7 +2548,7 @@
 					<value level="12">51310</value>
 					<value level="13">53876</value>
 					<value level="14">56569</value>
-				</amount>
+				</damage>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>

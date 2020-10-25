@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4600" toLevel="12" name="P. Def.-decreasing Stun">
-		<!-- Instantly decreases P. Def. ans stuns. Effect $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Instantly decreases P. Def. ans stuns. Effect $s1.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>
 			<value level="1">11</value>
@@ -67,7 +67,7 @@
 				<power>16</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -534,7 +534,7 @@
 		</effects>
 	</skill>
 	<skill id="4606" toLevel="12" name="Poison">
-		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1031,7 +1031,7 @@
 		</effects>
 	</skill>
 	<skill id="4615" toLevel="12" name="Bleed">
-		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1195,7 +1195,7 @@
 		</effects>
 	</skill>
 	<skill id="4620" toLevel="12" name="Paralysis">
-		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1246,7 +1246,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1823,7 +1823,7 @@
 		</effects>
 	</skill>
 	<skill id="4631" toLevel="3" name="Acumen Shield Wild Magic">
-		<!-- Casting Spd. +$s1, P. Def. +$s2, and critical rate of damage attack magic +$s3. -->
+		<!-- Casting Spd. +$s1, P. Def. +$s2, M. Skill Critical Rate +$s3. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1880,7 +1880,7 @@
 		</effects>
 	</skill>
 	<skill id="4632" toLevel="3" name="Acumen+Empower+Wild Magic">
-		<!-- Casting Spd. +$s1, M. Atk. +$s2, M. Critical Rate +$s3. -->
+		<!-- Casting Spd. +$s1, M. Atk. +$s2, M. Skill Critical Rate +$s3. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1936,7 +1936,7 @@
 		</effects>
 	</skill>
 	<skill id="4633" toLevel="3" name="Acumen+Berserker+Empower">
-		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5, P. Def. -$s6, M. Def. -$s7, M. Evasion -$s8. -->
+		<!-- M. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5, P. Def. $s6, M. Def. $s7, P. Evasion $s8. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2024,7 +2024,7 @@
 		</effects>
 	</skill>
 	<skill id="4634" toLevel="3" name="Acumen+Empower+Damage Shield">
-		<!-- Casting Spd. +$s1, M. Atk. +$s2 -->
+		<!-- Casting Spd. +$s1, M. Atk. +$s2. Some damage is reflected. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2079,7 +2079,7 @@
 		</effects>
 	</skill>
 	<skill id="4635" toLevel="3" name="Acumen Berserker Wild Magic">
-		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5, M. Critical Rate +$s6, P. Def. -$s7, M. Def. -$s8, Evasion -$s9. -->
+		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5, M. Skill Critical Rate +$s6, P. Def. $s7, M. Def. $s8, P. Evasion $s9. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2175,7 +2175,7 @@
 		</effects>
 	</skill>
 	<skill id="4636" toLevel="3" name="Acumen Berserker Damage Shield">
-		<!-- Increases P. Atk. by $s1, Atk. Spd. by $s2, M. Atk. by $s3, Casting Spd. by $s4, Speed by $s5. Some damage is reflected. Decreases P. Def. by $s6, M. Def. by $s7, Evasion by $s8. -->
+		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5. Temporarily reflects damage. P. Def. $s6, M. Def. $s7, P. Evasion $s8. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2270,7 +2270,7 @@
 		</effects>
 	</skill>
 	<skill id="4637" toLevel="3" name="Acumen Wild Magic Damage Shield">
-		<!-- Casting Spd. +$s1, M. Critical Rate +$s2 -->
+		<!-- Casting Spd. +$s1, M. Skill Critical Rate +$s2. Temporarily reflects damage. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2325,7 +2325,7 @@
 		</effects>
 	</skill>
 	<skill id="4638" toLevel="3" name="Acumen+Empower+Wild Magic">
-		<!-- Casting Spd. +$s1, M. Atk. +$s2, M. Critical Rate +$s3. -->
+		<!-- Casting Spd. +$s1, M. Atk. +$s2, M. Skill Critical Rate +$s3. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2383,7 +2383,7 @@
 		</effects>
 	</skill>
 	<skill id="4639" toLevel="3" name="Acumen+Empower+Berserker">
-		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5 -->
+		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5; P. Def. -$s6, M. Def. -$s7. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2473,7 +2473,7 @@
 		</effects>
 	</skill>
 	<skill id="4640" toLevel="12" name="Sleep">
-		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2528,7 +2528,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -2877,7 +2877,7 @@
 		</effects>
 	</skill>
 	<skill id="4649" toLevel="12" name="Poison">
-		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -3275,7 +3275,7 @@
 		</effects>
 	</skill>
 	<skill id="4657" toLevel="12" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3360,7 +3360,7 @@
 		</effects>
 	</skill>
 	<skill id="4658" toLevel="12" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3445,7 +3445,7 @@
 		</effects>
 	</skill>
 	<skill id="4659" toLevel="12" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3530,7 +3530,7 @@
 		</effects>
 	</skill>
 	<skill id="4660" toLevel="12" name="Sleep">
-		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3613,12 +3613,12 @@
 				<percentage>20</percentage>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4661" toLevel="12" name="Sleep">
-		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3701,12 +3701,12 @@
 				<percentage>20</percentage>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4662" toLevel="12" name="Sleep">
-		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3789,7 +3789,7 @@
 				<percentage>20</percentage>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -4260,7 +4260,7 @@
 		</effects>
 	</skill>
 	<skill id="4670" toLevel="12" name="Stun">
-		<!-- Stun and immobilization for a short time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a short time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
@@ -4310,7 +4310,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -4711,7 +4711,7 @@
 		<hitTime>3300</hitTime>
 		<operateType>A2</operateType>
 		<magicLevel>110</magicLevel>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalDefence">
@@ -4726,110 +4726,98 @@
 	</skill>
 	<skill id="4681" toLevel="1" name="Valakas Trample">
 		<affectRange>300</affectRange>
-		<castRange>50</castRange>
+		<castRange>300</castRange>
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>300</effectRange>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>450</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLevel>110</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4682" toLevel="1" name="Valakas Trample">
 		<affectRange>300</affectRange>
-		<castRange>50</castRange>
+		<castRange>300</castRange>
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>300</effectRange>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>450</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLevel>110</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4683" toLevel="4" name="Valakas Dragon Breath">
-		<!-- HP decreases rapidly from flame momentarily. -->
+		<!-- Deadly fire envelopes your entire body, causing your HP to drop rapidly. -->
 		<icon>icon.skill4683</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DRAGON_BREATH</abnormalType>
 		<coolTime>2000</coolTime>
-		<effectPoint>
-			<value level="1">-100</value>
-			<value level="2">-100</value>
-			<value level="3">0</value>
-			<value level="4">0</value>
-		</effectPoint>
+		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>450</attributeValue>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLevel>110</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>600</castRange>
 		<fanRange>0;0;2500;900</fanRange>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 			<effect name="DamOverTime">
-				<power>512</power>
+				<power>5120</power>
 				<ticks>1</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="4684" toLevel="4" name="Valakas Dragon Breath">
-		<!-- HP decreases rapidly from flame momentarily. -->
+		<!-- Deadly fire envelopes your entire body, causing your HP to drop rapidly. -->
 		<icon>icon.skill4683</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DRAGON_BREATH</abnormalType>
+		<affectRange>300</affectRange>
+		<castRange>2500</castRange>
+		<effectRange>2500</effectRange>
 		<coolTime>2000</coolTime>
-		<effectPoint>
-			<value level="1">-100</value>
-			<value level="2">-100</value>
-			<value level="3">0</value>
-			<value level="4">0</value>
-		</effectPoint>
+		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>450</attributeValue>
+		<attributeValue>850</attributeValue>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLevel>110</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<castRange>900</castRange>
-		<fanRange>0;0;2500;900</fanRange>
-		<targetType>SELF</targetType>
-		<affectScope>SQUARE</affectScope>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 			<effect name="DamOverTime">
-				<power>512</power>
+				<power>5120</power>
 				<ticks>1</ticks>
 			</effect>
 		</effects>
@@ -4839,21 +4827,26 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>40-40</affectLimit>
+		<affectRange>900</affectRange>
+		<castRange>2500</castRange>
+		<effectRange>2500</effectRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>450</attributeValue>
+		<attributeValue>850</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>3000</hitTime>
-		<magicLevel>110</magicLevel>
-		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<magicLevel>-1</magicLevel>
+		<operateType>A1</operateType>
 		<trait>SHOCK</trait>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -4863,19 +4856,26 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>40-40</affectLimit>
+		<affectRange>900</affectRange>
+		<castRange>2500</castRange>
+		<effectRange>2500</effectRange>
+		<coolTime>1000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>450</attributeValue>
+		<attributeValue>850</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
-		<magicLevel>110</magicLevel>
-		<operateType>A2</operateType>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLevel>-1</magicLevel>
+		<operateType>A1</operateType>
 		<trait>SHOCK</trait>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -4885,20 +4885,26 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>40-40</affectLimit>
+		<affectRange>900</affectRange>
+		<castRange>2500</castRange>
+		<effectRange>2500</effectRange>
+		<coolTime>1000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>450</attributeValue>
+		<attributeValue>850</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>3000</hitTime>
-		<magicLevel>110</magicLevel>
-		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<magicLevel>-1</magicLevel>
+		<operateType>A1</operateType>
 		<trait>SHOCK</trait>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -4910,45 +4916,43 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<coolTime>3000</coolTime>
-		<effectPoint>
-			<value level="1">-100</value>
-			<value level="2">0</value>
-		</effectPoint>
+		<affectLimit>40-40</affectLimit>
+		<affectRange>900</affectRange>
+		<castRange>2500</castRange>
+		<effectRange>2500</effectRange>
+		<coolTime>1000</coolTime>
+		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>450</attributeValue>
+		<attributeValue>850</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>3000</hitTime>
-		<magicLevel>110</magicLevel>
-		<operateType>A2</operateType>
+		<isDebuff>true</isDebuff>
+		<magicLevel>-1</magicLevel>
+		<operateType>A1</operateType>
 		<trait>SHOCK</trait>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="4689" toLevel="3" name="Valakas Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Frightened into fleeing. -->
 		<icon>icon.skill4689</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>9</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<affectRange>600</affectRange>
 		<coolTime>2000</coolTime>
-		<effectPoint>
-			<value level="1">-100</value>
-			<value level="2">-100</value>
-			<value level="3">0</value>
-		</effectPoint>
+		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLevel>110</magicLevel>
+		<magicLevel>-1</magicLevel>
 		<operateType>A2</operateType>
 		<trait>DERANGEMENT</trait>
 		<targetType>SELF</targetType>
@@ -4959,22 +4963,22 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="4690" toLevel="1" name="Valakas Meteor Storm">
+	<skill id="4690" toLevel="1" name="Valakas' Meteor Storm">
 		<affectRange>600</affectRange>
+		<affectLimit>40-40</affectLimit>
 		<coolTime>2000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>450</attributeValue>
+		<attributeValue>850</attributeValue>
 		<hitTime>8000</hitTime>
-		<magicLevel>110</magicLevel>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>-1</magicLevel>
+		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>534255</power>
 			</effect>
 		</effects>
 	</skill>
@@ -4996,16 +5000,16 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="HpRegen">
 				<amount>
-					<value level="1">-85</value>
-					<value level="2">-70</value>
-					<value level="3">-50</value>
-					<value level="4">-20</value>
-					<value level="5">0</value>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">80</value>
+					<value level="4">85</value>
+					<value level="5">90</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -5246,7 +5250,7 @@
 		</effects>
 	</skill>
 	<skill id="4699" toLevel="13" name="Blessing of Queen">
-		<!-- Queen's buff magic temporarily increases party members' Critical Rate/ Damage. Effect $s1. -->
+		<!-- Temporarily increases party members' Critical Rate/ Damage for standard attacks. Effect $s1 -->
 		<icon>icon.skill1331</icon>
 		<abnormalLevel>
 			<value level="1">1</value>

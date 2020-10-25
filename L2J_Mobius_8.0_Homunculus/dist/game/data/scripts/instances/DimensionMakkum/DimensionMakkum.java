@@ -19,10 +19,8 @@ package instances.DimensionMakkum;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import instances.AbstractInstance;
-import quests.Q10658_MakkumInTheDimension.Q10658_MakkumInTheDimension;
 
 /**
  * Dimension Makkum instance
@@ -81,18 +79,15 @@ public class DimensionMakkum extends AbstractInstance
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState qs = killer.getQuestState(Q10658_MakkumInTheDimension.class.getSimpleName());
 		final Instance world = npc.getInstanceWorld();
 		if (world == null)
 		{
 			return super.onKill(npc, killer, isSummon);
 		}
+		
 		startQuestTimer("spawn_piore", 4000, npc, killer);
-		if ((qs != null) && qs.isCond(1))
-		{
-			qs.setCond(2, true);
-		}
 		world.finishInstance();
+		
 		return super.onKill(npc, killer, isSummon);
 	}
 	

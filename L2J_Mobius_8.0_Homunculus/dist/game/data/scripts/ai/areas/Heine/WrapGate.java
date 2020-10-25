@@ -16,14 +16,11 @@
  */
 package ai.areas.Heine;
 
-import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
-import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 
 /**
  * Warp Gate AI.
@@ -47,11 +44,11 @@ public class WrapGate extends AbstractNpcAI
 	{
 		if ("enter_hellbound".equals(event))
 		{
-			final QuestState qs = player.getQuestState(Q10455_ElikiasLetter.class.getSimpleName());
-			if ((qs != null) && qs.isCond(1))
-			{
-				playMovie(player, Movie.SC_HELLBOUND);
-			}
+			// final QuestState qs = player.getQuestState(Q10455_ElikiasLetter.class.getSimpleName());
+			// if ((qs != null) && qs.isCond(1))
+			// {
+			// playMovie(player, Movie.SC_HELLBOUND);
+			// }
 			player.teleToLocation(TELEPORT_LOC);
 		}
 		return null;

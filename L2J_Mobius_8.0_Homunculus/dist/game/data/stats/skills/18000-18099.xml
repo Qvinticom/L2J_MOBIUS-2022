@@ -163,7 +163,7 @@
 		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="18009" toLevel="1" name="Tempest Stone">
-		<!-- Double-click for a chance to obtain either a Low/ Mid/ High-grade Dye Pack, or Talisman - Wind Pack. -->
+		<!-- Double-click to obtain one of the following items: Low-/ Mid-/ High-grade Dye Pack, Talisman of Wind Pack. -->
 		<itemConsumeId>39592</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -184,16 +184,16 @@
 				<items>
 					<value level="1">
 						<item chance="31.66">
-							<item id="39562" count="1" /> <!-- High-grade Wind Dye Pack -->
+							<item id="39562" count="1" /> <!-- High-grade Windy Dye Pack -->
 						</item>
 						<item chance="31.67">
-							<item id="39561" count="1" /> <!-- Mid-grade Wind Dye Pack -->
+							<item id="39561" count="1" /> <!-- Mid-grade Windy Dye Pack -->
 						</item>
 						<item chance="31.67">
-							<item id="39560" count="1" /> <!-- Low-grade Wind Dye Pack -->
+							<item id="39560" count="1" /> <!-- Low-grade Windy Dye Pack -->
 						</item>
 						<item chance="5">
-							<item id="48422" count="1" /> <!-- Talisman - Wind Box -->
+							<item id="48422" count="1" /> <!-- Talisman of Wind Pack -->
 						</item>
 					</value>
 				</items>
@@ -219,13 +219,13 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="18013" toLevel="1" name="Love Potion: P. Critical Rate">
-		<!-- Feel the power of love! For 30 sec., Attribute Resistance +30, and P. Critical Rate +50. -->
+		<!-- Feel the power of love! For 30 sec., Attribute Resistance +30, and Critical Rate for standard attacks +50. -->
 		<icon>icon.love_potion_ad_ctr</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="18014" toLevel="1" name="Love Potion: M. Critical Rate">
-		<!-- Feel the power of love! For 30 sec., Attribute Resistance +30, and M. Critical Rate +50. -->
+		<!-- Feel the power of love! For 30 sec., Attribute Resistance +30, and M. Skill Critical Rate +50. -->
 		<icon>icon.love_potion_ap_ctr</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
@@ -237,12 +237,12 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="18016" toLevel="1" name="Wondrous Love">
-		<!-- Feel the power of love! For 30 sec., Atk. Spd. +1500, Casting Spd. +1999, Speed +300, Debuff Resistance +50, and P./ M. Critical Rate +50. -->
+		<!-- Feel the power of love! For 30 sec., Atk. Spd. +1500, Casting Spd. +1999, Speed +300, Critical Rate for standard attacks +50, M. Skill Critical Rate +50, Debuff Resistance +50. -->
 		<icon>icon.love_potion_blessed</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 	</skill>
-	<skill id="18017" toLevel="1" name="Fortune Bag">
+	<skill id="18017" toLevel="1" name="Fortune Pocket Lv. 1">
 		<!-- Use to obtain 400,000 XP. Can combine 2 Lv. 1 pouches. Below Lv. 85 only. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -260,7 +260,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18018" toLevel="1" name="Fortune Bag">
+	<skill id="18018" toLevel="1" name="Fortune Pocket Lv. 2">
 		<!-- Use to obtain 1,600,000 XP. Can combine 2 Lv. 2 pouches. Below Lv. 85 only. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -278,7 +278,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18019" toLevel="1" name="Fortune Bag">
+	<skill id="18019" toLevel="1" name="Fortune Pocket">
 		<!-- Use to obtain 6,400,000 XP. Below Lv. 85 only. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -296,7 +296,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18020" toLevel="2" name="Fortune Bag">
+	<skill id="18020" toLevel="2" name="Fortune Pocket">
 		<!-- Random Prize. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -311,19 +311,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="1">
-						<item id="39631" count="10" /> <!-- Fortune Pocket - Stage 3 -->
+						<item id="39631" count="10" /> <!-- Fortune Pocket Lv. 3 -->
 					</item>
 					<item chance="4.5">
-						<item id="39386" count="1" /> <!-- Lv. 1 Windy LUC Dye - LUC +1 -->
+						<item id="39386" count="1" /> <!-- Windy LUC Dye Lv. 1 - LUC +1 -->
 					</item>
 					<item chance="3.5">
-						<item id="39387" count="1" /> <!-- Lv. 2 Windy LUC Dye - LUC +2 -->
+						<item id="39387" count="1" /> <!-- Windy LUC Dye Lv. 2 - LUC +2 -->
 					</item>
 					<item chance="0.5">
-						<item id="39388" count="1" /> <!-- Lv. 3 Windy LUC Dye - LUC +3 -->
+						<item id="39388" count="1" /> <!-- Windy LUC Dye Lv. 3 - LUC +3 -->
 					</item>
 					<item chance="2">
-						<item id="39720" count="1" /> <!-- Maphr's Luck Potion -->
+						<item id="39720" count="1" /> <!-- Freya's Luck Potion -->
 					</item>
 					<item chance="30">
 						<item id="57" count="20000" /> <!-- Adena -->
@@ -338,7 +338,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18021" toLevel="1" name="Fortune Bag">
+	<skill id="18021" toLevel="1" name="Fortune Pocket Lv. 4">
 		<!-- Use to obtain 80,000 XP. Can combine 2 Lv. 4 pouches. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -357,7 +357,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18022" toLevel="1" name="Fortune Bag">
+	<skill id="18022" toLevel="1" name="Fortune Pocket">
 		<!-- Use to obtain 256,000 SP. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -376,7 +376,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18023" toLevel="2" name="Fortune Bag">
+	<skill id="18023" toLevel="2" name="Fortune Pocket">
 		<!-- Random Prize. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -391,16 +391,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="4.5">
-						<item id="39633" count="10" /> <!-- Fortune Pocket - Stage 5 -->
+						<item id="39633" count="10" /> <!-- Fortune Pocket Lv. 5 -->
 					</item>
 					<item chance="2">
-						<item id="39389" count="1" /> <!-- Lv. 4 Windy LUC Dye - LUC +4 -->
+						<item id="39389" count="1" /> <!-- Windy LUC Dye Lv. 4 - LUC +4 -->
 					</item>
 					<item chance="0.5">
-						<item id="39390" count="1" /> <!-- Lv. 5 Windy LUC Dye - LUC +5 -->
+						<item id="39390" count="1" /> <!-- Windy LUC Dye Lv. 5 - LUC +5 -->
 					</item>
 					<item chance="15.5">
-						<item id="39720" count="1" /> <!-- Maphr's Luck Potion -->
+						<item id="39720" count="1" /> <!-- Freya's Luck Potion -->
 					</item>
 					<item chance="3">
 						<item id="57" count="100000000" /> <!-- Adena -->
@@ -730,7 +730,7 @@
 		</effects>
 	</skill>
 	<skill id="18051" toLevel="1" name="Prevailing Sonata - Dance">
-		<!-- For 1 h., Atk. Spd. +15%, Casting Spd. +30%, Max HP +30%, MP Recovery Bonus +20%, and M. Skill MP Consumption -10%. Decreases chance of being interrupted mid-spell. Cooldown is 1 h. Remains after death. -->
+		<!-- Grants the Emperor's Power. For 1 h., Atk. Spd. +15%, Casting Spd. +30%, Max HP +30%, MP Recovery Rate +20%, M. Skill MP Consumption -10%. Decreases Casting Interruption Rate. Cooldown: 1 h. The effect remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLevel>1</abnormalLevel>
@@ -786,7 +786,7 @@
 		</effects>
 	</skill>
 	<skill id="18052" toLevel="1" name="Dimensional Bracelet">
-		<!-- Can equip 1 Talisman. -->
+		<!-- Unlocks 1 talisman slot. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>85</magicLevel>
@@ -798,7 +798,7 @@
 		</effects>
 	</skill>
 	<skill id="18053" toLevel="1" name="Dimensional Bracelet">
-		<!-- Can equip 2 Talismans. -->
+		<!-- Unlocks 2 talisman slots. -->
 		<icon>icon.dimension_bracelet_i01</icon>
 		<operateType>P</operateType>
 		<magicLevel>85</magicLevel>
@@ -810,7 +810,7 @@
 		</effects>
 	</skill>
 	<skill id="18054" toLevel="1" name="Dimensional Bracelet">
-		<!-- Can equip 3 Talismans. -->
+		<!-- Unlocks 3 talisman slots. -->
 		<icon>icon.dimension_bracelet_i02</icon>
 		<operateType>P</operateType>
 		<magicLevel>85</magicLevel>
@@ -822,7 +822,7 @@
 		</effects>
 	</skill>
 	<skill id="18055" toLevel="1" name="Dimensional Bracelet">
-		<!-- Can equip 4 Talismans. -->
+		<!-- Unlocks 4 talisman slots. -->
 		<icon>icon.dimension_bracelet_i03</icon>
 		<operateType>P</operateType>
 		<magicLevel>85</magicLevel>
@@ -834,7 +834,7 @@
 		</effects>
 	</skill>
 	<skill id="18056" toLevel="1" name="Dimensional Bracelet">
-		<!-- Can equip 5 Talismans. -->
+		<!-- Unlocks 5 talisman slots. -->
 		<icon>icon.dimension_bracelet_i04</icon>
 		<operateType>P</operateType>
 		<magicLevel>85</magicLevel>
@@ -846,7 +846,7 @@
 		</effects>
 	</skill>
 	<skill id="18057" toLevel="1" name="Dimensional Bracelet">
-		<!-- Can equip 6 Talismans. -->
+		<!-- Unlocks 6 talisman slots. -->
 		<icon>icon.dimension_bracelet_i05</icon>
 		<operateType>P</operateType>
 		<magicLevel>85</magicLevel>
@@ -858,7 +858,7 @@
 		</effects>
 	</skill>
 	<skill id="18058" toLevel="1" name="Dimensional Bracelet">
-		<!-- STR +1. -->
+		<!-- STR +3. -->
 		<icon>icon.dimension_bracelet_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>85</magicLevel>

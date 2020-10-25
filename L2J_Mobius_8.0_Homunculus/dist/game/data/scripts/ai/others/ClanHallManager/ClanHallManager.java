@@ -86,9 +86,7 @@ public class ClanHallManager extends AbstractNpcAI
 		4353, // Blessed Shield
 		4358, // Guidance
 		4354, // Vampiric Rage
-		15380, // Knight's Harmony
-		15381, // Warrior's Harmony
-		15382, // Wizard's Harmony
+		32840, // Fantasia Harmony
 		4355, // Acumen
 		4356, // Empower
 		4357, // Haste

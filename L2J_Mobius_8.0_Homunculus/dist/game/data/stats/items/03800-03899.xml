@@ -193,7 +193,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3812" name="Kaldis Gold Dragon" type="EtcItem">
-		<!-- Coin that is the same as that which Hunter Guild President Bernard Has. Take this to Warehouse Keeper Sorint. -->
+		<!-- Coin that is the same as that which Hunter Guild President Bernard has. Take this to Warehouse Keeper Sorint. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -289,7 +289,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3818" name="Fairy Stone List" type="EtcItem">
-		<!-- 4 Accessory Gems (Low-grade), 2 Armor Fragments (Low-grade), 1 Gemstone (D-grade), 10 pieces of Toad Lord Back Skin and 1 Cokes -->
+		<!-- 4 Low-grade Accessory Gems, 2 Low-grade Armor Fragments, 1 D-grade Gemstone, 10 pieces of Toad Lord Back Skin and 1 Cokes -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -305,7 +305,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3819" name="Deluxe Fairy Stone List" type="EtcItem">
-		<!-- 5 Accessory Gems (Low-grade), 2 Armor Fragments (Low-grade), 1 Gemstone (C-grade), 20 pieces of Toad Lord Back Skin and 1 Cokes -->
+		<!-- 5 Low-grade Accessory Gems, 2 Low-grade Armor Fragments, 1 C-grade Gemstone, 10 pieces of Toad Lord Back Skin and 1 Cokes -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -513,7 +513,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3832" name="Herb of Harit" type="EtcItem">
-		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. -->
+		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
 		<set name="icon" val="icon.etc_herb_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -522,7 +522,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3833" name="Herb of Vanor" type="EtcItem">
-		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. -->
+		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
 		<set name="icon" val="icon.etc_herb_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -531,7 +531,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3834" name="Herb of Oel Mahum" type="EtcItem">
-		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. -->
+		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
 		<set name="icon" val="icon.etc_herb_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -540,7 +540,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3835" name="Blood of Eva" type="EtcItem">
-		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. -->
+		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
 		<set name="icon" val="icon.etc_dragon_blood_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -567,7 +567,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3838" name="Recipe: Giant's Powerstone (25%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Quest. Required to make a Giant's Powerstone. Requires Create Item - Skill Lv. 2. The success rate is 25%. -->
+		<!-- For Dwarves only. A quest recipe for Giant's Powerstone. Requires Create Item Lv. 2. The success rate is 25%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -880,7 +880,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3861" name="3rd Fragment of Abyssal Jewel" type="EtcItem">
-		<!-- Fragment obtained from destroying Abyssal Jewel. Take this to Antharas Watchman Theodric at the entrance to Antharas' Lair. -->
+		<!-- A fragment of the destroyed Abyssal Jewel. Take it to Antharas' Watchman Theodric at the entrance to Antharas' Lair. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1008,7 +1008,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3869" name="Scepter of Judgment" type="EtcItem">
-		<!-- Scepter bestowed on Founding Emperor Shunaiman of the ancient Elmoreden Empire by the god of light. Certificate representing the emperor's authority. -->
+		<!-- A figurine bestowed on Emperor Shunaiman of the ancient Elmoreden Empire by the Goddess of Light. It symbolizes the emperor's authority. -->
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1106,7 +1106,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3875" name="Letter - A" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_a_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1114,7 +1114,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3876" name="Letter - C" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_c_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1122,7 +1122,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3877" name="Letter - E" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_e_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1130,7 +1130,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3878" name="Letter - F" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_f_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1138,7 +1138,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3879" name="Letter - G" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_g_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1146,7 +1146,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3880" name="Letter - H" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_h_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1154,7 +1154,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3881" name="Letter - I" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_i_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1162,7 +1162,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3882" name="Letter - L" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_l_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1170,7 +1170,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3883" name="Letter - N" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_n_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1178,7 +1178,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3884" name="Letter - O" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_o_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1186,7 +1186,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3885" name="Letter - R" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_r_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1194,7 +1194,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3886" name="Letter - S" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_s_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1202,7 +1202,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3887" name="Letter - T" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_t_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1210,7 +1210,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3888" name="Letter - II" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+		<!-- Combine with other letters to create a special word and get a reward! -->
 		<set name="icon" val="icon.etc_alphabet_ii_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1235,7 +1235,7 @@
 		</skills>
 	</item>
 	<item id="3890" name="Badge of Slayer" type="EtcItem">
-		<!-- Certificate showing eligibility to participate in the group to conquer Antharas. Take this and go meet Antharas Watchman Gilmore. -->
+		<!-- A certificate that proves your right to fight Antharas. Take it to Antharas' Watchman Gilmore. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

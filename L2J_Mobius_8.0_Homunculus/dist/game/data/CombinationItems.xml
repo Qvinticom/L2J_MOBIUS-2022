@@ -2984,6 +2984,10 @@
 		<reward id="39572" count="1" type="ON_SUCCESS" /> <!-- Talisman - Insanity -->
 		<reward id="34989" count="1" type="ON_FAILURE" /> <!-- Talisman - Longing -->
 	</item>
+	<item one="37717" two="37717" chance="3"> <!-- Talisman - Seven Signs / Talisman - Seven Signs -->
+		<reward id="80959" count="1" type="ON_SUCCESS" /> <!-- Epic Talisman -->
+		<reward id="37717" count="1" type="ON_FAILURE" /> <!-- Talisman - Seven Signs -->
+	</item>
 	<item one="38162" two="38162" chance="50"> <!-- Agathion - Twinkling Virgo / Agathion - Twinkling Virgo -->
 		<reward id="38161" count="1" type="ON_SUCCESS" /> <!-- Agathion - Blessed Virgo -->
 		<reward id="38162" count="1" type="ON_FAILURE" /> <!-- Agathion - Twinkling Virgo -->
@@ -3180,17 +3184,33 @@
 		<reward id="38851" count="1" type="ON_SUCCESS" /> <!-- Topaz Lv. 2 -->
 		<reward id="38850" count="1" type="ON_FAILURE" /> <!-- Topaz Lv. 1 -->
 	</item>
+	<item one="38850" two="48831" chance="33"> <!-- Topaz Lv. 1 / Jewel Energy -->
+		<reward id="38851" count="1" type="ON_SUCCESS" /> <!-- Topaz Lv. 2 -->
+		<reward id="38850" count="1" type="ON_FAILURE" /> <!-- Topaz Lv. 1 -->
+	</item>
 	<item one="38851" two="38851" chance="33"> <!-- Topaz Lv. 2 / Topaz Lv. 2 -->
 		<reward id="38852" count="1" type="ON_SUCCESS" /> <!-- Topaz Lv. 3 -->
 		<reward id="38851" count="1" type="ON_FAILURE" /> <!-- Topaz Lv. 2 -->
+	</item>
+	<item one="38851" two="48831" chance="33"> <!-- Topaz Lv. 2 / Jewel Energy -->
+		<reward id="38852" count="1" type="ON_SUCCESS" /> <!-- Topaz Lv. 3 -->
+		<reward id="38850" count="1" type="ON_FAILURE" /> <!-- Topaz Lv. 1 -->
 	</item>
 	<item one="38852" two="38852" chance="33"> <!-- Topaz Lv. 3 / Topaz Lv. 3 -->
 		<reward id="38853" count="1" type="ON_SUCCESS" /> <!-- Topaz Lv. 4 -->
 		<reward id="38852" count="1" type="ON_FAILURE" /> <!-- Topaz Lv. 3 -->
 	</item>
+	<item one="38852" two="48831" chance="33"> <!-- Topaz Lv. 3 / Jewel Energy -->
+		<reward id="38853" count="1" type="ON_SUCCESS" /> <!-- Topaz Lv. 4 -->
+		<reward id="38850" count="1" type="ON_FAILURE" /> <!-- Topaz Lv. 1 -->
+	</item>
 	<item one="38853" two="38853" chance="33"> <!-- Topaz Lv. 4 / Topaz Lv. 4 -->
 		<reward id="38854" count="1" type="ON_SUCCESS" /> <!-- Topaz Lv. 5 -->
 		<reward id="38853" count="1" type="ON_FAILURE" /> <!-- Topaz Lv. 4 -->
+	</item>
+	<item one="38853" two="48831" chance="33"> <!-- Topaz Lv. 4 / Jewel Energy -->
+		<reward id="38854" count="1" type="ON_SUCCESS" /> <!-- Topaz Lv. 5 -->
+		<reward id="38850" count="1" type="ON_FAILURE" /> <!-- Topaz Lv. 1 -->
 	</item>
 	<item one="38854" two="29469" chance="33"> <!-- Topaz Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47687" count="1" type="ON_SUCCESS" /> <!-- Greater Topaz Lv. 1 -->
@@ -3208,17 +3228,33 @@
 		<reward id="38856" count="1" type="ON_SUCCESS" /> <!-- Ruby Lv. 2 -->
 		<reward id="38855" count="1" type="ON_FAILURE" /> <!-- Ruby Lv. 1 -->
 	</item>
+	<item one="38855" two="48831" chance="33"> <!-- Ruby Lv. 1 / Jewel Energy -->
+		<reward id="38856" count="1" type="ON_SUCCESS" /> <!-- Ruby Lv. 2 -->
+		<reward id="38855" count="1" type="ON_FAILURE" /> <!-- Ruby Lv. 1 -->
+	</item>
 	<item one="38856" two="38856" chance="33"> <!-- Ruby Lv. 2 / Ruby Lv. 2 -->
 		<reward id="38857" count="1" type="ON_SUCCESS" /> <!-- Ruby Lv. 3 -->
 		<reward id="38856" count="1" type="ON_FAILURE" /> <!-- Ruby Lv. 2 -->
+	</item>
+	<item one="38856" two="48831" chance="33"> <!-- Ruby Lv. 2 / Jewel Energy -->
+		<reward id="38857" count="1" type="ON_SUCCESS" /> <!-- Ruby Lv. 3 -->
+		<reward id="38855" count="1" type="ON_FAILURE" /> <!-- Ruby Lv. 1 -->
 	</item>
 	<item one="38857" two="38857" chance="33"> <!-- Ruby Lv. 3 / Ruby Lv. 3 -->
 		<reward id="38858" count="1" type="ON_SUCCESS" /> <!-- Ruby Lv. 4 -->
 		<reward id="38857" count="1" type="ON_FAILURE" /> <!-- Ruby Lv. 3 -->
 	</item>
+	<item one="38857" two="48831" chance="33"> <!-- Ruby Lv. 3 / Jewel Energy -->
+		<reward id="38858" count="1" type="ON_SUCCESS" /> <!-- Ruby Lv. 4 -->
+		<reward id="38855" count="1" type="ON_FAILURE" /> <!-- Ruby Lv. 1 -->
+	</item>
 	<item one="38858" two="38858" chance="33"> <!-- Ruby Lv. 4 / Ruby Lv. 4 -->
 		<reward id="38859" count="1" type="ON_SUCCESS" /> <!-- Ruby Lv. 5 -->
 		<reward id="38858" count="1" type="ON_FAILURE" /> <!-- Ruby Lv. 4 -->
+	</item>
+	<item one="38858" two="48831" chance="33"> <!-- Ruby Lv. 4 / Jewel Energy -->
+		<reward id="38859" count="1" type="ON_SUCCESS" /> <!-- Ruby Lv. 5 -->
+		<reward id="38855" count="1" type="ON_FAILURE" /> <!-- Ruby Lv. 1 -->
 	</item>
 	<item one="38859" two="29469" chance="33"> <!-- Ruby Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47688" count="1" type="ON_SUCCESS" /> <!-- Greater Ruby Lv. 1 -->
@@ -3268,17 +3304,33 @@
 		<reward id="38871" count="1" type="ON_SUCCESS" /> <!-- Obsidian Lv. 2 -->
 		<reward id="38870" count="1" type="ON_FAILURE" /> <!-- Obsidian Lv. 1 -->
 	</item>
+	<item one="38870" two="48831" chance="33"> <!-- Obsidian Lv. 1 / Jewel Energy -->
+		<reward id="38871" count="1" type="ON_SUCCESS" /> <!-- Obsidian Lv. 2 -->
+		<reward id="38870" count="1" type="ON_FAILURE" /> <!-- Obsidian Lv. 1 -->
+	</item>
 	<item one="38871" two="38871" chance="33"> <!-- Obsidian Lv. 2 / Obsidian Lv. 2 -->
 		<reward id="38872" count="1" type="ON_SUCCESS" /> <!-- Obsidian Lv. 3 -->
 		<reward id="38871" count="1" type="ON_FAILURE" /> <!-- Obsidian Lv. 2 -->
+	</item>
+	<item one="38871" two="48831" chance="33"> <!-- Obsidian Lv. 2 / Jewel Energy -->
+		<reward id="38872" count="1" type="ON_SUCCESS" /> <!-- Obsidian Lv. 3 -->
+		<reward id="38870" count="1" type="ON_FAILURE" /> <!-- Obsidian Lv. 1 -->
 	</item>
 	<item one="38872" two="38872" chance="33"> <!-- Obsidian Lv. 3 / Obsidian Lv. 3 -->
 		<reward id="38873" count="1" type="ON_SUCCESS" /> <!-- Obsidian Lv. 4 -->
 		<reward id="38872" count="1" type="ON_FAILURE" /> <!-- Obsidian Lv. 3 -->
 	</item>
+	<item one="38872" two="48831" chance="33"> <!-- Obsidian Lv. 3 / Jewel Energy -->
+		<reward id="38873" count="1" type="ON_SUCCESS" /> <!-- Obsidian Lv. 4 -->
+		<reward id="38870" count="1" type="ON_FAILURE" /> <!-- Obsidian Lv. 1 -->
+	</item>
 	<item one="38873" two="38873" chance="33"> <!-- Obsidian Lv. 4 / Obsidian Lv. 4 -->
 		<reward id="38874" count="1" type="ON_SUCCESS" /> <!-- Obsidian Lv. 5 -->
 		<reward id="38873" count="1" type="ON_FAILURE" /> <!-- Obsidian Lv. 4 -->
+	</item>
+	<item one="38873" two="48831" chance="33"> <!-- Obsidian Lv. 4 / Jewel Energy -->
+		<reward id="38874" count="1" type="ON_SUCCESS" /> <!-- Obsidian Lv. 5 -->
+		<reward id="38870" count="1" type="ON_FAILURE" /> <!-- Obsidian Lv. 1 -->
 	</item>
 	<item one="38874" two="29469" chance="33"> <!-- Obsidian Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47690" count="1" type="ON_SUCCESS" /> <!-- Greater Obsidian Lv. 1 -->
@@ -3296,17 +3348,33 @@
 		<reward id="38876" count="1" type="ON_SUCCESS" /> <!-- Opal Lv. 2 -->
 		<reward id="38875" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 1 -->
 	</item>
+	<item one="38875" two="48831" chance="33"> <!-- Opal Lv. 1 / Jewel Energy -->
+		<reward id="38876" count="1" type="ON_SUCCESS" /> <!-- Opal Lv. 2 -->
+		<reward id="38875" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 1 -->
+	</item>
 	<item one="38876" two="38876" chance="33"> <!-- Opal Lv. 2 / Opal Lv. 2 -->
 		<reward id="38877" count="1" type="ON_SUCCESS" /> <!-- Opal Lv. 3 -->
 		<reward id="38876" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 2 -->
+	</item>
+	<item one="38876" two="48831" chance="33"> <!-- Opal Lv. 2 / Jewel Energy -->
+		<reward id="38877" count="1" type="ON_SUCCESS" /> <!-- Opal Lv. 3 -->
+		<reward id="38875" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 1 -->
 	</item>
 	<item one="38877" two="38877" chance="33"> <!-- Opal Lv. 3 / Opal Lv. 3 -->
 		<reward id="38878" count="1" type="ON_SUCCESS" /> <!-- Opal Lv. 4 -->
 		<reward id="38877" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 3 -->
 	</item>
+	<item one="38877" two="48831" chance="33"> <!-- Opal Lv. 3 / Jewel Energy -->
+		<reward id="38878" count="1" type="ON_SUCCESS" /> <!-- Opal Lv. 4 -->
+		<reward id="38875" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 1 -->
+	</item>
 	<item one="38878" two="38878" chance="33"> <!-- Opal Lv. 4 / Opal Lv. 4 -->
 		<reward id="38879" count="1" type="ON_SUCCESS" /> <!-- Opal Lv. 5 -->
 		<reward id="38878" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 4 -->
+	</item>
+	<item one="38878" two="48831" chance="33"> <!-- Opal Lv. 4 / Jewel Energy -->
+		<reward id="38879" count="1" type="ON_SUCCESS" /> <!-- Opal Lv. 5 -->
+		<reward id="38875" count="1" type="ON_FAILURE" /> <!-- Opal Lv. 1 -->
 	</item>
 	<item one="38879" two="29469" chance="33"> <!-- Opal Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47691" count="1" type="ON_SUCCESS" /> <!-- Greater Opal Lv. 1 -->
@@ -3324,17 +3392,33 @@
 		<reward id="38881" count="1" type="ON_SUCCESS" /> <!-- Emerald Lv. 2 -->
 		<reward id="38880" count="1" type="ON_FAILURE" /> <!-- Emerald Lv. 1 -->
 	</item>
+	<item one="38880" two="48831" chance="33"> <!-- Emerald Lv. 1 / Jewel Energy -->
+		<reward id="38881" count="1" type="ON_SUCCESS" /> <!-- Emerald Lv. 2 -->
+		<reward id="38880" count="1" type="ON_FAILURE" /> <!-- Emerald Lv. 1 -->
+	</item>
 	<item one="38881" two="38881" chance="33"> <!-- Emerald Lv. 2 / Emerald Lv. 2 -->
 		<reward id="38882" count="1" type="ON_SUCCESS" /> <!-- Emerald Lv. 3 -->
 		<reward id="38881" count="1" type="ON_FAILURE" /> <!-- Emerald Lv. 2 -->
+	</item>
+	<item one="38881" two="48831" chance="33"> <!-- Emerald Lv. 2 / Jewel Energy -->
+		<reward id="38882" count="1" type="ON_SUCCESS" /> <!-- Emerald Lv. 3 -->
+		<reward id="38880" count="1" type="ON_FAILURE" /> <!-- Emerald Lv. 1 -->
 	</item>
 	<item one="38882" two="38882" chance="33"> <!-- Emerald Lv. 3 / Emerald Lv. 3 -->
 		<reward id="38883" count="1" type="ON_SUCCESS" /> <!-- Emerald Lv. 4 -->
 		<reward id="38882" count="1" type="ON_FAILURE" /> <!-- Emerald Lv. 3 -->
 	</item>
+	<item one="38882" two="48831" chance="33"> <!-- Emerald Lv. 3 / Jewel Energy -->
+		<reward id="38883" count="1" type="ON_SUCCESS" /> <!-- Emerald Lv. 4 -->
+		<reward id="38880" count="1" type="ON_FAILURE" /> <!-- Emerald Lv. 1 -->
+	</item>
 	<item one="38883" two="38883" chance="33"> <!-- Emerald Lv. 4 / Emerald Lv. 4 -->
 		<reward id="38884" count="1" type="ON_SUCCESS" /> <!-- Emerald Lv. 5 -->
 		<reward id="38883" count="1" type="ON_FAILURE" /> <!-- Emerald Lv. 4 -->
+	</item>
+	<item one="38883" two="48831" chance="33"> <!-- Emerald Lv. 4 / Jewel Energy -->
+		<reward id="38884" count="1" type="ON_SUCCESS" /> <!-- Emerald Lv. 5 -->
+		<reward id="38880" count="1" type="ON_FAILURE" /> <!-- Emerald Lv. 1 -->
 	</item>
 	<item one="38884" two="29469" chance="33"> <!-- Emerald Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47692" count="1" type="ON_SUCCESS" /> <!-- Greater Emerald Lv. 1 -->
@@ -3352,17 +3436,33 @@
 		<reward id="38886" count="1" type="ON_SUCCESS" /> <!-- Aquamarine Lv. 2 -->
 		<reward id="38885" count="1" type="ON_FAILURE" /> <!-- Aquamarine Lv. 1 -->
 	</item>
+	<item one="38885" two="48831" chance="33"> <!-- Aquamarine Lv. 1 / Jewel Energy -->
+		<reward id="38886" count="1" type="ON_SUCCESS" /> <!-- Aquamarine Lv. 2 -->
+		<reward id="38885" count="1" type="ON_FAILURE" /> <!-- Aquamarine Lv. 1 -->
+	</item>
 	<item one="38886" two="38886" chance="33"> <!-- Aquamarine Lv. 2 / Aquamarine Lv. 2 -->
 		<reward id="38887" count="1" type="ON_SUCCESS" /> <!-- Aquamarine Lv. 3 -->
 		<reward id="38886" count="1" type="ON_FAILURE" /> <!-- Aquamarine Lv. 2 -->
+	</item>
+	<item one="38886" two="48831" chance="33"> <!-- Aquamarine Lv. 2 / Jewel Energy -->
+		<reward id="38887" count="1" type="ON_SUCCESS" /> <!-- Aquamarine Lv. 3 -->
+		<reward id="38885" count="1" type="ON_FAILURE" /> <!-- Aquamarine Lv. 1 -->
 	</item>
 	<item one="38887" two="38887" chance="33"> <!-- Aquamarine Lv. 3 / Aquamarine Lv. 3 -->
 		<reward id="38888" count="1" type="ON_SUCCESS" /> <!-- Aquamarine Lv. 4 -->
 		<reward id="38887" count="1" type="ON_FAILURE" /> <!-- Aquamarine Lv. 3 -->
 	</item>
+	<item one="38887" two="48831" chance="33"> <!-- Aquamarine Lv. 3 / Jewel Energy -->
+		<reward id="38888" count="1" type="ON_SUCCESS" /> <!-- Aquamarine Lv. 4 -->
+		<reward id="38885" count="1" type="ON_FAILURE" /> <!-- Aquamarine Lv. 1 -->
+	</item>
 	<item one="38888" two="38888" chance="33"> <!-- Aquamarine Lv. 4 / Aquamarine Lv. 4 -->
 		<reward id="38889" count="1" type="ON_SUCCESS" /> <!-- Aquamarine Lv. 5 -->
 		<reward id="38888" count="1" type="ON_FAILURE" /> <!-- Aquamarine Lv. 4 -->
+	</item>
+	<item one="38888" two="48831" chance="33"> <!-- Aquamarine Lv. 4 / Jewel Energy -->
+		<reward id="38889" count="1" type="ON_SUCCESS" /> <!-- Aquamarine Lv. 5 -->
+		<reward id="38885" count="1" type="ON_FAILURE" /> <!-- Aquamarine Lv. 1 -->
 	</item>
 	<item one="38889" two="29469" chance="33"> <!-- Aquamarine Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47693" count="1" type="ON_SUCCESS" /> <!-- Greater Aquamarine Lv. 1 -->
@@ -3380,17 +3480,33 @@
 		<reward id="38891" count="1" type="ON_SUCCESS" /> <!-- Diamond Lv. 2 -->
 		<reward id="38890" count="1" type="ON_FAILURE" /> <!-- Diamond Lv. 1 -->
 	</item>
+	<item one="38890" two="48831" chance="33"> <!-- Diamond Lv. 1 / Jewel Energy -->
+		<reward id="38891" count="1" type="ON_SUCCESS" /> <!-- Diamond Lv. 2 -->
+		<reward id="38890" count="1" type="ON_FAILURE" /> <!-- Diamond Lv. 1 -->
+	</item>
 	<item one="38891" two="38891" chance="33"> <!-- Diamond Lv. 2 / Diamond Lv. 2 -->
 		<reward id="38892" count="1" type="ON_SUCCESS" /> <!-- Diamond Lv. 3 -->
 		<reward id="38891" count="1" type="ON_FAILURE" /> <!-- Diamond Lv. 2 -->
+	</item>
+	<item one="38891" two="48831" chance="33"> <!-- Diamond Lv. 2 / Jewel Energy -->
+		<reward id="38892" count="1" type="ON_SUCCESS" /> <!-- Diamond Lv. 3 -->
+		<reward id="38890" count="1" type="ON_FAILURE" /> <!-- Diamond Lv. 1 -->
 	</item>
 	<item one="38892" two="38892" chance="33"> <!-- Diamond Lv. 3 / Diamond Lv. 3 -->
 		<reward id="38893" count="1" type="ON_SUCCESS" /> <!-- Diamond Lv. 4 -->
 		<reward id="38892" count="1" type="ON_FAILURE" /> <!-- Diamond Lv. 3 -->
 	</item>
+	<item one="38892" two="48831" chance="33"> <!-- Diamond Lv. 3 / Jewel Energy -->
+		<reward id="38893" count="1" type="ON_SUCCESS" /> <!-- Diamond Lv. 4 -->
+		<reward id="38890" count="1" type="ON_FAILURE" /> <!-- Diamond Lv. 1 -->
+	</item>
 	<item one="38893" two="38893" chance="33"> <!-- Diamond Lv. 4 / Diamond Lv. 4 -->
 		<reward id="38894" count="1" type="ON_SUCCESS" /> <!-- Diamond Lv. 5 -->
 		<reward id="38893" count="1" type="ON_FAILURE" /> <!-- Diamond Lv. 4 -->
+	</item>
+	<item one="38893" two="48831" chance="33"> <!-- Diamond Lv. 4 / Jewel Energy -->
+		<reward id="38894" count="1" type="ON_SUCCESS" /> <!-- Diamond Lv. 5 -->
+		<reward id="38890" count="1" type="ON_FAILURE" /> <!-- Diamond Lv. 1 -->
 	</item>
 	<item one="38894" two="29469" chance="33"> <!-- Diamond Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47694" count="1" type="ON_SUCCESS" /> <!-- Greater Diamond Lv. 1 -->
@@ -3408,17 +3524,33 @@
 		<reward id="38896" count="1" type="ON_SUCCESS" /> <!-- Pearl Lv. 2 -->
 		<reward id="38895" count="1" type="ON_FAILURE" /> <!-- Pearl Lv. 1 -->
 	</item>
+	<item one="38895" two="48831" chance="33"> <!-- Pearl Lv. 1 / Jewel Energy -->
+		<reward id="38896" count="1" type="ON_SUCCESS" /> <!-- Pearl Lv. 2 -->
+		<reward id="38895" count="1" type="ON_FAILURE" /> <!-- Pearl Lv. 1 -->
+	</item>
 	<item one="38896" two="38896" chance="33"> <!-- Pearl Lv. 2 / Pearl Lv. 2 -->
 		<reward id="38897" count="1" type="ON_SUCCESS" /> <!-- Pearl Lv. 3 -->
 		<reward id="38896" count="1" type="ON_FAILURE" /> <!-- Pearl Lv. 2 -->
+	</item>
+	<item one="38896" two="48831" chance="33"> <!-- Pearl Lv. 2 / Jewel Energy -->
+		<reward id="38897" count="1" type="ON_SUCCESS" /> <!-- Pearl Lv. 3 -->
+		<reward id="38895" count="1" type="ON_FAILURE" /> <!-- Pearl Lv. 1 -->
 	</item>
 	<item one="38897" two="38897" chance="33"> <!-- Pearl Lv. 3 / Pearl Lv. 3 -->
 		<reward id="38898" count="1" type="ON_SUCCESS" /> <!-- Pearl Lv. 4 -->
 		<reward id="38897" count="1" type="ON_FAILURE" /> <!-- Pearl Lv. 3 -->
 	</item>
+	<item one="38897" two="48831" chance="33"> <!-- Pearl Lv. 3 / Jewel Energy -->
+		<reward id="38898" count="1" type="ON_SUCCESS" /> <!-- Pearl Lv. 4 -->
+		<reward id="38895" count="1" type="ON_FAILURE" /> <!-- Pearl Lv. 1 -->
+	</item>
 	<item one="38898" two="38898" chance="33"> <!-- Pearl Lv. 4 / Pearl Lv. 4 -->
 		<reward id="38899" count="1" type="ON_SUCCESS" /> <!-- Pearl Lv. 5 -->
 		<reward id="38898" count="1" type="ON_FAILURE" /> <!-- Pearl Lv. 4 -->
+	</item>
+	<item one="38898" two="48831" chance="33"> <!-- Pearl Lv. 4 / Jewel Energy -->
+		<reward id="38899" count="1" type="ON_SUCCESS" /> <!-- Pearl Lv. 5 -->
+		<reward id="38895" count="1" type="ON_FAILURE" /> <!-- Pearl Lv. 1 -->
 	</item>
 	<item one="38899" two="29469" chance="33"> <!-- Pearl Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47695" count="1" type="ON_SUCCESS" /> <!-- Greater Pearl Lv. 1 -->
@@ -3436,17 +3568,33 @@
 		<reward id="38928" count="1" type="ON_SUCCESS" /> <!-- Sapphire Lv. 2 -->
 		<reward id="38927" count="1" type="ON_FAILURE" /> <!-- Sapphire Lv. 1 -->
 	</item>
+	<item one="38927" two="48831" chance="33"> <!-- Sapphire Lv. 1 / Jewel Energy -->
+		<reward id="38928" count="1" type="ON_SUCCESS" /> <!-- Sapphire Lv. 2 -->
+		<reward id="38927" count="1" type="ON_FAILURE" /> <!-- Sapphire Lv. 1 -->
+	</item>
 	<item one="38928" two="38928" chance="33"> <!-- Sapphire Lv. 2 / Sapphire Lv. 2 -->
 		<reward id="38929" count="1" type="ON_SUCCESS" /> <!-- Sapphire Lv. 3 -->
 		<reward id="38928" count="1" type="ON_FAILURE" /> <!-- Sapphire Lv. 2 -->
+	</item>
+	<item one="38928" two="48831" chance="33"> <!-- Sapphire Lv. 2 / Jewel Energy -->
+		<reward id="38929" count="1" type="ON_SUCCESS" /> <!-- Sapphire Lv. 3 -->
+		<reward id="38927" count="1" type="ON_FAILURE" /> <!-- Sapphire Lv. 1 -->
 	</item>
 	<item one="38929" two="38929" chance="33"> <!-- Sapphire Lv. 3 / Sapphire Lv. 3 -->
 		<reward id="38930" count="1" type="ON_SUCCESS" /> <!-- Sapphire Lv. 4 -->
 		<reward id="38929" count="1" type="ON_FAILURE" /> <!-- Sapphire Lv. 3 -->
 	</item>
+	<item one="38929" two="48831" chance="33"> <!-- Sapphire Lv. 3 / Jewel Energy -->
+		<reward id="38930" count="1" type="ON_SUCCESS" /> <!-- Sapphire Lv. 4 -->
+		<reward id="38927" count="1" type="ON_FAILURE" /> <!-- Sapphire Lv. 1 -->
+	</item>
 	<item one="38930" two="38930" chance="33"> <!-- Sapphire Lv. 4 / Sapphire Lv. 4 -->
 		<reward id="38931" count="1" type="ON_SUCCESS" /> <!-- Sapphire Lv. 5 -->
 		<reward id="38930" count="1" type="ON_FAILURE" /> <!-- Sapphire Lv. 4 -->
+	</item>
+	<item one="38930" two="48831" chance="33"> <!-- Sapphire Lv. 4 / Jewel Energy -->
+		<reward id="38931" count="1" type="ON_SUCCESS" /> <!-- Sapphire Lv. 5 -->
+		<reward id="38927" count="1" type="ON_FAILURE" /> <!-- Sapphire Lv. 1 -->
 	</item>
 	<item one="38931" two="29469" chance="33"> <!-- Sapphire Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47689" count="1" type="ON_SUCCESS" /> <!-- Greater Sapphire Lv. 1 -->
@@ -3459,6 +3607,10 @@
 	<item one="38931" two="48597" chance="33"> <!-- Sapphire Lv. 5 / Energy of Sapphire -->
 		<reward id="47689" count="1" type="ON_SUCCESS" /> <!-- Greater Sapphire Lv. 1 -->
 		<reward id="38931" count="1" type="ON_FAILURE" /> <!-- Sapphire Lv. 5 -->
+	</item>
+	<item one="39572" two="39572" chance="3"> <!-- Talisman - Insanity / Talisman - Insanity -->
+		<reward id="80957" count="1" type="ON_SUCCESS" /> <!-- Heavenly Talisman -->
+		<reward id="39572" count="1" type="ON_FAILURE" /> <!-- Talisman - Insanity -->
 	</item>
 	<item one="39634" two="39634" chance="71"> <!-- Venir's Talisman Lv. 1 / Venir's Talisman Lv. 1 -->
 		<reward id="39635" count="1" type="ON_SUCCESS" /> <!-- Venir's Talisman Lv. 2 -->
@@ -4656,17 +4808,33 @@
 		<reward id="46671" count="1" type="ON_SUCCESS" /> <!-- Vital Stone Lv. 2 -->
 		<reward id="46670" count="1" type="ON_FAILURE" /> <!-- Vital Stone Lv. 1 -->
 	</item>
+	<item one="46670" two="48831" chance="33"> <!-- Vital Stone Lv. 1 / Jewel Energy -->
+		<reward id="46671" count="1" type="ON_SUCCESS" /> <!-- Vital Stone Lv. 2 -->
+		<reward id="46670" count="1" type="ON_FAILURE" /> <!-- Vital Stone Lv. 1 -->
+	</item>
 	<item one="46671" two="46671" chance="33"> <!-- Vital Stone Lv. 2 / Vital Stone Lv. 2 -->
 		<reward id="46672" count="1" type="ON_SUCCESS" /> <!-- Vital Stone Lv. 3 -->
 		<reward id="46671" count="1" type="ON_FAILURE" /> <!-- Vital Stone Lv. 2 -->
+	</item>
+	<item one="46671" two="48831" chance="33"> <!-- Vital Stone Lv. 2 / Jewel Energy -->
+		<reward id="46672" count="1" type="ON_SUCCESS" /> <!-- Vital Stone Lv. 3 -->
+		<reward id="46670" count="1" type="ON_FAILURE" /> <!-- Vital Stone Lv. 1 -->
 	</item>
 	<item one="46672" two="46672" chance="33"> <!-- Vital Stone Lv. 3 / Vital Stone Lv. 3 -->
 		<reward id="46673" count="1" type="ON_SUCCESS" /> <!-- Vital Stone Lv. 4 -->
 		<reward id="46672" count="1" type="ON_FAILURE" /> <!-- Vital Stone Lv. 3 -->
 	</item>
+	<item one="46672" two="48831" chance="33"> <!-- Vital Stone Lv. 3 / Jewel Energy -->
+		<reward id="46673" count="1" type="ON_SUCCESS" /> <!-- Vital Stone Lv. 4 -->
+		<reward id="46670" count="1" type="ON_FAILURE" /> <!-- Vital Stone Lv. 1 -->
+	</item>
 	<item one="46673" two="46673" chance="33"> <!-- Vital Stone Lv. 4 / Vital Stone Lv. 4 -->
 		<reward id="46674" count="1" type="ON_SUCCESS" /> <!-- Vital Stone Lv. 5 -->
 		<reward id="46673" count="1" type="ON_FAILURE" /> <!-- Vital Stone Lv. 4 -->
+	</item>
+	<item one="46673" two="48831" chance="33"> <!-- Vital Stone Lv. 4 / Jewel Energy -->
+		<reward id="46674" count="1" type="ON_SUCCESS" /> <!-- Vital Stone Lv. 5 -->
+		<reward id="46670" count="1" type="ON_FAILURE" /> <!-- Vital Stone Lv. 1 -->
 	</item>
 	<item one="46674" two="46674" chance="100"> <!-- Vital Stone Lv. 5 / Vital Stone Lv. 5 -->
 		<reward id="47696" count="1" type="ON_SUCCESS" /> <!-- Greater Vital Stone Lv. 1 -->
@@ -4680,17 +4848,33 @@
 		<reward id="46676" count="1" type="ON_SUCCESS" /> <!-- Garnet Lv. 2 -->
 		<reward id="46675" count="1" type="ON_FAILURE" /> <!-- Garnet Lv. 1 -->
 	</item>
+	<item one="46675" two="48831" chance="33"> <!-- Garnet Lv. 1 / Jewel Energy -->
+		<reward id="46676" count="1" type="ON_SUCCESS" /> <!-- Garnet Lv. 2 -->
+		<reward id="46675" count="1" type="ON_FAILURE" /> <!-- Garnet Lv. 1 -->
+	</item>
 	<item one="46676" two="46676" chance="33"> <!-- Garnet Lv. 2 / Garnet Lv. 2 -->
 		<reward id="46677" count="1" type="ON_SUCCESS" /> <!-- Garnet Lv. 3 -->
 		<reward id="46676" count="1" type="ON_FAILURE" /> <!-- Garnet Lv. 2 -->
+	</item>
+	<item one="46676" two="48831" chance="33"> <!-- Garnet Lv. 2 / Jewel Energy -->
+		<reward id="46677" count="1" type="ON_SUCCESS" /> <!-- Garnet Lv. 3 -->
+		<reward id="46675" count="1" type="ON_FAILURE" /> <!-- Garnet Lv. 1 -->
 	</item>
 	<item one="46677" two="46677" chance="33"> <!-- Garnet Lv. 3 / Garnet Lv. 3 -->
 		<reward id="46678" count="1" type="ON_SUCCESS" /> <!-- Garnet Lv. 4 -->
 		<reward id="46677" count="1" type="ON_FAILURE" /> <!-- Garnet Lv. 3 -->
 	</item>
+	<item one="46677" two="48831" chance="33"> <!-- Garnet Lv. 3 / Jewel Energy -->
+		<reward id="46678" count="1" type="ON_SUCCESS" /> <!-- Garnet Lv. 4 -->
+		<reward id="46675" count="1" type="ON_FAILURE" /> <!-- Garnet Lv. 1 -->
+	</item>
 	<item one="46678" two="46678" chance="33"> <!-- Garnet Lv. 4 / Garnet Lv. 4 -->
 		<reward id="46679" count="1" type="ON_SUCCESS" /> <!-- Garnet Lv. 5 -->
 		<reward id="46678" count="1" type="ON_FAILURE" /> <!-- Garnet Lv. 4 -->
+	</item>
+	<item one="46678" two="48831" chance="33"> <!-- Garnet Lv. 4 / Jewel Energy -->
+		<reward id="46679" count="1" type="ON_SUCCESS" /> <!-- Garnet Lv. 5 -->
+		<reward id="46675" count="1" type="ON_FAILURE" /> <!-- Garnet Lv. 1 -->
 	</item>
 	<item one="46679" two="46679" chance="100"> <!-- Garnet Lv. 5 / Garnet Lv. 5 -->
 		<reward id="47697" count="1" type="ON_SUCCESS" /> <!-- Greater Garnet Lv. 1 -->
@@ -4704,17 +4888,33 @@
 		<reward id="46681" count="1" type="ON_SUCCESS" /> <!-- Tanzanite Lv. 2 -->
 		<reward id="46680" count="1" type="ON_FAILURE" /> <!-- Tanzanite Lv. 1 -->
 	</item>
+	<item one="46680" two="48831" chance="33"> <!-- Tanzanite Lv. 1 / Jewel Energy -->
+		<reward id="46681" count="1" type="ON_SUCCESS" /> <!-- Tanzanite Lv. 2 -->
+		<reward id="46680" count="1" type="ON_FAILURE" /> <!-- Tanzanite Lv. 1 -->
+	</item>
 	<item one="46681" two="46681" chance="33"> <!-- Tanzanite Lv. 2 / Tanzanite Lv. 2 -->
 		<reward id="46682" count="1" type="ON_SUCCESS" /> <!-- Tanzanite Lv. 3 -->
 		<reward id="46681" count="1" type="ON_FAILURE" /> <!-- Tanzanite Lv. 2 -->
+	</item>
+	<item one="46681" two="48831" chance="33"> <!-- Tanzanite Lv. 2 / Jewel Energy -->
+		<reward id="46682" count="1" type="ON_SUCCESS" /> <!-- Tanzanite Lv. 3 -->
+		<reward id="46680" count="1" type="ON_FAILURE" /> <!-- Tanzanite Lv. 1 -->
 	</item>
 	<item one="46682" two="46682" chance="33"> <!-- Tanzanite Lv. 3 / Tanzanite Lv. 3 -->
 		<reward id="46683" count="1" type="ON_SUCCESS" /> <!-- Tanzanite Lv. 4 -->
 		<reward id="46682" count="1" type="ON_FAILURE" /> <!-- Tanzanite Lv. 3 -->
 	</item>
+	<item one="46682" two="48831" chance="33"> <!-- Tanzanite Lv. 3 / Jewel Energy -->
+		<reward id="46683" count="1" type="ON_SUCCESS" /> <!-- Tanzanite Lv. 4 -->
+		<reward id="46680" count="1" type="ON_FAILURE" /> <!-- Tanzanite Lv. 1 -->
+	</item>
 	<item one="46683" two="46683" chance="33"> <!-- Tanzanite Lv. 4 / Tanzanite Lv. 4 -->
 		<reward id="46684" count="1" type="ON_SUCCESS" /> <!-- Tanzanite Lv. 5 -->
 		<reward id="46683" count="1" type="ON_FAILURE" /> <!-- Tanzanite Lv. 4 -->
+	</item>
+	<item one="46683" two="48831" chance="33"> <!-- Tanzanite Lv. 4 / Jewel Energy -->
+		<reward id="46684" count="1" type="ON_SUCCESS" /> <!-- Tanzanite Lv. 5 -->
+		<reward id="46680" count="1" type="ON_FAILURE" /> <!-- Tanzanite Lv. 1 -->
 	</item>
 	<item one="46684" two="46684" chance="100"> <!-- Tanzanite Lv. 5 / Tanzanite Lv. 5 -->
 		<reward id="47698" count="1" type="ON_SUCCESS" /> <!-- Greater Tanzanite Lv. 1 -->
@@ -5064,17 +5264,33 @@
 		<reward id="47678" count="1" type="ON_SUCCESS" /> <!-- Red Cat's Eye Lv. 2 -->
 		<reward id="47677" count="1" type="ON_FAILURE" /> <!-- Red Cat's Eye Lv. 1 -->
 	</item>
+	<item one="47677" two="48831" chance="33"> <!-- Red Cat's Eye Lv. 1 / Jewel Energy -->
+		<reward id="47678" count="1" type="ON_SUCCESS" /> <!-- Red Cat's Eye Lv. 2 -->
+		<reward id="47677" count="1" type="ON_FAILURE" /> <!-- Red Cat's Eye Lv. 1 -->
+	</item>
 	<item one="47678" two="47678" chance="33"> <!-- Red Cat's Eye Lv. 2 / Red Cat's Eye Lv. 2 -->
 		<reward id="47679" count="1" type="ON_SUCCESS" /> <!-- Red Cat's Eye Lv. 3 -->
 		<reward id="47678" count="1" type="ON_FAILURE" /> <!-- Red Cat's Eye Lv. 2 -->
+	</item>
+	<item one="47678" two="48831" chance="33"> <!-- Red Cat's Eye Lv. 2 / Jewel Energy -->
+		<reward id="47679" count="1" type="ON_SUCCESS" /> <!-- Red Cat's Eye Lv. 3 -->
+		<reward id="47677" count="1" type="ON_FAILURE" /> <!-- Red Cat's Eye Lv. 1 -->
 	</item>
 	<item one="47679" two="47679" chance="33"> <!-- Red Cat's Eye Lv. 3 / Red Cat's Eye Lv. 3 -->
 		<reward id="47680" count="1" type="ON_SUCCESS" /> <!-- Red Cat's Eye Lv. 4 -->
 		<reward id="47679" count="1" type="ON_FAILURE" /> <!-- Red Cat's Eye Lv. 3 -->
 	</item>
+	<item one="47679" two="48831" chance="33"> <!-- Red Cat's Eye Lv. 3 / Jewel Energy -->
+		<reward id="47680" count="1" type="ON_SUCCESS" /> <!-- Red Cat's Eye Lv. 4 -->
+		<reward id="47677" count="1" type="ON_FAILURE" /> <!-- Red Cat's Eye Lv. 1 -->
+	</item>
 	<item one="47680" two="47680" chance="33"> <!-- Red Cat's Eye Lv. 4 / Red Cat's Eye Lv. 4 -->
 		<reward id="47681" count="1" type="ON_SUCCESS" /> <!-- Red Cat's Eye Lv. 5 -->
 		<reward id="47680" count="1" type="ON_FAILURE" /> <!-- Red Cat's Eye Lv. 4 -->
+	</item>
+	<item one="47680" two="48831" chance="33"> <!-- Red Cat's Eye Lv. 4 / Jewel Energy -->
+		<reward id="47681" count="1" type="ON_SUCCESS" /> <!-- Red Cat's Eye Lv. 5 -->
+		<reward id="47677" count="1" type="ON_FAILURE" /> <!-- Red Cat's Eye Lv. 1 -->
 	</item>
 	<item one="47681" two="29469" chance="33"> <!-- Red Cat's Eye Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47699" count="1" type="ON_SUCCESS" /> <!-- Greater Red Cat's Eye Lv. 1 -->
@@ -5092,17 +5308,33 @@
 		<reward id="47683" count="1" type="ON_SUCCESS" /> <!-- Blue Cat's Eye Lv. 2 -->
 		<reward id="47682" count="1" type="ON_FAILURE" /> <!-- Blue Cat's Eye Lv. 1 -->
 	</item>
+	<item one="47682" two="48831" chance="33"> <!-- Blue Cat's Eye Lv. 1 / Jewel Energy -->
+		<reward id="47683" count="1" type="ON_SUCCESS" /> <!-- Blue Cat's Eye Lv. 2 -->
+		<reward id="47682" count="1" type="ON_FAILURE" /> <!-- Blue Cat's Eye Lv. 1 -->
+	</item>
 	<item one="47683" two="47683" chance="33"> <!-- Blue Cat's Eye Lv. 2 / Blue Cat's Eye Lv. 2 -->
 		<reward id="47684" count="1" type="ON_SUCCESS" /> <!-- Blue Cat's Eye Lv. 3 -->
 		<reward id="47683" count="1" type="ON_FAILURE" /> <!-- Blue Cat's Eye Lv. 2 -->
+	</item>
+	<item one="47683" two="48831" chance="33"> <!-- Blue Cat's Eye Lv. 2 / Jewel Energy -->
+		<reward id="47684" count="1" type="ON_SUCCESS" /> <!-- Blue Cat's Eye Lv. 3 -->
+		<reward id="47682" count="1" type="ON_FAILURE" /> <!-- Blue Cat's Eye Lv. 1 -->
 	</item>
 	<item one="47684" two="47684" chance="33"> <!-- Blue Cat's Eye Lv. 3 / Blue Cat's Eye Lv. 3 -->
 		<reward id="47685" count="1" type="ON_SUCCESS" /> <!-- Blue Cat's Eye Lv. 4 -->
 		<reward id="47684" count="1" type="ON_FAILURE" /> <!-- Blue Cat's Eye Lv. 3 -->
 	</item>
+	<item one="47684" two="48831" chance="33"> <!-- Blue Cat's Eye Lv. 3 / Jewel Energy -->
+		<reward id="47685" count="1" type="ON_SUCCESS" /> <!-- Blue Cat's Eye Lv. 4 -->
+		<reward id="47682" count="1" type="ON_FAILURE" /> <!-- Blue Cat's Eye Lv. 1 -->
+	</item>
 	<item one="47685" two="47685" chance="33"> <!-- Blue Cat's Eye Lv. 4 / Blue Cat's Eye Lv. 4 -->
 		<reward id="47686" count="1" type="ON_SUCCESS" /> <!-- Blue Cat's Eye Lv. 5 -->
 		<reward id="47685" count="1" type="ON_FAILURE" /> <!-- Blue Cat's Eye Lv. 4 -->
+	</item>
+	<item one="47685" two="48831" chance="33"> <!-- Blue Cat's Eye Lv. 4 / Jewel Energy -->
+		<reward id="47686" count="1" type="ON_SUCCESS" /> <!-- Blue Cat's Eye Lv. 5 -->
+		<reward id="47682" count="1" type="ON_FAILURE" /> <!-- Blue Cat's Eye Lv. 1 -->
 	</item>
 	<item one="47686" two="29469" chance="33"> <!-- Blue Cat's Eye Lv. 5 / Shiny Gem's Energy -->
 		<reward id="47700" count="1" type="ON_SUCCESS" /> <!-- Greater Blue Cat's Eye Lv. 1 -->
@@ -5463,5 +5695,293 @@
 	<item one="48907" two="48909" chance="33"> <!-- Shillien's Soul Crystal Lv. 9 / Shillien's Soul -->
 		<reward id="48908" count="1" type="ON_SUCCESS" /> <!-- Shillien's Soul Crystal Lv. 10 -->
 		<reward id="48911" count="1" type="ON_FAILURE" /> <!-- Scattered Soul Fragment -->
+	</item>
+	<item one="80637" two="80964" chance="33"> <!-- Talisman of Protection Lv. 1 / Energy of Protection -->
+		<reward id="80638" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 2 -->
+		<reward id="80637" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 1 -->
+	</item>
+	<item one="80638" two="80964" chance="33"> <!-- Talisman of Protection Lv. 2 / Energy of Protection -->
+		<reward id="80639" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 3 -->
+		<reward id="80637" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 1 -->
+	</item>
+	<item one="80639" two="80964" chance="33"> <!-- Talisman of Protection Lv. 3 / Energy of Protection -->
+		<reward id="80640" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 4 -->
+		<reward id="80637" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 1 -->
+	</item>
+	<item one="80640" two="80964" chance="33"> <!-- Talisman of Protection Lv. 4 / Energy of Protection -->
+		<reward id="80641" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 5 -->
+		<reward id="80637" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 1 -->
+	</item>
+	<item one="80641" two="80964" chance="33"> <!-- Talisman of Protection Lv. 5 / Energy of Protection -->
+		<reward id="80642" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 6 -->
+		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
+	</item>
+	<item one="80642" two="80964" chance="33"> <!-- Talisman of Protection Lv. 6 / Energy of Protection -->
+		<reward id="80643" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 7 -->
+		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
+	</item>
+	<item one="80643" two="80964" chance="33"> <!-- Talisman of Protection Lv. 7 / Energy of Protection -->
+		<reward id="80644" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 8 -->
+		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
+	</item>
+	<item one="80644" two="80964" chance="33"> <!-- Talisman of Protection Lv. 8 / Energy of Protection -->
+		<reward id="80645" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 9 -->
+		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
+	</item>
+	<item one="80645" two="80964" chance="33"> <!-- Talisman of Protection Lv. 9 / Energy of Protection -->
+		<reward id="80646" count="1" type="ON_SUCCESS" /> <!-- Talisman of Protection Lv. 10 -->
+		<reward id="80641" count="1" type="ON_FAILURE" /> <!-- Talisman of Protection Lv. 5 -->
+	</item>
+	<item one="81055" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (P. Atk.) (STR +3, DEX +3) / Crystal of Dyes -->
+		<reward id="81056" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (P. Atk.) (STR +3, DEX +3, CHA +1) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81056" two="81134" chance="33"> <!-- Legendary Dye Lv. 2 (P. Atk.) (STR +3, DEX +3, CHA +1) / Crystal of Dyes -->
+		<reward id="81057" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 3 (P. Atk.) (STR +4, DEX +4, CHA +2) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81057" two="81134" chance="33"> <!-- Legendary Dye Lv. 3 (P. Atk.) (STR +4, DEX +4, CHA +2) / Crystal of Dyes -->
+		<reward id="81058" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 4 (P. Atk.) (STR +4, DEX +5, CHA +3) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81058" two="81134" chance="33"> <!-- Legendary Dye Lv. 4 (P. Atk.) (STR +4, DEX +5, CHA +3) / Crystal of Dyes -->
+		<reward id="81059" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 5 (P. Atk.) (STR +5, DEX +5, CHA +4) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81059" two="81134" chance="33"> <!-- Legendary Dye Lv. 5 (P. Atk.) (STR +5, DEX +5, CHA +4) / Crystal of Dyes -->
+		<reward id="81060" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 6 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81060" two="81134" chance="33"> <!-- Legendary Dye Lv. 6 (P. Atk.) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81061" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 7 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81061" two="81134" chance="33"> <!-- Legendary Dye Lv. 7 (P. Atk.) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81062" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81062" two="81134" chance="33"> <!-- Legendary Dye Lv. 8 (P. Atk.) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81063" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81063" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (P. Atk.) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81064" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (P. Atk.) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81065" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (P. Critical Damage) (STR +3, DEX +3) / Crystal of Dyes -->
+		<reward id="81066" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (P. Critical Damage) (STR +3, DEX +3, CHA +1) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81066" two="81134" chance="33"> <!-- Legendary Dye Lv. 2 (P. Critical Damage) (STR +3, DEX +3, CHA +1) / Crystal of Dyes -->
+		<reward id="81067" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 3 (P. Critical Damage) (STR +4, DEX +4, CHA +2) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81067" two="81134" chance="33"> <!-- Legendary Dye Lv. 3 (P. Critical Damage) (STR +4, DEX +4, CHA +2) / Crystal of Dyes -->
+		<reward id="81068" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 4 (P. Critical Damage) (STR +4, DEX +5, CHA +3) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81068" two="81134" chance="33"> <!-- Legendary Dye Lv. 4 (P. Critical Damage) (STR +4, DEX +5, CHA +3) / Crystal of Dyes -->
+		<reward id="81069" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 5 (P. Critical Damage) (STR +5, DEX +5, CHA +4) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81069" two="81134" chance="33"> <!-- Legendary Dye Lv. 5 (P. Critical Damage) (STR +5, DEX +5, CHA +4) / Crystal of Dyes -->
+		<reward id="81070" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 6 (P. Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81070" two="81134" chance="33"> <!-- Legendary Dye Lv. 6 (P. Critical Damage) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81071" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 7 (P. Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81071" two="81134" chance="33"> <!-- Legendary Dye Lv. 7 (P. Critical Damage) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81072" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (P. Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81072" two="81134" chance="33"> <!-- Legendary Dye Lv. 8 (P. Critical Damage) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81073" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (P. Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81073" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (P. Critical Damage) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81074" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (P. Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81075" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (P. Skill Critical Damage) (STR +3, DEX +3) / Crystal of Dyes -->
+		<reward id="81076" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (P. Skill Critical Damage) (STR +3, DEX +3, CHA +1) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81076" two="81134" chance="33"> <!-- Legendary Dye Lv. 2 (P. Skill Critical Damage) (STR +3, DEX +3, CHA +1) / Crystal of Dyes -->
+		<reward id="81077" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 3 (P. Skill Critical Damage) (STR +4, DEX +4, CHA +2) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81077" two="81134" chance="33"> <!-- Legendary Dye Lv. 3 (P. Skill Critical Damage) (STR +4, DEX +4, CHA +2) / Crystal of Dyes -->
+		<reward id="81078" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 4 (P. Skill Critical Damage) (STR +4, DEX +5, CHA +3) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81078" two="81134" chance="33"> <!-- Legendary Dye Lv. 4 (P. Skill Critical Damage) (STR +4, DEX +5, CHA +3) / Crystal of Dyes -->
+		<reward id="81079" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 5 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +4) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81079" two="81134" chance="33"> <!-- Legendary Dye Lv. 5 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +4) / Crystal of Dyes -->
+		<reward id="81080" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 6 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81080" two="81134" chance="33"> <!-- Legendary Dye Lv. 6 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81081" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 7 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81081" two="81134" chance="33"> <!-- Legendary Dye Lv. 7 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81082" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81082" two="81134" chance="33"> <!-- Legendary Dye Lv. 8 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81083" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81083" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81084" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (P. Skill Critical Damage) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81085" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (P. Skill Power) (STR +3, DEX +3) / Crystal of Dyes -->
+		<reward id="81086" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (P. Skill Power) (STR +3, DEX +3, CHA +1) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81086" two="81134" chance="33"> <!-- Legendary Dye Lv. 2 (P. Skill Power) (STR +3, DEX +3, CHA +1) / Crystal of Dyes -->
+		<reward id="81087" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 3 (P. Skill Power) (STR +4, DEX +4, CHA +2) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81087" two="81134" chance="33"> <!-- Legendary Dye Lv. 3 (P. Skill Power) (STR +4, DEX +4, CHA +2) / Crystal of Dyes -->
+		<reward id="81088" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 4 (P. Skill Power) (STR +4, DEX +5, CHA +3) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81088" two="81134" chance="33"> <!-- Legendary Dye Lv. 4 (P. Skill Power) (STR +4, DEX +5, CHA +3) / Crystal of Dyes -->
+		<reward id="81089" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 5 (P. Skill Power) (STR +5, DEX +5, CHA +4) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81089" two="81134" chance="33"> <!-- Legendary Dye Lv. 5 (P. Skill Power) (STR +5, DEX +5, CHA +4) / Crystal of Dyes -->
+		<reward id="81090" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 6 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81090" two="81134" chance="33"> <!-- Legendary Dye Lv. 6 (P. Skill Power) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81091" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 7 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81091" two="81134" chance="33"> <!-- Legendary Dye Lv. 7 (P. Skill Power) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81092" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81092" two="81134" chance="33"> <!-- Legendary Dye Lv. 8 (P. Skill Power) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81093" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81093" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (P. Skill Power) (STR +5, DEX +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81094" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (P. Skill Power) (STR +5, DEX +5, CHA +5) -->
+		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81095" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (M. Atk.) (INT +3, WIT +3) / Crystal of Dyes -->
+		<reward id="81096" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (M. Atk.) (INT +3, WIT +3, CHA +1) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81096" two="81134" chance="33"> <!-- Legendary Dye Lv. 2 (M. Atk.) (INT +3, WIT +3, CHA +1) / Crystal of Dyes -->
+		<reward id="81097" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 3 (M. Atk.) (INT +4, WIT +4, CHA +2) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81097" two="81134" chance="33"> <!-- Legendary Dye Lv. 3 (M. Atk.) (INT +4, WIT +4, CHA +2) / Crystal of Dyes -->
+		<reward id="81098" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 4 (M. Atk.) (INT +4, WIT +5, CHA +3) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81098" two="81134" chance="33"> <!-- Legendary Dye Lv. 4 (M. Atk.) (INT +4, WIT +5, CHA +3) / Crystal of Dyes -->
+		<reward id="81099" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 5 (M. Atk.) (INT +5, WIT +5, CHA +4) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81099" two="81134" chance="33"> <!-- Legendary Dye Lv. 5 (M. Atk.) (INT +5, WIT +5, CHA +4) / Crystal of Dyes -->
+		<reward id="81100" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 6 (M. Atk.) (INT +5, WIT +5, CHA +5) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81100" two="81134" chance="33"> <!-- Legendary Dye Lv. 6 (M. Atk.) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81101" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 7 (M. Atk.) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81101" two="81134" chance="33"> <!-- Legendary Dye Lv. 7 (M. Atk.) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81102" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (M. Atk.) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81102" two="81134" chance="33"> <!-- Legendary Dye Lv. 8 (M. Atk.) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81103" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (M. Atk.) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81103" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (M. Atk.) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81104" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (M. Atk.) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81105" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (M. Critical Damage) (INT +3, WIT +3) / Crystal of Dyes -->
+		<reward id="81106" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (M. Critical Damage) (INT +3, WIT +3, CHA +1) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81106" two="81134" chance="33"> <!-- Legendary Dye Lv. 2 (M. Critical Damage) (INT +3, WIT +3, CHA +1) / Crystal of Dyes -->
+		<reward id="81107" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 3 (M. Critical Damage) (INT +4, WIT +4, CHA +2) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81107" two="81134" chance="33"> <!-- Legendary Dye Lv. 3 (M. Critical Damage) (INT +4, WIT +4, CHA +2) / Crystal of Dyes -->
+		<reward id="81108" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 4 (M. Critical Damage) (INT +4, WIT +5, CHA +3) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81108" two="81134" chance="33"> <!-- Legendary Dye Lv. 4 (M. Critical Damage) (INT +4, WIT +5, CHA +3) / Crystal of Dyes -->
+		<reward id="81109" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 5 (M. Critical Damage) (INT +5, WIT +5, CHA +4) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81109" two="81134" chance="33"> <!-- Legendary Dye Lv. 5 (M. Critical Damage) (INT +5, WIT +5, CHA +4) / Crystal of Dyes -->
+		<reward id="81110" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 6 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81110" two="81134" chance="33"> <!-- Legendary Dye Lv. 6 (M. Critical Damage) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81111" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 7 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81111" two="81134" chance="33"> <!-- Legendary Dye Lv. 7 (M. Critical Damage) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81112" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81112" two="81134" chance="33"> <!-- Legendary Dye Lv. 8 (M. Critical Damage) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81113" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81113" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (M. Critical Damage) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81114" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (M. Critical Damage) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81115" two="81134" chance="33"> <!-- Legendary Dye Lv. 1 (M. Skill Power) (INT +3, WIT +3) / Crystal of Dyes -->
+		<reward id="81116" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 2 (M. Skill Power) (INT +3, WIT +3, CHA +1) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81116" two="81134" chance="33"> <!-- Legendary Dye Lv. 2 (M. Skill Power) (INT +3, WIT +3, CHA +1) / Crystal of Dyes -->
+		<reward id="81117" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 3 (M. Skill Power) (INT +4, WIT +4, CHA +2) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81117" two="81134" chance="33"> <!-- Legendary Dye Lv. 3 (M. Skill Power) (INT +4, WIT +4, CHA +2) / Crystal of Dyes -->
+		<reward id="81118" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 4 (M. Skill Power) (INT +4, WIT +5, CHA +3) -->
+		<reward id="80762" count="1" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81118" two="81134" chance="33"> <!-- Legendary Dye Lv. 4 (M. Skill Power) (INT +4, WIT +5, CHA +3) / Crystal of Dyes -->
+		<reward id="81119" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 5 (M. Skill Power) (INT +5, WIT +5, CHA +4) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81119" two="81134" chance="33"> <!-- Legendary Dye Lv. 5 (M. Skill Power) (INT +5, WIT +5, CHA +4) / Crystal of Dyes -->
+		<reward id="81120" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 6 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
+		<reward id="80762" count="2" type="ON_FAILURE" /> <!-- Dye Powder -->
+	</item>
+	<item one="81120" two="81134" chance="33"> <!-- Legendary Dye Lv. 6 (M. Skill Power) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81121" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 7 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81121" two="81134" chance="33"> <!-- Legendary Dye Lv. 7 (M. Skill Power) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81122" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 8 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81122" two="81134" chance="33"> <!-- Legendary Dye Lv. 8 (M. Skill Power) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81123" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 9 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="1" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
+	</item>
+	<item one="81123" two="81134" chance="33"> <!-- Legendary Dye Lv. 9 (M. Skill Power) (INT +5, WIT +5, CHA +5) / Crystal of Dyes -->
+		<reward id="81124" count="1" type="ON_SUCCESS" /> <!-- Legendary Dye Lv. 10 (M. Skill Power) (INT +5, WIT +5, CHA +5) -->
+		<reward id="81134" count="2" type="ON_FAILURE" /> <!-- Crystal of Dyes -->
 	</item>
 </list>

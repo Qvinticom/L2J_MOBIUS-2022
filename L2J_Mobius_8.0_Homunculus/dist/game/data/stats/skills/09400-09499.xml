@@ -73,7 +73,7 @@
 		</effects>
 	</skill>
 	<skill id="9403" toLevel="1" name="Pirate Elixir">
-		<!-- For 2 h., Vitality replenished if XP is gained through hunting. Buff remains even after death. -->
+		<!-- For 2 h., recovers Vitality when XP is acquired through hunting. The effect remains after death. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
@@ -102,7 +102,7 @@
 		</conditions>
 	</skill>
 	<skill id="9404" toLevel="1" name="Wondrous Herb of Power">
-		<!-- For 1 min. 30 sec., P. Atk. +100%. -->
+		<!-- P. Atk. +100% for 1 min. 30 sec. -->
 		<icon>icon.etc_warrior_set_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>1</abnormalLevel>
@@ -127,7 +127,7 @@
 		</effects>
 	</skill>
 	<skill id="9405" toLevel="1" name="Wondrous Herb of Magic">
-		<!-- For 1 min. 30 sec., M. Atk. +400%. -->
+		<!-- M. Atk. +400% for 1 min. 30 sec. -->
 		<icon>icon.etc_magic_set_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>1</abnormalLevel>
@@ -151,7 +151,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9406" toLevel="1" name="Ingredient and Hardener Pouch (R-grade)">
+	<skill id="9406" toLevel="1" name="R-grade Ingredient and Hardener Pouch">
 		<itemConsumeId>34861</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -167,10 +167,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="3">
-						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="17526" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="3">
-						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="17527" count="1" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="4">
 						<item id="19307" count="1" /> <!-- Corroded Giant's Arcsmith' Anvil -->
@@ -224,8 +224,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9407" toLevel="1" name="Summon Agathion - Hye-jin Jang">
-		<!-- Summons Agathion. -->
+	<skill id="9407" toLevel="1" name="Summon Agathion Hye-jin Jang">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -236,8 +236,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9408" toLevel="1" name="Summon Agathion - Jang Hyuk">
-		<!-- Summons Agathion. -->
+	<skill id="9408" toLevel="1" name="Summon Agathion Jang Hyuk">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -248,8 +248,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9409" toLevel="1" name="Summon Agathion - Kim Sooro">
-		<!-- Summons Agathion. -->
+	<skill id="9409" toLevel="1" name="Summon Agathion Kim Sooro">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -260,8 +260,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9410" toLevel="1" name="Summon Agathion - Park Jaebum">
-		<!-- Summons Agathion. -->
+	<skill id="9410" toLevel="1" name="Summon Agathion Jaebum Park">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -272,8 +272,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9411" toLevel="1" name="Summon Agathion - Kim Shinyoung">
-		<!-- Summons Agathion. -->
+	<skill id="9411" toLevel="1" name="Summon Agathion Kim Shinyoung">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -285,7 +285,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9412" toLevel="1" name="Agathion Cute Trick - Hye-jin Jang">
-		<!-- See Agathion's cute trick. -->
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -301,7 +301,7 @@
 		</conditions>
 	</skill>
 	<skill id="9413" toLevel="1" name="Agathion Cute Trick - Jang Hyuk">
-		<!-- See Agathion's cute trick. -->
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -317,7 +317,7 @@
 		</conditions>
 	</skill>
 	<skill id="9414" toLevel="1" name="Agathion Cute Trick - Kim Sooro">
-		<!-- See Agathion's cute trick. -->
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -333,7 +333,7 @@
 		</conditions>
 	</skill>
 	<skill id="9415" toLevel="1" name="Agathion Cute Trick - Park Jaebum">
-		<!-- See Agathion's cute trick. -->
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -349,7 +349,7 @@
 		</conditions>
 	</skill>
 	<skill id="9416" toLevel="1" name="Agathion Cute Trick - Kim Shinyoung">
-		<!-- See Agathion's cute trick. -->
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -431,10 +431,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.43">
-						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="17526" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="2.79">
-						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="17527" count="1" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="14.56">
 						<item id="9546" count="1" /> <!-- Fire Stone -->
@@ -490,16 +490,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.08">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.23">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.77">
-						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="17526" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="3.28">
-						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="17527" count="1" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="14.22">
 						<item id="9546" count="1" /> <!-- Fire Stone -->
@@ -679,10 +679,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.18">
-						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="17526" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="2.5">
-						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="17527" count="1" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="12.48">
 						<item id="34649" count="1" /> <!-- Fire Stone Fragment -->
@@ -756,10 +756,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="87.5">
-						<item id="33520" count="1" /> <!-- Scroll: Enchant Armor (R-grade) - Campaign -->
+						<item id="33520" count="1" /> <!-- Scroll: Enchant R-grade Armor - Campaign -->
 					</item>
 					<item chance="12.5">
-						<item id="33519" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) - Campaign -->
+						<item id="33519" count="1" /> <!-- Scroll: Enchant R-grade Weapon - Campaign -->
 					</item>
 				</items>
 			</effect>
@@ -779,16 +779,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="87.5">
-						<item id="33520" count="1" /> <!-- Scroll: Enchant Armor (R-grade) - Campaign -->
+						<item id="33520" count="1" /> <!-- Scroll: Enchant R-grade Armor - Campaign -->
 					</item>
 					<item chance="12.5">
-						<item id="33519" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) - Campaign -->
+						<item id="33519" count="1" /> <!-- Scroll: Enchant R-grade Weapon - Campaign -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9425" toLevel="1" name="Lv. 2 Giant Dye Pack">
+	<skill id="9425" toLevel="1" name="Lv. 2 Giant's Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -802,22 +802,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17643" count="1" /> <!-- Lv. 2 Giant STR Dye - STR +4/ DEX -3 -->
+						<item id="17643" count="1" /> <!-- Giant's STR Dye Lv. 2 - STR +4, DEX -3 -->
 					</item>
 					<item chance="16.6">
-						<item id="17644" count="1" /> <!-- Lv. 2 Giant DEX Dye - DEX +4/ CON -3 -->
+						<item id="17644" count="1" /> <!-- Giant's DEX Dye Lv. 2 - DEX +4, CON -3 -->
 					</item>
 					<item chance="16.6">
-						<item id="17645" count="1" /> <!-- Lv. 2 Giant CON Dye - CON +4/ STR -3 -->
+						<item id="17645" count="1" /> <!-- Giant's CON Dye Lv. 2 - CON +4, STR -3 -->
 					</item>
 					<item chance="16.6">
-						<item id="17646" count="1" /> <!-- Lv. 2 Giant INT Dye - INT +4/ WIT -3 -->
+						<item id="17646" count="1" /> <!-- Giant's INT Dye Lv. 2 - INT +4, WIT -3 -->
 					</item>
 					<item chance="16.6">
-						<item id="17647" count="1" /> <!-- Lv. 2 Giant WIT Dye - WIT +4/ MEN -3 -->
+						<item id="17647" count="1" /> <!-- Giant's WIT Dye Lv. 2 - WIT +4, MEN -3 -->
 					</item>
 					<item chance="17">
-						<item id="17648" count="1" /> <!-- Lv. 2 Giant MEN Dye - MEN +4/ INT -3 -->
+						<item id="17648" count="1" /> <!-- Giant's MEN Dye Lv. 2 - MEN +4, INT -3 -->
 					</item>
 				</items>
 			</effect>
@@ -837,22 +837,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17655" count="1" /> <!-- Lv. 2 Legendary STR Dye - STR +4/ DEX -2/ Fire Resistance +10 -->
+						<item id="17655" count="1" /> <!-- Legendary STR Dye Lv. 2 - STR +4, DEX -2, Fire Resistance +10 -->
 					</item>
 					<item chance="16.6">
-						<item id="17656" count="1" /> <!-- Lv. 2 Legendary DEX Dye - DEX +4/ CON -2/ Earth Resistance +10 -->
+						<item id="17656" count="1" /> <!-- Legendary DEX Dye Lv. 2 - DEX +4, CON -2, Earth Resistance +10 -->
 					</item>
 					<item chance="16.6">
-						<item id="17657" count="1" /> <!-- Lv. 2 Legendary CON Dye - CON +4/ STR -2/ Dark Resistance +10 -->
+						<item id="17657" count="1" /> <!-- Legendary CON Dye Lv. 2 - CON +4, STR -2, Dark Resistance +10 -->
 					</item>
 					<item chance="16.6">
-						<item id="17658" count="1" /> <!-- Lv. 2 Legendary INT Dye - INT +4/ WIT -2/ Water Resistance +10 -->
+						<item id="17658" count="1" /> <!-- Legendary INT Dye Lv. 2 - INT +4, WIT -2, Water Resistance +10 -->
 					</item>
 					<item chance="16.6">
-						<item id="17659" count="1" /> <!-- Lv. 2 Legendary WIT Dye - WIT +4/ MEN -2/ Wind Resistance +10 -->
+						<item id="17659" count="1" /> <!-- Legendary WIT Dye Lv. 2 - WIT +4, MEN -2, Wind Resistance +10 -->
 					</item>
 					<item chance="17">
-						<item id="17660" count="1" /> <!-- Lv. 2 Legendary MEN Dye - MEN +4/ INT -2/ Holy Resistance +10 -->
+						<item id="17660" count="1" /> <!-- Legendary MEN Dye Lv. 2 - MEN +4, INT -2, Holy Resistance +10 -->
 					</item>
 				</items>
 			</effect>
@@ -872,28 +872,28 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17649" count="1" /> <!-- Lv. 2 Ancient STR Dye - STR +4/ DEX -3/ Fire Resistance +10 -->
+						<item id="17649" count="1" /> <!-- Ancient STR Dye Lv. 2 - STR +4, DEX -3, Fire Resistance +10 -->
 					</item>
 					<item chance="16.6">
-						<item id="17650" count="1" /> <!-- Lv. 2 Ancient DEX Dye - DEX +4/ CON -3/ Earth Resistance +10 -->
+						<item id="17650" count="1" /> <!-- Ancient DEX Dye Lv. 2 - DEX +4, CON -3, Earth Resistance +10 -->
 					</item>
 					<item chance="16.6">
-						<item id="17651" count="1" /> <!-- Lv. 2 Ancient CON Dye - CON +4/ STR -3/ Dark Resistance +10 -->
+						<item id="17651" count="1" /> <!-- Ancient CON Dye Lv. 2 - CON +4, STR -3, Dark Resistance +10 -->
 					</item>
 					<item chance="16.6">
-						<item id="17652" count="1" /> <!-- Lv. 2 Ancient INT Dye - INT +4/ WIT -3/ Water Resistance +10 -->
+						<item id="17652" count="1" /> <!-- Ancient INT Dye Lv. 2 - INT +4, WIT -3, Water Resistance +10 -->
 					</item>
 					<item chance="16.6">
-						<item id="17653" count="1" /> <!-- Lv. 2 Ancient WIT Dye - WIT +4/ MEN -3/ Wind Resistance +10 -->
+						<item id="17653" count="1" /> <!-- Ancient WIT Dye Lv. 2 - WIT +4, MEN -3, Wind Resistance +10 -->
 					</item>
 					<item chance="17">
-						<item id="17654" count="1" /> <!-- Lv. 2 Ancient MEN Dye - MEN +4/ INT -3/ Holy Resistance +10 -->
+						<item id="17654" count="1" /> <!-- Ancient MEN Dye Lv. 2 - MEN +4, INT -3, Holy Resistance +10 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9428" toLevel="1" name="Lv. 3 Giant Dye Pack">
+	<skill id="9428" toLevel="1" name="Lv. 3 Giant's Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -907,22 +907,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17661" count="1" /> <!-- Lv. 3 Giant STR Dye - STR +5/ DEX -4 -->
+						<item id="17661" count="1" /> <!-- Giant's STR Dye Lv. 3 - STR +5, DEX -4 -->
 					</item>
 					<item chance="16.6">
-						<item id="17662" count="1" /> <!-- Lv. 3 Giant DEX Dye - DEX +5/ CON -4 -->
+						<item id="17662" count="1" /> <!-- Giant's DEX Dye Lv. 3 - DEX +5, CON -4 -->
 					</item>
 					<item chance="16.6">
-						<item id="17663" count="1" /> <!-- Lv. 3 Giant CON Dye - CON +5/ STR -4 -->
+						<item id="17663" count="1" /> <!-- Giant's CON Dye Lv. 3 - CON +5, STR -4 -->
 					</item>
 					<item chance="16.6">
-						<item id="17664" count="1" /> <!-- Lv. 3 Giant INT Dye - INT +5/ WIT -4 -->
+						<item id="17664" count="1" /> <!-- Giant's INT Dye Lv. 3 - INT +5, WIT -4 -->
 					</item>
 					<item chance="16.6">
-						<item id="17665" count="1" /> <!-- Lv. 3 Giant WIT Dye - WIT +5/ MEN -4 -->
+						<item id="17665" count="1" /> <!-- Giant's WIT Dye Lv. 3 - WIT +5, MEN -4 -->
 					</item>
 					<item chance="17">
-						<item id="17666" count="1" /> <!-- Lv. 3 Giant MEN Dye - MEN +5/ INT -4 -->
+						<item id="17666" count="1" /> <!-- Giant's MEN Dye Lv. 3 - MEN +5, INT -4 -->
 					</item>
 				</items>
 			</effect>
@@ -942,22 +942,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17673" count="1" /> <!-- Lv. 3 Legendary STR Dye - STR +5/ DEX -3/ Fire Resistance +15 -->
+						<item id="17673" count="1" /> <!-- Legendary STR Dye Lv. 3 - STR +5, DEX -3, Fire Resistance +15 -->
 					</item>
 					<item chance="16.6">
-						<item id="17674" count="1" /> <!-- Lv. 3 Legendary DEX Dye - DEX +5/ CON -3/ Earth Resistance +15 -->
+						<item id="17674" count="1" /> <!-- Legendary DEX Dye Lv. 3 - DEX +5, CON -3, Earth Resistance +15 -->
 					</item>
 					<item chance="16.6">
-						<item id="17675" count="1" /> <!-- Lv. 3 Legendary CON Dye - CON +5/ STR -3/ Dark Resistance +15 -->
+						<item id="17675" count="1" /> <!-- Legendary CON Dye Lv. 3 - CON +5, STR -3, Dark Resistance +15 -->
 					</item>
 					<item chance="16.6">
-						<item id="17676" count="1" /> <!-- Lv. 3 Legendary INT Dye - INT +5/ WIT -3/ Water Resistance +15 -->
+						<item id="17676" count="1" /> <!-- Legendary INT Dye Lv. 3 - INT +5, WIT -3, Water Resistance +15 -->
 					</item>
 					<item chance="16.6">
-						<item id="17677" count="1" /> <!-- Lv. 3 Legendary WIT Dye - WIT +5/ MEN -3/ Wind Resistance +15 -->
+						<item id="17677" count="1" /> <!-- Legendary WIT Dye Lv. 3 - WIT +5, MEN -3, Wind Resistance +15 -->
 					</item>
 					<item chance="17">
-						<item id="17678" count="1" /> <!-- Lv. 3 Legendary MEN Dye - MEN +5/ INT -3/ Holy Resistance +15 -->
+						<item id="17678" count="1" /> <!-- Legendary MEN Dye Lv. 3 - MEN +5, INT -3, Holy Resistance +15 -->
 					</item>
 				</items>
 			</effect>
@@ -977,28 +977,28 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17667" count="1" /> <!-- Lv. 3 Ancient STR Dye - STR +5/ DEX -4/ Fire Resistance +15 -->
+						<item id="17667" count="1" /> <!-- Ancient STR Dye Lv. 3 - STR +5, DEX -4, Fire Resistance +15 -->
 					</item>
 					<item chance="16.6">
-						<item id="17668" count="1" /> <!-- Lv. 3 Ancient DEX Dye - DEX +5/ CON -4/ Earth Resistance +15 -->
+						<item id="17668" count="1" /> <!-- Ancient DEX Dye Lv. 3 - DEX +5, CON -4, Earth Resistance +15 -->
 					</item>
 					<item chance="16.6">
-						<item id="17669" count="1" /> <!-- Lv. 3 Ancient CON Dye - CON +5/ STR -4/ Dark Resistance +15 -->
+						<item id="17669" count="1" /> <!-- Ancient CON Dye Lv. 3 - CON +5, STR -4, Dark Resistance +15 -->
 					</item>
 					<item chance="16.6">
-						<item id="17670" count="1" /> <!-- Lv. 3 Ancient INT Dye - INT +5/ WIT -4/ Water Resistance +15 -->
+						<item id="17670" count="1" /> <!-- Ancient INT Dye Lv. 3 - INT +5, WIT -4, Water Resistance +15 -->
 					</item>
 					<item chance="16.6">
-						<item id="17671" count="1" /> <!-- Lv. 3 Ancient WIT Dye - WIT +5/ MEN -4/ Wind Resistance +15 -->
+						<item id="17671" count="1" /> <!-- Ancient WIT Dye Lv. 3 - WIT +5, MEN -4, Wind Resistance +15 -->
 					</item>
 					<item chance="17">
-						<item id="17672" count="1" /> <!-- Lv. 3 Ancient MEN Dye - MEN +5/ INT -4/ Holy Resistance +15 -->
+						<item id="17672" count="1" /> <!-- Ancient MEN Dye Lv. 3 - MEN +5, INT -4, Holy Resistance +15 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9431" toLevel="1" name="Lv. 4 Giant Dye Pack">
+	<skill id="9431" toLevel="1" name="Lv. 4 Giant's Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1012,22 +1012,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17679" count="1" /> <!-- Lv. 4 Giant STR Dye - STR +5/ DEX -2 -->
+						<item id="17679" count="1" /> <!-- Giant's STR Dye Lv. 4 - STR +5, DEX -2 -->
 					</item>
 					<item chance="16.6">
-						<item id="17680" count="1" /> <!-- Lv. 4 Giant DEX Dye - DEX +5/ CON -2 -->
+						<item id="17680" count="1" /> <!-- Giant's DEX Dye Lv. 4 - DEX +5, CON -2 -->
 					</item>
 					<item chance="16.6">
-						<item id="17681" count="1" /> <!-- Lv. 4 Giant CON Dye - CON +5/ STR -2 -->
+						<item id="17681" count="1" /> <!-- Giant's CON Dye Lv. 4 - CON +5, STR -2 -->
 					</item>
 					<item chance="16.6">
-						<item id="17682" count="1" /> <!-- Lv. 4 Giant INT Dye - INT +5/ WIT -2 -->
+						<item id="17682" count="1" /> <!-- Giant's INT Dye Lv. 4 - INT +5, WIT -2 -->
 					</item>
 					<item chance="16.6">
-						<item id="17683" count="1" /> <!-- Lv. 4 Giant WIT Dye - WIT +5/ MEN -2 -->
+						<item id="17683" count="1" /> <!-- Giant's WIT Dye Lv. 4 - WIT +5, MEN -2 -->
 					</item>
 					<item chance="17">
-						<item id="17684" count="1" /> <!-- Lv. 4 Giant MEN Dye - MEN +5/ INT -2 -->
+						<item id="17684" count="1" /> <!-- Giant's MEN Dye Lv. 4 - MEN +5, INT -2 -->
 					</item>
 				</items>
 			</effect>
@@ -1047,22 +1047,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17691" count="1" /> <!-- Lv. 4 Legendary STR Dye - STR +5/ DEX -1/ Fire Resistance +20 -->
+						<item id="17691" count="1" /> <!-- Legendary STR Dye Lv. 4 - STR +5, DEX -1, Fire Resistance +20 -->
 					</item>
 					<item chance="16.6">
-						<item id="17692" count="1" /> <!-- Lv. 4 Legendary DEX Dye - DEX +5/ CON -1/ Earth Resistance +20 -->
+						<item id="17692" count="1" /> <!-- Legendary DEX Dye Lv. 4 - DEX +5, CON -1, Earth Resistance +20 -->
 					</item>
 					<item chance="16.6">
-						<item id="17693" count="1" /> <!-- Lv. 4 Legendary CON Dye - CON +5/ STR -1/ Dark Resistance +20 -->
+						<item id="17693" count="1" /> <!-- Legendary CON Dye Lv. 4 - CON +5, STR -1, Dark Resistance +20 -->
 					</item>
 					<item chance="16.6">
-						<item id="17694" count="1" /> <!-- Lv. 4 Legendary INT Dye - INT +5/ WIT -1/ Water Resistance +20 -->
+						<item id="17694" count="1" /> <!-- Legendary INT Dye Lv. 4 - INT +5, WIT -1, Water Resistance +20 -->
 					</item>
 					<item chance="16.6">
-						<item id="17695" count="1" /> <!-- Lv. 4 Legendary WIT Dye - WIT +5/ MEN -1/ Wind Resistance +20 -->
+						<item id="17695" count="1" /> <!-- Legendary WIT Dye Lv. 4 - WIT +5, MEN -1, Wind Resistance +20 -->
 					</item>
 					<item chance="17">
-						<item id="17696" count="1" /> <!-- Lv. 4 Legendary MEN Dye - MEN +5/ INT -1/ Holy Resistance +20 -->
+						<item id="17696" count="1" /> <!-- Legendary MEN Dye Lv. 4 - MEN +5, INT -1, Holy Resistance +20 -->
 					</item>
 				</items>
 			</effect>
@@ -1082,28 +1082,28 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17685" count="1" /> <!-- Lv. 4 Ancient STR Dye - STR +5/ DEX -2/ Fire Resistance +20 -->
+						<item id="17685" count="1" /> <!-- Ancient STR Dye Lv. 4 - STR +5, DEX -2, Fire Resistance +20 -->
 					</item>
 					<item chance="16.6">
-						<item id="17686" count="1" /> <!-- Lv. 4 Ancient DEX Dye - DEX +5/ CON -2/ Earth Resistance +20 -->
+						<item id="17686" count="1" /> <!-- Ancient DEX Dye Lv. 4 - DEX +5, CON -2, Earth Resistance +20 -->
 					</item>
 					<item chance="16.6">
-						<item id="17687" count="1" /> <!-- Lv. 4 Ancient CON Dye - CON +5/ STR -2/ Dark Resistance +20 -->
+						<item id="17687" count="1" /> <!-- Ancient CON Dye Lv. 4 - CON +5, STR -2, Dark Resistance +20 -->
 					</item>
 					<item chance="16.6">
-						<item id="17688" count="1" /> <!-- Lv. 4 Ancient INT Dye - INT +5/ WIT -2/ Water Resistance +20 -->
+						<item id="17688" count="1" /> <!-- Ancient INT Dye Lv. 4 - INT +5, WIT -2, Water Resistance +20 -->
 					</item>
 					<item chance="16.6">
-						<item id="17689" count="1" /> <!-- Lv. 4 Ancient WIT Dye - WIT +5/ MEN -2/ Wind Resistance +20 -->
+						<item id="17689" count="1" /> <!-- Ancient WIT Dye Lv. 4 - WIT +5, MEN -2, Wind Resistance +20 -->
 					</item>
 					<item chance="17">
-						<item id="17690" count="1" /> <!-- Lv. 4 Ancient MEN Dye - MEN +5/ INT -2/ Holy Resistance +20 -->
+						<item id="17690" count="1" /> <!-- Ancient MEN Dye Lv. 4 - MEN +5, INT -2, Holy Resistance +20 -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9434" toLevel="1" name="Lv. 5 Giant Dye Pack">
+	<skill id="9434" toLevel="1" name="Lv. 5 Giant's Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1117,22 +1117,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17697" count="1" /> <!-- Lv. 5 Giant STR Dye - STR +5 -->
+						<item id="17697" count="1" /> <!-- Giant's STR Dye Lv. 5 - STR +5 -->
 					</item>
 					<item chance="16.6">
-						<item id="17698" count="1" /> <!-- Lv. 5 Giant DEX Dye - DEX +5 -->
+						<item id="17698" count="1" /> <!-- Giant's DEX Dye Lv. 5 - DEX +5 -->
 					</item>
 					<item chance="16.6">
-						<item id="17699" count="1" /> <!-- Lv. 5 Giant CON Dye - CON +5 -->
+						<item id="17699" count="1" /> <!-- Giant's CON Dye Lv. 5 - CON +5 -->
 					</item>
 					<item chance="16.6">
-						<item id="17700" count="1" /> <!-- Lv. 5 Giant INT Dye - INT +5 -->
+						<item id="17700" count="1" /> <!-- Giant's INT Dye Lv. 5 - INT +5 -->
 					</item>
 					<item chance="16.6">
-						<item id="17701" count="1" /> <!-- Lv. 5 Giant WIT Dye - Wit +5 -->
+						<item id="17701" count="1" /> <!-- Giant's WIT Dye Lv. 5 - WIT +5 -->
 					</item>
 					<item chance="17">
-						<item id="17702" count="1" /> <!-- Lv. 5 Giant MEN Dye - Men +5 -->
+						<item id="17702" count="1" /> <!-- Giant's MEN Dye Lv. 5 - MEN +5 -->
 					</item>
 				</items>
 			</effect>
@@ -1152,22 +1152,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17709" count="1" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
+						<item id="17709" count="1" /> <!-- Legendary STR Dye Lv. 5 - STR +5, DEX +1, Fire Resistance +25 -->
 					</item>
 					<item chance="16.6">
-						<item id="17710" count="1" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+						<item id="17710" count="1" /> <!-- Legendary DEX Dye Lv. 5 - DEX +5, CON +1, Earth Resistance +25 -->
 					</item>
 					<item chance="16.6">
-						<item id="17711" count="1" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
+						<item id="17711" count="1" /> <!-- Legendary CON Dye Lv. 5 - CON +5, STR +1, Dark Resistance +25 -->
 					</item>
 					<item chance="16.6">
-						<item id="17712" count="1" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
+						<item id="17712" count="1" /> <!-- Legendary INT Dye Lv. 5 - INT +5, WIT +1, Water Resistance +25 -->
 					</item>
 					<item chance="16.6">
-						<item id="17713" count="1" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
+						<item id="17713" count="1" /> <!-- Legendary WIT Dye Lv. 5 - WIT +5, MEN +1, Wind Resistance +25 -->
 					</item>
 					<item chance="17">
-						<item id="17714" count="1" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
+						<item id="17714" count="1" /> <!-- Legendary MEN Dye Lv. 5 - MEN +5, INT +1, Holy Resistance +25 -->
 					</item>
 				</items>
 			</effect>
@@ -1187,22 +1187,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="17703" count="1" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+						<item id="17703" count="1" /> <!-- Ancient STR Dye Lv. 5 - STR +5, Fire Resistance +25 -->
 					</item>
 					<item chance="16.6">
-						<item id="17704" count="1" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+						<item id="17704" count="1" /> <!-- Ancient DEX Dye Lv. 5 - DEX +5, Earth Resistance +25 -->
 					</item>
 					<item chance="16.6">
-						<item id="17705" count="1" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+						<item id="17705" count="1" /> <!-- Ancient CON Dye Lv. 5 - CON +5, Dark Resistance +25 -->
 					</item>
 					<item chance="16.6">
-						<item id="17706" count="1" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+						<item id="17706" count="1" /> <!-- Ancient INT Dye Lv. 5 - INT +5, Water Resistance +25 -->
 					</item>
 					<item chance="16.6">
-						<item id="17707" count="1" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+						<item id="17707" count="1" /> <!-- Ancient WIT Dye Lv. 5 - WIT +5, Wind Resistance +25 -->
 					</item>
 					<item chance="17">
-						<item id="17708" count="1" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+						<item id="17708" count="1" /> <!-- Ancient MEN Dye Lv. 5 - MEN +5, Holy Resistance +25 -->
 					</item>
 				</items>
 			</effect>
@@ -1222,40 +1222,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.7">
-						<item id="7117" count="1" /> <!-- Scroll of Escape - Talking Island Village -->
+						<item id="7117" count="1" /> <!-- Scroll of Escape: Talking Island Village -->
 					</item>
 					<item chance="8.3">
-						<item id="7122" count="1" /> <!-- Scroll of Escape - Gludin Village -->
+						<item id="7122" count="1" /> <!-- Scroll of Escape: Gludin -->
 					</item>
 					<item chance="8.3">
-						<item id="7123" count="1" /> <!-- Scroll of Escape - Town of Gludio -->
+						<item id="7123" count="1" /> <!-- Scroll of Escape: Gludio -->
 					</item>
 					<item chance="8.3">
-						<item id="7124" count="1" /> <!-- Scroll of Escape - Town of Dion -->
+						<item id="7124" count="1" /> <!-- Scroll of Escape: Dion -->
 					</item>
 					<item chance="8.3">
-						<item id="7126" count="1" /> <!-- Scroll of Escape - Town of Giran -->
+						<item id="7126" count="1" /> <!-- Scroll of Escape: Giran -->
 					</item>
 					<item chance="8.3">
-						<item id="7128" count="1" /> <!-- Scroll of Escape - Heine -->
+						<item id="7128" count="1" /> <!-- Scroll of Escape: Heine -->
 					</item>
 					<item chance="8.3">
-						<item id="7129" count="1" /> <!-- Scroll of Escape - Town of Oren -->
+						<item id="7129" count="1" /> <!-- Scroll of Escape: Oren -->
 					</item>
 					<item chance="8.3">
-						<item id="7131" count="1" /> <!-- Scroll of Escape - Hunter's Village -->
+						<item id="7131" count="1" /> <!-- Scroll of Escape: Hunter's Village -->
 					</item>
 					<item chance="8.3">
-						<item id="7132" count="1" /> <!-- Scroll of Escape - Town of Aden -->
+						<item id="7132" count="1" /> <!-- Scroll of Escape: Aden -->
 					</item>
 					<item chance="8.3">
-						<item id="7133" count="1" /> <!-- Scroll of Escape - Town of Goddard -->
+						<item id="7133" count="1" /> <!-- Scroll of Escape: Goddard -->
 					</item>
 					<item chance="8.3">
-						<item id="7134" count="1" /> <!-- Scroll of Escape - Town of Rune -->
+						<item id="7134" count="1" /> <!-- Scroll of Escape: Rune -->
 					</item>
 					<item chance="8.3">
-						<item id="7135" count="1" /> <!-- Scroll of Escape - Town of Schuttgart -->
+						<item id="7135" count="1" /> <!-- Scroll of Escape: Schuttgart -->
 					</item>
 				</items>
 			</effect>
@@ -1569,7 +1569,7 @@
 		</effects>
 	</skill>
 	<skill id="9451" toLevel="1" name="Item Skill: Warp">
-		<!-- Stuns nearby enemies and removes their targeting, also teleports the character forward. Cooldown is 24 sec. Consumes 10 Gemstones (B-grade). Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns nearby enemies and removes their targeting, also teleports the character forward. Cooldown is 24 sec. Consumes 10 B-grade Gemstones.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.wizard_danger_warppow</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
@@ -1600,21 +1600,23 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="Blink">
-				<!-- Teleport to Front -->
-				<angle>180</angle>
-				<range>600</range>
-			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="TargetCancel">
 				<chance>100</chance>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="Blink">
+				<!-- Teleport to Front -->
+				<angle>180</angle>
+				<range>600</range>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="9452" toLevel="1" name="Item Skill: Dash">
-		<!-- For 10 sec., Speed +30, P. Evasion +7, and HP Recovery Bonus +7. Consumes 10 Gemstones (B-grade). -->
+		<!-- For 10 sec., Speed +30, P. Evasion +7, and HP Recovery Bonus +7. Consumes 10 B-grade Gemstones. -->
 		<icon>icon.rogue_shadow_dash</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1648,7 +1650,7 @@
 		</effects>
 	</skill>
 	<skill id="9453" toLevel="1" name="Item Skill: Undying Will">
-		<!-- Invincible for 5 sec. Can only be used when HP is 20% or below. Consumes 20 Gemstones (B-grade). -->
+		<!-- Grants invincibility for 5 sec. Available when HP is lower than 20%. Consumes 20 B-grade Gemstones. -->
 		<icon>icon.race_orc_immortality</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1682,6 +1684,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
@@ -1694,7 +1709,7 @@
 		</effects>
 	</skill>
 	<skill id="9454" toLevel="1" name="Item Skill: Silence">
-		<!-- P./ M. Atk can't be used for 5 sec. Consumes 30 Gemstones (B-grade). Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- P./ M. Atk. can't be used for 5 sec. Consumes 30 B-grade Gemstones.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.song_of_silence</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1724,7 +1739,7 @@
 		</effects>
 	</skill>
 	<skill id="9455" toLevel="1" name="Item Skill: Disable Target">
-		<!-- For 5 sec., enemy cannot target you. Consumes 10 Gemstones (B-grade). -->
+		<!-- Prevents enemies from targeting you for 5 sec. Consumes 10 B-grade Gemstones. -->
 		<icon>icon.notargetting</icon>
 		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1787,7 +1802,7 @@
 		</effects>
 	</skill>
 	<skill id="9459" toLevel="1" name="Tauti's Wrath">
-		<!-- P. Atk. on nearby enemies and Knockdown for 3 sec. Power 27,552. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- P. Atk. on nearby enemies and Knockdown for 3 sec. Power 27,552.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.weapon_tauti_one_hand_axe_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1833,7 +1848,7 @@
 		</effects>
 	</skill>
 	<skill id="9460" toLevel="1" name="Frenzied Tauti's Authority">
-		<!-- Using Tauti's Wrath attacks nearby enemies with 42645 power and inflicts Knock Down. Consumes 4 Spirit Ore. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Using Tauti's Wrath attacks nearby enemies with $s1 power and inflicts Knock Down. Consumes 4 Spirit Ore.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.tauti_weapon_one_hand_axe_high</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1909,19 +1924,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="9.58">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="79.52">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="5.75">
-						<item id="19444" count="1" /> <!-- Unbind Scroll (R-grade) -->
+						<item id="19444" count="1" /> <!-- R-grade Unbind Scroll -->
 					</item>
 					<item chance="2.66">
-						<item id="19445" count="1" /> <!-- Unbind Scroll (R95-grade) -->
+						<item id="19445" count="1" /> <!-- R95-grade Unbind Scroll -->
 					</item>
 					<item chance="2.13">
-						<item id="19446" count="1" /> <!-- Unbind Scroll (R99-grade) -->
+						<item id="19446" count="1" /> <!-- R99-grade Unbind Scroll -->
 					</item>
 					<item chance="0.36">
 						<item id="35566" count="1" /> <!-- Dark Weapon Enhancement Stone -->
@@ -2010,190 +2025,190 @@
 						<item id="35461" count="1" /> <!-- Recipe: Helios Retributer (60%) -->
 					</item>
 					<item chance="0.47">
-						<item id="35389" count="1" /> <!-- Blessed Helios Shaper Fragment -->
+						<item id="35389" count="1" /> <!-- Corroded Blessed Helios Shaper Fragment -->
 					</item>
 					<item chance="0.47">
-						<item id="35390" count="1" /> <!-- Blessed Helios Cutter Fragment -->
+						<item id="35390" count="1" /> <!-- Corroded Blessed Helios Cutter Fragment -->
 					</item>
 					<item chance="0.47">
-						<item id="35391" count="1" /> <!-- Blessed Helios Slasher Fragment -->
+						<item id="35391" count="1" /> <!-- Corroded Blessed Helios Slasher Fragment -->
 					</item>
 					<item chance="0.47">
-						<item id="35392" count="1" /> <!-- Blessed Helios Avenger Fragment -->
+						<item id="35392" count="1" /> <!-- Corroded Blessed Helios Avenger Fragment -->
 					</item>
 					<item chance="0.47">
-						<item id="35393" count="1" /> <!-- Blessed Helios Fighter Fragment -->
+						<item id="35393" count="1" /> <!-- Corroded Blessed Helios Fighter Fragment -->
 					</item>
 					<item chance="0.47">
-						<item id="35394" count="1" /> <!-- Blessed Helios Stormer Fragment -->
+						<item id="35394" count="1" /> <!-- Corroded Blessed Helios Stormer Fragment -->
 					</item>
 					<item chance="0.47">
-						<item id="35395" count="1" /> <!-- Blessed Helios Thrower Fragment -->
+						<item id="35395" count="1" /> <!-- Corroded Blessed Helios Thrower Fragment -->
 					</item>
 					<item chance="0.47">
-						<item id="35396" count="1" /> <!-- Blessed Helios Shooter Fragment -->
+						<item id="35396" count="1" /> <!-- Corroded Blessed Helios Shooter Fragment -->
 					</item>
 					<item chance="0.47">
-						<item id="35397" count="1" /> <!-- Blessed Helios Buster Fragment -->
+						<item id="35397" count="1" /> <!-- Corroded Blessed Helios Buster Fragment -->
 					</item>
 					<item chance="0.47">
-						<item id="35398" count="1" /> <!-- Blessed Helios Caster Fragment -->
+						<item id="35398" count="1" /> <!-- Corroded Blessed Helios Caster Fragment -->
 					</item>
 					<item chance="0.47">
-						<item id="35399" count="1" /> <!-- Blessed Helios Retributer Fragment -->
+						<item id="35399" count="1" /> <!-- Corroded Blessed Helios Retributer Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35327" count="3" /> <!-- Helios Shaper Fragment -->
+						<item id="35327" count="3" /> <!-- Corroded Helios Shaper Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35328" count="3" /> <!-- Helios Cutter Fragment -->
+						<item id="35328" count="3" /> <!-- Corroded Helios Cutter Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35329" count="3" /> <!-- Helios Slasher Fragment -->
+						<item id="35329" count="3" /> <!-- Corroded Helios Slasher Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35330" count="3" /> <!-- Helios Avenger Fragment -->
+						<item id="35330" count="3" /> <!-- Corroded Helios Avenger Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35331" count="3" /> <!-- Helios Fighter Fragment -->
+						<item id="35331" count="3" /> <!-- Corroded Helios Fighter Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35332" count="3" /> <!-- Helios Stormer Fragment -->
+						<item id="35332" count="3" /> <!-- Corroded Helios Stormer Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35333" count="3" /> <!-- Helios Thrower Fragment -->
+						<item id="35333" count="3" /> <!-- Corroded Helios Thrower Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35334" count="3" /> <!-- Helios Shooter Fragment -->
+						<item id="35334" count="3" /> <!-- Corroded Helios Shooter Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35335" count="3" /> <!-- Helios Buster Fragment -->
+						<item id="35335" count="3" /> <!-- Corroded Helios Buster Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35336" count="3" /> <!-- Helios Caster Fragment -->
+						<item id="35336" count="3" /> <!-- Corroded Helios Caster Fragment -->
 					</item>
 					<item chance="0.19">
-						<item id="35337" count="3" /> <!-- Helios Retributer Fragment -->
+						<item id="35337" count="3" /> <!-- Corroded Helios Retributer Fragment -->
 					</item>
 					<item chance="0.99">
-						<item id="35338" count="3" /> <!-- Eternal Helmet Ingredient -->
+						<item id="35338" count="3" /> <!-- Corroded Eternal Helmet Ingredient -->
 					</item>
 					<item chance="0.37">
-						<item id="35339" count="3" /> <!-- Eternal Breastplate Ingredient -->
+						<item id="35339" count="3" /> <!-- Corroded Eternal Breastplate Ingredient -->
 					</item>
 					<item chance="0.4">
-						<item id="35340" count="3" /> <!-- Eternal Gaiter Ingredient -->
+						<item id="35340" count="3" /> <!-- Corroded Eternal Gaiter Ingredient -->
 					</item>
 					<item chance="0.99">
-						<item id="35341" count="3" /> <!-- Eternal Gauntlet Ingredient -->
+						<item id="35341" count="3" /> <!-- Corroded Eternal Gauntlet Ingredient -->
 					</item>
 					<item chance="1.49">
-						<item id="35342" count="3" /> <!-- Eternal Boot Ingredient -->
+						<item id="35342" count="3" /> <!-- Corroded Eternal Boot Ingredient -->
 					</item>
 					<item chance="1.42">
-						<item id="35343" count="3" /> <!-- Eternal Shield Ingredient -->
+						<item id="35343" count="3" /> <!-- Corroded Eternal Shield Ingredient -->
 					</item>
 					<item chance="0.99">
-						<item id="35344" count="3" /> <!-- Eternal Leather Helmet Ingredient -->
+						<item id="35344" count="3" /> <!-- Corroded Eternal Leather Helmet Ingredient -->
 					</item>
 					<item chance="0.37">
-						<item id="35345" count="3" /> <!-- Eternal Leather Armor Ingredient -->
+						<item id="35345" count="3" /> <!-- Corroded Eternal Leather Armor Ingredient -->
 					</item>
 					<item chance="0.4">
-						<item id="35346" count="3" /> <!-- Eternal Leather Legging Ingredient -->
+						<item id="35346" count="3" /> <!-- Corroded Eternal Leather Legging Ingredient -->
 					</item>
 					<item chance="0.99">
-						<item id="35347" count="3" /> <!-- Eternal Leather Glove Ingredient -->
+						<item id="35347" count="3" /> <!-- Corroded Eternal Leather Glove Ingredient -->
 					</item>
 					<item chance="1.49">
-						<item id="35348" count="3" /> <!-- Eternal Leather Boot Ingredient -->
+						<item id="35348" count="3" /> <!-- Corroded Eternal Leather Boot Ingredient -->
 					</item>
 					<item chance="0.99">
-						<item id="35349" count="3" /> <!-- Eternal Circlet Ingredient -->
+						<item id="35349" count="3" /> <!-- Corroded Eternal Circlet Ingredient -->
 					</item>
 					<item chance="0.37">
-						<item id="35350" count="3" /> <!-- Eternal Tunic Ingredient -->
+						<item id="35350" count="3" /> <!-- Corroded Eternal Tunic Ingredient -->
 					</item>
 					<item chance="0.4">
-						<item id="35351" count="3" /> <!-- Eternal Stocking Ingredient -->
+						<item id="35351" count="3" /> <!-- Corroded Eternal Stocking Ingredient -->
 					</item>
 					<item chance="0.99">
-						<item id="35352" count="3" /> <!-- Eternal Glove Ingredient -->
+						<item id="35352" count="3" /> <!-- Corroded Eternal Glove Ingredient -->
 					</item>
 					<item chance="1.49">
-						<item id="35353" count="3" /> <!-- Eternal Shoe Ingredient -->
+						<item id="35353" count="3" /> <!-- Corroded Eternal Stocking Ingredient -->
 					</item>
 					<item chance="1.42">
-						<item id="35354" count="3" /> <!-- Eternal Sigil Ingredient -->
+						<item id="35354" count="3" /> <!-- Corroded Eternal Sigil Ingredient -->
 					</item>
 					<item chance="1.43">
-						<item id="35355" count="3" /> <!-- Eternal Necklace Gem -->
+						<item id="35355" count="3" /> <!-- Corroded Eternal Necklace Gem -->
 					</item>
 					<item chance="1.91">
-						<item id="35356" count="3" /> <!-- Eternal Earring Gem -->
+						<item id="35356" count="3" /> <!-- Corroded Eternal Earring Gem -->
 					</item>
 					<item chance="2.86">
-						<item id="35357" count="3" /> <!-- Eternal Ring Gem -->
+						<item id="35357" count="3" /> <!-- Corroded Eternal Ring Gem -->
 					</item>
 					<item chance="2.38">
-						<item id="35400" count="1" /> <!-- Blessed Eternal Helmet Ingredient -->
+						<item id="35400" count="1" /> <!-- Corroded Blessed Eternal Helmet Ingredient -->
 					</item>
 					<item chance="0.89">
-						<item id="35401" count="1" /> <!-- Blessed Eternal Breastplate Ingredient -->
+						<item id="35401" count="1" /> <!-- Corroded Blessed Eternal Breastplate Ingredient -->
 					</item>
 					<item chance="0.95">
-						<item id="35402" count="1" /> <!-- Blessed Eternal Gaiter Ingredient -->
+						<item id="35402" count="1" /> <!-- Corroded Blessed Eternal Gaiter Ingredient -->
 					</item>
 					<item chance="2.38">
-						<item id="35403" count="1" /> <!-- Blessed Eternal Gauntlet Ingredient -->
+						<item id="35403" count="1" /> <!-- Corroded Blessed Eternal Gauntlet Ingredient -->
 					</item>
 					<item chance="3.58">
-						<item id="35404" count="1" /> <!-- Blessed Eternal Boot Ingredient -->
+						<item id="35404" count="1" /> <!-- Corroded Blessed Eternal Boot Ingredient -->
 					</item>
 					<item chance="3.41">
-						<item id="35405" count="1" /> <!-- Blessed Eternal Shield Ingredient -->
+						<item id="35405" count="1" /> <!-- Corroded Blessed Eternal Shield Ingredient -->
 					</item>
 					<item chance="2.38">
-						<item id="35406" count="1" /> <!-- Blessed Eternal Leather Helmet Ingredient -->
+						<item id="35406" count="1" /> <!-- Corroded Blessed Eternal Leather Helmet Ingredient -->
 					</item>
 					<item chance="0.89">
-						<item id="35407" count="1" /> <!-- Blessed Eternal Leather Armor Ingredient -->
+						<item id="35407" count="1" /> <!-- Corroded Blessed Eternal Leather Armor Ingredient -->
 					</item>
 					<item chance="0.95">
-						<item id="35408" count="1" /> <!-- Blessed Eternal Leather Legging Ingredient -->
+						<item id="35408" count="1" /> <!-- Corroded Blessed Eternal Leather Legging Ingredient -->
 					</item>
 					<item chance="2.38">
-						<item id="35409" count="1" /> <!-- Blessed Eternal Leather Glove Ingredient -->
+						<item id="35409" count="1" /> <!-- Corroded Blessed Eternal Leather Glove Ingredient -->
 					</item>
 					<item chance="3.58">
-						<item id="35410" count="1" /> <!-- Blessed Eternal Leather Boot Ingredient -->
+						<item id="35410" count="1" /> <!-- Corroded Blessed Eternal Leather Boot Ingredient -->
 					</item>
 					<item chance="2.38">
-						<item id="35411" count="1" /> <!-- Blessed Eternal Circlet Ingredient -->
+						<item id="35411" count="1" /> <!-- Corroded Blessed Eternal Circlet Ingredient -->
 					</item>
 					<item chance="0.89">
-						<item id="35412" count="1" /> <!-- Blessed Eternal Tunic Ingredient -->
+						<item id="35412" count="1" /> <!-- Corroded Blessed Eternal Tunic Ingredient -->
 					</item>
 					<item chance="0.95">
-						<item id="35413" count="1" /> <!-- Blessed Eternal Stocking Ingredient -->
+						<item id="35413" count="1" /> <!-- Corroded Blessed Eternal Stocking Ingredient -->
 					</item>
 					<item chance="2.38">
-						<item id="35414" count="1" /> <!-- Blessed Eternal Glove Ingredient -->
+						<item id="35414" count="1" /> <!-- Corroded Blessed Eternal Glove Ingredient -->
 					</item>
 					<item chance="3.58">
-						<item id="35415" count="1" /> <!-- Blessed Eternal Shoe Ingredient -->
+						<item id="35415" count="1" /> <!-- Corroded Blessed Eternal Shoe Ingredient -->
 					</item>
 					<item chance="3.41">
-						<item id="35416" count="1" /> <!-- Blessed Eternal Sigil Ingredient -->
+						<item id="35416" count="1" /> <!-- Corroded Blessed Eternal Sigil Ingredient -->
 					</item>
 					<item chance="3.43">
-						<item id="35417" count="1" /> <!-- Blessed Eternal Necklace Gem -->
+						<item id="35417" count="1" /> <!-- Corroded Blessed Eternal Necklace Gem -->
 					</item>
 					<item chance="4.58">
-						<item id="35418" count="1" /> <!-- Blessed Eternal Earring Gem -->
+						<item id="35418" count="1" /> <!-- Corroded Blessed Eternal Earring Gem -->
 					</item>
 					<item chance="6.87">
-						<item id="35419" count="1" /> <!-- Blessed Eternal Ring Gem -->
+						<item id="35419" count="1" /> <!-- Corroded Blessed Eternal Ring Gem -->
 					</item>
 					<item chance="0.3">
 						<item id="35462" count="1" /> <!-- Recipe: Eternal Helmet (60%) -->
@@ -2316,10 +2331,10 @@
 						<item id="35543" count="1" /> <!-- Recipe: Blessed Eternal Ring (60%) -->
 					</item>
 					<item chance="0.47">
-						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="17526" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="3.02">
-						<item id="17527" count="2" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="17527" count="2" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.38">
 						<item id="9552" count="5" /> <!-- Fire Crystal -->
@@ -2357,19 +2372,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="9.58">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="79.52">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="5.75">
-						<item id="19444" count="1" /> <!-- Unbind Scroll (R-grade) -->
+						<item id="19444" count="1" /> <!-- R-grade Unbind Scroll -->
 					</item>
 					<item chance="2.66">
-						<item id="19445" count="1" /> <!-- Unbind Scroll (R95-grade) -->
+						<item id="19445" count="1" /> <!-- R95-grade Unbind Scroll -->
 					</item>
 					<item chance="2.13">
-						<item id="19446" count="1" /> <!-- Unbind Scroll (R99-grade) -->
+						<item id="19446" count="1" /> <!-- R99-grade Unbind Scroll -->
 					</item>
 					<item chance="0.36">
 						<item id="35566" count="1" /> <!-- Dark Weapon Enhancement Stone -->
@@ -2467,7 +2482,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.005">
-						<item id="19444" count="1" /> <!-- Unbind Scroll (R-grade) -->
+						<item id="19444" count="1" /> <!-- R-grade Unbind Scroll -->
 					</item>
 					<item chance="2.67">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
@@ -2494,7 +2509,7 @@
 						<item id="30297" count="1" /> <!-- Superior Giant's Codex -->
 					</item>
 					<item chance="3.181">
-						<item id="19440" count="1" /> <!-- Gemstone (R-grade) -->
+						<item id="19440" count="1" /> <!-- R-grade Gemstone -->
 					</item>
 					<item chance="43.49">
 						<item id="35743" count="1" /> <!-- Draco's Health Potion - Event -->
@@ -2506,10 +2521,10 @@
 						<item id="22204" count="1" /> <!-- Attribute Stone Pack - Event -->
 					</item>
 					<item chance="1.242">
-						<item id="35742" count="1" /> <!-- Scroll: Reputation (Low-grade) -->
+						<item id="35742" count="1" /> <!-- Low-grade Scroll: Reputation -->
 					</item>
 					<item chance="0.366">
-						<item id="35755" count="1" /> <!-- Scroll: Reputation (Mid-grade) -->
+						<item id="35755" count="1" /> <!-- Mid-grade Scroll: Reputation -->
 					</item>
 					<item chance="0.484">
 						<item id="30300" count="1" /> <!-- Superior Giant's Codex - Oblivion -->
@@ -2535,16 +2550,16 @@
 						<item id="36324" count="1" /> <!-- Draco's Shiny Accessory Pack - Event -->
 					</item>
 					<item chance="0.097">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.145">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.013">
-						<item id="19445" count="1" /> <!-- Unbind Scroll (R95-grade) -->
+						<item id="19445" count="1" /> <!-- R95-grade Unbind Scroll -->
 					</item>
 					<item chance="0.334">
-						<item id="35749" count="1" /> <!-- Weapon Attribute Change Crystal (R-grade) - Event -->
+						<item id="35749" count="1" /> <!-- R-grade Weapon Attribute Change Crystal - Event -->
 					</item>
 					<item chance="22.776">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
@@ -2553,22 +2568,22 @@
 						<item id="22205" count="1" /> <!-- Attribute Crystal Pack - Event -->
 					</item>
 					<item chance="0.116">
-						<item id="17709" count="1" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
+						<item id="17709" count="1" /> <!-- Legendary STR Dye Lv. 5 - STR +5, DEX +1, Fire Resistance +25 -->
 					</item>
 					<item chance="0.116">
-						<item id="17710" count="1" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+						<item id="17710" count="1" /> <!-- Legendary DEX Dye Lv. 5 - DEX +5, CON +1, Earth Resistance +25 -->
 					</item>
 					<item chance="0.116">
-						<item id="17711" count="1" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
+						<item id="17711" count="1" /> <!-- Legendary CON Dye Lv. 5 - CON +5, STR +1, Dark Resistance +25 -->
 					</item>
 					<item chance="0.116">
-						<item id="17712" count="1" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
+						<item id="17712" count="1" /> <!-- Legendary INT Dye Lv. 5 - INT +5, WIT +1, Water Resistance +25 -->
 					</item>
 					<item chance="0.116">
-						<item id="17713" count="1" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
+						<item id="17713" count="1" /> <!-- Legendary WIT Dye Lv. 5 - WIT +5, MEN +1, Wind Resistance +25 -->
 					</item>
 					<item chance="0.116">
-						<item id="17714" count="1" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
+						<item id="17714" count="1" /> <!-- Legendary MEN Dye Lv. 5 - MEN +5, INT +1, Holy Resistance +25 -->
 					</item>
 					<item chance="35.35">
 						<item id="35743" count="5" /> <!-- Draco's Health Potion - Event -->
@@ -2577,26 +2592,26 @@
 						<item id="35744" count="5" /> <!-- Draco's Mana Potion - Event -->
 					</item>
 					<item chance="0.56">
-						<item id="35741" count="1" /> <!-- Scroll: PK (Low-grade) -->
+						<item id="35741" count="1" /> <!-- Low-grade Scroll: PK -->
 					</item>
 					<item chance="0.19">
-						<item id="35752" count="1" /> <!-- Scroll: PK (Mid-grade) -->
+						<item id="35752" count="1" /> <!-- Mid-grade Scroll: PK -->
 					</item>
 					<item chance="0.121">
 						<item id="30298" count="1" /> <!-- Superior Giant's Codex - Mastery -->
 					</item>
 					<item chance="0.404">
-						<item id="30381" count="1" /> <!-- Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="30381" count="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="2.019">
-						<item id="30382" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="30382" count="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9472" toLevel="1" name="Summon Agathion - Flame Spirit">
-		<!-- Summons Agathion. -->
+	<skill id="9472" toLevel="1" name="Summon Agathion Flame Spirit">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2687,190 +2702,190 @@
 						<item id="35430" count="1" /> <!-- Recipe: Specter Retributer (60%) -->
 					</item>
 					<item chance="0.139">
-						<item id="35358" count="5" /> <!-- Blessed Specter Shaper Fragment -->
+						<item id="35358" count="5" /> <!-- Corroded Blessed Specter Shaper Fragment -->
 					</item>
 					<item chance="0.139">
-						<item id="35359" count="5" /> <!-- Blessed Specter Cutter Fragment -->
+						<item id="35359" count="5" /> <!-- Corroded Blessed Specter Cutter Fragment -->
 					</item>
 					<item chance="0.139">
-						<item id="35360" count="5" /> <!-- Blessed Specter Slasher Fragment -->
+						<item id="35360" count="5" /> <!-- Corroded Blessed Specter Slasher Fragment -->
 					</item>
 					<item chance="0.139">
-						<item id="35361" count="5" /> <!-- Blessed Specter Avenger Fragment -->
+						<item id="35361" count="5" /> <!-- Corroded Blessed Specter Avenger Fragment -->
 					</item>
 					<item chance="0.139">
-						<item id="35362" count="5" /> <!-- Blessed Specter Fighter Fragment -->
+						<item id="35362" count="5" /> <!-- Corroded Blessed Specter Fighter Fragment -->
 					</item>
 					<item chance="0.139">
-						<item id="35363" count="5" /> <!-- Blessed Specter Stormer Fragment -->
+						<item id="35363" count="5" /> <!-- Corroded Blessed Specter Stormer Fragment -->
 					</item>
 					<item chance="0.139">
-						<item id="35364" count="5" /> <!-- Blessed Specter Thrower Fragment -->
+						<item id="35364" count="5" /> <!-- Corroded Blessed Specter Thrower Fragment -->
 					</item>
 					<item chance="0.139">
-						<item id="35365" count="5" /> <!-- Blessed Specter Shooter Fragment -->
+						<item id="35365" count="5" /> <!-- Corroded Blessed Specter Shooter Fragment -->
 					</item>
 					<item chance="0.139">
-						<item id="35366" count="5" /> <!-- Blessed Specter Buster Fragment -->
+						<item id="35366" count="5" /> <!-- Corroded Blessed Specter Buster Fragment -->
 					</item>
 					<item chance="0.139">
-						<item id="35367" count="5" /> <!-- Blessed Specter Caster Fragment -->
+						<item id="35367" count="5" /> <!-- Corroded Blessed Specter Caster Fragment -->
 					</item>
 					<item chance="0.139">
-						<item id="35368" count="5" /> <!-- Blessed Specter Retributer Fragment -->
+						<item id="35368" count="5" /> <!-- Corroded Blessed Specter Retributer Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35296" count="5" /> <!-- Specter Shaper Fragment -->
+						<item id="35296" count="5" /> <!-- Corroded Specter Shaper Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35297" count="5" /> <!-- Specter Cutter Fragment -->
+						<item id="35297" count="5" /> <!-- Corroded Cutter Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35298" count="5" /> <!-- Specter Slasher Fragment -->
+						<item id="35298" count="5" /> <!-- Corroded Specter Slasher Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35299" count="5" /> <!-- Specter Avenger Fragment -->
+						<item id="35299" count="5" /> <!-- Corroded Specter Avenger Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35300" count="5" /> <!-- Specter Fighter Fragment -->
+						<item id="35300" count="5" /> <!-- Corroded Specter Fighter Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35301" count="5" /> <!-- Specter Stormer Fragment -->
+						<item id="35301" count="5" /> <!-- Corroded Specter Stormer Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35302" count="5" /> <!-- Specter Thrower Fragment -->
+						<item id="35302" count="5" /> <!-- Corroded Specter Thrower Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35303" count="5" /> <!-- Specter Shooter Fragment -->
+						<item id="35303" count="5" /> <!-- Corroded Specter Shooter Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35304" count="5" /> <!-- Specter Buster Fragment -->
+						<item id="35304" count="5" /> <!-- Corroded Specter Buster Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35305" count="5" /> <!-- Specter Caster Fragment -->
+						<item id="35305" count="5" /> <!-- Corroded Specter Caster Fragment -->
 					</item>
 					<item chance="0.174">
-						<item id="35306" count="5" /> <!-- Specter Retributer Fragment -->
+						<item id="35306" count="5" /> <!-- Corroded Specter Retributer Fragment -->
 					</item>
 					<item chance="0.886">
-						<item id="35307" count="5" /> <!-- Seraph Helmet Ingredient -->
+						<item id="35307" count="5" /> <!-- Corroded Seraph Helmet Ingredient -->
 					</item>
 					<item chance="0.332">
-						<item id="35308" count="5" /> <!-- Seraph Breastplate Ingredient -->
+						<item id="35308" count="5" /> <!-- Corroded Seraph Breastplate Ingredient -->
 					</item>
 					<item chance="0.354">
-						<item id="35309" count="5" /> <!-- Seraph Gaiter Ingredient -->
+						<item id="35309" count="5" /> <!-- Corroded Seraph Gaiter Ingredient -->
 					</item>
 					<item chance="0.886">
-						<item id="35310" count="5" /> <!-- Seraph Gauntlet Ingredient -->
+						<item id="35310" count="5" /> <!-- Corroded Seraph Gauntlet Ingredient -->
 					</item>
 					<item chance="1.328">
-						<item id="35311" count="5" /> <!-- Seraph Boot Ingredient -->
+						<item id="35311" count="5" /> <!-- Corroded Seraph Boot Ingredient -->
 					</item>
 					<item chance="1.265">
-						<item id="35312" count="5" /> <!-- Seraph Shield Ingredient -->
+						<item id="35312" count="5" /> <!-- Corroded Seraph Shield Ingredient -->
 					</item>
 					<item chance="0.886">
-						<item id="35313" count="5" /> <!-- Seraph Leather Helmet Ingredient -->
+						<item id="35313" count="5" /> <!-- Corroded Seraph Leather Helmet Ingredient -->
 					</item>
 					<item chance="0.332">
-						<item id="35314" count="5" /> <!-- Seraph Leather Armor Ingredient -->
+						<item id="35314" count="5" /> <!-- Corroded Seraph Leather Armor Ingredient -->
 					</item>
 					<item chance="0.354">
-						<item id="35315" count="5" /> <!-- Seraph Leather Legging Ingredient -->
+						<item id="35315" count="5" /> <!-- Corroded Seraph Leather Legging Ingredient -->
 					</item>
 					<item chance="0.886">
-						<item id="35316" count="5" /> <!-- Seraph Leather Glove Ingredient -->
+						<item id="35316" count="5" /> <!-- Corroded Seraph Leather Glove Ingredient -->
 					</item>
 					<item chance="1.328">
-						<item id="35317" count="5" /> <!-- Seraph Leather Boot Ingredient -->
+						<item id="35317" count="5" /> <!-- Corroded Seraph Leather Boot Ingredient -->
 					</item>
 					<item chance="0.886">
-						<item id="35318" count="5" /> <!-- Seraph Circlet Ingredient -->
+						<item id="35318" count="5" /> <!-- Corroded Seraph Circlet Ingredient -->
 					</item>
 					<item chance="0.332">
-						<item id="35319" count="5" /> <!-- Seraph Tunic Ingredient -->
+						<item id="35319" count="5" /> <!-- Corroded Seraph Tunic Ingredient -->
 					</item>
 					<item chance="0.354">
-						<item id="35320" count="5" /> <!-- Seraph Stocking Ingredient -->
+						<item id="35320" count="5" /> <!-- Corroded Seraph Stocking Ingredient -->
 					</item>
 					<item chance="0.886">
-						<item id="35321" count="5" /> <!-- Seraph Glove Ingredient -->
+						<item id="35321" count="5" /> <!-- Corroded Seraph Glove Ingredient -->
 					</item>
 					<item chance="1.328">
-						<item id="35322" count="5" /> <!-- Seraph Shoe Ingredient -->
+						<item id="35322" count="5" /> <!-- Corroded Seraph Boot Ingredient -->
 					</item>
 					<item chance="1.265">
-						<item id="35323" count="5" /> <!-- Seraph Sigil Ingredient -->
+						<item id="35323" count="5" /> <!-- Corroded Seraph Sigil Ingredient -->
 					</item>
 					<item chance="1.275">
-						<item id="35324" count="5" /> <!-- Seraph Necklace Gem -->
+						<item id="35324" count="5" /> <!-- Corroded Seraph Necklace Gem -->
 					</item>
 					<item chance="1.7">
-						<item id="35325" count="5" /> <!-- Seraph Earring Gem -->
+						<item id="35325" count="5" /> <!-- Corroded Seraph Earring Gem -->
 					</item>
 					<item chance="2.551">
-						<item id="35326" count="5" /> <!-- Seraph Ring Gem -->
+						<item id="35326" count="5" /> <!-- Corroded Seraph Ring Gem -->
 					</item>
 					<item chance="0.708">
-						<item id="35369" count="5" /> <!-- Blessed Seraph Helmet Ingredient -->
+						<item id="35369" count="5" /> <!-- Corroded Blessed Seraph Helmet Ingredient -->
 					</item>
 					<item chance="0.266">
-						<item id="35370" count="5" /> <!-- Blessed Seraph Breastplate Ingredient -->
+						<item id="35370" count="5" /> <!-- Corroded Blessed Seraph Breastplate Ingredient -->
 					</item>
 					<item chance="0.283">
-						<item id="35371" count="5" /> <!-- Blessed Seraph Gaiter Ingredient -->
+						<item id="35371" count="5" /> <!-- Corroded Blessed Seraph Gaiter Ingredient -->
 					</item>
 					<item chance="0.708">
-						<item id="35372" count="5" /> <!-- Blessed Seraph Gauntlet Ingredient -->
+						<item id="35372" count="5" /> <!-- Corroded Blessed Seraph Gauntlet Ingredient -->
 					</item>
 					<item chance="1.063">
-						<item id="35373" count="5" /> <!-- Blessed Seraph Boot Ingredient -->
+						<item id="35373" count="5" /> <!-- Corroded Blessed Seraph Boot Ingredient -->
 					</item>
 					<item chance="1.012">
-						<item id="35374" count="5" /> <!-- Blessed Seraph Shield Ingredient -->
+						<item id="35374" count="5" /> <!-- Corroded Blessed Seraph Shield Ingredient -->
 					</item>
 					<item chance="0.708">
-						<item id="35375" count="5" /> <!-- Blessed Seraph Leather Helmet Ingredient -->
+						<item id="35375" count="5" /> <!-- Corroded Blessed Seraph Leather Helmet Ingredient -->
 					</item>
 					<item chance="0.266">
-						<item id="35376" count="5" /> <!-- Blessed Seraph Leather Armor Ingredient -->
+						<item id="35376" count="5" /> <!-- Corroded Blessed Seraph Leather Armor Ingredient -->
 					</item>
 					<item chance="0.283">
-						<item id="35377" count="5" /> <!-- Blessed Seraph Leather Legging Ingredient -->
+						<item id="35377" count="5" /> <!-- Corroded Blessed Seraph Leather Legging Ingredient -->
 					</item>
 					<item chance="0.708">
-						<item id="35378" count="5" /> <!-- Blessed Seraph Leather Glove Ingredient -->
+						<item id="35378" count="5" /> <!-- Corroded Blessed Seraph Leather Glove Ingredient -->
 					</item>
 					<item chance="1.063">
-						<item id="35379" count="5" /> <!-- Blessed Seraph Leather Boot Ingredient -->
+						<item id="35379" count="5" /> <!-- Corroded Blessed Seraph Leather Boot Ingredient -->
 					</item>
 					<item chance="0.708">
-						<item id="35380" count="5" /> <!-- Blessed Seraph Circlet Ingredient -->
+						<item id="35380" count="5" /> <!-- Corroded Blessed Seraph Circlet Ingredient -->
 					</item>
 					<item chance="0.266">
-						<item id="35381" count="5" /> <!-- Blessed Seraph Tunic Ingredient -->
+						<item id="35381" count="5" /> <!-- Corroded Blessed Seraph Tunic Ingredient -->
 					</item>
 					<item chance="0.283">
-						<item id="35382" count="5" /> <!-- Blessed Seraph Stocking Ingredient -->
+						<item id="35382" count="5" /> <!-- Corroded Blessed Seraph Stocking Ingredient -->
 					</item>
 					<item chance="0.708">
-						<item id="35383" count="5" /> <!-- Blessed Seraph Glove Ingredient -->
+						<item id="35383" count="5" /> <!-- Corroded Blessed Seraph Glove Ingredient -->
 					</item>
 					<item chance="1.063">
-						<item id="35384" count="5" /> <!-- Blessed Seraph Shoe Ingredient -->
+						<item id="35384" count="5" /> <!-- Corroded Blessed Seraph Shoe Ingredient -->
 					</item>
 					<item chance="1.012">
-						<item id="35385" count="5" /> <!-- Blessed Seraph Sigil Ingredient -->
+						<item id="35385" count="5" /> <!-- Corroded Blessed Seraph Sigil Ingredient -->
 					</item>
 					<item chance="1.02">
-						<item id="35386" count="5" /> <!-- Blessed Seraph Necklace Gem -->
+						<item id="35386" count="5" /> <!-- Corroded Blessed Seraph Necklace Gem -->
 					</item>
 					<item chance="1.36">
-						<item id="35387" count="5" /> <!-- Blessed Seraph Earring Gem -->
+						<item id="35387" count="5" /> <!-- Corroded Blessed Seraph Earring Gem -->
 					</item>
 					<item chance="2.04">
-						<item id="35388" count="5" /> <!-- Blessed Seraph Ring Gem -->
+						<item id="35388" count="5" /> <!-- Corroded Blessed Seraph Ring Gem -->
 					</item>
 					<item chance="0.443">
 						<item id="35431" count="1" /> <!-- Recipe: Seraph Helmet (60%) -->
@@ -3052,97 +3067,97 @@
 						<item id="35430" count="1" /> <!-- Recipe: Specter Retributer (60%) -->
 					</item>
 					<item chance="0.081">
-						<item id="35296" count="5" /> <!-- Specter Shaper Fragment -->
+						<item id="35296" count="5" /> <!-- Corroded Specter Shaper Fragment -->
 					</item>
 					<item chance="0.081">
-						<item id="35297" count="5" /> <!-- Specter Cutter Fragment -->
+						<item id="35297" count="5" /> <!-- Corroded Cutter Fragment -->
 					</item>
 					<item chance="0.081">
-						<item id="35298" count="5" /> <!-- Specter Slasher Fragment -->
+						<item id="35298" count="5" /> <!-- Corroded Specter Slasher Fragment -->
 					</item>
 					<item chance="0.081">
-						<item id="35299" count="5" /> <!-- Specter Avenger Fragment -->
+						<item id="35299" count="5" /> <!-- Corroded Specter Avenger Fragment -->
 					</item>
 					<item chance="0.081">
-						<item id="35300" count="5" /> <!-- Specter Fighter Fragment -->
+						<item id="35300" count="5" /> <!-- Corroded Specter Fighter Fragment -->
 					</item>
 					<item chance="0.081">
-						<item id="35301" count="5" /> <!-- Specter Stormer Fragment -->
+						<item id="35301" count="5" /> <!-- Corroded Specter Stormer Fragment -->
 					</item>
 					<item chance="0.081">
-						<item id="35302" count="5" /> <!-- Specter Thrower Fragment -->
+						<item id="35302" count="5" /> <!-- Corroded Specter Thrower Fragment -->
 					</item>
 					<item chance="0.081">
-						<item id="35303" count="5" /> <!-- Specter Shooter Fragment -->
+						<item id="35303" count="5" /> <!-- Corroded Specter Shooter Fragment -->
 					</item>
 					<item chance="0.081">
-						<item id="35304" count="5" /> <!-- Specter Buster Fragment -->
+						<item id="35304" count="5" /> <!-- Corroded Specter Buster Fragment -->
 					</item>
 					<item chance="0.081">
-						<item id="35305" count="5" /> <!-- Specter Caster Fragment -->
+						<item id="35305" count="5" /> <!-- Corroded Specter Caster Fragment -->
 					</item>
 					<item chance="0.081">
-						<item id="35306" count="5" /> <!-- Specter Retributer Fragment -->
+						<item id="35306" count="5" /> <!-- Corroded Specter Retributer Fragment -->
 					</item>
 					<item chance="0.413">
-						<item id="35307" count="5" /> <!-- Seraph Helmet Ingredient -->
+						<item id="35307" count="5" /> <!-- Corroded Seraph Helmet Ingredient -->
 					</item>
 					<item chance="0.155">
-						<item id="35308" count="5" /> <!-- Seraph Breastplate Ingredient -->
+						<item id="35308" count="5" /> <!-- Corroded Seraph Breastplate Ingredient -->
 					</item>
 					<item chance="0.165">
-						<item id="35309" count="5" /> <!-- Seraph Gaiter Ingredient -->
+						<item id="35309" count="5" /> <!-- Corroded Seraph Gaiter Ingredient -->
 					</item>
 					<item chance="0.413">
-						<item id="35310" count="5" /> <!-- Seraph Gauntlet Ingredient -->
+						<item id="35310" count="5" /> <!-- Corroded Seraph Gauntlet Ingredient -->
 					</item>
 					<item chance="0.62">
-						<item id="35311" count="5" /> <!-- Seraph Boot Ingredient -->
+						<item id="35311" count="5" /> <!-- Corroded Seraph Boot Ingredient -->
 					</item>
 					<item chance="0.59">
-						<item id="35312" count="5" /> <!-- Seraph Shield Ingredient -->
+						<item id="35312" count="5" /> <!-- Corroded Seraph Shield Ingredient -->
 					</item>
 					<item chance="0.413">
-						<item id="35313" count="5" /> <!-- Seraph Leather Helmet Ingredient -->
+						<item id="35313" count="5" /> <!-- Corroded Seraph Leather Helmet Ingredient -->
 					</item>
 					<item chance="0.155">
-						<item id="35314" count="5" /> <!-- Seraph Leather Armor Ingredient -->
+						<item id="35314" count="5" /> <!-- Corroded Seraph Leather Armor Ingredient -->
 					</item>
 					<item chance="0.165">
-						<item id="35315" count="5" /> <!-- Seraph Leather Legging Ingredient -->
+						<item id="35315" count="5" /> <!-- Corroded Seraph Leather Legging Ingredient -->
 					</item>
 					<item chance="0.413">
-						<item id="35316" count="5" /> <!-- Seraph Leather Glove Ingredient -->
+						<item id="35316" count="5" /> <!-- Corroded Seraph Leather Glove Ingredient -->
 					</item>
 					<item chance="0.62">
-						<item id="35317" count="5" /> <!-- Seraph Leather Boot Ingredient -->
+						<item id="35317" count="5" /> <!-- Corroded Seraph Leather Boot Ingredient -->
 					</item>
 					<item chance="0.413">
-						<item id="35318" count="5" /> <!-- Seraph Circlet Ingredient -->
+						<item id="35318" count="5" /> <!-- Corroded Seraph Circlet Ingredient -->
 					</item>
 					<item chance="0.155">
-						<item id="35319" count="5" /> <!-- Seraph Tunic Ingredient -->
+						<item id="35319" count="5" /> <!-- Corroded Seraph Tunic Ingredient -->
 					</item>
 					<item chance="0.165">
-						<item id="35320" count="5" /> <!-- Seraph Stocking Ingredient -->
+						<item id="35320" count="5" /> <!-- Corroded Seraph Stocking Ingredient -->
 					</item>
 					<item chance="0.413">
-						<item id="35321" count="5" /> <!-- Seraph Glove Ingredient -->
+						<item id="35321" count="5" /> <!-- Corroded Seraph Glove Ingredient -->
 					</item>
 					<item chance="0.62">
-						<item id="35322" count="5" /> <!-- Seraph Shoe Ingredient -->
+						<item id="35322" count="5" /> <!-- Corroded Seraph Boot Ingredient -->
 					</item>
 					<item chance="0.59">
-						<item id="35323" count="5" /> <!-- Seraph Sigil Ingredient -->
+						<item id="35323" count="5" /> <!-- Corroded Seraph Sigil Ingredient -->
 					</item>
 					<item chance="0.595">
-						<item id="35324" count="5" /> <!-- Seraph Necklace Gem -->
+						<item id="35324" count="5" /> <!-- Corroded Seraph Necklace Gem -->
 					</item>
 					<item chance="0.793">
-						<item id="35325" count="5" /> <!-- Seraph Earring Gem -->
+						<item id="35325" count="5" /> <!-- Corroded Seraph Earring Gem -->
 					</item>
 					<item chance="1.189">
-						<item id="35326" count="5" /> <!-- Seraph Ring Gem -->
+						<item id="35326" count="5" /> <!-- Corroded Seraph Ring Gem -->
 					</item>
 					<item chance="0.207">
 						<item id="35431" count="1" /> <!-- Recipe: Seraph Helmet (60%) -->
@@ -3231,16 +3246,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.39">
-						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="17526" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="5.19">
-						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="17527" count="1" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.04">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.36">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="12.97">
 						<item id="9546" count="1" /> <!-- Fire Stone -->
@@ -3362,190 +3377,190 @@
 						<item id="35461" count="1" /> <!-- Recipe: Helios Retributer (60%) -->
 					</item>
 					<item chance="0.0026">
-						<item id="35389" count="1" /> <!-- Blessed Helios Shaper Fragment -->
+						<item id="35389" count="1" /> <!-- Corroded Blessed Helios Shaper Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35390" count="1" /> <!-- Blessed Helios Cutter Fragment -->
+						<item id="35390" count="1" /> <!-- Corroded Blessed Helios Cutter Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35391" count="1" /> <!-- Blessed Helios Slasher Fragment -->
+						<item id="35391" count="1" /> <!-- Corroded Blessed Helios Slasher Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35392" count="1" /> <!-- Blessed Helios Avenger Fragment -->
+						<item id="35392" count="1" /> <!-- Corroded Blessed Helios Avenger Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35393" count="1" /> <!-- Blessed Helios Fighter Fragment -->
+						<item id="35393" count="1" /> <!-- Corroded Blessed Helios Fighter Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35394" count="1" /> <!-- Blessed Helios Stormer Fragment -->
+						<item id="35394" count="1" /> <!-- Corroded Blessed Helios Stormer Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35395" count="1" /> <!-- Blessed Helios Thrower Fragment -->
+						<item id="35395" count="1" /> <!-- Corroded Blessed Helios Thrower Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35396" count="1" /> <!-- Blessed Helios Shooter Fragment -->
+						<item id="35396" count="1" /> <!-- Corroded Blessed Helios Shooter Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35397" count="1" /> <!-- Blessed Helios Buster Fragment -->
+						<item id="35397" count="1" /> <!-- Corroded Blessed Helios Buster Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35398" count="1" /> <!-- Blessed Helios Caster Fragment -->
+						<item id="35398" count="1" /> <!-- Corroded Blessed Helios Caster Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35399" count="1" /> <!-- Blessed Helios Retributer Fragment -->
+						<item id="35399" count="1" /> <!-- Corroded Blessed Helios Retributer Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35327" count="1" /> <!-- Helios Shaper Fragment -->
+						<item id="35327" count="1" /> <!-- Corroded Helios Shaper Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35328" count="1" /> <!-- Helios Cutter Fragment -->
+						<item id="35328" count="1" /> <!-- Corroded Helios Cutter Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35329" count="1" /> <!-- Helios Slasher Fragment -->
+						<item id="35329" count="1" /> <!-- Corroded Helios Slasher Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35330" count="1" /> <!-- Helios Avenger Fragment -->
+						<item id="35330" count="1" /> <!-- Corroded Helios Avenger Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35331" count="1" /> <!-- Helios Fighter Fragment -->
+						<item id="35331" count="1" /> <!-- Corroded Helios Fighter Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35332" count="1" /> <!-- Helios Stormer Fragment -->
+						<item id="35332" count="1" /> <!-- Corroded Helios Stormer Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35333" count="1" /> <!-- Helios Thrower Fragment -->
+						<item id="35333" count="1" /> <!-- Corroded Helios Thrower Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35334" count="1" /> <!-- Helios Shooter Fragment -->
+						<item id="35334" count="1" /> <!-- Corroded Helios Shooter Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35335" count="1" /> <!-- Helios Buster Fragment -->
+						<item id="35335" count="1" /> <!-- Corroded Helios Buster Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35336" count="1" /> <!-- Helios Caster Fragment -->
+						<item id="35336" count="1" /> <!-- Corroded Helios Caster Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35337" count="1" /> <!-- Helios Retributer Fragment -->
+						<item id="35337" count="1" /> <!-- Corroded Helios Retributer Fragment -->
 					</item>
 					<item chance="0.0163">
-						<item id="35338" count="1" /> <!-- Eternal Helmet Ingredient -->
+						<item id="35338" count="1" /> <!-- Corroded Eternal Helmet Ingredient -->
 					</item>
 					<item chance="0.0061">
-						<item id="35339" count="1" /> <!-- Eternal Breastplate Ingredient -->
+						<item id="35339" count="1" /> <!-- Corroded Eternal Breastplate Ingredient -->
 					</item>
 					<item chance="0.0065">
-						<item id="35340" count="1" /> <!-- Eternal Gaiter Ingredient -->
+						<item id="35340" count="1" /> <!-- Corroded Eternal Gaiter Ingredient -->
 					</item>
 					<item chance="0.0163">
-						<item id="35341" count="1" /> <!-- Eternal Gauntlet Ingredient -->
+						<item id="35341" count="1" /> <!-- Corroded Eternal Gauntlet Ingredient -->
 					</item>
 					<item chance="0.0245">
-						<item id="35342" count="1" /> <!-- Eternal Boot Ingredient -->
+						<item id="35342" count="1" /> <!-- Corroded Eternal Boot Ingredient -->
 					</item>
 					<item chance="0.0233">
-						<item id="35343" count="1" /> <!-- Eternal Shield Ingredient -->
+						<item id="35343" count="1" /> <!-- Corroded Eternal Shield Ingredient -->
 					</item>
 					<item chance="0.0163">
-						<item id="35344" count="1" /> <!-- Eternal Leather Helmet Ingredient -->
+						<item id="35344" count="1" /> <!-- Corroded Eternal Leather Helmet Ingredient -->
 					</item>
 					<item chance="0.0061">
-						<item id="35345" count="1" /> <!-- Eternal Leather Armor Ingredient -->
+						<item id="35345" count="1" /> <!-- Corroded Eternal Leather Armor Ingredient -->
 					</item>
 					<item chance="0.0065">
-						<item id="35346" count="1" /> <!-- Eternal Leather Legging Ingredient -->
+						<item id="35346" count="1" /> <!-- Corroded Eternal Leather Legging Ingredient -->
 					</item>
 					<item chance="0.0163">
-						<item id="35347" count="1" /> <!-- Eternal Leather Glove Ingredient -->
+						<item id="35347" count="1" /> <!-- Corroded Eternal Leather Glove Ingredient -->
 					</item>
 					<item chance="0.0245">
-						<item id="35348" count="1" /> <!-- Eternal Leather Boot Ingredient -->
+						<item id="35348" count="1" /> <!-- Corroded Eternal Leather Boot Ingredient -->
 					</item>
 					<item chance="0.0163">
-						<item id="35349" count="1" /> <!-- Eternal Circlet Ingredient -->
+						<item id="35349" count="1" /> <!-- Corroded Eternal Circlet Ingredient -->
 					</item>
 					<item chance="0.0061">
-						<item id="35350" count="1" /> <!-- Eternal Tunic Ingredient -->
+						<item id="35350" count="1" /> <!-- Corroded Eternal Tunic Ingredient -->
 					</item>
 					<item chance="0.0065">
-						<item id="35351" count="1" /> <!-- Eternal Stocking Ingredient -->
+						<item id="35351" count="1" /> <!-- Corroded Eternal Stocking Ingredient -->
 					</item>
 					<item chance="0.0163">
-						<item id="35352" count="1" /> <!-- Eternal Glove Ingredient -->
+						<item id="35352" count="1" /> <!-- Corroded Eternal Glove Ingredient -->
 					</item>
 					<item chance="0.0245">
-						<item id="35353" count="1" /> <!-- Eternal Shoe Ingredient -->
+						<item id="35353" count="1" /> <!-- Corroded Eternal Stocking Ingredient -->
 					</item>
 					<item chance="0.0233">
-						<item id="35354" count="1" /> <!-- Eternal Sigil Ingredient -->
+						<item id="35354" count="1" /> <!-- Corroded Eternal Sigil Ingredient -->
 					</item>
 					<item chance="0.0235">
-						<item id="35355" count="1" /> <!-- Eternal Necklace Gem -->
+						<item id="35355" count="1" /> <!-- Corroded Eternal Necklace Gem -->
 					</item>
 					<item chance="0.0313">
-						<item id="35356" count="1" /> <!-- Eternal Earring Gem -->
+						<item id="35356" count="1" /> <!-- Corroded Eternal Earring Gem -->
 					</item>
 					<item chance="0.047">
-						<item id="35357" count="1" /> <!-- Eternal Ring Gem -->
+						<item id="35357" count="1" /> <!-- Corroded Eternal Ring Gem -->
 					</item>
 					<item chance="0.0131">
-						<item id="35400" count="1" /> <!-- Blessed Eternal Helmet Ingredient -->
+						<item id="35400" count="1" /> <!-- Corroded Blessed Eternal Helmet Ingredient -->
 					</item>
 					<item chance="0.0049">
-						<item id="35401" count="1" /> <!-- Blessed Eternal Breastplate Ingredient -->
+						<item id="35401" count="1" /> <!-- Corroded Blessed Eternal Breastplate Ingredient -->
 					</item>
 					<item chance="0.0052">
-						<item id="35402" count="1" /> <!-- Blessed Eternal Gaiter Ingredient -->
+						<item id="35402" count="1" /> <!-- Corroded Blessed Eternal Gaiter Ingredient -->
 					</item>
 					<item chance="0.0131">
-						<item id="35403" count="1" /> <!-- Blessed Eternal Gauntlet Ingredient -->
+						<item id="35403" count="1" /> <!-- Corroded Blessed Eternal Gauntlet Ingredient -->
 					</item>
 					<item chance="0.0196">
-						<item id="35404" count="1" /> <!-- Blessed Eternal Boot Ingredient -->
+						<item id="35404" count="1" /> <!-- Corroded Blessed Eternal Boot Ingredient -->
 					</item>
 					<item chance="0.0186">
-						<item id="35405" count="1" /> <!-- Blessed Eternal Shield Ingredient -->
+						<item id="35405" count="1" /> <!-- Corroded Blessed Eternal Shield Ingredient -->
 					</item>
 					<item chance="0.0131">
-						<item id="35406" count="1" /> <!-- Blessed Eternal Leather Helmet Ingredient -->
+						<item id="35406" count="1" /> <!-- Corroded Blessed Eternal Leather Helmet Ingredient -->
 					</item>
 					<item chance="0.0049">
-						<item id="35407" count="1" /> <!-- Blessed Eternal Leather Armor Ingredient -->
+						<item id="35407" count="1" /> <!-- Corroded Blessed Eternal Leather Armor Ingredient -->
 					</item>
 					<item chance="0.0052">
-						<item id="35408" count="1" /> <!-- Blessed Eternal Leather Legging Ingredient -->
+						<item id="35408" count="1" /> <!-- Corroded Blessed Eternal Leather Legging Ingredient -->
 					</item>
 					<item chance="0.0131">
-						<item id="35409" count="1" /> <!-- Blessed Eternal Leather Glove Ingredient -->
+						<item id="35409" count="1" /> <!-- Corroded Blessed Eternal Leather Glove Ingredient -->
 					</item>
 					<item chance="0.0196">
-						<item id="35410" count="1" /> <!-- Blessed Eternal Leather Boot Ingredient -->
+						<item id="35410" count="1" /> <!-- Corroded Blessed Eternal Leather Boot Ingredient -->
 					</item>
 					<item chance="0.0131">
-						<item id="35411" count="1" /> <!-- Blessed Eternal Circlet Ingredient -->
+						<item id="35411" count="1" /> <!-- Corroded Blessed Eternal Circlet Ingredient -->
 					</item>
 					<item chance="0.0049">
-						<item id="35412" count="1" /> <!-- Blessed Eternal Tunic Ingredient -->
+						<item id="35412" count="1" /> <!-- Corroded Blessed Eternal Tunic Ingredient -->
 					</item>
 					<item chance="0.0052">
-						<item id="35413" count="1" /> <!-- Blessed Eternal Stocking Ingredient -->
+						<item id="35413" count="1" /> <!-- Corroded Blessed Eternal Stocking Ingredient -->
 					</item>
 					<item chance="0.0131">
-						<item id="35414" count="1" /> <!-- Blessed Eternal Glove Ingredient -->
+						<item id="35414" count="1" /> <!-- Corroded Blessed Eternal Glove Ingredient -->
 					</item>
 					<item chance="0.0196">
-						<item id="35415" count="1" /> <!-- Blessed Eternal Shoe Ingredient -->
+						<item id="35415" count="1" /> <!-- Corroded Blessed Eternal Shoe Ingredient -->
 					</item>
 					<item chance="0.0186">
-						<item id="35416" count="1" /> <!-- Blessed Eternal Sigil Ingredient -->
+						<item id="35416" count="1" /> <!-- Corroded Blessed Eternal Sigil Ingredient -->
 					</item>
 					<item chance="0.0188">
-						<item id="35417" count="1" /> <!-- Blessed Eternal Necklace Gem -->
+						<item id="35417" count="1" /> <!-- Corroded Blessed Eternal Necklace Gem -->
 					</item>
 					<item chance="0.0251">
-						<item id="35418" count="1" /> <!-- Blessed Eternal Earring Gem -->
+						<item id="35418" count="1" /> <!-- Corroded Blessed Eternal Earring Gem -->
 					</item>
 					<item chance="0.0376">
-						<item id="35419" count="1" /> <!-- Blessed Eternal Ring Gem -->
+						<item id="35419" count="1" /> <!-- Corroded Blessed Eternal Ring Gem -->
 					</item>
 					<item chance="0.0016">
 						<item id="35462" count="1" /> <!-- Recipe: Eternal Helmet (60%) -->
@@ -3760,190 +3775,190 @@
 						<item id="35461" count="1" /> <!-- Recipe: Helios Retributer (60%) -->
 					</item>
 					<item chance="0.0026">
-						<item id="35389" count="1" /> <!-- Blessed Helios Shaper Fragment -->
+						<item id="35389" count="1" /> <!-- Corroded Blessed Helios Shaper Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35390" count="1" /> <!-- Blessed Helios Cutter Fragment -->
+						<item id="35390" count="1" /> <!-- Corroded Blessed Helios Cutter Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35391" count="1" /> <!-- Blessed Helios Slasher Fragment -->
+						<item id="35391" count="1" /> <!-- Corroded Blessed Helios Slasher Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35392" count="1" /> <!-- Blessed Helios Avenger Fragment -->
+						<item id="35392" count="1" /> <!-- Corroded Blessed Helios Avenger Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35393" count="1" /> <!-- Blessed Helios Fighter Fragment -->
+						<item id="35393" count="1" /> <!-- Corroded Blessed Helios Fighter Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35394" count="1" /> <!-- Blessed Helios Stormer Fragment -->
+						<item id="35394" count="1" /> <!-- Corroded Blessed Helios Stormer Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35395" count="1" /> <!-- Blessed Helios Thrower Fragment -->
+						<item id="35395" count="1" /> <!-- Corroded Blessed Helios Thrower Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35396" count="1" /> <!-- Blessed Helios Shooter Fragment -->
+						<item id="35396" count="1" /> <!-- Corroded Blessed Helios Shooter Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35397" count="1" /> <!-- Blessed Helios Buster Fragment -->
+						<item id="35397" count="1" /> <!-- Corroded Blessed Helios Buster Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35398" count="1" /> <!-- Blessed Helios Caster Fragment -->
+						<item id="35398" count="1" /> <!-- Corroded Blessed Helios Caster Fragment -->
 					</item>
 					<item chance="0.0026">
-						<item id="35399" count="1" /> <!-- Blessed Helios Retributer Fragment -->
+						<item id="35399" count="1" /> <!-- Corroded Blessed Helios Retributer Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35327" count="1" /> <!-- Helios Shaper Fragment -->
+						<item id="35327" count="1" /> <!-- Corroded Helios Shaper Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35328" count="1" /> <!-- Helios Cutter Fragment -->
+						<item id="35328" count="1" /> <!-- Corroded Helios Cutter Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35329" count="1" /> <!-- Helios Slasher Fragment -->
+						<item id="35329" count="1" /> <!-- Corroded Helios Slasher Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35330" count="1" /> <!-- Helios Avenger Fragment -->
+						<item id="35330" count="1" /> <!-- Corroded Helios Avenger Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35331" count="1" /> <!-- Helios Fighter Fragment -->
+						<item id="35331" count="1" /> <!-- Corroded Helios Fighter Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35332" count="1" /> <!-- Helios Stormer Fragment -->
+						<item id="35332" count="1" /> <!-- Corroded Helios Stormer Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35333" count="1" /> <!-- Helios Thrower Fragment -->
+						<item id="35333" count="1" /> <!-- Corroded Helios Thrower Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35334" count="1" /> <!-- Helios Shooter Fragment -->
+						<item id="35334" count="1" /> <!-- Corroded Helios Shooter Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35335" count="1" /> <!-- Helios Buster Fragment -->
+						<item id="35335" count="1" /> <!-- Corroded Helios Buster Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35336" count="1" /> <!-- Helios Caster Fragment -->
+						<item id="35336" count="1" /> <!-- Corroded Helios Caster Fragment -->
 					</item>
 					<item chance="0.0032">
-						<item id="35337" count="1" /> <!-- Helios Retributer Fragment -->
+						<item id="35337" count="1" /> <!-- Corroded Helios Retributer Fragment -->
 					</item>
 					<item chance="0.0163">
-						<item id="35338" count="1" /> <!-- Eternal Helmet Ingredient -->
+						<item id="35338" count="1" /> <!-- Corroded Eternal Helmet Ingredient -->
 					</item>
 					<item chance="0.0061">
-						<item id="35339" count="1" /> <!-- Eternal Breastplate Ingredient -->
+						<item id="35339" count="1" /> <!-- Corroded Eternal Breastplate Ingredient -->
 					</item>
 					<item chance="0.0065">
-						<item id="35340" count="1" /> <!-- Eternal Gaiter Ingredient -->
+						<item id="35340" count="1" /> <!-- Corroded Eternal Gaiter Ingredient -->
 					</item>
 					<item chance="0.0163">
-						<item id="35341" count="1" /> <!-- Eternal Gauntlet Ingredient -->
+						<item id="35341" count="1" /> <!-- Corroded Eternal Gauntlet Ingredient -->
 					</item>
 					<item chance="0.0245">
-						<item id="35342" count="1" /> <!-- Eternal Boot Ingredient -->
+						<item id="35342" count="1" /> <!-- Corroded Eternal Boot Ingredient -->
 					</item>
 					<item chance="0.0233">
-						<item id="35343" count="1" /> <!-- Eternal Shield Ingredient -->
+						<item id="35343" count="1" /> <!-- Corroded Eternal Shield Ingredient -->
 					</item>
 					<item chance="0.0163">
-						<item id="35344" count="1" /> <!-- Eternal Leather Helmet Ingredient -->
+						<item id="35344" count="1" /> <!-- Corroded Eternal Leather Helmet Ingredient -->
 					</item>
 					<item chance="0.0061">
-						<item id="35345" count="1" /> <!-- Eternal Leather Armor Ingredient -->
+						<item id="35345" count="1" /> <!-- Corroded Eternal Leather Armor Ingredient -->
 					</item>
 					<item chance="0.0065">
-						<item id="35346" count="1" /> <!-- Eternal Leather Legging Ingredient -->
+						<item id="35346" count="1" /> <!-- Corroded Eternal Leather Legging Ingredient -->
 					</item>
 					<item chance="0.0163">
-						<item id="35347" count="1" /> <!-- Eternal Leather Glove Ingredient -->
+						<item id="35347" count="1" /> <!-- Corroded Eternal Leather Glove Ingredient -->
 					</item>
 					<item chance="0.0245">
-						<item id="35348" count="1" /> <!-- Eternal Leather Boot Ingredient -->
+						<item id="35348" count="1" /> <!-- Corroded Eternal Leather Boot Ingredient -->
 					</item>
 					<item chance="0.0163">
-						<item id="35349" count="1" /> <!-- Eternal Circlet Ingredient -->
+						<item id="35349" count="1" /> <!-- Corroded Eternal Circlet Ingredient -->
 					</item>
 					<item chance="0.0061">
-						<item id="35350" count="1" /> <!-- Eternal Tunic Ingredient -->
+						<item id="35350" count="1" /> <!-- Corroded Eternal Tunic Ingredient -->
 					</item>
 					<item chance="0.0065">
-						<item id="35351" count="1" /> <!-- Eternal Stocking Ingredient -->
+						<item id="35351" count="1" /> <!-- Corroded Eternal Stocking Ingredient -->
 					</item>
 					<item chance="0.0163">
-						<item id="35352" count="1" /> <!-- Eternal Glove Ingredient -->
+						<item id="35352" count="1" /> <!-- Corroded Eternal Glove Ingredient -->
 					</item>
 					<item chance="0.0245">
-						<item id="35353" count="1" /> <!-- Eternal Shoe Ingredient -->
+						<item id="35353" count="1" /> <!-- Corroded Eternal Stocking Ingredient -->
 					</item>
 					<item chance="0.0233">
-						<item id="35354" count="1" /> <!-- Eternal Sigil Ingredient -->
+						<item id="35354" count="1" /> <!-- Corroded Eternal Sigil Ingredient -->
 					</item>
 					<item chance="0.0235">
-						<item id="35355" count="1" /> <!-- Eternal Necklace Gem -->
+						<item id="35355" count="1" /> <!-- Corroded Eternal Necklace Gem -->
 					</item>
 					<item chance="0.0313">
-						<item id="35356" count="1" /> <!-- Eternal Earring Gem -->
+						<item id="35356" count="1" /> <!-- Corroded Eternal Earring Gem -->
 					</item>
 					<item chance="0.047">
-						<item id="35357" count="1" /> <!-- Eternal Ring Gem -->
+						<item id="35357" count="1" /> <!-- Corroded Eternal Ring Gem -->
 					</item>
 					<item chance="0.0131">
-						<item id="35400" count="1" /> <!-- Blessed Eternal Helmet Ingredient -->
+						<item id="35400" count="1" /> <!-- Corroded Blessed Eternal Helmet Ingredient -->
 					</item>
 					<item chance="0.0049">
-						<item id="35401" count="1" /> <!-- Blessed Eternal Breastplate Ingredient -->
+						<item id="35401" count="1" /> <!-- Corroded Blessed Eternal Breastplate Ingredient -->
 					</item>
 					<item chance="0.0052">
-						<item id="35402" count="1" /> <!-- Blessed Eternal Gaiter Ingredient -->
+						<item id="35402" count="1" /> <!-- Corroded Blessed Eternal Gaiter Ingredient -->
 					</item>
 					<item chance="0.0131">
-						<item id="35403" count="1" /> <!-- Blessed Eternal Gauntlet Ingredient -->
+						<item id="35403" count="1" /> <!-- Corroded Blessed Eternal Gauntlet Ingredient -->
 					</item>
 					<item chance="0.0196">
-						<item id="35404" count="1" /> <!-- Blessed Eternal Boot Ingredient -->
+						<item id="35404" count="1" /> <!-- Corroded Blessed Eternal Boot Ingredient -->
 					</item>
 					<item chance="0.0186">
-						<item id="35405" count="1" /> <!-- Blessed Eternal Shield Ingredient -->
+						<item id="35405" count="1" /> <!-- Corroded Blessed Eternal Shield Ingredient -->
 					</item>
 					<item chance="0.0131">
-						<item id="35406" count="1" /> <!-- Blessed Eternal Leather Helmet Ingredient -->
+						<item id="35406" count="1" /> <!-- Corroded Blessed Eternal Leather Helmet Ingredient -->
 					</item>
 					<item chance="0.0049">
-						<item id="35407" count="1" /> <!-- Blessed Eternal Leather Armor Ingredient -->
+						<item id="35407" count="1" /> <!-- Corroded Blessed Eternal Leather Armor Ingredient -->
 					</item>
 					<item chance="0.0052">
-						<item id="35408" count="1" /> <!-- Blessed Eternal Leather Legging Ingredient -->
+						<item id="35408" count="1" /> <!-- Corroded Blessed Eternal Leather Legging Ingredient -->
 					</item>
 					<item chance="0.0131">
-						<item id="35409" count="1" /> <!-- Blessed Eternal Leather Glove Ingredient -->
+						<item id="35409" count="1" /> <!-- Corroded Blessed Eternal Leather Glove Ingredient -->
 					</item>
 					<item chance="0.0196">
-						<item id="35410" count="1" /> <!-- Blessed Eternal Leather Boot Ingredient -->
+						<item id="35410" count="1" /> <!-- Corroded Blessed Eternal Leather Boot Ingredient -->
 					</item>
 					<item chance="0.0131">
-						<item id="35411" count="1" /> <!-- Blessed Eternal Circlet Ingredient -->
+						<item id="35411" count="1" /> <!-- Corroded Blessed Eternal Circlet Ingredient -->
 					</item>
 					<item chance="0.0049">
-						<item id="35412" count="1" /> <!-- Blessed Eternal Tunic Ingredient -->
+						<item id="35412" count="1" /> <!-- Corroded Blessed Eternal Tunic Ingredient -->
 					</item>
 					<item chance="0.0052">
-						<item id="35413" count="1" /> <!-- Blessed Eternal Stocking Ingredient -->
+						<item id="35413" count="1" /> <!-- Corroded Blessed Eternal Stocking Ingredient -->
 					</item>
 					<item chance="0.0131">
-						<item id="35414" count="1" /> <!-- Blessed Eternal Glove Ingredient -->
+						<item id="35414" count="1" /> <!-- Corroded Blessed Eternal Glove Ingredient -->
 					</item>
 					<item chance="0.0196">
-						<item id="35415" count="1" /> <!-- Blessed Eternal Shoe Ingredient -->
+						<item id="35415" count="1" /> <!-- Corroded Blessed Eternal Shoe Ingredient -->
 					</item>
 					<item chance="0.0186">
-						<item id="35416" count="1" /> <!-- Blessed Eternal Sigil Ingredient -->
+						<item id="35416" count="1" /> <!-- Corroded Blessed Eternal Sigil Ingredient -->
 					</item>
 					<item chance="0.0188">
-						<item id="35417" count="1" /> <!-- Blessed Eternal Necklace Gem -->
+						<item id="35417" count="1" /> <!-- Corroded Blessed Eternal Necklace Gem -->
 					</item>
 					<item chance="0.0251">
-						<item id="35418" count="1" /> <!-- Blessed Eternal Earring Gem -->
+						<item id="35418" count="1" /> <!-- Corroded Blessed Eternal Earring Gem -->
 					</item>
 					<item chance="0.0376">
-						<item id="35419" count="1" /> <!-- Blessed Eternal Ring Gem -->
+						<item id="35419" count="1" /> <!-- Corroded Blessed Eternal Ring Gem -->
 					</item>
 					<item chance="0.0016">
 						<item id="35462" count="1" /> <!-- Recipe: Eternal Helmet (60%) -->
@@ -4079,7 +4094,7 @@
 		</effects>
 	</skill>
 	<skill id="9478" toLevel="1" name="Chat Prohibition Active">
-		<!-- Blocks chat for a certain time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Blocks chat for a certain time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.shutup</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -4191,7 +4206,7 @@
 		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="9487" toLevel="1" name="Angel Cat's Blessing">
-		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P. Def./ M. Def. +5%, Atk. Spd./ Casting Spd. +5%, Max HP/ MP +5%, and Acquired XP/ SP +30%. -->
+		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, Acquired XP/ SP +30%. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -4207,7 +4222,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9488" toLevel="1" name="Holiday Blessing Stage 1">
+	<skill id="9488" toLevel="1" name="Holiday Blessing Lv. 1">
 		<!-- Holiday Blessing. For 10 min., P. Atk. +1%, M. Atk. +2%, and Vitality is replenished when XP is gained through hunting. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -4229,7 +4244,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9489" toLevel="1" name="Holiday Blessing Stage 2">
+	<skill id="9489" toLevel="1" name="Holiday Blessing Lv. 2">
 		<!-- Holiday Blessing. For 10 min., P. Atk. +2%, M. Atk. +4%, and Vitality is replenished when XP is gained through hunting. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -4251,7 +4266,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9490" toLevel="1" name="Holiday Blessing Stage 3">
+	<skill id="9490" toLevel="1" name="Holiday Blessing Lv. 3">
 		<!-- Holiday Blessing. For 10 min., P. Atk. +3%, M. Atk. +6%, and Vitality is replenished when XP is gained through hunting. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -4273,7 +4288,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9491" toLevel="1" name="Holiday Blessing Stage 4">
+	<skill id="9491" toLevel="1" name="Holiday Blessing Lv. 4">
 		<!-- Holiday Blessing. For 10 min., P. Atk. +4%, M. Atk. +8%, and Vitality is replenished when XP is gained through hunting. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -4295,7 +4310,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9492" toLevel="1" name="Holiday Blessing Stage 5">
+	<skill id="9492" toLevel="1" name="Holiday Blessing Lv. 5">
 		<!-- Holiday Blessing. For 10 min., P. Atk. +5%, M. Atk. +10%, and Vitality is replenished when XP is gained through hunting. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -4317,8 +4332,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9493" toLevel="1" name="Lingering Holiday Blessing Stage 1">
-		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Stage 1 again. -->
+	<skill id="9493" toLevel="1" name="Lingering Holiday Blessing Lv. 1">
+		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Lv. 1 again. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -4336,8 +4351,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9494" toLevel="1" name="Lingering Holiday Blessing Stage 2">
-		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Stage 2 again. -->
+	<skill id="9494" toLevel="1" name="Lingering Holiday Blessing Lv. 2">
+		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Lv. 2 again. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -4355,8 +4370,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9495" toLevel="1" name="Lingering Holiday Blessing Stage 3">
-		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Stage 3 again. -->
+	<skill id="9495" toLevel="1" name="Lingering Holiday Blessing Lv. 3">
+		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Lv. 3 again. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -4374,8 +4389,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9496" toLevel="1" name="Lingering Holiday Blessing Stage 4">
-		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Stage 4 again. -->
+	<skill id="9496" toLevel="1" name="Lingering Holiday Blessing Lv. 4">
+		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Lv. 4 again. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -4393,8 +4408,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9497" toLevel="1" name="Lingering Holiday Blessing Stage 5">
-		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Stage 5 again. -->
+	<skill id="9497" toLevel="1" name="Lingering Holiday Blessing Lv. 5">
+		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Lv. 5 again. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>

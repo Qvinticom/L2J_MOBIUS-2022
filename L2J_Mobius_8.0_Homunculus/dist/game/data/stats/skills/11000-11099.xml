@@ -82,7 +82,7 @@
 		</effects>
 	</skill>
 	<skill id="11002" toLevel="10" name="Superior Robe Mastery">
-		<!-- Max HP +$s1, P. Def. +$s2, and M. Def. +$s3 when equipped with a Robe. -->
+		<!-- When using robes, Max HP +$s1, P. Def. +$s2, M. Def. +$s3. -->
 		<icon>icon.skill11252</icon>
 		<magicLevel>
 			<value level="1">85</value>
@@ -131,10 +131,28 @@
 					<item>MAGIC</item>
 				</armorType>
 			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">1</value>
+					<value level="9">2</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11003" toLevel="10" name="Superior Anti Magic">
-		<!-- M. Def. +$s1, Magic Attack Resistance +$s2. INT +$s3. -->
+		<!-- M. Def. +$s1, M. Damage Resistance +$s2, INT +$s3. -->
 		<icon>icon.skill10004</icon>
 		<magicLevel>
 			<value level="1">85</value>
@@ -174,10 +192,25 @@
 				<amount>2</amount>
 				<stat>INT</stat>
 			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+					<value level="10">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="11004" toLevel="1" name="Superior Sigil Mastery">
-		<!-- When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery Bonus by 20%. -->
+	<skill id="11004" toLevel="1" name="Feoh's Defense Mastery">
+		<!-- When a sigil is used, M. Atk. +$s1, MP Recovery Rate +$s2, M. Skill Critical Damage +$s3. -->
 		<icon>icon.skill11791</icon>
 		<magicLevel>85</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -200,7 +233,7 @@
 		</effects>
 	</skill>
 	<skill id="11005" toLevel="1" name="Superior Wizard Mastery">
-		<!-- M. Atk./ Casting Spd./ M. Critical Rate +6%. Decreases skill MP Consumption by 6%. INT +2. -->
+		<!-- M. Atk./ Casting Spd./ M. Critical Rate +6%. M. Skill MP Consumption -6%. INT +2. -->
 		<icon>icon.skill11253</icon>
 		<magicLevel>90</magicLevel>
 		<operateType>P</operateType>
@@ -249,7 +282,7 @@
 		</effects>
 	</skill>
 	<skill id="11007" toLevel="1" name="Fire Stance">
-		<!-- Increases M. Atk. by 20% and Fire defense by 100, and applies Fire to attribute magic. -->
+		<!-- Increases M. Atk. by $s1 and Fire defense by $s2, and applies Fire to attribute magic. -->
 		<icon>icon.skill10305</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -268,13 +301,13 @@
 				<attribute>FIRE</attribute>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19404</skillId>
+				<skillId>19404</skillId> <!-- Fire Attribute -->
 				<skillLevel>1</skillLevel> <!-- Fire Attribute -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11008" toLevel="1" name="Water Stance">
-		<!-- Decreases Magical Skill Cooldown by 5% and increases Water defense by 100, and applies Water to attribute magic. -->
+		<!-- Decreases Magical Skill Cooldown by $s1 and increases Water defense by $s2, and applies Water to attribute magic. -->
 		<icon>icon.skill10306</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -299,13 +332,13 @@
 				<attribute>WATER</attribute>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19404</skillId>
+				<skillId>19404</skillId> <!-- Fire Attribute -->
 				<skillLevel>2</skillLevel> <!-- Water Attribute -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11009" toLevel="1" name="Wind Stance">
-		<!-- Increases Magical Critical Damage by 10% and Wind defense by 100, and applies Wind to attribute magic. -->
+		<!-- M. Skill Critical Damage +$s1, Wind Resistance +$s2. Applies wind attribute to the spell. -->
 		<icon>icon.skill10307</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -324,13 +357,13 @@
 				<attribute>WIND</attribute>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19404</skillId>
+				<skillId>19404</skillId> <!-- Fire Attribute -->
 				<skillLevel>3</skillLevel> <!-- Wind Attribute -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11010" toLevel="1" name="Earth Stance">
-		<!-- Increases Defense by 796 and Earth defense by 100, and applies Earth to attribute magic. -->
+		<!-- Increases Defense by $s1 and Earth defense by $s2, and applies Earth to attribute magic. -->
 		<icon>icon.skill10304</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -349,13 +382,13 @@
 				<attribute>EARTH</attribute>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19404</skillId>
+				<skillId>19404</skillId> <!-- Fire Attribute -->
 				<skillLevel>4</skillLevel> <!-- Earth Attribute -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11011" toLevel="13" name="Elemental Spike">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, decreasing their Attribute Resistance. Over-hit. -->
 		<icon>icon.skill11011</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
@@ -390,7 +423,7 @@
 			<value level="12">60</value>
 			<value level="13">64</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
@@ -478,7 +511,7 @@
 		</effects>
 	</skill>
 	<skill id="11012" toLevel="13" name="Elemental Spike (Fire)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, decreasing their Attribute Resistance. Over-hit. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>100</attributeValue>
@@ -516,7 +549,7 @@
 			<value level="12">58</value>
 			<value level="13">61</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
@@ -543,7 +576,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="CallSkill">
-				<skillId>11077</skillId> <!-- Fire Attribute -->
+				<skillId>11077</skillId> <!-- Elemental Spike - Decrease Fire Resistance -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="MagicalAttack">
@@ -580,7 +613,7 @@
 		</effects>
 	</skill>
 	<skill id="11013" toLevel="13" name="Elemental Spike (Water)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, decreasing their Attribute Resistance. Over-hit. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>100</attributeValue>
@@ -618,7 +651,7 @@
 			<value level="12">58</value>
 			<value level="13">61</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
@@ -645,7 +678,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="CallSkill">
-				<skillId>11078</skillId> <!-- Water Attribute -->
+				<skillId>11078</skillId> <!-- Elemental Spike - Decrease Water Resistance -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="MagicalAttack">
@@ -682,7 +715,7 @@
 		</effects>
 	</skill>
 	<skill id="11014" toLevel="13" name="Elemental Spike (Wind)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, decreasing their Attribute Resistance. Over-hit. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>100</attributeValue>
@@ -720,7 +753,7 @@
 			<value level="12">59</value>
 			<value level="13">61</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
@@ -747,7 +780,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="CallSkill">
-				<skillId>11079</skillId> <!-- Wind Attribute -->
+				<skillId>11079</skillId> <!-- Elemental Spike - Decrease Wind Resistance -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="MagicalAttack">
@@ -784,7 +817,7 @@
 		</effects>
 	</skill>
 	<skill id="11015" toLevel="13" name="Elemental Spike (Earth)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, decreasing their Attribute Resistance. Over-hit. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>100</attributeValue>
@@ -822,7 +855,7 @@
 			<value level="12">59</value>
 			<value level="13">61</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
@@ -849,7 +882,7 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="CallSkill">
-				<skillId>11080</skillId> <!-- Earth Attribute -->
+				<skillId>11080</skillId> <!-- Elemental Spike - Decrease Earth Resistance -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="MagicalAttack">
@@ -886,7 +919,7 @@
 		</effects>
 	</skill>
 	<skill id="11016" toLevel="13" name="Elemental Spike (Holy)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, decreasing their Attribute Resistance. Over-hit. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>100</attributeValue>
@@ -922,7 +955,7 @@
 			<value level="12">59</value>
 			<value level="13">61</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
@@ -951,7 +984,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="CallSkill">
-				<skillId>11081</skillId> <!-- Holy Attribute -->
+				<skillId>11081</skillId> <!-- Elemental Spike - Decrease Holy Resistance -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="MagicalAttack">
@@ -988,7 +1021,7 @@
 		</effects>
 	</skill>
 	<skill id="11017" toLevel="13" name="Elemental Crash">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target. Each attribute decreases a certain effect as follows: Fire - Ignite, Water - Slow/ Frozen, Wind - Knock Back, Earth - Hold, Holy - Stun, Dark - M. Def. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power. Each attribute has a certain effect: Fire - Ignite, Water - Slow/ Frozen, Wind - Knockback, Earth - Hold, Holy - Stun, Dark - M. Def. decrease. Over-hit. -->
 		<icon>icon.skill11018</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
@@ -1023,7 +1056,7 @@
 			<value level="12">82</value>
 			<value level="13">85</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
@@ -1113,7 +1146,7 @@
 		</effects>
 	</skill>
 	<skill id="11018" toLevel="13" name="Elemental Crash (Fire)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and inflicts Ignite. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, making them burn. Over-hit. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>100</attributeValue>
@@ -1151,7 +1184,7 @@
 			<value level="12">82</value>
 			<value level="13">85</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
@@ -1211,11 +1244,12 @@
 			<effect name="CallSkill">
 				<skillId>11139</skillId> <!-- Ignite -->
 				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11019" toLevel="13" name="Elemental Crash (Water)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and inflicts Slow. Overlapped Slow effects result in Frozen. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, slowing them for a time period and freezing after that. Over-hit. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>100</attributeValue>
@@ -1253,7 +1287,7 @@
 			<value level="12">82</value>
 			<value level="13">85</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
@@ -1317,7 +1351,7 @@
 		</effects>
 	</skill>
 	<skill id="11020" toLevel="13" name="Elemental Crash (Wind)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and pushes it. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, knocking them back. Over-hit. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>100</attributeValue>
@@ -1355,7 +1389,7 @@
 			<value level="12">82</value>
 			<value level="13">85</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
@@ -1419,7 +1453,7 @@
 		</effects>
 	</skill>
 	<skill id="11021" toLevel="13" name="Elemental Crash (Earth)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and inflicts Hold. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, holding them in place. Over-hit. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>100</attributeValue>
@@ -1457,7 +1491,7 @@
 			<value level="12">82</value>
 			<value level="13">85</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
@@ -1521,7 +1555,7 @@
 		</effects>
 	</skill>
 	<skill id="11022" toLevel="13" name="Elemental Crash (Holy)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and inflicts Stun. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, stunning them for a time period. Over-hit. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>100</attributeValue>
@@ -1557,7 +1591,7 @@
 			<value level="12">82</value>
 			<value level="13">85</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2780</hitTime>
 		<coolTime>300</coolTime>
@@ -1651,7 +1685,7 @@
 			<value level="10">175</value>
 			<value level="11">181</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>6080</hitTime>
 		<coolTime>1000</coolTime>
@@ -1729,7 +1763,7 @@
 		</effects>
 	</skill>
 	<skill id="11024" toLevel="13" name="Volcanic Destruction">
-		<!-- Inflicts M. Atk. of $s1 power added with Fire damage on the target and the enemies in the route and decreases M. Def. by $s3 for $s2 Additionally, inflicts Ignite effect. Over-hit is possible. -->
+		<!-- Deals Fire damage with $s1 power to the target and the enemies in the route, making them burn for a time period. For $s2, their M. Def. -$s3. Over-hit. -->
 		<icon>icon.skill11024</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1774,7 +1808,7 @@
 			<value level="12">187</value>
 			<value level="13">193</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>6080</hitTime>
 		<coolTime>1000</coolTime>
@@ -1837,20 +1871,49 @@
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CallSkill">
-				<skillId>11139</skillId> <!-- Ignite -->
-				<skillLevel>1</skillLevel>
-				<skillLevelScaleTo>5</skillLevelScaleTo>
+			<effect name="MagicalDamOverTime">
+				<power>
+					<value level="1">431</value>
+					<value level="2">444</value>
+					<value level="3">457</value>
+					<value level="4">469</value>
+					<value level="5">481</value>
+					<value level="6">493</value>
+					<value level="7">506</value>
+					<value level="8">518</value>
+					<value level="9">529</value>
+					<value level="10">541</value>
+					<value level="11">553</value>
+					<value level="12">569</value>
+					<value level="13">585</value>
+					<value level="13">585</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1005">{base + (base / 100 * (1 + 0.4 * (subIndex - 1)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1006" toSubLevel="1006">{base + (base / 100 * (2 + 0.8 * (subIndex - 5)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1007" toSubLevel="1007">{base + (base / 100 * (3 + 0.3 * (subIndex - 6)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1008" toSubLevel="1008">{base + (base / 100 * (3 + 0.3 * (subIndex - 7)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1009" toSubLevel="1011">{base + (base / 100 * (4 + 0.4 * (subIndex - 8)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1012" toSubLevel="1012">{base + (base / 100 * (5 + 0.1 * (subIndex - 11)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1013" toSubLevel="1013">{base + (base / 100 * (5 + 0.5 * (subIndex - 12)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1014" toSubLevel="1014">{base + (base / 100 * (5 + 0.9 * (subIndex - 13)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1015" toSubLevel="1015">{base + (base / 100 * (6 + 0.2 * (subIndex - 14)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1016" toSubLevel="1016">{base + (base / 100 * (6 + 0.6 * (subIndex - 15)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1017" toSubLevel="1017">{base + (base / 100 * (7 + 0.2 * (subIndex - 16)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1018" toSubLevel="1018">{base + (base / 100 * (7 + 0.4 * (subIndex - 17)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1019" toSubLevel="1019">{base + (base / 100 * (7 + 0.7 * (subIndex - 18)))}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1020" toSubLevel="1020">{base + (base / 100 * (8 + 0.1 * (subIndex - 19)))}</value>
+				</power>
+				<ticks>1</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11025" toLevel="13" name="Icicle Destruction">
-		<!-- Deals M. Atk. of $s1 power added with Water damage on the target. Decreases M. Def. by $s3 and Atk.Spd./ Speed by $s4 for $s2 Over-hit is possible. -->
+		<!-- Deals Water damage with $s1 power. For $s2, M. Def. -$s3, Atk. Spd./ Casting Spd. -$s4. Over-hit. -->
 		<icon>icon.skill11025</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<abnormalVisualEffect>ICE_ELEMENTALDESTROY</abnormalVisualEffect>
+		<activateRate>90</activateRate> <!-- Custom -->
 		<attributeType>WATER</attributeType>
 		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
@@ -1887,7 +1950,7 @@
 			<value level="12">187</value>
 			<value level="13">193</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>6080</hitTime>
 		<coolTime>1000</coolTime>
@@ -1961,13 +2024,14 @@
 		</effects>
 	</skill>
 	<skill id="11026" toLevel="13" name="Updraft Destruction">
-		<!-- Deals M. Atk. of $s1 power added with Wind damage on the target and the enemies near it. Decreases M. Def. by $s3 for $s2 Over-hit is possible. -->
+		<!-- Deals Wind damage with $s1 power to the target and nearby enemies. For $s2, their M. Def. -$s3. Over-hit. -->
 		<icon>icon.skill11017</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>WIND</attributeType>
 		<attributeValue>100</attributeValue>
+		<activateRate>60</activateRate> <!-- Custom -->
 		<operateType>A2</operateType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -2005,7 +2069,7 @@
 			<value level="12">187</value>
 			<value level="13">193</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>6080</hitTime>
 		<coolTime>1000</coolTime>
@@ -2071,7 +2135,7 @@
 		</effects>
 	</skill>
 	<skill id="11027" toLevel="13" name="Bedrock Destruction">
-		<!-- Inflicts earth damage on the target with $s1 Power added to M. Atk. M. Def. -$s3 and all Attribute Resistances -$s4 for $s2 -->
+		<!-- Inflicts earth damage on the target with $s1 power. For $s2, M. Def. -$s3, Attribute Resistance -$s4. -->
 		<icon>icon.skill11027</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2112,7 +2176,7 @@
 			<value level="12">187</value>
 			<value level="13">193</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>6080</hitTime>
 		<coolTime>1000</coolTime>
@@ -2202,7 +2266,7 @@
 		</effects>
 	</skill>
 	<skill id="11028" toLevel="13" name="Void Destruction">
-		<!-- Deals M. Atk. of $s1 power added with Dark damage on the target. Additionally, decreases M. Def. by $s3 and increases M. Critical Rate Received by $s4 for $s2 Over-hit is possible. -->
+		<!-- Deals Dark damage with $s1 power to the target. For $s2, their M. Def. -$s3, Received M. Critical Rate +$s4. Over-hit. -->
 		<icon>icon.skill19316</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2243,7 +2307,7 @@
 			<value level="12">187</value>
 			<value level="13">193</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>6080</hitTime>
 		<coolTime>1000</coolTime>
@@ -2320,7 +2384,7 @@
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="5">100</value>
+			<value fromLevel="1" toLevel="5">50</value>
 			<value fromLevel="4" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>NONE</basicProperty>
@@ -2339,7 +2403,7 @@
 			<value level="4">80</value>
 			<value level="5">84</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>1000</hitTime>
 		<reuseDelay>16700</reuseDelay>
@@ -2394,7 +2458,7 @@
 		</mpConsume>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>10000</hitTime>
 		<reuseDelay>20000</reuseDelay>
@@ -2428,7 +2492,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11032" toLevel="9" name="Death Howl">
-		<!-- Attacks nearby enemies with $s1 power knocking them back. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies with $s1 power knocking them back. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11032</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
@@ -2588,7 +2652,7 @@
 			<value level="7">264</value>
 			<value level="8">276</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>3780</hitTime>
 		<coolTime>300</coolTime>
@@ -2691,7 +2755,7 @@
 			<value level="7">264</value>
 			<value level="8">276</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>3780</hitTime>
 		<coolTime>300</coolTime>
@@ -2774,7 +2838,7 @@
 			<value level="7">264</value>
 			<value level="8">276</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>3780</hitTime>
 		<coolTime>300</coolTime>
@@ -2857,7 +2921,7 @@
 			<value level="7">264</value>
 			<value level="8">276</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>3780</hitTime>
 		<coolTime>300</coolTime>
@@ -2940,7 +3004,7 @@
 			<value level="7">264</value>
 			<value level="8">276</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>3780</hitTime>
 		<coolTime>300</coolTime>
@@ -3018,7 +3082,7 @@
 			<value level="7">264</value>
 			<value level="8">276</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>3780</hitTime>
 		<coolTime>300</coolTime>
@@ -3075,7 +3139,7 @@
 		</effects>
 	</skill>
 	<skill id="11040" toLevel="8" name="Elemental Final Storm">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<!-- Deals magical attribute damage to the target and nearby enemies with $s1 power. Over-hit. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3106,7 +3170,7 @@
 			<value level="7">336</value>
 			<value level="8">351</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4780</hitTime>
 		<coolTime>300</coolTime>
@@ -3175,7 +3239,7 @@
 		</effects>
 	</skill>
 	<skill id="11041" toLevel="8" name="Elemental Final Storm (Fire)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<!-- Deals magical attribute damage to the target and nearby enemies with $s1 power. Over-hit. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3206,7 +3270,7 @@
 			<value level="7">336</value>
 			<value level="8">351</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4780</hitTime>
 		<coolTime>300</coolTime>
@@ -3258,7 +3322,7 @@
 		</effects>
 	</skill>
 	<skill id="11042" toLevel="8" name="Elemental Final Storm (Water)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<!-- Deals magical attribute damage to the target and nearby enemies with $s1 power. Over-hit. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3289,7 +3353,7 @@
 			<value level="7">336</value>
 			<value level="8">351</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4780</hitTime>
 		<coolTime>300</coolTime>
@@ -3341,7 +3405,7 @@
 		</effects>
 	</skill>
 	<skill id="11043" toLevel="8" name="Elemental Final Storm (Wind)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<!-- Deals magical attribute damage to the target and nearby enemies with $s1 power. Over-hit. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3372,7 +3436,7 @@
 			<value level="7">336</value>
 			<value level="8">351</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4780</hitTime>
 		<coolTime>300</coolTime>
@@ -3455,7 +3519,7 @@
 			<value level="7">336</value>
 			<value level="8">351</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4780</hitTime>
 		<coolTime>300</coolTime>
@@ -3538,7 +3602,7 @@
 			<value level="7">336</value>
 			<value level="8">351</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4780</hitTime>
 		<coolTime>300</coolTime>
@@ -3591,7 +3655,7 @@
 		</effects>
 	</skill>
 	<skill id="11046" toLevel="3" name="Wizard Spirit">
-		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, P./ M. Def. +$s4, and M. Skill MP Consumption -$s5. -->
+		<!-- For $s1, M. Atk. +$s2, M. Skill Critical Rate +$s3, P./ M. Def. +$s4, M. Skill MP Consumption -$s5. -->
 		<icon>icon.skill11046</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -3631,7 +3695,7 @@
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5567</skillId> <!-- Flame Armor -->
+				<skillId>5567</skillId> <!-- Flaming Armor -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="MAtk">
@@ -3694,7 +3758,7 @@
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">90</value>
+			<value fromLevel="1" toLevel="11">40</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<operateType>A2</operateType>
@@ -3724,7 +3788,7 @@
 			<value level="10">115</value>
 			<value level="11">121</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>3500</hitTime>
 		<coolTime>580</coolTime>
@@ -3745,7 +3809,6 @@
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3805,13 +3868,13 @@
 		</effects>
 	</skill>
 	<skill id="11048" toLevel="11" name="Mass Ruin">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to M. Atk. P./ M. Skill Power -$s3, P./ M. Def. -$s4 and Speed -$s5 for $s2 -->
+		<!-- Attacks the target and nearby enemies with $s1 power. For $s2, P./ M. Skill Power -$s3, P./ M. Def. -$s4, and Speed -$s5. -->
 		<icon>icon.skill11048</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">90</value>
+			<value fromLevel="1" toLevel="11">40</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectRange>600</affectRange>
@@ -3842,7 +3905,7 @@
 			<value level="10">342</value>
 			<value level="11">358</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1800</effectRange>
 		<hitTime>3500</hitTime>
 		<coolTime>580</coolTime>
@@ -3864,7 +3927,6 @@
 		<affectLimit>5-12</affectLimit>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>DERANGEMENT</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -3922,10 +3984,12 @@
 			<value level="7">136</value>
 		</mpConsume>
 		<castRange>
-			<value fromLevel="1" toLevel="7">1100</value>
+			<value fromLevel="1" toLevel="7">900</value>
 			<value fromLevel="1" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + (10 * subIndex)}</value>
 		</castRange>
 		<effectRange>1100</effectRange>
+		<activateRate>10</activateRate>
+		<trait>DERANGEMENT</trait>
 		<hitTime>3000</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>
@@ -3950,11 +4014,12 @@
 		<isMagic>1</isMagic>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="DispelByCategory">
 				<slot>BUFF</slot>
 				<rate>
-					<value fromLevel="1" toLevel="7">60</value>
+					<value fromLevel="1" toLevel="7">1</value>
 					<value fromLevel="1" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</rate>
 				<max>
@@ -3970,14 +4035,14 @@
 		</effects>
 	</skill>
 	<skill id="11050" toLevel="9" name="Hell Binding">
-		<!-- Lifts the target in the air immobilizing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Lifts the target in the air immobilizing them.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11050</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">90</value>
+			<value fromLevel="1" toLevel="9">50</value>
 			<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>NONE</basicProperty>
@@ -3994,7 +4059,7 @@
 			<value level="8">112</value>
 			<value level="9">118</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -4057,14 +4122,14 @@
 		</effects>
 	</skill>
 	<skill id="11051" toLevel="7" name="Hell Binding">
-		<!-- Lifts the target in the air immobilizing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Lifts the target in the air immobilizing them.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11050</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="7">90</value>
+			<value fromLevel="1" toLevel="7">50</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>NONE</basicProperty>
@@ -4079,7 +4144,7 @@
 			<value level="6">100</value>
 			<value level="7">106</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -4138,10 +4203,10 @@
 		</effects>
 	</skill>
 	<skill id="11052" toLevel="9" name="Mass Hell Binding">
-		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11052</icon>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">100</value>
+			<value fromLevel="1" toLevel="9">50</value>
 			<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<abnormalLevel>1</abnormalLevel>
@@ -4162,7 +4227,7 @@
 			<value level="8">337</value>
 			<value level="9">353</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>300000</reuseDelay>
@@ -4181,7 +4246,7 @@
 			<value level="9">109</value>
 		</magicLevel>
 		<reuseDelayGroup>11052</reuseDelayGroup>
-		<affectRange>150</affectRange>
+		<affectRange>800</affectRange>
 		<affectLimit>5-12</affectLimit>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic>
@@ -4221,10 +4286,10 @@
 		</effects>
 	</skill>
 	<skill id="11053" toLevel="7" name="Mass Hell Binding">
-		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1042</icon>
 		<activateRate>
-			<value fromLevel="1" toLevel="7">100</value>
+			<value fromLevel="1" toLevel="7">70</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>NONE</basicProperty>
@@ -4243,7 +4308,7 @@
 			<value level="6">305</value>
 			<value level="7">321</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>300000</reuseDelay>
@@ -4287,7 +4352,7 @@
 		</effects>
 	</skill>
 	<skill id="11054" toLevel="1" name="Yoke Status">
-		<!-- Immobilized midair. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Immobilized midair.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1042</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -4295,13 +4360,13 @@
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<trait>AIRBIND</trait>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<effectPoint>-692</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<activateRate>
-			<value fromLevel="1" toLevel="1">100</value>
+			<value fromLevel="1" toLevel="1">70</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<magicLevel>85</magicLevel>
@@ -4342,7 +4407,7 @@
 		</effects>
 	</skill>
 	<skill id="11055" toLevel="12" name="Death Fear">
-		<!-- Inflicts fear on the target for $s1 Speed -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Fear on the target for $s1 Speed -$s2.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11055</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4383,7 +4448,7 @@
 			<value level="11">101</value>
 			<value level="12">104</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
 		<coolTime>300</coolTime>
@@ -4453,7 +4518,7 @@
 		</effects>
 	</skill>
 	<skill id="11056" toLevel="13" name="Mass Death Fear">
-		<!-- Inflicts fear on the target and nearby enemies for $s1 Their speed -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Fear on the target and nearby enemies for $s1 Speed -$s2.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11056</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4498,7 +4563,7 @@
 			<value level="13">337</value>
 		</mpConsume>
 		<trait>DERANGEMENT</trait>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
 		<coolTime>300</coolTime>
@@ -4571,16 +4636,16 @@
 		</effects>
 	</skill>
 	<skill id="11057" toLevel="11" name="Magical Evasion">
-		<!-- Attacks nearby enemies with $s1 magic power, inflicting stun and cancelling their targets. Teleports you to the back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies with $s1 magical power, stunning them and cancelling their targets. Teleports you to the back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11057</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<affectLimit>6-12</affectLimit>
-		<affectRange>150</affectRange>
+		<affectRange>400</affectRange>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">150</value>
+			<value fromLevel="1" toLevel="11">70</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>NONE</basicProperty>
@@ -4671,7 +4736,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="TargetCancel" />
 		</effects>
@@ -4684,7 +4749,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11058" toLevel="8" name="Shadow Snare">
-		<!-- Creates a danger zone for $s1 that pulls nearby enemies to its center. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Creates a danger zone for $s1 that pulls nearby enemies to its center.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11058</icon>
 		<operateType>A1</operateType>
 		<magicLevel>
@@ -4720,13 +4785,13 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonNpc">
-				<npcId>13323</npcId>
+				<npcId>13323</npcId> <!-- Whisper of Fear -->
 				<npcCount>1</npcCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11059" toLevel="8" name="Shadow Snare Zone">
-		<!-- Pulls nearby enemies to the center. Inflicted status: Danger Zone. -->
+		<!-- Pulls nearby enemies to the center.\n\nInflicted status: Danger Zone. -->
 		<icon>icon.skill1469</icon>
 		<abnormalTime>1</abnormalTime>
 		<abnormalLevel>1</abnormalLevel>
@@ -4851,7 +4916,7 @@
 		</effects>
 	</skill>
 	<skill id="11064" toLevel="13" name="Ultimate Body To Mind">
-		<!-- Sacrifices $s1 HP to recover $s2 MP. -->
+		<!-- Sacrifices your own $s1 HP to regenerate $s2 MP. The skill cooldown is fixed. -->
 		<icon>icon.skill11064</icon>
 		<operateType>A1</operateType>
 		<hpConsume>
@@ -4929,7 +4994,7 @@
 		</effects>
 	</skill>
 	<skill id="11065" toLevel="1" name="Arcane Barrier">
-		<!-- For 20 sec., reflects 10% of the received damage. Received damage -90%, blocks the rest by consuming MP. The effect is cancelled when MP drops to 0. -->
+		<!-- For $s1, reflects $s2 of the received damage. Received damage -$s3, blocks the rest by consuming MP. The effect is cancelled when MP drops to $s4. -->
 		<icon>icon.skill11065</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -4972,7 +5037,7 @@
 		</effects>
 	</skill>
 	<skill id="11066" toLevel="6" name="Arcane Comet Strike">
-		<!-- Inflicts M. Atk. of $s1 power on the target and the enemies in the route. Additionally, decreases Speed by $s3 for $s2 Decreases 15 sec. from the remaining cooldown if Mana Burst level increases. Over-hit is possible. -->
+		<!-- Deals magic damage with $s1 power to the target and the enemies in the front, cancelling their target. For $s2, their Speed -$s3. If Mana Burst is active, cooldown -15 sec. Over-hit. -->
 		<icon>icon.skill11066</icon>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
@@ -5000,7 +5065,7 @@
 			<value level="5">1723</value>
 			<value level="6">1740</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>6750</hitTime>
 		<coolTime>500</coolTime>
@@ -5052,7 +5117,7 @@
 		</effects>
 	</skill>
 	<skill id="11067" toLevel="6" name="Quadruple Elemental Blast">
-		<!-- Attacks the target and nearby enemies with M. Atk. of $s1. And for $s2, deals damage over time with $s3 Power added to M. Atk. and inflicts Knock Down on the enemies. Over-hit is possible. Available at Mana Burst Stage 4. -->
+		<!-- Attacks the target and nearby enemies with $s1 power. For $s2, deals additional damage with $s3 power. Knocks the target down. Over-hit. Consumes 2 Spirit Ore. -->
 		<icon>icon.skill11067</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -5083,11 +5148,11 @@
 			<value level="5">1831</value>
 			<value level="6">1847</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>10000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>30000</reuseDelay>
+		<reuseDelay>45000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -5095,14 +5160,8 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<conditions>
-			<condition name="OpCheckAbnormal">
-				<type>MANA_BURST</type>
-				<level>4</level>
-				<hasAbnormal>true</hasAbnormal>
-				<affectType>CASTER</affectType>
-			</condition>
-		</conditions>
+		<itemConsumeCount>2</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -5205,16 +5264,6 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
-			<effect name="Reuse">
-				<amount>
-					<value level="1">-5</value>
-					<value level="2">-10</value>
-					<value level="3">-15</value>
-					<value level="4">-20</value>
-				</amount>
-				<mode>PER</mode>
-				<magicType>22</magicType>
-			</effect>
 			<effect name="CallSkill">
 				<skillId>19315</skillId> <!-- Mana Burst -->
 				<skillLevel>1</skillLevel>
@@ -5225,7 +5274,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
 					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{0.4 + (0.6 * subIndex)}</value>
 				</amount>
@@ -5595,7 +5644,7 @@
 		</effects>
 	</skill>
 	<skill id="11083" toLevel="1" name="Water - Elemental Crash">
-		<!-- target's Speed is reduced. -->
+		<!-- Decreases the enemy's Speed when using the Water magic. -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -5664,7 +5713,7 @@
 		</effects>
 	</skill>
 	<skill id="11087" toLevel="3" name="Elemental Crash (Fire)">
-		<!-- Inflicts fear on the target immobilizing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Fear on the target immobilizing them.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11017</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
@@ -5708,7 +5757,7 @@
 		</effects>
 	</skill>
 	<skill id="11088" toLevel="3" name="Elemental Crash (Water)">
-		<!-- Decreases target's Speed. -->
+		<!-- With a certain chance, decreases the target's Speed. -->
 		<icon>icon.skill11017</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
@@ -5740,7 +5789,7 @@
 		</effects>
 	</skill>
 	<skill id="11089" toLevel="3" name="Elemental Crash (Wind)">
-		<!-- Knocks the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Knocks the target back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11017</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -5765,7 +5814,7 @@
 		</effects>
 	</skill>
 	<skill id="11090" toLevel="3" name="Elemental Crash (Earth)">
-		<!-- Holds the target with a certain chance. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target with a certain chance.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11017</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
@@ -5791,7 +5840,7 @@
 		</effects>
 	</skill>
 	<skill id="11091" toLevel="3" name="Elemental Crash (4 Elements)">
-		<!-- Stuns the target with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target with a certain chance.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11017</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
@@ -5814,7 +5863,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -5858,9 +5907,9 @@
 		</effects>
 	</skill>
 	<skill id="11093" toLevel="1" name="Crystal Form">
-		<!-- Cancels Poison/ Bleed/ Hold/ Stun effect. Becomes invincible for 10 sec. and rapidly recovers HP and MP. -->
+		<!-- Cancels Poison/ Bleed/ Hold/ Stun effect. Becomes invincible for $s1 and rapidly recovers HP and MP. -->
 		<icon>icon.skill11093</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -5890,18 +5939,99 @@
 				<ticks>1</ticks>
 			</effect>
 			<effect name="DispelBySlot">
-				<dispel>POISON,9;BLEEDING,9;ROOT_MAGICALLY,9;ROOT_PHYSICALLY,9;STUN,9</dispel>
+				<dispel>POISON,-1;BLEEDING,-1;ROOT_MAGICALLY,-1;ROOT_PHYSICALLY,-1;STUN,-1;CONFUSION,-1</dispel>
 			</effect>
 			<effect name="DefenceTrait">
 				<POISON>100</POISON>
-				<SHOCK>100</SHOCK>
 				<BLEED>100</BLEED>
 				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
+			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
+				<power>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">1936</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">2072</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">2207</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1004" toSubLevel="1004">2342</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1005" toSubLevel="1005">2477</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1006" toSubLevel="1006">2612</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1007" toSubLevel="1007">2747</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1008" toSubLevel="1008">2882</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1009" toSubLevel="1009">3017</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1010" toSubLevel="1010">3152</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1011">3288</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1012" toSubLevel="1012">3423</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1013" toSubLevel="1013">3558</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1014" toSubLevel="1014">3693</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1015" toSubLevel="1015">3828</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1016" toSubLevel="1016">3964</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1017" toSubLevel="1017">4099</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">4234</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">4369</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
+				</power>
+			</effect>
+			<effect name="ManaHeal" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
+				<power>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2001">532</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2002" toSubLevel="2002">570</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2003" toSubLevel="2003">607</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2004" toSubLevel="2004">644</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2005" toSubLevel="2005">681</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2006" toSubLevel="2006">718</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2007" toSubLevel="2007">756</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2008" toSubLevel="2008">793</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2009" toSubLevel="2009">830</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2010" toSubLevel="2010">867</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2011" toSubLevel="2011">904</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2012" toSubLevel="2012">942</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2013" toSubLevel="2013">979</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2014" toSubLevel="2014">1016</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2015" toSubLevel="2015">1053</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2016" toSubLevel="2016">1090</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2017" toSubLevel="2017">1128</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2018" toSubLevel="2018">1165</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2019" toSubLevel="2019">1202</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2020" toSubLevel="2020">1240</value>
+				</power>
+			</effect>
+			<effect name="CpHeal" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
+				<power>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3001">2421</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3002" toSubLevel="3002">2590</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3003" toSubLevel="3003">2759</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3004" toSubLevel="3004">2928</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3005" toSubLevel="3005">3097</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3006" toSubLevel="3006">3265</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3007" toSubLevel="3007">3434</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3008" toSubLevel="3008">3603</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3009" toSubLevel="3009">3772</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3010" toSubLevel="3010">3941</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3011" toSubLevel="3011">4110</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3012" toSubLevel="3012">4279</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3013" toSubLevel="3013">4448</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3014" toSubLevel="3014">4617</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3015" toSubLevel="3015">4786</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3016" toSubLevel="3016">4955</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3017" toSubLevel="3017">5124</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3018" toSubLevel="3018">5293</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3019" toSubLevel="3019">5462</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3020" toSubLevel="3020">5631</value>
+				</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11094" toLevel="11" name="Magical Charge">
-		<!-- Attacks nearby enemies with $s1 magic power, inflicting stun and cancelling their targets. Teleports you to the front. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies with $s1 magical power, stunning them and cancelling their targets. Teleports you to the front.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11094</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
@@ -5911,7 +6041,7 @@
 			<value fromLevel="1" toLevel="11">150</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<affectRange>150</affectRange>
+		<affectRange>400</affectRange>
 		<affectLimit>6-12</affectLimit>
 		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
@@ -6001,7 +6131,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="TargetCancel" />
 		</effects>
@@ -6014,11 +6144,11 @@
 		</selfEffects>
 	</skill>
 	<skill id="11095" toLevel="1" name="Devil's Sway">
-		<!-- Resets the duration of Paralyze/ Hold/ Silence/ Sleep/ Stun/ Fear/ Petrifaction/ Mutation/ Disarm cast on the target. -->
+		<!-- Resets the duration of Paralysis/ Hold/ Silence/ Sleep/ Stun/ Fear/ Petrification/ Mutation/ Disarm debuffs on the target. -->
 		<icon>icon.skill11535</icon>
 		<operateType>A1</operateType>
 		<mpConsume>190</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
 		<reuseDelay>300000</reuseDelay>

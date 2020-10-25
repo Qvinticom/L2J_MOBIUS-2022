@@ -384,4 +384,74 @@
 		<node X="83207" Y="193791" />
 		<node X="83272" Y="194478" />
 	</zone>
+	<zone name="protect_timezone_altar" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="10000">
+		<stat name="oustX" val="-113127" />
+		<stat name="oustY" val="-251162" />
+		<stat name="oustZ" val="-2993" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="-119843" Y="69946" />
+		<node X="-109006" Y="69307" />
+		<node X="-107334" Y="67390" />
+		<node X="-118660" Y="66424" />
+	</zone>
+	<zone name="protect_timezone_abcoalmines" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="10000">
+		<stat name="oustX" val="-113127" />
+		<stat name="oustY" val="-251162" />
+		<stat name="oustZ" val="-2993" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="140104" Y="-177448" />
+		<node X="139272" Y="-177384" />
+		<node X="138440" Y="-178376" />
+		<node X="138392" Y="-179096" />
+	</zone>
+	<zone name="protect_timezone_primeval" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="10000">
+		<stat name="oustX" val="-113127" />
+		<stat name="oustY" val="-251162" />
+		<stat name="oustZ" val="-2993" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="10468" Y="-24569" />
+		<node X="9032" Y="-24072" />
+		<node X="9304" Y="-23096" />
+		<node X="10529" Y="-22177" />
+	</zone>
+	<zone name="protect_timezone_primeval2" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="10000">
+		<stat name="oustX" val="-113127" />
+		<stat name="oustY" val="-251162" />
+		<stat name="oustZ" val="-2993" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="13480" Y="-19320" />
+		<node X="13224" Y="-19224" />
+		<node X="12040" Y="-21016" />
+		<node X="12440" Y="-21528" />
+	</zone>
+	<zone name="protect_timezonegold" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="-3800">
+		<stat name="oustX" val="-113127" />
+		<stat name="oustY" val="-251162" />
+		<stat name="oustZ" val="-2993" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="-102264" Y="84632" />
+		<node X="-101701" Y="84760" />
+		<node X="-118752" Y="94774" />
+		<node X="-112264" Y="94472" />
+	</zone>
+	<zone name="protect_timezonegold2" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="10000">
+		<stat name="oustX" val="-113127" />
+		<stat name="oustY" val="-251162" />
+		<stat name="oustZ" val="-2993" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="-110965" Y="114235" />
+		<node X="-113792" Y="100160" />
+		<node X="-83467" Y="64274" />
+		<node X="-83779" Y="67500" />
+	</zone>
+	<zone name="protect_timezonegold3" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="10000">
+		<stat name="oustX" val="-113127" />
+		<stat name="oustY" val="-251162" />
+		<stat name="oustZ" val="-2993" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="-121896" Y="67240" />
+		<node X="-121720" Y="70840" />
+		<node X="-161807" Y="72486" />
+		<node X="-162587" Y="85862" />
+	</zone>
 </list>

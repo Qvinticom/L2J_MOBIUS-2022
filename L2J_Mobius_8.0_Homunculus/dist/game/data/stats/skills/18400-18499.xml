@@ -294,7 +294,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="18438" toLevel="1" name="Agathion - Anakim Holy Barrier Pack">
+	<skill id="18438" toLevel="1" name="Agathion Anakim Holy Barrier Pack">
 		<itemConsumeId>46188</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -314,10 +314,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="50.0">
-						<item id="46185" count="1" /> <!-- Agathion - Anakim Holy Barrier -->
+						<item id="46185" count="1" /> <!-- Agathion Anakim Holy Barrier -->
 					</item>
 					<item chance="50.0">
-						<item id="46186" count="1" /> <!-- Agathion - Anakim Holy Barrier - 30-day -->
+						<item id="46186" count="1" /> <!-- Agathion Anakim Holy Barrier - 30-day -->
 					</item>
 				</items>
 			</effect>
@@ -358,7 +358,7 @@
 		</effects>
 	</skill>
 	<skill id="18443" toLevel="1" name="Agathion Summon - Anakim Holy Barrier">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -373,7 +373,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18444" toLevel="6" name="Physical Reflect Shirt Enchant Effect">
+	<skill id="18444" toLevel="6" name="Unique Enchant Effect: Physical Reflect Shirt">
 		<!-- P. Def. +$s1. -->
 		<icon>icon.reflect_attack_shirt</icon>
 		<operateType>P</operateType>
@@ -395,6 +395,7 @@
 					<value level="5">12</value>
 					<value level="6">15</value>
 				</amount>
+				<mode>PER</mode>
 				<type>PHYSICAL</type>
 			</effect>
 			<effect name="PhysicalDefence">
@@ -410,7 +411,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18445" toLevel="6" name="Magical Reflect Shirt Enchant Effect">
+	<skill id="18445" toLevel="6" name="Unique Enchant Effect: Magical Reflect Shirt">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.reflect_magic_shirt</icon>
 		<operateType>P</operateType>
@@ -432,6 +433,7 @@
 					<value level="5">12</value>
 					<value level="6">15</value>
 				</amount>
+				<mode>PER</mode>
 				<type>MAGIC</type>
 			</effect>
 			<effect name="MagicalDefence">
@@ -447,7 +449,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18446" toLevel="1" name="Reflect Shirt Basic Effect">
+	<skill id="18446" toLevel="1" name="Basic Enchant Effect: Reflect Shirt">
 		<!-- M. Def. +8. -->
 		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i01</icon>
 		<operateType>P</operateType>
@@ -460,7 +462,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18447" toLevel="10" name="Reflect Shirt Basic Effect">
+	<skill id="18447" toLevel="10" name="Basic Enchant Effect: Reflect Shirt">
 		<!-- M. Def. +$s1. -->
 		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i00</icon>
 		<operateType>P</operateType>
@@ -689,8 +691,8 @@
 		<effectPoint>204</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="18451" toLevel="2" name="11th Anniversary Buff">
-		<!-- Acquired XP/ SP +$s1. Receive a $s2th Anniversary Coins once the buff ends. Note: Cannot receive item if you are dead or don't have space in your inventory. -->
+	<skill id="18451" toLevel="2" name="Anniversary Effect">
+		<!-- Acquired XP/ SP +$s1. A chance to obtain a $s2th Anniversary Coin when the buff is cancelled.\nNote!\nThe coins can't be obtained if your character is dead or has no free space in the inventory. -->
 		<icon>icon.ev_buff_11th</icon>
 		<abnormalTime>
 			<value level="1">3600</value>
@@ -737,7 +739,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="18455" toLevel="1" name="Halloween Weapon Appearance Stone (7-day)">
+	<skill id="18455" toLevel="1" name="Halloween Weapon Appearance Stone - 7 d.">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -746,7 +748,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="18456" toLevel="1" name="Halloween Weapon Appearance Stone (90-day)">
+	<skill id="18456" toLevel="1" name="Halloween Weapon Appearance Stone - 90 d.">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -783,7 +785,7 @@
 		<!-- 1st place prize for the L2 Market giveaway. Get Tiat or Ekimus' Belt. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18464" toLevel="8" name="L2 Market Talisman - Seven Signs Pack">
+	<skill id="18464" toLevel="8" name="L2 Market Talisman of Seven Signs Pack">
 		<!-- 1st place prize for the L2 Market giveaway. Get an Anakim, Lilith, or Seven Signs Talisman. -->
 		<operateType>A1</operateType>
 	</skill>
@@ -800,15 +802,15 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18468" toLevel="1" name="+4 Eternal Heavy Armor Capsule">
-		<!-- Get a +4 enchanted Eternal Heavy Armor set. -->
+		<!-- Double-click to obtain Eternal heavy armor set enchanted to +4. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18469" toLevel="1" name="+4 Eternal Light Armor Capsule">
-		<!-- Get a +4 enchanted Eternal Light Armor set. -->
+		<!-- Double-click to obtain Eternal light armor set enchanted to +4. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18470" toLevel="1" name="+4 Eternal Robe Armor Capsule">
-		<!-- Get a +4 enchanted Eternal Robe Armor set. -->
+		<!-- Double-click to obtain Eternal robe set enchanted to +4. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18471" toLevel="1" name="Dandy's Golden Ball">
@@ -822,16 +824,16 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18473" toLevel="1" name="Venezia Rune">
-		<!-- Acquired XP/ SP +22%. The effect only applies to characters below Lv. 99. -->
+		<!-- When in inventory, acquired XP/ SP +22%. Required level: 1-99. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="18474" toLevel="1" name="Blessed Venezia Rune">
-		<!-- Acquired XP/ SP +11%. All levels. -->
+		<!-- When in the inventory, acquired XP/ SP +11%. All levels. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="18475" toLevel="2" name="11th Anniversary Buff">
+	<skill id="18475" toLevel="2" name="Anniversary Effect">
 		<icon>icon.ev_buff_11th</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -903,7 +905,7 @@
 		</effects>
 	</skill>
 	<skill id="18478" toLevel="1" name="Freya's Wish Stick">
-		<!-- Double-click to get 1 Freya's Frozen Scroll and 1 Freya's Art of Seduction. Has a chance of obtaining one of the following items: Freya's Wish Box, Sirra's Wish Box, or a Snowman's Wish Box. -->
+		<!-- Double-click to obtain 1 Freya's Frozen Scroll and 1 Freya's Art of Seduction. Has a chance of obtaining one of the following items: Freya's Wish Box, Sirra's Wish Box, or a Snowman's Wish Box. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -930,7 +932,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18483" toLevel="1" name="Freya's Kindness">
-		<!-- Wrapped Pack containing 1 random item out of the following: Dark Assassin Suit, Dark Knight Suit, Ninja Outfit, or Metal Suit. -->
+		<!-- Double-click to obtain 1 random item out of the following: Dark Assassin Suit, Dark Knight Suit, Ninja Outfit, or Metal Suit. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18484" toLevel="1" name="Wind Vitality Tonic">
@@ -1055,109 +1057,109 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="2.941176470588235">
-						<item id="35342" count="1" /> <!-- Eternal Boot Ingredient -->
+						<item id="35342" count="1" /> <!-- Corroded Eternal Boot Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35342" count="1" /> <!-- Eternal Boot Ingredient -->
+						<item id="35342" count="1" /> <!-- Corroded Eternal Boot Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35339" count="1" /> <!-- Eternal Breastplate Ingredient -->
+						<item id="35339" count="1" /> <!-- Corroded Eternal Breastplate Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35349" count="1" /> <!-- Eternal Circlet Ingredient -->
+						<item id="35349" count="1" /> <!-- Corroded Eternal Circlet Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35340" count="1" /> <!-- Eternal Gaiter Ingredient -->
+						<item id="35340" count="1" /> <!-- Corroded Eternal Gaiter Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35341" count="1" /> <!-- Eternal Gauntlet Ingredient -->
+						<item id="35341" count="1" /> <!-- Corroded Eternal Gauntlet Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35352" count="1" /> <!-- Eternal Glove Ingredient -->
+						<item id="35352" count="1" /> <!-- Corroded Eternal Glove Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35338" count="1" /> <!-- Eternal Helmet Ingredient -->
+						<item id="35338" count="1" /> <!-- Corroded Eternal Helmet Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35345" count="1" /> <!-- Eternal Leather Armor Ingredient -->
+						<item id="35345" count="1" /> <!-- Corroded Eternal Leather Armor Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35348" count="1" /> <!-- Eternal Leather Boot Ingredient -->
+						<item id="35348" count="1" /> <!-- Corroded Eternal Leather Boot Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35347" count="1" /> <!-- Eternal Leather Glove Ingredient -->
+						<item id="35347" count="1" /> <!-- Corroded Eternal Leather Glove Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35344" count="1" /> <!-- Eternal Leather Helmet Ingredient -->
+						<item id="35344" count="1" /> <!-- Corroded Eternal Leather Helmet Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35346" count="1" /> <!-- Eternal Leather Legging Ingredient -->
+						<item id="35346" count="1" /> <!-- Corroded Eternal Leather Legging Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35343" count="1" /> <!-- Eternal Shield Ingredient -->
+						<item id="35343" count="1" /> <!-- Corroded Eternal Shield Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35353" count="1" /> <!-- Eternal Shoe Ingredient -->
+						<item id="35353" count="1" /> <!-- Corroded Eternal Stocking Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35354" count="1" /> <!-- Eternal Sigil Ingredient -->
+						<item id="35354" count="1" /> <!-- Corroded Eternal Sigil Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35351" count="1" /> <!-- Eternal Stocking Ingredient -->
+						<item id="35351" count="1" /> <!-- Corroded Eternal Stocking Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35350" count="1" /> <!-- Eternal Tunic Ingredient -->
+						<item id="35350" count="1" /> <!-- Corroded Eternal Tunic Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35311" count="1" /> <!-- Seraph Boot Ingredient -->
+						<item id="35311" count="1" /> <!-- Corroded Seraph Boot Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35308" count="1" /> <!-- Seraph Breastplate Ingredient -->
+						<item id="35308" count="1" /> <!-- Corroded Seraph Breastplate Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35318" count="1" /> <!-- Seraph Circlet Ingredient -->
+						<item id="35318" count="1" /> <!-- Corroded Seraph Circlet Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35309" count="1" /> <!-- Seraph Gaiter Ingredient -->
+						<item id="35309" count="1" /> <!-- Corroded Seraph Gaiter Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35310" count="1" /> <!-- Seraph Gauntlet Ingredient -->
+						<item id="35310" count="1" /> <!-- Corroded Seraph Gauntlet Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35321" count="1" /> <!-- Seraph Glove Ingredient -->
+						<item id="35321" count="1" /> <!-- Corroded Seraph Glove Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35307" count="1" /> <!-- Seraph Helmet Ingredient -->
+						<item id="35307" count="1" /> <!-- Corroded Seraph Helmet Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35314" count="1" /> <!-- Seraph Leather Armor Ingredient -->
+						<item id="35314" count="1" /> <!-- Corroded Seraph Leather Armor Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35317" count="1" /> <!-- Seraph Leather Boot Ingredient -->
+						<item id="35317" count="1" /> <!-- Corroded Seraph Leather Boot Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35316" count="1" /> <!-- Seraph Leather Glove Ingredient -->
+						<item id="35316" count="1" /> <!-- Corroded Seraph Leather Glove Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35313" count="1" /> <!-- Seraph Leather Helmet Ingredient -->
+						<item id="35313" count="1" /> <!-- Corroded Seraph Leather Helmet Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35315" count="1" /> <!-- Seraph Leather Legging Ingredient -->
+						<item id="35315" count="1" /> <!-- Corroded Seraph Leather Legging Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35312" count="1" /> <!-- Seraph Shield Ingredient -->
+						<item id="35312" count="1" /> <!-- Corroded Seraph Shield Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35322" count="1" /> <!-- Seraph Shoe Ingredient -->
+						<item id="35322" count="1" /> <!-- Corroded Seraph Boot Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35323" count="1" /> <!-- Seraph Sigil Ingredient -->
+						<item id="35323" count="1" /> <!-- Corroded Seraph Sigil Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35320" count="1" /> <!-- Seraph Stocking Ingredient -->
+						<item id="35320" count="1" /> <!-- Corroded Seraph Stocking Ingredient -->
 					</item>
 					<item chance="2.941176470588235">
-						<item id="35319" count="1" /> <!-- Seraph Tunic Ingredient -->
+						<item id="35319" count="1" /> <!-- Corroded Seraph Tunic Ingredient -->
 					</item>
 				</items>
 			</effect>
@@ -1168,7 +1170,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18498" toLevel="3" name="Holiday Blessing">
-		<!-- For $s1 hours Acuired XP/ SP +$s2 and Vitality Consumption -$s3. Additionaly, recovers $s4 bar of Vitality and changes the appearance into that of Santa Claus. -->
+		<!-- For $s1 h., acquired XP/ SP +$s2%, Vitality Consumption -$s3. Additionaly, recovers $s4 bar of Vitality and changes the armor appearance to that of Santa Outfit. The effect remains after death. -->
 		<icon>
 			<value level="1">BranchSys.icon.br_xmas_miracle_i00</value>
 			<value level="2">icon.etc_scroll_white_i00</value>

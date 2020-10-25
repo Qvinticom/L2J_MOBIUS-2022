@@ -290,7 +290,7 @@
 		</effects>
 	</skill>
 	<skill id="22213" toLevel="1" name="Mysterious Scroll: Drum Melody">
-		<!-- For 60 min., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill1357</icon>
 		<abnormalLevel>25</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -403,6 +403,9 @@
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-10</amount>
+			</effect>
+			<effect name="VitalityPointUp">
+				<value>10000</value>
 			</effect>
 		</effects>
 	</skill>
@@ -937,40 +940,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="5">
-						<item id="6577" count="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+						<item id="6577" count="1" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="5">
-						<item id="6578" count="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+						<item id="6578" count="1" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="5">
-						<item id="6569" count="1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+						<item id="6569" count="1" /> <!-- Blessed Scroll: Enchant A-grade Weapon -->
 					</item>
 					<item chance="5">
-						<item id="6570" count="1" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+						<item id="6570" count="1" /> <!-- Blessed Scroll: Enchant A-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="959" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+						<item id="959" count="1" /> <!-- Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="15">
-						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
+						<item id="960" count="1" /> <!-- Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="729" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+						<item id="729" count="1" /> <!-- Scroll: Enchant A-grade Weapon -->
 					</item>
 					<item chance="15">
-						<item id="730" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+						<item id="730" count="1" /> <!-- Scroll: Enchant A-grade Armor -->
 					</item>
 					<item chance="5">
-						<item id="6571" count="1" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+						<item id="6571" count="1" /> <!-- Blessed Scroll: Enchant B-grade Weapon -->
 					</item>
 					<item chance="5">
-						<item id="6572" count="1" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+						<item id="6572" count="1" /> <!-- Blessed Scroll: Enchant B-grade Armor -->
 					</item>
 					<item chance="5">
-						<item id="6573" count="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+						<item id="6573" count="1" /> <!-- Blessed Scroll: Enchant C-grade Weapon -->
 					</item>
 					<item chance="5">
-						<item id="6574" count="1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+						<item id="6574" count="1" /> <!-- Blessed Scroll: Enchant C-grade Armor -->
 					</item>
 				</items>
 			</effect>
@@ -992,40 +995,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="5">
-						<item id="6577" count="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+						<item id="6577" count="1" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="5">
-						<item id="6578" count="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+						<item id="6578" count="1" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="5">
-						<item id="6569" count="1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+						<item id="6569" count="1" /> <!-- Blessed Scroll: Enchant A-grade Weapon -->
 					</item>
 					<item chance="5">
-						<item id="6570" count="1" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+						<item id="6570" count="1" /> <!-- Blessed Scroll: Enchant A-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="959" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+						<item id="959" count="1" /> <!-- Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="15">
-						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
+						<item id="960" count="1" /> <!-- Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="729" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+						<item id="729" count="1" /> <!-- Scroll: Enchant A-grade Weapon -->
 					</item>
 					<item chance="15">
-						<item id="730" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+						<item id="730" count="1" /> <!-- Scroll: Enchant A-grade Armor -->
 					</item>
 					<item chance="5">
-						<item id="6571" count="1" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+						<item id="6571" count="1" /> <!-- Blessed Scroll: Enchant B-grade Weapon -->
 					</item>
 					<item chance="5">
-						<item id="6572" count="1" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+						<item id="6572" count="1" /> <!-- Blessed Scroll: Enchant B-grade Armor -->
 					</item>
 					<item chance="5">
-						<item id="6573" count="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+						<item id="6573" count="1" /> <!-- Blessed Scroll: Enchant C-grade Weapon -->
 					</item>
 					<item chance="5">
-						<item id="6574" count="1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+						<item id="6574" count="1" /> <!-- Blessed Scroll: Enchant C-grade Armor -->
 					</item>
 				</items>
 			</effect>
@@ -1053,13 +1056,13 @@
 						<item id="14681" count="1" /> <!-- Neolithic Crystal (S80-grade) -->
 					</item>
 					<item chance="4">
-						<item id="14680" count="1" /> <!-- Neolithic Crystal (S-grade) -->
+						<item id="14680" count="1" /> <!-- S-grade Neolithic Crystal -->
 					</item>
 					<item chance="23.75">
-						<item id="14679" count="1" /> <!-- Neolithic Crystal (A-grade) -->
+						<item id="14679" count="1" /> <!-- A-grade Neolithic Crystal -->
 					</item>
 					<item chance="23.75">
-						<item id="14678" count="1" /> <!-- Neolithic Crystal (B-grade) -->
+						<item id="14678" count="1" /> <!-- B-grade Neolithic Crystal -->
 					</item>
 					<item chance="23.75">
 						<item id="21247" count="1" /> <!-- Vitality Replenishing Potion -->
@@ -1093,13 +1096,13 @@
 						<item id="14681" count="1" /> <!-- Neolithic Crystal (S80-grade) -->
 					</item>
 					<item chance="4">
-						<item id="14680" count="1" /> <!-- Neolithic Crystal (S-grade) -->
+						<item id="14680" count="1" /> <!-- S-grade Neolithic Crystal -->
 					</item>
 					<item chance="23.75">
-						<item id="14679" count="1" /> <!-- Neolithic Crystal (A-grade) -->
+						<item id="14679" count="1" /> <!-- A-grade Neolithic Crystal -->
 					</item>
 					<item chance="23.75">
-						<item id="14678" count="1" /> <!-- Neolithic Crystal (B-grade) -->
+						<item id="14678" count="1" /> <!-- B-grade Neolithic Crystal -->
 					</item>
 					<item chance="23.75">
 						<item id="21247" count="1" /> <!-- Vitality Replenishing Potion -->
@@ -1127,40 +1130,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="2.5">
-						<item id="21383" count="1" /> <!-- Mount - Darkmane Pacer -->
+						<item id="21383" count="1" /> <!-- Darkmane Pacer Bracelet -->
 					</item>
 					<item chance="2.5">
-						<item id="21395" count="1" /> <!-- Mount - Steam Beetle -->
+						<item id="21395" count="1" /> <!-- Steam Beetle Bracelet -->
 					</item>
 					<item chance="2.5">
-						<item id="21407" count="1" /> <!-- Mount - Gold Maned Lion -->
+						<item id="21407" count="1" /> <!-- Gold Maned Lion Bracelet -->
 					</item>
 					<item chance="2.5">
-						<item id="21419" count="1" /> <!-- Mount - Jet Bike -->
+						<item id="21419" count="1" /> <!-- Jet Bike Bracelet -->
 					</item>
 					<item chance="15">
-						<item id="21381" count="1" /> <!-- Mount - Darkmane Pacer - 30-day -->
+						<item id="21381" count="1" /> <!-- Darkmane Pacer Bracelet - 30-day -->
 					</item>
 					<item chance="15">
-						<item id="21393" count="1" /> <!-- Mount - Steam Beetle - 30-day -->
+						<item id="21393" count="1" /> <!-- Steam Beetle Bracelet - 30-day -->
 					</item>
 					<item chance="15">
-						<item id="21405" count="1" /> <!-- Mount - Gold Maned Lion - 30-day -->
+						<item id="21405" count="1" /> <!-- Gold Maned Lion Bracelet - 30-day -->
 					</item>
 					<item chance="15">
-						<item id="21417" count="1" /> <!-- Mount - Jet Bike - 30-day -->
+						<item id="21417" count="1" /> <!-- Jet Bike Bracelet - 30-day -->
 					</item>
 					<item chance="7.5">
-						<item id="21379" count="1" /> <!-- Mount - Darkmane Pacer - 7-day -->
+						<item id="21379" count="1" /> <!-- Darkmane Pacer Bracelet - 7-day -->
 					</item>
 					<item chance="7.5">
-						<item id="21391" count="1" /> <!-- Mount - Steam Beetle - 7-day -->
+						<item id="21391" count="1" /> <!-- Steam Beetle Bracelet - 7-day -->
 					</item>
 					<item chance="7.5">
-						<item id="21403" count="1" /> <!-- Mount - Gold Maned Lion - 7-day -->
+						<item id="21403" count="1" /> <!-- Gold Maned Lion Bracelet - 7-day -->
 					</item>
 					<item chance="7.5">
-						<item id="21415" count="1" /> <!-- Mount - Jet Bike - 7-day -->
+						<item id="21415" count="1" /> <!-- Jet Bike Bracelet - 7-day -->
 					</item>
 				</items>
 			</effect>
@@ -1182,40 +1185,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="2.5">
-						<item id="21383" count="1" /> <!-- Mount - Darkmane Pacer -->
+						<item id="21383" count="1" /> <!-- Darkmane Pacer Bracelet -->
 					</item>
 					<item chance="2.5">
-						<item id="21395" count="1" /> <!-- Mount - Steam Beetle -->
+						<item id="21395" count="1" /> <!-- Steam Beetle Bracelet -->
 					</item>
 					<item chance="2.5">
-						<item id="21407" count="1" /> <!-- Mount - Gold Maned Lion -->
+						<item id="21407" count="1" /> <!-- Gold Maned Lion Bracelet -->
 					</item>
 					<item chance="2.5">
-						<item id="21419" count="1" /> <!-- Mount - Jet Bike -->
+						<item id="21419" count="1" /> <!-- Jet Bike Bracelet -->
 					</item>
 					<item chance="15">
-						<item id="21381" count="1" /> <!-- Mount - Darkmane Pacer - 30-day -->
+						<item id="21381" count="1" /> <!-- Darkmane Pacer Bracelet - 30-day -->
 					</item>
 					<item chance="15">
-						<item id="21393" count="1" /> <!-- Mount - Steam Beetle - 30-day -->
+						<item id="21393" count="1" /> <!-- Steam Beetle Bracelet - 30-day -->
 					</item>
 					<item chance="15">
-						<item id="21405" count="1" /> <!-- Mount - Gold Maned Lion - 30-day -->
+						<item id="21405" count="1" /> <!-- Gold Maned Lion Bracelet - 30-day -->
 					</item>
 					<item chance="15">
-						<item id="21417" count="1" /> <!-- Mount - Jet Bike - 30-day -->
+						<item id="21417" count="1" /> <!-- Jet Bike Bracelet - 30-day -->
 					</item>
 					<item chance="7.5">
-						<item id="21379" count="1" /> <!-- Mount - Darkmane Pacer - 7-day -->
+						<item id="21379" count="1" /> <!-- Darkmane Pacer Bracelet - 7-day -->
 					</item>
 					<item chance="7.5">
-						<item id="21391" count="1" /> <!-- Mount - Steam Beetle - 7-day -->
+						<item id="21391" count="1" /> <!-- Steam Beetle Bracelet - 7-day -->
 					</item>
 					<item chance="7.5">
-						<item id="21403" count="1" /> <!-- Mount - Gold Maned Lion - 7-day -->
+						<item id="21403" count="1" /> <!-- Gold Maned Lion Bracelet - 7-day -->
 					</item>
 					<item chance="7.5">
-						<item id="21415" count="1" /> <!-- Mount - Jet Bike - 7-day -->
+						<item id="21415" count="1" /> <!-- Jet Bike Bracelet - 7-day -->
 					</item>
 				</items>
 			</effect>
@@ -1565,7 +1568,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22257" toLevel="1" name="Wind Walk">
-		<!-- Increases Speed by 33 for 60 min. -->
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1583,7 +1586,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22258" toLevel="1" name="Haste">
-		<!-- Increases Atk. Spd. by 33% for 60 min. -->
+		<!-- Atk. Spd. +33% for 60 min. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1655,7 +1658,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22262" toLevel="1" name="Acumen">
-		<!-- Increases Casting Spd. by 30% for 60 min. -->
+		<!-- Casting Spd. +30% for 60 min. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1673,7 +1676,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22263" toLevel="1" name="Shield">
-		<!-- For 60 min., P. Def. +15%. -->
+		<!-- P. Def. +15% for 60 min. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1781,7 +1784,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22269" toLevel="6" name="Concentration">
-		<!-- Decreases magic cancel damage by 53 for 60 min. -->
+		<!-- Casting Interruption Rate -42 for 20 min. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2196,7 +2199,7 @@
 						<item id="10226" count="1" /> <!-- Icarus Shooter -->
 					</item>
 					<item chance="2.47">
-						<item id="10415" count="1" /> <!-- Icarus Dual Sword -->
+						<item id="10415" count="1" /> <!-- Icarus Dual Swords -->
 					</item>
 					<item chance="1.56">
 						<item id="52" count="1" /> <!-- Vesper Dual Sword -->
@@ -2264,7 +2267,7 @@
 						<item id="9814" count="15" /> <!-- Memento Mori -->
 					</item>
 					<item chance="20">
-						<item id="9815" count="15" /> <!-- Dragon Heart -->
+						<item id="9815" count="15" /> <!-- Dragon's Heart -->
 					</item>
 					<item chance="20">
 						<item id="9816" count="15" /> <!-- Earth Egg -->
@@ -2327,7 +2330,7 @@
 						<item id="9924" count="1" /> <!-- Blue Talisman - Healing -->
 					</item>
 					<item chance="1.1236">
-						<item id="9925" count="1" /> <!-- Red Talisman - HP/ CP Recovery -->
+						<item id="9925" count="1" /> <!-- Red Talisman - HP/CP Recovery -->
 					</item>
 					<item chance="1.1236">
 						<item id="9926" count="1" /> <!-- Blue Talisman - P. Def. -->
@@ -2336,7 +2339,7 @@
 						<item id="9927" count="1" /> <!-- Blue Talisman - M. Def. -->
 					</item>
 					<item chance="1.1236">
-						<item id="9928" count="1" /> <!-- Red Talisman - Mental Regeneration -->
+						<item id="9928" count="1" /> <!-- Red Talisman - MP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
 						<item id="9929" count="1" /> <!-- Blue Talisman - Shield Defense -->
@@ -2393,16 +2396,16 @@
 						<item id="9946" count="1" /> <!-- Yellow Talisman - Healing -->
 					</item>
 					<item chance="1.1236">
-						<item id="9947" count="1" /> <!-- Yellow Talisman - CP Regeneration -->
+						<item id="9947" count="1" /> <!-- Yellow Talisman - CP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="9948" count="1" /> <!-- Yellow Talisman - HP Regeneration -->
+						<item id="9948" count="1" /> <!-- Yellow Talisman - HP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="9949" count="1" /> <!-- Yellow Talisman - MP Regeneration -->
+						<item id="9949" count="1" /> <!-- Yellow Talisman - MP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="9950" count="1" /> <!-- Grey Talisman - Weight Training -->
+						<item id="9950" count="1" /> <!-- Grey Talisman - Weight Limit -->
 					</item>
 					<item chance="1.1236">
 						<item id="9951" count="1" /> <!-- Grey Talisman - Mid-grade Fishing -->
@@ -2432,25 +2435,25 @@
 						<item id="9959" count="1" /> <!-- Black Talisman - Free Speech -->
 					</item>
 					<item chance="1.1236">
-						<item id="9960" count="1" /> <!-- White Talisman - Bravery -->
+						<item id="9960" count="1" /> <!-- White Talisman - Confusion Resistance -->
 					</item>
 					<item chance="1.1236">
-						<item id="9961" count="1" /> <!-- White Talisman - Paralysis Resistance -->
+						<item id="9961" count="1" /> <!-- White Talisman - Confusion Resistance -->
 					</item>
 					<item chance="1.1236">
-						<item id="9962" count="1" /> <!-- White Talisman - Stun Resistance -->
+						<item id="9962" count="1" /> <!-- White Talisman - Confusion Resistance -->
 					</item>
 					<item chance="1.1236">
-						<item id="9963" count="1" /> <!-- White Talisman - Sleep Resistance -->
+						<item id="9963" count="1" /> <!-- White Talisman - Stupor Resistance -->
 					</item>
 					<item chance="1.1236">
-						<item id="9964" count="1" /> <!-- White Talisman - Bleed Resistance -->
+						<item id="9964" count="1" /> <!-- White Talisman - Infection Resistance -->
 					</item>
 					<item chance="1.1236">
 						<item id="9965" count="1" /> <!-- White Talisman - Cancel Resistance -->
 					</item>
 					<item chance="1.1236">
-						<item id="9966" count="1" /> <!-- White Talisman - Hold Resistance -->
+						<item id="9966" count="1" /> <!-- White Talisman - Obstruction Resistance -->
 					</item>
 					<item chance="1.1236">
 						<item id="10141" count="1" /> <!-- Grey Talisman - Yeti Transform -->
@@ -2513,16 +2516,16 @@
 						<item id="10538" count="1" /> <!-- Yellow Talisman - Healing Power -->
 					</item>
 					<item chance="1.1236">
-						<item id="10539" count="1" /> <!-- Yellow Talisman - CP Regeneration -->
+						<item id="10539" count="1" /> <!-- Yellow Talisman - CP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="10540" count="1" /> <!-- Yellow Talisman - HP Regeneration -->
+						<item id="10540" count="1" /> <!-- Yellow Talisman - HP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="10541" count="1" /> <!-- Yellow Talisman - MP Regeneration (Low-grade) -->
+						<item id="10541" count="1" /> <!-- Low-grade Yellow Talisman - MP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="10542" count="1" /> <!-- Red Talisman - HP/ CP Recovery -->
+						<item id="10542" count="1" /> <!-- Red Talisman - HP/CP Recovery -->
 					</item>
 					<item chance="1.1236">
 						<item id="10543" count="1" /> <!-- Yellow Talisman - Speed -->
@@ -2531,7 +2534,7 @@
 						<item id="12815" count="1" /> <!-- Red Talisman - Max CP -->
 					</item>
 					<item chance="1.1236">
-						<item id="12816" count="1" /> <!-- Red Talisman - CP Regeneration -->
+						<item id="12816" count="1" /> <!-- Red Talisman - CP Recovery -->
 					</item>
 					<item chance="1.1236">
 						<item id="12817" count="1" /> <!-- Yellow Talisman - Increase Momentum -->
@@ -2647,7 +2650,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22283" toLevel="1" name="PA - Blessing">
+	<skill id="22283" toLevel="1" name="PA Blessing">
 		<!-- For 20 min., recovers Vitality when XP is acquired through hunting. -->
 		<icon>BranchSys.icon.br_flag_of_bookmark_i00</icon>
 		<operateType>A2</operateType>
@@ -2700,7 +2703,7 @@
 		</conditions>
 	</skill>
 	<skill id="22285" toLevel="1" name="PA Vitality">
-		<!-- For 2 h., recovers Vitality when XP is acquired through hunting. -->
+		<!-- For 2 h., recovers Vitality when acquiring XP. -->
 		<icon>icon.etc_pccafe_point_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -2730,7 +2733,7 @@
 		</conditions>
 	</skill>
 	<skill id="22286" toLevel="1" name="PA Vitality">
-		<!-- For 3 h., recovers Vitality when XP is acquired through hunting. -->
+		<!-- For 3 h., recovers Vitality when acquiring XP. -->
 		<icon>icon.etc_pccafe_point_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -2789,7 +2792,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22288" toLevel="1" name="PA - Vitality Pack">
+	<skill id="22288" toLevel="1" name="Package: PA Vitality">
 		<itemConsumeId>21862</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2839,16 +2842,16 @@
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="2.5">
-						<item id="6570" count="1" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+						<item id="6570" count="1" /> <!-- Blessed Scroll: Enchant A-grade Armor -->
 					</item>
 					<item chance="2.5">
-						<item id="6578" count="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+						<item id="6578" count="1" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="2.5">
-						<item id="6569" count="1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+						<item id="6569" count="1" /> <!-- Blessed Scroll: Enchant A-grade Weapon -->
 					</item>
 					<item chance="2.5">
-						<item id="6577" count="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+						<item id="6577" count="1" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="5">
 						<item id="9552" count="1" /> <!-- Fire Crystal -->
@@ -2962,13 +2965,13 @@
 						<item id="14111" count="1" /> <!-- Sealed Vesper Shield -->
 					</item>
 					<item chance="0.0000571">
-						<item id="15541" count="1" /> <!-- Red Soul Crystal - Stage 17 -->
+						<item id="15541" count="1" /> <!-- Red Soul Crystal Lv. 17 -->
 					</item>
 					<item chance="0.0000571">
-						<item id="15542" count="1" /> <!-- Blue Soul Crystal - Stage 17 -->
+						<item id="15542" count="1" /> <!-- Blue Soul Crystal Lv. 17 -->
 					</item>
 					<item chance="0.0000571">
-						<item id="15543" count="1" /> <!-- Green Soul Crystal - Stage 17 -->
+						<item id="15543" count="1" /> <!-- Green Soul Crystal Lv. 17 -->
 					</item>
 				</items>
 			</effect>

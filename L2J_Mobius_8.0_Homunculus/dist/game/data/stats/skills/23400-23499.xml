@@ -35,7 +35,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23402" toLevel="3" name="Unclean Power of Ancient Kartia's Labyrinth">
+	<skill id="23402" toLevel="3" name="Tainted Power of Ancient Kartia's Labyrinth">
 		<!-- Consistently decreases HP. -->
 		<icon>icon.skill5086</icon>
 		<operateType>A2</operateType>
@@ -522,7 +522,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23420" toLevel="3" name="Borna Heal">
-		<!-- Heals self and surrounding party members with $s1 power. If HP is full, CP is restored with the remaining power. -->
+		<!-- Recovers your HP and that of your nearby party members with $s1 power. If HP is full, recovers CP. -->
 		<icon>icon.skill11757</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -678,7 +678,7 @@
 		</effects>
 	</skill>
 	<skill id="23428" toLevel="1" name="(Haste)">
-		<!-- For 20 min., Atk. Spd. +15%. -->
+		<!-- Atk. Spd. +15% for 20 min. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -870,7 +870,7 @@
 				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 				<affectScope>SINGLE</affectScope>
-				<skillId>5567</skillId> <!-- Flame Armor -->
+				<skillId>5567</skillId> <!-- Flaming Armor -->
 				<skillLevel>1</skillLevel>
 				<minDamage>1</minDamage>
 			</effect>
@@ -1239,7 +1239,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>NONE</affectScope>
 	</skill>
-	<skill id="23448" toLevel="1" name="Blessed Three-headed Dragon's Egg">
+	<skill id="23448" toLevel="1" name="Hut on Chicken Legs' Gift">
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
 		<coolTime>1000</coolTime>
@@ -1619,7 +1619,7 @@
 		<affectObject>NOT_FRIEND_PC</affectObject>
 	</skill>
 	<skill id="23461" toLevel="3" name="(Armor Destruction)">
-		<!-- Inflicts $s1 physical damage on target, decreases their P. Def., and absorbs their Momentum. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. Over-hit. Critical. -->
+		<!-- Inflicts $s1 physical damage on target, decreases their P. Def., and absorbs their Momentum. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. Over-hit. Critical. -->
 		<icon>icon.skill10258</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -1666,7 +1666,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="23462" toLevel="1" name="(Power Bomber)">
-		<!-- Inflicts 20483 physical damage to Knock Down the target for 2 sec. Damage increases with Momentum. Damage +30% when Momentum is 5, and Damage -20% when Momentum is 0. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. Critical. Ignores Shield Defense. -->
+		<!-- Inflicts 20483 physical damage to Knock Down the target for 2 sec. Damage increases with Momentum. Damage +30% when Momentum is 5, and Damage -20% when Momentum is 0. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. Critical. Ignores Shield Defense. -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<mpConsume>84</mpConsume>
@@ -1776,7 +1776,7 @@
 		<affectObject>NOT_FRIEND_PC</affectObject>
 	</skill>
 	<skill id="23467" toLevel="2" name="(Blood Stab)">
-		<!-- Strikes the enemy to a vital spot with $s1 power inflicting Infection. Requires a dagger or a dual dagger. Half-kill. Critical. Over-hit. -->
+		<!-- Strikes the enemy to a vital spot with $s1 power inflicting Infection. Requires a dagger or dual daggers. Half-kill. Critical. Over-hit. -->
 		<icon>icon.skill10508</icon>
 		<operateType>A2</operateType>
 		<mpConsume>59</mpConsume>
@@ -1961,7 +1961,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23475" toLevel="2" name="(Crippling Attack)">
-		<!-- Inflicts $s1 physical damage. For $s2, target's P. Def./ M. Def. -$s3, and P. Evasion -$s4. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. Over-hit. Critical. -->
+		<!-- Inflicts $s1 physical damage. For $s2, target's P. Def./ M. Def. -$s3, and P. Evasion -$s4. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. Over-hit. Critical. -->
 		<icon>icon.skill11509</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2077,7 +2077,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23477" toLevel="2" name="(Assault Rush)">
+	<skill id="23477" toLevel="2" name="(Dash Assault)">
 		<icon>icon.skill11508</icon>
 		<operateType>DA2</operateType>
 		<mpConsume>38</mpConsume>
@@ -2103,7 +2103,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23478" toLevel="1" name="Protected Area">
-		<!-- Protected by the Crystal of Protection. you're not affected by the Unclean Power of Ancient Kartia's Labyrinth. -->
+		<!-- The crystal protects from the Tainted Power of Ancient Kartia's Labyrinth. -->
 		<icon>icon.skill6319</icon>
 		<operateType>A2</operateType>
 		<abnormalType>POISON</abnormalType>
@@ -2208,7 +2208,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23485" toLevel="1" name="Unknown Sculptor - Horn Melody">
-		<!-- For 20 min., party members' P. Atk. +23%, M. Atk. +88%, P. Def. +35%, P. Def. +40%. -->
+		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2253,7 +2253,7 @@
 		</effects>
 	</skill>
 	<skill id="23486" toLevel="1" name="Unknown Sculptor - Drum Melody">
-		<!-- For 20 min., increases party members' P. Critical Rate by 30%, P. Critical Power by 30%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For $s1, party members' P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, received P. Critical Damage -$s5. Has a chance of increasing P. Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2339,7 +2339,7 @@
 		</effects>
 	</skill>
 	<skill id="23487" toLevel="1" name="Unknown Sculptor - Pipe Organ Melody">
-		<!-- For 20 min., party members' Max HP +37%, Max MP +62%, Max CP +37%, Vampiric Rage +9% is applied at a certain chance. -->
+		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, Max CP +$s4, Vampiric Rage +$s5 is applied at a certain chance. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2386,7 +2386,7 @@
 		</effects>
 	</skill>
 	<skill id="23488" toLevel="1" name="Unknown Sculptor - Guitar Melody">
-		<!-- For 20 min., party members' Atk. Spd +60%, Casting Spd. +60%, Speed +10 and All Skill MP Consumption -10%. -->
+		<!-- For $s1, party members' Atk. Spd +$s2, Casting Spd. +$s3, Speed +$s4 and All Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2562,7 +2562,7 @@
 		</conditions>
 	</skill>
 	<skill id="23492" toLevel="1" name="(Horn Melody)">
-		<!-- For 30 min., party members' P. Atk. +24%, M. Atk. +91%, P. Def. +35%, M. Def. +40%. -->
+		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2607,7 +2607,7 @@
 		</effects>
 	</skill>
 	<skill id="23493" toLevel="1" name="(Horn Melody)">
-		<!-- For 30 min., party members' P. Atk. +26%, M. Atk. +94%, P. Def. +35%, M. Def. +40%. -->
+		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2652,7 +2652,7 @@
 		</effects>
 	</skill>
 	<skill id="23494" toLevel="1" name="(Drum Melody)">
-		<!-- For 30 min., increases party members' P. Critical Rate by 32%, P. Critical Power by 31%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For $s1, increases party members' P. Critical Rate by $s2, P. Critical Power by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2706,7 +2706,7 @@
 		</effects>
 	</skill>
 	<skill id="23495" toLevel="1" name="(Drum Melody)">
-		<!-- For 30 min., increases party members' P. Critical Rate by 34%, P. Critical Power by 32%, M. Critical Rate by 40, and decreases Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For $s1, increases party members' P. Critical Rate by $s2, P. Critical Power by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2760,7 +2760,7 @@
 		</effects>
 	</skill>
 	<skill id="23496" toLevel="1" name="(Pipe Organ Melody)">
-		<!-- For 30 min., party members' Max HP +39%, Max MP +64%, Max CP +39%, and Vampiric Rage +9% is applied at a certain chance. -->
+		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, Max CP +$s4, and Vampiric Rage +$s5 is applied at a certain chance. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2807,7 +2807,7 @@
 		</effects>
 	</skill>
 	<skill id="23497" toLevel="1" name="(Pipe Organ Melody)">
-		<!-- For 30 min., party members' Max HP +41%, Max MP +66%, Max CP +41%, and Vampiric Rage +9% is applied at a certain chance. -->
+		<!-- For $s1, party members' Max HP +$s2, Max MP +$s3, Max CP +$s4, and Vampiric Rage +$s5 is applied at a certain chance. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2854,7 +2854,7 @@
 		</effects>
 	</skill>
 	<skill id="23498" toLevel="1" name="(Guitar Melody)">
-		<!-- For 30 min., party members' Atk. Spd +61%, Casting Spd. +60%, Speed +15, and All Skill MP Consumption -10%. -->
+		<!-- For $s1, party members' Atk. Spd +$s2, Casting Spd. +$s3, Speed +$s4, and All Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2913,7 +2913,7 @@
 		</effects>
 	</skill>
 	<skill id="23499" toLevel="1" name="(Guitar Melody)">
-		<!-- For 30 min., party members' Atk. Spd +62%, Casting Spd. +61%, Speed +20, and All Skill MP Consumption -10%. -->
+		<!-- For $s1, party members' Atk. Spd +$s2, Casting Spd. +$s3, Speed +$s4, and All Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>

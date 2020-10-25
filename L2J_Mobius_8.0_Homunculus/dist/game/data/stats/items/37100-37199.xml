@@ -37,7 +37,7 @@
 		</skills>
 	</item>
 	<item id="37103" name="Recipe: High-grade Elixir of Life (R-grade)" type="EtcItem">
-		<!-- For those who have completed the fourth class transfer only. Recipe for Elixir of Life (R-grade). Requires Create Common Item (Lv. 10). Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for R-grade Elixir of Life. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -46,7 +46,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="37104" name="Recipe: High-grade Elixir of Mind (R-grade)" type="EtcItem">
-		<!-- For those who have completed the fourth class transfer only. Recipe for Elixir of Mind (R-grade). Requires Create Common Item (Lv. 10). Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for R-grade Elixir of Mind. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -55,7 +55,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="37105" name="Recipe: High-grade Elixir of CP (R-grade)" type="EtcItem">
-		<!-- For those who have completed the fourth class transfer only. Recipe for Elixir of CP (R-grade). Requires Create Common Item (Lv. 10). Success rate is 100%. -->
+		<!-- For the 4th classes only. A recipe for R-grade Elixir of CP. Requires Create Common Item Lv. 10. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -64,7 +64,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="37106" name="Recipe: High-grade Elixir of Life (R-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Elixir of Life (R-grade). Requires Create Item (Lv. 11). Success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for R-grade Elixir of Life. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
@@ -74,7 +74,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="37107" name="Recipe: High-grade Elixir of Mind (R-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Elixir of Mind (R-grade). Requires Create Item (Lv. 11). Success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for R-grade Elixir of Mind. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
@@ -84,7 +84,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="37108" name="Recipe: High-grade Elixir of CP (R-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Elixir of Life (R-grade). Requires Create Item (Lv. 11). Success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for R-grade Elixir of CP. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -93,7 +93,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="37109" name="Recipe: Elixir of Protection" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Elixir of Protection. Requires Create Item (Lv. 11). Success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Elixir of Protection. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -102,7 +102,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="37110" name="Recipe: Elixir of Magic" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Elixir of Magic. Requires Create Item (Lv. 11). Success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Elixir of Magic. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -111,7 +111,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="37111" name="Recipe: Elixir of Aggression" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Elixir of Aggression. Requires Create Item (Lv. 11). Success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Elixir of Aggression. Requires Create Item Lv. 11. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -120,7 +120,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="37112" name="Scroll of Escape - Heine" type="EtcItem">
-		<!-- Teleports you close to Captain Gosta in Heine. -->
+		<!-- Teleports to Captain Gosta in Heine. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -209,7 +209,7 @@
 		</skills>
 	</item>
 	<item id="37117" name="Scroll of Escape - Town of Rune" type="EtcItem">
-		<!-- Teleports you close to Captain Mathias in the town of Rune. -->
+		<!-- Teleports to Captain Mathias in Rune. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -231,7 +231,7 @@
 		</skills>
 	</item>
 	<item id="37118" name="Scroll of Escape - Town of Rune" type="EtcItem">
-		<!-- Teleports you close to Captain Mathias in the town of Rune. -->
+		<!-- Teleports to Captain Mathias in Rune. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -253,7 +253,7 @@
 		</skills>
 	</item>
 	<item id="37119" name="Scroll of Escape - Town of Goddard" type="EtcItem">
-		<!-- Teleports you close to Captain Andrei in the town of Goddard. -->
+		<!-- Teleports to Captain Andrei in Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
@@ -274,7 +274,7 @@
 		</skills>
 	</item>
 	<item id="37120" name="Scroll of Escape - Town of Goddard" type="EtcItem">
-		<!-- Teleports you close to Captain Andrei in the town of Goddard. -->
+		<!-- Teleports to Captain Andrei in Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -291,7 +291,7 @@
 		</skills>
 	</item>
 	<item id="37121" name="Scroll of Escape - Town of Goddard" type="EtcItem">
-		<!-- Teleports you close to Captain Andrei in the town of Goddard. -->
+		<!-- Teleports to Captain Andrei in Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
 		<set name="is_depositable" val="false" />
@@ -309,7 +309,7 @@
 		</skills>
 	</item>
 	<item id="37122" name="Scroll of Escape - Town of Goddard" type="EtcItem">
-		<!-- Teleports you close to Captain Andrei in the town of Goddard. -->
+		<!-- Teleports to Captain Andrei in Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -378,7 +378,7 @@
 		</skills>
 	</item>
 	<item id="37127" name="Scroll of Escape - Heine" type="EtcItem">
-		<!-- Teleports you close to Captain Gosta in Heine. -->
+		<!-- Teleports to Captain Gosta in Heine. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -395,7 +395,7 @@
 		</skills>
 	</item>
 	<item id="37128" name="Lindvior Support Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive 1 Bloody Helios Pack, 1 Bloody Eternal Pack, 1 Istina/ Octavis Accessory Pack, 1 Top-grade Enchantment Pack, 1 Talisman - Longing, 1 Enhanced Tauti's Bracelet, 2 billion Adena, 10 Scrolls: 100,000,000 SP, 1 Hair Accessory/ Pendant Pack, 1 Returning Hero's Shirt, 1 Nurka's Belt, 1 Lv. 5 Legendary Dye Pack, and 100 Blessed Scrolls of Resurrection. -->
+		<!-- Double-click to obtain Bloody Helios Pack, Bloody Eternal Pack, Istina/ Octavis Accessory Pack, Top-grade Enchantment Pack, Talisman of Longing, Enhanced Tauti's Bracelet, 2 billion adena, Scroll: 100,000,000 SP (10 pcs.), Hair Accessory/ Pendant Pack, Returning Hero's Shirt, Nurka's Belt, Lv. 5 Legendary Dye Pack, and Blessed Scroll of Resurrection (100 pcs.). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -434,7 +434,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37131" name="Istina/ Octavis Accessory Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive 1 Istina's Necklace, 1 Octavis' Ring, 1 Istina's Ring, 1 Istina's Earring, and 1 Octavis' Earring. -->
+		<!-- Double-click to receive one Istina's Necklace, Octavis' Ring, Istina's Ring, Istina's Earring and Octavis' Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -447,7 +447,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37132" name="Top-grade Enchantment Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive 20 Scrolls: Enchant Weapon of Destruction (R-grade), 220 Scrolls: Enchant Armor of Destruction (R-grade), 3 Scrolls: Enchant Weapon (R-grade), 33 Scrolls: Enchant Armor (R-grade), each of the 12 Super Attribute Stones and 1 Life Stone Instilled with Giants' Power. -->
+		<!-- Double-click to obtain Scrolls: Enchant R-grade Weapon of Destruction (20 pcs.), Scrolls: Enchant R-grade Armor of Destruction (220 pcs.), Scrolls: Enchant R-grade Weapon (3 pcs.), Scrolls: Enchant R-grade Armor (33 pcs.), each of the 12 Super Attribute Stones and a Life Stone: Giant's Power. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -473,7 +473,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37134" name="Lv. 5 Legendary Dye Pack" type="EtcItem">
-		<!-- Double-click to receive 3 of each Lv. 5 Legendary Dye Pack. -->
+		<!-- Double-click to obtain 3 of each Lv. 5 Legendary Dye Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -838,7 +838,7 @@
 		</stats>
 	</item>
 	<item id="37153" name="Steel Avadon Robe (60-day)" type="Armor">
-		<!-- Avadon Robe with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
+		<!-- Upgrade options are limited. Cannot be enchanted, augmented, or assigned an attribute. Available for 60 d. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -858,7 +858,7 @@
 		</stats>
 	</item>
 	<item id="37154" name="Steel Avadon Circlet (60-day)" type="Armor">
-		<!-- Avadon Circlet with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
+		<!-- Upgrade options are limited. Cannot be enchanted, augmented, or assigned an attribute. Available for 60 d. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -877,7 +877,7 @@
 		</stats>
 	</item>
 	<item id="37155" name="Steel Avadon Gloves (Robe) (60-day)" type="Armor">
-		<!-- Avadon Gloves - Robe with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
+		<!-- Upgrade options are limited. Cannot be enchanted, augmented, or assigned an attribute. Available for 60 d. -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -896,7 +896,7 @@
 		</stats>
 	</item>
 	<item id="37156" name="Steel Avadon Boots (Robe) (60-day)" type="Armor">
-		<!-- Avadon Boots - Robe with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
+		<!-- Upgrade options are limited. Cannot be enchanted, augmented, or assigned an attribute. Available for 60 d. -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -915,7 +915,7 @@
 		</stats>
 	</item>
 	<item id="37157" name="Steel Avadon Shield (60-day)" type="Armor">
-		<!-- Avadon Shield with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
+		<!-- Upgrade options are limited. Cannot be enchanted, augmented, or assigned an attribute. Available for 60 d. -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -936,7 +936,7 @@
 		</stats>
 	</item>
 	<item id="37158" name="Steel Leather Armor of Doom (60-day)" type="Armor">
-		<!-- Leather Armor of Doom with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
+		<!-- Doom Leather Armor with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1071,7 +1071,7 @@
 		</stats>
 	</item>
 	<item id="37165" name="Steel Shield of Nightmares (60-day)" type="Armor">
-		<!-- Shield of Nightmares with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
+		<!-- Shield of Nightmare with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />

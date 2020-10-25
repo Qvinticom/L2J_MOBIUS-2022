@@ -98,7 +98,7 @@
 		</effects>
 	</skill>
 	<skill id="3805" toLevel="1" name="Dynasty Jewel Leather Armor">
-		<!-- Increases Accuracy/ Evasion/ Max MP/ Atk. Spd./ Dark Resistance. -->
+		<!-- Increases P. Accuracy, P. Evasion, Max MP, Atk. Spd., and Dark Resistance. -->
 		<icon>icon.armor_t92_ud_i00</icon>
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
@@ -255,7 +255,7 @@
 		</effects>
 	</skill>
 	<skill id="3815" toLevel="1" name="Phoenix Earring">
-		<!-- Increases Resistance to attack magic by 1%. -->
+		<!-- Increases Resistance to attack magic by $s1. -->
 		<icon>icon.accessary_phoenixs_earing_i00</icon>
 		<magicLevel>64</magicLevel>
 		<operateType>P</operateType>
@@ -268,7 +268,7 @@
 		</effects>
 	</skill>
 	<skill id="3816" toLevel="1" name="Majestic Necklace">
-		<!-- Increases Resistance to attack magic by 1%. -->
+		<!-- Increases Resistance to attack magic by $s1. -->
 		<icon>icon.accessary_inferno_necklace_i00</icon>
 		<magicLevel>67</magicLevel>
 		<operateType>P</operateType>
@@ -422,7 +422,7 @@
 		</effects>
 	</skill>
 	<skill id="3827" toLevel="1" name="Sword of Critical Damage">
-		<!-- Increases Critical Damage. -->
+		<!-- Increases Critical Damage for standard attacks. -->
 		<icon>icon.skill0193</icon>
 		<magicLevel>67</magicLevel>
 		<operateType>P</operateType>
@@ -435,7 +435,7 @@
 		</effects>
 	</skill>
 	<skill id="3828" toLevel="1" name="Sword of Critical Chance">
-		<!-- Increases Critical Rate. -->
+		<!-- Increases Critical Rate for standard attacks. -->
 		<icon>icon.skill1077</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -448,7 +448,7 @@
 		</effects>
 	</skill>
 	<skill id="3829" toLevel="1" name="Sword of Stun">
-		<!-- Inflicts Stun on the enemy at a certain probability for successful general attack. -->
+		<!-- Inflicts Stun on the enemy at a certain probability after a standard attack. -->
 		<icon>icon.skill0100</icon>
 		<magicLevel>70</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -510,7 +510,7 @@
 		</effects>
 	</skill>
 	<skill id="3832" toLevel="1" name="Rapier of Critical Damage">
-		<!-- Increases Critical Damage. -->
+		<!-- Increases Critical Damage for standard attacks. -->
 		<icon>icon.skill0193</icon>
 		<magicLevel>67</magicLevel>
 		<operateType>P</operateType>
@@ -523,7 +523,7 @@
 		</effects>
 	</skill>
 	<skill id="3833" toLevel="1" name="Rapier of Critical Chance">
-		<!-- Increases Critical Rate. -->
+		<!-- Increases Critical Rate for standard attacks. -->
 		<icon>icon.skill1077</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -536,7 +536,7 @@
 		</effects>
 	</skill>
 	<skill id="3834" toLevel="1" name="Rapier of Stun">
-		<!-- Inflicts Stun on the enemy at a certain probability for successful general attack. -->
+		<!-- Inflicts Stun on the enemy at a certain probability after a standard attack. -->
 		<icon>icon.skill0100</icon>
 		<magicLevel>70</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -598,7 +598,7 @@
 		</effects>
 	</skill>
 	<skill id="3837" toLevel="1" name="Dual-blade Weapon of Critical Damage">
-		<!-- Increases Critical Damage. -->
+		<!-- Increases Critical Damage for standard attacks. -->
 		<icon>icon.skill0193</icon>
 		<magicLevel>67</magicLevel>
 		<operateType>P</operateType>
@@ -611,7 +611,7 @@
 		</effects>
 	</skill>
 	<skill id="3838" toLevel="1" name="Dual-blade Weapon of Critical Chance">
-		<!-- Increases Critical Rate. -->
+		<!-- Increases Critical Rate for standard attacks. -->
 		<icon>icon.skill1077</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -624,7 +624,7 @@
 		</effects>
 	</skill>
 	<skill id="3839" toLevel="1" name="Dual-blade Weapon of Stun">
-		<!-- Inflicts Stun on the enemy at a certain probability for successful general attack. -->
+		<!-- Inflicts Stun on the enemy at a certain probability after a standard attack. -->
 		<icon>icon.skill0100</icon>
 		<magicLevel>70</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -646,7 +646,7 @@
 		</effects>
 	</skill>
 	<skill id="3840" toLevel="2" name="Two-handed Sword of Haste">
-		<!-- Increases Atk. Spd. when equipped with a two-handed sword. -->
+		<!-- Increases Atk. Spd., when using a two-handed sword. -->
 		<icon>icon.skill1086</icon>
 		<magicLevel>
 			<value level="1">61</value>
@@ -662,7 +662,7 @@
 		</effects>
 	</skill>
 	<skill id="3841" toLevel="1" name="Two-handed Sword of Guidance">
-		<!-- Increases Accuracy when equipped with a two-handed sword. -->
+		<!-- Increases P. Accuracy. -->
 		<icon>icon.skill1240</icon>
 		<magicLevel>64</magicLevel>
 		<operateType>P</operateType>
@@ -701,7 +701,7 @@
 		</effects>
 	</skill>
 	<skill id="3844" toLevel="1" name="Two-handed Sword of Critical Damage">
-		<!-- Increases Critical Damage. -->
+		<!-- Increases Critical Damage for standard attacks. -->
 		<icon>icon.skill0193</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -714,7 +714,7 @@
 		</effects>
 	</skill>
 	<skill id="3845" toLevel="2" name="Two-handed Sword of Critical Chance">
-		<!-- Increases Critical Rate. -->
+		<!-- Increases Critical Rate for standard attacks. -->
 		<icon>icon.skill1077</icon>
 		<magicLevel>
 			<value level="1">58</value>
@@ -730,7 +730,7 @@
 		</effects>
 	</skill>
 	<skill id="3846" toLevel="2" name="Ancient Sword of Haste">
-		<!-- Increases Atk. Spd. when equipped with an ancient sword. -->
+		<!-- Increases Atk. Spd., when using an ancient sword. -->
 		<icon>icon.skill1086</icon>
 		<magicLevel>
 			<value level="1">61</value>
@@ -746,7 +746,7 @@
 		</effects>
 	</skill>
 	<skill id="3847" toLevel="1" name="Ancient Sword of Guidance">
-		<!-- Increases Accuracy when equipped with an ancient sword. -->
+		<!-- Increases Atk. Spd., when using an ancient sword. -->
 		<icon>icon.skill1240</icon>
 		<magicLevel>64</magicLevel>
 		<operateType>P</operateType>
@@ -785,7 +785,7 @@
 		</effects>
 	</skill>
 	<skill id="3850" toLevel="1" name="Ancient Sword of Critical Damage">
-		<!-- Increases Critical Damage. -->
+		<!-- Increases Critical Damage for standard attacks. -->
 		<icon>icon.skill0193</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -798,7 +798,7 @@
 		</effects>
 	</skill>
 	<skill id="3851" toLevel="2" name="Ancient Sword of Critical Chance">
-		<!-- Increases Critical Rate. -->
+		<!-- Increases Critical Rate for standard attacks. -->
 		<icon>icon.skill1077</icon>
 		<magicLevel>
 			<value level="1">58</value>
@@ -869,7 +869,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3856" toLevel="1" name="Sword of Divine Power">
-		<!-- Increases the power of one's own recovery magic. -->
+		<!-- Increases Healing Power. -->
 		<icon>icon.skill1459</icon>
 		<magicLevel>67</magicLevel>
 		<operateType>P</operateType>
@@ -882,7 +882,7 @@
 		</effects>
 	</skill>
 	<skill id="3857" toLevel="1" name="Sword of Clarity">
-		<!-- Decreases MP Consumption. -->
+		<!-- Decreases M. Skill MP Consumption. -->
 		<icon>icon.skill1397</icon>
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
@@ -906,7 +906,7 @@
 		</effects>
 	</skill>
 	<skill id="3858" toLevel="3" name="Dagger of Avoid">
-		<!-- Increases Evasion when equipped with a dagger. -->
+		<!-- Increases P. Evasion when using a dagger. -->
 		<icon>icon.skill1087</icon>
 		<magicLevel>
 			<value level="1">58</value>
@@ -923,7 +923,7 @@
 		</effects>
 	</skill>
 	<skill id="3859" toLevel="2" name="Dagger of Haste">
-		<!-- Increases Atk. Spd. when equipped with a dagger. -->
+		<!-- Increases Atk. Spd., when using a dagger. -->
 		<icon>icon.skill1086</icon>
 		<magicLevel>
 			<value level="1">61</value>
@@ -952,7 +952,7 @@
 		</effects>
 	</skill>
 	<skill id="3861" toLevel="1" name="Dagger of Poison">
-		<!-- Has a chance to poison the enemy during a regular attack. -->
+		<!-- Has a chance to poison the enemy after a standard attack. -->
 		<icon>icon.skill0129</icon>
 		<magicLevel>70</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -974,7 +974,7 @@
 		</effects>
 	</skill>
 	<skill id="3862" toLevel="1" name="Dagger of Guidance">
-		<!-- Increases Accuracy. -->
+		<!-- Increases P. Accuracy. -->
 		<icon>icon.skill1240</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -987,7 +987,7 @@
 		</effects>
 	</skill>
 	<skill id="3863" toLevel="4" name="Bow of Guidance">
-		<!-- Increases Accuracy. -->
+		<!-- Increases P. Accuracy. -->
 		<icon>icon.skill1240</icon>
 		<magicLevel>
 			<value level="1">58</value>
@@ -1021,7 +1021,7 @@
 		</effects>
 	</skill>
 	<skill id="3865" toLevel="1" name="Bow of Long Shot">
-		<!-- Increases the range of the bow. -->
+		<!-- Increases bow attack range. -->
 		<icon>icon.skill0113</icon>
 		<magicLevel>67</magicLevel>
 		<operateType>P</operateType>
@@ -1037,7 +1037,7 @@
 		</effects>
 	</skill>
 	<skill id="3866" toLevel="1" name="Dynasty Leather Gloves">
-		<!-- Increases Accuracy/ Evasion/ Max HP/ Atk. Spd./ Dark Resistance. -->
+		<!-- Increases P. Accuracy, P. Evasion, Max HP, Atk. Spd., and Dark Resistance. -->
 		<icon>icon.armor_t92_g_i00</icon>
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
@@ -1079,7 +1079,7 @@
 		</effects>
 	</skill>
 	<skill id="3868" toLevel="4" name="Crossbow of Guidance">
-		<!-- Increases Accuracy. -->
+		<!-- Increases P. Accuracy. -->
 		<icon>icon.skill1240</icon>
 		<magicLevel>
 			<value level="1">58</value>
@@ -1113,7 +1113,7 @@
 		</effects>
 	</skill>
 	<skill id="3870" toLevel="1" name="Crossbow of Long Shot">
-		<!-- Increases the crossbow's range. -->
+		<!-- Increases crossbow attack range. -->
 		<icon>icon.skill0486</icon>
 		<magicLevel>67</magicLevel>
 		<operateType>P</operateType>
@@ -1148,7 +1148,7 @@
 		</effects>
 	</skill>
 	<skill id="3873" toLevel="2" name="Polearm of Critical Damage">
-		<!-- Increases Critical Damage. -->
+		<!-- Increases Critical Damage for standard attacks. -->
 		<icon>icon.skill0193</icon>
 		<magicLevel>
 			<value level="1">58</value>
@@ -1167,7 +1167,7 @@
 		</effects>
 	</skill>
 	<skill id="3874" toLevel="1" name="Polearm of Critical Chance">
-		<!-- Increases Critical Rate. -->
+		<!-- Increases Critical Rate for standard attacks. -->
 		<icon>icon.skill1077</icon>
 		<magicLevel>64</magicLevel>
 		<operateType>P</operateType>
@@ -1193,7 +1193,7 @@
 		</effects>
 	</skill>
 	<skill id="3876" toLevel="1" name="Polearm of Stun">
-		<!-- Inflicts Stun on the enemy at a certain probability for successful general attack. -->
+		<!-- Inflicts Stun on the enemy at a certain probability after a standard attack. -->
 		<icon>icon.skill0100</icon>
 		<magicLevel>70</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1297,7 +1297,7 @@
 		</effects>
 	</skill>
 	<skill id="3882" toLevel="1" name="Fist Weapon of Stun">
-		<!-- Inflicts Stun on the enemy at a certain probability for successful general attack. -->
+		<!-- Inflicts Stun on the enemy at a certain probability after a standard attack. -->
 		<icon>icon.skill0100</icon>
 		<magicLevel>70</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1319,7 +1319,7 @@
 		</effects>
 	</skill>
 	<skill id="3883" toLevel="1" name="Fist Weapon of Critical Damage">
-		<!-- Increases Critical Damage. -->
+		<!-- Increases Critical Damage for standard attacks. -->
 		<icon>icon.skill0193</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -1353,7 +1353,7 @@
 		</effects>
 	</skill>
 	<skill id="3885" toLevel="2" name="Blunt Weapon of Stun">
-		<!-- Inflicts Stun on the enemy at a certain probability for successful general attack. -->
+		<!-- Inflicts Stun on the enemy at a certain probability after a standard attack. -->
 		<icon>icon.skill0100</icon>
 		<magicLevel>61</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1407,7 +1407,7 @@
 		</effects>
 	</skill>
 	<skill id="3888" toLevel="1" name="Blunt Weapon of Guidance">
-		<!-- Increases Accuracy. -->
+		<!-- Increases P. Accuracy. -->
 		<icon>icon.skill1240</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
@@ -1473,7 +1473,7 @@
 		</effects>
 	</skill>
 	<skill id="3892" toLevel="1" name="Blunt Weapon of Clarity">
-		<!-- Decreases MP Consumption. -->
+		<!-- Decreases Skill MP Consumption. -->
 		<icon>icon.skill1397</icon>
 		<magicLevel>67</magicLevel>
 		<operateType>P</operateType>
@@ -1500,7 +1500,7 @@
 		</effects>
 	</skill>
 	<skill id="3894" toLevel="1" name="Two-handed Blunt Weapon of Critical Damage">
-		<!-- Increases Critical Damage. -->
+		<!-- Increases Critical Damage for standard attacks. -->
 		<icon>icon.skill0193</icon>
 		<magicLevel>67</magicLevel>
 		<operateType>P</operateType>
@@ -1513,7 +1513,7 @@
 		</effects>
 	</skill>
 	<skill id="3895" toLevel="3" name="Two-handed Blunt Weapon of Critical Chance">
-		<!-- Increases Critical Rate. -->
+		<!-- Increases Critical Rate for standard attacks. -->
 		<icon>icon.skill1077</icon>
 		<magicLevel>
 			<value level="1">58</value>
@@ -1559,7 +1559,7 @@
 		</effects>
 	</skill>
 	<skill id="3898" toLevel="1" name="Two-handed Blunt Weapon of Guidance">
-		<!-- Increases Accuracy. -->
+		<!-- Increases P. Accuracy. -->
 		<icon>icon.skill1240</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>

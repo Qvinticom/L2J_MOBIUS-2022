@@ -185,7 +185,7 @@
 		</effects>
 	</skill>
 	<skill id="5603" toLevel="1" name="Dagger Mastery">
-		<!-- A state in which MP consumption of skills is greatly decreased, and the probability of a vital spot jab is increased. -->
+		<!-- P. Skill MP consumption is greatly decreased, and Vital Point Attack Rate is increased. -->
 		<icon>icon.skill0209</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -212,8 +212,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5604" toLevel="1" name="Sword/Blunt Weapon Mastery">
-		<!-- Skill MP consumption is greatly decreased, and Confusion Atk. Rate is increased. -->
+	<skill id="5604" toLevel="1" name="Sword / Blunt Weapon Mastery">
+		<!-- P. Skill MP consumption is greatly decreased, and Confusion Atk. Rate is increased. -->
 		<icon>icon.skill0217</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -240,7 +240,7 @@
 		</effects>
 	</skill>
 	<skill id="5605" toLevel="2" name="Power of Apella">
-		<!-- Power of Apella. Increased M. Def., increased Critical Rate, and decreased Critical Damage. -->
+		<!-- Power of Apella increases M. Def., but decreases Received P. Critical Rate. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>APELLA</abnormalType>
@@ -282,7 +282,7 @@
 		</effects>
 	</skill>
 	<skill id="5607" toLevel="2" name="Power of Apella">
-		<!-- Power of Apella. Increased Evasion, increased Atk. Spd., and decreased Critical Damage. -->
+		<!-- Power of Apella increases P. Evasion, decreases Received Critical Damage from standard attacks. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>APELLA</abnormalType>
@@ -399,7 +399,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5613" toLevel="4" name="Vampiric Rage">
-		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect 4. -->
+		<!-- With a certain chance, absorbs some of the inflicted damage as HP. Effect 4. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -633,7 +633,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5622" toLevel="7" name="Double Skill Attack">
+	<skill id="5622" toLevel="7" name="Double Attack">
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -657,7 +657,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5624" toLevel="1" name="Soul Confinement">
+	<skill id="5624" toLevel="1" name="Soul's Confinement">
 		<!-- The soul is confined, making it impossible to move, but in addition, damage is not incurred. Effect 1. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -684,6 +684,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -694,7 +707,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5625" toLevel="1" name="Soul Confinement">
+	<skill id="5625" toLevel="1" name="Soul's Confinement">
 		<!-- The soul is confined, making it impossible to move, but in addition, damage is not incurred. Effect 1. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -721,6 +734,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -739,7 +765,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5627" toLevel="1" name="Adventurer's Wind Walk">
-		<!-- For 60 min., Spd. increases by 33. -->
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -762,7 +788,7 @@
 		</effects>
 	</skill>
 	<skill id="5628" toLevel="1" name="Adventurer's Shield">
-		<!-- For 60 min., P. Def. +15%. -->
+		<!-- P. Def. +15% for 60 min. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -785,7 +811,7 @@
 		</effects>
 	</skill>
 	<skill id="5629" toLevel="1" name="Adventurer's Blessed Body">
-		<!-- For 60 min., Max HP increases by 35%. -->
+		<!-- Max HP +35% for 60 min. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -831,7 +857,7 @@
 		</effects>
 	</skill>
 	<skill id="5631" toLevel="1" name="Adventurer's Regeneration">
-		<!-- For 60 min., HP Recovery Rate increases by 20%. -->
+		<!-- HP Recovery Rate +20% for 60 min. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -854,7 +880,7 @@
 		</effects>
 	</skill>
 	<skill id="5632" toLevel="1" name="Adventurer's Haste">
-		<!-- Increases Atk. Spd. by 33% for 60 min. -->
+		<!-- Atk. Spd. +33% for 60 min. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -877,7 +903,7 @@
 		</effects>
 	</skill>
 	<skill id="5633" toLevel="1" name="Adventurer's Blessed Soul">
-		<!-- For 60 min., Max MP +35%. -->
+		<!-- Max HP +35% for 60 min. -->
 		<icon>icon.skill1048</icon>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -900,7 +926,7 @@
 		</effects>
 	</skill>
 	<skill id="5634" toLevel="1" name="Adventurer's Acumen">
-		<!-- For 60 min., Casting Spd. increases by 30% -->
+		<!-- Casting Spd. +30% for 60 min. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -923,7 +949,7 @@
 		</effects>
 	</skill>
 	<skill id="5635" toLevel="1" name="Adventurer's Concentration">
-		<!-- For 60 min., decreases magic cancel rate by 18. -->
+		<!-- Buff Cancel Rate -18 for 60 min. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -946,7 +972,7 @@
 		</effects>
 	</skill>
 	<skill id="5636" toLevel="1" name="Adventurer's Empower">
-		<!-- For 60 min., M. Atk. increases by 55%. -->
+		<!-- For 60 min., M. Atk. +55%. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -969,7 +995,7 @@
 		</effects>
 	</skill>
 	<skill id="5637" toLevel="1" name="Adventurer's Magic Barrier">
-		<!-- For 20 min., M. Def. +30%. -->
+		<!-- For 60 min., M. Def. +30%. -->
 		<icon>icon.skill1036</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -992,7 +1018,7 @@
 		</effects>
 	</skill>
 	<skill id="5638" toLevel="4" name="Feline Queen - Blessed Body">
-		<!-- Increases maximum HP temporarily. Effect $s1. -->
+		<!-- Temporarily increases Max HP. Effect $s1 -->
 		<icon>icon.skill1045</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -1049,7 +1075,7 @@
 		</effects>
 	</skill>
 	<skill id="5639" toLevel="4" name="Feline Queen - Blessed Soul">
-		<!-- Increases maximum MP temporarily. Effect $s1. -->
+		<!-- Temporarily increases Max MP. Effect $s1 -->
 		<icon>icon.skill1048</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -1106,7 +1132,7 @@
 		</effects>
 	</skill>
 	<skill id="5640" toLevel="2" name="Feline Queen - Haste">
-		<!-- Atk. Spd. increases temporarily. Effect $s1. -->
+		<!-- Temporarily increases Atk. Spd. Effect $s1 -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1313,7 +1339,7 @@
 		</effects>
 	</skill>
 	<skill id="5646" toLevel="3" name="Seraphim the Unicorn - Wild Magic">
-		<!-- Momentarily increases the Critical Rate of magic damage. Effect $s1. -->
+		<!-- Increases M. Skill Critical Rate temporarily. Effect $s1 -->
 		<icon>
 			<value level="1">icon.skill1303</value>
 			<value level="2">icon.skill1303</value>
@@ -1372,7 +1398,7 @@
 		</effects>
 	</skill>
 	<skill id="5647" toLevel="3" name="Seraphim the Unicorn - Clarity">
-		<!-- Momentarily decreases the MP consumption of skills of the target. Consumes $s1 Spirit Ore. Effect $s2. -->
+		<!-- Temporarily decreases Skill MP consumption. Consumes $s1 Spirit Ore. Effect $s2. -->
 		<icon>icon.skill1397</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1448,7 +1474,7 @@
 		</effects>
 	</skill>
 	<skill id="5648" toLevel="2" name="Seraphim the Unicorn - Empower">
-		<!-- Increases M. Atk. power temporarily. Effect $s1. -->
+		<!-- Temporarily increases M. Atk. Effect $s1 -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1578,7 +1604,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5652" toLevel="3" name="Nightshade - Death Whisper">
-		<!-- Temporarily increases Critical Damage. Effect $s1 -->
+		<!-- Temporarily increases Critical Damage for standard attacks. Effect $s1 -->
 		<icon>icon.skill1242</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1629,7 +1655,7 @@
 		</effects>
 	</skill>
 	<skill id="5653" toLevel="2" name="Nightshade - Focus">
-		<!-- Momentarily increases critical P. Atk. rate. Effect $s1. -->
+		<!-- Temporarily increases Critical Rate for standard attacks. Effect $s1 -->
 		<icon>icon.skill1077</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1674,7 +1700,7 @@
 		</effects>
 	</skill>
 	<skill id="5654" toLevel="3" name="Nightshade - Guidance">
-		<!-- Increases Accuracy temporarily. Effect $s1. -->
+		<!-- Temporarily increases P. Accuracy. Effect $s1 -->
 		<icon>icon.skill1240</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2229,7 +2255,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5657" toLevel="85" name="Gatekeeper Prominence">
-		<!-- Condenses air to burst flames. Power $s1 -->
+		<!-- Detonates a fireball by compressing the air around the caster. Power $s1 -->
 		<icon>icon.skill1230</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -2687,7 +2713,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5658" toLevel="85" name="Gatekeeper Flame Strike">
-		<!-- Hurls a fireball that causes a burning trail. Power $s1 -->
+		<!-- Sets the closest area on fire and hurls a fireball. Power $s1. -->
 		<icon>icon.skill1181</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -3148,7 +3174,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5659" toLevel="2" name="Gatekeeper Berserker Spirit">
-		<!-- P. Def. decreases momentarily./ M. Def./ evasion and increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd./ Speed. Effect $s1. -->
+		<!-- Temporarily decreases P./ M. Def. and P. Evasion and increases P./ M. Atk., Atk. Spd., Casting Spd., Speed. Effect $s1. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -3389,7 +3415,7 @@
 		</effects>
 	</skill>
 	<skill id="5665" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3412,12 +3438,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5666" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3440,12 +3466,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5667" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3468,12 +3494,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5668" toLevel="1" name="Poison">
-		<!-- Inflicts Poison on the target and decreases HP. Effect 8. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect 8.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3504,7 +3530,7 @@
 		</effects>
 	</skill>
 	<skill id="5669" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3527,12 +3553,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5670" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3555,12 +3581,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5671" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3583,12 +3609,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5672" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3611,12 +3637,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5673" toLevel="1" name="Evasion Counter">
-		<!-- For 9 sec. gives a chance to reflect the enemy's attack inflicting Faint. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- For 9 sec. gives a chance to reflect the enemy's attack inflicting Faint.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0818</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3640,12 +3666,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5674" toLevel="1" name="Evasion Chance">
-		<!-- For 2 min., increases one's own deadly attack rate by 10%. -->
+		<!-- For 2 min., deadly attack rate +10%. -->
 		<icon>icon.skill0819</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -3950,7 +3976,7 @@
 		</effects>
 	</skill>
 	<skill id="5687" toLevel="1" name="PvP Weapon - Decrease Range">
-		<!-- Bow/ Crossbow range decreases momentarily. -->
+		<!-- Temporarily decreases bow/ crossbow attack range. -->
 		<icon>icon.skill0486</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4030,7 +4056,7 @@
 		</effects>
 	</skill>
 	<skill id="5689" toLevel="1" name="PvP Shield - Reflect Damage">
-		<!-- Able to return some of the received damage back to the enemy momentarily. -->
+		<!-- Temporarily reflects some of the received damage back to the enemy. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4055,7 +4081,7 @@
 		</effects>
 	</skill>
 	<skill id="5690" toLevel="1" name="PvP Armor - Damage Down">
-		<!-- Damage received during PvP is decreased. -->
+		<!-- Decreases Received PvP damage. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4089,7 +4115,7 @@
 		</effects>
 	</skill>
 	<skill id="5691" toLevel="1" name="PvP Armor - Critical Down">
-		<!-- The chance of receiving critical attacks and the amount of received critical damage decreases temporarily. -->
+		<!-- Decreases received P. Critical Rate and received P. Critical Damage. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4243,7 +4269,7 @@
 		</effects>
 	</skill>
 	<skill id="5697" toLevel="4" name="Seal">
-		<!-- Temporarily blocks all physical and magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Temporarily blocks all physical and magic skills.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0835</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4400" toLevel="3" name="Acumen">
-		<!-- Momentarily increases Casting Spd. Effect $s1. -->
+		<!-- Temporarily increases Casting Spd. Effect $s1 -->
 		<icon>icon.skill1085</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -32,7 +32,7 @@
 		</effects>
 	</skill>
 	<skill id="4401" toLevel="3" name="Empower">
-		<!-- M. Atk. increases temporarily. Effect $s1. -->
+		<!-- Temporarily increases M. Atk. Effect $s1 -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -63,7 +63,7 @@
 		</effects>
 	</skill>
 	<skill id="4402" toLevel="2" name="Haste">
-		<!-- Atk. Spd. increases temporarily. Effect $s1. -->
+		<!-- Temporarily increases Atk. Spd. Effect $s1 -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -92,7 +92,7 @@
 		</effects>
 	</skill>
 	<skill id="4403" toLevel="3" name="Guidance">
-		<!-- Momentarily increases Accuracy. Effect $s1. -->
+		<!-- Temporarily increases P. Accuracy. Effect $s1 -->
 		<icon>icon.skill1240</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -123,7 +123,7 @@
 		</effects>
 	</skill>
 	<skill id="4404" toLevel="3" name="Focus">
-		<!-- Momentarily increases the probability of critical attack. Effect $s1. -->
+		<!-- Temporarily increases Critical Rate for standard attacks. Effect $s1 -->
 		<icon>icon.skill1077</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -154,7 +154,7 @@
 		</effects>
 	</skill>
 	<skill id="4405" toLevel="3" name="Death Whisper">
-		<!-- Temporarily increases Critical Damage. Effect $s1 -->
+		<!-- Temporarily increases Critical Damage for standard attacks. Effect $s1 -->
 		<icon>icon.skill1242</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -185,7 +185,7 @@
 		</effects>
 	</skill>
 	<skill id="4406" toLevel="3" name="Agility">
-		<!-- Momentarily increases Evasion. Effect $s1 -->
+		<!-- Temporarily increases P. Evasion. Effect $s1 -->
 		<icon>icon.skill1087</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1763,7 +1763,7 @@
 		</effects>
 	</skill>
 	<skill id="4433" toLevel="5" name="High Holy Attribute Resistance">
-		<!-- Very resistant to Holy. -->
+		<!-- Enhanced Holy Resistance. -->
 		<icon>icon.skill4433</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2526,7 +2526,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4466" toLevel="3" name="Surrender to Dark">
+	<skill id="4466" toLevel="3" name="Fall into Darkness">
 		<!-- Dark Attack Resistance decreases and Holy Attack Resistance increases momentarily. Effect $s1 -->
 		<icon>icon.skill4336_new</icon>
 		<abnormalLevel>
@@ -2585,7 +2585,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4467" toLevel="3" name="Surrender to Holy">
+	<skill id="4467" toLevel="3" name="Fall into Holiness">
 		<!-- Holy Attack Resistance decreases and Dark Attack Resistance increases momentarily. Effect $s1 -->
 		<icon>icon.skill4275_new</icon>
 		<abnormalLevel>
@@ -2863,7 +2863,7 @@
 		</effects>
 	</skill>
 	<skill id="4473" toLevel="12" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -2929,7 +2929,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -3236,7 +3236,7 @@
 		</effects>
 	</skill>
 	<skill id="4483" toLevel="12" name="Hold">
-		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3320,7 +3320,6 @@
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>100</hitTime>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>75</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3939,7 +3938,7 @@
 		</effects>
 	</skill>
 	<skill id="4494" toLevel="2" name="Raid Boss">
-		<!-- If the person who made the greatest contribution is $s1 or more Lv.s higher than the raid monster, then the item/ Adena rewards will decrease. If the difference is $s2 or more Lv.s, the monster will drop nothing at all. -->
+		<!-- If the person who has made the greatest contribution is $s1 or more levels higher than the Raid Boss, then the item/ adena rewards will decrease. If the difference is $s2 levels or more, the monster will drop nothing at all. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -4007,7 +4006,7 @@
 		</effects>
 	</skill>
 	<skill id="4496" toLevel="12" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -4084,7 +4083,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>

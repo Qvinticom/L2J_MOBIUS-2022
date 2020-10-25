@@ -100,7 +100,7 @@
 		</stats>
 	</item>
 	<item id="37303" name="Steel Requiem Slasher (30-day)" type="Weapon">
-		<!-- <Special Option>. Increases Attack Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- <Special Option>. Atk. Spd. +15%. Inflicts additional PvP Damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_polion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -131,7 +131,7 @@
 		</stats>
 	</item>
 	<item id="37304" name="Steel Requiem Dual Sword (30-day)" type="Weapon">
-		<!-- <Special Option>. Increases Attack Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- <Special Option>. Atk. Spd. +15%. Inflicts additional PvP Damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -162,7 +162,7 @@
 		</stats>
 	</item>
 	<item id="37305" name="Steel Requiem Fighter (30-day)" type="Weapon">
-		<!-- <Special Option>. Increases Attack Spd. by 15%. Increases damage inflicted during. No Soul Crystal option. -->
+		<!-- <Special Option>. Atk. Spd. +15%. Inflicts additional PvP Damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_fantasma_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -194,7 +194,7 @@
 		</stats>
 	</item>
 	<item id="37306" name="Steel Requiem Dual Blunt (30-day)" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 79.5. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +79.5. Inflicts additional PvP Damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -226,7 +226,7 @@
 		</stats>
 	</item>
 	<item id="37307" name="Steel Requiem Shaper (30-day)" type="Weapon">
-		<!-- <Special Option>. Increases Attack Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- <Special Option>. Atk. Spd. +15%. Inflicts additional PvP Damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -325,7 +325,7 @@
 		</stats>
 	</item>
 	<item id="37310" name="Steel Requiem Shooter (30-day)" type="Weapon">
-		<!-- <Special Option>. Increases Attack Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- <Special Option>. Atk. Spd. +15%. Inflicts additional PvP Damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -359,7 +359,7 @@
 		</stats>
 	</item>
 	<item id="37311" name="Steel Requiem Avenger (30-day)" type="Weapon">
-		<!-- <Special Option>. Increases Attack Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- <Special Option>. Atk. Spd. +15%. Inflicts additional PvP Damage. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_batista_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -487,7 +487,7 @@
 			<item id="37136" min="1" max="1" chance="100" /> <!-- Steel Plate Armor (60-day) -->
 			<item id="37135" min="1" max="1" chance="100" /> <!-- Steel Plate Helmet (60-day) -->
 			<item id="37139" min="1" max="1" chance="100" /> <!-- Steel Plate Shield (60-day) -->
-			<item id="37322" min="1" max="1" chance="100" /> <!-- Fated Support Box: Fighter (B-grade) -->
+			<item id="37322" min="1" max="1" chance="100" /> <!-- Fated B-grade Support Box: Fighter -->
 		</capsuled_items>
 	</item>
 	<item id="37316" name="Fated Support Box: Wizard (C-grade)" type="EtcItem">
@@ -514,7 +514,7 @@
 			<item id="37141" min="1" max="1" chance="100" /> <!-- Steel Karmian Stockings (60-day) -->
 			<item id="37245" min="1" max="1" chance="100" /> <!-- Steel Mysterious Sword (60-day) -->
 			<item id="37135" min="1" max="1" chance="100" /> <!-- Steel Plate Helmet (60-day) -->
-			<item id="37323" min="1" max="1" chance="100" /> <!-- Fated Support Box: Wizard (B-grade) -->
+			<item id="37323" min="1" max="1" chance="100" /> <!-- Fated B-grade Support Box: Wizard -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="40;84" />
@@ -547,7 +547,7 @@
 			<item id="37136" min="1" max="1" chance="100" /> <!-- Steel Plate Armor (60-day) -->
 			<item id="37135" min="1" max="1" chance="100" /> <!-- Steel Plate Helmet (60-day) -->
 			<item id="37139" min="1" max="1" chance="100" /> <!-- Steel Plate Shield (60-day) -->
-			<item id="37324" min="1" max="1" chance="100" /> <!-- Fated Support Box: Warrior (B-grade) -->
+			<item id="37324" min="1" max="1" chance="100" /> <!-- Fated B-grade Support Box: Warrior -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="40;84" />
@@ -580,7 +580,7 @@
 			<item id="37144" min="1" max="1" chance="100" /> <!-- Steel Plate Leather Armor (60-day) -->
 			<item id="37248" min="1" max="1" chance="100" /> <!-- Steel Crystallized Ice Bow (60-day) -->
 			<item id="37135" min="1" max="1" chance="100" /> <!-- Steel Plate Helmet (60-day) -->
-			<item id="37325" min="1" max="1" chance="100" /> <!-- Fated Support Box: Rogue (B-grade) -->
+			<item id="37325" min="1" max="1" chance="100" /> <!-- Fated B-grade Support Box: Rogue -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="40;84" />
@@ -613,7 +613,7 @@
 			<item id="37135" min="1" max="1" chance="100" /> <!-- Steel Plate Helmet (60-day) -->
 			<item id="37251" min="1" max="1" chance="100" /> <!-- Steel Arbalest (60-day) -->
 			<item id="37249" min="1" max="1" chance="100" /> <!-- Steel Schlager (60-day) -->
-			<item id="37326" min="1" max="1" chance="100" /> <!-- Fated Support Box: Kamael (B-grade) -->
+			<item id="37326" min="1" max="1" chance="100" /> <!-- Fated B-grade Support Box: Kamael -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="40;84" />
@@ -650,7 +650,7 @@
 			<item id="37135" min="1" max="1" chance="100" /> <!-- Steel Plate Helmet (60-day) -->
 			<item id="37139" min="1" max="1" chance="100" /> <!-- Steel Plate Shield (60-day) -->
 			<item id="37252" min="1" max="1" chance="100" /> <!-- Steel Flamberge (60-day) -->
-			<item id="37327" min="1" max="1" chance="100" /> <!-- Fated Support Box: Orc Fighter (B-grade) -->
+			<item id="37327" min="1" max="1" chance="100" /> <!-- Fated B-grade Support Box: Orc Fighter -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="40;84" />
@@ -686,7 +686,7 @@
 			<item id="37136" min="1" max="1" chance="100" /> <!-- Steel Plate Armor (60-day) -->
 			<item id="37135" min="1" max="1" chance="100" /> <!-- Steel Plate Helmet (60-day) -->
 			<item id="37139" min="1" max="1" chance="100" /> <!-- Steel Plate Shield (60-day) -->
-			<item id="37328" min="1" max="1" chance="100" /> <!-- Fated Support Box: Orc Wizard (B-grade) -->
+			<item id="37328" min="1" max="1" chance="100" /> <!-- Fated B-grade Support Box: Orc Wizard -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="40;84" />
@@ -719,7 +719,7 @@
 			<item id="37255" min="1" max="1" chance="100" /> <!-- Steel Spell Breaker (60-day) -->
 			<item id="37148" min="1" max="1" chance="100" /> <!-- Steel Doom Helmet (60-day) -->
 			<item id="37152" min="1" max="1" chance="100" /> <!-- Steel Doom Shield (60-day) -->
-			<item id="37329" min="1" max="1" chance="100" /> <!-- Fated Support Box: Fighter (A-grade) -->
+			<item id="37329" min="1" max="1" chance="100" /> <!-- Fated A-grade Support Box: Fighter -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="52;84" />
@@ -746,11 +746,11 @@
 			<item id="37228" min="1" max="1" chance="100" /> <!-- Steel Adamantite Necklace (60-day) -->
 			<item id="37154" min="1" max="1" chance="100" /> <!-- Steel Avadon Circlet (60-day) -->
 			<item id="37153" min="1" max="1" chance="100" /> <!-- Steel Avadon Robe (60-day) -->
-			<item id="37155" min="1" max="1" chance="100" /> <!-- Steel Avadon Gloves (Robe) (60-day) -->
-			<item id="37156" min="1" max="1" chance="100" /> <!-- Steel Avadon Boots (Robe) (60-day) -->
+			<item id="37155" min="1" max="1" chance="100" /> <!-- Steel Avadon Gloves - Robe (60-day) -->
+			<item id="37156" min="1" max="1" chance="100" /> <!-- Steel Avadon Boots - Robe (60-day) -->
 			<item id="37257" min="1" max="1" chance="100" /> <!-- Steel Wizard's Tear (60-day) -->
-			<item id="37157" min="1" max="1" chance="100" /> <!-- Steel Abaddon Shield (60-day) -->
-			<item id="37330" min="1" max="1" chance="100" /> <!-- Fated Support Box: Wizard (A-grade) -->
+			<item id="37157" min="1" max="1" chance="100" /> <!-- Steel Avadon Shield (60-day) -->
+			<item id="37330" min="1" max="1" chance="100" /> <!-- Fated A-grade Support Box: Wizard -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="52;84" />
@@ -783,7 +783,7 @@
 			<item id="37255" min="1" max="1" chance="100" /> <!-- Steel Spell Breaker (60-day) -->
 			<item id="37148" min="1" max="1" chance="100" /> <!-- Steel Doom Helmet (60-day) -->
 			<item id="37152" min="1" max="1" chance="100" /> <!-- Steel Doom Shield (60-day) -->
-			<item id="37331" min="1" max="1" chance="100" /> <!-- Fated Support Box: Warrior (A-grade) -->
+			<item id="37331" min="1" max="1" chance="100" /> <!-- Fated A-grade Support Box: Warrior -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="52;84" />
@@ -812,10 +812,10 @@
 			<item id="37160" min="1" max="1" chance="100" /> <!-- Steel Doom Boots (Light) (60-day) -->
 			<item id="37258" min="1" max="1" chance="100" /> <!-- Steel Great Axe (60-day) -->
 			<item id="37260" min="1" max="1" chance="100" /> <!-- Steel Dark Elven Longbow (60-day) -->
-			<item id="37158" min="1" max="1" chance="100" /> <!-- Steel Leather Armor of Doom (60-day) -->
+			<item id="37158" min="1" max="1" chance="100" /> <!-- Steel Doom Leather Armor (60-day) -->
 			<item id="37259" min="1" max="1" chance="100" /> <!-- Steel Twilight Knife (60-day) -->
 			<item id="37148" min="1" max="1" chance="100" /> <!-- Steel Doom Helmet (60-day) -->
-			<item id="37332" min="1" max="1" chance="100" /> <!-- Fated Support Box: Rogue (A-grade) -->
+			<item id="37332" min="1" max="1" chance="100" /> <!-- Fated A-grade Support Box: Rogue -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="52;84" />
@@ -844,10 +844,10 @@
 			<item id="37160" min="1" max="1" chance="100" /> <!-- Steel Doom Boots (Light) (60-day) -->
 			<item id="37258" min="1" max="1" chance="100" /> <!-- Steel Great Axe (60-day) -->
 			<item id="37260" min="1" max="1" chance="100" /> <!-- Steel Dark Elven Longbow (60-day) -->
-			<item id="37158" min="1" max="1" chance="100" /> <!-- Steel Leather Armor of Doom (60-day) -->
+			<item id="37158" min="1" max="1" chance="100" /> <!-- Steel Doom Leather Armor (60-day) -->
 			<item id="37259" min="1" max="1" chance="100" /> <!-- Steel Twilight Knife (60-day) -->
 			<item id="37148" min="1" max="1" chance="100" /> <!-- Steel Doom Helmet (60-day) -->
-			<item id="37333" min="1" max="1" chance="100" /> <!-- Fated Support Box: Kamael (A-grade) -->
+			<item id="37333" min="1" max="1" chance="100" /> <!-- Fated A-grade Support Box: Kamael -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="52;84" />
@@ -879,11 +879,11 @@
 			<item id="37264" min="1" max="1" chance="100" /> <!-- Steel Great Sword (60-day) -->
 			<item id="37258" min="1" max="1" chance="100" /> <!-- Steel Great Axe (60-day) -->
 			<item id="37265" min="1" max="1" chance="100" /> <!-- Steel Arthro Nail (60-day) -->
-			<item id="37158" min="1" max="1" chance="100" /> <!-- Steel Leather Armor of Doom (60-day) -->
+			<item id="37158" min="1" max="1" chance="100" /> <!-- Steel Doom Leather Armor (60-day) -->
 			<item id="37151" min="1" max="1" chance="100" /> <!-- Steel Doom Plate Armor (60-day) -->
 			<item id="37148" min="1" max="1" chance="100" /> <!-- Steel Doom Helmet (60-day) -->
 			<item id="37152" min="1" max="1" chance="100" /> <!-- Steel Doom Shield (60-day) -->
-			<item id="37334" min="1" max="1" chance="100" /> <!-- Fated Support Box: Orc Fighter (A-grade) -->
+			<item id="37334" min="1" max="1" chance="100" /> <!-- Fated A-grade Support Box: Orc Fighter -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="52;84" />
@@ -910,17 +910,17 @@
 			<item id="37228" min="1" max="1" chance="100" /> <!-- Steel Adamantite Necklace (60-day) -->
 			<item id="37154" min="1" max="1" chance="100" /> <!-- Steel Avadon Circlet (60-day) -->
 			<item id="37153" min="1" max="1" chance="100" /> <!-- Steel Avadon Robe (60-day) -->
-			<item id="37155" min="1" max="1" chance="100" /> <!-- Steel Avadon Gloves (Robe) (60-day) -->
+			<item id="37155" min="1" max="1" chance="100" /> <!-- Steel Avadon Gloves - Robe (60-day) -->
 			<item id="37149" min="1" max="1" chance="100" /> <!-- Steel Doom Gloves (Heavy) (60-day) -->
-			<item id="37156" min="1" max="1" chance="100" /> <!-- Steel Avadon Boots (Robe) (60-day) -->
+			<item id="37156" min="1" max="1" chance="100" /> <!-- Steel Avadon Boots - Robe (60-day) -->
 			<item id="37150" min="1" max="1" chance="100" /> <!-- Steel Doom Boots (Heavy) (60-day) -->
 			<item id="37257" min="1" max="1" chance="100" /> <!-- Steel Wizard's Tear (60-day) -->
 			<item id="37151" min="1" max="1" chance="100" /> <!-- Steel Doom Plate Armor (60-day) -->
 			<item id="37255" min="1" max="1" chance="100" /> <!-- Steel Spell Breaker (60-day) -->
 			<item id="37148" min="1" max="1" chance="100" /> <!-- Steel Doom Helmet (60-day) -->
-			<item id="37157" min="1" max="1" chance="100" /> <!-- Steel Abaddon Shield (60-day) -->
+			<item id="37157" min="1" max="1" chance="100" /> <!-- Steel Avadon Shield (60-day) -->
 			<item id="37152" min="1" max="1" chance="100" /> <!-- Steel Doom Shield (60-day) -->
-			<item id="37335" min="1" max="1" chance="100" /> <!-- Fated Support Box: Orc Wizard (A-grade) -->
+			<item id="37335" min="1" max="1" chance="100" /> <!-- Fated A-grade Support Box: Orc Wizard -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="52;84" />
@@ -952,8 +952,8 @@
 			<item id="37268" min="1" max="1" chance="100" /> <!-- Steel Keshanberk*Keshanberk (60-day) -->
 			<item id="37266" min="1" max="1" chance="100" /> <!-- Steel Elemental Sword (60-day) -->
 			<item id="37162" min="1" max="1" chance="100" /> <!-- Steel Helm of Nightmare (60-day) -->
-			<item id="37165" min="1" max="1" chance="100" /> <!-- Steel Shield of Nightmares (60-day) -->
-			<item id="37336" min="1" max="1" chance="100" /> <!-- Fated Support Box: Fighter (S-grade) (Stage 1) -->
+			<item id="37165" min="1" max="1" chance="100" /> <!-- Steel Shield of Nightmare (60-day) -->
+			<item id="37336" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Fighter Lv. 1 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="61;84" />
@@ -984,7 +984,7 @@
 			<item id="37269" min="1" max="1" chance="100" /> <!-- Steel Sword of Miracles (60-day) -->
 			<item id="37167" min="1" max="1" chance="100" /> <!-- Steel Dark Crystal Helmet (60-day) -->
 			<item id="37170" min="1" max="1" chance="100" /> <!-- Steel Dark Crystal Shield (60-day) -->
-			<item id="37337" min="1" max="1" chance="100" /> <!-- Fated Support Box: Wizard (S-grade) (Stage 1) -->
+			<item id="37337" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Wizard Lv. 1 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="61;84" />
@@ -1016,8 +1016,8 @@
 			<item id="37161" min="1" max="1" chance="100" /> <!-- Steel Armor of Nightmare (60-day) -->
 			<item id="37268" min="1" max="1" chance="100" /> <!-- Steel Keshanberk*Keshanberk (60-day) -->
 			<item id="37162" min="1" max="1" chance="100" /> <!-- Steel Helm of Nightmare (60-day) -->
-			<item id="37165" min="1" max="1" chance="100" /> <!-- Steel Shield of Nightmares (60-day) -->
-			<item id="37338" min="1" max="1" chance="100" /> <!-- Fated Support Box: Warrior (S-grade) (Stage 1) -->
+			<item id="37165" min="1" max="1" chance="100" /> <!-- Steel Shield of Nightmare (60-day) -->
+			<item id="37338" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Warrior Lv. 1 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="61;84" />
@@ -1050,7 +1050,7 @@
 			<item id="37171" min="1" max="1" chance="100" /> <!-- Steel Dark Crystal Leather Armor (60-day) -->
 			<item id="37272" min="1" max="1" chance="100" /> <!-- Steel Carnage Bow (60-day) -->
 			<item id="37167" min="1" max="1" chance="100" /> <!-- Steel Dark Crystal Helmet (60-day) -->
-			<item id="37339" min="1" max="1" chance="100" /> <!-- Fated Support Box: Rogue (S-grade) (Stage 1) -->
+			<item id="37339" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Rogue Lv. 1 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="61;84" />
@@ -1083,7 +1083,7 @@
 			<item id="37171" min="1" max="1" chance="100" /> <!-- Steel Dark Crystal Leather Armor (60-day) -->
 			<item id="37274" min="1" max="1" chance="100" /> <!-- Steel Doomchanter (60-day) -->
 			<item id="37167" min="1" max="1" chance="100" /> <!-- Steel Dark Crystal Helmet (60-day) -->
-			<item id="37340" min="1" max="1" chance="100" /> <!-- Fated Support Box: Kamael (S-grade) (Stage 1) -->
+			<item id="37340" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Kamael Lv. 1 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="61;84" />
@@ -1120,8 +1120,8 @@
 			<item id="37276" min="1" max="1" chance="100" /> <!-- Steel Infernal Master (60-day) -->
 			<item id="37162" min="1" max="1" chance="100" /> <!-- Steel Helm of Nightmare (60-day) -->
 			<item id="37167" min="1" max="1" chance="100" /> <!-- Steel Dark Crystal Helmet (60-day) -->
-			<item id="37165" min="1" max="1" chance="100" /> <!-- Steel Shield of Nightmares (60-day) -->
-			<item id="37341" min="1" max="1" chance="100" /> <!-- Fated Support Box: Orc Fighter (S-grade) (Stage 1) -->
+			<item id="37165" min="1" max="1" chance="100" /> <!-- Steel Shield of Nightmare (60-day) -->
+			<item id="37341" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Orc Fighter Lv. 1 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="61;84" />
@@ -1156,16 +1156,16 @@
 			<item id="37269" min="1" max="1" chance="100" /> <!-- Steel Sword of Miracles (60-day) -->
 			<item id="37162" min="1" max="1" chance="100" /> <!-- Steel Helm of Nightmare (60-day) -->
 			<item id="37167" min="1" max="1" chance="100" /> <!-- Steel Dark Crystal Helmet (60-day) -->
-			<item id="37165" min="1" max="1" chance="100" /> <!-- Steel Shield of Nightmares (60-day) -->
+			<item id="37165" min="1" max="1" chance="100" /> <!-- Steel Shield of Nightmare (60-day) -->
 			<item id="37170" min="1" max="1" chance="100" /> <!-- Steel Dark Crystal Shield (60-day) -->
-			<item id="37342" min="1" max="1" chance="100" /> <!-- Fated Support Box: Orc Wizard (S-grade) (Stage 1) -->
+			<item id="37342" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Orc Wizard Lv. 1 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="61;84" />
 		</cond>
 	</item>
 	<item id="37336" name="Fated Support Box: Fighter (S-grade) (Stage 1)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for fighter-type characters. Can be used by characters Lv. 76 - 84. -->
+		<!-- Double-click to obtain S-grade equipment for fighter-type characters. Required level: 76-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1192,14 +1192,14 @@
 			<item id="37280" min="1" max="1" chance="100" /> <!-- Steel Tallum Blade*Dark Legion's Edge (60-day) -->
 			<item id="37179" min="1" max="1" chance="100" /> <!-- Steel Imperial Crusader Helmet (60-day) -->
 			<item id="37180" min="1" max="1" chance="100" /> <!-- Steel Imperial Crusader Shield (60-day) -->
-			<item id="37343" min="1" max="1" chance="100" /> <!-- Fated Support Box: Fighter (S-grade) (Stage 2) -->
+			<item id="37343" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Fighter Lv. 2 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="76;84" />
 		</cond>
 	</item>
 	<item id="37337" name="Fated Support Box: Wizard (S-grade) (Stage 1)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for wizard-type characters. Can be used by characters Lv. 76 - 84. -->
+		<!-- Double-click to obtain S-grade equipment for wizard-type characters. Required level: 76-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1223,14 +1223,14 @@
 			<item id="37183" min="1" max="1" chance="100" /> <!-- Steel Major Arcana Boots (60-day) -->
 			<item id="37281" min="1" max="1" chance="100" /> <!-- Steel Arcana Mace (60-day) -->
 			<item id="37185" min="1" max="1" chance="100" /> <!-- Steel Arcana Sigil (60-day) -->
-			<item id="37344" min="1" max="1" chance="100" /> <!-- Fated Support Box: Wizard (S-grade) (Stage 2) -->
+			<item id="37344" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Wizard Lv. 2 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="76;84" />
 		</cond>
 	</item>
 	<item id="37338" name="Fated Support Box: Warrior (S-grade) (Stage 1)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for warrior-type characters. Can be used by characters Lv. 76 - 84. -->
+		<!-- Double-click to obtain S-grade equipment for warrior-type characters. Required level: 76-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1257,14 +1257,14 @@
 			<item id="37280" min="1" max="1" chance="100" /> <!-- Steel Tallum Blade*Dark Legion's Edge (60-day) -->
 			<item id="37179" min="1" max="1" chance="100" /> <!-- Steel Imperial Crusader Helmet (60-day) -->
 			<item id="37180" min="1" max="1" chance="100" /> <!-- Steel Imperial Crusader Shield (60-day) -->
-			<item id="37345" min="1" max="1" chance="100" /> <!-- Fated Support Box: Warrior (S-grade) (Stage 2) -->
+			<item id="37345" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Warrior Lv. 2 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="76;84" />
 		</cond>
 	</item>
 	<item id="37339" name="Fated Support Box: Rogue (S-grade) (Stage 1)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for rogue-type characters. Can be used by characters Lv. 76 - 84. -->
+		<!-- Double-click to obtain S-grade equipment for rogue-type characters. Required level: 76-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1289,14 +1289,14 @@
 			<item id="37376" min="1" max="1" chance="100" /> <!-- Steel Draconic Bow (60-day) -->
 			<item id="37283" min="1" max="1" chance="100" /> <!-- Steel Angel Slayer (60-day) -->
 			<item id="37189" min="1" max="1" chance="100" /> <!-- Steel Draconic Leather Helmet (60-day) -->
-			<item id="37346" min="1" max="1" chance="100" /> <!-- Fated Support Box: Rogue (S-grade) (Stage 2) -->
+			<item id="37346" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Rogue Lv. 2 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="76;84" />
 		</cond>
 	</item>
 	<item id="37340" name="Fated Support Box: Kamael (S-grade) (Stage 1)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for Kamael-type characters. Can be used by characters Lv. 76 - 84. -->
+		<!-- Double-click to obtain S-grade equipment for Kamael-type characters. Required level: 76-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1321,14 +1321,14 @@
 			<item id="37186" min="1" max="1" chance="100" /> <!-- Steel Draconic Leather Armor (60-day) -->
 			<item id="37285" min="1" max="1" chance="100" /> <!-- Steel Laevateinn (60-day) -->
 			<item id="37189" min="1" max="1" chance="100" /> <!-- Steel Draconic Leather Helmet (60-day) -->
-			<item id="37347" min="1" max="1" chance="100" /> <!-- Fated Support Box: Kamael (S-grade) (Stage 2) -->
+			<item id="37347" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Kamael Lv. 2 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="76;84" />
 		</cond>
 	</item>
 	<item id="37341" name="Fated Support Box: Orc Fighter (S-grade) (Stage 1)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for orc-fighter-type characters. Can be used by characters Lv. 76 - 84. -->
+		<!-- Double-click to obtain S-grade equipment for Orc-fighter-type characters. Required level: 76-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1359,14 +1359,14 @@
 			<item id="37189" min="1" max="1" chance="100" /> <!-- Steel Draconic Leather Helmet (60-day) -->
 			<item id="37179" min="1" max="1" chance="100" /> <!-- Steel Imperial Crusader Helmet (60-day) -->
 			<item id="37180" min="1" max="1" chance="100" /> <!-- Steel Imperial Crusader Shield (60-day) -->
-			<item id="37348" min="1" max="1" chance="100" /> <!-- Fated Support Box: Orc Fighter (S-grade) (Stage 2) -->
+			<item id="37348" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Orc Fighter Lv. 2 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="76;84" />
 		</cond>
 	</item>
 	<item id="37342" name="Fated Support Box: Orc Wizard (S-grade) (Stage 1)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for orc-wizard-type characters. Can be used by characters Lv. 76 - 84. -->
+		<!-- Double-click to obtain S-grade equipment for Orc-wizard-type characters. Required level: 76-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1397,14 +1397,14 @@
 			<item id="37185" min="1" max="1" chance="100" /> <!-- Steel Arcana Sigil (60-day) -->
 			<item id="37179" min="1" max="1" chance="100" /> <!-- Steel Imperial Crusader Helmet (60-day) -->
 			<item id="37180" min="1" max="1" chance="100" /> <!-- Steel Imperial Crusader Shield (60-day) -->
-			<item id="37349" min="1" max="1" chance="100" /> <!-- Fated Support Box: Orc Wizard (S-grade) (Stage 2) -->
+			<item id="37349" min="1" max="1" chance="100" /> <!-- Fated S-grade Support Box: Orc Wizard Lv. 2 -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="76;84" />
 		</cond>
 	</item>
 	<item id="37343" name="Fated Support Box: Fighter (S-grade) (Stage 2)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for fighter-type characters. Can be used by characters between level 81 and level 84. -->
+		<!-- Double-click to obtain S-grade equipment for fighter-type characters. Required level: 81-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1431,14 +1431,14 @@
 			<item id="37289" min="1" max="1" chance="100" /> <!-- Steel Dynasty Phantom (60-day) -->
 			<item id="37192" min="1" max="1" chance="100" /> <!-- Steel Dynasty Helmet (60-day) -->
 			<item id="37195" min="1" max="1" chance="100" /> <!-- Steel Dynasty Shield (60-day) -->
-			<item id="37350" min="1" max="1" chance="100" /> <!-- Fated Support Box: Sigel Knight (R-grade) -->
+			<item id="37350" min="1" max="1" chance="100" /> <!-- Fated R-grade Support Box: Sigel Knight -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="81;84" />
 		</cond>
 	</item>
 	<item id="37344" name="Fated Support Box: Wizard (S-grade) (Stage 2)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for wizard-type characters. Can be used by characters between level 81 and level 84. -->
+		<!-- Double-click to obtain S-grade equipment for wizard-type characters. Required level: 81-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1463,14 +1463,14 @@
 			<item id="37197" min="1" max="1" chance="100" /> <!-- Steel Dynasty Stockings (60-day) -->
 			<item id="37201" min="1" max="1" chance="100" /> <!-- Steel Dynasty Sigil (60-day) -->
 			<item id="37289" min="1" max="1" chance="100" /> <!-- Steel Dynasty Phantom (60-day) -->
-			<item id="37351" min="1" max="1" chance="100" /> <!-- Fated Support Box: Tyrr Warrior (R-grade) -->
+			<item id="37351" min="1" max="1" chance="100" /> <!-- Fated R-grade Support Box: Tyrr Warrior -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="81;84" />
 		</cond>
 	</item>
 	<item id="37345" name="Fated Support Box: Warrior (S-grade) (Stage 2)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for warrior-type characters. Can be used by characters between level 81 and level 84. -->
+		<!-- Double-click to obtain S-grade equipment for warrior-type characters. Required level: 81-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1497,14 +1497,14 @@
 			<item id="37194" min="1" max="1" chance="100" /> <!-- Steel Dynasty Boots (60-day) -->
 			<item id="37192" min="1" max="1" chance="100" /> <!-- Steel Dynasty Helmet (60-day) -->
 			<item id="37195" min="1" max="1" chance="100" /> <!-- Steel Dynasty Shield (60-day) -->
-			<item id="37352" min="1" max="1" chance="100" /> <!-- Fated Support Box: Othell Rogue (R-grade) -->
+			<item id="37352" min="1" max="1" chance="100" /> <!-- Fated R-grade Support Box: Othell Rogue -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="81;84" />
 		</cond>
 	</item>
 	<item id="37346" name="Fated Support Box: Rogue (S-grade) (Stage 2)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for rogue-type characters. Can be used by characters between level 81 and level 84. -->
+		<!-- Double-click to obtain S-grade equipment for rogue-type characters. Required level: 81-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1530,14 +1530,14 @@
 			<item id="37204" min="1" max="1" chance="100" /> <!-- Steel Dynasty Leather Helmet (60-day) -->
 			<item id="37377" min="1" max="1" chance="100" /> <!-- Steel Dynasty Bow (60-day) -->
 			<item id="37293" min="1" max="1" chance="100" /> <!-- Steel Dynasty Knife (60-day) -->
-			<item id="37353" min="1" max="1" chance="100" /> <!-- Fated Support Box: Yul Archer (R-grade) -->
+			<item id="37353" min="1" max="1" chance="100" /> <!-- Fated R-grade Support Box: Yul Archer -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="81;84" />
 		</cond>
 	</item>
 	<item id="37347" name="Fated Support Box: Kamael (S-grade) (Stage 2)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for Kamael-type characters. Can be used by characters between level 81 and level 84. -->
+		<!-- Double-click to obtain S-grade equipment for Kamael-type characters. Required level: 81-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1563,14 +1563,14 @@
 			<item id="37295" min="1" max="1" chance="100" /> <!-- Steel Dynasty Ancient Sword (60-day) -->
 			<item id="37202" min="1" max="1" chance="100" /> <!-- Steel Dynasty Leather Armor (60-day) -->
 			<item id="37204" min="1" max="1" chance="100" /> <!-- Steel Dynasty Leather Helmet (60-day) -->
-			<item id="37354" min="1" max="1" chance="100" /> <!-- Fated Support Box: Feoh Wizard (R-grade) -->
+			<item id="37354" min="1" max="1" chance="100" /> <!-- Fated R-grade Support Box: Feoh Wizard -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="81;84" />
 		</cond>
 	</item>
 	<item id="37348" name="Fated Support Box: Orc Fighter (S-grade) (Stage 2)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for orc-fighter-type characters. Can be used by characters between level 81 and level 84. -->
+		<!-- Double-click to obtain S-grade equipment for Orc-fighter-type characters. Required level: 81-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1602,14 +1602,14 @@
 			<item id="37204" min="1" max="1" chance="100" /> <!-- Steel Dynasty Leather Helmet (60-day) -->
 			<item id="37192" min="1" max="1" chance="100" /> <!-- Steel Dynasty Helmet (60-day) -->
 			<item id="37195" min="1" max="1" chance="100" /> <!-- Steel Dynasty Shield (60-day) -->
-			<item id="37355" min="1" max="1" chance="100" /> <!-- Fated Support Box: Wynn Summoner (R-grade) -->
+			<item id="37355" min="1" max="1" chance="100" /> <!-- Fated R-grade Support Box: Wynn Summoner -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="81;84" />
 		</cond>
 	</item>
 	<item id="37349" name="Fated Support Box: Orc Wizard (S-grade) (Stage 2)" type="EtcItem">
-		<!-- Double-click to receive S-grade equipment items necessary for orc-wizard-type characters. Can be used by characters between level 81 and level 84. -->
+		<!-- Double-click to obtain S-grade equipment for Orc-wizard-type characters. Required level: 81-84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1641,7 +1641,7 @@
 			<item id="37289" min="1" max="1" chance="100" /> <!-- Steel Dynasty Phantom (60-day) -->
 			<item id="37192" min="1" max="1" chance="100" /> <!-- Steel Dynasty Helmet (60-day) -->
 			<item id="37195" min="1" max="1" chance="100" /> <!-- Steel Dynasty Shield (60-day) -->
-			<item id="37356" min="1" max="1" chance="100" /> <!-- Fated Support Box: Aeore Healer (R-grade) -->
+			<item id="37356" min="1" max="1" chance="100" /> <!-- Fated R-grade Support Box: Aeore Healer -->
 		</capsuled_items>
 		<cond msgId="1902">
 			<player levelRange="81;84" />
@@ -1668,7 +1668,7 @@
 			<item id="37240" min="1" max="1" chance="100" /> <!-- Steel Immortal Necklace (30-day) -->
 			<item id="37207" min="1" max="1" chance="100" /> <!-- Steel Immortal Breastplate (30-day) -->
 			<item id="37208" min="1" max="1" chance="100" /> <!-- Steel Immortal Gaiters (30-day) -->
-			<item id="37306" min="1" max="1" chance="100" /> <!-- Steel Requiem Dual Blunt (30-day) -->
+			<item id="37306" min="1" max="1" chance="100" /> <!-- Steel Requiem Dual Blunt Weapon (30-day) -->
 			<item id="37304" min="1" max="1" chance="100" /> <!-- Steel Requiem Dual Sword (30-day) -->
 			<item id="37210" min="1" max="1" chance="100" /> <!-- Steel Immortal Gauntlets (30-day) -->
 			<item id="37211" min="1" max="1" chance="100" /> <!-- Steel Immortal Boots (30-day) -->
@@ -1705,7 +1705,7 @@
 			<item id="37216" min="1" max="1" chance="100" /> <!-- Steel Immortal Leather Gloves (30-day) -->
 			<item id="37217" min="1" max="1" chance="100" /> <!-- Steel Immortal Leather Boots (30-day) -->
 			<item id="37208" min="1" max="1" chance="100" /> <!-- Steel Immortal Gaiters (30-day) -->
-			<item id="37306" min="1" max="1" chance="100" /> <!-- Steel Requiem Dual Blunt (30-day) -->
+			<item id="37306" min="1" max="1" chance="100" /> <!-- Steel Requiem Dual Blunt Weapon (30-day) -->
 			<item id="37304" min="1" max="1" chance="100" /> <!-- Steel Requiem Dual Sword (30-day) -->
 			<item id="37210" min="1" max="1" chance="100" /> <!-- Steel Immortal Gauntlets (30-day) -->
 			<item id="37211" min="1" max="1" chance="100" /> <!-- Steel Immortal Boots (30-day) -->
@@ -1915,7 +1915,7 @@
 			<item id="37312" min="1" max="1" chance="100" /> <!-- Steel Requiem Retributer (30-day) -->
 			<item id="37222" min="1" max="1" chance="100" /> <!-- Steel Immortal Shoes (30-day) -->
 			<item id="37208" min="1" max="1" chance="100" /> <!-- Steel Immortal Gaiters (30-day) -->
-			<item id="37306" min="1" max="1" chance="100" /> <!-- Steel Requiem Dual Blunt (30-day) -->
+			<item id="37306" min="1" max="1" chance="100" /> <!-- Steel Requiem Dual Blunt Weapon (30-day) -->
 			<item id="37304" min="1" max="1" chance="100" /> <!-- Steel Requiem Dual Sword (30-day) -->
 			<item id="37221" min="1" max="1" chance="100" /> <!-- Steel Immortal Gloves (30-day) -->
 			<item id="37210" min="1" max="1" chance="100" /> <!-- Steel Immortal Gauntlets (30-day) -->
@@ -1934,7 +1934,7 @@
 		</cond>
 	</item>
 	<item id="37358" name="Test Server Support Badge" type="EtcItem">
-		<!-- Badge that confirms you have obtained a Lindvior Support Box. If you have this badge, you cannot obtain a Lindvior Support Box. Cannot be transferred between servers. -->
+		<!-- Badge that confirms you have obtained a Lindvior Support Box. -->
 		<set name="icon" val="icon.etc_coins_black_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -2356,7 +2356,7 @@
 		</skills>
 	</item>
 	<item id="37385" name="Blessed Scroll: Modify Armor (R-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
+		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item. It won t be destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.pr_armor_change_i06" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2377,7 +2377,7 @@
 		</skills>
 	</item>
 	<item id="37386" name="Blessed Scroll: Modify Armor (S-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
+		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item. It won t be destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. An appearance-modified item cannot be exchanged until it gets back its original appearance. -->
 		<set name="icon" val="icon.pr_armor_change_i05" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2398,7 +2398,7 @@
 		</skills>
 	</item>
 	<item id="37387" name="Blessed Scroll: Modify Armor (A-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
+		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item. It won t be destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.pr_armor_change_i04" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2419,7 +2419,7 @@
 		</skills>
 	</item>
 	<item id="37388" name="Blessed Scroll: Modify Armor (B-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
+		<!-- Changes the appearance of an B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item. It won t be destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.pr_armor_change_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2440,7 +2440,7 @@
 		</skills>
 	</item>
 	<item id="37389" name="Blessed Scroll: Modify Armor (C-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
+		<!-- Changes the appearance of an C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item. It won t be destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.pr_armor_change_i02" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2461,7 +2461,7 @@
 		</skills>
 	</item>
 	<item id="37390" name="Blessed Scroll: Modify Armor (D-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
+		<!-- Changes the appearance of an D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item. It won t be destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. An appearance-modified item cannot be exchanged until it gets back its original appearance. -->
 		<set name="icon" val="icon.pr_armor_change_i01" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2598,7 +2598,7 @@
 			<item id="37426" min="1" max="1" chance="6.25" /> <!-- Emerald Weapon Appearance Stone: Two-handed Staff -->
 			<item id="37423" min="1" max="1" chance="6.25" /> <!-- Emerald Weapon Appearance Stone: One-handed Blunt -->
 			<item id="37425" min="1" max="1" chance="6.25" /> <!-- Emerald Weapon Appearance Stone: One-handed Staff -->
-			<item id="37429" min="1" max="1" chance="6.25" /> <!-- Emerald Weapon Appearance Stone: Dual Blunt -->
+			<item id="37429" min="1" max="1" chance="6.25" /> <!-- Emerald Weapon Appearance Stone: Dual Blunt Weapon -->
 			<item id="37428" min="1" max="1" chance="6.25" /> <!-- Emerald Weapon Appearance Stone: Dual Dagger -->
 			<item id="37427" min="1" max="1" chance="6.25" /> <!-- Emerald Weapon Appearance Stone: Dual Sword -->
 		</capsuled_items>

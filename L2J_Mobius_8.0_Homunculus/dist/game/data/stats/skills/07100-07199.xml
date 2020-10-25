@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="7100" toLevel="1" name="Clan-exclusive Pet Stun">
-		<!-- Stuns the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns the target for 3 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill5168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>5</mpConsume>
@@ -23,12 +23,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="7101" toLevel="1" name="Clan-exclusive Pet Aerial Thrust">
-		<!-- Lifts the target in the air immobilizing them for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Lifts the target in the air immobilizing them for 3 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11276</icon>
 		<operateType>A2</operateType>
 		<mpConsume>5</mpConsume>
@@ -98,7 +98,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="7104" toLevel="1" name="Pa'agrio's Hand">
-		<!-- Raise the temperature of the Draco Egg through Pa'agrio's Hand. It raises the temperature by 1 - 10 degrees on a Small Draco Egg and 0.1 - 1.0 degrees on a Large Draco Egg. The Fire Spirit Agathion must be summoned for it to be used. -->
+		<!-- Raises the temperature of Draco Eggs through Pa'agrio's Hand. The temperature is raised by 1-10 degrees for a Small Draco Egg and 0.1-1.0 degree for a Large Draco Egg. Can be used only when Fire Spirit agathion is summoned. -->
 		<icon>icon.skill11775</icon>
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
@@ -695,6 +695,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -718,7 +731,7 @@
 		<conditions>
 			<condition name="OpMainjob" />
 			<condition name="OpSocialClass">
-				<socialClass>8</socialClass>
+				<socialClass>-1</socialClass>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>15094</skillId> <!-- Clan Flag -->
@@ -922,14 +935,14 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>8910</skillId> <!-- Riding the Griffin -->
+				<skillId>8910</skillId> <!-- Mount Griffin -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>8910</skillId> <!-- Riding the Griffin -->
+				<skillId>8910</skillId> <!-- Mount Griffin -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>

@@ -25,6 +25,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
+import org.l2jmobius.gameserver.data.xml.impl.VariationData;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
@@ -43,6 +44,7 @@ import org.l2jmobius.gameserver.model.items.type.ActionType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.ExShowVariationMakeWindow;
 import org.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -284,6 +286,11 @@ public class UseItem implements IClientIncomingPacket
 					player.addTimeStampItem(item, reuseDelay);
 					sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
 				}
+			}
+			// TODO: New item handler for minerals.
+			if (VariationData.getInstance().getVariation(_itemId) != null)
+			{
+				player.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
 			}
 		}
 	}

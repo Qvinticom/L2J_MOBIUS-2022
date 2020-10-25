@@ -2301,4 +2301,12 @@
 		<stat name="skillIdLvl" val="16734-1;" /> <!-- eaking Magic - Eradication -->
 		<node X="78023" Y="172262" />
 	</zone>
+	<zone name="gm_punish" id="100100" type="EffectZone" shape="Cylinder" minZ="-10610" maxZ="10150" rad="600" >
+		<stat name="chance" val="100" />
+		<stat name="default_enabled" val="true" />
+		<stat name="showDangerIcon" val="true"/>
+		<stat name="initialDelay" val="1000" />
+		<stat name="skillIdLvl" val="55031-1;" /> <!-- GM Punish -->
+		<node X="-113088" Y="-251088" />
+	</zone>
 </list>

@@ -218,7 +218,7 @@
 		</stats>
 	</item>
 	<item id="4807" name="Blood Tornado - Critical Drain" type="Weapon">
-		<!-- <Special Option>. Absorbs the target's HP during a Critical Attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Absorbs the target's HP after a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -246,7 +246,7 @@
 		</stats>
 	</item>
 	<item id="4808" name="Blood Tornado - Rsk. Evasion" type="Weapon">
-		<!-- <Special Option>. Increases Evasion when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- <Special Ability>. Increases Evasion when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -274,7 +274,7 @@
 		</stats>
 	</item>
 	<item id="4809" name="Blood Tornado - Haste" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. No Soul Crystal option. -->
+		<!-- <Special Ability>. Increases Atk. Spd. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1021,7 +1021,7 @@
 		</stats>
 	</item>
 	<item id="4832" name="Carnage Bow - Mana Up" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 30%. No Soul Crystal option. -->
+		<!-- <Special Ability>. Max MP +30%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1051,7 +1051,7 @@
 		</stats>
 	</item>
 	<item id="4833" name="Carnage Bow - Quick Recovery" type="Weapon">
-		<!-- <Special Option>. Decreases cooldown by about 10%. No Soul Crystal option. -->
+		<!-- <Special Option>. Skill Cooldown is about -10%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1930,7 +1930,7 @@
 		</stats>
 	</item>
 	<item id="4861" name="Halberd" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 15% chance of casting Stun on the target during a Critical Attack. -->
+		<!-- <Soul Crystal property>. A 15% chance of stunning the target after a critical attack. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1961,7 +1961,7 @@
 		</stats>
 	</item>
 	<item id="4862" name="Halberd" additionalName="Long Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases the attack range. -->
+		<!-- <Soul Crystal property>. Increases the attack range. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1992,7 +1992,7 @@
 		</stats>
 	</item>
 	<item id="4863" name="Halberd" additionalName="Wide Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. -->
+		<!-- <Soul Crystal property>. Broadens the angle of attack. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />

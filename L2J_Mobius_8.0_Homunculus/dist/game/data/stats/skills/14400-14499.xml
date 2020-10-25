@@ -109,7 +109,7 @@
 		</effects>
 	</skill>
 	<skill id="14404" toLevel="1" name="Valakas Fear">
-		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- The target is feared and flees.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4689</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -233,7 +233,7 @@
 		</effects>
 	</skill>
 	<skill id="14409" toLevel="1" name="Infection">
-		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -267,7 +267,7 @@
 		</effects>
 	</skill>
 	<skill id="14410" toLevel="1" name="Dragon's Trace">
-		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -695,7 +695,7 @@
 		</effects>
 	</skill>
 	<skill id="14432" toLevel="1" name="Stun">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -719,12 +719,12 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14433" toLevel="1" name="Digest">
-		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts bleed.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -980,7 +980,7 @@
 		</effects>
 	</skill>
 	<skill id="14446" toLevel="1" name="Sleep">
-		<!-- Sleep. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Sleep.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
@@ -999,7 +999,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
@@ -1007,7 +1007,7 @@
 		</effects>
 	</skill>
 	<skill id="14447" toLevel="1" name="Chains of Hatred">
-		<!-- Immobilized. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Immobilized.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -1039,7 +1039,7 @@
 		</effects>
 	</skill>
 	<skill id="14448" toLevel="1" name="Blink">
-		<!-- Increases Evasion. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Increases P. Evasion.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10768</icon>
 		<operateType>A1</operateType>
 		<castRange>500</castRange>
@@ -1055,7 +1055,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -1276,7 +1276,7 @@
 		</effects>
 	</skill>
 	<skill id="14459" toLevel="1" name="Stun Shot">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<castRange>200</castRange>
@@ -1297,12 +1297,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14460" toLevel="1" name="Sleep">
-		<!-- Sleep. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Sleep.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<operateType>A2</operateType>
 		<castRange>200</castRange>
@@ -1324,7 +1324,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
@@ -1332,7 +1332,7 @@
 		</effects>
 	</skill>
 	<skill id="14461" toLevel="1" name="Fear">
-		<!-- Horrifies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Fear.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<castRange>200</castRange>
@@ -1358,7 +1358,7 @@
 		</effects>
 	</skill>
 	<skill id="14462" toLevel="1" name="Apherus Curse">
-		<!-- Paralyzes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -1397,7 +1397,7 @@
 		</endEffects>
 	</skill>
 	<skill id="14463" toLevel="1" name="Apherus Curse">
-		<!-- HP is decresed. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- HP is decresed.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -1519,7 +1519,7 @@
 		</effects>
 	</skill>
 	<skill id="14467" toLevel="1" name="Chains of Hatred">
-		<!-- Yoked status. -->
+		<!-- Immobilized. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1680,6 +1680,7 @@
 		</effects>
 	</skill>
 	<skill id="14474" toLevel="1" name="Octavis Connection">
+		<!-- none\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>2</effectPoint>
@@ -1698,6 +1699,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14475" toLevel="1" name="Octavis Connection">
+		<!-- none\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>2</effectPoint>
@@ -1734,7 +1736,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14477" toLevel="1" name="Sacrifice">
+	<skill id="14477" toLevel="1" name="Tamer Sacrifice">
 		<icon>icon.skill1011</icon>
 		<operateType>A1</operateType>
 		<castRange>350</castRange>
@@ -1957,8 +1959,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14487" toLevel="1" name="Poison Cloud">
-		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
+	<skill id="14487" toLevel="1" name="Poisonous Cloud">
+		<!-- Inflicts Poison.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -2028,7 +2030,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14490" toLevel="1" name="Silence">
-		<!-- Silence. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Silence.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>

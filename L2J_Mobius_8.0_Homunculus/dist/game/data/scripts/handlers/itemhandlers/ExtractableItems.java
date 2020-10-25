@@ -71,6 +71,7 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
+		boolean primeReward = false;
 		final Map<ItemInstance, Long> extractedItems = new HashMap<>();
 		final List<ItemInstance> enchantedItems = new ArrayList<>();
 		if (etcitem.getExtractableCountMin() > 0)
@@ -106,6 +107,14 @@ public class ExtractableItems implements IItemHandler
 						}
 						if (alreadyExtracted && (exitems.size() >= etcitem.getExtractableCountMax()))
 						{
+							continue;
+						}
+						
+						if (expi.getId() == -1) // Prime points
+						{
+							player.setPrimePoints(player.getPrimePoints() + createItemAmount);
+							player.sendMessage("You have obtained " + (createItemAmount / 100) + " Euro!");
+							primeReward = true;
 							continue;
 						}
 						
@@ -156,6 +165,14 @@ public class ExtractableItems implements IItemHandler
 						continue;
 					}
 					
+					if (expi.getId() == -1) // Prime points
+					{
+						player.setPrimePoints(player.getPrimePoints() + createItemAmount);
+						player.sendMessage("You have obtained " + (createItemAmount / 100) + " Euro!");
+						primeReward = true;
+						continue;
+					}
+					
 					if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 					{
 						final ItemInstance newItem = player.addItem("Extract", expi.getId(), createItemAmount, player, false);
@@ -184,7 +201,7 @@ public class ExtractableItems implements IItemHandler
 			}
 		}
 		
-		if (extractedItems.isEmpty())
+		if (extractedItems.isEmpty() && !primeReward)
 		{
 			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 		}

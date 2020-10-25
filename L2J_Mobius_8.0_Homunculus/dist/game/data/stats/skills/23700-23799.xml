@@ -64,10 +64,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">506</value> <!-- Fix: Retail Missed -->
-					<value level="2">518</value> <!-- Fix: Retail Missed -->
-					<value level="3">529</value> <!-- Fix: Retail Missed -->
-					<value level="4">553</value> <!-- Fix: Retail Missed -->
+					<value level="1">5000</value> <!-- Custom -->
+					<value level="2">10000</value> <!-- Custom -->
+					<value level="3">15000</value> <!-- Custom -->
+					<value level="4">20000</value> <!-- Custom -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -92,7 +92,7 @@
 		</effects>
 	</skill>
 	<skill id="23707" toLevel="4" name="Chaos Fire">
-		<!-- Deals great magic damage to a single target and decreases P./ M. Def. by $s2 for $s1 -->
+		<!-- Deals great magic damage to a single target. P./ M. Def. -$s2 for $s1 -->
 		<icon>icon.skill4336_new</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -119,10 +119,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">506</value> <!-- Fix: Retail Missed -->
-					<value level="2">518</value> <!-- Fix: Retail Missed -->
-					<value level="3">529</value> <!-- Fix: Retail Missed -->
-					<value level="4">553</value> <!-- Fix: Retail Missed -->
+					<value level="1">500</value> <!-- Custom -->
+					<value level="2">1000</value> <!-- Custom -->
+					<value level="3">1500</value> <!-- Custom -->
+					<value level="4">2000</value> <!-- Custom -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -203,7 +203,7 @@
 		</effects>
 	</skill>
 	<skill id="23709" toLevel="4" name="Chaos Breaker">
-		<!-- Deals great damage to a single target and decreases P./ M. Def. by $s2 for $s1 -->
+		<!-- Deals great magic damage to a single target. P./ M. Def. -$s2 for $s1 -->
 		<icon>icon.skill1443</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -354,7 +354,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23719" toLevel="1" name="Rose Scent Spray">
-		<!-- Charms the target forcing it to approach the character. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Charms the target forcing them to approach you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.etc_red_rose_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -413,7 +413,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23723" toLevel="1" name="Guardian Knock Down">
-		<!-- Pushes oncoming attackers and makes them fall. -->
+		<!-- Knocks back and knocks down the enemy attacking you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<operateType>A2</operateType>
 		<castRange>150</castRange>
 		<hitTime>1000</hitTime>
@@ -482,7 +482,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23729" toLevel="1" name="Mass Lightning Strike">
-		<!-- Strikes the target and nearby enemies with a lightning bolt that inflicts Paralysis for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Strikes the target and nearby enemies with a lightning bolt that inflicts Paralysis for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skll10094</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -505,7 +505,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23731" toLevel="1" name="Chain Hydra">
-		<!-- Pulls the target and nearby enemies to you and provokes them to attack you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Pulls the target to you and provokes nearby enemies to attack you. Inflicted status: Pull). -->
 		<icon>icon.skill10016</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -517,7 +517,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23732" toLevel="1" name="Shield Wave">
-		<!-- Attacks nearby enemies stunning them for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies stunning them for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -553,7 +553,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23735" toLevel="1" name="Sonic Star">
-		<!-- Attacks enemies with wind gust knocking them down. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks enemies with wind gust knocking them down. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10281</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -596,7 +596,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23739" toLevel="1" name="Heart Breaker">
-		<!-- Stabs target's heart with 29472 Power added to P. Atk. to inflict a powerful vital spot attack. Increases Spd. +40, Evasion +5, and Rear Critical Damage +30%. Over-hit. Critical hit. Half-kill. -->
+		<!-- Attacks the target's vital points with 29,472 power. Speed +40, P. Evasion +5, Critical Damage for standard attacks after backstab +30%. Half-kill. Critical. Over-hit. -->
 		<icon>icon.skill10509</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -637,7 +637,7 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="23741" toLevel="1" name="Razor Rain">
-		<!-- Calls down a rain of blades to attack nearby enemies and inflicts Bleed. Requires a dagger or dual dagger. Over-hit. Critical hit. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Calls down a rain of blades to attack nearby enemies, making them bleed for a time period. Requires a dagger or dual daggers. Critical. Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill10513</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -658,7 +658,7 @@
 		</conditions>
 	</skill>
 	<skill id="23742" toLevel="1" name="Mass Trick">
-		<!-- Cancels the target of nearby enemies, decreases their aggression and prevent them from targeting for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Cancels the target of nearby enemies, decreases their aggression and prevent them from targeting for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10527</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -693,7 +693,7 @@
 		<reuseDelay>7000</reuseDelay>
 	</skill>
 	<skill id="23745" toLevel="1" name="Impact Shot">
-		<!-- Shoots an arrow which stuns the enemy for 5 sec. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Shoots an arrow which stuns the enemy for 5 sec. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10769</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -760,7 +760,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23750" toLevel="1" name="Mass Hell Binding">
-		<!-- Lifts the target and nearby enemies in the air immobilizing them for 9 sec. Also deals 100 damage per sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for 9 sec. Also deals 100 damage per sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11052</icon>
 		<operateType>A1</operateType>
 		<mpConsume>2</mpConsume>
@@ -771,7 +771,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23751" toLevel="1" name="Mass Death Fear">
-		<!-- Inflicts Fear on the target and nearby enemies for 10 sec. Speed -55%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Fear on the target and nearby enemies for 10 sec. Speed -55%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11056</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -784,7 +784,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23752" toLevel="1" name="Magical Charge">
-		<!-- Attacks nearby enemies stunning and knocking them down. Teleports you to the front. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies stunning and knocking them down. Teleports you to the front. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11094</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -829,8 +829,8 @@
 		<effectPoint>-687</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="23756" toLevel="1" name="Assault Rush">
-		<!-- Rushes to the enemy stunning him for 1 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+	<skill id="23756" toLevel="1" name="Dash Assault">
+		<!-- Rushes to the enemy stunning him for 1 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11508</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -842,7 +842,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23757" toLevel="1" name="Ultimate Suspension">
-		<!-- Increases nearby enemies' physical/ magic skill Cooldown by 200% for 2 min. -->
+		<!-- Nearby enemies' P./ M. Skill Cooldown +200% for 2 min. -->
 		<icon>icon.skill11559</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -905,7 +905,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23762" toLevel="1" name="Mark of Weakness">
-		<!-- Weakens target for 10 sec. Decreases 326 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. -->
+		<!-- Weakens target for 10 sec. Decreases 326 HP per second, P./ M. Def. -30%, and Debuff Resistance by 30%. -->
 		<icon>icon.skill11259</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -918,7 +918,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23763" toLevel="1" name="Mark of Lumi">
-		<!-- Leaves a mark that decreases target's P. Def. and M. Def. by 10%, and consumes 113 HP every second for 60 sec. -->
+		<!-- Leaves a mark that decreases target's P./ M. Def. by 10%, and consumes 113 HP every second for 60 sec. -->
 		<icon>icon.skill11777</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -964,7 +964,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23767" toLevel="1" name="Dark Force">
-		<!-- Attacks the target and knocking it back with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks the target and knocking it back with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11814</icon>
 		<operateType>A2</operateType>
 		<mpConsume>2</mpConsume>
@@ -977,7 +977,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23768" toLevel="1" name="Disparition">
-		<!-- Cancels all your debuffs. For 5 sec., you cannot be targeted. -->
+		<!-- Removes all debuffs. For 5 sec., prevents enemies from targeting you. -->
 		<icon>icon.skill1912</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
@@ -989,7 +989,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="23770" toLevel="1" name="Undying Will">
-		<!-- Invincible. -->
+		<!-- Grants invincibility. -->
 		<icon>icon.skill1917</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
@@ -1003,7 +1003,7 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="23772" toLevel="1" name="Revolutionaries' Petrification">
-		<!-- Petrified and unable to move temporarily. -->
+		<!-- Petrified and unable to move. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
@@ -1021,7 +1021,7 @@
 		<reuseDelay>60000</reuseDelay>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="23774" toLevel="1" name="Clan Teamwork - Stage 1">
+	<skill id="23774" toLevel="1" name="Clan Teamwork Lv. 1">
 		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +8% and Vitality Consumption Speed -3% for 3 h. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
@@ -1043,7 +1043,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23775" toLevel="1" name="Clan Teamwork - Stage 2">
+	<skill id="23775" toLevel="1" name="Clan Teamwork Lv. 2">
 		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +16%, PvE Damage +2%, and Vitality Consumption Speed -3% for 3 h. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
@@ -1079,7 +1079,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23776" toLevel="1" name="Clan Teamwork - Stage 3">
+	<skill id="23776" toLevel="1" name="Clan Teamwork Lv. 3">
 		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +24%, PvE Damage +5%, and Vitality Consumption Speed -5% for 3 h. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
@@ -1115,7 +1115,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23777" toLevel="1" name="Clan Teamwork - Stage 4">
+	<skill id="23777" toLevel="1" name="Clan Teamwork Lv. 4">
 		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +35%, PvE Damage +8%, Vitality Consumption Speed -3%, and Damage Received from Raid/ Boss Monsters -8% for 3 h. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>

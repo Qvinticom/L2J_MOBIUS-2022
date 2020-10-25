@@ -4,146 +4,757 @@
 		<!-- When Topaz Lv. 4+is equipped, PvP Damage +$s1.. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17701</skillId> <!-- Topaz - Spiritshot -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35002" toLevel="3" name="Augment Ruby">
 		<!-- When Ruby Lv. 4+is equipped, P. Atk. +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18717</skillId> <!-- Ruby -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35003" toLevel="3" name="Augment Sapphire">
 		<!-- When Sapphire Lv. 4+is equipped, M. Atk. +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18719</skillId> <!-- Sapphire -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35004" toLevel="3" name="Augment Obsidian">
 		<!-- When Obsidian Lv. 4+is equipped, PvP Damage Received -$s1 -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17704</skillId> <!-- Obsidian -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-5</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35005" toLevel="3" name="Augment Opal">
-		<!-- When Opal Lv. 4+is equipped, Attack Attribute Bonus +$s1. -->
+		<!-- When Opal Lv. 4+is equipped, Attribute Attack Bonus +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17705</skillId> <!-- Opal -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35006" toLevel="3" name="Augment Emerald">
 		<!-- When Emerald Lv. 4+is equipped, MEN +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17825</skillId> <!-- Emerald -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35007" toLevel="3" name="Augment Aquamarine">
 		<!-- When Aquamarine Lv. 4+is equipped, Max MP +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17823</skillId> <!-- Aquamarine -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35008" toLevel="3" name="Augment Diamond">
 		<!-- When Diamond Lv. 4+is equipped, P. Def. +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17708</skillId> <!-- Diamond -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">283</value>
+					<value level="2">567</value>
+					<value level="3">945</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35009" toLevel="3" name="Augment Pearl">
 		<!-- When Pearl Lv. 4 or higher is equipped, M. Def. +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17709</skillId> <!-- Pearl -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">283</value>
+					<value level="2">328</value>
+					<value level="3">548</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35010" toLevel="3" name="Augment Tanzanite">
 		<!-- When Tanzanite Lv. 4+is equipped, Damage Received -$s1 -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18565</skillId> <!-- Tanzanite - Barrier -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35011" toLevel="3" name="Augment Garnet">
 		<!-- When Garnet Lv. 4+is equipped, Max HP +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18566</skillId> <!-- Garnet -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35012" toLevel="3" name="Augment Vital Stone">
 		<!-- When Vital Stone Lv. 4+is equipped, Vitality: XP +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18568</skillId> <!-- Vital Stone -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35013" toLevel="3" name="Augment Red Cat's Eye">
 		<!-- When Red Cat's Eye Lv. 4+is equipped, P. Skill Power +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18713</skillId> <!-- Red Cat's Eye -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35014" toLevel="3" name="Augment Blue Cat's Eye">
 		<!-- When Blue Cat's Eye Lv. 4+is equipped, M. Skill Power +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18714</skillId> <!-- Blue Cat's Eye -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35015" toLevel="3" name="Augment Topaz">
 		<!-- PvP Damage +$s1. -->
 		<icon>icon.etc_bm_jewel_topaz_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17701</skillId> <!-- Topaz - Spiritshot -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35016" toLevel="3" name="Augment Ruby">
 		<!-- P. Atk. +$s1. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18717</skillId> <!-- Ruby -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35017" toLevel="3" name="Augment Sapphire">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18719</skillId> <!-- Sapphire -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35018" toLevel="3" name="Augment Obsidian">
 		<!-- PvP Damage Received -$s1 -->
 		<icon>icon.etc_bm_jewel_obsidian_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17704</skillId> <!-- Obsidian -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35019" toLevel="3" name="Augment Opal">
-		<!-- Attack Attribute Bonus +$s1. -->
+		<!-- Attribute Attack +$s1. -->
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17705</skillId> <!-- Opal -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35020" toLevel="3" name="Augment Emerald">
 		<!-- MEN +$s1. -->
 		<icon>icon.etc_bm_jewel_emerald_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17825</skillId> <!-- Emerald -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35021" toLevel="3" name="Augment Aquamarine">
 		<!-- Max MP +$s1. -->
 		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17823</skillId> <!-- Aquamarine -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35022" toLevel="3" name="Augment Diamond">
 		<!-- P. Def. +$s1. -->
 		<icon>icon.etc_bm_jewel_diamond_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17708</skillId> <!-- Diamond -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">283</value>
+					<value level="2">567</value>
+					<value level="3">945</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35023" toLevel="3" name="Augment Pearl">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.etc_bm_jewel_pearl_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>17709</skillId> <!-- Pearl -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">283</value>
+					<value level="2">328</value>
+					<value level="3">548</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35024" toLevel="3" name="Augment Tanzanite">
 		<!-- Damaged received -$s1 -->
 		<icon>icon.etc_bm_jewel_tanzanite</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18565</skillId> <!-- Tanzanite - Barrier -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<type>PK</type>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35025" toLevel="3" name="Augment Garnet">
 		<!-- Max HP +$s1. -->
 		<icon>icon.etc_bm_jewel_garnet</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18566</skillId> <!-- Garnet -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35026" toLevel="3" name="Augment Vital Stone">
-		<!-- Vitality Bonus +$s1. -->
+		<!-- When you have Vitality, acquired XP +$s1. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18568</skillId> <!-- Vital Stone -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35027" toLevel="3" name="Augment Red Cat's Eye">
 		<!-- P. Skill Power +$s1. -->
 		<icon>icon.bm_jewel_red_catseye</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18713</skillId> <!-- Red Cat's Eye -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35028" toLevel="3" name="Augment Blue Cat's Eye">
 		<!-- M. Skill Power +$s1. -->
 		<icon>Icon.bm_jewel_blue_catseye</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckSkill">
+				<skillId>18714</skillId> <!-- Blue Cat's Eye -->
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35029" toLevel="1" name="Freya's Dark Rune">
-		<!-- PvP Damage +15%. -->
+		<!-- PvP Damage +$s1. -->
 		<icon>icon.bm_freya_dark_rune</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpNotOlympiad" />
+		</passiveConditions>
 		<effects>
 			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>15</amount>
@@ -160,13 +771,13 @@
 		</effects>
 	</skill>
 	<skill id="35030" toLevel="1" name="Freya's CHA Potion">
-		<!-- Changes the appearance to that of Teddy Bear and increases CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown of 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
+		<!-- Changes the appearance to that of Teddy Bear and increases CHA +$s2 for $s1 Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown of 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_freya_charisma_potion1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>300000</reuseDelay>
 	</skill>
-	<skill id="35031" toLevel="1" name="Entrance Pass: Shilen's Altar">
+	<skill id="35031" toLevel="1" name="Extra Pass: Altar of Shillien">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35032" toLevel="1" name="Summon Virgo Agathion">
@@ -364,8 +975,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35045" toLevel="22" name="Virgo Agathion Unique Ability">
-		<!-- Increases P. Critical Rate with the growth of the Agathion. -->
+	<skill id="35045" toLevel="22" name="Secondary Skill: Agathion Virgo">
+		<!-- P. Critical Rate is increased, when the agathion grows. -->
 		<icon>icon.agathion_virgo_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -472,8 +1083,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35046" toLevel="22" name="Capricorn Agathion Unique Ability">
-		<!-- Increases M. Critical Rate with the growth of the Agathion. -->
+	<skill id="35046" toLevel="22" name="Secondary Skill: Agathion Capricorn">
+		<!-- M. Skill Critical Rate is increased, when the agathion grows. -->
 		<icon>icon.agathion_capr_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -580,8 +1191,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35047" toLevel="22" name="Libra Agathion Unique Ability">
-		<!-- Increases M. Critical Damage with the growth of the Agathion. -->
+	<skill id="35047" toLevel="22" name="Secondary Skill: Agathion Libra">
+		<!-- M. Skill Critical Damage is increased, when the agathion grows. -->
 		<icon>icon.agathion_lib_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -688,8 +1299,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35048" toLevel="22" name="Aries Agathion Unique Ability">
-		<!-- Increases P. Skill Critical Damage with the growth of the Agathion. -->
+	<skill id="35048" toLevel="22" name="Secondary Skill: Agathion Aries">
+		<!-- P. Skill Critical Damage is increased, when the agathion grows. -->
 		<icon>icon.agathion_aries_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -796,8 +1407,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35049" toLevel="22" name="Taurus Agathion Unique Ability">
-		<!-- Increases P. Def. with the growth of the Agathion. -->
+	<skill id="35049" toLevel="22" name="Secondary Skill: Agathion Taurus">
+		<!-- P. Def. is increased, when the agathion grows. -->
 		<icon>icon.agathion_tau_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -895,8 +1506,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35050" toLevel="22" name="Leo Agathion Unique Ability">
-		<!-- Increases P. Atk. with the growth of the Agathion. -->
+	<skill id="35050" toLevel="22" name="Secondary Skill: Agathion Leo">
+		<!-- P. Atk. is increased, when the agathion grows. -->
 		<icon>icon.agathion_leo_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -994,8 +1605,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35051" toLevel="22" name="Gemini Agathion Unique Ability">
-		<!-- Increases M. Def. with the growth of the Agathion. -->
+	<skill id="35051" toLevel="22" name="Secondary Skill: Agathion Gemini">
+		<!-- M. Def. is increased, when the agathion grows. -->
 		<icon>icon.agathion_gem_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1093,8 +1704,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35052" toLevel="22" name="Scorpio Agathion Unique Ability">
-		<!-- Increases P. Critical Damage with the growth of the Agathion. -->
+	<skill id="35052" toLevel="22" name="Secondary Skill: Agathion Scorpio">
+		<!-- P. Critical Damage is increased, when the agathion grows. -->
 		<icon>icon.agathion_sco_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1192,8 +1803,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35053" toLevel="22" name="Aquarius Agathion Unique Ability">
-		<!-- Increases M. Atk. with the growth of the Agathion. -->
+	<skill id="35053" toLevel="22" name="Secondary Skill: Agathion Aquarius">
+		<!-- M. Atk. is increased, when the agathion grows. -->
 		<icon>icon.agathion_aqu_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1300,8 +1911,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35054" toLevel="22" name="Pisces Agathion Unique Ability">
-		<!-- Increases Casting Spd. with the growth of the Agathion. -->
+	<skill id="35054" toLevel="22" name="Agathion Pisces' Unique Ability">
+		<!-- Casting Spd. is increased, when the agathion grows. -->
 		<icon>icon.agathion_pis_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1429,8 +2040,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35055" toLevel="22" name="Sagittarius Agathion Unique Ability">
-		<!-- Increases Atk. Spd. with the growth of the Agathion. -->
+	<skill id="35055" toLevel="22" name="Secondary Skill: Agathion Sagittarius">
+		<!-- Atk. Spd. is increased, when the agathion grows. -->
 		<icon>icon.agathion_sag_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1558,8 +2169,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35056" toLevel="22" name="Cancer Agathion Unique Ability">
-		<!-- Increases P. Skill Critical Rate with the growth of the Agathion. -->
+	<skill id="35056" toLevel="22" name="Secondary Skill: Agathion Cancer">
+		<!-- P. Skill Critical Rate is increased, when the agathion grows. -->
 		<icon>icon.agathion_can_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1666,8 +2277,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35057" toLevel="8" name="Virgo Agathion Special Ability">
-		<!-- Increases XP gain with the growth of the Agathion. -->
+	<skill id="35057" toLevel="8" name="Primary Skill: Agathion Virgo">
+		<!-- Acquired XP is increased, when the agathion grows. -->
 		<icon>icon.agathion_virgo_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1686,8 +2297,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35058" toLevel="8" name="Capricorn Agathion Special Ability">
-		<!-- Increases Vitality Bonus with the growth of the Agathion. -->
+	<skill id="35058" toLevel="8" name="Primary Skill: Agathion Capricorn">
+		<!-- Vitality bonus is increased, when the agathion grows. -->
 		<icon>icon.agathion_capr_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1706,8 +2317,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35059" toLevel="8" name="Libra Agathion Special Ability">
-		<!-- Decreases Skill MP Consumption with the growth of the Agathion. -->
+	<skill id="35059" toLevel="8" name="Primary Skill: Agathion Libra">
+		<!-- M. Skill MP Consumption is decreased, when the agathion grows. -->
 		<icon>icon.agathion_lib_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1756,8 +2367,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35060" toLevel="8" name="Aries Agathion Special Ability">
-		<!-- Increases Damage Reflection Resistance with the growth of the Agathion. -->
+	<skill id="35060" toLevel="8" name="Primary Skill: Agathion Aries">
+		<!-- Damage Reflection Resistance is increased, when the agathion grows. -->
 		<icon>icon.agathion_aries_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1776,8 +2387,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35061" toLevel="8" name="Taurus Agathion Special Ability">
-		<!-- Increases Max HP with the growth of the Agathion. -->
+	<skill id="35061" toLevel="8" name="Primary Skill: Agathion Taurus">
+		<!-- Max HP is increased, when the agathion grows. -->
 		<icon>icon.agathion_tau_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1797,8 +2408,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35062" toLevel="8" name="Leo Agathion Special Ability">
-		<!-- Increases Max MP with the growth of the Agathion. -->
+	<skill id="35062" toLevel="8" name="Primary Skill: Agathion Leo">
+		<!-- Max MP is increased, when the agathion grows. -->
 		<icon>icon.agathion_leo_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1818,8 +2429,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35063" toLevel="8" name="Gemini Agathion Special Ability">
-		<!-- Increases Debuff Resistance with the growth of the Agathion. -->
+	<skill id="35063" toLevel="8" name="Primary Skill: Agathion Gemini">
+		<!-- Debuff Resistance is increased, when the agathion grows. -->
 		<icon>icon.agathion_gem_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1839,8 +2450,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35064" toLevel="8" name="Scorpio Agathion Special Ability">
-		<!-- Increases Vampiric Rage with the growth of the Agathion. -->
+	<skill id="35064" toLevel="8" name="Primary Skill: Agathion Scorpio">
+		<!-- Vampiric Rage effect is increased, when the agathion grows. -->
 		<icon>icon.agathion_sco_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1860,8 +2471,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35065" toLevel="8" name="Aquarius Agathion Special Ability">
-		<!-- Increases Max CP with the growth of the Agathion. -->
+	<skill id="35065" toLevel="8" name="Primary Skill: Agathion Aquarius">
+		<!-- Max CP is increased, when the agathion grows. -->
 		<icon>icon.agathion_aqu_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1881,8 +2492,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35066" toLevel="8" name="Pisces Agathion Special Ability">
-		<!-- Increases Bow/ Crossbow Attack Resistance with the growth of the agathion. -->
+	<skill id="35066" toLevel="8" name="Primary Skill: Agathion Pisces">
+		<!-- Bow/ Crossbow Resistance is increased, when the agathion grows. -->
 		<icon>icon.agathion_pis_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1921,8 +2532,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35067" toLevel="8" name="Sagittarius Agathion Special Ability">
-		<!-- Increases Dagger Resistance with the growth of the Agathion. -->
+	<skill id="35067" toLevel="8" name="Primary Skill: Agathion Sagittarius">
+		<!-- Dagger Attack Resistance is increased, when the agathion grows. -->
 		<icon>icon.agathion_sag_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1951,8 +2562,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35068" toLevel="8" name="Cancer Agathion Special Ability">
-		<!-- Slows the Vitality consumption rate with the growth of the Agathion. -->
+	<skill id="35068" toLevel="8" name="Primary Skill: Agathion Cancer">
+		<!-- Vitality Consumption is decreased, when the agathion grows. -->
 		<icon>icon.agathion_can_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1972,7 +2583,7 @@
 		</effects>
 	</skill>
 	<skill id="35069" toLevel="2" name="Agathion's Main Slot">
-		<!-- Activates the agathion's main slot. -->
+		<!-- Unlocks the agathion's main slot. -->
 		<icon>
 			<value level="1">icon.agathion_base</value>
 			<value level="2">icon.lbracelet_agathion_charm</value>
@@ -1985,7 +2596,7 @@
 		</effects>
 	</skill>
 	<skill id="35070" toLevel="4" name="Agathion's Additional Slot">
-		<!-- Activates $s1 agathion's additional slot(s). -->
+		<!-- Unlocks $s1 agathion's additional slot(s). -->
 		<icon>icon.agathion_base</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2000,7 +2611,7 @@
 		</effects>
 	</skill>
 	<skill id="35071" toLevel="4" name="Expand Primary and Secondary Agathion Slots">
-		<!-- Activates the main agathion slot and $s1 additional slot(s). -->
+		<!-- Unlocks the agathion's main slot and $s1 side slot(s). -->
 		<icon>icon.agathion_base</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2014,11 +2625,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35072" toLevel="1" name="Zodiac Agathion Book of Growth">
+	<skill id="35072" toLevel="1" name="Zodiac Agathion's Book of Growth">
 		<icon>icon.star_scrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="35073" toLevel="1" name="Ancient Zodiac Agathion Book of Growth">
+	<skill id="35073" toLevel="1" name="Ancient Zodiac Agathion's Book of Growth">
 		<icon>icon.star_giantscrl_of_ench_ag</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2029,13 +2640,13 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="35075" toLevel="1" name="Agathion Summon - Zaken's Spirit Sword">
-		<!-- Removes Agathion's seal. -->
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="35076" toLevel="1" name="Agathion Cute Trick - Zaken's Spirit Swords">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -2044,7 +2655,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35078" toLevel="1" name="Elementary Seed Bracelet">
-		<!-- Activates the primary Agathion slot. -->
+		<!-- Unlocks the agathion's main slot. -->
 		<icon>icon.lbracelet_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2053,8 +2664,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35079" toLevel="1" name="Intermediate Seed Bracelet">
-		<!-- Activates the primary Agathion slot and increases STR/ DEX/ CON/ INT/ WIT/ MEN +1. -->
+	<skill id="35079" toLevel="1" name="Mid-grade Seed Bracelet">
+		<!-- Unlocks the agathion's main slot. STR/ DEX/ CON/ INT/ WIT/ MEN +$s1. -->
 		<icon>icon.lbracelet_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2088,7 +2699,7 @@
 		</effects>
 	</skill>
 	<skill id="35080" toLevel="1" name="Advanced Seed Bracelet">
-		<!-- Activates the primary Agathion slot and STR/ DEX/ CON/ INT/ WIT/ MEN +1 and all Attribute Resistance +30. -->
+		<!-- Unlocks the agathion's main slot. STR/ DEX/ CON/ INT/ WIT/ MEN +$s1, Attribute Resistance +$s2. -->
 		<icon>icon.lbracelet_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2146,7 +2757,7 @@
 		</effects>
 	</skill>
 	<skill id="35081" toLevel="1" name="Top-grade Seed Bracelet">
-		<!-- Activates the primary Agathion slot, STR/ DEX/ CON/ INT/ WIT/ MEN +1, Attack Attribute +30, and all Attribute Resistance +30. -->
+		<!-- Unlocks the agathion's main slot. STR/ DEX/ CON/ INT/ WIT/ MEN +$s1, Attribute Attack +$s2, Attribute Resistance +$s3. -->
 		<icon>icon.lbracelet_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2227,10 +2838,10 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35082" toLevel="4" name="Super Advanced Seed Bracelet - Stage 1">
-		<!-- Activates the primary Agathion slot and adds $s1 secondary slots. Also increases Vitality bonus +$s2, all basic stats +$s3, Attack Attribute +$s4, and all Attribute Resistance +$s5. -->
+	<skill id="35082" toLevel="4" name="Superior Seed Bracelet Lv. 1">
+		<!-- Unlocks the agathion's main slot and $s1 additional slot(s). Vitality bonus +$s2, all stats +$s3, Attribute Attack +$s4, Attribute Resistance +$s5. -->
 		<icon>icon.lbracelet_agathion_charm</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AgathionSlot">
 				<amount>
@@ -2373,7 +2984,7 @@
 		</effects>
 	</skill>
 	<skill id="35085" toLevel="1" name="Seed Teleport: Town of Giran">
-		<!-- Teleports you to the Town of Giran. -->
+		<!-- Teleports to Giran. -->
 		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -2414,8 +3025,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35087" toLevel="1" name="Agathion's Trick">
-		<!-- Watch the Agathion's trick. -->
+	<skill id="35087" toLevel="1" name="Agathion's Cute Trick">
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -2426,32 +3037,32 @@
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
 	</skill>
-	<skill id="35089" toLevel="1" name="Summon Agathion - Makeshift Bat">
-		<!-- Summons Agathion. -->
+	<skill id="35089" toLevel="1" name="Summon Agathion Makeshift Bat">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="35090" toLevel="1" name="Summon Agathion - Cow">
-		<!-- Summons Agathion. -->
+	<skill id="35090" toLevel="1" name="Summon Agathion Cow">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="35091" toLevel="1" name="Summon Agathion - Griffin">
-		<!-- Summons Agathion. -->
+	<skill id="35091" toLevel="1" name="Summon Agathion Griffin">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="35092" toLevel="1" name="Summon Agathion - Pegasus">
-		<!-- Summons Agathion. -->
+	<skill id="35092" toLevel="1" name="Summon Agathion Pegasus">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="35093" toLevel="1" name="Summon Agathion - Lantern">
-		<!-- Summons Agathion. -->
+	<skill id="35093" toLevel="1" name="Summon Agathion Lantern">
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -2462,7 +3073,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35095" toLevel="1" name="Elysium Special Stew">
-		<!-- For 30 min., P./ M. Atk., Atk./ Casting Spd., Max HP/ MP +3%, and acquired XP/ SP +30%. Can be stacked with Honey Vitality Beer. -->
+		<!-- For $s1, P./ M. Atk., Atk./ Casting Spd., Max HP/ MP +$s2, and acquired XP/ SP +$s3. Can be stacked with Honey Vitality Beer. -->
 		<icon>icon.red_libra_pochouse</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>

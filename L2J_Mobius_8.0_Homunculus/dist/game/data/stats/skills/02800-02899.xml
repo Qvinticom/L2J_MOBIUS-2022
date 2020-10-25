@@ -126,7 +126,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2805" toLevel="1" name="Spirit of the Phoenix">
+	<skill id="2805" toLevel="1" name="Phoenix Spirit">
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -155,7 +155,7 @@
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>784</skillId> <!-- Spirit of the Phoenix -->
+				<skillId>784</skillId> <!-- Phoenix Spirit -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="SetSkill">
@@ -202,7 +202,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2807" toLevel="1" name="Pain of Shilen">
+	<skill id="2807" toLevel="1" name="Pain of Shillien">
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -219,7 +219,7 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>789</skillId> <!-- Spirit of Shilen -->
+				<skillId>789</skillId> <!-- Spirit of Shillien -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
@@ -231,11 +231,11 @@
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>788</skillId> <!-- Pain of Shilen -->
+				<skillId>788</skillId> <!-- Pain of Shillien -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="SetSkill">
-				<skillId>789</skillId> <!-- Spirit of Shilen -->
+				<skillId>789</skillId> <!-- Spirit of Shillien -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
@@ -614,7 +614,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2819" toLevel="1" name="Lightning Shock">
+	<skill id="2819" toLevel="1" name="Lightning">
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -639,19 +639,19 @@
 				<isWithin>true</isWithin>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>791</skillId> <!-- Lightning Shock -->
+				<skillId>791</skillId> <!-- Lightning -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>791</skillId> <!-- Lightning Shock -->
+				<skillId>791</skillId> <!-- Lightning -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2820" toLevel="1" name="Flame Armor">
+	<skill id="2820" toLevel="1" name="Flaming Armor">
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -668,7 +668,7 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>1492</skillId> <!-- Flame Armor -->
+				<skillId>1492</skillId> <!-- Flaming Armor -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
@@ -680,7 +680,7 @@
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>1492</skillId> <!-- Flame Armor -->
+				<skillId>1492</skillId> <!-- Flaming Armor -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
@@ -1195,7 +1195,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2834" toLevel="1" name="Weapon Pack (S-grade)">
+	<skill id="2834" toLevel="1" name="S-grade Weapon Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -1251,7 +1251,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2835" toLevel="1" name="Armor Pack (S-grade)">
+	<skill id="2835" toLevel="1" name="S-grade Armor Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -1316,7 +1316,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2836" toLevel="1" name="Accessory Pack (S-grade)">
+	<skill id="2836" toLevel="1" name="S-grade Accessory Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -1400,7 +1400,7 @@
 		</effects>
 	</skill>
 	<skill id="2839" toLevel="1" name="Sacred Light Fragment">
-		<!-- Decreases Holy Attack Resistance. -->
+		<!-- Decreases Holy Resistance. -->
 		<icon>icon.etc_piece_holy_light</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1492,9 +1492,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="86.5">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 						<item id="9630" count="3" /> <!-- Corroded Orichalcum -->
 						<item id="9629" count="3" /> <!-- Corroded Adamantine -->
@@ -1518,7 +1518,7 @@
 						<item id="14212" count="1" /> <!-- Forgotten Scroll: Enlightenment - Wizard -->
 					</item>
 					<item chance="1.93">
-						<item id="14027" count="1" /> <!-- Agathion - Essence Collector -->
+						<item id="14027" count="1" /> <!-- Agathion Essence Collector -->
 					</item>
 				</items>
 			</effect>
@@ -1544,9 +1544,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="92.5">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 						<item id="9630" count="3" /> <!-- Corroded Orichalcum -->
 						<item id="9629" count="3" /> <!-- Corroded Adamantine -->
@@ -1570,7 +1570,7 @@
 						<item id="14212" count="1" /> <!-- Forgotten Scroll: Enlightenment - Wizard -->
 					</item>
 					<item chance="1.08">
-						<item id="14027" count="1" /> <!-- Agathion - Essence Collector -->
+						<item id="14027" count="1" /> <!-- Agathion Essence Collector -->
 					</item>
 				</items>
 			</effect>
@@ -1596,22 +1596,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="39.00">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 						<item id="9630" count="3" /> <!-- Corroded Orichalcum -->
 					</item>
 					<item chance="60.00">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 						<item id="9630" count="3" /> <!-- Corroded Orichalcum -->
 						<item id="9629" count="3" /> <!-- Corroded Adamantine -->
 					</item>
 					<item chance="1.00">
-						<item id="14027" count="1" /> <!-- Agathion - Essence Collector -->
+						<item id="14027" count="1" /> <!-- Agathion Essence Collector -->
 					</item>
 				</items>
 			</effect>
@@ -1637,22 +1637,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="80.00">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 						<item id="9630" count="3" /> <!-- Corroded Orichalcum -->
 					</item>
 					<item chance="19.5">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 						<item id="9630" count="3" /> <!-- Corroded Orichalcum -->
 						<item id="9629" count="3" /> <!-- Corroded Adamantine -->
 					</item>
 					<item chance="0.5">
-						<item id="14027" count="1" /> <!-- Agathion - Essence Collector -->
+						<item id="14027" count="1" /> <!-- Agathion Essence Collector -->
 					</item>
 				</items>
 			</effect>
@@ -1678,15 +1678,15 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="25.44">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 					</item>
 					<item chance="74.56">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 						<item id="9630" count="3" /> <!-- Corroded Orichalcum -->
 					</item>
@@ -1714,15 +1714,15 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="75.44">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 					</item>
 					<item chance="24.56">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 						<item id="9630" count="3" /> <!-- Corroded Orichalcum -->
 					</item>
@@ -1750,14 +1750,14 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="19.0">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 					</item>
 					<item chance="81.0">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 						<item id="9628" count="4" /> <!-- Corroded Leonard -->
 					</item>
 				</items>
@@ -1784,9 +1784,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="8627" count="6" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="6" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="6" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="6" /> <!-- Elixir of Life -->
+						<item id="8633" count="6" /> <!-- Elixir of Mind -->
+						<item id="8639" count="6" /> <!-- Elixir of CP -->
 					</item>
 				</items>
 			</effect>
@@ -1812,9 +1812,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="8627" count="5" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="5" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="5" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="5" /> <!-- Elixir of Life -->
+						<item id="8633" count="5" /> <!-- Elixir of Mind -->
+						<item id="8639" count="5" /> <!-- Elixir of CP -->
 					</item>
 				</items>
 			</effect>
@@ -1840,9 +1840,9 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="8627" count="4" /> <!-- Elixir of Life (S-grade) -->
-						<item id="8633" count="4" /> <!-- Elixir of Mind (S-grade) -->
-						<item id="8639" count="4" /> <!-- Elixir of CP (S-grade) -->
+						<item id="8627" count="4" /> <!-- Elixir of Life -->
+						<item id="8633" count="4" /> <!-- Elixir of Mind -->
+						<item id="8639" count="4" /> <!-- Elixir of CP -->
 					</item>
 				</items>
 			</effect>
@@ -1971,7 +1971,7 @@
 		</effects>
 	</skill>
 	<skill id="2856" toLevel="1" name="Santa's Buff Gift Set">
-		<!-- For 1 h., receives help from a great spirit to increase Max MP by 20%, MP Recovery Bonus by 20%, HP Recovery Bonus by 20%, the chance of prominent magic damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
+		<!-- For 1 h., a buff from the Great Spirit is active. Max MP +20%, MP Recovery Rate +20%, HP Recovery Rate +20%, M. Skill Critical Rate +2, Critical Damage for standard attacks +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, Speed -20%, Skill MP Consumption -5%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2059,7 +2059,7 @@
 		</effects>
 	</skill>
 	<skill id="2857" toLevel="1" name="Holiday Event - Enchant Scroll (Wizard)">
-		<!-- For 1 h., receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP Recovery Bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
+		<!-- For 1 h., a buff from the Great Spirit is active. M. Critical Rate +2, MP Recovery Rate +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, Speed -20%, Skill MP Consumption -5%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2171,11 +2171,11 @@
 						<item id="14614" count="1" /> <!-- Santa's Buff Gift Set -->
 					</item>
 					<item chance="8.665">
-						<item id="14617" count="1" /> <!-- Agathion - Rudolph -->
+						<item id="14617" count="1" /> <!-- Agathion Rudolph -->
 						<item id="14619" count="1" /> <!-- Santa's Weapon Coupon -->
 					</item>
 					<item chance="8.665">
-						<item id="14617" count="1" /> <!-- Agathion - Rudolph -->
+						<item id="14617" count="1" /> <!-- Agathion Rudolph -->
 						<item id="14614" count="1" /> <!-- Santa's Buff Gift Set -->
 					</item>
 					<item chance="0.01">
@@ -2197,7 +2197,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2860" toLevel="7" name="Superior Elixir of Life (No-grade)">
+	<skill id="2860" toLevel="7" name="Superior No-grade Elixir of Life">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -2262,7 +2262,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2861" toLevel="7" name="Superior Elixir of Mind (No-grade)">
+	<skill id="2861" toLevel="7" name="Superior No-grade Elixir of Mind">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -2327,7 +2327,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2862" toLevel="7" name="Superior Elixir of CP (No-grade)">
+	<skill id="2862" toLevel="7" name="Superior No-grade Elixir of CP">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -2392,7 +2392,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2863" toLevel="1" name="Superior Healing Potion">
+	<skill id="2863" toLevel="1" name="Superior HP Replenishing Potion">
 		<!-- Greatly increases HP recovery bonus. Effect 4. -->
 		<icon>icon.etc_reagent_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
@@ -2415,7 +2415,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2864" toLevel="1" name="Superior Quick Healing Potion">
+	<skill id="2864" toLevel="1" name="Superior Quick HP Replenishing Potion">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14701</itemConsumeId> <!-- Greater Quick Healing Potion -->
@@ -2452,10 +2452,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="40.0">
-						<item id="14700" count="3" /> <!-- Superior Healing Potion -->
+						<item id="14700" count="3" /> <!-- Superior HP Replenishing Potion -->
 					</item>
 					<item chance="26.0">
-						<item id="14701" count="3" /> <!-- Superior Quick Healing Potion -->
+						<item id="14701" count="3" /> <!-- Superior Quick HP Replenishing Potion -->
 					</item>
 					<item chance="4.0">
 						<item id="9625" count="1" /> <!-- Lesser Giant's Codex - Oblivion -->
@@ -2464,40 +2464,40 @@
 						<item id="9626" count="1" /> <!-- Lesser Giant's Codex - Discipline -->
 					</item>
 					<item chance="6.0">
-						<item id="14716" count="1" /> <!-- Superior Elixir Gift Box (B-grade) -->
+						<item id="14716" count="1" /> <!-- Superior B-grade Elixir Gift Box -->
 					</item>
 					<item chance="6.0">
-						<item id="14717" count="1" /> <!-- Superior Elixir Gift Box (A-grade) -->
+						<item id="14717" count="1" /> <!-- Superior A-grade Elixir Gift Box -->
 					</item>
 					<item chance="6.0">
-						<item id="14718" count="1" /> <!-- Superior Elixir Gift Box (S-grade) -->
+						<item id="14718" count="1" /> <!-- Superior S-grade Elixir Gift Box -->
 					</item>
 					<item chance="3.9">
-						<item id="14709" count="1" /> <!-- Lucky Enchant Stone: Armor (B-grade) -->
+						<item id="14709" count="1" /> <!-- Lucky Enchant Stone: B-grade Armor -->
 					</item>
 					<item chance="1.95">
-						<item id="14710" count="1" /> <!-- Lucky Enchant Stone: Armor (A-grade) -->
+						<item id="14710" count="1" /> <!-- Lucky Enchant Stone: A-grade Armor -->
 					</item>
 					<item chance="0.15">
-						<item id="14711" count="1" /> <!-- Lucky Enchant Stone: Armor (S-grade) -->
+						<item id="14711" count="1" /> <!-- Lucky Enchant Stone: S-grade Armor -->
 					</item>
 					<item chance="0.65">
-						<item id="14704" count="1" /> <!-- Lucky Enchant Stone: Weapon (B-grade) -->
+						<item id="14704" count="1" /> <!-- Lucky Enchant Stone: B-grade Weapon -->
 					</item>
 					<item chance="0.325">
-						<item id="14705" count="1" /> <!-- Lucky Enchant Stone: Weapon (A-grade) -->
+						<item id="14705" count="1" /> <!-- Lucky Enchant Stone: A-grade Weapon -->
 					</item>
 					<item chance="0.025">
-						<item id="14706" count="1" /> <!-- Lucky Enchant Stone: Weapon (S-grade) -->
+						<item id="14706" count="1" /> <!-- Lucky Enchant Stone: S-grade Weapon -->
 					</item>
 					<item chance="0.6">
-						<item id="14678" count="1" /> <!-- Neolithic Crystal (B-grade) -->
+						<item id="14678" count="1" /> <!-- B-grade Neolithic Crystal -->
 					</item>
 					<item chance="0.26">
-						<item id="14679" count="1" /> <!-- Neolithic Crystal (A-grade) -->
+						<item id="14679" count="1" /> <!-- A-grade Neolithic Crystal -->
 					</item>
 					<item chance="0.13">
-						<item id="14680" count="1" /> <!-- Neolithic Crystal (S-grade) -->
+						<item id="14680" count="1" /> <!-- S-grade Neolithic Crystal -->
 					</item>
 					<item chance="0.01">
 						<item id="14681" count="1" /> <!-- Neolithic Crystal (S80-grade) -->
@@ -2526,10 +2526,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="40.0">
-						<item id="14700" count="3" /> <!-- Superior Healing Potion -->
+						<item id="14700" count="3" /> <!-- Superior HP Replenishing Potion -->
 					</item>
 					<item chance="26.0">
-						<item id="14701" count="3" /> <!-- Superior Quick Healing Potion -->
+						<item id="14701" count="3" /> <!-- Superior Quick HP Replenishing Potion -->
 					</item>
 					<item chance="4.0">
 						<item id="9625" count="1" /> <!-- Lesser Giant's Codex - Oblivion -->
@@ -2538,40 +2538,40 @@
 						<item id="9626" count="1" /> <!-- Lesser Giant's Codex - Discipline -->
 					</item>
 					<item chance="6.0">
-						<item id="14716" count="1" /> <!-- Superior Elixir Gift Box (B-grade) -->
+						<item id="14716" count="1" /> <!-- Superior B-grade Elixir Gift Box -->
 					</item>
 					<item chance="6.0">
-						<item id="14717" count="1" /> <!-- Superior Elixir Gift Box (A-grade) -->
+						<item id="14717" count="1" /> <!-- Superior A-grade Elixir Gift Box -->
 					</item>
 					<item chance="6.0">
-						<item id="14718" count="1" /> <!-- Superior Elixir Gift Box (S-grade) -->
+						<item id="14718" count="1" /> <!-- Superior S-grade Elixir Gift Box -->
 					</item>
 					<item chance="3.9">
-						<item id="14709" count="1" /> <!-- Lucky Enchant Stone: Armor (B-grade) -->
+						<item id="14709" count="1" /> <!-- Lucky Enchant Stone: B-grade Armor -->
 					</item>
 					<item chance="1.95">
-						<item id="14710" count="1" /> <!-- Lucky Enchant Stone: Armor (A-grade) -->
+						<item id="14710" count="1" /> <!-- Lucky Enchant Stone: A-grade Armor -->
 					</item>
 					<item chance="0.15">
-						<item id="14711" count="1" /> <!-- Lucky Enchant Stone: Armor (S-grade) -->
+						<item id="14711" count="1" /> <!-- Lucky Enchant Stone: S-grade Armor -->
 					</item>
 					<item chance="0.65">
-						<item id="14704" count="1" /> <!-- Lucky Enchant Stone: Weapon (B-grade) -->
+						<item id="14704" count="1" /> <!-- Lucky Enchant Stone: B-grade Weapon -->
 					</item>
 					<item chance="0.325">
-						<item id="14705" count="1" /> <!-- Lucky Enchant Stone: Weapon (A-grade) -->
+						<item id="14705" count="1" /> <!-- Lucky Enchant Stone: A-grade Weapon -->
 					</item>
 					<item chance="0.025">
-						<item id="14706" count="1" /> <!-- Lucky Enchant Stone: Weapon (S-grade) -->
+						<item id="14706" count="1" /> <!-- Lucky Enchant Stone: S-grade Weapon -->
 					</item>
 					<item chance="0.6">
-						<item id="14678" count="1" /> <!-- Neolithic Crystal (B-grade) -->
+						<item id="14678" count="1" /> <!-- B-grade Neolithic Crystal -->
 					</item>
 					<item chance="0.26">
-						<item id="14679" count="1" /> <!-- Neolithic Crystal (A-grade) -->
+						<item id="14679" count="1" /> <!-- A-grade Neolithic Crystal -->
 					</item>
 					<item chance="0.13">
-						<item id="14680" count="1" /> <!-- Neolithic Crystal (S-grade) -->
+						<item id="14680" count="1" /> <!-- S-grade Neolithic Crystal -->
 					</item>
 					<item chance="0.01">
 						<item id="14681" count="1" /> <!-- Neolithic Crystal (S80-grade) -->
@@ -2644,7 +2644,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="2869" toLevel="1" name="Event - Summon Scroll: Milk Cow">
+	<skill id="2869" toLevel="1" name="Scroll: Summon Milk Cow - Event">
 		<icon>icon.etc_scroll_of_return_i00</icon>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2667,7 +2667,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2870" toLevel="1" name="Event - Summon Scroll: Milk Cow Captain">
+	<skill id="2870" toLevel="1" name="Scroll: Summon Milk Cow Captain - Event">
 		<icon>icon.etc_scroll_of_return_i00</icon>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2754,7 +2754,7 @@
 		</effects>
 	</skill>
 	<skill id="2874" toLevel="1" name="Wind Walk">
-		<!-- Increases Speed by 60 for 33 min. -->
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2775,7 +2775,7 @@
 		</effects>
 	</skill>
 	<skill id="2875" toLevel="1" name="Haste">
-		<!-- Increases Atk. Spd. by 33% for 60 min. -->
+		<!-- Atk. Spd. +33% for 60 min. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2817,7 +2817,7 @@
 		</effects>
 	</skill>
 	<skill id="2877" toLevel="1" name="Berserker Spirit">
-		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 min. -->
+		<!-- For 60 min., P. Def. -8%, M. Def. -16%, and P. Evasion -4. P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Speed +8. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2887,7 +2887,7 @@
 		</effects>
 	</skill>
 	<skill id="2879" toLevel="1" name="Acumen">
-		<!-- Increases Casting Spd. by 30% for 60 min. -->
+		<!-- Casting Spd. +30% for 60 min. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -2907,7 +2907,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2880" toLevel="1" name="Event - Summon Scroll: Gloomy Milk Cow">
+	<skill id="2880" toLevel="1" name="Scroll: Summon Gloomy Milk Cow - Event">
 		<icon>icon.etc_scroll_of_return_i00</icon>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2927,7 +2927,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2881" toLevel="1" name="Event - Summon Scroll: Gloomy Milk Cow Captain">
+	<skill id="2881" toLevel="1" name="Scroll: Summon Gloomy Milk Cow Captain - Event">
 		<icon>icon.etc_scroll_of_return_i00</icon>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2994,7 +2994,7 @@
 		</effects>
 	</skill>
 	<skill id="2883" toLevel="1" name="Vitality Recovering Potion">
-		<!-- Recovers Vitality upon acquiring XP for 10 min. -->
+		<!-- For 10 min., Vitality is recovered when acquiring XP. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -3020,7 +3020,7 @@
 		</conditions>
 	</skill>
 	<skill id="2884" toLevel="1" name="Vitality Recovering Potion">
-		<!-- Recovers Vitality upon acquiring XP for 20 min. -->
+		<!-- For 20 min., Vitality is recovered when acquiring XP. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -3046,7 +3046,7 @@
 		</conditions>
 	</skill>
 	<skill id="2885" toLevel="1" name="Shield">
-		<!-- For 60 min., P. Def. +15%. -->
+		<!-- P. Def. +15% for 60 min. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -3067,7 +3067,7 @@
 		</effects>
 	</skill>
 	<skill id="2886" toLevel="1" name="Focus">
-		<!-- Increases Critical Rate by 30% for 60 min. -->
+		<!-- For 60 min., Critical Rate for standard attacks +30%. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -3088,7 +3088,7 @@
 		</effects>
 	</skill>
 	<skill id="2887" toLevel="1" name="Death Whisper">
-		<!-- Increases Critical Damage by 35% for 60 min. -->
+		<!-- For 60 min., Critical Damage for standard attacks +35%. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -3109,7 +3109,7 @@
 		</effects>
 	</skill>
 	<skill id="2888" toLevel="1" name="Guidance">
-		<!-- For 60 min., Accuracy +2. -->
+		<!-- For 60 min., P. Accuracy +4. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -3183,7 +3183,7 @@
 		</effects>
 	</skill>
 	<skill id="2891" toLevel="6" name="Concentration">
-		<!-- Decreases magic cancel damage by 53 for 60 min. -->
+		<!-- Casting Interruption Rate -42 for 20 min. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -3203,7 +3203,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2892" toLevel="1" name="Event - Extra Pass: Rim Kamaloka">
+	<skill id="2892" toLevel="1" name="Extra Pass: Rim Kamaloka - Event">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14765</itemConsumeId> <!-- For Events - Extra Entrance Pass - Rim Kamaloka -->
@@ -3294,11 +3294,11 @@
 					</item>
 					<item chance="40">
 						<item id="14769" count="5" /> <!-- Valentine's Day Candy -->
-						<item id="14773" count="1" /> <!-- Formal Wear (14-day) - 14-day -->
+						<item id="14773" count="1" /> <!-- Formal Wear - 14-day -->
 					</item>
 					<item chance="50">
 						<item id="14769" count="5" /> <!-- Valentine's Day Candy -->
-						<item id="14776" count="1" /> <!-- Agathion - Juju (14-day) - 14-day -->
+						<item id="14776" count="1" /> <!-- Agathion Chuchu - 14-day -->
 					</item>
 				</items>
 			</effect>
@@ -3329,7 +3329,7 @@
 					</item>
 					<item chance="50">
 						<item id="14769" count="1" /> <!-- Valentine's Day Candy -->
-						<item id="14775" count="1" /> <!-- Agathion - Love - 14-day -->
+						<item id="14775" count="1" /> <!-- Agathion Love - 14-day -->
 					</item>
 				</items>
 			</effect>

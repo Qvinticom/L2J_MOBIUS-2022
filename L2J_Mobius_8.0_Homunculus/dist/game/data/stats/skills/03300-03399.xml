@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3300" toLevel="1" name="Yellow Talisman - Speed">
-		<!-- Increases Speed when equipped. -->
+		<!-- Increases Speed, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -14,7 +14,7 @@
 		</effects>
 	</skill>
 	<skill id="3301" toLevel="1" name="Yellow Talisman - Atk. Spd.">
-		<!-- Increases Atk. Spd. when equipped. -->
+		<!-- Increases Atk. Spd., when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -27,7 +27,7 @@
 		</effects>
 	</skill>
 	<skill id="3302" toLevel="1" name="Yellow Talisman - Casting Spd.">
-		<!-- Increases Casting Spd. -->
+		<!-- Increases Casting Spd., when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -40,7 +40,7 @@
 		</effects>
 	</skill>
 	<skill id="3303" toLevel="1" name="White Talisman - Bleed Resistance">
-		<!-- Increases Infection Resistance when the talisman is equipped. -->
+		<!-- Increases Infection Resistance, when equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -52,7 +52,7 @@
 		</effects>
 	</skill>
 	<skill id="3304" toLevel="1" name="White Talisman - Sleep Resistance">
-		<!-- Increases Stupor Resistance when the talisman is equipped. -->
+		<!-- Increases Stupor Resistance, when equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -64,7 +64,7 @@
 		</effects>
 	</skill>
 	<skill id="3305" toLevel="1" name="White Talisman - Stun Resistance">
-		<!-- Increases Confusion Resistance when the talisman is equipped. -->
+		<!-- Increases Confusion Resistance, when equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -76,7 +76,7 @@
 		</effects>
 	</skill>
 	<skill id="3306" toLevel="1" name="White Talisman - Bravery">
-		<!-- Increases Confusion Resistance when the talisman is equipped. -->
+		<!-- Increases Confusion Resistance, when equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -88,7 +88,7 @@
 		</effects>
 	</skill>
 	<skill id="3307" toLevel="1" name="White Talisman - Paralysis Resistance">
-		<!-- Increases Resistance to paralysis when equipped. -->
+		<!-- Increases Paralysis Resistance, when equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -100,7 +100,7 @@
 		</effects>
 	</skill>
 	<skill id="3308" toLevel="1" name="White Talisman - Hold Resistance">
-		<!-- Increases Hold Resistance when equipped. -->
+		<!-- Increases Stun Resistance, when equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -112,7 +112,7 @@
 		</effects>
 	</skill>
 	<skill id="3309" toLevel="1" name="White Talisman - Cancel Resistance">
-		<!-- Increases Resistance to buff-lifting attack when equipped. -->
+		<!-- Increases Buff Cancel Resistance, when equipped. -->
 		<icon>icon.etc_talisman_i06</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -125,7 +125,7 @@
 		</effects>
 	</skill>
 	<skill id="3310" toLevel="1" name="Yellow Talisman - HP Regeneration">
-		<!-- Increases HP Recovery Bonus when a talisman is equipped. -->
+		<!-- Increases HP Recovery Rate, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -138,7 +138,7 @@
 		</effects>
 	</skill>
 	<skill id="3311" toLevel="1" name="Yellow Talisman - CP Regeneration">
-		<!-- Increases CP Recovery Bonus when a talisman is equipped. -->
+		<!-- Increases CP Recovery Rate, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -151,7 +151,7 @@
 		</effects>
 	</skill>
 	<skill id="3312" toLevel="1" name="Yellow Talisman - Healing">
-		<!-- Increases power of HP regeneration magic when equipped. -->
+		<!-- Increases Healing Power, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -164,7 +164,7 @@
 		</effects>
 	</skill>
 	<skill id="3313" toLevel="1" name="Yellow Talisman - Alacrity">
-		<!-- Increases P. Atk., M. Atk., and Speed when equipped. -->
+		<!-- Increases P./ M. Atk. and Speed, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -184,8 +184,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3314" toLevel="1" name="Grey Talisman - Weight Training">
-		<!-- Increases weight limit when equipped. -->
+	<skill id="3314" toLevel="1" name="Grey Talisman - Weight Limit">
+		<!-- Increases Weight Limit, when equipped. -->
 		<icon>icon.etc_talisman_i07</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -198,14 +198,14 @@
 		</effects>
 	</skill>
 	<skill id="3315" toLevel="1" name="Grey Talisman - Mid-grade Fishing">
-		<!-- Gives fishing expertise (Lv.8) when equipped. Effect does not stack. -->
+		<!-- Enables Fishing Expertise Lv. 8. Effects of two identical talismans do not stack. -->
 		<icon>icon.etc_talisman_i07</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3316" toLevel="1" name="Yellow Talisman - Critical Dodging">
-		<!-- Decreases Critical Rate of the opponent's regular attack when equipped. -->
+		<!-- Decreases Received P. Critical Rate when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -218,7 +218,7 @@
 		</effects>
 	</skill>
 	<skill id="3317" toLevel="1" name="Yellow Talisman - Critical Reduction">
-		<!-- Decreases damage of a critical regular attack when equipped. -->
+		<!-- Decreases Received Critical Damage from standard attacks. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -256,7 +256,7 @@
 		</effects>
 	</skill>
 	<skill id="3319" toLevel="1" name="Divine Protection of Ring">
-		<!-- Immune to gust when equipped with ring. -->
+		<!-- Immune to Wind, when the ring is equipped. -->
 		<magicLevel>86</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -267,7 +267,7 @@
 		</effects>
 	</skill>
 	<skill id="3320" toLevel="1" name="Yellow Talisman - MP Regeneration">
-		<!-- Increases MP Recovery Bonus when a talisman is equipped. -->
+		<!-- Increases MP Recovery Rate, when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLevel>55</magicLevel>
 		<operateType>P</operateType>
@@ -280,7 +280,7 @@
 		</effects>
 	</skill>
 	<skill id="3321" toLevel="1" name="Blue Talisman - Evasion">
-		<!-- Use the power of the Talisman to increase the Evasion rate and decrease the chance of receiving a critical attack. -->
+		<!-- Increases P. Evasion and decreases Received P. Critical Rate, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -310,7 +310,7 @@
 		</effects>
 	</skill>
 	<skill id="3322" toLevel="1" name="Iron Bracelet">
-		<!-- 1 Talisman can be equipped. -->
+		<!-- Unlocks 1 talisman slot. -->
 		<icon>icon.etc_rbracelet_c_i00</icon>
 		<magicLevel>20</magicLevel>
 		<operateType>P</operateType>
@@ -322,7 +322,7 @@
 		</effects>
 	</skill>
 	<skill id="3323" toLevel="1" name="Bronze Bracelet">
-		<!-- 2 Talisman can be equipped. -->
+		<!-- Unlocks 2 talisman slots. -->
 		<icon>icon.etc_rbracelet_b_i01</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -334,7 +334,7 @@
 		</effects>
 	</skill>
 	<skill id="3324" toLevel="1" name="Steel Bracelet">
-		<!-- 3 Talisman can be equipped. -->
+		<!-- Unlocks 3 talisman slots. -->
 		<icon>icon.etc_rbracelet_a_i02</icon>
 		<magicLevel>52</magicLevel>
 		<operateType>P</operateType>
@@ -350,7 +350,7 @@
 		</effects>
 	</skill>
 	<skill id="3325" toLevel="1" name="Mithril Bracelet">
-		<!-- 4 Talisman can be equipped. -->
+		<!-- Unlocks 4 talisman slots. -->
 		<icon>icon.etc_rbracelet_s_i03</icon>
 		<magicLevel>61</magicLevel>
 		<operateType>P</operateType>
@@ -362,7 +362,7 @@
 		</effects>
 	</skill>
 	<skill id="3326" toLevel="1" name="Jewelry Bracelet">
-		<!-- 5 Talisman can be equipped. -->
+		<!-- Unlocks 5 talisman slots. -->
 		<magicLevel>76</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -373,7 +373,7 @@
 		</effects>
 	</skill>
 	<skill id="3327" toLevel="1" name="Oriharukon Bracelet">
-		<!-- 6 Talisman can be equipped. -->
+		<!-- Unlocks 6 talisman slots. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -483,7 +483,7 @@
 		</effects>
 	</skill>
 	<skill id="3332" toLevel="1" name="Orange Talisman - Hot Springs CP Potion">
-		<!-- Create 1 Hot Springs CP Potion with the power of the Talisman. Consumes 16 Soulstone. -->
+		<!-- Creates 1 Hot Springs CP Potion, when the talisman is equipped. Requires 16 Soulstones. -->
 		<icon>icon.etc_talisman_i04</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -511,8 +511,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3333" toLevel="1" name="Orange Talisman - Elixir of Life (A-grade)">
-		<!-- Create 1 Elixir of Life A with power of the Talisman. Consumes 50 Soulstone. -->
+	<skill id="3333" toLevel="1" name="Orange Talisman - A-grade Elixir of Life">
+		<!-- Creates 1 Elixir of Life, when the talisman is equipped. Requires 50 Soulstones. -->
 		<icon>icon.etc_talisman_i04</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -540,8 +540,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3334" toLevel="1" name="Orange Talisman - Elixir of Mind (A-grade)">
-		<!-- Create 1 Elixir of Mind A with the power of the Talisman. Consumes 57 Soulstone. -->
+	<skill id="3334" toLevel="1" name="Orange Talisman - A-grade Elixir of Mind">
+		<!-- Creates 1 Elixir of Mind, when the talisman is equipped. Requires 57 Soulstones. -->
 		<icon>icon.etc_talisman_i04</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -747,7 +747,7 @@
 		</effects>
 	</skill>
 	<skill id="3349" toLevel="1" name="Dynasty Breastplate">
-		<!-- Increases P. Atk, Max HP, Critical Rate, Dark Resistance, and Critical Damage. -->
+		<!-- Increases P. Atk., Max HP, Critical Rate/ Damage for standard attacks, and Dark Resistance. -->
 		<icon>icon.armor_t91_uw_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -804,7 +804,7 @@
 		</effects>
 	</skill>
 	<skill id="3351" toLevel="1" name="Dynasty Breastplate">
-		<!-- Attack ability/ Max HP/ Dark Resistance increases. Consumption of MP decreases. -->
+		<!-- Increases P. Atk., Max HP, Dark Resistance. Decreases Song/ Dance MP Consumption. -->
 		<icon>icon.armor_t91_uke_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -831,7 +831,7 @@
 		</effects>
 	</skill>
 	<skill id="3352" toLevel="1" name="Dynasty Leather Armor">
-		<!-- Increases Evasion, Max HP, Atk. Spd., and Hold Resistance. -->
+		<!-- Increases P. Evasion, Max HP, Atk. Spd., and Hold Resistance. -->
 		<icon>icon.armor_t92_ud_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -860,7 +860,7 @@
 		</effects>
 	</skill>
 	<skill id="3353" toLevel="1" name="Dynasty Leather Armor">
-		<!-- Increases Accuracy/ Max MP/ Atk. Spd./ MP Recovery Rate/ Dark Resistance. -->
+		<!-- Increases P. Accuracy, Max MP, Atk. Spd., MP Recovery Rate, and Dark Resistance. -->
 		<icon>icon.armor_t92_ub_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -881,7 +881,7 @@
 			</effect>
 			<effect name="MpRegen">
 				<amount>1.72</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>8</amount>
@@ -890,7 +890,7 @@
 		</effects>
 	</skill>
 	<skill id="3354" toLevel="1" name="Dynasty Tunic">
-		<!-- Increases Casting Spd./ Max MP/ Heal Power/ Dark Resistance, and decreases magic cancel rate against damage. -->
+		<!-- Increases Casting Spd., Max MP, Healing Power, Dark Resistance, and decreases Casting Interruption Rate. -->
 		<icon>icon.armor_t93_uh_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1082,7 +1082,7 @@
 		</effects>
 	</skill>
 	<skill id="3361" toLevel="1" name="Agathion Summon - Fortress">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1099,25 +1099,25 @@
 		</effects>
 	</skill>
 	<skill id="3362" toLevel="1" name="Stat Enhancing Necklace">
-		<!-- Increases weighted value to Stun attack. -->
+		<!-- Increases Confusion Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3363" toLevel="1" name="Stat Enhancing Ring">
-		<!-- Increases weighted value to Stun attack. -->
+		<!-- Increases Confusion Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3364" toLevel="1" name="Stat Enhancing Earring">
-		<!-- Increases weighted value to Stun attack. -->
+		<!-- Increases Confusion Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3365" toLevel="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Stun Resistance value. -->
+		<!-- Increases Confusion Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1128,7 +1128,7 @@
 		</effects>
 	</skill>
 	<skill id="3366" toLevel="1" name="Dynasty Resistance Ring">
-		<!-- Increases Stun Resistance value. -->
+		<!-- Increases Confusion Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1139,7 +1139,7 @@
 		</effects>
 	</skill>
 	<skill id="3367" toLevel="1" name="Dynasty Resistance Earring">
-		<!-- Increases Stun Resistance value. -->
+		<!-- Increases Confusion Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1150,25 +1150,25 @@
 		</effects>
 	</skill>
 	<skill id="3368" toLevel="1" name="Stat Enhancing Necklace">
-		<!-- Increases the power of bleed attacks. -->
+		<!-- Increases Infection Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3369" toLevel="1" name="Stat Enhancing Ring">
-		<!-- Increases the power of bleed attacks. -->
+		<!-- Increases Infection Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3370" toLevel="1" name="Stat Enhancing Earring">
-		<!-- Increases the power of bleed attacks. -->
+		<!-- Increases Infection Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3371" toLevel="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Bleed Resistance. -->
+		<!-- Increases Infection Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1179,7 +1179,7 @@
 		</effects>
 	</skill>
 	<skill id="3372" toLevel="1" name="Dynasty Resistance Ring">
-		<!-- Increases Bleed Resistance. -->
+		<!-- Increases Infection Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1190,7 +1190,7 @@
 		</effects>
 	</skill>
 	<skill id="3373" toLevel="1" name="Dynasty Resistance Earring">
-		<!-- Increases Bleed Resistance. -->
+		<!-- Increases Infection Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1201,25 +1201,25 @@
 		</effects>
 	</skill>
 	<skill id="3374" toLevel="1" name="Stat Enhancing Necklace">
-		<!-- Increases the power of poison attacks. -->
+		<!-- Increases Infection Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3375" toLevel="1" name="Stat Enhancing Ring">
-		<!-- Increases the power of poison attacks. -->
+		<!-- Increases Infection Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3376" toLevel="1" name="Stat Enhancing Earring">
-		<!-- Increases the power of poison attacks. -->
+		<!-- Increases Infection Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3377" toLevel="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Poison Resistance. -->
+		<!-- Increases Infection Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1230,7 +1230,7 @@
 		</effects>
 	</skill>
 	<skill id="3378" toLevel="1" name="Dynasty Resistance Ring">
-		<!-- Increases Poison Resistance. -->
+		<!-- Increases Infection Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1241,7 +1241,7 @@
 		</effects>
 	</skill>
 	<skill id="3379" toLevel="1" name="Dynasty Resistance Earring">
-		<!-- Increases Poison Resistance. -->
+		<!-- Increases Infection Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1252,25 +1252,25 @@
 		</effects>
 	</skill>
 	<skill id="3380" toLevel="1" name="Stat Enhancing Necklace">
-		<!-- Increases the power of paralysis attacks. -->
+		<!-- Increases Confusion Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3381" toLevel="1" name="Stat Enhancing Ring">
-		<!-- Increases the power of paralysis attacks. -->
+		<!-- Increases Confusion Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3382" toLevel="1" name="Stat Enhancing Earring">
-		<!-- Increases the power of paralysis attacks. -->
+		<!-- Increases Confusion Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3383" toLevel="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Paralysis Resistance. -->
+		<!-- Increases Confusion Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1281,7 +1281,7 @@
 		</effects>
 	</skill>
 	<skill id="3384" toLevel="1" name="Dynasty Resistance Ring">
-		<!-- Increases Paralysis Resistance. -->
+		<!-- Increases Confusion Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1292,7 +1292,7 @@
 		</effects>
 	</skill>
 	<skill id="3385" toLevel="1" name="Dynasty Resistance Earring">
-		<!-- Increases Paralysis Resistance. -->
+		<!-- Increases Confusion Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1303,25 +1303,25 @@
 		</effects>
 	</skill>
 	<skill id="3386" toLevel="1" name="Stat Enhancing Necklace">
-		<!-- Increases the power of hold attacks. -->
+		<!-- Increases Obstruction Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3387" toLevel="1" name="Stat Enhancing Ring">
-		<!-- Increases the power of hold attacks. -->
+		<!-- Increases Obstruction Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3388" toLevel="1" name="Stat Enhancing Earring">
-		<!-- Increases the power of hold attacks. -->
+		<!-- Increases Obstruction Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3389" toLevel="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Hold Resistance. -->
+		<!-- Increases Obstruction Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1332,7 +1332,7 @@
 		</effects>
 	</skill>
 	<skill id="3390" toLevel="1" name="Dynasty Resistance Ring">
-		<!-- Increases Hold Resistance. -->
+		<!-- Increases Obstruction Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1343,7 +1343,7 @@
 		</effects>
 	</skill>
 	<skill id="3391" toLevel="1" name="Dynasty Resistance Earring">
-		<!-- Increases Hold Resistance. -->
+		<!-- Increases Obstruction Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1354,25 +1354,25 @@
 		</effects>
 	</skill>
 	<skill id="3392" toLevel="1" name="Stat Enhancing Necklace">
-		<!-- Increases the power of sleep attacks. -->
+		<!-- Increases Stupor Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3393" toLevel="1" name="Stat Enhancing Ring">
-		<!-- Increases the power of sleep attacks. -->
+		<!-- Increases Stupor Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3394" toLevel="1" name="Stat Enhancing Earring">
-		<!-- Increases the power of sleep attacks. -->
+		<!-- Increases Stupor Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3395" toLevel="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Sleep Resistance. -->
+		<!-- Increases Stupor Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1383,7 +1383,7 @@
 		</effects>
 	</skill>
 	<skill id="3396" toLevel="1" name="Dynasty Resistance Ring">
-		<!-- Increases Sleep Resistance. -->
+		<!-- Increases Stupor Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1394,7 +1394,7 @@
 		</effects>
 	</skill>
 	<skill id="3397" toLevel="1" name="Dynasty Resistance Earring">
-		<!-- Increases Sleep Resistance. -->
+		<!-- Increases Stupor Resistance. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1405,13 +1405,13 @@
 		</effects>
 	</skill>
 	<skill id="3398" toLevel="1" name="Stat Enhancing Necklace">
-		<!-- Increases the power of mental attacks. -->
+		<!-- Increases Confusion Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3399" toLevel="1" name="Stat Enhancing Ring">
-		<!-- Increases the power of mental attacks. -->
+		<!-- Increases Confusion Atk. Power. -->
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

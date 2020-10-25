@@ -609,7 +609,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3238" name="Mark of Prosperity" type="EtcItem">
-		<!-- Mark given to those who have passed the Testimony of Prosperity. Occupation change related item. -->
+		<!-- A mark given to those who have passed the Testimony of Prosperity. Required for the class change. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

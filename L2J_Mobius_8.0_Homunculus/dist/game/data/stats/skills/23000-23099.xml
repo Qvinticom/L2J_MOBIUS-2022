@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23000" toLevel="1" name="Majo Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -16,7 +16,7 @@
 		</conditions>
 	</skill>
 	<skill id="23001" toLevel="1" name="Gold Majo Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -31,7 +31,7 @@
 		</conditions>
 	</skill>
 	<skill id="23002" toLevel="1" name="Black Majo Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -46,7 +46,7 @@
 		</conditions>
 	</skill>
 	<skill id="23003" toLevel="1" name="Plaipitak Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -60,7 +60,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23004" toLevel="1" name="Majo Agathion Special Skill: Mysterious Power">
+	<skill id="23004" toLevel="1" name="Agathion Majo's Special Skill: Mysterious Power">
 		<!-- A mysterious power that no one knows. Use with caution! -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>0</abnormalLevel>
@@ -148,7 +148,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23008" toLevel="1" name="Plaipitak Agathion Special Skill: Blessed Escape">
+	<skill id="23008" toLevel="1" name="Agathion Plaipitak's Special Skill: Blessed Escape Power">
 		<!-- Blessed Escape is available. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -170,7 +170,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23009" toLevel="1" name="Plaipitak Agathion Special Skill: Blessed Resurrection">
+	<skill id="23009" toLevel="1" name="Agathion Plaipitak's Special Skill: Blessed Resurrection Power">
 		<!-- Blessed Resurrection is available. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -194,8 +194,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23010" toLevel="1" name="Baby Panda Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23010" toLevel="1" name="Agathion Baby Panda's Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -210,7 +210,7 @@
 		</conditions>
 	</skill>
 	<skill id="23011" toLevel="1" name="Bamboo Panda Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -225,7 +225,7 @@
 		</conditions>
 	</skill>
 	<skill id="23012" toLevel="1" name="Sexy Panda Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -239,7 +239,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23013" toLevel="1" name="Baby Panda Agathion Special Skill: Mysterious Power">
+	<skill id="23013" toLevel="1" name="Agathion Baby Panda's Special Skill: Mysterious Power">
 		<!-- A mysterious power that no one knows. Use with caution! -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>0</abnormalLevel>
@@ -260,7 +260,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="23014" toLevel="1" name="Bamboo Panda Agathion Special Skill: Blessed Resurrection">
+	<skill id="23014" toLevel="1" name="Agathion Bamboo Panda's Special Skill: Blessed Resurrection Power">
 		<!-- Blessed Resurrection is available. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -284,7 +284,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23015" toLevel="1" name="Sexy Panda Agathion Special Skill: Blessed Escape">
+	<skill id="23015" toLevel="1" name="Agathion Sexy Panda's Special Skill: Blessed Escape Power">
 		<!-- Blessed Escape is available. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -616,7 +616,7 @@
 		</effects>
 	</skill>
 	<skill id="23025" toLevel="1" name="Charming Cupid Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -631,7 +631,7 @@
 		</conditions>
 	</skill>
 	<skill id="23026" toLevel="1" name="Naughty Cupid Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -645,8 +645,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23027" toLevel="1" name="White Maneki Neko Agathion Cute Trick I">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23027" toLevel="1" name="Agathion White Maneki Neko: Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -661,7 +661,7 @@
 		</conditions>
 	</skill>
 	<skill id="23028" toLevel="1" name="Black Maneki Neko Agathion Cute Trick I">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -676,7 +676,7 @@
 		</conditions>
 	</skill>
 	<skill id="23029" toLevel="1" name="Brown Maneki Neko Agathion Cute Trick I">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -764,8 +764,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23033" toLevel="1" name="One-eyed Bat Drove Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23033" toLevel="1" name="Agathion One-eyed Bat Drove's Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -779,8 +779,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23034" toLevel="1" name="One-eyed Bat Drove Agathion Special Skill: Ability of Dark Attack Resistance">
-		<!-- Increases Dark Attack Resistance by 30 for 5 min. Cooldown is 1 h. -->
+	<skill id="23034" toLevel="1" name="Agathion One-eyed Bat Drove's Special Skill: Dark Resistance">
+		<!-- For 5 min., Dark Resistance +30. Skill Cooldown: 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -807,7 +807,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23035" toLevel="1" name="One-eyed Bat Drove Agathion Special Skill: Ability of Vitality Recovery">
+	<skill id="23035" toLevel="1" name="Agathion One-eyed Bat Drove's Special Skill: Vitality Recovery">
 		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
@@ -836,7 +836,7 @@
 		</effects>
 	</skill>
 	<skill id="23036" toLevel="1" name="Pegasus Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -851,7 +851,7 @@
 		</conditions>
 	</skill>
 	<skill id="23037" toLevel="1" name="Pegasus Agathion Special Skill: Ability of Wind Walk">
-		<!-- Increases Speed by 33 for 5 min. Cooldown is 4 h. -->
+		<!-- For 5 min., Speed +33. Skill Cooldown: 4 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -901,7 +901,7 @@
 		</effects>
 	</skill>
 	<skill id="23039" toLevel="1" name="Yellow-robed Tojigong Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -916,7 +916,7 @@
 		</conditions>
 	</skill>
 	<skill id="23040" toLevel="1" name="Blue-robed Tojigong Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -931,7 +931,7 @@
 		</conditions>
 	</skill>
 	<skill id="23041" toLevel="1" name="Green-robed Tojigong Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1032,7 +1032,7 @@
 		</effects>
 	</skill>
 	<skill id="23045" toLevel="1" name="Bugbear Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1046,8 +1046,8 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23046" toLevel="1" name="White Maneki Neko Agathion Cute Trick II">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23046" toLevel="1" name="Agathion White Maneki Neko: Cute Trick 2">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1062,7 +1062,7 @@
 		</conditions>
 	</skill>
 	<skill id="23047" toLevel="1" name="Black Maneki Neko Agathion Cute Trick II">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1077,7 +1077,7 @@
 		</conditions>
 	</skill>
 	<skill id="23048" toLevel="1" name="Brown Maneki Neko Agathion Cute Trick II">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1092,7 +1092,7 @@
 		</conditions>
 	</skill>
 	<skill id="23049" toLevel="1" name="Red Sumo Wrestler Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1107,7 +1107,7 @@
 		</conditions>
 	</skill>
 	<skill id="23050" toLevel="1" name="Blue Sumo Wrestler Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1122,7 +1122,7 @@
 		</conditions>
 	</skill>
 	<skill id="23051" toLevel="1" name="Great Sumo Match Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1137,7 +1137,7 @@
 		</conditions>
 	</skill>
 	<skill id="23052" toLevel="1" name="Button-eyed Bear Doll Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1152,7 +1152,7 @@
 		</conditions>
 	</skill>
 	<skill id="23053" toLevel="1" name="God of Fortune Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1167,7 +1167,7 @@
 		</conditions>
 	</skill>
 	<skill id="23054" toLevel="1" name="Agathion Cute Trick - Dryad">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1182,7 +1182,7 @@
 		</conditions>
 	</skill>
 	<skill id="23055" toLevel="1" name="Wonboso Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1197,7 +1197,7 @@
 		</conditions>
 	</skill>
 	<skill id="23056" toLevel="1" name="Daewoonso Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1237,7 +1237,7 @@
 		</effects>
 	</skill>
 	<skill id="23058" toLevel="1" name="Blue Sumo Wrestler Agathion Special Skill: Wild Magic Ability">
-		<!-- For 5 min., increases by 2 the occurrence rate of damage that is caused by magic damage. Cooldown is 1 h. -->
+		<!-- For 5 min., M. Critical Rate +2. Skill Cooldown: 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1318,7 +1318,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23062" toLevel="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Blessed Resurrection">
+	<skill id="23062" toLevel="1" name="Agathion Button-eyed Bear Doll's Special Skill: Blessed Resurrection Power">
 		<!-- Blessed Resurrection is available. Cooldown: 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1399,7 +1399,7 @@
 		</effects>
 	</skill>
 	<skill id="23065" toLevel="1" name="Wonboso Agathion Special Skill: Wind Walk Ability">
-		<!-- Increases Speed by 20 for 5 min. Cooldown is 1 h. -->
+		<!-- For 5 min., Speed +20. Skill Cooldown: 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1459,7 +1459,7 @@
 		</effects>
 	</skill>
 	<skill id="23067" toLevel="1" name="Agathion Cute Trick - Pomona">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1539,7 +1539,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23070" toLevel="1" name="Red Flame">
+	<skill id="23070" toLevel="1" name="Red Fire">
 		<!-- Spirit's power: Cannot damage the spirit for 10 sec. Exclusive use for the Reckless Fire Spirit. -->
 		<icon>icon.skill0211</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -1569,7 +1569,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23071" toLevel="1" name="Blue Flame">
+	<skill id="23071" toLevel="1" name="Blue Fire">
 		<!-- Spirit's power: Cannot damage the spirit for 8 sec. Exclusive use for the Fire Spirit. -->
 		<icon>icon.skill0213</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1599,7 +1599,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23072" toLevel="1" name="Eva's Authority">
+	<skill id="23072" toLevel="1" name="Eva's Will">
 		<!-- For 70 sec., attacks the spirit using Eva's Authority. -->
 		<icon>BranchSys.icon.br_power_of_eva_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1698,7 +1698,7 @@
 		</conditions>
 	</skill>
 	<skill id="23076" toLevel="1" name="Weaver Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1713,7 +1713,7 @@
 		</conditions>
 	</skill>
 	<skill id="23077" toLevel="1" name="Weaver Agathion Special Skill: Power of the Golden Calf">
-		<!-- For 20 min., receives help from the Golden Calf. Increases party members' Max HP by 60%, Max MP by 60%, Max CP by 60%, P. Def. by 30%, M. Def. by 30%, Speed by 30, and P. Atk. by 20%. Decreases MP consumption during skill use by 10%. Cooldown 5 min. Consumes 1 Girl's Soulstone during skill use. -->
+		<!-- For 20 min., party members' Max HP +60%, Max MP +60%, Max CP +60%, P. Def. +30%, M. Def. +30%, Speed +30, P. Atk. +20%, Skill MP Consumption -10%. Cooldown: 5 min. Consumes 1 Girl's Soulstone. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1785,7 +1785,7 @@
 		</effects>
 	</skill>
 	<skill id="23078" toLevel="1" name="Weaver Agathion Special Skill: Flute Sound">
-		<!-- For 20 min., through the magic of the mysterious flute sound, increases party members' Max HP by 40%, Max MP by 40%, Max CP by 40%, P. Def. by 30%, M. Def. by 30%, Speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. Cooldown 5 min. Consumes 1 Girl's Soulstone during skill use. -->
+		<!-- For 20 min., party members' Max HP +40%, Max MP +40%, Max CP +40%, P. Def. +30%, M. Def. +30%, Speed +20, P. Atk. +45%, Skill MP Consumption -10%. Cooldown: 5 min. Consumes 1 Girl's Soulstone. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1857,7 +1857,7 @@
 		</effects>
 	</skill>
 	<skill id="23079" toLevel="1" name="Lucky Girl Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1913,7 +1913,7 @@
 		</effects>
 	</skill>
 	<skill id="23081" toLevel="1" name="Lucky Boy Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1968,8 +1968,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23083" toLevel="1" name="Dancing Child Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+	<skill id="23083" toLevel="1" name="Agathion Dancing Lucky Kid: Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1983,7 +1983,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23084" toLevel="1" name="Dancing Child Agathion Special Skill: Prominent Adventurer Soul's Ability">
+	<skill id="23084" toLevel="1" name="Agathion Dancing Lucky Kid's Special Skill: Prominent Adventurer Soul's Ability">
 		<!-- For 5 min., receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP recovery bonus by 20% and MP recovery bonus by 20%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>26</abnormalLevel>
@@ -2025,7 +2025,7 @@
 		</effects>
 	</skill>
 	<skill id="23085" toLevel="1" name="Agathion Cute Trick - Monkey King">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2081,7 +2081,7 @@
 		</effects>
 	</skill>
 	<skill id="23087" toLevel="1" name="Uthanka Agathion Skill">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2137,7 +2137,7 @@
 		</effects>
 	</skill>
 	<skill id="23089" toLevel="1" name="Bonus B Agathion Cute Trick">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->

@@ -22,7 +22,7 @@
 		</stats>
 	</item>
 	<item id="11401" name="Blue Wolf Gloves" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases Max MP and MP Recovery Rate. -->
+		<!-- Masterwork item that increases Max MP and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t70_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -43,7 +43,7 @@
 		</stats>
 	</item>
 	<item id="11402" name="Blue Wolf Tunic" type="Armor">
-		<!-- Masterwork Item that increases Max MP and MP Recovery Rate. -->
+		<!-- Masterwork item that increases Max MP and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t70_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -86,7 +86,7 @@
 		</stats>
 	</item>
 	<item id="11404" name="Blue Wolf Stockings" type="Armor">
-		<!-- Masterwork Item that increases Max MP and MP Recovery Rate. -->
+		<!-- Masterwork item that increases Max MP and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t70_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -131,7 +131,7 @@
 		</stats>
 	</item>
 	<item id="11406" name="Stockings of Doom" type="Armor">
-		<!-- Masterwork Item that increases Speed, Breath Gauge and MP Recovery Rate. -->
+		<!-- Masterwork item that increases Speed, breath gauge and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t73_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -154,7 +154,7 @@
 		</stats>
 	</item>
 	<item id="11407" name="Dark Crystal Gaiters" type="Armor">
-		<!-- Masterwork Item that increases heal power and Paralysis resistance. -->
+		<!-- Masterwork Item that increases heal power and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t74_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -176,7 +176,7 @@
 		</stats>
 	</item>
 	<item id="11408" name="Dark Crystal Gloves" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases heal power and Paralysis resistance. -->
+		<!-- Masterwork Item that increases heal power and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -197,7 +197,7 @@
 		</stats>
 	</item>
 	<item id="11409" name="Dark Crystal Gloves" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., Atk. Spd. and Paralysis resistance. -->
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd. and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -218,7 +218,7 @@
 		</stats>
 	</item>
 	<item id="11410" name="Dark Crystal Gloves" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases P. Def. and Speed and decreases Magic Cancel Rate and Paralysis Resistance -->
+		<!-- Masterwork item. Increases P. Def., Speed, and Confusion Resistance. Decreases Casting Interruption Rate. -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -239,7 +239,7 @@
 		</stats>
 	</item>
 	<item id="11411" name="Dark Crystal Leather Armor" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., Atk. Spd. and Paralysis resistance. -->
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd. and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -261,7 +261,7 @@
 		</stats>
 	</item>
 	<item id="11412" name="Dark Crystal Robe" type="Armor">
-		<!-- Masterwork Item that increases P. Def., Casting Spd. and Speed, and decreases casting interrupt and Paralysis resistance. -->
+		<!-- Masterwork item that increases P. Def., Casting Spd., Speed, and Confusion Resistance, and decreases Casting Interruption Rate. -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -284,7 +284,7 @@
 		</stats>
 	</item>
 	<item id="11413" name="Dark Crystal Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases heal power and Paralysis resistance. -->
+		<!-- Masterwork Item that increases heal power and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -305,7 +305,7 @@
 		</stats>
 	</item>
 	<item id="11414" name="Dark Crystal Boots" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., Atk. Spd. and Paralysis resistance. -->
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd. and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -326,7 +326,7 @@
 		</stats>
 	</item>
 	<item id="11415" name="Dark Crystal Boots" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases P. Def. and Speed and decreases Magic Cancel Rate and Paralysis Resistance -->
+		<!-- Masterwork item. Increases P. Def., Speed, and Confusion Resistance. Decreases Casting Interruption Rate. -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -347,7 +347,7 @@
 		</stats>
 	</item>
 	<item id="11416" name="Dark Crystal Shield" type="Armor">
-		<!-- Increases Resistance to attack magic by 2%. -->
+		<!-- Magic Resistance +2%. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -370,7 +370,7 @@
 		</stats>
 	</item>
 	<item id="11417" name="Dark Crystal Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases heal power and Paralysis resistance. -->
+		<!-- Masterwork Item that increases heal power and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -391,7 +391,7 @@
 		</stats>
 	</item>
 	<item id="11418" name="Dark Crystal Breastplate" type="Armor">
-		<!-- Masterwork Item that increases heal power and Paralysis resistance. -->
+		<!-- Masterwork Item that increases heal power and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t74_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -413,7 +413,7 @@
 		</stats>
 	</item>
 	<item id="11419" name="Dark Crystal Leggings" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., Atk. Spd. and Paralysis resistance. -->
+		<!-- Masterwork Item that increases P. Atk., Atk. Spd. and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t75_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -435,7 +435,7 @@
 		</stats>
 	</item>
 	<item id="11420" name="Sealed Dark Crystal Gaiters" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t74_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -454,7 +454,7 @@
 		</stats>
 	</item>
 	<item id="11421" name="Sealed Dark Crystal Gloves" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t74_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -472,7 +472,7 @@
 		</stats>
 	</item>
 	<item id="11422" name="Sealed Dark Crystal Leather Armor" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t75_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -491,7 +491,7 @@
 		</stats>
 	</item>
 	<item id="11423" name="Sealed Dark Crystal Robe" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t76_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -511,7 +511,7 @@
 		</stats>
 	</item>
 	<item id="11424" name="Sealed Dark Crystal Boots" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t74_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -529,7 +529,7 @@
 		</stats>
 	</item>
 	<item id="11425" name="Sealed Dark Crystal Shield" type="Armor">
-		<!-- Sealed Masterwork Item. A village blacksmith can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -549,7 +549,7 @@
 		</stats>
 	</item>
 	<item id="11426" name="Sealed Dark Crystal Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -566,7 +566,7 @@
 		</stats>
 	</item>
 	<item id="11427" name="Sealed Dark Crystal breastplate" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t74_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -585,7 +585,7 @@
 		</stats>
 	</item>
 	<item id="11428" name="Sealed Dark Crystal Leggings" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t75_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -604,7 +604,7 @@
 		</stats>
 	</item>
 	<item id="11429" name="Sealed Tallum Gloves" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t77_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -622,7 +622,7 @@
 		</stats>
 	</item>
 	<item id="11430" name="Sealed Tallum Leather Armor" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t78_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -641,7 +641,7 @@
 		</stats>
 	</item>
 	<item id="11431" name="Sealed Tallum Boots" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t77_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -659,7 +659,7 @@
 		</stats>
 	</item>
 	<item id="11432" name="Sealed Tallum Tunic" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t79_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -679,7 +679,7 @@
 		</stats>
 	</item>
 	<item id="11433" name="Sealed Tallum Plate Armor" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t77_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -698,7 +698,7 @@
 		</stats>
 	</item>
 	<item id="11434" name="Sealed Tallum Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -715,7 +715,7 @@
 		</stats>
 	</item>
 	<item id="11435" name="Sealed Tallum Stockings" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t79_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -735,7 +735,7 @@
 		</stats>
 	</item>
 	<item id="11436" name="(Not in Use) Holy Spirit's Cloak" type="Armor">
-		<!-- Masterwork Item. -->
+		<!-- Masterwork item. -->
 		<set name="icon" val="icon.armor_back09" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -752,7 +752,7 @@
 		</stats>
 	</item>
 	<item id="11437" name="Tallum Gloves" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/ Bleed Resistance -->
+		<!-- Masterwork Item that increases Atk. Spd., P. Atk., Weight Limit and Infection Resistance. -->
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -773,7 +773,7 @@
 		</stats>
 	</item>
 	<item id="11438" name="Tallum Gloves" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Poison/ Bleed Resistance -->
+		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Infection Resistance. -->
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -794,7 +794,7 @@
 		</stats>
 	</item>
 	<item id="11439" name="Tallum Gloves" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases M. Def. and Poison/ Bleed Resistance -->
+		<!-- Masterwork Item that increases M. Def. and Infection Resistance. -->
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -815,7 +815,7 @@
 		</stats>
 	</item>
 	<item id="11440" name="Tallum Leather Armor" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Poison/ Bleed Resistance -->
+		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Infection Resistance. -->
 		<set name="icon" val="icon.armor_t78_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -837,7 +837,7 @@
 		</stats>
 	</item>
 	<item id="11441" name="Tallum Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/ Bleed Resistance -->
+		<!-- Masterwork Item that increases Atk. Spd., P. Atk., Weight Limit and Infection Resistance. -->
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -858,7 +858,7 @@
 		</stats>
 	</item>
 	<item id="11442" name="Tallum Boots" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Poison/ Bleed Resistance -->
+		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Infection Resistance. -->
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -879,7 +879,7 @@
 		</stats>
 	</item>
 	<item id="11443" name="Tallum Boots" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases M. Def. and Poison/ Bleed Resistance -->
+		<!-- Masterwork Item that increases M. Def. and Infection Resistance. -->
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -923,7 +923,7 @@
 		</stats>
 	</item>
 	<item id="11445" name="Tallum Plate Armor" type="Armor">
-		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/ Bleed Resistance -->
+		<!-- Masterwork Item that increases Atk. Spd., P. Atk., Weight Limit and Infection Resistance. -->
 		<set name="icon" val="icon.armor_t77_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -945,7 +945,7 @@
 		</stats>
 	</item>
 	<item id="11446" name="Tallum Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/ Bleed Resistance -->
+		<!-- Masterwork Item that increases Atk. Spd., P. Atk., Weight Limit and Infection Resistance. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -965,7 +965,7 @@
 		</stats>
 	</item>
 	<item id="11447" name="Tallum Stockings" type="Armor">
-		<!-- Masterwork Item that increases M. Def. and Poison/ Bleed Resistance -->
+		<!-- Masterwork Item that increases M. Def. and Infection Resistance. -->
 		<set name="icon" val="icon.armor_t79_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -988,7 +988,7 @@
 		</stats>
 	</item>
 	<item id="11448" name="Majestic Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., Accuracy and Stun Resistance -->
+		<!-- Masterwork Item that increases P. Atk., P. Accuracy and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1009,7 +1009,7 @@
 		</stats>
 	</item>
 	<item id="11449" name="Majestic Gauntlets" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases Bow/ Crossbow P. Atk. and Max MP, and decreases Weight Limit and increases Stun Resistance -->
+		<!-- Masterwork Item that increases Bow/ Crossbow P. Atk. and Max MP, Weight Limit and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1030,7 +1030,7 @@
 		</stats>
 	</item>
 	<item id="11450" name="Majestic Gauntlets" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases Max MP, MP Recovery Rate, and Stun Resistance. -->
+		<!-- Masterwork item that increases Max MP, MP Recovery Rate and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1051,7 +1051,7 @@
 		</stats>
 	</item>
 	<item id="11451" name="Majestic Leather Armor" type="Armor">
-		<!-- Masterwork Item that increases Bow/ Crossbow P. Atk. and Max MP, and decreases Weight Limit and increases Stun Resistance -->
+		<!-- Masterwork Item that increases Bow/ Crossbow P. Atk. and Max MP, Weight Limit and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t84_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1073,7 +1073,7 @@
 		</stats>
 	</item>
 	<item id="11452" name="Majestic Robe" type="Armor">
-		<!-- Masterwork Item that increases Max MP, Casting Spd., MP Recovery Rate and Stun Resistance -->
+		<!-- Masterwork item that increases Max MP, Casting Spd., MP Recovery Rate and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t85_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1096,7 +1096,7 @@
 		</stats>
 	</item>
 	<item id="11453" name="Majestic Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., Accuracy and Stun Resistance -->
+		<!-- Masterwork Item that increases P. Atk., P. Accuracy and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1117,7 +1117,7 @@
 		</stats>
 	</item>
 	<item id="11454" name="Majestic Boots" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases Bow/ Crossbow P. Atk. and Max MP, and decreases Weight Limit and increases Stun Resistance -->
+		<!-- Masterwork Item that increases Bow/ Crossbow P. Atk. and Max MP, Weight Limit and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1138,7 +1138,7 @@
 		</stats>
 	</item>
 	<item id="11455" name="Majestic Boots" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases Max MP, MP Recovery Rate, and Stun Resistance. -->
+		<!-- Masterwork item that increases Max MP, MP Recovery Rate and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1159,7 +1159,7 @@
 		</stats>
 	</item>
 	<item id="11456" name="Majestic Circlet" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item with Stun Resistance. P. Atk. and Accuracy are increased. -->
+		<!-- Masterwork Item that increases P. Atk., P. Accuracy and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1179,7 +1179,7 @@
 		</stats>
 	</item>
 	<item id="11457" name="Majestic Plate Armor" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., Accuracy and Stun Resistance -->
+		<!-- Masterwork Item that increases P. Atk., P. Accuracy and Confusion Resistance. -->
 		<set name="icon" val="icon.armor_t83_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1201,7 +1201,7 @@
 		</stats>
 	</item>
 	<item id="11458" name="Sealed Majestic Gauntlets" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t83_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1219,7 +1219,7 @@
 		</stats>
 	</item>
 	<item id="11459" name="Sealed Majestic Leather Armor" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t84_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1238,7 +1238,7 @@
 		</stats>
 	</item>
 	<item id="11460" name="Sealed Majestic Robe" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t85_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1258,7 +1258,7 @@
 		</stats>
 	</item>
 	<item id="11461" name="Sealed Majestic Boots" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t83_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1276,7 +1276,7 @@
 		</stats>
 	</item>
 	<item id="11462" name="Sealed Majestic Circlet" additionalName="Heavy Armor" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1293,7 +1293,7 @@
 		</stats>
 	</item>
 	<item id="11463" name="Sealed Majestic Plate Armor" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t83_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1312,7 +1312,7 @@
 		</stats>
 	</item>
 	<item id="11464" name="Sealed Armor of Nightmare" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t80_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1331,7 +1331,7 @@
 		</stats>
 	</item>
 	<item id="11465" name="Sealed Gauntlets of Nightmare" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t80_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1349,7 +1349,7 @@
 		</stats>
 	</item>
 	<item id="11466" name="Sealed Leather Armor of Nightmare" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t81_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1368,7 +1368,7 @@
 		</stats>
 	</item>
 	<item id="11467" name="Sealed Robe of Nightmare" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t82_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1388,7 +1388,7 @@
 		</stats>
 	</item>
 	<item id="11468" name="Sealed Boots of Nightmare" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t80_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1406,7 +1406,7 @@
 		</stats>
 	</item>
 	<item id="11469" name="Sealed Shield of Nightmare" type="Armor">
-		<!-- Sealed Masterwork Item. A village blacksmith can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1426,7 +1426,7 @@
 		</stats>
 	</item>
 	<item id="11470" name="Sealed Helm of Nightmare" additionalName="Heavy Armor" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1443,7 +1443,7 @@
 		</stats>
 	</item>
 	<item id="11471" name="Armor of Nightmare" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., and Sleep/ Hold Resistance. -->
+		<!-- Masterwork Item that increases P. Atk. and Stupor/ Obstruction Resistance. -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1465,7 +1465,7 @@
 		</stats>
 	</item>
 	<item id="11472" name="Gauntlets of Nightmare" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., and Sleep/ Hold Resistance. -->
+		<!-- Masterwork Item that increases P. Atk. and Stupor/ Obstruction Resistance. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1486,7 +1486,7 @@
 		</stats>
 	</item>
 	<item id="11473" name="Gauntlets of Nightmare" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases M. Def. and Sleep/ Hold Resistance. -->
+		<!-- Masterwork Item that increases M. Def. and Obstruction/ Stupor Resistance. -->
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1507,7 +1507,7 @@
 		</stats>
 	</item>
 	<item id="11474" name="Gauntlets of Nightmare" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, M. Atk., and Sleep/ Hold Resistance. -->
+		<!-- Masterwork item that increases MP Recovery Rate, M. Atk. and Stupor/ Obstruction Resistance. -->
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1528,7 +1528,7 @@
 		</stats>
 	</item>
 	<item id="11475" name="Leather Armor of Nightmare" type="Armor">
-		<!-- Sleep/ Hold Resistance and M. Def. are increased. Has a chance of using some of the damage inflicted upon the enemy to restore one's own HP. Excludes damage from skill and ranged attacks. -->
+		<!-- Increases M. Def. and Stupor/ Obstruction Resistance. Has a chance of using some of the damage inflicted upon the enemy to restore one's own HP. -->
 		<set name="icon" val="icon.armor_t81_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1550,7 +1550,7 @@
 		</stats>
 	</item>
 	<item id="11476" name="Robe of Nightmare" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, M. Atk., and Sleep/ Hold Resistance. -->
+		<!-- Masterwork item that increases MP Recovery Rate, M. Atk. and Stupor/ Obstruction Resistance. -->
 		<set name="icon" val="icon.armor_t82_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1573,7 +1573,7 @@
 		</stats>
 	</item>
 	<item id="11477" name="Boots of Nightmare" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., and Sleep/ Hold Resistance. -->
+		<!-- Masterwork Item that increases P. Atk. and Stupor/ Obstruction Resistance. -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1594,7 +1594,7 @@
 		</stats>
 	</item>
 	<item id="11478" name="Boots of Nightmare" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item with Sleep/ Hold Resistance and M. Def. are increased. -->
+		<!-- Increases M. Def. and Stupor/ Obstruction Resistance. -->
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1615,7 +1615,7 @@
 		</stats>
 	</item>
 	<item id="11479" name="Boots of Nightmare" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, M. Atk., and Sleep/ Hold Resistance. -->
+		<!-- Masterwork item that increases MP Recovery Rate, M. Atk. and Stupor/ Obstruction Resistance. -->
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1636,7 +1636,7 @@
 		</stats>
 	</item>
 	<item id="11480" name="Shield of Nightmares" type="Armor">
-		<!-- Increases Resistance to attack magic by 2%. -->
+		<!-- Magic Resistance +2%. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1659,7 +1659,7 @@
 		</stats>
 	</item>
 	<item id="11481" name="Helm of Nightmare" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item with Sleep/ Hold Resistance and P. Atk. are increased. -->
+		<!-- Increases P. Atk. and Stupor/ Obstruction Resistance. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1786,7 +1786,7 @@
 		</stats>
 	</item>
 	<item id="11487" name="Major Arcana Gloves" type="Armor">
-		<!-- Masterwork Item that increases M. Atk. and Speed, and decreases casting interrupt, Stun Resistance and Weight Limit. -->
+		<!-- Masterwork Item that increases M. Atk., Speed, Confusion Resistance and Weight Limit. Decreases Casting Interruption Rate. -->
 		<set name="icon" val="icon.armor_t90_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1808,7 +1808,7 @@
 		</stats>
 	</item>
 	<item id="11488" name="Major Arcana Robe" type="Armor">
-		<!-- Masterwork Item that increases M. Atk. and Speed, and decreases casting interrupt, Stun Resistance and Weight Limit. -->
+		<!-- Masterwork Item that increases M. Atk., Speed, Confusion Resistance and Weight Limit. Decreases Casting Interruption Rate. -->
 		<set name="icon" val="icon.armor_t90_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1832,7 +1832,7 @@
 		</stats>
 	</item>
 	<item id="11489" name="Major Arcana Boots" type="Armor">
-		<!-- Masterwork Item that increases M. Atk. and Speed, and decreases casting interrupt, Stun Resistance and Weight Limit. -->
+		<!-- Masterwork Item that increases M. Atk., Speed, Confusion Resistance and Weight Limit. Decreases Casting Interruption Rate. -->
 		<set name="icon" val="icon.armor_t90_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1854,7 +1854,7 @@
 		</stats>
 	</item>
 	<item id="11490" name="Major Arcana Circlet" type="Armor">
-		<!-- Masterwork Item that increases M. Atk. and Speed, and decreases casting interrupt, Stun Resistance and Weight Limit. -->
+		<!-- Masterwork Item that increases M. Atk., Speed, Confusion Resistance and Weight Limit. Decreases Casting Interruption Rate. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1875,7 +1875,7 @@
 		</stats>
 	</item>
 	<item id="11491" name="Sealed Draconic Leather Gloves" type="Armor">
-		<!-- Sealed Masterwork Item -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t89_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1894,7 +1894,7 @@
 		</stats>
 	</item>
 	<item id="11492" name="Sealed Draconic Leather Boots" type="Armor">
-		<!-- Sealed Masterwork Item -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t89_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1913,7 +1913,7 @@
 		</stats>
 	</item>
 	<item id="11493" name="Sealed Draconic Leather Armor" type="Armor">
-		<!-- Sealed Masterwork Item -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t89_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1933,7 +1933,7 @@
 		</stats>
 	</item>
 	<item id="11494" name="Sealed Draconic Leather Helmet" type="Armor">
-		<!-- Sealed Masterwork Item -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1951,7 +1951,7 @@
 		</stats>
 	</item>
 	<item id="11495" name="Sealed Major Arcana Gloves" type="Armor">
-		<!-- Sealed Masterwork Item -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t90_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1970,7 +1970,7 @@
 		</stats>
 	</item>
 	<item id="11496" name="Sealed Major Arcana Robe" type="Armor">
-		<!-- Sealed Masterwork Item -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t90_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1991,7 +1991,7 @@
 		</stats>
 	</item>
 	<item id="11497" name="Sealed Major Arcana Boots" type="Armor">
-		<!-- Sealed Masterwork Item -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t90_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2010,7 +2010,7 @@
 		</stats>
 	</item>
 	<item id="11498" name="Sealed Major Arcana Circlet" type="Armor">
-		<!-- Sealed Masterwork Item -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2028,7 +2028,7 @@
 		</stats>
 	</item>
 	<item id="11499" name="Sealed Imperial Crusader Gaiters" type="Armor">
-		<!-- Sealed Masterwork Item -->
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t88_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

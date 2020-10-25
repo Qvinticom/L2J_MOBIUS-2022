@@ -337,7 +337,7 @@
 		</effects>
 	</skill>
 	<skill id="13816" toLevel="2" name="Kelbim's Dagger">
-		<!-- PvP Damage +$s1, Max HP +$s2, Attack +$s3, Atk. Spd. +$s4, and P. Critical Damage +$s5. Reflects $s6 of Damage received. -->
+		<!-- PvP Damage +$s1, Max HP +$s2, P. Atk. +$s3, Atk. Spd. +$s4, and Critical Damage for standard attacks +$s5. Reflects $s6 of the received damage. -->
 		<icon>
 			<value level="1">icon.weapon_kelbim_cutter_i01</value>
 			<value level="2">icon.kelbim_weapon_cutter_high</value>
@@ -387,7 +387,7 @@
 		</effects>
 	</skill>
 	<skill id="13817" toLevel="2" name="Kelbim Dual Dagger">
-		<!-- PvP Damage +$s1, Max HP +$s2, Attack +$s3, Atk. Spd. +$s4, and P. Critical Damage +$s5. Reflects $s6 of Damage received. -->
+		<!-- PvP Damage +$s1, Max HP +$s2, P. Atk. +$s3, Atk. Spd. +$s4, and Critical Damage for standard attacks +$s5. Reflects $s6 of the received damage. -->
 		<icon>
 			<value level="1">icon.weapon_kelbim_dual_dagger_i01</value>
 			<value level="2">icon.kelbim_weapon_dual_dagger_high</value>
@@ -437,7 +437,7 @@
 		</effects>
 	</skill>
 	<skill id="13818" toLevel="2" name="Kelbim's Bow">
-		<!-- PvP Damage +$s1, Max HP +$s2, Attack +$s3, Atk. Spd. +$s4, and P. Critical Damage +$s5. Reflects $s6 of Damage received. -->
+		<!-- PvP Damage +$s1, Max HP +$s2, P. Atk. +$s3, Atk. Spd. +$s4, and Critical Damage for standard attacks +$s5. Reflects $s6 of the received damage. -->
 		<icon>
 			<value level="1">icon.weapon_kelbim_bow_i01</value>
 			<value level="2">icon.kelbim_weapon_bow_high</value>
@@ -487,7 +487,7 @@
 		</effects>
 	</skill>
 	<skill id="13819" toLevel="2" name="Kelbim's Crossbow">
-		<!-- PvP Damage +$s1, Max HP +$s2, Attack +$s3, Atk. Spd. +$s4, and P. Critical Damage +$s5. Reflects $s6 of Damage received. -->
+		<!-- PvP Damage +$s1, Max HP +$s2, P. Atk. +$s3, Atk. Spd. +$s4, and Critical Damage for standard attacks +$s5. Reflects $s6 of the received damage. -->
 		<icon>
 			<value level="1">icon.weapon_kelbim_crossbow_i01</value>
 			<value level="2">icon.kelbim_weapon_crossbow_high</value>
@@ -537,7 +537,7 @@
 		</effects>
 	</skill>
 	<skill id="13820" toLevel="1" name="Spirit of Kelbim">
-		<!-- Ignores the target's CP and inflicts 6903 damage in PvP. Consumes 4 Spirit Ore. -->
+		<!-- Ignores the target's CP and inflicts $s1 damage. Consumes 4 Spirit Ore. -->
 		<icon>icon.kelbim_weapon_cutter_high</icon>
 		<operateType>A1</operateType>
 		<mpConsume>279</mpConsume>
@@ -607,8 +607,8 @@
 			<value level="2">0</value>
 		</isMagic>
 	</skill>
-	<skill id="13827" toLevel="2" name="Christmas Talisman - ALL STAT (High)">
-		<!-- All Stats +$s1 with the power of Talisman. -->
+	<skill id="13827" toLevel="2" name="Christmas Talisman - All Stats (High)">
+		<!-- All stats +$s1, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -670,8 +670,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13828" toLevel="1" name="Christmas Talisman - Critical Damage">
-		<!-- P. Skill Critical Damage +7% with the power of Talisman. -->
+	<skill id="13828" toLevel="1" name="Christmas Talisman - P. Skill Critical Damage">
+		<!-- P. Skill Critical Damage +7%, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -682,7 +682,7 @@
 		</effects>
 	</skill>
 	<skill id="13829" toLevel="1" name="Christmas Talisman - M. Skill Critical Damage">
-		<!-- M. Skill Critical Damage +7% with the power of Talisman. -->
+		<!-- M. Skill Critical Damage +7%, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -722,7 +722,7 @@
 		</effects>
 	</skill>
 	<skill id="13831" toLevel="1" name="Christmas Talisman - Debuff Resistance">
-		<!-- Defends against 5 Debuffs for 15 sec. -->
+		<!-- For 15 sec., blocks 5 debuff attacks when used. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -744,7 +744,7 @@
 		</effects>
 	</skill>
 	<skill id="13832" toLevel="1" name="Christmas Talisman - P. Atk.">
-		<!-- P. Atk. +5% with the power of Talisman. -->
+		<!-- P. Atk. +5%, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -755,7 +755,7 @@
 		</effects>
 	</skill>
 	<skill id="13833" toLevel="1" name="Christmas Talisman - M. Atk.">
-		<!-- M. Atk. +5% with the power of Talisman. -->
+		<!-- M. Atk. +5%, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -766,7 +766,7 @@
 		</effects>
 	</skill>
 	<skill id="13834" toLevel="1" name="Christmas Talisman - P. Def">
-		<!-- P. Def. +7% with the power of Talisman. -->
+		<!-- P. Def. +7%, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -777,7 +777,7 @@
 		</effects>
 	</skill>
 	<skill id="13835" toLevel="1" name="Christmas Talisman - M. Def.">
-		<!-- M. Def. +7% with the power of Talisman. -->
+		<!-- M. Def. +7%, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -788,7 +788,7 @@
 		</effects>
 	</skill>
 	<skill id="13836" toLevel="1" name="Christmas Talisman - Attribute Resistance">
-		<!-- All Attribute Resistance +30 with the power of Talisman. -->
+		<!-- Attribute Resistance +30, when the talisman is equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -819,7 +819,7 @@
 		</effects>
 	</skill>
 	<skill id="13837" toLevel="13" name="Shadow Cutter">
-		<!-- Atk. Spd +$s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>
 			<value level="1">icon.weapon_shadow_onehand_sword</value>
 			<value level="2">icon.weapon_shadow_onehand_sword</value>
@@ -891,7 +891,7 @@
 		</effects>
 	</skill>
 	<skill id="13838" toLevel="13" name="Shadow Slasher">
-		<!-- Atk. Spd +$s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>
 			<value level="1">icon.weapon_shadow_twohand_sword</value>
 			<value level="2">icon.weapon_shadow_twohand_sword</value>
@@ -963,7 +963,7 @@
 		</effects>
 	</skill>
 	<skill id="13839" toLevel="13" name="Shadow Fighter">
-		<!-- Atk. Spd +$s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>
 			<value level="1">icon.weapon_shadow_fist</value>
 			<value level="2">icon.weapon_shadow_fist</value>
@@ -1035,7 +1035,7 @@
 		</effects>
 	</skill>
 	<skill id="13840" toLevel="13" name="Shadow Stormer">
-		<!-- Atk. Spd +$s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>
 			<value level="1">icon.weapon_shadow_spear</value>
 			<value level="2">icon.weapon_shadow_spear</value>
@@ -1114,7 +1114,7 @@
 		</effects>
 	</skill>
 	<skill id="13841" toLevel="13" name="Shadow Dual Sword">
-		<!-- Atk. Spd +$s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>
 			<value level="1">icon.weapon_shadow_dual_sword</value>
 			<value level="2">icon.weapon_shadow_dual_sword</value>
@@ -1186,7 +1186,7 @@
 		</effects>
 	</skill>
 	<skill id="13842" toLevel="13" name="Shadow Shaper">
-		<!-- Atk. Spd +$s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>
 			<value level="1">icon.weapon_shadow_dagger</value>
 			<value level="2">icon.weapon_shadow_dagger</value>
@@ -1258,7 +1258,7 @@
 		</effects>
 	</skill>
 	<skill id="13843" toLevel="13" name="Shadow Thrower">
-		<!-- Atk. Spd +$s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>
 			<value level="1">icon.weapon_shadow_bow</value>
 			<value level="2">icon.weapon_shadow_bow</value>
@@ -1330,7 +1330,7 @@
 		</effects>
 	</skill>
 	<skill id="13844" toLevel="13" name="Shadow Shooter">
-		<!-- Atk. Spd +$s1. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>
 			<value level="1">icon.weapon_shadow_crossbow</value>
 			<value level="2">icon.weapon_shadow_crossbow</value>
@@ -1546,7 +1546,7 @@
 		</effects>
 	</skill>
 	<skill id="13847" toLevel="1" name="PvE Damage Increase">
-		<!-- NPC Damage +10%. -->
+		<!-- PvE Damage +10%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1738,7 +1738,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13857" toLevel="15" name="Wrath">
+	<skill id="13857" toLevel="15" name="Fury">
 		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
@@ -1764,7 +1764,7 @@
 		</effects>
 	</skill>
 	<skill id="13858" toLevel="15" name="Focus">
-		<!-- P. Critical Rate +$s1. -->
+		<!-- Critical Rate for standard attacks +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1789,7 +1789,7 @@
 		</effects>
 	</skill>
 	<skill id="13859" toLevel="15" name="Death">
-		<!-- P. Critical Damage +$s1. -->
+		<!-- Critical Damage for standard attacks +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1814,7 +1814,7 @@
 		</effects>
 	</skill>
 	<skill id="13860" toLevel="15" name="Hunter">
-		<!-- P. Skills Critical Rate +$s1. -->
+		<!-- P. Skill Critical Rate +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1914,7 +1914,7 @@
 		</effects>
 	</skill>
 	<skill id="13864" toLevel="15" name="Acumen">
-		<!-- Casting Spd. +$s1 -->
+		<!-- Casting Spd. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1938,8 +1938,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13865" toLevel="15" name="Savagery">
-		<!-- M. Critical Rate +$s1. -->
+	<skill id="13865" toLevel="15" name="Wild">
+		<!-- M. Skill Critical Rate +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1964,7 +1964,7 @@
 		</effects>
 	</skill>
 	<skill id="13866" toLevel="15" name="Mystic">
-		<!-- M. Critical Damage +$s1. -->
+		<!-- M. Skill Critical Damage +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2014,7 +2014,7 @@
 		</effects>
 	</skill>
 	<skill id="13868" toLevel="15" name="Speed Focus">
-		<!-- Atk. Spd. +$s1, P. Critical Rate +$s2 -->
+		<!-- Atk. Spd. +$s1, Critical Rate for standard attacks +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2052,7 +2052,7 @@
 		</effects>
 	</skill>
 	<skill id="13869" toLevel="15" name="Speed Death">
-		<!-- Atk. Spd. +$s1, P. Critical Damage +$s2 -->
+		<!-- Atk. Spd. +$s1, Critical Damage for standard attacks +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2097,7 +2097,7 @@
 		</effects>
 	</skill>
 	<skill id="13870" toLevel="15" name="Speed Hunter">
-		<!-- Atk. Spd. +$s1, P. Skill Critical Rate +$s2 -->
+		<!-- Atk. Spd. +$s1, P. Skill Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2142,7 +2142,7 @@
 		</effects>
 	</skill>
 	<skill id="13871" toLevel="15" name="Speed Fire">
-		<!-- Atk. Spd. +$s1, P. Skill Critical Damage +$s2 -->
+		<!-- Atk. Spd. +$s1, P. Skill Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2187,7 +2187,7 @@
 		</effects>
 	</skill>
 	<skill id="13872" toLevel="15" name="Speed Body">
-		<!-- Atk. Spd. +$s1, Max HP +$s2 -->
+		<!-- Atk. Spd. +$s1, Max HP +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2232,7 +2232,7 @@
 		</effects>
 	</skill>
 	<skill id="13873" toLevel="15" name="Critical Death">
-		<!-- P. Critical Rate +$s1 , P. Critical Damage +$s2 -->
+		<!-- Critical Rate for standard attacks +$s1, Critical Damage for standard attacks +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2270,7 +2270,7 @@
 		</effects>
 	</skill>
 	<skill id="13874" toLevel="15" name="Critical Hunter">
-		<!-- P. Critical Rate +$s1, P. Skill Critical Rate +$s2 -->
+		<!-- Critical Rate for standard attacks +$s1, P. Skill Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2308,7 +2308,7 @@
 		</effects>
 	</skill>
 	<skill id="13875" toLevel="15" name="Critical Fire">
-		<!-- P. Critical Rate +$s1, P. Skill Critical Damage +$s2 -->
+		<!-- Critical Rate for standard attacks +$s1, P. Skill Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2346,7 +2346,7 @@
 		</effects>
 	</skill>
 	<skill id="13876" toLevel="15" name="Critical Body">
-		<!-- P. Critical Rate +$s1, Max HP +$s2 -->
+		<!-- Critical Rate for standard attacks +$s1, Max HP +$s2. -->
 		<icon>icon.ensoul_big_pp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2384,7 +2384,7 @@
 		</effects>
 	</skill>
 	<skill id="13877" toLevel="15" name="Acumen Wild">
-		<!-- Casting Spd. +$s1, M. Critical Rate +$s2 -->
+		<!-- Casting Spd. +$s1, M. Skill Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_mm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2429,7 +2429,7 @@
 		</effects>
 	</skill>
 	<skill id="13878" toLevel="15" name="Acumen Mystic">
-		<!-- Casting Spd. +$s1, M. Critical Damage +$s2 -->
+		<!-- Casting Spd. +$s1, M. Skill Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_mm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2474,7 +2474,7 @@
 		</effects>
 	</skill>
 	<skill id="13879" toLevel="15" name="Acumen Soul">
-		<!-- Casting Spd. +$s1, Max MP +$s2 -->
+		<!-- Casting Spd. +$s1, Max MP +$s2. -->
 		<icon>icon.ensoul_big_mm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2518,8 +2518,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13880" toLevel="15" name="Wid. Mystic">
-		<!-- M. Critical Rate +$s1, M. Critical Damage +$s2 -->
+	<skill id="13880" toLevel="15" name="Wild Mystic">
+		<!-- M. Skill Critical Rate +$s1, M. Skill Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_mm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2563,8 +2563,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13881" toLevel="15" name="Wid. Soul">
-		<!-- M. Critical Rate +$s1, Max MP +$s2. -->
+	<skill id="13881" toLevel="15" name="Wild Soul">
+		<!-- M. Skill Critical Rate +$s1, Max MP +$s2. -->
 		<icon>icon.ensoul_big_mm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2654,7 +2654,7 @@
 		</effects>
 	</skill>
 	<skill id="13883" toLevel="15" name="HP-Savagery">
-		<!-- Max HP +$s1, M. Critical Rate +$s2. -->
+		<!-- Max HP +$s1, M. Skill Critical Rate +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2699,7 +2699,7 @@
 		</effects>
 	</skill>
 	<skill id="13884" toLevel="15" name="HP Mystic">
-		<!-- Max HP +$s1, M. Critical Damage +$s2 -->
+		<!-- Max HP +$s1, M. Skill Critical Damage +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2834,7 +2834,7 @@
 		</effects>
 	</skill>
 	<skill id="13887" toLevel="15" name="MP Focus">
-		<!-- Max MP +$s1, P. Critical Rate +$s2. -->
+		<!-- Max MP +$s1, Critical Rate for standard attacks +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2886,7 +2886,7 @@
 		</effects>
 	</skill>
 	<skill id="13888" toLevel="15" name="MP Death">
-		<!-- Max MP +$s1, P. Critical Damage +$s2. -->
+		<!-- Max MP +$s1, Critical Damage for standard attacks +$s2. -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3026,7 +3026,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13892" toLevel="1" name="Critical Stun">
-		<!-- Stun with a certain rate and increased PvP damage during Critical -->
+		<!-- A chance to stun after a critical attack. PvP damage increased. -->
 		<icon>icon.ensoul_big_old</icon>
 		<operateType>P</operateType>
 	</skill>

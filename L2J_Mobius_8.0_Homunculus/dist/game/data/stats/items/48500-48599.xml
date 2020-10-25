@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="48500" name="Dragon's Relic Chest" type="EtcItem">
-		<!-- Double-click to randomly obtain one of various items. -->
+		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -35,7 +35,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48504" name="+10 Bloody Armor set Pack" type="EtcItem">
-		<!-- Use to obtain +10 Bloody Eternal Light Armor, Heavy Armor, or Robe set. -->
+		<!-- Double-click to obtain one of the following items: +10 Bloody Eternal Heavy/ Light/ Robe set. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -46,7 +46,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48505" name="+10 Bloody Armor Heavy Armor Capsule" type="EtcItem">
-		<!-- Use to obtain a Bloody Eternal Heavy Armor set, enchanted to +10. -->
+		<!-- Double-click to obtain a Bloody Eternal Heavy Armor set, enchanted to +10. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -58,7 +58,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48506" name="+10 Bloody Armor Light Armor Capsule" type="EtcItem">
-		<!-- Use to obtain a Bloody Eternal Light Armor set, enchanted to +10. -->
+		<!-- Double-click to obtain a Bloody Eternal Light Armor set, enchanted to +10. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -70,7 +70,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48507" name="+10 Bloody Armor Robe Capsule" type="EtcItem">
-		<!-- Use to obtain a Bloody Eternal Robe set, enchanted to +10. -->
+		<!-- Double-click to obtain a Bloody Eternal Robe set, enchanted to +10. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -82,7 +82,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48508" name="+5 Zodiac Agathion Box" type="EtcItem">
-		<!-- Use to obtain a +5 Zodiac Agathion. -->
+		<!-- Double-click to obtain +5 Zodiac Agathion Charm. -->
 		<set name="icon" val="icon.star_agathion_cube" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -94,7 +94,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48509" name="+6 Zodiac Agathion Box" type="EtcItem">
-		<!-- Use it to obtain one +6 Zodiac Agathion Charm. -->
+		<!-- Double-click to obtain +6 Zodiac Agathion Charm. -->
 		<set name="icon" val="icon.star_agathion_cube" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -106,7 +106,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48510" name="+7 Zodiac Agathion Box" type="EtcItem">
-		<!-- Use it to obtain one +7 Zodiac Agathion Charm. -->
+		<!-- Double-click to obtain +7 Zodiac Agathion Charm. -->
 		<set name="icon" val="icon.star_agathion_cube" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -118,7 +118,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48511" name="Royal Red Save Ticket Treasure Chest" type="EtcItem">
-		<!-- Use to obtain a R, R95, or R99 Royal Red Save Ticket. -->
+		<!-- Double-click to obtain one of the following items: Royal R-/ R95-/ R99-grade Red Save Ticket. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -149,7 +149,7 @@
 		</stats>
 	</item>
 	<item id="48513" name="Elysium Recovery Potion" type="EtcItem">
-		<!-- Light recovery portion developed by Elysium's technology. When used, it restores 5000 HP, and the remaining power restores CP. Instant effect with no duration. -->
+		<!-- When used, recovers 5000 HP. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -158,7 +158,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48514" name="Red Libra Request - Shadow of the Mother Tree" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Shadow of the Mother Tree. Characters of level 103 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Shadow of the Mother Tree. Receive the request by double-clicking the item. Can be played once a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -180,7 +180,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48516" name="Medal of Honor" type="EtcItem">
-		<!-- A medal awarded to those who contributed to a faction. Can be exchanged for 100 Faction Points of a desired faction through Adventure Guildsman Penny in the Town of Aden. -->
+		<!-- A medal awarded to those who contributed to a faction. Can be exchanged for 100 Faction Points of a desired faction through Ivory Tower Wizard Valleria in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -191,7 +191,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48517" name="Grand Medal of Honor" type="EtcItem">
-		<!-- An honorable medal awarded to those who contributed greatly to a faction. Can be exchanged for 1000 Faction Points of a desired faction through Adventure Guildsman Penny in the Town of Aden. -->
+		<!-- An honorable medal awarded to those who contributed greatly to a faction. Can be exchanged for 1000 Faction Points of a desired faction through Ivory Tower Wizard Valleria in the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -224,7 +224,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48520" name="Red Libra's Fortune Scroll" additionalName="Event" type="EtcItem">
-		<!-- When used, increases Acquired XP/ SP by 30%, Acquired XP/ SP in Vitality state by 30%, and P. Atk./ P. Def./ M. Atk./ M. Def. by 15% for 30 min. -->
+		<!-- Damage +5%. For 30 min., Vitality bonus +50%. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -232,7 +232,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48521" name="Red Libra's Adena Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain 5 billion Adena. -->
+		<!-- A gift box earned for healing the Exhausted Elysium Buffalo. Double-click to obtain 5 billion adena. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -240,7 +240,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48522" name="Red Libra's Scroll of Blessing Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one Scroll of Blessing - R95/ R99. -->
+		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one Scroll of Blessing - R95/R99. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -248,7 +248,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48523" name="Red Libra's Rare Earring Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one Blessed Antharas' Earring, Ramona's Fancy Earrings, Helios's Majestic Earrings, Orfen's Soul Earring, or Lindvior's Earring. -->
+		<!-- A gift box for restoring the Exhausted Elysium Buffalo. Double-click to obtain one of the following items: Blessed Antharas' Earring, Ramona's Fancy Earring, Helios' Majestic Earring, Orfen's Soul Earring, Lindvior's Earring. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -256,7 +256,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48524" name="Red Libra's Rare Ring Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain randomly one Baium's Soul Ring, Tauti's Ring, Queen Ant's Soul Ring, Mimir's Worn Ring, Forgotten Ring of the Core, or Earth Wyrm Heart Ring. -->
+		<!-- A gift box for restoring the Exhausted Elysium Buffalo. Double-click to obtain one of the following items: Baium's Soul Ring, Tauti's Ring, Queen Ant's Soul Ring, Mimir's Soul Ring, Forgotten Ring of Core, Earth Wyrm's Heart Ring. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -264,7 +264,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48525" name="Red Libra's Rare Necklace Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one Blessed Valakas' Necklace, Angel's Necklace, or Harnak's Deformed Necklace. -->
+		<!-- A reward for restoring the Exhausted Elysium Buffalo. Double-click to obtain one of the following items: Blessed Valakas' Necklace, Angel's Necklace, Harnak's Deformed Necklace. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -272,7 +272,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48526" name="Red Libra's Talisman Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one Energy of Longing, Sealed Talisman - Longing, Sealed Talisman - Golden Bough, Seven Signs' Energy, or Talisman - Seven Signs. -->
+		<!-- A gift for restoring the Exhausted Elysium Buffalo. Double-click to obtain one of the following items: Energy of Longing, Seven Signs' Energy, Sealed Talisman of Longing/ Insanity/ Seven Signs. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -288,7 +288,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48528" name="Red Libra's Outfit Appearance Stone Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one Healer/ Chevalier/ Kat the Cat/ Barbarian Wolf/ Valkyrie Outfit Appearance Stone. -->
+		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one Healer/Chevalier/Kat the Cat/Barbarian Wolf/Valkyrie Outfit Appearance Stone. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -296,7 +296,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48529" name="Red Libra's Soul Crystal Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one Kain van Halter/ Mermoden/ Leona/ Pantheon/ Lionel's Soul Crystal - Stage 8. -->
+		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 8. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -312,7 +312,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48531" name="Red Libra's Lv. 5 Legendary Dye Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain a box out of 10 Lv. 5 Legendary Dye boxes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<!-- A gift box earned for restoring Exhausted Elysium Buffalos. Double-click to obtain 10 Lv. 5 Legendary Dyes: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -320,7 +320,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48532" name="Red Libra's Seed Bracelet Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain one Top-grade/ Super Advanced Seed Bracelet. -->
+		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain one Top-grade/Superior Seed Bracelet. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -375,7 +375,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48537" name="Bait" type="EtcItem">
-		<!-- Fishing time: 105 sec. Standby time: 15 sec. Normal Fishing Bait. Fishing with this bait has a low chance of yielding a Blueish Box. -->
+		<!-- Fishing time: 105 sec. Standby time: 15 sec. Normal Fishing Bait. Fishing with this bait has a low chance of yielding a Bluish Box. -->
 		<set name="icon" val="icon.etc_normal_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -408,7 +408,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48540" name="Fried Fish" additionalName="P. Atk." type="EtcItem">
-		<!-- When used, increases P. Atk. by 3% or by 4% for 10 min. Even if different types of fish dishes are used, only one effect applies. -->
+		<!-- Rotten Fried Fish. It has no effects. Take it to a fishermen's guild member in each village. -->
 		<set name="icon" val="icon.fishing_buff_p_dmg" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -430,7 +430,7 @@
 		</skills>
 	</item>
 	<item id="48541" name="Steamed Fish" additionalName="M. Atk." type="EtcItem">
-		<!-- When used, increases M. Atk. by 4% or by 5% for 10 min. Even if different types of fish dishes are used, only one effect applies. -->
+		<!-- Rotten Steamed Fish. It has no effects. Take it to a fishermen's guild member in each village. -->
 		<set name="icon" val="icon.fishing_buff_m_dmg" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -452,7 +452,7 @@
 		</skills>
 	</item>
 	<item id="48542" name="Grilled Fish" additionalName="Combat Speed" type="EtcItem">
-		<!-- When used, increases Atk. Spd./ Casting Spd. by 3%, Speed by 4 or Atk. Spd./ Casting Spd. by 4%, Speed by 6 for 10 min. Even if different types of fish dishes are used, only one effect applies. -->
+		<!-- Rotten Grilled Fish. It has no effects. Take it to a fishermen's guild member in each village. -->
 		<set name="icon" val="icon.fishing_buff_pm_speed" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -474,7 +474,7 @@
 		</skills>
 	</item>
 	<item id="48543" name="Braised Fish" additionalName="Max HP/ MP" type="EtcItem">
-		<!-- When used, increases Max HP/ MP by 6% or by 8% for 10 min. Even if different types of fish dishes are used, only one effect applies. -->
+		<!-- Rotten Braised Fish. It has no effects. Take it to a fishermen's guild member in each village. -->
 		<set name="icon" val="icon.fishing_buff_hp_mp" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -495,7 +495,7 @@
 		</skills>
 	</item>
 	<item id="48544" name="Royal Fish Soup" additionalName="Combat Prowess" type="EtcItem">
-		<!-- When used, increases P. Atk./ M. Atk. by 2%, Atk. Spd./ Casting Spd. by 2%, Max HP/ MP by 2% or P. Atk./ M. Atk. by 3%, Atk. Spd./ Casting Spd. by 3%, and Max HP/ MP by 3% for 10 min. Even if different types of fish dishes are used, only one effect applies. -->
+		<!-- Rotten Royal Fish Soup. It has no effects. Take it to a fishermen's guild member in each village. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -569,7 +569,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48551" name="Olympiad Class Winner's Rune" type="EtcItem">
-		<!-- A glorious rune awarded to the class winner of the World Olympiad. If stored in the inventory, increases Vitality XP by 30%, P. Def. by 1986, M. Def. by 1150, Speed by 7, and Skill Power by 5%. Will be deleted once the Olympiad cycle ends. Cannot be used in Olympiad. -->
+		<!-- A reward for the mighty warrior who has taken the first place at the World Olympiad. When in inventory, Vitality bonus +30%, P. Def. +1986, M. Def. +1150, Speed +7, Skill Power +5%. Will be deleted once the Olympiad cycle ends. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.rune_olympiad_legend_server" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -592,7 +592,7 @@
 		</skills>
 	</item>
 	<item id="48552" name="Olympiad Class Runner-up's Rune" type="EtcItem">
-		<!-- A glorious rune awarded to the class runner-up of the World Olympiad. If stored in the inventory, increases Vitality XP by 20%, P. Def. by 1428, M. Def. by 821, Speed by 3, and Skill Power by 3%. Will be deleted once the Olympiad cycle ends. Cannot be used in Olympiad. -->
+		<!-- A reward for the mighty warrior who has taken the second place at the World Olympiad. When in inventory, Vitality bonus +20%, P. Def. +1428, M. Def. +821, Speed +3, Skill Power +3%. Will be deleted once the Olympiad cycle ends. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.rune_olympiad_legend_server" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -602,7 +602,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48553" name="Legend Celebration Rune" additionalName="2-hour" type="EtcItem">
-		<!-- A celebration rune awarded to the members of the server that produced a Legend, the glorious World Olympiad winner. If stored in the inventory, increases Vitality XP by 10%, P. Def. by 567, M. Def. by 328, Speed by 1, and Skill Power by 1%. Cannot be used in Olympiad. -->
+		<!-- A reward for all characters of the server where a new Legend - a winner of the World Olympiad - has been born. When in inventory, Vitality bonus +10%, P. Def. +567, M. Def. +328, Speed +1, Skill Power +1%. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.rune_olympiad_legend_server" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -612,7 +612,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48554" name="Legend Infinity Shaper" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -655,7 +655,7 @@
 		</stats>
 	</item>
 	<item id="48555" name="Legend Infinity Cutter" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -696,7 +696,7 @@
 		</stats>
 	</item>
 	<item id="48556" name="Legend Infinity Slasher" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -737,7 +737,7 @@
 		</stats>
 	</item>
 	<item id="48557" name="Legend Infinity Avenger" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -779,7 +779,7 @@
 		</stats>
 	</item>
 	<item id="48558" name="Legend Infinity Fighter" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -821,7 +821,7 @@
 		</stats>
 	</item>
 	<item id="48559" name="Legend Infinity Stormer" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -860,10 +860,11 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="holyPower">450</stat>
 		</stats>
 	</item>
 	<item id="48560" name="Legend Infinity Thrower" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -906,7 +907,7 @@
 		</stats>
 	</item>
 	<item id="48561" name="Legend Infinity Shooter" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -947,7 +948,7 @@
 		</stats>
 	</item>
 	<item id="48562" name="Legend Infinity Buster" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -989,7 +990,7 @@
 		</stats>
 	</item>
 	<item id="48563" name="Legend Infinity Caster" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1032,7 +1033,7 @@
 		</stats>
 	</item>
 	<item id="48564" name="Legend Infinity Retributer" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1076,7 +1077,7 @@
 		</stats>
 	</item>
 	<item id="48565" name="Legend Infinity Dual Sword" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1117,7 +1118,7 @@
 		</stats>
 	</item>
 	<item id="48566" name="Legend Infinity Dual Dagger" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1157,7 +1158,7 @@
 		</stats>
 	</item>
 	<item id="48567" name="Legend Infinity Dual Blunt Weapon" type="Weapon">
-		<!-- Legendary Olympiad weapon. When equipped, increases PvP Damage on PC by 30%. Additionally increases Max HP/ MP/ CP by 30%, Atk. Spd./ Casting Spd. by 20%, P./ M. Skill Power by 15%, P. Critical Damage and P./ M. Skill Critical Damage by 10%, and decreases Skill Cooldown by 5%. -->
+		<!-- Legendary Olympiad weapon. PvP Damage +30%. Max HP/ MP/ CP +30%, Atk. Spd./ Casting Spd. +20%, P./ M. Skill Power +15%, P. Critical Damage and P./ M. Skill Critical Damage +10%, Skill Cooldown -5%. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1197,7 +1198,7 @@
 		</stats>
 	</item>
 	<item id="48568" name="Guard Agathion Fragment" type="EtcItem">
-		<!-- A fragment containing the power of Guardians who inherited the angels' power. Can be exchanged for a Guard Agathion Charm or Scroll of Growth through a Black Marketeer of Mammon. -->
+		<!-- A fragment containing the power of Guardians who inherited the angels' power. Can be exchanged for a Guard Agathion Charm or Scroll of Growth through a Merchant of Mammon. -->
 		<set name="icon" val="icon.guard_ag_piece_1" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -1213,7 +1214,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48570" name="Book of Growth: Guard Agathion" type="EtcItem">
-		<!-- Growth Book exclusively for Guard Agathion. The book increases M. Def. and adds a Special Ability from +4. It can safely enchant Agathion to +3 and enchant up to +10. Unique Abilities level up gradually from +1. -->
+		<!-- Can be used for enchanting Guard agathions. Increases M. Def. When the agathion is enchanted to +4 and higher, enables its primary skills. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
 		<set name="icon" val="icon.guard_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -1228,7 +1229,7 @@
 		</skills>
 	</item>
 	<item id="48571" name="Ancient Book of Growth: Guard Agathion" type="EtcItem">
-		<!-- Growth Book exclusively for Guard Agathion. The book increases M. Def. and adds a Special Ability from +4. It can safely enchant Agathion to +3 and enchant up to +10. Unique Abilities level up gradually from +1. If successful, Agathion enhances randomly between +1 to +3. Cannot be used on Agathions enchanted to +7 or higher. -->
+		<!-- Can be used for enchanting Guard agathions. Increases M. Def. When the agathion is enchanted to +4 and higher, enables its primary skills. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. The enchanting is random from +1 to +3. Cannot be used with agathions enchanted to +7 or higher. -->
 		<set name="icon" val="icon.guard_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
@@ -1243,7 +1244,7 @@
 		</skills>
 	</item>
 	<item id="48572" name="Masia's Guard Agathion Charm" type="Armor">
-		<!-- A charm that activates the power of Masia's Guard Agathion. Unique Abilities become active only when applied to a heavy armor set enchanted to +8 or higher. When equipped in a main slot, it summons the Agathion and activates Special Abilities. When equipped in a sub slot, only its Unique Abilities become active. -->
+		<!-- Contains the power of Agathion Masia's Guard. Secondary skills are enabled only when a heavy armor set enchanted to +8 or higher is equipped. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. <Enchanting>. Use Guard Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_masia_guard_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -1253,18 +1254,18 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="7" />
 		<skills>
-			<skill id="39222" level="1" /> <!-- Summon Masia's Guard Agathion -->
-			<skill id="39223" level="1" /> <!-- Masia's Guard Unique Ability -->
-			<skill id="39223" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Masia's Guard Unique Ability -->
-			<skill id="39223" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Masia's Guard Unique Ability -->
-			<skill id="39223" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Masia's Guard Unique Ability -->
-			<skill id="39223" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Masia's Guard Unique Ability -->
-			<skill id="39223" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Masia's Guard Unique Ability -->
-			<skill id="39223" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Masia's Guard Unique Ability -->
-			<skill id="39223" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Masia's Guard Unique Ability -->
-			<skill id="39223" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Masia's Guard Unique Ability -->
-			<skill id="39223" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Masia's Guard Unique Ability -->
-			<skill id="39223" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39222" level="1" type="ON_EQUIP" /> <!-- Summon Masia's Guard Agathion -->
+			<skill id="39224" level="1" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39224" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39224" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39224" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39224" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39224" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39224" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39224" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39224" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39224" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Masia's Guard Unique Ability -->
+			<skill id="39224" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Masia's Guard Unique Ability -->
 			<skill id="39225" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Masia's Guard Special Ability -->
 			<skill id="39225" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Masia's Guard Special Ability -->
 			<skill id="39225" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Masia's Guard Special Ability -->
@@ -1277,7 +1278,7 @@
 		</skills>
 	</item>
 	<item id="48573" name="Paulina's Guard Agathion Charm" type="Armor">
-		<!-- A charm that activates the power of Paulina's Guard Agathion. Unique Abilities become active only when applied to a light armor set enchanted to +8 or higher. When equipped in a main slot, it summons the Agathion and activates Special Abilities. When equipped in a sub slot, only its Unique Abilities become active. -->
+		<!-- Contains the power of Agathion Paulina's Guard. Secondary skills are enabled only when a light armor set enchanted to +8 or higher is equipped. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. <Enchanting>. Use Guard Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_pollyne_guard_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -1287,18 +1288,18 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="7" />
 		<skills>
-			<skill id="39226" level="1" /> <!-- Summon Paulina's Guard Agathion -->
-			<skill id="39227" level="1" /> <!-- Paulina's Guard Unique Ability -->
-			<skill id="39227" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Paulina's Guard Unique Ability -->
-			<skill id="39227" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Paulina's Guard Unique Ability -->
-			<skill id="39227" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Paulina's Guard Unique Ability -->
-			<skill id="39227" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Paulina's Guard Unique Ability -->
-			<skill id="39227" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Paulina's Guard Unique Ability -->
-			<skill id="39227" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Paulina's Guard Unique Ability -->
-			<skill id="39227" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Paulina's Guard Unique Ability -->
-			<skill id="39227" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Paulina's Guard Unique Ability -->
-			<skill id="39227" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Paulina's Guard Unique Ability -->
-			<skill id="39227" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39226" level="1" type="ON_EQUIP" /> <!-- Summon Paulina's Guard Agathion -->
+			<skill id="39228" level="1" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39228" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39228" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39228" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39228" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39228" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39228" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39228" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39228" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39228" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Paulina's Guard Unique Ability -->
+			<skill id="39228" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Paulina's Guard Unique Ability -->
 			<skill id="39229" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Paulina's Guard Special Ability -->
 			<skill id="39229" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Paulina's Guard Special Ability -->
 			<skill id="39229" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Paulina's Guard Special Ability -->
@@ -1311,7 +1312,7 @@
 		</skills>
 	</item>
 	<item id="48574" name="Tersi's Guard Agathion Charm" type="Armor">
-		<!-- A charm that activates the power of Tersi's Guard Agathion. Unique abilities become active only when applied to a robe set enchanted to +8 or higher. When equipped in a main slot, it summons the Agathion and activates Special Abilities. When equipped in a sub slot, only its Unique Abilities become active. -->
+		<!-- Contains the power of Agathion Tersi's Guard. Secondary skills are enabled only when a robe set enchanted to +8 or higher is equipped. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. <Enchanting>. Use Guard Agathion's Book of Growth. -->
 		<set name="icon" val="icon.agathion_tersi_guard_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -1321,18 +1322,18 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="7" />
 		<skills>
-			<skill id="39330" level="1" /> <!-- Summon Tersi's Guard Agathion -->
-			<skill id="39331" level="1" /> <!-- Tersi's Guard Unique Ability -->
-			<skill id="39331" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Tersi's Guard Unique Ability -->
-			<skill id="39331" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Tersi's Guard Unique Ability -->
-			<skill id="39331" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Tersi's Guard Unique Ability -->
-			<skill id="39331" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Tersi's Guard Unique Ability -->
-			<skill id="39331" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Tersi's Guard Unique Ability -->
-			<skill id="39331" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Tersi's Guard Unique Ability -->
-			<skill id="39331" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Tersi's Guard Unique Ability -->
-			<skill id="39331" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Tersi's Guard Unique Ability -->
-			<skill id="39331" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Tersi's Guard Unique Ability -->
-			<skill id="39331" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39330" level="1" type="ON_EQUIP" /> <!-- Summon Tersi's Guard Agathion -->
+			<skill id="39332" level="1" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39332" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39332" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39332" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39332" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39332" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39332" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39332" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39332" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39332" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Tersi's Guard Unique Ability -->
+			<skill id="39332" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Tersi's Guard Unique Ability -->
 			<skill id="39333" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Tersi's Guard Special Ability -->
 			<skill id="39333" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Tersi's Guard Special Ability -->
 			<skill id="39333" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Tersi's Guard Special Ability -->
@@ -1345,7 +1346,7 @@
 		</skills>
 	</item>
 	<item id="48575" name="Super Advanced Seed Bracelet" additionalName="Stage 2" type="Armor">
-		<!-- When equipped, it activates one main Agathion slot and two auxiliary slots. Can be enchanted through Fishing Guild Leader Santiago. <Active Skill>. 1. Agathion Teleport: Provides a teleport skill to teleport to Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min). <Item Skill>. 1. Increases STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC by 1. 2. Increases Fire/ Water/ Earth/ Wind/ Dark/ Holy attacks by 50 and defenses by 50. 3. Increases XP gain in Vitality state by 10%. -->
+		<!-- When equipped, unlocks the agathion's main slot and 2 additional slots. Can be enchanted through Fishermen's Guild Leader Santiago. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +50. 3. Vitality bonus +10%. <Enchanting>. 1. Take the bracelet, Ugly Fish and Nimble Fish to Santiago in Heine. 2. Take the bracelet and Star Sign to Santiago in Heine. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1354,17 +1355,16 @@
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="35071" level="2" /> <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="17551" level="1" /> <!-- Balanced Power -->
-			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
-			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
-			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
-			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="35082" level="2" /> <!-- Super Advanced Seed Bracelet - Stage 2 -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48576" name="Super Advanced Seed Bracelet" additionalName="Stage 3" type="Armor">
-		<!-- When equipped, it activates one main Agathion slot and three auxiliary slots. Can be enchanted through Fishing Guild Leader Santiago. <Active Skill>. 1. Agathion Teleport: Provides a teleport skill to teleport to Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy attacks and defenses +50. 3. XP gain in Vitality state +15%. -->
+		<!-- When equipped, unlocks the agathion's main slot and 3 additional slots. Can be enchanted through Fishermen's Guild Leader Santiago. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +50. 3. Vitality bonus +15%. <Enchanting>. Take the bracelet, Ugly Fish and Nimble Fish to Santiago in Heine. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1373,17 +1373,16 @@
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="35071" level="3" /> <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="17551" level="1" /> <!-- Balanced Power -->
-			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
-			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
-			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
-			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="35082" level="3" /> <!-- Super Advanced Seed Bracelet - Stage 3 -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48577" name="Super Advanced Seed Bracelet" additionalName="Stage 4" type="Armor">
-		<!-- When equipped, it activates one main Agathion slot and four auxiliary slots. <Active Skill>. 1. Agathion Teleport: Provides a teleport skill to teleport to Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown 30 min). <Item Skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy attack and defense +50. 3. XP gain in Vitality state +20%. -->
+		<!-- When equipped, unlocks the agathion's main slot and 4 additional slots. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +50. 3. Vitality bonus +20%. <Enchanting>. Use Scroll: Enchant Superior Seed Bracelet. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1391,13 +1390,13 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
-			<skill id="35071" level="4" /> <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="17551" level="1" /> <!-- Balanced Power -->
-			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
-			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
-			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran-->
-			<skill id="17550" level="1" /> <!-- Agathion Teleport: Heine -->
+			<skill id="35082" level="4" /> <!-- Super Advanced Seed Bracelet - Stage 4 -->
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Town of Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Town of Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
@@ -1461,7 +1460,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48582" name="Scroll: Enchant Savior's Mask" type="EtcItem">
-		<!-- Enchant Scroll exclusively for Savior's Mask. Enchantment increases P. Def. and Debuff Resistance. Enchantment to +7 or higher increases P. Atk., M. Atk., P. Def., and M. Def., depending on the type of the equipped circlet. The scroll can enchant the mask safely to +3 and enchant up to +10. -->
+		<!-- Can be used to enchant masks. The enchanting is safe up to +3, maximum to +10. -->
 		<set name="icon" val="icon.episode_scrl_of_ench_hair" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1480,7 +1479,7 @@
 		</skills>
 	</item>
 	<item id="48583" name="Special Scroll: Enchant Savior's Mask" type="EtcItem">
-		<!-- Enchant Scroll exclusively for Savior's Mask. Enchantment increases P. Def. and Debuff Resistance. Enchantment to +7 or higher increases P. Atk., M. Atk., P. Def., and M. Def., depending on the type of the equipped circlet. The scroll can enchant the mask safely to +3 and enchant up to +10. If successfully enchanted, the mask will enhance randomly between +1 to +3. Cannot be used on the items enchanted to +7 or higher. -->
+		<!-- Only for masks. The enchanting is safe up to +3, the maximum enchant value is +10. The enchanting is random from +1 to +3. Cannot be used with items enchanted for more than +7. -->
 		<set name="icon" val="icon.episode_scrl_of_ench_hair" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1499,7 +1498,7 @@
 		</skills>
 	</item>
 	<item id="48584" name="Savior's Mask" type="Armor">
-		<!-- A mask granted only to those credited for saving Aden by helping the Blackbird Clan defeat Etis van Etina at the Savior's Path - Fall of Etina.. When equipped, increases M. Def. by 5%. -->
+		<!-- A mask granted only to those credited for saving Aden by helping the Blackbird Clan defeat Etis van Etina in the Hall of Etina. M. Def. +5%. <Enchanting>. Use Scroll: Enchant Mask. -->
 		<set name="icon" val="icon.episode_mask_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1528,7 +1527,7 @@
 		</skills>
 	</item>
 	<item id="48585" name="Savior's Wish" type="EtcItem">
-		<!-- Embodiment of the wish of the saviors who saved Aden from Etis van Etina. It can be obtained from the Blackbird Clan that led the Savior's Path. Those who are credited for saving Aden by helping the Blackbird Clan defeat Etis van Etina at the Savior's Path - Fall of Etina can purchase Savior's Wish at a set price or receive it as a reward for helping the Blackbird Clan's mission. You can use it through Elikia at the Blackbird Campsite. -->
+		<!-- The embodiment of the wish of the saviors who saved Aden from Etis van Etina. Can be obtained from the Blackbird Clan for completing the 'Savior's Path - Hall of Etina' quest or purchased at a set price. Can be used through Elikia in Gludio. -->
 		<set name="icon" val="icon.episode_token" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1538,7 +1537,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48586" name="Scroll Fragment: Enchant Savior's Mask" type="EtcItem">
-		<!-- A material item used to make the Scroll: Enchant Savior's Mask. Only those who are qualified can exchange it for the Savior's Enchant Scroll through Elikia at the Blackbird Campsite. -->
+		<!-- Take several of these to Elikia in Gludio to get Scroll: Enchant Savior's Mask. -->
 		<set name="icon" val="icon.episode_scroll_token" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="material" val="PAPER" />
@@ -1546,7 +1545,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48587" name="Goblin Liquor" type="EtcItem">
-		<!-- Goblin Liquor. For 2 min., increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. by 100% and Acquired XP/ SP by 10%. The effect disappears on restart. -->
+		<!-- For 2 min., P./ M. Atk. and Atk. Spd./ Casting Spd. +100%, Acquired XP/ SP +10%. The effect disappears on logout. -->
 		<set name="icon" val="icon.bm_goblin_buff_herong" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />

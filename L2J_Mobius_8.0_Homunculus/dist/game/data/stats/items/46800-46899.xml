@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="46800" name="Paulina's Cranequin" type="Weapon">
-		<!-- A Cranequin imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- Cranequin imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +5%, Critical Rate for standard attacks +30. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -31,7 +31,7 @@
 		</stats>
 	</item>
 	<item id="46801" name="Paulina's Samurai Long Sword" type="Weapon">
-		<!-- A Samurai Long Sword imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Samurai Long Sword imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -59,7 +59,7 @@
 		</stats>
 	</item>
 	<item id="46802" name="Paulina's Berserker Blade" type="Weapon">
-		<!-- A Berserker Blade imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Berserker Blade imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -87,7 +87,7 @@
 		</stats>
 	</item>
 	<item id="46803" name="Paulina's Yaksa Mace" type="Weapon">
-		<!-- A Yaksa Mace imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Yaksa Mace imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -116,7 +116,7 @@
 		</stats>
 	</item>
 	<item id="46804" name="Paulina's Great Pata" type="Weapon">
-		<!-- A Great Pata imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Great Pata imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -145,7 +145,7 @@
 		</stats>
 	</item>
 	<item id="46805" name="Paulina's Orcish Poleaxe" type="Weapon">
-		<!-- An Orcish Poleaxe imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Orcish Poleaxe imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -176,7 +176,7 @@
 		</stats>
 	</item>
 	<item id="46806" name="Paulina's Eminence Bow" type="Weapon">
-		<!-- A Eminence Bow imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Eminence Bow imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -208,7 +208,7 @@
 		</stats>
 	</item>
 	<item id="46807" name="Paulina's Crystal Dagger" type="Weapon">
-		<!-- A Crystal Dagger imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Crystal Dagger imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -237,7 +237,7 @@
 		</stats>
 	</item>
 	<item id="46808" name="Paulina's Deadman's Staff" type="Weapon">
-		<!-- A Deadman's Staff imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Casting Spd. +15%, M. Critical Rate +60. -->
+		<!-- Deadman's Staff imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and assigned an attribute. <Special Option>. Casting Spd. +15%, M. Skill Critical Rate +60. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -267,7 +267,7 @@
 		</stats>
 	</item>
 	<item id="46809" name="Paulina's Katana*Katana" type="Weapon">
-		<!-- A Katana*Katana imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Katana*Katana imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -295,7 +295,7 @@
 		</stats>
 	</item>
 	<item id="46810" name="Paulina's Saber Tooth" type="Weapon">
-		<!-- A Saber Tooth imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Saber Tooth imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -324,7 +324,7 @@
 		</stats>
 	</item>
 	<item id="46811" name="Paulina's Admiral's Estoc" type="Weapon">
-		<!-- A Admiral's Estoc imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Admiral's Estoc imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -353,7 +353,7 @@
 		</stats>
 	</item>
 	<item id="46812" name="Paulina's Sharpshooter" type="Weapon">
-		<!-- A Sharpshooter imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Sharpshooter imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -384,7 +384,7 @@
 		</stats>
 	</item>
 	<item id="46813" name="Paulina's Dark Legion's Edge" type="Weapon">
-		<!-- A Dark Legion's Edge imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dark Legion's Edge imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -412,7 +412,7 @@
 		</stats>
 	</item>
 	<item id="46814" name="Paulina's Dragon Slayer" type="Weapon">
-		<!-- A Dragon Slayer imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dragon Slayer imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -440,7 +440,7 @@
 		</stats>
 	</item>
 	<item id="46815" name="Paulina's Elysian" type="Weapon">
-		<!-- A Elysian imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Elysian imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -469,7 +469,7 @@
 		</stats>
 	</item>
 	<item id="46816" name="Paulina's Dragon Grinder" type="Weapon">
-		<!-- A Dragon Grinder imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dragon Grinder imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -498,7 +498,7 @@
 		</stats>
 	</item>
 	<item id="46817" name="Paulina's Halberd" type="Weapon">
-		<!-- A Halberd imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Halberd imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -529,7 +529,7 @@
 		</stats>
 	</item>
 	<item id="46818" name="Paulina's Soul Bow" type="Weapon">
-		<!-- A Soul Bow imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Soul Bow imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -561,7 +561,7 @@
 		</stats>
 	</item>
 	<item id="46819" name="Paulina's Bloody Orchid" type="Weapon">
-		<!-- A Bloody Orchid imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Bloody Orchid imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -620,7 +620,7 @@
 		</stats>
 	</item>
 	<item id="46821" name="Paulina's Damascus*Damascus" type="Weapon">
-		<!-- A Damascus*Damascus imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Damascus*Damascus imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -648,7 +648,7 @@
 		</stats>
 	</item>
 	<item id="46822" name="Paulina's Undertaker" type="Weapon">
-		<!-- A Undertaker imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Undertaker imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -677,7 +677,7 @@
 		</stats>
 	</item>
 	<item id="46823" name="Paulina's Lacerator" type="Weapon">
-		<!-- A Lacerator imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Lacerator imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -706,7 +706,7 @@
 		</stats>
 	</item>
 	<item id="46824" name="Paulina's Reaper" type="Weapon">
-		<!-- A Reaper imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Reaper imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -737,7 +737,7 @@
 		</stats>
 	</item>
 	<item id="46825" name="Paulina's Dynasty Sword" type="Weapon">
-		<!-- A Dynasty Sword imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Sword imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -766,7 +766,7 @@
 		</stats>
 	</item>
 	<item id="46826" name="Paulina's Dynasty Blade" type="Weapon">
-		<!-- A Dynasty Blade imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Blade imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -795,7 +795,7 @@
 		</stats>
 	</item>
 	<item id="46827" name="Paulina's Dynasty Cudgel" type="Weapon">
-		<!-- A Dynasty Cudgel imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Cudgel imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -825,7 +825,7 @@
 		</stats>
 	</item>
 	<item id="46828" name="Paulina's Dynasty Bagh-Nakh" type="Weapon">
-		<!-- A Dynasty Bagh-Nakh imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Bagh-Nakh imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -855,7 +855,7 @@
 		</stats>
 	</item>
 	<item id="46829" name="Paulina's Dynasty Halberd" type="Weapon">
-		<!-- A Dynasty Halberd imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Halberd imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -887,7 +887,7 @@
 		</stats>
 	</item>
 	<item id="46830" name="Paulina's Dynasty Bow" type="Weapon">
-		<!-- A Dynasty Bow imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Bow imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -920,7 +920,7 @@
 		</stats>
 	</item>
 	<item id="46831" name="Paulina's Dynasty Knife" type="Weapon">
-		<!-- A Dynasty Knife imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Knife imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -950,7 +950,7 @@
 		</stats>
 	</item>
 	<item id="46832" name="Paulina's Dynasty Staff" type="Weapon">
-		<!-- A Dynasty Staff imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Casting Spd. +15%, M. Critical Rate +60. -->
+		<!-- Dynasty Staff imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and assigned an attribute. <Special Option>. Atk. Spd. +15%, M. Skill Critical Rate +60. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -981,7 +981,7 @@
 		</stats>
 	</item>
 	<item id="46833" name="Paulina's Dynasty Dual Sword" type="Weapon">
-		<!-- A Dynasty Dual Sword imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Dual Swords imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1010,7 +1010,7 @@
 		</stats>
 	</item>
 	<item id="46834" name="Paulina's Dynasty Ancient Sword" type="Weapon">
-		<!-- A Dynasty Ancient Sword imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Ancient Sword imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1040,7 +1040,7 @@
 		</stats>
 	</item>
 	<item id="46835" name="Paulina's Dynasty Rapier" type="Weapon">
-		<!-- A Dynasty Rapier imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Rapier imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1070,7 +1070,7 @@
 		</stats>
 	</item>
 	<item id="46836" name="Paulina's Dynasty Crossbow" type="Weapon">
-		<!-- A Dynasty Crossbow imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +15%, P. Critical Rate +60. -->
+		<!-- Dynasty Crossbow imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +15%, Critical Rate for standard attacks +60. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1115,11 +1115,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="46927" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Helmet - Heavy Armor -->
-			<item id="46928" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine - Heavy Armor -->
-			<item id="46929" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Gaiters - Heavy Armor -->
-			<item id="46930" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Gauntlets - Heavy Armor -->
-			<item id="46931" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Boots - Heavy Armor -->
+			<item id="46927" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Helmet - Heavy armor -->
+			<item id="46928" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine - Heavy armor -->
+			<item id="46929" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Gaiters - Heavy armor -->
+			<item id="46930" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Gauntlets - Heavy armor -->
+			<item id="46931" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Boots - Heavy armor -->
 			<item id="46920" min="1" max="1" chance="100" /> <!-- Paulina's Brigandine Shield -->
 			<item id="46942" min="1" max="1" chance="100" /> <!-- Paulina's Elven Necklace -->
 			<item id="46943" min="2" max="2" chance="100" /> <!-- Paulina's Elven Earrings -->
@@ -1141,11 +1141,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="46932" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Helmet - Light Armor -->
-			<item id="46933" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Shirt - Light Armor -->
-			<item id="46934" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Gaiters - Light Armor -->
-			<item id="46935" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Gloves - Light Armor -->
-			<item id="46936" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Boots - Light Armor -->
+			<item id="46932" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Helmet - Light armor -->
+			<item id="46933" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Shirt - Light armor -->
+			<item id="46934" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Gaiters - Light armor -->
+			<item id="46935" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Gloves - Light armor -->
+			<item id="46936" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Boots - Light armor -->
 			<item id="46942" min="1" max="1" chance="100" /> <!-- Paulina's Elven Necklace -->
 			<item id="46943" min="2" max="2" chance="100" /> <!-- Paulina's Elven Earrings -->
 			<item id="46944" min="2" max="2" chance="100" /> <!-- Paulina's Elven Ring -->
@@ -1191,13 +1191,13 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="46945" min="1" max="1" chance="100" /> <!-- Paulina's Chain Helmet - Heavy Armor -->
-			<item id="46946" min="1" max="1" chance="100" /> <!-- Paulina's Chain Mail Shirt - Heavy Armor -->
-			<item id="46947" min="1" max="1" chance="100" /> <!-- Paulina's Chain Gaiters - Heavy Armor -->
-			<item id="46948" min="1" max="1" chance="100" /> <!-- Paulina's Chain Gloves - Heavy Armor -->
-			<item id="46949" min="1" max="1" chance="100" /> <!-- Paulina's Chain Boots - Heavy Armor -->
+			<item id="46945" min="1" max="1" chance="100" /> <!-- Paulina's Chain Helmet - Heavy armor -->
+			<item id="46946" min="1" max="1" chance="100" /> <!-- Paulina's Chain Mail Shirt - Heavy armor -->
+			<item id="46947" min="1" max="1" chance="100" /> <!-- Paulina's Chain Gaiters - Heavy armor -->
+			<item id="46948" min="1" max="1" chance="100" /> <!-- Paulina's Chain Gloves - Heavy armor -->
+			<item id="46949" min="1" max="1" chance="100" /> <!-- Paulina's Chain Boots - Heavy armor -->
 			<item id="46921" min="1" max="1" chance="100" /> <!-- Paulina's Chain Shield -->
-			<item id="46960" min="1" max="1" chance="100" /> <!-- Paulina's Necklace of Protection - Skill Cooldown -->
+			<item id="46960" min="1" max="1" chance="100" /> <!-- Paulina's Necklace of Protection - Cooldown -->
 			<item id="46961" min="1" max="1" chance="100" /> <!-- Paulina's Earring of Protection - Vampiric Rage -->
 			<item id="46962" min="1" max="1" chance="100" /> <!-- Paulina's Earring of Protection - MP Consumption -->
 			<item id="46963" min="1" max="1" chance="100" /> <!-- Paulina's Ring of Protection - Critical Damage -->
@@ -1219,12 +1219,12 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="46950" min="1" max="1" chance="100" /> <!-- Paulina's Theca Leather Helmet - Light Armor -->
-			<item id="46951" min="1" max="1" chance="100" /> <!-- Paulina's Theca Leather Armor - Light Armor -->
-			<item id="46952" min="1" max="1" chance="100" /> <!-- Paulina's Theca Leather Gaiters - Light Armor -->
-			<item id="46953" min="1" max="1" chance="100" /> <!-- Paulina's Theca Leather Gloves - Light Armor -->
-			<item id="46954" min="1" max="1" chance="100" /> <!-- Paulina's Theca Leather Boots - Light Armor -->
-			<item id="46960" min="1" max="1" chance="100" /> <!-- Paulina's Necklace of Protection - Skill Cooldown -->
+			<item id="46950" min="1" max="1" chance="100" /> <!-- Paulina's Theca Leather Helmet - Light armor -->
+			<item id="46951" min="1" max="1" chance="100" /> <!-- Paulina's Theca Leather Armor - Light armor -->
+			<item id="46952" min="1" max="1" chance="100" /> <!-- Paulina's Theca Leather Gaiters - Light armor -->
+			<item id="46953" min="1" max="1" chance="100" /> <!-- Paulina's Theca Leather Gloves - Light armor -->
+			<item id="46954" min="1" max="1" chance="100" /> <!-- Paulina's Theca Leather Boots - Light armor -->
+			<item id="46960" min="1" max="1" chance="100" /> <!-- Paulina's Necklace of Protection - Cooldown -->
 			<item id="46961" min="1" max="1" chance="100" /> <!-- Paulina's Earring of Protection - Vampiric Rage -->
 			<item id="46962" min="1" max="1" chance="100" /> <!-- Paulina's Earring of Protection - MP Consumption -->
 			<item id="46963" min="1" max="1" chance="100" /> <!-- Paulina's Ring of Protection - Critical Damage -->
@@ -1251,7 +1251,7 @@
 			<item id="46957" min="1" max="1" chance="100" /> <!-- Paulina's Demon Stockings - Robe -->
 			<item id="46958" min="1" max="1" chance="100" /> <!-- Paulina's Demon Gloves - Robe -->
 			<item id="46959" min="1" max="1" chance="100" /> <!-- Paulina's Demon Boots - Robe -->
-			<item id="46960" min="1" max="1" chance="100" /> <!-- Paulina's Necklace of Protection - Skill Cooldown -->
+			<item id="46960" min="1" max="1" chance="100" /> <!-- Paulina's Necklace of Protection - Cooldown -->
 			<item id="46961" min="1" max="1" chance="100" /> <!-- Paulina's Earring of Protection - Vampiric Rage -->
 			<item id="46962" min="1" max="1" chance="100" /> <!-- Paulina's Earring of Protection - MP Consumption -->
 			<item id="46963" min="1" max="1" chance="100" /> <!-- Paulina's Ring of Protection - Critical Damage -->
@@ -1273,13 +1273,13 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="46965" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Helmet - Heavy Armor -->
-			<item id="46966" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Breastplate - Heavy Armor -->
-			<item id="46967" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Gaiters - Heavy Armor -->
-			<item id="46968" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Gloves - Heavy Armor -->
-			<item id="46969" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Boots - Heavy Armor -->
+			<item id="46965" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Helmet - Heavy armor -->
+			<item id="46966" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Breastplate - Heavy armor -->
+			<item id="46967" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Gaiters - Heavy armor -->
+			<item id="46968" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Gloves - Heavy armor -->
+			<item id="46969" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Boots - Heavy armor -->
 			<item id="46922" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Shield -->
-			<item id="46980" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Necklace - Skill Cooldown -->
+			<item id="46980" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Necklace - Cooldown -->
 			<item id="46981" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Earring - Vampiric Rage -->
 			<item id="46982" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Earring - MP Consumption -->
 			<item id="46983" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Ring - Critical Damage -->
@@ -1301,12 +1301,12 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="46970" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Leather Helmet - Light Armor -->
-			<item id="46971" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Leather Armor - Light Armor -->
-			<item id="46972" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Leggings - Light Armor -->
-			<item id="46973" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Gloves - Light Armor -->
-			<item id="46974" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Boots - Light Armor -->
-			<item id="46980" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Necklace - Skill Cooldown -->
+			<item id="46970" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Leather Helmet - Light armor -->
+			<item id="46971" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Leather Armor - Light armor -->
+			<item id="46972" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Leggings - Light armor -->
+			<item id="46973" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Gloves - Light armor -->
+			<item id="46974" min="1" max="1" chance="100" /> <!-- Paulina's Dark Crystal Boots - Light armor -->
+			<item id="46980" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Necklace - Cooldown -->
 			<item id="46981" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Earring - Vampiric Rage -->
 			<item id="46982" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Earring - MP Consumption -->
 			<item id="46983" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Ring - Critical Damage -->
@@ -1333,7 +1333,7 @@
 			<item id="46977" min="1" max="1" chance="100" /> <!-- Paulina's Tallum Stockings - Robe -->
 			<item id="46978" min="1" max="1" chance="100" /> <!-- Paulina's Tallum Gloves - Robe -->
 			<item id="46979" min="1" max="1" chance="100" /> <!-- Paulina's Tallum Boots - Robe -->
-			<item id="46980" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Necklace - Skill Cooldown -->
+			<item id="46980" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Necklace - Cooldown -->
 			<item id="46981" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Earring - Vampiric Rage -->
 			<item id="46982" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Earring - MP Consumption -->
 			<item id="46983" min="1" max="1" chance="100" /> <!-- Paulina's Majestic Ring - Critical Damage -->
@@ -1355,13 +1355,13 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="46985" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Helmet - Heavy Armor -->
-			<item id="46986" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Breastplate - Heavy Armor -->
-			<item id="46987" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Gaiters - Heavy Armor -->
-			<item id="46988" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Gauntlets - Heavy Armor -->
-			<item id="46989" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Boots - Heavy Armor -->
+			<item id="46985" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Helmet - Heavy armor -->
+			<item id="46986" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Breastplate - Heavy armor -->
+			<item id="46987" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Gaiters - Heavy armor -->
+			<item id="46988" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Gauntlets - Heavy armor -->
+			<item id="46989" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Boots - Heavy armor -->
 			<item id="46923" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Shield -->
-			<item id="47000" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Necklace - Skill Cooldown -->
+			<item id="47000" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Necklace - Cooldown -->
 			<item id="47001" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Earring - Vampiric Rage -->
 			<item id="47002" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Earring - MP Consumption -->
 			<item id="47003" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Ring - Critical Damage -->
@@ -1369,7 +1369,7 @@
 		</capsuled_items>
 	</item>
 	<item id="46847" name="S-grade Paulina Light Armor Treasure Chest" type="EtcItem">
-		<!-- Double-click to obtain a S-grade Light Armor set, earrings, necklace, and ring. -->
+		<!-- Double-click to obtain an S-grade light armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1383,12 +1383,12 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="46990" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Leather Helmet - Light Armor -->
-			<item id="46991" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Leather Armor - Light Armor -->
-			<item id="46992" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Leather Leggints - Light Armor -->
-			<item id="46993" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Leather Gloves - Light Armor -->
-			<item id="46994" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Leather Boots - Light Armor -->
-			<item id="47000" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Necklace - Skill Cooldown -->
+			<item id="46990" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Leather Helmet - Light armor -->
+			<item id="46991" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Leather Armor - Light armor -->
+			<item id="46992" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Leather Leggints - Light armor -->
+			<item id="46993" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Leather Gloves - Light armor -->
+			<item id="46994" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Leather Boots - Light armor -->
+			<item id="47000" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Necklace - Cooldown -->
 			<item id="47001" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Earring - Vampiric Rage -->
 			<item id="47002" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Earring - MP Consumption -->
 			<item id="47003" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Ring - Critical Damage -->
@@ -1415,7 +1415,7 @@
 			<item id="46997" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Stockings - Robe -->
 			<item id="46998" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Gloves - Robe -->
 			<item id="46999" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Shoes - Robe -->
-			<item id="47000" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Necklace - Skill Cooldown -->
+			<item id="47000" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Necklace - Cooldown -->
 			<item id="47001" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Earring - Vampiric Rage -->
 			<item id="47002" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Earring - MP Consumption -->
 			<item id="47003" min="1" max="1" chance="100" /> <!-- Paulina's Dynasty Ring - Critical Damage -->
@@ -1423,7 +1423,7 @@
 		</capsuled_items>
 	</item>
 	<item id="46849" name="Paulina's Equipment Set (D-grade)" type="EtcItem">
-		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters between Lv. 20-39. -->
+		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters of Lv. 20-39. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1440,7 +1440,7 @@
 		</cond>
 	</item>
 	<item id="46850" name="Paulina's Equipment Set (C-grade)" type="EtcItem">
-		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters between Lv. 40-60. -->
+		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters of Lv. 40-60. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1457,7 +1457,7 @@
 		</cond>
 	</item>
 	<item id="46851" name="Paulina's Equipment Set (A-grade)" type="EtcItem">
-		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters between Lv. 61-75. -->
+		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters of Lv. 61-75. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1491,7 +1491,7 @@
 		</cond>
 	</item>
 	<item id="46853" name="Blessed Paulina's Specter Dual Sword" type="Weapon">
-		<!-- Dimensional Item. A Specter Dual Sword that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Blessed Specter Dual Swords that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special properties>. Atk. Spd. +5%, Critical Rate for standard attacks +82. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1549,7 +1549,7 @@
 		</stats>
 	</item>
 	<item id="46855" name="Blessed Paulina's Specter Slasher" type="Weapon">
-		<!-- Dimensional Item. A Specter Slasher that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Blessed Specter Slasher that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special properties>. Atk. Spd. +5%, Critical Rate for standard attacks +82. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_weapon_skia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1578,7 +1578,7 @@
 		</stats>
 	</item>
 	<item id="46856" name="Blessed Paulina's Specter Avenger" type="Weapon">
-		<!-- Dimensional Item. A Specter Avenger that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Blessed Specter Avenger that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special properties>. Atk. Spd. +5%, Critical Rate for standard attacks +82. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_weapon_ikeon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1608,7 +1608,7 @@
 		</stats>
 	</item>
 	<item id="46857" name="Blessed Paulina's Specter Fighter" type="Weapon">
-		<!-- Dimensional Item. A Specter Fighter that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Blessed Specter Fighter that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special properties>. Atk. Spd. +5%, Critical Rate for standard attacks +82. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_weapon_deodos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1638,7 +1638,7 @@
 		</stats>
 	</item>
 	<item id="46858" name="Blessed Paulina's Specter Stormer" type="Weapon">
-		<!-- Dimensional Item. A Specter Stormer that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Blessed Specter Stormer that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special properties>. Atk. Spd. +5%, Critical Rate for standard attacks +82. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_weapon_transgredi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1670,7 +1670,7 @@
 		</stats>
 	</item>
 	<item id="46859" name="Blessed Paulina's Specter Thrower" type="Weapon">
-		<!-- Dimensional Item. A Specter Thrower that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Damage +10%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Specter Thrower imbued with the energy of Paulina. Required level: 85+. <Special properties>. Atk. Spd. +5%, P. Critical Damage +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, assigned an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_weapon_solenas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1702,7 +1702,7 @@
 		</stats>
 	</item>
 	<item id="46860" name="Blessed Paulina's Specter Shooter" type="Weapon">
-		<!-- Dimensional Item. A Specter Shooter that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Damage +10%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Specter Shooter imbued with the energy of Paulina. Required level: 85+. <Special properties>. Atk. Spd. +5%, P. Critical Damage +10%. The item's appearance cannot be modified. Cannot be enchanted, crystallized, augmented, assigned an attribute. Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.bm_weapon_lapis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1734,7 +1734,7 @@
 		</stats>
 	</item>
 	<item id="46861" name="Blessed Paulina's Specter Dual Dagger" type="Weapon">
-		<!-- Dimensional Item. A Specter Dual Dagger that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Damage +7%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Blessed Specter Dual Daggers that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special properties>. Atk. Spd. +5%, Critical Damage for standard attacks +7%. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, imbued with an attribute. -->
 		<set name="icon" val="icon.bm_weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1796,7 +1796,7 @@
 		</stats>
 	</item>
 	<item id="46863" name="Blessed Paulina's Specter Retributer" type="Weapon">
-		<!-- Dimensional Item. A Specter Retributer that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Casting Spd. +15%, Atk. Spd. +5%, M. Atk +5%, P. Atk +5%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- Dimensional Item. A Specter Retributer that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Casting Spd. +15%, Atk. Spd. +5%, M. Atk. +5%, P. Atk. +5%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
 		<set name="icon" val="icon.bm_weapon_rupe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1827,7 +1827,7 @@
 		</stats>
 	</item>
 	<item id="46864" name="Blessed Paulina's Seraph Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional Item. A Seraph Helmet that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- A Seraph Helmet that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1846,7 +1846,7 @@
 		</stats>
 	</item>
 	<item id="46865" name="Blessed Paulina's Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional Item. A Seraph Breastplate that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- A Seraph Breastplate that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_t401_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1866,7 +1866,7 @@
 		</stats>
 	</item>
 	<item id="46866" name="Blessed Paulina's Seraph Gaiters" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional Item. Seraph Gaiters that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- Seraph Gaiters that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_t401_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1886,7 +1886,7 @@
 		</stats>
 	</item>
 	<item id="46867" name="Blessed Paulina's Seraph Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional Item. Seraph Gauntlets that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- Seraph Gauntlets that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1905,7 +1905,7 @@
 		</stats>
 	</item>
 	<item id="46868" name="Blessed Paulina's Seraph Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- Dimensional Item. Seraph Boots that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- Seraph Boots that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1984,7 +1984,7 @@
 		</stats>
 	</item>
 	<item id="46872" name="Blessed Paulina's Seraph Leather Leggings" additionalName="Light Armor" type="Armor">
-		<!-- Dimensional Item. Seraph Leather Leggings that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- Seraph Leather Leggings that can be equipped from level 85 onwards, thanks to Paulina's blessing. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.bm_armor_t402_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2235,7 +2235,7 @@
 		</stats>
 	</item>
 	<item id="46884" name="Blessed Paulina's Seraph Ring" additionalName="Critical Damage" type="Armor">
-		<!-- Dimensional Item. A Seraph Ring that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +31, P./ M. Critical Damage +15%. -->
+		<!-- Required level: 85+. MP +31, P. Critical Damage/ M. Skill Critical Damage +15%. -->
 		<set name="icon" val="icon.bm_r95_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2258,7 +2258,7 @@
 		</stats>
 	</item>
 	<item id="46885" name="Blessed Paulina's Seraph Ring" additionalName="Critical Rate" type="Armor">
-		<!-- Dimensional Item. A Seraph Ring that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +31, P./ M. Critical Rate +40. -->
+		<!-- Required level: 85+. MP +31, P. Critical Rate/ M. Skill Critical Rate +15%. -->
 		<set name="icon" val="icon.bm_r95_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2281,7 +2281,7 @@
 		</stats>
 	</item>
 	<item id="46886" name="PA - Paulina's Specter Dual Sword" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Dual Sword that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2309,7 +2309,7 @@
 		</stats>
 	</item>
 	<item id="46887" name="PA - Paulina's Specter Cutter" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Cutter that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, Max HP +25%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_ninfea_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2337,7 +2337,7 @@
 		</stats>
 	</item>
 	<item id="46888" name="PA - Paulina's Specter Slasher" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Slasher that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_skia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2365,7 +2365,7 @@
 		</stats>
 	</item>
 	<item id="46889" name="PA - Paulina's Specter Avenger" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Avenger that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_ikeon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2394,7 +2394,7 @@
 		</stats>
 	</item>
 	<item id="46890" name="PA - Paulina's Specter Fighter" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Fighter that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_deodos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2423,7 +2423,7 @@
 		</stats>
 	</item>
 	<item id="46891" name="PA - Paulina's Specter Stormer" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Stormer that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_transgredi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2454,7 +2454,7 @@
 		</stats>
 	</item>
 	<item id="46892" name="PA - Paulina's Specter Thrower" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Thrower that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Damage +10%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +10%, Critical Rate for standard attacks +50. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_solenas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2485,7 +2485,7 @@
 		</stats>
 	</item>
 	<item id="46893" name="PA - Paulina's Specter Shooter" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Shooter that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Damage +10%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +10%, Critical Rate for standard attacks +50. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_lapis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2516,7 +2516,7 @@
 		</stats>
 	</item>
 	<item id="46894" name="PA - Paulina's Specter Dual Dagger" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Dual Dagger that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Atk. Spd. +5%, P. Critical Damage +7%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special properties>. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +10%, Critical Rate for standard attacks +50. Its appearance cannot be modified. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, imbued with an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -2546,7 +2546,7 @@
 		</stats>
 	</item>
 	<item id="46895" name="PA - Paulina Specter Caster" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Caster that can be equipped from Level 85 onwards, thanks to Paulina's blessing. <Special Option>. Casting Spd. +15%, M. Atk. +5%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special Features>. PvE Damage +10%, Max HP +15%, Casting Spd. +15%, M. Critical Damage +10%, M. Critical Rate +50. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, assigned an attribute. -->
 		<set name="icon" val="icon.weapon_alacer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2576,7 +2576,7 @@
 		</stats>
 	</item>
 	<item id="46896" name="PA - Paulina's Specter Retributer" additionalName="4-hour" type="Weapon">
-		<!-- A Specter Retributer that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. <Special Option>. Casting Spd. +15%, Atk. Spd. +5%, M. Atk +5%, P. Atk +5%. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- For PA. <Special Option>. PvE Damage +10%, Max HP +15%, Atk./ Casting Spd. +15%, P. Critical Damage/ M. Skill Critical Damage +10%. Cannot be enchanted, augmented, upgraded with Soul Crystal, crystallized, appearance modified, assigned an attribute. -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2606,7 +2606,7 @@
 		</stats>
 	</item>
 	<item id="46897" name="PA - Paulina's Seraph Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- A Seraph Helmet that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2624,7 +2624,7 @@
 		</stats>
 	</item>
 	<item id="46898" name="PA - Paulina's Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- A Seraph Breastplate that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2643,7 +2643,7 @@
 		</stats>
 	</item>
 	<item id="46899" name="PA - Paulina's Seraph Gaiters" additionalName="Heavy Armor" type="Armor">
-		<!-- Seraph Gaiters that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

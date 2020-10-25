@@ -96,7 +96,7 @@
 		</effects>
 	</skill>
 	<skill id="2305" toLevel="1" name="Primeval Potion">
-		<!-- Increases resistance to various poisons and anesthetics that originate on the Primeval Isle. -->
+		<!-- Increases resistance to infections and anesthetics that originate on the Primeval Isle. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>POTION_OF_GENESIS</abnormalType>
@@ -316,7 +316,7 @@
 							<item id="9095" count="1" /> <!-- Shadow Item: Majestic Circlet -->
 							<item id="9096" count="1" /> <!-- Shadow Item: Majestic Gauntlets -->
 							<item id="9097" count="1" /> <!-- Shadow Item: Majestic Boots -->
-							<item id="9129" count="1" /> <!-- Shadow Item: Shield of Nightmares -->
+							<item id="9129" count="1" /> <!-- Shadow Item: Shield of Nightmare -->
 						</item>
 					</value>
 					<value level="13">
@@ -404,8 +404,8 @@
 					</value>
 					<value level="22">
 						<item chance="100">
-							<item id="9077" count="1" /> <!-- Shadow Item: Tunic of Zubei -->
-							<item id="9078" count="1" /> <!-- Shadow Item: Stockings of Zubei -->
+							<item id="9077" count="1" /> <!-- Shadow Item: Zubei's Tunic -->
+							<item id="9078" count="1" /> <!-- Shadow Item: Zubei's Stockings -->
 							<item id="9079" count="1" /> <!-- Shadow Item: Zubei's Gauntlets -->
 							<item id="9080" count="1" /> <!-- Shadow Item: Zubei's Boots -->
 							<item id="9069" count="1" /> <!-- Shadow Item: Zubei's Helmet -->
@@ -427,79 +427,79 @@
 							<item id="9102" count="1" /> <!-- Shadow Item: Majestic Gauntlets -->
 							<item id="9103" count="1" /> <!-- Shadow Item: Majestic Boots -->
 							<item id="9095" count="1" /> <!-- Shadow Item: Majestic Circlet -->
-							<item id="9129" count="1" /> <!-- Shadow Item: Shield of Nightmares -->
+							<item id="9129" count="1" /> <!-- Shadow Item: Shield of Nightmare -->
 						</item>
 					</value>
 					<value level="25">
 						<item chance="100">
-							<item id="1835" count="1000" /> <!-- Soulshot (No-grade) -->
-							<item id="8622" count="10" /> <!-- Elixir of Life (No-grade) -->
+							<item id="1835" count="1000" /> <!-- No-grade Soulshot -->
+							<item id="8622" count="10" /> <!-- No-grade Elixir of Life -->
 						</item>
 					</value>
 					<value level="26">
 						<item chance="100">
-							<item id="1463" count="1000" /> <!-- Soulshot (D-grade) -->
-							<item id="8623" count="10" /> <!-- Elixir of Life (D-grade) -->
+							<item id="1463" count="1000" /> <!-- D-grade Soulshot -->
+							<item id="8623" count="10" /> <!-- Elixir of Life -->
 						</item>
 					</value>
 					<value level="27">
 						<item chance="100">
-							<item id="1464" count="1000" /> <!-- Soulshot (C-grade) -->
-							<item id="8624" count="10" /> <!-- Elixir of Life (C-grade) -->
+							<item id="1464" count="1000" /> <!-- C-grade Soulshot -->
+							<item id="8624" count="10" /> <!-- Elixir of Life -->
 						</item>
 					</value>
 					<value level="28">
 						<item chance="100">
-							<item id="1465" count="500" /> <!-- Soulshot (B-grade) -->
-							<item id="8625" count="7" /> <!-- Elixir of Life (B-grade) -->
+							<item id="1465" count="500" /> <!-- B-grade Soulshot -->
+							<item id="8625" count="7" /> <!-- Elixir of Life -->
 						</item>
 					</value>
 					<value level="29">
 						<item chance="100">
-							<item id="1466" count="300" /> <!-- Soulshot (A-grade) -->
-							<item id="8626" count="7" /> <!-- Elixir of Life (A-grade) -->
+							<item id="1466" count="300" /> <!-- A-grade Soulshot -->
+							<item id="8626" count="7" /> <!-- Elixir of Life -->
 						</item>
 					</value>
 					<value level="30">
 						<item chance="100">
-							<item id="1466" count="300" /> <!-- Soulshot (A-grade) -->
-							<item id="8627" count="5" /> <!-- Elixir of Life (S-grade) -->
+							<item id="1466" count="300" /> <!-- A-grade Soulshot -->
+							<item id="8627" count="5" /> <!-- Elixir of Life -->
 						</item>
 					</value>
 					<value level="31">
 						<item chance="100">
-							<item id="2509" count="1000" /> <!-- Spiritshot (No-grade) -->
-							<item id="8622" count="10" /> <!-- Elixir of Life (No-grade) -->
+							<item id="2509" count="1000" /> <!-- No-grade Spiritshot -->
+							<item id="8622" count="10" /> <!-- No-grade Elixir of Life -->
 						</item>
 					</value>
 					<value level="32">
 						<item chance="100">
-							<item id="2510" count="1000" /> <!-- Spiritshot (D-grade) -->
-							<item id="8623" count="10" /> <!-- Elixir of Life (D-grade) -->
+							<item id="2510" count="1000" /> <!-- D-grade Spiritshot -->
+							<item id="8623" count="10" /> <!-- Elixir of Life -->
 						</item>
 					</value>
 					<value level="33">
 						<item chance="100">
-							<item id="2511" count="1000" /> <!-- Spiritshot (C-grade) -->
-							<item id="8624" count="10" /> <!-- Elixir of Life (C-grade) -->
+							<item id="2511" count="1000" /> <!-- C-grade Spiritshot -->
+							<item id="8624" count="10" /> <!-- Elixir of Life -->
 						</item>
 					</value>
 					<value level="34">
 						<item chance="100">
-							<item id="2512" count="500" /> <!-- Spiritshot (B-grade) -->
-							<item id="8625" count="7" /> <!-- Elixir of Life (B-grade) -->
+							<item id="2512" count="500" /> <!-- B-grade Spiritshot -->
+							<item id="8625" count="7" /> <!-- Elixir of Life -->
 						</item>
 					</value>
 					<value level="35">
 						<item chance="100">
-							<item id="2513" count="300" /> <!-- Spiritshot (A-grade) -->
-							<item id="8626" count="7" /> <!-- Elixir of Life (A-grade) -->
+							<item id="2513" count="300" /> <!-- A-grade Spiritshot -->
+							<item id="8626" count="7" /> <!-- Elixir of Life -->
 						</item>
 					</value>
 					<value level="36">
 						<item chance="100">
-							<item id="2513" count="300" /> <!-- Spiritshot (A-grade) -->
-							<item id="8627" count="5" /> <!-- Elixir of Life (S-grade) -->
+							<item id="2513" count="300" /> <!-- A-grade Spiritshot -->
+							<item id="8627" count="5" /> <!-- Elixir of Life -->
 						</item>
 					</value>
 				</items>
@@ -533,7 +533,7 @@
 		</effects>
 	</skill>
 	<skill id="2310" toLevel="1" name="Scroll: Guidance (Event)">
-		<!-- Increases Accuracy. Effect 3. -->
+		<!-- Increases P. Accuracy. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -556,7 +556,7 @@
 		</effects>
 	</skill>
 	<skill id="2311" toLevel="1" name="Scroll: Death Whisper (Event)">
-		<!-- Critical Damage is increased. Effect 3. -->
+		<!-- Increases Critical Damage for standard attacks. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -579,7 +579,7 @@
 		</effects>
 	</skill>
 	<skill id="2312" toLevel="1" name="Scroll: Focus (Event)">
-		<!-- Increases Critical Rate. Effect 3. -->
+		<!-- Increases Critical Rate for standard attacks. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -648,7 +648,7 @@
 		</effects>
 	</skill>
 	<skill id="2315" toLevel="1" name="Scroll: Agility (Event)">
-		<!-- Increases Evasion. Effect 3. -->
+		<!-- Increases P. Evasion. Effect 3. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -870,10 +870,10 @@
 						<item id="9157" count="1" /> <!-- Blessed Scroll of Resurrection (Event) -->
 					</item>
 					<item chance="45.997">
-						<item id="9206" count="10" /> <!-- Major Healing Potion (Event) -->
+						<item id="9206" count="10" /> <!-- Major HP Replenishing Potion - Event -->
 					</item>
 					<item chance="15.0">
-						<item id="9207" count="5" /> <!-- Quick Healing Potion (Event) -->
+						<item id="9207" count="5" /> <!-- Quick HP Replenishing Potion - Event -->
 					</item>
 					<item chance="0.0015">
 						<item id="8678" count="1" /> <!-- Sirra's Blade -->
@@ -932,10 +932,10 @@
 						<item id="9157" count="1" /> <!-- Blessed Scroll of Resurrection (Event) -->
 					</item>
 					<item chance="45.997">
-						<item id="9206" count="10" /> <!-- Major Healing Potion (Event) -->
+						<item id="9206" count="10" /> <!-- Major HP Replenishing Potion - Event -->
 					</item>
 					<item chance="15.0">
-						<item id="9207" count="5" /> <!-- Quick Healing Potion (Event) -->
+						<item id="9207" count="5" /> <!-- Quick HP Replenishing Potion - Event -->
 					</item>
 					<item chance="0.0015">
 						<item id="8685" count="1" /> <!-- Sobekk's Hurricane -->
@@ -994,10 +994,10 @@
 						<item id="9157" count="1" /> <!-- Blessed Scroll of Resurrection (Event) -->
 					</item>
 					<item chance="45.997">
-						<item id="9206" count="10" /> <!-- Major Healing Potion (Event) -->
+						<item id="9206" count="10" /> <!-- Major HP Replenishing Potion - Event -->
 					</item>
 					<item chance="15.0">
-						<item id="9207" count="5" /> <!-- Quick Healing Potion (Event) -->
+						<item id="9207" count="5" /> <!-- Quick HP Replenishing Potion - Event -->
 					</item>
 					<item chance="0.0015">
 						<item id="8688" count="1" /> <!-- Daimon Crystal -->
@@ -1056,10 +1056,10 @@
 						<item id="9157" count="1" /> <!-- Blessed Scroll of Resurrection (Event) -->
 					</item>
 					<item chance="45.997">
-						<item id="9206" count="10" /> <!-- Major Healing Potion (Event) -->
+						<item id="9206" count="10" /> <!-- Major HP Replenishing Potion - Event -->
 					</item>
 					<item chance="15.0">
-						<item id="9207" count="5" /> <!-- Quick Healing Potion (Event) -->
+						<item id="9207" count="5" /> <!-- Quick HP Replenishing Potion - Event -->
 					</item>
 					<item chance="0.0015">
 						<item id="8681" count="1" /> <!-- Behemoth' Tuning Fork -->
@@ -1118,10 +1118,10 @@
 						<item id="9157" count="1" /> <!-- Blessed Scroll of Resurrection (Event) -->
 					</item>
 					<item chance="45.997">
-						<item id="9206" count="10" /> <!-- Major Healing Potion (Event) -->
+						<item id="9206" count="10" /> <!-- Major HP Replenishing Potion - Event -->
 					</item>
 					<item chance="15.0">
-						<item id="9207" count="5" /> <!-- Quick Healing Potion (Event) -->
+						<item id="9207" count="5" /> <!-- Quick HP Replenishing Potion - Event -->
 					</item>
 					<item chance="0.0015">
 						<item id="8685" count="1" /> <!-- Sobekk's Hurricane -->
@@ -1180,10 +1180,10 @@
 						<item id="9157" count="1" /> <!-- Blessed Scroll of Resurrection (Event) -->
 					</item>
 					<item chance="45.997">
-						<item id="9206" count="10" /> <!-- Major Healing Potion (Event) -->
+						<item id="9206" count="10" /> <!-- Major HP Replenishing Potion - Event -->
 					</item>
 					<item chance="15.0">
-						<item id="9207" count="5" /> <!-- Quick Healing Potion (Event) -->
+						<item id="9207" count="5" /> <!-- Quick HP Replenishing Potion - Event -->
 					</item>
 					<item chance="0.0015">
 						<item id="8686" count="1" /> <!-- Themis' Tongue -->
@@ -1352,7 +1352,7 @@
 		</effects>
 	</skill>
 	<skill id="2339" toLevel="1" name="Holy Attack Resistance Potion">
-		<!-- Increases the Holy Attack Resistance. -->
+		<!-- Increases Holy Resistance. -->
 		<icon>icon.etc_holy_potion_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -1373,7 +1373,7 @@
 		</effects>
 	</skill>
 	<skill id="2340" toLevel="1" name="Dark Attack Resistance Potion">
-		<!-- Increases the Dark Attack Resistance. -->
+		<!-- Increases Dark Resistance. -->
 		<icon>icon.etc_unholy_potion_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -2611,7 +2611,7 @@
 		</effects>
 	</skill>
 	<skill id="2388" toLevel="1" name="Focus">
-		<!-- Increases Critical Rate. Effect 1. -->
+		<!-- Increases Critical Rate for standard attacks. Effect 1. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2632,7 +2632,7 @@
 		</effects>
 	</skill>
 	<skill id="2389" toLevel="1" name="Guidance">
-		<!-- Increases Accuracy. Effect 1. -->
+		<!-- Increases P. Accuracy. Effect 1. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2653,7 +2653,7 @@
 		</effects>
 	</skill>
 	<skill id="2390" toLevel="1" name="Berserker Spirit">
-		<!-- Decreases P. Def./ M. Def./ Evasion and increases P. Atk/ M Atk/ Atk. Spd./ Casting Spd./ Speed. Effect 2. -->
+		<!-- Decreases P. Def./ M. Def. and P. Evasion, also increases P./ M. Atk, Atk. Spd., Casting Spd., Speed. Effect 2. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2702,7 +2702,7 @@
 		</effects>
 	</skill>
 	<skill id="2391" toLevel="1" name="Clarity">
-		<!-- Decreases MP consumption. Effect 1. -->
+		<!-- Decreases Skill MP Consumption. Effect 1. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2804,8 +2804,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2395" toLevel="1" name="Healing Potion (Battleground)">
-		<!-- Recovers HP. -->
+	<skill id="2395" toLevel="1" name="Combat HP Replenishing Potion">
+		<!-- Restores HP. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -2888,7 +2888,7 @@
 		</effects>
 	</skill>
 	<skill id="2399" toLevel="1" name="Capture Rope">
-		<!-- Hold the target in place for a short time. While the effect lasts, additional Hold is not available. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Hold the target in place for a short time. While the effect lasts, additional Hold is not available.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.etc_braided_hemp_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>

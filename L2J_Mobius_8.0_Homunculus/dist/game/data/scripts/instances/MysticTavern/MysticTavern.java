@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -37,7 +36,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import ai.AbstractNpcAI;
 import instances.MysticTavern.StoryOfFreya.StoryOfFreya;
 import instances.MysticTavern.StoryOfTauti.StoryOfTauti;
-import quests.Q10297_GrandOpeningComeToOurPub.Q10297_GrandOpeningComeToOurPub;
 
 /**
  * This AI manages the entry to the Mystic Tavern instances.
@@ -118,11 +116,7 @@ public class MysticTavern extends AbstractNpcAI
 						{
 							return "34200-no-level.html";
 						}
-						final QuestState qs = member.getQuestState(Q10297_GrandOpeningComeToOurPub.class.getSimpleName());
-						if ((qs == null) || !qs.isCompleted())
-						{
-							return "34200-no-quest.html";
-						}
+						
 						if (InstanceManager.getInstance().getInstanceTime(member, INSTANCE_FREYA) > 0)
 						{
 							for (int i = 0; i < availableInstances.size(); i++)

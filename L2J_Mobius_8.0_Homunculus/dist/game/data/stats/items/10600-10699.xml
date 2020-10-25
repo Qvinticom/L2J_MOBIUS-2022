@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10600" name="Battle Manual - Soul Barrier" type="EtcItem">
-		<!-- Spellbook needed to learn Soul Barrier. Used by Berserkers and Arbalesters. Required level: 58 -->
+		<!-- A battle manual for learning the Soul Barrier skill. Used by Berserkers and Arbalesters. Required level: 58. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -11,7 +11,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10601" name="Battle Manual - Lightning Barrier" type="EtcItem">
-		<!-- Spellbook needed to learn Lightning Barrier. Used by Soul Hound. -->
+		<!-- A battle manual for learning the Lightning Barrier skill. Used by Soul Hounds. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -21,7 +21,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10602" name="Battle Manual - Soul Strike" type="EtcItem">
-		<!-- Spellbook needed to learn Soul Strike. Used by Soul Hound. -->
+		<!-- A battle manual for learning the Soul Strike skill. Used by Soul Hounds. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -31,7 +31,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10603" name="Battle Manual - Betrayal Mark" type="EtcItem">
-		<!-- Spellbook needed to learn Betrayal Mark. Used by Trickster. -->
+		<!-- A battle manual for learning the Betrayal Mark skill. Used by Tricksters. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -41,7 +41,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10604" name="Battle Manual - Rush Impact" type="EtcItem">
-		<!-- Spellbook needed to learn Rush Impact. Used by Doombringer. -->
+		<!-- A battle manual for learning the Rush Impact skill. Used by Doombringers. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -51,7 +51,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10605" name="Battle Manual - Mass Disarm" type="EtcItem">
-		<!-- Spellbook needed to learn Mass Disarm. Used by Doombringer. -->
+		<!-- A battle manual for learning the Mass Disarm skill. Used by Doombringers. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -61,7 +61,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10606" name="Agathion - Rudolph" type="Armor">
-		<!-- The bracelet which can summon cute Rudolph Agathion. -->
+		<!-- A bracelet for summoning Agathion Rudolph. Can be used only during the New Year event. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -76,13 +76,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
+			<skill id="23297" level="1" /> <!-- Rudolph's Blessing -->
 			<skill id="5537" level="1" /> <!-- Rudolph Cuteness Trick -->
 			<skill id="3425" level="1" /> <!-- Release Agathion's Seal - Rudolph -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="10607" name="Agathion - Rudolph" type="EtcItem">
-		<!-- The bracelet which can summon cute Rudolph Agathion. -->
+		<!-- A bracelet for summoning Agathion Rudolph. Can be used only during the New Year event. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -96,7 +97,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10608" name="Forgotten Scroll: Chant of Combat" type="EtcItem">
-		<!-- Scroll to learn Chant of Combat. Warcryer uses it. Can be acquired by level 70. -->
+		<!-- A scroll for learning the Chant of Combat skill. Used by Warcryers. Required level: 70. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -110,7 +111,7 @@
 		</skills>
 	</item>
 	<item id="10609" name="Forgotten Scroll: Chant of Critical" type="EtcItem">
-		<!-- Scroll to learn Chant of Critical. Warcryer uses it. Can be acquired by level 72. -->
+		<!-- A scroll for learning the Chant of Critical skill. Used by Warcryers. Required level: 72. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -124,7 +125,7 @@
 		</skills>
 	</item>
 	<item id="10610" name="Forgotten Scroll: Chant of Blood Awakening" type="EtcItem">
-		<!-- Scroll to learn Chant of Blood Awakening. Warcryer uses it. Can be acquired by level 74. -->
+		<!-- A scroll for learning the Chant of Blood Awakening skill. Used by Warcryers. Required level: 74. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -165,7 +166,7 @@
 		</skills>
 	</item>
 	<item id="10612" name="Certificate - Master Ability" type="EtcItem">
-		<!-- Certificate needed to learn a Master Ability. Only main classes can learn this skill. -->
+		<!-- A certificate for learning Master Abilities. Used by main classes. -->
 		<set name="icon" val="icon.etc_all_subjob_skillbook_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -572,7 +573,7 @@
 		</skills>
 	</item>
 	<item id="10632" name="Wondrous Cubic" type="EtcItem">
-		<!-- Double-click to create a cube fragment that can be exchanged for a weapon/ armor enchant scroll. (Can only be used once per day.) -->
+		<!-- Wondrous Cubic, no longer used. Can be exchanged for Elcyum Crystals by Warehouse Keeper. -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -592,7 +593,7 @@
 		</skills>
 	</item>
 	<item id="10633" name="Cube Fragment Armor - D" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for a D-grade Scroll: Enchant Armor. -->
+		<!-- Go to Warehouse Keeper to exchange it for Scroll: Enchant D-grade Armor. -->
 		<set name="icon" val="icon.event_cubic_piece_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -600,7 +601,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10634" name="Cube Fragment Armor - C" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for a C-grade Scroll: Enchant Armor. -->
+		<!-- Go to Warehouse Keeper to exchange it for Scroll: Enchant C-grade Armor. -->
 		<set name="icon" val="icon.event_cubic_piece_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -608,7 +609,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10635" name="Cube Fragment Armor - B" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for a B-grade armor Enchant Scroll. -->
+		<!-- Go to Warehouse Keeper to exchange it for Scroll: Enchant B-grade Armor. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_a_piece_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -616,7 +617,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="10636" name="Cube Fragment Armor - A" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for an A-grade Scroll: Enchant Armor. -->
+		<!-- Go to Warehouse Keeper to exchange it for Scroll: Enchant A-grade Armor. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_a_piece_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -624,7 +625,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="10637" name="Cube Fragment Armor - S" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for an S-grade Scroll: Enchant Armor. -->
+		<!-- Go to Warehouse Keeper to exchange it for Scroll: Enchant S-grade Armor. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_a_piece_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -640,14 +641,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10639" name="Mouse Coin" type="EtcItem">
-		<!-- Currency used by Mutated Rats. Take it to a magic lab for a reward. -->
+		<!-- A coin with a cute rat - the symbol of the New Year. Can be exchanged for various items through Stray Rat. -->
 		<set name="icon" val="icon.mouse_coin_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10640" name="Cloned Squash Seed" type="EtcItem">
-		<!-- Double-click to make a Young Squash appear. -->
+		<!-- Autumn Harvest Event - double-click to make a Young Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -685,7 +686,7 @@
 		</skills>
 	</item>
 	<item id="10642" name="Cube Fragment Weapon - D" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for a D-grade Scroll: Enchant Weapon. -->
+		<!-- Can be exchanged for Scroll: Enchant D-grade Weapon through the Warehouse Keeper. -->
 		<set name="icon" val="icon.event_cubic_piece_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -693,7 +694,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10643" name="Cube Fragment Weapon - C" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for a C-grade Scroll: Enchant Weapon. -->
+		<!-- Can be exchanged for Scroll: Enchant C-grade Weapon through the Warehouse Keeper. -->
 		<set name="icon" val="icon.event_cubic_piece_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -701,7 +702,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10644" name="Cube Fragment Weapon - B" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for a B-grade Scroll: Enchant Weapon. -->
+		<!-- Can be exchanged for Scroll: Enchant B-grade Weapon through the Warehouse Keeper. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_w_piece_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -709,7 +710,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="10645" name="Cube Fragment Weapon - A" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for an A-grade Scroll: Enchant Weapon. -->
+		<!-- Can be exchanged for Scroll: Enchant A-grade Weapon through the Warehouse Keeper. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_w_piece_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -717,7 +718,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="10646" name="Cube Fragment Weapon - S" type="EtcItem">
-		<!-- Speak with a warehouse keeper to exchange this for an S-grade Scroll: Enchant Weapon. -->
+		<!-- Can be exchanged for Scroll: Enchant S-grade Weapon through the Warehouse Keeper. -->
 		<set name="icon" val="Branchsys2.icon.event_cubic_w_piece_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -748,7 +749,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10649" name="Feather of Blessing" type="EtcItem">
-		<!-- You can resurrect right away at the spot where you died if you have the Feather of Blessing in your inventory. -->
+		<!-- You can resurrect right away at the spot where you get killed if you have the Feather of Blessing. -->
 		<set name="icon" val="icon.blessed_feather_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
@@ -1012,7 +1013,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10667" name="Sirra's Blade {PvP} - Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Atk. Spd. +6%. Increases PvP damage. Has a chance of recovering CP after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1049,7 +1050,7 @@
 		</stats>
 	</item>
 	<item id="10668" name="Sirra's Blade {PvP} - Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Max HP +25%. Increases PvP damage. Has a chance of recovering CP after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1086,7 +1087,7 @@
 		</stats>
 	</item>
 	<item id="10669" name="Sirra's Blade {PvP} - Critical Poison" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 15% chance of casting Poison on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Soul Crystal properties>. With a 15% chance, poisons the target after a critical attack. Increases PvP damage. Has a chance of recovering CP after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1123,7 +1124,7 @@
 		</stats>
 	</item>
 	<item id="10670" name="Sword of Ipos {PvP} - Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +61. Inflicts additional PvP Damage, also has a chance of inflicting additional damage after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1160,7 +1161,7 @@
 		</stats>
 	</item>
 	<item id="10671" name="Sword of Ipos {PvP} - Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Atk. Spd. +6%. Increases PvP damage. Has a chance of inflicting additional damage after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1197,7 +1198,7 @@
 		</stats>
 	</item>
 	<item id="10672" name="Sword of Ipos {PvP} - Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Max HP +25%. Increases PvP damage. Has a chance of inflicting additional damage after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1234,7 +1235,7 @@
 		</stats>
 	</item>
 	<item id="10673" name="Barakiel's Axe {PvP} - Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Max HP +25%. Increases PvP damage. Has a chance of recovering CP after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1272,7 +1273,7 @@
 		</stats>
 	</item>
 	<item id="10674" name="Barakiel's Axe {PvP} - Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Atk. Spd. +6%. Increases PvP damage. Has a chance of recovering CP after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1310,7 +1311,7 @@
 		</stats>
 	</item>
 	<item id="10675" name="Barakiel's Axe {PvP} - Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. P. Critical Rate +61. Increases PvP damage. Has a chance of recovering CP when hit. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1348,7 +1349,7 @@
 		</stats>
 	</item>
 	<item id="10676" name="Behemoth' Tuning Fork {PvP} - Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +61. Inflicts additional PvP Damage, also has a chance of inflicting additional damage after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1386,7 +1387,7 @@
 		</stats>
 	</item>
 	<item id="10677" name="Behemoth' Tuning Fork {PvP} - Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Max HP +25%. Increases PvP damage. Has a chance to inflict additional damage after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1424,7 +1425,7 @@
 		</stats>
 	</item>
 	<item id="10678" name="Behemoth' Tuning Fork {PvP} - Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +32 and decreases Max HP by 15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +32 and Max HP -15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1462,7 +1463,7 @@
 		</stats>
 	</item>
 	<item id="10679" name="Naga's Storm {PvP} - Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 67. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +67. Inflicts additional PvP Damage, also has a chance of canceling one or more buffs and decreasing the target's Shield Defense after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1501,7 +1502,7 @@
 		</stats>
 	</item>
 	<item id="10680" name="Naga's Storm {PvP} - Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +200 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. P. Atk. +200 after a critical attack. Increases PvP damage. Has a chance of removing 1 or more of the target's buffs, and of decreasing their Shield Defense after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1540,7 +1541,7 @@
 		</stats>
 	</item>
 	<item id="10681" name="Naga's Storm {PvP} - Back Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Critical Rate by 37 when attacking the target from behind. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Critical Rate for standard attacks +37 after a backstab. Increases PvP damage. Has a chance of removing 1 or more of the target's buffs, and of decreasing their Shield Defense after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1579,7 +1580,7 @@
 		</stats>
 	</item>
 	<item id="10682" name="Tiphon's Spear {PvP} - Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target after a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1617,7 +1618,7 @@
 		</stats>
 	</item>
 	<item id="10683" name="Tiphon's Spear {PvP} - Long Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases the attack range. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Increases the attack range. Increases PvP damage. Has a chance of inflicting additional damage after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1654,7 +1655,7 @@
 		</stats>
 	</item>
 	<item id="10684" name="Tiphon's Spear {PvP} - Wild Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Widens the angle of attack. Increases PvP damage. Has a chance of inflicting additional damage after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1691,7 +1692,7 @@
 		</stats>
 	</item>
 	<item id="10685" name="Shyeed's Bow {PvP} - Cheap Shot" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 30% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. With a 30% chance, decreases MP consumption for 1 after a standard attack. Increases PvP damage. Has a chance of increasing Atk. Spd. of bows/ crossbows after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1731,7 +1732,7 @@
 		</stats>
 	</item>
 	<item id="10686" name="Shyeed's Bow {PvP} - Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +61. Inflicts additional PvP Damage. Has a chance of increasing Atk. Spd. of bows/ crossbows after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1771,7 +1772,7 @@
 		</stats>
 	</item>
 	<item id="10687" name="Shyeed's Bow {PvP} - Quick Recovery" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Decreases cooldown by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Skill Cooldown is about -17%. Inflicts additional PvP Damage. Has a chance of increasing Atk. Spd. of bows/ crossbows after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1810,7 +1811,7 @@
 		</stats>
 	</item>
 	<item id="10688" name="Sobekk's Hurricane {PvP} - Rsk. Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Atk. Spd. +11% when HP is lower than 60%. Increases PvP damage. Has a chance of removing 1 or more of the target's buffs, and of decreasing their Shield Defense after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1849,7 +1850,7 @@
 		</stats>
 	</item>
 	<item id="10689" name="Sobekk's Hurricane {PvP} - Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Atk. Spd. +6%. Increases PvP damage. Has a chance of removing 1 or more of the target's buffs, and of decreasing their Shield Defense after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1888,7 +1889,7 @@
 		</stats>
 	</item>
 	<item id="10690" name="Sobekk's Hurricane {PvP} - Critical Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a chance to absorb 14 HP from the target during a critical attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. With a certain chance, absorbs 14 HP from the target after a critical attack. Increases PvP damage. Has a chance of cancelling 1 or more of the target's buffs, and of decreasing their Shield Defense after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1927,7 +1928,7 @@
 		</stats>
 	</item>
 	<item id="10691" name="Themis' Tongue {PvP} - Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. Max MP +30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2041,7 +2042,7 @@
 		</stats>
 	</item>
 	<item id="10694" name="Cabrio's Hand {PvP} - Conversion" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. Max MP +60% and Max HP -40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2080,7 +2081,7 @@
 		</stats>
 	</item>
 	<item id="10695" name="Cabrio's Hand {PvP} - Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. Max MP +30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2158,7 +2159,7 @@
 		</stats>
 	</item>
 	<item id="10697" name="Daimon Crystal {PvP} - Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. Max MP +30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2197,7 +2198,7 @@
 		</stats>
 	</item>
 	<item id="10698" name="Daimon Crystal {PvP} - Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd. +15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

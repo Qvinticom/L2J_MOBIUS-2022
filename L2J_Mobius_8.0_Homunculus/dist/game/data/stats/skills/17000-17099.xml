@@ -7,42 +7,42 @@
 		<hitTime>200</hitTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="17001" toLevel="1" name="Blessed Weapon Appearance Stone (R-grade) (30-day)">
+	<skill id="17001" toLevel="1" name="Blessed R-grade Weapon Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17002" toLevel="1" name="Blessed Weapon Appearance Stone (S-grade) (30-day)">
+	<skill id="17002" toLevel="1" name="Blessed S-grade Weapon Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17003" toLevel="1" name="Blessed Weapon Appearance Stone (A-grade) (30-day)">
+	<skill id="17003" toLevel="1" name="Blessed A-grade Weapon Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 		<itemConsumeId>37536</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 	</skill>
-	<skill id="17004" toLevel="1" name="Blessed Weapon Appearance Stone (B-grade) (30-day)">
+	<skill id="17004" toLevel="1" name="Blessed B-grade Weapon Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17005" toLevel="1" name="Blessed Weapon Appearance Stone (C-grade) (30-day)">
+	<skill id="17005" toLevel="1" name="Blessed C-grade Weapon Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17006" toLevel="1" name="Blessed Weapon Appearance Stone (D-grade) (30-day)">
+	<skill id="17006" toLevel="1" name="Blessed D-grade Weapon Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17007" toLevel="1" name="Blessed Armor Appearance Stone (R-grade) (30-day)">
+	<skill id="17007" toLevel="1" name="Blessed R-grade Armor Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17008" toLevel="1" name="Blessed Armor Appearance Stone (S-grade) (30-day)">
+	<skill id="17008" toLevel="1" name="Blessed S-grade Armor Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17009" toLevel="1" name="Blessed Armor Appearance Stone (A-grade) (30-day)">
+	<skill id="17009" toLevel="1" name="Blessed A-grade Armor Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17010" toLevel="1" name="Blessed Armor Appearance Stone (B-grade) (30-day)">
+	<skill id="17010" toLevel="1" name="Blessed B-grade Armor Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17011" toLevel="1" name="Blessed Armor Appearance Stone (C-grade) (30-day)">
+	<skill id="17011" toLevel="1" name="Blessed C-grade Armor Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17012" toLevel="1" name="Blessed Armor Appearance Stone (D-grade) (30-day)">
+	<skill id="17012" toLevel="1" name="Blessed D-grade Armor Appearance Stone (30-day)">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17013" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Sword (15-day)">
@@ -187,6 +187,7 @@
 		<isMagic>2</isMagic>
 		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
 			<condition name="OpAlignment">
 				<affectType>CASTER</affectType>
@@ -214,6 +215,7 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
 			<condition name="OpAlignment">
 				<affectType>CASTER</affectType>
@@ -240,6 +242,7 @@
 		<isMagic>2</isMagic>
 		<magicLevel>1</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<conditions>
 			<condition name="OpAlignment">
 				<affectType>CASTER</affectType>
@@ -256,15 +259,15 @@
 		</effects>
 	</skill>
 	<skill id="17052" toLevel="2" name="Elmore's Support Box">
-		<!-- Double-click to obtain either: 1 of the 4 Giant's Codices (Oblivion, Discipline, Mastery, Standard), or an Enchant Scroll (R-grade) for a weapon or armor. -->
+		<!-- Double-click to obtain either: 1 of the 4 Giant's Codices (Oblivion, Discipline, Mastery, Standard), or an R-grade Enchant Scroll for a weapon or armor. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17053" toLevel="1" name="Elmore's Mysterious Box">
-		<!-- Double-click to obtain either: a weapon upgrade ingredient (Lv. 4), armor upgrade ingredient (Lv. 4), Eternal Ingredient Pouch, or Eternal Recipe Pouch. -->
+		<!-- Double-click to obtain one of the following items: a weapon upgrade ingredient (Lv. 4), armor upgrade ingredient (Lv. 4), Eternal Ingredient Pouch, or Eternal Recipe Pouch. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17054" toLevel="1" name="Elmore's Noble Box">
-		<!-- Double-click to obtain either: a weapon upgrade ingredient (Lv. 4), armor upgrade ingredient (Lv. 4), Eternal Ingredient Pouch, or Eternal Recipe Pouch. Has a higher chance of obtaining more and better items than through the Elmore's Mysterious Box. -->
+		<!-- Double-click to obtain one of the following items: a weapon upgrade ingredient (Lv. 4), armor upgrade ingredient (Lv. 4), Eternal Ingredient Pouch, or Eternal Recipe Pouch. Has a higher chance of obtaining more and better items than through the Elmore's Mysterious Box. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17055" toLevel="1" name="Eternal Recipe Pouch">
@@ -283,137 +286,155 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17058" toLevel="1" name="Dimensional Blessing (Event)">
-		<!-- Blessing bestowed by the Dimensional Wizard for your victory in the Dimensional Space. For 4 h., obtained XP +100%. -->
+		<!-- Blessing given by the Dimensional Wizard. Acquired XP +100% for 4 h. -->
 		<icon>icon.skill14216</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17059" toLevel="1" name="Talisman - Escape: Town of Gludio">
+	<skill id="17059" toLevel="1" name="Talisman of Escape: Gludio">
 		<!-- Return to the Town of Gludio. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17060" toLevel="1" name="Talisman - Escape: Town of Dion">
+	<skill id="17060" toLevel="1" name="Talisman of Escape: Dion">
 		<!-- Return to the Town of Dion. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17061" toLevel="1" name="Talisman - Escape: Town of Giran">
+	<skill id="17061" toLevel="1" name="Talisman of Escape: Giran">
 		<!-- Return to the Town of Giran. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17062" toLevel="1" name="Talisman - Escape: Heine">
+	<skill id="17062" toLevel="1" name="Talisman of Escape: Heine">
 		<!-- Return to Heine. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17063" toLevel="1" name="Talisman - Escape: Town of Oren">
+	<skill id="17063" toLevel="1" name="Talisman of Escape: Oren">
 		<!-- Return to the Town of Oren. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17064" toLevel="1" name="Talisman - Escape: Town of Aden">
+	<skill id="17064" toLevel="1" name="Talisman of Escape: Aden">
 		<!-- Return to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17065" toLevel="1" name="Talisman - Escape: Town of Goddard">
+	<skill id="17065" toLevel="1" name="Talisman of Escape: Goddard">
 		<!-- Return to the Town of Goddard. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17066" toLevel="1" name="Talisman - Escape: Town of Rune">
+	<skill id="17066" toLevel="1" name="Talisman of Escape: Rune">
 		<!-- Return to the Town of Rune. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17067" toLevel="1" name="Talisman - Escape: Town of Schuttgart">
+	<skill id="17067" toLevel="1" name="Talisman of Escape: Schuttgart">
 		<!-- Return to the Town of Schuttgart. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
 	</skill>
-	<skill id="17068" toLevel="1" name="Talisman - Escape: Talking Island Village">
+	<skill id="17068" toLevel="1" name="Talisman of Escape: Talking Island Village">
 		<!-- Return to Talking Island Village. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17069" toLevel="1" name="Talisman - Escape: Elven Village">
+	<skill id="17069" toLevel="1" name="Talisman of Escape: Elven Village">
 		<!-- Return to the Elven Village. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17070" toLevel="1" name="Talisman - Escape: Dark Elf Village">
+	<skill id="17070" toLevel="1" name="Talisman of Escape: Dark Elf Village">
 		<!-- Return to the Dark Elf Village. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
 	</skill>
-	<skill id="17071" toLevel="1" name="Talisman - Escape: Orc Village">
+	<skill id="17071" toLevel="1" name="Talisman of Escape: Orc Village">
 		<!-- Return to the Orc Village. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17072" toLevel="1" name="Talisman - Escape: Dwarven Village">
+	<skill id="17072" toLevel="1" name="Talisman of Escape: Dwarven Village">
 		<!-- Return to the Dwarven Village. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
 	</skill>
-	<skill id="17073" toLevel="1" name="Talisman - Escape: Floran Village">
+	<skill id="17073" toLevel="1" name="Talisman of Escape: Floran Village">
 		<!-- Return to Floran Village. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17074" toLevel="1" name="Talisman - Escape: Hardin's Academy">
+	<skill id="17074" toLevel="1" name="Talisman of Escape: Hardin's Academy">
 		<!-- Return to Hardin's Academy. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17075" toLevel="1" name="Talisman - Escape: Ivory Tower">
+	<skill id="17075" toLevel="1" name="Talisman of Escape: Ivory Tower">
 		<!-- Return to Ivory Tower. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17076" toLevel="1" name="Talisman - Escape: Hunters' Village">
+	<skill id="17076" toLevel="1" name="Talisman of Escape: Hunters' Village">
 		<!-- Return to the Hunter's Village. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17077" toLevel="1" name="Talisman - Escape: Ketra Orc Village">
+	<skill id="17077" toLevel="1" name="Talisman of Escape: Ketra Orc Village">
 		<!-- Return to the Ketra Orc Village. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17078" toLevel="1" name="Talisman - Escape: Varka Silenos Village">
+	<skill id="17078" toLevel="1" name="Talisman of Escape: Varka Silenos Village">
 		<!-- Return to Varka Silenos Village. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
-	<skill id="17079" toLevel="1" name="Talisman - Escape: Kamael Village">
+	<skill id="17079" toLevel="1" name="Talisman of Escape: Kamael Village">
 		<!-- Return to the Kamael Village. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
 	</skill>
 	<skill id="17080" toLevel="1" name="Hair Accessory Restoration Stone">
 		<operateType>A1</operateType>
@@ -451,7 +472,7 @@
 		</effects>
 	</skill>
 	<skill id="17082" toLevel="1" name="Mentor's Prevailing Sonata">
-		<!-- With your Mentor's help, your Max HP +30%, P. Atk. +25%, M. Atk. +30%, and magic cancel rate -40. A chance to add 8% Vampiric Rage effect. The buff disappears when the Mentee contract ends. -->
+		<!-- With your mentor's help, Max HP +$s1, P. Atk. +$s2, M. Atk. +$s3, Casting Interruption Rate -$s5. The effect is active only when your mentor is online and for 5 min. after they have gone offline. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -508,7 +529,7 @@
 		</effects>
 	</skill>
 	<skill id="17083" toLevel="1" name="Daring Sonata - Mentor">
-		<!-- With your Mentor's help, your Atk. Spd. +25%, Casting Spd. +25%, Speed +20, Damage Reflectionion +10%, and Skill Cooldown -10%. The buff disappears when the Mentee contract ends. -->
+		<!-- With your mentor's help, your Atk. Spd. +$s1, Casting Spd. +$s2, Damage Reflection +$s3, Skill Cooldown -$s4. Buff is triggered only when your mentor is online. Buff persists for 5 min. after your mentor has gone offline. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -571,7 +592,7 @@
 		</effects>
 	</skill>
 	<skill id="17084" toLevel="1" name="Refreshing Sonata - Mentor">
-		<!-- With your Mentor's help, your HP Recovery +75%, MP Recovery +50%, P. Evasion/ M. Evasion +5, and Skill MP Consumption -20%. The buff disappears when the Mentee contract ends. -->
+		<!-- With your mentor's help, your HP Recovery Rate +$s1, MP Recovery Rate +$s2, P./ M. Evasion +$s3, Skill MP Consumption -$s4. Buff is triggered only when your mentor is online. Buff persists for 5 min. after your mentor has gone offline. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -625,7 +646,7 @@
 		</effects>
 	</skill>
 	<skill id="17085" toLevel="1" name="Kisung's Power Up">
-		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
+		<!-- For 30 min., acquired XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot be used with the Art of Seduction buff. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<itemConsumeId>37554</itemConsumeId>
@@ -636,13 +657,13 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17086" toLevel="1" name="Agathion Summon - Bae Kisung">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17087" toLevel="1" name="Kisung's Power Up (Event)">
-		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
+		<!-- For 30 min., acquired XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot be used with the Art of Seduction buff. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<operateType>A2</operateType>
@@ -651,7 +672,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17088" toLevel="1" name="Kisung's Emote 2">
-		<!-- See Agathion's cute trick. -->
+		<!-- Makes an agathion perform a cute trick. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<hitTime>3800</hitTime>
@@ -670,23 +691,23 @@
 		<effectPoint>1</effectPoint>
 		<hitTime>7000</hitTime>
 	</skill>
-	<skill id="17091" toLevel="1" name="Sealbook: One-eyed ParaPara Cat">
+	<skill id="17091" toLevel="1" name="Transformation Scroll: One-eyed ParaPara Cat">
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="17092" toLevel="1" name="Sealbook: Smiling ParaPara Cat">
+	<skill id="17092" toLevel="1" name="Transformation Scroll: Smiling ParaPara Cat">
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="17093" toLevel="1" name="Sealbook: Charming ParaPara Cat">
+	<skill id="17093" toLevel="1" name="Transformation Scroll: Charming ParaPara Cat">
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="17094" toLevel="1" name="Sealbook: Ferocious ParaPara Cat">
+	<skill id="17094" toLevel="1" name="Transformation Scroll: Ferocious ParaPara Cat">
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
-	<skill id="17095" toLevel="1" name="Sealbook: Merchant ParaPara Cat">
+	<skill id="17095" toLevel="1" name="Transformation Scroll: Merchant ParaPara Cat">
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>

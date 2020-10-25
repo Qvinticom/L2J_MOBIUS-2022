@@ -39,8 +39,8 @@ public class ExperienceData implements IXmlReader
 	private final Map<Integer, Long> _expTable = new HashMap<>();
 	private final Map<Integer, Double> _traningRateTable = new HashMap<>();
 	
-	private byte MAX_LEVEL;
-	private byte MAX_PET_LEVEL;
+	private int MAX_LEVEL;
+	private int MAX_PET_LEVEL;
 	
 	/**
 	 * Instantiates a new experience table.
@@ -66,8 +66,8 @@ public class ExperienceData implements IXmlReader
 	{
 		final Node table = doc.getFirstChild();
 		final NamedNodeMap tableAttr = table.getAttributes();
-		MAX_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxLevel").getNodeValue()) + 1);
-		MAX_PET_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxPetLevel").getNodeValue()) + 1);
+		MAX_LEVEL = Integer.parseInt(tableAttr.getNamedItem("maxLevel").getNodeValue()) + 1;
+		MAX_PET_LEVEL = Integer.parseInt(tableAttr.getNamedItem("maxPetLevel").getNodeValue()) + 1;
 		if (MAX_LEVEL > Config.PLAYER_MAXIMUM_LEVEL)
 		{
 			MAX_LEVEL = Config.PLAYER_MAXIMUM_LEVEL;
@@ -103,7 +103,7 @@ public class ExperienceData implements IXmlReader
 	{
 		if (level > Config.PLAYER_MAXIMUM_LEVEL)
 		{
-			return _expTable.get((int) Config.PLAYER_MAXIMUM_LEVEL);
+			return _expTable.get(Config.PLAYER_MAXIMUM_LEVEL);
 		}
 		return _expTable.get(level);
 	}
@@ -112,7 +112,7 @@ public class ExperienceData implements IXmlReader
 	{
 		if (level > Config.PLAYER_MAXIMUM_LEVEL)
 		{
-			return _traningRateTable.get((int) Config.PLAYER_MAXIMUM_LEVEL);
+			return _traningRateTable.get(Config.PLAYER_MAXIMUM_LEVEL);
 		}
 		return _traningRateTable.get(level);
 	}
@@ -121,7 +121,7 @@ public class ExperienceData implements IXmlReader
 	 * Gets the max level.
 	 * @return the maximum level acquirable by a player.
 	 */
-	public byte getMaxLevel()
+	public int getMaxLevel()
 	{
 		return MAX_LEVEL;
 	}
@@ -130,7 +130,7 @@ public class ExperienceData implements IXmlReader
 	 * Gets the max pet level.
 	 * @return the maximum level acquirable by a pet.
 	 */
-	public byte getMaxPetLevel()
+	public int getMaxPetLevel()
 	{
 		return MAX_PET_LEVEL;
 	}

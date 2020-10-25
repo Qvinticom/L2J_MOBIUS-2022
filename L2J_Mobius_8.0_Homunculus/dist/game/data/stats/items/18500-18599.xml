@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="18500" name="Special Talisman (R99-grade) - Shield Defense (Passive)" type="Armor">
-		<!-- Shield Defense +546 when equipped. -->
+		<!-- Shield Defense +546. -->
 		<set name="icon" val="icon.r85_sp_talisman_sd_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -22,7 +22,7 @@
 		</skills>
 	</item>
 	<item id="18501" name="Special Talisman (R85-grade) - Shield Defense (Active)" type="Armor">
-		<!-- Shield Defense +1242 when used. -->
+		<!-- When used, Shield Defense +1242. -->
 		<set name="icon" val="icon.r85_sp_talisman_sd_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -43,7 +43,7 @@
 		</skills>
 	</item>
 	<item id="18502" name="Special Talisman (R90-grade) - Shield Defense (Active)" type="Armor">
-		<!-- Shield Defense +1371 when used. -->
+		<!-- When used, Shield Defense +1371. -->
 		<set name="icon" val="icon.r85_sp_talisman_sd_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -64,7 +64,7 @@
 		</skills>
 	</item>
 	<item id="18503" name="Special Talisman (R95-grade) - Shield Defense (Active)" type="Armor">
-		<!-- Shield Defense +1515 when used. -->
+		<!-- When used, Shield Defense +1515. -->
 		<set name="icon" val="icon.r85_sp_talisman_sd_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -85,7 +85,7 @@
 		</skills>
 	</item>
 	<item id="18504" name="Special Talisman (R99-grade) - Shield Defense (Active)" type="Armor">
-		<!-- Shield Defense +1638 when used. -->
+		<!-- When used, Shield Defense +1638. -->
 		<set name="icon" val="icon.r85_sp_talisman_sd_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -186,7 +186,7 @@
 		</skills>
 	</item>
 	<item id="18509" name="Special Talisman (R85-grade) - Momentum (Active)" type="Armor">
-		<!-- When used, Momentum increases. Available up to Lv. 5. -->
+		<!-- Increases Momentum up to Lv. 5. -->
 		<set name="icon" val="icon.r85_sp_talisman_eg_rf_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -207,7 +207,7 @@
 		</skills>
 	</item>
 	<item id="18510" name="Special Talisman (R90-grade) - Momentum (Active)" type="Armor">
-		<!-- When used, Momentum increases. Available up to Lv. 5. -->
+		<!-- Increases Momentum up to Lv. 5. -->
 		<set name="icon" val="icon.r85_sp_talisman_eg_rf_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -228,7 +228,7 @@
 		</skills>
 	</item>
 	<item id="18511" name="Special Talisman (R95-grade) - Momentum (Active)" type="Armor">
-		<!-- When used, Momentum increases. Available up to Lv. 5. -->
+		<!-- Increases Momentum up to Lv. 5. -->
 		<set name="icon" val="icon.r85_sp_talisman_eg_rf_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -249,7 +249,7 @@
 		</skills>
 	</item>
 	<item id="18512" name="Special Talisman (R99-grade) - Momentum (Active)" type="Armor">
-		<!-- When used, Momentum increases. Available up to Lv. 5. -->
+		<!-- Increases Momentum up to Lv. 5. -->
 		<set name="icon" val="icon.r85_sp_talisman_eg_rf_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -270,7 +270,7 @@
 		</skills>
 	</item>
 	<item id="18513" name="Special Talisman (R85-grade) - Mana Drain" type="Armor">
-		<!-- Can absorb the attack target MP upon use. -->
+		<!-- When used, absorbs MP of the attacked target. -->
 		<set name="icon" val="icon.r85_sp_talisman_dr_mp_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -291,7 +291,7 @@
 		</skills>
 	</item>
 	<item id="18514" name="Special Talisman (R90-grade) - Mana Drain" type="Armor">
-		<!-- Can absorb the attack target MP upon use. -->
+		<!-- When used, absorbs MP of the attacked target. -->
 		<set name="icon" val="icon.r85_sp_talisman_dr_mp_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -312,7 +312,7 @@
 		</skills>
 	</item>
 	<item id="18515" name="Special Talisman (R95-grade) - Mana Drain" type="Armor">
-		<!-- Can absorb the attack target MP upon use. -->
+		<!-- When used, absorbs MP of the attacked target. -->
 		<set name="icon" val="icon.r85_sp_talisman_dr_mp_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -333,7 +333,7 @@
 		</skills>
 	</item>
 	<item id="18516" name="Special Talisman (R99-grade) - Mana Drain" type="Armor">
-		<!-- Can absorb the attack target MP upon use. -->
+		<!-- When used, absorbs MP of the attacked target. -->
 		<set name="icon" val="icon.r85_sp_talisman_dr_mp_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -354,7 +354,7 @@
 		</skills>
 	</item>
 	<item id="18517" name="Special Talisman (R85-grade) - Blood Siphon" type="Armor">
-		<!-- Chance of absorbing the attack target's HP upon use. -->
+		<!-- When used, has a certain chance to absorb HP of the attacked target. -->
 		<set name="icon" val="icon.r85_sp_talisman_dr_hp_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -375,7 +375,7 @@
 		</skills>
 	</item>
 	<item id="18518" name="Special Talisman (R90-grade) - Blood Siphon" type="Armor">
-		<!-- Chance of absorbing the attack target's HP upon use. -->
+		<!-- When used, has a certain chance to absorb HP of the attacked target. -->
 		<set name="icon" val="icon.r85_sp_talisman_dr_hp_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -396,7 +396,7 @@
 		</skills>
 	</item>
 	<item id="18519" name="Special Talisman (R95-grade) - Blood Siphon" type="Armor">
-		<!-- Chance of absorbing the attack target's HP upon use. -->
+		<!-- When used, has a certain chance to absorb HP of the attacked target. -->
 		<set name="icon" val="icon.r85_sp_talisman_dr_hp_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -417,7 +417,7 @@
 		</skills>
 	</item>
 	<item id="18520" name="Special Talisman (R99-grade) - Blood Siphon" type="Armor">
-		<!-- Chance of absorbing the attack target's HP upon use. -->
+		<!-- When used, has a certain chance to absorb HP of the attacked target. -->
 		<set name="icon" val="icon.r85_sp_talisman_dr_hp_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -438,7 +438,7 @@
 		</skills>
 	</item>
 	<item id="18521" name="Special Talisman (R85-grade) - Increase Range(Passive)" type="Armor">
-		<!-- User's bow/ crossbow range increases when equipped. -->
+		<!-- Increases bow/ crossbow attack range. -->
 		<set name="icon" val="icon.r85_sp_talisman_ad_ex_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -458,7 +458,7 @@
 		</skills>
 	</item>
 	<item id="18522" name="Special Talisman (R90-grade) - Increase Range(Passive)" type="Armor">
-		<!-- User's bow/ crossbow range increases when equipped. -->
+		<!-- Increases bow/ crossbow attack range. -->
 		<set name="icon" val="icon.r85_sp_talisman_ad_ex_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -478,7 +478,7 @@
 		</skills>
 	</item>
 	<item id="18523" name="Special Talisman (R95-grade) - Increase Range(Passive)" type="Armor">
-		<!-- User's bow/ crossbow range increases when equipped. -->
+		<!-- Increases bow/ crossbow attack range. -->
 		<set name="icon" val="icon.r85_sp_talisman_ad_ex_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -498,7 +498,7 @@
 		</skills>
 	</item>
 	<item id="18524" name="Special Talisman (R99-grade) - Increase Range(Passive)" type="Armor">
-		<!-- User's bow/ crossbow range increases when equipped. -->
+		<!-- Increases bow/ crossbow attack range. -->
 		<set name="icon" val="icon.r85_sp_talisman_ad_ex_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -518,7 +518,7 @@
 		</skills>
 	</item>
 	<item id="18525" name="Special Talisman (R85-grade) - Increase Range (Active)" type="Armor">
-		<!-- User's bow/ crossbow range increases when used. -->
+		<!-- Increases bow/ crossbow attack range, when used. -->
 		<set name="icon" val="icon.r85_sp_talisman_ad_ex_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -539,7 +539,7 @@
 		</skills>
 	</item>
 	<item id="18526" name="Special Talisman (R90-grade) - Increase Range (Active)" type="Armor">
-		<!-- User's bow/ crossbow range increases when used. -->
+		<!-- Increases bow/ crossbow attack range, when used. -->
 		<set name="icon" val="icon.r85_sp_talisman_ad_ex_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -560,7 +560,7 @@
 		</skills>
 	</item>
 	<item id="18527" name="Special Talisman (R95-grade) - Increase Range (Active)" type="Armor">
-		<!-- User's bow/ crossbow range increases when used. -->
+		<!-- Increases bow/ crossbow attack range, when used. -->
 		<set name="icon" val="icon.r85_sp_talisman_ad_ex_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -581,7 +581,7 @@
 		</skills>
 	</item>
 	<item id="18528" name="Special Talisman (R99-grade) - Increase Range (Active)" type="Armor">
-		<!-- User's bow/ crossbow range increases when used. -->
+		<!-- Increases bow/ crossbow attack range, when used. -->
 		<set name="icon" val="icon.r85_sp_talisman_ad_ex_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -707,7 +707,7 @@
 		</skills>
 	</item>
 	<item id="18534" name="Special Talisman (R-grade) - Magic Cancel (Passive)" type="Armor">
-		<!-- Magic cancel rate +10% when used. -->
+		<!-- Casting Interruption Rate -10%. -->
 		<set name="icon" val="icon.r_sp_talisman_mg_rs_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -727,7 +727,7 @@
 		</skills>
 	</item>
 	<item id="18535" name="Special Talisman (R-grade) - Magic Cancel (Active)" type="Armor">
-		<!-- Magic is not canceled when used. -->
+		<!-- When used, completely protects from Casting Interruption. -->
 		<set name="icon" val="icon.r_sp_talisman_mg_cc_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -748,7 +748,7 @@
 		</skills>
 	</item>
 	<item id="18536" name="Special Talisman (R85-grade) - MP Recovery" type="Armor">
-		<!-- MP Recovery amount +0.66 when equipped. -->
+		<!-- MP Recovery +0.66. -->
 		<set name="icon" val="icon.r85_sp_talisman_mp_rg_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -768,7 +768,7 @@
 		</skills>
 	</item>
 	<item id="18537" name="Special Talisman (R90-grade) - MP Recovery" type="Armor">
-		<!-- MP Recovery amount +0.68 when equipped. -->
+		<!-- MP Recovery +0.68. -->
 		<set name="icon" val="icon.r85_sp_talisman_mp_rg_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -788,7 +788,7 @@
 		</skills>
 	</item>
 	<item id="18538" name="Special Talisman (R95-grade) - MP Recovery" type="Armor">
-		<!-- MP Recovery amount +0.7 when equipped. -->
+		<!-- MP Recovery +0.7. -->
 		<set name="icon" val="icon.r85_sp_talisman_mp_rg_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -808,7 +808,7 @@
 		</skills>
 	</item>
 	<item id="18539" name="Special Talisman (R99-grade) - MP Recovery" type="Armor">
-		<!-- MP Recovery amount +0.72 when equipped. -->
+		<!-- MP Recovery +0.72. -->
 		<set name="icon" val="icon.r85_sp_talisman_mp_rg_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -828,7 +828,7 @@
 		</skills>
 	</item>
 	<item id="18540" name="Special Talisman (R-grade) - Decrease MP Consumption" type="Armor">
-		<!-- When equipped, MP consumption -15% for physical and magic skills. -->
+		<!-- P./ M. Skill MP Consumption -15%. -->
 		<set name="icon" val="icon.r_sp_talisman_mp_rd_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -849,7 +849,7 @@
 		</skills>
 	</item>
 	<item id="18541" name="Special Talisman (R85-grade) - Enhance Heal (Passive)" type="Armor">
-		<!-- HP Recovery M. Atk. +75 when equipped. -->
+		<!-- Healing Power +75. -->
 		<set name="icon" val="icon.r85_sp_talisman_hl_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -869,7 +869,7 @@
 		</skills>
 	</item>
 	<item id="18542" name="Special Talisman (R90-grade) - Enhance Heal (Passive)" type="Armor">
-		<!-- HP Recovery magic +82 when equipped. -->
+		<!-- Healing Power +82. -->
 		<set name="icon" val="icon.r85_sp_talisman_hl_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -889,7 +889,7 @@
 		</skills>
 	</item>
 	<item id="18543" name="Special Talisman (R95-grade) - Enhance Heal (Passive)" type="Armor">
-		<!-- HP Recovery magic +90 when equipped. -->
+		<!-- Healing Power +90. -->
 		<set name="icon" val="icon.r85_sp_talisman_hl_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -909,7 +909,7 @@
 		</skills>
 	</item>
 	<item id="18544" name="Special Talisman (R99-grade) - Enhance Heal (Passive)" type="Armor">
-		<!-- HP Recovery magic +96 when equipped. -->
+		<!-- Healing Power +96. -->
 		<set name="icon" val="icon.r85_sp_talisman_hl_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -929,7 +929,7 @@
 		</skills>
 	</item>
 	<item id="18545" name="Special Talisman (R85-grade) - Enhance Heal (Active)" type="Armor">
-		<!-- HP Recovery magic +225 when used. -->
+		<!-- When used, Healing Power +225. -->
 		<set name="icon" val="icon.r85_sp_talisman_hl_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -950,7 +950,7 @@
 		</skills>
 	</item>
 	<item id="18546" name="Special Talisman (R90-grade) - Enhance Heal (Active)" type="Armor">
-		<!-- HP Recovery magic +246 when used. -->
+		<!-- When used, Healing Power +246. -->
 		<set name="icon" val="icon.r85_sp_talisman_hl_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -971,7 +971,7 @@
 		</skills>
 	</item>
 	<item id="18547" name="Special Talisman (R95-grade) - Enhance Heal (Active)" type="Armor">
-		<!-- HP Recovery magic +270 when used. -->
+		<!-- When used, Healing Power +270. -->
 		<set name="icon" val="icon.r85_sp_talisman_hl_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -992,7 +992,7 @@
 		</skills>
 	</item>
 	<item id="18548" name="Special Talisman (R99-grade) - Enhance Heal (Active)" type="Armor">
-		<!-- HP Recovery magic +288 when used. -->
+		<!-- When used, Healing Power +288. -->
 		<set name="icon" val="icon.r85_sp_talisman_hl_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1041,7 +1041,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="18551" name="Red Soul Crystal (R-grade)" type="EtcItem">
-		<!-- Red crystal containing the light of absorbed souls. R-grade. Once saturated, it bestows special abilities to a weapon. -->
+		<!-- Red crystal containing the light of absorbed souls. R-grade. Endues a weapon with special features. -->
 		<set name="icon" val="icon.r_soul_stone_i00" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -1051,7 +1051,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="18552" name="Green Soul Crystal (R-grade)" type="EtcItem">
-		<!-- Green crystal containing the light of absorbed souls. R-grade. Once saturated, it bestows special abilities to a weapon. -->
+		<!-- Green crystal containing the light of absorbed souls. R-grade. Endues a weapon with special features. -->
 		<set name="icon" val="icon.r_soul_stone_i01" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -1061,7 +1061,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="18553" name="Blue Soul Crystal (R-grade)" type="EtcItem">
-		<!-- Blue crystal containing the light of absorbed souls. R-grade. Once saturated, it bestows special abilities to a weapon. -->
+		<!-- Blue crystal containing the light of absorbed souls. R-grade. Endues a weapon with special features. -->
 		<set name="icon" val="icon.r_soul_stone_i02" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -1071,7 +1071,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="18554" name="Red Soul Crystal (R95-grade)" type="EtcItem">
-		<!-- Red crystal containing the light of absorbed souls. R95-grade. Can bestow special abilities on the weapon. -->
+		<!-- Red crystal containing the light of absorbed souls. R95-grade. Endues a weapon with special features. -->
 		<set name="icon" val="icon.r95_soul_stone_i00" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -1081,7 +1081,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="18555" name="Green Soul Crystal (R95-grade)" type="EtcItem">
-		<!-- Green crystal containing the light of absorbed souls. R95-grade. Once saturated, it bestows special abilities to a weapon. -->
+		<!-- Green crystal containing the light of absorbed souls. R95-grade. Endues a weapon with special features. -->
 		<set name="icon" val="icon.r95_soul_stone_i01" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -1091,7 +1091,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="18556" name="Blue Soul Crystal (R95-grade)" type="EtcItem">
-		<!-- Blue crystal containing the light of absorbed souls. R95-grade. Once saturated, it bestows special abilities to a weapon. -->
+		<!-- Blue crystal containing the light of absorbed souls. R95-grade. Endues a weapon with special features. -->
 		<set name="icon" val="icon.r95_soul_stone_i02" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -1101,7 +1101,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="18557" name="Red Soul Crystal (R99-grade)" type="EtcItem">
-		<!-- Red crystal containing the light of absorbed souls. R99-grade. Once saturated, it bestows special abilities to a weapon. -->
+		<!-- Red crystal containing the light of absorbed souls. R99-grade. Endues a weapon with special features. -->
 		<set name="icon" val="icon.r99_soul_stone_i00" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -1111,7 +1111,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="18558" name="Green Soul Crystal (R99-grade)" type="EtcItem">
-		<!-- Green crystal containing the light of absorbed souls. R99-grade. Once saturated, it bestows special abilities to a weapon. -->
+		<!-- Green crystal containing the light of absorbed souls. R99-grade. Endues a weapon with special features. -->
 		<set name="icon" val="icon.r99_soul_stone_i01" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -1121,7 +1121,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="18559" name="Blue Soul Crystal (R99-grade)" type="EtcItem">
-		<!-- Blue crystal containing the light of absorbed souls. R99-grade. Once saturated, it bestows special abilities to a weapon. -->
+		<!-- Blue crystal containing the light of absorbed souls. R99-grade. Endues a weapon with special features. -->
 		<set name="icon" val="icon.r99_soul_stone_i02" />
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
@@ -1161,7 +1161,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="18563" name="Life Stone (R-grade)" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 85 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1173,7 +1173,7 @@
 		</cond>
 	</item>
 	<item id="18564" name="Mid-grade Life Stone (R-grade)" type="EtcItem">
-		<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 85 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.r_mineral_special_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1185,7 +1185,7 @@
 		</cond>
 	</item>
 	<item id="18565" name="High-grade Life Stone (R-grade)" type="EtcItem">
-		<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 85 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1197,7 +1197,7 @@
 		</cond>
 	</item>
 	<item id="18566" name="Top-grade Life Stone (R-grade)" type="EtcItem">
-		<!-- Top-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon augmentation at level 85 or above. Can be exchanged or dropped. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1209,7 +1209,7 @@
 		</cond>
 	</item>
 	<item id="18567" name="Legendary Life Stone (R-grade)" type="EtcItem">
-		<!-- This is a legendary mineral, having been petrified by a creature's physical or magical force. May be used as an ingredient in weapon augmentation by characters higher than level 85. -->
+		<!-- A long forgotten mineral. Required level: 85+. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1221,7 +1221,7 @@
 		</cond>
 	</item>
 	<item id="18568" name="Life Stone (R95-grade)" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 95 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1233,7 +1233,7 @@
 		</cond>
 	</item>
 	<item id="18569" name="Mid-grade Life Stone (R95-grade)" type="EtcItem">
-		<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 95 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.r95_mineral_special_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1245,7 +1245,7 @@
 		</cond>
 	</item>
 	<item id="18570" name="High-grade Life Stone (R95-grade)" type="EtcItem">
-		<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 95 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.r95_mineral_rare_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1257,7 +1257,7 @@
 		</cond>
 	</item>
 	<item id="18571" name="Top-grade Life Stone (R95-grade)" type="EtcItem">
-		<!-- Top-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 95 or above. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.r95_mineral_unique_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1281,7 +1281,7 @@
 		</cond>
 	</item>
 	<item id="18573" name="Life Stone (R99-grade)" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 99. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1293,7 +1293,7 @@
 		</cond>
 	</item>
 	<item id="18574" name="Mid-grade Life Stone (R99-grade)" type="EtcItem">
-		<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 99. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.r99_mineral_special_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1305,7 +1305,7 @@
 		</cond>
 	</item>
 	<item id="18575" name="High-grade Life Stone (R99-grade)" type="EtcItem">
-		<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 99. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.r99_mineral_rare_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1317,7 +1317,7 @@
 		</cond>
 	</item>
 	<item id="18576" name="Top-grade Life Stone (R99-grade)" type="EtcItem">
-		<!-- Top-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 99. -->
+		<!-- A mineral formed inside a monster under immense impact. Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
 		<set name="icon" val="icon.r99_mineral_unique_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1341,7 +1341,7 @@
 		</cond>
 	</item>
 	<item id="18578" name="Requiem Shaper" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.6. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1373,7 +1373,7 @@
 		</stats>
 	</item>
 	<item id="18579" name="Requiem Shaper" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Damage for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1405,7 +1405,7 @@
 		</stats>
 	</item>
 	<item id="18580" name="Requiem Shaper" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 82.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +82.7. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_aspeda_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1437,7 +1437,7 @@
 		</stats>
 	</item>
 	<item id="18581" name="Requiem Cutter" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1468,7 +1468,7 @@
 		</stats>
 	</item>
 	<item id="18582" name="Requiem Cutter" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases P. Accuracy and Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1499,7 +1499,7 @@
 		</stats>
 	</item>
 	<item id="18583" name="Requiem Cutter" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Max HP +25%. Deals additional PvP damage. Increases P. Accuracy and Critical Rate for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_estia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1530,7 +1530,7 @@
 		</stats>
 	</item>
 	<item id="18584" name="Requiem Slasher" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1561,7 +1561,7 @@
 		</stats>
 	</item>
 	<item id="18585" name="Requiem Slasher" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1592,7 +1592,7 @@
 		</stats>
 	</item>
 	<item id="18586" name="Requiem Slasher" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases P. Atk. -->
 		<set name="icon" val="icon.weapon_polion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1623,7 +1623,7 @@
 		</stats>
 	</item>
 	<item id="18587" name="Requiem Avenger" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. Increases Critical Damage for standard attacks when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1655,7 +1655,7 @@
 		</stats>
 	</item>
 	<item id="18588" name="Requiem Avenger" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +1108 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +1108 after a critical attack. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1687,7 +1687,7 @@
 		</stats>
 	</item>
 	<item id="18589" name="Requiem Avenger" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.weapon_batista_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1719,7 +1719,7 @@
 		</stats>
 	</item>
 	<item id="18590" name="Requiem Fighter" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 76.3. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. P. Critical Rate +76.3. Increases PvP Damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1751,7 +1751,7 @@
 		</stats>
 	</item>
 	<item id="18591" name="Requiem Fighter" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1783,7 +1783,7 @@
 		</stats>
 	</item>
 	<item id="18592" name="Requiem Fighter" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. +15%. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. and P. Atk. -->
 		<set name="icon" val="icon.weapon_fantasma_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1815,7 +1815,7 @@
 		</stats>
 	</item>
 	<item id="18593" name="Requiem Stormer" additionalName="HP Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. -->
+		<!-- <Soul Crystal properties>. A chance to absorb 4% of the inflicted damage as HP. Increases PvP damage. When enchanted to +4, increases the number of targets hit with a spear. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1847,7 +1847,7 @@
 		</stats>
 	</item>
 	<item id="18594" name="Requiem Stormer" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 7.6. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Accuracy +7.6. Deals additional PvP damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1879,7 +1879,7 @@
 		</stats>
 	</item>
 	<item id="18595" name="Requiem Stormer" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Inflicts additional PvP Damage. When enchanted to +4, increases the number of targets attacked with a spear. -->
 		<set name="icon" val="icon.weapon_soryu_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1911,7 +1911,7 @@
 		</stats>
 	</item>
 	<item id="18596" name="Requiem Thrower" additionalName="Damage Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1944,7 +1944,7 @@
 		</stats>
 	</item>
 	<item id="18597" name="Requiem Thrower" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1977,7 +1977,7 @@
 		</stats>
 	</item>
 	<item id="18598" name="Requiem Thrower" additionalName="Long Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases the attack range. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to +4. -->
+		<!-- <Soul Crystal enhancement>. Increases attack range and PvP Damage. When enchanted to +4, additionally increases P. Skill Power. -->
 		<set name="icon" val="icon.weapon_grabathus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2010,7 +2010,7 @@
 		</stats>
 	</item>
 	<item id="18599" name="Requiem Shooter" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 79.5. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +79.5. Deals additional PvP damage. When enchanted to +4, increases Atk. Spd. -->
 		<set name="icon" val="icon.weapon_shyayaka_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

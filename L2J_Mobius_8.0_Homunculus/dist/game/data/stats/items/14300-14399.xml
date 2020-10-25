@@ -1872,7 +1872,7 @@
 		</stats>
 	</item>
 	<item id="14372" name="Icarus Stinger {PvP}" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Icarus Sawsword Conversion. When enchanted to 4 or more, there's a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal and decreased MP consumption per skill during a Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Icarus Sawsword Conversion. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. Inflicts additional PvP Damage. Has a chance of recovering CP when the character is attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1995,7 +1995,7 @@
 		</stats>
 	</item>
 	<item id="14375" name="Icarus Dual Sword {PvP}" type="Weapon">
-		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 109 and Max HP by 10%. Inflicts more damage during PvP and has a chance to decrease the range of Bow/ Crossbow. No Soul Crystal option. -->
+		<!-- When enchanting dual swords, two-handed swords/ blunts and fists, the P. Atk. bonus is higher than that of one-handed weapons. When enchanted to +4 or higher, Critical Rate for standard attacks +109, Max HP +10%. Increases PvP damage. Has a chance of decreasing the enemy's bow/ crossbow attack range when hit. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2032,7 +2032,7 @@
 		</stats>
 	</item>
 	<item id="14376" name="Icarus Sawsword {PvP} - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. P. Critical Rate +111. Increases PvP damage. Has a chance of recovering CP when hit. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2069,7 +2069,7 @@
 		</stats>
 	</item>
 	<item id="14377" name="Icarus Sawsword {PvP} - Health" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Max HP +25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2106,7 +2106,7 @@
 		</stats>
 	</item>
 	<item id="14378" name="Icarus Sawsword {PvP} - Light Armor" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2143,7 +2143,7 @@
 		</stats>
 	</item>
 	<item id="14379" name="Icarus Heavy Arms {PvP} - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +111. Inflicts additional PvP Damage. Has a chance to increase damage after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2180,7 +2180,7 @@
 		</stats>
 	</item>
 	<item id="14380" name="Icarus Heavy Arms {PvP} - Health" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Max HP +25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2217,7 +2217,7 @@
 		</stats>
 	</item>
 	<item id="14381" name="Icarus Heavy Arms {PvP} - Light Armor" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2254,7 +2254,7 @@
 		</stats>
 	</item>
 	<item id="14382" name="Icarus Spirit {PvP} - Acumen" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2292,7 +2292,7 @@
 		</stats>
 	</item>
 	<item id="14383" name="Icarus Spirit {PvP} - Mana Up" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. Max MP +30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2330,7 +2330,7 @@
 		</stats>
 	</item>
 	<item id="14384" name="Icarus Spirit {PvP} - Conversion" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. Max MP +60% and Max HP -40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2368,7 +2368,7 @@
 		</stats>
 	</item>
 	<item id="14385" name="Icarus Spitter {PvP} - Cheap Shot" type="Weapon">
-		<!-- <Special Option>. Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Skill MP Consumption -4%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2408,7 +2408,7 @@
 		</stats>
 	</item>
 	<item id="14386" name="Icarus Spitter {PvP} - Guidance" type="Weapon">
-		<!-- <Special Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Features>. P. Accuracy +5.32. Deals additional PvP damage, also has a chance to increase Atk. Spd. for bows and crossbows after an attack. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2448,7 +2448,7 @@
 		</stats>
 	</item>
 	<item id="14387" name="Icarus Spitter {PvP} - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +116. Inflicts additional PvP Damage. Has a chance of increasing Atk. Spd. of bows/ crossbows after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2488,7 +2488,7 @@
 		</stats>
 	</item>
 	<item id="14388" name="Icarus Disperser {PvP} - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Critical Rate +116. Inflicts additional PvP Damage, also has a chance of canceling one or more buffs and decreasing the target's Shield Defense after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2527,7 +2527,7 @@
 		</stats>
 	</item>
 	<item id="14389" name="Icarus Disperser {PvP} - Evasion" type="Weapon">
-		<!-- <Special Option>. Increases Evasion by 5. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Evasion +5. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2566,7 +2566,7 @@
 		</stats>
 	</item>
 	<item id="14390" name="Icarus Disperser {PvP} - Critical Damage" type="Weapon">
-		<!-- <Special Option>. P. Atk. +559 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +559 after a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2605,7 +2605,7 @@
 		</stats>
 	</item>
 	<item id="14391" name="Icarus Trident {PvP} - Anger" type="Weapon">
-		<!-- <Special Option>. P. Atk. +78 and decreases HP by 15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +78 and Max HP -15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2643,7 +2643,7 @@
 		</stats>
 	</item>
 	<item id="14392" name="Icarus Trident {PvP} - Critical Stun" type="Weapon">
-		<!-- <Special Option>. Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Has a 48% chance of casting Stun on the target after a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2681,7 +2681,7 @@
 		</stats>
 	</item>
 	<item id="14393" name="Icarus Trident {PvP} - Light Armor" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Weight Limit +20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2719,7 +2719,7 @@
 		</stats>
 	</item>
 	<item id="14394" name="Icarus Hammer {PvP} - Anger" type="Weapon">
-		<!-- <Special Option>. P. Atk. +78 and decreases HP by 15%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +78 and Max HP -15%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2757,7 +2757,7 @@
 		</stats>
 	</item>
 	<item id="14395" name="Icarus Hammer {PvP} - Health" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Max HP +25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2795,7 +2795,7 @@
 		</stats>
 	</item>
 	<item id="14396" name="Icarus Hammer {PvP} - Rsk. Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. Critical Rate for standard attacks +164 when HP is lower than 60%. Increases PvP damage. Has a chance of recovering CP after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2833,7 +2833,7 @@
 		</stats>
 	</item>
 	<item id="14397" name="Icarus Hall {PvP} - Mana Up" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. Max MP +30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2872,7 +2872,7 @@
 		</stats>
 	</item>
 	<item id="14398" name="Icarus Hall {PvP} - Conversion" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. Max MP +60% and Max HP -40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2911,7 +2911,7 @@
 		</stats>
 	</item>
 	<item id="14399" name="Icarus Hall {PvP} - Acumen" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

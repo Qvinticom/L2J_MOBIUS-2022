@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37800" name="Potion of Protection: Aerial Yoke" additionalName="Low-grade" type="EtcItem">
-		<!-- When used, increases Resistance to Aerial Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<!-- Confusion Resistance +5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
@@ -26,7 +26,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37803" name="Master Yogi's Special Scroll: Enchant Weapon" type="EtcItem">
-		<!-- Special weapon enchant scroll containing Master Yogi's power, only usable on Master Yogi's Staff. The item and the enchant value remain intact when enchanting fails. Cannot be used on a Staff enchanted to +15 or above. Lucky Enchant Stones cannot be used with this item. -->
+		<!-- Special weapon enchant scroll containing Master Yogi's power, only usable on Master Yogi's Staff. The item and the enchant value remain intact when enchanting fails. Cannot be used on a Staff enchanted to +15 or higher. Lucky Enchant Stones cannot be used with this item. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -35,7 +35,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37804" name="Replica Tiara" type="Armor">
-		<!-- A replica of the Exalted Tiara. Attack Attribute Bonus +30 when equipped. -->
+		<!-- A replica of the Exalted Tiara. Attribute Attack +30. -->
 		<set name="icon" val="icon.accessory_noblesse2_tiara_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -140,7 +140,7 @@
 		</stats>
 	</item>
 	<item id="37809" name="Mysterious Crystal" type="EtcItem">
-		<!-- Master Yogi's power assembly. Bring it to Master Yogi with a +15 ~ +17 Master Yogi's Staff to increase the Staff' enchant level by 1. -->
+		<!-- Master Yogi's power assembly. Bring it to Master Yogi with a +15 ~ +17 Master Yogi's Staff to increase the Staff' enchant value by 1. -->
 		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -163,7 +163,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37812" name="Metal Suit Gaiters" type="Armor">
-		<!-- Metal Suit Gaiters. Part of a costume. -->
+		<!-- Metal Suit Pants. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_l" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -209,7 +209,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37817" name="Metal Suit Breastplate Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a top to that of a Metal Shoot breastplate for 30 days. -->
+		<!-- Changes the appearance of a top to that of a Metal Suit Breastplate for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -222,7 +222,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37818" name="Metal Suit Gaiters Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a bottom to that of Metal Shoot gaiters for 30 days. -->
+		<!-- Changes the appearance of a bottom to that of a Metal Suit Pants for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -235,7 +235,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37819" name="Metal Suit Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of gloves to that of Metal Shoot gloves for 30 days. -->
+		<!-- Changes the appearance of gloves to that of Metal Suit Gloves for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -248,7 +248,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37820" name="Metal Suit Boots Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of boots to that of Metal Shoot boots for 30 days. -->
+		<!-- Changes the appearance of boots to that of Metal Suit Boots for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -308,7 +308,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37826" name="NC Dinos Hat Appearance Stone" additionalName="15-day" type="EtcItem">
-		<!-- Item that changes the appearance of a hair accessory to that of an NC Dinos Hat (15-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that changes the appearance of a hair accessory to that of an NC Dinos Hat (15-day). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. Note!. When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair1" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -319,7 +319,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37827" name="NC Dinos Hat Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Item that changes the appearance of a hair accessory to that of an NC Dinos Hat (30-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Changes the appearance of a hair accessory to that of an NC Dinos Cap (30-day). Works for items that use the same number of hair accessory slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. Note!. When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair1" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -330,7 +330,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37828" name="Vigilante Hat Appearance Stone" additionalName="15-day" type="EtcItem">
-		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (15-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (15-day). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. Note!. When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -341,7 +341,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37829" name="Vigilante Hat Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (30-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (30-day). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. Note!. When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -376,7 +376,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="37832" name="Valentine Appearance Stone: Dagger" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -387,7 +387,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37833" name="Valentine Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword to that of a Valentine weapon. Limited time item (15-day). -->
+		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -398,7 +398,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37834" name="Valentine Appearance Stone: Two-handed Sword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed sword to that of a Valentine weapon. Limited time item (15-day). -->
+		<!-- Changes the appearance of a two-handed sword to that of a Valentine weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -409,7 +409,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37835" name="Valentine Appearance Stone: One-handed Blunt Weapon" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed blunt to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a one-handed blunt weapon to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -420,7 +420,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37836" name="Valentine Appearance Stone: Fist Weapon" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -431,7 +431,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37837" name="Valentine Appearance Stone: Spear" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -442,7 +442,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37838" name="Valentine Appearance Stone: Bow" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -453,7 +453,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37839" name="Valentine Appearance Stone: Crossbow" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -464,7 +464,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37840" name="Valentine Appearance Stone: Magic Sword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a magic sword to that of a Valentine weapon. Limited time item (15-day). -->
+		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -475,7 +475,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37841" name="Valentine Appearance Stone: One-handed Staff" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed staff to that of a Valentine weapon. Limited time item (15-day). -->
+		<!-- Changes the appearance of a one-handed staff to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -486,7 +486,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37842" name="Valentine Appearance Stone: Two-handed Staff" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed staff to that of a Valentine weapon. Limited time item (15-day). -->
+		<!-- Changes the appearance of a two-handed staff to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -497,7 +497,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37843" name="Valentine Appearance Stone: Dual Sword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a dual sword to that of a Valentine weapon. Limited time item (15-day). -->
+		<!-- Changes the appearance of dual swords to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -508,7 +508,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37844" name="Valentine Appearance Stone: Dual Dagger" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a dagger dual sword to that of a Valentine weapon. Limited time item (15-day). -->
+		<!-- Changes the appearance of dual daggers to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -519,7 +519,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37845" name="Valentine Appearance Stone: Dual Blunt Weapon" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a dual blunt to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of dual blunt weapon to that of a Valentine's Day weapon. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -530,7 +530,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37846" name="Valentine Appearance Stone: Shield" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a shield to that of a Valentine's Day shield.15-day. -->
+		<!-- Changes the appearance of a shield to that of a Valentine's Day shield. 15-day. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -541,7 +541,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37847" name="Valentine Appearance Stone: Sigil" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil.15-day. -->
+		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil. 15-day. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -552,7 +552,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37848" name="Valentine Appearance Stone: Dagger" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon.30-day. -->
+		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -563,7 +563,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37849" name="Valentine Appearance Stone: One-handed Sword" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword to that of a Valentine weapon for 30 days. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -574,7 +574,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37850" name="Valentine Appearance Stone: Two-handed Sword" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed sword to that of a Valentine weapon. Limited time item (30-day). -->
+		<!-- Changes the appearance of a two-handed sword to that of a Valentine weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -585,7 +585,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37851" name="Valentine Appearance Stone: One-handed Blunt Weapon" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed blunt to that of a Valentine's Day weapon.30-day. -->
+		<!-- Changes the appearance of a one-handed blunt weapon to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -596,7 +596,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37852" name="Valentine Appearance Stone: Fist Weapon" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon.30-day. -->
+		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -607,7 +607,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37853" name="Valentine Appearance Stone: Spear" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon.30-day. -->
+		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -618,7 +618,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37854" name="Valentine Appearance Stone: Bow" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon.30-day. -->
+		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -629,7 +629,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37855" name="Valentine Appearance Stone: Crossbow" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon 30-day. -->
+		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -640,7 +640,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37856" name="Valentine Appearance Stone: Magic Sword" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a magic sword to that of a Valentine weapon. Limited time item (30-day). -->
+		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -651,7 +651,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37857" name="Valentine Appearance Stone: One-handed Staff" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed staff to that of a Valentine weapon. Limited time item (30-day). -->
+		<!-- Changes the appearance of a one-handed staff to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -662,7 +662,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37858" name="Valentine Appearance Stone: Two-handed Staff" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed staff to that of a Valentine weapon. Limited time item (30-day). -->
+		<!-- Changes the appearance of a two-handed staff to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -673,7 +673,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37859" name="Valentine Appearance Stone: Dual Sword" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a dual sword to that of a Valentine weapon. Limited time item (30-day). -->
+		<!-- Changes the appearance of dual swords to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -684,7 +684,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37860" name="Valentine Appearance Stone: Dual Dagger" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a dagger dual sword to that of a Valentine weapon. Limited time item (30-day). -->
+		<!-- Changes the appearance of dual daggers to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -695,7 +695,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37861" name="Valentine Appearance Stone: Dual Blunt Weapon" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a dual blunt to that of a Valentine's Day weapon. 30-day. -->
+		<!-- Changes the appearance of dual blunt weapon to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -706,7 +706,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37862" name="Valentine Appearance Stone: Shield" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a shield to that of a Valentine's Day shield. 30-day. -->
+		<!-- Changes the appearance of a shield to that of a Valentine's Day shield. 30-day. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -717,7 +717,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37863" name="Valentine Appearance Stone: Sigil" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil. 30-day. -->
+		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil. 30-day. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -766,6 +766,8 @@
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17220" level="1" /> <!-- Valiant Scroll -->
@@ -1315,7 +1317,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="37889" name="Herb of Growth" type="EtcItem">
-		<!-- For 10 min., Acquired XP/ SP +50%. -->
+		<!-- Acquired XP/ SP +50% for 10 min. -->
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1331,7 +1333,7 @@
 		</skills>
 	</item>
 	<item id="37890" name="Major Herb of Growth" type="EtcItem">
-		<!-- For 10 min., Acquired XP/ SP +100%. -->
+		<!-- Acquired XP/ SP +100% for 10 min. -->
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1347,7 +1349,7 @@
 		</skills>
 	</item>
 	<item id="37891" name="Superior Herb of Growth" type="EtcItem">
-		<!-- For 5 min., Acquired XP/ SP +200%. -->
+		<!-- Acquired XP/ SP +200% for 5 min. -->
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1363,7 +1365,7 @@
 		</skills>
 	</item>
 	<item id="37892" name="Leona's Reward Box" type="EtcItem">
-		<!-- Reward box given by Leona Blackbird of Hellbound for your help. Double-click to acquire the item. -->
+		<!-- Reward box received from Leona Blackbird for helping her in Hellbound. Double-click to open. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1376,7 +1378,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="37893" name="Bloodied Demonic Tome" type="EtcItem">
-		<!-- Ancient book of the demon stained with the blood of the caravan. The ancient book managing caravan Budenka is collecting it in the Refugee Village. -->
+		<!-- Ancient book of the demon stained with the blood of caravans. Budenka, the ancient book keeper of the Caravan, is collecting such books in the Refugee Village. -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1390,7 +1392,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37894" name="Healing Potion Improved Warrior's Recovery Potion" type="EtcItem">
-		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no duration. -->
+		<!-- Recovers 5000 HP. If HP is full, recovers CP. No cooldown. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1457,7 +1459,7 @@
 		</skills>
 	</item>
 	<item id="37898" name="SP Rune Pack (Low-grade) (1-day)" type="EtcItem">
-		<!-- Box containing Kat the Cat's gift. Double-click to acquire 1 of the following at random: 150 Heavenly Recovery Potions, 1 Kat the Cat's Box of Roses, or 1 Emperor's Rune Box. Cannot be exchanged, dropped, sold in a private store, or used in an auction house. Can be shared within the same account through the Dimensional Merchant. Can be stored in a private warehouse. To be deleted on 30.10.13. -->
+		<!-- Double-click to obtain Low-grade SP Rune (1-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

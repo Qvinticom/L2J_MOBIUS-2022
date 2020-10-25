@@ -21,6 +21,7 @@ import java.util.Map;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 
 import instances.AbstractInstance;
@@ -32,9 +33,11 @@ import instances.AbstractInstance;
 public class NightmareKamaloka extends AbstractInstance
 {
 	// NPCs
-	private static final int KURTIZ = 30870;
+	private static final int BENUSTA = 34542;
 	private static final int DARK_RIDER = 26102;
 	private static final int INVISIBLE_NPC = 18919;
+	// Item
+	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
 	// Skills
 	// private static final int DARK_RIDER_UD = 16574;
 	//@formatter:off
@@ -54,8 +57,8 @@ public class NightmareKamaloka extends AbstractInstance
 	public NightmareKamaloka()
 	{
 		super(TEMPLATE_ID);
-		addStartNpc(KURTIZ);
-		addTalkId(KURTIZ);
+		addStartNpc(BENUSTA);
+		addTalkId(BENUSTA);
 		addSpawnId(INVISIBLE_NPC);
 		// addAttackId(DARK_RIDER_UD);
 		addKillId(BOSS_MAP.keySet());
@@ -104,6 +107,10 @@ public class NightmareKamaloka extends AbstractInstance
 			final int nextDoorId = BOSS_MAP.getOrDefault(npc.getId(), -1);
 			if (nextDoorId == -1)
 			{
+				for (PlayerInstance member : instance.getPlayers())
+				{
+					giveItems(member, BENUSTAS_REWARD_BOX);
+				}
 				instance.finishInstance();
 			}
 			else

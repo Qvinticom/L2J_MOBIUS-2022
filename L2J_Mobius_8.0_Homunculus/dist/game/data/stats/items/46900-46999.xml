@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="46900" name="PA - Paulina's Seraph Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- Seraph Gauntlets that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t401_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -19,7 +19,7 @@
 		</stats>
 	</item>
 	<item id="46901" name="PA - Paulina's Seraph Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- Seraph Boots that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -37,7 +37,7 @@
 		</stats>
 	</item>
 	<item id="46902" name="PA - Paulina's Seraph Shield" additionalName="Heavy Armor" type="Armor">
-		<!-- A Seraph Shield that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. -->
+		<!-- PA only. -->
 		<set name="icon" val="icon.beranka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -56,7 +56,7 @@
 		</stats>
 	</item>
 	<item id="46903" name="PA - Paulina's Seraph Leather Helmet" additionalName="Light Armor" type="Armor">
-		<!-- A Seraph Leather Helmet that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -74,7 +74,7 @@
 		</stats>
 	</item>
 	<item id="46904" name="PA - Paulina's Seraph Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- A Seraph Leather Armor that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -94,7 +94,7 @@
 		</stats>
 	</item>
 	<item id="46905" name="PA - Paulina's Seraph Leather Leggings" additionalName="Light Armor" type="Armor">
-		<!-- Seraph Leather Leggings that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -114,7 +114,7 @@
 		</stats>
 	</item>
 	<item id="46906" name="PA - Paulina's Seraph Leather Gloves" additionalName="Light Armor" type="Armor">
-		<!-- Seraph Leather Gloves that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -132,7 +132,7 @@
 		</stats>
 	</item>
 	<item id="46907" name="PA - Paulina's Seraph Leather Boots" additionalName="Light Armor" type="Armor">
-		<!-- Seraph Leather Boots that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -150,7 +150,7 @@
 		</stats>
 	</item>
 	<item id="46908" name="PA - Paulina's Seraph Circlet" additionalName="Robe" type="Armor">
-		<!-- A Seraph Circlet that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -168,7 +168,7 @@
 		</stats>
 	</item>
 	<item id="46909" name="PA - Paulina's Seraph Tunic" additionalName="Robe" type="Armor">
-		<!-- Seraph Tunic that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -189,7 +189,7 @@
 		</stats>
 	</item>
 	<item id="46910" name="PA - Paulina's Seraph Stockings" additionalName="Robe" type="Armor">
-		<!-- Seraph Stockings that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t403_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -210,7 +210,7 @@
 		</stats>
 	</item>
 	<item id="46911" name="PA - Paulina's Seraph Gloves" additionalName="Robe" type="Armor">
-		<!-- Seraph Gloves that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t403_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -228,7 +228,7 @@
 		</stats>
 	</item>
 	<item id="46912" name="PA - Paulina's Seraph Shoes" additionalName="Robe" type="Armor">
-		<!-- Seraph Shoes that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. Enchantment, Crystallization, Attribute Assignment not possible. -->
+		<!-- For PA. Cannot be enchanted, crystallized or assigned an attribute. -->
 		<set name="icon" val="icon.armor_t403_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -246,7 +246,7 @@
 		</stats>
 	</item>
 	<item id="46913" name="PA - Paulina's Seraph Sigil" additionalName="Robe" type="Armor">
-		<!-- A Seraph Sigil that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. -->
+		<!-- PA only. -->
 		<set name="icon" val="icon.airtoil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -267,7 +267,7 @@
 		</stats>
 	</item>
 	<item id="46914" name="PA - Paulina's Seraph Necklace" additionalName="Skill Cooldown" type="Armor">
-		<!-- A Seraph Necklace that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +62, Skill Cooldown -10%. -->
+		<!-- For PA. MP +65, Skill Cooldown -10%. -->
 		<set name="icon" val="icon.r95_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -289,7 +289,7 @@
 		</stats>
 	</item>
 	<item id="46915" name="PA - Paulina's Seraph Earring" additionalName="Vampiric Rage" type="Armor">
-		<!-- Seraph Earrings that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +46, Vampiric Rage. -->
+		<!-- For PA. MP +49, Vampiric Rage +5%. -->
 		<set name="icon" val="icon.r95_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -311,7 +311,7 @@
 		</stats>
 	</item>
 	<item id="46916" name="PA - Paulina's Seraph Earring" additionalName="MP Consumption" type="Armor">
-		<!-- Seraph Earrings that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +46, MP Consumption -5%. -->
+		<!-- For PA. MP +49, Received Healing +10%, Skill MP consumption -5%. -->
 		<set name="icon" val="icon.r95_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -333,7 +333,7 @@
 		</stats>
 	</item>
 	<item id="46917" name="PA - Paulina's Seraph Ring" additionalName="Critical Damage" type="Armor">
-		<!-- A Seraph Ring that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +31, P./ M. Critical Damage +15%. -->
+		<!-- For PA. MP +33, P. Critical Damage/ M. Skill Critical Damage +15%. -->
 		<set name="icon" val="icon.r95_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -355,7 +355,7 @@
 		</stats>
 	</item>
 	<item id="46918" name="PA - Paulina's Seraph Ring" additionalName="Critical Rate" type="Armor">
-		<!-- A Seraph Ring that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +31, P./ M. Critical Rate +40. -->
+		<!-- For PA. MP +33, P. Critical Rate and P./ M. Skill Critical Rate +50. -->
 		<set name="icon" val="icon.r95_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -377,7 +377,7 @@
 		</stats>
 	</item>
 	<item id="46919" name="Paulina's Equipment Set (R-grade)" type="EtcItem">
-		<!-- Use to obtain a Paulina's Equipment set (R-grade) that mamatches your class. Usable only by Lv. 40 and higher characters only. -->
+		<!-- Use to obtain a Paulina's R-grade Equipment Set that matches your class. Can be used only by characters of Lv. 40+. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -485,12 +485,12 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="47021" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Helmet - Heavy Armor -->
-			<item id="47022" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Breastplate - Heavy Armor -->
-			<item id="47023" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gaiters - Heavy Armor -->
-			<item id="47024" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gauntlets - Heavy Armor -->
-			<item id="47025" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Boots - Heavy Armor -->
-			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace - Skill Cooldown -->
+			<item id="47021" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Helmet - Heavy armor -->
+			<item id="47022" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Breastplate - Heavy armor -->
+			<item id="47023" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gaiters - Heavy armor -->
+			<item id="47024" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gauntlets - Heavy armor -->
+			<item id="47025" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Boots - Heavy armor -->
+			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace - Cooldown -->
 			<item id="47039" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Earring - Vampiric Rage -->
 			<item id="47040" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Earring - MP Consumption -->
 			<item id="47041" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Ring - Critical Damage -->
@@ -512,12 +512,12 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="47027" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Helmet - Light Armor -->
-			<item id="47028" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Armor - Light Armor -->
-			<item id="47029" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Leggings - Light Armor -->
-			<item id="47030" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Gloves - Light Armor -->
-			<item id="47031" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Boots - Light Armor -->
-			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace - Skill Cooldown -->
+			<item id="47027" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Helmet - Light armor -->
+			<item id="47028" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Armor - Light armor -->
+			<item id="47029" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Leggings - Light armor -->
+			<item id="47030" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Gloves - Light armor -->
+			<item id="47031" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Boots - Light armor -->
+			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace - Cooldown -->
 			<item id="47039" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Earring - Vampiric Rage -->
 			<item id="47040" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Earring - MP Consumption -->
 			<item id="47041" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Ring - Critical Damage -->
@@ -544,7 +544,7 @@
 			<item id="47034" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Stockings - Robe -->
 			<item id="47035" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gloves - Robe -->
 			<item id="47036" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Shoes - Robe -->
-			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace - Skill Cooldown -->
+			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace - Cooldown -->
 			<item id="47039" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Earring - Vampiric Rage -->
 			<item id="47040" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Earring - MP Consumption -->
 			<item id="47041" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Ring - Critical Damage -->
@@ -1162,7 +1162,7 @@
 		</stats>
 	</item>
 	<item id="46960" name="Paulina's Necklace of Protection" additionalName="Skill Cooldown" type="Armor">
-		<!-- A Necklace of Protection imbued with the energy of Paulina. Skill Cooldown -3%. -->
+		<!-- Necklace of Protection imbued with the energy of Paulina. Skill Cooldown -3%. -->
 		<set name="icon" val="icon.accessary_necklace_of_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1183,7 +1183,7 @@
 		</stats>
 	</item>
 	<item id="46961" name="Paulina's Earring of Protection" additionalName="Vampiric Rage" type="Armor">
-		<!-- Earrings of Protection imbued with the energy of Paulina. Vampiric Rage effect. -->
+		<!-- Earring of Protection imbued with the energy of Paulina. Vampiric Rage effect. -->
 		<set name="icon" val="icon.accessary_earing_of_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1204,7 +1204,7 @@
 		</stats>
 	</item>
 	<item id="46962" name="Paulina's Earring of Protection" additionalName="MP Consumption" type="Armor">
-		<!-- Earrings of Protection imbued with the energy of Paulina. MP Consumption -2%. -->
+		<!-- Earring of Protection imbued with the energy of Paulina. MP Consumption -2%. -->
 		<set name="icon" val="icon.accessary_earing_of_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1225,7 +1225,7 @@
 		</stats>
 	</item>
 	<item id="46963" name="Paulina's Ring of Protection" additionalName="Critical Damage" type="Armor">
-		<!-- A Ring of Protection imbued with the energy of Paulina. P./ M. Critical Damage +5%. -->
+		<!-- Ring of Protection imbued with the energy of Paulina. P. Critical Damage/ M. Skill Critical Damage +5%. -->
 		<set name="icon" val="icon.accessary_ring_of_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1246,7 +1246,7 @@
 		</stats>
 	</item>
 	<item id="46964" name="Paulina's Ring of Protection" additionalName="Critical Rate" type="Armor">
-		<!-- A Ring of Protection imbued with the energy of Paulina. P./ M. Critical Rate +10. -->
+		<!-- Ring of Protection imbued with the energy of Paulina. P. Critical Rate/ M. Skill Critical Rate +10. -->
 		<set name="icon" val="icon.accessary_ring_of_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1267,7 +1267,7 @@
 		</stats>
 	</item>
 	<item id="46965" name="Paulina's Dark Crystal Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- A Dynasty Helmet imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
+		<!-- A Dark Crystal Helmet imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1545,7 +1545,7 @@
 		</stats>
 	</item>
 	<item id="46980" name="Paulina's Majestic Necklace" additionalName="Skill Cooldown" type="Armor">
-		<!-- A Majestic Necklace imbued with the energy of Paulina. Skill Cooldown -3%. -->
+		<!-- Majestic Necklace imbued with the energy of Paulina. Skill Cooldown -3%. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1567,7 +1567,7 @@
 		</stats>
 	</item>
 	<item id="46981" name="Paulina's Majestic Earring" additionalName="Vampiric Rage" type="Armor">
-		<!-- Majestic Earrings imbued with the energy of Paulina. Vampiric Rage effect. -->
+		<!-- Majestic Earring imbued with the energy of Paulina. Vampiric Rage effect. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1589,7 +1589,7 @@
 		</stats>
 	</item>
 	<item id="46982" name="Paulina's Majestic Earring" additionalName="MP Consumption" type="Armor">
-		<!-- Majestic Earrings imbued with the energy of Paulina. MP Consumption -2%. -->
+		<!-- Majestic Earring imbued with the energy of Paulina. MP Consumption -2%. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1611,7 +1611,7 @@
 		</stats>
 	</item>
 	<item id="46983" name="Paulina's Majestic Ring" additionalName="Critical Damage" type="Armor">
-		<!-- A Majestic Ring imbued with the energy of Paulina. P./ M. Critical Damage +5%. -->
+		<!-- Majestic Ring imbued with the energy of Paulina. P. Critical Damage/ M. Skill Critical Damage +5%. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1633,7 +1633,7 @@
 		</stats>
 	</item>
 	<item id="46984" name="Paulina's Majestic Ring" additionalName="Critical Rate" type="Armor">
-		<!-- A Majestic Ring imbued with the energy of Paulina. P./ M. Critical Rate +10. -->
+		<!-- Majestic Ring imbued with the energy of Paulina. P. Critical Rate/ M. Skill Critical Rate +10. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1655,7 +1655,7 @@
 		</stats>
 	</item>
 	<item id="46985" name="Paulina's Dynasty Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- A Dynasty Helmet imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
+		<!-- A Dark Crystal Helmet imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />

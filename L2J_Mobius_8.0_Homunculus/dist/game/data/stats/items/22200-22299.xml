@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="22200" name="Agathion - Lantern" additionalName="33-day (Event)" type="Armor">
-		<!-- Bracelet that can summon an Agathion - Lantern. Requires room in the inventory and the weight limit to receive a gift from an Agathion - Lantern. -->
+		<!-- A bracelet for summoning Agathion Lantern. You can't receive its gift, if your inventory is full. -->
 		<set name="icon" val="BranchSys2.icon.event_agathion_han_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -25,7 +25,7 @@
 		</skills>
 	</item>
 	<item id="22201" name="Agathion - Lantern Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive an Agathion - Lantern. -->
+		<!-- Double-click to obtain Agathion Lantern. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -41,7 +41,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22200" min="1" max="1" chance="100" /> <!-- Agathion - Lantern - 33-day (Event) -->
+			<item id="22200" min="1" max="1" chance="100" /> <!-- Agathion Lantern - 33-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="22202" name="Weapon Pack (S80-grade)" additionalName="Event" type="EtcItem">
@@ -57,7 +57,7 @@
 		</skills>
 	</item>
 	<item id="22203" name="Vorpal Armor Pack" additionalName="Event" type="EtcItem">
-		<!-- Pack containing Vorpal armor. Which one could it be? -->
+		<!-- Double-click to obtain a Vorpal weapon. Which one will you get? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -69,7 +69,7 @@
 		</skills>
 	</item>
 	<item id="22204" name="Attribute Stone Pack" additionalName="Event" type="EtcItem">
-		<!-- Box containing Attribute Stone. Which one could it be? -->
+		<!-- Double-click to obtain an Attribute Stone. Which one will you get? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -93,7 +93,7 @@
 		</skills>
 	</item>
 	<item id="22206" name="Soul Crystal - Step 17 Box" additionalName="Event" type="EtcItem">
-		<!-- Box containing Soul Crystal - Step 17. Which one could it be? -->
+		<!-- Double-click to obtain Soul Crystal Lv. 17. Which one could it be...? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -105,7 +105,7 @@
 		</skills>
 	</item>
 	<item id="22207" name="Soul Crystal - Step 18 Box" additionalName="Event" type="EtcItem">
-		<!-- Box containing Soul Crystal - Step 18. Which one could it be? -->
+		<!-- Double-click to obtain Soul Crystal Lv. 18. Which one could it be...? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -117,7 +117,7 @@
 		</skills>
 	</item>
 	<item id="22208" name="Bad Bunny's Necklace Pack" additionalName="Event" type="EtcItem">
-		<!-- Box containing 7 day or 30 day Bad Bunny's Necklace. Which one could it be? -->
+		<!-- Double-click to obtain Bad Bunny's Necklace - 7-day or 30-day. Which one will you get? -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -129,7 +129,7 @@
 		</skills>
 	</item>
 	<item id="22209" name="Bad Bunny's Earring Pack" additionalName="Event" type="EtcItem">
-		<!-- Box containing 7 day or 30 day Bad Bunny's Earring. Which one could it be? -->
+		<!-- Double-click to obtain Bad Bunny's Earring - 7-day or 30-day. Which one will you get? -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -141,7 +141,7 @@
 		</skills>
 	</item>
 	<item id="22210" name="Bad Bunny's Ring Pack" additionalName="Event" type="EtcItem">
-		<!-- Box containing 7 day or 30 day Bad Bunny's Ring. Which one could it be? -->
+		<!-- Double-click to obtain Bad Bunny's Ring - 7-day or 30-day. Which one will you get? -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -177,7 +177,7 @@
 		</stats>
 	</item>
 	<item id="22212" name="Bad Bunny's Earring" additionalName="7-day (Event)" type="Armor">
-		<!-- Its effects are MP+37, HP+250, Vampiric Rage Effect, increased Accuracy, decreased cooldown for magic skills, and decreased MP consumption for magic skills. When two identical earrings are equipped, only one effect is applied. 7-day. -->
+		<!-- Available for 7 d. MP +37, HP +250. Grants Vampiric Rage effect, increases P. Accuracy and decreases M. Skill cooldown/ MP Consumption. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="branchsys2.icon2.g_accessory_event_earring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -201,7 +201,7 @@
 		</stats>
 	</item>
 	<item id="22213" name="Bad Bunny's Ring" additionalName="7-day (Event)" type="Armor">
-		<!-- Its effects are MP+25, increased Atk. Spd., and increased Casting Spd. When two identical rings are equipped, only one effect is applied. 7-day. -->
+		<!-- Available for 7 d. MP +25. Increases Atk. Spd. and Casting Spd. Effects of two identical rings do not stack. -->
 		<set name="icon" val="branchsys2.icon2.g_accessory_event_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -225,7 +225,7 @@
 		</stats>
 	</item>
 	<item id="22214" name="Bad Bunny's Necklace" additionalName="30-day (Event)" type="Armor">
-		<!-- Its effects are MP+300, HP+500, CP+1035, increased P. Atk., increased M. Atk., Wild Magic Effect, and increased Critical Damage. 30-day. -->
+		<!-- MP +300, HP +500, CP +1035, increases P./ M. Atk. and Critical Damage. Grants Wild Magic Effect. 30-day. -->
 		<set name="icon" val="branchsys2.icon2.g_accessory_event_necklace" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -249,7 +249,7 @@
 		</stats>
 	</item>
 	<item id="22215" name="Bad Bunny's Earring" additionalName="30-day (Event)" type="Armor">
-		<!-- Its effects are MP+37, HP+250, Vampiric Rage Effect, increased Accuracy, decreased cooldown for magic skills, and decreased MP consumption for magic skills. When two identical earrings are equipped, only one effect is applied. 30-day. -->
+		<!-- Available for 30 d. MP +37, HP +250. Grants Vampiric Rage effect, increases P. Accuracy and decreases M. Skill cooldown/ MP Consumption. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="branchsys2.icon2.g_accessory_event_earring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -273,7 +273,7 @@
 		</stats>
 	</item>
 	<item id="22216" name="Bad Bunny's Ring" additionalName="30-day (Event)" type="Armor">
-		<!-- Its effects are MP+25, increased Atk. Spd., and increased Casting Spd. When two identical rings are equipped, only one effect is applied. 30-day. -->
+		<!-- Available for 30 d. MP +25. Increases Atk. Spd. and Casting Spd. Effects of two identical rings do not stack. -->
 		<set name="icon" val="branchsys2.icon2.g_accessory_event_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -297,7 +297,7 @@
 		</stats>
 	</item>
 	<item id="22217" name="Lantern Agathion's Gift Set" additionalName="Event" type="EtcItem">
-		<!-- When used, you can receive 2 - 5 Lantern Agathion's Gifts. -->
+		<!-- Double-click to obtain 2-5 Agathion Lantern's Gifts. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -316,7 +316,7 @@
 		</skills>
 	</item>
 	<item id="22218" name="Destruction Enchant Scroll Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing one Destruction Scroll: Enchant Weapon (S-grade). -->
+		<!-- Double-click to obtain Destruction Scroll: Enchant S-grade Weapon. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -332,11 +332,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22221" min="1" max="1" chance="100" /> <!-- Destruction Scroll: Enchant Weapon (S-grade) - Event -->
+			<item id="22221" min="1" max="1" chance="100" /> <!-- Destruction Scroll: Enchant S-grade Weapon - Event -->
 		</capsuled_items>
 	</item>
 	<item id="22219" name="Destruction Enchant Scroll Set (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing 3 Scrolls: Enchant Weapon of Destruction (S-grade) and 3 Scrolls: Enchant Armor of Destruction (S-grade). -->
+		<!-- Double-click to obtain 3 Scrolls: Enchant S-grade Weapon of Destruction and 3 Scrolls: Enchant S-grade Armor of Destruction. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -352,12 +352,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22221" min="3" max="3" chance="100" /> <!-- Destruction Scroll: Enchant Weapon (S-grade) - Event -->
-			<item id="22222" min="3" max="3" chance="100" /> <!-- Destruction Scroll: Enchant Armor (S-grade) - Event -->
+			<item id="22221" min="3" max="3" chance="100" /> <!-- Destruction Scroll: Enchant S-grade Weapon - Event -->
+			<item id="22222" min="3" max="3" chance="100" /> <!-- Destruction Scroll: Enchant S-grade Armor - Event -->
 		</capsuled_items>
 	</item>
 	<item id="22220" name="Lantern Agathion's Gift" additionalName="Event" type="EtcItem">
-		<!-- Lantern Agathion's Gift. Double-click to get a random item. -->
+		<!-- Agathion Chorong's gift. Double-click to obtain a random item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="COTTON" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -369,7 +369,7 @@
 		</skills>
 	</item>
 	<item id="22221" name="Destruction Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 5 for S-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 6 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
+		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers/ swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. is doubled. In case of failure the item doesn't disappear, and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -385,7 +385,7 @@
 		</skills>
 	</item>
 	<item id="22222" name="Destruction Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. +1 for S-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
+		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. In case of failure the item doesn't disappear, and its enchant value remains the same. Cannot be used with equipment enchanted to +6 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -401,7 +401,7 @@
 		</skills>
 	</item>
 	<item id="22223" name="Destruction Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
+		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P./ M. Atk. doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to Goddess of Destruction's power. Cannot be used on weapons enchanted to +15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -417,7 +417,7 @@
 		</skills>
 	</item>
 	<item id="22224" name="Destruction Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. +1 for A-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
+		<!-- P. Def. +1 for A-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -433,7 +433,7 @@
 		</skills>
 	</item>
 	<item id="22225" name="Destruction Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 3 for B-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
+		<!-- For B-grade weapons. When enchanted, P. Atk. +3 for one-handed swords, one-handed blunts, one-handed staffs, daggers and spears. P. Atk. +4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. P. Atk. +6 for bow weapons. M. Atk. +3 for all weapons. When enchanted +4 or higher, P. Atk./ M. Atk. doubles. Thanks to the Goddess of Destruction, in case of failure the enchanted item doesn't disappear, also its enchant value remains the same. Cannot be used on weapons enchanted +15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -449,7 +449,7 @@
 		</skills>
 	</item>
 	<item id="22226" name="Destruction Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. +1 for B-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
+		<!-- P. Def. +1 for B-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -465,7 +465,7 @@
 		</skills>
 	</item>
 	<item id="22227" name="Destruction Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 3 for C-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
+		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual dagger/ sword, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. is doubled. In case of failure the item doesn't disappear, and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -481,7 +481,7 @@
 		</skills>
 	</item>
 	<item id="22228" name="Destruction Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
+		<!-- P. Def. +1 for C-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -497,7 +497,7 @@
 		</skills>
 	</item>
 	<item id="22229" name="Destruction Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 2 for D-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 2 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 4 for bow weapons. Increases M. Atk. by 2 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
+		<!-- When enchanted, increases P. Atk. by 2 for D-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 2 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 4 for bow weapons. Increases M. Atk. by 2 for all weapons. P./ M. Atk. doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -513,7 +513,7 @@
 		</skills>
 	</item>
 	<item id="22230" name="Destruction Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
+		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -529,7 +529,7 @@
 		</skills>
 	</item>
 	<item id="22231" name="Mysterious Blessed Spiritshot (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- High-level spirit light is infused into a weapon, instantly and greatly increasing its M. Atk. Can be used on S-grade weapons. -->
+		<!-- Increases a weapon's magical power. Used with S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -549,7 +549,7 @@
 		</skills>
 	</item>
 	<item id="22232" name="Mysterious Soulshot Pack (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive 1,000 rounds of Mysterious Soulshot (S-grade). -->
+		<!-- Double-click to obtain 1,000 Mysterious S-grade Soulshots. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_soulshot_s_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="500" />
@@ -563,7 +563,7 @@
 		</skills>
 	</item>
 	<item id="22233" name="Mysterious Blessed Spiritshot Pack (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive 1,000 rounds of Mysterious Blessed Spiritshot (S-grade). -->
+		<!-- Double-click to obtain 1,000 Mysterious Blessed S-grade Spiritshots. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_blessed_spiritshot_s_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="500" />
@@ -577,7 +577,7 @@
 		</skills>
 	</item>
 	<item id="22234" name="Sweet Chocolate Box" type="EtcItem">
-		<!-- Wrapped Pack containing 3 Sweet Chocolates and 1 Valentine's Day Love Pouch. -->
+		<!-- Double-click to obtain Sweet Chocolate (3 pcs.) and Valentine's Day Love Pouch (1 pc.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
@@ -595,7 +595,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22235" name="Sweet Chocolate" type="EtcItem">
-		<!-- When used, for 30 min., Vitality is replenished when XP is acquired through hunting. Cannot be used when already receiving the same effect. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- For 30 min., Vitality is replenished when XP is acquired through hunting. Cannot be used when already receiving the same effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -615,7 +615,7 @@
 		</skills>
 	</item>
 	<item id="22236" name="Valentine's Day Love Pouch" type="EtcItem">
-		<!-- When used, can receive 1 of the following: Formal Wear (14-day) Limited Period, Agathion - Juju (14-day), Wild Rose Pig Candy (14-day), and Scroll: Enchant Hair Accessory (warrior or wizard use). -->
+		<!-- Double-click to obtain one of the following items: Formal Wear (14-day), Agathion Chuchu (14-day), Wild Rose Pig Candy (14-day), Scroll: Enchant Hair Accessory (for warriors or wizards). -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -633,7 +633,7 @@
 		</skills>
 	</item>
 	<item id="22237" name="Shiny Couple Ring" type="Armor">
-		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. Cooldown is 1 hour. -->
+		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. Cooldown is 1 h. -->
 		<set name="icon" val="icon.accessory_shiny_couple_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -655,7 +655,7 @@
 		</stats>
 	</item>
 	<item id="22238" name="Scroll: Hair Accessory (Warrior)" type="EtcItem">
-		<!-- Scroll to add the options for a Warrior to a hair accessory. -->
+		<!-- Scroll to add the options for a warrior to a hair accessory. -->
 		<set name="icon" val="BranchSys.icon.br_scroll_of_transformation_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_clan_depositable" val="false" />
@@ -671,7 +671,7 @@
 		</skills>
 	</item>
 	<item id="22239" name="Scroll: Hair Accessory (Wizard)" type="EtcItem">
-		<!-- Scroll to add the options for a Mystic to a hair accessory. -->
+		<!-- Scroll to add the options for a mage to a hair accessory. -->
 		<set name="icon" val="BranchSys.icon.br_scroll_of_transformation_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_clan_depositable" val="false" />
@@ -687,7 +687,7 @@
 		</skills>
 	</item>
 	<item id="22240" name="Enhanced Rose Spirit Coupon (5-hour)" additionalName="Event" type="EtcItem">
-		<!-- Coupon that can be exchanged for a necklace (5-hour) that summons an improved rose spirit. -->
+		<!-- A coupon that can be exchanged for Enhanced Rose Spirit Minion Necklace (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -702,7 +702,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="22241" name="Sweet Chocolate Box" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing 3 Sweet Chocolates and 1 Valentine's Day Love Pouch. -->
+		<!-- Double-click to obtain Sweet Chocolate (3 pcs.) and Valentine's Day Love Pouch (1 pc.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
@@ -720,7 +720,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22242" name="Sweet Chocolate" additionalName="Event" type="EtcItem">
-		<!-- When used, for 30 min., Vitality is replenished when XP is acquired through hunting. Cannot be used when already receiving the same effect. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- For 30 min., Vitality is replenished when XP is acquired through hunting. Cannot be used when already receiving the same effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -740,7 +740,7 @@
 		</skills>
 	</item>
 	<item id="22243" name="(Not in Use)" additionalName="Event" type="Armor">
-		<!-- Not in Use -->
+		<!-- Not used -->
 		<set name="icon" val="icon.accessory_shiny_couple_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -762,7 +762,7 @@
 		</stats>
 	</item>
 	<item id="22244" name="Mysterious Soulshot (C-grade)" type="EtcItem">
-		<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with a C-grade weapon. -->
+		<!-- For C-grade weapons. Temporarily increases a weapon's attack power. -->
 		<set name="icon" val="icon.bm_spirit_bullet_green" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -784,7 +784,7 @@
 		</skills>
 	</item>
 	<item id="22245" name="Mysterious Soulshot (B-grade)" type="EtcItem">
-		<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with a B-grade weapon. -->
+		<!-- Soulshot containing the light of Spirits -->
 		<set name="icon" val="icon.bm_spirit_bullet_red" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -806,7 +806,7 @@
 		</skills>
 	</item>
 	<item id="22246" name="Mysterious Soulshot (A-grade)" type="EtcItem">
-		<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with an A-grade weapon. -->
+		<!-- Increases a weapon's attack power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.bm_spirit_bullet_silver" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -828,7 +828,7 @@
 		</skills>
 	</item>
 	<item id="22247" name="Mysterious Soulshot (S-grade)" type="EtcItem">
-		<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with an S-grade weapon. -->
+		<!-- Soulshot containing the light of Spirits -->
 		<set name="icon" val="icon.bm_spirit_bullet_gold" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -850,7 +850,7 @@
 		</skills>
 	</item>
 	<item id="22248" name="Mysterious Soulshot Pack" type="EtcItem">
-		<!-- If used, can obtain 1 Mysterious Soulshot (C - S-grade). -->
+		<!-- Double-click to obtain 10,000 C-S-grade Mysterious Soulshots. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -865,14 +865,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22244" min="10000" max="10000" chance="100" /> <!-- Mysterious Soulshot (C-grade) -->
-			<item id="22245" min="10000" max="10000" chance="100" /> <!-- Mysterious Soulshot (B-grade) -->
-			<item id="22246" min="10000" max="10000" chance="100" /> <!-- Mysterious Soulshot (A-grade) -->
-			<item id="22247" min="10000" max="10000" chance="100" /> <!-- Mysterious Soulshot (S-grade) -->
+			<item id="22244" min="10000" max="10000" chance="100" /> <!-- Mysterious C-grade Soulshot -->
+			<item id="22245" min="10000" max="10000" chance="100" /> <!-- Mysterious B-grade Soulshot -->
+			<item id="22246" min="10000" max="10000" chance="100" /> <!-- Mysterious A-grade Soulshot -->
+			<item id="22247" min="10000" max="10000" chance="100" /> <!-- Mysterious S-grade Soulshot -->
 		</capsuled_items>
 	</item>
 	<item id="22249" name="Mysterious Blessed Spiritshot (C-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with a C-grade weapon. -->
+		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.bm_spell_shot_green" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -894,7 +894,7 @@
 		</skills>
 	</item>
 	<item id="22250" name="Mysterious Blessed Spiritshot (B-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with a B-grade weapon. -->
+		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.bm_spell_shot_red" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -916,7 +916,7 @@
 		</skills>
 	</item>
 	<item id="22251" name="Mysterious Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with an A-grade weapon. -->
+		<!-- Increases a weapon's magic power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.bm_spell_shot_silver" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -938,7 +938,7 @@
 		</skills>
 	</item>
 	<item id="22252" name="Mysterious Blessed Spiritshot (S-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with an S-grade weapon. -->
+		<!-- Increases a weapon's magical power. Used with S-grade weapons. -->
 		<set name="icon" val="icon.bm_spell_shot_gold" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -960,7 +960,7 @@
 		</skills>
 	</item>
 	<item id="22253" name="Mysterious Blessed Spiritshot Pack" type="EtcItem">
-		<!-- If used, can obtain 2,000 Mysterious Blessed Spiritshots (C - S-grade). -->
+		<!-- Double-click to obtain 2,000 C-S-grade Mysterious Blessed Spiritshots. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -975,14 +975,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22249" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (C-grade) -->
-			<item id="22250" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (B-grade) -->
-			<item id="22251" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (A-grade) -->
-			<item id="22252" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
+			<item id="22249" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed C-grade Spiritshot -->
+			<item id="22250" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed B-grade Spiritshot -->
+			<item id="22251" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed A-grade Spiritshot -->
+			<item id="22252" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed S-grade Spiritshot -->
 		</capsuled_items>
 	</item>
 	<item id="22254" name="Mysterious Friend Summon Bracelet" additionalName="30-day" type="Armor">
-		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. 30-day. Cooldown is 1 hour. -->
+		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. 30-day. Cooldown: 1 h. -->
 		<set name="icon" val="icon.bm_ring_of_friendship" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1003,7 +1003,7 @@
 		</skills>
 	</item>
 	<item id="22255" name="Mysterious Friend Summon Bracelet Pack (30-day)" type="EtcItem">
-		<!-- When used, you can receive 1 Mysterious Friend Summon Bracelet (30-day). -->
+		<!-- Double-click to obtain 1 Mysterious Friend Summon Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1375,7 +1375,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="22279" min="1" max="1" chance="100" /> <!-- PA Vitality (1-hour) - Event -->
-			<item id="22280" min="1" max="1" chance="100" /> <!-- PA - Blessing (1-hour) - Event -->
+			<item id="22280" min="1" max="1" chance="100" /> <!-- PA Blessing (1-hour) - Event -->
 		</capsuled_items>
 	</item>
 	<item id="22276" name="PA - Transformation Stick Pack" additionalName="Event" type="EtcItem">
@@ -1433,7 +1433,7 @@
 		</skills>
 	</item>
 	<item id="22279" name="PA Vitality (1-hour)" additionalName="Event" type="EtcItem">
-		<!-- Upon use, for 1 hour, energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- Upon use, for 1 h., energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1455,7 +1455,7 @@
 		</skills>
 	</item>
 	<item id="22280" name="PA - Blessing (1-hour)" additionalName="Event" type="EtcItem">
-		<!-- When used, HP Recovery Bonus, Max MP, and Critical Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. -->
+		<!-- HP Recovery Rate/ Max MP/ P. Critical Damage +20%. Grants the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -1492,7 +1492,7 @@
 		</skills>
 	</item>
 	<item id="22281" name="Sujin Transformation Stick" additionalName="7-day (Event)" type="Weapon">
-		<!-- Stick that transforms you into a the Blessed Child Sujin. The transformation ends when you de-equip the item. Cooldown is 4 hours. -->
+		<!-- Stick that transforms you into a the Blessed Child Sujin. The transformation ends when you de-equip the item. Cooldown is 4 h.. -->
 		<set name="icon" val="BranchSys2.icon.br_blessed_taigirl_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1539,11 +1539,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22281" min="1" max="1" chance="100" /> <!-- Sujin Transformation Stick - 7-day (Event) -->
+			<item id="22281" min="1" max="1" chance="100" /> <!-- Sujin Transformation Stick - 7-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="22283" name="Trejuo Transformation Stick" additionalName="7-day (Event)" type="Weapon">
-		<!-- Stick that transforms you into a the Blessed Child Trejuo. The transformation ends when you de-equip the item. Cooldown is 4 hours. -->
+		<!-- Stick that transforms you into a the Blessed Child Trejuo. The transformation ends when you de-equip the item. Cooldown is 4 h.. -->
 		<set name="icon" val="BranchSys2.icon.br_blessed_taiboy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1590,7 +1590,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22283" min="1" max="1" chance="100" /> <!-- Trejuo Transformation Stick - 7-day (Event) -->
+			<item id="22283" min="1" max="1" chance="100" /> <!-- Trejuo Transformation Stick - 7-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="22285" name="Eva's Circlet" additionalName="Event" type="Armor">
@@ -1626,7 +1626,7 @@
 		</skills>
 	</item>
 	<item id="22287" name="Agathion - Juju" additionalName="33-day (Event)" type="Armor">
-		<!-- Bracelet that can summon an Agathion - Juju. Requires room in the inventory and the weight limit to receive a gift from an Agathion - Juju. -->
+		<!-- Summons Agathion Chuchu. You can't receive its gift, if your inventory is full. -->
 		<set name="icon" val="icon.high_agathion_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1650,7 +1650,7 @@
 		</skills>
 	</item>
 	<item id="22288" name="Agathion - Juju Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive an Agathion - Juju. -->
+		<!-- Double-click to obtain Agathion Chuchu. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -1666,11 +1666,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22287" min="1" max="1" chance="100" /> <!-- Agathion - Juju - 33-day (Event) -->
+			<item id="22287" min="1" max="1" chance="100" /> <!-- Agathion Chuchu - 33-day / Event -->
 		</capsuled_items>
 	</item>
 	<item id="22289" name="Juju Agathion's Gift" additionalName="Event" type="EtcItem">
-		<!-- Juju Agathion's Gift. Double-click to receive one random item. -->
+		<!-- Agathion Chuchu's gift. Double-click to obtain a random item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="COTTON" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1801,7 +1801,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22299" name="Miraculous Valentine Cake: Special Ingredient Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Miraculous Valentine Cake: Special Ingredient. -->
+		<!-- Double-click to obtain Miraculous Valentine Cake: Special Ingredient. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1818,7 +1818,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22300" min="1" max="1" chance="100" /> <!-- Miraculous Valentine Cake: Special Ingredient - 15-day (Event) -->
+			<item id="22300" min="1" max="1" chance="100" /> <!-- Miraculous Valentine Cake: Special Ingredient - 15-day / Event -->
 		</capsuled_items>
 	</item>
 </list>

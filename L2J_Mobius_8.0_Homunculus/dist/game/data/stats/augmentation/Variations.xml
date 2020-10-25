@@ -5590,6 +5590,57 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
+		<!-- Rare Accessory Spirit Stone -->
+		<variation mineralId="46588">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="31901" to="31940" chance="2.439" /> <!-- P. Def. + 22 -> CP Recovery Rate + 3 -->
+					<option id="31941" chance="2.44" /> <!-- CP Recovery Rate + 5 -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="31942" to="31964" chance="4.166" /> <!-- Fire Resistance + 3 -> Dark Resistance + 5 -->
+					<option id="31965" chance="4.182" /> <!-- Dark Resistance + 10 -->
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="31966" to="31998" chance="3.125" /> <!-- Stun Resistance + 2% -> Passive: Petrification Resistance + 5%. -->
+				</optionCategory>
+				<optionCategory chance="9.0">
+					<optionRange from="31999" to="32052" chance="1.818" /> <!-- Stun/Hold Resistance + 6% -> Passive: Aerial Yoke/Petrification Resistance + 6%. -->
+					<option id="32053" chance="1.828" /> <!-- Passive: Pull/Petrification Resistance + 6%. -->
+				</optionCategory>
+				<optionCategory chance="1.0">
+					<optionRange from="32054" to="32107" chance="1.818" /> <!-- Stun/Hold Resistance + 7% -> Passive: Aerial Yoke/Petrification Resistance + 7%. -->
+					<option id="32108" chance="1.828" /> <!-- Passive: Pull/Petrification Resistance + 7%. -->
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<variation mineralId="47714">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="31901" to="31940" chance="2.439" /> <!-- P. Def. + 22 -> CP Recovery Rate + 3 -->
+					<option id="31941" chance="2.44" /> <!-- CP Recovery Rate + 5 -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="31942" to="31964" chance="4.166" /> <!-- Fire Resistance + 3 -> Dark Resistance + 5 -->
+					<option id="31965" chance="4.182" /> <!-- Dark Resistance + 10 -->
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="31966" to="31998" chance="3.125" /> <!-- Stun Resistance + 2% -> Passive: Petrification Resistance + 5%. -->
+				</optionCategory>
+				<optionCategory chance="9.0">
+					<optionRange from="31999" to="32052" chance="1.818" /> <!-- Stun/Hold Resistance + 6% -> Passive: Aerial Yoke/Petrification Resistance + 6%. -->
+					<option id="32053" chance="1.828" /> <!-- Passive: Pull/Petrification Resistance + 6%. -->
+				</optionCategory>
+				<optionCategory chance="1.0">
+					<optionRange from="32054" to="32107" chance="1.818" /> <!-- Stun/Hold Resistance + 7% -> Passive: Aerial Yoke/Petrification Resistance + 7%. -->
+					<option id="32108" chance="1.828" /> <!-- Passive: Pull/Petrification Resistance + 7%. -->
+				</optionCategory>
+			</optionGroup>
+		</variation>
 		<!-- Spirit Stone: Hair Accessory -->
 		<variation mineralId="45937">
 			<optionGroup weaponType="warrior" order="0">
@@ -5694,6 +5745,34 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
+		<variation mineralId="28540">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="40073" to="40122" chance="2.0" /> <!-- P. Def. + 22 -> MEN + 2 -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="40031" to="40072" chance="2.083" /> <!-- PvP Damage + 1% when equipping Topaz Lv. 4 or above -> M. Skill Power + 5% when equipping Blue Cat's Eye Lv. 4 or above -->
+					<optionRange from="40223" to="40227" chance="2.083" /> <!-- PvP Damage + 1% when equipping Amethyst Lv. 4 or above -> Reflect 2% of Received Damage when equipping Cat's Eye Lv. 4 or above -->
+					<option id="40228" chance="2.099" /> <!-- Reflect 5% of Received Damage when equipping Cat's Eye Lv. 4 or above -->
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<variation mineralId="28539">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="40073" to="40122" chance="2.0" /> <!-- P. Def. + 22 -> MEN + 2 -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="40031" to="40072" chance="2.083" /> <!-- PvP Damage + 1% when equipping Topaz Lv. 4 or above -> M. Skill Power + 5% when equipping Blue Cat's Eye Lv. 4 or above -->
+					<optionRange from="40223" to="40227" chance="2.083" /> <!-- PvP Damage + 1% when equipping Amethyst Lv. 4 or above -> Reflect 2% of Received Damage when equipping Cat's Eye Lv. 4 or above -->
+					<option id="40228" chance="2.099" /> <!-- Reflect 5% of Received Damage when equipping Cat's Eye Lv. 4 or above -->
+				</optionCategory>
+			</optionGroup>
+		</variation>
 		<!-- Circlet Spirit Stone -->
 		<variation mineralId="48215">
 			<optionGroup weaponType="warrior" order="0">
@@ -5719,6 +5798,159 @@
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="100.0">
 					<option id="7288" chance="100" /> <!-- HP Recovery + 0.23. -->
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Dragon Spirit Stone -->
+		<variation mineralId="81135">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="34357" to="34358" chance="4.761" />
+					<optionRange from="34359" to="34360" chance="4.761" />
+					<optionRange from="34361" to="34362" chance="4.761" />
+					<optionRange from="34363" to="34364" chance="4.761" />
+					<optionRange from="34365" to="34366" chance="4.761" />
+					<optionRange from="34367" to="34368" chance="4.761" />
+					<optionRange from="34369" to="34370" chance="4.761" />
+					<optionRange from="34371" to="34372" chance="4.761" />
+					<optionRange from="34373" to="34374" chance="4.761" />
+					<optionRange from="34375" to="34376" chance="4.761" />
+					<optionRange from="34377" to="34378" chance="4.761" />
+					<optionRange from="34379" to="34380" chance="4.761" />
+					<optionRange from="34381" to="34382" chance="4.761" />
+					<optionRange from="34383" to="34384" chance="4.761" />
+					<optionRange from="34385" to="34386" chance="4.761" />
+					<optionRange from="34387" to="34388" chance="4.761" />
+					<optionRange from="34389" to="34390" chance="4.761" />
+					<optionRange from="34391" to="34392" chance="4.761" />
+					<optionRange from="34393" to="34394" chance="4.761" />
+					<optionRange from="34395" to="34396" chance="4.761" />
+					<optionRange from="34397" to="34399" chance="4.761" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="34400" to="34401" chance="8.33" />
+					<optionRange from="34402" to="34403" chance="8.33" />
+					<optionRange from="34404" to="34405" chance="8.33" />
+					<optionRange from="34406" to="34407" chance="8.33" />
+					<optionRange from="34408" to="34409" chance="8.33" />
+					<optionRange from="34410" to="34411" chance="8.33" />
+					<optionRange from="34412" to="34413" chance="8.33" />
+					<optionRange from="34414" to="34415" chance="8.33" />
+					<optionRange from="34416" to="34417" chance="8.33" />
+					<optionRange from="34418" to="34419" chance="8.33" />
+					<optionRange from="34420" to="34421" chance="8.33" />
+					<optionRange from="34422" to="34424" chance="8.33" />
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="34425" to="34426" chance="5.88" />
+					<optionRange from="34427" to="34428" chance="5.88" />
+					<optionRange from="34429" to="34430" chance="5.88" />
+					<optionRange from="34431" to="34432" chance="5.88" />
+					<optionRange from="34433" to="34434" chance="5.88" />
+					<optionRange from="34435" to="34436" chance="5.88" />
+					<optionRange from="34437" to="34438" chance="5.88" />
+					<optionRange from="34439" to="34440" chance="5.88" />
+					<optionRange from="34441" to="34442" chance="5.88" />
+					<optionRange from="34443" to="34444" chance="5.88" />
+					<optionRange from="34445" to="34446" chance="5.88" />
+					<optionRange from="34447" to="34448" chance="5.88" />
+					<optionRange from="34449" to="34450" chance="5.88" />
+					<optionRange from="34451" to="34452" chance="5.88" />
+					<optionRange from="34453" to="34454" chance="5.88" />
+					<optionRange from="34455" to="34456" chance="5.88" />
+					<optionRange from="34457" to="34458" chance="5.88" />
+				</optionCategory>
+				<optionCategory chance="7.0">
+					<optionRange from="34459" to="34460" chance="11.1111" />
+					<optionRange from="34461" to="34462" chance="11.1111" />
+					<optionRange from="34463" to="34464" chance="11.1111" />
+					<optionRange from="34465" to="34466" chance="11.1111" />
+					<optionRange from="34467" to="34468" chance="11.1111" />
+					<optionRange from="34469" to="34470" chance="11.1111" />
+					<optionRange from="34471" to="34473" chance="11.1111" />
+					<optionRange from="34474" to="34477" chance="11.1111" />
+					<optionRange from="34478" to="34479" chance="11.1111" />
+				</optionCategory>
+				<optionCategory chance="3.0">
+					<optionRange from="34480" to="34489" chance="50" />
+					<optionRange from="34490" to="34496" chance="50" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="34357" to="34358" chance="4.761" />
+					<optionRange from="34359" to="34360" chance="4.761" />
+					<optionRange from="34361" to="34362" chance="4.761" />
+					<optionRange from="34363" to="34364" chance="4.761" />
+					<optionRange from="34365" to="34366" chance="4.761" />
+					<optionRange from="34367" to="34368" chance="4.761" />
+					<optionRange from="34369" to="34370" chance="4.761" />
+					<optionRange from="34371" to="34372" chance="4.761" />
+					<optionRange from="34373" to="34374" chance="4.761" />
+					<optionRange from="34375" to="34376" chance="4.761" />
+					<optionRange from="34377" to="34378" chance="4.761" />
+					<optionRange from="34379" to="34380" chance="4.761" />
+					<optionRange from="34381" to="34382" chance="4.761" />
+					<optionRange from="34383" to="34384" chance="4.761" />
+					<optionRange from="34385" to="34386" chance="4.761" />
+					<optionRange from="34387" to="34388" chance="4.761" />
+					<optionRange from="34389" to="34390" chance="4.761" />
+					<optionRange from="34391" to="34392" chance="4.761" />
+					<optionRange from="34393" to="34394" chance="4.761" />
+					<optionRange from="34395" to="34396" chance="4.761" />
+					<optionRange from="34397" to="34399" chance="4.761" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="mage" order="1">
+				<optionCategory chance="55.0">
+					<optionRange from="34400" to="34401" chance="8.33" />
+					<optionRange from="34402" to="34403" chance="8.33" />
+					<optionRange from="34404" to="34405" chance="8.33" />
+					<optionRange from="34406" to="34407" chance="8.33" />
+					<optionRange from="34408" to="34409" chance="8.33" />
+					<optionRange from="34410" to="34411" chance="8.33" />
+					<optionRange from="34412" to="34413" chance="8.33" />
+					<optionRange from="34414" to="34415" chance="8.33" />
+					<optionRange from="34416" to="34417" chance="8.33" />
+					<optionRange from="34418" to="34419" chance="8.33" />
+					<optionRange from="34420" to="34421" chance="8.33" />
+					<optionRange from="34422" to="34424" chance="8.33" />
+				</optionCategory>
+				<optionCategory chance="35.0">
+					<optionRange from="34425" to="34426" chance="5.88" />
+					<optionRange from="34427" to="34428" chance="5.88" />
+					<optionRange from="34429" to="34430" chance="5.88" />
+					<optionRange from="34431" to="34432" chance="5.88" />
+					<optionRange from="34433" to="34434" chance="5.88" />
+					<optionRange from="34435" to="34436" chance="5.88" />
+					<optionRange from="34437" to="34438" chance="5.88" />
+					<optionRange from="34439" to="34440" chance="5.88" />
+					<optionRange from="34441" to="34442" chance="5.88" />
+					<optionRange from="34443" to="34444" chance="5.88" />
+					<optionRange from="34445" to="34446" chance="5.88" />
+					<optionRange from="34447" to="34448" chance="5.88" />
+					<optionRange from="34449" to="34450" chance="5.88" />
+					<optionRange from="34451" to="34452" chance="5.88" />
+					<optionRange from="34453" to="34454" chance="5.88" />
+					<optionRange from="34455" to="34456" chance="5.88" />
+					<optionRange from="34457" to="34458" chance="5.88" />
+				</optionCategory>
+				<optionCategory chance="7.0">
+					<optionRange from="34459" to="34460" chance="11.1111" />
+					<optionRange from="34461" to="34462" chance="11.1111" />
+					<optionRange from="34463" to="34464" chance="11.1111" />
+					<optionRange from="34465" to="34466" chance="11.1111" />
+					<optionRange from="34467" to="34468" chance="11.1111" />
+					<optionRange from="34469" to="34470" chance="11.1111" />
+					<optionRange from="34471" to="34473" chance="11.1111" />
+					<optionRange from="34474" to="34477" chance="11.1111" />
+					<optionRange from="34478" to="34479" chance="11.1111" />
+				</optionCategory>
+				<optionCategory chance="3.0">
+					<optionRange from="34480" to="34489" chance="50" />
+					<optionRange from="34490" to="34496" chance="50" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -16758,6 +16990,10 @@
 		<!-- [brooch_life_stone1] -->
 		<itemGroup id="73">
 			<item id="28488" /> <!-- La Vie En Rose's Radiant Brooch (Rare-Type) -->
+			<item id="81359" /> <!-- Enchanced La Vie En Rose's Brooch -->
+			<item id="29546" /> <!-- Enchanced La Vie En Rose's Brooch -->
+			<item id="81360" /> <!-- Top-Grade La Vie En Rose's Brooch -->
+			<item id="29547" /> <!-- Top-Grade La Vie En Rose's Brooch -->
 		</itemGroup>
 		<!-- [circlet_life_stone] -->
 		<itemGroup id="74">
@@ -16844,6 +17080,100 @@
 			<item id="80186" />
 			<item id="80187" />
 			<item id="80188" />
+		</itemGroup>
+		<!-- Dragon Weapons -->
+		<itemGroup id="77">
+			<item id="36441" /> <!-- <Rare> Antharas Shaper(Standard) -->
+			<item id="36442" /> <!-- <Rare> Antharas Slasher(Standard) -->
+			<item id="36443" /> <!-- <Rare> Antharas Thrower(Standard) -->
+			<item id="36444" /> <!-- <Rare> Antharas Buster(Standard) -->
+			<item id="36445" /> <!-- <Rare> Antharas Cutter(Standard) -->
+			<item id="36446" /> <!-- <Rare> Antharas Stormer(Standard) -->
+			<item id="36447" /> <!-- <Rare> Antharas Fighter(Standard) -->
+			<item id="36448" /> <!-- <Rare> Antharas Avenger(Standard) -->
+			<item id="36449" /> <!-- <Rare> Antharas Dual Blunt Weapon(Standard) -->
+			<item id="36450" /> <!-- <Rare> Antharas Dual Swords(Standard) -->
+			<item id="36451" /> <!-- <Rare> Antharas Shaper(Standard) -->
+			<item id="36452" /> <!-- <Rare> Valakas Cutter(Standard) -->
+			<item id="36453" /> <!-- <Rare> Valakas Slasher(Standard) -->
+			<item id="36454" /> <!-- <Rare> Valakas Thrower(Standard) -->
+			<item id="36455" /> <!-- <Rare> Valakas Buster(Standard) -->
+			<item id="36456" /> <!-- <Rare> Valakas Caster(Standard) -->
+			<item id="36457" /> <!-- <Rare> Valakas Retributer(Standard) -->
+			<item id="36458" /> <!-- <Rare> Lindvior Shaper(Standard) -->
+			<item id="36459" /> <!-- <Rare> Lindvior Thrower(Standard) -->
+			<item id="36460" /> <!-- <Rare> Lindvior Slasher(Standard) -->
+			<item id="36461" /> <!-- <Rare> Lindvior Caster(Standard) -->
+			<item id="36462" /> <!-- <Rare> Lindvior Cutter(Standard) -->
+			<item id="36463" /> <!-- <Rare> Lindvior Shooter(Standard) -->
+			<item id="36464" /> <!-- <Rare> Lindvior Dual Daggers(Standard) -->
+			<item id="36465" /> <!-- Antharas Shaper(High Grade) -->
+			<item id="36466" /> <!-- Antharas Slasher(High Grade) -->
+			<item id="36467" /> <!-- Antharas Thrower(High Grade) -->
+			<item id="36468" /> <!-- Antharas Buster(High Grade) -->
+			<item id="36469" /> <!-- Antharas Cutter(High Grade) -->
+			<item id="36470" /> <!-- Antharas Stormer(High Grade) -->
+			<item id="36471" /> <!-- Antharas Fighter(High Grade) -->
+			<item id="36472" /> <!-- Antharas Avenger(High Grade) -->
+			<item id="36473" /> <!-- Antharas Dual Blunt Weapon(High Grade) -->
+			<item id="36474" /> <!-- Antharas Dual Swords(High Grade) -->
+			<item id="36475" /> <!-- Valakas Shaper(High Grade) -->
+			<item id="36476" /> <!-- Valakas Cutter(High Grade) -->
+			<item id="36477" /> <!-- Valakas Slasher(High Grade) -->
+			<item id="36478" /> <!-- Valakas Thrower(High Grade) -->
+			<item id="36479" /> <!-- Valakas Buster(High Grade) -->
+			<item id="36480" /> <!-- Valakas Caster(High Grade) -->
+			<item id="36481" /> <!-- Valakas Retributer(High Grade) -->
+			<item id="36482" /> <!-- Lindvior Shaper(High Grade) -->
+			<item id="36483" /> <!-- Lindvior Thrower(High Grade) -->
+			<item id="36484" /> <!-- Lindvior Slasher(High Grade) -->
+			<item id="36485" /> <!-- Lindvior Caster(High Grade) -->
+			<item id="36486" /> <!-- Lindvior Cutter(High Grade) -->
+			<item id="36487" /> <!-- Lindvior Shooter(High Grade) -->
+			<item id="36488" /> <!-- Lindvior Dual Daggers(High Grade) -->
+			<item id="36489" /> <!-- Antharas Shaper(Top Grade) -->
+			<item id="36490" /> <!-- Antharas Slasher(Top Grade) -->
+			<item id="36491" /> <!-- Antharas Thrower(Top Grade) -->
+			<item id="36492" /> <!-- Antharas Buster(Top Grade) -->
+			<item id="36493" /> <!-- Antharas Cutter(Top Grade) -->
+			<item id="36494" /> <!-- Antharas Stormer(Top Grade) -->
+			<item id="36495" /> <!-- Antharas Fighter(Top Grade) -->
+			<item id="36496" /> <!-- Antharas Avenger(Top Grade) -->
+			<item id="36497" /> <!-- Antharas Dual Blunt Weapon(Top Grade) -->
+			<item id="36498" /> <!-- Antharas Dual Swords(Top Grade) -->
+			<item id="36499" /> <!-- Valakas Shaper(Top Grade) -->
+			<item id="36500" /> <!-- Valakas Cutter(Top Grade) -->
+			<item id="36501" /> <!-- Valakas Slasher(Top Grade) -->
+			<item id="36502" /> <!-- Valakas Thrower(Top Grade) -->
+			<item id="36503" /> <!-- Valakas Buster(Top Grade) -->
+			<item id="36504" /> <!-- Valakas Caster(Top Grade) -->
+			<item id="36505" /> <!-- Valakas Retributer(Top Grade) -->
+			<item id="36506" /> <!-- Lindvior Shaper(Top Grade) -->
+			<item id="36507" /> <!-- Lindvior Thrower -->
+			<item id="36508" /> <!-- Lindvior Slasher(Top Grade) -->
+			<item id="36509" /> <!-- Lindvior Caster(Top Grade) -->
+			<item id="36510" /> <!-- Lindvior Cutter(Top Grade) -->
+			<item id="36511" /> <!-- Lindvior Shooter(Top Grade) -->
+			<item id="36512" /> <!-- Lindvior Dual Daggers(Top Grade) -->
+			<item id="80072" /> <!-- <Rare> Fafurion Avenger(Standard) -->
+			<item id="80073" /> <!-- <Rare> Fafurion Fighter(Standard) -->
+			<item id="80074" /> <!-- <Rare> Fafurion Stormer(Standard) -->
+			<item id="80075" /> <!-- <Rare> Fafurion Retributer(Standard) -->
+			<item id="80076" /> <!-- <Rare> Fafurion Dual Blunt Weapon(Standard) -->
+			<item id="80077" /> <!-- <Rare> Fafurion Dual swords(Standard) -->
+			<item id="80078" /> <!-- Fafurion Avenger(High Grade) -->
+			<item id="80079" /> <!-- Fafurion Fighter(High Grade) -->
+			<item id="80080" /> <!-- Fafurion Stormer(High Grade) -->
+			<item id="80081" /> <!-- Fafurion Retributer(High Grade) -->
+			<item id="80082" /> <!-- Fafurion Dual Blunt Weapon(High Grade) -->
+			<item id="80083" /> <!-- Fafurion Dual Swords(High Grade) -->
+			<item id="80084" /> <!-- Fafurion Avenger(Top Grade) -->
+			<item id="80085" /> <!-- Fafurion Fighter(Top Grade) -->
+			<item id="80086" /> <!-- Fafurion Stormer(Top Grade) -->
+			<item id="80087" /> <!-- Fafurion Retributer(Top Grade) -->
+			<item id="80088" /> <!-- Fafurion Dual Blunt Weapon(Top Grade) -->
+			<item id="80089" /> <!-- Fafurion Dual Swords(Top Grade) -->
+			<item id="80318" /> <!-- Fafurion Dual Daggers  -->
 		</itemGroup>
 	</itemGroups>
 	<fees>
@@ -17362,6 +17692,134 @@
 		<fee itemGroup="70" itemId="19440" itemCount="8" cancelFee="21000000"> <!-- Gemstone (R-grade) -->
 			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
+		<!-- [c_46_acc_new] -->
+		<fee itemGroup="55" itemId="2132" itemCount="125" cancelFee="95000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [c_49_acc_new] -->
+		<fee itemGroup="56" itemId="2132" itemCount="125" cancelFee="115000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [c_52_acc_new] -->
+		<fee itemGroup="57" itemId="2132" itemCount="125" cancelFee="150000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [c_55_acc_new] -->
+		<fee itemGroup="58" itemId="2132" itemCount="125" cancelFee="210000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [b_58_acc_new] -->
+		<fee itemGroup="59" itemId="2132" itemCount="125" cancelFee="240000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [b_61_acc_new] -->
+		<fee itemGroup="60" itemId="2132" itemCount="125" cancelFee="270000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [a_64_acc_new] -->
+		<fee itemGroup="61" itemId="2132" itemCount="125" cancelFee="330000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [a_67_acc_new] -->
+		<fee itemGroup="62" itemId="2132" itemCount="125" cancelFee="390000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [s_75_acc_new] -->
+		<fee itemGroup="63" itemId="2132" itemCount="125" cancelFee="480000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [s_80_acc_new] -->
+		<fee itemGroup="64" itemId="2132" itemCount="125" cancelFee="920000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [s_84_acc_new] -->
+		<fee itemGroup="65" itemId="2132" itemCount="125" cancelFee="1400000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [s_85_acc_new] -->
+		<fee itemGroup="66" itemId="2132" itemCount="125" cancelFee="2800000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [s_86_acc_new] -->
+		<fee itemGroup="67" itemId="2132" itemCount="125" cancelFee="3600000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [r_acc_new] -->
+		<fee itemGroup="68" itemId="2133" itemCount="30" cancelFee="2400000"> <!-- Gemstone (A-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [r95_acc_new] -->
+		<fee itemGroup="69" itemId="2134" itemCount="18" cancelFee="8100000"> <!-- Gemstone (S-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [r99_acc_new] -->
+		<fee itemGroup="70" itemId="19440" itemCount="8" cancelFee="21000000"> <!-- Gemstone (R-grade) -->
+			<mineralRange from="46588" to="46588" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [c_46_acc_new] -->
+		<fee itemGroup="55" itemId="2132" itemCount="125" cancelFee="95000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [c_49_acc_new] -->
+		<fee itemGroup="56" itemId="2132" itemCount="125" cancelFee="115000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [c_52_acc_new] -->
+		<fee itemGroup="57" itemId="2132" itemCount="125" cancelFee="150000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [c_55_acc_new] -->
+		<fee itemGroup="58" itemId="2132" itemCount="125" cancelFee="210000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [b_58_acc_new] -->
+		<fee itemGroup="59" itemId="2132" itemCount="125" cancelFee="240000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [b_61_acc_new] -->
+		<fee itemGroup="60" itemId="2132" itemCount="125" cancelFee="270000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [a_64_acc_new] -->
+		<fee itemGroup="61" itemId="2132" itemCount="125" cancelFee="330000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [a_67_acc_new] -->
+		<fee itemGroup="62" itemId="2132" itemCount="125" cancelFee="390000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [s_75_acc_new] -->
+		<fee itemGroup="63" itemId="2132" itemCount="125" cancelFee="480000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [s_80_acc_new] -->
+		<fee itemGroup="64" itemId="2132" itemCount="125" cancelFee="920000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [s_84_acc_new] -->
+		<fee itemGroup="65" itemId="2132" itemCount="125" cancelFee="1400000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [s_85_acc_new] -->
+		<fee itemGroup="66" itemId="2132" itemCount="125" cancelFee="2800000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [s_86_acc_new] -->
+		<fee itemGroup="67" itemId="2132" itemCount="125" cancelFee="3600000"> <!-- Gemstone (B-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [r_acc_new] -->
+		<fee itemGroup="68" itemId="2133" itemCount="30" cancelFee="2400000"> <!-- Gemstone (A-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [r95_acc_new] -->
+		<fee itemGroup="69" itemId="2134" itemCount="18" cancelFee="8100000"> <!-- Gemstone (S-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
+		<!-- [r99_acc_new] -->
+		<fee itemGroup="70" itemId="19440" itemCount="8" cancelFee="21000000"> <!-- Gemstone (R-grade) -->
+			<mineralRange from="47714" to="47714" /> <!-- Rare Accessory Spirit Stone -->
+		</fee>
 		<!-- [hair_acc_new] -->
 		<fee itemGroup="71" itemId="2133" itemCount="30" cancelFee="2400000"> <!-- Gemstone (A-grade) -->
 			<mineral id="45937" /> <!-- Spirit Stone: Hair Accessory -->
@@ -17388,6 +17846,10 @@
 		<!-- [r110_new] -->
 		<fee itemGroup="76" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
 			<mineral id="80130" /> <!-- Super Advanced Spirit Stone -->
+		</fee>
+		<!-- Dragon Weapons -->
+		<fee itemGroup="77" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+			<mineral id="81135" /> <!-- Dragon Spirit Stone -->
 		</fee>
 	</fees>
 </list>

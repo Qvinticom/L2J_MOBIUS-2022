@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10200" name="Seed: Alternative Blue Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14- 24 character must plant it on a level 14- 24 monster. -->
+		<!-- A seed of Alternative Blue Coda. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 14-24 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -16,7 +16,7 @@
 		</skills>
 	</item>
 	<item id="10201" name="Seed: Alternative Golden Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17- 27 character must plant it on a level 17- 27 monster. -->
+		<!-- A seed of Alternative Golden Coda. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 17-27 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -31,7 +31,7 @@
 		</skills>
 	</item>
 	<item id="10202" name="Seed: Golden Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Golden Coda. For best results, a level 17- 27 character must plant it on a level 17- 27 monster. -->
+		<!-- A seed of Golden Coda. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 17-27 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -46,7 +46,7 @@
 		</skills>
 	</item>
 	<item id="10203" name="Spellbook: Empowering Echo" type="EtcItem">
-		<!-- Spellbook needed to learn Empower of Echo. Used by Storm Screamers. -->
+		<!-- A spellbook for learning the Empower of Echo skill. Used by Storm Screamers. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -56,7 +56,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10204" name="Battle Manual - Soul Gathering" type="EtcItem">
-		<!-- Battle Manual needed to learn Soul Gathering. Used by Berserkers, Arbalesters, Soul Breakers, and Inspectors. Required level: 46 -->
+		<!-- A battle manual for learning the Soul Gathering skill. Used by Berserkers, Arbalesters, Soul Breakers and Inspectors. Required level: 46. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -66,7 +66,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10205" name="White Seed of Evil Lump" type="EtcItem">
-		<!-- Double-click to obtain white seed of evil. -->
+		<!-- Double-click to obtain a seed of evil. -->
 		<set name="icon" val="icon.etc_poison_pouch_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -81,7 +81,7 @@
 		</skills>
 	</item>
 	<item id="10206" name="Black Seed of Evil Lump" type="EtcItem">
-		<!-- Double-click to obtain black seed of evil. -->
+		<!-- Double-click to obtain a seed of evil. -->
 		<set name="icon" val="icon.etc_poison_pouch_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -96,7 +96,7 @@
 		</skills>
 	</item>
 	<item id="10207" name="Enhanced Striped Scale Shirt" type="Armor">
-		<!-- Increases Max MP by 35, M. Def. Increases. -->
+		<!-- Max MP +35. Increases M. Def. -->
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -114,7 +114,7 @@
 		</stats>
 	</item>
 	<item id="10208" name="Enhanced Striped Mithril Shirt" type="Armor">
-		<!-- Increases Max MP by 70, M. Def. Increases by 50. -->
+		<!-- Max MP +70, M. Def. +50. -->
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -136,7 +136,7 @@
 		</stats>
 	</item>
 	<item id="10209" name="Enhanced Steel Bracelet" type="Armor">
-		<!-- Activates 3 talisman slots when equipped. Increases Max MP by 60. -->
+		<!-- When equipped, unlocks 3 talisman slots. Max MP +60. -->
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -155,7 +155,7 @@
 		</stats>
 	</item>
 	<item id="10210" name="Enhanced Mithril Bracelet" type="Armor">
-		<!-- Activates 4 talisman slots when equipped. Increases Max MP by 120. -->
+		<!-- When equipped, unlocks 4 talisman slots. Max MP +120. -->
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -174,7 +174,7 @@
 		</stats>
 	</item>
 	<item id="10211" name="Blessed Ring of Resurrection" type="Armor">
-		<!-- Makes a Blessed Resurrection available for up to 180 min. Only one effect is applied, even if you wear two identical rings. -->
+		<!-- Enables Blessed Resurrection for 120 min. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_ring_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -259,7 +259,7 @@
 		</stats>
 	</item>
 	<item id="10215" name="Icarus Sawsword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -288,7 +288,7 @@
 		</stats>
 	</item>
 	<item id="10216" name="Icarus Disperser" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -317,7 +317,7 @@
 		</stats>
 	</item>
 	<item id="10217" name="Icarus Spirit" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -346,7 +346,7 @@
 		</stats>
 	</item>
 	<item id="10218" name="Icarus Heavy Arms" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -375,7 +375,7 @@
 		</stats>
 	</item>
 	<item id="10219" name="Icarus Trident" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -407,7 +407,7 @@
 		</stats>
 	</item>
 	<item id="10220" name="Icarus Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -436,7 +436,7 @@
 		</stats>
 	</item>
 	<item id="10221" name="Icarus Hand" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -465,7 +465,7 @@
 		</stats>
 	</item>
 	<item id="10222" name="Icarus Hall" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -495,7 +495,7 @@
 		</stats>
 	</item>
 	<item id="10223" name="Icarus Spitter" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -527,7 +527,7 @@
 		</stats>
 	</item>
 	<item id="10224" name="Icarus Stinger" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Icarus Sawsword Conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive weapon: Icarus Sawsword conversion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. When enchanted to +4 or higher, has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -563,7 +563,7 @@
 		</stats>
 	</item>
 	<item id="10225" name="Icarus Wingblade" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Kamael-exclusive weapon: Icarus Heavy Arms conversion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -596,7 +596,7 @@
 		</stats>
 	</item>
 	<item id="10226" name="Icarus Shooter" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Icarus Spitter Conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Kamael-exclusive weapon: Icarus Spitter conversion. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -985,7 +985,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="10243" name="Panda Hat" type="Armor">
-		<!-- Interesting hair accessory that looks like a panda. Uses 2 hair accessory slots. -->
+		<!-- An interesting hair accessory that looks like a panda. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_panda_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1076,7 +1076,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="10250" name="Adventurer Hat (Event)" type="Armor">
-		<!-- Adventurer hat commemorating the 1st character creation. Uses 2 hair accessory slots. -->
+		<!-- Adventurer's Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_explorer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1107,7 +1107,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="10252" name="Dynasty Staff" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1137,7 +1137,7 @@
 		</stats>
 	</item>
 	<item id="10253" name="Dynasty Crusher" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1166,7 +1166,7 @@
 		</stats>
 	</item>
 	<item id="10254" name="1st Place Treasure Sack" additionalName="Event" type="EtcItem">
-		<!-- When Double-clicked, a random 1st Place prize is granted. -->
+		<!-- Double-click to obtain a random 1st place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1179,7 +1179,7 @@
 		</skills>
 	</item>
 	<item id="10255" name="2nd Place Treasure Sack" additionalName="Event" type="EtcItem">
-		<!-- When Double-clicked, a random 2nd Place prize is granted. -->
+		<!-- Double-click to obtain a random 2nd place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1192,7 +1192,7 @@
 		</skills>
 	</item>
 	<item id="10256" name="3rd Place Treasure Sack" additionalName="Event" type="EtcItem">
-		<!-- When Double-clicked, a random 3rd Place prize is granted. -->
+		<!-- Double-click to obtain a random 3rd place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1205,7 +1205,7 @@
 		</skills>
 	</item>
 	<item id="10257" name="4th Place Treasure Sack" additionalName="Event" type="EtcItem">
-		<!-- When Double-clicked, a random 4th Place prize is granted. -->
+		<!-- Double-click to obtain a random 4th place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_4_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1218,7 +1218,7 @@
 		</skills>
 	</item>
 	<item id="10258" name="5th Place Treasure Sack" additionalName="Event" type="EtcItem">
-		<!-- When Double-clicked, a random 5th Place prize is granted. -->
+		<!-- Double-click to obtain a random 5th place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_5_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1231,7 +1231,7 @@
 		</skills>
 	</item>
 	<item id="10259" name="6th Place Treasure Sack" additionalName="Event" type="EtcItem">
-		<!-- When Double-clicked, a random 6th Place prize is granted. -->
+		<!-- Double-click to obtain a random 6th place reward. -->
 		<set name="icon" val="icon.etc_treasure_sack_6_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1244,7 +1244,7 @@
 		</skills>
 	</item>
 	<item id="10260" name="Haste Potion" type="EtcItem">
-		<!-- Delicious beverage made with rare fruits. Increases Atk. Spd. by 33% when used. -->
+		<!-- Delicious beverage made with rare fruits. Atk. Spd. +33% when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1264,7 +1264,7 @@
 		</skills>
 	</item>
 	<item id="10261" name="Accuracy Juice" type="EtcItem">
-		<!-- Delicious beverage made with rare fruits. Increases Accuracy by 4 when used. -->
+		<!-- Delicious beverage made with rare fruits. Increases P. Accuracy by +4 after use. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1284,7 +1284,7 @@
 		</skills>
 	</item>
 	<item id="10262" name="Critical Damage Juice" type="EtcItem">
-		<!-- Delicious beverage made with rare fruits. Increases Critical Damage by 35% when used. -->
+		<!-- A delicious beverage made from rare fruit. Critical Damage for standard attacks +35%. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1304,7 +1304,7 @@
 		</skills>
 	</item>
 	<item id="10263" name="Critical Rate Juice" type="EtcItem">
-		<!-- Delicious beverage made with rare fruits. P. Critical Rate increases by 30% when used. -->
+		<!-- A delicious beverage made from rare fruit. Critical Rate for standard attacks +30%. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1324,7 +1324,7 @@
 		</skills>
 	</item>
 	<item id="10264" name="Casting Spd. Juice" type="EtcItem">
-		<!-- Delicious beverage made with rare fruits. Increases Casting Spd. by 30% when used. -->
+		<!-- Delicious beverage made with rare fruits. Casting Spd. +30% when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1344,7 +1344,7 @@
 		</skills>
 	</item>
 	<item id="10265" name="Evasion Juice" type="EtcItem">
-		<!-- Delicious beverage made with rare fruits. Increases Evasion by 4 when used. -->
+		<!-- Delicious beverage made with rare fruits. When used, P. Evasion +4. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1404,7 +1404,7 @@
 		</skills>
 	</item>
 	<item id="10268" name="Wind Walk Juice" type="EtcItem">
-		<!-- Delicious beverage made with rare fruits. Speed increases by 33 when used. -->
+		<!-- Delicious beverage made with rare fruits. Speed +33 when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1424,7 +1424,7 @@
 		</skills>
 	</item>
 	<item id="10269" name="P. Def. Juice" type="EtcItem">
-		<!-- Delicious beverage made with rare fruits. P. Def. increases by 15% when used. -->
+		<!-- Delicious beverage made with rare fruits. P. Def. +15% when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1528,7 +1528,7 @@
 		</skills>
 	</item>
 	<item id="10275" name="Battle Manual - Warp" type="EtcItem">
-		<!-- Battle Manual needed to learn Warp. Used by Warders. Required level: 32 -->
+		<!-- A battle manual for learning the Warp skill. Used by Warders. Required level: 32. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1538,7 +1538,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10276" name="Battle Manual - Soul Shock" type="EtcItem">
-		<!-- Battle Manual needed to learn Soul Shock. Used by Warders. Required level: 36 -->
+		<!-- A battle manual for learning the Soul Shock skill. Used by Warders. Required level: 36. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1609,7 +1609,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10280" name="Certificate - Subclass" type="EtcItem">
-		<!-- Certificate needed to learn an Emergent Ability. Only main classes can learn this skill. -->
+		<!-- A certificate for learning the Emergent Abilities. Used by main classes. -->
 		<set name="icon" val="icon.etc_all_subjob_skillbook_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1626,7 +1626,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10281" name="Certificate - Warrior Ability" type="EtcItem">
-		<!-- Certificate needed to learn a Warrior Ability. Only main classes can learn this skill. -->
+		<!-- A certificate for learning the Warrior Abilities. Used by main classes. -->
 		<set name="icon" val="icon.etc_warrior_subjob_skillbook_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1643,7 +1643,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10282" name="Certificate - Knight Ability" type="EtcItem">
-		<!-- Certificate needed to learn a Knight Ability. Only main classes can learn this skill. -->
+		<!-- A certificate for learning the Knight Abilities. Used by main classes. -->
 		<set name="icon" val="icon.etc_knight_subjob_skillbook_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1660,7 +1660,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10283" name="Certificate - Rogue Ability" type="EtcItem">
-		<!-- Certificate needed to learn a Rogue Ability. Only main classes can learn this skill. -->
+		<!-- A certificate for learning the Rogue Abilities. Used by main classes. -->
 		<set name="icon" val="icon.etc_archer_subjob_skillbook_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1677,7 +1677,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10284" name="Certificate - Wizard Ability" type="EtcItem">
-		<!-- Certificate needed to learn a Wizard Ability. Only main classes can learn this skill. -->
+		<!-- A certificate for learning the Wizard Abilities. Used by main classes. -->
 		<set name="icon" val="icon.etc_wizard_subjob_skillbook_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1694,7 +1694,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10285" name="Certificate - Healer Ability" type="EtcItem">
-		<!-- Certificate needed to learn a Healer Ability. Only main classes can learn this skill. -->
+		<!-- A certificate for learning the Healer Abilities. Used by main classes. -->
 		<set name="icon" val="icon.etc_healer_subjob_skillbook_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1711,7 +1711,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10286" name="Certificate - Summoner Ability" type="EtcItem">
-		<!-- Certificate needed to learn a Summoner Ability. Only main classes can learn this skill. -->
+		<!-- A certificate for learning the Summoner Abilities. Used by main classes. -->
 		<set name="icon" val="icon.etc_summon_subjob_skillbook_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1728,7 +1728,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10287" name="Certificate - Enchanter Ability" type="EtcItem">
-		<!-- Certificate needed to learn an Enchanter Ability. Only main classes can learn this skill. -->
+		<!-- A certificate for learning the Enchanter Abilities. Used by main classes. -->
 		<set name="icon" val="icon.etc_enchanter_subjob_skillbook_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

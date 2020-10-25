@@ -27,7 +27,7 @@
 		</stats>
 	</item>
 	<item id="32401" name="Fantasy Bec de Corbin" additionalName="Not in Use" type="Weapon">
-		<!-- Bestows one of the following functions: Critical Stun, Long Blow or Light. -->
+		<!-- Bestows one of the following functions: Critical Stun, Long Blow or Decrease Weight. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -165,7 +165,7 @@
 		</stats>
 	</item>
 	<item id="32406" name="Fantasy Stormbringer*Stormbringer" additionalName="Not in Use" type="Weapon">
-		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Accuracy by 2. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to +4 or higher, P. Accuracy +2. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -193,7 +193,7 @@
 		</stats>
 	</item>
 	<item id="32407" name="Fantasy Compound Armor" additionalName="Not in Use" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t61_ul_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -485,7 +485,7 @@
 		</stats>
 	</item>
 	<item id="32424" name="Fantasy Military Fleuret" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Keshanberk. Bestows one of the following functions: Guidance, Focus or Back Blow. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Keshanberk. Bestows one of the following functions: Guidance, Focus or Back Blow. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -697,7 +697,7 @@
 		</stats>
 	</item>
 	<item id="32432" name="Fantasy Great Axe" additionalName="Not in Use" type="Weapon">
-		<!-- Bestows one of the following functions: Anger, Critical Stun or Light. -->
+		<!-- Bestows one of the following functions: Anger, Critical Stun or Decrease Weight. -->
 		<set name="icon" val="icon.weapon_great_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -752,7 +752,7 @@
 		</stats>
 	</item>
 	<item id="32434" name="Fantasy Sword of Delusion*Sword of Delusion" additionalName="Not in Use" type="Weapon">
-		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Accuracy by 4. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to +4 or higher, P. Accuracy +4. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1130,7 +1130,7 @@
 		</stats>
 	</item>
 	<item id="32454" name="Fantasy White Lightning" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion. Bestows one of the following functions: Critical Poison, Haste or Anger. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion. Bestows one of the following functions: Critical Poison, Haste or Anger. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1159,7 +1159,7 @@
 		</stats>
 	</item>
 	<item id="32455" name="Fantasy Lacerator" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Legion Conversion. Bestows one of the following functions: Critical Damage, Health or Rsk. Focus. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dark Legion's Edge Conversion. Bestows one of the following functions: Critical Damage, Health or Rsk. Focus. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1290,7 +1290,7 @@
 		</stats>
 	</item>
 	<item id="32460" name="Fantasy Carnage Bow" additionalName="Not in Use" type="Weapon">
-		<!-- Bestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
+		<!-- Bestows one of the following functions: Decrease Weight, Critical Bleed or Mana Up. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1344,7 +1344,7 @@
 		</stats>
 	</item>
 	<item id="32462" name="Fantasy Doomchanter" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion. Bestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
+		<!-- Kamael-exclusive weapon: Carnage Bow conversion. Bestows one of the following functions: Decrease Weight, Critical Bleed or Mana Up. -->
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1700,7 +1700,7 @@
 		</stats>
 	</item>
 	<item id="32476" name="Fantasy Majestic Plate Armor" additionalName="Not in Use" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t83_ul_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1749,7 +1749,7 @@
 		</stats>
 	</item>
 	<item id="32479" name="Fantasy Majestic Leather Armor" additionalName="Not in Use" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t84_ul_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1798,7 +1798,7 @@
 		</stats>
 	</item>
 	<item id="32482" name="Fantasy Dark Crystal Robe" additionalName="Not in Use" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1815,7 +1815,7 @@
 		</stats>
 	</item>
 	<item id="32483" name="Fantasy Majestic Robe" additionalName="Not in Use" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t85_ul_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1832,7 +1832,7 @@
 		</stats>
 	</item>
 	<item id="32484" name="Fantasy Dark Crystal Gloves" additionalName="Not in Use" type="Armor">
-		<!-- Part of the heavy dark crystal set. -->
+		<!-- Part of the heavy Dark Crystal set. -->
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1848,7 +1848,7 @@
 		</stats>
 	</item>
 	<item id="32485" name="Fantasy Dark Crystal Gloves" additionalName="Not in Use" type="Armor">
-		<!-- Part of the light dark crystal set. -->
+		<!-- Part of the light Dark Crystal set. -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1864,7 +1864,7 @@
 		</stats>
 	</item>
 	<item id="32486" name="Fantasy Dark Crystal Gloves" additionalName="Not in Use" type="Armor">
-		<!-- Part of the dark crystal robe set. -->
+		<!-- Part of the Dark Crystal robe set. -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1880,7 +1880,7 @@
 		</stats>
 	</item>
 	<item id="32487" name="Fantasy Majestic Gauntlets" additionalName="Not in Use" type="Armor">
-		<!-- Part of the heavy majestic set. -->
+		<!-- Part of the heavy Majestic set. -->
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1896,7 +1896,7 @@
 		</stats>
 	</item>
 	<item id="32488" name="Fantasy Majestic Gauntlets" additionalName="Not in Use" type="Armor">
-		<!-- Part of the light majestic set. -->
+		<!-- Part of the light Majestic set. -->
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1912,7 +1912,7 @@
 		</stats>
 	</item>
 	<item id="32489" name="Fantasy Majestic Gauntlets" additionalName="Not in Use" type="Armor">
-		<!-- Part of the majestic robe set. -->
+		<!-- Part of the Majestic robe set. -->
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1928,7 +1928,7 @@
 		</stats>
 	</item>
 	<item id="32490" name="Fantasy Dark Crystal Boots" additionalName="Not in Use" type="Armor">
-		<!-- Part of the heavy dark crystal set. -->
+		<!-- Part of the heavy Dark Crystal set. -->
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1944,7 +1944,7 @@
 		</stats>
 	</item>
 	<item id="32491" name="Fantasy Dark Crystal Boots" additionalName="Not in Use" type="Armor">
-		<!-- Part of the light dark crystal set. -->
+		<!-- Part of the light Dark Crystal set. -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1960,7 +1960,7 @@
 		</stats>
 	</item>
 	<item id="32492" name="Fantasy Dark Crystal Boots" additionalName="Not in Use" type="Armor">
-		<!-- Part of the dark crystal robe set. -->
+		<!-- Part of the Dark Crystal robe set. -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1976,7 +1976,7 @@
 		</stats>
 	</item>
 	<item id="32493" name="Fantasy Majestic Boots" additionalName="Not in Use" type="Armor">
-		<!-- Part of the heavy majestic set. -->
+		<!-- Part of the heavy Majestic set. -->
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1992,7 +1992,7 @@
 		</stats>
 	</item>
 	<item id="32494" name="Fantasy Majestic Boots" additionalName="Not in Use" type="Armor">
-		<!-- Part of the light majestic set. -->
+		<!-- Part of the light Majestic set. -->
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2008,7 +2008,7 @@
 		</stats>
 	</item>
 	<item id="32495" name="Fantasy Majestic Boots" additionalName="Not in Use" type="Armor">
-		<!-- Part of the majestic robe set. -->
+		<!-- Part of the Majestic robe set. -->
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />

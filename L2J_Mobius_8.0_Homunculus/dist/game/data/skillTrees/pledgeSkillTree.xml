@@ -3,7 +3,7 @@
 	<skillTree type="pledgeSkillTree">
 		<!-- Castle/Fort Skills -->
 		<skill skillName="Residence Guard" skillId="32123" skillLevel="1" getLevel="1" residenceSkill="true">
-			<socialClass>DISTINGUISHED_KING</socialClass>
+			<socialClass>APPRENTICE</socialClass>
 			<residenceId>112</residenceId> <!-- Floran Fortress -->
 			<residenceId>114</residenceId> <!-- Tanor Fortress -->
 			<residenceId>115</residenceId> <!-- Dragonspine Fortress -->
@@ -15,7 +15,7 @@
 			<residenceId>121</residenceId> <!-- Monastic Fortress -->
 		</skill>
 		<skill skillName="Residence Dominion" skillId="32124" skillLevel="1" getLevel="1" residenceSkill="true">
-			<socialClass>DISTINGUISHED_KING</socialClass>
+			<socialClass>APPRENTICE</socialClass>
 			<residenceId>101</residenceId> <!-- Camp Fortress -->
 			<residenceId>102</residenceId> <!-- Southern Fortress -->
 			<residenceId>103</residenceId> <!-- Hive Fortress -->

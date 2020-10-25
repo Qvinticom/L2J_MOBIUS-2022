@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37500" name="Water Stone" additionalName="Event" type="EtcItem">
-		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Water Attack +5 when bestowed on a weapon. Fire Resistance +6 when bestowed on armor. Can be used up to Attribute Lv. 3. A maximum of three types of Attribute Resistance can be bestowed. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -23,7 +23,7 @@
 		</skills>
 	</item>
 	<item id="37501" name="Earth Stone" additionalName="Event" type="EtcItem">
-		<!-- Earth attack attribute increases by 5 when bestowed on a weapon. Wind defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Earth Attack +5 when bestowed on a weapon. Wind Resistance +6 when bestowed on armor. Can be used up to Attribute Lv. 3. A maximum of three types of Attribute Resistance can be bestowed. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -45,7 +45,7 @@
 		</skills>
 	</item>
 	<item id="37502" name="Wind Stone" additionalName="Event" type="EtcItem">
-		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Wind Attack +5 when bestowed on a weapon. Earth Resistance +6 when bestowed on an armor. Can be used up to Attribute Lv. 3. A maximum of three types of Attribute Resistance can be bestowed. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -67,7 +67,7 @@
 		</skills>
 	</item>
 	<item id="37503" name="Dark Stone" additionalName="Event" type="EtcItem">
-		<!-- Darkness Elemental attack attribute increases by 5 when bestowed on a weapon. Holy defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Dark Attack +5 when bestowed on a weapon. Holy Resistance +6 when bestowed on armor. Can be used up to Attribute Lv. 3. A maximum of three types of Attribute Resistance can be bestowed. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -89,7 +89,7 @@
 		</skills>
 	</item>
 	<item id="37504" name="Holy Stone" additionalName="Event" type="EtcItem">
-		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Darkness Elemental defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Holy Attack +5 when bestowed on a weapon. Dark Resistance +6 when bestowed on armor. Can be used up to Attribute Lv. 3. A maximum of three types of Attribute Resistance can be bestowed. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -135,7 +135,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37507" name="Enhanced Octavis' Ring" additionalName="Warrior" type="Armor">
-		<!-- MP +37, Atk. Spd. +3%, P. Critical Rate +10, and P. Critical Damage +15%. Wearing two of these rings will give you the effect of wearing one. -->
+		<!-- MP +37, Atk. Spd. +3%, Critical Rate for standard attacks +10, Critical Damage for standard attacks +15%. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -152,7 +152,7 @@
 		</stats>
 	</item>
 	<item id="37508" name="Enhanced Octavis' Earring" additionalName="Warrior" type="Armor">
-		<!-- MP +56, Def. +3%, P. Skill MP consumption -5%, and Vampiric Rage +5%. Wearing two of these earrings will give you the effect of wearing one. -->
+		<!-- MP +56, P. Def. +3%, P. Skill MP consumption -5%, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.octavis_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -168,7 +168,7 @@
 		</stats>
 	</item>
 	<item id="37509" name="Enhanced Octavis' Necklace" additionalName="Warrior" type="Armor">
-		<!-- MP +74, P. Atk. +3%, P. Skill Cooldown -10%, and Damage Reflection +5%. -->
+		<!-- MP +74, P. Atk. +3%, P. Skill Cooldown -10%, Damage Reflection Rate +5%. -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -185,7 +185,7 @@
 		</stats>
 	</item>
 	<item id="37510" name="Enhanced Istina's Ring" additionalName="Warrior" type="Armor">
-		<!-- MP +37, Atk. Spd. +2%, P. Critical Rate +10, and P. Critical Damage +10%. Wearing two of these rings will give you the effect of wearing one. -->
+		<!-- MP +37, Atk. Spd. +2%, Critical Rate for standard attacks +10, Critical Damage for standard attacks +10%. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -202,7 +202,7 @@
 		</stats>
 	</item>
 	<item id="37511" name="Enhanced Istina's Earring" additionalName="Warrior" type="Armor">
-		<!-- MP +56, Def. +2%, P. Skill MP consumption -3%, and Vampiric Rage +5%. Wearing two of these earrings will give you the effect of wearing one. -->
+		<!-- MP +56, P. Def. +2%, P. Skill MP consumption -3%, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.istina_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -221,7 +221,7 @@
 		</stats>
 	</item>
 	<item id="37512" name="Enhanced Istina's Necklace" additionalName="Warrior" type="Armor">
-		<!-- MP +74, P. Atk. +2%, P. Skill Cooldown -5%, and Damage Reflection +5%. -->
+		<!-- MP +74, P. Atk. +2%, P. Skill Cooldown -5%, Damage Reflection Rate +5%. -->
 		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -240,7 +240,7 @@
 		</stats>
 	</item>
 	<item id="37513" name="Enhanced Octavis' Ring" additionalName="Wizard" type="Armor">
-		<!-- MP +37, Casting Spd. +2%, M. Critical Rate +10, and M. Critical Damage +10%. Wearing two of these rings will give you the effect of wearing one. -->
+		<!-- MP +37, Atk. Spd. +2%, M. Skill Critical Rate +10, M. Skill Critical Damage +10%. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -256,7 +256,7 @@
 		</stats>
 	</item>
 	<item id="37514" name="Enhanced Octavis' Earring" additionalName="Wizard" type="Armor">
-		<!-- MP +56, M. Def. +2%, M. Skill MP consumption -3%, and Vampiric Rage +5%. Wearing two of these earrings will give you the effect of wearing one. -->
+		<!-- MP +56, M. Def. +2%, M. Skill MP Consumption -3%, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.octavis_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -273,7 +273,7 @@
 		</stats>
 	</item>
 	<item id="37515" name="Enhanced Octavis' Necklace" additionalName="Wizard" type="Armor">
-		<!-- MP +74, M. Atk. +3%, M. Skill Cooldown -5%, and Damage Reflection +5%. -->
+		<!-- MP +74, M. Atk. +3%, M. Skill Cooldown -5%, Damage Reflection Rate +5%. -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -289,7 +289,7 @@
 		</stats>
 	</item>
 	<item id="37516" name="Enhanced Istina's Ring" additionalName="Wizard" type="Armor">
-		<!-- MP +37, Casting Spd. +3%, M. Critical Rate +10, and M. Critical Damage +15%. Wearing two of these rings will give you the effect of wearing one. -->
+		<!-- MP +37, Casting Spd. +3%, M. Skill Critical Rate +10, M. Skill Critical Damage +15%. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -308,7 +308,7 @@
 		</stats>
 	</item>
 	<item id="37517" name="Enhanced Istina's Earring" additionalName="Wizard" type="Armor">
-		<!-- MP +56, M. Def. +3%, M. Skill MP consumption -5%, and Vampiric Rage +5%. Wearing two of these earrings will give you the effect of wearing one. -->
+		<!-- MP +56, M. Def. +3%, M. Skill MP Consumption -5%, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.istina_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -327,7 +327,7 @@
 		</stats>
 	</item>
 	<item id="37518" name="Enhanced Istina's Necklace" additionalName="Wizard" type="Armor">
-		<!-- MP +74, M. Atk. +5%, M. Skill Cooldown -10% and Damage Reflection +5%. -->
+		<!-- MP +74, M. Atk. +5%, M. Skill Cooldown -10%, Damage Reflection Rate +5%. -->
 		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -360,7 +360,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37521" name="Baium's Soul Ring" type="Armor">
-		<!-- MP +31, P./ M. Accuracy +4, P./ M. Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Stun/ Hold/ Mental Atk./ Def. Success Rate +25%. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +31, P./ M. Accuracy +4, P. Critical Damage/ M. Skill Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Confusion Resistance/ Atk. Rate +25%, Obstruction Resistance/ Atk. Rate +25%. Effects of two identical rings do not stack. The item can be changed. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -378,7 +378,7 @@
 		</stats>
 	</item>
 	<item id="37522" name="Frintezza's Soul Necklace" type="Armor">
-		<!-- MP +62, Movement Speed +5, Poison/ Bleed/ Stun/ Hold/ Paralysis Atk./ Def. Success Rate +20%, Skill Cooldown -10%, Damage Reflection +5%. Can be crafted. -->
+		<!-- MP +62, Speed +5, Infection Resistance/ Atk. Rate +20%, Confusion Resistance/ Atk. Rate +20%, Obstruction Resistance/ Atk. Rate +20%. Skill Cooldown -10%, Damage Reflection +5%. The item can be changed. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -408,7 +408,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37524" name="Passion Treasure Chest" type="EtcItem">
-		<!-- Treasure Chest with Pomona's gift. -->
+		<!-- Treasure Chest with Pomona's gift. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -418,7 +418,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="37525" name="Agathion - Bae Kisung" additionalName="90-day" type="Armor">
-		<!-- A bracelet that can summon Bae Kisung Agathion. 90-day item. Cannot be used in Olympiad. <Active Skill>. 1. Bae Kisung Agathion Teleport: Assigns a skill to teleport to Town of Aden/ Town of Rune/ Talking Island Village. (Cooldown: 30 min). <Item Skill>. 1. Kisung's Mysterious Power: Kisung's mysterious power decreases Physical and Magic Skill MP Consumption by 3%. 2. Kisung's Great Power: Kisung's great power increases Atk. Spd. and Casting Spd. by 50. 3. Kisung's Balanced Power: Kisung's Balanced Power increases STR/ INT/ CON/ DEX/ WIT/ MEN by 1. -->
+		<!-- A bracelet that can summon Agathion Bae Kisung. 90-day item. Cannot be used in Olympiad. <Active Skill>. 1. Bae Kisung Agathion Teleport: Assigns a skill to teleport to Town of Aden/ Town of Rune/ Talking Island Village. (Cooldown: 30 min). <Item Skill>. 1. Kisung's Mysterious Power: P./ M. Skill MP Consumption -3%. 2. Kisung's Great Power: Atk. Spd. and Casting Spd. +50. 3. Kisung's Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -476,7 +476,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37532" name="Lindvior's Egg" type="EtcItem">
-		<!-- Wind Dragon Egg rewarded on the 9th Anniversary of Lineage II. Double-click to obtain one from 10th Anniversary Time Capsule Box, 10th Anniversary Cake Pack, and 10th Anniversary Designer's Edition. -->
+		<!-- Anniversary Item. Wind Dragon Egg. Double-click to obtain one of the following items: Anniversary Time Capsule, Anniversary Cake Pack, Anniversary Designer's Edition. -->
 		<set name="icon" val="icon.etc_ev_lind_egg" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -519,7 +519,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37535" name="Santa Hat" type="Armor">
-		<!-- Santa Hat. -->
+		<!-- Santa's Hat. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -531,7 +531,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37536" name="Santa's Blessing" type="EtcItem">
-		<!-- Double-click to change your appearance to that of a Santa for 3 hours. STR/ INT/ CON/ DEX/ WIT/ MEN +1. Buff remains even after death. Note: If you use an item that changes your appearance, such as Letter Collector's Gift, the Santa appearance might disappear. -->
+		<!-- Double-click to change your appearance to that of a Santa for 3 h. STR/ INT/ CON/ DEX/ WIT/ MEN +1. The effect remains after death. Note!. If you use an item that changes your appearance, such as Letter Collector's Gift, the Santa appearance disappears. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -564,7 +564,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37538" name="Bae Kisung Agathion Box" type="EtcItem">
-		<!-- Double-click to receive a Bae Kisung Agathion (90-day). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain Agathion Bae Kisung Charm (90-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -575,11 +575,11 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="37525" min="1" max="1" chance="100" /> <!-- Bae Kisung Agathion (90-day) -->
+			<item id="37525" min="1" max="1" chance="100" /> <!-- Agathion Bae Kisung - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="37539" name="Enchant Scroll Pack" type="EtcItem">
-		<!-- Double-click to receive 1 Scroll: Enchant Armor (R-grade) and 1 Scroll: Enchant Weapon (R-grade). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain a Scroll: Enchant R-grade Armor and a Scroll: Enchant R-grade Weapon. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -587,12 +587,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17526" min="1" max="1" chance="100" /> <!-- Giant's Scroll: Enchant R-Grade Weapon -->
-			<item id="17527" min="1" max="1" chance="100" /> <!-- Giant's Scroll: Enchant R-Grade Armor -->
+			<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="17527" min="1" max="1" chance="100" /> <!-- Scroll: Enchant R-grade Armor -->
 		</capsuled_items>
 	</item>
 	<item id="37540" name="Giant's Enchant Scroll Pack" type="EtcItem">
-		<!-- Double-click to receive 1 Giant's Scroll: Enchant Armor (R-grade) and 1 Giant's Scroll: Enchant Weapon (R-grade). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain a Giant s Scroll: Enchant R-grade Armor and a Giant s Scroll: Enchant R-grade Weapon. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -600,12 +600,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36386" min="1" max="1" chance="100" /> <!-- Giant's Scroll: Enchant R-Grade Weapon -->
-			<item id="36389" min="1" max="1" chance="100" /> <!-- Giant's Scroll: Enchant R-Grade Armor -->
+			<item id="36386" min="1" max="1" chance="100" /> <!-- Giant's Scroll: Enchant R-grade Weapon -->
+			<item id="36389" min="1" max="1" chance="100" /> <!-- Giant's Scroll: Enchant R-grade Armor -->
 		</capsuled_items>
 	</item>
 	<item id="37541" name="Blessed Enchant Scroll Pack" type="EtcItem">
-		<!-- Double-click to receive 1 Blessed Scroll: Enchant Armor (R-grade) and 1 Blessed Scroll: Enchant Weapon (R-grade). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain a Blessed Scroll: Enchant R-grade Armor and a Blessed Scroll: Enchant R-grade Weapon. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -621,20 +621,20 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37543" name="Nectar" type="EtcItem">
-		<!-- Go to Santa to trade in for Snowy Squash Seed or Large Snowy Squash Seed. You can also use it to grow Snowy Squash and Large Snowy Squash. -->
+		<!-- Go to Santa Claus to trade it for Snowy Squash Seed or Large Snowy Squash Seed. You can also use it to grow Snowy Squash and Large Snowy Squash. -->
 		<set name="icon" val="icon.etc_nectar_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37544" name="Snowball" type="EtcItem">
-		<!-- Shaken off of a Snowy Squash, this snow lump is popular among merchants as a bringer of fortune. Perhaps you could invest this in Aden Reconstruction for the future? -->
+		<!-- Obtained from Squash. They say it brings good luck. Can be sold in any store or given to Aden Reconstruction Society. -->
 		<set name="icon" val="BranchSys2.icon.g_illumination_white" />
 		<set name="price" val="5000" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37545" name="Large Snowball" type="EtcItem">
-		<!-- Shaken off of a Large Snowy Squash, this snow lump is popular among merchants as a bringer of fortune. Perhaps you could invest this in Aden Reconstruction for the future? -->
+		<!-- Obtained from Large Squash. They say it brings good luck. Can be sold in any store or given to Aden Reconstruction Society. -->
 		<set name="icon" val="BranchSys2.icon.g_illumination_white" />
 		<set name="price" val="30000" />
 		<set name="is_sellable" val="false" />
@@ -665,30 +665,30 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37550" name="Snowman's Buff" type="EtcItem">
-		<!-- Replenishes Vitality for 3 h. in a peace zone. -->
+		<!-- When in a peaceful zone, restores energy for 3 h. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="weight" val="120" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37551" name="2012 Holiday Gift" type="EtcItem">
-		<!-- Double-click to acquire one of the following: Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Queen Ant's Soul, or Bottle of Baium's Soul. -->
+		<!-- Double-click to obtain one of the following items: Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Queen Ant's Soul, Bottle of Baium's Soul. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37552" name="Snowy Squash Seed" type="EtcItem">
-		<!-- Double-click to have a Young Snowy Squash appear. -->
+		<!-- Double-click to summon Snowy Young Squash. -->
 		<set name="icon" val="icon.etc_gourd_i10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37553" name="Large Snowy Squash Seed" type="EtcItem">
-		<!-- Double-click to have a Young Large Snowy Squash appear. -->
+		<!-- Double-click to summon Snowy Large Young Squash. -->
 		<set name="icon" val="icon.etc_gourd_i11" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37554" name="Kisung's Cherry Nose Buff Scroll" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive Bae Kisung's Power Up buff for 30 min. Cooldown is 15 sec. Cannot be used in the Olympiad. -->
+		<!-- Double-click to get Bae Kisung's buff for 30 min. Cooldown: 15 sec. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -706,7 +706,7 @@
 		</skills>
 	</item>
 	<item id="37555" name="Snow Crystal" type="EtcItem">
-		<!-- PA event item for 2013. One received per hour spent in a PA. The more you have, the better your chances to win! -->
+		<!-- PC event item for 2013. One received per hour spent in a PC Caf?. The more you have, the better your chances to win! -->
 		<set name="icon" val="icon.etc_int_symbol_i01" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -720,7 +720,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37556" name="Promise Cube" additionalName="100-day" type="EtcItem">
-		<!-- Promise Cube. Double-click to acquire one of the following: Dark/ Bloody Eternal Enhancement Stone (Annihilation/ Hellfire/ Desire), Blessed Scroll of Resurrection, High-grade Elixir Box, or Energy of Destruction. Can use 1 time per 1 day. Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain one of the following items: Dark/ Bloody Eternal Enhancement Stone, Kaliel's Energy (Annihilation/ Hellfire/ Desire), Blessed Scroll of Resurrection, High-grade Elixir Pack, Destructive Energy. Can used once a day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -734,7 +734,7 @@
 		<set name="time" val="144000" />
 	</item>
 	<item id="37557" name="Promise Cube (1-time use)" type="EtcItem">
-		<!-- Double-click to acquire one of the following: Dark/ Bloody Eternal Enhancement Stone (Annihilation/ Hellfire/ Desire), Blessed Scroll of Resurrection, High-grade Elixir Box, or Energy of Destruction. Cannot be used in the Olympiad. (disappears after 1 time use) -->
+		<!-- Double-click to obtain one of the following items: Dark/ Bloody Eternal Enhancement Stone, Kaliel's Energy (Annihilation/ Hellfire/ Desire), Blessed Scroll of Resurrection, High-grade Elixir Pack, Destructive Energy. Cannot be used in the Olympiad. (Disappears after being used.) -->
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -762,14 +762,14 @@
 		</capsuled_items>
 	</item>
 	<item id="37559" name="Shiny Coin" type="EtcItem">
-		<!-- Sparkling coin. Used to exchange for special items through the dimensional merchant. -->
+		<!-- Can be exchanged for special items through the Game Assistant. -->
 		<set name="icon" val="icon.etc_recall_token" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37560" name="Emperor's Vitality Tonic" type="EtcItem">
-		<!-- Water of Vitality containing the strength of the lord. Recovers 1 of the 4 Vitality slots. Cannot be used in the Olympiad. The 5 uses per week limit does not apply. -->
+		<!-- Water of Vitality containing the strength of the emperor. Recovers 1 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_recall_potion3" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -783,7 +783,7 @@
 		</skills>
 	</item>
 	<item id="37561" name="Emperor's Vitality Tonic (Medium)" type="EtcItem">
-		<!-- Water of Vitality containing the strength of the lord. Recovers 2 of the 4 Vitality slots. Cannot be used in the Olympiad. The 5 uses per week limit does not apply. -->
+		<!-- Water of Vitality containing the strength of the emperor. Recovers 2 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_recall_potion2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -797,7 +797,7 @@
 		</skills>
 	</item>
 	<item id="37562" name="Emperor's Vitality Tonic (Large)" type="EtcItem">
-		<!-- Water of Vitality containing the strength of the lord. Recovers 3 of the 4 Vitality slots. Cannot be used in the Olympiad. The 5 uses per week limit does not apply. -->
+		<!-- Water of Vitality containing the strength of the emperor. Recovers 3 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_recall_potion1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -811,7 +811,7 @@
 		</skills>
 	</item>
 	<item id="37563" name="Emperor's Growth Scroll" type="EtcItem">
-		<!-- When used, the emperor's experience is infused so that the character's acquired XP and SP are increased by 30% for one hour. Cannot be used in the Olympiad. -->
+		<!-- Grants the Emperor's experience. For 1 h., acquired XP/ SP +30%. Cannot be used in the Olympiad. The effect does not stack with those of Freya's Frozen Scroll, Freya's Scroll of Storm, Maphr's Wind Scroll, Dandy's Scroll: Challenge, Scroll: Midsummer Passion, Vital Wind, Wind of Bard. -->
 		<set name="icon" val="icon.etc_recall_exp_scroll" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -819,7 +819,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37564" name="Emperor's Rune" type="EtcItem">
-		<!-- 8-hour limited item. While in possession, the character's acquired XP and SP increase by 30%. -->
+		<!-- Available for 8 h. Acquired XP/ SP +30%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -842,11 +842,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="37565" min="1" max="1" chance="100" /> <!-- Emperor's Rune (8h) -->
+			<item id="37565" min="1" max="1" chance="100" /> <!-- Emperor's Rune Pack -->
 		</capsuled_items>
 	</item>
 	<item id="37566" name="Blessed Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant success rate +10% for weapons (R-grade) when using Blessed Scroll: Enchant Weapon. Only for items enchanted between +3 and +9. Not for items enchanted to +10 or above. -->
+		<!-- Enchant success rate +10% for R-grade weapons. Only for items enchanted between +3 and +9. Not for items enchanted to +10 or above. -->
 		<set name="icon" val="icon.bless_ench_wp_stone_i05" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -859,7 +859,7 @@
 		</skills>
 	</item>
 	<item id="37567" name="Blessed Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Enchant success rate +15% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<!-- Enchant success rate +15% for R-grade armor. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.bless_ench_amr_stone_i05" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -996,35 +996,35 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37588" name="Snake's Gift" additionalName="Not in Use" type="EtcItem">
-		<!-- Snake's Gift for the Year of the Black Snake. Double-click for a chance to obtain a card excluding the Hidden Card. -->
+		<!-- A Snake's gift. Double-click to obtain a random card, except the hidden one. -->
 		<set name="icon" val="icon.card_event_snake_gift" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37589" name="Lord of the Western Winds" type="EtcItem">
-		<!-- Golden card obtained from combining the Lord of the Western Winds. For 30 min., CON +5, MEN +5, and Damage Reflection +20%. -->
+		<!-- Golden card obtained from combining the Lord of the Western Winds. For 30 min., CON/ MEN +5, Damage Reflection +20%. -->
 		<set name="icon" val="icon.card_dragon_gold" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37590" name="Successors of Destiny" type="EtcItem">
-		<!-- Red card obtained from combining the Successors of Destiny. For 30 min., STR +5, INT +5, and P. Def. +10%. -->
+		<!-- Red card obtained from combining the Successors of Destiny. For 30 min., STR/ INT +5, P. Def. +10%. -->
 		<set name="icon" val="icon.card_hero_red" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37591" name="Dragon Rising" type="EtcItem">
-		<!-- Black card obtained from combining the Dragon Rising. For 30 min., STR +5, INT +5, and M. Def. +10%. -->
+		<!-- Black card obtained from combining the Dragon Rising. For 30 min., STR/ INT +5, and M. Def. +10%. -->
 		<set name="icon" val="icon.card_devil_black" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37592" name="Awakening Darkness" type="EtcItem">
-		<!-- Blue card obtained from combining the Awakening Darkness. For 30 min., STR +5, INT +5, and Attribute Resistance +100. -->
+		<!-- A blue card obtained from combining the Awakening Darkness set. For 30 min., STR +5, INT +5, 6 Attribute Resistance +100. -->
 		<set name="icon" val="icon.card_angel_blue" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1056,7 +1056,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37595" name="Returning Hero's Potion Pack" additionalName="Event" type="EtcItem">
-		<!-- Gift box containing 30 Returning Hero's Health Potion, 1 Returning Hero's Vitality Replenishing Juice 4-unit Pack, and 6 Heavenly Cocktails. -->
+		<!-- Double-click to obtain Returning Hero's Health Potion (30 pcs.), Package: Returning Hero's Vitality Replenishing Juice (4 pcs.), Heavenly Cocktail (6 pcs.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1068,25 +1068,25 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37596" name="Weapon Coupon (R-grade)" type="EtcItem">
-		<!-- Take this to Snake in town to obtain a weapon (R-grade) for a small fee. Temporary event item. -->
+		<!-- Take it to Snake to obtain an R-grade weapon for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37597" name="Weapon Coupon (R95-grade)" type="EtcItem">
-		<!-- Take this to Snake in town to obtain a weapon (R95-grade) for a small fee. Temporary event item. -->
+		<!-- Take it to Snake to obtain an R95-grade weapon for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37598" name="Weapon Coupon (R99-grade)" type="EtcItem">
-		<!-- Take this to Snake in town to obtain a weapon (R99-grade) for a small fee. Temporary event item. -->
+		<!-- Take it to Snake to obtain an R99-grade weapon for a fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37599" name="Weapon Coupon (S-grade)" type="EtcItem">
-		<!-- Take this to Snake in town to obtain a weapon (S-grade) for a small fee. Temporary event item. -->
+		<!-- Take this to Snake in town to obtain an S-grade weapon for a small fee. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

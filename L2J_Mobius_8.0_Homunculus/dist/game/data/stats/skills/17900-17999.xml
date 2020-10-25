@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="17900" toLevel="1" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
+	<skill id="17900" toLevel="1" name="Giant's Lucky Enchant Stone: R-grade Armor">
 		<icon>icon.giant_ench_armor_stone_r_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17901" toLevel="1" name="Giant's Lucky Enchant Stone: Weapon (R-grade)">
+	<skill id="17901" toLevel="1" name="Giant's Lucky Enchant Stone: R-grade Weapon">
 		<icon>icon.giant_ench_wp_stone_r_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17902" toLevel="1" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
+	<skill id="17902" toLevel="1" name="Windy Lucky Enchant Stone: R-grade Armor">
 		<icon>icon.giant_ench_armor_stone_r_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17903" toLevel="1" name="Giant's Lucky Enchant Stone: Weapon (R-grade)">
+	<skill id="17903" toLevel="1" name="Windy Lucky Enchant Stone: R-grade Weapon">
 		<icon>icon.giant_ench_wp_stone_r_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17904" toLevel="1" name="Windy Healing Potion">
-		<!-- Quickly restores HP. Lasts 15 sec. -->
+	<skill id="17904" toLevel="1" name="Wind HP Replenishing Potion">
+		<!-- Magical potion that quickly restores HP. Its effect lasts for 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -38,8 +38,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17905" toLevel="1" name="Major Windy Healing Potion">
-		<!-- Quickly restores HP. Lasts 15 sec. -->
+	<skill id="17905" toLevel="1" name="Wind Greater HP Replenishing Potion">
+		<!-- Magical potion that quickly restores HP. Its effect lasts for 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -60,8 +60,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17906" toLevel="1" name="Greater Windy Healing Potion">
-		<!-- Quickly restores HP. Lasts 15 sec. -->
+	<skill id="17906" toLevel="1" name="Wind Major HP Replenishing Potion">
+		<!-- Magical potion that quickly restores HP. Its effect lasts for 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -82,8 +82,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17907" toLevel="1" name="Superior Windy Healing Potion">
-		<!-- Quickly restores HP. Lasts 15 sec. -->
+	<skill id="17907" toLevel="1" name="Wind Superior HP Replenishing Potion">
+		<!-- Magical potion that quickly restores HP. Its effect lasts for 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -104,8 +104,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17908" toLevel="1" name="Supreme Windy Healing Potion">
-		<!-- Quickly restores HP. Lasts 15 sec. -->
+	<skill id="17908" toLevel="1" name="Wind Supreme Windy Healing Potion">
+		<!-- Magical potion that quickly restores HP. Its effect lasts for 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -126,8 +126,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17909" toLevel="1" name="Windy Quick Healing Potion">
-		<!-- Restores 625 HP. The remaining points are used to restore CP. No cooldown. -->
+	<skill id="17909" toLevel="1" name="Quick Wind HP Replenishing Potion">
+		<!-- Recovers 625 HP. When HP is full, recovers CP. No cooldown. -->
 		<icon>icon.etc_potion_gold_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -144,8 +144,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17910" toLevel="1" name="Major Windy Quick Healing Potion">
-		<!-- Restores 1250 HP and restores CP with remaining power. No duration. -->
+	<skill id="17910" toLevel="1" name="Major Quick Wind HP Replenishing Potion">
+		<!-- Recovers 1250 HP. When HP is full, recovers CP. No cooldown. -->
 		<icon>icon.etc_potion_gold_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -162,8 +162,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17911" toLevel="1" name="Greater Windy Quick Healing Potion">
-		<!-- Restores 2500 HP and restores CP with remaining power. No duration. -->
+	<skill id="17911" toLevel="1" name="Greater Quick Wind HP Replenishing Potion">
+		<!-- Recovers 2500 HP. When HP is full, recovers CP. No cooldown. -->
 		<icon>icon.etc_potion_gold_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -180,8 +180,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17912" toLevel="1" name="Superior Windy Quick Healing Potion">
-		<!-- Restores 3750 HP and restores CP with remaining power. No duration. -->
+	<skill id="17912" toLevel="1" name="Superior Quick Wind HP Replenishing Potion">
+		<!-- Recovers 3750 HP. When HP is full, recovers CP. No cooldown. -->
 		<icon>icon.etc_potion_gold_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -198,8 +198,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17913" toLevel="1" name="Supreme Windy Quick Healing Potion">
-		<!-- Restores 5000 HP and restores CP with remaining power. No duration. -->
+	<skill id="17913" toLevel="1" name="Supreme Quick Wind HP Replenishing Potion">
+		<!-- Recovers 5000 HP. When HP is full, recovers CP. No cooldown. -->
 		<icon>icon.etc_potion_gold_i00</icon>
 		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -431,8 +431,9 @@
 		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
-		<reuseDelay>1200000</reuseDelay>
+		<reuseDelay>120000</reuseDelay>
 		<blockedInOlympiad>true</blockedInOlympiad>
+		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -452,13 +453,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17920" toLevel="4" name="Windy Healing Potion">
-		<!-- Converts Windy Healing Potion. Elementary Alchemy. -->
+	<skill id="17920" toLevel="4" name="Wind HP Replenishing Potion">
+		<!-- Allows to create Wind HP Replenishing Potion. Elementary Alchemy. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17921" toLevel="4" name="Windy Quick Healing Potion">
-		<!-- Converts Windy Quick Healing Potion. Elementary Alchemy. -->
+	<skill id="17921" toLevel="4" name="Quick Wind HP Replenishing Potion">
+		<!-- Allows to create Quick Wind HP Replenishing Potion. Elementary Alchemy. -->
 		<icon>icon.etc_potion_gold_i00</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -478,8 +479,8 @@
 		<icon>icon.super_elixir_potion</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17924" toLevel="3" name="Supreme Windy Healing Potion">
-		<!-- Converts Supreme Windy Healing Potion. Master Alchemy. -->
+	<skill id="17924" toLevel="3" name="Wind Supreme Windy Healing Potion">
+		<!-- Allows to create Wind Supreme Windy Healing Potion. Master Alchemy. -->
 		<icon>
 			<value level="1">icon.etc_potion_scarlet_i00</value>
 			<value level="2">icon.etc_potion_gold_i00</value>
@@ -488,24 +489,24 @@
 		<operateType>P</operateType>
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="17925" toLevel="2" name="Giant's Scroll: Enchant Armor (R-grade)">
-		<!-- Converts Giant's Scroll: Enchant Weapon (R-grade). Elementary Alchemy. -->
+	<skill id="17925" toLevel="2" name="Giant's Scroll: Enchant R-grade Armor">
+		<!-- Allows to create Giant's Scroll: Enchant R-grade Armor. Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.giant_scrl_of_ench_am_r</value>
 			<value level="2">icon.giant_scrl_of_ench_wp_r</value>
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17926" toLevel="2" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
-		<!-- Converts Giant's Lucky Enchant Stone: Armor (R-grade). Advanced Alchemy. -->
+	<skill id="17926" toLevel="2" name="Giant's Lucky Enchant Stone: R-grade Armor">
+		<!-- Allows to create Giant's Lucky Enchant Stone: R-grade Armor. Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.giant_ench_armor_stone_r_i01</value>
 			<value level="2">icon.giant_ench_wp_stone_r_i01</value>
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17927" toLevel="2" name="Windy Lucky Enchant Stone: Armor (R-grade)">
-		<!-- Converts Windy Lucky Enchant Stone: Armor (R-grade). Master Alchemy. -->
+	<skill id="17927" toLevel="2" name="Windy Lucky Enchant Stone: R-grade Armor">
+		<!-- Allows to create Windy Lucky Enchant Stone: R-grade Armor. Master Alchemy. -->
 		<icon>
 			<value level="1">icon.giant_ench_armor_stone_r_i02</value>
 			<value level="2">icon.giant_ench_wp_stone_r_i02</value>
@@ -513,8 +514,8 @@
 		<operateType>P</operateType>
 		<reuseDelay>86400000</reuseDelay>
 	</skill>
-	<skill id="17928" toLevel="6" name="Lv. 1 Legendary MEN Dye (Luck)">
-		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Luck). Elementary Alchemy. -->
+	<skill id="17928" toLevel="6" name="Legendary MEN Dye Lv. 1 (Luck)">
+		<!-- Can be converted to Legendary MEN Dye Lv. $s1 (Luck). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_men_luc</value>
 			<value level="2">icon.lv1_unique_dye_con_luc</value>
@@ -525,8 +526,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17929" toLevel="6" name="Lv. 2 Legendary MEN Dye (Luck)">
-		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Luck). Intermediate Alchemy. -->
+	<skill id="17929" toLevel="6" name="Legendary MEN Dye Lv. 2 (Luck)">
+		<!-- Can be converted to Legendary MEN Dye Lv. $s1 (Luck). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv2_unique_dye_men_luc</value>
 			<value level="2">icon.lv2_unique_dye_con_luc</value>
@@ -537,8 +538,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17930" toLevel="6" name="Lv. 3 Legendary MEN Dye (Luck)">
-		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Luck). Intermediate Alchemy. -->
+	<skill id="17930" toLevel="6" name="Legendary MEN Dye Lv. 3 (Luck)">
+		<!-- Can be converted to Legendary MEN Dye Lv. $s1 (Luck). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv3_unique_dye_men_luc</value>
 			<value level="2">icon.lv3_unique_dye_con_luc</value>
@@ -549,8 +550,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17931" toLevel="6" name="Lv. 4 Legendary MEN Dye (Luck)">
-		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Luck). Advanced Alchemy. -->
+	<skill id="17931" toLevel="6" name="Legendary MEN Dye Lv. 4 (Luck)">
+		<!-- Can be converted to Legendary MEN Dye Lv. $s1 (Luck). Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.lv4_unique_dye_men_luc</value>
 			<value level="2">icon.lv4_unique_dye_con_luc</value>
@@ -561,8 +562,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17932" toLevel="6" name="Lv. 1 Legendary MEN Dye (Charisma)">
-		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Charisma). Elementary Alchemy. -->
+	<skill id="17932" toLevel="6" name="Legendary MEN Dye Lv. 1 (Charisma)">
+		<!-- Can be converted to Legendary MEN Dye Lv. $s1 (Charisma). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_men_cha</value>
 			<value level="2">icon.lv1_unique_dye_con_cha</value>
@@ -573,8 +574,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17933" toLevel="6" name="Lv. 2 Legendary MEN Dye (Charisma)">
-		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Charisma). Intermediate Alchemy. -->
+	<skill id="17933" toLevel="6" name="Legendary MEN Dye Lv. 2 (Charisma)">
+		<!-- Can be converted to Legendary MEN Dye Lv. $s1 (Charisma). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv2_unique_dye_men_cha</value>
 			<value level="2">icon.lv2_unique_dye_con_cha</value>
@@ -585,8 +586,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17934" toLevel="6" name="Lv. 3 Legendary MEN Dye (Charisma)">
-		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Charisma). Intermediate Alchemy. -->
+	<skill id="17934" toLevel="6" name="Legendary MEN Dye Lv. 3 (Charisma)">
+		<!-- Can be converted to Legendary MEN Dye Lv. $s1 (Charisma). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv3_unique_dye_men_cha</value>
 			<value level="2">icon.lv3_unique_dye_con_cha</value>
@@ -597,8 +598,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17935" toLevel="6" name="Lv. 4 Legendary MEN Dye (Charisma)">
-		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Charisma). Advanced Alchemy. -->
+	<skill id="17935" toLevel="6" name="Legendary MEN Dye Lv. 4 (Charisma)">
+		<!-- Can be converted to Legendary MEN Dye Lv. $s1 (Charisma). Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.lv4_unique_dye_men_cha</value>
 			<value level="2">icon.lv4_unique_dye_con_cha</value>
@@ -609,8 +610,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17936" toLevel="14" name="Lv. 5 Legendary MEN Dye (Luck)">
-		<!-- Can convert to Lv. $s1 Legendary MEN Dye (Luck). Master Alchemy. -->
+	<skill id="17936" toLevel="14" name="Legendary MEN Dye Lv. 5 (Luck)">
+		<!-- Master alchemy. Double-click to obtain Legendary MEN Dye Lv. $s1 (Luck). -->
 		<icon>
 			<value level="1">icon.lv5_unique_dye_men_luc</value>
 			<value level="2">icon.lv5_unique_dye_con_luc</value>
@@ -630,8 +631,8 @@
 		<operateType>P</operateType>
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
-	<skill id="17937" toLevel="3" name="Mid-grade Life Stone (R-grade)">
-		<!-- Can convert to Mid-grade Life Stone (R-grade). Elementary Alchemy. -->
+	<skill id="17937" toLevel="3" name="Mid-grade R-grade Life Stone">
+		<!-- Allows to create Mid-grade R-grade Life Stone. Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.r_mineral_special_i00</value>
 			<value level="2">icon.r_mineral_rare_i00</value>
@@ -639,8 +640,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17938" toLevel="3" name="Mid-grade Life Stone (R95-grade)">
-		<!-- Can convert to Mid-grade Life Stone (R$s1-grade). Intermediate Alchemy. -->
+	<skill id="17938" toLevel="3" name="Mid-grade R95-grade Life Stone">
+		<!-- Allows to create Mid-grade R$s1-grade Life Stone. Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.r95_mineral_special_i00</value>
 			<value level="2">icon.r95_mineral_rare_i00</value>
@@ -648,8 +649,8 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17939" toLevel="3" name="Mid-grade Life Stone (R99-grade)">
-		<!-- Can convert to Mid-grade Life Stone (R$s1-grade). Advanced Alchemy. -->
+	<skill id="17939" toLevel="3" name="Mid-grade R99-grade Life Stone">
+		<!-- Allows to create Mid-grade R$s1-grade Life Stone. Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.r99_mineral_special_i00</value>
 			<value level="2">icon.r99_mineral_rare_i00</value>
@@ -663,7 +664,7 @@
 		<operateType>P</operateType>
 		<reuseDelay>604800000</reuseDelay>
 	</skill>
-	<skill id="17941" toLevel="4" name="Lv. 1 Windy CHA Dye (Luck)">
+	<skill id="17941" toLevel="4" name="Windy CHA Dye Lv. 1 (Luck)">
 		<!-- Can convert to Lv. $s1 Windy CHA Dye (Luck). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_cha_luc</value>
@@ -673,7 +674,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17942" toLevel="4" name="Lv. 1 Windy LUC Dye (Charisma)">
+	<skill id="17942" toLevel="4" name="Windy LUC Dye Lv. 1 (Charisma)">
 		<!-- Can convert to Lv. $s1 Windy LUC Dye (Charisma). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_luc_cha</value>
@@ -786,7 +787,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17947" toLevel="1" name="Scroll of Escape: Town of Rune">
+	<skill id="17947" toLevel="1" name="Scroll of Escape: Rune">
 		<!-- Teleports you to the Town of Rune. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -813,7 +814,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17948" toLevel="1" name="Scroll of Escape: Town of Aden">
+	<skill id="17948" toLevel="1" name="Scroll of Escape: Aden">
 		<!-- Teleports you to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -840,7 +841,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17949" toLevel="1" name="Scroll of Escape: Town of Oren">
+	<skill id="17949" toLevel="1" name="Scroll of Escape: Oren">
 		<!-- Teleports you to the Town of Oren. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -892,7 +893,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17951" toLevel="1" name="Scroll of Escape: Town of Aden">
+	<skill id="17951" toLevel="1" name="Scroll of Escape: Aden">
 		<!-- Teleports you to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -946,7 +947,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17953" toLevel="1" name="Scroll of Escape: Town of Aden">
+	<skill id="17953" toLevel="1" name="Scroll of Escape: Aden">
 		<!-- Teleports you to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -998,7 +999,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17955" toLevel="1" name="Scroll of Escape: Town of Rune">
+	<skill id="17955" toLevel="1" name="Scroll of Escape: Rune">
 		<!-- Teleports you to the Town of Rune. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1052,7 +1053,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17957" toLevel="1" name="Scroll of Escape: Town of Rune">
+	<skill id="17957" toLevel="1" name="Scroll of Escape: Rune">
 		<!-- Teleports you to the Town of Rune. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1104,7 +1105,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17959" toLevel="1" name="Scroll of Escape: Town of Goddard">
+	<skill id="17959" toLevel="1" name="Scroll of Escape: Goddard">
 		<!-- Teleports you to the Town of Goddard. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1150,7 +1151,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17961" toLevel="1" name="Scroll of Escape: Town of Giran">
+	<skill id="17961" toLevel="1" name="Scroll of Escape: Giran">
 		<!-- Teleports you to the Town of Giran. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1178,7 +1179,7 @@
 		</effects>
 	</skill>
 	<skill id="17962" toLevel="1" name="Scroll of Escape: Dragon Valley">
-		<!-- Teleports you to Dragon Valley. -->
+		<!-- Teleports to Dragon Valley. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1230,15 +1231,15 @@
 	<skill id="17968" toLevel="1" name="High-grade Tallisman Ingredient Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17969" toLevel="1" name="Low-grade Wind Dye Pack">
+	<skill id="17969" toLevel="1" name="Low-grade Windy Dye Pack">
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17970" toLevel="1" name="Mid-grade Wind Dye Pack">
+	<skill id="17970" toLevel="1" name="Mid-grade Windy Dye Pack">
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17971" toLevel="1" name="High-grade Wind Dye Pack">
+	<skill id="17971" toLevel="1" name="High-grade Windy Dye Pack">
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1246,7 +1247,7 @@
 		<icon>icon.etc_treasure_box_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17973" toLevel="1" name="Talisman - Wind: P. Critical Damage">
+	<skill id="17973" toLevel="1" name="Talisman of Wind - P. Skill Critical Damage">
 		<!-- P. Skill Critical Damage +10%. -->
 		<icon>icon.r85_talisman_ca_up_passive</icon>
 		<operateType>P</operateType>
@@ -1258,7 +1259,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17974" toLevel="1" name="Talisman - Wind: M. Critical Damage">
+	<skill id="17974" toLevel="1" name="Talisman of Wind - M. Skill Critical Damage">
 		<!-- M. Skill Critical Damage +10%. -->
 		<icon>icon.r_talisman_mc_up_passive</icon>
 		<operateType>P</operateType>
@@ -1270,7 +1271,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17975" toLevel="1" name="Talisman - Wind: Defense">
+	<skill id="17975" toLevel="1" name="Talisman of Wind - Defense">
 		<!-- Maximizes P./ M. Def. -->
 		<icon>icon.r85_talisman_pd_up_active</icon>
 		<operateType>A2</operateType>
@@ -1289,8 +1290,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17976" toLevel="1" name="Talisman - Wind: Debuff Resistance">
-		<!-- Increases Debuff Resistance. -->
+	<skill id="17976" toLevel="1" name="Talisman of Wind - Debuff Resistance">
+		<!-- Increases Debuff Resistance, when used. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1305,7 +1306,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17978" toLevel="1" name="Equip Talisman - Insanity">
+	<skill id="17978" toLevel="1" name="Talisman of Insanity">
 		<!-- The Talisman pulsates with power. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -1325,8 +1326,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="17979" toLevel="1" name="Unequip Talisman - Insanity">
-		<!-- The Talisman's power fades away. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+	<skill id="17979" toLevel="1" name="Unequip Talisman of Insanity">
+		<!-- The Talisman's power fades away.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -1343,7 +1344,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17980" toLevel="1" name="Unseal Talisman - Insanity">
+	<skill id="17980" toLevel="1" name="Unseal Talisman of Insanity">
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
@@ -1810,7 +1811,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17999" toLevel="2" name="Scroll of Escape: Seal of Shilen">
+	<skill id="17999" toLevel="2" name="Scroll of Escape: Seal of Shillien">
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

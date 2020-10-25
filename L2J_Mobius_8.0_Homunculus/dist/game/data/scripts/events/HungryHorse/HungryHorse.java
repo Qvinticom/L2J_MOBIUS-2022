@@ -45,9 +45,7 @@ public class HungryHorse extends LongTimeEvent
 		new SkillHolder(15652, 1), // Daring Sonata
 		new SkillHolder(15653, 1), // Refreshing Sonata
 	};
-	private static final SkillHolder KNIGHT = new SkillHolder(15648, 1); // Knight's Harmony
-	private static final SkillHolder WARRIOR = new SkillHolder(15649, 1); // Warrior's Harmony
-	private static final SkillHolder WIZARD = new SkillHolder(15650, 1); // Wizard's Harmony
+	private static final SkillHolder FANTASIA = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
 	private static final SkillHolder XP_BUFF = new SkillHolder(19036, 1); // Blessing of Light
 	
 	private HungryHorse()
@@ -78,7 +76,7 @@ public class HungryHorse extends LongTimeEvent
 					{
 						SkillCaster.triggerCast(npc, player, holder.getSkill());
 					}
-					SkillCaster.triggerCast(npc, player, KNIGHT.getSkill());
+					SkillCaster.triggerCast(npc, player, FANTASIA.getSkill()); // TODO: Merge events.
 					SkillCaster.triggerCast(npc, player, XP_BUFF.getSkill());
 				}
 				else
@@ -96,7 +94,7 @@ public class HungryHorse extends LongTimeEvent
 					{
 						SkillCaster.triggerCast(npc, player, holder.getSkill());
 					}
-					SkillCaster.triggerCast(npc, player, WARRIOR.getSkill());
+					SkillCaster.triggerCast(npc, player, FANTASIA.getSkill()); // TODO: Merge events.
 					SkillCaster.triggerCast(npc, player, XP_BUFF.getSkill());
 				}
 				else
@@ -114,7 +112,7 @@ public class HungryHorse extends LongTimeEvent
 					{
 						SkillCaster.triggerCast(npc, player, holder.getSkill());
 					}
-					SkillCaster.triggerCast(npc, player, WIZARD.getSkill());
+					SkillCaster.triggerCast(npc, player, FANTASIA.getSkill()); // TODO: Merge events.
 					SkillCaster.triggerCast(npc, player, XP_BUFF.getSkill());
 				}
 				else

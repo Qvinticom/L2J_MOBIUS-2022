@@ -134,7 +134,7 @@ public class ChamberOfProphecies extends AbstractInstance
 					{
 						takeItems(player, PROPHECY_MACHINE, 1);
 					}
-					qs.setCond(4, true);
+					qs.setCond(22, true);
 				}
 				break;
 			}
@@ -428,7 +428,7 @@ public class ChamberOfProphecies extends AbstractInstance
 				final QuestState qs = player.getQuestState(Q11027_PathOfDestinyOvercome.class.getSimpleName());
 				if (qs != null)
 				{
-					qs.setCond(5, true);
+					qs.setCond(23, true);
 				}
 				break;
 			}
@@ -455,7 +455,7 @@ public class ChamberOfProphecies extends AbstractInstance
 		{
 			case KAIN_VAN_HALTER:
 			{
-				if ((qs != null) && qs.isCond(4))
+				if ((qs != null) && qs.isCond(22))
 				{
 					htmltext = "31639.html";
 				}
@@ -468,7 +468,7 @@ public class ChamberOfProphecies extends AbstractInstance
 			}
 			case MYSTERIOUS_WIZARD:
 			{
-				if ((qs != null) && qs.isCond(4))
+				if ((qs != null) && qs.isCond(22))
 				{
 					htmltext = "33980.html";
 				}

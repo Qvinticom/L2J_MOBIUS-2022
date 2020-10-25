@@ -34,8 +34,8 @@ public class Belas extends AbstractNpcAI
 	private static final Location EAST = new Location(-41168, 79507, -4000);
 	private static final Location WEST = new Location(-59485, 79782, -4104);
 	// Item
-	private static final int MARK_OF_TRUST_MID_GRADE = 45843;
-	private static final int MARK_OF_TRUST_HIGH_GRADE = 45848;
+	// private static final int MARK_OF_TRUST_MID_GRADE = 45843;
+	// private static final int MARK_OF_TRUST_HIGH_GRADE = 45848;
 	
 	private Belas()
 	{
@@ -56,22 +56,22 @@ public class Belas extends AbstractNpcAI
 			}
 			case "West":
 			{
-				if (hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) || hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-				{
+				// if (hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) || hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
+				// {
 					player.teleToLocation(WEST);
-					break;
-				}
-				htmltext = "34056-02.html";
+				// 	break;
+				// }
+				// htmltext = "34056-02.html";
 				break;
 			}
 			case "East":
 			{
-				if (hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) || hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-				{
+				// if (hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) || hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
+				// {
 					player.teleToLocation(EAST);
-					break;
-				}
-				htmltext = "34056-02.html";
+				// 	break;
+				// }
+				// htmltext = "34056-02.html";
 				break;
 			}
 		}

@@ -13,9 +13,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
-		<acquire exp="33035" sp="7" />
+		<acquire exp="33036" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1219.78913219789" mpRegen="2.7" />
+			<vitals hp="4487.69716088328" hpRegen="7.5" mp="1231.14355231144" mpRegen="2.7" />
 			<attack physical="833.333333333333" magical="392.175445316677" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="221.935483870968" magical="238.643645650194" />
 			<speed>
@@ -30,10 +30,9 @@
 			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4643" level="6" /> <!-- Decrease Speed -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4643" level="6" /> <!-- Decrease Speed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -48,9 +47,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5318" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="57" min="85" max="199" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="0.003" /> <!-- Orichalcum Wire -->
+				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -59,12 +57,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="1.196" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21509" level="67" type="Monster" name="Splinter Stakato Worker">
@@ -81,9 +75,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="28062" sp="6" />
+		<acquire exp="28063" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<vitals hp="4589.90536277603" hpRegen="7.5" mp="1263.58475263585" mpRegen="2.7" />
 			<attack physical="862.470862470862" magical="405.483648172946" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.769512538743" magical="206.175963600221" />
 			<speed>
@@ -96,15 +90,12 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4142" level="1" /> <!-- Fast Wind Fist -->
-			<skill id="4160" level="6" /> <!-- Aura Burn -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4142" level="1" /> <!-- Fast Wind Fist -->
+			<skill id="4160" level="6" /> <!-- Aura Burn -->
 		</skillList>
 		<shots shotChance="20" spiritChance="20" />
 		<exCrtEffect>false</exCrtEffect>
@@ -119,9 +110,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="270" min="1" max="1" chance="0.0009" /> <!-- Dragon Grinder -->
-				<item id="57" min="72" max="169" chance="70" /> <!-- Adena -->
-				<item id="36549" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="57" min="111" max="260" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -130,13 +120,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21510" level="68" type="Monster" name="Splinter Stakato Soldier">
@@ -153,9 +138,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- Sword of Valhalla -->
-		<acquire exp="28144" sp="6" />
+		<acquire exp="28145" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2345.11041009464" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<vitals hp="4690.22082018927" hpRegen="7.5" mp="1295.21492295215" mpRegen="2.7" />
 			<attack physical="891.807478373778" magical="418.643482502829" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="287.007904228378" magical="209.816244136379" />
 			<speed>
@@ -168,15 +153,12 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4073" level="1" /> <!-- Stun -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4561" level="6" /> <!-- Fire Burn -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4073" level="1" /> <!-- Stun -->
+			<skill id="4561" level="6" /> <!-- Fire Burn -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -191,9 +173,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5293" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Plate Armor -->
-				<item id="57" min="73" max="170" chance="70" /> <!-- Adena -->
-				<item id="36554" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (High-grade) -->
+				<item id="57" min="115" max="269" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -202,13 +183,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21511" level="69" type="Monster" name="Splinter Stakato Drone">
@@ -227,9 +203,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- Ultimate Sword -->
-		<acquire exp="39407" sp="9" />
+		<acquire exp="39408" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2395.58359621451" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
+			<vitals hp="4789.90536277603" hpRegen="7.5" mp="1326.84509326845" mpRegen="2.7" />
 			<attack physical="921.413502109705" magical="431.786470309814" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="233.544303797468" magical="250.657485753038" />
 			<speed>
@@ -244,10 +220,9 @@
 			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4579" level="6" /> <!-- Bleed -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4579" level="6" /> <!-- Bleed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -262,10 +237,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="57" min="103" max="239" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
-				<item id="36559" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="119" max="277" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -274,13 +247,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21512" level="70" type="Monster" name="Splinter Stakato Drone">
@@ -299,12 +267,12 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4067" level="6" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- Ultimate Sword -->
-		<acquire exp="35273" sp="8" />
+		<acquire exp="31267" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<vitals hp="6170.34700315457" hpRegen="7.5" mp="1090.83536090835" mpRegen="2.7" />
 			<attack physical="950.973706145336" magical="445.47858728397" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="237.018556058007" magical="254.835370657862" />
 			<speed>
@@ -316,16 +284,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4067" level="6" /> <!-- Blow -->
 			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4067" level="6" /> <!-- Blow -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -338,27 +305,6 @@
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="8682" min="1" max="1" chance="0.0009" /> <!-- Naga's Storm -->
-				<item id="57" min="91" max="214" chance="70" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="0.03" /> <!-- Quality Fiber -->
-				<item id="36559" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (High-grade) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="1.221" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
-		</dropLists>
 	</npc>
 	<npc id="21513" level="70" type="Monster" name="Needle Stakato">
 		<parameters>
@@ -373,9 +319,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
-		<acquire exp="43340" sp="10" />
+		<acquire exp="43341" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<vitals hp="4887.69716088328" hpRegen="7.5" mp="1358.47526358475" mpRegen="2.7" />
 			<attack physical="950.733752620545" magical="445.095379897059" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="237.106918238994" magical="254.835370657862" />
 			<speed>
@@ -390,10 +336,9 @@
 			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4643" level="6" /> <!-- Decrease Speed -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4643" level="6" /> <!-- Decrease Speed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -408,9 +353,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="57" min="113" max="263" chance="70" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="0.03" /> <!-- Quality Fiber -->
+				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -419,13 +363,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21514" level="71" type="Monster" name="Needle Stakato Worker">
@@ -442,9 +381,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="36675" sp="8" />
+		<acquire exp="36676" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2492.11356466877" hpRegen="8.5" mp="1377.12895377129" mpRegen="3" />
+			<vitals hp="4984.22712933754" hpRegen="8.5" mp="1390.91646390916" mpRegen="3" />
 			<attack physical="980.113636363636" magical="458.429128045304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.824175824176" magical="220.116877201169" />
 			<speed>
@@ -457,15 +396,12 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4142" level="1" /> <!-- Fast Wind Fist -->
-			<skill id="4160" level="6" /> <!-- Aura Burn -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4142" level="1" /> <!-- Fast Wind Fist -->
+			<skill id="4160" level="6" /> <!-- Aura Burn -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -480,9 +416,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5293" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Plate Armor -->
-				<item id="57" min="96" max="223" chance="70" /> <!-- Adena -->
-				<item id="36539" min="1" max="1" chance="0.0075" /> <!-- Quality Leather Braid -->
+				<item id="57" min="127" max="295" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -491,13 +426,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21515" level="72" type="Monster" name="Needle Stakato Soldier">
@@ -514,9 +444,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- Sword of Valhalla -->
-		<acquire exp="36636" sp="8" />
+		<acquire exp="36637" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540.06309148265" hpRegen="8.5" mp="1410.38118410381" mpRegen="3" />
+			<vitals hp="5080.1261829653" hpRegen="8.5" mp="1424.16869424169" mpRegen="3" />
 			<attack physical="1009.53065379943" magical="471.271907997999" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="306.068996482826" magical="223.580126459404" />
 			<speed>
@@ -529,15 +459,12 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4073" level="1" /> <!-- Stun -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4561" level="6" /> <!-- Fire Burn -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4073" level="1" /> <!-- Stun -->
+			<skill id="4561" level="6" /> <!-- Fire Burn -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -552,9 +479,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="213" min="1" max="1" chance="0.003" /> <!-- Branch of the Mother Tree -->
-				<item id="57" min="96" max="224" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="0.003" /> <!-- Orichalcum Wire -->
+				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -563,13 +489,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21516" level="73" type="Monster" name="Needle Stakato Drone">
@@ -588,9 +509,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- Ultimate Sword -->
-		<acquire exp="47289" sp="11" />
+		<acquire exp="47290" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2586.11987381703" hpRegen="8.5" mp="1442.01135442011" mpRegen="3" />
+			<vitals hp="5172.23974763407" hpRegen="8.5" mp="1456.6098945661" mpRegen="3" />
 			<attack physical="1039.09465020576" magical="484.193987101974" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="248.148148148148" magical="267.05955241642" />
 			<speed>
@@ -603,12 +524,11 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4072" level="7" /> <!-- Stun -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4072" level="7" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -623,9 +543,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="125" max="290" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="0.075" /> <!-- Quality Leather -->
-				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="57" min="135" max="314" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -634,12 +553,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="1.664" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21517" level="74" type="Monster" name="Needle Stakato Drone">
@@ -661,9 +576,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- Ultimate Sword -->
-		<acquire exp="45916" sp="11" />
+		<acquire exp="45438" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2632.17665615142" hpRegen="8.5" mp="1475.26358475264" mpRegen="3" />
+			<vitals hp="5263.72239747634" hpRegen="8.5" mp="1489.86212489862" mpRegen="3" />
 			<attack physical="1068.07598492128" magical="497.280902276759" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="251.990062363738" magical="271.034286362454" />
 			<speed>
@@ -676,15 +591,14 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4244" level="7" /> <!-- Wild Sweep -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4244" level="7" /> <!-- Wild Sweep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -699,9 +613,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="121" max="281" chance="70" /> <!-- Adena -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="57" min="139" max="323" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -710,12 +623,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21518" level="68" type="Monster" name="Frenzied Stakato Soldier">
@@ -731,8 +640,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
+		<acquire exp="35274" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2345.11041009464" hpRegen="8.5" mp="1282.23844282238" mpRegen="3" />
+			<vitals hp="4690.22082018927" hpRegen="8.5" mp="1295.21492295215" mpRegen="3" />
 			<attack physical="891.959197356448" magical="418.61060181587" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.624203821656" magical="209.816244136379" />
 			<speed>
@@ -744,13 +654,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- Power Strike -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -761,6 +668,7 @@
 		</collision>
 		<dropLists>
 			<drop>
+				<item id="57" min="115" max="269" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -770,7 +678,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -787,8 +695,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
+		<acquire exp="45917" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540.06309148265" hpRegen="8.5" mp="1410.38118410381" mpRegen="3" />
+			<vitals hp="5080.1261829653" hpRegen="8.5" mp="1424.16869424169" mpRegen="3" />
 			<attack physical="1009.51135602983" magical="471.383884532451" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="244.360902255639" magical="263.035442893416" />
 			<speed>
@@ -800,14 +709,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4067" level="7" /> <!-- Blow -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4067" level="7" /> <!-- Blow -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -818,6 +724,7 @@
 		</collision>
 		<dropLists>
 			<drop>
+				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -827,7 +734,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -848,9 +755,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="326" /> <!-- Heathen's Book -->
-		<acquire exp="10079" sp="2" />
+		<acquire exp="10080" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1036.49635036496" mpRegen="2.4" />
+			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1046.22871046229" mpRegen="2.4" />
 			<attack physical="664.429530201342" magical="315.348233981419" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.651006711409" magical="181.257042081027" />
 			<speed>
@@ -862,9 +769,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4035" level="6" /> <!-- Poison -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4631" level="3" /> <!-- Acumen Shield Wild Magic -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
@@ -882,8 +788,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="119" min="1" max="1" chance="0.3" /> <!-- Necklace of Seal -->
-				<item id="57" min="50" max="117" chance="70" /> <!-- Adena -->
+				<item id="57" min="88" max="205" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -892,13 +798,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="19.37" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21521" level="60" type="Monster" name="Claws of Splendor">
@@ -921,9 +822,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="326" /> <!-- Heathen's Book -->
-		<acquire exp="9909" sp="2" />
+		<acquire exp="9910" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1036.49635036496" mpRegen="2.4" />
+			<vitals hp="1933.12302839117" hpRegen="6.5" mp="1046.22871046229" mpRegen="2.4" />
 			<attack physical="664.402576749953" magical="315.127092162357" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.933884297521" magical="181.288531404099" />
 			<speed>
@@ -935,14 +836,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4035" level="6" /> <!-- Poison -->
-			<skill id="4160" level="6" /> <!-- Aura Burn -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4035" level="6" /> <!-- Poison -->
+			<skill id="4160" level="6" /> <!-- Aura Burn -->
 			<skill id="4638" level="3" /> <!-- Acumen+Empower+Wild Magic -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
 		</skillList>
@@ -959,8 +859,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="855" min="1" max="1" chance="0.3" /> <!-- Nassen's Earring -->
-				<item id="57" min="50" max="115" chance="70" /> <!-- Adena -->
+				<item id="57" min="88" max="205" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -969,13 +869,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="17.89" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21522" level="60" type="Monster" name="Claws of Splendor">
@@ -1041,15 +936,13 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="18.01" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1076,9 +969,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="326" /> <!-- Heathen's Book -->
-		<acquire exp="10164" sp="2" />
+		<acquire exp="10165" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<vitals hp="1984.85804416404" hpRegen="7.5" mp="1077.04785077048" mpRegen="2.7" />
 			<attack physical="691.666666666667" magical="327.641209306521" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="252.666666666667" magical="184.914841849148" />
 			<speed>
@@ -1090,10 +983,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4160" level="6" /> <!-- Aura Burn -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4563" level="6" /> <!-- Solar Flare -->
 			<skill id="4569" level="6" /> <!-- Solar Flare -->
 			<skill id="4633" level="3" /> <!-- Acumen+Berserker+Empower -->
@@ -1112,8 +1004,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="886" min="1" max="1" chance="0.3" /> <!-- Ring of Seal -->
-				<item id="57" min="51" max="118" chance="70" /> <!-- Adena -->
+				<item id="57" min="91" max="212" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1122,15 +1014,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="10.78" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21524" level="61" type="Monster" name="Blade of Splendor">
@@ -1153,9 +1038,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="242" /> <!-- Soulfire Dirk -->
-		<acquire exp="10838" sp="2" />
+		<acquire exp="10839" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<vitals hp="1984.85804416404" hpRegen="7.5" mp="1077.04785077048" mpRegen="2.7" />
 			<attack physical="691.729323308271" magical="327.743850469195" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="252.631578947368" magical="184.971756235682" />
 			<speed>
@@ -1169,13 +1054,12 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4103" level="2" /> <!-- Ultimate Evasion -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4103" level="2" /> <!-- Ultimate Evasion -->
 			<skill id="4641" level="6" /> <!-- Super Strike -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
 		</skillList>
@@ -1192,8 +1076,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="856" min="1" max="1" chance="0.3" /> <!-- Adamantite Earring -->
-				<item id="57" min="54" max="126" chance="70" /> <!-- Adena -->
+				<item id="57" min="91" max="212" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1202,15 +1086,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="12.18" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21525" level="61" type="Monster" name="Blade of Splendor">
@@ -1248,7 +1125,7 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- Ultimate Evasion -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4641" level="6" /> <!-- Super Strike -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
 		</skillList>
@@ -1272,17 +1149,15 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="12.05" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1307,9 +1182,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
-		<acquire exp="12448" sp="2" />
+		<acquire exp="12449" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1097.32360097324" mpRegen="2.7" />
+			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1107.86699107867" mpRegen="2.7" />
 			<attack physical="719.646799116998" magical="340.156785791482" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.615894039735" magical="188.524193938222" />
 			<speed>
@@ -1321,9 +1196,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4104" level="6" /> <!-- Chill Flame -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4634" level="3" /> <!-- Acumen+Empower+Damage Shield -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
@@ -1341,8 +1215,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="887" min="1" max="1" chance="0.3" /> <!-- Adamantite Ring -->
-				<item id="57" min="60" max="141" chance="70" /> <!-- Adena -->
+				<item id="57" min="94" max="220" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1351,13 +1225,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21527" level="63" type="Monster" name="Fury of Splendor">
@@ -1381,9 +1250,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
-		<acquire exp="10978" sp="2" />
+		<acquire exp="10979" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2089.58990536278" hpRegen="7.5" mp="1127.33171127332" mpRegen="2.7" />
+			<vitals hp="2088.95899053628" hpRegen="7.5" mp="1137.87510137875" mpRegen="2.7" />
 			<attack physical="747.258771929825" magical="353.489422932554" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="262.5" magical="192.086054552439" />
 			<speed>
@@ -1395,10 +1264,9 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4102" level="2" /> <!-- Surrender to Fire -->
 			<skill id="4160" level="6" /> <!-- Aura Burn -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4566" level="6" /> <!-- Rain of Fire -->
 			<skill id="4632" level="3" /> <!-- Acumen+Empower+Wild Magic -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
@@ -1416,8 +1284,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="918" min="1" max="1" chance="0.3" /> <!-- Adamantite Necklace -->
-				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
+				<item id="57" min="98" max="228" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1426,13 +1294,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21528" level="63" type="Monster" name="Fury of Splendor">
@@ -1493,15 +1356,14 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1528,9 +1390,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
-		<acquire exp="9959" sp="2" />
+		<acquire exp="9960" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2089.58990536278" hpRegen="7.5" mp="1127.33171127332" mpRegen="2.7" />
+			<vitals hp="2088.95899053628" hpRegen="7.5" mp="1137.87510137875" mpRegen="2.7" />
 			<attack physical="747.258771929825" magical="353.489422932554" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="262.5" magical="192.086054552439" />
 			<speed>
@@ -1542,9 +1404,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4035" level="6" /> <!-- Poison -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4571" level="6" /> <!-- Blazing Circle -->
 			<skill id="4630" level="6" /> <!-- Twister -->
@@ -1564,8 +1425,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="891" min="1" max="1" chance="0.3" /> <!-- Sage's Ring -->
-				<item id="57" min="50" max="117" chance="70" /> <!-- Adena -->
+				<item id="57" min="98" max="228" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1574,13 +1435,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21530" level="64" type="Monster" name="Victory of Splendor">
@@ -1600,9 +1456,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="196" /> <!-- Stick of Eternity -->
-		<acquire exp="10808" sp="2" />
+		<acquire exp="10809" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2141.32492113565" hpRegen="7.5" mp="1158.15085158151" mpRegen="2.7" />
+			<vitals hp="2140.69400630915" hpRegen="7.5" mp="1169.50527169505" mpRegen="2.7" />
 			<attack physical="775.599128540305" magical="365.800561056902" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.320261437908" magical="195.60135489719" />
 			<speed>
@@ -1614,10 +1470,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4160" level="6" /> <!-- Aura Burn -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4636" level="3" /> <!-- Acumen Berserker Damage Shield -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
 		</skillList>
@@ -1634,8 +1489,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="922" min="1" max="1" chance="0.075" /> <!-- Sage's Necklace -->
-				<item id="57" min="54" max="125" chance="70" /> <!-- Adena -->
+				<item id="57" min="101" max="235" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1644,13 +1499,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21531" level="64" type="Monster" name="Punishment of Splendor">
@@ -1673,9 +1523,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="242" /> <!-- Soulfire Dirk -->
-		<acquire exp="11930" sp="2" />
+		<acquire exp="11931" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2141.32492113565" hpRegen="7.5" mp="1158.15085158151" mpRegen="2.7" />
+			<vitals hp="2140.69400630915" hpRegen="7.5" mp="1169.50527169505" mpRegen="2.7" />
 			<attack physical="775.631890182974" magical="365.902200557057" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.457860337117" magical="195.991943824384" />
 			<speed>
@@ -1689,13 +1539,12 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4103" level="2" /> <!-- Ultimate Evasion -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4103" level="2" /> <!-- Ultimate Evasion -->
 			<skill id="4641" level="6" /> <!-- Super Strike -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
 		</skillList>
@@ -1712,8 +1561,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="864" min="1" max="1" chance="0.3" /> <!-- Black Ore Earring -->
-				<item id="57" min="60" max="140" chance="70" /> <!-- Adena -->
+				<item id="57" min="101" max="235" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1722,13 +1571,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21532" level="65" type="Monster" name="Shout of Splendor">
@@ -1750,9 +1594,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="196" /> <!-- Stick of Eternity -->
-		<acquire exp="12766" sp="3" />
+		<acquire exp="12767" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1199.51338199513" mpRegen="2.7" />
 			<attack physical="804.65367965368" magical="378.90274609333" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="272.077922077922" magical="199.07100199071" />
 			<speed>
@@ -1764,11 +1608,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4104" level="6" /> <!-- Chill Flame -->
 			<skill id="4158" level="6" /> <!-- Prominence -->
 			<skill id="4160" level="6" /> <!-- Aura Burn -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4566" level="6" /> <!-- Rain of Fire -->
 			<skill id="4638" level="3" /> <!-- Acumen+Empower+Wild Magic -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
@@ -1786,8 +1629,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="895" min="1" max="1" chance="0.3" /> <!-- Black Ore Ring -->
-				<item id="57" min="62" max="145" chance="70" /> <!-- Adena -->
+				<item id="57" min="104" max="244" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1796,13 +1639,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21533" level="65" type="Monster" name="Alliance of Splendor">
@@ -1825,9 +1663,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="196" /> <!-- Stick of Eternity -->
-		<acquire exp="10485" sp="2" />
+		<acquire exp="10486" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1199.51338199513" mpRegen="2.7" />
 			<attack physical="804.51676837219" magical="379.510991700796" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="217.881292261458" magical="234.518649473459" />
 			<speed>
@@ -1839,14 +1677,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4076" level="3" /> <!-- Slow -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4076" level="3" /> <!-- Slow -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4633" level="3" /> <!-- Acumen+Berserker+Empower -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
@@ -1864,8 +1701,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="926" min="1" max="1" chance="0.075" /> <!-- Black Ore Necklace -->
-				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
+				<item id="57" min="104" max="244" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1874,13 +1711,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21534" level="65" type="Monster" name="Alliance of Splendor">
@@ -1945,15 +1777,14 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1980,9 +1811,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="189" /> <!-- Staff of Life -->
-		<acquire exp="12597" sp="3" />
+		<acquire exp="12598" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1219.78913219789" mpRegen="2.7" />
+			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1231.14355231144" mpRegen="2.7" />
 			<attack physical="833.333333333333" magical="392.175445316677" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.774193548387" magical="203.019124610836" />
 			<speed>
@@ -1994,10 +1825,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4104" level="6" /> <!-- Chill Flame -->
 			<skill id="4160" level="6" /> <!-- Aura Burn -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4571" level="6" /> <!-- Blazing Circle -->
 			<skill id="4630" level="6" /> <!-- Twister -->
 			<skill id="4636" level="3" /> <!-- Acumen Berserker Damage Shield -->
@@ -2016,8 +1846,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6324" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Earring -->
-				<item id="57" min="63" max="147" chance="70" /> <!-- Adena -->
+				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2026,13 +1856,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21536" level="66" type="Monster" name="Crown of Splendor">
@@ -2052,9 +1877,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="189" /> <!-- Staff of Life -->
-		<acquire exp="12807" sp="3" />
+		<acquire exp="12808" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1219.78913219789" mpRegen="2.7" />
+			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1231.14355231144" mpRegen="2.7" />
 			<attack physical="833.333333333333" magical="392.175445316677" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.774193548387" magical="203.019124610836" />
 			<speed>
@@ -2066,9 +1891,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4102" level="2" /> <!-- Surrender to Fire -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4637" level="3" /> <!-- Acumen Wild Magic Damage Shield -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
@@ -2086,8 +1910,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6323" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Necklace -->
-				<item id="57" min="61" max="142" chance="70" /> <!-- Adena -->
+				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2096,13 +1920,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21537" level="67" type="Monster" name="Fang of Splendor">
@@ -2126,9 +1945,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="189" /> <!-- Staff of Life -->
-		<acquire exp="12022" sp="2" />
+		<acquire exp="12023" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1263.58475263585" mpRegen="2.7" />
 			<attack physical="862.42405519514" magical="405.490529407853" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="225.683407501589" magical="242.632663882517" />
 			<speed>
@@ -2140,16 +1959,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4104" level="6" /> <!-- Chill Flame -->
-			<skill id="4155" level="6" /> <!-- Twister -->
-			<skill id="4160" level="6" /> <!-- Aura Burn -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4104" level="6" /> <!-- Chill Flame -->
+			<skill id="4155" level="6" /> <!-- Twister -->
+			<skill id="4160" level="6" /> <!-- Aura Burn -->
 			<skill id="4639" level="3" /> <!-- Acumen+Empower+Berserker -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
 		</skillList>
@@ -2166,8 +1984,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6325" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Ring -->
-				<item id="57" min="61" max="142" chance="70" /> <!-- Adena -->
+				<item id="57" min="111" max="260" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2176,13 +1994,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21538" level="67" type="Monster" name="Fang of Splendor">
@@ -2247,15 +2060,14 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2283,9 +2095,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="242" /> <!-- Soulfire Dirk -->
-		<acquire exp="13075" sp="3" />
+		<acquire exp="13076" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1263.58475263585" mpRegen="2.7" />
 			<attack physical="862.7337574706" magical="405.405855229158" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.713900134953" magical="206.58827804429" />
 			<speed>
@@ -2299,13 +2111,12 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4103" level="2" /> <!-- Ultimate Evasion -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4103" level="2" /> <!-- Ultimate Evasion -->
 			<skill id="4641" level="6" /> <!-- Super Strike -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
 		</skillList>
@@ -2322,8 +2133,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6323" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Necklace -->
-				<item id="57" min="66" max="155" chance="70" /> <!-- Adena -->
+				<item id="57" min="111" max="260" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2332,13 +2143,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21540" level="67" type="Monster" name="Wailing of Splendor">
@@ -2376,7 +2182,7 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- Ultimate Evasion -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4641" level="6" /> <!-- Super Strike -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
 		</skillList>
@@ -2400,15 +2206,14 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2438,9 +2243,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="315" /> <!-- Divine Tome -->
-		<acquire exp="10678" sp="2" />
+		<acquire exp="13425" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2089.58990536278" hpRegen="7.5" mp="1127.33171127332" mpRegen="2.7" />
+			<vitals hp="2088.95899053628" hpRegen="7.5" mp="1137.87510137875" mpRegen="2.7" />
 			<attack physical="747.258771929825" magical="353.489422932554" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="209.868421052632" magical="225.983593591105" />
 			<speed>
@@ -2452,11 +2257,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4036" level="6" /> <!-- Poison -->
 			<skill id="4158" level="6" /> <!-- Prominence -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4566" level="6" /> <!-- Rain of Fire -->
 			<skill id="4638" level="3" /> <!-- Acumen+Empower+Wild Magic -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
@@ -2474,14 +2278,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6328" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Ring -->
-				<item id="57" min="53" max="125" chance="70" /> <!-- Adena -->
+				<item id="57" min="98" max="228" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21542" level="62" type="Monster" name="Pilgrim's Disciple">
@@ -2500,9 +2298,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
-		<acquire exp="9358" sp="2" />
+		<acquire exp="9359" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1097.32360097324" mpRegen="2.7" />
+			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1107.86699107867" mpRegen="2.7" />
 			<attack physical="719.44611679711" magical="340.304744375994" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.623171530456" magical="188.872427476382" />
 			<speed>
@@ -2514,13 +2312,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4158" level="6" /> <!-- Prominence -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4158" level="6" /> <!-- Prominence -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
 		</skillList>
@@ -2537,14 +2334,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6328" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Ring -->
-				<item id="57" min="47" max="109" chance="70" /> <!-- Adena -->
+				<item id="57" min="94" max="220" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21543" level="62" type="Monster" name="Pilgrim's Servant">
@@ -2564,8 +2355,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="326" /> <!-- Heathen's Book -->
+		<acquire exp="10679" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1097.32360097324" mpRegen="2.7" />
+			<vitals hp="2037.22397476341" hpRegen="7.5" mp="1107.86699107867" mpRegen="2.7" />
 			<attack physical="719.258666278534" magical="340.655124073424" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.676098735701" magical="188.475366123164" />
 			<speed>
@@ -2577,14 +2369,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4097" level="6" /> <!-- Chant of Life -->
-			<skill id="4158" level="6" /> <!-- Prominence -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4097" level="6" /> <!-- Chant of Life -->
+			<skill id="4158" level="6" /> <!-- Prominence -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
 		</skillList>
@@ -2601,16 +2392,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="94" max="220" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2636,9 +2418,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" /> <!-- Elemental Sword -->
-		<acquire exp="12100" sp="2" />
+		<acquire exp="15299" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1263.58475263585" mpRegen="2.7" />
 			<attack physical="862.713675213675" magical="405.60709752719" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="282.051282051282" magical="206.396739243455" />
 			<speed>
@@ -2650,9 +2432,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4155" level="6" /> <!-- Twister -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4569" level="6" /> <!-- Solar Flare -->
 			<skill id="4635" level="3" /> <!-- Acumen Berserker Wild Magic -->
 			<skill id="4640" level="6" /> <!-- Sleep -->
@@ -2671,14 +2452,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6327" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Earring -->
-				<item id="57" min="61" max="143" chance="70" /> <!-- Adena -->
+				<item id="57" min="111" max="260" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21545" level="66" type="Monster" name="Judge of Fire">
@@ -2697,9 +2472,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="189" /> <!-- Staff of Life -->
-		<acquire exp="10605" sp="2" />
+		<acquire exp="10606" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1219.78913219789" mpRegen="2.7" />
+			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1231.14355231144" mpRegen="2.7" />
 			<attack physical="833.333333333333" magical="392.016519700582" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="221.907125132932" magical="238.791911806773" />
 			<speed>
@@ -2711,15 +2486,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4155" level="6" /> <!-- Twister -->
-			<skill id="4160" level="6" /> <!-- Aura Burn -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4155" level="6" /> <!-- Twister -->
+			<skill id="4160" level="6" /> <!-- Aura Burn -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -2735,14 +2509,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6327" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Earring -->
-				<item id="57" min="54" max="125" chance="70" /> <!-- Adena -->
+				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21546" level="66" type="Monster" name="Judge of Light">
@@ -2762,8 +2530,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="196" /> <!-- Stick of Eternity -->
+		<acquire exp="12101" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1219.78913219789" mpRegen="2.7" />
+			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1231.14355231144" mpRegen="2.7" />
 			<attack physical="833.628736854543" magical="392.46329854101" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.83284457478" magical="202.638582671547" />
 			<speed>
@@ -2775,13 +2544,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4097" level="6" /> <!-- Chant of Life -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4097" level="6" /> <!-- Chant of Life -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4563" level="6" /> <!-- Solar Flare -->
 			<skill id="4642" level="3" /> <!-- Fast Spell Casting -->
@@ -2797,6 +2565,11 @@
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="21547" level="65" type="Monster" name="Corrupted Knight">
 		<parameters>
@@ -2815,9 +2588,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
-		<acquire exp="32238" sp="7" />
+		<acquire exp="32239" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<vitals hp="4386.11987381704" hpRegen="7.5" mp="1199.51338199513" mpRegen="2.7" />
 			<attack physical="804.65367965368" magical="378.90274609333" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="272.193559864793" magical="199.07100199071" shield="131" shieldRate="20" />
 			<speed>
@@ -2829,11 +2602,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4032" level="6" /> <!-- Power Strike -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
 		</skillList>
@@ -2851,10 +2623,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="81" min="1" max="1" chance="0.0009" /> <!-- Dragon Slayer -->
-				<item id="7884" min="1" max="1" chance="0.0009" /> <!-- Infernal Master -->
-				<item id="8679" min="1" max="1" chance="0.0009" /> <!-- Sword of Ipos -->
-				<item id="57" min="83" max="194" chance="70" /> <!-- Adena -->
+				<item id="57" min="104" max="244" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2863,13 +2633,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21548" level="66" type="Monster" name="Resurrected Knight">
@@ -2925,7 +2690,6 @@
 				<item id="7884" min="1" max="1" chance="0.0009" /> <!-- Infernal Master -->
 				<item id="8679" min="1" max="1" chance="0.0009" /> <!-- Sword of Ipos -->
 				<item id="57" min="86" max="200" chance="70" /> <!-- Adena -->
-				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2934,11 +2698,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21549" level="65" type="Monster" name="Corrupted Royal Guard">
@@ -2996,7 +2757,6 @@
 				<item id="236" min="1" max="1" chance="0.0009" /> <!-- Soul Separator -->
 				<item id="8682" min="1" max="1" chance="0.0009" /> <!-- Naga's Storm -->
 				<item id="57" min="102" max="239" chance="70" /> <!-- Adena -->
-				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3005,12 +2765,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="1.348" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21550" level="65" type="Monster" name="Corrupted Royal Guard">
@@ -3073,7 +2829,6 @@
 				<item id="236" min="1" max="1" chance="0.0009" /> <!-- Soul Separator -->
 				<item id="8682" min="1" max="1" chance="0.0009" /> <!-- Naga's Storm -->
 				<item id="57" min="82" max="192" chance="70" /> <!-- Adena -->
-				<item id="36559" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (High-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3082,10 +2837,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -3145,8 +2899,7 @@
 				<item id="236" min="1" max="1" chance="0.0009" /> <!-- Soul Separator -->
 				<item id="8682" min="1" max="1" chance="0.0009" /> <!-- Naga's Storm -->
 				<item id="57" min="106" max="247" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="36564" min="1" max="1" chance="0.0009" /> <!-- Greater Synthetic Cokes -->
+				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant A-grade Weapon -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3155,12 +2908,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="1.404" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21552" level="66" type="Monster" name="Resurrected Royal Guard">
@@ -3230,10 +2979,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -3292,7 +3040,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="67" max="158" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3301,12 +3048,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21554" level="65" type="Monster" name="Trampled Man">
@@ -3366,7 +3109,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="61" max="143" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3375,10 +3117,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.0075" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -3451,12 +3192,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21556" level="65" type="Monster" name="Slaughter Executioner">
@@ -3522,12 +3259,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21557" level="66" type="Monster" name="Bone Snatcher">
@@ -3569,7 +3302,7 @@
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4155" level="6" /> <!-- Twister -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4650" level="1" /> <!-- Dispel Hold -->
 			<skill id="4654" level="6" /> <!-- Death Link -->
@@ -3600,11 +3333,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21558" level="66" type="Monster" name="Bone Snatcher">
@@ -3643,7 +3373,7 @@
 			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4155" level="6" /> <!-- Twister -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4652" level="1" /> <!-- Dispel Silence -->
 			<skill id="4654" level="6" /> <!-- Death Link -->
@@ -3670,13 +3400,10 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3706,9 +3433,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="35813" sp="8" />
+		<acquire exp="35814" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1219.78913219789" mpRegen="2.7" />
+			<vitals hp="4487.69716088328" hpRegen="7.5" mp="1231.14355231144" mpRegen="2.7" />
 			<attack physical="833.628736854543" magical="392.46329854101" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.83284457478" magical="202.638582671547" />
 			<speed>
@@ -3720,13 +3447,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4597" level="6" /> <!-- Bleed -->
 			<skill id="4650" level="1" /> <!-- Dispel Hold -->
@@ -3746,10 +3472,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="57" min="92" max="216" chance="70" /> <!-- Adena -->
+				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3758,11 +3482,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21560" level="66" type="Monster" name="Bone Shaper">
@@ -3784,9 +3505,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="35813" sp="8" />
+		<acquire exp="35814" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2244.16403785489" hpRegen="7.5" mp="1219.78913219789" mpRegen="2.7" />
+			<vitals hp="4487.69716088328" hpRegen="7.5" mp="1231.14355231144" mpRegen="2.7" />
 			<attack physical="833.628736854543" magical="392.46329854101" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.83284457478" magical="202.638582671547" />
 			<speed>
@@ -3798,13 +3519,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4597" level="6" /> <!-- Bleed -->
 			<skill id="4652" level="1" /> <!-- Dispel Silence -->
@@ -3823,10 +3543,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="57" min="92" max="216" chance="70" /> <!-- Adena -->
+				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3835,12 +3553,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="1.33" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21561" level="67" type="Monster" name="Sacrificed Man">
@@ -3859,9 +3573,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="33083" sp="7" />
+		<acquire exp="33084" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<vitals hp="4589.90536277603" hpRegen="7.5" mp="1263.58475263585" mpRegen="2.7" />
 			<attack physical="862.919132149901" magical="405.620941245322" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="225.524475524475" magical="242.430469995949" />
 			<speed>
@@ -3873,17 +3587,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4073" level="6" /> <!-- Stun -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
 		</skillList>
@@ -3901,8 +3614,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="85" max="199" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="57" min="111" max="260" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3911,12 +3624,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21562" level="67" type="Monster" name="Guillotine's Ghost">
@@ -3932,11 +3641,11 @@
 			<skill name="SelfBuff" id="4635" level="3" />
 			<skill name="DDMagic" id="4596" level="6" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="34463" sp="8" />
+		<acquire exp="34464" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<vitals hp="4589.90536277603" hpRegen="7.5" mp="1263.58475263585" mpRegen="2.7" />
 			<attack physical="862.713675213675" magical="405.60709752719" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="225.641025641026" magical="242.819693227594" />
 			<speed>
@@ -3949,10 +3658,9 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4276" level="1" /> <!-- Bow/ Crossbow Vulnerability -->
-			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
 			<skill id="4596" level="6" /> <!-- Bleed -->
 			<skill id="4635" level="3" /> <!-- Acumen Berserker Wild Magic -->
 		</skillList>
@@ -3969,9 +3677,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5312" min="1" max="1" chance="0.03" /> <!-- Sealed Helm of Nightmare -->
-				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="57" min="111" max="260" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3980,13 +3687,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21563" level="67" type="Monster" name="Bone Collector">
@@ -4011,9 +3713,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="34463" sp="8" />
+		<acquire exp="35071" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<vitals hp="4589.90536277603" hpRegen="7.5" mp="1263.58475263585" mpRegen="2.7" />
 			<attack physical="862.470862470862" magical="405.483648172946" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.769512538743" magical="206.242485860678" />
 			<speed>
@@ -4025,13 +3727,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4047" level="6" /> <!-- Hold -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4597" level="6" /> <!-- Bleed -->
 			<skill id="4650" level="1" /> <!-- Dispel Hold -->
@@ -4047,9 +3746,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="5312" min="1" max="1" chance="0.03" /> <!-- Sealed Helm of Nightmare -->
-				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="57" min="111" max="260" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -4059,16 +3756,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 		<collision>
 			<radius normal="8" />
@@ -4097,9 +3786,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="32311" sp="7" />
+		<acquire exp="32312" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295.26813880126" hpRegen="7.5" mp="1251.41930251419" mpRegen="2.7" />
+			<vitals hp="4589.90536277603" hpRegen="7.5" mp="1263.58475263585" mpRegen="2.7" />
 			<attack physical="862.470862470862" magical="405.483648172946" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.769512538743" magical="206.242485860678" />
 			<speed>
@@ -4111,13 +3800,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4076" level="3" /> <!-- Slow -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4076" level="3" /> <!-- Slow -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4651" level="3" /> <!-- Dispel Slow -->
 			<skill id="4654" level="6" /> <!-- Death Link -->
@@ -4137,10 +3823,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="57" min="83" max="195" chance="70" /> <!-- Adena -->
+				<item id="57" min="111" max="260" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4149,13 +3833,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21565" level="68" type="Monster" name="Bone Animator">
@@ -4177,9 +3856,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="33391" sp="8" />
+		<acquire exp="33392" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2345.11041009464" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<vitals hp="4690.22082018927" hpRegen="7.5" mp="1295.21492295215" mpRegen="2.7" />
 			<attack physical="892.202277552596" magical="418.531253381224" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.974172324491" magical="210.037868692385" />
 			<speed>
@@ -4191,14 +3870,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4047" level="6" /> <!-- Hold -->
-			<skill id="4155" level="6" /> <!-- Twister -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4047" level="6" /> <!-- Hold -->
+			<skill id="4155" level="6" /> <!-- Twister -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4650" level="1" /> <!-- Dispel Hold -->
 			<skill id="4654" level="6" /> <!-- Death Link -->
@@ -4216,10 +3892,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="57" min="86" max="202" chance="70" /> <!-- Adena -->
+				<item id="57" min="115" max="269" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4228,13 +3902,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21566" level="68" type="Monster" name="Skull Animator">
@@ -4256,9 +3925,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="36242" sp="8" />
+		<acquire exp="36243" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2345.11041009464" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<vitals hp="4690.22082018927" hpRegen="7.5" mp="1295.21492295215" mpRegen="2.7" />
 			<attack physical="892.202277552596" magical="418.531253381224" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.974172324491" magical="210.037868692385" />
 			<speed>
@@ -4270,13 +3939,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4098" level="6" /> <!-- Silence -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4597" level="6" /> <!-- Bleed -->
 			<skill id="4652" level="1" /> <!-- Dispel Silence -->
@@ -4295,10 +3961,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="57" min="94" max="220" chance="70" /> <!-- Adena -->
+				<item id="57" min="115" max="269" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4307,13 +3971,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21567" level="68" type="Monster" name="Bone Slayer">
@@ -4333,9 +3992,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="42800" sp="10" />
+		<acquire exp="42801" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2345.11041009464" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<vitals hp="4690.22082018927" hpRegen="7.5" mp="1295.21492295215" mpRegen="2.7" />
 			<attack physical="891.836401390541" magical="418.367680885226" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.624203821656" magical="209.919174073714" />
 			<speed>
@@ -4347,13 +4006,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4138" level="6" /> <!-- Corpse Burst -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4138" level="6" /> <!-- Corpse Burst -->
 			<skill id="4573" level="6" /> <!-- Sonic Blaster -->
 			<skill id="4654" level="6" /> <!-- Death Link -->
 		</skillList>
@@ -4370,10 +4028,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="57" min="111" max="259" chance="70" /> <!-- Adena -->
+				<item id="57" min="115" max="269" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4382,12 +4038,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21568" level="68" type="Monster" name="Devil Bat">
@@ -4449,8 +4101,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="96" max="225" chance="70" /> <!-- Adena -->
-				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="729" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant A-grade Weapon -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4459,10 +4110,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -4517,8 +4167,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="78" max="183" chance="70" /> <!-- Adena -->
-				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="729" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant A-grade Weapon -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4527,12 +4176,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="1.049" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21570" level="69" type="Monster" name="Ghost of Betrayer">
@@ -4551,9 +4196,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="31242" sp="7" />
+		<acquire exp="31243" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2395.58359621451" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
+			<vitals hp="4789.90536277603" hpRegen="7.5" mp="1326.84509326845" mpRegen="2.7" />
 			<attack physical="921.546807622757" magical="432.062398009478" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.714614499425" magical="213.257027449026" />
 			<speed>
@@ -4565,15 +4210,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 			<skill id="4592" level="6" /> <!-- Decrease P. Def. -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
@@ -4592,9 +4236,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="80" min="1" max="1" chance="0.0009" /> <!-- Tallum Blade -->
-				<item id="8680" min="1" max="1" chance="0.0009" /> <!-- Barakiel's Axe -->
-				<item id="57" min="81" max="189" chance="70" /> <!-- Adena -->
+				<item id="57" min="119" max="277" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4603,12 +4246,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36517" min="1" max="1" chance="2.904" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21571" level="69" type="Monster" name="Ghost of Rebel Soldier">
@@ -4627,9 +4266,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
-		<acquire exp="39967" sp="9" />
+		<acquire exp="39968" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2395.58359621451" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
+			<vitals hp="4789.90536277603" hpRegen="7.5" mp="1326.84509326845" mpRegen="2.7" />
 			<attack physical="921.413502109705" magical="431.786470309814" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.31264088781" magical="213.537014793598" shield="146" shieldRate="20" />
 			<speed>
@@ -4641,13 +4280,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4074" level="2" /> <!-- Haste -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4074" level="2" /> <!-- Haste -->
 			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4581" level="6" /> <!-- Hold -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -4663,10 +4301,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="81" min="1" max="1" chance="0.0009" /> <!-- Dragon Slayer -->
-				<item id="7884" min="1" max="1" chance="0.0009" /> <!-- Infernal Master -->
-				<item id="8679" min="1" max="1" chance="0.0009" /> <!-- Sword of Ipos -->
-				<item id="57" min="104" max="242" chance="70" /> <!-- Adena -->
+				<item id="57" min="119" max="277" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4675,13 +4311,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21572" level="69" type="Monster" name="Bone Sweeper">
@@ -4706,9 +4337,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="38346" sp="9" />
+		<acquire exp="38347" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2395.58359621451" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
+			<vitals hp="4789.90536277603" hpRegen="7.5" mp="1326.84509326845" mpRegen="2.7" />
 			<attack physical="921.557345607979" magical="431.634128852572" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.417443316177" magical="213.221131635619" />
 			<speed>
@@ -4720,13 +4351,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4076" level="3" /> <!-- Slow -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4076" level="3" /> <!-- Slow -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4597" level="6" /> <!-- Bleed -->
 			<skill id="4651" level="3" /> <!-- Dispel Slow -->
@@ -4746,11 +4374,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="57" min="100" max="232" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
+				<item id="57" min="119" max="277" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4759,12 +4384,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="1.334" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21573" level="69" type="Monster" name="Atrox">
@@ -4784,9 +4405,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="36577" sp="8" />
+		<acquire exp="36578" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2395.58359621451" hpRegen="7.5" mp="1314.6796431468" mpRegen="2.7" />
+			<vitals hp="4789.90536277603" hpRegen="7.5" mp="1326.84509326845" mpRegen="2.7" />
 			<attack physical="483.900393841856" magical="431.947159244166" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.291749275583" magical="213.363849929887" />
 			<speed>
@@ -4798,14 +4419,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4028" level="3" /> <!-- Might -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4028" level="3" /> <!-- Might -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 			<skill id="4582" level="6" /> <!-- Poison -->
 			<skill id="4596" level="6" /> <!-- Bleed -->
 			<skill id="4664" level="6" /> <!-- Drain Energy -->
@@ -4823,9 +4441,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5314" min="1" max="1" chance="0.03" /> <!-- Sealed Boots of Nightmare -->
-				<item id="57" min="95" max="222" chance="70" /> <!-- Adena -->
-				<item id="36524" min="1" max="1" chance="0.0075" /> <!-- Orichalcum -->
+				<item id="57" min="119" max="277" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4834,13 +4451,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21574" level="70" type="Monster" name="Bone Grinder">
@@ -4880,7 +4492,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="7" /> <!-- Sonic Blaster -->
 			<skill id="4654" level="7" /> <!-- Death Link -->
 		</skillList>
@@ -4901,7 +4513,6 @@
 				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
 				<item id="57" min="120" max="279" chance="70" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="0.03" /> <!-- Quality Fiber -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4910,12 +4521,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21575" level="70" type="Monster" name="Bone Grinder">
@@ -4949,7 +4556,7 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="7" /> <!-- Fire Burn -->
 			<skill id="4658" level="7" /> <!-- Hold -->
 		</skillList>
@@ -4970,7 +4577,6 @@
 				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
 				<item id="57" min="91" max="212" chance="70" /> <!-- Adena -->
-				<item id="36539" min="1" max="1" chance="0.0075" /> <!-- Quality Leather Braid -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4979,10 +4585,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -5048,7 +4653,6 @@
 			<drop>
 				<item id="5312" min="1" max="1" chance="0.03" /> <!-- Sealed Helm of Nightmare -->
 				<item id="57" min="100" max="232" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="0.003" /> <!-- Orichalcum Wire -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5057,10 +4661,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -5120,7 +4723,6 @@
 			<drop>
 				<item id="5312" min="1" max="1" chance="0.03" /> <!-- Sealed Helm of Nightmare -->
 				<item id="57" min="105" max="244" chance="70" /> <!-- Adena -->
-				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5129,12 +4731,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21578" level="71" type="Monster" name="Behemoth Zombie">
@@ -5153,9 +4751,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="44321" sp="10" />
+		<acquire exp="44322" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2492.11356466877" hpRegen="8.5" mp="1377.12895377129" mpRegen="3" />
+			<vitals hp="4984.22712933754" hpRegen="8.5" mp="1390.91646390916" mpRegen="3" />
 			<attack physical="980.425824175824" magical="458.1965135225" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.854037267081" magical="220.268377202684" />
 			<speed>
@@ -5167,16 +4765,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4073" level="7" /> <!-- Stun -->
-			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4073" level="7" /> <!-- Stun -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 			<skill id="4649" level="7" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
 			<skill id="4789" level="2" /> <!-- High Lv. -->
@@ -5195,8 +4792,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="116" max="270" chance="70" /> <!-- Adena -->
-				<item id="36554" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (High-grade) -->
+				<item id="57" min="127" max="295" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5205,13 +4802,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21579" level="71" type="Monster" name="Ghost of Rebel Leader">
@@ -5230,9 +4822,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="221" lhand="945" /> <!-- Assassin Knife / Skeleton Buckler -->
-		<acquire exp="50451" sp="12" />
+		<acquire exp="50452" sp="13" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2492.11356466877" hpRegen="8.5" mp="1377.12895377129" mpRegen="3" />
+			<vitals hp="4984.22712933754" hpRegen="8.5" mp="1390.91646390916" mpRegen="3" />
 			<attack physical="987.787356321839" magical="457.993597923654" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="300.941780821918" magical="220.498783454988" shield="150" shieldRate="20" />
 			<speed>
@@ -5245,11 +4837,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4596" level="7" /> <!-- Bleed -->
 			<skill id="4635" level="3" /> <!-- Acumen Berserker Wild Magic -->
 			<skill id="4789" level="2" /> <!-- High Lv. -->
@@ -5267,11 +4858,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="150" min="1" max="1" chance="0.0009" /> <!-- Elemental Sword -->
-				<item id="151" min="1" max="1" chance="0.0009" /> <!-- Sword of Miracles -->
-				<item id="8686" min="1" max="1" chance="0.0009" /> <!-- Themis' Tongue -->
-				<item id="57" min="132" max="307" chance="70" /> <!-- Adena -->
-				<item id="36559" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="127" max="295" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5280,13 +4868,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21580" level="71" type="Monster" name="Bone Caster">
@@ -5308,9 +4891,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="43311" sp="10" />
+		<acquire exp="43312" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2492.11356466877" hpRegen="8.5" mp="1377.12895377129" mpRegen="3" />
+			<vitals hp="4984.22712933754" hpRegen="8.5" mp="1390.91646390916" mpRegen="3" />
 			<attack physical="980.113636363636" magical="458.429128045304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.824175824176" magical="220.025311266187" />
 			<speed>
@@ -5322,14 +4905,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4047" level="7" /> <!-- Hold -->
-			<skill id="4155" level="7" /> <!-- Twister -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4047" level="7" /> <!-- Hold -->
+			<skill id="4155" level="7" /> <!-- Twister -->
 			<skill id="4561" level="7" /> <!-- Fire Burn -->
 			<skill id="4650" level="1" /> <!-- Dispel Hold -->
 			<skill id="4654" level="7" /> <!-- Death Link -->
@@ -5348,11 +4928,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="57" min="114" max="264" chance="70" /> <!-- Adena -->
-				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="57" min="127" max="295" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5361,11 +4938,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21581" level="71" type="Monster" name="Bone Puppeteer">
@@ -5387,9 +4961,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="46917" sp="11" />
+		<acquire exp="46918" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2492.11356466877" hpRegen="8.5" mp="1377.12895377129" mpRegen="3" />
+			<vitals hp="4984.22712933754" hpRegen="8.5" mp="1390.91646390916" mpRegen="3" />
 			<attack physical="980.113636363636" magical="458.429128045304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.824175824176" magical="220.025311266187" />
 			<speed>
@@ -5401,13 +4975,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4098" level="7" /> <!-- Silence -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4098" level="7" /> <!-- Silence -->
 			<skill id="4561" level="7" /> <!-- Fire Burn -->
 			<skill id="4597" level="7" /> <!-- Bleed -->
 			<skill id="4652" level="1" /> <!-- Dispel Silence -->
@@ -5427,10 +4998,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
+				<item id="57" min="127" max="295" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5439,13 +5008,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21582" level="71" type="Monster" name="Vampire Soldier">
@@ -5523,11 +5087,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21583" level="72" type="Monster" name="Bone Scavenger">
@@ -5572,7 +5133,7 @@
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="7" /> <!-- Fire Burn -->
 			<skill id="4597" level="7" /> <!-- Bleed -->
 			<skill id="4650" level="1" /> <!-- Dispel Hold -->
@@ -5597,7 +5158,6 @@
 				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
 				<item id="57" min="124" max="289" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5606,10 +5166,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -5655,7 +5214,7 @@
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="7" /> <!-- Fire Burn -->
 			<skill id="4652" level="1" /> <!-- Dispel Silence -->
 			<skill id="4654" level="7" /> <!-- Death Link -->
@@ -5678,7 +5237,6 @@
 				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
 				<item id="57" min="121" max="282" chance="70" /> <!-- Adena -->
-				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5687,12 +5245,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="1.715" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21585" level="72" type="Monster" name="Vampire Magician">
@@ -5715,9 +5269,9 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
-		<acquire exp="39420" sp="9" />
+		<acquire exp="39421" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540.06309148265" hpRegen="8.5" mp="1410.38118410381" mpRegen="3" />
+			<vitals hp="5080.1261829653" hpRegen="8.5" mp="1424.16869424169" mpRegen="3" />
 			<attack physical="1009.53065379943" magical="471.271907997999" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="306.068996482826" magical="223.95425652376" />
 			<speed>
@@ -5729,17 +5283,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4275" level="1" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4561" level="7" /> <!-- Fire Burn -->
 			<skill id="4590" level="7" /> <!-- Decrease Speed -->
 			<skill id="4596" level="7" /> <!-- Bleed -->
@@ -5760,10 +5311,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="8678" min="1" max="1" chance="0.003" /> <!-- Sirra's Blade -->
-				<item id="57" min="104" max="242" chance="70" /> <!-- Adena -->
-				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
-				<item id="45930" min="1" max="1" chance="0.0009" /> <!-- Mid-grade Spirit Stone -->
+				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5772,12 +5321,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21586" level="72" type="Monster" name="Vampire Adept">
@@ -5845,7 +5390,6 @@
 			<drop>
 				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
 				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="0.03" /> <!-- Quality Fiber -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5854,12 +5398,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21587" level="72" type="Monster" name="Vampire Warrior">
@@ -5937,10 +5477,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -6019,12 +5558,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21589" level="73" type="Monster" name="Vampire Wizard">
@@ -6100,10 +5635,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -6180,10 +5714,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -6262,10 +5795,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -6338,12 +5870,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21593" level="73" type="Monster" name="Vampire Warlord">
@@ -6408,7 +5936,7 @@
 			<drop>
 				<item id="6372" min="1" max="1" chance="0.0009" /> <!-- Heaven's Divider -->
 				<item id="57" min="135" max="314" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant A-grade Weapon -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -6417,12 +5945,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36522" min="1" max="1" chance="1.899" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21594" level="73" type="Monster" name="Vampire Warlord">
@@ -6489,7 +6013,7 @@
 			<drop>
 				<item id="6372" min="1" max="1" chance="0.0009" /> <!-- Heaven's Divider -->
 				<item id="57" min="125" max="291" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant A-grade Weapon -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -6498,10 +6022,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -6567,7 +6090,7 @@
 			<drop>
 				<item id="6372" min="1" max="1" chance="0.0009" /> <!-- Heaven's Divider -->
 				<item id="57" min="106" max="246" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant A-grade Weapon -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -6576,12 +6099,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
 			</drop>
-			<spoil>
-				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21596" level="68" type="Monster" name="Requiem Lord">
@@ -6608,9 +6127,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="37498" sp="9" />
+		<acquire exp="36813" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2345.11041009464" hpRegen="7.5" mp="1282.23844282238" mpRegen="2.7" />
+			<vitals hp="4690.22082018927" hpRegen="7.5" mp="1295.21492295215" mpRegen="2.7" />
 			<attack physical="891.836401390541" magical="418.367680885226" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.624203821656" magical="209.919174073714" />
 			<speed>
@@ -6622,13 +6141,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4138" level="6" /> <!-- Corpse Burst -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4138" level="6" /> <!-- Corpse Burst -->
 			<skill id="4561" level="6" /> <!-- Fire Burn -->
 			<skill id="4593" level="6" /> <!-- Decrease P. Def. -->
 			<skill id="4654" level="6" /> <!-- Death Link -->
@@ -6647,13 +6165,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5323" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="57" min="97" max="226" chance="70" /> <!-- Adena -->
+				<item id="57" min="115" max="269" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36517" min="1" max="1" chance="3.5" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21597" level="67" type="Monster" name="Requiem Behemoth">
@@ -6715,10 +6228,8 @@
 			<drop>
 				<item id="5323" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Leather Armor -->
 				<item id="57" min="83" max="195" chance="70" /> <!-- Adena -->
-				<item id="36539" min="1" max="1" chance="0.0075" /> <!-- Quality Leather Braid -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -6804,9 +6315,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<acquire exp="44753" sp="10" />
+		<acquire exp="44754" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2492.11356466877" hpRegen="8.5" mp="1377.12895377129" mpRegen="3" />
+			<vitals hp="4984.22712933754" hpRegen="8.5" mp="1390.91646390916" mpRegen="3" />
 			<attack physical="980.425824175824" magical="458.1965135225" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="301.136363636364" magical="220.268377202684" />
 			<speed>
@@ -6818,14 +6329,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4138" level="7" /> <!-- Corpse Burst -->
-			<skill id="4257" level="7" /> <!-- Hydro Blast -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4138" level="7" /> <!-- Corpse Burst -->
+			<skill id="4257" level="7" /> <!-- Hydro Blast -->
 			<skill id="4561" level="7" /> <!-- Fire Burn -->
 			<skill id="4654" level="7" /> <!-- Death Link -->
 			<skill id="4672" level="1" /> <!-- Corpse Remove -->
@@ -6840,19 +6350,8 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="57" min="117" max="273" chance="70" /> <!-- Adena -->
+				<item id="57" min="127" max="295" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 		<collision>
 			<radius normal="8" />

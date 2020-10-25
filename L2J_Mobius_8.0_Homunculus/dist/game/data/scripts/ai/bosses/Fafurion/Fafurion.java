@@ -189,7 +189,7 @@ public class Fafurion extends AbstractNpcAI
 				{
 					for (PlayerInstance plr : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 5000))
 					{
-						plr.sendPacket(new ExShowScreenMessage(NpcStringId.EXCEEDED_THE_FAFURION_S_NEST_RAID_TIME_LIMIT, ExShowScreenMessage.TOP_CENTER, 10000, true));
+						plr.sendPacket(new ExShowScreenMessage(NpcStringId.FAFURION_S_NEST_RAID_IS_OVER, ExShowScreenMessage.TOP_CENTER, 10000, true));
 					}
 					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 					FAFURION_ZONE.oustAllPlayers();

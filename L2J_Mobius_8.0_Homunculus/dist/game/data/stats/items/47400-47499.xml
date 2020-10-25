@@ -20,7 +20,7 @@
 		</stats>
 	</item>
 	<item id="47401" name="Returned Duo Bracelet" additionalName="Event" type="Armor">
-		<!-- MP +216, CON +2, MEN +2, activates 5 Talisman Slots when equipped.. <Skills Used>. 1. Duo - Prophecy: When used, party members' P./ M. Atk. +10% for 5 min. (Cooldown: 270 sec.). 2. Duo - Energy of Blessing - When used, EAcquired XP/ SPed from hunting +30% for 3 hours. Duo's Gift' item received when the buff ends. (Cooldown: 10 hours). -->
+		<!-- MP +216, CON +2, MEN +2 -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -162,7 +162,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47408" name="+6 Helios Weapon Capsule Coupon" additionalName="30-day" type="EtcItem">
-		<!-- Can be exchanged for a Helios Weapon (30-day) through the Dimensional Merchant. Will be deleted when the event ends. -->
+		<!-- Can be exchanged for +6 Helios weapon (30-day) through the Game Assistant. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -172,7 +172,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47409" name="+6 Eternal Armor Set Coupon" additionalName="30-day" type="EtcItem">
-		<!-- Can be exchanged for an Eternal Armor Set (30-day) through the Dimensional Merchant. Will be deleted when the event ends. -->
+		<!-- Can be exchanged for +6 Eternal armor set (30-day) through the Game Assistant. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -182,7 +182,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47410" name="Duo Growth Rune 30% - 30 days" type="EtcItem">
-		<!-- Increases XP and SP gained through hunting by 30% while having it in your inventory. -->
+		<!-- When in inventory, acquired XP/ SP +30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -201,7 +201,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47412" name="Duo Vital Compression Stone" type="EtcItem">
-		<!-- When used, Vitality Bonus +20%. Cannot be used together with Dandy's Home Run Ball/ Fall of the Dragon Buff/ Nevit's Hourglass. -->
+		<!-- Acquired XP +20%. Cannot be used together with Dandy's Home Run Ball/ Fall of the Dragon Buff/ Nevit's Hourglass. -->
 		<set name="icon" val="icon.etc_capture_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -235,7 +235,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47415" name="Freya's Wind Cube" type="EtcItem">
-		<!-- Acquired XP/ SP +100%, Vitality consumption +100%. Effect remains after death. Duration is 10 min. Cooldown is 30 min. Only usable when at least 1 Vitality slot is full. Cannot be used in the Olympiad. -->
+		<!-- For 10 min., acquired XP/ SP +100%, Vitality Consumption +100%. The effect remains after death. Cooldown: 30 min. Can be used only when 1 or more Vitality bar is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_cube_box" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="weight" val="100" />
@@ -256,7 +256,7 @@
 		</skills>
 	</item>
 	<item id="47416" name="Sibi's Suspicious Supply Box" type="EtcItem">
-		<!-- Supply Box prepared by Balthus Knights' Supply Officer Sibi. When used, a random item can be obtained. This item will be deleted after the event is over. -->
+		<!-- Gifts prepared by Festival Fairy for the new year. When used, an item can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -270,36 +270,36 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35567" min="1" max="1" chance="5.5" /> <!-- Dark Armor Enhancement Stone -->
-			<item id="27598" min="1" max="1" chance="2.5" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
-			<item id="27597" min="1" max="1" chance="2.6" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
-			<item id="27599" min="1" max="1" chance="3.4" /> <!-- Scroll of Blessing: Armor (R-grade) -->
-			<item id="27601" min="1" max="1" chance="2.5" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
-			<item id="27600" min="1" max="1" chance="2.6" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
-			<item id="27599" min="1" max="1" chance="3.4" /> <!-- Scroll of Blessing: Armor (R-grade) -->
-			<item id="39720" min="1" max="1" chance="6" /> <!-- Maphr's Luck Potion -->
+			<item id="27598" min="1" max="1" chance="2.5" /> <!-- Scroll of Blessing: R99-grade Weapon -->
+			<item id="27597" min="1" max="1" chance="2.6" /> <!-- Scroll of Blessing: R95-grade Weapon -->
+			<item id="27599" min="1" max="1" chance="3.4" /> <!-- Scroll of Blessing: R-grade Armor -->
+			<item id="27601" min="1" max="1" chance="2.5" /> <!-- Scroll of Blessing: R99-grade Armor -->
+			<item id="27600" min="1" max="1" chance="2.6" /> <!-- Scroll of Blessing: R95-grade Armor -->
+			<item id="27599" min="1" max="1" chance="3.4" /> <!-- Scroll of Blessing: R-grade Armor -->
+			<item id="39720" min="1" max="1" chance="6" /> <!-- Freya's Luck Potion -->
 			<item id="34954" min="1" max="1" chance="2.5" /> <!-- Lv. 5 Legendary Dye Pack - Event -->
 			<item id="34955" min="1" max="1" chance="2.5" /> <!-- Lv. 5 Ancient Dye Pack - Event -->
-			<item id="34953" min="1" max="1" chance="2.5" /> <!-- Lv. 5 Giant Dye Pack - Event -->
+			<item id="34953" min="1" max="1" chance="2.5" /> <!-- Lv. 5 Giant's Dye Pack - Event -->
 			<item id="34951" min="1" max="1" chance="2.6" /> <!-- Lv. 4 Legendary Dye Pack - Event -->
 			<item id="34952" min="1" max="1" chance="2.6" /> <!-- Lv. 4 Ancient Dye Pack - Event -->
-			<item id="34950" min="1" max="1" chance="2.6" /> <!-- Lv. 4 Giant Dye Pack - Event -->
+			<item id="34950" min="1" max="1" chance="2.6" /> <!-- Lv. 4 Giant's Dye Pack - Event -->
 			<item id="34946" min="1" max="1" chance="3.4" /> <!-- Lv. 3 Legendary Dye Pack - Event -->
 			<item id="34947" min="1" max="1" chance="3.4" /> <!-- Lv. 3 Ancient Dye Pack - Event -->
-			<item id="34945" min="1" max="1" chance="3.4" /> <!-- Lv. 3 Giant Dye Pack - Event -->
+			<item id="34945" min="1" max="1" chance="3.4" /> <!-- Lv. 3 Giant's Dye Pack - Event -->
 			<item id="27594" min="1" max="1" chance="5" /> <!-- Maphr's Wind Scroll -->
 			<item id="40227" min="1" max="1" chance="5" /> <!-- Freya's Frozen Scroll -->
 			<item id="27673" min="1" max="1" chance="3.5" /> <!-- Freya's Scroll of Storm -->
-			<item id="40056" min="1" max="1" chance="6" /> <!-- Mysterious Wind Scroll -->
-			<item id="39634" min="1" max="1" chance="3.5" /> <!-- Venir's Talisman - Stage 1 -->
-			<item id="39635" min="1" max="1" chance="4.5" /> <!-- Venir's Talisman - Stage 2 -->
+			<item id="40056" min="1" max="1" chance="6" /> <!-- Wondrous Wind Scroll -->
+			<item id="39634" min="1" max="1" chance="3.5" /> <!-- Venir's Talisman Lv. 1 -->
+			<item id="39635" min="1" max="1" chance="4.5" /> <!-- Venir's Talisman Lv. 2 -->
 			<item id="36152" min="1" max="1" chance="4.5" /> <!-- Kaliel's Energy Box -->
-			<item id="47385" min="1" max="1" chance="5" /> <!-- Sibi's Disguised Clothing -->
-			<item id="19440" min="1" max="1" chance="5" /> <!-- Gemstone (R-grade) -->
+			<item id="47385" min="1" max="1" chance="5" /> <!-- Lucky Gift Coupon - 2-hour -->
+			<item id="19440" min="1" max="1" chance="5" /> <!-- R-grade Gemstone -->
 			<item id="23762" min="1" max="1" chance="4" /> <!-- High-grade Elixir Pack - Event -->
 	</capsuled_items>
 	</item>
 	<item id="47417" name="Dandy's Elemental Shirt" additionalName="2-hour" type="Armor">
-		<!-- A shiny magic shirt laden with Einhasad's Energy. <Item Skill>. M. Def. +17. Movement Speed +7. Max HP +547. Max MP +547. Skill MP Consumption -3%. Damage Reflection Resistance +5. Vampiric Rage +5%. Skill Cooldown -3%. Damage Received -3%. Water/ Fire/ Wind/ Earth/ Divine/ Dark Attribute Resistance +36. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4.. <Active Skill>. Einhasad's Wrath/ Einhasad's Protection/ Einhasad's Silence/ Einhasad's Salvation.. Enchantment not possible. -->
+		<!-- A shiny magic shirt laden with Einhasad's Energy. <Item Skill>. M. Def. +17. Speed +7. Max HP/ MP +547. Skill MP Consumption -3%. Damage Reflection Resistance +5. Vampiric Rage +5%. Skill Cooldown -3%. Received Damage -3%. Water/ Fire/ Wind/ Earth/ Divine/ Dark Resistance +36. STR/ DEX/ CON/ INT/ WIT/ MEN +4. <Active Skill>. Einhasad's Wrath/ Einhasad's Resistance/ Einhasad's Silence/ Einhasad's Salvation. Cannot be enchanted. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -325,7 +325,7 @@
 		</stats>
 	</item>
 	<item id="47418" name="Dandy's Shiny Elemental Shirt" additionalName="2-hour" type="Armor">
-		<!-- A shining magic T-shirt imbued with Einhasad's Energy. <Item Skill>. Increases M. Def. by 18. Increases Speed by 7. Increases Max HP by 552, Max MP by 552. Decreases Skill MP Consumption by 3%. Increases Damage Reflection Resistance by 5, Vampiric Rage by 5%. Decreases Skill Cooldown by 3% -->
+		<!-- A shiny magic shirt laden with Einhasad's Energy. <Item Skill>. M. Def. +18. Speed +7. Max HP/ MP +552. Skill MP Consumption -3%. Damage Reflection Resistance +5. Vampiric Rage +5%. Skill Cooldown -3%. Received Damage -3%. Water/ Fire/ Wind/ Earth/ Divine/ Dark Resistance +36. STR/ DEX/ CON/ INT/ WIT/ MEN +4. <Active Skill>. Einhasad's Wrath/ Einhasad's Resistance/ Einhasad's Silence/ Einhasad's Salvation/ Einhasad's Silence. Cannot be enchanted. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -351,7 +351,7 @@
 		</stats>
 	</item>
 	<item id="47419" name="Dandy's Uniform" type="Armor">
-		<!-- Armor that takes on the appearance of the NC Dinos Uniform. Enables the skills Perfect Pitch and Perfect Swing. When equipped, armor is disabled and cannot be used. However, hair accessories, weapons, and magic armor is not disabled. -->
+		<!-- Allows using Excellent Hit and Excellent Serve. Totally changes the appearance of the equipped armor. Hair accessory and robes do not change. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -366,13 +366,13 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47420" name="Energy of Longing" type="EtcItem">
-		<!-- Compounding the Energy of Longing with Talisman - Longing gives a certain probability of the production of a Talisman - Insanity. If production fails, the Talisman - Longing is not destroyed, and only the Energy of Longing is lost. -->
+		<!-- Compound it with Talisman of Longing to obtain Talisman of Insanity with a certain chance. In case of failure, Talisman of Longing is not destroyed, only Energy of Longing is lost. -->
 		<set name="icon" val="icon.longing_talisman_energy" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47421" name="Freya's Ice Crystal" type="EtcItem">
-		<!-- Take to the Freya NPC at Town of Schuttgart to exchange for special items. Will be deleted when the event ends. -->
+		<!-- Take to the Freya at Town of Schuttgart to exchange for special items. -->
 		<set name="icon" val="icon.bm_freya_crystal" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -392,7 +392,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47424" name="Sirra's Gift Box" type="EtcItem">
-		<!-- Double-click the chest to receive 1 random item relating to enchantment of items. -->
+		<!-- Double-click to obtain an item for enchanting equipment. -->
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -420,7 +420,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47428" name="Freya's Scroll of Storm" type="EtcItem">
-		<!-- For 10 min., Vitality consumption +150% and A?quired XP/ SP +150% while hunting. Remains after death. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. Cannot be stacked with "Freya's Frozen Scroll" and "Maphr's Wind Scroll". -->
+		<!-- For 10 min., Vitality Consumption +150%, acquired XP/ SP +150%. The effect remains after death. Cooldown: 9 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. The effect does not stack with those of Freya's Frozen Scroll, Maphr's Wind Scroll, Dandy's Scroll: Challenge, Emperor's Growth Scroll, Scroll: Midsummer Passion, Vital Wind, Wind of Bard. -->
 		<set name="icon" val="icon.bm_freya_storm_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -428,7 +428,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="18126" level="2" /> <!-- Freya's Scroll of Storm -->
+			<skill id="18646" level="2" /> <!-- Freya's Scroll of Storm -->
 		</skills>
 	</item>
 	<item id="47429" name="Freya's Bloody Rune (2-hour) Box" type="EtcItem">
@@ -442,11 +442,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="47430" min="1" max="1" chance="100" /> <!-- Freya's Bloody Rune 2-hour -->
+			<item id="47430" min="1" max="1" chance="100" /> <!-- Freya's Bloody Rune - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="47430" name="Freya's Bloody Rune" additionalName="2-hour" type="EtcItem">
-		<!-- When stored in the inventory, PvE Damage +15%. The remaining time decreases even when not playing. -->
+		<!-- When in inventory, PvE damage +15%. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -475,11 +475,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="47432" min="1" max="1" chance="100" /> <!-- Freya's Rune 30-day -->
+			<item id="47432" min="1" max="1" chance="100" /> <!-- Freya's Rune - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="47432" name="Freya's Rune" additionalName="30-day" type="EtcItem">
-		<!-- Boosts STR/ DEX/ CON/ INT/ WIT/ MEN by 1 and increases Paralysis/ Mental Resistance by 10% when having it in your inventory. -->
+		<!-- When stored in the inventory, STR/ DEX/ CON/ INT/ WIT/ MEN +1 and Confusion Resistance +10%. -->
 		<set name="icon" val="icon.bm_freya_rune" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -508,11 +508,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="47434" min="1" max="1" chance="100" /> <!-- Freya's Dark Rune 30-min -->
+			<item id="47434" min="1" max="1" chance="100" /> <!-- Freya's Vital Rune - 30-min -->
 		</capsuled_items>
 	</item>
 	<item id="47434" name="Freya's Vital Rune" additionalName="30-min" type="EtcItem">
-		<!-- Vitality Bonus +50% when having it in your inventory (Does not apply to Boss Monsters) -->
+		<!-- If stored in the inventory, increases Bonus XP gain in Vitality state by 50% (excludes boss monsters) and decreases Vitality Consumption Spd. by 15%. -->
 		<set name="icon" val="icon.bm_freya_vital_rune" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -529,7 +529,7 @@
 		</skills>
 	</item>
 	<item id="47435" name="Mysterious Talisman - STR" additionalName="2-hour" type="Armor">
-		<!-- STR +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, STR +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -544,7 +544,7 @@
 		<set name="time" val="120" />
 	</item>
 	<item id="47436" name="Mysterious Talisman - INT" additionalName="2-hour" type="Armor">
-		<!-- INT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, INT +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -559,7 +559,7 @@
 		<set name="time" val="120" />
 	</item>
 	<item id="47437" name="Mysterious Talisman - DEX" additionalName="2-hour" type="Armor">
-		<!-- DEX +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, DEX +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -574,7 +574,7 @@
 		<set name="time" val="120" />
 	</item>
 	<item id="47438" name="Mysterious Talisman - WIT" additionalName="2-hour" type="Armor">
-		<!-- WIT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, WIT +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -589,7 +589,7 @@
 		<set name="time" val="120" />
 	</item>
 	<item id="47439" name="Mysterious Talisman - CON" additionalName="2-hour" type="Armor">
-		<!-- CON +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, CON +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -604,7 +604,7 @@
 		<set name="time" val="120" />
 	</item>
 	<item id="47440" name="Mysterious Talisman - MEN" additionalName="2-hour" type="Armor">
-		<!-- MEN +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, MEN +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -619,7 +619,7 @@
 		<set name="time" val="120" />
 	</item>
 	<item id="47441" name="Mysterious Talisman - Attack Attribute" additionalName="2-hour" type="Armor">
-		<!-- Attack Attribute Bonus +50 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, Attribute Attack +50. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -634,7 +634,7 @@
 		<set name="time" val="120" />
 	</item>
 	<item id="47442" name="Mysterious Talisman - Attribute Resistance" additionalName="2-hour" type="Armor">
-		<!-- Attribute Resistance +50 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, Attribute Resistance +50. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -649,7 +649,7 @@
 		<set name="time" val="120" />
 	</item>
 	<item id="47443" name="Mysterious Talisman - STR 2 Hour Box" type="EtcItem">
-		<!-- Gift Box containing one Mysterious Talisman - STR (2-hour). -->
+		<!-- Double-click to obtain Mysterious Talisman - STR (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -657,7 +657,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47444" name="Mysterious Talisman - INT 2 Hour Box" type="EtcItem">
-		<!-- Gift Box containing one Mysterious Talisman - INT (2-hour). -->
+		<!-- Double-click to obtain Mysterious Talisman - INT (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -665,7 +665,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47445" name="Mysterious Talisman - DEX 2 Hour Box" type="EtcItem">
-		<!-- Gift Box containing one Mysterious Talisman - DEX (2-hour). -->
+		<!-- Double-click to obtain Mysterious Talisman - DEX (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -673,7 +673,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47446" name="Mysterious Talisman - WIT 2 Hour Box" type="EtcItem">
-		<!-- Gift Box containing one Mysterious Talisman - WIT (2-hour). -->
+		<!-- Double-click to obtain Mysterious Talisman - WIT (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -681,7 +681,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47447" name="Mysterious Talisman - CON 2 Hour Box" type="EtcItem">
-		<!-- Gift Box containing one Mysterious Talisman - CON (2-hour). -->
+		<!-- Double-click to obtain Mysterious Talisman - CON (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -689,7 +689,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47448" name="Mysterious Talisman - MEN 2 Hour Box" type="EtcItem">
-		<!-- Gift Box containing one Mysterious Talisman - MEN (2-hour). -->
+		<!-- Double-click to obtain Mysterious Talisman - MEN (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -697,7 +697,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47449" name="Mysterious Talisman - Attack Attribute 2 Hour Box" type="EtcItem">
-		<!-- Gift Box containing one Mysterious Talisman - Attack Attribute (2-hour). -->
+		<!-- Double-click to obtain Mysterious Talisman - Attribute Attack (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -705,7 +705,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47450" name="Mysterious Talisman - Attribute Resistance Attribute 2 Hour Box" type="EtcItem">
-		<!-- Gift Box containing one Mysterious Talisman - Attribute Resistance (2-hour). -->
+		<!-- Double-click to obtain Mysterious Talisman - Attribute Resistance (2-hour). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -713,49 +713,49 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47451" name="+8 T-shirt Box (Shiny/ Attack/ Magic)" type="EtcItem">
-		<!-- Double-click to obtain one of the following +8 enchanted items: Shiny Elemental/ Melee Reflect/ Magical Reflect T-Shirt. -->
+		<!-- Double-click to obtain one of the following +8 shirts: Shiny Elemental/ Physical Reflect/ Magical Reflect. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47452" name="+9 T-shirt Box (Shiny/ Attack/ Magic)" type="EtcItem">
-		<!-- Double-click to obtain one of the following +9 enchanted items: Shiny Elemental/ Melee Reflect/ Magical Reflect T-Shirt. -->
+		<!-- Double-click to obtain one of the following +9 shirts: Shiny Elemental/ Physical Reflect/ Magical Reflect. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47453" name="Seven Signs Soul Crystal Box (Stage 4-8)" type="EtcItem">
-		<!-- Double-click to obtain a Stage 4-8 Seven Signs Soul Crystal. -->
+		<!-- Double-click to obtain Seven Signs' Soul Crystal Lv. 4-8. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47454" name="Lilith Soul Crystal Box (Stage 5-8)" type="EtcItem">
-		<!-- Double-click to obtain a Stage 5-8 Lilith Soul Crystal. -->
+		<!-- Double-click to obtain Lilith' Soul Crystal Lv. 5-8. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47455" name="Anakim Soul Crystal Box (Stage 5-8)" type="EtcItem">
-		<!-- Double-click to obtain a Stage 5-8 Anakim Soul Crystal. -->
+		<!-- Double-click to obtain Anakim's Soul Crystal Lv. 5-8. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47456" name="Level 4 Box of Gems" type="EtcItem">
-		<!-- Double-click to obtain 1 Level 4 La Vie En Rose Gem. -->
+		<!-- Double-click to obtain a La Vie En Rose's Jewelry of Lv. 4. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47457" name="Level 5 Box of Gems" type="EtcItem">
-		<!-- Double-click to obtain 1 Level 5 La Vie En Rose Gem. -->
+		<!-- Double-click to obtain a La Vie En Rose's Jewelry of Lv. 5. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
@@ -818,7 +818,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47461" name="Red Pirate Garment Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-body armor into a Red Pirate Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Pirate Outfit. -->
+		<!-- Changes the appearance of the entire armor to that of Red Pirate Garment. Used with upper or full-body armor. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -828,7 +828,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47462" name="Pirate Shipmate Garment Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-body armor into a Pirate Shipmate Garment. The stone modifies the appearance of all armor, and all armor appears as a Pirate Shipmate Outfit. -->
+		<!-- Changes the appearance of the entire armor to that of Pirate Shipmate Garment. Used with upper or full-body armor. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -838,7 +838,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47463" name="Cowboy-Purple Garment Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-body armor into a Cowboy-Purple Garment. The stone modifies the appearance of all armor, and all armor appears as a Cowboy-Purple Outfit. -->
+		<!-- Changes the appearance of the entire armor to that of Cowboy-Purple Garment. Used with upper or full-body armor. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -848,7 +848,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47464" name="Appearance Stone: White Assassin Suit" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-body armor into a White Assassin Suit. The stone modifies the appearance of all armor, and all armor appears as a White Assassin Outfit. -->
+		<!-- Changes the appearance of the entire armor to that of White Assassin Suit. Used with upper or full-body armor. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -884,7 +884,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47466" name="Baium's Soul Ring" additionalName="STR" type="Armor">
-		<!-- MP +31, P./ M. Accuracy +4, P./ M. Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Stun/ Hold/ Mental Atk./ Def. Success Rate +25%. Effect does not stack with identical ones. <Craft Effect>. STR +2 -->
+		<!-- MP +31, P./ M. Accuracy +4, P. Critical Damage/ M. Skill Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Confusion Resistance/ Atk. Rate +25%, Obstruction Resistance/ Atk. Rate +25%. Effects of two identical rings do not stack. <Special effect>. STR +2 -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -896,6 +896,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13539" level="1" /> <!-- Baium's Soul Ring -->
+			<skill id="18660" level="1" /> <!-- Craft Effect - STR -->
 		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
@@ -903,7 +904,7 @@
 		</stats>
 	</item>
 	<item id="47467" name="Baium's Soul Ring" additionalName="INT" type="Armor">
-		<!-- MP +31, P./ M. Accuracy +4, P./ M. Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Stun/ Hold/ Mental Atk./ Def. Success Rate +25%. Effect does not stack with identical ones. <Craft Effect>. INT +2 -->
+		<!-- MP +31, P./ M. Accuracy +4, P. Critical Damage/ M. Skill Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Confusion Resistance/ Atk. Rate +25%, Obstruction Resistance/ Atk. Rate +25%. Effects of two identical rings do not stack. <Special effect>. INT +2 -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -915,6 +916,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13539" level="1" /> <!-- Baium's Soul Ring -->
+			<skill id="18661" level="1" /> <!-- Craft Effect - INT -->
 		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
@@ -922,7 +924,7 @@
 		</stats>
 	</item>
 	<item id="47468" name="Baium's Soul Ring" additionalName="CON" type="Armor">
-		<!-- MP +31, P./ M. Accuracy +4, P./ M. Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Stun/ Hold/ Mental Atk./ Def. Success Rate +25%. Effect does not stack with identical ones. <Craft Effect>. CON +2 -->
+		<!-- MP +31, P./ M. Accuracy +4, P. Critical Damage/ M. Skill Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Confusion Resistance/ Atk. Rate +25%, Obstruction Resistance/ Atk. Rate +25%. Effects of two identical rings do not stack. <Special effect>. CON +2 -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -934,6 +936,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13539" level="1" /> <!-- Baium's Soul Ring -->
+			<skill id="18662" level="1" /> <!-- Craft Effect - CON -->
 		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
@@ -941,7 +944,7 @@
 		</stats>
 	</item>
 	<item id="47469" name="Frintezza's Soul Necklace" additionalName="Body" type="Armor">
-		<!-- MP +62, Movement Speed +5, Poison/ Bleed/ Stun/ Hold/ Paralysis Atk./ Def. Success Rate +20%, Skill Cooldown -10%, Damage Reflection +5%. <Craft Effect>. Max HP +5% -->
+		<!-- MP +62, Speed +5, Infection Resistance/ Atk. Rate +20%, Confusion Resistance/ Atk. Rate +20%, Obstruction Resistance/ Atk. Rate +20%. Skill Cooldown -10%, Damage Reflection +5%. <Special effect>. Max HP +5% -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -953,6 +956,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13540" level="1" /> <!-- Frintezza's Soul Necklace -->
+			<skill id="18654" level="1" /> <!-- Craft Effect - Body -->
 		</skills>
 		<stats>
 			<stat type="mDef">158</stat>
@@ -960,7 +964,7 @@
 		</stats>
 	</item>
 	<item id="47470" name="Frintezza's Soul Necklace" additionalName="Mind" type="Armor">
-		<!-- MP +62, Movement Speed +5, Poison/ Bleed/ Stun/ Hold/ Paralysis Atk./ Def. Success Rate +20%, Skill Cooldown -10%, Damage Reflection +5%. <Craft Effect>. Skill Cooldown -3% -->
+		<!-- MP +62, Speed +5, Infection Resistance/ Atk. Rate +20%, Confusion Resistance/ Atk. Rate +20%, Obstruction Resistance/ Atk. Rate +20%. Skill Cooldown -10%, Damage Reflection +5%. <Special effect>. Skill Cooldown -3% -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -972,6 +976,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13540" level="1" /> <!-- Frintezza's Soul Necklace -->
+			<skill id="18655" level="1" /> <!-- Craft Effect - Mind -->
 		</skills>
 		<stats>
 			<stat type="mDef">158</stat>
@@ -979,7 +984,7 @@
 		</stats>
 	</item>
 	<item id="47471" name="Frintezza's Soul Necklace" additionalName="Barrier" type="Armor">
-		<!-- MP +62, Movement Speed +5, Poison/ Bleed/ Stun/ Hold/ Paralysis Atk./ Def. Success Rate +20%, Skill Cooldown -10%, Damage Reflection +5%. <Craft Effect>. Fixed Damage Resistance +5% -->
+		<!-- MP +62, Speed +5, Infection Resistance/ Atk. Rate +20%, Confusion Resistance/ Atk. Rate +20%, Obstruction Resistance/ Atk. Rate +20%. Skill Cooldown -10%, Damage Reflection +5%. <Special effect>. Fixed Damage Resistance +5% -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -991,6 +996,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13540" level="1" /> <!-- Frintezza's Soul Necklace -->
+			<skill id="18656" level="1" /> <!-- Craft Effect - Barrier -->
 		</skills>
 		<stats>
 			<stat type="mDef">158</stat>
@@ -998,7 +1004,7 @@
 		</stats>
 	</item>
 	<item id="47472" name="Queen Ant's Soul Ring" additionalName="STR" type="Armor">
-		<!-- MP +31, P./ M. Accuracy +4, P./ M. Critical Rate +20, P./ M. Critical Damage +15%, Stun/ Poison/ Bleed Atk./ Def. Success Rate +25%. Effect does not stack with identical ones. <Craft Effect>. STR +2 -->
+		<!-- MP +31, P./ M. Accuracy +4, P. Critical Rate/ M. Skill Critical Rate +20, P./ M. Critical Damage +15%, Confusion Resistance/ Atk. Rate +25%, Infection Resistance/ Atk. Rate +25%. Effects of two identical rings do not stack. <Special effect>. STR +2 -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1010,6 +1016,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13441" level="1" /> <!-- Queen Ant's Soul Ring -->
+			<skill id="18660" level="1" /> <!-- Craft Effect - STR -->
 		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
@@ -1017,7 +1024,7 @@
 		</stats>
 	</item>
 	<item id="47473" name="Queen Ant's Soul Ring" additionalName="INT" type="Armor">
-		<!-- MP +31, P./ M. Accuracy +4, P./ M. Critical Rate +20, P./ M. Critical Damage +15%, Stun/ Poison/ Bleed Atk./ Def. Success Rate +25%. Effect does not stack with identical ones. <Craft Effect>. INT +2 -->
+		<!-- MP +31, P./ M. Accuracy +4, P. Critical Rate/ M. Skill Critical Rate +20, P./ M. Critical Damage +15%, Confusion Resistance/ Atk. Rate +25%, Infection Resistance/ Atk. Rate +25%. Effects of two identical rings do not stack. <Special effect>. INT +2 -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1029,6 +1036,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13441" level="1" /> <!-- Queen Ant's Soul Ring -->
+			<skill id="18661" level="1" /> <!-- Craft Effect - INT -->
 		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
@@ -1036,7 +1044,7 @@
 		</stats>
 	</item>
 	<item id="47474" name="Queen Ant's Soul Ring" additionalName="CON" type="Armor">
-		<!-- MP +31, P./ M. Accuracy +4, P./ M. Critical Rate +20, P./ M. Critical Damage +15%, Stun/ Poison/ Bleed Atk./ Def. Success Rate +25%. Effect does not stack with identical ones. <Craft Effect>. CON +2 -->
+		<!-- MP +31, P./ M. Accuracy +4, P. Critical Rate/ M. Skill Critical Rate +20, P./ M. Critical Damage +15%, Confusion Resistance/ Atk. Rate +25%, Infection Resistance/ Atk. Rate +25%. Effects of two identical rings do not stack. <Special effect>. CON +2 -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1048,6 +1056,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13441" level="1" /> <!-- Queen Ant's Soul Ring -->
+			<skill id="18662" level="1" /> <!-- Craft Effect - CON -->
 		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
@@ -1055,7 +1064,7 @@
 		</stats>
 	</item>
 	<item id="47475" name="Orfen's Soul Earring" additionalName="Shield" type="Armor">
-		<!-- MP +46, Sleep/ Paralysis/ Mental Atk./ Def. Success Rate +25%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Effect does not stack with identical ones. <Craft Effect>. P. Def. +4% -->
+		<!-- MP +46, Stupor Resistance/ Atk. Rate +25%, Confusion Resistance/ Atk. Rate +25%, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Effects of two identical earrings do not stack. <Special effect>. P. Def. +4% -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1067,6 +1076,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13442" level="1" /> <!-- Orfen's Soul Earring -->
+			<skill id="18657" level="1" /> <!-- Craft Effect - Shield -->
 		</skills>
 		<stats>
 			<stat type="mDef">118</stat>
@@ -1074,7 +1084,7 @@
 		</stats>
 	</item>
 	<item id="47476" name="Orfen's Soul Earring" additionalName="Earth" type="Armor">
-		<!-- MP +46, Sleep/ Paralysis/ Mental Atk./ Def. Success Rate +25%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Effect does not stack with identical ones. <Craft Effect>. M. Def. +4% -->
+		<!-- MP +46, Stupor Resistance/ Atk. Rate +25%, Confusion Resistance/ Atk. Rate +25%, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Effects of two identical earrings do not stack. <Special effect>. M. Def. +4% -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1086,6 +1096,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13442" level="1" /> <!-- Orfen's Soul Earring -->
+			<skill id="18658" level="1" /> <!-- Craft Effect - Earth -->
 		</skills>
 		<stats>
 			<stat type="mDef">118</stat>
@@ -1093,7 +1104,7 @@
 		</stats>
 	</item>
 	<item id="47477" name="Orfen's Soul Earring" additionalName="Pure" type="Armor">
-		<!-- MP +46, Sleep/ Paralysis/ Mental Atk./ Def. Success Rate +25%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Effect does not stack with identical ones. <Craft Effect>. 6 Major Attributes Def. +25 -->
+		<!-- MP +46, Stupor Resistance/ Atk. Rate +25%, Confusion Resistance/ Atk. Rate +25%, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Effects of two identical earrings do not stack. <Special effect>. 6 Attribute Resistance +25 -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1105,6 +1116,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13442" level="1" /> <!-- Orfen's Soul Earring -->
+			<skill id="18659" level="1" /> <!-- Craft Effect - Pure -->
 		</skills>
 		<stats>
 			<stat type="mDef">118</stat>
@@ -1112,7 +1124,7 @@
 		</stats>
 	</item>
 	<item id="47478" name="Ruler's Ring of Authority" additionalName="STR" type="Armor">
-		<!-- MP +46, P. Atk. +5%, P. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-sec. Paralysis when single P. Atk. skill is used. Effect does not stack with identical ones. <Craft Effect>. STR +2 -->
+		<!-- MP +46, P. Atk. +5%, Critical Damage for standard attacks +20%, LUC/ CHA +2, Confusion Resistance/ Atk. Rate +30%, damage to Giants +5%. Applies Confusion for 3 sec. when using attacking skills. Effects of two identical rings do not stack. <Special effect>. STR +2. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1124,6 +1136,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="16748" level="2" /> <!-- Ruler's Ring of Authority -->
+			<skill id="18660" level="1" /> <!-- Craft Effect - STR -->
 		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
@@ -1131,7 +1144,7 @@
 		</stats>
 	</item>
 	<item id="47479" name="Ruler's Ring of Authority" additionalName="INT" type="Armor">
-		<!-- MP +46, P. Atk. +5%, P. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-sec. Paralysis when single P. Atk. skill is used. Effect does not stack with identical ones. <Craft Effect>. INT +2 -->
+		<!-- MP +46, P. Atk. +5%, Critical Damage for standard attacks +20%, LUC/ CHA +2, Confusion Resistance/ Atk. Rate +30%, damage to Giants +5%. Applies Confusion for 3 sec. when using attacking skills. Effects of two identical rings do not stack. <Special effect>. INT +2. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1143,6 +1156,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="16748" level="2" /> <!-- Ruler's Ring of Authority -->
+			<skill id="18661" level="1" /> <!-- Craft Effect - INT -->
 		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
@@ -1150,7 +1164,7 @@
 		</stats>
 	</item>
 	<item id="47480" name="Ruler's Ring of Authority" additionalName="CON" type="Armor">
-		<!-- MP +46, P. Atk. +5%, P. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-sec. Paralysis when single P. Atk. skill is used. Effect does not stack with identical ones. <Craft Effect>. CON +2 -->
+		<!-- MP +46, P. Atk. +5%, Critical Damage for standard attacks +20%, LUC/ CHA +2, Confusion Resistance/ Atk. Rate +30%, damage to Giants +5%. Applies Confusion for 3 sec. when using attacking skills. Effects of two identical rings do not stack. <Special effect>. CON +2. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1162,6 +1176,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="16748" level="2" /> <!-- Ruler's Ring of Authority -->
+			<skill id="18662" level="1" /> <!-- Craft Effect - CON -->
 		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
@@ -1169,7 +1184,7 @@
 		</stats>
 	</item>
 	<item id="47481" name="Ring of the Truth-Seeker" additionalName="STR" type="Armor">
-		<!-- MP +46, M. Atk. +5%, M. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-sec. Paralysis when single P. Atk. skill is used. Effect does not stack with identical ones. <Craft Effect>. STR +2 -->
+		<!-- MP +46, M. Atk. +5%, M. Skill Critical Damage +20%, LUC/ CHA +2, Confusion Resistance/ Atk. Rate +30%, damage to Giants +5%. Applies Confusion for 3 sec. when using M. skills. Effects of two identical rings do not stack. <Special effect>. STR +2. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1181,6 +1196,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="16749" level="2" /> <!-- Ruler's Ring of the Truth-Seeker -->
+			<skill id="18660" level="1" /> <!-- Craft Effect - STR -->
 		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
@@ -1188,7 +1204,7 @@
 		</stats>
 	</item>
 	<item id="47482" name="Ring of the Truth-Seeker" additionalName="INT" type="Armor">
-		<!-- MP +46, M. Atk. +5%, M. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-sec. Paralysis when single P. Atk. skill is used. Effect does not stack with identical ones. <Craft Effect>. INT +2 -->
+		<!-- MP +46, M. Atk. +5%, M. Skill Critical Damage +20%, LUC/ CHA +2, Confusion Resistance/ Atk. Rate +30%, damage to Giants +5%. Applies Confusion for 3 sec. when using M. skills. Effects of two identical rings do not stack. <Special effect>. INT +2. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1200,6 +1216,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="16749" level="2" /> <!-- Ruler's Ring of the Truth-Seeker -->
+			<skill id="18661" level="1" /> <!-- Craft Effect - INT -->
 		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
@@ -1207,7 +1224,7 @@
 		</stats>
 	</item>
 	<item id="47483" name="Ring of the Truth-Seeker" additionalName="CON" type="Armor">
-		<!-- MP +46, M. Atk. +5%, M. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-sec. Paralysis when single P. Atk. skill is used. Effect does not stack with identical ones. <Craft Effect>. CON +2 -->
+		<!-- MP +46, M. Atk. +5%, M. Skill Critical Damage +20%, LUC/ CHA +2, Confusion Resistance/ Atk. Rate +30%, damage to Giants +5%. Applies Confusion for 3 sec. when using M. skills. Effects of two identical rings do not stack. <Special effect>. CON +2. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1219,6 +1236,7 @@
 		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="16749" level="2" /> <!-- Ruler's Ring of the Truth-Seeker -->
+			<skill id="18662" level="1" /> <!-- Craft Effect - CON -->
 		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
@@ -1226,7 +1244,7 @@
 		</stats>
 	</item>
 	<item id="47484" name="Blessed Antharas' Earring" additionalName="Shield" type="Armor">
-		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Skills Used: Immediately neutralizes Stun effect when used, and gives Stun Resistance for 5 sec. Effect does not stack with identical ones. <Craft Effect>. P. Def. +4% -->
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Stun debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. P. Def. +4%. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1239,6 +1257,7 @@
 		<skills>
 			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
 			<skill id="13314" level="1" /> <!-- Blessed Antharas' Earring -->
+			<skill id="18657" level="1" /> <!-- Craft Effect - Shield -->
 		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
@@ -1246,7 +1265,7 @@
 		</stats>
 	</item>
 	<item id="47485" name="Blessed Antharas' Earring" additionalName="Earth" type="Armor">
-		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Skills Used: Immediately neutralizes Stun effect when used, and gives Stun Resistance for 5 sec. Effect does not stack with identical ones. <Craft Effect>. M. Def. +4% -->
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Stun debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. M. Def. +4%. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1259,6 +1278,7 @@
 			<skills>
 			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
 			<skill id="13314" level="1" /> <!-- Blessed Antharas' Earring -->
+			<skill id="18658" level="1" /> <!-- Craft Effect - Earth -->
 		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
@@ -1266,7 +1286,7 @@
 		</stats>
 	</item>
 	<item id="47486" name="Blessed Antharas' Earring" additionalName="Pure" type="Armor">
-		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Skills Used: Immediately neutralizes Stun effect when used, and gives Stun Resistance for 5 sec. Effect does not stack with identical ones. <Craft Effect>. 6 Major Attributes Def. +25 -->
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Stun debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. 6 Attribute Resistance +25. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1279,6 +1299,7 @@
 		<skills>
 			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
 			<skill id="13314" level="1" /> <!-- Blessed Antharas' Earring -->
+			<skill id="18659" level="1" /> <!-- Craft Effect - Pure -->
 		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
@@ -1286,7 +1307,7 @@
 		</stats>
 	</item>
 	<item id="47487" name="Blessed Valakas' Necklace" additionalName="Body" type="Armor">
-		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attack Def. +30, Dark Attack Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Skills Used: Immediately disables Hold effect when used, and gives Hold Resistance for 5 sec. <Craft Effect>. Max HP +5% -->
+		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +20, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Resistance/ Atk. Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold debuffs and grants immunity to Obstruction for 5 sec. <Special effect>. Max HP +5%. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1299,6 +1320,7 @@
 		<skills>
 			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
 			<skill id="13316" level="1" /> <!-- Blessed Valakas' Necklace -->
+			<skill id="18654" level="1" /> <!-- Craft Effect - Body -->
 		</skills>
 		<stats>
 			<stat type="mDef">226</stat>
@@ -1306,7 +1328,7 @@
 		</stats>
 	</item>
 	<item id="47488" name="Blessed Valakas' Necklace" additionalName="Mind" type="Armor">
-		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attack Def. +30, Dark Attack Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Skills Used: Immediately disables Hold effect when used, and gives Hold Resistance for 5 sec. <Craft Effect>. Skill Cooldown -3% -->
+		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +20, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Resistance/ Atk. Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold debuffs and grants immunity to Obstruction for 5 sec. <Special effect>. Skill Cooldown -3%. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1319,6 +1341,7 @@
 		<skills>
 			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
 			<skill id="13316" level="1" /> <!-- Blessed Valakas' Necklace -->
+			<skill id="18655" level="1" /> <!-- Craft Effect - Mind -->
 		</skills>
 		<stats>
 			<stat type="mDef">226</stat>
@@ -1326,7 +1349,7 @@
 		</stats>
 	</item>
 	<item id="47489" name="Blessed Valakas' Necklace" additionalName="Barrier" type="Armor">
-		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attack Def. +30, Dark Attack Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Skills Used: Immediately disables Hold effect when used, and gives Hold Resistance for 5 sec. <Craft Effect>. Fixed Damage Resistance +5% -->
+		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +20, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Resistance/ Atk. Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold debuffs and grants immunity to Obstruction for 5 sec. <Special effect>. Fixed Damage Resistance +5%. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1339,6 +1362,7 @@
 		<skills>
 			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
 			<skill id="13316" level="1" /> <!-- Blessed Valakas' Necklace -->
+			<skill id="18656" level="1" /> <!-- Craft Effect - Barrier -->
 		</skills>
 		<stats>
 			<stat type="mDef">226</stat>
@@ -1346,7 +1370,7 @@
 		</stats>
 	</item>
 	<item id="47490" name="Lindvior's Earring" additionalName="Shield" type="Armor">
-		<!-- MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attack Def. +30, Petrify Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Skills Used: Immediately disables Knock Back/ Knock Down effects when used, and gives Knock Back/ Knock Down Resistance for 5 sec. Effect does not stack with identical ones. <Craft Effect>. P. Def. +4% -->
+		<!-- MP +59, P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. P. Def. +4%. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1359,6 +1383,7 @@
 		<skills>
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="18657" level="1" /> <!-- Craft Effect - Shield -->
 		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
@@ -1366,7 +1391,7 @@
 		</stats>
 	</item>
 	<item id="47491" name="Lindvior's Earring" additionalName="Earth" type="Armor">
-		<!-- MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attack Def. +30, Petrify Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Skills Used: Immediately disables Knock Back/ Knock Down effects when used, and gives Knock Back/ Knock Down Resistance for 5 sec. Effect does not stack with identical ones. <Craft Effect>. M. Def. +4% -->
+		<!-- MP +59, P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. M. Def. +4%. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1379,6 +1404,7 @@
 		<skills>
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="18658" level="1" /> <!-- Craft Effect - Earth -->
 		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
@@ -1386,7 +1412,7 @@
 		</stats>
 	</item>
 	<item id="47492" name="Lindvior's Earring" additionalName="Pure" type="Armor">
-		<!-- MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attack Def. +30, Petrify Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Skills Used: Immediately disables Knock Back/ Knock Down effects when used, and gives Knock Back/ Knock Down Resistance for 5 sec. Effect does not stack with identical ones. <Craft Effect>. 6 Major Attributes Def. +25 -->
+		<!-- MP +59, P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. 6 Attribute Resistance +25. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1399,6 +1425,7 @@
 		<skills>
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="18659" level="1" /> <!-- Craft Effect - Pure -->
 		</skills>
 		<stats>
 			<stat type="mDef">170</stat>

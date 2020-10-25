@@ -260,7 +260,7 @@ public class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 				}
 				case 3:
 				{
-					broadcastInGracia(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_ADEN_CONTINENT_IN_1_MINUTE);
+					broadcastInGracia(NpcStringId.THE_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_ADEN_CONTINENT_IN_1_MIN);
 					_ship.setInDock(GRACIA_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPool.schedule(this, 60000);
@@ -287,7 +287,7 @@ public class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 				}
 				case 7:
 				{
-					broadcastInGludio(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_GRACIA_CONTINENT_IN_1_MINUTE);
+					broadcastInGludio(NpcStringId.THE_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_GRACIA_CONTINENT_IN_1_MIN);
 					_ship.setInDock(GLUDIO_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPool.schedule(this, 60000);

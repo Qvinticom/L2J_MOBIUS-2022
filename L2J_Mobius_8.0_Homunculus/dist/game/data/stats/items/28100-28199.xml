@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="28100" name="Transcendent Eternal Leather Armor" additionalName="Assassin Type/ Light Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%, P. Atk. +1.1%, M. Atk. +2.1%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -29,7 +29,7 @@
 		</stats>
 	</item>
 	<item id="28101" name="Transcendent Eternal Leather Leggings" additionalName="Assassin Type/ Light Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -5%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -55,7 +55,7 @@
 		</stats>
 	</item>
 	<item id="28102" name="Transcendent Eternal Leather Gloves" additionalName="Assassin Type/ Light Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -2%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -79,7 +79,7 @@
 		</stats>
 	</item>
 	<item id="28103" name="Transcendent Eternal Leather Boots" additionalName="Assassin Type/ Light Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -2%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -103,7 +103,7 @@
 		</stats>
 	</item>
 	<item id="28104" name="Transcendent Eternal Circlet" additionalName="Magic Type/ Robe/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -3%, P. Atk. +1.1%, M. Atk. +2.2%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -126,7 +126,7 @@
 		</stats>
 	</item>
 	<item id="28105" name="Transcendent Eternal Tunic" additionalName="Magic Type/ Robe/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.1%, M. Atk. +2.2%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -155,7 +155,7 @@
 		</stats>
 	</item>
 	<item id="28106" name="Transcendent Eternal Stockings" additionalName="Magic Type/ Robe/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -5%, P. Atk. +1.1%, M. Atk. +2.2%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -182,7 +182,7 @@
 		</stats>
 	</item>
 	<item id="28107" name="Transcendent Eternal Gloves" additionalName="Magic Type/ Robe/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -2%, P. Atk. +1.1%, M. Atk. +2.2%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -206,7 +206,7 @@
 		</stats>
 	</item>
 	<item id="28108" name="Transcendent Eternal Shoes" additionalName="Magic Type/ Robe/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -2%, P. Atk. +1.1%, M. Atk. +2.2%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -230,7 +230,7 @@
 		</stats>
 	</item>
 	<item id="28109" name="Transcendent Eternal Helmet" additionalName="Defense Type/ Heavy Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -3%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -253,7 +253,7 @@
 		</stats>
 	</item>
 	<item id="28110" name="Transcendent Eternal Breastplate" additionalName="Defense Type/ Heavy Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received Damage -8%. P. Atk. +1.1% and M. Atk. +2.2%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -280,7 +280,7 @@
 		</stats>
 	</item>
 	<item id="28111" name="Transcendent Eternal Gaiters" additionalName="Defense Type/ Heavy Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -5%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -305,7 +305,7 @@
 		</stats>
 	</item>
 	<item id="28112" name="Transcendent Eternal Gauntlets" additionalName="Defense Type/ Heavy Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -2%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -329,7 +329,7 @@
 		</stats>
 	</item>
 	<item id="28113" name="Transcendent Eternal Boots" additionalName="Defense Type/ Heavy Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -2%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -353,7 +353,7 @@
 		</stats>
 	</item>
 	<item id="28114" name="Transcendent Eternal Leather Helmet" additionalName="Enchant Type/ Light Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -3%, P. Atk. +1.1%, M. Atk. +2.2%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -376,7 +376,7 @@
 		</stats>
 	</item>
 	<item id="28115" name="Transcendent Eternal Leather Armor" additionalName="Enchant Type/ Light Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%, P. Atk. +1.1%, M. Atk. +2.1%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -404,7 +404,7 @@
 		</stats>
 	</item>
 	<item id="28116" name="Transcendent Eternal Leather Leggings" additionalName="Enchant Type/ Light Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -5%, P. Atk. +1.1%, M. Atk. +2.2%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -430,7 +430,7 @@
 		</stats>
 	</item>
 	<item id="28117" name="Transcendent Eternal Leather Gloves" additionalName="Enchant Type/ Light Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -2%, P. Atk. +1.1%, M. Atk. +2.2%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -454,7 +454,7 @@
 		</stats>
 	</item>
 	<item id="28118" name="Transcendent Eternal Leather Boots" additionalName="Enchant Type/ Light Armor/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -2%, P. Atk. +1.1%, M. Atk. +2.2%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -478,7 +478,7 @@
 		</stats>
 	</item>
 	<item id="28119" name="Transcendent Eternal Circlet" additionalName="Recovery Type/ Robe/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -3%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -501,7 +501,7 @@
 		</stats>
 	</item>
 	<item id="28120" name="Transcendent Eternal Tunic" additionalName="Recovery Type/ Robe/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.1%, M. Atk. +2.2%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -530,7 +530,7 @@
 		</stats>
 	</item>
 	<item id="28121" name="Transcendent Eternal Stockings" additionalName="Recovery Type/ Robe/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -5%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -557,7 +557,7 @@
 		</stats>
 	</item>
 	<item id="28122" name="Transcendent Eternal Gloves" additionalName="Recovery Type/ Robe/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -2%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -581,7 +581,7 @@
 		</stats>
 	</item>
 	<item id="28123" name="Transcendent Eternal Shoes" additionalName="Recovery Type/ Robe/ Lv. 2" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. -->
+		<!-- Received damage -2%, P. Atk. +1.1%, M. Atk. +2.2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -605,7 +605,7 @@
 		</stats>
 	</item>
 	<item id="28124" name="Transcendent Eternal Helmet" additionalName="Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.2%, M. Atk. +2.4%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -628,7 +628,7 @@
 		</stats>
 	</item>
 	<item id="28125" name="Transcendent Eternal Breastplate" additionalName="Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an attack or defense type set option. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received damage -8%, P. Atk. +1.2%, M. Atk. +2.4%. Heavy Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -655,7 +655,7 @@
 		</stats>
 	</item>
 	<item id="28126" name="Transcendent Eternal Gaiters" additionalName="Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.2%, M. Atk. +2.4%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -680,7 +680,7 @@
 		</stats>
 	</item>
 	<item id="28127" name="Transcendent Eternal Gauntlets" additionalName="Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -704,7 +704,7 @@
 		</stats>
 	</item>
 	<item id="28128" name="Transcendent Eternal Boots" additionalName="Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -728,7 +728,7 @@
 		</stats>
 	</item>
 	<item id="28129" name="Transcendent Eternal Leather Helmet" additionalName="Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.2%, M. Atk. +2.4%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -751,7 +751,7 @@
 		</stats>
 	</item>
 	<item id="28130" name="Transcendent Eternal Leather Armor" additionalName="Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%. P. Atk. +1.2%, M. Atk. +2.4%. Light Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -779,7 +779,7 @@
 		</stats>
 	</item>
 	<item id="28131" name="Transcendent Eternal Leather Leggings" additionalName="Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.2%, M. Atk. +2.4%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -805,7 +805,7 @@
 		</stats>
 	</item>
 	<item id="28132" name="Transcendent Eternal Leather Gloves" additionalName="Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -829,7 +829,7 @@
 		</stats>
 	</item>
 	<item id="28133" name="Transcendent Eternal Leather Boots" additionalName="Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -853,7 +853,7 @@
 		</stats>
 	</item>
 	<item id="28134" name="Transcendent Eternal Circlet" additionalName="Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.2%, M. Atk. +2.4%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -876,7 +876,7 @@
 		</stats>
 	</item>
 	<item id="28135" name="Transcendent Eternal Tunic" additionalName="Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.2%, M. Atk. +2.4%. Robe, can be enhanced by Blacksmith in any town. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -905,7 +905,7 @@
 		</stats>
 	</item>
 	<item id="28136" name="Transcendent Eternal Stockings" additionalName="Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.2%, M. Atk. +2.4%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -932,7 +932,7 @@
 		</stats>
 	</item>
 	<item id="28137" name="Transcendent Eternal Gloves" additionalName="Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -956,7 +956,7 @@
 		</stats>
 	</item>
 	<item id="28138" name="Transcendent Eternal Shoes" additionalName="Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -980,7 +980,7 @@
 		</stats>
 	</item>
 	<item id="28139" name="Transcendent Eternal Helmet" additionalName="Attack Type/ Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -3%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1003,7 +1003,7 @@
 		</stats>
 	</item>
 	<item id="28140" name="Transcendent Eternal Breastplate" additionalName="Attack Type/ Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received Damage -8%. P. Atk. +1.2% and M. Atk. +2.4%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1030,7 +1030,7 @@
 		</stats>
 	</item>
 	<item id="28141" name="Transcendent Eternal Gaiters" additionalName="Attack Type/ Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -5%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1055,7 +1055,7 @@
 		</stats>
 	</item>
 	<item id="28142" name="Transcendent Eternal Gauntlets" additionalName="Attack Type/ Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1079,7 +1079,7 @@
 		</stats>
 	</item>
 	<item id="28143" name="Transcendent Eternal Boots" additionalName="Attack Type/ Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1103,7 +1103,7 @@
 		</stats>
 	</item>
 	<item id="28144" name="Transcendent Eternal Leather Helmet" additionalName="Assassin Type/ Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -3%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1126,7 +1126,7 @@
 		</stats>
 	</item>
 	<item id="28145" name="Transcendent Eternal Leather Armor" additionalName="Assassin Type/ Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%, P. Atk. +1.2%, M. Atk. +2.4%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1154,7 +1154,7 @@
 		</stats>
 	</item>
 	<item id="28146" name="Transcendent Eternal Leather Leggings" additionalName="Assassin Type/ Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -5%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1180,7 +1180,7 @@
 		</stats>
 	</item>
 	<item id="28147" name="Transcendent Eternal Leather Gloves" additionalName="Assassin Type/ Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1204,7 +1204,7 @@
 		</stats>
 	</item>
 	<item id="28148" name="Transcendent Eternal Leather Boots" additionalName="Assassin Type/ Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1228,7 +1228,7 @@
 		</stats>
 	</item>
 	<item id="28149" name="Transcendent Eternal Circlet" additionalName="Magic Type/ Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -3%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1251,7 +1251,7 @@
 		</stats>
 	</item>
 	<item id="28150" name="Transcendent Eternal Tunic" additionalName="Magic Type/ Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.2%, M. Atk. +2.4%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1280,7 +1280,7 @@
 		</stats>
 	</item>
 	<item id="28151" name="Transcendent Eternal Stockings" additionalName="Magic Type/ Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -5%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1307,7 +1307,7 @@
 		</stats>
 	</item>
 	<item id="28152" name="Transcendent Eternal Gloves" additionalName="Magic Type/ Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1331,7 +1331,7 @@
 		</stats>
 	</item>
 	<item id="28153" name="Transcendent Eternal Shoes" additionalName="Magic Type/ Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1355,7 +1355,7 @@
 		</stats>
 	</item>
 	<item id="28154" name="Transcendent Eternal Helmet" additionalName="Defense Type/ Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -3%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1378,7 +1378,7 @@
 		</stats>
 	</item>
 	<item id="28155" name="Transcendent Eternal Breastplate" additionalName="Defense Type/ Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received Damage -8%. P. Atk. +1.2% and M. Atk. +2.4%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1405,7 +1405,7 @@
 		</stats>
 	</item>
 	<item id="28156" name="Transcendent Eternal Gaiters" additionalName="Defense Type/ Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -5%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1430,7 +1430,7 @@
 		</stats>
 	</item>
 	<item id="28157" name="Transcendent Eternal Gauntlets" additionalName="Defense Type/ Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1454,7 +1454,7 @@
 		</stats>
 	</item>
 	<item id="28158" name="Transcendent Eternal Boots" additionalName="Defense Type/ Heavy Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1478,7 +1478,7 @@
 		</stats>
 	</item>
 	<item id="28159" name="Transcendent Eternal Leather Helmet" additionalName="Enchant Type/ Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -3%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1501,7 +1501,7 @@
 		</stats>
 	</item>
 	<item id="28160" name="Transcendent Eternal Leather Armor" additionalName="Enchant Type/ Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%, P. Atk. +1.2%, M. Atk. +2.4%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1529,7 +1529,7 @@
 		</stats>
 	</item>
 	<item id="28161" name="Transcendent Eternal Leather Leggings" additionalName="Enchant Type/ Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -5%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1555,7 +1555,7 @@
 		</stats>
 	</item>
 	<item id="28162" name="Transcendent Eternal Leather Gloves" additionalName="Enchant Type/ Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1579,7 +1579,7 @@
 		</stats>
 	</item>
 	<item id="28163" name="Transcendent Eternal Leather Boots" additionalName="Enchant Type/ Light Armor/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1603,7 +1603,7 @@
 		</stats>
 	</item>
 	<item id="28164" name="Transcendent Eternal Circlet" additionalName="Recovery Type/ Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -3%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1626,7 +1626,7 @@
 		</stats>
 	</item>
 	<item id="28165" name="Transcendent Eternal Tunic" additionalName="Recovery Type/ Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.2%, M. Atk. +2.4%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1655,7 +1655,7 @@
 		</stats>
 	</item>
 	<item id="28166" name="Transcendent Eternal Stockings" additionalName="Recovery Type/ Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -5%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1682,7 +1682,7 @@
 		</stats>
 	</item>
 	<item id="28167" name="Transcendent Eternal Gloves" additionalName="Recovery Type/ Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1706,7 +1706,7 @@
 		</stats>
 	</item>
 	<item id="28168" name="Transcendent Eternal Shoes" additionalName="Recovery Type/ Robe/ Lv. 3" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. -->
+		<!-- Received damage -2%, P. Atk. +1.2%, M. Atk. +2.4%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1730,7 +1730,7 @@
 		</stats>
 	</item>
 	<item id="28169" name="Transcendent Eternal Helmet" additionalName="Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1753,7 +1753,7 @@
 		</stats>
 	</item>
 	<item id="28170" name="Transcendent Eternal Breastplate" additionalName="Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an attack or defense type set option. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1780,7 +1780,7 @@
 		</stats>
 	</item>
 	<item id="28171" name="Transcendent Eternal Gaiters" additionalName="Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1805,7 +1805,7 @@
 		</stats>
 	</item>
 	<item id="28172" name="Transcendent Eternal Gauntlets" additionalName="Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1829,7 +1829,7 @@
 		</stats>
 	</item>
 	<item id="28173" name="Transcendent Eternal Boots" additionalName="Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an attack or defense type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Heavy Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1853,7 +1853,7 @@
 		</stats>
 	</item>
 	<item id="28174" name="Transcendent Eternal Leather Helmet" additionalName="Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1876,7 +1876,7 @@
 		</stats>
 	</item>
 	<item id="28175" name="Transcendent Eternal Leather Armor" additionalName="Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%. P. Atk. +1.3%, M. Atk. +2.6%. Light Armor that can be enhanced by Blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1904,7 +1904,7 @@
 		</stats>
 	</item>
 	<item id="28176" name="Transcendent Eternal Leather Leggings" additionalName="Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1930,7 +1930,7 @@
 		</stats>
 	</item>
 	<item id="28177" name="Transcendent Eternal Leather Gloves" additionalName="Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1954,7 +1954,7 @@
 		</stats>
 	</item>
 	<item id="28178" name="Transcendent Eternal Leather Boots" additionalName="Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an assassin or enchant type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Light Armor that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1978,7 +1978,7 @@
 		</stats>
 	</item>
 	<item id="28179" name="Transcendent Eternal Circlet" additionalName="Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2001,7 +2001,7 @@
 		</stats>
 	</item>
 	<item id="28180" name="Transcendent Eternal Tunic" additionalName="Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. Robe, can be enhanced by Blacksmith in any town. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2030,7 +2030,7 @@
 		</stats>
 	</item>
 	<item id="28181" name="Transcendent Eternal Stockings" additionalName="Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2057,7 +2057,7 @@
 		</stats>
 	</item>
 	<item id="28182" name="Transcendent Eternal Gloves" additionalName="Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2081,7 +2081,7 @@
 		</stats>
 	</item>
 	<item id="28183" name="Transcendent Eternal Shoes" additionalName="Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows a magic or recovery type set option. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Robe that can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2105,7 +2105,7 @@
 		</stats>
 	</item>
 	<item id="28184" name="Transcendent Eternal Helmet" additionalName="Attack Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2128,7 +2128,7 @@
 		</stats>
 	</item>
 	<item id="28185" name="Transcendent Eternal Breastplate" additionalName="Attack Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
+		<!-- Received Damage -8%. P. Atk. +1.3% and M. Atk. +2.6%. When enchanted to +4, decreases Received Critical Damage from standard attacks and increases P. Def. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2155,7 +2155,7 @@
 		</stats>
 	</item>
 	<item id="28186" name="Transcendent Eternal Gaiters" additionalName="Attack Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2180,7 +2180,7 @@
 		</stats>
 	</item>
 	<item id="28187" name="Transcendent Eternal Gauntlets" additionalName="Attack Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2204,7 +2204,7 @@
 		</stats>
 	</item>
 	<item id="28188" name="Transcendent Eternal Boots" additionalName="Attack Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t801_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2228,7 +2228,7 @@
 		</stats>
 	</item>
 	<item id="28189" name="Transcendent Eternal Leather Helmet" additionalName="Assassin Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2251,7 +2251,7 @@
 		</stats>
 	</item>
 	<item id="28190" name="Transcendent Eternal Leather Armor" additionalName="Assassin Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received Damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, decreases Received P. Critical Rate. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2279,7 +2279,7 @@
 		</stats>
 	</item>
 	<item id="28191" name="Transcendent Eternal Leather Leggings" additionalName="Assassin Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2305,7 +2305,7 @@
 		</stats>
 	</item>
 	<item id="28192" name="Transcendent Eternal Leather Gloves" additionalName="Assassin Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2329,7 +2329,7 @@
 		</stats>
 	</item>
 	<item id="28193" name="Transcendent Eternal Leather Boots" additionalName="Assassin Type/ Light Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t802_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2353,7 +2353,7 @@
 		</stats>
 	</item>
 	<item id="28194" name="Transcendent Eternal Circlet" additionalName="Magic Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2376,7 +2376,7 @@
 		</stats>
 	</item>
 	<item id="28195" name="Transcendent Eternal Tunic" additionalName="Magic Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received damage -8%, P. Atk. +1.3%, M. Atk. +2.6%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2405,7 +2405,7 @@
 		</stats>
 	</item>
 	<item id="28196" name="Transcendent Eternal Stockings" additionalName="Magic Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -5%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2432,7 +2432,7 @@
 		</stats>
 	</item>
 	<item id="28197" name="Transcendent Eternal Gloves" additionalName="Magic Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2456,7 +2456,7 @@
 		</stats>
 	</item>
 	<item id="28198" name="Transcendent Eternal Shoes" additionalName="Magic Type/ Robe/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -2%, P. Atk. +1.3%, M. Atk. +2.6%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2480,7 +2480,7 @@
 		</stats>
 	</item>
 	<item id="28199" name="Transcendent Eternal Helmet" additionalName="Defense Type/ Heavy Armor/ Lv. 4" type="Armor">
-		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. -->
+		<!-- Received damage -3%, P. Atk. +1.3%, M. Atk. +2.6%. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />

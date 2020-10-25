@@ -632,7 +632,7 @@
 		</stats>
 	</item>
 	<item id="3926" name="Scroll: Guidance" type="EtcItem">
-		<!-- Accuracy increases. -->
+		<!-- Increases P. Accuracy. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -651,7 +651,7 @@
 		</skills>
 	</item>
 	<item id="3927" name="Scroll: Death Whisper" type="EtcItem">
-		<!-- Increases Critical Damage. -->
+		<!-- Increases Critical Damage for standard attacks. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -670,7 +670,7 @@
 		</skills>
 	</item>
 	<item id="3928" name="Scroll: Focus" type="EtcItem">
-		<!-- P. Critical Rate increases. -->
+		<!-- Increases Critical Rate for standard attacks. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -689,7 +689,7 @@
 		</skills>
 	</item>
 	<item id="3929" name="Scroll: Greater Acumen" type="EtcItem">
-		<!-- Spell Casting Spd. Increases. -->
+		<!-- Increases Casting Spd. Effect 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -708,7 +708,7 @@
 		</skills>
 	</item>
 	<item id="3930" name="Scroll: Haste" type="EtcItem">
-		<!-- Increases Atk. Spd. -->
+		<!-- Increases Atk. Spd. Effect 2. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -727,7 +727,7 @@
 		</skills>
 	</item>
 	<item id="3931" name="Scroll: Agility" type="EtcItem">
-		<!-- Increases Evasion. -->
+		<!-- Increases P. Evasion. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -746,7 +746,7 @@
 		</skills>
 	</item>
 	<item id="3932" name="Scroll: Mystic Empower" type="EtcItem">
-		<!-- M. Atk. Increases. -->
+		<!-- Increases M. Atk. Effect 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -765,7 +765,7 @@
 		</skills>
 	</item>
 	<item id="3933" name="Scroll: Might" type="EtcItem">
-		<!-- P. Atk. Increases. -->
+		<!-- Increases P. Atk. Effect 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -784,7 +784,7 @@
 		</skills>
 	</item>
 	<item id="3934" name="Scroll: Wind Walk" type="EtcItem">
-		<!-- Speed increases. -->
+		<!-- Increases Speed. Effect 2. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -803,7 +803,7 @@
 		</skills>
 	</item>
 	<item id="3935" name="Scroll: Shield" type="EtcItem">
-		<!-- P. Def. increases. -->
+		<!-- Increases P. Def. Effect 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -831,6 +831,7 @@
 		<set name="price" val="400000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>
@@ -931,7 +932,7 @@
 		</stats>
 	</item>
 	<item id="3940" name="Blueprint: Summon Siege Golem" type="EtcItem">
-		<!-- Blueprint needed to learn the Summon Siege Golem technique. Required level: 49 -->
+		<!-- A blueprint for learning the Summon Siege Golem skill. Required level: 49. -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -941,7 +942,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3941" name="Spellbook: Mass Resurrection" type="EtcItem">
-		<!-- Spellbook needed to learn Mass Resurrection. Used by Bishops. Required level: 40 -->
+		<!-- A spellbook for learning the Mass Resurrection skill. Used by Bishops. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -951,7 +952,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3942" name="Spellbook: Party Return" type="EtcItem">
-		<!-- Spellbook needed to learn Party Return. Used by Elven Elders. Required level: 48 -->
+		<!-- A spellbook for learning the Party Return skill. Used by Elven Elders. Required level: 48. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -961,7 +962,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3943" name="Amulet: Pa'agrio's Heart" type="EtcItem">
-		<!-- Amulet required for the Pa'agrio's Heart spell. Used by Overlords. Required level: 44 -->
+		<!-- An amulet for learning the Pa'agrio's Heart skill. Used by Overlords. Required level: 44. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -971,7 +972,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3944" name="Spellbook: Decrease Weight" type="EtcItem">
-		<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles. Required level: 35 -->
+		<!-- A spellbook for learning the Decrease Weight skill. Used by Elven Oracles. Required level: 35. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -981,7 +982,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3945" name="Boat Ticket: Talking Island to Giran" type="EtcItem">
-		<!-- Ship ticket: From Talking Island - To Giran -->
+		<!-- A ticket for a ship from Talking Island to Giran. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -991,7 +992,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3946" name="Boat Ticket: Giran to Talking Island" type="EtcItem">
-		<!-- Ship ticket: From Giran - To Talking Island -->
+		<!-- A ticket for a ship from Giran to Talking Island. -->
 		<set name="icon" val="icon.etc_ticket_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1017,7 +1018,7 @@
 		</skills>
 	</item>
 	<item id="3948" name="Blessed Spiritshot (D-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with D-grade weapons. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1035,7 +1036,7 @@
 		</skills>
 	</item>
 	<item id="3949" name="Blessed Spiritshot (C-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with C-grade weapons. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1053,7 +1054,7 @@
 		</skills>
 	</item>
 	<item id="3950" name="Blessed Spiritshot (B-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with B-grade weapons. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1071,7 +1072,7 @@
 		</skills>
 	</item>
 	<item id="3951" name="Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with a-grade weapons. -->
+		<!-- Increases a weapon's magic power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1089,7 +1090,7 @@
 		</skills>
 	</item>
 	<item id="3952" name="Blessed Spiritshot (S-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with S-grade weapons. -->
+		<!-- Increases a weapon's magical power. Used with S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1107,7 +1108,7 @@
 		</skills>
 	</item>
 	<item id="3953" name="Recipe: Blessed Spiritshot (D-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Blessed D-grade Spiritshot. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1121,7 +1122,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3954" name="Recipe: Blessed Spiritshot (C-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Blessed C-grade Spiritshot. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1135,7 +1136,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3955" name="Recipe: Blessed Spiritshot (B-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Blessed B-grade Spiritshot. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1149,7 +1150,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3956" name="Recipe: Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Blessed A-grade Spiritshot. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1163,7 +1164,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3957" name="Recipe: Blessed Spiritshot (S-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Blessed S-grade Spiritshot. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1185,6 +1186,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>

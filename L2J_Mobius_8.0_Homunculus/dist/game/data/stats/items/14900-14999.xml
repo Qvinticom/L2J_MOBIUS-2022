@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14900" name="Rune Supply Box - Magic Ornament" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Rune. High grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box decorated with the symbol of Rune. Gives a certain chance to obtain High-grade Magic Ornament that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -21,7 +21,7 @@
 		</skills>
 	</item>
 	<item id="14901" name="Schuttgart Supply Box - Magic Ornament" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Schuttgart. High grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box decorated with the symbol of Schuttgart. Gives a certain chance to obtain High-grade Magic Ornament that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -41,7 +41,7 @@
 		</skills>
 	</item>
 	<item id="14902" name="Sealed Magic Rune Clip (A-grade)" type="EtcItem">
-		<!-- Can be attached to Sealed Magic Rune Clip and Belt. The seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
+		<!-- Can be attached to Sealed Magic Rune Clip and Belt. The seal can be released by the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -49,7 +49,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14903" name="Sealed Magic Rune Clip (S-grade)" type="EtcItem">
-		<!-- Can be attached to Sealed Magic Rune Clip and Belt. The seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
+		<!-- Can be attached to Sealed Magic Rune Clip and Belt. The seal can be released by the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -57,7 +57,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14904" name="Sealed Magic Ornament (A-grade)" type="EtcItem">
-		<!-- Can be attached to Sealed Magic Ornament and Belt. The seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
+		<!-- Can be attached to Sealed Magic Ornament and Belt. The seal can be released by the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -65,7 +65,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14905" name="Sealed Magic Ornament (S-grade)" type="EtcItem">
-		<!-- Can be attached to Sealed Magic Ornament and Belt. The seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
+		<!-- Can be attached to Sealed Magic Ornament and Belt. The seal can be released by the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -73,7 +73,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14906" name="Low-grade Magic Rune Clip (A-grade)" type="EtcItem">
-		<!-- Low-grade Magic Rune Clip that can improve the function of Steel Belt. -->
+		<!-- Can be used to upgrade Iron Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -81,7 +81,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14907" name="Mid-grade Magic Rune Clip (A-grade)" type="EtcItem">
-		<!-- Magic Rune Clip that can improve the function of Steel Belt. -->
+		<!-- Can be used to upgrade Iron Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -89,7 +89,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14908" name="High-grade Magic Rune Clip (A-grade)" type="EtcItem">
-		<!-- Magic Rune Clip that can improve the function of Steel Belt. -->
+		<!-- Can be used to upgrade Iron Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -97,7 +97,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14909" name="Top-grade Magic Rune Clip (A-grade)" type="EtcItem">
-		<!-- Magic Rune Clip that can improve the function of Steel Belt. -->
+		<!-- Can be used to upgrade Iron Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -105,7 +105,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14910" name="Low-grade Magic Rune Clip (S-grade)" type="EtcItem">
-		<!-- Low-grade Magic Rune Clip that can improve the function of Mithril Belt. -->
+		<!-- Can be used to upgrade Mithril Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -113,7 +113,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14911" name="Mid-grade Magic Rune Clip (S-grade)" type="EtcItem">
-		<!-- Magic Rune Clip that can improve the function of Mithril Belt. -->
+		<!-- Can be used to upgrade Mithril Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -121,7 +121,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14912" name="High-grade Magic Rune Clip (S-grade)" type="EtcItem">
-		<!-- High-grade Magic Rune Clip that can improve the function of Mithril Belt. -->
+		<!-- Can be used to upgrade Mithril Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -129,7 +129,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14913" name="Top-grade Magic Rune Clip (S-grade)" type="EtcItem">
-		<!-- Highest-grade Magic Rune Clip that can improve the function of Mithril Belt. -->
+		<!-- Can be used to upgrade Mithril Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -137,7 +137,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14914" name="Low-grade Magic Ornament (A-grade)" type="EtcItem">
-		<!-- Low-grade Magic Ornament that can improve the function of Steel Belt. -->
+		<!-- Can be used to upgrade Iron Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -145,7 +145,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14915" name="Mid-grade Magic Ornament (A-grade)" type="EtcItem">
-		<!-- Magic Ornament that can improve the function of Iron Belt. -->
+		<!-- Can be used to upgrade Iron Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -153,7 +153,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14916" name="High-grade Magic Ornament (A-grade)" type="EtcItem">
-		<!-- High-grade Magic Ornament that can improve the function of Iron Belt. -->
+		<!-- Can be used to upgrade Iron Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -161,7 +161,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14917" name="Top-grade Magic Ornament (A-grade)" type="EtcItem">
-		<!-- Highest-level Magic Ornament that can improve the function of Iron Belt. -->
+		<!-- Can be used to upgrade Iron Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -169,7 +169,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14918" name="Low-grade Magic Ornament (S-grade)" type="EtcItem">
-		<!-- Low-grade Magic Pin that can improve the function of Mithril Belt. -->
+		<!-- Can be used to upgrade Mithril Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -177,7 +177,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14919" name="Mid-grade Magic Ornament (S-grade)" type="EtcItem">
-		<!-- Magic Pin that can improve the function of Mithril Belt. -->
+		<!-- Can be used to upgrade Mithril Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -185,7 +185,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14920" name="High-grade Magic Ornament (S-grade)" type="EtcItem">
-		<!-- High-grade Magic Ornament that can improve the function of Mithril Belt. -->
+		<!-- Can be used to upgrade Mithril Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -193,7 +193,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14921" name="Top-grade Magic Ornament (S-grade)" type="EtcItem">
-		<!-- High-grade Magic Ornament that can improve the function of Mithril Belt. -->
+		<!-- Can be used to upgrade Mithril Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1089,7 +1089,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="14966" name="Majestic Earring of Fortune" additionalName="30-day" type="Armor">
-		<!-- Increases MP by 25. -->
+		<!-- MP +25. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1111,7 +1111,7 @@
 		</stats>
 	</item>
 	<item id="14967" name="Majestic Necklace of Fortune" additionalName="30-day" type="Armor">
-		<!-- Increases MP by 33. -->
+		<!-- MP +33. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1133,7 +1133,7 @@
 		</stats>
 	</item>
 	<item id="14968" name="Majestic Ring of Fortune" additionalName="30-day" type="Armor">
-		<!-- Increases MP by 17. -->
+		<!-- MP +17. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1335,7 +1335,7 @@
 		</stats>
 	</item>
 	<item id="14978" name="Dark Crystal Robe of Fortune" additionalName="30-day" type="Armor">
-		<!-- One-piece Body Armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1378,7 +1378,7 @@
 		</stats>
 	</item>
 	<item id="14980" name="Dark Crystal Gloves of Fortune - Robe" additionalName="30-day" type="Armor">
-		<!-- A Set with Dark Crystal Robe of Fortune. -->
+		<!-- Part of the Dark Crystal robe of Fortune set. -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1399,7 +1399,7 @@
 		</stats>
 	</item>
 	<item id="14981" name="Dark Crystal Boots of Fortune - Robe" additionalName="30-day" type="Armor">
-		<!-- A Set with Dark Crystal Robe of Fortune. -->
+		<!-- Part of the Dark Crystal robe of Fortune set. -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1442,7 +1442,7 @@
 		</stats>
 	</item>
 	<item id="14983" name="Avadon Robe of Fortune" additionalName="30-day" type="Armor">
-		<!-- One-piece Body Armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1485,7 +1485,7 @@
 		</stats>
 	</item>
 	<item id="14985" name="Avadon Gloves of Fortune - Robe" additionalName="30-day" type="Armor">
-		<!-- A Set with Avadon Robe of Fortune. -->
+		<!-- A part of the Avadon robe set of Fortune. -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1506,7 +1506,7 @@
 		</stats>
 	</item>
 	<item id="14986" name="Avadon Boots of Fortune - Robe" additionalName="30-day" type="Armor">
-		<!-- A Set with Avadon Robe of Fortune. -->
+		<!-- A part of the Avadon robe set of Fortune. -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1759,7 +1759,7 @@
 		</stats>
 	</item>
 	<item id="14998" name="Dark Crystal Gloves of Fortune - Light Armor" additionalName="30-day" type="Armor">
-		<!-- A Set with Dark Crystal Leather Armor of Fortune. -->
+		<!-- A part of the Dark Crystal light armor set (Fortune). -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />

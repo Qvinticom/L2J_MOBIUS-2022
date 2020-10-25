@@ -41,7 +41,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47205" name="Academy Dye of STR (Str+1)" type="EtcItem">
-		<!-- An ingredient of the Academy STR Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
+		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -51,7 +51,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47206" name="Academy Dye of CON (Con+1)" type="EtcItem">
-		<!-- An ingredient of the Academy CON Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
+		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -61,7 +61,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47207" name="Academy Dye of DEX (Dex+1)" type="EtcItem">
-		<!-- An ingredient of the Academy DEX Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
+		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -71,7 +71,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47208" name="Academy Dye of INT (Int+1)" type="EtcItem">
-		<!-- An ingredient of the Academy INT Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
+		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -81,7 +81,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47209" name="Academy Dye of MEN (Men+1)" type="EtcItem">
-		<!-- An ingredient of the Academy MEN Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
+		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -91,7 +91,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47210" name="Academy Dye of WIT (Wit+1)" type="EtcItem">
-		<!-- An ingredient of the Academy WIT Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
+		<!-- Take it to the Dye Merchant in town to get a symbol that boosts your abilities. For all classes. -->
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -137,7 +137,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47214" name="Ring of Creation" type="Armor">
-		<!-- MP +42, Stun/ Paralysis/ Knock Back Atk. Rate +15%, Stun/ Paralysis/ Knock Back Resistance +15%, Additional Damage to the Giants +5%, P./ M. Critical Damage +15%, P./ M. Atk. +3%. Effect does not stack with identical ones. -->
+		<!-- MP +42, Confusion Resistance/ Atk. Rate +15%, damage to Giants +5%, P. Critical Damage/ M. Skill Critical Damage +15%, P./ M. Atk. +3%. Effects of two identical rings do not stack. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Enhancing>. Take the ring and Source of the Emperor to Denign in Giran to get Ring of Authority or Ring of the Truth. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_Black" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -156,7 +156,7 @@
 		</stats>
 	</item>
 	<item id="47215" name="Ring of Authority" type="Armor">
-		<!-- MP +43, Stun/ Paralysis/ Knock Back Atk. Rate +25%, Stun/ Paralysis/ Knock Back Resistance +25%, Additional Damage to the Giants +5%, P. Critical Damage +15%, P. Atk. +4%. Effect does not stack with identical ones. -->
+		<!-- MP +43, Confusion Resistance/ Atk. Rate +25%, damage to Giants +5%, Critical Damage for standard attacks +15%, P. Atk. +4%. Effects of two identical rings do not stack. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Enhancing>. Take the ring and Source of the Emperor to Denign in Giran to get Ruler's Ring of Authority. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -174,7 +174,7 @@
 		</stats>
 	</item>
 	<item id="47216" name="Ruler's Ring of Authority" type="Armor">
-		<!-- MP +46, P. Atk. +5%, P. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-sec. Paralysis when single P. Atk. skill is used. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +46, P. Atk. +5%, Critical Damage for standard attacks +20%, LUC/ CHA +2, Confusion Resistance/ Atk. Rate +30%, damage to Giants +5%. Applies Paralysis for 3 sec. when using single P. skills. Effects of two identical rings do not stack. The item can be changed. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -192,7 +192,7 @@
 		</stats>
 	</item>
 	<item id="47217" name="Ring of the Truth" type="Armor">
-		<!-- MP +43, Stun/ Paralysis/ Knock Back Atk. Rate +25%, Stun/ Paralysis/ Knock Back Resistance +25%, Additional Damage to the Giants +5%, M. Critical Damage +15%, M. Atk. +4%. Effect does not stack with identical ones. -->
+		<!-- MP +43, Confusion Resistance/ Atk. Rate +25%, damage to Giants +5%, M. Skill Critical Damage +15%, M. Atk. +4%. Effects of two identical rings do not stack. <Enchanting>. Use Scroll: Enchant R-grade Armor. <Enhancing>. Take the ring and Source of the Emperor to Denign in Giran to get Ring of the Truth-Seeker. -->
 		<set name="icon" val="icon.accessory_ring_of_helios" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -210,7 +210,7 @@
 		</stats>
 	</item>
 	<item id="47218" name="Ring of the Truth-Seeker" type="Armor">
-		<!-- MP +46, M. Atk. +5%, M. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-sec. Knock Down when single M. Atk. skill is used. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +46, M. Atk. +5%, M. Skill Critical Damage +20%, LUC/ CHA +2, Confusion Resistance/ Atk. Rate +30%, damage to Giants +5%. Applies Confusion for 3 sec. when using single M. skills. Effects of two identical rings do not stack. Can be changed. <Enchanting>. Use Scroll: Enchant R-grade Armor. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -518,7 +518,7 @@
 		</skills>
 	</item>
 	<item id="47244" name="Ramona's Fancy Earrings" type="Armor">
-		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 64, additional damage to Giants by 5%, and Vampiric Rage by 5%. When two identical earrings are equipped, only one effect is applied. Cannot be enchanted, augmented or crystallized. -->
+		<!-- Can be exchanged for Source of the Emperor through Denign. MP +64, damage to Giants +5%, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. Cannot be enchanted, augmented, or crystallized. -->
 		<set name="icon" val="icon.glossy_earing_of_ramona" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -537,7 +537,7 @@
 		</stats>
 	</item>
 	<item id="47245" name="Helios' Majestic Earrings" type="Armor">
-		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 64, additional damage to Giants by 5%, and Vampiric Rage by 5%. When two identical earrings are equipped, only one effect is applied. Cannot be enchanted, augmented or crystallized. -->
+		<!-- Can be exchanged for Source of the Emperor through Denign. MP +64, damage to Giants +5%, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. Cannot be enchanted, augmented, or crystallized. -->
 		<set name="icon" val="icon.grand_earing_of_helios" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -575,7 +575,7 @@
 		</stats>
 	</item>
 	<item id="47247" name="Mimir's Worn Ring" type="Armor">
-		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 42, additional damage to Giants by 5%, and P. Critical Damage by 15%. These effects do not stack with identical rings. Cannot be enchanted, augmented or crystallized. -->
+		<!-- Can be exchanged for Source of the Emperor through Denign. MP +42, damage to Giants +5%, Critical Damage for standard attacks +15%. Effects of two identical rings do not stack. Cannot be enchanted, augmented, or crystallized. -->
 		<set name="icon" val="icon.old_ring_of_mimir" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -594,7 +594,7 @@
 		</stats>
 	</item>
 	<item id="47248" name="Forgotten Ring of the Core" type="Armor">
-		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 39, additional damage to Giants by 5%, and M. Critical Damage by 15%. These effects do not stack with identical rings. Cannot be enchanted, augmented or crystallized. -->
+		<!-- Can be exchanged for Source of the Emperor through Denign. MP +39, damage to Giants +5%, M. Skill Critical Damage +15%. Effects of two identical rings do not stack. Cannot be enchanted, augmented, or crystallized. -->
 		<set name="icon" val="icon.forgotten_ring_of_core" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -613,14 +613,14 @@
 		</stats>
 	</item>
 	<item id="47249" name="Giant Stone" type="EtcItem">
-		<!-- A stone with the power of the Giants. Use to neutralize the effects of the Superion Barrier. -->
+		<!-- Stone that contains the power of the Giants. Required to neutralize the effects of the Superion Barrier. -->
 		<set name="icon" val="icon.etc_black_freezing_core_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47250" name="Giant Crystal" type="EtcItem">
-		<!-- A crystal with the power of the Giants. Use to neutralize the effects of the Superion Barrier and the Helios Barrier. -->
+		<!-- Stone that contains the power of the Giants. Required to neutralize the effects of the Superion and Helios Barriers. -->
 		<set name="icon" val="icon.etc_freezing_core_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="30" />

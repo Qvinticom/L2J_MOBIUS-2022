@@ -219,7 +219,7 @@
 		</stats>
 	</item>
 	<item id="8108" name="Infernal Master" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Atk. Spd. +6%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -250,7 +250,7 @@
 		</stats>
 	</item>
 	<item id="8109" name="Infernal Master" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +270 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Critical Damage for standard attacks +297. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -281,7 +281,7 @@
 		</stats>
 	</item>
 	<item id="8110" name="Infernal Master" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Critical Rate for standard attacks +61. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -777,7 +777,7 @@
 		</stats>
 	</item>
 	<item id="8126" name="Destroyer Hammer" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Max HP +25%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -808,7 +808,7 @@
 		</stats>
 	</item>
 	<item id="8127" name="Destroyer Hammer" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Atk. Spd. +6%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -839,7 +839,7 @@
 		</stats>
 	</item>
 	<item id="8128" name="Destroyer Hammer" additionalName="Critical Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Absorbs 18 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Absorbs 18 HP from the target after a critical attack. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1057,7 +1057,7 @@
 		</stats>
 	</item>
 	<item id="8135" name="Doom Crusher" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. Max HP +25%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1088,7 +1088,7 @@
 		</stats>
 	</item>
 	<item id="8136" name="Doom Crusher" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal properties>. P. Atk. +32, Max HP -15%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1119,7 +1119,7 @@
 		</stats>
 	</item>
 	<item id="8137" name="Doom Crusher" additionalName="Rsk. Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Atk. Spd. +11% when HP is lower than 60%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1438,7 +1438,7 @@
 		</stats>
 	</item>
 	<item id="8147" name="Spiritual Eye" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Max MP +30%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1470,7 +1470,7 @@
 		</stats>
 	</item>
 	<item id="8148" name="Spiritual Eye" additionalName="Magic Poison" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has an 8% chance of casting Curse Poison on the target during magic use. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. An 8% chance of poisoning the target after using a debuff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1503,7 +1503,7 @@
 		</stats>
 	</item>
 	<item id="8149" name="Spiritual Eye" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Casting Spd. +15%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1535,7 +1535,7 @@
 		</stats>
 	</item>
 	<item id="8150" name="Flaming Dragon Skull" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. Casting Spd. +15%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1567,7 +1567,7 @@
 		</stats>
 	</item>
 	<item id="8151" name="Flaming Dragon Skull" additionalName="M. Atk." type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15%, M. Atk. by 167. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. M. Skill MP Consumption +15%, M. Atk. +167. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1599,7 +1599,7 @@
 		</stats>
 	</item>
 	<item id="8152" name="Flaming Dragon Skull" additionalName="Magic Silence" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal property>. A 10% chance of inflicting Silence on the target after using a debuff. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1686,7 +1686,7 @@
 		</skills>
 	</item>
 	<item id="8157" name="Herb of Magic" type="EtcItem">
-		<!-- Instantly increases M. Atk. for a certain period of time. -->
+		<!-- Temporarily increases M. Atk. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1922,7 +1922,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="8181" name="Academy Circlet" type="Armor">
-		<!-- When the Academy Benefaction skill is used, the XP penalty upon death is decreased by 50% and the XP acquired through hunting is increased by 10%. -->
+		<!-- When the Academy Benefaction skill is used, the death XP penalty -50%, acquired XP +10%. -->
 		<set name="icon" val="icon.accessory_academy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1945,7 +1945,7 @@
 		</skills>
 	</item>
 	<item id="8182" name="Circlet of Rune" type="Armor">
-		<!-- Rose Circlet. Can be worn by the lord of Rune Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be transferred between servers. -->
+		<!-- Rose Circlet. Can be worn by the lord of Rune Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1974,7 +1974,7 @@
 		</skills>
 	</item>
 	<item id="8183" name="Circlet of Schuttgart" type="Armor">
-		<!-- Hammer and Torch Circlet. Can be worn by the lord of Schuttgart Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be transferred between servers. -->
+		<!-- Circlet decorated with a hammer and a torch. Can be worn by the lord of Schuttgart Castle and their clan members but not by allies. Allows use of Residential Skills when equipped. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -2003,7 +2003,7 @@
 		</skills>
 	</item>
 	<item id="8184" name="Party Hat" type="Armor">
-		<!-- Funky hair accessory which uses 2 hair accessory slots. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- A funny hair accessory. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_party_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2016,7 +2016,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8185" name="Chapeau" type="Armor">
-		<!-- Wide-brimmed hat with a feather. Uses 2 accessory slots. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- Broadbrim Feathered Hat. Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2029,7 +2029,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8186" name="Artisan's Goggles" type="Armor">
-		<!-- Eye protection that uses 2 accessory slots. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- Large goggles used to protect eyes. Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2054,7 +2054,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="8188" name="Little Angel Wings" type="Armor">
-		<!-- Wing-shaped hair accessory. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- A hair accessory shaped as a little white wing. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -2067,7 +2067,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8189" name="Fairy Antennae" type="Armor">
-		<!-- Cute antennae hair accessory with stars. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- A lovely hair accessory shaped as antennae with starlets. -->
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -2080,7 +2080,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="8190" name="Demonic Sword Zariche" type="Weapon">
-		<!-- Deadly and powerful magical sword that was once wielded by the devil Bremnon himself. It is always thirsty for blood. Cannot be transferred between servers. -->
+		<!-- Deadly and powerful magical sword made by the devil Bremnon himself. It is always thirsty for blood. -->
 		<set name="icon" val="icon.weapon_unique_zariche_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2111,7 +2111,7 @@
 		</stats>
 	</item>
 	<item id="8191" name="Frintezza's Necklace" type="Armor">
-		<!-- MP +42, Sleep/ Paralysis/ Stun Resistance +15%, Sleep/ Paralysis/ Stun Attack Rate +15%, Poison/ Bleed Resistance +25%, Poison/ Bleed Attack Rate +25%. Decreases skill cooldown. Damage Reflection effect. Increases Dark Resistance. -->
+		<!-- Max MP +42, Sleep/ Paralysis/ Stun Resistance/ Atk. Rate +15%, Poison/ Bleed Resistance/ Atk. Rate +25%. Decreases Skill Cooldown. Reflects damage. Increases Dark Resistance. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2147,7 +2147,7 @@
 		</skills>
 	</item>
 	<item id="8193" name="Corroded Fisherman's Potion - Green" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oblivion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -2164,7 +2164,7 @@
 		</skills>
 	</item>
 	<item id="8194" name="Corroded Fisherman's Potion - Jade" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oblivion_jade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -2181,7 +2181,7 @@
 		</skills>
 	</item>
 	<item id="8195" name="Corroded Fisherman's Potion - Blue" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oblivion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -2198,7 +2198,7 @@
 		</skills>
 	</item>
 	<item id="8196" name="Corroded Fisherman's Potion - Yellow" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oblivion_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -2215,7 +2215,7 @@
 		</skills>
 	</item>
 	<item id="8197" name="Corroded Fisherman's Potion - Orange" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oblivion_orange_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -2232,7 +2232,7 @@
 		</skills>
 	</item>
 	<item id="8198" name="Corroded Fisherman's Potion - Purple" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oblivion_violet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -2249,7 +2249,7 @@
 		</skills>
 	</item>
 	<item id="8199" name="Corroded Fisherman's Potion - Red" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oblivion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />

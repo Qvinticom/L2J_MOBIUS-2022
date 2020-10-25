@@ -256,7 +256,7 @@
 		</skills>
 	</item>
 	<item id="5126" name="Dual Sword Crafting Stamp" type="EtcItem">
-		<!-- A stamp used to craft a dual sword of B-grade or higher from a one-handed sword that you obtain from a shop or quest. -->
+		<!-- A stamp given by the Castle Lord or bought from another character. Used to craft a dual sword of B-grade or higher. No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
@@ -430,7 +430,7 @@
 		</stats>
 	</item>
 	<item id="5133" name="Chrono Unitus" type="Weapon">
-		<!-- Chronicle II Souvenir!!! -->
+		<!-- Chronicle II Souvenir! -->
 		<set name="icon" val="icon.weapon_chrono_tambourine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -452,7 +452,7 @@
 		</stats>
 	</item>
 	<item id="5134" name="Soulshot Compressed Package (No-grade)" type="EtcItem">
-		<!-- 300 compressed soulshots. No-grade. -->
+		<!-- 300 compressed No-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -466,7 +466,7 @@
 		</skills>
 	</item>
 	<item id="5135" name="Soulshot Compressed Package (D-grade)" type="EtcItem">
-		<!-- 300 compressed soulshots. D-grade. -->
+		<!-- Double-click to obtain 300 D-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -480,7 +480,7 @@
 		</skills>
 	</item>
 	<item id="5136" name="Soulshot Compressed Package (C-grade)" type="EtcItem">
-		<!-- 300 compressed soulshots. C-grade. -->
+		<!-- Double-click to obtain 300 C-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -494,7 +494,7 @@
 		</skills>
 	</item>
 	<item id="5137" name="Soulshot Compressed Package (B-grade)" type="EtcItem">
-		<!-- 300 compressed soulshots. B-grade. -->
+		<!-- Double-click to obtain 300 B-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -508,7 +508,7 @@
 		</skills>
 	</item>
 	<item id="5138" name="Soulshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- 300 compressed soulshots. A-grade. -->
+		<!-- 300 compressed Soulshots. A-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -522,7 +522,7 @@
 		</skills>
 	</item>
 	<item id="5139" name="Soulshot Compressed Package (S-grade)" type="EtcItem">
-		<!-- 300 compressed soulshots. S-grade. -->
+		<!-- 300 compressed S-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -536,7 +536,7 @@
 		</skills>
 	</item>
 	<item id="5140" name="Spiritshot Compressed Package (No-grade)" type="EtcItem">
-		<!-- 300 compressed spiritshots. No-grade. -->
+		<!-- Double-click to obtain 300 No-grade Spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -606,7 +606,7 @@
 		</skills>
 	</item>
 	<item id="5145" name="Spiritshot Compressed Package (S-grade)" type="EtcItem">
-		<!-- 300 compressed spiritshots. S-grade. -->
+		<!-- 300 compressed S-grade Spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -620,7 +620,7 @@
 		</skills>
 	</item>
 	<item id="5146" name="Blessed Spiritshot Compressed Package (No-grade)" type="EtcItem">
-		<!-- 300 compressed blessed spiritshots. No-grade. -->
+		<!-- Double-click to obtain 300 Blessed No-grade Spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -690,7 +690,7 @@
 		</skills>
 	</item>
 	<item id="5151" name="Blessed Spiritshot Compressed Package (S-grade)" type="EtcItem">
-		<!-- 300 compressed blessed spiritshots. S-grade. -->
+		<!-- 300 compressed Blessed S-grade Spiritshots. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -704,7 +704,7 @@
 		</skills>
 	</item>
 	<item id="5152" name="Magic Compressor" type="EtcItem">
-		<!-- Magic tool needed to compress soulshots, spiritshots etc. -->
+		<!-- A magic tool for creating shot packages. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -713,7 +713,7 @@
 		<set name="price" val="100" />
 	</item>
 	<item id="5153" name="Recipe: Soulshot Compressed Package (D-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Soulshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: D-grade Soulshots. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -727,7 +727,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5154" name="Recipe: Soulshot Compressed Package (C-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Soulshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: C-grade Soulshots. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -741,7 +741,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5155" name="Recipe: Soulshot Compressed Package (B-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Soulshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: B-grade Soulshots. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -755,7 +755,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5156" name="Recipe: Soulshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: A-grade Soulshots. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -769,7 +769,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5157" name="Recipe: Soulshot Compressed Package (S-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Soulshot Compressed Package (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: S-grade Soulshots. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -783,7 +783,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5158" name="Recipe: Spiritshot Compressed Package (D-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: D-grade Spiritshots. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -797,7 +797,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5159" name="Recipe: Spiritshot Compressed Package (C-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: C-grade Spiritshots. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -811,7 +811,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5160" name="Recipe: Spiritshot Compressed Package (B-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: B-grade Spiritshots. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -825,7 +825,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5161" name="Recipe: Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: A-grade Spiritshots. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -839,7 +839,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5162" name="Recipe: Spiritshot Compressed Package (S-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: S-grade Spiritshots. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -853,7 +853,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5163" name="Recipe: Blessed Spiritshot Compressed Package (D-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: Blessed D-grade Spiritshots. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -867,7 +867,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5164" name="Recipe: Blessed Spiritshot Compressed Package (C-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: Blessed C-grade Spiritshots. Requires Create Item Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -881,7 +881,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5165" name="Recipe: Blessed Spiritshot Compressed Package (B-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: Blessed B-grade Spiritshots. Requires Create Item Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -895,7 +895,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5166" name="Recipe: Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: Blessed A-grade Spiritshots. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -909,7 +909,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5167" name="Recipe: Blessed Spiritshot Compressed Package (S-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Compressed Package: Blessed S-grade Spiritshots. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1530,7 +1530,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5197" name="Chest Key - Grade 8" type="EtcItem">
-		<!-- Opens a level 1 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<!-- Opens a Lv. 1 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1545,7 +1545,7 @@
 		</skills>
 	</item>
 	<item id="5198" name="Chest Key - Grade 7" type="EtcItem">
-		<!-- Opens a level 10 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<!-- Opens a Lv. 10 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1560,7 +1560,7 @@
 		</skills>
 	</item>
 	<item id="5199" name="Chest Key - Grade 6" type="EtcItem">
-		<!-- Opens a level 20 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
+		<!-- Opens a Lv. 20 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />

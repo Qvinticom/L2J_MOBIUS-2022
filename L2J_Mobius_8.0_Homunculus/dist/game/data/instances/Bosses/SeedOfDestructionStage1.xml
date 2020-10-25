@@ -10,10 +10,8 @@
 	</locations>
 	<conditions>
 		<condition type="Party" />
-		<condition type="CommandChannel" />
-		<condition type="CommandChannelLeader" />
 		<condition type="GroupMin">
-			<param name="limit" value="7" />
+			<param name="limit" value="2" />
 		</condition>
 		<condition type="GroupMax">
 			<param name="limit" value="35" />

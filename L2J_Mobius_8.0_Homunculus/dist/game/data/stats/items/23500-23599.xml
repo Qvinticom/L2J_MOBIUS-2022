@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="23503" name="Military Top Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a top into that of a Military look. An appearance-modified item has no change in abilities. All armor types. -->
+		<!-- Changes the appearance of a top into that of a Military Top. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -21,7 +21,7 @@
 		</skills>
 	</item>
 	<item id="23504" name="Military Pants Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of pants into that of a Military look. An appearance-modified item has no change in abilities. All armor types. -->
+		<!-- Changes the appearance of a top into that of Military Pants. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -41,7 +41,7 @@
 		</skills>
 	</item>
 	<item id="23505" name="Military Gloves Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of gloves into that of a Military look. An appearance-modified item has no change in abilities. -->
+		<!-- Changes the appearance of a top into that of Military Gloves. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -61,7 +61,7 @@
 		</skills>
 	</item>
 	<item id="23506" name="Military Shoes Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of shoes into that of a Military look. An appearance-modified item has no change in abilities. -->
+		<!-- Changes the appearance of shoes into that of Military Shoes. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -81,7 +81,7 @@
 		</skills>
 	</item>
 	<item id="23507" name="Military Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a hair accessory into that of a Military look. Can be used only on hair accessories that take up 2 slots. -->
+		<!-- Changes the appearance of a hair accessory into that of a Military Hair Accessory. Can be used only on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -101,7 +101,7 @@
 		</skills>
 	</item>
 	<item id="23513" name="Maid Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of the entire armor into that of a Maid Costume. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. Female only. -->
+		<!-- Changes the appearance of the entire armor to that of Maid Costume. Used with upper or full-body armor. Modified armor can be restored to its original appearance with Restoration Stone. Female only. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_cutie_maid_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -161,7 +161,7 @@
 		</skills>
 	</item>
 	<item id="23530" name="Automatic Appearance Stone: Emerald Weapon" type="EtcItem">
-		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. -->
+		<!-- Double-click to change the appearance of a weapon into that of an Emerald one. Can be used on shields and sigils. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -181,7 +181,7 @@
 		</skills>
 	</item>
 	<item id="23531" name="Automatic Appearance Stone: Japanese Weapon" type="EtcItem">
-		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. -->
+		<!-- Double-click to change the appearance of a weapon into that of a Japanese one. Can be used on shields and sigils. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -201,7 +201,7 @@
 		</skills>
 	</item>
 	<item id="23532" name="Contender's Mark" additionalName="Event" type="EtcItem">
-		<!-- Mark with which you can participate in monster duels in the Fantasy Isle Festival. Take it to a Contender to fight with him. -->
+		<!-- Mark with which you can participate in monster duels in the Fantasy Isle Festival. Take it to a Contender to start fighting. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_sponsor_token" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -223,7 +223,7 @@
 		</skills>
 	</item>
 	<item id="23534" name="Monster Weapon Appearance Stone Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Appearance Stone for either Hellblade, Tiat's Tiatenon, Butcher Blade, Aenkinel's Astaroth, Yehan Klanikus' Tirbing, or Mardil's Wind. -->
+		<!-- Double-click to obtain an Appearance Stone for one of the following weapons: Hellblade, Tiat's Tiatenon, Butcher Blades, Aenkinel's Astaroth, Yehan Klanikus' Tirbing, or Mardil's Wind. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -513,7 +513,7 @@
 		</skills>
 	</item>
 	<item id="23550" name="Mysterious Soulshot Small Pack (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Pack that contains 500 Mysterious Soulshots (R-grade). -->
+		<!-- Double-click to obtain 500 Mysterious R-grade Soulshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -524,11 +524,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23552" min="500" max="500" chance="100" /> <!-- Mysterious Soulshot (R-grade) - Event -->
+			<item id="23552" min="500" max="500" chance="100" /> <!-- Mysterious R-grade Soulshot - Event -->
 		</capsuled_items>
 	</item>
 	<item id="23551" name="Mysterious Spiritshot Small Pack (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Pack that contains 500 Mysterious Spiritshots (R-grade). -->
+		<!-- Double-click to obtain 500 Mysterious R-grade Spiritshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -539,11 +539,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23553" min="500" max="500" chance="100" /> <!-- Mysterious Spiritshot (R-grade) - Event -->
+			<item id="23553" min="500" max="500" chance="100" /> <!-- Mysterious R-grade Spiritshot - Event -->
 		</capsuled_items>
 	</item>
 	<item id="23552" name="Mysterious Soulshot (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- The power of a spirit is bestowed upon a weapon (R-grade), temporarily inflicting a powerful attack on the enemy. -->
+		<!-- The power of a spirit is bestowed upon a R-grade weapon, temporarily inflicting a powerful attack on the enemy. -->
 		<set name="icon" val="icon.soulshot_r_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -563,7 +563,7 @@
 		</skills>
 	</item>
 	<item id="23553" name="Mysterious Spiritshot (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon (R-grade), temporarily increasing its magic significantly. -->
+		<!-- The power of a higher-level spirit is bestowed upon a R-grade weapon, temporarily increasing its magic significantly. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -747,7 +747,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23564" name="Ninja Top Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
-		<!-- Changes the appearance of a top into that of a Ninja Outfit. An appearance-modified item has no change in abilities. All armor types. Gives you active skills upon modification. -->
+		<!-- Changes the appearance of a top into that of a Ninja Top. All armor types. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -767,7 +767,7 @@
 		</skills>
 	</item>
 	<item id="23565" name="Ninja Pants Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
-		<!-- Changes the appearance of pants into that of a Ninja Outfit. An appearance-modified item has no change in abilities. All armor types. Gives you active skills upon modification. -->
+		<!-- Changes the appearance of pants into that of Ninja Pants. All armor types. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -787,7 +787,7 @@
 		</skills>
 	</item>
 	<item id="23566" name="Ninja Gloves Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
-		<!-- Changes the appearance of gloves into that of a Ninja Outfit. An appearance-modified item has no change in abilities. Gives you active skills upon modification. -->
+		<!-- Changes the appearance of gloves into that of Ninja Gloves. All armor types. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -807,7 +807,7 @@
 		</skills>
 	</item>
 	<item id="23567" name="Ninja Shoes Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
-		<!-- Changes the appearance of shoes into that of a Ninja Outfit. An appearance-modified item has no change in abilities. Gives you active skills upon modification. -->
+		<!-- Changes the appearance of shoes into that of Ninja Shoes. All armor types. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -827,7 +827,7 @@
 		</skills>
 	</item>
 	<item id="23568" name="Ninja Hair Accessory Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
-		<!-- Changes the appearance of a hair accessory into that of a Ninja Outfit. Can be used only on hair accessories that take up 2 slots. Gives you active skills upon modification. -->
+		<!-- Changes the appearance of a hair accessory into that of a Ninja Hair Accessory. Can be used only on hair accessories that use 2 slots. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -847,7 +847,7 @@
 		</skills>
 	</item>
 	<item id="23569" name="Ninja Top Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
-		<!-- Changes the appearance of a top into that of a Ninja Outfit. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification. -->
+		<!-- Changes the appearance of a top into that of a Ninja Top. All armor types. Gives you passive skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -867,7 +867,7 @@
 		</skills>
 	</item>
 	<item id="23570" name="Ninja Pants Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
-		<!-- Changes the appearance of pants into that of a Ninja Outfit. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification. -->
+		<!-- Changes the appearance of pants into that of Ninja Pants. All armor types. Gives you passive skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -887,7 +887,7 @@
 		</skills>
 	</item>
 	<item id="23571" name="Ninja Gloves Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
-		<!-- Changes the appearance of gloves into that of a Ninja Outfit. An appearance-modified item has no change in abilities. Gives you passive skills upon modification. -->
+		<!-- Changes the appearance of gloves into that of Ninja Gloves. All armor types. Gives you passive skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -907,7 +907,7 @@
 		</skills>
 	</item>
 	<item id="23572" name="Ninja Shoes Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
-		<!-- Changes the appearance of shoes into that of a Ninja Outfit. An appearance-modified item has no change in abilities. Gives you passive skills upon modification. -->
+		<!-- Changes the appearance of shoes into that of Ninja Shoes. All armor types. Gives you passive skills upon modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -927,7 +927,7 @@
 		</skills>
 	</item>
 	<item id="23573" name="Ninja Hair Accessory Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
-		<!-- Changes the appearance of a hair accessory into that of a Ninja Outfit. Can be used only on hair accessories that take up 2 slots. Gives you passive skills upon modification. -->
+		<!-- Changes the appearance of a hair accessory into that of a Ninja Hair Accessory. Can be used only on hair accessories that use 2 slots. Gives you passive skills upon modification. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -947,7 +947,7 @@
 		</skills>
 	</item>
 	<item id="23574" name="Agathion - Hussar (Poland)" additionalName="Test Agathion" type="Armor">
-		<!-- Can summon Hussar when equipped. -->
+		<!-- A bracelet for summoning Agathion Hussar. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -967,7 +967,7 @@
 		</skills>
 	</item>
 	<item id="23575" name="Fantasy Top Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either Vesper Noble Light Armor Top Appearance Stone (7-day) or Vorpal Light Armor Top Appearance Stone (7-day). -->
+		<!-- Double-click to obtain either Vesper Noble Light Armor Top Appearance Stone (7-day) or Vorpal Light Armor Top Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -980,7 +980,7 @@
 		</skills>
 	</item>
 	<item id="23576" name="Fantasy Pants Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either Vesper Noble Light Armor Pants Appearance Stone (7-day) or Vorpal Light Armor Pants Appearance Stone (7-day). -->
+		<!-- Double-click to obtain either Vesper Noble Light Armor Pants Appearance Stone (7-day) or Vorpal Light Armor Pants Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -993,7 +993,7 @@
 		</skills>
 	</item>
 	<item id="23577" name="Fantasy Gloves Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either Vesper Noble Light Armor Gloves Appearance Stone (7-day) or Vorpal Light Armor Gloves Appearance Stone (7-day). -->
+		<!-- Double-click to obtain either Vesper Noble Light Armor Gloves Appearance Stone (7-day) or Vorpal Light Armor Gloves Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1006,7 +1006,7 @@
 		</skills>
 	</item>
 	<item id="23578" name="Fantasy Shoes Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either Vesper Noble Light Armor Shoes Appearance Stone (7-day) or Vorpal Light Armor Shoes Appearance Stone (7-day). -->
+		<!-- Double-click to obtain either Vesper Noble Light Armor Shoes Appearance Stone (7-day) or Vorpal Light Armor Shoes Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1019,7 +1019,7 @@
 		</skills>
 	</item>
 	<item id="23579" name="Shining Accessory Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either Istina's Earring, Baium's Ring or Octavis' Necklace. -->
+		<!-- Double-click to obtain either Istina's Earring, Baium's Ring or Octavis' Necklace. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1202,7 +1202,7 @@
 		</skills>
 	</item>
 	<item id="23589" name="Monster Weapon Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Appearance Stone for either Hellblade (7-day), Tiat's Tiatenon (7-day), Butcher Blade (7-day), Aenkinel's Astaroth (7-day), Yehan Klanikus' Tirbing (7-day), or Mardil's Wind (7-day). -->
+		<!-- Double-click to obtain a 7-day Appearance Stone for one of the following weapons: Hellblade, Tiat's Tiatenon, Butcher Blades, Aenkinel's Astaroth, Yehan Klanikus' Tirbing, or Mardil's Wind. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1323,7 +1323,7 @@
 		</skills>
 	</item>
 	<item id="23596" name="Blessed Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1340,7 +1340,7 @@
 		</skills>
 	</item>
 	<item id="23597" name="Blessed Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Def. by 2 for R-grade armor and accessories, and increases greatly starting at +4. Can be enhanced safely to +3. When enhanced to +4 or higher, HP also increases according to the enchantment value. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- When enchanted, P. Def. +2 for R-grade armor and accessories. The effect is greatly increased when enchanted to +4 or higher. Can be enhanced safely to +3. When enhanced to +4 or higher, HP also increases according to the enchantment value. Failure to enchant does not crystallize the item but resets its enchantment level to 0. Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1357,7 +1357,7 @@
 		</skills>
 	</item>
 	<item id="23599" name="Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Enchant success rate +10% for weapons (R-grade). Only for items enchanted between +3 and +9. -->
+		<!-- Enchant success rate +10% for R-grade weapons. Only for items enchanted from +3 to +9. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />

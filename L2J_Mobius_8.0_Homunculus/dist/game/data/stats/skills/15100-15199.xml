@@ -82,7 +82,7 @@
 		</effects>
 	</skill>
 	<skill id="15104" toLevel="1" name="Dimensional Trap">
-		<!-- Holds the enemy for 15 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the enemy for 15 sec.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11561</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -228,7 +228,7 @@
 		</effects>
 	</skill>
 	<skill id="15110" toLevel="1" name="Mandra's Spell">
-		<!-- Inflicts damage around you. -->
+		<!-- Deals AoE damage around the character. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
@@ -248,7 +248,7 @@
 		</effects>
 	</skill>
 	<skill id="15111" toLevel="1" name="Mace of Punishment">
-		<!-- Deals damage to the target and knocks it down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Deals damage to the target and knocks it down.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -278,7 +278,7 @@
 		</effects>
 	</skill>
 	<skill id="15112" toLevel="1" name="Threat">
-		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+		<!-- Armor is destroyed. P./ M. Def. -10%. Additional P./ M. Def. -500. P. Evasion -4. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -329,7 +329,7 @@
 		</effects>
 	</skill>
 	<skill id="15113" toLevel="1" name="Imposing Axe">
-		<!-- Armor is destroyed. P./ M. Def. -10% and additional P./ M. Def. -500. P. Evasion -4. The effect stacks as you receive continuous attacks. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Armor is destroyed. P./ M. Def. -10% and additional P./ M. Def. -500. P. Evasion -4. The effect stacks as you receive continuous attacks.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -385,7 +385,7 @@
 		</effects>
 	</skill>
 	<skill id="15114" toLevel="1" name="Massive Blade">
-		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+		<!-- Armor is destroyed. P./ M. Def. -10%. Additional P./ M. Def. -500. P. Evasion -4. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -436,7 +436,7 @@
 		</effects>
 	</skill>
 	<skill id="15115" toLevel="1" name="Black Kiss">
-		<!-- Inflicts damage around you. -->
+		<!-- Deals AoE damage around the character. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
@@ -457,7 +457,7 @@
 		</effects>
 	</skill>
 	<skill id="15116" toLevel="1" name="Dreaming Romantic Pig">
-		<!-- Changes a silhouette of one party member into that of a pig. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Changes a silhouette of one party member into that of a pig.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -520,7 +520,7 @@
 		</effects>
 	</skill>
 	<skill id="15118" toLevel="1" name="Induce Mental Illness">
-		<!-- Stuns all members of the enemy's party for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stuns all members of the enemy's party for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -549,7 +549,7 @@
 				<power>5000</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -595,7 +595,7 @@
 		</effects>
 	</skill>
 	<skill id="15121" toLevel="1" name="Rage Explosion">
-		<!-- Rage explodes at the death of your child. Uses Petra to greatly decrease HP and greatly increases HP Recovery Rate and P. Atk. -->
+		<!-- The burst of rage energy. Increases P. Atk. and HP Recovery Rate, when using Petra. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -625,7 +625,7 @@
 		</effects>
 	</skill>
 	<skill id="15122" toLevel="1" name="Vernier Calipers Hurl">
-		<!-- Hurls the opponent with a Vernier Calipers in your hands. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Hurls the opponent with a Vernier Calipers in your hands.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -664,8 +664,8 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="15123" toLevel="1" name="Sword Cleave">
-		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+	<skill id="15123" toLevel="1" name="Sword Slash">
+		<!-- Armor is destroyed. P./ M. Def. -10%. Additional P./ M. Def. -500. P. Evasion -4. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -714,8 +714,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15124" toLevel="1" name="Axe Strike">
-		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
+	<skill id="15124" toLevel="1" name="Axe Yoke">
+		<!-- Armor is destroyed. P./ M. Def. -10%. Additional P./ M. Def. -500. P. Evasion -4. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -765,7 +765,7 @@
 		</effects>
 	</skill>
 	<skill id="15125" toLevel="1" name="Tauti Final Attack">
-		<!-- Helps to summon strength and deliver the final attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Helps to summon strength and deliver the final attack.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA2</operateType>
 		<mpConsume>83</mpConsume>
@@ -810,7 +810,7 @@
 		</effects>
 	</skill>
 	<skill id="15126" toLevel="1" name="Tauti Final Attack">
-		<!-- Helps to summon strength and deliver the final attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Helps to summon strength and deliver the final attack.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA2</operateType>
 		<mpConsume>83</mpConsume>
@@ -907,7 +907,7 @@
 		</effects>
 	</skill>
 	<skill id="15129" toLevel="1" name="Full Buff Knight Lv. 1">
-		<!-- For test. Knight Full Buff stage 1. Increases abilities through Kyu's power. -->
+		<!-- For test. Knight Full Buff Lv. 1. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -923,7 +923,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15130" toLevel="1" name="Full Buff Knight Lv. 2">
-		<!-- For test. Knight Full Buff stage 2. Increases abilities through Kyu's power. -->
+		<!-- For test. Knight Full Buff Lv. 2. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -939,7 +939,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15131" toLevel="1" name="Full Buff Knight Lv. 3">
-		<!-- For test. Knight Full Buff stage 3. Increases abilities through Kyu's power. -->
+		<!-- For test. Knight Full Buff Lv. 3. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -955,7 +955,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15132" toLevel="1" name="Full Buff Knight Lv. 4">
-		<!-- For test. Knight Full Buff stage 4. Increases abilities through Kyu's power. -->
+		<!-- For test. Knight Full Buff Lv. 4. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -971,7 +971,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15133" toLevel="1" name="Full Buff Warrior Lv. 1">
-		<!-- For test. Warrior Full Buff stage 1. Increases abilities through Kyu's power. -->
+		<!-- For test. Warrior Full Buff Lv. 1. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -987,7 +987,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15134" toLevel="1" name="Full Buff Warrior Lv. 2">
-		<!-- For test. Warrior Full Buff stage 2. Increases abilities through Kyu's power. -->
+		<!-- For test. Warrior Full Buff Lv. 2. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1003,7 +1003,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15135" toLevel="1" name="Full Buff Warrior Lv. 3">
-		<!-- For test. Warrior Full Buff stage 3. Increases abilities through Kyu's power. -->
+		<!-- For test. Warrior Full Buff Lv. 3. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1019,7 +1019,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15136" toLevel="1" name="Full Buff Warrior Lv. 4">
-		<!-- For test. Warrior Full Buff stage 4. Increases abilities through Kyu's power. -->
+		<!-- For test. Warrior Full Buff Lv. 4. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1035,7 +1035,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15137" toLevel="1" name="Full Buff Wizard Lv. 1">
-		<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 1. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1051,7 +1051,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15138" toLevel="1" name="Full Buff Wizard Lv. 2">
-		<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 2. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1067,7 +1067,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15139" toLevel="1" name="Full Buff Wizard Lv. 3">
-		<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 3. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1083,7 +1083,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15140" toLevel="1" name="Full Buff Wizard Lv. 4">
-		<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 4. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1099,7 +1099,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15141" toLevel="1" name="Super CP Lv. 1">
-		<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 1. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1115,7 +1115,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15142" toLevel="1" name="Super CP Lv. 2">
-		<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 2. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1131,7 +1131,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15143" toLevel="1" name="Super CP Lv. 3">
-		<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 3. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1147,7 +1147,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15144" toLevel="1" name="Super CP Lv. 4">
-		<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 4. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1163,7 +1163,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15145" toLevel="2" name="Ruler's Authority">
-		<!-- When equipped, Max HP/ MP/ CP +$s1, weight +$s2, damage dealt +$s3, Received Damage -$s4, Damage Reflection Resistance +$s5, Inventory Slots +$s6, and all attribute resistance +$s7. -->
+		<!-- When equipped, Max HP/ MP/ CP +$s1, weight limit +$s2, damage +$s3, received damage -$s4, Damage Reflection Resistance +$s5, inventory slots +$s6, Attribute Resistance +$s7. -->
 		<icon>icon.belt_rulers_authority</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1277,7 +1277,7 @@
 		</effects>
 	</skill>
 	<skill id="15147" toLevel="1" name="Overheat">
-		<!-- The machine is overheated. Inflicts DoT on the enemy. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- The machine is overheated. Inflicts DoT on the enemy.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1492</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1311,7 +1311,7 @@
 		</effects>
 	</skill>
 	<skill id="15148" toLevel="1" name="Coolant Leak">
-		<!-- The machine is overheated. Speed is decreased. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- The machine is overheated. Speed is decreased.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0102</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1459,7 +1459,7 @@
 		</effects>
 	</skill>
 	<skill id="15153" toLevel="1" name="Attention to Draco Incubation">
-		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1477,7 +1477,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15154" toLevel="1" name="Attention to Draco Incubation">
-		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1660,7 +1660,7 @@
 		</effects>
 	</skill>
 	<skill id="15165" toLevel="1" name="Tauti Shock Wave">
-		<!-- The character is stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- The character is stunned and immobilized.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1691,7 +1691,7 @@
 		</effects>
 	</skill>
 	<skill id="15166" toLevel="1" name="Tauti Rush">
-		<!-- Deals damage to the enemy and knocks him down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Deals damage to the enemy and knocks him down.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>DA2</operateType>
 		<castRange>900</castRange>
@@ -1734,7 +1734,7 @@
 		</effects>
 	</skill>
 	<skill id="15167" toLevel="1" name="Tauti Leap Attack">
-		<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -1763,7 +1763,7 @@
 		</effects>
 	</skill>
 	<skill id="15168" toLevel="1" name="Tauti Ultimate Chain Strike">
-		<!-- Pulls nearby enemies toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Pulls nearby enemies toward you.\n\nInflicted status: Pull. -->
 		<icon>icon.skill10016</icon>
 		<operateType>A2</operateType>
 		<mpConsume>123</mpConsume>
@@ -1793,7 +1793,7 @@
 		</effects>
 	</skill>
 	<skill id="15169" toLevel="1" name="Tauti Great Shout">
-		<!-- HP is decreased by the energy of fire in the roar. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- HP is decreased by the energy of fire in the roar.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0102</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -1822,7 +1822,7 @@
 		</effects>
 	</skill>
 	<skill id="15170" toLevel="1" name="Chaos Shield">
-		<!-- P. Def. and M. Def. are increased. -->
+		<!-- P./ M. Def. are increased. -->
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
 		<hitTime>5000</hitTime>
@@ -1988,7 +1988,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15177" toLevel="1" name="Petra Injection - Enhance P. Def.">
-		<!-- Zahak has used its Petra to increase Tauti's P. Def. -->
+		<!-- Increases Tauti's P. Def. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>
 		<castRange>2500</castRange>
@@ -2032,7 +2032,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15179" toLevel="1" name="Petra Injection - Enhance M. Def.">
-		<!-- Zahak has used its Petra to increase Tauti's M. Def. -->
+		<!-- Increases Tauti's M. Def. -->
 		<icon>icon.skill1434</icon>
 		<operateType>A2</operateType>
 		<castRange>2500</castRange>
@@ -2100,7 +2100,7 @@
 		</effects>
 	</skill>
 	<skill id="15182" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes nearby enemies into attacking you.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -2123,7 +2123,7 @@
 		</effects>
 	</skill>
 	<skill id="15183" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes nearby enemies into attacking you.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -2146,7 +2146,7 @@
 		</effects>
 	</skill>
 	<skill id="15184" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes nearby enemies into attacking you.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -2169,7 +2169,7 @@
 		</effects>
 	</skill>
 	<skill id="15185" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the targets in front and inflicts Stun for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks the targets in front and inflicts Stun for 9 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2199,12 +2199,12 @@
 				<power>9516</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="15186" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the targets in front and inflicts Stun for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks the targets in front and inflicts Stun for 9 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2234,12 +2234,12 @@
 				<power>11162</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="15187" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the targets in front and inflicts Stun for 9 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks the targets in front and inflicts Stun for 9 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2269,7 +2269,7 @@
 				<power>12809</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -2286,8 +2286,8 @@
 		<magicLevel>85</magicLevel>
 		<affectLimit>10-10</affectLimit>
 		<reuseDelay>7000</reuseDelay>
-		<affectRange>1100</affectRange>
-		<fanRange>0;0;1100;90</fanRange>
+		<affectRange>900</affectRange>
+		<fanRange>0;0;900;90</fanRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2310,8 +2310,8 @@
 		<magicLevel>90</magicLevel>
 		<affectLimit>10-10</affectLimit>
 		<reuseDelay>7000</reuseDelay>
-		<affectRange>1100</affectRange>
-		<fanRange>0;0;1100;90</fanRange>
+		<affectRange>900</affectRange>
+		<fanRange>0;0;900;90</fanRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2334,8 +2334,8 @@
 		<magicLevel>95</magicLevel>
 		<affectLimit>10-10</affectLimit>
 		<reuseDelay>7000</reuseDelay>
-		<affectRange>1100</affectRange>
-		<fanRange>0;0;1100;90</fanRange>
+		<affectRange>900</affectRange>
+		<fanRange>0;0;900;90</fanRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -2415,7 +2415,7 @@
 		</effects>
 	</skill>
 	<skill id="15194" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -282 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -282 per second.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2443,7 +2443,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DamOverTime">
 				<power>282</power>
@@ -2460,7 +2460,7 @@
 		</effects>
 	</skill>
 	<skill id="15195" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -296 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -296 per second.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2488,7 +2488,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DamOverTime">
 				<power>296</power>
@@ -2505,7 +2505,7 @@
 		</effects>
 	</skill>
 	<skill id="15196" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -313 per second. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Banishes nearby enemies surrounding the target to another dimension. The exiled enemy becomes incapacitated and invincible against attacks, skills, and debuffs. The enemy's HP -313 per second.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2533,7 +2533,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DamOverTime">
 				<power>313</power>

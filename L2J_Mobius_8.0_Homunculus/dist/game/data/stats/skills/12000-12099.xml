@@ -5,7 +5,7 @@
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
 		<mpConsume>2</mpConsume>
-		<castRange>900</castRange>
+		<castRange>800</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -694,7 +694,7 @@
 						<item id="17978" count="1" /> <!-- Blessed Requiem Dual Sword -->
 					</item>
 					<item chance="4">
-						<item id="17301" count="1" /> <!-- Requiem Dual Sword -->
+						<item id="17301" count="1" /> <!-- Requiem Dual Swords -->
 					</item>
 				</items>
 			</effect>
@@ -728,7 +728,7 @@
 						<item id="17979" count="1" /> <!-- Blessed Requiem Dual Dagger -->
 					</item>
 					<item chance="4">
-						<item id="17302" count="1" /> <!-- Requiem Dual Dagger -->
+						<item id="17302" count="1" /> <!-- Requiem Dual Daggers -->
 					</item>
 				</items>
 			</effect>
@@ -790,13 +790,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17845" count="1" /> <!-- Bound Immortal Helmet - Heavy Armor -->
+						<item id="17845" count="1" /> <!-- Bound Immortal Helmet - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="17981" count="1" /> <!-- Blessed Immortal Helmet - Heavy Armor -->
+						<item id="17981" count="1" /> <!-- Blessed Immortal Helmet - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17304" count="1" /> <!-- Immortal Helmet - Heavy Armor -->
+						<item id="17304" count="1" /> <!-- Immortal Helmet - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -824,13 +824,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17846" count="1" /> <!-- Bound Immortal Breastplate - Heavy Armor -->
+						<item id="17846" count="1" /> <!-- Bound Immortal Breastplate - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="17982" count="1" /> <!-- Blessed Immortal Breastplate - Heavy Armor -->
+						<item id="17982" count="1" /> <!-- Blessed Immortal Breastplate - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17305" count="1" /> <!-- Immortal Breastplate - Heavy Armor -->
+						<item id="17305" count="1" /> <!-- Immortal Breastplate - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -858,13 +858,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17847" count="1" /> <!-- Bound Immortal Gaiters - Heavy Armor -->
+						<item id="17847" count="1" /> <!-- Bound Immortal Gaiters - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="17983" count="1" /> <!-- Blessed Immortal Gaiters - Heavy Armor -->
+						<item id="17983" count="1" /> <!-- Blessed Immortal Gaiters - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17306" count="1" /> <!-- Immortal Gaiters - Heavy Armor -->
+						<item id="17306" count="1" /> <!-- Immortal Gaiters - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -892,13 +892,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17848" count="1" /> <!-- Bound Immortal Gauntlets - Heavy Armor -->
+						<item id="17848" count="1" /> <!-- Bound Immortal Gauntlets - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="17984" count="1" /> <!-- Blessed Immortal Gauntlets - Heavy Armor -->
+						<item id="17984" count="1" /> <!-- Blessed Immortal Gauntlets - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17307" count="1" /> <!-- Immortal Gauntlets - Heavy Armor -->
+						<item id="17307" count="1" /> <!-- Immortal Gauntlets - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -926,13 +926,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17849" count="1" /> <!-- Bound Immortal Boots - Heavy Armor -->
+						<item id="17849" count="1" /> <!-- Bound Immortal Boots - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="17985" count="1" /> <!-- Blessed Immortal Boots - Heavy Armor -->
+						<item id="17985" count="1" /> <!-- Blessed Immortal Boots - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17308" count="1" /> <!-- Immortal Boots - Heavy Armor -->
+						<item id="17308" count="1" /> <!-- Immortal Boots - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -960,13 +960,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17850" count="1" /> <!-- Bound Immortal Shield - Heavy Armor -->
+						<item id="17850" count="1" /> <!-- Bound Immortal Shield -->
 					</item>
 					<item chance="1">
-						<item id="17986" count="1" /> <!-- Blessed Immortal Shield - Heavy Armor -->
+						<item id="17986" count="1" /> <!-- Blessed Immortal Shield -->
 					</item>
 					<item chance="4">
-						<item id="17309" count="1" /> <!-- Immortal Shield - Heavy Armor -->
+						<item id="17309" count="1" /> <!-- Immortal Shield -->
 					</item>
 				</items>
 			</effect>
@@ -994,13 +994,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17851" count="1" /> <!-- Bound Immortal Leather Helmet - Light Armor -->
+						<item id="17851" count="1" /> <!-- Bound Immortal Leather Helmet - Light armor -->
 					</item>
 					<item chance="1">
-						<item id="17987" count="1" /> <!-- Blessed Immortal Leather Helmet - Light Armor -->
+						<item id="17987" count="1" /> <!-- Blessed Immortal Leather Helmet - Light armor -->
 					</item>
 					<item chance="4">
-						<item id="17310" count="1" /> <!-- Immortal Leather Helmet - Light Armor -->
+						<item id="17310" count="1" /> <!-- Immortal Leather Helmet - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -1028,13 +1028,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17852" count="1" /> <!-- Bound Immortal Leather Armor - Light Armor -->
+						<item id="17852" count="1" /> <!-- Bound Immortal Leather Armor - Light armor -->
 					</item>
 					<item chance="1">
-						<item id="17988" count="1" /> <!-- Blessed Immortal Leather Armor - Light Armor -->
+						<item id="17988" count="1" /> <!-- Blessed Immortal Leather Armor - Light armor -->
 					</item>
 					<item chance="4">
-						<item id="17311" count="1" /> <!-- Immortal Leather Armor - Light Armor -->
+						<item id="17311" count="1" /> <!-- Immortal Leather Armor - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -1062,13 +1062,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17853" count="1" /> <!-- Bound Immortal Leather Leggings - Light Armor -->
+						<item id="17853" count="1" /> <!-- Bound Immortal Leather Leggings - Light armor -->
 					</item>
 					<item chance="1">
-						<item id="17989" count="1" /> <!-- Blessed Immortal Leather Leggings - Light Armor -->
+						<item id="17989" count="1" /> <!-- Blessed Immortal Leather Leggings - Light armor -->
 					</item>
 					<item chance="4">
-						<item id="17312" count="1" /> <!-- Immortal Leather Leggings - Light Armor -->
+						<item id="17312" count="1" /> <!-- Immortal Leather Leggings - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -1096,13 +1096,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17854" count="1" /> <!-- Bound Immortal Leather Gloves - Light Armor -->
+						<item id="17854" count="1" /> <!-- Bound Immortal Leather Gloves - Light armor -->
 					</item>
 					<item chance="1">
-						<item id="17990" count="1" /> <!-- Blessed Immortal Leather Gloves - Light Armor -->
+						<item id="17990" count="1" /> <!-- Blessed Immortal Leather Gloves - Light armor -->
 					</item>
 					<item chance="4">
-						<item id="17313" count="1" /> <!-- Immortal Leather Gloves - Light Armor -->
+						<item id="17313" count="1" /> <!-- Immortal Leather Gloves - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -1130,13 +1130,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17855" count="1" /> <!-- Bound Immortal Leather Boots - Light Armor -->
+						<item id="17855" count="1" /> <!-- Bound Immortal Leather Boots - Light armor -->
 					</item>
 					<item chance="1">
-						<item id="17991" count="1" /> <!-- Blessed Immortal Leather Boots - Light Armor -->
+						<item id="17991" count="1" /> <!-- Blessed Immortal Leather Boots - Light armor -->
 					</item>
 					<item chance="4">
-						<item id="17314" count="1" /> <!-- Immortal Leather Boots - Light Armor -->
+						<item id="17314" count="1" /> <!-- Immortal Leather Boots - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -1334,13 +1334,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17861" count="1" /> <!-- Bound Immortal Sigil - Robe -->
+						<item id="17861" count="1" /> <!-- Bound Immortal Sigil -->
 					</item>
 					<item chance="1">
-						<item id="17997" count="1" /> <!-- Blessed Immortal Sigil - Robe -->
+						<item id="17997" count="1" /> <!-- Blessed Immortal Sigil -->
 					</item>
 					<item chance="4">
-						<item id="17320" count="1" /> <!-- Immortal Sigil - Robe -->
+						<item id="17320" count="1" /> <!-- Immortal Sigil -->
 					</item>
 				</items>
 			</effect>
@@ -1847,10 +1847,10 @@
 						<item id="17876" count="1" /> <!-- Bound Apocalypse Dual Sword -->
 					</item>
 					<item chance="1">
-						<item id="18012" count="1" /> <!-- Blessed Apocalypse Dual Sword -->
+						<item id="18012" count="1" /> <!-- Blessed Apocalypse Dual Swords -->
 					</item>
 					<item chance="4">
-						<item id="17335" count="1" /> <!-- Apocalypse Dual Sword -->
+						<item id="17335" count="1" /> <!-- Apocalypse Dual Swords -->
 					</item>
 				</items>
 			</effect>
@@ -1881,10 +1881,10 @@
 						<item id="17877" count="1" /> <!-- Bound Apocalypse Dual Dagger -->
 					</item>
 					<item chance="1">
-						<item id="18013" count="1" /> <!-- Blessed Apocalypse Dual Dagger -->
+						<item id="18013" count="1" /> <!-- Blessed Apocalypse Dual Daggers -->
 					</item>
 					<item chance="4">
-						<item id="17336" count="1" /> <!-- Apocalypse Dual Dagger -->
+						<item id="17336" count="1" /> <!-- Apocalypse Dual Daggers -->
 					</item>
 				</items>
 			</effect>
@@ -1946,13 +1946,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17879" count="1" /> <!-- Bound Twilight Helmet - Heavy Armor -->
+						<item id="17879" count="1" /> <!-- Bound Twilight Helmet - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="18015" count="1" /> <!-- Blessed Twilight Helmet - Heavy Armor -->
+						<item id="18015" count="1" /> <!-- Blessed Twilight Helmet - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17338" count="1" /> <!-- Twilight Helmet - Heavy Armor -->
+						<item id="17338" count="1" /> <!-- Twilight Helmet - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -1980,13 +1980,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17880" count="1" /> <!-- Bound Twilight Breastplate - Heavy Armor -->
+						<item id="17880" count="1" /> <!-- Bound Twilight Breastplate - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="18016" count="1" /> <!-- Blessed Twilight Breastplate - Heavy Armor -->
+						<item id="18016" count="1" /> <!-- Blessed Twilight Breastplate - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17339" count="1" /> <!-- Twilight Breastplate - Heavy Armor -->
+						<item id="17339" count="1" /> <!-- Twilight Breastplate - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -2014,13 +2014,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17881" count="1" /> <!-- Bound Twilight Gaiters - Heavy Armor -->
+						<item id="17881" count="1" /> <!-- Bound Twilight Gaiters - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="18017" count="1" /> <!-- Blessed Twilight Gaiters - Heavy Armor -->
+						<item id="18017" count="1" /> <!-- Blessed Twilight Gaiters - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17340" count="1" /> <!-- Twilight Gaiters - Heavy Armor -->
+						<item id="17340" count="1" /> <!-- Twilight Gaiters - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -2048,13 +2048,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17882" count="1" /> <!-- Bound Twilight Gauntlets - Heavy Armor -->
+						<item id="17882" count="1" /> <!-- Bound Twilight Gauntlets - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="18018" count="1" /> <!-- Blessed Twilight Gauntlets - Heavy Armor -->
+						<item id="18018" count="1" /> <!-- Blessed Twilight Gauntlets - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17341" count="1" /> <!-- Twilight Gauntlets - Heavy Armor -->
+						<item id="17341" count="1" /> <!-- Twilight Gauntlets - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -2082,13 +2082,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17883" count="1" /> <!-- Bound Twilight Boots - Heavy Armor -->
+						<item id="17883" count="1" /> <!-- Bound Twilight Boots - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="18019" count="1" /> <!-- Blessed Twilight Boots - Heavy Armor -->
+						<item id="18019" count="1" /> <!-- Blessed Twilight Boots - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17342" count="1" /> <!-- Twilight Boots - Heavy Armor -->
+						<item id="17342" count="1" /> <!-- Twilight Boots - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -2116,13 +2116,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17884" count="1" /> <!-- Bound Twilight Shield - Heavy Armor -->
+						<item id="17884" count="1" /> <!-- Bound Twilight Shield -->
 					</item>
 					<item chance="1">
-						<item id="18020" count="1" /> <!-- Blessed Twilight Shield - Heavy Armor -->
+						<item id="18020" count="1" /> <!-- Blessed Twilight Shield -->
 					</item>
 					<item chance="4">
-						<item id="17343" count="1" /> <!-- Twilight Shield - Heavy Armor -->
+						<item id="17343" count="1" /> <!-- Twilight Shield -->
 					</item>
 				</items>
 			</effect>
@@ -2150,13 +2150,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17885" count="1" /> <!-- Bound Twilight Leather Helmet - Light Armor -->
+						<item id="17885" count="1" /> <!-- Bound Twilight Leather Helmet - Light armor -->
 					</item>
 					<item chance="1">
-						<item id="18021" count="1" /> <!-- Blessed Twilight Leather Helmet - Light Armor -->
+						<item id="18021" count="1" /> <!-- Blessed Twilight Leather Helmet - Light armor -->
 					</item>
 					<item chance="4">
-						<item id="17344" count="1" /> <!-- Twilight Leather Helmet - Light Armor -->
+						<item id="17344" count="1" /> <!-- Twilight Leather Helmet - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -2184,13 +2184,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17886" count="1" /> <!-- Bound Twilight Leather Armor - Light Armor -->
+						<item id="17886" count="1" /> <!-- Bound Twilight Leather Armor - Light armor -->
 					</item>
 					<item chance="1">
-						<item id="18022" count="1" /> <!-- Blessed Twilight Leather Armor - Light Armor -->
+						<item id="18022" count="1" /> <!-- Blessed Twilight Leather Armor - Light armor -->
 					</item>
 					<item chance="4">
-						<item id="17345" count="1" /> <!-- Twilight Leather Armor - Light Armor -->
+						<item id="17345" count="1" /> <!-- Twilight Leather Armor - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -2218,13 +2218,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17887" count="1" /> <!-- Bound Twilight Leather Leggings - Light Armor -->
+						<item id="17887" count="1" /> <!-- Bound Twilight Leather Leggings - Light armor -->
 					</item>
 					<item chance="1">
-						<item id="18023" count="1" /> <!-- Blessed Twilight Leather Leggings - Light Armor -->
+						<item id="18023" count="1" /> <!-- Blessed Twilight Leather Leggings - Light armor -->
 					</item>
 					<item chance="4">
-						<item id="17346" count="1" /> <!-- Twilight Leather Leggings - Light Armor -->
+						<item id="17346" count="1" /> <!-- Twilight Leather Leggings - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -2252,13 +2252,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17888" count="1" /> <!-- Bound Twilight Leather Gloves - Light Armor -->
+						<item id="17888" count="1" /> <!-- Bound Twilight Leather Gloves - Light armor -->
 					</item>
 					<item chance="1">
-						<item id="18024" count="1" /> <!-- Blessed Twilight Leather Gloves - Light Armor -->
+						<item id="18024" count="1" /> <!-- Blessed Twilight Leather Gloves - Light armor -->
 					</item>
 					<item chance="4">
-						<item id="17347" count="1" /> <!-- Twilight Leather Gloves - Light Armor -->
+						<item id="17347" count="1" /> <!-- Twilight Leather Gloves - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -2286,13 +2286,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17889" count="1" /> <!-- Bound Twilight Leather Boots - Light Armor -->
+						<item id="17889" count="1" /> <!-- Bound Twilight Leather Boots - Light armor -->
 					</item>
 					<item chance="1">
-						<item id="18025" count="1" /> <!-- Blessed Twilight Leather Boots - Light Armor -->
+						<item id="18025" count="1" /> <!-- Blessed Twilight Leather Boots - Light armor -->
 					</item>
 					<item chance="4">
-						<item id="17348" count="1" /> <!-- Twilight Leather Boots - Light Armor -->
+						<item id="17348" count="1" /> <!-- Twilight Leather Boots - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -2490,13 +2490,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17895" count="1" /> <!-- Bound Twilight Sigil - Robe -->
+						<item id="17895" count="1" /> <!-- Bound Twilight Sigil -->
 					</item>
 					<item chance="1">
-						<item id="18031" count="1" /> <!-- Blessed Twilight Sigil - Robe -->
+						<item id="18031" count="1" /> <!-- Blessed Twilight Sigil -->
 					</item>
 					<item chance="4">
-						<item id="17354" count="1" /> <!-- Twilight Sigil - Robe -->
+						<item id="17354" count="1" /> <!-- Twilight Sigil -->
 					</item>
 				</items>
 			</effect>
@@ -3003,10 +3003,10 @@
 						<item id="17910" count="1" /> <!-- Bound Specter Dual Sword -->
 					</item>
 					<item chance="1">
-						<item id="18046" count="1" /> <!-- Blessed Specter Dual Sword -->
+						<item id="18046" count="1" /> <!-- Blessed Specter Dual Swords -->
 					</item>
 					<item chance="4">
-						<item id="17393" count="1" /> <!-- Specter Dual Sword -->
+						<item id="17393" count="1" /> <!-- Specter Dual Swords -->
 					</item>
 				</items>
 			</effect>
@@ -3037,10 +3037,10 @@
 						<item id="17911" count="1" /> <!-- Bound Specter Dual Dagger -->
 					</item>
 					<item chance="1">
-						<item id="18047" count="1" /> <!-- Blessed Specter Dual Dagger -->
+						<item id="18047" count="1" /> <!-- Blessed Specter Dual Daggers -->
 					</item>
 					<item chance="4">
-						<item id="17394" count="1" /> <!-- Specter Dual Dagger -->
+						<item id="17394" count="1" /> <!-- Specter Dual Daggers -->
 					</item>
 				</items>
 			</effect>
@@ -3102,13 +3102,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17913" count="1" /> <!-- Bound Seraph Helmet - Heavy Armor -->
+						<item id="17913" count="1" /> <!-- Bound Seraph Helmet - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="18049" count="1" /> <!-- Blessed Seraph Helmet - Heavy Armor -->
+						<item id="18049" count="1" /> <!-- Blessed Seraph Helmet - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17396" count="1" /> <!-- Seraph Helmet - Heavy Armor -->
+						<item id="17396" count="1" /> <!-- Seraph Helmet - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -3136,13 +3136,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17914" count="1" /> <!-- Bound Seraph Breastplate - Heavy Armor -->
+						<item id="17914" count="1" /> <!-- Bound Seraph Breastplate - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="18050" count="1" /> <!-- Blessed Seraph Breastplate - Heavy Armor -->
+						<item id="18050" count="1" /> <!-- Blessed Seraph Breastplate - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17397" count="1" /> <!-- Seraph Breastplate - Heavy Armor -->
+						<item id="17397" count="1" /> <!-- Seraph Breastplate - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -3170,13 +3170,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17915" count="1" /> <!-- Bound Seraph Gaiters - Heavy Armor -->
+						<item id="17915" count="1" /> <!-- Bound Seraph Gaiters - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="18051" count="1" /> <!-- Blessed Seraph Gaiters - Heavy Armor -->
+						<item id="18051" count="1" /> <!-- Blessed Seraph Gaiters - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17398" count="1" /> <!-- Seraph Gaiters - Heavy Armor -->
+						<item id="17398" count="1" /> <!-- Seraph Gaiters - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -3204,13 +3204,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17916" count="1" /> <!-- Bound Seraph Gauntlets - Heavy Armor -->
+						<item id="17916" count="1" /> <!-- Bound Seraph Gauntlets - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="18052" count="1" /> <!-- Blessed Seraph Gauntlets - Heavy Armor -->
+						<item id="18052" count="1" /> <!-- Blessed Seraph Gauntlets - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17399" count="1" /> <!-- Seraph Gauntlets - Heavy Armor -->
+						<item id="17399" count="1" /> <!-- Seraph Gauntlets - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -3238,13 +3238,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17917" count="1" /> <!-- Bound Seraph Boots - Heavy Armor -->
+						<item id="17917" count="1" /> <!-- Bound Seraph Boots - Heavy armor -->
 					</item>
 					<item chance="1">
-						<item id="18053" count="1" /> <!-- Blessed Seraph Boots - Heavy Armor -->
+						<item id="18053" count="1" /> <!-- Blessed Seraph Boots - Heavy armor -->
 					</item>
 					<item chance="4">
-						<item id="17400" count="1" /> <!-- Seraph Boots - Heavy Armor -->
+						<item id="17400" count="1" /> <!-- Seraph Boots - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -3272,13 +3272,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17918" count="1" /> <!-- Bound Seraph Shield - Heavy Armor -->
+						<item id="17918" count="1" /> <!-- Bound Seraph Shield -->
 					</item>
 					<item chance="1">
-						<item id="18054" count="1" /> <!-- Blessed Seraph Shield - Heavy Armor -->
+						<item id="18054" count="1" /> <!-- Blessed Seraph Shield -->
 					</item>
 					<item chance="4">
-						<item id="17401" count="1" /> <!-- Seraph Shield - Heavy Armor -->
+						<item id="17401" count="1" /> <!-- Seraph Shield -->
 					</item>
 				</items>
 			</effect>

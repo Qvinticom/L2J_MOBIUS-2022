@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14500" name="Vesper Retributer {PvP} - Health" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Max HP +25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -39,7 +39,7 @@
 		</stats>
 	</item>
 	<item id="14501" name="Vesper Retributer {PvP} - HP Drain" type="Weapon">
-		<!-- <Special Option>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Special properties>. With a certain chance, absorbs 4% of the inflicted damage as HP. Increases PvP damage. Has a chance of inflicting additional damage after an attack. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -77,7 +77,7 @@
 		</stats>
 	</item>
 	<item id="14502" name="Vesper Caster {PvP} - Acumen" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -116,7 +116,7 @@
 		</stats>
 	</item>
 	<item id="14503" name="Vesper Caster {PvP} - MP Regeneration" type="Weapon">
-		<!-- <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Features>. Increases MP Recovery Rate. Deals additional PvP damage, also has a chance to increase Casting Spd. when the character is attacked. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -155,7 +155,7 @@
 		</stats>
 	</item>
 	<item id="14504" name="Vesper Caster {PvP} - Mana Up" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. Max MP +30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -233,7 +233,7 @@
 		</stats>
 	</item>
 	<item id="14506" name="Vesper Singer {PvP} - MP Regeneration" type="Weapon">
-		<!-- <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Features>. Increases MP Recovery Rate. Deals additional PvP damage, also has a chance to increase Casting Spd. when the character is attacked. Soul Crystal cannot be used. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -311,7 +311,7 @@
 		</stats>
 	</item>
 	<item id="14508" name="Vesper Thrower {PvP} - Cheap Shot" type="Weapon">
-		<!-- <Special Option>. Decreases MP consumption by 8% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. MP consumption -8% after a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -351,7 +351,7 @@
 		</stats>
 	</item>
 	<item id="14509" name="Vesper Thrower {PvP} - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 133. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Critical Rate +133. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -391,7 +391,7 @@
 		</stats>
 	</item>
 	<item id="14510" name="Vesper Thrower {PvP} - Critical Slow" type="Weapon">
-		<!-- <Special Option>. Has a 33% chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Has a 33% chance of casting Slow on the target after a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -431,7 +431,7 @@
 		</stats>
 	</item>
 	<item id="14511" name="Vesper Pincer {PvP} - Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Atk. Spd. +11%. Inflicts additional PvP Damage. Has a chance of recovering CP when the character is attacked. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -473,7 +473,7 @@
 		</stats>
 	</item>
 	<item id="14512" name="Vesper Pincer {PvP} - Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Max HP +25%. Inflicts additional PvP Damage. Has a chance of recovering CP when the character is attacked. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -515,7 +515,7 @@
 		</stats>
 	</item>
 	<item id="14513" name="Vesper Pincer {PvP} - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Cutter Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP, and chance to recover CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get the increased P. Atk., M. Atk., healing capacity and MP consumption during skill use is decreased. -->
+		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. P. Critical Rate +131%. Inflicts additional PvP Damage. Has a chance of recovering CP when the character is attacked. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -557,7 +557,7 @@
 		</stats>
 	</item>
 	<item id="14514" name="Vesper Shooter {PvP} - Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>when using the. Skill MP consumption decreases by 12%. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/ crossbows during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>when using the. MP Consumption -12% after a standard attack. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/ crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -599,7 +599,7 @@
 		</stats>
 	</item>
 	<item id="14515" name="Vesper Shooter {PvP} - Focus" type="Weapon">
-		<!-- Kamael-exclusive weapon Vesper Thrower Conversion. <Special Option>. Critical Attack increases by 133. Increases damage inflicted during PvP. Increases Atk. Spd. of bows/ crossbows at a fixed rate during an attack. -->
+		<!-- Kamael-exclusive weapon Vesper Thrower Conversion. <Special Option>. P. Critical Rate +133. Inflicts additional PvP Damage. Increases Atk. Spd. of bows/ crossbows after an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -641,7 +641,7 @@
 		</stats>
 	</item>
 	<item id="14516" name="Vesper Shooter {PvP} - Critical Slow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. Casts Slow at a 24% rate during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. Casts Slow at a 24% rate after a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -683,7 +683,7 @@
 		</stats>
 	</item>
 	<item id="14517" name="Vesper Nagan {PvP} - Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. There is a chance that additional damage is applied during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Atk. Spd. +11%. Increases damage inflicted during PvP. There is a chance that additional damage is applied during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -724,7 +724,7 @@
 		</stats>
 	</item>
 	<item id="14518" name="Vesper Nagan {PvP} - Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Max HP +25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -765,7 +765,7 @@
 		</stats>
 	</item>
 	<item id="14519" name="Vesper Nagan {PvP} - Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Critical Rate +131. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -806,7 +806,7 @@
 		</stats>
 	</item>
 	<item id="14520" name="Vesper Breastplate {PvP}" type="Armor">
-		<!-- Decreases damage received during PvP. Has a chance of decreasing all Speeds of the attacker. -->
+		<!-- Decreases received PvP damage. Has a certain chance to decrease all types of enemy s Speed. -->
 		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -832,7 +832,7 @@
 		</stats>
 	</item>
 	<item id="14521" name="Vesper Leather Breastplate {PvP}" type="Armor">
-		<!-- Decreases damage received during PvP. Has a chance of canceling the opponent's target when attacked. -->
+		<!-- Decreases Received PvP damage. With a certain chance, cancels the enemy's target when hit. -->
 		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -858,7 +858,7 @@
 		</stats>
 	</item>
 	<item id="14522" name="Vesper Tunic {PvP}" type="Armor">
-		<!-- Decreases damage received during PvP. Has a chance of decreasing the chance of receiving Critical Damage and P. Critical Damage amount. -->
+		<!-- Decreases received PvP damage. Has a certain chance to decrease Received P. Critical Rate and Received P. Critical Damage. -->
 		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -885,7 +885,7 @@
 		</stats>
 	</item>
 	<item id="14523" name="Vesper Noble Breastplate {PvP}" type="Armor">
-		<!-- Decreases damage received during PvP. Has a chance of decreasing all Speeds of the attacker. -->
+		<!-- Decreases received PvP damage. Has a certain chance to decrease all types of enemy s Speed. -->
 		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -911,7 +911,7 @@
 		</stats>
 	</item>
 	<item id="14524" name="Vesper Noble Leather Breastplate {PvP}" type="Armor">
-		<!-- Decreases damage received during PvP. Has a chance of canceling the opponent's target when attacked. -->
+		<!-- Decreases Received PvP damage. With a certain chance, cancels the enemy's target when hit. -->
 		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -937,7 +937,7 @@
 		</stats>
 	</item>
 	<item id="14525" name="Vesper Noble Tunic {PvP}" type="Armor">
-		<!-- Decreases damage received during PvP. Has a chance of decreasing the chance of receiving Critical Damage and P. Critical Damage amount. -->
+		<!-- Decreases received PvP damage. Has a certain chance to decrease Received P. Critical Rate and Received P. Critical Damage. -->
 		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -964,7 +964,7 @@
 		</stats>
 	</item>
 	<item id="14526" name="Dynasty Dual Dagger - Great Gale" type="Weapon">
-		<!-- Masterwork item that increases Atk. Spd. A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. Can be equipped by Dagger Masters level 81 and higher. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases Atk. Spd. Dual daggers. When enchanted, P. Atk. is increased. Can be used by Dagger Masters. Required level: 81+. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1004,7 +1004,7 @@
 		</stats>
 	</item>
 	<item id="14527" name="Icarus Dual Dagger - Chaos" type="Weapon">
-		<!-- Masterwork item that increases Evasion. A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. Can be equipped by Dagger Masters level 81 and higher. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases P. Evasion. Dual daggers. When enchanted, P. Atk. is increased. Can be used by Dagger Masters. Required level: 81+. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1044,7 +1044,7 @@
 		</stats>
 	</item>
 	<item id="14528" name="Dynasty Dual Dagger - Great Gale {PvP}" type="Weapon">
-		<!-- Masterwork item that increases Atk. Spd. A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP and has a chance to remove 1 or more of the target's enhanced status or decrease its Shield Defense during an attack. Can be equipped by Dagger Masters level 81 and higher. No Soul Crystal option. -->
+		<!-- Masterwork item that increases Atk. Spd. Dual daggers. When enchanted, P. Atk. is increased. When enchanted to +4 or higher, P. Critical Rate +109. Can be equipped by Dagger Masters of Lv. 81+. Increases PvP damage. Has a chance of removing 1 or more of the target's buffs and of decreasing their Shield Defense. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1090,7 +1090,7 @@
 		</stats>
 	</item>
 	<item id="14529" name="Icarus Dual Dagger - Chaos {PvP}" type="Weapon">
-		<!-- Masterwork item that increases Evasion. A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP and has a chance to remove 1 or more of the target's enhanced status or decrease its Shield Defense during an attack. Can be equipped by Dagger Masters level 81 and higher. No Soul Crystal option. -->
+		<!-- Masterwork item that increases P. Evasion. Dual daggers. When enchanted, P. Atk. is increased. When enchanted to +4 or higher, Critical Rate for standard attacks +109. Can be equipped by Dagger Masters of Lv. 81+. Increases PvP damage. Has a chance of removing 1 or more of the target's buffs and of decreasing their Shield Defense. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1136,7 +1136,7 @@
 		</stats>
 	</item>
 	<item id="14530" name="Maxwell House Pack" type="EtcItem">
-		<!-- The wrapped pack containing 3 sheets of Feather of Resurrection, 3 sheets of Minion Pet Coupon (5-hour), 1 Mount - Darkmane Pacer (7-day) and one of Ornithomimus Hat (30-day). -->
+		<!-- Double-click to obtain 3 Feathers of Resurrection, 3 Minion Pet Coupons (5-hour), Darkmane Pacer Bracelet (7-day), and Ornithomimus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1154,13 +1154,13 @@
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="13300" min="3" max="3" chance="100" /> <!-- Feather of Blessing (Event) -->
-			<item id="13383" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) (Event) -->
-			<item id="13308" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer (Event) - 7-day -->
+			<item id="13383" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) - Event -->
+			<item id="13308" min="1" max="1" chance="100" /> <!-- Darkmane Pacer Bracelet (Event) - 7-day -->
 			<item id="13316" min="1" max="1" chance="100" /> <!-- Ornithomimus Hat (Event) - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="14531" name="Gludio Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Gludio. Has a chance of containing high grade magic pin that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Gludio. Gives a certain chance to obtain High-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1180,7 +1180,7 @@
 		</skills>
 	</item>
 	<item id="14532" name="Dion Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Dion. Has a chance of containing high grade magic pin that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Dion. Gives a certain chance to obtain High-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1200,7 +1200,7 @@
 		</skills>
 	</item>
 	<item id="14533" name="Giran Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Giran. Has a chance of containing high grade magic pin that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Giran. Gives a certain chance to obtain High-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1220,7 +1220,7 @@
 		</skills>
 	</item>
 	<item id="14534" name="Oren Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Oren. Has a chance of containing high grade magic pin that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Oren. Gives a certain chance to obtain High-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1240,7 +1240,7 @@
 		</skills>
 	</item>
 	<item id="14535" name="Aden Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Aden. Has a chance of containing high grade magic pin that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Aden. Gives a certain chance to obtain High-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1260,7 +1260,7 @@
 		</skills>
 	</item>
 	<item id="14536" name="Innadril Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Innadril. Has a chance of containing high grade magic pin that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Innadril. Gives a certain chance to obtain High-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1280,7 +1280,7 @@
 		</skills>
 	</item>
 	<item id="14537" name="Goddard Supply Box: Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Goddard. Has a chance of containing high grade magic pin that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Goddard. Gives a certain chance to obtain High-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1300,7 +1300,7 @@
 		</skills>
 	</item>
 	<item id="14538" name="Rune Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Rune. Has a chance of containing high grade magic pin that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Rune. Gives a certain chance to obtain High-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1320,7 +1320,7 @@
 		</skills>
 	</item>
 	<item id="14539" name="Schuttgart Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Schuttgart. Has a chance of containing high grade magic pin that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Schuttgart. Gives a certain chance to obtain High-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1340,7 +1340,7 @@
 		</skills>
 	</item>
 	<item id="14540" name="Gludio Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Gludio. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Gludio. Gives a certain chance to obtain High-grade Magic Pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1360,7 +1360,7 @@
 		</skills>
 	</item>
 	<item id="14541" name="Dion Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Dion. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Dion. Gives a certain chance to obtain High-grade Magic Pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1380,7 +1380,7 @@
 		</skills>
 	</item>
 	<item id="14542" name="Giran Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Giran. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Giran. Gives a certain chance to obtain High-grade Magic Pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1400,7 +1400,7 @@
 		</skills>
 	</item>
 	<item id="14543" name="Oren Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Oren. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Oren. Gives a certain chance to obtain High-grade Magic Pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1420,7 +1420,7 @@
 		</skills>
 	</item>
 	<item id="14544" name="Aden Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Aden. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Aden. Gives a certain chance to obtain High-grade Magic Pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1440,7 +1440,7 @@
 		</skills>
 	</item>
 	<item id="14545" name="Innadril Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Innadril. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Innadril. Gives a certain chance to obtain High-grade Magic Pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1460,7 +1460,7 @@
 		</skills>
 	</item>
 	<item id="14546" name="Goddard Supply Box: Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Goddard. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Goddard. Gives a certain chance to obtain High-grade Magic Pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1480,7 +1480,7 @@
 		</skills>
 	</item>
 	<item id="14547" name="Rune Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Rune. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
+		<!-- Box decorated with the symbol of Rune. Gives a certain chance to obtain High-grade Magic Pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1500,7 +1500,7 @@
 		</skills>
 	</item>
 	<item id="14548" name="Schuttgart Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
-		<!-- Box that has the symbol of Schuttgart. High grade magic pouch that can be attached to the belt is packaged. -->
+		<!-- Box decorated with the symbol of Schuttgart. Gives a certain chance to obtain High-grade Magic Pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1700,7 +1700,7 @@
 		</skills>
 	</item>
 	<item id="14558" name="Dynasty Dual Dagger {PvP}" type="Weapon">
-		<!-- A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP and has a chance to remove 1 or more of the target's enhanced status or decrease its Shield Defense during an attack. Can be equipped by Dagger Masters level 81 and higher. No Soul Crystal option. -->
+		<!-- Dual daggers. When enchanted, P. Atk. is increased. When enchanted to +4 or higher, Critical Rate for standard attacks +109. Can be equipped by Dagger Masters of Lv. 81+. Increases PvP damage. Has a chance of removing 1 or more of the target's buffs and of decreasing their Shield Defense. No Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -2406,7 +2406,7 @@
 		</stats>
 	</item>
 	<item id="14579" name="Épée of Ashton Family" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Ashton Family's Sword conversion. Enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Kamael-exclusive Weapon: Ashton Family's Sword Conversion. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. Cannot be enhanced or crystallized. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2782,7 +2782,7 @@
 		</stats>
 	</item>
 	<item id="14592" name="Gludio Earth Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Gludio territory. Earth Resistance +12. Only one effect is applied even when wearing two earrings having the same effect. -->
+		<!-- A ring given to the Guardian of Gludio. Earth Resistance +12. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2808,7 +2808,7 @@
 		</stats>
 	</item>
 	<item id="14593" name="Dion Water Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Dion territory. Water Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- A ring given to the Guardian of Dion. Water Resistance +12. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2834,7 +2834,7 @@
 		</stats>
 	</item>
 	<item id="14594" name="Giran Fire Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Giran territory. Fire Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- A ring given to the Guardian of Giran. Fire Resistance +12. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2860,7 +2860,7 @@
 		</stats>
 	</item>
 	<item id="14595" name="Oren Earth Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Oren territory. Earth Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- A ring given to the Guardian of Oren. Earth Resistance +12. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2886,7 +2886,7 @@
 		</stats>
 	</item>
 	<item id="14596" name="Aden Holy Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Aden territory. Holy Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- A ring given to the Guardian of Aden. Holy Resistance +12. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2912,7 +2912,7 @@
 		</stats>
 	</item>
 	<item id="14597" name="Innadril Holy Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Innadril territory. Holy Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- A ring given to the Guardian of Innadril. Holy Resistance +12. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2938,7 +2938,7 @@
 		</stats>
 	</item>
 	<item id="14598" name="Goddard Dark Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Goddard territory. Dark Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- A ring given to the Guardian of Goddard. Dark Resistance +12. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2964,7 +2964,7 @@
 		</stats>
 	</item>
 	<item id="14599" name="Rune Wind Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Rune territory. Wind Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- A ring given to the Guardian of Rune. Wind Resistance +12. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

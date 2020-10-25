@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9600" toLevel="1" name="Stronghold Siege (50-second)">
+	<skill id="9600" toLevel="1" name="Stronghold Siege (50 sec.)">
 		<!-- Used for Stronghold Siege. -->
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
@@ -153,7 +153,7 @@
 		</effects>
 	</skill>
 	<skill id="9606" toLevel="1" name="Sealing Agathion">
-		<!-- Seal the summoned Agathion. Not affected by Hour of Penitence for 10 sec. -->
+		<!-- Seals the summoned agathion, making it unavailable for 10 sec. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>EXP_BOTTLE</abnormalType>
@@ -172,7 +172,7 @@
 		</effects>
 	</skill>
 	<skill id="9607" toLevel="1" name="Blessing of Light">
-		<!-- Obtained XP +3% for clan members for the Castle of Light. -->
+		<!-- Acquired XP +3% for clan members of the Castle of Light. -->
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<operateType>A1</operateType>
 		<hitTime>17000</hitTime>
@@ -196,7 +196,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9609" toLevel="1" name="Clan Association - Horn Melody">
-		<!-- For 30 min., P. Atk. +23%, M. Atk. +88%, P. Def. +35%, and M. Def. +40%. Buff remains even after death. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. Buff remains even after death. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -214,7 +214,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9610" toLevel="1" name="Clan Association - Drum Melody">
-		<!-- For 30 min., increases P. Critical Rate by 30%, P. Critical Damage by 30%, M. Critical Rate by 40, and Received P. Critical Damage by 50%. Also has a chance to increase Critical Damage when hit. Buff remains even after death. -->
+		<!-- For $s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, M. Skill Critical Rate +$s4, Received Critical Damage from standard attacks -$s5. Also has a chance to increase P. Critical Damage when hit. The effect remains after death. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -232,7 +232,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9611" toLevel="1" name="Clan Association - Pipe Organ Melody">
-		<!-- For 30 min., Max HP +37%, Max MP +62%, and Max CP +37%. A chance to apply 9% Vampiric Rage effect. Buff effects persist even after death. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. Buff effects persist even after death. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -250,7 +250,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9612" toLevel="1" name="Clan Association - Guitar Melody">
-		<!-- For 30 min., Atk. Spd. +60%, Casting Spd. +60%, and all Skill MP Consumption -10%. But the buff is not deleted upon death. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. But the buff is not deleted upon death. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -268,7 +268,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9613" toLevel="1" name="Clan Association - Harp Melody">
-		<!-- For 30 min., P. Accuracy +5, P. Evasion/ M. Evasion +5, and Speed +34. Critical Damage Received -30%. Buff remains even after death. -->
+		<!-- For 30 min., P. Accuracy +5, P./ M. Evasion +5, and Speed +34. Received Critical Damage from standard attacks -30%. The effect remains after death. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -351,7 +351,7 @@
 		</conditions>
 	</skill>
 	<skill id="9618" toLevel="1" name="Yum Yum Candy">
-		<!-- Acquired XP/ SP +25%. Stacks with effects of Nom Nom Candy. When two identical candies are in the inventory, only one effect is applied. -->
+		<!-- Acquired XP/ SP +25%. The effect stacks with that of Nom Nom Candy. Effects of two identical candies do not stack. -->
 		<icon>etc_whiteday_candy_i05</icon>
 		<operateType>P</operateType>
 		<hitTime>500</hitTime>
@@ -366,7 +366,7 @@
 		</effects>
 	</skill>
 	<skill id="9619" toLevel="1" name="Nom Nom Candy">
-		<!-- Acquired XP/ SP +25%. Stacks with effects of Yum Yum Candy. When two identical candies are in the inventory, only one effect is applied. -->
+		<!-- Acquired XP/ SP +25%. The effect stacks with that of Nom Nom Candy. Effects of two identical candies do not stack. -->
 		<icon>etc_whiteday_candy_i06</icon>
 		<operateType>P</operateType>
 		<hitTime>500</hitTime>
@@ -505,7 +505,7 @@
 		</effects>
 	</skill>
 	<skill id="9627" toLevel="1" name="Innocent Heejin's Blessing">
-		<!-- For 60 min., Acquired XP/ SP +30%. -->
+		<!-- For 60 min., acquired XP/ SP +30%. -->
 		<icon>icon.exp_bottle_scroll</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -652,25 +652,25 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20">
-						<item id="36097" count="1" /> <!-- Star Agathion - Innocent Heejin -->
+						<item id="36097" count="1" /> <!-- Agathion Innocent Heejin -->
 					</item>
 					<item chance="20">
-						<item id="36098" count="1" /> <!-- Star Agathion - Dandy Hyuk -->
+						<item id="36098" count="1" /> <!-- Star Agathion Dandy Hyuk -->
 					</item>
 					<item chance="20">
-						<item id="36099" count="1" /> <!-- Star Agathion - Powerful Sooro -->
+						<item id="36099" count="1" /> <!-- Star Agathion Powerful Sooro -->
 					</item>
 					<item chance="20">
-						<item id="36100" count="1" /> <!-- Star Agathion - Chic Jaebum -->
+						<item id="36100" count="1" /> <!-- Star Agathion Chic Jaebum -->
 					</item>
 					<item chance="20">
-						<item id="36101" count="1" /> <!-- Star Agathion - Cute Shinyoung -->
+						<item id="36101" count="1" /> <!-- Star Agathion Cute Shinyoung -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9633" toLevel="1" name="Transformation Scroll Pack">
+	<skill id="9633" toLevel="1" name="Transformation Scroll Box">
 		<itemConsumeId>36103</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -803,7 +803,7 @@
 		</effects>
 	</skill>
 	<skill id="9640" toLevel="1" name="Dandy Hyuk's Blessing">
-		<!-- For 60 min., Acquired XP/ SP +30%. -->
+		<!-- For 60 min., acquired XP/ SP +30%. -->
 		<icon>icon.exp_bottle_scroll</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -915,7 +915,7 @@
 		</effects>
 	</skill>
 	<skill id="9646" toLevel="1" name="Powerful Sooro's Blessing">
-		<!-- For 60 min., Acquired XP/ SP +30%. -->
+		<!-- For 60 min., acquired XP/ SP +30%. -->
 		<icon>icon.exp_bottle_scroll</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1027,7 +1027,7 @@
 		</effects>
 	</skill>
 	<skill id="9652" toLevel="1" name="Chic Jaebum's Blessing">
-		<!-- For 60 min., Acquired XP/ SP +30%. -->
+		<!-- For 60 min., acquired XP/ SP +30%. -->
 		<icon>icon.exp_bottle_scroll</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1139,7 +1139,7 @@
 		</effects>
 	</skill>
 	<skill id="9658" toLevel="1" name="Cute Shinyoung's Blessing">
-		<!-- For 60 min., Acquired XP/ SP +30%. -->
+		<!-- For 60 min., acquired XP/ SP +30%. -->
 		<icon>icon.exp_bottle_scroll</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1189,7 +1189,7 @@
 		</conditions>
 	</skill>
 	<skill id="9660" toLevel="1" name="Heavenly P. Atk. Cookie (Event)">
-		<!-- For 1 h., P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd. +10%. -->
+		<!-- For $s1, P. Atk. +$s2, Critical Rate for standard attacks +$s3, Critical Damage for standard attacks +$s4, Atk. Spd. +$s5. -->
 		<icon>icon.etc_bm_attack_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1226,7 +1226,7 @@
 		</effects>
 	</skill>
 	<skill id="9661" toLevel="1" name="Heavenly P. Def. Cookie (Event)">
-		<!-- For 1 h., increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, and Shield Defense by 50%. -->
+		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Shield Defense Rate +$s6, and Shield Defense +$s7. -->
 		<icon>icon.etc_bm_defence_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1275,7 +1275,7 @@
 		</effects>
 	</skill>
 	<skill id="9662" toLevel="1" name="Heavenly Magic Cookie (Event)">
-		<!-- For 1 h., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
+		<!-- For $s1, M. Atk. +$s2, M. Skill Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, Skill MP Consumption -$s6. -->
 		<icon>icon.etc_bm_magic_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1332,8 +1332,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9664" toLevel="1" name="Kaliel's Treasure Chest (Low-grade)">
-		<!-- Kaliel's Treasure Chest skill (Low-grade). -->
+	<skill id="9664" toLevel="1" name="Kaliel's Small Treasure Chest">
+		<!-- Kaliel's Low-grade Treasure Chest -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1342,8 +1342,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9665" toLevel="1" name="Kaliel's Treasure Chest (Mid-grade)">
-		<!-- Kaliel's Treasure Chest skill (Mid-grade). -->
+	<skill id="9665" toLevel="1" name="Kaliel's Mid Treasure Chest">
+		<!-- Kaliel's Mid-grade Treasure Chest -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1352,8 +1352,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9666" toLevel="1" name="Kaliel's Treasure Chest (High-grade)">
-		<!-- Kaliel's Treasure Chest skill (High-grade). -->
+	<skill id="9666" toLevel="1" name="Kaliel's High-grade Treasure Chest">
+		<!-- Kaliel's High-grade Treasure Chest. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1661,28 +1661,28 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="30233" count="1" /> <!-- Blessed Helios Shaper - Haste +Focus -->
+						<item id="30233" count="1" /> <!-- Blessed Helios Shaper - Haste + Focus -->
 					</item>
 					<item chance="12.5">
-						<item id="30235" count="1" /> <!-- Blessed Helios Cutter - Haste +Focus -->
+						<item id="30235" count="1" /> <!-- Blessed Helios Cutter - Haste + Focus -->
 					</item>
 					<item chance="12.5">
-						<item id="30238" count="1" /> <!-- Blessed Helios Slasher - Focus +Damage -->
+						<item id="30238" count="1" /> <!-- Blessed Helios Slasher - Focus + Damage -->
 					</item>
 					<item chance="12.5">
-						<item id="30243" count="1" /> <!-- Blessed Helios Avenger - Focus +Haste -->
+						<item id="30243" count="1" /> <!-- Blessed Helios Avenger - Focus + Haste -->
 					</item>
 					<item chance="12.5">
-						<item id="30246" count="1" /> <!-- Blessed Helios Fighter - Haste +Focus -->
+						<item id="30246" count="1" /> <!-- Blessed Helios Fighter - Haste + Focus -->
 					</item>
 					<item chance="12.5">
-						<item id="30249" count="1" /> <!-- Blessed Helios Stormer - Damage Up +HP Drain -->
+						<item id="30249" count="1" /> <!-- Blessed Helios Stormer - Damage Up + HP Drain -->
 					</item>
 					<item chance="12.5">
-						<item id="30250" count="1" /> <!-- Blessed Helios Thrower - Damage Up +Focus -->
+						<item id="30250" count="1" /> <!-- Blessed Helios Thrower - Damage Up + Focus -->
 					</item>
 					<item chance="12.5">
-						<item id="30255" count="1" /> <!-- Blessed Helios Shooter - Haste +Focus -->
+						<item id="30255" count="1" /> <!-- Blessed Helios Shooter - Haste + Focus -->
 					</item>
 				</items>
 			</effect>
@@ -1702,13 +1702,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33">
-						<item id="30258" count="1" /> <!-- Blessed Helios Buster - Mana Up +Acumen -->
+						<item id="30258" count="1" /> <!-- Blessed Helios Buster - Mana Up + Acumen -->
 					</item>
 					<item chance="33">
-						<item id="30259" count="1" /> <!-- Blessed Helios Caster - Empower +Acumen -->
+						<item id="30259" count="1" /> <!-- Blessed Helios Caster - Empower + Acumen -->
 					</item>
 					<item chance="34">
-						<item id="30263" count="1" /> <!-- Blessed Helios Retributer - Acumen +Empower -->
+						<item id="30263" count="1" /> <!-- Blessed Helios Retributer - Acumen + Empower -->
 					</item>
 				</items>
 			</effect>
@@ -1728,13 +1728,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33">
-						<item id="30265" count="1" /> <!-- Blessed Helios Dual Sword - Haste +Damage Up -->
+						<item id="30265" count="1" /> <!-- Blessed Helios Dual Swords - Haste + Damage Up -->
 					</item>
 					<item chance="33">
-						<item id="30268" count="1" /> <!-- Blessed Helios Dual Dagger - Damage Up +Focus -->
+						<item id="30268" count="1" /> <!-- Blessed Helios Dual Daggers - Damage Up + Focus -->
 					</item>
 					<item chance="34">
-						<item id="30273" count="1" /> <!-- Blessed Helios Dual Blunt Weapon - Damage Up +Focus -->
+						<item id="30273" count="1" /> <!-- Blessed Helios Dual Blunt Weapon - Damage Up + Focus -->
 					</item>
 				</items>
 			</effect>
@@ -1974,7 +1974,7 @@
 						<item id="36152" count="1" /> <!-- Kaliel's Energy Box -->
 					</item>
 					<item chance="0.612">
-						<item id="35562" count="1" /> <!-- Energy of Destruction -->
+						<item id="35562" count="1" /> <!-- Destructive Energy -->
 					</item>
 				</items>
 			</effect>
@@ -2006,10 +2006,10 @@
 						<item id="36156" count="1" /> <!-- Enhanced Kaliel's Attribute Crystal Pack -->
 					</item>
 					<item chance="0.945">
-						<item id="32814" count="1" /> <!-- Recipe: Soulshot (R-grade) -->
+						<item id="32814" count="1" /> <!-- Recipe: R-grade Soulshot (100%) -->
 					</item>
 					<item chance="0.945">
-						<item id="32816" count="1" /> <!-- Recipe: Blessed Spiritshot R -->
+						<item id="32816" count="1" /> <!-- Recipe: R-grade Blessed Spiritshot (100%) -->
 					</item>
 					<item chance="2.836">
 						<item id="36157" count="1" /> <!-- Scroll: Enchant Hair Accessory Pack -->
@@ -2021,29 +2021,29 @@
 						<item id="35563" count="1" /> <!-- Giant's Energy -->
 					</item>
 					<item chance="0.193">
-						<item id="34774" count="1" /> <!-- Scroll of Blessing: (R1-grade) - Event -->
+						<item id="34774" count="1" /> <!-- Scroll of Blessing (R1-grade) - Event -->
 					</item>
 					<item chance="0.08">
-						<item id="34775" count="1" /> <!-- Scroll of Blessing: (R2-grade) - Event -->
+						<item id="34775" count="1" /> <!-- Scroll of Blessing (R2-grade) - Event -->
 					</item>
 					<item chance="0.019">
-						<item id="34776" count="1" /> <!-- Scroll of Blessing: (R95-grade) - Event -->
+						<item id="34776" count="1" /> <!-- R95-grade Scroll of Blessing - Event -->
 					</item>
 					<item chance="0.009">
-						<item id="34777" count="1" /> <!-- Scroll of Blessing: (R99-grade) - Event -->
+						<item id="34777" count="1" /> <!-- R99-grade Scroll of Blessing - Event -->
 					</item>
 					<item chance="0.053">
-						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) - Event -->
+						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant R-grade Weapon - Event -->
 					</item>
 					<item chance="0.106">
-						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) - Event -->
+						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant R-grade Armor - Event -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="9685" toLevel="1" name="Kaliel's Hourglass">
-		<!-- Obtained XP +50%. -->
+		<!-- While the effect lasts, acquired XP +50%. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
 		<abnormalType>VOTE</abnormalType>
@@ -2095,7 +2095,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9687" toLevel="1" name="Giant's Scroll: Enchant Weapon (R-grade)">
+	<skill id="9687" toLevel="1" name="Giant's Scroll: Enchant R-grade Weapon">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2104,7 +2104,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9688" toLevel="1" name="Giant's Scroll: Enchant Armor (R-grade)">
+	<skill id="9688" toLevel="1" name="Giant's Scroll: Enchant R-grade Armor">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2215,7 +2215,7 @@
 			<condition name="OpCanEscape" />
 		</conditions>
 	</skill>
-	<skill id="9695" toLevel="1" name="Scroll of Escape: Seal of Shilen">
+	<skill id="9695" toLevel="1" name="Scroll of Escape: Seal of Shillien">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>

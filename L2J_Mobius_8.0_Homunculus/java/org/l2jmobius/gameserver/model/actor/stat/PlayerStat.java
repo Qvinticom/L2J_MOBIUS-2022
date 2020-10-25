@@ -231,7 +231,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public boolean addLevel(byte value)
+	public boolean addLevel(int value)
 	{
 		if ((getLevel() + value) > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
@@ -273,7 +273,7 @@ public class PlayerStat extends PlayableStat
 			final PetInstance pet = (PetInstance) sPet;
 			if (pet.getPetData().isSynchLevel() && (pet.getLevel() != getLevel()))
 			{
-				final byte availableLevel = (byte) Math.min(pet.getPetData().getMaxLevel(), getLevel());
+				final int availableLevel = Math.min(pet.getPetData().getMaxLevel(), getLevel());
 				pet.getStat().setLevel(availableLevel);
 				pet.getStat().getExpForLevel(availableLevel);
 				pet.setCurrentHp(pet.getMaxHp());
@@ -387,7 +387,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public byte getLevel()
+	public int getLevel()
 	{
 		if (getActiveChar().isDualClassActive())
 		{
@@ -400,18 +400,18 @@ public class PlayerStat extends PlayableStat
 		return super.getLevel();
 	}
 	
-	public byte getBaseLevel()
+	public int getBaseLevel()
 	{
 		return super.getLevel();
 	}
 	
 	@Override
-	public void setLevel(byte value)
+	public void setLevel(int value)
 	{
-		byte level = value;
+		int level = value;
 		if (level > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
-			level = (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
+			level = ExperienceData.getInstance().getMaxLevel() - 1;
 		}
 		
 		if (getActiveChar().isSubClassActive())

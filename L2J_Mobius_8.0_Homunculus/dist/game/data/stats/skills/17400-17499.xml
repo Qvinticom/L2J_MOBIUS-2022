@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17400" toLevel="1" name="Lady's Hairpin: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -41,7 +41,7 @@
 		</effects>
 	</skill>
 	<skill id="17403" toLevel="1" name="Lady's Hairpin: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -161,7 +161,7 @@
 		</effects>
 	</skill>
 	<skill id="17413" toLevel="1" name="Party Mask: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.etc_party_mask_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -173,7 +173,7 @@
 		</effects>
 	</skill>
 	<skill id="17414" toLevel="1" name="Party Mask: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.etc_party_mask_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -213,7 +213,7 @@
 		</effects>
 	</skill>
 	<skill id="17417" toLevel="1" name="Party Mask: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.etc_party_mask_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -333,7 +333,7 @@
 		</effects>
 	</skill>
 	<skill id="17427" toLevel="1" name="Monocle: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_glasses_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -345,7 +345,7 @@
 		</effects>
 	</skill>
 	<skill id="17428" toLevel="1" name="Monocle: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_glasses_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -385,7 +385,7 @@
 		</effects>
 	</skill>
 	<skill id="17431" toLevel="1" name="Monocle: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_glasses_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -505,7 +505,7 @@
 		</effects>
 	</skill>
 	<skill id="17441" toLevel="1" name="Maiden's Hairpin: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_maidens_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -517,7 +517,7 @@
 		</effects>
 	</skill>
 	<skill id="17442" toLevel="1" name="Maiden's Hairpin: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_maidens_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -557,7 +557,7 @@
 		</effects>
 	</skill>
 	<skill id="17445" toLevel="1" name="Maiden's Hairpin: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_maidens_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -677,7 +677,7 @@
 		</effects>
 	</skill>
 	<skill id="17455" toLevel="1" name="Forget-me-not Hairpin: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_forget_me_not_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -689,7 +689,7 @@
 		</effects>
 	</skill>
 	<skill id="17456" toLevel="1" name="Forget-me-not Hairpin: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_forget_me_not_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -729,7 +729,7 @@
 		</effects>
 	</skill>
 	<skill id="17459" toLevel="1" name="Forget-me-not Hairpin: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_forget_me_not_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -849,7 +849,7 @@
 		</effects>
 	</skill>
 	<skill id="17469" toLevel="1" name="Daisy Hairpin: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_daisy_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -861,7 +861,7 @@
 		</effects>
 	</skill>
 	<skill id="17470" toLevel="1" name="Daisy Hairpin: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_daisy_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -901,7 +901,7 @@
 		</effects>
 	</skill>
 	<skill id="17473" toLevel="1" name="Daisy Hairpin: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_daisy_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -1021,7 +1021,7 @@
 		</effects>
 	</skill>
 	<skill id="17483" toLevel="1" name="Little Angel Wings: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_hair_ring_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -1033,7 +1033,7 @@
 		</effects>
 	</skill>
 	<skill id="17484" toLevel="1" name="Little Angel Wings: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_hair_ring_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -1073,7 +1073,7 @@
 		</effects>
 	</skill>
 	<skill id="17487" toLevel="1" name="Little Angel Wings: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_hair_ring_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -1193,7 +1193,7 @@
 		</effects>
 	</skill>
 	<skill id="17497" toLevel="1" name="Fairy Antennae: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_hair_feeler_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -1205,7 +1205,7 @@
 		</effects>
 	</skill>
 	<skill id="17498" toLevel="1" name="Fairy Antennae: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_hair_feeler_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>

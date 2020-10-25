@@ -21,7 +21,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="28004" toLevel="3" name="Empire Legendary Cloak Augmentation">
-		<!-- Reflect $s1 of received damage -->
+		<!-- Reflects $s1 of the received damage. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -50,7 +50,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="28009" toLevel="1" name="Empire Legendary Cloak Augmentation">
-		<!-- When receiving a fatal attack, CP/ HP recovers by 100% for 1 min When the effect is applied the buff disappears. Can be used when the equipped cloak is +15 or higher. -->
+		<!-- When receiving a fatal attack, CP/ HP recovers by $s2 for $s1 When the effect is applied the buff disappears. Can be used when the equipped cloak is +15 or higher. -->
 		<icon>icon.skill19211</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -106,7 +106,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="28017" toLevel="1" name="Legendary Cloak - Invincibility">
-		<!-- Become invincible. -->
+		<!-- Grants invincibility. -->
 		<icon>icon.skill1917</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
@@ -165,8 +165,8 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28026" toLevel="4" name="+10 Elmoreden Cloak - Legendary Box">
-		<!-- Double-click to obtain a +10 Elmoreden Cloak - Legendary. -->
+	<skill id="28026" toLevel="4" name="+10 Legendary Elmoreden Cloak Box">
+		<!-- Double-click to obtain Legendary Elmoreden Cloak enchanted to +10. -->
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
@@ -183,7 +183,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13410</npcId>
+				<npcId>13410</npcId> <!-- Virgo -->
 			</effect>
 		</effects>
 	</skill>
@@ -200,7 +200,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13412</npcId>
+				<npcId>13412</npcId> <!-- Capricorn -->
 			</effect>
 		</effects>
 	</skill>
@@ -217,7 +217,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13415</npcId>
+				<npcId>13415</npcId> <!-- Libra -->
 			</effect>
 		</effects>
 	</skill>
@@ -234,7 +234,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13411</npcId>
+				<npcId>13411</npcId> <!-- Aries -->
 			</effect>
 		</effects>
 	</skill>
@@ -251,7 +251,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13418</npcId>
+				<npcId>13418</npcId> <!-- Taurus -->
 			</effect>
 		</effects>
 	</skill>
@@ -268,7 +268,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13414</npcId>
+				<npcId>13414</npcId> <!-- Leo -->
 			</effect>
 		</effects>
 	</skill>
@@ -285,7 +285,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13413</npcId>
+				<npcId>13413</npcId> <!-- Gemini -->
 			</effect>
 		</effects>
 	</skill>
@@ -302,7 +302,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13417</npcId>
+				<npcId>13417</npcId> <!-- Scorpio -->
 			</effect>
 		</effects>
 	</skill>
@@ -319,7 +319,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13408</npcId>
+				<npcId>13408</npcId> <!-- Aquarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -336,7 +336,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13407</npcId>
+				<npcId>13407</npcId> <!-- Pisces -->
 			</effect>
 		</effects>
 	</skill>
@@ -353,7 +353,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13416</npcId>
+				<npcId>13416</npcId> <!-- Sagittarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -370,7 +370,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13409</npcId>
+				<npcId>13409</npcId> <!-- Cancer -->
 			</effect>
 		</effects>
 	</skill>
@@ -387,7 +387,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13488</npcId>
+				<npcId>13488</npcId> <!-- Virgo -->
 			</effect>
 		</effects>
 	</skill>
@@ -404,7 +404,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13490</npcId>
+				<npcId>13490</npcId> <!-- Capricorn -->
 			</effect>
 		</effects>
 	</skill>
@@ -421,7 +421,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13493</npcId>
+				<npcId>13493</npcId> <!-- Libra -->
 			</effect>
 		</effects>
 	</skill>
@@ -438,7 +438,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13489</npcId>
+				<npcId>13489</npcId> <!-- Aries -->
 			</effect>
 		</effects>
 	</skill>
@@ -455,7 +455,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13496</npcId>
+				<npcId>13496</npcId> <!-- Taurus -->
 			</effect>
 		</effects>
 	</skill>
@@ -472,7 +472,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13492</npcId>
+				<npcId>13492</npcId> <!-- Leo -->
 			</effect>
 		</effects>
 	</skill>
@@ -489,7 +489,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13491</npcId>
+				<npcId>13491</npcId> <!-- Gemini -->
 			</effect>
 		</effects>
 	</skill>
@@ -506,7 +506,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13495</npcId>
+				<npcId>13495</npcId> <!-- Scorpio -->
 			</effect>
 		</effects>
 	</skill>
@@ -523,7 +523,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13498</npcId>
+				<npcId>13498</npcId> <!-- Aquarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -540,7 +540,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13497</npcId>
+				<npcId>13497</npcId> <!-- Pisces -->
 			</effect>
 		</effects>
 	</skill>
@@ -557,7 +557,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13494</npcId>
+				<npcId>13494</npcId> <!-- Sagittarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -574,7 +574,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13487</npcId>
+				<npcId>13487</npcId> <!-- Cancer -->
 			</effect>
 		</effects>
 	</skill>
@@ -591,7 +591,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13500</npcId>
+				<npcId>13500</npcId> <!-- Virgo -->
 			</effect>
 		</effects>
 	</skill>
@@ -608,7 +608,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13502</npcId>
+				<npcId>13502</npcId> <!-- Capricorn -->
 			</effect>
 		</effects>
 	</skill>
@@ -625,7 +625,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13505</npcId>
+				<npcId>13505</npcId> <!-- Libra -->
 			</effect>
 		</effects>
 	</skill>
@@ -642,7 +642,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13501</npcId>
+				<npcId>13501</npcId> <!-- Aries -->
 			</effect>
 		</effects>
 	</skill>
@@ -659,7 +659,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13508</npcId>
+				<npcId>13508</npcId> <!-- Taurus -->
 			</effect>
 		</effects>
 	</skill>
@@ -676,7 +676,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13504</npcId>
+				<npcId>13504</npcId> <!-- Leo -->
 			</effect>
 		</effects>
 	</skill>
@@ -693,7 +693,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13503</npcId>
+				<npcId>13503</npcId> <!-- Gemini -->
 			</effect>
 		</effects>
 	</skill>
@@ -710,7 +710,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13507</npcId>
+				<npcId>13507</npcId> <!-- Scorpio -->
 			</effect>
 		</effects>
 	</skill>
@@ -727,7 +727,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13510</npcId>
+				<npcId>13510</npcId> <!-- Aquarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -744,7 +744,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13509</npcId>
+				<npcId>13509</npcId> <!-- Pisces -->
 			</effect>
 		</effects>
 	</skill>
@@ -761,7 +761,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13412</npcId>
+				<npcId>13412</npcId> <!-- Capricorn -->
 			</effect>
 		</effects>
 	</skill>
@@ -778,12 +778,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13499</npcId>
+				<npcId>13499</npcId> <!-- Cancer -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28063" toLevel="1" name="Agathion Cute Trick">
-		<!-- See Agathion's cute tricks. -->
+	<skill id="28063" toLevel="1" name="Agathion's Cute Trick">
+		<!-- Makes an agathion perform a cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -803,7 +803,7 @@
 			<effect name="UnsummonAgathion" />
 		</effects>
 	</skill>
-	<skill id="28065" toLevel="1" name="Zodiac Agathion Charm Book of Growth">
+	<skill id="28065" toLevel="1" name="Starlight Agathion Book of Growth">
 		<icon>icon.star_scrl_of_ench_ag</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -813,7 +813,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="28066" toLevel="1" name="Ancient Zodiac Agathion Charm Book of Growth">
+	<skill id="28066" toLevel="1" name="Starlight Agathion Ancient Book of Growth">
 		<icon>icon.star_giantscrl_of_ench_ag</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -823,7 +823,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="28067" toLevel="1" name="Zodiac Agathion Cube">
+	<skill id="28067" toLevel="1" name="Starlight Agathion Cube">
 		<icon>icon.star_agathion_cube</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -849,8 +849,8 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28070" toLevel="11" name="Virgo Agathion Unique Ability">
-		<!-- Upgrade to increase Casting Spd. -->
+	<skill id="28070" toLevel="11" name="Secondary Skill: Agathion Virgo">
+		<!-- Casting Spd. is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_virgo_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -872,8 +872,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28071" toLevel="11" name="Capricorn Agathion Unique Ability">
-		<!-- Upgrade to increase M. Critical Damage. -->
+	<skill id="28071" toLevel="11" name="Secondary Skill: Agathion Capricorn">
+		<!-- M. Critical Damage is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_capr_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -895,8 +895,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28072" toLevel="11" name="Libra Agathion Unique Ability">
-		<!-- Upgrade to increase M. Critical Rate. -->
+	<skill id="28072" toLevel="11" name="Secondary Skill: Agathion Libra">
+		<!-- M. Critical Rate is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_lib_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -918,8 +918,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28073" toLevel="11" name="Aries Agathion Unique Ability">
-		<!-- Upgrade to increase P. Skill Critical Damage. -->
+	<skill id="28073" toLevel="11" name="Secondary Skill: Agathion Aries">
+		<!-- P. Skill Critical Damage is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_aries_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -941,8 +941,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28074" toLevel="11" name="Taurus Agathion Unique Ability">
-		<!-- Upgrade to increase Atk. Spd. -->
+	<skill id="28074" toLevel="11" name="Secondary Skill: Agathion Taurus">
+		<!-- Atk. Spd. is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_tau_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -964,8 +964,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28075" toLevel="11" name="Leo Agathion Unique Ability">
-		<!-- Upgrade to increase P. Critical Rate. -->
+	<skill id="28075" toLevel="11" name="Secondary Skill: Agathion Leo">
+		<!-- P. Critical Rate is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_leo_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -987,8 +987,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28076" toLevel="11" name="Gemini Agathion Unique Ability">
-		<!-- Upgrade to increase M. Def. -->
+	<skill id="28076" toLevel="11" name="Secondary Skill: Agathion Gemini">
+		<!-- M. Def. is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_gem_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1010,8 +1010,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28077" toLevel="11" name="Scorpio Agathion Unique Ability">
-		<!-- Upgrade to increase P. Critical Damage. -->
+	<skill id="28077" toLevel="11" name="Secondary Skill: Agathion Scorpio">
+		<!-- P. Critical Damage is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_sco_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1033,8 +1033,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28078" toLevel="11" name="Aquarius Agathion Unique Ability">
-		<!-- Upgrade to increase M. Atk. -->
+	<skill id="28078" toLevel="11" name="Secondary Skill: Agathion Aquarius">
+		<!-- M. Atk. is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_aqu_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1056,8 +1056,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28079" toLevel="11" name="Pisces Agathion Unique Ability">
-		<!-- Upgrade to increase P. Atk. -->
+	<skill id="28079" toLevel="11" name="Agathion Pisces� Unique Ability">
+		<!-- P. Atk. is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_pis_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1079,8 +1079,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28080" toLevel="11" name="Sagittarius Agathion Unique Ability">
-		<!-- Upgrade to increase P. Skill Critical Rate. -->
+	<skill id="28080" toLevel="11" name="Secondary Skill: Agathion Sagittarius">
+		<!-- P. Skill Critical Rate is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_sag_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1102,8 +1102,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28081" toLevel="11" name="Cancer Agathion Unique Ability">
-		<!-- Upgrade to increase P. Def. -->
+	<skill id="28081" toLevel="11" name="Secondary Skill: Agathion Cancer">
+		<!-- P. Def. is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_can_agathion_charm</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1184,6 +1184,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<isMagic>22</isMagic>
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -1312,6 +1313,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<isMagic>22</isMagic>
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -1346,18 +1348,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="28087" toLevel="12" name="Maiden's Prayer">
-		<!-- Invincible for $s1 -->
+	<skill id="28087" toLevel="12" name="Nemean Lion's Defense">
+		<!-- Grants invincibility for $s1 -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_july_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>867</effectPoint>
 		<abnormalTime>10</abnormalTime>
-		<isMagic>1</isMagic>
+		<isMagic>22</isMagic>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
@@ -1388,10 +1389,6 @@
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
 				<max>10</max>
-			</effect>
-			<effect name="ResistDispelByCategory">
-				<amount>-100</amount>
-				<slot>ALL</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -1476,7 +1473,7 @@
 		<reuseDelayGroup>27356</reuseDelayGroup>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DamOverTime">
 				<power>282</power>
@@ -1490,6 +1487,19 @@
 			</effect>
 			<effect name="BuffBlock" />
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="28090" toLevel="12" name="Mass Binding Flood">
@@ -1557,7 +1567,7 @@
 		</effects>
 	</skill>
 	<skill id="28091" toLevel="12" name="Slippery Scale">
-		<!-- For $s1, defends against debuffs $s2 times. -->
+		<!-- For $s1, blocks $s2 debuff attack(s). -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_feb_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
@@ -1566,6 +1576,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
 		<basicProperty>NONE</basicProperty>
+		<abnormalTime>60</abnormalTime>
 		<activateRate>0</activateRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -1599,12 +1610,11 @@
 		<hitTime>15000</hitTime>
 		<effectPoint>467</effectPoint>
 		<isMagic>4</isMagic>
-		<effectRange>-2</effectRange>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>OTHERS</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<staticReuse>true</staticReuse>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">6750000</value>
@@ -1621,14 +1631,16 @@
 			<value level="12">1800000</value>
 		</reuseDelay>
 		<reuseDelayGroup>27359</reuseDelayGroup>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 		<conditions>
 			<condition name="OpCallPc" />
-			<condition name="TargetMyParty">
-				<includeMe>false</includeMe>
-			</condition>
 		</conditions>
 		<effects>
-			<effect name="CallPc" />
+			<effect name="CallParty" />
 		</effects>
 	</skill>
 	<skill id="28093" toLevel="12" name="Exoskeletal Shield">
@@ -1642,7 +1654,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1727,6 +1739,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<isMagic>22</isMagic>
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -1858,6 +1871,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<isMagic>22</isMagic>
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -1893,13 +1907,13 @@
 		</effects>
 	</skill>
 	<skill id="28099" toLevel="12" name="Maiden's Prayer">
-		<!-- Invincible for $s1 -->
+		<!-- Grants invincibility for $s1 -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_july_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>867</effectPoint>
 		<abnormalTime>10</abnormalTime>
-		<isMagic>1</isMagic>
+		<isMagic>22</isMagic>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
@@ -1934,10 +1948,6 @@
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
 				<max>10</max>
-			</effect>
-			<effect name="ResistDispelByCategory">
-				<amount>-100</amount>
-				<slot>ALL</slot>
 			</effect>
 		</effects>
 	</skill>

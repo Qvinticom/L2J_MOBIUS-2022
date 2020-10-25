@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20600" name="Twilight Staff" additionalName="Dance of Shadow (7-day)" type="Weapon">
-		<!-- Staff that calls souls. Cooldown is 1 hour. -->
+		<!-- A staff that summons souls. Special skill's cooldown: 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_invokespirit_stick_a_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -33,7 +33,7 @@
 		</stats>
 	</item>
 	<item id="20601" name="Anniversary Hat" additionalName="Soul of Phoenix (7-day)" type="Armor">
-		<!-- Hat that comforts souls. Uses 2 hair accessory slots. Cooldown is 24 hours. -->
+		<!-- Hat that comforts souls. Uses 2 hair accessory slots. Cooldown is 24 h.. -->
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -55,7 +55,7 @@
 		</skills>
 	</item>
 	<item id="20602" name="Soul Silver Foil (Event)" type="EtcItem">
-		<!-- Silver Foil to comfort a spirit of monster. When used on a corpse of monster, increases max HP by 60%, max MP by 60%, max CP by 60%, P. Def. by 30%, Magic Def. by 30%, Speed by 30, P. Atk. by 20%, and decreases skill MP consumption by 10% for 2 min. -->
+		<!-- Silver Foil to comfort a spirit of monster. When used on a corpse of monster, for 2 min. Max HP/ MP/ CP +60%, P./ M. Def. +30%, Speed +30, P. Atk. +20%, and Skill MP consumption -10%. -->
 		<set name="icon" val="BranchSys.icon.br_ghost_silverpaper_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -74,7 +74,7 @@
 		</skills>
 	</item>
 	<item id="20603" name="Soul Scent (Event)" type="EtcItem">
-		<!-- Scent to comfort a spirit of monster. When used on a corpse of monster, increases max HP by 40%, max CP by 40%, P. Def. by 30%, Magic Def. by 30%, Speed by 20, P. Atk. by 45%, and decreases skill MP consumption by 10% for 2 min. -->
+		<!-- Scent to comfort a spirit of monster. When used on a corpse of monster, for 2 min. Max HP/ CP +40%, P./ M. Def. +30%, Speed +20, M. Atk. +45%, and Skill MP consumption -10%. -->
 		<set name="icon" val="BranchSys.icon.br_ghost_incense_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -142,7 +142,7 @@
 		<set name="time" val="480" />
 	</item>
 	<item id="20607" name="Headphone Pack" additionalName="Town Theme" type="EtcItem">
-		<!-- Wrapped Pack containing Headphone. -->
+		<!-- Double-click to obtain Headphone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -164,7 +164,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20608" name="Headphone Pack" additionalName="Hero Theme" type="EtcItem">
-		<!-- Wrapped Pack containing Headphone. -->
+		<!-- Double-click to obtain Headphone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -186,7 +186,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20609" name="Headphone Pack" additionalName="Theme Park" type="EtcItem">
-		<!-- Wrapped Pack containing Headphone. -->
+		<!-- Double-click to obtain Headphone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -208,7 +208,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20610" name="Headphone Pack (7-day)" additionalName="Town Theme: Great Adventurer's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Headphone (7-day). -->
+		<!-- Double-click to obtain Headphone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -226,11 +226,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20616" min="1" max="1" chance="100" /> <!-- Headphone - Town Theme: Great Adventurer's Soul Power (7-day) -->
+			<item id="20616" min="1" max="1" chance="100" /> <!-- Headphone - Town Theme: Great Adventurer's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20611" name="Headphone Pack (7-day)" additionalName="Hero Theme: Brave Warrior's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Headphone (7-day). -->
+		<!-- Double-click to obtain Headphone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -248,11 +248,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20617" min="1" max="1" chance="100" /> <!-- Headphone - Hero Theme: Brave Warrior's Soul Power (7-day) -->
+			<item id="20617" min="1" max="1" chance="100" /> <!-- Headphone - Hero Theme: Brave Warrior's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20612" name="Headphone Pack (7-day)" additionalName="Theme Park: Great Wizard's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Headphone (7-day). -->
+		<!-- Double-click to obtain Headphone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -270,7 +270,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20618" min="1" max="1" chance="100" /> <!-- Headphone - Theme Park: Great Wizard's Soul Power (7-day) -->
+			<item id="20618" min="1" max="1" chance="100" /> <!-- Headphone - Theme Park: Great Wizard's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20613" name="Headphone" additionalName="Town Theme" type="Armor">
@@ -320,7 +320,7 @@
 		</skills>
 	</item>
 	<item id="20615" name="Headphone" additionalName="Theme Park" type="Armor">
-		<!-- Wrapped Pack containing magical Headphone that plays Theme Park music. -->
+		<!-- Double-click to obtain Headphone. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -389,7 +389,7 @@
 		</skills>
 	</item>
 	<item id="20618" name="Headphone" additionalName="Theme Park: Great Wizard's Soul Power (7-day)" type="Armor">
-		<!-- Wrapped Pack containing magical Headphone (7-day) playing Theme Park music. -->
+		<!-- Double-click to obtain Headphone. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -412,7 +412,7 @@
 		</skills>
 	</item>
 	<item id="20619" name="Agathion - Weaver Pack (24-hour)" additionalName="Flute Sound" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Weaver (24-hour). -->
+		<!-- Double-click to obtain Agathion Weaver (24-hour). Cannot be sold. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -427,11 +427,11 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_mailable" val="false" />
 		<capsuled_items>
-			<item id="20621" min="1" max="1" chance="100" /> <!-- Agathion - Weaver - Flute Sound (24-hour) -->
+			<item id="20621" min="1" max="1" chance="100" /> <!-- Agathion Weaver - Flute Sound / 24-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20620" name="Agathion - Weaver Pack (3-day)" additionalName="Flute Sound" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Weaver (3-day). -->
+		<!-- Double-click to obtain Agathion Weaver (3-day). Cannot be sold. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -446,11 +446,11 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_mailable" val="false" />
 		<capsuled_items>
-			<item id="20622" min="1" max="1" chance="100" /> <!-- Agathion - Weaver - Flute Sound (3-day) -->
+			<item id="20622" min="1" max="1" chance="100" /> <!-- Agathion Weaver - Flute Sound / 3-day -->
 		</capsuled_items>
 	</item>
 	<item id="20621" name="Agathion - Weaver" additionalName="Flute Sound (24-hour)" type="Armor">
-		<!-- Bracelet that summons an Agathion - Weaver. -->
+		<!-- A bracelet for summoning Agathion Weaver. -->
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -474,7 +474,7 @@
 		</skills>
 	</item>
 	<item id="20622" name="Agathion - Weaver" additionalName="Flute Sound (3-day)" type="Armor">
-		<!-- Bracelet that summons an Agathion - Weaver. -->
+		<!-- A bracelet for summoning Agathion Weaver. -->
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -498,7 +498,7 @@
 		</skills>
 	</item>
 	<item id="20623" name="Soul Silver Foil - Scent Pack" type="EtcItem">
-		<!-- Wrapped containing silver foil and scent that comfort the souls of monsters. -->
+		<!-- Double-click to obtain Soul Silver Foil and Scent. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -519,7 +519,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20624" name="Soul Scent 100-unit Pack" type="EtcItem">
-		<!-- Wrapped containing scent that comfort the souls of monsters. -->
+		<!-- Double-click to obtain Soul Scent. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -539,7 +539,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20625" name="Anniversary Hat Pack (7-day)" additionalName="Resurrection" type="EtcItem">
-		<!-- Wrapped Pack containing Anniversary Hat (7-day). -->
+		<!-- Double-click to obtain Anniversary Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -557,11 +557,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20626" min="1" max="1" chance="100" /> <!-- Anniversary Hat - Resurrection (7-day) -->
+			<item id="20626" min="1" max="1" chance="100" /> <!-- Anniversary Hat - Resurrection / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20626" name="Anniversary Hat" additionalName="Resurrection (7-day)" type="Armor">
-		<!-- Hat that comforts souls. Uses 2 hair accessory slots. Cooldown is 12 hours. -->
+		<!-- Uses 2 hair accessory slots. Cooldown is 12 h. -->
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -583,7 +583,7 @@
 		</skills>
 	</item>
 	<item id="20627" name="Summon of Love Bracelet Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Summon of Love Bracelet (7-day). -->
+		<!-- Double-click to obtain Summon of Love Bracelet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -642,7 +642,7 @@
 		</skills>
 	</item>
 	<item id="20630" name="Soul Magic Box" type="EtcItem">
-		<!-- If you Double-click, Soul Silver Foil and Soul Scent items are created. (You can only use on every 24 hours.) -->
+		<!-- If you Double-click, Soul Silver Foil and Soul Scent items are created. (You can only use on every 24 h..) -->
 		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -661,7 +661,7 @@
 		</skills>
 	</item>
 	<item id="20631" name="Watermelon Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Laborer Hat (7-day). -->
+		<!-- Double-click to obtain Watermelon Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -679,11 +679,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20633" min="1" max="1" chance="100" /> <!-- Watermelon Hat - Ability of a Cool Watermelon (7-day) -->
+			<item id="20633" min="1" max="1" chance="100" /> <!-- Watermelon Hat - Cool Watermelon / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20632" name="Watermelon Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Watermelon Hat. -->
+		<!-- Double-click to obtain Watermelon Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -848,9 +848,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20415" min="1" max="1" chance="100" /> <!-- Afro Hair - Big Head, Firework (7-day) -->
-			<item id="21091" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% Pack (7-day) -->
-			<item id="21092" min="1" max="1" chance="100" /> <!-- SP Rune 50% Pack (7-day) -->
+			<item id="20415" min="1" max="1" chance="100" /> <!-- Afro Hair - Big Head / Firework / 7-day -->
+			<item id="21091" min="1" max="1" chance="100" /> <!-- Package: XP Rune 50% (7-day) -->
+			<item id="21092" min="1" max="1" chance="100" /> <!-- Package: SP Rune 50% (7-day) -->
 		</capsuled_items>
 	</item>
 	<item id="20639" name="Common Item - Elven Long Sword" type="Weapon">
@@ -1208,7 +1208,7 @@
 		</stats>
 	</item>
 	<item id="20654" name="Agathion - Lucky Girl" type="Armor">
-		<!-- Bracelet that summons an Agathion - Lucky Girl. -->
+		<!-- A bracelet for summoning Agathion Lucky Girl. -->
 		<set name="icon" val="BranchSys.icon.br_aga_luckygirl_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1232,7 +1232,7 @@
 		</skills>
 	</item>
 	<item id="20655" name="Agathion - Lucky Girl" additionalName="Brave Warrior's Soul Power (7-day)" type="Armor">
-		<!-- Bracelet that summons an Agathion - Lucky Girl. -->
+		<!-- A bracelet for summoning Agathion Lucky Girl. -->
 		<set name="icon" val="BranchSys.icon.br_aga_luckygirl_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1256,7 +1256,7 @@
 		</skills>
 	</item>
 	<item id="20656" name="Agathion - Lucky Boy" type="Armor">
-		<!-- Bracelet that summons an Agathion - Lucky Boy. -->
+		<!-- A bracelet for summoning Agathion Lucky Boy. -->
 		<set name="icon" val="BranchSys.icon.br_aga_luckyboy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1280,7 +1280,7 @@
 		</skills>
 	</item>
 	<item id="20657" name="Agathion - Lucky Boy" additionalName="Great Wizard's Soul Power (7-day)" type="Armor">
-		<!-- Bracelet that summons an Agathion - Lucky Boy. -->
+		<!-- A bracelet for summoning Agathion Lucky Boy. -->
 		<set name="icon" val="BranchSys.icon.br_aga_luckyboy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1304,7 +1304,7 @@
 		</skills>
 	</item>
 	<item id="20658" name="Agathion - Dancing Lucky Kid" type="Armor">
-		<!-- The bracelet to summon an Agathion - Dancing Lucky Kid. -->
+		<!-- A bracelet for summoning Agathion Dancing Lucky Kid. -->
 		<set name="icon" val="BranchSys.icon.br_aga_dancingchild_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1328,7 +1328,7 @@
 		</skills>
 	</item>
 	<item id="20659" name="Agathion - Dancing Lucky Kid" additionalName="Great Adventurer's Soul Power (7-day)" type="Armor">
-		<!-- The bracelet to summon an Agathion - Dancing Lucky Kid. -->
+		<!-- A bracelet for summoning Agathion Dancing Lucky Kid. -->
 		<set name="icon" val="BranchSys.icon.br_aga_dancingchild_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1352,7 +1352,7 @@
 		</skills>
 	</item>
 	<item id="20660" name="Agathion - Monkey King" type="Armor">
-		<!-- Can summon Agathion - Monkey King when equipped. -->
+		<!-- A bracelet for summoning Agathion Monkey King. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sunwukong_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1376,7 +1376,7 @@
 		</skills>
 	</item>
 	<item id="20661" name="Agathion - Monkey King" additionalName="Great Wizard's Soul Power (7-day)" type="Armor">
-		<!-- Can summon Agathion - Monkey King when equipped. -->
+		<!-- A bracelet for summoning Agathion Monkey King. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sunwukong_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1400,7 +1400,7 @@
 		</skills>
 	</item>
 	<item id="20662" name="Agathion - Uthanka" type="Armor">
-		<!-- Bracelet that summons an Agathion - Uthanka. -->
+		<!-- Bracelet that summons Agathion Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1424,7 +1424,7 @@
 		</skills>
 	</item>
 	<item id="20663" name="Agathion - Uthanka" additionalName="Brave Warrior's Soul Power (7-day)" type="Armor">
-		<!-- Bracelet that summons an Agathion - Uthanka. -->
+		<!-- Bracelet that summons Agathion Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1448,7 +1448,7 @@
 		</skills>
 	</item>
 	<item id="20664" name="Agathion - Bonus B" type="Armor">
-		<!-- Bracelet that summons Agathion - Bonus B. -->
+		<!-- A bracelet for summoning Agathion Bonus B. -->
 		<set name="icon" val="BranchSys.icon.br_aga_bonus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1472,7 +1472,7 @@
 		</skills>
 	</item>
 	<item id="20665" name="Agathion - Bonus B" additionalName="Great Adventurer's Soul Power (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Bonus B. -->
+		<!-- A bracelet for summoning Agathion Bonus B. -->
 		<set name="icon" val="BranchSys.icon.br_aga_bonus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1496,7 +1496,7 @@
 		</skills>
 	</item>
 	<item id="20666" name="Valkyrie Hat" type="Armor">
-		<!-- The hat with Valkyrie's power in it. Uses 2 hair accessory slots. -->
+		<!-- A hat endowed with Valkyrie power. Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1582,7 +1582,7 @@
 		</skills>
 	</item>
 	<item id="20670" name="Maid Hairband" type="Armor">
-		<!-- Cute Maid Hairband Uses 2 hair accessory slots. -->
+		<!-- Cute hairband. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1603,7 +1603,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20671" name="Maid Hairband" additionalName="Great Wizard's Soul Power (7-day)" type="Armor">
-		<!-- Cute Maid Hairband Uses 2 hair accessory slots. -->
+		<!-- A cute hairband. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1646,7 +1646,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20673" name="Baby Panda Hat" additionalName="Blessed Escape (7-day)" type="Armor">
-		<!-- Baby Panda shaped hat. Uses 2 hair accessory slots. -->
+		<!-- Baby-panda shaped hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_babypanda_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1711,7 +1711,7 @@
 		</skills>
 	</item>
 	<item id="20676" name="Sexy Panda Hat" type="Armor">
-		<!-- Sexy-panda shaped hat. Uses 2 hair accessory slots. -->
+		<!-- Bamboo-panda shaped hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1732,7 +1732,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20677" name="Sexy Panda Hat" additionalName="Blessed Resurrection (7-day)" type="Armor">
-		<!-- Sexy-panda shaped hat. Uses 2 hair accessory slots. -->
+		<!-- Bamboo-panda shaped hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1754,7 +1754,7 @@
 		</skills>
 	</item>
 	<item id="20678" name="Gatekeeper Hat" type="Armor">
-		<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots. -->
+		<!-- A hat worn by Gatekeepers. Occupies 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1775,7 +1775,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20679" name="Gatekeeper Hat" additionalName="Appetite for Destruction (7-day)" type="Armor">
-		<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots. Cooldown is 1h. -->
+		<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1797,7 +1797,7 @@
 		</skills>
 	</item>
 	<item id="20680" name="Agathion - Lucky Girl Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Lucky Girl. -->
+		<!-- Double-click to obtain Agathion Lucky Girl. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1815,11 +1815,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20654" min="1" max="1" chance="100" /> <!-- Agathion - Lucky Girl -->
+			<item id="20654" min="1" max="1" chance="100" /> <!-- Agathion Lucky Girl -->
 		</capsuled_items>
 	</item>
 	<item id="20681" name="Agathion - Lucky Girl Pack (7-day)" additionalName="Brave Warrior's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Lucky Girl (7-day). -->
+		<!-- Double-click to obtain Agathion Lucky Girl (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1837,11 +1837,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20655" min="1" max="1" chance="100" /> <!-- Agathion - Lucky Girl - Brave Warrior's Soul Power (7-day) -->
+			<item id="20655" min="1" max="1" chance="100" /> <!-- Agathion Lucky Girl - Brave Warrior's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20682" name="Agathion - Lucky Boy Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Lucky Boy. -->
+		<!-- Double-click to obtain Agathion Lucky Boy. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1859,11 +1859,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20656" min="1" max="1" chance="100" /> <!-- Agathion - Lucky Boy -->
+			<item id="20656" min="1" max="1" chance="100" /> <!-- Agathion Lucky Boy -->
 		</capsuled_items>
 	</item>
 	<item id="20683" name="Agathion - Lucky Boy Pack (7-day)" additionalName="Great Wizard's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Lucky Boy (7-day). -->
+		<!-- Double-click to obtain Agathion Lucky Boy (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1881,11 +1881,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20657" min="1" max="1" chance="100" /> <!-- Agathion - Lucky Boy - Great Wizard's Soul Power (7-day) -->
+			<item id="20657" min="1" max="1" chance="100" /> <!-- Agathion Lucky Boy - Great Wizard's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20684" name="Agathion - Dancing Lucky Kid Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Dancing Lucky Kid. -->
+		<!-- Double-click to obtain Agathion Dancing Lucky Kid. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1903,11 +1903,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20658" min="1" max="1" chance="100" /> <!-- Agathion - Dancing Lucky Kid -->
+			<item id="20658" min="1" max="1" chance="100" /> <!-- Agathion Dancing Lucky Kid -->
 		</capsuled_items>
 	</item>
 	<item id="20685" name="Agathion - Dancing Lucky Kid Pack (7-day)" additionalName="Great Adventurer's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Dancing Lucky Kid (7-day). -->
+		<!-- Double-click to obtain Agathion Dancing Lucky Kid (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1925,11 +1925,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20659" min="1" max="1" chance="100" /> <!-- Agathion - Dancing Lucky Kid - Great Adventurer's Soul Power (7-day) -->
+			<item id="20659" min="1" max="1" chance="100" /> <!-- Agathion Dancing Lucky Kid - Great Adventurer's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20686" name="Agathion - Monkey King Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Monkey King. -->
+		<!-- Double-click to obtain Agathion Monkey King. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1947,11 +1947,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20660" min="1" max="1" chance="100" /> <!-- Agathion - Monkey King -->
+			<item id="20660" min="1" max="1" chance="100" /> <!-- Agathion Monkey King -->
 		</capsuled_items>
 	</item>
 	<item id="20687" name="Agathion - Monkey King Pack (7-day)" additionalName="Great Wizard's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Monkey King (7-day). -->
+		<!-- Double-click to obtain Agathion Monkey King (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1969,11 +1969,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20661" min="1" max="1" chance="100" /> <!-- Agathion - Monkey King - Great Wizard's Soul Power (7-day) -->
+			<item id="20661" min="1" max="1" chance="100" /> <!-- Agathion Monkey King - Great Wizard's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20688" name="Agathion - Uthanka Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Uthanka. -->
+		<!-- Double-click to obtain Agathion Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1991,11 +1991,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20662" min="1" max="1" chance="100" /> <!-- Agathion - Uthanka -->
+			<item id="20662" min="1" max="1" chance="100" /> <!-- Agathion Uthanka -->
 		</capsuled_items>
 	</item>
 	<item id="20689" name="Agathion - Uthanka Pack (7-day)" additionalName="Brave Warrior's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Uthanka (7-day). -->
+		<!-- Double-click to obtain Agathion Uthanka (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2013,11 +2013,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20663" min="1" max="1" chance="100" /> <!-- Agathion - Uthanka - Brave Warrior's Soul Power (7-day) -->
+			<item id="20663" min="1" max="1" chance="100" /> <!-- Agathion Uthanka - Brave Warrior's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20690" name="Agathion - Bonus B Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Bonus B. -->
+		<!-- Double-click to obtain Agathion Bonus B. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2035,11 +2035,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20664" min="1" max="1" chance="100" /> <!-- Agathion - Bonus B -->
+			<item id="20664" min="1" max="1" chance="100" /> <!-- Agathion Bonus B -->
 		</capsuled_items>
 	</item>
 	<item id="20691" name="Agathion - Bonus B Pack (7-day)" additionalName="Great Adventurer's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Bonus B (7-day). -->
+		<!-- Double-click to obtain Agathion Bonus B (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2057,11 +2057,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20665" min="1" max="1" chance="100" /> <!-- Agathion - Bonus B - Great Adventurer's Soul Power (7-day) -->
+			<item id="20665" min="1" max="1" chance="100" /> <!-- Agathion Bonus B - Great Adventurer's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20692" name="Valkyrie Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Valkyrie Hat. -->
+		<!-- Double-click to obtain Valkyrie Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2083,7 +2083,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20693" name="Valkyrie Hat Pack (7-day)" additionalName="Great Adventurer's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Valkyrie Hat (7-day). -->
+		<!-- Double-click to obtain Valkyrie Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2101,11 +2101,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20667" min="1" max="1" chance="100" /> <!-- Valkyrie Hat - Great Adventurer's Soul Power (7-day) -->
+			<item id="20667" min="1" max="1" chance="100" /> <!-- Valkyrie Hat - Great Adventurer's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20694" name="Tiger Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Tiger Hat. -->
+		<!-- Double-click to obtain Tiger Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2127,7 +2127,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20695" name="Tiger Hat Pack (7-day)" additionalName="Brave Warrior's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Tiger Hat (7-day). -->
+		<!-- Double-click to obtain Tiger Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2145,11 +2145,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20669" min="1" max="1" chance="100" /> <!-- Tiger Hat - Brave Warrior's Soul Power (7-day) -->
+			<item id="20669" min="1" max="1" chance="100" /> <!-- Tiger Hat - Brave Warrior's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20696" name="Maid Hairband Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Maid Hairband. -->
+		<!-- Double-click to obtain Maid Hairband. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2171,7 +2171,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20697" name="Maid Hairband Pack (7-day)" additionalName="Great Wizard's Soul Power" type="EtcItem">
-		<!-- Wrapped Pack containing Maid Hairband (7-day). -->
+		<!-- Double-click to obtain Maid Hairband (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2189,11 +2189,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20671" min="1" max="1" chance="100" /> <!-- Maid Hairband - Great Wizard's Soul Power (7-day) -->
+			<item id="20671" min="1" max="1" chance="100" /> <!-- Maid Hairband - Great Wizard's Soul Power / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20698" name="Baby Panda Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Baby Panda Hat. -->
+		<!-- Double-click to obtain Baby Panda Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2215,7 +2215,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20699" name="Baby Panda Hat Pack (7-day)" additionalName="Blessed Escape" type="EtcItem">
-		<!-- Wrapped Pack containing Baby Panda Hat (7-day). -->
+		<!-- Double-click to obtain Baby Panda Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2233,7 +2233,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20673" min="1" max="1" chance="100" /> <!-- Baby Panda Hat - Blessed Escape (7-day) -->
+			<item id="20673" min="1" max="1" chance="100" /> <!-- Baby Panda Hat - Blessed Escape / 7-day -->
 		</capsuled_items>
 	</item>
 </list>

@@ -920,7 +920,7 @@
 		</stats>
 	</item>
 	<item id="52" name="Vesper Dual Sword" type="Weapon">
-		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- When enchanting dual swords, two-handed swords/ blunts, and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -952,7 +952,7 @@
 		</stats>
 	</item>
 	<item id="53" name="(Not in Use)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Angry Devil (30-day). -->
+		<!-- Double-click to obtain Agathion Angry Devil. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -970,11 +970,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="13024" min="1" max="1" chance="100" /> <!-- Agathion - Angry Devil - 30-day -->
+			<item id="13024" min="1" max="1" chance="100" /> <!-- Agathion Angry Devil - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="54" name="(Not in Use)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Shiny (30-day). -->
+		<!-- Double-click to obtain Agathion Shiny. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -992,11 +992,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="13025" min="1" max="1" chance="100" /> <!-- Agathion - Shiny - 30-day -->
+			<item id="13025" min="1" max="1" chance="100" /> <!-- Agathion Joy - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="55" name="Agathion - Shiny Pack (7-day) (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Shiny (7-day). -->
+		<!-- Double-click to obtain Agathion Shiny (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1013,11 +1013,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="14102" min="1" max="1" chance="100" /> <!-- Agathion - Shiny (Event) - 7-day -->
+			<item id="14102" min="1" max="1" chance="100" /> <!-- Agathion Joy - Event - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="56" name="Agathion - Sobbing Pack (7-day) (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Sobbing (7-day). -->
+		<!-- Double-click to obtain Agathion Sobbing (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1034,7 +1034,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="14103" min="1" max="1" chance="100" /> <!-- Agathion - Sobbing (Event) - 7-day -->
+			<item id="14103" min="1" max="1" chance="100" /> <!-- Agathion Sobbing (Event) - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="57" name="Adena" type="EtcItem">
@@ -1083,7 +1083,7 @@
 		</stats>
 	</item>
 	<item id="60" name="Compound Armor" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t61_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1315,7 +1315,7 @@
 		</stats>
 	</item>
 	<item id="71" name="Flamberge" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_flamberge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1343,7 +1343,7 @@
 		</stats>
 	</item>
 	<item id="72" name="Stormbringer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1371,7 +1371,7 @@
 		</stats>
 	</item>
 	<item id="73" name="Shamshir" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_shamshir_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1399,7 +1399,7 @@
 		</stats>
 	</item>
 	<item id="74" name="Katana" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_katana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1427,7 +1427,7 @@
 		</stats>
 	</item>
 	<item id="75" name="Caliburs" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_caliburs_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1455,7 +1455,7 @@
 		</stats>
 	</item>
 	<item id="76" name="Sword of Delusion" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sword_of_delusion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1483,7 +1483,7 @@
 		</stats>
 	</item>
 	<item id="77" name="Tsurugi" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tsurugi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1511,7 +1511,7 @@
 		</stats>
 	</item>
 	<item id="78" name="Great Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1539,7 +1539,7 @@
 		</stats>
 	</item>
 	<item id="79" name="Damascus Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1567,7 +1567,7 @@
 		</stats>
 	</item>
 	<item id="80" name="Tallum Blade" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1595,7 +1595,7 @@
 		</stats>
 	</item>
 	<item id="81" name="Dragon Slayer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1682,7 +1682,7 @@
 		</stats>
 	</item>
 	<item id="84" name="Homunkulus' Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1815,7 +1815,7 @@
 		</stats>
 	</item>
 	<item id="89" name="Big Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_big_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1871,7 +1871,7 @@
 		</stats>
 	</item>
 	<item id="91" name="Heavy War Axe" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1899,7 +1899,7 @@
 		</stats>
 	</item>
 	<item id="92" name="Spirit's Staff" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1958,7 +1958,7 @@
 		</stats>
 	</item>
 	<item id="94" name="Bec de Corbin" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1989,7 +1989,7 @@
 		</stats>
 	</item>
 	<item id="95" name="Poleaxe" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2020,7 +2020,7 @@
 		</stats>
 	</item>
 	<item id="96" name="Scythe" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_scythe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2051,7 +2051,7 @@
 		</stats>
 	</item>
 	<item id="97" name="Lance" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2082,7 +2082,7 @@
 		</stats>
 	</item>
 	<item id="98" name="Halberd" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />

@@ -14,7 +14,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="13501" name="Refined Romantic Chapeau" type="Armor">
-		<!-- Refined Romantic Chapeau. Uses 2 hair accessory slots. -->
+		<!-- Refined Romantic Chapeau. Occupies two Hair Accessory slots. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -812,7 +812,7 @@
 		</skills>
 	</item>
 	<item id="13544" name="Agathion - Teddy Boy" type="Armor">
-		<!-- Can summon an Agathion - Teddy Boy when equipped. -->
+		<!-- Summons Agathion Teddy Boy. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -834,7 +834,7 @@
 		</skills>
 	</item>
 	<item id="13545" name="Agathion - Teddy Girl" type="Armor">
-		<!-- Can summon an Agathion - Teddy Girl when equipped. -->
+		<!-- Summons Agathion Teddy Girl. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -856,7 +856,7 @@
 		</skills>
 	</item>
 	<item id="13546" name="Mount - Steam Sledge" type="Armor">
-		<!-- Can mount a Steam Sledge when equipped. -->
+		<!-- Allows to mount a Steam Sledge. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -872,7 +872,7 @@
 		</skills>
 	</item>
 	<item id="13547" name="Mount - Tawny-maned Lion" type="Armor">
-		<!-- Can mount a Tawny Maned Lion when equipped. -->
+		<!-- Allows to mount a Tawny Maned Lion. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -888,7 +888,7 @@
 		</skills>
 	</item>
 	<item id="13548" name="Toy Knight Minion Necklace" type="EtcItem">
-		<!-- Allows you to summon a Minion who temporarily casts Wizard-type battle buff. -->
+		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -912,7 +912,7 @@
 		</skills>
 	</item>
 	<item id="13549" name="Soul Monk Minion Necklace" type="EtcItem">
-		<!-- Allows you to summon a Minion who temporarily casts Wizard-type battle buff. -->
+		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -936,7 +936,7 @@
 		</skills>
 	</item>
 	<item id="13550" name="Owl Monk Minion Necklace" type="EtcItem">
-		<!-- Allows you to summon a Minion who temporarily casts Wizard-type battle buff. -->
+		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -960,7 +960,7 @@
 		</skills>
 	</item>
 	<item id="13551" name="Turtle Ascetic Minion Necklace" type="EtcItem">
-		<!-- Allows you to summon a Minion who temporarily casts Wizard-type battle buff. -->
+		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1067,7 +1067,7 @@
 		</stats>
 	</item>
 	<item id="13557" name="Airship Cannon" type="Weapon">
-		<!-- Used to control a Airship's cannon. -->
+		<!-- Used to control an Airship's cannon. -->
 		<set name="icon" val="icon.etc_gateleeper_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

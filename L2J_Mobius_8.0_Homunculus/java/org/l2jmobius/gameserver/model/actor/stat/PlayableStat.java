@@ -61,15 +61,15 @@ public class PlayableStat extends CreatureStat
 		
 		final int oldLevel = getLevel();
 		setExp(getExp() + value);
-		byte minimumLevel = 1;
+		int minimumLevel = 1;
 		if (getActiveChar().isPet())
 		{
 			// get minimum level from NpcTemplate
-			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
+			minimumLevel = PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
 		}
 		
-		byte level = minimumLevel; // minimum level
-		for (byte tmp = level; tmp <= getMaxLevel(); tmp++)
+		int level = minimumLevel; // minimum level
+		for (int tmp = level; tmp <= getMaxLevel(); tmp++)
 		{
 			if (getExp() >= getExpForLevel(tmp))
 			{
@@ -81,7 +81,7 @@ public class PlayableStat extends CreatureStat
 		
 		if ((level != getLevel()) && (level >= minimumLevel))
 		{
-			addLevel((byte) (level - getLevel()));
+			addLevel(level - getLevel());
 		}
 		
 		if ((getLevel() > oldLevel) && getActiveChar().isPlayer())
@@ -110,14 +110,14 @@ public class PlayableStat extends CreatureStat
 		}
 		
 		setExp(getExp() - value);
-		byte minimumLevel = 1;
+		int minimumLevel = 1;
 		if (getActiveChar().isPet())
 		{
 			// get minimum level from NpcTemplate
-			minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
+			minimumLevel = PetDataTable.getInstance().getPetMinLevel(((PetInstance) getActiveChar()).getTemplate().getId());
 		}
-		byte level = minimumLevel;
-		for (byte tmp = level; tmp <= getMaxLevel(); tmp++)
+		int level = minimumLevel;
+		for (int tmp = level; tmp <= getMaxLevel(); tmp++)
 		{
 			if (getExp() >= getExpForLevel(tmp))
 			{
@@ -128,7 +128,7 @@ public class PlayableStat extends CreatureStat
 		}
 		if ((level != getLevel()) && (level >= minimumLevel))
 		{
-			addLevel((byte) (level - getLevel()));
+			addLevel(level - getLevel());
 		}
 		return true;
 	}
@@ -148,14 +148,14 @@ public class PlayableStat extends CreatureStat
 		return expRemoved || spRemoved;
 	}
 	
-	public boolean addLevel(byte amount)
+	public boolean addLevel(int amount)
 	{
-		byte value = amount;
+		int value = amount;
 		if ((getLevel() + value) > (getMaxLevel() - 1))
 		{
 			if (getLevel() < (getMaxLevel() - 1))
 			{
-				value = (byte) (getMaxLevel() - 1 - getLevel());
+				value = getMaxLevel() - 1 - getLevel();
 			}
 			else
 			{

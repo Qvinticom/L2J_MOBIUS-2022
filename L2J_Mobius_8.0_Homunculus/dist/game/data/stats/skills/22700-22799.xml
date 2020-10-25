@@ -214,7 +214,7 @@
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
 	</skill>
-	<skill id="22708" toLevel="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="22708" toLevel="1" name="Nevit's Hourglass (1-hour)">
 		<!-- Obtained XP +50%. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -243,7 +243,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22709" toLevel="1" name="Nevit's Hourglass - 2 hours">
+	<skill id="22709" toLevel="1" name="Nevit's Hourglass (2-hour)">
 		<!-- Obtained XP +50%. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -407,40 +407,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.05">
-						<item id="23343" count="1" /> <!-- Heavenly Scroll: Enchant Weapon (R-grade) -->
+						<item id="23343" count="1" /> <!-- Sacred Crystal: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.1">
-						<item id="23342" count="1" /> <!-- Ancient Scroll: Enchant Weapon (R-grade) -->
+						<item id="23342" count="1" /> <!-- Ancient Crystal: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.1">
-						<item id="23345" count="1" /> <!-- Heavenly Scroll: Enchant Armor (R-grade) -->
+						<item id="23345" count="1" /> <!-- Sacred Crystal: Enchant R-grade Armor -->
 					</item>
 					<item chance="1.5">
-						<item id="17712" count="1" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
+						<item id="17712" count="1" /> <!-- Legendary INT Dye Lv. 5 - INT +5, WIT +1, Water Resistance +25 -->
 					</item>
 					<item chance="0.75">
-						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="1.5">
-						<item id="17709" count="1" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
+						<item id="17709" count="1" /> <!-- Legendary STR Dye Lv. 5 - STR +5, DEX +1, Fire Resistance +25 -->
 					</item>
 					<item chance="2">
-						<item id="23344" count="1" /> <!-- Ancient Scroll: Enchant Armor (R-grade) -->
+						<item id="23344" count="1" /> <!-- Ancient Crystal: Enchant R-grade Armor -->
 					</item>
 					<item chance="2">
-						<item id="17711" count="1" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
+						<item id="17711" count="1" /> <!-- Legendary CON Dye Lv. 5 - CON +5, STR +1, Dark Resistance +25 -->
 					</item>
 					<item chance="2">
-						<item id="17713" count="1" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
+						<item id="17713" count="1" /> <!-- Legendary WIT Dye Lv. 5 - WIT +5, MEN +1, Wind Resistance +25 -->
 					</item>
 					<item chance="3">
-						<item id="17710" count="1" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+						<item id="17710" count="1" /> <!-- Legendary DEX Dye Lv. 5 - DEX +5, CON +1, Earth Resistance +25 -->
 					</item>
 					<item chance="3">
-						<item id="17714" count="1" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
+						<item id="17714" count="1" /> <!-- Legendary MEN Dye Lv. 5 - MEN +5, INT +1, Holy Resistance +25 -->
 					</item>
 					<item chance="6">
-						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="10">
 						<item id="34941" count="1" /> <!-- Life Stone: Hair Accessory - Event -->
@@ -449,28 +449,28 @@
 						<item id="34940" count="1" /> <!-- Scroll: Enchant Hair Accessory - Event -->
 					</item>
 					<item chance="6">
-						<item id="34681" count="1" /> <!-- Scroll: Seal Weapon (R99-grade) -->
+						<item id="34681" count="1" /> <!-- Scroll: Seal R99-grade Armor -->
 					</item>
 					<item chance="10">
-						<item id="34690" count="1" /> <!-- Scroll: Seal Armor (R99-grade) -->
+						<item id="34690" count="1" /> <!-- Scroll: Seal R99-grade Armor -->
 					</item>
 					<item chance="7">
-						<item id="34689" count="1" /> <!-- Scroll: Seal Armor (R95-grade) -->
+						<item id="34689" count="1" /> <!-- Scroll: Seal R95-grade Armor -->
 					</item>
 					<item chance="7">
-						<item id="34688" count="1" /> <!-- Scroll: Seal Armor (R-grade) -->
+						<item id="34688" count="1" /> <!-- Scroll: Seal R-grade Armor -->
 					</item>
 					<item chance="7">
-						<item id="34680" count="1" /> <!-- Scroll: Seal Weapon (R95-grade) -->
+						<item id="34680" count="1" /> <!-- Scroll: Seal R95-grade Weapon -->
 					</item>
 					<item chance="7">
-						<item id="34679" count="1" /> <!-- Scroll: Seal Weapon (R-grade) -->
+						<item id="34679" count="1" /> <!-- Scroll: Seal R-grade Weapon -->
 					</item>
 					<item chance="7">
-						<item id="18566" count="1" /> <!-- Top-grade Life Stone (R-grade) -->
+						<item id="18566" count="1" /> <!-- Top-grade R-grade Life Stone -->
 					</item>
 					<item chance="7">
-						<item id="18565" count="1" /> <!-- High-grade Life Stone (R-grade) -->
+						<item id="18565" count="1" /> <!-- High-grade R-grade Life Stone -->
 					</item>
 				</items>
 			</effect>
@@ -490,31 +490,31 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.05">
-						<item id="23087" count="1" /> <!-- Enhanced Power Shirt Pack - Event -->
+						<item id="23087" count="1" /> <!-- Package: Enchanted Power Shirt - Event -->
 					</item>
 					<item chance="0.1">
-						<item id="34984" count="1" /> <!-- Talisman - Infinity -->
+						<item id="34984" count="1" /> <!-- Talisman of Infinity -->
 					</item>
 					<item chance="0.79">
-						<item id="36186" count="1" /> <!-- Kaliel's Energy - Desire -->
+						<item id="36186" count="1" /> <!-- Energy of Desire -->
 					</item>
 					<item chance="1">
-						<item id="36185" count="1" /> <!-- Kaliel's Energy - Hellfire -->
+						<item id="36185" count="1" /> <!-- Hellfire Energy -->
 					</item>
 					<item chance="2">
-						<item id="35749" count="1" /> <!-- Weapon Attribute Change Crystal (R-grade) - Event -->
+						<item id="35749" count="1" /> <!-- R-grade Weapon Attribute Change Crystal - Event -->
 					</item>
 					<item chance="2">
-						<item id="36184" count="1" /> <!-- Kaliel's Energy - Annihilation -->
+						<item id="36184" count="1" /> <!-- Annihilation Energy -->
 					</item>
 					<item chance="10">
-						<item id="23348" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) -->
+						<item id="23348" count="1" /> <!-- Lucky Enchant Stone: R-grade Armor -->
 					</item>
 					<item chance="15">
 						<item id="34628" count="1" /> <!-- Einhasad's Energy -->
 					</item>
 					<item chance="12">
-						<item id="23347" count="1" /> <!-- Lucky Enchant Stone: Weapon (R-grade) -->
+						<item id="23347" count="1" /> <!-- Lucky Enchant Stone: R-grade Weapon -->
 					</item>
 					<item chance="15">
 						<item id="23346" count="1" /> <!-- Letter Collector's Gift -->
@@ -555,49 +555,49 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.1">
-						<item id="20577" count="1" /> <!-- Eva's Circlet Pack (7-day) -->
+						<item id="20577" count="1" /> <!-- Package: Eva's Circlet (7-day) - Event -->
 					</item>
 					<item chance="2">
-						<item id="22515" count="1" /> <!-- Superior Minion Coupon Pack -->
+						<item id="22515" count="1" /> <!-- Package: Superior Minion Coupon (1 pc.) -->
 					</item>
 					<item chance="1">
-						<item id="23372" count="1" /> <!-- Weapon Appearance/ Restoration Stone Pack (R-grade) -->
+						<item id="23372" count="1" /> <!-- Package: R-grade Weapon Appearance/Restoration Stone (1 pc.) -->
 					</item>
 					<item chance="2.45">
-						<item id="23376" count="1" /> <!-- Hair Accessory Appearance/ Restoration Stone Pack -->
+						<item id="23376" count="1" /> <!-- Package: Hair Accessory Appearance/Restoration Stone -->
 					</item>
 					<item chance="2.45">
-						<item id="23374" count="1" /> <!-- Armor Appearance/ Restoration Stone Pack (R-grade) -->
+						<item id="23374" count="1" /> <!-- Package: R-grade Armor Appearance/Restoration Stone -->
 					</item>
 					<item chance="5">
-						<item id="23373" count="1" /> <!-- Weapon Appearance/ Restoration Stone Pack (S-grade) -->
+						<item id="23373" count="1" /> <!-- Package: S-grade Weapon Appearance/Restoration Stone (1 pc.) -->
 					</item>
 					<item chance="10">
-						<item id="23438" count="1" /> <!-- Party Cake Pack -->
+						<item id="23438" count="1" /> <!-- Package: Party Cake -->
 					</item>
 					<item chance="13">
-						<item id="23439" count="1" /> <!-- Feather of Blessing Pack -->
+						<item id="23439" count="1" /> <!-- Package: Feather of Blessing (1 pc.) -->
 					</item>
 					<item chance="13">
-						<item id="23437" count="1" /> <!-- Mysterious Friend Summon Bracelet Pack (30-day) -->
+						<item id="23437" count="1" /> <!-- Package: Mysterious Friend Summon Bracelet (30-day) -->
 					</item>
 					<item chance="15">
 						<item id="23350" count="1" /> <!-- Transformation Scroll Pack -->
 					</item>
 					<item chance="8">
-						<item id="23434" count="1" /> <!-- Agathion - Phoenix Pack (7-day) - Nirvana Rebirth -->
+						<item id="23434" count="1" /> <!-- Package: Agathion Phoenix (7-day) - Nirvana Rebirth -->
 					</item>
 					<item chance="6">
-						<item id="23435" count="1" /> <!-- Agathion - Blue Opera Pack (7-day) - Sword of Recovery ] -->
+						<item id="23435" count="1" /> <!-- Package: Agathion Blue Opera (7-day) - Sword of Recovery -->
 					</item>
 					<item chance="8">
-						<item id="23436" count="1" /> <!-- Agathion - Button-eyed Bear Doll Pack (7-day) - Vitality -->
+						<item id="23436" count="1" /> <!-- Package: Agathion Teddy Boy (7-day) - Vitality -->
 					</item>
 					<item chance="6">
-						<item id="23441" count="1" /> <!-- Super Healthy Juice Pack (CP) -->
+						<item id="23441" count="1" /> <!-- Package: Super Healthy Juice (CP) -->
 					</item>
 					<item chance="8">
-						<item id="23440" count="1" /> <!-- Super Healthy Juice Pack (HP) -->
+						<item id="23440" count="1" /> <!-- Package: Super Healthy Juice (HP) -->
 					</item>
 				</items>
 			</effect>
@@ -635,61 +635,61 @@
 						<item id="22621" count="1" /> <!-- Vitality Recovery Potion - 1-hour -->
 					</item>
 					<item chance="0.1">
-						<item id="22628" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="22628" count="1" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.05">
-						<item id="22627" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="22627" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.01">
-						<item id="22648" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="22648" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="0.005">
-						<item id="22647" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="22647" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="0.9">
-						<item id="22629" count="1" /> <!-- High-grade Life Stone (R-grade) -->
+						<item id="22629" count="1" /> <!-- High-grade R-grade Life Stone - Not Available -->
 					</item>
 					<item chance="0.8">
-						<item id="22630" count="1" /> <!-- Top-grade Life Stone (R-grade) -->
+						<item id="22630" count="1" /> <!-- Top-grade R-grade Life Stone - Not available -->
 					</item>
 					<item chance="0.7">
-						<item id="22631" count="1" /> <!-- High-grade Life Stone (R95-grade) -->
+						<item id="22631" count="1" /> <!-- High-grade R95-grade Life Stone - Not available -->
 					</item>
 					<item chance="0.3">
-						<item id="22632" count="1" /> <!-- Top-grade Life Stone (R95-grade) -->
+						<item id="22632" count="1" /> <!-- Top-grade R95-grade Life Stone - Not available -->
 					</item>
 					<item chance="0.2">
-						<item id="22633" count="1" /> <!-- High-grade Life Stone (R99-grade) -->
+						<item id="22633" count="1" /> <!-- High-grade R99-grade Life Stone - Not available -->
 					</item>
 					<item chance="0.1">
-						<item id="22634" count="1" /> <!-- Top-grade Life Stone (R99-grade) -->
+						<item id="22634" count="1" /> <!-- Top-grade R99-grade Life Stone - Not available -->
 					</item>
 					<item chance="0.2">
-						<item id="19508" count="1" /> <!-- Yellow Soul Crystal Fragment (R-grade) -->
+						<item id="19508" count="1" /> <!-- Yellow R-grade Soul Crystal Fragment -->
 					</item>
 					<item chance="0.2">
-						<item id="19509" count="1" /> <!-- Teal Soul Crystal Fragment (R-grade) -->
+						<item id="19509" count="1" /> <!-- Teal R-grade Soul Crystal Fragment -->
 					</item>
 					<item chance="0.2">
-						<item id="19510" count="1" /> <!-- Purple Soul Crystal Fragment (R-grade) -->
+						<item id="19510" count="1" /> <!-- Purple R-grade Soul Crystal Fragment -->
 					</item>
 					<item chance="0.05">
-						<item id="19511" count="1" /> <!-- Yellow Soul Crystal Fragment (R95-grade) -->
+						<item id="19511" count="1" /> <!-- R95-grade Yellow Soul Crystal Fragment -->
 					</item>
 					<item chance="0.05">
-						<item id="19512" count="1" /> <!-- Teal Soul Crystal Fragment (R95-grade) -->
+						<item id="19512" count="1" /> <!-- R95-grade Teal Soul Crystal Fragment -->
 					</item>
 					<item chance="0.05">
-						<item id="19513" count="1" /> <!-- Purple Soul Crystal Fragment (R95-grade) -->
+						<item id="19513" count="1" /> <!-- R95-grade Purple Soul Crystal Fragment -->
 					</item>
 					<item chance="0.01">
-						<item id="19467" count="1" /> <!-- Yellow Soul Crystal Fragment (R99-grade) -->
+						<item id="19467" count="1" /> <!-- R99-grade Yellow Soul Crystal Fragment -->
 					</item>
 					<item chance="0.01">
-						<item id="19468" count="1" /> <!-- Teal Soul Crystal Fragment (R99-grade) -->
+						<item id="19468" count="1" /> <!-- R99-grade Teal Soul Crystal Fragment -->
 					</item>
 					<item chance="0.01">
-						<item id="19469" count="1" /> <!-- Purple Soul Crystal Fragment (R99-grade) -->
+						<item id="19469" count="1" /> <!-- R99-grade Purple Soul Crystal Fragment -->
 					</item>
 					<item chance="0.4">
 						<item id="22635" count="1" /> <!-- Fire Stone -->
@@ -794,52 +794,52 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="7">
-						<item id="18273" count="1" /> <!-- Talisman (R85-grade) - P. Atk. (Passive) -->
+						<item id="18273" count="1" /> <!-- R85-grade Talisman - P. Atk. (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18277" count="1" /> <!-- Talisman (R85-grade) - P. Def. (Passive) -->
+						<item id="18277" count="1" /> <!-- R85-grade Talisman - P. Def. (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18281" count="1" /> <!-- Talisman (R85-grade) - M. Atk. (Passive) -->
+						<item id="18281" count="1" /> <!-- R85-grade Talisman - M. Atk. (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18285" count="1" /> <!-- Talisman (R85-grade) - M. Def. (Passive) -->
+						<item id="18285" count="1" /> <!-- R85-grade Talisman - M. Def. (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18289" count="1" /> <!-- Talisman (R85-grade) - HP (Passive) -->
+						<item id="18289" count="1" /> <!-- R85-grade Talisman - HP (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18293" count="1" /> <!-- Talisman (R85-grade) - MP (Passive) -->
+						<item id="18293" count="1" /> <!-- R85-grade Talisman - MP (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18297" count="1" /> <!-- Talisman (R85-grade) - CP (Passive) -->
+						<item id="18297" count="1" /> <!-- R85-grade Talisman - CP (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18301" count="1" /> <!-- Talisman (R85-grade) - Critical Damage (Passive) -->
+						<item id="18301" count="1" /> <!-- R85-grade Talisman - Critical Damage (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18305" count="1" /> <!-- Talisman (R85-grade) - Decrease Critical (Passive) -->
+						<item id="18305" count="1" /> <!-- R85-grade Talisman - Decrease Critical (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18309" count="1" /> <!-- Talisman (R-grade) - M. Critical (Passive) -->
+						<item id="18309" count="1" /> <!-- R-grade Talisman - M. Critical (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18310" count="1" /> <!-- Talisman (R-grade) - P. Accuracy (Passive) -->
+						<item id="18310" count="1" /> <!-- R-grade Talisman - P. Accuracy (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18311" count="1" /> <!-- Talisman (R-grade) - M. Accuracy (Passive) -->
+						<item id="18311" count="1" /> <!-- R-grade Talisman - M. Accuracy (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18312" count="1" /> <!-- Talisman (R-grade) - Evasion (Passive) -->
+						<item id="18312" count="1" /> <!-- R-grade Talisman - Evasion (Passive) -->
 					</item>
 					<item chance="7">
-						<item id="18313" count="1" /> <!-- Talisman (R-grade) - M. Evasion (Passive) -->
+						<item id="18313" count="1" /> <!-- R-grade Talisman - M. Evasion (Passive) -->
 					</item>
 					<item chance="8">
-						<item id="18314" count="1" /> <!-- Talisman (R-grade) - P. Critical Rate (Passive) -->
+						<item id="18314" count="1" /> <!-- R-grade Talisman - Critical Rate (Passive) -->
 					</item>
 					<item chance="8">
-						<item id="18315" count="1" /> <!-- Talisman (R-grade) - Critical Evasion (Passive) -->
+						<item id="18315" count="1" /> <!-- R-grade Talisman - Critical Evasion (Passive) -->
 					</item>
 				</items>
 			</effect>
@@ -861,31 +861,31 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="30">
-						<item id="34015" count="1" /> <!-- Scroll: Seal Weapon (D-grade) - Event -->
+						<item id="34015" count="1" /> <!-- Scroll: Seal D-grade Weapon - Event -->
 					</item>
 					<item chance="25">
-						<item id="34016" count="1" /> <!-- Scroll: Seal Weapon (C-grade) - Event -->
+						<item id="34016" count="1" /> <!-- Scroll: Seal C-grade Weapon - Event -->
 					</item>
 					<item chance="20">
-						<item id="34017" count="1" /> <!-- Scroll: Seal Weapon (B-grade) - Event -->
+						<item id="34017" count="1" /> <!-- Scroll: Seal B-grade Weapon - Event -->
 					</item>
 					<item chance="10">
-						<item id="34018" count="1" /> <!-- Scroll: Seal Weapon (A-grade) - Event -->
+						<item id="34018" count="1" /> <!-- Scroll: Seal A-grade Weapon - Event -->
 					</item>
 					<item chance="5">
-						<item id="34019" count="1" /> <!-- Scroll: Seal Weapon (S-grade) - Event -->
+						<item id="34019" count="1" /> <!-- Scroll: Seal S-grade Weapon - Event -->
 					</item>
 					<item chance="4">
 						<item id="34020" count="1" /> <!-- Scroll: Seal Weapon (S80-grade) - Event -->
 					</item>
 					<item chance="3">
-						<item id="34021" count="1" /> <!-- Scroll: Seal Weapon (R-grade) - Event -->
+						<item id="34021" count="1" /> <!-- Scroll: Seal R-grade Weapon - Event -->
 					</item>
 					<item chance="2">
-						<item id="34022" count="1" /> <!-- Scroll: Seal Weapon (R95-grade) - Event -->
+						<item id="34022" count="1" /> <!-- Scroll: Seal R95-grade Weapon - Event -->
 					</item>
 					<item chance="1">
-						<item id="34023" count="1" /> <!-- Scroll: Seal Weapon (R99-grade) - Event -->
+						<item id="34023" count="1" /> <!-- Scroll: Seal R99-grade Weapon - Event -->
 					</item>
 				</items>
 			</effect>
@@ -907,31 +907,31 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="15">
-						<item id="34024" count="1" /> <!-- Scroll: Seal Armor (D-grade) - Event -->
+						<item id="34024" count="1" /> <!-- Scroll: Seal D-grade Armor - Event -->
 					</item>
 					<item chance="15">
-						<item id="34025" count="1" /> <!-- Scroll: Seal Armor (C-grade) - Event -->
+						<item id="34025" count="1" /> <!-- Scroll: Seal C-grade Armor - Event -->
 					</item>
 					<item chance="15">
-						<item id="34026" count="1" /> <!-- Scroll: Seal Armor (B-grade) - Event -->
+						<item id="34026" count="1" /> <!-- Scroll: Seal B-grade Armor - Event -->
 					</item>
 					<item chance="15">
-						<item id="34027" count="1" /> <!-- Scroll: Seal Armor (A-grade) - Event -->
+						<item id="34027" count="1" /> <!-- Scroll: Seal A-grade Armor - Event -->
 					</item>
 					<item chance="12">
-						<item id="34028" count="1" /> <!-- Scroll: Seal Armor (S-grade) - Event -->
+						<item id="34028" count="1" /> <!-- Scroll: Seal S-grade Armor - Event -->
 					</item>
 					<item chance="10">
 						<item id="34029" count="1" /> <!-- Scroll: Seal Armor (S80-grade) - Event -->
 					</item>
 					<item chance="8">
-						<item id="34030" count="1" /> <!-- Scroll: Seal Armor (R-grade) - Event -->
+						<item id="34030" count="1" /> <!-- Scroll: Seal R-grade Armor - Event -->
 					</item>
 					<item chance="6">
-						<item id="34031" count="1" /> <!-- Scroll: Seal Armor (R95-grade) - Event -->
+						<item id="34031" count="1" /> <!-- Scroll: Seal R95-grade Armor - Event -->
 					</item>
 					<item chance="4">
-						<item id="34032" count="1" /> <!-- Scroll: Seal Armor (R99-grade) - Event -->
+						<item id="34032" count="1" /> <!-- Scroll: Seal R99-grade Armor - Event -->
 					</item>
 				</items>
 			</effect>
@@ -953,22 +953,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="10">
-						<item id="23410" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="23410" count="1" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="15">
-						<item id="23411" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+						<item id="23411" count="1" /> <!-- Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="15">
-						<item id="23412" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+						<item id="23412" count="1" /> <!-- Scroll: Enchant A-grade Weapon -->
 					</item>
 					<item chance="20">
-						<item id="23413" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+						<item id="23413" count="1" /> <!-- Scroll: Enchant B-grade Weapon -->
 					</item>
 					<item chance="20">
-						<item id="23414" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+						<item id="23414" count="1" /> <!-- Scroll: Enchant C-grade Weapon -->
 					</item>
 					<item chance="20">
-						<item id="23415" count="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+						<item id="23415" count="1" /> <!-- Scroll: Enchant D-grade Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -990,22 +990,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20">
-						<item id="23416" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="23416" count="1" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="20">
-						<item id="23417" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
+						<item id="23417" count="1" /> <!-- Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="23418" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+						<item id="23418" count="1" /> <!-- Scroll: Enchant A-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="23419" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
+						<item id="23419" count="1" /> <!-- Scroll: Enchant B-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="23420" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+						<item id="23420" count="1" /> <!-- Scroll: Enchant C-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="23421" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
+						<item id="23421" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
 					</item>
 				</items>
 			</effect>
@@ -1027,22 +1027,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="10">
-						<item id="23422" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+						<item id="23422" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="10">
-						<item id="23423" count="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+						<item id="23423" count="1" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="15">
-						<item id="23424" count="1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+						<item id="23424" count="1" /> <!-- Blessed Scroll: Enchant A-grade Weapon -->
 					</item>
 					<item chance="20">
-						<item id="23425" count="1" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+						<item id="23425" count="1" /> <!-- Blessed Scroll: Enchant B-grade Weapon -->
 					</item>
 					<item chance="20">
-						<item id="23426" count="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+						<item id="23426" count="1" /> <!-- Blessed Scroll: Enchant C-grade Weapon -->
 					</item>
 					<item chance="25">
-						<item id="23427" count="1" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+						<item id="23427" count="1" /> <!-- Blessed Scroll: Enchant D-grade Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -1064,22 +1064,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="15">
-						<item id="23428" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+						<item id="23428" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="23429" count="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+						<item id="23429" count="1" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="23430" count="1" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+						<item id="23430" count="1" /> <!-- Blessed Scroll: Enchant A-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="23431" count="1" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+						<item id="23431" count="1" /> <!-- Blessed Scroll: Enchant B-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="23432" count="1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+						<item id="23432" count="1" /> <!-- Blessed Scroll: Enchant C-grade Armor -->
 					</item>
 					<item chance="25">
-						<item id="23433" count="1" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+						<item id="23433" count="1" /> <!-- Blessed Scroll: Enchant D-grade Armor -->
 					</item>
 				</items>
 			</effect>
@@ -1419,28 +1419,28 @@
 						<item id="23579" count="1" /> <!-- Shining Accessory Pack - Event -->
 					</item>
 					<item chance="0.027">
-						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) - Event -->
+						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant R-grade Weapon - Event -->
 					</item>
 					<item chance="0.037">
-						<item id="23596" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) - Event -->
+						<item id="23596" count="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon - Event -->
 					</item>
 					<item chance="0.058">
-						<item id="35749" count="1" /> <!-- Weapon Attribute Change Crystal (R-grade) - Event -->
+						<item id="35749" count="1" /> <!-- R-grade Weapon Attribute Change Crystal - Event -->
 					</item>
 					<item chance="0.0942">
-						<item id="23599" count="1" /> <!-- Lucky Enchant Stone: Weapon (R-grade) - Event -->
+						<item id="23599" count="1" /> <!-- Lucky Enchant Stone: R-grade Weapon - Event -->
 					</item>
 					<item chance="0.175">
 						<item id="23534" count="1" /> <!-- Monster Weapon Appearance Stone Pack - Event -->
 					</item>
 					<item chance="0.3">
-						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) - Event -->
+						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant R-grade Armor - Event -->
 					</item>
 					<item chance="0.425">
-						<item id="23600" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) - Event -->
+						<item id="23600" count="1" /> <!-- Lucky Enchant Stone: R-grade Armor - Event -->
 					</item>
 					<item chance="0.52">
-						<item id="23597" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) - Event -->
+						<item id="23597" count="1" /> <!-- Blessed Scroll: Enchant R-grade Armor - Event -->
 					</item>
 					<item chance="0.61">
 						<item id="23541" count="1" /> <!-- Vesper Noble Light Armor Appearance Stone Set - Event -->
@@ -1458,22 +1458,22 @@
 						<item id="23589" count="1" /> <!-- Monster Weapon Appearance Stone Pack (7-day) - Event -->
 					</item>
 					<item chance="1.861">
-						<item id="23575" count="1" /> <!-- Fantasy Top Appearance Stone Pack (7-day) - Event -->
+						<item id="23575" count="1" /> <!-- Package: Fantasy Top Appearance Stone (7-day) - Event -->
 					</item>
 					<item chance="1.861">
-						<item id="23576" count="1" /> <!-- Fantasy Pants Appearance Stone Pack (7-day) - Event -->
+						<item id="23576" count="1" /> <!-- Package: Fantasy Bottom Appearance Stone (7-day) - Event -->
 					</item>
 					<item chance="2.12">
-						<item id="23577" count="1" /> <!-- Fantasy Gloves Appearance Stone Pack (7-day) - Event -->
+						<item id="23577" count="1" /> <!-- Package: Fantasy Gloves Appearance Stone (7-day) - Event -->
 					</item>
 					<item chance="2.12">
-						<item id="23578" count="1" /> <!-- Fantasy Shoes Appearance Stone Pack (7-day) - Event -->
+						<item id="23578" count="1" /> <!-- Package: Fantasy Shoes Appearance Stone (7-day) - Event -->
 					</item>
 					<item chance="3.1">
-						<item id="19440" count="1" /> <!-- Gemstone (R-grade) -->
+						<item id="19440" count="1" /> <!-- R-grade Gemstone -->
 					</item>
 					<item chance="4.9">
-						<item id="23551" count="1" /> <!-- Mysterious Spiritshot Small Pack (R-grade) - Event -->
+						<item id="23551" count="1" /> <!-- Package: Mysterious R-grade Spiritshots (500) - Event -->
 					</item>
 					<item chance="5.94">
 						<item id="23470" count="1" /> <!-- Fantasy Homemade Cookie - Event -->
@@ -1491,7 +1491,7 @@
 						<item id="23468" count="1" /> <!-- Fantasy Mana Potion - Event -->
 					</item>
 					<item chance="24.936">
-						<item id="23550" count="1" /> <!-- Mysterious Soulshot Small Pack (R-grade) - Event -->
+						<item id="23550" count="1" /> <!-- Package: Mysterious R-grade Soulshots (500) - Event -->
 					</item>
 				</items>
 			</effect>
@@ -1523,7 +1523,7 @@
 		</effects>
 	</skill>
 	<skill id="22744" toLevel="1" name="Fantasy Cookie">
-		<!-- For 60 min., Speed +33. -->
+		<!-- Speed +33 for 60 min. -->
 		<icon>BranchSys3.Icon.ev_halloween_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1599,7 +1599,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22747" toLevel="1" name="Fantasy Isle Medal of Glory">
+	<skill id="22747" toLevel="1" name="Fantasy Isle Medal of Honor">
 		<!-- Individual Fame +200. -->
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
@@ -1611,7 +1611,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22748" toLevel="1" name="Scroll: PK (Low-grade)">
+	<skill id="22748" toLevel="1" name="Low-grade Scroll: PK">
 		<itemConsumeId>23474</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1635,7 +1635,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22749" toLevel="1" name="Scroll: PK (Mid-grade)">
+	<skill id="22749" toLevel="1" name="Mid-grade Scroll: PK">
 		<itemConsumeId>23475</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1659,7 +1659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22750" toLevel="1" name="Scroll: PK (High-grade)">
+	<skill id="22750" toLevel="1" name="High-grade Scroll: PK">
 		<itemConsumeId>23476</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1683,7 +1683,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22751" toLevel="1" name="Scroll: PK (Top-grade)">
+	<skill id="22751" toLevel="1" name="Top-grade Scroll: PK">
 		<itemConsumeId>23477</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1707,7 +1707,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22752" toLevel="1" name="Scroll: Reputation (Low-grade)">
+	<skill id="22752" toLevel="1" name="Low-grade Scroll: Reputation">
 		<itemConsumeId>23478</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1733,7 +1733,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22753" toLevel="1" name="Scroll: Reputation (Mid-grade)">
+	<skill id="22753" toLevel="1" name="Mid-grade Scroll: Reputation">
 		<itemConsumeId>23479</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1759,7 +1759,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22754" toLevel="1" name="Scroll: Reputation (High-grade)">
+	<skill id="22754" toLevel="1" name="High-grade Scroll: Reputation">
 		<itemConsumeId>23480</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1785,7 +1785,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22755" toLevel="1" name="Scroll: Reputation (Top-grade)">
+	<skill id="22755" toLevel="1" name="Top-grade Scroll: Reputation">
 		<itemConsumeId>23480</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1978,7 +1978,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22763" toLevel="1" name="Santa Outfit Appearance Stone (14-day)">
+	<skill id="22763" toLevel="1" name="Santa Outfit Appearance Stone - 14 d.">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

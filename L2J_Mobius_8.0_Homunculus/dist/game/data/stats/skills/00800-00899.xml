@@ -19,7 +19,7 @@
 		</effects>
 	</skill>
 	<skill id="801" toLevel="1" name="Warrior Ability: Boost CP">
-		<!-- Increases Max. CP. -->
+		<!-- Increases Max CP. -->
 		<icon>icon.skill0440</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLevel>75</magicLevel>
@@ -47,7 +47,7 @@
 		</effects>
 	</skill>
 	<skill id="803" toLevel="1" name="Healer Ability: Divine Protection">
-		<!-- Increases Dark/ Holy Attack Resistance. -->
+		<!-- Increases Dark/ Holy Resistance. -->
 		<icon>icon.skill1353</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLevel>75</magicLevel>
@@ -65,7 +65,7 @@
 		</effects>
 	</skill>
 	<skill id="804" toLevel="1" name="Knight Ability: Critical Damage Resistance">
-		<!-- Decreases received Critical Damage. -->
+		<!-- Received Critical Damage from standard attacks is dereased. -->
 		<icon>icon.skill0232</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLevel>75</magicLevel>
@@ -128,7 +128,7 @@
 		</effects>
 	</skill>
 	<skill id="808" toLevel="1" name="Golem Punch">
-		<!-- Throws a powerful punch with 11205 Power that both stuns and inflicts damage to the enemy. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Throws a powerful punch with 11,205 power that both stuns and inflicts damage on the enemy. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -157,12 +157,12 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="809" toLevel="1" name="Golem Tornado Swing">
-		<!-- Spinning attack strikes enemy with 6199 Power. Over-hit is possible. -->
+		<!-- Spins attacking the enemy with 6199 power. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
@@ -184,7 +184,7 @@
 		</effects>
 	</skill>
 	<skill id="810" toLevel="1" name="Vanguard">
-		<!-- Goes forth as the vanguard and displays valor. Equips a two-handed sword and gains the ability to attack more freely. Decreases Shield Defense by 50%. -->
+		<!-- Goes forth as the vanguard and displays valor. Equips a two-handed sword and gains the ability to attack more freely. Shield Defense -50%. The skill cooldown is fixed. -->
 		<icon>icon.skill0810</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>21600</abnormalTime>
@@ -224,7 +224,7 @@
 		</effects>
 	</skill>
 	<skill id="811" toLevel="1" name="Vanguard">
-		<!-- Goes forth as the advance guard and displays valor. Receives the ability to attack more freely because a dual sword is equipped. Decreases Shield Defense by 50%. -->
+		<!-- Goes forth as the advance guard and displays valor. Receives the ability to attack more freely because a dual sword is equipped. Shield Defense -50%. The skill cooldown is fixed. -->
 		<icon>icon.skill0810</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>21600</abnormalTime>
@@ -267,7 +267,7 @@
 		</effects>
 	</skill>
 	<skill id="812" toLevel="1" name="Vanguard">
-		<!-- Goes forth as the vanguard and displays valor. Equips a two-handed sword and gains the ability to attack more freely. Decreases Shield Defense by 50%. -->
+		<!-- Goes forth as the vanguard and displays valor. Equips a two-handed sword and gains the ability to attack more freely. Shield Defense -50%. The skill cooldown is fixed. -->
 		<icon>icon.skill0810</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>21600</abnormalTime>
@@ -307,7 +307,7 @@
 		</effects>
 	</skill>
 	<skill id="813" toLevel="1" name="Vanguard">
-		<!-- Goes forth as the advance guard and displays valor. Receives the ability to attack more freely because a dual sword is equipped. Decreases Shield Defense by 50%. -->
+		<!-- Goes forth as the advance guard and displays valor. Receives the ability to attack more freely because a dual sword is equipped. Shield Defense -50%. The skill cooldown is fixed. -->
 		<icon>icon.skill0810</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>21600</abnormalTime>
@@ -350,7 +350,7 @@
 		</effects>
 	</skill>
 	<skill id="814" toLevel="43" name="Full Swing">
-		<!-- Widely swings a weapon to attack nearby enemies with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
+		<!-- Swings a weapon to attack nearby enemies with $s1 power. Requires a sword or a blunt weapon. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0814</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -768,7 +768,7 @@
 		</effects>
 	</skill>
 	<skill id="816" toLevel="43" name="Cleave">
-		<!-- Inflicts a powerful blow on the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
+		<!-- Inflicts a powerful blow on the enemy with $s1 power. Requires a sword or a blunt weapon. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0816</icon>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
@@ -1352,7 +1352,7 @@
 		</effects>
 	</skill>
 	<skill id="824" toLevel="3" name="Golem Reinforcement">
-		<!-- For $s1, equips a summoned golem with an additional armor plate to increase P. Def. by $s2 and Max HP by $s3. -->
+		<!-- For $s1, equips a summoned golem with an additional armor plate. Its P. Def. +$s2, Max HP +$s3. -->
 		<icon>icon.skill0824</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1407,7 +1407,7 @@
 		</effects>
 	</skill>
 	<skill id="825" toLevel="1" name="Sharpen Edge">
-		<!-- Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 20 min. -->
+		<!-- For 20 min., due to sarpening of bladed weapon P. Atk. +5% and Critical Rate for standard attacks +20%. -->
 		<icon>icon.skill0825</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1489,7 +1489,7 @@
 		</effects>
 	</skill>
 	<skill id="827" toLevel="1" name="Bowstring">
-		<!-- Enhances the string of a bow or crossbow to increase P. Atk. by 5% and range by 100 for 20 min. -->
+		<!-- Enhances the string of a bow or crossbow. For 20 min. P. Atk. +5% and range +100. -->
 		<icon>icon.skill0827</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1529,7 +1529,7 @@
 		</effects>
 	</skill>
 	<skill id="828" toLevel="1" name="Encase Armor">
-		<!-- Thickens the surface of heavy armor to increase P. Def. by 10% for 20 min. -->
+		<!-- Thickens the surface of heavy armor. For 20 min. P. Def. +10%. -->
 		<icon>icon.skill0828</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1558,7 +1558,7 @@
 		</effects>
 	</skill>
 	<skill id="829" toLevel="1" name="Hard Tanning">
-		<!-- Tans light armor to increase P. Def. by 5% and Evasion by 2 for 20 min. Cannot be used on pets. -->
+		<!-- P. Def. +5%, P. Evasion +2 for 20 min. Can be used only on light armor. -->
 		<icon>icon.skill0829</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1594,7 +1594,7 @@
 		</effects>
 	</skill>
 	<skill id="830" toLevel="1" name="Embroider">
-		<!-- Embroiders a robe to increase P. Def. by 5% and MP Recovery Bonus by 2 for 20 min. -->
+		<!-- Embroiders a robe. For 20 min. P. Def. +5% and MP Recovery Bonus +2. -->
 		<icon>icon.skill0830</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1652,7 +1652,7 @@
 		</effects>
 	</skill>
 	<skill id="832" toLevel="2" name="Fast Recovery">
-		<!-- Increases HP/ MP/ CP Recovery Bonus. -->
+		<!-- Increases HP/ MP/ CP Recovery Rate. -->
 		<icon>icon.skill0832</icon>
 		<magicLevel>
 			<value level="1">43</value>
@@ -1703,7 +1703,7 @@
 		</effects>
 	</skill>
 	<skill id="834" toLevel="1" name="Blood Pact">
-		<!-- Through a blood contract, increases party members' Max HP by 10% and HP Recovery Bonus by 10 for 2 min. -->
+		<!-- Through a blood contract, for 2 min. party members' Max HP +10% and HP Recovery Bonus +10. -->
 		<icon>icon.skill0834</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1732,7 +1732,7 @@
 		</effects>
 	</skill>
 	<skill id="835" toLevel="4" name="Imbue Seed of Destruction">
-		<!-- Plants a Seed of Destruction in the enemy's body. The seed grows inside the enemy, draining $s1 mana per second. When fully grown, the seed blocks the enemy from using any skills. Consumes $s2 Dark Seeds. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Plants a Seed of Destruction in the enemy's body. The seed grows inside the enemy, draining $s1 mana per second. When fully grown, the seed blocks the enemy from using any skills. Consumes $s2 Dark Seeds.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0835</icon>
 		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -1792,7 +1792,7 @@
 		</endEffects>
 	</skill>
 	<skill id="836" toLevel="3" name="Oblivion Trap">
-		<!-- Creates a trap that when triggered makes the enemy lose focus, potentially causing them to lose their target when attacking. -->
+		<!-- Creates a trap that when triggered makes the enemy lose focus, potentially causing them to lose their target when attacking. The skill cooldown is fixed. -->
 		<icon>icon.skill0836</icon>
 		<effectPoint>-1</effectPoint>
 		<hitTime>3000</hitTime>
@@ -1846,6 +1846,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -1892,7 +1905,7 @@
 		</effects>
 	</skill>
 	<skill id="840" toLevel="1" name="Final Flying Form">
-		<!-- Transforms target into the final flying battle mode. Consumes 20 souls. -->
+		<!-- Transforms into the final flying battle form. Consumes 20 souls. The skill cooldown is fixed. -->
 		<icon>icon.skill0840</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
@@ -1951,7 +1964,7 @@
 		</effects>
 	</skill>
 	<skill id="841" toLevel="1" name="Aura Bird - Falcon">
-		<!-- Mounts the Aura Bird - Falcon. -->
+		<!-- Summons a Falcon. The skill cooldown is fixed. -->
 		<icon>icon.skill0841</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
@@ -2006,7 +2019,7 @@
 		</effects>
 	</skill>
 	<skill id="842" toLevel="1" name="Aura Bird - Owl">
-		<!-- Mounts the Aura Bird - Owl. -->
+		<!-- Summons an Owl. The skill cooldown is fixed. -->
 		<icon>icon.skill0842</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>-1</abnormalTime>
@@ -2163,7 +2176,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="848" toLevel="1" name="Gludio Territory Benefaction">
-		<!-- STR+1/ INT+1 -->
+		<!-- STR +1, INT +1. -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2180,7 +2193,7 @@
 		</effects>
 	</skill>
 	<skill id="849" toLevel="1" name="Dion Territory Benefaction">
-		<!-- DEX+1/ WIT+1 -->
+		<!-- DEX +1, and WIT +1. -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2197,7 +2210,7 @@
 		</effects>
 	</skill>
 	<skill id="850" toLevel="1" name="Giran Territory Benefaction">
-		<!-- STR+1/ MEN+1 -->
+		<!-- STR +1, MEN +1. -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2214,7 +2227,7 @@
 		</effects>
 	</skill>
 	<skill id="851" toLevel="1" name="Oren Territory Benefaction">
-		<!-- CON+1/ MEN+1 -->
+		<!-- CON +1, MEN +1. -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2231,7 +2244,7 @@
 		</effects>
 	</skill>
 	<skill id="852" toLevel="1" name="Aden Territory Benefaction">
-		<!-- DEX+1/ MEN+1 -->
+		<!-- DEX +1, MEN +1. -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2248,7 +2261,7 @@
 		</effects>
 	</skill>
 	<skill id="853" toLevel="1" name="Innadril Territory Benefaction">
-		<!-- CON+1/ INT+1 -->
+		<!-- CON +1, INT +1. -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2265,7 +2278,7 @@
 		</effects>
 	</skill>
 	<skill id="854" toLevel="1" name="Goddard Territory Benefaction">
-		<!-- DEX+1/ INT+1 -->
+		<!-- DEX +1, INT +1. -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2282,7 +2295,7 @@
 		</effects>
 	</skill>
 	<skill id="855" toLevel="1" name="Rune Territory Benefaction">
-		<!-- STR+1/ WIT+1 -->
+		<!-- STR +1, WIT +1. -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2299,7 +2312,7 @@
 		</effects>
 	</skill>
 	<skill id="856" toLevel="1" name="Schuttgart Territory Benefaction">
-		<!-- CON+1/ WIT+1 -->
+		<!-- CON +1, WIT +1. -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2316,7 +2329,7 @@
 		</effects>
 	</skill>
 	<skill id="857" toLevel="1" name="Human Mercenary">
-		<!-- Transforms player into a human mercenary. -->
+		<!-- Transforms into a human mercenary. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2348,7 +2361,7 @@
 		</effects>
 	</skill>
 	<skill id="858" toLevel="1" name="Elf Mercenary">
-		<!-- Transforms player into an Elf mercenary. -->
+		<!-- Transforms into an elf mercenary. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2380,7 +2393,7 @@
 		</effects>
 	</skill>
 	<skill id="859" toLevel="1" name="Dark Elf Mercenary">
-		<!-- Transforms player into a Dark Elf mercenary. -->
+		<!-- Transforms into a dark elf mercenary. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2412,7 +2425,7 @@
 		</effects>
 	</skill>
 	<skill id="860" toLevel="1" name="Orc Mercenary">
-		<!-- Transforms player into an Orc mercenary. -->
+		<!-- Transforms into an orc mercenary. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2444,7 +2457,7 @@
 		</effects>
 	</skill>
 	<skill id="861" toLevel="1" name="Dwarf Mercenary">
-		<!-- Transforms player into a Dwarf mercenary. -->
+		<!-- Transforms into a dwarf mercenary. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2476,7 +2489,7 @@
 		</effects>
 	</skill>
 	<skill id="862" toLevel="1" name="Kamael Mercenary">
-		<!-- Transforms player into a Kamael mercenary. -->
+		<!-- Transforms into a kamael mercenary. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2508,7 +2521,7 @@
 		</effects>
 	</skill>
 	<skill id="863" toLevel="1" name="Royal Guard Captain">
-		<!-- Transforms player into a Royal Guard Captain. -->
+		<!-- Transforms into a royal guard captain. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2540,7 +2553,7 @@
 		</effects>
 	</skill>
 	<skill id="864" toLevel="1" name="Archer Captain">
-		<!-- Transforms player into an Archer Captain. -->
+		<!-- Transforms into an archer captain. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2572,7 +2585,7 @@
 		</effects>
 	</skill>
 	<skill id="865" toLevel="1" name="Wizard Captain">
-		<!-- Transforms player into a Wizard Captain. -->
+		<!-- Transforms into a wizard captain. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2604,7 +2617,7 @@
 		</effects>
 	</skill>
 	<skill id="866" toLevel="1" name="Centurion">
-		<!-- Transforms player into a Centurion. -->
+		<!-- Transforms into a kamael guard captain. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2636,7 +2649,7 @@
 		</effects>
 	</skill>
 	<skill id="867" toLevel="1" name="Knight Captain">
-		<!-- Transforms player into a Knight of Dawn. -->
+		<!-- Transforms into a knight of Dawn. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2668,7 +2681,7 @@
 		</effects>
 	</skill>
 	<skill id="868" toLevel="1" name="Commander">
-		<!-- Transforms player into a Fortress Commander. -->
+		<!-- Transforms into a fortress commander. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -2867,7 +2880,7 @@
 		</effects>
 	</skill>
 	<skill id="873" toLevel="1" name="Rapid Shot">
-		<!-- Increases your own bow Atk. Spd by 12% for 20 min. -->
+		<!-- For 20 min. bow Atk. Spd +12%. -->
 		<icon>icon.skill0099</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2893,7 +2906,7 @@
 		</effects>
 	</skill>
 	<skill id="874" toLevel="8" name="Wizard Captain Flame Strike">
-		<!-- Launches a flaming swath of energy that inflicts Fire damage on the enemy with $s1 Power. -->
+		<!-- Launches an exploding fireball that inflicts damage on the enemy with $s1 Power. -->
 		<icon>icon.skill1181</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -3037,7 +3050,7 @@
 		</effects>
 	</skill>
 	<skill id="877" toLevel="8" name="Centurion Disarm">
-		<!-- Disarms the enemy and prevents them from equipping a weapon for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Disarms the enemy and prevents them from equipping a weapon for $s1\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0485</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -3134,7 +3147,7 @@
 		</effects>
 	</skill>
 	<skill id="879" toLevel="7" name="Knight Captain Curse Fear">
-		<!-- Causes your enemies to flee in fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Forces enemies to flee in fear.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -3172,7 +3185,7 @@
 		</effects>
 	</skill>
 	<skill id="880" toLevel="1" name="Knight Captain Ultimate Defense">
-		<!-- For 30 sec., increases P. Def. by 3600, M. Def. by 2700 and Buff-canceling Attack Resistance by 80%. The player cannot move while the effect lasts. -->
+		<!-- For 30 sec., P. Def. +3600, M. Def. +2700, Buff Cancel Resistance +80%. Impossible to move while the effect is active. -->
 		<icon>icon.skill0110</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3303,7 +3316,7 @@
 		</effects>
 	</skill>
 	<skill id="883" toLevel="7" name="Commander Seal of Binding">
-		<!-- Holds nearby enemies for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds nearby enemies for $s1\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1208</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3411,7 +3424,7 @@
 				<power>100</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -3423,7 +3436,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="886" toLevel="11" name="Air Shock Bomb">
-		<!-- Damages and stuns the target, momentarily preventing movement. Power $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Damages and stuns the target, momentarily preventing movement. Power $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -3498,12 +3511,12 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="887" toLevel="11" name="Sky Clutch">
-		<!-- Inflicts damage and simultaneously holds the enemy. Power $s1 Only one root effect can be used at a time. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Inflicts damage and simultaneously holds the enemy. Power $s1 Only one root effect can be used at a time.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -3582,7 +3595,7 @@
 		</effects>
 	</skill>
 	<skill id="888" toLevel="11" name="Energy Storm">
-		<!-- Delivers a powerful strike with $s1 Power. -->
+		<!-- Delivers a powerful strike. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>200</castRange>
 		<effectPoint>
@@ -3650,7 +3663,7 @@
 		</effects>
 	</skill>
 	<skill id="889" toLevel="11" name="Energy Storm">
-		<!-- Delivers a powerful strike with $s1 Power. -->
+		<!-- Delivers a powerful strike. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>200</castRange>
 		<effectPoint>
@@ -3718,7 +3731,7 @@
 		</effects>
 	</skill>
 	<skill id="890" toLevel="11" name="Prodigious Flare">
-		<!-- Delivers a powerful strike with $s1 Power. -->
+		<!-- Delivers a powerful strike. Power $s1 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>200</castRange>
 		<effectPoint>
@@ -3786,7 +3799,7 @@
 		</effects>
 	</skill>
 	<skill id="891" toLevel="11" name="Energy Shot">
-		<!-- Inflicts a powerful ranged attack with $s1 Power. -->
+		<!-- Inflicts a powerful ranged attack. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -3855,7 +3868,7 @@
 		</effects>
 	</skill>
 	<skill id="892" toLevel="11" name="Energy Shot">
-		<!-- Inflicts a powerful ranged attack with $s1 Power. -->
+		<!-- Inflicts a powerful ranged attack. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -4075,7 +4088,7 @@
 		</effects>
 	</skill>
 	<skill id="896" toLevel="6" name="Rolling Attack">
-		<!-- Delivers a powerful strike with $s1 Power. -->
+		<!-- Delivers a powerful strike. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -4136,7 +4149,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="897" toLevel="6" name="Double Blast">
-		<!-- Inflicts a powerful ranged attack with $s1 Power. -->
+		<!-- Inflicts a powerful ranged attack. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -4257,7 +4270,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="899" toLevel="6" name="Cat Roar">
-		<!-- Howls to decrease P./ M. Def., Speed, Atk. Spd./ Casting Spd. of nearby enemies. Power $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Lets out a howl to decrease P./ M. Def., Speed and Atk. Spd./ Casting Spd. of nearby enemies. Power $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

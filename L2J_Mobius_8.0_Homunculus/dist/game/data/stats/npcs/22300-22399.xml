@@ -112,9 +112,9 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="328135" sp="78" />
+		<acquire exp="328137" sp="79" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="44673.1861198738" hpRegen="152.624194212594" mp="1743.71451743715" mpRegen="3" />
+			<vitals hp="44673.1861198738" hpRegen="152.624194212594" mp="1760.74614760746" mpRegen="3" />
 			<attack physical="11225.6335282651" magical="5523.05300028029" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="559.649122807018" magical="614.675374567806" />
 			<attribute>
@@ -131,12 +131,11 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4666" level="10" /> <!-- Drain Energy -->
 			<skill id="5360" level="2" /> <!-- Spinning Slasher -->
 			<skill id="5390" level="4" /> <!-- Unholy Blast -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -148,6 +147,11 @@
 			<radius normal="10" />
 			<height normal="54" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="173" max="404" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22303" level="82" type="Monster" name="Guardian of the Square">
 		<parameters>
@@ -162,9 +166,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="342208" sp="82" />
+		<acquire exp="342209" sp="83" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="44673.1861198738" hpRegen="152.624194212594" mp="1743.71451743715" mpRegen="3" />
+			<vitals hp="44673.1861198738" hpRegen="152.624194212594" mp="1760.74614760746" mpRegen="3" />
 			<attack physical="11225.7984141641" magical="5523.10866018671" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="559.649122807018" magical="614.675374567806" />
 			<attribute>
@@ -181,11 +185,10 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="5359" level="4" /> <!-- Power Shot -->
 			<skill id="5365" level="4" /> <!-- Paralysis -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -197,6 +200,11 @@
 			<radius normal="16" />
 			<height normal="35.6" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="173" max="404" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22304" level="82" type="Monster" name="Guardian of the Emerald">
 		<parameters>
@@ -211,9 +219,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="343659" sp="82" />
+		<acquire exp="343660" sp="83" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="44673.1861198738" hpRegen="152.624194212594" mp="1743.71451743715" mpRegen="3" />
+			<vitals hp="44673.1861198738" hpRegen="152.624194212594" mp="1760.74614760746" mpRegen="3" />
 			<attack physical="11225.6335282651" magical="5523.10866018671" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="559.649122807018" magical="614.432882194102" />
 			<attribute>
@@ -230,11 +238,10 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="5362" level="4" /> <!-- Stun -->
 			<skill id="5393" level="4" /> <!-- Mana Burn -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -246,6 +253,11 @@
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="173" max="404" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22305" level="82" type="Monster" name="Kechi's Guard Captain">
 		<parameters>
@@ -519,7 +531,7 @@
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4572" level="10" /> <!-- Triple Sonic Slash -->
 			<skill id="5301" level="3" /> <!-- Stun -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
@@ -619,9 +631,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="324426" sp="77" />
+		<acquire exp="324427" sp="78" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="32829.0220820189" hpRegen="111.50705124295" mp="1777.77777777778" mpRegen="3" />
+			<vitals hp="65658.0441640379" hpRegen="111.50705124295" mp="1794.80940794809" mpRegen="3" />
 			<attack physical="8025.19379844961" magical="3694.29013579323" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="453.488372093023" magical="731.248297326163" />
 			<attribute>
@@ -637,15 +649,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="5317" level="4" /> <!-- Mass Hydro Blast -->
 			<skill id="5318" level="4" /> <!-- Frost Wall -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -658,6 +668,11 @@
 			<radius normal="25" />
 			<height normal="72" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="178" max="415" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22312" level="83" type="Monster" name="Fafurion's Henchman">
 		<parameters>
@@ -696,7 +711,7 @@
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5282" level="4" /> <!-- Power Shot -->
 			<skill id="5283" level="4" /> <!-- Spinning Slasher -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
@@ -754,7 +769,7 @@
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5282" level="4" /> <!-- Power Shot -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
@@ -836,9 +851,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="5132" /> <!-- Monster Only (Giant Trident) -->
-		<acquire exp="62811" sp="15" />
+		<acquire exp="62813" sp="16" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="10943.2176656151" hpRegen="111.50705124295" mp="1777.77777777778" mpRegen="3" />
+			<vitals hp="10943.2176656151" hpRegen="111.50705124295" mp="1794.80940794809" mpRegen="3" />
 			<attack physical="9349.17355371901" magical="4303.90827911839" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="679.651162790698" magical="540.585964109494" />
 			<attribute>
@@ -857,11 +872,10 @@
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="5273" level="4" /> <!-- Power Strike -->
 			<skill id="5309" level="4" /> <!-- Bleed -->
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
@@ -875,16 +889,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<!-- Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="178" max="415" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
 	</npc>

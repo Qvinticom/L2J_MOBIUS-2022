@@ -16,10 +16,14 @@
  */
 package quests.Q11025_PathOfDestinyProving;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.enums.CategoryType;
-import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -29,33 +33,50 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionChange;
+import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
+import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
+import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeSetAlarm;
 
 /**
  * Path of Destiny - Proving (11025)
  * @URL https://l2wiki.com/Path_of_Destiny_-_Proving
- * @author Dmitri
+ * @author Liviades
  */
 public class Q11025_PathOfDestinyProving extends Quest
 {
 	// NPCs
 	private static final int TARTI = 34505;
 	private static final int RAYMOND = 30289;
-	private static final int TERESIA = 33981;
-	private static final int MYSTERIOUS_MAGE = 1033980; // TODO: Find proper ID.
-	private static final int SKELETON_ARCHER = 27529;
-	private static final int SKELETON_WARRIOR = 27528;
+	private static final int TELESHA = 33981;
+	private static final int KALLESIN = 33177;
+	private static final int ZENATH = 33509;
+	private static final int MYSTERIOUS_WIZARD = 1033980;
+	// Monsters
+	private static final int VAMPIRE = 24385;
+	private static final int CARCASS_BAT = 24384;
+	private static final int SKELETON_WARRIOR = 24388;
+	private static final int SKELETON_SCOUT = 24386;
+	private static final int SKELETON_ARCHER = 24387;
+	private static final int SPARTOI_SOLDIER = 24389;
+	private static final int RAGING_SPARTOI = 24390;
+	private static final int SKELETON_WARRIOR_2 = 27528;
+	private static final int SKELETON_SCOUT_2 = 27529;
 	// Items
-	private static final int WIND_SPIRIT = 80673;
+	private static final int SOE_KALLESIN = 80679;
+	private static final int SOE_ZENATH = 80680;
+	private static final int SOE_TARTI = 80677;
+	// Quest Item
+	private static final int WIND_SPIRIT_REALM_RELIC = 39535;
+	private static final int SECRET_MATERIAL = 80671;
+	private static final int BREATH_OF_DEATH = 80672;
 	// Class change rewards
 	private static final int SS_R = 33780;
 	private static final int BSS_R = 33794;
-	private static final int BS_R = 6645;
 	private static final int BOX_R_HEAVY = 46924;
 	private static final int BOX_R_LIGHT = 46925;
 	private static final int BOX_R_ROBE = 46926;
@@ -75,21 +96,32 @@ public class Q11025_PathOfDestinyProving extends Quest
 	private static final int WEAPON_SIGIL_R = 47037;
 	private static final int ORICHALCUM_BOLT_R = 19443;
 	private static final int ORICHALCUM_ARROW_R = 18550;
-	// Location
-	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-4983, 116607, -3344);
+	// Locations
+	private static final Location TRAINING_GROUNDS_TELEPORT1 = new Location(-43688, 117592, -3560);
+	private static final Location TRAINING_GROUNDS_TELEPORT2 = new Location(-46450, 110273, -3808);
+	private static final Location TRAINING_GROUNDS_TELEPORT3 = new Location(-51637, 108721, -3720);
+	private static final Location TRAINING_GROUNDS_TELEPORT4 = new Location(-4983, 116607, -3344);
+	private static final Location TRAINING_GROUNDS_TELEPORT5 = new Location(-12877, 121710, -2960);
 	// Misc
 	private static final String R_GRADE_ITEMS_REWARDED_VAR = "R_GRADE_ITEMS_REWARDED";
-	private static final int MIN_LEVEL = 40;
+	private static final String KILL_COUNT_VAR = "KillCount";
+	private static final String KILL_COUNT_VAR2 = "KillCount2";
+	private static final String EXPSP_REWARD_CHECK_VAR1 = "EXPSP_REWARD_CHECK";
+	private static final String EXPSP_REWARD_CHECK_VAR2 = "EXPSP_REWARD_CHECK2";
+	private static final String EXPSP_REWARD_CHECK_VAR3 = "EXPSP_REWARD_CHECK3";
+	private static final int LEVEL_20 = 20;
+	private static final int LEVEL_40 = 40;
+	private static boolean INSTANT_LEVEL_40 = false;
 	
 	public Q11025_PathOfDestinyProving()
 	{
 		super(11025);
 		addStartNpc(TARTI);
-		addFirstTalkId(TERESIA, MYSTERIOUS_MAGE);
-		addTalkId(TARTI, RAYMOND, TERESIA, MYSTERIOUS_MAGE);
-		addKillId(SKELETON_ARCHER, SKELETON_WARRIOR);
-		registerQuestItems(WIND_SPIRIT);
-		addCondMinLevel(MIN_LEVEL, "34505-11.html");
+		addFirstTalkId(TELESHA, MYSTERIOUS_WIZARD);
+		addTalkId(TARTI, RAYMOND, TELESHA, MYSTERIOUS_WIZARD, KALLESIN, ZENATH);
+		addKillId(VAMPIRE, CARCASS_BAT, SKELETON_SCOUT, SKELETON_ARCHER, SKELETON_WARRIOR, SPARTOI_SOLDIER, RAGING_SPARTOI, SKELETON_WARRIOR_2, SKELETON_SCOUT_2);
+		registerQuestItems(WIND_SPIRIT_REALM_RELIC, SECRET_MATERIAL, BREATH_OF_DEATH);
+		addCondMinLevel(LEVEL_20, "34505-16.html");
 		setQuestNameNpcStringId(NpcStringId.LV_20_PATH_OF_DESTINY_PROVING);
 	}
 	
@@ -105,85 +137,215 @@ public class Q11025_PathOfDestinyProving extends Quest
 		
 		switch (event)
 		{
+			case "34505-02.htm":
+			case "34505-03.htm":
+			case "33177-03.html":
+			case "33177-04.html":
+			case "33509-03.html":
+			case "33509-04.html":
 			case "30289-02.html":
+			case "33980-02.html":
 			case "30289-05.html":
-			case "34505-05.html":
-			case "34505-06.html":
-			case "34505-07.html":
-			case "34505-08.html":
-			case "34505-09.html":
+			case "34505-10.html":
+			case "34505-11.html":
 			case "34505-12.html":
-			case "1033980-02.html":
+			case "34505-13.html":
+			case "34505-14.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "34505-02.html":
+			case "34505-04.htm":
+			{
+				htmltext = event;
+				player.sendPacket(new ExTutorialShowId(15)); // Skill
+				showOnScreenMsg(player, NpcStringId.PRESS_ALT_K_TO_OPEN_THE_LEARN_SKILL_TAB_AND_LEARN_NEW_SKILLS_NTHE_SKILLS_IN_THE_ACTIVE_TAB_CAN_BE_ADDED_TO_THE_SHORTCUTS, ExShowScreenMessage.TOP_CENTER, 10000);
+				break;
+			}
+			case "34505-05.html":
 			{
 				qs.startQuest();
+				qs.setCond(1, true);
+				giveStoryBuffReward(npc, player);
 				htmltext = event;
-				if (player.getLevel() >= 40)
+				break;
+			}
+			case "33177-02.html":
+			{
+				if (qs.isCond(2))
 				{
-					qs.setCond(2, true);
-					htmltext = "34505-03.html";
+					takeItems(player, SECRET_MATERIAL, 15);
+					qs.setCond(3, true);
+					if (!player.getVariables().getBoolean(EXPSP_REWARD_CHECK_VAR1, false))
+					{
+						player.getVariables().set(EXPSP_REWARD_CHECK_VAR1, true);
+						addExpAndSp(player, 1640083, 1476);
+					}
+					htmltext = event;
+				}
+				break;
+			}
+			case "33177-05.html":
+			{
+				if (qs.isCond(3))
+				{
+					qs.setCond(4, true);
+					giveStoryBuffReward(npc, player);
+					player.sendPacket(new ExTutorialShowId(15)); // Auto-use Next Target //TODO: ADD PROPER ID
+					htmltext = event;
+				}
+				break;
+			}
+			case "33509-02.html":
+			{
+				if (qs.isCond(5))
+				{
+					qs.setCond(6, true);
+					if (!player.getVariables().getBoolean(EXPSP_REWARD_CHECK_VAR2, false))
+					{
+						player.getVariables().set(EXPSP_REWARD_CHECK_VAR2, true);
+						addExpAndSp(player, 913551, 822);
+					}
+					htmltext = event;
+				}
+				break;
+			}
+			case "33509-05.html":
+			{
+				if (qs.isCond(6))
+				{
+					qs.setCond(7, true);
+					giveStoryBuffReward(npc, player);
+					player.sendPacket(new ExTutorialShowId(15)); // Auto-use Potions //TODO: ADD PROPER ID
+					htmltext = event;
+				}
+				break;
+			}
+			case "34505-07.html":
+			{
+				if (qs.isCond(8))
+				{
+					takeItems(player, BREATH_OF_DEATH, 15);
+					qs.setCond(9, true);
+					if (!player.getVariables().getBoolean(EXPSP_REWARD_CHECK_VAR3, false))
+					{
+						player.getVariables().set(EXPSP_REWARD_CHECK_VAR3, true);
+						if (INSTANT_LEVEL_40 && (player.getLevel() < LEVEL_40))
+						{
+							addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(LEVEL_40) + 100) - player.getExp(), 4457);
+						}
+						else
+						{
+							addExpAndSp(player, 4952686, 4457);
+						}
+						giveAdena(player, 165000, true);
+					}
+					htmltext = event;
+					showOnScreenMsg(player, NpcStringId.SECOND_CLASS_TRANSFER_IS_AVAILABLE_NGO_SEE_TARTI_IN_THE_TOWN_OF_GLUDIO_TO_START_THE_CLASS_TRANSFER, ExShowScreenMessage.TOP_CENTER, 10000);
+				}
+				break;
+			}
+			case "34505-08.html":
+			{
+				if (qs.isCond(9))
+				{
+					if (qs.isCond(9) && (player.getLevel() >= LEVEL_40))
+					{
+						qs.setCond(11, true);
+						htmltext = event;
+						break;
+					}
+					qs.setCond(10, true);
+					htmltext = event;
 				}
 				break;
 			}
 			case "30289-03.html":
 			{
-				qs.setCond(3, true);
-				giveItems(player, WIND_SPIRIT, 1);
-				htmltext = event;
-				break;
-			}
-			case "teleport":
-			{
-				if (qs.isCond(3))
+				if (qs.isCond(11))
 				{
-					player.teleToLocation(TRAINING_GROUNDS_TELEPORT);
+					qs.setCond(12, true);
+					giveItems(player, WIND_SPIRIT_REALM_RELIC, 1);
+					htmltext = event;
 				}
-				break;
-			}
-			case "mega_menu":
-			{
-				if (qs.isCond(4) && (npc != null))
-				{
-					addSpawn(MYSTERIOUS_MAGE, npc, true, 300000);
-					showOnScreenMsg(player, NpcStringId.TALK_TO_THE_MYSTERIOUS_WIZARD_2, ExShowScreenMessage.TOP_CENTER, 10000);
-					npc.deleteMe();
-				}
-				break;
-			}
-			case "falver":
-			{
-				qs.setCond(5, true);
-				showOnScreenMsg(player, NpcStringId.RETURN_TO_RAYMOND_OF_THE_TOWN_OF_GLUDIO, ExShowScreenMessage.TOP_CENTER, 10000);
-				giveItems(player, WIND_SPIRIT, 1);
-				htmltext = event;
 				break;
 			}
 			case "30289-06.html":
 			{
-				qs.setCond(6, true);
-				htmltext = event;
+				if (qs.isCond(14))
+				{
+					qs.setCond(15, true);
+					htmltext = event;
+				}
 				break;
 			}
-			case "34505-10.html":
+			case "34505-15.html":
 			{
-				if (qs.isCond(6))
+				if (qs.isCond(15))
 				{
-					giveAdena(player, 5000, true);
+					takeItems(player, WIND_SPIRIT_REALM_RELIC, 2);
 					qs.exitQuest(false, true);
-					if (CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, player.getClassId().getId()) || //
-						(CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()) && (player.getRace() == Race.ERTHEIA)))
+					if (CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, player.getClassId().getId()))
 					{
 						showOnScreenMsg(player, NpcStringId.CLASS_TRANSFER_IS_AVAILABLE_NCLICK_THE_CLASS_TRANSFER_ICON_IN_THE_NOTIFICATION_WINDOW_TO_TRANSFER_YOUR_CLASS, ExShowScreenMessage.TOP_CENTER, 10000);
-						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+						player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 					}
-					giveStoryBuffReward(npc, player);
 					htmltext = event;
-					break;
 				}
+				break;
+			}
+			case "teleport1":
+			{
+				if (qs.isCond(1))
+				{
+					player.teleToLocation(TRAINING_GROUNDS_TELEPORT1);
+				}
+				break;
+			}
+			case "teleport2":
+			{
+				if (qs.isCond(4))
+				{
+					player.teleToLocation(TRAINING_GROUNDS_TELEPORT2);
+				}
+				break;
+			}
+			case "teleport3":
+			{
+				if (qs.isCond(7))
+				{
+					player.teleToLocation(TRAINING_GROUNDS_TELEPORT3);
+				}
+				break;
+			}
+			case "teleport4":
+			{
+				if (qs.isCond(12))
+				{
+					player.teleToLocation(TRAINING_GROUNDS_TELEPORT4);
+				}
+				break;
+			}
+			case "MageSpawn":
+			{
+				if (qs.isCond(13) && (npc != null))
+				{
+					addSpawn(MYSTERIOUS_WIZARD, npc, true, 300000);
+					showOnScreenMsg(player, NpcStringId.TALK_TO_THE_MYSTERIOUS_WIZARD, ExShowScreenMessage.TOP_CENTER, 10000);
+					npc.deleteMe();
+				}
+				break;
+			}
+			case "BacktoRaymond":
+			{
+				if (qs.isCond(13))
+				{
+					qs.setCond(14, true);
+					showOnScreenMsg(player, NpcStringId.RETURN_TO_RAYMOND_OF_THE_TOWN_OF_GLUDIO, ExShowScreenMessage.TOP_CENTER, 10000);
+					giveItems(player, WIND_SPIRIT_REALM_RELIC, 1);
+					player.teleToLocation(TRAINING_GROUNDS_TELEPORT5);
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -198,9 +360,13 @@ public class Q11025_PathOfDestinyProving extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == TARTI)
+				if ((npc.getId() == TARTI) && (player.getLevel() >= LEVEL_20))
 				{
-					htmltext = "34505-01.html";
+					htmltext = "34505-01.htm";
+				}
+				else
+				{
+					htmltext = "34505-16.html";
 				}
 				break;
 			}
@@ -210,68 +376,104 @@ public class Q11025_PathOfDestinyProving extends Quest
 				{
 					case TARTI:
 					{
-						if (qs.isCond(1) && (player.getLevel() > MIN_LEVEL))
+						switch (qs.getCond())
 						{
-							qs.setCond(2, true);
-							htmltext = "34505-03.html";
-							break;
+							case 1:
+							{
+								htmltext = "34505-01.htm";
+								break;
+							}
+							case 8:
+							{
+								htmltext = "34505-06.html";
+								break;
+							}
+							case 10:
+							{
+								if (player.getLevel() >= 40)
+								{
+									qs.setCond(11, true);
+									htmltext = "34505-08.html";
+								}
+								else
+								{
+									htmltext = "34505-19.html";
+								}
+								break;
+							}
+							case 11:
+							{
+								htmltext = "34505-18.html";
+								break;
+							}
+							case 15:
+							{
+								htmltext = "34505-09.html";
+								break;
+							}
 						}
-						else if (qs.isCond(2))
+						break;
+					}
+					case KALLESIN:
+					{
+						if (qs.isCond(2))
 						{
-							htmltext = "34505-03.html"; // TODO: Proper second talk dialog.
-							break;
+							htmltext = "33177-01.html";
 						}
-						else if (qs.isCond(3))
+						else if (qs.isCond(4))
 						{
-							htmltext = "34505-03.html";
+							htmltext = "33177-06.html";
 						}
-						else if (qs.isCond(5))
+						break;
+					}
+					case ZENATH:
+					{
+						if (qs.isCond(5))
 						{
-							htmltext = "34505-03.html";
+							htmltext = "33509-01.html";
 						}
 						else if (qs.isCond(6))
 						{
-							htmltext = "34505-04.html";
+							htmltext = "33509-03.html";
+						}
+						else if (qs.isCond(7))
+						{
+							htmltext = "33509-06.html";
 						}
 						break;
 					}
 					case RAYMOND:
 					{
-						if (qs.isCond(2))
+						switch (qs.getCond())
 						{
-							htmltext = "30289-01.html";
-						}
-						else if (qs.isCond(3))
-						{
-							htmltext = "30289-03.html";
-						}
-						else if (qs.isCond(5))
-						{
-							htmltext = "30289-04.html";
-						}
-						else if (qs.isCond(6))
-						{
-							htmltext = "30289-06.html"; // TODO: Proper second talk dialog.
+							case 11:
+							{
+								htmltext = "30289-01.html";
+								break;
+							}
+							case 12:
+							{
+								htmltext = "30289-07.html";
+								break;
+							}
+							case 14:
+							{
+								htmltext = "30289-04.html";
+								break;
+							}
+							case 15:
+							{
+								htmltext = "30289-08.html";
+								break;
+							}
 						}
 						break;
 					}
-					case TERESIA:
+					case MYSTERIOUS_WIZARD:
 					{
-						if (qs.isCond(4))
+						if (qs.isCond(14))
 						{
-							htmltext = "33981-01.html";
-						}
-						break;
-					}
-					case MYSTERIOUS_MAGE:
-					{
-						if (qs.isCond(4))
-						{
-							htmltext = "1033980-01.html";
-						}
-						else if (qs.isCond(5))
-						{
-							htmltext = "1033980-03.html";
+							htmltext = "33980-03.html";
 						}
 						break;
 					}
@@ -290,6 +492,11 @@ public class Q11025_PathOfDestinyProving extends Quest
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(12))
+		{
+			qs.setCond(13, true);
+		}
 		return npc.getId() + "-01.html";
 	}
 	
@@ -297,13 +504,118 @@ public class Q11025_PathOfDestinyProving extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, true);
-		if ((qs != null) && qs.isCond(3))
+		if (qs != null)
 		{
-			addSpawn(TERESIA, npc, true, 300000);
-			showOnScreenMsg(killer, NpcStringId.CHECK_ON_TELESHA, ExShowScreenMessage.TOP_CENTER, 10000);
-			qs.setCond(4, true);
+			switch (npc.getId())
+			{
+				case CARCASS_BAT:
+				case VAMPIRE:
+				{
+					if (qs.isCond(1))
+					{
+						if (getQuestItemsCount(killer, SECRET_MATERIAL) < 14)
+						{
+							giveItems(killer, SECRET_MATERIAL, 1);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						}
+						else if (getQuestItemsCount(killer, SECRET_MATERIAL) == 14)
+						{
+							giveItems(killer, SECRET_MATERIAL, 1);
+							qs.setCond(2, true);
+							giveItems(killer, SOE_KALLESIN, 1);
+							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_KALLESIN_IN_YOUR_INVENTORY_NTALK_TO_KALLESIN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+						}
+					}
+					break;
+				}
+				case SKELETON_SCOUT:
+				case SKELETON_ARCHER:
+				case SKELETON_WARRIOR:
+				{
+					if (qs.isCond(4))
+					{
+						final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
+						if (killCount < 30)
+						{
+							qs.set(KILL_COUNT_VAR, killCount);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+							sendNpcLogList(killer);
+						}
+						else
+						{
+							qs.setCond(5, true);
+							qs.unset(KILL_COUNT_VAR);
+							giveItems(killer, SOE_ZENATH, 1);
+							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_ZENATH_IN_YOUR_INVENTORY_NTALK_TO_ZENATH_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+						}
+					}
+					break;
+				}
+				case SPARTOI_SOLDIER:
+				case RAGING_SPARTOI:
+				{
+					if (qs.isCond(7))
+					{
+						if (getQuestItemsCount(killer, BREATH_OF_DEATH) < 14)
+						{
+							giveItems(killer, BREATH_OF_DEATH, 1);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						}
+						else if (getQuestItemsCount(killer, BREATH_OF_DEATH) == 14)
+						{
+							qs.setCond(8, true);
+							giveItems(killer, SOE_TARTI, 1);
+							showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+						}
+					}
+					break;
+				}
+				case SKELETON_WARRIOR_2:
+				case SKELETON_SCOUT_2:
+				{
+					if (qs.isCond(12))
+					{
+						final int killCount = qs.getInt(KILL_COUNT_VAR2) + 1;
+						if (killCount < 1)
+						{
+							qs.set(KILL_COUNT_VAR2, killCount);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+							sendNpcLogList(killer);
+						}
+						else
+						{
+							qs.unset(KILL_COUNT_VAR2);
+							addSpawn(TELESHA, npc, true, 300000);
+							showOnScreenMsg(killer, NpcStringId.CHECK_ON_TELESHA, ExShowScreenMessage.TOP_CENTER, 10000);
+						}
+					}
+					break;
+				}
+			}
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if (qs != null)
+		{
+			if (qs.isCond(4))
+			{
+				final Set<NpcLogListHolder> holder = new HashSet<>();
+				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_SKELETONS_3.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+				return holder;
+			}
+			else if (qs.isCond(11))
+			{
+				final Set<NpcLogListHolder> holder = new HashSet<>();
+				holder.add(new NpcLogListHolder(NpcStringId.INVESTIGATE_THE_SURROUNDINGS.getId(), true, qs.getInt(KILL_COUNT_VAR2)));
+				return holder;
+			}
+		}
+		return super.getNpcLogList(player);
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_PROFESSION_CHANGE)
@@ -331,8 +643,8 @@ public class Q11025_PathOfDestinyProving extends Quest
 		if ((qs != null) && qs.isCompleted())
 		{
 			player.getVariables().set(R_GRADE_ITEMS_REWARDED_VAR, true);
-			giveItems(player, SS_R, 3000);
-			giveItems(player, BSS_R, 2000);
+			giveItems(player, SS_R, 5000);
+			giveItems(player, BSS_R, 5000);
 			
 			switch (player.getClassId())
 			{
@@ -399,7 +711,6 @@ public class Q11025_PathOfDestinyProving extends Quest
 				{
 					giveItems(player, BOX_R_LIGHT, 1);
 					giveItems(player, WEAPON_STAFF_R, 1);
-					giveItems(player, BS_R, 1000); // TODO: Confirm.
 					break;
 				}
 				case BISHOP:
@@ -469,14 +780,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 			return;
 		}
 		
-		if (player.getRace() == Race.ERTHEIA)
-		{
-			if (!CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
-			{
-				return;
-			}
-		}
-		else if (!CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, player.getClassId().getId()))
+		if (!CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, player.getClassId().getId()))
 		{
 			return;
 		}
@@ -484,7 +788,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCompleted())
 		{
-			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+			player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 		}
 	}
 }

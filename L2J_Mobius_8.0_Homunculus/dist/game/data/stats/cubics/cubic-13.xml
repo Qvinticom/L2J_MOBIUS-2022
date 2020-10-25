@@ -4,13 +4,13 @@
 		<skills>
 			<skill id="4049" level="8" triggerRate="25" successRate="40" canUseOnStaticObjects="true" target="TARGET"> <!-- Cubic Strike -->
 				<conditions>
-					<hp type="GREATER" percent="30" />
+					<hp type="GREATER" percent="1" />
 					<range value="1000" />
 				</conditions>
 			</skill>
 			<skill id="4166" level="9" triggerRate="25" successRate="40" target="TARGET"> <!-- Stun -->
 				<conditions>
-					<hp type="GREATER" percent="30" />
+					<hp type="GREATER" percent="1" />
 					<range value="1000" />
 				</conditions>
 			</skill>

@@ -1744,7 +1744,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="13686" name="Sealed Knight's Cloak" type="EtcItem">
-		<!-- Cloak with luxurious embroidery. When the seal is cancelled, it'll have Dark Resistance +30 effect. The seal can be cancelled through the weaver Olf Kanore and Olf Adams. It cannot be worn before the seal cancellation. Cannot be enchanted, augmented, or assigned an attribute. Cannot be transferred between servers. -->
+		<!-- Old and not very useful equipment. Cannot be enchanted, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1775,7 +1775,7 @@
 		</stats>
 	</item>
 	<item id="13687" name="Knight's Cloak" type="Armor">
-		<!-- Cloak with luxurious embroidery. Dark Attribute Resistance +30. Can be worn by Barons or higher ranks of the clan that own a castle. Cannot be enchanted, augmented, or assigned an attribute. Cannot be transferred between servers. -->
+		<!-- Knight's Cloak for high-level characters. Can be worn only by members of a clan that owns a castle. Dark Resistance +30. Cannot be enchanted, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1807,7 +1807,7 @@
 		</stats>
 	</item>
 	<item id="13688" name="Knight's Cloak (Light Armor)" type="Armor">
-		<!-- Cloak with luxurious embroidery. Dark Attribute Resistance +30, and can be worn by Barons or higher ranks of the clan that own a castle. The cloak is exclusively for Bow Masters and Dagger Masters (excluding Kamaels). Cannot be enchanted, augmented, or assigned an attribute. Cannot be transferred between servers. -->
+		<!-- Knight's Cloak for high-level characters. Can be worn only by members of a clan that owns a castle. Dark Resistance +30. The cloak is exclusively for Bow Masters and Dagger Masters (excluding Kamaels). Cannot be enchanted, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1841,7 +1841,7 @@
 		</stats>
 	</item>
 	<item id="13689" name="Knight's Cloak (Robe)" type="Armor">
-		<!-- Cloak with luxurious embroidery. Dark Attribute Resistance +30, and can be worn by Barons or higher ranks of the clan that own a castle. The cloak is exclusively for Healer, Enchanter, Summoner and Wizard (excluding Kamaels). Cannot be enchanted, augmented, or assigned an attribute. Cannot be transferred between servers. -->
+		<!-- Knight's Cloak for high-level characters. Can be worn only by members of a clan that owns a castle. Dark Resistance +30. The cloak is exclusively for Healer, Enchanter, Summoner and Wizard (excluding Kamaels). Cannot be enchanted, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1875,7 +1875,7 @@
 		</stats>
 	</item>
 	<item id="13690" name="Knight's Cloak (Kamael)" type="Armor">
-		<!-- Cloak with luxurious embroidery. Dark Attribute Resistance +30, and can be worn by Barons or higher ranks of the clan that own a castle. Kamael-exclusive cloak. Cannot be enchanted, augmented, or assigned an attribute. Cannot be transferred between servers. -->
+		<!-- Knight's Cloak for high-level characters. Can be worn only by members of a clan that owns a castle. Dark Resistance +30. Kamael-exclusive cloak. Cannot be enchanted, augmented, or assigned with attributes. Cannot be exchanged or thrown out. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1978,7 +1978,7 @@
 		</skills>
 	</item>
 	<item id="13695" name="Gludio Supply Box - Magic Pin" additionalName="B-/ C-grade" type="EtcItem">
-		<!-- Box that has the symbol of Gludio. Low grade magic pin that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box decorated with the symbol of Gludio. Gives a certain chance to obtain Low-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1998,7 +1998,7 @@
 		</skills>
 	</item>
 	<item id="13696" name="Dion Supply Box - Magic Pin" additionalName="B-/ C-grade" type="EtcItem">
-		<!-- Box that has the symbol of Dion. Low grade magic pin that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box decorated with the symbol of Dion. Gives a certain chance to obtain Low-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -2018,7 +2018,7 @@
 		</skills>
 	</item>
 	<item id="13697" name="Giran Supply Box - Magic Pin" additionalName="B-/ C-grade" type="EtcItem">
-		<!-- Box that has the symbol of Giran. Low grade magic pin that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box decorated with the symbol of Giran. Gives a certain chance to obtain Low-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -2038,7 +2038,7 @@
 		</skills>
 	</item>
 	<item id="13698" name="Oren Supply Box - Magic Pin" additionalName="B-/ C-grade" type="EtcItem">
-		<!-- Box that has the symbol of Oren. Low grade magic pin that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box decorated with the symbol of Oren. Gives a certain chance to obtain Low-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -2058,7 +2058,7 @@
 		</skills>
 	</item>
 	<item id="13699" name="Aden Supply Box - Magic Pin" additionalName="B-/ C-grade" type="EtcItem">
-		<!-- Box that has the symbol of Aden. Low grade magic pin that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box decorated with the symbol of Aden. Gives a certain chance to obtain Low-grade Magic Pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

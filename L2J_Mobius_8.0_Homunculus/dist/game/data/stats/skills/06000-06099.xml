@@ -320,7 +320,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6034" toLevel="1" name="Freezing">
-		<!-- Target cannot move until the match starts. -->
+		<!-- Impossible to move until the match starts. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -344,6 +344,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -423,7 +436,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6038" toLevel="1" name="Report Status">
-		<!-- You are under suspicion of using this program illegally. Chatting has been blocked. -->
+		<!-- You are under suspicion of using an illegal program. Chatting has been blocked. -->
 		<icon>icon.skill6038</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -832,7 +845,7 @@
 		</effects>
 	</skill>
 	<skill id="6049" toLevel="4" name="Battle Cry">
-		<!-- Utters a battle cry that increases one's own P. Atk., P. Def. and M. Def. -->
+		<!-- Utters a battle cry that increases one's own P. Atk., P./ M. Def. -->
 		<icon>icon.action117</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1135,7 +1148,7 @@
 		</effects>
 	</skill>
 	<skill id="6053" toLevel="4" name="Howl">
-		<!-- Amplifies one's own abilities with a loud roar, raising P. Atk., P. Def., M. Atk., and M. Def. -->
+		<!-- The pet momentarily amplifies its abilities with a loud roar. Increases P./ M. Atk. and P./ M. Def. -->
 		<icon>icon.action117</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1221,7 +1234,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="6055" toLevel="1" name="Report Status">
-		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<!-- You are under suspicion of using an illegal program. Your actions have been restricted. -->
 		<icon>icon.skill6038</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
@@ -1243,7 +1256,7 @@
 		</effects>
 	</skill>
 	<skill id="6056" toLevel="1" name="Report Status">
-		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<!-- You are under suspicion of using an illegal program. Your actions have been restricted. -->
 		<icon>icon.skill6038</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
@@ -1311,7 +1324,7 @@
 		</effects>
 	</skill>
 	<skill id="6059" toLevel="1" name="Counter Critical">
-		<!-- Critical Damage is greatly increased. -->
+		<!-- Increases P. Critical Damage. -->
 		<icon>icon.skill1542</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
@@ -1370,7 +1383,7 @@
 		</effects>
 	</skill>
 	<skill id="6061" toLevel="1" name="Decrease Weight">
-		<!-- Weight penalty interval increases by 9000, and the number of items an individual can possess increases. -->
+		<!-- Overweight limit +9000. Increases the amount of items that can be carried in the inventory. -->
 		<icon>icon.skill1257</icon>
 		<magicLevel>52</magicLevel>
 		<operateType>P</operateType>
@@ -1390,168 +1403,168 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6064" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6064" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- An undead version of a famous healer in Gracia before the fall. It served Ekimus and later aspired to rule the Hall of Erosion. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6065" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6065" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- An undead version of an infamous serial killer infamous throughout Gracia before the fall. He attempted to preserve his life by threatening Cohemenes, but was deceived and became an undead slave. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6066" toLevel="1" name="81 Lv. Raid Boss">
-		<!-- Steals souls in order to secrete matter from the Seed of Infinity. These Soul Devourers eventually lose all capacity for thought, driven only by their unholy appetite. Thy particularly favor souls that suffered a horrific and agonizing death. -->
+	<skill id="6066" toLevel="1" name="Raid Boss (Lv. 81)">
+		<!-- Steals souls in order to secrete matter from the Seed of Infinity. These Soul Devourers eventually lose all capacity for thought, driven only by their unholy appetite. They particularly favor souls that suffered a horrific and agonizing death. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6067" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6067" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- An undead version of the royal astrologer in Gracia before the fall. While alive, his intentionally false prophecy opened the kingdom to the influence of Ekimus and the Seed of Infinity. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6068" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6068" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- An undead version of a former Gracian high priest. Obsessed with attaining eternal life, he played a pivotal role in bringing the Seed of Infinity to the capital. He styled himself the 1st priest of Ekimus. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6069" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6069" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- An exceptionally efficient pre-fall Gracian provincial official infamous for his brutal interrogation methods. He was transformed into undead by the Seed of Infinity. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6070" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6070" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- In his bid for power, he committed atrocities in Gracia rarely seen before the fall. Because of his thirst for violence and bloodshed, he was transformed into undead by the Seed of Infinity. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6071" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6071" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This undead monster was once a powerful warlord on the frontier of pre-fall Gracia. He believed that the enemy's power was contained in their blood, and so he killed countless prisoners in order to absorb their strength. He was transformed into undead by the Seed of Infinity. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6072" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6072" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This undead monster was once of the most powerful warlords in Gracia. He gained popularity among the fallen nobles for mercilessly carrying out his missions, whatever the cost. He was also a secret worshipper of the Goddess of Death. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6073" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6073" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This undead monster was created from the rage and pain of prisoners tortured and killed in ancient Gracia. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6074" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6074" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This undead monster was created to protect a sacred burial ground for nobles in ancient Gracia. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6075" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6075" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This undead monster was created to prevent the corpses left on the battlegrounds of ancient Gracia from being raised. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6076" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6076" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This undead monster fed on the souls of ancient Gracians. It awoke from its long slumber though the magic of Ekimus. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6077" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6077" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This undead monster fed on the souls of ancient Gracians. It awoke from its long slumber though the magic of Ekimus. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6078" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6078" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6079" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6079" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6080" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6080" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6081" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6081" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6082" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6082" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6083" toLevel="1" name="81 Lv. Raid Boss">
+	<skill id="6083" toLevel="1" name="Raid Boss (Lv. 81)">
 		<!-- This ancient undead monster awoke through the M. Atk. of the Seed of Infinity. Once it was a powerful Gracian warrior, but now it lacks any vestige of its former self. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6084" toLevel="1" name="80 Lv. Raid Boss">
+	<skill id="6084" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- Lord of ancient Hwuh whose hand was imbued with Demon power in return for not taking action while Hwuh was being conquered by the Seed of Infinity. He now has the power to control Aurabirds and has become a Master Rider. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6085" toLevel="1" name="80 Lv. Raid Boss">
+	<skill id="6085" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- This ill-tempered king of the birds in Gracia has become even more violent after losing its sky nest to the Storm Dragon Lindvior. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6086" toLevel="1" name="80 Lv. Raid Boss">
+	<skill id="6086" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- One of the ladies-in-waiting of the Banshee Queen, she became close to Ekimus and eventually was transformed into a Banshee Queen herself. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6087" toLevel="1" name="80 Lv. Raid Boss">
+	<skill id="6087" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- This Drake originally appeared with the Seed of Destruction. Though one of the children of Skellus, the Dragon of Darkness , it does not serve Tiat. Instead, it watches Tiat's actions for Skellus. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
@@ -1576,7 +1589,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6090" toLevel="1" name="Lightning Strike">
-		<!-- Inflicts Paralysis. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0279</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1596,12 +1609,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6091" toLevel="1" name="Anchor">
-		<!-- Inflicts Paralysis. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1620,12 +1633,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6092" toLevel="1" name="Lightning Shock">
-		<!-- Inflicts Paralysis. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+	<skill id="6092" toLevel="1" name="Lightning">
+		<!-- Inflicts Paralysis.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0791</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1645,12 +1658,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6093" toLevel="1" name="Panther Hide">
-		<!-- Allows one to stay hidden. Movement speed is decreased by 10%. The effect is canceled if any action other than movement is initiated. -->
+		<!-- Allows one to stay hidden. Speed -10%. The effect is cancelled if any action other than movement is initiated. -->
 		<icon>icon.skill0922</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

@@ -145,12 +145,12 @@
 		</effects>
 	</skill>
 	<skill id="30501" toLevel="29" name="Backspin Impact">
-		<!-- The energy of the wind hits the target with $s1 power and inflicts stun for $s2. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- The energy of the wind hits the target with $s1 power and inflicts stun for $s2. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill30501</icon>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>60</activateRate>
+		<activateRate>900</activateRate>
 		<trait>SHOCK</trait>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -274,19 +274,19 @@
 				</criticalChance>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30502" toLevel="26" name="Chin Strike">
-		<!-- Jawbone Blow. Knocks the target down for $s1. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Jawbone Blow. Knocks the target down for $s1. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill30502</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="24">100</value>
+			<value fromLevel="1" toLevel="24">30</value>
 			<value fromLevel="20" toLevel="24" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -376,6 +376,9 @@
 					<value fromLevel="20" toLevel="26" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -542,14 +545,14 @@
 				<pDefMod>0.5</pDefMod>
 				<criticalChance>
 					<value fromLevel="1" toLevel="18">15</value>
-					<value fromLevel="12" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
+					<value fromLevel="12" toLevel="18" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30505" toLevel="12" name="Pressure Punch">
-		<!-- Attacks nearby enemies with $s1 power added to P. Atk, causing them to tumble toward you. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies with $s1 power added to P. Atk, causing them to tumble toward you. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill30505</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
@@ -638,7 +641,7 @@
 		</effects>
 	</skill>
 	<skill id="30506" toLevel="16" name="Distant Kick">
-		<!-- Attacks frontal targets with $s1 power and knocks them down. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks frontal targets with $s1 power and knocks them down. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill30506</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
@@ -740,24 +743,29 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30507" toLevel="26" name="Left Sidestep">
-		<!-- Disables targeting and finds weakness to the enemy's left. Stuns the enemy for $s1. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Disables targeting and finds weakness to the enemy's left. Stuns the enemy for $s1. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill30507</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
-		<abnormalType>STUN</abnormalType>
+		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate> <!-- Unconfirmed -->
 			<value fromLevel="1" toLevel="26">80</value>
 			<value fromLevel="20" toLevel="26" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<effectPoint>-687</effectPoint>
-		<effectRange>900</effectRange> <!-- Unconfirmed -->
+		<effectRange>300</effectRange>
+		<castRange>300</castRange>
 		<operateType>DA4</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
 		<mpConsume>
 			<value level="1">13</value>
 			<value level="2">14</value>
@@ -794,8 +802,6 @@
 		<hitTime>100</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>7000</reuseDelay>
-		<isDebuff>true</isDebuff>
-		<trait>SHOCK</trait>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -804,11 +810,14 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+		<effect name="DeleteHateOfMe">
+				<chance>80</chance>
 			</effect>
-			<effect name="TargetCancel">
-				<chance>90</chance>
+		<effect name="DisableTargeting" />
+		<effect name="TargetCancel">
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -818,10 +827,12 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<effectPoint>-687</effectPoint>
-		<effectRange>900</effectRange> <!-- Unconfirmed -->
+		<effectRange>300</effectRange>
+		<castRange>300</castRange>
 		<operateType>DA5</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<activateRate>90</activateRate>
 		<mpConsume>
 			<value level="1">7</value>
 			<value level="2">9</value>
@@ -876,8 +887,11 @@
 					<value fromLevel="17" toLevel="29">-30</value>
 				</FIST>
 			</effect>
+			<effect name="DeleteHateOfMe">
+				<chance>100</chance>
+			</effect>
 			<effect name="TargetCancel">
-				<chance>90</chance>
+				<chance>100</chance>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="23" toLevel="29" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
@@ -1064,7 +1078,7 @@
 		</effects>
 	</skill>
 	<skill id="30512" toLevel="4" name="Distortion">
-		<!-- For $s1, distorts space to make attacks from any side as efficient as from behind. P. Atk. +$s2, P. Critical Damage +$s3, and P. Skill Power +$s4. Requires a fist weapon. -->
+		<!-- For $s1, distorts space to make attacks from any side as efficient as from behind. P. Atk. +$s2, Critical Damage for standard attacks +$s3, and P. Skill Power +$s4. Requires a fist weapon. -->
 		<icon>icon.skill30512</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1158,13 +1172,6 @@
 		</conditions>
 		<effects>
 			<!-- TODO: Effect should be only available on skill level 2 or 3. -->
-			<effect name="AbnormalShield">
-				<times>
-					<value level="1">0</value>
-					<value level="2">1</value>
-					<value level="3">3</value>
-				</times>
-			</effect>
 			<effect name="SkillEvasion">
 				<magicType>0</magicType>
 				<amount>
@@ -1172,6 +1179,7 @@
 					<value level="2">70</value>
 					<value level="3">70</value>
 				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>
@@ -1190,12 +1198,12 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="AbnormalShield">
-				<times>1</times>
+				<times>3</times>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30515" toLevel="1" name="Spallation">
-		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs from a distance of 30 sec. and increases P. Def. by 50%. Damaged if attacked within the sphere. Requires a fist weapon. -->
+		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs for $s1, also P. Def. +$s2. Damaged if attacked in melee within the sphere. Requires a fist weapon. -->
 		<icon>icon.skill30515</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -1245,7 +1253,7 @@
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (0.5 * subIndex)}</value>
 		</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
-		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1261,6 +1269,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
@@ -1334,7 +1355,7 @@
 		</effects>
 	</skill>
 	<skill id="30518" toLevel="13" name="Reverse Weight">
-		<!-- Attacks nearby enemies with $s1 power and knocks them down. The damage is increasing with the number of affected enemies. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Attacks nearby enemies with $s1 power and knocks them down. The damage is increasing with the number of affected enemies. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill30518</icon>
 		<abnormalTime>1</abnormalTime> <!-- Unconfirmed -->
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -1369,6 +1390,7 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
+		<staticReuse>false</staticReuse>
 		<isMagic>6</isMagic>
 		<isDebuff>true</isDebuff>
 		<trait>KNOCKDOWN</trait>
@@ -1409,6 +1431,9 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1451,7 +1476,7 @@
 		</effects>
 	</skill>
 	<skill id="30520" toLevel="4" name="Steel Mind">
-		<!-- For $s1, P. Atk. +$s2, P. Critical Damage +$s3, P. Skill Critical Damage +$s4, Speed +$s5, Obstruction/ Danger Zone/ Confusion Resistance +$s6. Inflicts additional damage $s7 times stronger than the normal attack. HP does not decrease below $s8. Recovers $s9 HP when the effect expires. Requires a fist weapon. -->
+		<!-- For $s1, P. Atk. +$s2, Critical Damage for standard attacks +$s3, P. Skill Critical Damage +$s4, Speed +$s5, Obstruction/ Danger Zone/ Confusion Resistance +$s6. Inflicts additional damage $s7 times stronger than a standard attack, but HP cannot decrease lower than $s8. Recovers $s9 HP when the effect expires. Requires a fist weapon. -->
 		<icon>icon.skill30520</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1554,7 +1579,7 @@
 		</endEffects>
 	</skill>
 	<skill id="30521" toLevel="1" name="Damage Up">
-		<!-- Inflicts normal damage x 5. -->
+		<!-- Increases standard attack damage x 5. -->
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -1649,7 +1674,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="30526" toLevel="1" name="Heavy Punch">
-		<!-- Has a chance to inflict P. Atk. x 5. Requires a fist weapon to activate. -->
+		<!-- There is a chance to deal damage equal to 30% of the target's HP after a standard attack. Requires a fist weapon. -->
 		<icon>icon.skill30526</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1749,19 +1774,19 @@
 		</effects>
 	</skill>
 	<skill id="30531" toLevel="1" name="Servitor's Rage">
-		<!-- Critical Damage Received increases by 30% for 5 sec. due to the rage of Servitor. -->
+		<!-- For $s1, Received Critical Damage from standard attacks +$s2. -->
 		<icon>icon.skill11351</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<isDebuff>true</isDebuff>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>100</coolTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-671</effectPoint>
 	</skill>
 	<skill id="30532" toLevel="3" name="Inside Position">
-		<!-- P. Critical Rate +$s1, P. Skill Critical Rate +$s2, P. Atk. +$s3. -->
+		<!-- Critical Rate for standard attacks +$s1, P. Skill Critical Rate +$s2, P. Atk. +$s3. -->
 		<icon>icon.skill30510</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1846,11 +1871,24 @@
 				<rate>100</rate>
 				<max>10</max>
 			</effect>
-			<effect name="DebuffBlock" />
+			<effect name="DebuffBlock"/>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30534" toLevel="1" name="Puppy 1 Transformation">
-		<!-- Transforms into a Test - Puppy. -->
+		<!-- Test - transforms into Puppy. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1860,7 +1898,7 @@
 		<mpConsume>44</mpConsume>
 	</skill>
 	<skill id="30535" toLevel="1" name="Puppy 2 Transformation">
-		<!-- Transforms into a Test - Puppy. -->
+		<!-- Test - transforms into Puppy. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1870,7 +1908,7 @@
 		<mpConsume>44</mpConsume>
 	</skill>
 	<skill id="30536" toLevel="1" name="Puppy 3 Transformation">
-		<!-- Transforms into a Test - Puppy. -->
+		<!-- Test - transforms into Puppy. The skill cooldown is fixed. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1880,7 +1918,7 @@
 		<mpConsume>44</mpConsume>
 	</skill>
 	<skill id="30540" toLevel="17" name="Eminent Fist Weapon Mastery">
-		<!-- When equipped with a fist weapon, P. Atk. +$s1 and +$s2. -->
+		<!-- P. Atk. +$s1 when using a fist weapon. Additionally P. Atk. +$s2. -->
 		<icon>icon.skill30524</icon>
 		<magicLevel>
 			<value level="1">5</value>
@@ -1906,7 +1944,10 @@
 			<effect name="PAtk">
 				<amount>
 					<value fromLevel="1" toLevel="7">10</value>
-					<value fromLevel="8" toLevel="17">45</value>
+					<value fromLevel="8" toLevel="14">45</value>
+					<value level="15">47</value>
+					<value level="16">48</value>
+					<value level="17">50</value>
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -1972,7 +2013,10 @@
 			<effect name="CriticalDamage" fromLevel="6" toLevel="17">
 				<amount>
 					<value fromLevel="6" toLevel="7">10</value>
-					<value fromLevel="8" toLevel="17">45</value>
+					<value fromLevel="8" toLevel="14">45</value>
+					<value level="15">47</value>
+					<value level="16">48</value>
+					<value level="18">50</value>
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -2047,8 +2091,26 @@
 					<item>LIGHT</item>
 				</armorType>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="8" toLevel="17">
-				<amount>10</amount>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">10</value>
+					<value level="9">10</value>
+					<value level="10">10</value>
+					<value level="11">10</value>
+					<value level="12">10</value>
+					<value level="13">10</value>
+					<value level="14">10</value>
+					<value level="15">12</value>
+					<value level="16">13</value>
+					<value level="17">15</value>
+				</amount>
 				<mode>PER</mode>
 				<armorType>
 					<item>LIGHT</item>
@@ -2115,10 +2177,14 @@
 					<item>LIGHT</item>
 				</armorType>
 			</effect>
+			<effect name="Accuracy">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30542" toLevel="13" name="Eminent Stability">
-		<!-- Max HP +$s1, HP Recovery Bonus +$s2, MP Recovery Bonus +$s3. -->
+		<!-- Max HP +$s1, HP Recovery Rate +$s2, MP Recovery Rate +$s3. -->
 		<icon>icon.skill11506</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -2203,10 +2269,28 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value fromLevel="1" toLevel="10">0</value>
+					<value level="11">2</value>
+					<value level="12">3</value>
+					<value level="13">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value fromLevel="1" toLevel="10">0</value>
+					<value level="11">2</value>
+					<value level="12">3</value>
+					<value level="13">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30543" toLevel="11" name="Eminent Attribute Resistance">
-		<!-- Attack Attribute Bonus +$s1, Fire/ Water/ Wind/ Earth/ Holy Resistance +$s2. -->
+		<!-- Attribute Attack Bonus +$s1, Fire/ Water/ Wind/ Earth/ Holy Resistance +$s2. -->
 		<icon>icon.skill11006</icon>
 		<magicLevel>
 			<value level="1">76</value>
@@ -2302,22 +2386,6 @@
 					<value level="11">40</value>
 				</amount>
 				<attribute>HOLY</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">20</value>
-					<value level="3">22</value>
-					<value level="4">24</value>
-					<value level="5">26</value>
-					<value level="6">30</value>
-					<value level="7">32</value>
-					<value level="8">34</value>
-					<value level="9">36</value>
-					<value level="10">38</value>
-					<value level="11">40</value>
-				</amount>
-				<attribute>DARK</attribute>
 			</effect>
 			<effect name="AttackAttribute">
 				<amount>
@@ -2472,16 +2540,15 @@
 		</effects>
 	</skill>
 	<skill id="30546" toLevel="13" name="Flying Knee Kick">
-		<!-- Flying Knee. Knocks the target down for $s1. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Flying Knee. Knocks the target down for $s1. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill30546</icon>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">80</value>
+			<value fromLevel="1" toLevel="11">30</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate> <!-- Guessed -->
-		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<trait>KNOCKDOWN</trait>
@@ -2548,10 +2615,13 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30547" toLevel="6" name="Stamp Punch">
-		<!-- Throws a powerful punch to a fallen target with $s1 Power added to P. Atk. Ignores $s2 of target's P. Def. Fist weapon must be equipped. -->
+		<!-- Attacks a knocked-down target with $s1 power. Ignores $s2 of target's P. Def. Requires a fist weapon. -->
 		<icon>icon.skill30547</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>

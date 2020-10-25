@@ -2,117 +2,107 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
 	<option id="33209" name="gc_opt">
 		<!-- PvP Damage + 5% -->
+		<passive_skill id="35116" level="1" />
 	</option>
 	<option id="33210" name="gc_opt">
 		<!-- PvP Received Damage - 5% -->
+		<passive_skill id="35117" level="1" />
 	</option>
 	<option id="33211" name="gc_opt">
 		<!-- PvE Damage + 5% -->
+		<passive_skill id="35118" level="1" />
 	</option>
 	<option id="33212" name="gc_opt">
 		<!-- PvE Received Damage - 5% -->
+		<passive_skill id="35119" level="1" />
 	</option>
 	<option id="33213" name="gc_opt">
 		<!-- Potion/Elixir Effect + 500 -->
+		<passive_skill id="35120" level="1" />
 	</option>
 	<option id="33214" name="gc_opt">
 		<!-- Damage to Immobilized Targets + 5% -->
+		<passive_skill id="35121" level="1" />
 	</option>
 	<option id="33215" name="gc_opt">
 		<!-- Received Damage When Immobilized - 5% -->
+		<passive_skill id="35122" level="1" />
 	</option>
 	<option id="33216" name="gc_opt">
 		<!-- P. Atk. + 1% -->
+		<passive_skill id="35123" level="1" />
 	</option>
 	<option id="33217" name="gc_opt">
 		<!-- M. Atk. + 1% -->
+		<passive_skill id="35124" level="1" />
 	</option>
 	<option id="33218" name="gc_opt">
 		<!-- P. Def. + 2% -->
+		<passive_skill id="35125" level="1" />
 	</option>
 	<option id="33219" name="gc_opt">
 		<!-- M. Def. + 2% -->
+		<passive_skill id="35126" level="1" />
 	</option>
 	<option id="33220" name="gc_opt">
 		<!-- Atk. Spd. + 2% -->
+		<passive_skill id="35127" level="1" />
 	</option>
 	<option id="33221" name="gc_opt">
 		<!-- Casting Spd. + 2% -->
+		<passive_skill id="35128" level="1" />
 	</option>
 	<option id="33222" name="gc_opt">
 		<!-- Max HP + 2% -->
+		<passive_skill id="35129" level="1" />
 	</option>
 	<option id="33223" name="gc_opt">
 		<!-- Max MP + 2% -->
+		<passive_skill id="35130" level="1" />
 	</option>
 	<option id="33224" name="gc_opt">
 		<!-- Max CP + 2% -->
+		<passive_skill id="35131" level="1" />
 	</option>
 	<option id="33225" name="gc_opt">
 		<!-- P. Accuracy + 1 -->
+		<passive_skill id="35132" level="1" />
 	</option>
 	<option id="33226" name="gc_opt">
 		<!-- P. Evasion + 1 -->
+		<passive_skill id="35133" level="1" />
 	</option>
 	<option id="33227" name="gc_opt">
 		<!-- M. Accuracy + 1 -->
+		<passive_skill id="35134" level="1" />
 	</option>
 	<option id="33228" name="gc_opt">
 		<!-- M. Evasion + 1 -->
+		<passive_skill id="35135" level="1" />
 	</option>
 	<option id="33229" name="gc_opt">
 		<!-- Fire Resistance + 10 -->
-		<effects>
-			<effect name="DefenceAttribute">
-				<amount>10</amount>
-				<attribute>FIRE</attribute>
-			</effect>
-		</effects>
+		<passive_skill id="35136" level="1" />
 	</option>
 	<option id="33230" name="gc_opt">
 		<!-- Water Resistance + 10 -->
-		<effects>
-			<effect name="DefenceAttribute">
-				<amount>10</amount>
-				<attribute>WATER</attribute>
-			</effect>
-		</effects>
+		<passive_skill id="35137" level="1" />
 	</option>
 	<option id="33231" name="gc_opt">
 		<!-- Wind Resistance + 10 -->
-		<effects>
-			<effect name="DefenceAttribute">
-				<amount>10</amount>
-				<attribute>WIND</attribute>
-			</effect>
-		</effects>
+		<passive_skill id="35138" level="1" />
 	</option>
 	<option id="33232" name="gc_opt">
 		<!-- Earth Resistance + 10 -->
-		<effects>
-			<effect name="DefenceAttribute">
-				<amount>10</amount>
-				<attribute>EARTH</attribute>
-			</effect>
-		</effects>
+		<passive_skill id="35139" level="1" />
 	</option>
 	<option id="33233" name="gc_opt">
 		<!-- Holy Resistance + 10 -->
-		<effects>
-			<effect name="DefenceAttribute">
-				<amount>10</amount>
-				<attribute>HOLY</attribute>
-			</effect>
-		</effects>
+		<passive_skill id="35140" level="1" />
 	</option>
 	<option id="33234" name="gc_opt">
 		<!-- Darkness Resistance + 10 -->
-		<effects>
-			<effect name="DefenceAttribute">
-				<amount>10</amount>
-				<attribute>DARK</attribute>
-			</effect>
-		</effects>
+		<passive_skill id="35141" level="1" />
 	</option>
 	<option id="33235" name="gc_opt">
 		<!-- STR + 1 -->
@@ -329,5 +319,38 @@
 	<option id="33288" name="gc_opt">
 		<!-- XP/SP 10%, Vitality Status XP/SP + 10%, P. Def./M.\n Def. + 7%, All Debuff Resistance + 5%, LUC/CHA + \n1, CON/MEN + 5, All Defense Attribute + 50 -->
 		<passive_skill id="35112" level="3" />
+	</option>
+	<option id="33289" name="unk_opt">
+		<!-- Basic Ability increases when enchanted -->
+	</option>
+	<option id="33290" name="unk_opt">
+		<!-- STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1, LUC +1, CHA +1\nDebuff Resistance increases when enchanted -->
+	</option>
+	<option id="33291" name="unk_opt">
+		<!-- STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2, LUC +2, CHA +2, Debuff Resistance +5%\nEffect of Recovery Potions/ Elixirs increases when enchanted -->
+	</option>
+	<option id="33292" name="unk_opt">
+		<!-- STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3, LUC +3, CHA +3, Debuff Resistance +5%, Recovery Potion/ Elixir Effect +500\nReceived PvP Damage decreases when enchanted -->
+	</option>
+	<option id="33293" name="unk_opt">
+		<!-- MEN +1 -->
+	</option>
+	<option id="33294" name="unk_opt">
+		<!-- CON +1, MEN +1 -->
+	</option>
+	<option id="33295" name="unk_opt">
+		<!-- CON +1, MEN +1, LUC +1 -->
+	</option>
+	<option id="33296" name="unk_opt">
+		<!-- DEX +1, CON +1, WIT +1, MEN +1, LUC +1 -->
+	</option>
+	<option id="33297" name="unk_opt">
+		<!-- STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1, LUC +1, CHA +1 -->
+	</option>
+	<option id="33298" name="unk_opt">
+		<!-- STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +2, LUC +1, CHA +1, Debuff Resistance +1% -->
+	</option>
+	<option id="33299" name="unk_opt">
+		<!-- STR +1, DEX +1, CON +2, INT +1, WIT +1, MEN +2, LUC +1, CHA +1, Debuff Resistance +2% -->
 	</option>
 </list>

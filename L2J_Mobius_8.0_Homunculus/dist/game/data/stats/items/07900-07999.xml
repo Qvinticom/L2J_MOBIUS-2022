@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7900" name="Ice Storm Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -29,7 +29,7 @@
 		</stats>
 	</item>
 	<item id="7901" name="Star Buster" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -57,7 +57,7 @@
 		</stats>
 	</item>
 	<item id="7902" name="Doom Crusher" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -130,7 +130,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7906" name="Blessing of Fire" type="EtcItem">
-		<!-- Bestows fire attack attribute while engaged in a physical attack. -->
+		<!-- Bestows fire attribute attack while engaged in a physical attack. -->
 		<set name="icon" val="icon.etc_fire_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -145,7 +145,7 @@
 		</skills>
 	</item>
 	<item id="7907" name="Blessing of Water" type="EtcItem">
-		<!-- Bestows water attack attribute while engaged in a physical attack. -->
+		<!-- Bestows water attribute attack while engaged in a physical attack. -->
 		<set name="icon" val="icon.etc_water_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -160,7 +160,7 @@
 		</skills>
 	</item>
 	<item id="7908" name="Blessing of Wind" type="EtcItem">
-		<!-- Bestows wind attack attribute while engaged in a physical attack. -->
+		<!-- Bestows wind attribute attack while engaged in a physical attack. -->
 		<set name="icon" val="icon.etc_wind_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -175,7 +175,7 @@
 		</skills>
 	</item>
 	<item id="7909" name="Blessing of Earth" type="EtcItem">
-		<!-- Bestows earth attack attribute while engaged in a physical attack. -->
+		<!-- Bestows earth attribute attack while engaged in a physical attack. -->
 		<set name="icon" val="icon.etc_earth_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -190,7 +190,7 @@
 		</skills>
 	</item>
 	<item id="7910" name="Blessing of Dark" type="EtcItem">
-		<!-- Bestows Dark attack attribute while engaged in a physical attack. -->
+		<!-- Bestows Dark attribute attack while engaged in a physical attack. -->
 		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -205,7 +205,7 @@
 		</skills>
 	</item>
 	<item id="7911" name="Holy Blessing" type="EtcItem">
-		<!-- Bestows Holy attack attribute while engaged in a physical attack. -->
+		<!-- Bestows Holy attribute attack while engaged in a physical attack. -->
 		<set name="icon" val="icon.etc_holy_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />

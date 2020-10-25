@@ -116,7 +116,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39713" name="Shining Mysterious Fragment" type="EtcItem">
-		<!-- Found from the magical creatures of Cruma Tower Underground Lv. 3. The energy is unstable and must be destroyed. -->
+		<!-- Found among the remains of magical creatures on the third level of Cruma Tower Underground. Its energy is unstable, so the fragment must be destroyed. -->
 		<set name="icon" val="icon.r95_soul_stone_i01" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -583,14 +583,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39746" name="Sealed Pendant" type="EtcItem">
-		<!-- Main ingredient for making a pendant. -->
+		<!-- Key material for making a pendant. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="39747" name="Dimensional Bracelet - Stage 1" additionalName="Basic" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. -->
+		<!-- When equipped, unlocks 1 talisman slot. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -609,7 +609,7 @@
 		</skills>
 	</item>
 	<item id="39748" name="Dimensional Bracelet - Stage 1" additionalName="STR" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives STR Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 1 talisman slot. Increases STR. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -628,7 +628,7 @@
 		</skills>
 	</item>
 	<item id="39749" name="Dimensional Bracelet - Stage 1" additionalName="DEX" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives DEX Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 1 talisman slot. Increases DEX. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -647,7 +647,7 @@
 		</skills>
 	</item>
 	<item id="39750" name="Dimensional Bracelet - Stage 1" additionalName="CON" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives CON Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 1 talisman slot. Increases CON. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -666,7 +666,7 @@
 		</skills>
 	</item>
 	<item id="39751" name="Dimensional Bracelet - Stage 1" additionalName="INT" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives INT Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 1 talisman slot. Increases INT. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -685,7 +685,7 @@
 		</skills>
 	</item>
 	<item id="39752" name="Dimensional Bracelet - Stage 1" additionalName="MEN" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives MEN Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 1 talisman slot. Increases MEN. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -704,7 +704,7 @@
 		</skills>
 	</item>
 	<item id="39753" name="Dimensional Bracelet - Stage 1" additionalName="WIT" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives WIT Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 1 talisman slot. Increases WIT. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -723,7 +723,7 @@
 		</skills>
 	</item>
 	<item id="39754" name="Dimensional Bracelet - Stage 1" additionalName="LUC" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives LUC Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 1 talisman slot. Increases LUC. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -742,7 +742,7 @@
 		</skills>
 	</item>
 	<item id="39755" name="Dimensional Bracelet - Stage 1" additionalName="CHA" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives CHA Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 1 talisman slot. Increases CHA. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -761,7 +761,7 @@
 		</skills>
 	</item>
 	<item id="39756" name="Dimensional Bracelet - Stage 1" additionalName="STR+1" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the STR+1 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. STR +1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -781,7 +781,7 @@
 		</skills>
 	</item>
 	<item id="39757" name="Dimensional Bracelet - Stage 1" additionalName="STR+2" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the STR+2 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. STR +2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -801,7 +801,7 @@
 		</skills>
 	</item>
 	<item id="39758" name="Dimensional Bracelet - Stage 1" additionalName="STR+3" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the STR+3 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. STR +3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -821,7 +821,7 @@
 		</skills>
 	</item>
 	<item id="39759" name="Dimensional Bracelet - Stage 1" additionalName="STR+4" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the STR+4 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. STR +4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -841,7 +841,7 @@
 		</skills>
 	</item>
 	<item id="39760" name="Dimensional Bracelet - Stage 1" additionalName="STR+5" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the STR+5 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. STR +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -861,7 +861,7 @@
 		</skills>
 	</item>
 	<item id="39761" name="Dimensional Bracelet - Stage 1" additionalName="DEX+1" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the DEX+1 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. DEX +1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -881,7 +881,7 @@
 		</skills>
 	</item>
 	<item id="39762" name="Dimensional Bracelet - Stage 1" additionalName="DEX+2" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the DEX+2 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. DEX +2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -901,7 +901,7 @@
 		</skills>
 	</item>
 	<item id="39763" name="Dimensional Bracelet - Stage 1" additionalName="DEX+3" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the DEX+3 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. DEX +3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -921,7 +921,7 @@
 		</skills>
 	</item>
 	<item id="39764" name="Dimensional Bracelet - Stage 1" additionalName="DEX+4" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the DEX+4 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. DEX +4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -941,7 +941,7 @@
 		</skills>
 	</item>
 	<item id="39765" name="Dimensional Bracelet - Stage 1" additionalName="DEX+5" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the DEX+5 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. DEX +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -961,7 +961,7 @@
 		</skills>
 	</item>
 	<item id="39766" name="Dimensional Bracelet - Stage 1" additionalName="CON+1" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the CON+1 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. CON +1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -981,7 +981,7 @@
 		</skills>
 	</item>
 	<item id="39767" name="Dimensional Bracelet - Stage 1" additionalName="CON+2" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the CON+2 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. CON +2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1001,7 +1001,7 @@
 		</skills>
 	</item>
 	<item id="39768" name="Dimensional Bracelet - Stage 1" additionalName="CON+3" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the CON+3 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. CON +3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1021,7 +1021,7 @@
 		</skills>
 	</item>
 	<item id="39769" name="Dimensional Bracelet - Stage 1" additionalName="CON+4" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the CON+4 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. CON +4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1041,7 +1041,7 @@
 		</skills>
 	</item>
 	<item id="39770" name="Dimensional Bracelet - Stage 1" additionalName="CON+5" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the CON+5 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. CON +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1061,7 +1061,7 @@
 		</skills>
 	</item>
 	<item id="39771" name="Dimensional Bracelet - Stage 1" additionalName="INT+1" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the INT+1 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. INT +1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1081,7 +1081,7 @@
 		</skills>
 	</item>
 	<item id="39772" name="Dimensional Bracelet - Stage 1" additionalName="INT+2" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the INT+2 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. INT +2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1101,7 +1101,7 @@
 		</skills>
 	</item>
 	<item id="39773" name="Dimensional Bracelet - Stage 1" additionalName="INT+3" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the INT+3 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. INT +3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1121,7 +1121,7 @@
 		</skills>
 	</item>
 	<item id="39774" name="Dimensional Bracelet - Stage 1" additionalName="INT+4" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the INT+4 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. INT +4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1141,7 +1141,7 @@
 		</skills>
 	</item>
 	<item id="39775" name="Dimensional Bracelet - Stage 1" additionalName="INT+5" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the INT+5 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. INT +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1161,7 +1161,7 @@
 		</skills>
 	</item>
 	<item id="39776" name="Dimensional Bracelet - Stage 1" additionalName="MEN+1" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the MEN+1 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. MEN +1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1181,7 +1181,7 @@
 		</skills>
 	</item>
 	<item id="39777" name="Dimensional Bracelet - Stage 1" additionalName="MEN+2" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the MEN+2 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. MEN +2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1201,7 +1201,7 @@
 		</skills>
 	</item>
 	<item id="39778" name="Dimensional Bracelet - Stage 1" additionalName="MEN+3" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the MEN+3 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. MEN +3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1221,7 +1221,7 @@
 		</skills>
 	</item>
 	<item id="39779" name="Dimensional Bracelet - Stage 1" additionalName="MEN+4" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the MEN+4 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. MEN +4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1241,7 +1241,7 @@
 		</skills>
 	</item>
 	<item id="39780" name="Dimensional Bracelet - Stage 1" additionalName="MEN+5" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the MEN+5 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. MEN +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1261,7 +1261,7 @@
 		</skills>
 	</item>
 	<item id="39781" name="Dimensional Bracelet - Stage 1" additionalName="WIT+1" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the WIT+1 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. WIT +1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1281,7 +1281,7 @@
 		</skills>
 	</item>
 	<item id="39782" name="Dimensional Bracelet - Stage 1" additionalName="WIT+2" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the WIT+2 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. WIT +2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1301,7 +1301,7 @@
 		</skills>
 	</item>
 	<item id="39783" name="Dimensional Bracelet - Stage 1" additionalName="WIT+3" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the WIT+3 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. WIT +3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1321,7 +1321,7 @@
 		</skills>
 	</item>
 	<item id="39784" name="Dimensional Bracelet - Stage 1" additionalName="WIT+4" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the WIT+4 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. WIT +4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1341,7 +1341,7 @@
 		</skills>
 	</item>
 	<item id="39785" name="Dimensional Bracelet - Stage 1" additionalName="WIT+5" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the WIT+5 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. WIT +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1361,7 +1361,7 @@
 		</skills>
 	</item>
 	<item id="39786" name="Dimensional Bracelet - Stage 1" additionalName="LUC+1" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the LUC+1 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. LUC +1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1381,7 +1381,7 @@
 		</skills>
 	</item>
 	<item id="39787" name="Dimensional Bracelet - Stage 1" additionalName="LUC+2" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the LUC+2 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. LUC +2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1401,7 +1401,7 @@
 		</skills>
 	</item>
 	<item id="39788" name="Dimensional Bracelet - Stage 1" additionalName="LUC+3" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the LUC+3 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. LUC +3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1421,7 +1421,7 @@
 		</skills>
 	</item>
 	<item id="39789" name="Dimensional Bracelet - Stage 1" additionalName="LUC+4" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the LUC+4 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. LUC +4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1441,7 +1441,7 @@
 		</skills>
 	</item>
 	<item id="39790" name="Dimensional Bracelet - Stage 1" additionalName="LUC+5" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the LUC+5 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. LUC +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1461,7 +1461,7 @@
 		</skills>
 	</item>
 	<item id="39791" name="Dimensional Bracelet - Stage 1" additionalName="CHA +1" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the CHA+1 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. CHA +1. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1481,7 +1481,7 @@
 		</skills>
 	</item>
 	<item id="39792" name="Dimensional Bracelet - Stage 1" additionalName="CHA +2" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the CHA+2 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. CHA +2. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1501,7 +1501,7 @@
 		</skills>
 	</item>
 	<item id="39793" name="Dimensional Bracelet - Stage 1" additionalName="CHA +3" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the CHA+3 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. CHA +3. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1521,7 +1521,7 @@
 		</skills>
 	</item>
 	<item id="39794" name="Dimensional Bracelet - Stage 1" additionalName="CHA +4" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the CHA+4 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. CHA +4. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1541,7 +1541,7 @@
 		</skills>
 	</item>
 	<item id="39795" name="Dimensional Bracelet - Stage 1" additionalName="CHA +5" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Has the CHA+5 function. -->
+		<!-- When equipped, unlocks 1 talisman slot. CHA +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1561,7 +1561,7 @@
 		</skills>
 	</item>
 	<item id="39796" name="Dimensional Bracelet - Stage 2" additionalName="Basic" type="Armor">
-		<!-- Activates 2 talisman slots when equipped. -->
+		<!-- When equipped, unlocks 2 talisman slots. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1580,7 +1580,7 @@
 		</skills>
 	</item>
 	<item id="39797" name="Dimensional Bracelet - Stage 2" additionalName="STR" type="Armor">
-		<!-- Activates 2 talisman slots when equipped. Gives STR Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 2 talisman slots. Increases STR. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1599,7 +1599,7 @@
 		</skills>
 	</item>
 	<item id="39798" name="Dimensional Bracelet - Stage 2" additionalName="DEX" type="Armor">
-		<!-- Activates 2 talisman slots when equipped. Gives DEX Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 2 talisman slots. Increases DEX. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1618,7 +1618,7 @@
 		</skills>
 	</item>
 	<item id="39799" name="Dimensional Bracelet - Stage 2" additionalName="CON" type="Armor">
-		<!-- Activates 2 talisman slots when equipped. Gives CON Options/ Can be Enhanced. -->
+		<!-- When equipped, unlocks 2 talisman slots. Increases CON. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />

@@ -1,0 +1,1277 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="81400" name="Demon Priest Outfit" type="Armor">
+		<set name="icon" val="icon.king_black_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81401" name="Festival Fairy's Potion - Red Assassin" type="EtcItem">
+		<!-- Changes appearance by wearing Red Assassin Suit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81402" name="Festival Fairy's Potion - Blue Assassin" type="EtcItem">
+		<!-- Changes appearance by wearing Blue Assassin Suit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81403" name="Festival Fairy's Potion - Pink Assassin" type="EtcItem">
+		<!-- Changes appearance by wearing Pink Assassin Suit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81404" name="Festival Fairy's Potion - Demon Priest" type="EtcItem">
+		<!-- Changes appearance by wearing Demon Priest Outfit for 24 h. -->
+		<set name="icon" val="icon.dragon_dye_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81405" name="+8 Blessed Eternal Heavy Armor Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +8 Blessed Eternal Heavy Armor set (no shield). -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81406" name="+8 Blessed Eternal Light Armor Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +8 Blessed Eternal Light Armor set. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81407" name="+8 Blessed Eternal Robe Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +8 Blessed Eternal Robe set (no sigil). -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81408" name="+10 Blessed Eternal Heavy Armor Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +10 Blessed Eternal Heavy Armor set (no shield). -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81409" name="+10 Blessed Eternal Light Armor Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +10 Blessed Eternal Light Armor set. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81410" name="+10 Blessed Eternal Robe Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +10 Blessed Eternal Robe set (no sigil). -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81411" name="+14 Blessed Helios Shaper Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Shaper. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81412" name="+14 Blessed Helios Cutter Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Cutter. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81413" name="+14 Blessed Helios Slasher Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Slasher. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81414" name="+14 Blessed Helios Avenger Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Avenger. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81415" name="+14 Blessed Helios Fighter Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Fighter. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81416" name="+14 Blessed Helios Stormer Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Stormer. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81417" name="+14 Blessed Helios Thrower Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Thrower. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81418" name="+14 Blessed Helios Shooter Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Shooter. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81419" name="+14 Blessed Helios Buster Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Buster. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81420" name="+14 Blessed Helios Caster Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Caster. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81421" name="+14 Blessed Helios Retributer Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Retributer. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81422" name="+14 Blessed Helios Dual Swords Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Dual Swords. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81423" name="+14 Blessed Helios Dual Daggers Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Dual Daggers. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81424" name="+14 Blessed Helios Dual Blunt Weapon Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain +14 Blessed Helios Dual Blunt Weapon. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81425" name="+8 Blessed Eternal Armor Coupon" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged for +8 Blessed Eternal armor set (at your choice) through Festival Fairy. -->
+		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81426" name="+10 Blessed Eternal Armor Coupon" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged for +10 Blessed Eternal armor set (at your choice) through Festival Fairy. -->
+		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81427" name="+14 Blessed Helios Weapon Coupon" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged for +14 Blessed Helios weapon through Festival Fairy. -->
+		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81428" name="Festival Fairy's Lucky Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Dark Weapon Enhancement Stone, Sayha's Talisman Lv. 10, +10 Fallen Angel's Ring Pack, Blessed Valakas' Necklace, Blessed Antharas' Earring, Lindvior's Earring, Dragon's Earring/ Ring/ Necklace, Sealed Talisman of Insanity, Talisman of Seven Signs, Sealed Talisman of Longing, Energy of Longing, Sayha's Energy, Nevit's Cloak of Light Pack, Bloody Armor Enhancement Stone, Dark Armor Enhancement Stone, Artifact Crystal, Crystal of Dyes, Forgotten Spellbook Chapter 1. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81429" name="Festival Fairy's Superior Talisman Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of many items: Sealed Talisman of Insanity, Talisman of Seven Signs, Sealed Heavenly Talisman, Epic Talisman. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81430" name="Artifact - Attribute Attack" additionalName="Fighting Spirit" type="Armor">
+		<!-- An artifact that increases Attribute Attack. Can be equipped in an attack artifact slot. When enchanted, increases Attribute Attack bonus. Only an attack artifact can be used as a material for upgrade. -->
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="1" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="81431" name="Artifact - P. Skill Power" additionalName="Fighting Spirit" type="Armor">
+		<!-- An artifact that increases P. Skill Power. Can be equipped in an attack artifact slot. When enchanted, increases P. Skill Power bonus. Only an attack artifact can be used as a material for upgrade. -->
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="1" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="81432" name="Artifact - M. Skill Power" additionalName="Fighting Spirit" type="Armor">
+		<!-- An artifact that increases M. Skill Power. Can be equipped in an attack artifact slot. When enchanted, increases M. Skill Power bonus. Only an attack artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_b_spell_power" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81433" name="Artifact - Attribute Resistance" additionalName="Defense" type="Armor">
+		<!-- An artifact that increases Attribute Resistance. Can be equipped in a defense artifact slot. When enchanted, increases Attribute Resistance bonus. Only a defense artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_c_attribute_def_up" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81434" name="Artifact - Received Damage When Immobilized" additionalName="Defense" type="Armor">
+		<!-- An artifact that decreases Received Damage when Immobilized. Can be equipped in a defense artifact slot. When enchanted, increases Received Damage when Immobilized bonus. Only a defense artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_c_block_act_dmg" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81435" name="Artifact - Received P. Critical Damage" additionalName="Defense" type="Armor">
+		<!-- An artifact that decreases All received Critical Damage. Can be equipped in a defense artifact slot. When enchanted, increases Received P. Critical Damage bonus. Only a defense artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_c_receive_crt_dmg" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81436" name="Artifact - Recovery Potions' Effect" additionalName="Support" type="Armor">
+		<!-- An artifact that increases Recovery Potions' Effect. Can be equipped in a support artifact slot. When enchanted, increases Recovery Potions' Effect bonus. Only a support artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_d_hp_special" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81437" name="Artifact - Fixed Damage Resistance" additionalName="Support" type="Armor">
+		<!-- An artifact that increases Fixed Damage Resistance. Can be equipped in a support artifact slot. When enchanted, increases Fixed Damage Resistance bonus. Only a support artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_d_dmg_by_atk" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81438" name="Artifact - Damage Reflection Resistance" additionalName="Support" type="Armor">
+		<!-- An artifact that increases Damage Reflection Resistance. Can be equipped in a support artifact slot. When enchanted, increases Damage Reflection Resistance bonus. Only a support artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_d_dmg_shield_resist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81439" name="Artifact - Vitality Bonus" additionalName="Balance" type="Armor">
+		<!-- An artifact that increases Vitality bonus. Can be equipped in a balance artifact slot. When enchanted, increases Vitality bonus. Only a balance artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_a_vital_bonus" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81440" name="Artifact - Received Healing" additionalName="Balance" type="Armor">
+		<!-- An artifact that increases Received Healing. Can be equipped in a balance artifact slot. When enchanted, increases Received Healing bonus. Only a balance artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_a_heal_effect" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81441" name="Artifact - Skill MP Consumption" additionalName="Balance" type="Armor">
+		<!-- An artifact that decreases Skill MP Consumption. Can be equipped in a balance artifact slot. When enchanted, increases Skill MP Consumption bonus. Only a balance artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_a_skill_mp_cost" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81442" name="Artifact - Received P. Critical Rate" additionalName="Balance" type="Armor">
+		<!-- An artifact that decreases Received P. Critical Rate. Can be equipped in a balance artifact slot. When enchanted, increases Received P. Critical Rate bonus. Only a balance artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_a_receive_crt_per" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81443" name="Agathion Fire Dragon Charm" type="Armor">
+		<!-- Contains the power of Agathion Fire Dragon. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. <Enchanting>. Use Divine Book of Growth: Agathion Dragon. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Fishermen's Guild's leader Santiago in Heine. -->
+		<set name="icon" val="icon.agathion_fire_dragon_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="7" />
+		<skills>
+			<skill id="35634" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Fire Dragon -->
+		</skills>
+		<stats>
+			<stat type="mDef">48</stat>
+		</stats>
+	</item>
+	<item id="81444" name="Greater Agathion Fire Dragon Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Fire Dragon. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
+		<set name="icon" val="icon.agathion_fire_dragon_star_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35635" level="1" type="ON_EQUIP" /> <!-- Summon Greater Agathion Fire Dragon -->
+		</skills>
+		<stats>
+			<stat type="mDef">72</stat>
+		</stats>
+	</item>
+	<item id="81445" name="Divine Book of Growth: Agathion Dragon" type="EtcItem">
+		<!-- Required for enchanting Agathion Fire Dragon. In case of failure, the enchant value remains the same. -->
+		<set name="icon" val="icon.star_destruction_of_ench_dragon_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39653" level="1" /> <!-- Divine Book of Growth: Agathion Dragon -->
+		</skills>
+	</item>
+	<item id="81446" name="Dragon Essence" type="EtcItem">
+		<!-- A crystal imbues with the power of a dragon. -->
+		<set name="icon" val="icon.essense_of_dragon" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81447" name="Valakas Treasure Chest" type="EtcItem">
+		<!-- Precious treasure chest obtained after the campaign against Valakas. Double-click to obtain one rare item. -->
+		<set name="icon" val="icon.bm_dragon_shinning_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81448" name="Angel's Necklace Pack" type="EtcItem">
+		<!-- Double-click to obtain Angel's Necklace. -->
+		<set name="icon" val="icon.card_event_black_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48669" min="1" max="1" chance="100" /> <!-- Angel's Necklace -->
+		</capsuled_items>
+	</item>
+	<item id="81449" name="Angel's Earring Pack" type="EtcItem">
+		<!-- Double-click to obtain Angel's Earring. -->
+		<set name="icon" val="icon.card_event_black_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48841" min="1" max="1" chance="100" /> <!-- Angel's Earring -->
+		</capsuled_items>
+	</item>
+	<item id="81450" name="Angel's Ring Pack" type="EtcItem">
+		<!-- Double-click to obtain Angel's Ring. -->
+		<set name="icon" val="icon.card_event_black_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81154" min="1" max="1" chance="100" /> <!-- Angel's Ring -->
+		</capsuled_items>
+	</item>
+	<item id="81451" name="Jack O'Lantern's Potion" type="EtcItem">
+		<!-- You can feel powerful energy of Jack O'Lantern. Perhaps, that's what caused the monsters' growth. -->
+		<set name="icon" val="icon.ev_jack_ghost_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81452" name="Benusta's Shining Reward Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following rewards: adena, a rare item, an R99-/ R110-grade armor or weapon. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81453" name="Improved Rune Stone" type="EtcItem">
+		<!-- A stone that contains Einhasad's wisdom. Consumed when learning class skills. -->
+		<set name="icon" val="icon.skill_acquire_book_a2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81454" name="Atlas� Earring" additionalName="Vitality" type="Armor">
+		<!-- A special mentor's earring. When enchanted, increases Stupor Atk./ Resistance, Attribute Resistance, Vampiric Rage effect, P. Critical Damage, P./ M. Skill Critical Damage, and decreases MP Consumption. Effects of two identical earrings do not stack. <Special effects>. Vitality Bonus +3%. <Enchanting>Use Scroll: Enchant Atlas Earring. Can be augmented. -->
+		<set name="icon" val="branchsys2.icon2.g_accessory_event_earring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39655" level="1" /> <!-- Craft Effect - Life Lv. 1 -->
+		</skills>
+		<stats>
+			<stat type="mDef">151</stat>
+		</stats>
+	</item>
+	<item id="81455" name="Special Clan Reward Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain one of the following rewards at random: Freya's Ice Rose, Emperor's Special Cocktail, Special Clan Reward Lv. 2. -->
+		<set name="icon" val="icon.card_event_black_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81456" name="Special Clan Reward Lv. 2" type="EtcItem">
+		<!-- Double-click to obtain one of the following rewards at random: Freya's Ice Rose, Emperor's Special Cocktail, Freya's Scroll of Storm (3 pcs.), Honey Dark Beer, Special Clan Reward Lv. 3. -->
+		<set name="icon" val="icon.card_event_black_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81457" name="Special Clan Reward Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain one of the following rewards at random: Freya's Ice Rose (2 pcs.), Emperor's Special Cocktail, Freya's Scroll of Storm (6 pcs.), Honey Dark Beer (2 pcs.), Glowing Dragon's Attribute Potion (2 pcs.), Shining Nevit's Gold Hourglass (2 pcs.), Special Clan Reward Lv. 4. -->
+		<set name="icon" val="icon.card_event_black_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81458" name="Special Clan Reward Lv. 4" type="EtcItem">
+		<!-- Double-click to obtain one of the following rewards at random: Freya's Ice Rose (4 pcs.), Emperor's Special Cocktail (2 pcs.), Freya's Scroll of Storm (12 pcs.), Honey Dark Beer (4 pcs.), Glowing Dragon's Attribute Potion (4 pcs.), Shining Nevit's Gold Hourglass (4 pcs.), Special Clan Reward Lv. 5. -->
+		<set name="icon" val="icon.card_event_black_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81459" name="Special Clan Reward Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain one of the following rewards at random: Freya's Ice Rose (8 pcs.), Emperor's Special Cocktail (4 pcs.), Freya's Scroll of Storm (24 pcs.), Honey Dark Beer (8 pcs.), Glowing Dragon's Attribute Potion (8 pcs.), Shining Nevit's Gold Hourglass (8 pcs.), Energy of Longing, Sealed Talisman of Longing, Bloody Weapon Enhancement Stone, Dark Weapon Enhancement Stone. -->
+		<set name="icon" val="icon.card_event_black_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81460" name="Honey Dark Beer" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., all basic stats +3, Vitality bonus +30%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_royal_black_beer" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81461" name="Common Dice" type="EtcItem">
+		<!-- Dice for the "Journey through Aden" game. After dice roll you got values from 1 to 6. -->
+		<set name="icon" val="icon.normal_dice" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81462" name="Enhanced Dice" type="EtcItem">
+		<!-- Special dice for the "Journey through Aden" game. After dice roll you got values from 5 to 6. -->
+		<set name="icon" val="icon.special_dice" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81463" name="Time Stone: Tower of Insolence (Lower Floor)" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in Tower of Insolence (Lower Floor). Required level: 110+. -->
+		<set name="icon" val="icon.timezone_refill_oman_a_60" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81464" name="Freya's Vital Rune" additionalName="30-day" type="EtcItem">
+		<!-- If stored in the inventory, increases Bonus XP gain in Vitality state by 50% (excludes boss monsters) and decreases Vitality Consumption Spd. by 15%. -->
+		<set name="icon" val="icon.bm_freya_vital_rune" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="81465" name="Kastia's Pack" additionalName="Lv. 4" type="EtcItem">
+		<!-- Double-click to obtain 2 Emperor's Special Cocktails and 4 of each following items: Freya's Ice Rose, Glowing Dragon's Attribute Potion, Honey Dark Beer. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81012" min="2" max="2" chance="100" /> <!-- Emperor's Special Cocktail - Event -->
+			<item id="48848" min="4" max="4" chance="100" /> <!-- Freya's Ice Rose - Event -->
+			<item id="48857" min="4" max="4" chance="100" /> <!-- Glowing Dragon's Attribute Potion (XP) - Event -->
+			<item id="81011" min="4" max="4" chance="100" /> <!-- Honey Dark Beer - Event -->
+		</capsuled_items>
+	</item>
+	<item id="81466" name="Kastia's Pack" additionalName="Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain 4 Emperor's Special Cocktails and 8 of each following items: Freya's Ice Rose, Glowing Dragon's Attribute Potion, Honey Dark Beer. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81012" min="4" max="4" chance="100" /> <!-- Emperor's Special Cocktail - Event -->
+			<item id="48848" min="8" max="8" chance="100" /> <!-- Freya's Ice Rose - Event -->
+			<item id="48857" min="8" max="8" chance="100" /> <!-- Glowing Dragon's Attribute Potion (XP) - Event -->
+			<item id="81011" min="8" max="8" chance="100" /> <!-- Honey Dark Beer - Event -->
+		</capsuled_items>
+	</item>
+	<item id="81467" name="Blessed Exalted Helmet" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_heavy_helmet_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="81468" name="Blessed Exalted Breastplate" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_heavy_upbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">451</stat>
+		</stats>
+	</item>
+	<item id="81469" name="Blessed Exalted Gaiters" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_heavy_downbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">282</stat>
+		</stats>
+	</item>
+	<item id="81470" name="Blessed Exalted Gauntlets" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_heavy_gloves_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="81471" name="Blessed Exalted Boots" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_heavy_shoes_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="81472" name="Blessed Exalted Shield" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_heavy_shield_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1130" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="accCombat">-8E-07</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">604</stat>
+		</stats>
+	</item>
+	<item id="81473" name="Blessed Exalted Leather Helmet" additionalName="Light armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_light_helmet_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="81474" name="Blessed Exalted Leather Armor" additionalName="Light armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_light_upbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">360</stat>
+			<stat type="accCombat">5E-07</stat>
+		</stats>
+	</item>
+	<item id="81475" name="Blessed Exalted Leather Leggings" additionalName="Light armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_light_downbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">225</stat>
+			<stat type="accCombat">3E-07</stat>
+		</stats>
+	</item>
+	<item id="81476" name="Blessed Exalted Leather Gloves" additionalName="Light armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_light_gloves_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="81477" name="Blessed Exalted Leather Boots" additionalName="Light armor" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_light_shoes_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="81478" name="Blessed Exalted Circlet" additionalName="Robe" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_robe_helmet_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="81479" name="Blessed Exalted Tunic" additionalName="Robe" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_robe_upbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">61</stat>
+			<stat type="pDef">248</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+	</item>
+	<item id="81480" name="Blessed Exalted Stockings" additionalName="Robe" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_robe_downbody_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">155</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="81481" name="Blessed Exalted Gloves" additionalName="Robe" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_robe_gloves_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="81482" name="Blessed Exalted Shoes" additionalName="Robe" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_robe_shoes_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="81483" name="Blessed Exalted Sigil" additionalName="Robe" type="Armor">
+		<!-- A part of Exalted Armor imbued with Lionel Hunter's blessing. Cannot be enchanted, crystallized, appearance modified, assigned an attribute, or augmented. -->
+		<set name="icon" val="icon.honors_robe_sigil_opt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="920" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">56</stat>
+			<stat type="accCombat">-8E-07</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="81484" name="Blessed Exalted Circlet" type="Armor">
+		<!-- Exalted Circlet imbued with Lionel Hunter's blessing. LUC/ CHA +1, STR/ INT/ CON +3, Attribute Attack/ Resistance +30, Vitality Bonus +10%, P./ M. Atk. and P./ M. Def. +5%, P. Critical Rate/ M. Skill Critical Rate +50, Debuff Resistance +3%, Acquired XP/ SP +10%. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute, augmented. -->
+		<set name="icon" val="BranchSys.icon.br_circlet_of_eva_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81485" name="Exalted Soul Crystal" type="EtcItem">
+		<!-- A special Soul Crystal with the power of the Exalted. Can bestow crystal effect to weapons. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
+		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81486" name="Talisman of Longing" additionalName="Exalted" type="Armor">
+		<!-- Talisman of Longing imbued with the power of the Exalted. Max HP/ MP/ CP +600, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage effect +3%, Atk. Spd./ Casting Spd. +50, Critical Rate for standard attacks +30, M. Skill Critical Rate +10, P. Atk. +303, M. Atk. +356, Skill Power +4%, Damage Reflection Resistance +30%, P./ M. Def. +60, STR/ INT/ CON/ MEN/ DEX/ WIT +2, Skill MP consumption -3%. Cannot be stacked with effects other Talisman of Longing. Cannot be sealed or upgraded. -->
+		<set name="icon" val="icon.accessory_longing_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81487" name="Sayha's Talisman" additionalName="Exalted" type="Armor">
+		<!-- Sayha's Talisman imbued with the power of the Exalted. P. Def. +676, M. Def. +441, acquired XP/ SP +5%. If equipped with Venir's Talisman Lv. 10+, Skill Power +2%, Skill Cooldown -2%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. Cannot be upgraded. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81488" name="Blessed Exalted Seed Bracelet" type="Armor">
+		<!-- Seed Bracelet imbued with Lionel Hunter's blessing. Unlocks an agathion's main slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. 3. P./ M. Atk. and P./ M. Def. +5%. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81489" name="Exalted Spirit Stone" type="EtcItem">
+		<!-- A special mineral for Exalted weapon augmentation. During the process, you can choose one of the bonuses: P./ M. Atk., P./ M. Def., Max HP/ MP/ CP +10, or P. Critical Damage and P./ M. Skill Critical Damage +5%. Double-click on the item or speak to a blacksmith to augment what you need. -->
+		<set name="icon" val="icon.renewal_mineral_r99" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="81490" name="Blessed Exalted Necklace" additionalName="Skill Cooldown" type="Armor">
+		<!-- A necklace imbued with Lionel Hunter's blessing. MP +65, P./ M. Atk. +5%, Damage Reflection +3%, Skill Cooldown -10%. Cannot be enchanted, crystallized or augmented. -->
+		<set name="icon" val="icon.honors_necklace" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">201</stat>
+			<stat type="maxMp">65</stat>
+		</stats>
+	</item>
+	<item id="81491" name="Blessed Exalted Earring" additionalName="MP Consumption" type="Armor">
+		<!-- An earring imbued with Lionel Hunter's blessing. MP +49, Confusion Resistance/ Atk. Rate +30%, Vampiric Rage +3%, Received Healing +10%, Skill MP Consumption -5%. Cannot be enchanted, crystallized or augmented. -->
+		<set name="icon" val="icon.honors_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">151</stat>
+			<stat type="maxMp">49</stat>
+		</stats>
+	</item>
+	<item id="81492" name="Blessed Exalted Earring" additionalName="Vampiric Rage" type="Armor">
+		<!-- An earring imbued with Lionel Hunter's blessing. MP +49, Obstruction Atk. Rate/ Resistance +30%, Vampiric Rage +5%, Attribute Resistance -10. Cannot be enchanted, crystallized or augmented. -->
+		<set name="icon" val="icon.honors_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">151</stat>
+			<stat type="maxMp">49</stat>
+		</stats>
+	</item>
+	<item id="81493" name="Blessed Exalted Ring" additionalName="Critical Rate" type="Armor">
+		<!-- A ring imbued with Lionel Hunter's blessing. MP +33, Stupor Atk. Rate/ Resistance +20%, P./ M. Critical Rate +50, P. Critical Damage/ M. Skill Critical Damage +10%. Cannot be enchanted, crystallized or augmented. -->
+		<set name="icon" val="icon.honors_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">100</stat>
+			<stat type="maxMp">33</stat>
+		</stats>
+	</item>
+	<item id="81494" name="Blessed Exalted Ring" additionalName="Critical Damage" type="Armor">
+		<!-- A ring imbued with Lionel Hunter's blessing. Max MP +33, Infection Atk. Rate/ Resistance +20%, P. Critical Damage and P./ M. Skill Critical Damage +15%. Cannot be enchanted, crystallized or augmented. -->
+		<set name="icon" val="icon.honors_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">100</stat>
+			<stat type="maxMp">33</stat>
+		</stats>
+	</item>
+	<item id="81495" name="Superior Topaz Lv. 1" type="Armor">
+		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 22,005 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_absdmg_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17701" level="11" /> <!-- Topaz -->
+		</skills>
+	</item>
+	<item id="81496" name="Superior Topaz Lv. 2" type="Armor">
+		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 24,362 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_absdmg_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17701" level="12" /> <!-- Topaz -->
+		</skills>
+	</item>
+	<item id="81497" name="Superior Topaz Lv. 3" type="Armor">
+		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 26,720 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_absdmg_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17701" level="13" /> <!-- Topaz -->
+		</skills>
+	</item>
+	<item id="81498" name="Superior Topaz Lv. 4" type="Armor">
+		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 29,078 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_absdmg_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17701" level="14" /> <!-- Topaz -->
+		</skills>
+	</item>
+	<item id="81499" name="Superior Topaz Lv. 5" type="Armor">
+		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 31,435 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding with Jewel Energy. -->
+		<set name="icon" val="icon.bm_jewel_absdmg_lv1_lavianrose_high2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17701" level="15" /> <!-- Topaz -->
+		</skills>
+	</item>
+</list>

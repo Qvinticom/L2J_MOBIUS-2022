@@ -63,9 +63,9 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		{
 			return false;
 		}
-		final int chestMask = chest.getItem().getItemMask();
 		
 		// If chest armor is different from the condition one return false
+		final int chestMask = chest.getItem().getItemMask();
 		if ((_armorTypesMask & chestMask) == 0)
 		{
 			return false;
@@ -73,20 +73,22 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		
 		// So from here, chest armor matches conditions
 		
-		final long chestBodyPart = chest.getItem().getBodyPart();
 		// return True if chest armor is a Full Armor
+		final long chestBodyPart = chest.getItem().getBodyPart();
 		if (chestBodyPart == Item.SLOT_FULL_ARMOR)
 		{
 			return true;
 		}
+		
 		// check legs armor
 		final ItemInstance legs = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 		if (legs == null)
 		{
 			return false;
 		}
-		final int legMask = legs.getItem().getItemMask();
+		
 		// return true if legs armor matches too
+		final int legMask = legs.getItem().getItemMask();
 		return (_armorTypesMask & legMask) != 0;
 	}
 }

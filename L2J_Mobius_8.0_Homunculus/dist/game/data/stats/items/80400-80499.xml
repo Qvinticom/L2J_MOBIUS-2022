@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="80400" name="Bloody Eternal Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Heavy Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -17,7 +17,7 @@
 		</stats>
 	</item>
 	<item id="80401" name="Bloody Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
+		<!-- Received PvE Damage -3%. PvE Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -33,7 +33,7 @@
 		</stats>
 	</item>
 	<item id="80402" name="Bloody Eternal Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<!-- Received PvE Damage -8%, PvE Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, also decreases Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -51,7 +51,7 @@
 		</stats>
 	</item>
 	<item id="80403" name="Bloody Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
+		<!-- Received PvE Damage -5%. PvE Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -69,7 +69,7 @@
 		</stats>
 	</item>
 	<item id="80404" name="Bloody Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -85,7 +85,7 @@
 		</stats>
 	</item>
 	<item id="80405" name="Bloody Eternal Leather Boots" additionalName="Light Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Light Armor, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -101,7 +101,7 @@
 		</stats>
 	</item>
 	<item id="80406" name="Bloody Eternal Circlet" additionalName="Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
+		<!-- Received PvE Damage -3%. PvE Damage +1%. Robe, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -117,7 +117,7 @@
 		</stats>
 	</item>
 	<item id="80407" name="Bloody Eternal Tunic" additionalName="Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
+		<!-- Received PvE Damage -8%. PvE Damage +1%. Robe, can be enhanced by Blacksmith in any town. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, also decreases Received P. Critical Damage and Received P. Critical Rate. Can be augmented. -->
 		<set name="icon" val="icon.armor_t803_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -136,7 +136,7 @@
 		</stats>
 	</item>
 	<item id="80408" name="Bloody Eternal Stockings" additionalName="Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
+		<!-- Received PvE Damage -5%. PvE Damage +1%. Robe, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t803_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -155,7 +155,7 @@
 		</stats>
 	</item>
 	<item id="80409" name="Bloody Eternal Gloves" additionalName="Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Robe, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t803_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -171,7 +171,7 @@
 		</stats>
 	</item>
 	<item id="80410" name="Bloody Eternal Shoes" additionalName="Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
+		<!-- Received PvE Damage -2%. PvE Damage +1%. Robe, can be enhanced by Blacksmith in any town. Can be augmented. -->
 		<set name="icon" val="icon.armor_t803_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -198,7 +198,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80412" name="Gale Scroll" type="EtcItem">
-		<!-- A scroll to level up as fast as the wind. Hunting XP and SP gain +200%. Remains active after death. Duration 10 min. Cooldown 9 min. Only for characters below Lv. 108. Cannot be stacked with Freya s Wind Scroll or Freya s Storm Scroll. -->
+		<!-- A scroll to level up as fast as the wind. For 10 min., acquired XP/ SP +200%. The effect remains after death. Cooldown: 9 min. Required level: 1-107. The effect does not stack with Freya's Frozen Scroll and Freya's Scroll of Storm. -->
 		<set name="icon" val="icon.scrl_of_storm" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -220,7 +220,7 @@
 		</skills>
 	</item>
 	<item id="80413" name="Raging Billow Scroll" type="EtcItem">
-		<!-- A scroll to hunt with the force of a raging billow. When used, attack attribute +100, all Attribute Resistance +100, and Acquired XP/ SP +100% for 30 min. Buffs persist after death. Cooldown 5 min. Only for characters below Lv. 108. Cannot be used in the Olympiad. Cannot be stacked with Dragon's Attribute Potion or Glowing Dragon's Attribute Potion. -->
+		<!-- A scroll for easier hunting. For 30 min., Attribute Attack +100, Attribute Resistance +100, acquired XP/ SP +100%. The effect remains after death. Cooldown: 5 min. Required level: 1-107. Cannot be used in the Olympiad. The effect does not stack with Dragon's Attribute Potion or Glowing Dragon's Attribute Potion. -->
 		<set name="icon" val="icon.etc_blesscharm_slay_val_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -232,7 +232,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80414" name="Expertise Rune - ALL (30-day) Box" type="EtcItem">
-		<!-- Double-click to obtain an Expertise Rune-ALL (30-day). -->
+		<!-- Double-click to obtain Growth Rune (30-day). -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -255,7 +255,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80416" name="Lucky Box of 10 Billion Adena" type="EtcItem">
-		<!-- Use it to obtain 10 billion Adena. -->
+		<!-- Double-click to obtain 10 billion adena. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -291,7 +291,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80419" name="Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one Fighting Spirit Artifact Box, Protection Artifact Box, Support Artifact Box, or Balance Artifact Box. -->
+		<!-- Double-click to obtain Attack/ Defense/ Support/ Balance Artifact Pack. -->
 		<set name="icon" val="icon.bm_artifact_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -317,7 +317,7 @@
 		</skills>
 	</item>
 	<item id="80421" name="Protection Artifact Box" type="EtcItem">
-		<!-- Double-click to obtain one of the following protection artifacts: Artifact - P. Def./ M. Def./ Max HP/ Max MP. -->
+		<!-- Double-click to obtain one of the following defense artifacts: Artifact - P. Def./ M. Def./ Max HP/ Max MP. -->
 		<set name="icon" val="icon.bm_artifact_c_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -362,7 +362,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80425" name="+1 Fighting Spirit Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one +1 Enchanted Fighting Spirit Artifact. -->
+		<!-- Double-click to obtain an attack artifact enchanted to +1. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -375,7 +375,7 @@
 		</skills>
 	</item>
 	<item id="80426" name="+3 Fighting Spirit Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one +3 Enchanted Fighting Spirit Artifact. -->
+		<!-- Double-click to obtain an attack artifact enchanted to +3. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -388,7 +388,7 @@
 		</skills>
 	</item>
 	<item id="80427" name="+1 Protection Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one +1 Enchanted Protection Artifact. -->
+		<!-- Double-click to obtain a defense artifact enchanted to +1. -->
 		<set name="icon" val="icon.bm_artifact_c_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -401,7 +401,7 @@
 		</skills>
 	</item>
 	<item id="80428" name="+3 Protection Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one +3 Enchanted Protection Artifact. -->
+		<!-- Double-click to obtain a defense artifact enchanted to +3. -->
 		<set name="icon" val="icon.bm_artifact_c_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -414,7 +414,7 @@
 		</skills>
 	</item>
 	<item id="80429" name="+1 Support Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one +1 Enchanted Support Artifact. -->
+		<!-- Double-click to obtain a support artifact enchanted to +1. -->
 		<set name="icon" val="icon.bm_artifact_d_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -427,7 +427,7 @@
 		</skills>
 	</item>
 	<item id="80430" name="+3 Support Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one +3 Enchanted Support Artifact. -->
+		<!-- Double-click to obtain a support artifact enchanted to +3. -->
 		<set name="icon" val="icon.bm_artifact_d_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -440,7 +440,7 @@
 		</skills>
 	</item>
 	<item id="80431" name="+1 Balance Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one +1 Enchanted Balance Artifact. -->
+		<!-- Double-click to obtain a balance artifact enchanted to +1. -->
 		<set name="icon" val="icon.bm_artifact_a_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -453,7 +453,7 @@
 		</skills>
 	</item>
 	<item id="80432" name="+3 Balance Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one +3 Enchanted Balance Artifact. -->
+		<!-- Double-click to obtain a balance artifact enchanted to +3. -->
 		<set name="icon" val="icon.bm_artifact_a_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="material" val="PAPER" />
@@ -492,7 +492,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80435" name="Emperor's Special Cocktail - Attack" additionalName="4-hour" type="EtcItem">
-		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Warrior's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 4 hours. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
+		<!-- For 4 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Warrior's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_p" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -500,7 +500,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80436" name="Emperor's Special Cocktail - Magic" additionalName="4-hour" type="EtcItem">
-		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Wizard's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 4 hours. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
+		<!-- For 4 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Wizard's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_m" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -508,7 +508,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80437" name="Emperor's Special Cocktail - Defense" additionalName="4-hour" type="EtcItem">
-		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Knight's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 4 hours. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
+		<!-- For 4 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Knight's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -516,7 +516,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80438" name="Emperor's Special Cocktail - Attack" additionalName="8-hour" type="EtcItem">
-		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Warrior's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 8 hours. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
+		<!-- For 8 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Warrior's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_p" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -524,7 +524,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80439" name="Emperor's Special Cocktail - Magic" additionalName="8-hour" type="EtcItem">
-		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Wizard's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 8 hours. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
+		<!-- For 8 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Wizard's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_m" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -532,7 +532,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80440" name="Emperor's Special Cocktail - Defense" additionalName="8-hour" type="EtcItem">
-		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Knight's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 8 hours. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
+		<!-- For 8 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Knight's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -540,7 +540,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80441" name="Freya's Ice Rose" additionalName="4-hour" type="EtcItem">
-		<!-- Dimensional item. When used, Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attack/ Attribute Resistance +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +30%, and Damage Received -10% and Skill MP Consumption -15% for 4 hours.. Buffs persist after death. Cooldown 5 min. Cannot stack with Art of Seduction and Pa agrio s Blessing. Cannot be used in Olympiad. -->
+		<!-- For 4 h., Max HP/ MP/ CP +30%, P./ M. Atk. and P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Atk. Rate/ Resistance +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +30%, and Received damage -10% and Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Cannot be stacked with Art of Seduction and Pa agrio s Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -560,7 +560,7 @@
 		</skills>
 	</item>
 	<item id="80442" name="Freya's Ice Rose" additionalName="8-hour" type="EtcItem">
-		<!-- Dimensional item. When used, Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attack/ Attribute Resistance +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +30%, and Damage Received -10% and Skill MP Consumption -15% for 8 hours.. Buffs persist after death. Cooldown 5 min. Cannot stack with Art of Seduction and Pa agrio s Blessing. Cannot be used in Olympiad. -->
+		<!-- For 8 h., Max HP/ MP/ CP +30%, P./ M. Atk. and P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Atk. Rate/ Resistance +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +30%, and Received damage -10% and Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Cannot be stacked with Art of Seduction and Pa agrio s Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_ice_rose" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -580,7 +580,7 @@
 		</skills>
 	</item>
 	<item id="80443" name="Stage 4 Soul Crystal Box" type="EtcItem">
-		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 4 Soul Crystals. -->
+		<!-- Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 4. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
@@ -602,7 +602,7 @@
 		</capsuled_items>
 	</item>
 	<item id="80444" name="Stage 5 Soul Crystal Box" type="EtcItem">
-		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 5 Soul Crystals. -->
+		<!-- Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 5. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
@@ -633,7 +633,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80446" name="Maestro's Gift Box" type="EtcItem">
-		<!-- Use it to obtain the Honey Vitality Beer or Shining Nevit Gold Hourglass. In addition, there is a chance to obtain the Maestro's Article Box or Maestro's Luxury Box. -->
+		<!-- Double-click to obtain the Honey Vitality Beer or Nevit's Golden Hourglass. Also there is a chance to obtain the Maestro's Article Box or Maestro's Luxury Box. -->
 		<set name="icon" val="icon.bm_freya_snowman_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -657,7 +657,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80449" name="Royal Black Save Card" type="EtcItem">
-		<!-- Enchant success rate +20% for armor (R-grade and higher) with a normal enchant scroll. Only for items enchanted between +3 and +11. When enchant succeeds, it increases randomly by 1-2. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
+		<!-- Enchant success rate +20% for R-grade armor when using an Enchant Scroll. Only for +3 to +11 enchanted items. If enchantment fails. the enchant value of the item will increase randomly by 1 to 2. If enchantment fails. the item will not be crystallized but its enchant value will decrease by 1. -->
 		<set name="icon" val="icon.bm_royal_black_ticket_all" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -700,7 +700,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80453" name="Red Libra Request - Field of Silence" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Field of Silence. Characters level 106 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Field of Silence. Receive the request by double-clicking the item. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -712,7 +712,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80454" name="Red Libra Request - Field of Whispers" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Field of Whispers. Characters level 108 or higher can receive the request by double-clicking the item. Can be played once a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Field of Whispers. Receive the request by double-clicking the item. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -746,7 +746,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80457" name="Stage 3 Soul Crystal Box" type="EtcItem">
-		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 3 Soul Crystals. -->
+		<!-- Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 3. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
@@ -768,7 +768,7 @@
 		</capsuled_items>
 	</item>
 	<item id="80458" name="Stage 4 Soul Crystal Box" type="EtcItem">
-		<!-- Double-click to obtain one of the Kain van Halter, Mermoden, Leona, Pantheon, and Lionel Stage 4 Soul Crystals. -->
+		<!-- Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 4. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
@@ -790,7 +790,7 @@
 		</capsuled_items>
 	</item>
 	<item id="80459" name="+7 Agathion Charm Box" type="EtcItem">
-		<!-- Double-click to obtain one +7 Enchanted Agathion Charm. -->
+		<!-- Double-click to obtain +7 Enchanted Agathion Charm. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -799,7 +799,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80460" name="+8 Agathion Charm Box" type="EtcItem">
-		<!-- Double-click to obtain one +8 Enchanted Agathion Charm. -->
+		<!-- Double-click to obtain +8 Enchanted Agathion Charm. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -808,7 +808,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80461" name="+9 Agathion Charm Box" type="EtcItem">
-		<!-- Double-click to obtain one +9 Enchanted Agathion Charm. -->
+		<!-- Double-click to obtain +9 Enchanted Agathion Charm. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -817,7 +817,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80462" name="+10 Agathion Charm Box" type="EtcItem">
-		<!-- Double-click to obtain one +10 Enchanted Agathion Charm. -->
+		<!-- Double-click to obtain +10 Enchanted Agathion Charm. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -839,7 +839,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80464" name="Fighting Spirit Artifact Box" additionalName="Event" type="EtcItem">
-		<!-- Use it to obtain one of the Fighting Spirit Artifacts. -->
+		<!-- Double-click to obtain one of the following +8 attack artifacts: Artifact - P. Atk./ M. Atk./ Atk. Spd./ Casting Spd/ P. Critical Damage/ P. Skill Critical Damage/ M. Skill Critical Damage. -->
 		<set name="icon" val="icon.bm_artifact_b_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -853,17 +853,17 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="48957" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
-			<item id="48958" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
-			<item id="48959" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
-			<item id="48960" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
-			<item id="80647" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
-			<item id="80648" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
-			<item id="80649" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Attack -->
+			<item id="48957" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - P. Atk. - Attack -->
+			<item id="48958" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - M. Atk. - Attack -->
+			<item id="48959" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Atk. Spd. - Attack -->
+			<item id="48960" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Casting Spd. - Attack -->
+			<item id="80647" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Standard Attack Critical Damage - Attack -->
+			<item id="80648" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - P. Skill Critical Damage - Attack -->
+			<item id="80649" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - M. Skill Critical Damage - Attack -->
 		</capsuled_items>
 	</item>
 	<item id="80465" name="Protection Artifact Box" additionalName="Event" type="EtcItem">
-		<!-- Use it to obtain one of the Protection Artifacts. -->
+		<!-- Double-click to obtain one of the following +8 defense artifacts: Artifact - P. Def./ M. Def./ Max HP/ Max MP/ Bow Resistance/ Dagger Resistance/ Sword Resistance. -->
 		<set name="icon" val="icon.bm_artifact_c_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -877,17 +877,17 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="48961" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
-			<item id="48962" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
-			<item id="48963" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
-			<item id="48964" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
-			<item id="80650" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
-			<item id="80651" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
-			<item id="80652" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Protection -->
+			<item id="48961" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - P. Def. - Protection -->
+			<item id="48962" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - M. Def. - Protection -->
+			<item id="48963" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Max HP - Protection -->
+			<item id="48964" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Max MP - Protection -->
+			<item id="80650" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Bow Resistance - Protection -->
+			<item id="80651" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Dagger Resistance - Protection -->
+			<item id="80652" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Sword Resistance - Protection -->
 		</capsuled_items>
 	</item>
 	<item id="80466" name="Support Artifact Box" additionalName="Event" type="EtcItem">
-		<!-- Use it to obtain one of the Support Artifacts. -->
+		<!-- Double-click to obtain one of the following +8 support artifacts: Artifact - Acquired XP/ Vampiric Rage/ Speed/ Received Healing/ Vitality Bonus/ Vitality Consumption/ Skill MP Consumption. -->
 		<set name="icon" val="icon.bm_artifact_d_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -901,17 +901,17 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="48965" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48966" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48967" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48968" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80653" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80654" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80655" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48965" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - XP - Support -->
+			<item id="48966" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Vampiric Rage - Support -->
+			<item id="48967" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Speed - Support -->
+			<item id="48968" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Received Healing - Support -->
+			<item id="80653" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Vitality Bonus - Support -->
+			<item id="80654" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Vitality Consumption - Support -->
+			<item id="80655" min="1" max="1" chance="14.285714" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Skill MP Consumption - Support -->
 		</capsuled_items>
 	</item>
 	<item id="80467" name="Balance Artifact Box" additionalName="Event" type="EtcItem">
-		<!-- Use it to obtain one of the Balance Artifacts. -->
+		<!-- Double-click to obtain one of the following +8 balance artifacts: Artifact - P. Atk./ M. Atk./ P. Accuracy/ M. Accuracy/ P. Critical Rate/ P. Skill Critical Rate/ M. Skill Critical Rate/ M. Critical Rate/ Recovery Potions' Effect/ Received Damage When Immobilized/ Fixed Damage Resistance/ P. Def./ M. Def./ P. Critical Damage/ P. Skill Critical Damage/ M. Skill Critical Damage/ Atk. Spd./ Casting Spd. -->
 		<set name="icon" val="icon.bm_artifact_a_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -924,36 +924,27 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="48969" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48970" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48971" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48972" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48973" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48974" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48975" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48976" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48977" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48980" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48981" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48982" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48983" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48984" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="48985" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80656" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80657" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80658" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80659" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80660" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80661" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80662" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80749" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80750" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80751" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
-			<item id="80752" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Support -->
+			<item id="48969" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - P. Atk. - Balance -->
+			<item id="48970" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - M. Atk. - Balance -->
+			<item id="48971" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - P. Accuracy - Balance -->
+			<item id="48972" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - M. Accuracy - Balance -->
+			<item id="48973" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Standard Attack Critical Rate - Balance -->
+			<item id="48974" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - P. Skill Critical Rate - Balance -->
+			<item id="48975" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - M. Critical Rate - Balance -->
+			<item id="48976" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Recovery Potions' Effect - Balance -->
+			<item id="48977" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Received Damage When Immobilized - Balance -->
+			<item id="48985" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Fixed Damage Resistance - Balance -->
+			<item id="80656" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - P. Def. - Balance -->
+			<item id="80657" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - M. Def. - Balance -->
+			<item id="80658" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Standard Attack Critical Damage - Balance -->
+			<item id="80659" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - P. Skill Critical Damage - Balance -->
+			<item id="80660" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - M. Skill Critical Damage - Balance -->
+			<item id="80661" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Atk. Spd. - Balance -->
+			<item id="80662" min="1" max="1" chance="3.84615" minEnchant="8" maxEnchant="8" /> <!-- Artifact - Casting Spd. - Balance -->
 		</capsuled_items>
 	</item>
 	<item id="80468" name="Red Libra Artifact Box" type="EtcItem">
-		<!-- Use it to obtain one Fighting Spirit Artifact Box, Protection Artifact Box, Support Artifact Box, or Balance Artifact Box. -->
+		<!-- Double-click to obtain Attack Artifact Pack, Defense Artifact Pack, Support Artifact Pack, or Balance Artifact Pack. -->
 		<set name="icon" val="icon.bm_artifact_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -964,7 +955,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80469" name="Mammon's Treasure Chest" type="EtcItem">
-		<!-- Use it to obtain 3 Mammon's Weapon Enchant Scroll and one additional random item. -->
+		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.bm_2018_special_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -972,7 +963,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80470" name="Stage 5-7 Soul Crystal Box" type="EtcItem">
-		<!-- Double-click to obtain one Lionel, Kain van Halter, Leona, Pantheon, or Mermoden Stage 5 to 7 Soul Crystal. -->
+		<!-- Double-click to obtain Lionel's, Kain's, Leona's, Pantheon's, or Mermoden's Soul Crystal Lv. 5-7. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -988,7 +979,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80472" name="Greater Topaz Lv. 1" additionalName="30 days" type="Armor">
-		<!-- Disrupts the target's skill casting. When used on a PC. inflicts damage with 13275 Power and ignores CP. Low chance of killing the enemy instantly. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
+		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed 13,275 damage. With a low chance, inflicts a lethal strike on the enemy. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1023,7 +1014,7 @@
 		</skills>
 	</item>
 	<item id="80474" name="Greater Sapphire Lv. 1" additionalName="Event" type="Armor">
-		<!-- When equipped. increases Spiritshot and Blessed Spiritshot's damage by 20% and M. Atk. by 13%. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
+		<!-- Spiritshot and Blessed Spiritshot's damage +20% and M. Atk. +13%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1041,7 +1032,7 @@
 		</skills>
 	</item>
 	<item id="80475" name="Greater Obsidian Lv. 1" additionalName="30 days" type="Armor">
-		<!-- When equipped. decreases PVP Damage Received by 15% and cancels the attacker's targeting when hit. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
+		<!-- When equipped, received PvP damage -15%. Cancels the enemy's target when hit. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_pvpdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1058,7 +1049,7 @@
 		</skills>
 	</item>
 	<item id="80476" name="Greater Opal Lv. 1" additionalName="30 days" type="Armor">
-		<!-- Attack Attribute +120, all Attribute Resistance +70. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<!-- Attribute Attack +120, Attribute Resistance +70. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_atkeleup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1075,7 +1066,7 @@
 		</skills>
 	</item>
 	<item id="80477" name="Greater Emerald Lv. 1" additionalName="30 days" type="Armor">
-		<!-- All basic stats +3, Skill Master Rate +30%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<!-- When equipped, all stats +3, Skill Mastery Rate +30%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1092,7 +1083,7 @@
 		</skills>
 	</item>
 	<item id="80478" name="Greater Aquamarine Lv. 1" additionalName="30 days" type="Armor">
-		<!-- With a 15% chance recovers 136 MP when using skills, Skill Cooldown -5%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<!-- When equipped, with a 15% chance recovers 136 MP when using skills, Skill Cooldown -5%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1109,7 +1100,7 @@
 		</skills>
 	</item>
 	<item id="80479" name="Greater Diamond Lv. 1" additionalName="30 days" type="Armor">
-		<!-- P. Def. +1986, received P. Critical Damage -5%, P. Def. +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<!-- P. Def. +1986, Received Critical Damage from standard attacks -5%, P. Def. +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1126,7 +1117,7 @@
 		</skills>
 	</item>
 	<item id="80480" name="Greater Pearl Lv. 1" additionalName="30 days" type="Armor">
-		<!-- M. Def. +1150, received M. Critical Damage -5%, M. Def. +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<!-- M. Def. +1150, received M. Skill Critical Damage -5%. Additionally, M. Def. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1143,7 +1134,7 @@
 		</skills>
 	</item>
 	<item id="80481" name="Greater Vital Stone Lv. 1" additionalName="30 days" type="Armor">
-		<!-- Vitality Bonus +30%, Vitality Consumption Rate +15%, acquired XP +10%. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<!-- Vitality bonus +50%, Vitality Consumption -15%, acquired XP/ SP +10%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1160,7 +1151,7 @@
 		</skills>
 	</item>
 	<item id="80482" name="Greater Garnet Lv. 1" additionalName="30 days" type="Armor">
-		<!-- When equipped. increases All Debuff Defense Success Rates by 30% and removes Stun/Silence if damaged by a PC. When used. removes your debuffs. If identical Gems are equipped. only the effect of the highest level Gem is applied. -->
+		<!-- Debuff Resistance +30%. Damage Reflection Resistance +15%. Removes Stun/ Silence of Confusion/ Obstruction debuff types when receiving PvP damage. Removes debuffs from you and grants immunity to debuffs for 7 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1178,7 +1169,7 @@
 		</skills>
 	</item>
 	<item id="80483" name="Greater Tanzanite Lv. 1" additionalName="30 days" type="Armor">
-		<!-- Creates a barrier that absorbs 50,000 damage for 15 sec. Instantly restores 15% HP. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
+		<!-- Creates a protective barrier that absorbs 50,000 damage for 15 sec, and instantly restores 15% HP. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1195,7 +1186,7 @@
 		</skills>
 	</item>
 	<item id="80484" name="Greater Red Cat's Eye Lv. 1" additionalName="30 days" type="Armor">
-		<!-- Increases P. Critical Damage by 12%. P. Skill Critical Damage by 12%, and P. Skill Power by 5%. When you wear the same type of gemstone. only the effect of the highest level gem is applied. -->
+		<!-- Critical Damage for standard attacks +12%, P. Skill Critical Damage +12%, P. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1212,7 +1203,7 @@
 		</skills>
 	</item>
 	<item id="80485" name="Greater Blue Cat's Eye Lv. 1" additionalName="30 days" type="Armor">
-		<!-- Increases Magic Critical Damage by 12%. M. Skill Power by 5%. When you wear the same type of gemstone. only the effect of the highest level gem is applied. -->
+		<!-- M. Skill Critical Damage +12%, M. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1229,7 +1220,7 @@
 		</skills>
 	</item>
 	<item id="80486" name="Mysterious Talisman - STR" additionalName="Event" type="Armor">
-		<!-- When the talisman is equipped. STR +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<!-- When equipped, STR +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1242,7 +1233,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80487" name="Mysterious Talisman - INT" additionalName="Event" type="Armor">
-		<!-- When the talisman is equipped. INT +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<!-- When equipped, INT +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1255,7 +1246,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80488" name="Mysterious Talisman - DEX" additionalName="Event" type="Armor">
-		<!-- When the talisman is equipped. DEX +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<!-- When equipped, DEX +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1268,7 +1259,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80489" name="Mysterious Talisman - WIT" additionalName="Event" type="Armor">
-		<!-- When the talisman is equipped. WIT +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<!-- When equipped, WIT +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1281,7 +1272,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80490" name="Mysterious Talisman - CON" additionalName="Event" type="Armor">
-		<!-- When the talisman is equipped. CON +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<!-- When equipped, CON +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1294,7 +1285,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80491" name="Mysterious Talisman - MEN" additionalName="Event" type="Armor">
-		<!-- When the talisman is equipped. MEN +5. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<!-- When equipped, MEN +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1307,7 +1298,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80492" name="Mysterious Talisman - Attack Attribute" additionalName="Event" type="Armor">
-		<!-- When the talisman is equipped. Attack Attributes +50. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<!-- When equipped, Attribute Attack +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1320,7 +1311,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80493" name="Mysterious Talisman - Attribute Resistance" additionalName="Event" type="Armor">
-		<!-- When the talisman is equipped. Attribute Defense +50. When you equip 2 or more of the same talismans or PA talismans with the same effect. only the effect of a single talisman is applied. -->
+		<!-- When equipped, Attribute Resistance +50. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1343,7 +1334,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80495" name="Talisman Exchange Ticket" additionalName="Event" type="EtcItem">
-		<!-- Exchange it through Festival Fairy for a talisman. -->
+		<!-- Can be exchanged for a talisman through Festival Fairy. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -1365,7 +1356,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80497" name="Five-colored Sweets" additionalName="Event" type="EtcItem">
-		<!-- A sweet rice cake received from Festival Fairy. For 2 hours, acquired XP/ SP +30%, acquired XP/ SP in Vitality state +30%, P. Atk./ P. Def./ M. Atk./ M. Def. +15%. Cooldown is 5 min. -->
+		<!-- A sweet rice cake received from Festival Fairy. For 2 h., acquired XP/ SP +30%, acquired XP/ SP in Vitality state +30%, P. Atk./ P. Def./ M. Atk./ M. Def. +15%. Cooldown is 5 min. -->
 		<set name="icon" val="icon.ev_ricecake_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1376,7 +1367,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80498" name="Golden Orc Potion" additionalName="Event" type="EtcItem">
-		<!-- When used. XP/SP gain +30%. XP/SP gain in Vitality state +30%. and P. Atk./P. Def./M. Atk./M. Def. +15% for 30 min. Cooldown 5 min. -->
+		<!-- When used, increases Acquired XP/ SP by 30%, Acquired XP/ SP in Vitality state by 30%, and P. Atk./ P. Def./ M. Atk./ M. Def. by 15% for 30 min. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

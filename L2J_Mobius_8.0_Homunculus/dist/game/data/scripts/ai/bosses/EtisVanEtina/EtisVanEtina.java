@@ -650,7 +650,7 @@ public class EtisVanEtina extends AbstractNpcAI
 					_sealOfDestruction.setDisplayEffect(3);
 					// TODO: Seal of Destruction skill cast.
 					_sealOfDestruction.broadcastPacket(new MagicSkillUse(_sealOfDestruction, _sealOfDestruction, CALL_OF_SEVEN_SIGNS_SEAL_N.getSkillId(), 7, 10000, 0));
-					BOSS_ZONE.getPlayersInside().forEach(player -> player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_SEAL_OF_DESTRUCTION_ACTIVATES_AND_THE_ENTIRE_ETINA_GREAT_TEMPLE_IS_NOW_UNDER_THE_INFLUENCE_OF_THE_SEAL, ExShowScreenMessage.TOP_CENTER, 7000, true)));
+					BOSS_ZONE.getPlayersInside().forEach(player -> player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_SEAL_OF_DESTRUCTION_IS_ACTIVATED_AND_ETINA_S_GRAND_TEMPLE_IS_NOW_UNDER_ITS_INFLUENCE, ExShowScreenMessage.TOP_CENTER, 7000, true)));
 				}, 70000, 120000);
 			}
 			else if ((npc.getCurrentHp() <= (npc.getMaxHp() * 0.15)) && !_etina15)
@@ -661,7 +661,7 @@ public class EtisVanEtina extends AbstractNpcAI
 					_minionSpawns.add(addSpawn(spawn.getNpcId(), spawn.getLocation()));
 				}
 				// TODO: decrease etina and seals power
-				BOSS_ZONE.getPlayersInside().forEach(player -> player.sendPacket(new ExShowScreenMessage(NpcStringId.ETIS_VAN_ETINA_AND_THE_POWER_OF_SEVEN_SEALS_ARE_WEAKENING, ExShowScreenMessage.TOP_CENTER, 7000, true)));
+				BOSS_ZONE.getPlayersInside().forEach(player -> player.sendPacket(new ExShowScreenMessage(NpcStringId.ETIS_VAN_ETINA_AND_THE_POWER_OF_SIX_SEALS_ARE_WEAKENING, ExShowScreenMessage.TOP_CENTER, 7000, true)));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7000" name="Recipe: Greater WIT Dye (Wit +3 Int -3)" type="EtcItem">
-		<!-- This recipe for Greater WIT Dye <Wit +3 Int -3> can be used by all races. Requires Create Common Item Skill Lv. 5. -->
+		<!-- A recipe for Greater WIT Dye <WIT +3 INT -3>. Requires Create Common Item Lv. 5. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -15,7 +15,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7001" name="Recipe: Greater WIT Dye (Wit +3 Men -3)" type="EtcItem">
-		<!-- This recipe for Greater WIT Dye <Wit +3 Men -3> can be used by all races. Requires Create Common Item Skill Lv. 5. -->
+		<!-- A recipe for Greater WIT Dye <WIT +3 MEN -3>. Requires Create Common Item Lv. 5. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -29,7 +29,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7002" name="Recipe: Greater STR Dye (STR +4 CON -4)" type="EtcItem">
-		<!-- This recipe for Greater STR Dye <Str +4 Con -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater STR Dye <STR +4 CON -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -43,7 +43,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7003" name="Recipe: Greater STR Dye (STR +4 DEX -4)" type="EtcItem">
-		<!-- This recipe for Greater STR Dye <Str +4 Dex -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater STR Dye <STR +4 DEX -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -57,7 +57,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7004" name="Recipe: Greater CON Dye (Con +4 Str -4)" type="EtcItem">
-		<!-- This recipe for Greater CON Dye <Con +4 Str -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater CON Dye<CON +4 STR -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -71,7 +71,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7005" name="Recipe: Greater CON Dye (Con +4 DEX -4)" type="EtcItem">
-		<!-- This recipe for Greater CON Dye <Con +4 Dex -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater CON Dye<CON +4 DEX -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -85,7 +85,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7006" name="Recipe: Greater DEX Dye (Dex +4 Str -4)" type="EtcItem">
-		<!-- This recipe for Greater DEX Dye <Dex +4 Str -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater DEX Dye <DEX +4 STR -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -99,7 +99,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7007" name="Recipe: Greater DEX Dye (Dex +4 CON -4)" type="EtcItem">
-		<!-- This recipe for Greater DEX Dye <Dex +4 Con -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater DEX Dye <DEX +4 CON -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -113,7 +113,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7008" name="Recipe: Greater INT Dye (Int +4 Men -4)" type="EtcItem">
-		<!-- This recipe for Greater INT Dye <Int +4 Men -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater INT Dye <INT +4 MEN -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -127,7 +127,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7009" name="Recipe: Greater INT Dye (Int +4 Wit -4)" type="EtcItem">
-		<!-- This recipe for Greater INT Dye <Int +4 Wit -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater INT Dye <INT +4 WIT -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -141,7 +141,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7010" name="Recipe: Greater MEN Dye (Men +4 Int -4)" type="EtcItem">
-		<!-- This recipe for Greater MEN Dye <Men +4 Int -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater MEN Dye <MEN +4 INT -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -155,7 +155,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7011" name="Recipe: Greater MEN Dye (Men +4 Wit -4)" type="EtcItem">
-		<!-- This recipe for Greater MEN Dye <Men +4 Wit -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater MEN Dye <MEN +4 WIT -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -169,7 +169,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7012" name="Recipe: Greater WIT Dye (Wit +4 Int -4)" type="EtcItem">
-		<!-- This recipe for Greater WIT Dye <Wit +4 Int -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater WIT Dye <WIT +4 INT -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -183,7 +183,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="7013" name="Recipe: Greater WIT Dye (Wit +4 Men -4)" type="EtcItem">
-		<!-- This recipe for Greater WIT Dye <Wit +4 Men -4> can be used by all races. Requires Create Common Item Skill Lv. 6. -->
+		<!-- A recipe for Greater WIT Dye <WIT +4 MEN -4>. Requires Create Common Item Lv. 6. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -213,7 +213,7 @@
 		</stats>
 	</item>
 	<item id="7015" name="Shield of Castle Pledge" type="Armor">
-		<!-- Shield that can only be used by the members of a clan that owns a castle. Cannot be transferred between servers. -->
+		<!-- Shield that can only be used by the members of a clan that owns a castle. -->
 		<set name="icon" val="icon.shield_pledge_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -236,7 +236,7 @@
 		</stats>
 	</item>
 	<item id="7016" name="Seed: Blue Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Blue Cobol. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 32-42 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -251,7 +251,7 @@
 		</skills>
 	</item>
 	<item id="7017" name="Seed: Blue Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Blue Codran. For best results, a level 50- 60 character must plant it on a level 50- 60 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Blue Codran. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 50-60 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -266,7 +266,7 @@
 		</skills>
 	</item>
 	<item id="7018" name="Seed: Blue Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Blue Codran. For best results, a level 50- 60 character must plant it on a level 50- 60 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Blue Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 50-60 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -281,7 +281,7 @@
 		</skills>
 	</item>
 	<item id="7019" name="Seed: Chilly Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Chilly Cobol. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 29-39 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -296,7 +296,7 @@
 		</skills>
 	</item>
 	<item id="7020" name="Seed: Chilly Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Chilly Coda. For best results, a level 11- 21 character must plant it on a level 11- 21 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Chilly Coda. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 11-21 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -311,7 +311,7 @@
 		</skills>
 	</item>
 	<item id="7021" name="Seed: Chilly Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Chilly Codran. For best results, a level 47- 57 character must plant it on a level 47- 57 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Chilly Codran. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 47-57 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -326,7 +326,7 @@
 		</skills>
 	</item>
 	<item id="7022" name="Seed: Chilly Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Chilly Codran. For best results, a level 47- 57 character must plant it on a level 47- 57 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Chilly Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 47-57 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -341,7 +341,7 @@
 		</skills>
 	</item>
 	<item id="7023" name="Seed: Desert Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Desert Codran. For best results, a level 59- 69 character must plant it on a level 59- 69 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Desert Codran. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 59-69 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -356,7 +356,7 @@
 		</skills>
 	</item>
 	<item id="7024" name="Seed: Desert Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Desert Codran. For best results, a level 59- 69 character must plant it on a level 59- 69 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Desert Codran. To get the fruit, plant this seed onto a monster in the Goddard area. For best results, a level 59-69 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -371,7 +371,7 @@
 		</skills>
 	</item>
 	<item id="7025" name="Seed: Golden Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Golden Cobol. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 38-48 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -386,7 +386,7 @@
 		</skills>
 	</item>
 	<item id="7026" name="Seed: Golden Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Desert Coda. For best results, a level 17- 27 character must plant it on a level 17- 27 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Golden Coda. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 17-27 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -401,7 +401,7 @@
 		</skills>
 	</item>
 	<item id="7027" name="Seed: Great Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Great Cobol. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 41-51 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -416,7 +416,7 @@
 		</skills>
 	</item>
 	<item id="7028" name="Seed: Great Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Great Codran. For best results, a level 56- 66 character must plant it on a level 56- 66 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Great Codran. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 56-66 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -431,7 +431,7 @@
 		</skills>
 	</item>
 	<item id="7029" name="Seed: Great Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Great Codran. For best results, a level 56- 66 character must plant it on a level 56- 66 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Great Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 56-66 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -446,7 +446,7 @@
 		</skills>
 	</item>
 	<item id="7030" name="Seed: Alternative Blue Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Cobol. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 32-42 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -461,7 +461,7 @@
 		</skills>
 	</item>
 	<item id="7031" name="Seed: Alternative Blue Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50- 60 character must plant it on a level 50- 60 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Codran. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 50-60 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -476,7 +476,7 @@
 		</skills>
 	</item>
 	<item id="7032" name="Seed: Alternative Blue Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50- 60 character must plant it on a level 50- 60 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 50-60 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -491,7 +491,7 @@
 		</skills>
 	</item>
 	<item id="7033" name="Seed: Alternative Chilly Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Cobol. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 29-39 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -506,7 +506,7 @@
 		</skills>
 	</item>
 	<item id="7034" name="Seed: Alternative Chilly Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Coda. For best results, a level 11- 21 character must plant it on a level 11- 21 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Coda. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 11-21 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -521,7 +521,7 @@
 		</skills>
 	</item>
 	<item id="7035" name="Seed: Alternative Chilly Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47- 57 character must plant it on a level 47- 57 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Codran. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 47-57 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -536,7 +536,7 @@
 		</skills>
 	</item>
 	<item id="7036" name="Seed: Alternative Chilly Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47- 57 character must plant it on a level 47- 57 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 47-57 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -551,7 +551,7 @@
 		</skills>
 	</item>
 	<item id="7037" name="Seed: Alternative Desert Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59- 69 character must plant it on a level 59- 69 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Desert Codran. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 59-69 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -566,7 +566,7 @@
 		</skills>
 	</item>
 	<item id="7038" name="Seed: Alternative Desert Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59- 69 character must plant it on a level 59- 69 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Desert Codran. To get the fruit, plant this seed onto a monster in the Goddard area. For best results, a level 59-69 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -581,7 +581,7 @@
 		</skills>
 	</item>
 	<item id="7039" name="Seed: Alternative Golden Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Golden Cobol. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 38-48 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -596,7 +596,7 @@
 		</skills>
 	</item>
 	<item id="7040" name="Seed: Alternative Golden Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17- 27 character must plant it on a level 17- 27 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Golden Coda. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 17-27 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -611,7 +611,7 @@
 		</skills>
 	</item>
 	<item id="7041" name="Seed: Alternative Great Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Great Cobol. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 41-51 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -626,7 +626,7 @@
 		</skills>
 	</item>
 	<item id="7042" name="Seed: Alternative Great Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Great Codran. For best results, a level 56- 66 character must plant it on a level 56- 66 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Great Codran. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 56-66 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -641,7 +641,7 @@
 		</skills>
 	</item>
 	<item id="7043" name="Seed: Alternative Great Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Great Codran. For best results, a level 56- 66 character must plant it on a level 56- 66 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Great Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 56-66 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -656,7 +656,7 @@
 		</skills>
 	</item>
 	<item id="7044" name="Seed: Alternative Red Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26- 36 character must plant it on a level 26- 36 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Cobol. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 26-36 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -671,7 +671,7 @@
 		</skills>
 	</item>
 	<item id="7045" name="Seed: Alternative Red Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Codran. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -686,7 +686,7 @@
 		</skills>
 	</item>
 	<item id="7046" name="Seed: Alternative Red Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Codran. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -701,7 +701,7 @@
 		</skills>
 	</item>
 	<item id="7047" name="Seed: Alternative Sea Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 45- 55 character must plant it on a level 45- 55 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Sea Codran. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 45-55 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -716,7 +716,7 @@
 		</skills>
 	</item>
 	<item id="7048" name="Seed: Alternative Sea Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 45- 55 character must plant it on a level 45- 55 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Sea Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 45-55 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -731,7 +731,7 @@
 		</skills>
 	</item>
 	<item id="7049" name="Seed: Alternative Sea Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 45- 55 character must plant it on a level 45- 55 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Sea Codran. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 45-55 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -746,7 +746,7 @@
 		</skills>
 	</item>
 	<item id="7050" name="Seed: Alternative Twin Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Twin Codran. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -761,7 +761,7 @@
 		</skills>
 	</item>
 	<item id="7051" name="Seed: Red Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Red Cobol. For best results, a level 26- 36 character must plant it on a level 26- 36 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Red Cobol. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 26-36 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -776,7 +776,7 @@
 		</skills>
 	</item>
 	<item id="7052" name="Seed: Red Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Red Codran. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -791,7 +791,7 @@
 		</skills>
 	</item>
 	<item id="7053" name="Seed: Red Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Red Codran. To get the fruit, plant this seed onto a monster in the Oren area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -806,7 +806,7 @@
 		</skills>
 	</item>
 	<item id="7054" name="Seed: Sea Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Sea Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Sea Codran. To get the fruit, plant this seed onto a monster in the Dion area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -821,7 +821,7 @@
 		</skills>
 	</item>
 	<item id="7055" name="Seed: Sea Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Sea Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Sea Codran. To get the fruit, plant this seed onto a monster in the Giran area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -836,7 +836,7 @@
 		</skills>
 	</item>
 	<item id="7056" name="Seed: Sea Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Sea Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Sea Codran. To get the fruit, plant this seed onto a monster in the Aden area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -851,7 +851,7 @@
 		</skills>
 	</item>
 	<item id="7057" name="Seed: Twin Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Twin Codran. To get the fruit, plant this seed onto a monster in the Gludio area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -1182,7 +1182,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="7082" name="Guild Report" type="EtcItem">
-		<!-- Document containing information regarding Demon Allector. Double-click to view contents. -->
+		<!-- A document containing information about Demon Alector. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1201,7 +1201,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7083" name="Guild Report" type="EtcItem">
-		<!-- Document containing information regarding Demon Allector. Double-click to view contents. -->
+		<!-- A document containing information about Demon Alector. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1220,7 +1220,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7084" name="Guild Report" type="EtcItem">
-		<!-- Document containing information regarding Demon Allector. Double-click to view contents. -->
+		<!-- A document containing information about Demon Alector. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1239,7 +1239,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7085" name="Guild Report" type="EtcItem">
-		<!-- Document containing information regarding Great Angel Iconoclasis. Double-click to view contents. -->
+		<!-- A document containing information about Grand Guardian Angel. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1258,7 +1258,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7086" name="Guild Report" type="EtcItem">
-		<!-- Document containing information regarding Great Angel Iconoclasis. Double-click to view contents. -->
+		<!-- A document containing information about Grand Guardian Angel. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1277,7 +1277,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7087" name="Tattered Book" type="EtcItem">
-		<!-- Document containing information regarding demons. Double-click to view contents. -->
+		<!-- A document containing information about demons. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1296,7 +1296,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7088" name="Tattered Book" type="EtcItem">
-		<!-- Document containing information regarding demons. Double-click to view contents. -->
+		<!-- A document containing information about demons. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1315,7 +1315,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7089" name="Tattered Book" type="EtcItem">
-		<!-- Document containing information regarding demons. Double-click to view contents. -->
+		<!-- A document containing information about demons. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1334,7 +1334,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7090" name="Tattered Book" type="EtcItem">
-		<!-- Document containing information regarding demons. Double-click to view contents. -->
+		<!-- A document containing information about demons. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1353,7 +1353,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7091" name="Guild Report" type="EtcItem">
-		<!-- Secret document used in the guild. Double-click to view contents. -->
+		<!-- A secret document used in the Guild. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1372,7 +1372,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7092" name="Guild Report" type="EtcItem">
-		<!-- Secret document used in the guild. Double-click to view contents. -->
+		<!-- A secret document used in the Guild. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1391,7 +1391,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7093" name="Sculpture of the Fallen Knight" type="EtcItem">
-		<!-- Contains information regarding Adhil, the fallen knight. Double-click to view contents. -->
+		<!-- Contains information about Fallen Knight Adhil. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1409,7 +1409,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7094" name="Record of Mother Tree Guardian" type="EtcItem">
-		<!-- Contains information regarding Guardian of Mother Tree. Double-click to view contents. -->
+		<!-- Contains information about Mother Tree Guardian. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1463,7 +1463,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7097" name="Contemplation of White Wing Army" type="EtcItem">
-		<!-- Contains story of White Wing, the army of god. Double-click to view contents. -->
+		<!-- Contains the history of the divine White Wing Army. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1481,7 +1481,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7098" name="Record of Traitor Muhark" type="EtcItem">
-		<!-- Contains story of Traitor Muhark. Double-click to view contents. -->
+		<!-- Contains the history of Traitor Muhark. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1499,7 +1499,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7099" name="Secret Book of Khavatari" type="EtcItem">
-		<!-- Contains instructions for use of Khavatari's energy, as well as instructions on how to deal with those subdued by his devilishness. Double-click to view contents. -->
+		<!-- Contains instructions on how to use Khavatari energy and how to deal with the servants of his demonic will. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />

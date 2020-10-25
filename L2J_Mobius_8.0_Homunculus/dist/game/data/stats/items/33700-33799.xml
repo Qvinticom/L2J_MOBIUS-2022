@@ -121,7 +121,7 @@
 		</skills>
 	</item>
 	<item id="33710" name="Unidentified Shield of Nightmares" additionalName="Event" type="EtcItem">
-		<!-- Shield of Nightmares in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Shield) -->
+		<!-- Shield of Nightmare in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: Shield) -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="A" />
@@ -1095,7 +1095,7 @@
 		</stats>
 	</item>
 	<item id="33748" name="Small Kukurin Pouch" type="EtcItem">
-		<!-- Can acquire a Kukurin Feather Helm. -->
+		<!-- Double-click to obtain a Kukurin Feather Helm. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1116,7 +1116,7 @@
 		</capsuled_items>
 	</item>
 	<item id="33749" name="Big Kukurin Pouch" type="EtcItem">
-		<!-- Can acquire a Kukurin Feather Helm and a Kukurin Bracelet. -->
+		<!-- Double-click to obtain a Kukurin Feather Helm and a Kukurin Bracelet. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1646,7 +1646,7 @@
 		</skills>
 	</item>
 	<item id="33768" name="Talisman (R-grade) - Damage Reflection Resistance (Active)" type="Armor">
-		<!-- Increases Damage Reflection Resistance when equipped. Shadow weapon. -->
+		<!-- When used, increases Damage Reflection Resistance. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1686,7 +1686,7 @@
 		</skills>
 	</item>
 	<item id="33770" name="Talisman (R-grade) - Damage Reflection Resistance (Active)" type="Armor">
-		<!-- Increases Damage Reflection Resistance upon use. Shadow weapon. -->
+		<!-- When used, increases Damage Reflection Resistance. Shadow item. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1722,7 +1722,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="9570" min="1" max="1" chance="100" /> <!-- Red Soul Crystal - Stage 14 -->
+			<item id="9570" min="1" max="1" chance="100" /> <!-- Red Soul Crystal Lv. 14 -->
 			<item id="57" min="5000000" max="5000000" chance="100" /> <!-- Adena -->
 			<item id="6622" min="1" max="1" chance="100" /> <!-- Lesser Giant's Codex -->
 		</capsuled_items>
@@ -1744,7 +1744,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="9571" min="1" max="1" chance="100" /> <!-- Blue Soul Crystal - Stage 14 -->
+			<item id="9571" min="1" max="1" chance="100" /> <!-- Blue Soul Crystal Lv. 14 -->
 			<item id="57" min="5000000" max="5000000" chance="100" /> <!-- Adena -->
 			<item id="6622" min="1" max="1" chance="100" /> <!-- Lesser Giant's Codex -->
 		</capsuled_items>
@@ -1766,7 +1766,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="9572" min="1" max="1" chance="100" /> <!-- Green Soul Crystal - Stage 14 -->
+			<item id="9572" min="1" max="1" chance="100" /> <!-- Green Soul Crystal Lv. 14 -->
 			<item id="57" min="5000000" max="5000000" chance="100" /> <!-- Adena -->
 			<item id="6622" min="1" max="1" chance="100" /> <!-- Lesser Giant's Codex -->
 		</capsuled_items>
@@ -1851,7 +1851,7 @@
 		</skills>
 	</item>
 	<item id="33778" name="Soulshot (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on A-grade weapons. -->
+		<!-- Increases a weapon's attack power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1992,7 +1992,7 @@
 		</skills>
 	</item>
 	<item id="33785" name="Spiritshot (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on A-grade weapons. -->
+		<!-- Increases a weapon's magic power. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -2012,7 +2012,7 @@
 		</skills>
 	</item>
 	<item id="33786" name="Spiritshot (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on S-grade weapons. -->
+		<!-- Increases a weapon's magical power. Used with S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -2191,7 +2191,7 @@
 		</skills>
 	</item>
 	<item id="33795" name="Returning Hero's Vitality Replenishing Juice 3-unit Pack" additionalName="Event" type="EtcItem">
-		<!-- Contains 3 Returning Hero's Vitality Replenishing Juices that replenish your vitality for 4 hours. -->
+		<!-- Contains 3 Returning Hero's Vitality Replenishing Juices that replenish your vitality for 4 h.. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -2234,7 +2234,7 @@
 		</capsuled_items>
 	</item>
 	<item id="33797" name="Agathion - Tersi's Light" additionalName="Event" type="Armor">
-		<!-- Bracelet that can summon Tersi's Light, which was distributed by the temple to oppose Shilen's darkness. Requires room in the inventory and the weight limit to receive the Specter of Light. -->
+		<!-- Bracelet that can summon Tersi's Light, which was distributed by the temple to oppose Shillien's darkness. Requires room in the inventory and the weight limit to receive the Specter of Light. -->
 		<set name="icon" val="icon.bracelet_tersi_agathion" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />

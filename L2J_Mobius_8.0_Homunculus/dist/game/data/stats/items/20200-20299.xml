@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20200" name="Agathion - Love" additionalName="Vitality (3-day)" type="Armor">
-		<!-- This bracelet summons an Love Agathion. Agathion skill cooldown is 12 hours. -->
+		<!-- This bracelet summons an Love Agathion. Skill cooldown is 12 h. Cannot be exchanged/ dropped/ sold. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -24,7 +24,7 @@
 		</skills>
 	</item>
 	<item id="20201" name="Agathion - Love" additionalName="Vitality (7-day)" type="Armor">
-		<!-- This bracelet summons an Love Agathion. Agathion skill cooldown is 12 hours. -->
+		<!-- A bracelet for summoning Agathion Love. Primary skill cooldown: 12 h. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -47,7 +47,7 @@
 		</skills>
 	</item>
 	<item id="20202" name="Agathion - Love" additionalName="Vitality (15-day)" type="Armor">
-		<!-- This bracelet summons an Love Agathion. Agathion skill cooldown is 12 hours. -->
+		<!-- A bracelet for summoning Agathion Love. Primary skill cooldown: 12 h. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -70,7 +70,7 @@
 		</skills>
 	</item>
 	<item id="20203" name="Agathion - Love" additionalName="Vitality (30-day)" type="Armor">
-		<!-- This bracelet summons an Love Agathion. Agathion skill cooldown is 12 hours. -->
+		<!-- A bracelet for summoning Agathion Love. Primary skill cooldown: 12 h. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -93,7 +93,7 @@
 		</skills>
 	</item>
 	<item id="20204" name="Queen Ant's Ring (Event)" additionalName="3-day" type="Armor">
-		<!-- Event Queen Ant's Ring. MP+21, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increase, P. Critical Damage increase, hold tolerance +20%, and hold Atk. Rate +20%. Only one effect is applied even when the two identical rings are worn. -->
+		<!-- Temporary item. MP +21, Infection Atk. Rate and Resistance +30%, Obstruction Atk. Rate and Resistance +20%. Increases P. Accuracy and Critical Damage. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -119,7 +119,7 @@
 		</stats>
 	</item>
 	<item id="20205" name="Queen Ant's Ring (Event)" additionalName="7-day" type="Armor">
-		<!-- Event Queen Ant's Ring. MP+21, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increase, P. Critical Damage increase, hold tolerance +20%, and hold Atk. Rate +20%. Only one effect is applied even when the two identical rings are worn. -->
+		<!-- Temporary item. MP +21, Infection Atk. Rate and Resistance +30%, Obstruction Atk. Rate and Resistance +20%. Increases P. Accuracy and Critical Damage. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -145,7 +145,7 @@
 		</stats>
 	</item>
 	<item id="20206" name="Queen Ant's Ring (Event)" additionalName="15-day" type="Armor">
-		<!-- Event Queen Ant's Ring. MP+21, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increase, P. Critical Damage increase, hold tolerance +20%, and hold Atk. Rate +20%. Only one effect is applied even when the two identical rings are worn. -->
+		<!-- Temporary item. MP +21, Infection Atk. Rate and Resistance +30%, Obstruction Atk. Rate and Resistance +20%. Increases P. Accuracy, Critical Damage. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -171,7 +171,7 @@
 		</stats>
 	</item>
 	<item id="20207" name="Zaken's Earring (Event)" additionalName="3-day" type="Armor">
-		<!-- Event Zaken's Earring. MP+31, Bleed Resistance +30%, Bleed Atk. Rate +30%, Heal Amount increase, Vampiric Rage Effect, Stun/ Mental Attack Resistance +20%, and Stun/ Mental Atk. Rate +20%. Only one effect is applied even when the two identical earrings are worn. -->
+		<!-- Temporary item. MP +31, Infection Resistance/ Atk. Rate +30%, Confusion Resistance/ Atk. Rate +20%. Increases Received Healing, grants Vampiric Rage effect. Effects of two identical earrings do not stack. When equipped with Blessed Zaken's Earring, only the effect of the latter is applied. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -197,7 +197,7 @@
 		</stats>
 	</item>
 	<item id="20208" name="Zaken's Earring (Event)" additionalName="7-day" type="Armor">
-		<!-- Event Zaken's Earring. MP+31, Bleed Resistance +30%, Bleed Atk. Rate +30%, Heal Amount increase, Vampiric Rage Effect, Stun/ Mental Attack Resistance +20%, and Stun/ Mental Atk. Rate +20%. Only one effect is applied even when the two identical earrings are worn. -->
+		<!-- Temporary item. MP +31, Infection Resistance/ Atk. Rate +30%, Confusion Resistance/ Atk. Rate +20%. Increases Received Healing, grants Vampiric Rage effect. Effects of two identical earrings do not stack. When equipped with Blessed Zaken's Earring, only the effect of the latter is applied. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -223,7 +223,7 @@
 		</stats>
 	</item>
 	<item id="20209" name="Zaken's Earring (Event)" additionalName="15-day" type="Armor">
-		<!-- Event Zaken's Earring. MP+31, Bleed Resistance +30%, Bleed Atk. Rate +30%, Heal Amount increase, Vampiric Rage Effect, Stun/ Mental Attack Resistance +20%, and Stun/ Mental Atk. Rate +20%. Only one effect is applied even when the two identical earrings are worn. -->
+		<!-- Temporary item. MP +31, Infection Resistance/ Atk. Rate +30%, Confusion Resistance/ Atk. Rate +20%. Increases Received Healing, grants Vampiric Rage effect. Effects of two identical earrings do not stack. When equipped with Blessed Zaken's Earring, only the effect of the latter is applied. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -249,7 +249,7 @@
 		</stats>
 	</item>
 	<item id="20210" name="Charming Valentine Gift Set" type="EtcItem">
-		<!-- Wrapped Pack containing Charming Cupid Agathion and some scrumptious Chocolate Cookies. -->
+		<!-- Double-click to obtain Charming Cupid Agathion and some scrumptious Chocolate Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -267,12 +267,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20212" min="1" max="1" chance="100" /> <!-- Agathion - Charming Cupid -->
+			<item id="20212" min="1" max="1" chance="100" /> <!-- Agathion Charming Cupid -->
 			<item id="20214" min="15" max="15" chance="100" /> <!-- Chocolate Cookie -->
 		</capsuled_items>
 	</item>
 	<item id="20211" name="Naughty Valentine Gift Set" type="EtcItem">
-		<!-- Wrapped Pack containing Naughty Cupid Agathion and some scrumptious Chocolate Cookies. -->
+		<!-- Double-click to obtain Naughty Cupid Agathion and some scrumptious Chocolate Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -290,12 +290,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20213" min="1" max="1" chance="100" /> <!-- Agathion - Naughty Cupid -->
+			<item id="20213" min="1" max="1" chance="100" /> <!-- Agathion Naughty Cupid -->
 			<item id="20214" min="15" max="15" chance="100" /> <!-- Chocolate Cookie -->
 		</capsuled_items>
 	</item>
 	<item id="20212" name="Agathion - Charming Cupid" type="Armor">
-		<!-- Bracelet that summons a Charming Cupid Agathion. -->
+		<!-- A bracelet for summoning Agathion Charming Cupid. -->
 		<set name="icon" val="BranchSys.icon.br_aga_cupid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -318,7 +318,7 @@
 		</skills>
 	</item>
 	<item id="20213" name="Agathion - Naughty Cupid" type="Armor">
-		<!-- Bracelet that summons a Naughty Cupid Agathion. -->
+		<!-- A bracelet for summoning Agathion Naughty Cupid. -->
 		<set name="icon" val="BranchSys.icon.br_aga_cupid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -363,7 +363,7 @@
 		</skills>
 	</item>
 	<item id="20215" name="Agathion - White Maneki Neko Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - White Maneki Neko. -->
+		<!-- Double-click to obtain Agathion White Maneki Neko. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -381,11 +381,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20221" min="1" max="1" chance="100" /> <!-- Agathion - White Maneki Neko -->
+			<item id="20221" min="1" max="1" chance="100" /> <!-- Agathion White Maneki Neko -->
 		</capsuled_items>
 	</item>
 	<item id="20216" name="Agathion - Black Maneki Neko Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Black Maneki Neko. -->
+		<!-- Double-click to obtain Agathion Black Maneki Neko. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -403,11 +403,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20222" min="1" max="1" chance="100" /> <!-- Agathion - Black Maneki Neko -->
+			<item id="20222" min="1" max="1" chance="100" /> <!-- Agathion Black Maneki Neko -->
 		</capsuled_items>
 	</item>
 	<item id="20217" name="Agathion - Brown Maneki Neko Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Brown Maneki Neko. -->
+		<!-- Double-click to obtain Agathion Brown Maneki Neko. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -425,11 +425,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20223" min="1" max="1" chance="100" /> <!-- Agathion - Brown Maneki Neko -->
+			<item id="20223" min="1" max="1" chance="100" /> <!-- Agathion Brown Maneki Neko -->
 		</capsuled_items>
 	</item>
 	<item id="20218" name="Agathion - White Maneki Neko Pack (7-day)" additionalName="Resurrection" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - White Maneki Neko (7-day). -->
+		<!-- Double-click to obtain Agathion White Maneki Neko (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -447,11 +447,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20224" min="1" max="1" chance="100" /> <!-- Agathion - White Maneki Neko - Resurrection (7-day) -->
+			<item id="20224" min="1" max="1" chance="100" /> <!-- Agathion White Maneki Neko - Resurrection / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20219" name="Agathion - Black Maneki Neko Pack (7-day)" additionalName="Escape" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Black Maneki Neko (7-day limit). -->
+		<!-- Double-click to obtain Agathion Black Maneki Neko (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -469,11 +469,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20225" min="1" max="1" chance="100" /> <!-- Agathion - Black Maneki Neko - Escape (7-day) -->
+			<item id="20225" min="1" max="1" chance="100" /> <!-- Agathion Black Maneki Neko - Escape / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20220" name="Agathion - Brown Maneki Neko Pack (7-day)" additionalName="Vitality" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Brown Maneki Neko (7-day limit). -->
+		<!-- Double-click to obtain Agathion Brown Maneki Neko (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -491,11 +491,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20226" min="1" max="1" chance="100" /> <!-- Agathion - Brown Maneki Neko - Vitality (7-day) -->
+			<item id="20226" min="1" max="1" chance="100" /> <!-- Agathion Brown Maneki Neko - Vitality / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20221" name="Agathion - White Maneki Neko" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - White Maneki Neko. -->
+		<!-- A bracelet for summoning Agathion White Maneki Neko. -->
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -519,7 +519,7 @@
 		</skills>
 	</item>
 	<item id="20222" name="Agathion - Black Maneki Neko" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Black Maneki Neko. -->
+		<!-- A bracelet for summoning Agathion Black Maneki Neko. -->
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -543,7 +543,7 @@
 		</skills>
 	</item>
 	<item id="20223" name="Agathion - Brown Maneki Neko" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Brown Maneki Neko. -->
+		<!-- Summons Agathion Brown Maneki Neko. -->
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -567,7 +567,7 @@
 		</skills>
 	</item>
 	<item id="20224" name="Agathion - White Maneki Neko" additionalName="Resurrection (7-day)" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - White Maneki Neko. Cooldown is 12 hours. -->
+		<!-- A bracelet for summoning Agathion White Maneki Neko. Special skill's cooldown: 12 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -591,7 +591,7 @@
 		</skills>
 	</item>
 	<item id="20225" name="Agathion - Black Maneki Neko" additionalName="Escape (7-day)" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Black Maneki Neko. Cooldown is 12 hours. -->
+		<!-- A bracelet for summoning Agathion Brown Maneki Neko. Special skill's cooldown: 12 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -615,7 +615,7 @@
 		</skills>
 	</item>
 	<item id="20226" name="Agathion - Brown Maneki Neko" additionalName="Vitality (7-day)" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Brown Maneki Neko. Cooldown is 1 hour. -->
+		<!-- A bracelet for summoning Agathion Brown Maneki Neko. Special skill's cooldown: 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_maneki_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -639,7 +639,7 @@
 		</skills>
 	</item>
 	<item id="20227" name="Agathion - One-eyed Bat Drove Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - One-eyed Bat Drove. -->
+		<!-- Double-click to obtain Agathion One-eyed Bat Drove. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -657,11 +657,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20230" min="1" max="1" chance="100" /> <!-- Agathion - One-eyed Bat Drove -->
+			<item id="20230" min="1" max="1" chance="100" /> <!-- Agathion One-eyed Bat Drove -->
 		</capsuled_items>
 	</item>
 	<item id="20228" name="Agathion - One-eyed Bat Drove Pack (7-day)" additionalName="Dark Resistance" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - One-eyed Bat Drove (7-day limit). Cooldown is 1 hour. -->
+		<!-- Double-click to obtain Agathion One-eyed Bat Drove (7-day). Special skill's cooldown: 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -679,11 +679,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20231" min="1" max="1" chance="100" /> <!-- Agathion - One-eyed Bat Drove - Dark Resistance (7-day) -->
+			<item id="20231" min="1" max="1" chance="100" /> <!-- Agathion One-eyed Bat Drove - Dark Resistance / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20229" name="Agathion - One-eyed Bat Drove Pack (7-day)" additionalName="Vitality" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - One-eyed Bat Drove (7-day limit). Cooldown is 1 hour. -->
+		<!-- Double-click to obtain Agathion One-eyed Bat Drove (7-day). Special skill's cooldown: 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -701,11 +701,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20232" min="1" max="1" chance="100" /> <!-- Agathion - One-eyed Bat Drove - Vitality (7-day) -->
+			<item id="20232" min="1" max="1" chance="100" /> <!-- Agathion One-eyed Bat Drove - Vitality / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20230" name="Agathion - One-eyed Bat Drove" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - One-eyed Bat Drove. -->
+		<!-- A bracelet for summoning Agathion One-eyed Bat Drove. -->
 		<set name="icon" val="BranchSys.icon.br_aga_bat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -728,7 +728,7 @@
 		</skills>
 	</item>
 	<item id="20231" name="Agathion - One-eyed Bat Drove" additionalName="Dark Resistance (7-day)" type="Armor">
-		<!-- Can summon an Agathion - One-eyed Bat Drove when equipped. 7-day. Cooldown is 1 hour. -->
+		<!-- A bracelet for summoning Agathion One-eyed Bat Drove. Special skill's cooldown: 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_bat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -752,7 +752,7 @@
 		</skills>
 	</item>
 	<item id="20232" name="Agathion - One-eyed Bat Drove" additionalName="Vitality (7-day)" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - One-eyed Bat Drove. Cooldown is 1 hour. -->
+		<!-- A bracelet for summoning Agathion One-eyed Bat Drove. Special skill's cooldown: 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_bat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -776,7 +776,7 @@
 		</skills>
 	</item>
 	<item id="20233" name="Agathion - Pegasus Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Pegasus. -->
+		<!-- Double-click to obtain Agathion Pegasus. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -794,11 +794,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20236" min="1" max="1" chance="100" /> <!-- Agathion - Pegasus -->
+			<item id="20236" min="1" max="1" chance="100" /> <!-- Agathion Pegasus -->
 		</capsuled_items>
 	</item>
 	<item id="20234" name="Agathion - Pegasus Pack (7-day)" additionalName="Wind Walk" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Pegasus (7-day limit). -->
+		<!-- Double-click to obtain Agathion Pegasus (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -816,11 +816,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20237" min="1" max="1" chance="100" /> <!-- Agathion - Pegasus - Wind Walk (7-day) -->
+			<item id="20237" min="1" max="1" chance="100" /> <!-- Agathion Pegasus - Wind Walk / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20235" name="Agathion - Pegasus Pack (7-day)" additionalName="Escape" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Pegasus (7-day limit). -->
+		<!-- Double-click to obtain Agathion Pegasus (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -838,11 +838,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20238" min="1" max="1" chance="100" /> <!-- Agathion - Pegasus - Escape (7-day) -->
+			<item id="20238" min="1" max="1" chance="100" /> <!-- Agathion Pegasus - Escape / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20236" name="Agathion - Pegasus" type="Armor">
-		<!-- Bracelet that summons an Agathion - Pegasus. -->
+		<!-- A bracelet for summoning Agathion Pegasus. -->
 		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -865,7 +865,7 @@
 		</skills>
 	</item>
 	<item id="20237" name="Agathion - Pegasus" additionalName="Wind Walk (7-day)" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Pegasus. Cooldown is 4 hours. -->
+		<!-- A bracelet for summoning Agathion Pegasus. Special skill's cooldown: 4 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -889,7 +889,7 @@
 		</skills>
 	</item>
 	<item id="20238" name="Agathion - Pegasus" additionalName="Escape (7-day)" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Pegasus. Cooldown is 12 hours. -->
+		<!-- A bracelet for summoning Agathion Pegasus. Special skill's cooldown: 12 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -913,7 +913,7 @@
 		</skills>
 	</item>
 	<item id="20239" name="Yellow-robed Tojigong Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Yellow-robed Tojigong. -->
+		<!-- Double-click to obtain Agathion Yellow-robed Tojigong. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -931,11 +931,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20245" min="1" max="1" chance="100" /> <!-- Agathion - Yellow-robed Tojigong -->
+			<item id="20245" min="1" max="1" chance="100" /> <!-- Agathion Yellow-robed Tojigong -->
 		</capsuled_items>
 	</item>
 	<item id="20240" name="Blue-robed Tojigong Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blue-robed Tojigong. -->
+		<!-- Double-click to obtain Agathion Blue-robed Tojigong. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -953,11 +953,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20246" min="1" max="1" chance="100" /> <!-- Agathion - Blue-robed Tojigong -->
+			<item id="20246" min="1" max="1" chance="100" /> <!-- Agathion Blue-robed Tojigong -->
 		</capsuled_items>
 	</item>
 	<item id="20241" name="Green-robed Tojigong Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Green-robed Tojigong. -->
+		<!-- Double-click to obtain Agathion Green-robed Tojigong. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -975,11 +975,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20247" min="1" max="1" chance="100" /> <!-- Agathion - Green-robed Tojigong -->
+			<item id="20247" min="1" max="1" chance="100" /> <!-- Agathion Green-robed Tojigong -->
 		</capsuled_items>
 	</item>
 	<item id="20242" name="Yellow-robed Tojigong Pack (7-day)" additionalName="Greater Heal" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Yellow-robed Tojigong (7-day limit). -->
+		<!-- Double-click to obtain Agathion Yellow-robed Tojigong (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -997,11 +997,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20248" min="1" max="1" chance="100" /> <!-- Agathion - Yellow-robed Tojigong - Greater Heal (7-day) -->
+			<item id="20248" min="1" max="1" chance="100" /> <!-- Agathion Yellow-robed Tojigong - Greater Heal / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20243" name="Blue-robed Tojigong Pack (7-day)" additionalName="Reflect Damage" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blue-robed Tojigong (7-day limit). -->
+		<!-- Double-click to obtain Agathion Blue-robed Tojigong (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1019,11 +1019,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20249" min="1" max="1" chance="100" /> <!-- Agathion - Blue-robed Tojigong - Reflect Damage (7-day) -->
+			<item id="20249" min="1" max="1" chance="100" /> <!-- Agathion Blue-robed Tojigong - Reflect Damage / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20244" name="Green-robed Tojigong Pack (7-day)" additionalName="Mana Regeneration" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Green-robed Tojigong (7-day limit). -->
+		<!-- Double-click to obtain Agathion Green-robed Tojigong (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1041,11 +1041,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20250" min="1" max="1" chance="100" /> <!-- Agathion - Green-robed Tojigong - Mana Regeneration (7-day) -->
+			<item id="20250" min="1" max="1" chance="100" /> <!-- Agathion Green-robed Tojigong - Mana Regeneration / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20245" name="Agathion - Yellow-robed Tojigong" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Yellow-robed Tojigong. -->
+		<!-- Summons Agathion Yellow-robed Tojigong. -->
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1068,7 +1068,7 @@
 		</skills>
 	</item>
 	<item id="20246" name="Agathion - Blue-robed Tojigong" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Blue-robed Tojigong. -->
+		<!-- Summons Agathion Blue-robed Tojigong. -->
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1091,7 +1091,7 @@
 		</skills>
 	</item>
 	<item id="20247" name="Agathion - Green-robed Tojigong" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Green-robed Tojigong. -->
+		<!-- Summons Agathion Green-robed Tojigong. -->
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1114,7 +1114,7 @@
 		</skills>
 	</item>
 	<item id="20248" name="Agathion - Yellow-robed Tojigong" additionalName="Greater Heal (7-day)" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Yellow-robed Tojigong. Cooldown is 4 hours. -->
+		<!-- Summons Agathion Yellow-robed Tojigong. Cooldown: 4 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1138,7 +1138,7 @@
 		</skills>
 	</item>
 	<item id="20249" name="Agathion - Blue-robed Tojigong" additionalName="Reflect Damage (7-day)" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Blue-robed Tojigong. Cooldown is 1 hour. -->
+		<!-- Summons Agathion Blue-robed Tojigong. Cooldown: 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1162,7 +1162,7 @@
 		</skills>
 	</item>
 	<item id="20250" name="Agathion - Green-robed Tojigong" additionalName="Mana Regeneration (7-day)" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Green-robed Tojigong. Cooldown is 1 hour. -->
+		<!-- Summons Agathion Green-robed Tojigong. Cooldown: 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_tozi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1186,7 +1186,7 @@
 		</skills>
 	</item>
 	<item id="20251" name="Agathion - Bugbear Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Bugbear. -->
+		<!-- Double-click to obtain Agathion Bugbear. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1204,11 +1204,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20252" min="1" max="1" chance="100" /> <!-- Agathion - Bugbear -->
+			<item id="20252" min="1" max="1" chance="100" /> <!-- Agathion Bugbear -->
 		</capsuled_items>
 	</item>
 	<item id="20252" name="Agathion - Bugbear" type="Armor">
-		<!-- Bracelet capable of summoning an Agathion - Bugbear. -->
+		<!-- A bracelet for summoning Agathion Bugbear. -->
 		<set name="icon" val="BranchSys.icon.br_aga_bugbear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1231,7 +1231,7 @@
 		</skills>
 	</item>
 	<item id="20253" name="Agathion - Love (Event)" type="Armor">
-		<!-- Capable of summoning an Love Agathion. -->
+		<!-- Summons Agathion Love. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1252,7 +1252,7 @@
 		</skills>
 	</item>
 	<item id="20254" name="Love Agathion Pack (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing Love Agathion Seal Bracelet. -->
+		<!-- Double-click to obtain sealed Agathion Love. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1268,7 +1268,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20253" min="1" max="1" chance="100" /> <!-- Agathion - Love (Event) -->
+			<item id="20253" min="1" max="1" chance="100" /> <!-- Agathion Love - Event -->
 		</capsuled_items>
 	</item>
 	<item id="20255" name="Baguette Sword" additionalName="7-day" type="Weapon">
@@ -1873,7 +1873,7 @@
 		</skills>
 	</item>
 	<item id="20273" name="Cream Puff Herb" type="EtcItem">
-		<!-- Event item. Mysterious herb that recovers Vitality upon acquiring XP. -->
+		<!-- Event item. Vitality is replenished with XP gain. -->
 		<set name="icon" val="BranchSys.icon.br_herb_of_cream_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1970,7 +1970,7 @@
 		</skills>
 	</item>
 	<item id="20278" name="Gold Afro Hair Pack" type="EtcItem">
-		<!-- Pack with Gold Afro. Uses 2 hair accessory slots. -->
+		<!-- Double-click to obtain Gold Afro. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1993,7 +1993,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20279" name="Pink Afro Hair Pack" type="EtcItem">
-		<!-- Pack with Pink Afro. Uses 2 hair accessory slots. -->
+		<!-- Double-click to obtain Pink Afro. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2016,7 +2016,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20280" name="Agathion - Red Sumo Wrestler Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Red Sumo Wrestler. -->
+		<!-- Double-click to obtain Agathion Red Sumo Wrestler. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2034,11 +2034,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20297" min="1" max="1" chance="100" /> <!-- Agathion - Red Sumo Wrestler -->
+			<item id="20297" min="1" max="1" chance="100" /> <!-- Agathion Red Sumo Wrestler -->
 		</capsuled_items>
 	</item>
 	<item id="20281" name="Agathion - Red Sumo Wrestler Pack (7-day)" additionalName="Death Whisper" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Red Sumo Wrestler (7-day). -->
+		<!-- Double-click to obtain Agathion Red Sumo Wrestler (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2056,11 +2056,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20298" min="1" max="1" chance="100" /> <!-- Agathion - Red Sumo Wrestler - Death Whisper (7-day) -->
+			<item id="20298" min="1" max="1" chance="100" /> <!-- Agathion Red Sumo Wrestler - Death Whisper / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20282" name="Agathion - Blue Sumo Wrestler Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blue Sumo Wrestler. -->
+		<!-- Double-click to obtain Agathion Blue Sumo Wrestler. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2078,11 +2078,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20299" min="1" max="1" chance="100" /> <!-- Agathion - Blue Sumo Wrestler -->
+			<item id="20299" min="1" max="1" chance="100" /> <!-- Agathion Blue Sumo Wrestler -->
 		</capsuled_items>
 	</item>
 	<item id="20283" name="Agathion - Blue Sumo Wrestler Pack (7-day)" additionalName="Wild Magic" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blue Sumo Wrestler (7-day). -->
+		<!-- Double-click to obtain Agathion Blue Sumo Wrestler (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2100,11 +2100,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20300" min="1" max="1" chance="100" /> <!-- Agathion - Blue Sumo Wrestler - Wild Magic (7-day) -->
+			<item id="20300" min="1" max="1" chance="100" /> <!-- Agathion Blue Sumo Wrestler - Wild Magic / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20284" name="Agathion - Great Sumo Match Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Great Sumo Match. -->
+		<!-- Double-click to obtain Agathion Great Sumo Match. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2122,11 +2122,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20301" min="1" max="1" chance="100" /> <!-- Agathion - Great Sumo Match -->
+			<item id="20301" min="1" max="1" chance="100" /> <!-- Agathion Great Sumo Match -->
 		</capsuled_items>
 	</item>
 	<item id="20285" name="Agathion - Great Sumo Match Pack (7-day)" additionalName="Big Head/ Firework" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Great Sumo Match (7-day). -->
+		<!-- Double-click to obtain Agathion Great Sumo Match (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2144,11 +2144,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20302" min="1" max="1" chance="100" /> <!-- Agathion - Great Sumo Match - Big Head/ Firework (7-day) -->
+			<item id="20302" min="1" max="1" chance="100" /> <!-- Agathion Great Sumo Match - Big Head / Firework / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20286" name="Agathion - Button-eyed Bear Doll Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Button-eyed Bear Doll. -->
+		<!-- Double-click to obtain Agathion Teddy Boy. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2166,11 +2166,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20303" min="1" max="1" chance="100" /> <!-- Agathion - Button-eyed Bear Doll -->
+			<item id="20303" min="1" max="1" chance="100" /> <!-- Agathion Button-eyed Bear Doll -->
 		</capsuled_items>
 	</item>
 	<item id="20287" name="Agathion - Button-eyed Bear Doll Pack (7-day)" additionalName="Escape" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Button-eyed Bear Doll (7-day). -->
+		<!-- Double-click to obtain Agathion Teddy Boy (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2188,11 +2188,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20304" min="1" max="1" chance="100" /> <!-- Agathion - Button-eyed Bear Doll - Escape (7-day) -->
+			<item id="20304" min="1" max="1" chance="100" /> <!-- Agathion Button-eyed Bear Doll - Escape / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20288" name="Agathion - Button-eyed Bear Doll Pack (7-day)" additionalName="Resurrection" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Button-eyed Bear Doll (7-day). -->
+		<!-- Double-click to obtain Agathion Teddy Boy (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2210,11 +2210,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20305" min="1" max="1" chance="100" /> <!-- Agathion - Button-eyed Bear Doll - Resurrection (7-day) -->
+			<item id="20305" min="1" max="1" chance="100" /> <!-- Agathion Button-eyed Bear Doll - Resurrection / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20289" name="Agathion - Button-eyed Bear Doll Pack (7-day)" additionalName="Vitality" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Button-eyed Bear Doll (7-day). -->
+		<!-- Double-click to obtain Agathion Teddy Boy (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2232,11 +2232,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20306" min="1" max="1" chance="100" /> <!-- Agathion - Button-eyed Bear Doll - Vitality (7-day) -->
+			<item id="20306" min="1" max="1" chance="100" /> <!-- Agathion Button-eyed Bear Doll - Vitality / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20290" name="Agathion - God of Fortune Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - God of Fortune. -->
+		<!-- Double-click to obtain Agathion God of Fortune. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2254,11 +2254,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20307" min="1" max="1" chance="100" /> <!-- Agathion - God of Fortune -->
+			<item id="20307" min="1" max="1" chance="100" /> <!-- Agathion God of Fortune -->
 		</capsuled_items>
 	</item>
 	<item id="20291" name="Agathion - God of Fortune Pack (7-day)" additionalName="Vitality" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - God of Fortune (7-day). -->
+		<!-- Double-click to obtain Agathion God of Fortune (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2276,11 +2276,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20308" min="1" max="1" chance="100" /> <!-- Agathion - God of Fortune - Vitality (7-day) -->
+			<item id="20308" min="1" max="1" chance="100" /> <!-- Agathion God of Fortune - Vitality / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20292" name="Agathion - Dryad Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Dryad. -->
+		<!-- Double-click to obtain Agathion Dryad. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2298,11 +2298,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20309" min="1" max="1" chance="100" /> <!-- Agathion - Dryad -->
+			<item id="20309" min="1" max="1" chance="100" /> <!-- Agathion Dryad -->
 		</capsuled_items>
 	</item>
 	<item id="20293" name="Agathion - Wonboso Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Wonboso. -->
+		<!-- Double-click to obtain Agathion Wonboso. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2320,11 +2320,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20310" min="1" max="1" chance="100" /> <!-- Agathion - Wonboso -->
+			<item id="20310" min="1" max="1" chance="100" /> <!-- Agathion Wonboso -->
 		</capsuled_items>
 	</item>
 	<item id="20294" name="Agathion - Wonboso Pack (7-day)" additionalName="Wind Walk" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Wonboso (7-day). -->
+		<!-- Double-click to obtain Agathion Wonboso (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2342,11 +2342,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20311" min="1" max="1" chance="100" /> <!-- Agathion - Wonboso - Wind Walk (7-day) -->
+			<item id="20311" min="1" max="1" chance="100" /> <!-- Agathion Wonboso - Wind Walk / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20295" name="Agathion - Daewoonso Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Daewoonso. -->
+		<!-- Double-click to obtain Agathion Daewoonso. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2364,11 +2364,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20312" min="1" max="1" chance="100" /> <!-- Agathion - Daewoonso -->
+			<item id="20312" min="1" max="1" chance="100" /> <!-- Agathion Daewoonso -->
 		</capsuled_items>
 	</item>
 	<item id="20296" name="Agathion - Daewoonso Pack (7-day)" additionalName="New Year's Gift" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Daewoonso (7-day). -->
+		<!-- Double-click to obtain Agathion Daewoonso (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2386,11 +2386,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20313" min="1" max="1" chance="100" /> <!-- Agathion - Daewoonso - New Year's Gift (7-day) -->
+			<item id="20313" min="1" max="1" chance="100" /> <!-- Agathion Daewoonso - Daewoonso / 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="20297" name="Agathion - Red Sumo Wrestler" type="Armor">
-		<!-- Bracelet that summons Agathion - Red Sumo Wrestler. -->
+		<!-- A bracelet for summoning Agathion Red Sumo Wrestler. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -2414,7 +2414,7 @@
 		</skills>
 	</item>
 	<item id="20298" name="Agathion - Red Sumo Wrestler" additionalName="Death Whisper (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Red Sumo Wrestler. Cooldown is 1 hour. -->
+		<!-- A bracelet for summoning Agathion Red Sumo Wrestler. Special skill's cooldown: 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -2438,7 +2438,7 @@
 		</skills>
 	</item>
 	<item id="20299" name="Agathion - Blue Sumo Wrestler" type="Armor">
-		<!-- Bracelet that summons Agathion - Blue Sumo Wrestler. -->
+		<!-- A bracelet for summoning Agathion Blue Sumo Wrestler. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />

@@ -63,7 +63,8 @@ public enum CommonSkill
 	FROG_TRANSFORM(6201, 1),
 	CHILD_TRANSFORM(6202, 1),
 	NATIVE_TRANSFORM(6203, 1),
-	LUCKY_CLOVER(18103, 1);
+	LUCKY_CLOVER(18103, 1),
+	TRANQUIL_SOUL(32935, 1);
 	
 	private final SkillHolder _holder;
 	

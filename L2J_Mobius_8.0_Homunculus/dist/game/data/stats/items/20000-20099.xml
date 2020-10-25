@@ -65,7 +65,7 @@
 		</skills>
 	</item>
 	<item id="20004" name="Vitality Ginseng" type="EtcItem">
-		<!-- Event item. Recovers Vitality upon acquiring XP Vitality item with limited usage. -->
+		<!-- Event item. Vitality is replenished with XP gain. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.etc_ginseng_recovery_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -96,7 +96,7 @@
 		</skills>
 	</item>
 	<item id="20006" name="Agathion - Majo" type="Armor">
-		<!-- Can summon Majo when equipped. -->
+		<!-- A bracelet for summoning Agathion Majo. -->
 		<set name="icon" val="BranchSys.icon.br_bracelet_aga_mazu_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -165,7 +165,7 @@
 		</skills>
 	</item>
 	<item id="20009" name="Agathion - Majo" additionalName="Big Head (30-day)" type="Armor">
-		<!-- Can summon Majo when equipped. -->
+		<!-- A bracelet for summoning Agathion Majo. -->
 		<set name="icon" val="BranchSys.icon.br_bracelet_aga_mazu_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -239,7 +239,7 @@
 		</skills>
 	</item>
 	<item id="20012" name="Agathion - Plaipitak" type="Armor">
-		<!-- Can summon Plaipitak when equipped. -->
+		<!-- A bracelet for summoning Agathion Plaipitak. -->
 		<set name="icon" val="BranchSys.icon.br_bracelet_aga_pitak_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -262,7 +262,7 @@
 		</skills>
 	</item>
 	<item id="20013" name="Agathion - Plaipitak" additionalName="Big Head (30-day)" type="Armor">
-		<!-- Can summon Plaipitak when equipped. -->
+		<!-- A bracelet for summoning Agathion Plaipitak. -->
 		<set name="icon" val="BranchSys.icon.br_bracelet_aga_pitak_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -286,7 +286,7 @@
 		</skills>
 	</item>
 	<item id="20014" name="Agathion - Plaipitak" additionalName="Resurrection (30-day)" type="Armor">
-		<!-- Can summon Plaipitak when equipped. -->
+		<!-- A bracelet for summoning Agathion Plaipitak. -->
 		<set name="icon" val="BranchSys.icon.br_bracelet_aga_pitak_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -311,7 +311,7 @@
 		</skills>
 	</item>
 	<item id="20015" name="Agathion - Plaipitak" additionalName="Escape (30-day)" type="Armor">
-		<!-- Can summon Plaipitak when equipped. -->
+		<!-- A bracelet for summoning Agathion Plaipitak. -->
 		<set name="icon" val="BranchSys.icon.br_bracelet_aga_pitak_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -409,7 +409,7 @@
 		</skills>
 	</item>
 	<item id="20020" name="Uniform Hat" type="Armor">
-		<!-- Stylish uniform hat. Uses 2 hair accessory slots. -->
+		<!-- A very fancy hat. Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_Uniform_Hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -437,7 +437,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="20022" name="Ruthless Tribe Mask" type="Armor">
-		<!-- Mask worn by a savage tribe. -->
+		<!-- A mask which formerly belonged to Looters. -->
 		<set name="icon" val="BranchSys.icon.br_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -451,7 +451,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="20023" name="Ribbon Hairband" type="Armor">
-		<!-- Large ribbon hair accessory. Exclusive for female characters. -->
+		<!-- A ribbon-like hair accessory, intended for female characters only. -->
 		<set name="icon" val="BranchSys.icon.br_Ribbon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -495,7 +495,7 @@
 		<set name="is_premium" val="true" />
 	</item>
 	<item id="20026" name="Extra Pass: Kamaloka (Hall of the Abyss)" type="EtcItem">
-		<!-- Extra entrance pass that lets you enter Kamaloka (Hall of the Abyss). Can cancel the limit on entrance if used while a limit on entrance to the Hall of the Abyss exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. -->
+		<!-- An extra pass to Kamaloka (Hall of the Abyss). Double-click to reset the instance zone timer. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. The effect expires when the instance zone timer is reset. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -510,7 +510,7 @@
 		</skills>
 	</item>
 	<item id="20027" name="Extra Pass: Near Kamaloka" type="EtcItem">
-		<!-- Extra entrance pass that lets you enter Near Kamaloka. Can cancel the limit on entrance if used while a limit on entrance to Near Kamaloka exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. -->
+		<!-- An extra pass to Near Kamaloka. Double-click to reset the instance zone timer. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. The effect expires when the instance zone timer is reset. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -525,7 +525,7 @@
 		</skills>
 	</item>
 	<item id="20028" name="Extra Pass: Kamaloka (Labyrinth of the Abyss)" type="EtcItem">
-		<!-- Extra entrance pass that lets you enter Kamaloka (Labyrinth of the Abyss). Can cancel the limit on entrance if used while a limit on entrance to the Labyrinth of the Abyss exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. -->
+		<!-- An extra pass to Kamaloka (Labyrinth of the Abyss). Double-click to reset the instance zone timer. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. The effect expires when the instance zone timer is reset. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -540,7 +540,7 @@
 		</skills>
 	</item>
 	<item id="20029" name="Mount - Darkmane Pacer" type="Armor">
-		<!-- Can mount a Darkmane Pacer when equipped. -->
+		<!-- Allows to mount Darkmane Pacer. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -584,7 +584,7 @@
 		</skills>
 	</item>
 	<item id="20031" name="Kat the Cat Hat" type="Armor">
-		<!-- Hat that looks like Kat the Cat. Uses 2 hair accessory slots. -->
+		<!-- Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -598,7 +598,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="20032" name="Skull Hat" type="Armor">
-		<!-- Hat that looks like a skull. Uses 2 hair accessory slots. -->
+		<!-- A hat that looks like a skull. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_skeleton_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -612,7 +612,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="20033" name="My Teleport Flag" type="EtcItem">
-		<!-- Dimensional Item. Item consumed when saving a new My Teleport location. Can be shared within an account through the Dimensional Merchant. -->
+		<!-- Required for changing the save point. -->
 		<set name="icon" val="BranchSys.icon.br_flag_of_bookmark_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -643,7 +643,7 @@
 		</skills>
 	</item>
 	<item id="20035" name="Agathion - Majo Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Majo. -->
+		<!-- Double-click to obtain Agathion Majo. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -661,11 +661,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20006" min="1" max="1" chance="100" /> <!-- Agathion - Majo -->
+			<item id="20006" min="1" max="1" chance="100" /> <!-- Agathion Majo -->
 		</capsuled_items>
 	</item>
 	<item id="20036" name="Agathion - Gold Majo Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Gold Majo. -->
+		<!-- Double-click to obtain Agathion Gold Majo. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -683,11 +683,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20007" min="1" max="1" chance="100" /> <!-- Agathion - Gold Majo -->
+			<item id="20007" min="1" max="1" chance="100" /> <!-- Agathion Gold Majo -->
 		</capsuled_items>
 	</item>
 	<item id="20037" name="Agathion - Black Majo Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Black Majo. -->
+		<!-- Double-click to obtain Agathion Black Majo. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -705,11 +705,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20008" min="1" max="1" chance="100" /> <!-- Agathion - Black Majo -->
+			<item id="20008" min="1" max="1" chance="100" /> <!-- Agathion Black Majo -->
 		</capsuled_items>
 	</item>
 	<item id="20038" name="Agathion - Majo Pack (30-day)" additionalName="Big Head" type="EtcItem">
-		<!-- Contains an Agathion - Majo usable for up to 30 days. -->
+		<!-- Double-click to obtain Agathion Majo (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -727,11 +727,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20009" min="1" max="1" chance="100" /> <!-- Agathion - Majo - Big Head (30-day) -->
+			<item id="20009" min="1" max="1" chance="100" /> <!-- Agathion Majo - Big Head / 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="20039" name="Agathion - Gold Majo Pack (30-day)" additionalName="Resurrection" type="EtcItem">
-		<!-- Contains an Agathion - Gold Majo usable for up to 30 days. -->
+		<!-- Double-click to obtain Agathion Gold Majo (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -749,11 +749,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20010" min="1" max="1" chance="100" /> <!-- Agathion - Gold Majo - Resurrection (30-day) -->
+			<item id="20010" min="1" max="1" chance="100" /> <!-- Agathion Gold Majo - Resurrection / 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="20040" name="Agathion - Black Majo Pack (30-day)" additionalName="Escape" type="EtcItem">
-		<!-- Contains an Agathion - Black Majo usable for up to 30 days. -->
+		<!-- Double-click to obtain Agathion Black Majo (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -771,11 +771,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20011" min="1" max="1" chance="100" /> <!-- Agathion - Black Majo - Escape (30-day) -->
+			<item id="20011" min="1" max="1" chance="100" /> <!-- Agathion Black Majo - Escape / 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="20041" name="Agathion - Plaipitak Pack" type="EtcItem">
-		<!-- Contains an Agathion - Plaipitak. -->
+		<!-- Double-click to obtain Agathion Plaipitak. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -793,11 +793,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20012" min="1" max="1" chance="100" /> <!-- Agathion - Plaipitak -->
+			<item id="20012" min="1" max="1" chance="100" /> <!-- Agathion Plaipitak -->
 		</capsuled_items>
 	</item>
 	<item id="20042" name="Agathion - Plaipitak Pack (30-day)" additionalName="Big Head" type="EtcItem">
-		<!-- Contains an Agathion - Plaipitak usable for up to 30 days. -->
+		<!-- Double-click to obtain Agathion Plaipitak (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -815,11 +815,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20013" min="1" max="1" chance="100" /> <!-- Agathion - Plaipitak - Big Head (30-day) -->
+			<item id="20013" min="1" max="1" chance="100" /> <!-- Agathion Plaipitak - Big Head / 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="20043" name="Agathion - Plaipitak Pack (30-day)" additionalName="Resurrection" type="EtcItem">
-		<!-- Contains an Agathion - Plaipitak usable for up to 30 days. -->
+		<!-- Double-click to obtain Agathion Plaipitak (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -837,11 +837,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20014" min="1" max="1" chance="100" /> <!-- Agathion - Plaipitak - Resurrection (30-day) -->
+			<item id="20014" min="1" max="1" chance="100" /> <!-- Agathion Plaipitak - Resurrection / 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="20044" name="Agathion - Plaipitak Pack (30-day)" additionalName="Escape" type="EtcItem">
-		<!-- Contains an Agathion - Plaipitak usable for up to 30 days. -->
+		<!-- Double-click to obtain Agathion Plaipitak (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -859,7 +859,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20015" min="1" max="1" chance="100" /> <!-- Agathion - Plaipitak - Escape (30-day) -->
+			<item id="20015" min="1" max="1" chance="100" /> <!-- Agathion Plaipitak - Escape / 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="20045" name="Horn-rimmed Glasses Pack" additionalName="Agility" type="EtcItem">
@@ -911,7 +911,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="20018" min="1" max="1" chance="100" /> <!-- Afro Hair - Big Head, Firework -->
+			<item id="20018" min="1" max="1" chance="100" /> <!-- Afro Hair - Big Head / Firework -->
 		</capsuled_items>
 	</item>
 	<item id="20048" name="Afro Hair Pack" additionalName="Wind Walk" type="EtcItem">
@@ -930,7 +930,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20049" name="Uniform Hat Pack" type="EtcItem">
-		<!-- Contains a fancy Uniform Hat. -->
+		<!-- Double-click to obtain Uniform Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -990,7 +990,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20053" name="Visor Pack" type="EtcItem">
-		<!-- Contains a rakish Visor. Exclusive for male characters. -->
+		<!-- Double-click to obtain Visor. For male characters. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1020,7 +1020,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20055" name="Extra Pass: Kamaloka (Hall of the Abyss) Pack" type="EtcItem">
-		<!-- Contains an extra entrance pass that allows you to enter Kamaloka (Hall of the Abyss). -->
+		<!-- Double-click to obtain Extra Pass: Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1035,7 +1035,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20056" name="Extra Pass: Near Kamaloka Pack" type="EtcItem">
-		<!-- Contains an extra entrance pass that allows you to enter Near Kamaloka. -->
+		<!-- Double-click to obtain Extra Pass: Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1050,7 +1050,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20057" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) Pack" type="EtcItem">
-		<!-- Contains an extra entrance pass that allows you to enter Kamaloka (Labyrinth of the Abyss). -->
+		<!-- Double-click to obtain Extra Pass: Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1065,7 +1065,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20058" name="Mount - Darkmane Pacer Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Darkmane Pacer. -->
+		<!-- Double-click to obtain Darkmane Pacer Bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1083,11 +1083,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20029" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer -->
+			<item id="20029" min="1" max="1" chance="100" /> <!-- Darkmane Pacer Bracelet -->
 		</capsuled_items>
 	</item>
 	<item id="20059" name="Mount - Darkmane Pacer Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Darkmane Pacer (30-day). -->
+		<!-- Double-click to obtain Darkmane Pacer Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1105,11 +1105,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20030" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer - 30-day -->
+			<item id="20030" min="1" max="1" chance="100" /> <!-- Darkmane Pacer Bracelet - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="20060" name="Kat the Cat Hat Pack" type="EtcItem">
-		<!-- Contains a Kat the Cat Hat. -->
+		<!-- Double-click to obtain a Kat the Cat Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1294,7 +1294,7 @@
 		</skills>
 	</item>
 	<item id="20069" name="Agathion - Baby Panda Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Baby Panda. -->
+		<!-- Double-click to obtain Agathion Baby Panda. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1312,11 +1312,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20063" min="1" max="1" chance="100" /> <!-- Agathion - Baby Panda -->
+			<item id="20063" min="1" max="1" chance="100" /> <!-- Agathion Baby Panda -->
 		</capsuled_items>
 	</item>
 	<item id="20070" name="Agathion - Bamboo Panda Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Bamboo Panda. -->
+		<!-- Double-click to obtain Agathion Bamboo Panda. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1334,11 +1334,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20064" min="1" max="1" chance="100" /> <!-- Agathion - Bamboo Panda -->
+			<item id="20064" min="1" max="1" chance="100" /> <!-- Agathion Bamboo Panda -->
 		</capsuled_items>
 	</item>
 	<item id="20071" name="Agathion - Sexy Pandan Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Sexy Panda. -->
+		<!-- Double-click to obtain Agathion Sexy Panda. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1356,11 +1356,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20065" min="1" max="1" chance="100" /> <!-- Agathion - Sexy Panda -->
+			<item id="20065" min="1" max="1" chance="100" /> <!-- Agathion Sexy Panda -->
 		</capsuled_items>
 	</item>
 	<item id="20072" name="Agathion - Baby Panda Pack (15-day)" additionalName="Big Head" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Baby Panda (15-day). -->
+		<!-- Double-click to obtain Agathion Baby Panda (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1378,11 +1378,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20066" min="1" max="1" chance="100" /> <!-- Agathion - Baby Panda - Big Head (15-day) -->
+			<item id="20066" min="1" max="1" chance="100" /> <!-- Agathion Baby Panda - Big Head / 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="20073" name="Agathion - Bamboo Panda Pack (15-day)" additionalName="Resurrection" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Bamboo Panda (15-day). -->
+		<!-- Double-click to obtain Agathion Bamboo Panda (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1400,11 +1400,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20067" min="1" max="1" chance="100" /> <!-- Agathion - Bamboo Panda - Resurrection (15-day) -->
+			<item id="20067" min="1" max="1" chance="100" /> <!-- Agathion Bamboo Panda - Resurrection / 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="20074" name="Agathion - Sexy Panda Pack (15-day)" additionalName="Escape" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Sexy Pandan (15-day). -->
+		<!-- Double-click to obtain Agathion Sexy Panda (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1422,7 +1422,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20068" min="1" max="1" chance="100" /> <!-- Agathion - Sexy Panda - Escape (15-day) -->
+			<item id="20068" min="1" max="1" chance="100" /> <!-- Agathion Sexy Panda - Escape / 15-day -->
 		</capsuled_items>
 	</item>
 	<item id="20075" name="Santa's Gift - Joy" additionalName="4-hour" type="EtcItem">
@@ -1514,7 +1514,7 @@
 		</skills>
 	</item>
 	<item id="20079" name="Good Luck Bag Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Good Luck Bag. -->
+		<!-- Double-click to obtain Good Luck Bags. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1536,7 +1536,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20080" name="Lucky Four-leaf Clover Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Lucky Four-leaf Pack. -->
+		<!-- Double-click to obtain Lucky Four-leaf Clover. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1605,7 +1605,7 @@
 		</skills>
 	</item>
 	<item id="20083" name="Afro Hair" additionalName="Vitality (3-hour)" type="Armor">
-		<!-- Afro style hair. Vitality skill cooldown is 12 hours. Uses 2 hair accessory slots. Vitality item with limited usage. -->
+		<!-- Afro style hair. Vitality skill cooldown is 12 h. Uses 2 hair accessory slots. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1627,7 +1627,7 @@
 		</skills>
 	</item>
 	<item id="20084" name="Afro Hair" additionalName="Vitality (3-day)" type="Armor">
-		<!-- Afro style hair. Vitality skill cooldown is 12 hours. Uses 2 hair accessory slots. Vitality item with limited usage. -->
+		<!-- Afro style hair. Vitality skill cooldown is 12 h. Uses 2 hair accessory slots. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1649,7 +1649,7 @@
 		</skills>
 	</item>
 	<item id="20085" name="Afro Hair" additionalName="Vitality (30-day)" type="Armor">
-		<!-- Afro style hair. Vitality skill cooldown is 12 hours. Uses 2 hair accessory slots. Vitality item with limited usage. -->
+		<!-- Afro style hair. Vitality skill cooldown is 12 h. Uses 2 hair accessory slots. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1671,7 +1671,7 @@
 		</skills>
 	</item>
 	<item id="20086" name="Horn-rimmed Glasses" additionalName="Vitality (3-hour)" type="Armor">
-		<!-- Magic Horn-rimmed Glasses. Vitality skill cooldown is 12 hours. Vitality item with limited usage. -->
+		<!-- Magic horn-rimmed glasses with mysterious power. Vitality cooldown 12 h. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1693,7 +1693,7 @@
 		</skills>
 	</item>
 	<item id="20087" name="Horn-rimmed Glasses" additionalName="Vitality (3-day)" type="Armor">
-		<!-- Magic Horn-rimmed Glasses. Vitality skill cooldown is 12 hours. Vitality item with limited usage. -->
+		<!-- Magic horn-rimmed glasses with mysterious power. Vitality cooldown 12 h. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1715,7 +1715,7 @@
 		</skills>
 	</item>
 	<item id="20088" name="Horn-rimmed Glasses" additionalName="Vitality (30-day)" type="Armor">
-		<!-- Magic Horn-rimmed Glasses. Vitality skill cooldown is 12 hours. Vitality item with limited usage. -->
+		<!-- Magic horn-rimmed glasses with mysterious power. Vitality cooldown 12 h. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1737,7 +1737,7 @@
 		</skills>
 	</item>
 	<item id="20089" name="Assassin's Bamboo Hat" additionalName="Vitality (3-hour)" type="Armor">
-		<!-- Wide brimmed hat made of bamboo. Uses 2 hair accessory slots. Active skill: Maintain Vitality. Skill cooldown is 12 hours. Vitality item with limited usage. -->
+		<!-- Wide brimmed hat made of bamboo. Uses 2 hair accessory slots. Active skill: Maintain Vitality. Skill cooldown is 12 h. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Bamboo_Hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1759,7 +1759,7 @@
 		</skills>
 	</item>
 	<item id="20090" name="Assassin's Bamboo Hat" additionalName="Vitality (3-day)" type="Armor">
-		<!-- Wide brimmed hat made of bamboo. Uses 2 hair accessory slots. Active skill: Maintain Vitality. Skill cooldown is 12 hours. Vitality item with limited usage. -->
+		<!-- Wide brimmed hat made of bamboo. Uses 2 hair accessory slots. Active skill: Maintain Vitality. Skill cooldown is 12 h. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Bamboo_Hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1781,7 +1781,7 @@
 		</skills>
 	</item>
 	<item id="20091" name="Assassin's Bamboo Hat" additionalName="Vitality (30-day)" type="Armor">
-		<!-- Wide brimmed hat made of bamboo. Uses 2 hair accessory slots. Active skill: Maintain Vitality. Skill cooldown is 12 hours. Vitality item with limited usage. -->
+		<!-- Wide brimmed hat made of bamboo. Uses 2 hair accessory slots. ?oldown: 12 h. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Bamboo_Hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1803,7 +1803,7 @@
 		</skills>
 	</item>
 	<item id="20092" name="Holiday Spirit Pack" type="EtcItem">
-		<!-- This gift-wrapped pack contains the true spirit of the holiday season. -->
+		<!-- Double-click to obtain a Christmas miracle. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1825,7 +1825,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20093" name="Holiday Miracle" type="EtcItem">
-		<!-- This provides you with a chance to acquire an Agathion - Rudolph, which Has Vitality Recovery Capability. -->
+		<!-- A bracelet for summoning Agathion Rudolph with a certain chance. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1848,7 +1848,7 @@
 		</skills>
 	</item>
 	<item id="20094" name="Agathion - Rudolph" additionalName="Vitality (30-day)" type="Armor">
-		<!-- Allows you to summon a cute Rudolph Agathion. Can only be used once every 12 hours. Vitality item with limited usage. -->
+		<!-- A bracelet for summoning Agathion Rudolph. Cooldown: 12 h. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1892,7 +1892,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20096" name="Mysterious Formal Wear (Event) Pack" type="EtcItem">
-		<!-- This gift-wrapped pack contains a Mysterious Formal Wear. -->
+		<!-- Double-click to obtain Mysterious Formal Wear. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1908,11 +1908,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20097" min="1" max="1" chance="100" /> <!-- Mysterious Formal Wear (Event) -->
+			<item id="20097" min="1" max="1" chance="100" /> <!-- Mysterious Formal Wear - Event -->
 		</capsuled_items>
 	</item>
 	<item id="20097" name="Mysterious Formal Wear (Event)" type="EtcItem">
-		<!-- Use this to acquire the Formal Wear. -->
+		<!-- Double-click to obtain Mysterious Formal Wear. -->
 		<set name="icon" val="BranchSys.icon.br_mysterious_wedding_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

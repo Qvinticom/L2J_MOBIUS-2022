@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="19000" level="88" type="Monster" name="Mutated Millipede">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14183" level="1" />
 			<skill name="Buff1" id="14120" level="1" />
@@ -13,7 +12,7 @@
 		<sex>MALE</sex>
 		<mpReward value="26" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14809.467795" hpRegen="8.5" mp="2422.457" mpRegen="3" />
+			<vitals hp="13568.2080924855" hpRegen="8.5" mp="1971.61716171617" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -24,9 +23,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="14183" level="1" /> <!-- Millipede Blow -->
 			<skill id="14120" level="1" /> <!-- Enhance -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -441,7 +440,6 @@
 		</collision>
 	</npc>
 	<npc id="19015" level="88" type="Monster" name="Elite Millipede">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14184" level="1" />
@@ -450,7 +448,7 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="313725.00741" hpRegen="8.5" mp="24228.625" mpRegen="3" />
+			<vitals hp="287430.057803468" hpRegen="8.5" mp="19719.4719471947" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -465,9 +463,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14184" level="1" /> <!-- Millipede Ultimate Blow -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14184" level="1" /> <!-- Millipede Ultimate Blow -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -480,7 +478,6 @@
 		</collision>
 	</npc>
 	<npc id="19016" level="88" type="Monster" name="Teredor's Larva">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14182" level="1" />
@@ -490,7 +487,7 @@
 		<sex>MALE</sex>
 		<mpReward value="15" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3702.20922" hpRegen="8.5" mp="2422.457" mpRegen="3" />
+			<vitals hp="3391.90751445087" hpRegen="8.5" mp="1971.61716171617" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -505,9 +502,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14182" level="1" /> <!-- Millipede Blow -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14182" level="1" /> <!-- Millipede Blow -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -763,7 +760,6 @@
 		</collision>
 	</npc>
 	<npc id="19024" level="88" type="Monster" name="Beetle" title="Hatcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14183" level="1" />
 			<param name="Attack_BoostValue" value="131" />
@@ -771,7 +767,7 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="78430.936395" hpRegen="8.5" mp="24228.625" mpRegen="3" />
+			<vitals hp="71857.225433526" hpRegen="8.5" mp="19719.4719471947" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
@@ -786,11 +782,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="14183" level="1" /> <!-- Millipede Blow -->
-			<skill id="14412" level="1" /> <!-- Incubatioin -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="14183" level="1" /> <!-- Millipede Blow -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1120,14 +1115,13 @@
 		</collision>
 	</npc>
 	<npc id="19037" level="85" type="Monster" name="Wild Maguen" title="Raider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Steal_Skill" id="14235" level="1" />
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4621.452375" hpRegen="8.5" mp="2291.075" mpRegen="3" />
+			<vitals hp="4234.10404624277" hpRegen="8.5" mp="1864.68646864686" mpRegen="3" />
 			<speed>
 				<walk ground="15" />
 				<run ground="200" />
@@ -1138,7 +1132,7 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1229,14 +1223,13 @@
 		</collision>
 	</npc>
 	<npc id="19041" level="97" type="Monster" name="Greedy Crystalline Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17119.878525" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<vitals hp="15684.9710982659" hpRegen="8.5" mp="2302.9702970297" mpRegen="3" />
 			<speed>
 				<walk ground="54" />
 				<run ground="170" />
@@ -1251,7 +1244,7 @@
 		</stats>
 		<status attackable="false" showName="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />

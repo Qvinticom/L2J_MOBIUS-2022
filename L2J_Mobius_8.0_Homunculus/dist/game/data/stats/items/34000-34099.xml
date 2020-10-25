@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="34000" name="Lv. 5 Legendary MEN Dye" additionalName="MEN +5/ INT +1/ Holy Resistance +25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Legendary MEN Dye (Men +5 Int +1 Holy Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- MEN +5, INT +1, Holy Resistance +25. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the 4th class change. -->
 		<set name="icon" val="icon.lv5_3_dye_men" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -122,7 +122,7 @@
 		</skills>
 	</item>
 	<item id="34008" name="Drum Melody Scroll" additionalName="Event" type="EtcItem">
-		<!-- For 30 min., increases Max MP by 20%, HP Recovery bonus by 20%, M. Critical Rate by 20, Critical Damage during a standard attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and P. Def. upon receiving a critical attack. Decreases speed by 15%. Additionally increases Critical Damage during a standard attack when receiving more than a certain amount of damage. -->
+		<!-- For 60 min., Max MP +20%, HP Recovery Rate +20%, P. Critical Rate/ M. Skill Critical Rate +20, Critical Damage for standard attacks +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%. Decreases Received Critical Damage from standard attacks. Speed -15%. Additionally increases P. Critical Damage when you receive more than a certain amount of damage. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
@@ -139,7 +139,7 @@
 		</skills>
 	</item>
 	<item id="34009" name="Pipe Organ Melody Scroll" additionalName="Event" type="EtcItem">
-		<!-- For 30 min., increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP Recovery Bonus by 20%. -->
+		<!-- For 30 min., Max HP +37%, Max MP +37%, Max CP +37%, HP Recovery Rate +20%. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
@@ -173,7 +173,7 @@
 		</skills>
 	</item>
 	<item id="34011" name="Horn Melody Scroll" additionalName="Event" type="EtcItem">
-		<!-- For 30 min., P. Atk. +17%, P. Def. by 15%, M. Atk. by 79%, and M. Def. by 30%. -->
+		<!-- For 30 min., P. Atk. +17%, P. Def. +15%, M. Atk. +79%, M. Def. +30%. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
@@ -190,7 +190,7 @@
 		</skills>
 	</item>
 	<item id="34012" name="Elixir of Life - Tersi event" additionalName="Event" type="EtcItem">
-		<!-- Recovers HP. Only characters level 85 or above can use on themselves. Cooldown 2 min. -->
+		<!-- Recovers HP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
@@ -210,7 +210,7 @@
 		</skills>
 	</item>
 	<item id="34013" name="Elixir of Mind - Tersi event" additionalName="Event" type="EtcItem">
-		<!-- Recovers MP. Only characters level 85 or above can use on themselves. Cooldown 2 min. -->
+		<!-- Recovers MP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i00" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
@@ -230,7 +230,7 @@
 		</skills>
 	</item>
 	<item id="34014" name="Elixir of CP - Tersi event" additionalName="Event" type="EtcItem">
-		<!-- Recovers CP. Only characters level 85 or above can use on themselves. Cooldown 2 min. -->
+		<!-- Recovers CP. Only characters above level 85 can use on themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i01" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
@@ -352,7 +352,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34021" name="Scroll: Seal Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Converts a Bound weapon (R-grade) to Unidentified state through the town blacksmith. All enchant values are reset. -->
+		<!-- Converts a Bound R-grade weapon to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -369,7 +369,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34022" name="Scroll: Seal Weapon (R95-grade)" additionalName="Event" type="EtcItem">
-		<!-- Converts a Bound weapon (R95-grade) to Unidentified state through the town blacksmith. All enchant values are reset. -->
+		<!-- Converts Bound R95-grade weapon to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -386,7 +386,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34023" name="Scroll: Seal Weapon (R99-grade)" additionalName="Event" type="EtcItem">
-		<!-- Converts a Bound weapon (R99-grade) to Unidentified state through the town blacksmith. All enchant values are reset. -->
+		<!-- Converts Bound R99-grade weapon to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -505,7 +505,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34030" name="Scroll: Seal Armor (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Converts Bound armor (R-grade) to Unidentified state through the town blacksmith. All enchant values are reset. -->
+		<!-- Converts Bound R-grade armor to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -522,7 +522,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34031" name="Scroll: Seal Armor (R95-grade)" additionalName="Event" type="EtcItem">
-		<!-- Converts Bound armor (R95-grade) to Unidentified state through the town blacksmith. All enchant values are reset. -->
+		<!-- Converts Bound R95-grade armor to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -539,7 +539,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34032" name="Scroll: Seal Armor (R99-grade)" additionalName="Event" type="EtcItem">
-		<!-- Converts Bound armor (R99-grade) to Unidentified state through the town blacksmith. All enchant values are reset. -->
+		<!-- Converts Bound R99-grade armor to Unidentified state through the town blacksmith. All enchant values are reset. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -585,7 +585,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="34035" name="XP Rune I (Lv. 1-85) 100% (3-hour)" type="EtcItem">
-		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 100%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->
+		<!-- When in inventory, Acquired XP/ SP +100%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -603,7 +603,7 @@
 		</skills>
 	</item>
 	<item id="34036" name="XP Rune I (Lv. 1-85) 100% (5-hour)" type="EtcItem">
-		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 100%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->
+		<!-- When in inventory, Acquired XP/ SP +100%. Required level: 1-85. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -693,7 +693,7 @@
 		</skills>
 	</item>
 	<item id="34041" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (3-hour). -->
+		<!-- Double-click to obtain Nevit's Rune 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -707,11 +707,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hour) -->
+			<item id="34035" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34042" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (5-hour). -->
+		<!-- Double-click to obtain Nevit's Rune 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -725,11 +725,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34036" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (5-hour) -->
+			<item id="34036" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34043" name="XP Rune I (Lv. 1-85) 100% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (7-day). -->
+		<!-- Double-click to obtain Nevit's Rune 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -743,11 +743,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34037" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (7-day) -->
+			<item id="34037" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (7-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34044" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (3-hour). -->
+		<!-- Double-click to obtain Nevit's Rune 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -761,11 +761,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hour) -->
+			<item id="34038" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34045" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (5-hour). -->
+		<!-- Double-click to obtain Nevit's Rune 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -779,11 +779,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34039" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (5-hour) -->
+			<item id="34039" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34046" name="XP Rune I (Lv. 1-85) 200% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (7-day). -->
+		<!-- Double-click to obtain Nevit's Rune 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -797,11 +797,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34040" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (7-day) -->
+			<item id="34040" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (7-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34047" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (3-hour). -->
+		<!-- Double-click to obtain Nevit's Rune 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -818,11 +818,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hour) -->
+			<item id="34035" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34048" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (5-hour). -->
+		<!-- Double-click to obtain Nevit's Rune 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -839,11 +839,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34036" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (5-hour) -->
+			<item id="34036" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34049" name="XP Rune I (Lv. 1-85) 100% Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (7-day). -->
+		<!-- Double-click to obtain Nevit's Rune 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -860,11 +860,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34037" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (7-day) -->
+			<item id="34037" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (7-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34050" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (3-hour). -->
+		<!-- Double-click to obtain Nevit's Rune 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -881,11 +881,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hour) -->
+			<item id="34038" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34051" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (5-hour). -->
+		<!-- Double-click to obtain Nevit's Rune 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -902,11 +902,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34039" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (5-hour) -->
+			<item id="34039" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34052" name="XP Rune I (Lv. 1-85) 200% Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (7-day). -->
+		<!-- Double-click to obtain Nevit's Rune 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -923,7 +923,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34040" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (7-day) -->
+			<item id="34040" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (7-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34053" name="Blessed Specter Weapon Pack" type="EtcItem">
@@ -950,8 +950,8 @@
 			<item id="18043" min="1" max="1" chance="100" /> <!-- Blessed Specter Buster -->
 			<item id="18044" min="1" max="1" chance="100" /> <!-- Blessed Specter Caster -->
 			<item id="18045" min="1" max="1" chance="100" /> <!-- Blessed Specter Retributer -->
-			<item id="18046" min="1" max="1" chance="100" /> <!-- Blessed Specter Dual Sword -->
-			<item id="18047" min="1" max="1" chance="100" /> <!-- Blessed Specter Dual Dagger -->
+			<item id="18046" min="1" max="1" chance="100" /> <!-- Blessed Specter Dual Swords -->
+			<item id="18047" min="1" max="1" chance="100" /> <!-- Blessed Specter Dual Daggers -->
 			<item id="18048" min="1" max="1" chance="100" /> <!-- Blessed Specter Dual Blunt Weapon -->
 		</capsuled_items>
 	</item>
@@ -968,12 +968,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="18049" min="1" max="1" chance="100" /> <!-- Blessed Seraph Helmet - Heavy Armor -->
-			<item id="18050" min="1" max="1" chance="100" /> <!-- Blessed Seraph Breastplate - Heavy Armor -->
-			<item id="18051" min="1" max="1" chance="100" /> <!-- Blessed Seraph Gaiters - Heavy Armor -->
-			<item id="18052" min="1" max="1" chance="100" /> <!-- Blessed Seraph Gauntlets - Heavy Armor -->
-			<item id="18053" min="1" max="1" chance="100" /> <!-- Blessed Seraph Boots - Heavy Armor -->
-			<item id="18054" min="1" max="1" chance="100" /> <!-- Blessed Seraph Shield - Heavy Armor -->
+			<item id="18049" min="1" max="1" chance="100" /> <!-- Blessed Seraph Helmet - Heavy armor -->
+			<item id="18050" min="1" max="1" chance="100" /> <!-- Blessed Seraph Breastplate - Heavy armor -->
+			<item id="18051" min="1" max="1" chance="100" /> <!-- Blessed Seraph Gaiters - Heavy armor -->
+			<item id="18052" min="1" max="1" chance="100" /> <!-- Blessed Seraph Gauntlets - Heavy armor -->
+			<item id="18053" min="1" max="1" chance="100" /> <!-- Blessed Seraph Boots - Heavy armor -->
+			<item id="18054" min="1" max="1" chance="100" /> <!-- Blessed Seraph Shield -->
 		</capsuled_items>
 	</item>
 	<item id="34055" name="Blessed Seraph Light Armor Pack" type="EtcItem">
@@ -989,11 +989,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="18055" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Helmet - Light Armor -->
-			<item id="18056" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Armor - Light Armor -->
-			<item id="18057" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Leggings - Light Armor -->
-			<item id="18058" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Gloves - Light Armor -->
-			<item id="18059" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Boots - Light Armor -->
+			<item id="18055" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Helmet - Light armor -->
+			<item id="18056" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Armor - Light armor -->
+			<item id="18057" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Leggings - Light armor -->
+			<item id="18058" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Gloves - Light armor -->
+			<item id="18059" min="1" max="1" chance="100" /> <!-- Blessed Seraph Leather Boots - Light armor -->
 		</capsuled_items>
 	</item>
 	<item id="34056" name="Blessed Seraph Robe Armor Pack" type="EtcItem">
@@ -1014,7 +1014,7 @@
 			<item id="18062" min="1" max="1" chance="100" /> <!-- Blessed Seraph Stockings - Robe -->
 			<item id="18063" min="1" max="1" chance="100" /> <!-- Blessed Seraph Gloves - Robe -->
 			<item id="18064" min="1" max="1" chance="100" /> <!-- Blessed Seraph Shoes - Robe -->
-			<item id="18065" min="1" max="1" chance="100" /> <!-- Blessed Seraph Sigil - Robe -->
+			<item id="18065" min="1" max="1" chance="100" /> <!-- Blessed Seraph Sigil -->
 		</capsuled_items>
 	</item>
 	<item id="34057" name="Blessed Seraph Accessory Pack" type="EtcItem">
@@ -1098,7 +1098,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34062" name="Giant's Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click for a chance to acquire a Giant's Enchant Scroll, Scroll: Enchant Hair Accessory, and Spirit Stone - Hair Accessory. -->
+		<!-- Double-click to obtain Giant's Enchant Scroll, Scroll: Enchant Hair Accessory, or Spirit Stone - Hair Accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1116,7 +1116,7 @@
 		</skills>
 	</item>
 	<item id="34063" name="Bound Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click for a chance to acquire a Bind Removing Scroll, Enchant Stone, and Superior Giant's Codex. -->
+		<!-- Double-click to obtain Unbind Scroll, Enchant Stone, or Superior Giant's Codex. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1134,7 +1134,7 @@
 		</skills>
 	</item>
 	<item id="34064" name="Box of Destruction" additionalName="Event" type="EtcItem">
-		<!-- Double-click for a chance to acquire Destruction or Regular Enchant scrolls, Soul Crystal Change Stone, or Attribute Change Crystal. -->
+		<!-- Double-click to obtain Scroll of Destruction, Soul Crystal Change Stone, or Attribute Change Crystal. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1168,7 +1168,7 @@
 		</skills>
 	</item>
 	<item id="34066" name="Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1189,7 +1189,7 @@
 		</skills>
 	</item>
 	<item id="34067" name="Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- Increases P. Def. by 1 for A-grade armor and accessories. When enchanted to +4 or higher, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. HP is gradually increased with each enchant value when enchanted to +4 or higher. Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1210,7 +1210,7 @@
 		</skills>
 	</item>
 	<item id="34068" name="Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 3 for B-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1231,7 +1231,7 @@
 		</skills>
 	</item>
 	<item id="34069" name="Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for armor and accessories (B-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For B-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1252,7 +1252,7 @@
 		</skills>
 	</item>
 	<item id="34070" name="Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 3 for C-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1273,7 +1273,7 @@
 		</skills>
 	</item>
 	<item id="34071" name="Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for armor and accessories (C-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For C-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1294,7 +1294,7 @@
 		</skills>
 	</item>
 	<item id="34072" name="Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 2 for D-grade one-handed sword, one-handed blunt, one-handed staff, dagger, spear, other weapons, two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 4 for bow weapons. Increases M. Atk. by 2 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears, two-handed swords/ blunts/ staffs, dual daggers, dual swords, and fist weapons. P. Atk. +4 for bows. M. Atk. +2 for all weapons. When enchanted to +4 and higher, P./ M. Atk. doubles. Cannot be used on weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1315,7 +1315,7 @@
 		</skills>
 	</item>
 	<item id="34073" name="Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for armor and accessories (D-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For D-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1336,7 +1336,7 @@
 		</skills>
 	</item>
 	<item id="34074" name="Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 5 for S-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 6 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1357,7 +1357,7 @@
 		</skills>
 	</item>
 	<item id="34075" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for armor and accessories (S-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. Cannot be used for equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1378,7 +1378,7 @@
 		</skills>
 	</item>
 	<item id="34076" name="Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. -->
+		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1399,7 +1399,7 @@
 		</skills>
 	</item>
 	<item id="34077" name="Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. +2 for R-grade armor and accessories. It is greatly increased starting at +4. Can be safely enchanted to +3. When enchanted to +4 or more, HP also increases according to the enchant value. -->
+		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, P. Def. is greatly increased, Max HP is increased with each enchant value. The enchanting is safe up to +3. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1420,7 +1420,7 @@
 		</skills>
 	</item>
 	<item id="34078" name="Improved Giant's Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click for a chance to acquire an R-grade Scroll: Enchant Weapon or Armor, Scroll: Enchant Hair Accessory, and Spirit Stone - Hair Accessory. -->
+		<!-- Double-click to obtain Giant's Enchant Scroll, Scroll: Enchant Hair Accessory, or Spirit Stone - R-grade Hair Accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1438,7 +1438,7 @@
 		</skills>
 	</item>
 	<item id="34079" name="Improved Bound Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click for a chance to acquire an R-grade Unbind Scroll, R-grade Lucky Enchant Stone (Weapon or Armor), Superior Giant's Codex, and R-grade Scroll: Enchant Weapon or Armor. -->
+		<!-- Double-click to obtain R-grade Unbind Scroll, R-grade Lucky Enchant Stone, R-grade Superior Giant's Codex, or Scroll: Enchant R-grade Weapon/ Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1456,7 +1456,7 @@
 		</skills>
 	</item>
 	<item id="34080" name="Improved Box of Destruction" additionalName="Event" type="EtcItem">
-		<!-- Has a chance of obtaining Scroll: Enchant Destruction (R-grade), Soul Crystal Change Stone (R-grade), Attribute Change Crystal (R-grade), and Scroll: Enchant Weapon/ Armor (R-grade). Double-click to use. -->
+		<!-- Double-click to obtain R-grade Scroll of Destruction, R-grade Soul Crystal Change Stone, R-grade Attribute Change Crystal, or Scroll: Enchant R-grade Weapon/ Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1474,7 +1474,7 @@
 		</skills>
 	</item>
 	<item id="34081" name="Mentor's Surprise Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click for a chance to acquire an Improved Giant's Box, Improved Bound Box, and Improved Box of Destruction. -->
+		<!-- Double-click to obtain Improved Giant's Box, Improved Bound Box, or Improved Box of Destruction. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1514,7 +1514,7 @@
 		</skills>
 	</item>
 	<item id="34083" name="PA - Grand Épée (Earth)" additionalName="PA exclusive" type="Weapon">
-		<!-- Grand Épée (Earth) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Earth), upgrade options are limited. Expiratory. Cannot be crystallized. Can only be enchanted. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1551,7 +1551,7 @@
 		</stats>
 	</item>
 	<item id="34084" name="PA - Grand Épée (Water)" additionalName="PA exclusive" type="Weapon">
-		<!-- Grand Épée (Water) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Water), upgrade options are limited. Expiratory. Cannot be crystallized. Can only be enchanted. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1588,7 +1588,7 @@
 		</stats>
 	</item>
 	<item id="34085" name="PA - Grand Épée (Wind)" additionalName="PA exclusive" type="Weapon">
-		<!-- Grand Épée (Wind) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Wind), upgrade options are limited. Expiratory. Cannot be crystallized. Can only be enchanted. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1625,7 +1625,7 @@
 		</stats>
 	</item>
 	<item id="34086" name="PA - Grand Épée (Fire)" additionalName="PA exclusive" type="Weapon">
-		<!-- Grand Épée (Fire) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Fire), upgrade options are limited. Expiratory. Cannot be crystallized. Can only be enchanted. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1662,7 +1662,7 @@
 		</stats>
 	</item>
 	<item id="34087" name="PA - Grand Épée (Holy)" additionalName="PA exclusive" type="Weapon">
-		<!-- Grand Épée (Holy) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Holy), upgrade options are limited. Expiratory. Cannot be crystallized. Can only be enchanted. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1699,7 +1699,7 @@
 		</stats>
 	</item>
 	<item id="34088" name="PA - Grand Épée (Dark)" additionalName="PA exclusive" type="Weapon">
-		<!-- Grand Épée (Dark) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Dark), upgrade options are limited. Expiratory. Cannot be crystallized. Can only be enchanted. When enchanted to +4 or higher, it has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

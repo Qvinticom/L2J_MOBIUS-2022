@@ -11,7 +11,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="14501" toLevel="1" name="Glimpse of Terror">
+	<skill id="14501" toLevel="1" name="Fear Gaze">
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -160,7 +160,7 @@
 		</effects>
 	</skill>
 	<skill id="14509" toLevel="1" name="HP Drain">
-		<!-- Absorbs opponent's HP to add to one's own. -->
+		<!-- Drains HP of the target for yourself. -->
 		<icon>icon.skill1042</icon>
 		<operateType>CA2</operateType>
 		<castRange>900</castRange>
@@ -278,7 +278,7 @@
 		</effects>
 	</skill>
 	<skill id="14513" toLevel="1" name="Fierce Kick">
-		<!-- Powerfully kicks the target to knock back. P. Def. and M. Def. decreased 10%. Additional 500 decrease. Evasion 4 decrease. Accumulates with every incurred attack. -->
+		<!-- Powerfully kicks the target to knock back. P./ M. Def. -10%. Additional P./ M. Def. -500. P. Evasion -4. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0261</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -382,7 +382,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14516" toLevel="1" name="Darkness Scream">
-		<!-- Horrifies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Fear.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0763</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -441,6 +441,7 @@
 		</effects>
 	</skill>
 	<skill id="14518" toLevel="1" name="Teleport">
+		<!-- none. -->
 		<icon>icon.skill0484</icon>
 		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
@@ -559,7 +560,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="PhysicalAttack">
 				<power>4848</power>
@@ -689,7 +690,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14526" toLevel="1" name="Roar of Death">
+	<skill id="14526" toLevel="1" name="Antharas Cry">
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -704,7 +705,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="14527" toLevel="1" name="Antharas Bleed">
-		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts bleed.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>T</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -842,7 +843,7 @@
 		</pveEffects>
 	</skill>
 	<skill id="14531" toLevel="1" name="Blow">
-		<!-- Armor is destroyed. P. Def. and M. Def. decreased 10%. Additional 500 decrease. Evasion 4 decrease. Accumulates with every incurred attack. -->
+		<!-- Armor is destroyed. P./ M. Def. -10%. Additional P./ M. Def. -500. P. Evasion -4. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
 		<castRange>100</castRange>
@@ -893,7 +894,7 @@
 		</effects>
 	</skill>
 	<skill id="14532" toLevel="1" name="Stun Attack">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<castRange>150</castRange>
@@ -922,7 +923,7 @@
 				<power>6960</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1013,7 +1014,7 @@
 		</effects>
 	</skill>
 	<skill id="14536" toLevel="1" name="Bleed">
-		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts bleed.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1047,7 +1048,7 @@
 		</effects>
 	</skill>
 	<skill id="14537" toLevel="1" name="Silence">
-		<!-- Silence. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Silence.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1097,7 +1098,7 @@
 		</effects>
 	</skill>
 	<skill id="14539" toLevel="1" name="Stun">
-		<!-- Shock status and armor destroyed. P. Def., M. Def. decreased by 10%, plus additional 500 decrease. Evasion decreased by 4. Cumulative if struck continuously. -->
+		<!-- Armor is destroyed. P./ M. Def. -10%. Additional P./ M. Def. -500. P. Evasion -4. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1149,7 +1150,7 @@
 		</effects>
 	</skill>
 	<skill id="14540" toLevel="1" name="Stun">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1175,12 +1176,12 @@
 				<power>101527</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="14541" toLevel="1" name="Bleed">
-		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts bleed.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1214,7 +1215,7 @@
 		</effects>
 	</skill>
 	<skill id="14542" toLevel="1" name="Decrease Accuracy">
-		<!-- Accuracy is decreased. -->
+		<!-- Decreases P. Accuracy. -->
 		<icon>icon.skill1222</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -1244,7 +1245,7 @@
 		</effects>
 	</skill>
 	<skill id="14543" toLevel="1" name="Poison Sweep">
-		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1326,7 +1327,7 @@
 		</effects>
 	</skill>
 	<skill id="14546" toLevel="1" name="Shock Wave">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0048</icon>
 		<operateType>A2</operateType>
 		<hitTime>1800</hitTime>
@@ -1352,7 +1353,7 @@
 				<power>101527</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1472,7 +1473,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14551" toLevel="1" name="Shilen's Blessing">
+	<skill id="14551" toLevel="1" name="Shillien's Blessing">
 		<!-- Atk. Spd./ Speed/ M. Atk. are increased. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
@@ -1541,7 +1542,7 @@
 		</effects>
 	</skill>
 	<skill id="14553" toLevel="1" name="Earth Wyrm Heartbeat">
-		<!-- Stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -1593,7 +1594,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14555" toLevel="1" name="Earth Wyrm Heart Protection">
-		<!-- P. Def. increased -->
+		<!-- P. Def. is increased. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<castRange>150</castRange>
@@ -1657,7 +1658,7 @@
 		</effects>
 	</skill>
 	<skill id="14558" toLevel="1" name="Weak Moment">
-		<!-- P. Def./ M. Def. are decreased. -->
+		<!-- P./ M. Def. are decreased. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -1710,7 +1711,7 @@
 		</effects>
 	</skill>
 	<skill id="14560" toLevel="1" name="Teredor Poison Paralysis">
-		<!-- Paralyzes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1967,7 +1968,7 @@
 		</effects>
 	</skill>
 	<skill id="14570" toLevel="1" name="Earth Wyrm yoke status.">
-		<!-- The Earth Wyrm is weakened and can be attacked again! Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- The Earth Wyrm is weakened and can be attacked again!\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0005</icon>
 		<operateType>A2</operateType>
 		<effectPoint>2</effectPoint>
@@ -1994,8 +1995,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14571" toLevel="5" name="Shilen's Breath">
-		<!-- Is killed and poisoned by Shilen's Breath. Increases Dark Attack Resistance by $s1 and HP recovery by $s2. If killed while poisoned, the poison stage increases. -->
+	<skill id="14571" toLevel="5" name="Shillien's Breath">
+		<!-- Poisoned by Shillien's Breath. Dark Resistance +$s1, HP Recovery Rate +$s2. If you die while poisoned, the debuff level will increase. -->
 		<icon>icon.skill5076_c</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2121,25 +2122,25 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
-				<skillId>14571</skillId> <!-- Shilen's Breath -->
+				<skillId>14571</skillId> <!-- Shillien's Breath -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="3" toLevel="3">
-				<skillId>14571</skillId> <!-- Shilen's Breath -->
+				<skillId>14571</skillId> <!-- Shillien's Breath -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="4" toLevel="4">
-				<skillId>14571</skillId> <!-- Shilen's Breath -->
+				<skillId>14571</skillId> <!-- Shillien's Breath -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="5" toLevel="5">
-				<skillId>14571</skillId> <!-- Shilen's Breath -->
+				<skillId>14571</skillId> <!-- Shillien's Breath -->
 				<skillLevel>4</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="14572" toLevel="1" name="Rose Reduction">
-		<!-- Atk. Spd. -50%. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Atk. Spd. -50%.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1394</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
@@ -2233,7 +2234,7 @@
 		</effects>
 	</skill>
 	<skill id="14576" toLevel="1" name="Rear Destroy">
-		<!-- Armor is destroyed. P. Def. and M. Def. decreased 10%. Additional 500 decrease. Evasion 4 decrease. Accumulates with every incurred attack. -->
+		<!-- Armor is destroyed. P./ M. Def. -10%. Additional P./ M. Def. -500. P. Evasion -4. The effect stacks with every incurred attack. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -2289,7 +2290,7 @@
 		</effects>
 	</skill>
 	<skill id="14577" toLevel="1" name="Eva's Breath">
-		<!-- Received Eva's Breath. Even if killed, Shilen's Breath will not be applied. -->
+		<!-- Received Eva's Breath. Even if killed, Shillien's Breath will not be applied. -->
 		<icon>icon.skill1073</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
@@ -2329,7 +2330,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14579" toLevel="1" name="">
-		<!-- You have entered the Earth Wyrm's interior. -->
+		<!-- You are inside the Earth Wyrm. -->
 		<icon>icon.skill10317</icon>
 		<operateType>DA1</operateType>
 		<castRange>600</castRange>
@@ -2353,7 +2354,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14581" toLevel="1" name="Cry of Destiny - Shield Charge">
-		<!-- Uses a shield to attack the selected target with 6150 power added to P. Atk. Also decreases P. Def. by 10% and physical evasion by 2. Increase incurred physical critical damage by 10%. -->
+		<!-- Attacks with +6150 power. P. Def. -10%, P. Evasion -2, Received Critical Damage from standard attacks -10%. -->
 		<icon>icon.skill10008</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -2398,7 +2399,7 @@
 		</effects>
 	</skill>
 	<skill id="14582" toLevel="1" name="Cry of Destiny - Chain Strike">
-		<!-- Pulls a target toward you. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Drags a target to the center.\n\nInflicted status: Pull. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -2534,7 +2535,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="14586" toLevel="1" name="Cry of Destiny - Giant Punch">
-		<!-- Strikes down at the ground with a fist to knock down nearby enemies for 3 sec. Requires a dual sword, two-handed sword, spear, or fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Strikes down at the ground with a fist to knock down nearby enemies for 3 sec. Requires a dual sword, two-handed sword, spear, or fist weapon.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10266</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2590,7 +2591,7 @@
 		</effects>
 	</skill>
 	<skill id="14587" toLevel="1" name="Cry of Destiny - Power Bomber">
-		<!-- Deals physical damage to the target with 8102 power and knocks it down for 2 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Deals physical damage to the target with 8102 power and knocks it down for 2 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -2667,7 +2668,7 @@
 		</effects>
 	</skill>
 	<skill id="14590" toLevel="1" name="Cry of Destiny - Dark Paralysis">
-		<!-- Seals with the power of darkness and petrifies the enemy's body for 10 sec. After that inflicts Paralysis for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Seals with the power of darkness and petrifies the enemy's body for 10 sec. After that inflicts Paralysis for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10514</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -2706,13 +2707,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>10515</skillId> <!-- Paralyzed -->
+				<skillId>10515</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="14591" toLevel="1" name="Cry of Destiny - Throwing Sand">
-		<!-- Hurls poison sand at the target and forces it to fight by your side for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Hurls poison sand at the target and forces it to fight by your side for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10540</icon>
 		<operateType>A2</operateType>
 		<mpConsume>38</mpConsume>
@@ -2830,7 +2831,7 @@
 		</effects>
 	</skill>
 	<skill id="14595" toLevel="1" name="Cry of Destiny - Recoil Shot">
-		<!-- Shoots with 4912 power and knocks the enemy back. Requires a bow/ crossbow. Over-hit. Has a chance to cancel the enemy's target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Shoots with 4912 power and knocks the enemy back. Requires a bow/ crossbow. Over-hit. Has a chance to cancel the enemy's target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<mpConsume>102</mpConsume>
@@ -2925,7 +2926,7 @@
 		</effects>
 	</skill>
 	<skill id="14598" toLevel="1" name="Cry of Destiny - Elemental Crash">
-		<!-- Strikes the enemy with 150 magic power, decreases Speed and inflicts Fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Strikes the enemy with 150 magic power, decreases Speed and inflicts Fear.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11513</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -2964,7 +2965,7 @@
 		</effects>
 	</skill>
 	<skill id="14599" toLevel="1" name="Cry of Destiny - Hell Binding">
-		<!-- Floats the target into the air and immobilizes it for awhile. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Floats the target into the air and immobilizes it for awhile.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11050</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>

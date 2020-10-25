@@ -21,7 +21,7 @@
 		<!-- An enchant scroll for Freya Staff. Failure to enchant destroys the weapon. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28304" toLevel="1" name="Pumpkin Seed">
+	<skill id="28304" toLevel="1" name="Squash Seed">
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<reuseDelay>10000</reuseDelay>
@@ -50,7 +50,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="28310" toLevel="1" name="Mysterious Ancient Herb">
-		<!-- With the mysterious ancient power, P. Atk. +100%, M. Atk. +400%, P. Def. +2837, M. Def. +1785, Speed +7, Vampiric Rage Effect +5%. -->
+		<!-- With the mysterious ancient power, P. Atk. +100%, M. Atk. +400%, P. Def. +$s1, M. Def. +$s2, Speed +$s3, Vampiric Rage Effect +$s4. -->
 		<icon>BranchSys2.icon.etc_vampiric_rage_herb_i01</icon>
 		<operateType>A1</operateType>
 		<castRange>2000</castRange>
@@ -100,7 +100,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="28319" toLevel="1" name="Red's Elysium Blessing">
-		<!-- For 4 h., Max HP/ MP/ CP +30%, P./ M. Atk. +30%, P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +50%, Vitality Bonus +4 h.0, Received Damage -4 h.1, Skill MP Consumption -4 h.2. The effect remains after death. -->
+		<!-- For $s1, Max HP/ MP/ CP +$s2, P./ M. Atk. +$s3, P./ M. Def. +$s3, Atk. Spd./ Casting Spd. +$s4, Speed +$s5, Attribute Attack/ Resistance +$s6, Damage +$s7, P./ M. Skill Power +$s8, Acquired XP/ SP +$s9, Vitality Bonus +$s10, Received Damage -$s11, Skill MP Consumption -$s12. The effect remains after death. -->
 		<icon>icon.ev_libra_red_buff1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -389,7 +389,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28340" toLevel="1" name="Ertheia's Mysterious Wind Scroll">
+	<skill id="28340" toLevel="1" name="Wondrous Wind Scroll">
 		<!-- For 60 min., Max HP +30%, Max MP +30%, Max CP +30%, P. Def. +30%, M. Def. +30%, P. Atk. +10%, M. Atk. +20%, Skill Cooldown -10%. Wind Attack/ Resistance +20. Cannot be stacked with Art of Seduction. -->
 		<icon>icon.ev_charge_scroll</icon>
 		<operateType>A1</operateType>
@@ -407,7 +407,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28343" toLevel="1" name="Freya's Fortune Stick">
+	<skill id="28343" toLevel="1" name="Freya's Fortune Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -448,7 +448,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28352" toLevel="1" name="Transformation Sealbook: Kat the Cat">
+	<skill id="28352" toLevel="1" name="Transformation Scroll: Kat the Cat">
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
@@ -463,7 +463,7 @@
 		</passiveConditions>
 	</skill>
 	<skill id="28354" toLevel="1" name="Angel Cat's Blessing">
-		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P. Def./ M. Def. +5%, Atk. Spd./ Casting Spd. +5%, Max HP/ MP +5%, and Acquired XP/ SP +30%. -->
+		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, Acquired XP/ SP +30%. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -487,58 +487,58 @@
 	<skill id="28360" toLevel="1" name="+3 Dragon Necklace Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="28361" toLevel="1" name="Archaeologist's Box">
-		<!-- Double-click to obtain an item. -->
+	<skill id="28361" toLevel="1" name="Suspicious Safe">
+		<!-- Double-click to obtain various items. -->
 		<icon>icon.bm_strongbox</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28362" toLevel="1" name="Shining Gold Bar Box">
+	<skill id="28362" toLevel="1" name="Shiny Gold Bar Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="28363" toLevel="1" name="Holiday Lucky Scroll">
-		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%. -->
+		<!-- For $s1, Acquired XP/ SP +$s2, Vitality Bonus +$s3, P. Atk./ M. Atk./ P. Def./ M. Def. +$s4. -->
 		<icon>icon.etc_charm_of_luck_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="28364" toLevel="1" name="15th Anniversary Pitapat Box">
+	<skill id="28364" toLevel="1" name="Anniversary Pitapat Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="28365" toLevel="1" name="15th Anniversary Attendance Box">
+	<skill id="28365" toLevel="1" name="Anniversary Attendance Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="28366" toLevel="1" name="15th Anniversary Rare Earring Gift Box">
+	<skill id="28366" toLevel="1" name="Anniversary Earring Gift Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="28367" toLevel="1" name="15th Anniversary Rare Ring Gift Box">
+	<skill id="28367" toLevel="1" name="Anniversary Ring Gift Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="28368" toLevel="1" name="15th Anniversary Rare Necklace Gift Box">
+	<skill id="28368" toLevel="1" name="Anniversary Necklace Gift Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="28369" toLevel="1" name="Blazing Sun Chest">
-		<!-- Double-click to obtain an item. -->
+		<!-- Double-click to obtain various items. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>

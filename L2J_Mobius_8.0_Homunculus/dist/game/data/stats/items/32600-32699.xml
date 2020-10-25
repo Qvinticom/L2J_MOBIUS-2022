@@ -77,17 +77,17 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="18568" min="1" max="1" chance="5" /> <!-- Life Stone (R95-grade) -->
-			<item id="19167" min="1" max="1" chance="5" /> <!-- Life Stone: Accessory (R95-grade) -->
-			<item id="17754" min="2000" max="2000" chance="10" /> <!-- Soulshot (R-grade) -->
-			<item id="19441" min="1500" max="1500" chance="10" /> <!-- Spiritshot (R-grade) -->
-			<item id="19442" min="1000" max="1000" chance="10" /> <!-- Blessed Spiritshot (R-grade) -->
-			<item id="30357" min="3" max="3" chance="100" /> <!-- Elixir of Life (R-grade) -->
-			<item id="30358" min="3" max="3" chance="100" /> <!-- Elixir of Mind (R-grade) -->
-			<item id="30359" min="3" max="3" chance="100" /> <!-- Elixir of CP (R-grade) -->
-			<item id="30360" min="1" max="1" chance="100" /> <!-- Superior Elixir of Life (R-grade) -->
-			<item id="30361" min="1" max="1" chance="100" /> <!-- Superior Elixir of Mind (R-grade) -->
-			<item id="30362" min="1" max="1" chance="100" /> <!-- Superior Elixir of CP (R-grade) -->
+			<item id="18568" min="1" max="1" chance="5" /> <!-- R95-grade Life Stone -->
+			<item id="19167" min="1" max="1" chance="5" /> <!-- R95-grade Life Stone: Accessory -->
+			<item id="17754" min="2000" max="2000" chance="10" /> <!-- R-grade Soulshot -->
+			<item id="19441" min="1500" max="1500" chance="10" /> <!-- R-grade Spiritshot -->
+			<item id="19442" min="1000" max="1000" chance="10" /> <!-- Blessed R-grade Spiritshot -->
+			<item id="30357" min="3" max="3" chance="100" /> <!-- Elixir of Life -->
+			<item id="30358" min="3" max="3" chance="100" /> <!-- Elixir of Mind -->
+			<item id="30359" min="3" max="3" chance="100" /> <!-- Elixir of CP -->
+			<item id="30360" min="1" max="1" chance="100" /> <!-- Superior Elixir of Life -->
+			<item id="30361" min="1" max="1" chance="100" /> <!-- Superior Elixir of Mind -->
+			<item id="30362" min="1" max="1" chance="100" /> <!-- Superior Elixir of CP -->
 			<item id="32316" min="2" max="2" chance="100" /> <!-- Elixir of Blessing -->
 		</capsuled_items>
 	</item>
@@ -102,23 +102,23 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="18554" min="1" max="1" chance="0.4" /> <!-- Red Soul Crystal (R95-grade) -->
-			<item id="18555" min="1" max="1" chance="0.4" /> <!-- Green Soul Crystal (R95-grade) -->
-			<item id="18556" min="1" max="1" chance="0.4" /> <!-- Blue Soul Crystal (R95-grade) -->
-			<item id="18569" min="1" max="1" chance="93" /> <!-- Mid-grade Life Stone (R95-grade) -->
-			<item id="19167" min="1" max="1" chance="93" /> <!-- Life Stone: Accessory (R95-grade) -->
+			<item id="18554" min="1" max="1" chance="0.4" /> <!-- R95-grade Red Soul Crystal -->
+			<item id="18555" min="1" max="1" chance="0.4" /> <!-- R95-grade Green Soul Crystal -->
+			<item id="18556" min="1" max="1" chance="0.4" /> <!-- R95-grade Blue Soul Crystal -->
+			<item id="18569" min="1" max="1" chance="93" /> <!-- Mid-grade R95-grade Life Stone -->
+			<item id="19167" min="1" max="1" chance="93" /> <!-- R95-grade Life Stone: Accessory -->
 			<item id="19514" min="1" max="1" chance="31" /> <!-- Corroded Ancient Warsmith' Holder -->
 			<item id="19515" min="1" max="1" chance="31" /> <!-- Corroded Ancient Reorin's Mold -->
 			<item id="19516" min="1" max="1" chance="31" /> <!-- Corroded Ancient Arcsmith' Anvil -->
 			<item id="19517" min="1" max="1" chance="31" /> <!-- Corroded Ancient Warsmith' Mold -->
 			<item id="19309" min="1" max="1" chance="31" /> <!-- Corroded Durandil Temper -->
-			<item id="19310" min="1" max="1" chance="31" /> <!-- Corroded Greater Synthetic Cokes -->
+			<item id="19310" min="1" max="1" chance="31" /> <!-- Corroded High-grade Synthetic Cokes -->
 			<item id="19311" min="1" max="1" chance="31" /> <!-- Corroded Laktorarium -->
 			<item id="19312" min="1" max="1" chance="31" /> <!-- Corroded Itenium Temper -->
 			<item id="19313" min="1" max="1" chance="31" /> <!-- Corroded Ertel -->
 			<item id="19314" min="1" max="1" chance="31" /> <!-- Corroded Dark Ion -->
-			<item id="17526" min="1" max="1" chance="13" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			<item id="17527" min="1" max="1" chance="13" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			<item id="17526" min="1" max="1" chance="13" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="17527" min="1" max="1" chance="13" /> <!-- Scroll: Enchant R-grade Armor -->
 		</capsuled_items>
 	</item>
 	<item id="32606" name="Orbis Reward Box (Luxury-grade)" type="EtcItem">
@@ -132,25 +132,25 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="18554" min="1" max="1" chance="0.6" /> <!-- Red Soul Crystal (R95-grade) -->
-			<item id="18555" min="1" max="1" chance="0.6" /> <!-- Green Soul Crystal (R95-grade) -->
-			<item id="18556" min="1" max="1" chance="0.6" /> <!-- Blue Soul Crystal (R95-grade) -->
-			<item id="18569" min="1" max="1" chance="53" /> <!-- Mid-grade Life Stone (R95-grade) -->
-			<item id="19167" min="1" max="1" chance="53" /> <!-- Life Stone: Accessory (R95-grade) -->
+			<item id="18554" min="1" max="1" chance="0.6" /> <!-- R95-grade Red Soul Crystal -->
+			<item id="18555" min="1" max="1" chance="0.6" /> <!-- R95-grade Green Soul Crystal -->
+			<item id="18556" min="1" max="1" chance="0.6" /> <!-- R95-grade Blue Soul Crystal -->
+			<item id="18569" min="1" max="1" chance="53" /> <!-- Mid-grade R95-grade Life Stone -->
+			<item id="19167" min="1" max="1" chance="53" /> <!-- R95-grade Life Stone: Accessory -->
 			<item id="19514" min="1" max="1" chance="36" /> <!-- Corroded Ancient Warsmith' Holder -->
 			<item id="19515" min="1" max="1" chance="36" /> <!-- Corroded Ancient Reorin's Mold -->
 			<item id="19516" min="1" max="1" chance="36" /> <!-- Corroded Ancient Arcsmith' Anvil -->
 			<item id="19517" min="1" max="1" chance="36" /> <!-- Corroded Ancient Warsmith' Mold -->
 			<item id="19309" min="1" max="1" chance="36" /> <!-- Corroded Durandil Temper -->
-			<item id="19310" min="1" max="1" chance="36" /> <!-- Corroded Greater Synthetic Cokes -->
+			<item id="19310" min="1" max="1" chance="36" /> <!-- Corroded High-grade Synthetic Cokes -->
 			<item id="19311" min="1" max="1" chance="36" /> <!-- Corroded Laktorarium -->
 			<item id="19312" min="1" max="1" chance="36" /> <!-- Corroded Itenium Temper -->
 			<item id="19313" min="1" max="1" chance="36" /> <!-- Corroded Ertel -->
 			<item id="19314" min="1" max="1" chance="36" /> <!-- Corroded Dark Ion -->
-			<item id="17526" min="1" max="1" chance="14" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			<item id="17527" min="1" max="1" chance="14" /> <!-- Scroll: Enchant Armor (R-grade) -->
-			<item id="19447" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-			<item id="19448" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+			<item id="17526" min="1" max="1" chance="14" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="17527" min="1" max="1" chance="14" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="19448" min="1" max="1" chance="1" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
 		</capsuled_items>
 	</item>
 	<item id="32607" name="Orbis Reward Box (Top-grade)" type="EtcItem">
@@ -164,28 +164,28 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="18554" min="1" max="1" chance="1.4" /> <!-- Red Soul Crystal (R95-grade) -->
-			<item id="18555" min="1" max="1" chance="1.4" /> <!-- Green Soul Crystal (R95-grade) -->
-			<item id="18556" min="1" max="1" chance="1.4" /> <!-- Blue Soul Crystal (R95-grade) -->
-			<item id="18569" min="1" max="1" chance="65" /> <!-- Mid-grade Life Stone (R95-grade) -->
-			<item id="19167" min="1" max="1" chance="65" /> <!-- Life Stone: Accessory (R95-grade) -->
+			<item id="18554" min="1" max="1" chance="1.4" /> <!-- R95-grade Red Soul Crystal -->
+			<item id="18555" min="1" max="1" chance="1.4" /> <!-- R95-grade Green Soul Crystal -->
+			<item id="18556" min="1" max="1" chance="1.4" /> <!-- R95-grade Blue Soul Crystal -->
+			<item id="18569" min="1" max="1" chance="65" /> <!-- Mid-grade R95-grade Life Stone -->
+			<item id="19167" min="1" max="1" chance="65" /> <!-- R95-grade Life Stone: Accessory -->
 			<item id="19514" min="1" max="1" chance="87" /> <!-- Corroded Ancient Warsmith' Holder -->
 			<item id="19515" min="1" max="1" chance="87" /> <!-- Corroded Ancient Reorin's Mold -->
 			<item id="19516" min="1" max="1" chance="87" /> <!-- Corroded Ancient Arcsmith' Anvil -->
 			<item id="19517" min="1" max="1" chance="87" /> <!-- Corroded Ancient Warsmith' Mold -->
 			<item id="19309" min="1" max="1" chance="87" /> <!-- Corroded Durandil Temper -->
-			<item id="19310" min="1" max="1" chance="87" /> <!-- Corroded Greater Synthetic Cokes -->
+			<item id="19310" min="1" max="1" chance="87" /> <!-- Corroded High-grade Synthetic Cokes -->
 			<item id="19311" min="1" max="1" chance="87" /> <!-- Corroded Laktorarium -->
 			<item id="19312" min="1" max="1" chance="87" /> <!-- Corroded Itenium Temper -->
 			<item id="19313" min="1" max="1" chance="87" /> <!-- Corroded Ertel -->
 			<item id="19314" min="1" max="1" chance="87" /> <!-- Corroded Dark Ion -->
-			<item id="17526" min="1" max="1" chance="28" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			<item id="17527" min="1" max="1" chance="28" /> <!-- Scroll: Enchant Armor (R-grade) -->
-			<item id="19447" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-			<item id="19448" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-			<item id="19511" min="1" max="1" chance="0.2" /> <!-- Yellow Soul Crystal Fragment (R95-grade) -->
-			<item id="19512" min="1" max="1" chance="0.2" /> <!-- Teal Soul Crystal Fragment (R95-grade) -->
-			<item id="19513" min="1" max="1" chance="0.2" /> <!-- Purple Soul Crystal Fragment (R95-grade) -->
+			<item id="17526" min="1" max="1" chance="28" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="17527" min="1" max="1" chance="28" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="19447" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+			<item id="19448" min="1" max="1" chance="2" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+			<item id="19511" min="1" max="1" chance="0.2" /> <!-- R95-grade Yellow Soul Crystal Fragment -->
+			<item id="19512" min="1" max="1" chance="0.2" /> <!-- R95-grade Teal Soul Crystal Fragment -->
+			<item id="19513" min="1" max="1" chance="0.2" /> <!-- R95-grade Purple Soul Crystal Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="32608" name="Immortal Shirt" additionalName="HP" type="Armor">

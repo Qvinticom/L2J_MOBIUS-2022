@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="23200" name="Tribal Warrior Costume Appearance Stone Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Tribal Warrior Top/ Pants/ Gloves/ Shoes/ Hair Accessory Appearance Stone. -->
+		<!-- Double-click to obtain Tribal Warrior Top/ Pants/ Gloves/ Shoes/ Hair Accessory Appearance Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -24,7 +24,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23201" name="Dark Accessory Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive either Antharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, or Bottle of Valakas' Soul. -->
+		<!-- Double-click to obtain one of the following items: Antharas' Earring, Valakas' Necklace, Earth Wyrm's Heart Ring, Bottle of Antharas' Soul, Bottle of Valakas' Soul. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -152,7 +152,7 @@
 		</skills>
 	</item>
 	<item id="23208" name="Red Potion of Regeneration" type="EtcItem">
-		<!-- Restores 3000 HP and the remaining power restores CP. Instant effect with no duration. -->
+		<!-- Recovers 3000 HP. If HP is full, recovers CP. No cooldown. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -170,7 +170,7 @@
 		</skills>
 	</item>
 	<item id="23209" name="Blue Potion of Recovery" type="EtcItem">
-		<!-- Magic potion that instantly restores Mana. Instant effect with no duration. -->
+		<!-- A magic potion that recovers MP. No cooldown. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -310,7 +310,7 @@
 		</skills>
 	</item>
 	<item id="23216" name="Ron's Dual Blunt Weapon Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt. -->
+		<!-- Changes the appearance of a dual blunt weapon into that of Ron's Dual Blunt. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -457,7 +457,7 @@
 		</skills>
 	</item>
 	<item id="23223" name="Monster Weapon Appearance Stone Pack A" type="EtcItem">
-		<!-- Wrapped Pack containing Appearance Stone for either Drake Maul, Spezion's Claw, Steregos' Dagger, Darion's Hellblade, Tiat's Tiat's Tiatenon, or Yehan Klanikus' Yehan Klanikus' Tirbing. -->
+		<!-- Double-click to obtain Appearance Stone for either Drake Maul, Spezion's Claw, Steregos' Dagger, Darion's Hellblade, Tiat's Tiat's Tiatenon, or Yehan Klanikus' Yehan Klanikus' Tirbing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -471,7 +471,7 @@
 		</skills>
 	</item>
 	<item id="23224" name="Monster Weapon Appearance Stone Pack B" type="EtcItem">
-		<!-- Wrapped Pack containing Appearance Stone for either Freya's Staff, Maliss Stormer, Ron's Dual Blunt, Doll Blader's Butcher Blades, Aenkinel's Aenkinel's Astaroth or Mardil's Wind. -->
+		<!-- Double-click to obtain Appearance Stone for either Freya's Staff, Maliss Stormer, Ron's Dual Blunt Weapon, Doll Blader's Butcher Blades, Aenkinel's Aenkinel's Astaroth or Mardil's Wind. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -485,7 +485,7 @@
 		</skills>
 	</item>
 	<item id="23225" name="Soul Avatar's Giant Placid" type="EtcItem">
-		<!-- Restores full Soul Avatar Energy (up to 200000) when used. Can be replenished only when the Soul Avatar is equipped and 10000 or more energy has been consumed. -->
+		<!-- Restores full Soul Avatar Energy (up to 200,000) when used. Can be replenished only when the Soul Avatar is equipped and 10,000 or more energy has been consumed. -->
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -504,7 +504,7 @@
 		</skills>
 	</item>
 	<item id="23226" name="Seductive Swimsuit" type="Armor">
-		<!-- Seductive swimsuit with exquisite prints. -->
+		<!-- Seductive swimsuit with exquisite prints. Note!. Displayed incorrectly on Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_03" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="is_clan_depositable" val="false" />
@@ -559,7 +559,7 @@
 		</skills>
 	</item>
 	<item id="23229" name="Pretzel" type="EtcItem">
-		<!-- Nutritious pretzel. Increases XP gain by 50% for 1 h. -->
+		<!-- Nutritious pretzel. For 1 h., Acquired XP +50%. -->
 		<set name="icon" val="BranchSys3.icon1.g_brezel_germany" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -621,7 +621,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23232" name="Traces of Ancient Kartia's Labyrinth" type="EtcItem">
-		<!-- Traces of Ancient Kartia's Labyrinth. Perhaps a Kartia Researcher may know more about it. -->
+		<!-- Traces of Ancient Kartia's Labyrinth. Perhaps, a Kartia Researcher may know more about it. -->
 		<set name="icon" val="BranchSys3.Icon.g_ev_magic_powder" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -633,7 +633,7 @@
 		<set name="commissionItemType" val="POTION" />
 	</item>
 	<item id="23233" name="Traces of Ancient Kartia's Labyrinth" additionalName="Event" type="EtcItem">
-		<!-- Traces of Ancient Kartia's Labyrinth. Perhaps a Kartia Researcher may know more about it. -->
+		<!-- Traces of Ancient Kartia's Labyrinth. Perhaps, a Kartia Researcher may know more about it. -->
 		<set name="icon" val="BranchSys3.Icon.g_ev_magic_powder" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -704,7 +704,7 @@
 		</skills>
 	</item>
 	<item id="23237" name="Agathion - Pirate Captain Uthanka" type="Armor">
-		<!-- Bracelet acquired when you mourn for Pirate Captain Uthanka's spirit. Use it to summon the Uthanka Agathion. -->
+		<!-- Given to those who mourn for Pirate Captain Uthanka's spirit. Summons Agathion Pirate Captain Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -720,7 +720,7 @@
 		</skills>
 	</item>
 	<item id="23238" name="Blessed Scroll: Enchant Elemental Shirt Pack" additionalName="Pa'agrio" type="EtcItem">
-		<!-- Wrapped Pack containing 30 Blessed Scroll: Enchant Elemental Shirt. Has a very low chance of acquiring a +7 Pa'agrio's Shirt. -->
+		<!-- Double-click to obtain 30 Blessed Scrolls: Enchant Elemental Shirt. There is a very low chance to obtain +7 Pa'agrio's Shirt. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -739,7 +739,7 @@
 		</skills>
 	</item>
 	<item id="23239" name="Enchanted Pa'agrio's Shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Pa'agrio's Shirt enchanted to +7. -->
+		<!-- Double-click to obtain Pa'agrio's Shirt enchanted to +7. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -758,7 +758,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23240" name="Pa'agrio's Shirt" type="Armor">
-		<!-- Magic shirt filled with the power of Pa'agrio, the god of fire. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can remove abnormal conditions and use the ultimate invincibility skill for a certain amount of time. -->
+		<!-- Magic shirt filled with the power of Pa'agrio, the god of fire. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or higher, removes debuffs and grants Invincibility. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_fire" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -786,7 +786,7 @@
 		</stats>
 	</item>
 	<item id="23241" name="Blessed Scroll: Enchant Elemental Shirt" type="EtcItem">
-		<!-- Enchant Scroll exclusive to Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, and the Shiny Elemental Shirt. When enchanted, increases P. Def. and M. Def. by 1. From +3, Elemental defense increases by 5, and from +4, P. Def. increases by 3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +6, +7, +8, +9, and +10, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
+		<!-- For Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, Shiny Elemental Shirt, and Physical/ Magical Reflect Shirt. P./ M. Def. +1. When enchanted to +3, a corresponding attribute resistance is increased. When enchanted to +4 and higher, P. Def. +3, basic stats (CON, MEN, STR, INT, DEX, and WIT) are increased with each enchant value. The enchanting is safe up to +3. The maximum enchant value is +10. Depending on the shirt's enchant value, additional bonuses are added. In case of failure, the item's enchant value is reset to 0. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1008,7 +1008,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23253" name="XP Rune III (Lv. 1-100+) 50%" additionalName="30-day" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 50%. The remaining time decreases even when not playing. -->
+		<!-- An ancient charm endowed with mysterious symbols. When in inventory, Acquired XP +50%. The remaining time decreases even when logged out. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1026,7 +1026,7 @@
 		</skills>
 	</item>
 	<item id="23254" name="XP Rune III (Lv. 1-100+) 100%" additionalName="1-hour" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 100%. The remaining time decreases even when not playing. -->
+		<!-- An ancient charm endowed with mysterious symbols. When in inventory, Acquired XP +100%. The remaining time decreases even when logged out. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1044,7 +1044,7 @@
 		</skills>
 	</item>
 	<item id="23255" name="XP Rune III (Lv. 1-100+) 100%" additionalName="7-day" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 100%. The remaining time decreases even when not playing. -->
+		<!-- An ancient charm endowed with mysterious symbols. When in inventory, Acquired XP +100%. The remaining time decreases even when logged out. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1062,7 +1062,7 @@
 		</skills>
 	</item>
 	<item id="23256" name="XP Rune III (Lv. 1-100+) 100%" additionalName="30-day" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 100%. The remaining time decreases even when not playing. -->
+		<!-- An ancient charm endowed with mysterious symbols. When in inventory, Acquired XP +100%. The remaining time decreases even when logged out. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1080,7 +1080,7 @@
 		</skills>
 	</item>
 	<item id="23257" name="XP Rune III (Lv. 1-100+) 200%" additionalName="1-hour" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 200%. The remaining time decreases even when not playing. -->
+		<!-- An ancient charm endowed with mysterious symbols. When in inventory, Acquired XP +200%. The remaining time decreases even when logged out. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1098,7 +1098,7 @@
 		</skills>
 	</item>
 	<item id="23258" name="XP Rune III (Lv. 1-100+) 200%" additionalName="7-day" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 200%. The remaining time decreases even when not playing. -->
+		<!-- An ancient charm endowed with mysterious symbols. When in inventory, Acquired XP +200%. The remaining time decreases even when logged out. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1116,7 +1116,7 @@
 		</skills>
 	</item>
 	<item id="23259" name="XP Rune III (Lv. 1-100+) 200%" additionalName="30-day" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 200%. The remaining time decreases even when not playing. -->
+		<!-- An ancient charm endowed with mysterious symbols. When in inventory, Acquired XP +200%. The remaining time decreases even when logged out. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1134,7 +1134,7 @@
 		</skills>
 	</item>
 	<item id="23260" name="SP Rune 50%" additionalName="30-day" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 50%. The remaining time decreases even when not playing. -->
+		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Acquired SP +50%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1152,7 +1152,7 @@
 		</skills>
 	</item>
 	<item id="23261" name="SP Rune 100%" additionalName="1-hour" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 100%. The remaining time decreases even when not playing. -->
+		<!-- Ancient charm endowed with mysterious symbols. When in inventory, Acquired SP +100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1170,7 +1170,7 @@
 		</skills>
 	</item>
 	<item id="23262" name="SP Rune 100%" additionalName="7-day" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 100%. The remaining time decreases even when not playing. -->
+		<!-- Ancient charm endowed with mysterious symbols. When in inventory, Acquired SP +100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1188,7 +1188,7 @@
 		</skills>
 	</item>
 	<item id="23263" name="SP Rune 100%" additionalName="30-day" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 100%. The remaining time decreases even when not playing. -->
+		<!-- Ancient charm endowed with mysterious symbols. When in inventory, Acquired SP +100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1206,7 +1206,7 @@
 		</skills>
 	</item>
 	<item id="23264" name="SP Rune 200%" additionalName="1-hour" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 200%. The remaining time decreases even when not playing. -->
+		<!-- Ancient charm endowed with mysterious symbols. When in inventory, Acquired SP +200%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1224,7 +1224,7 @@
 		</skills>
 	</item>
 	<item id="23265" name="SP Rune 200%" additionalName="7-day" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 200%. The remaining time decreases even when not playing. -->
+		<!-- Ancient charm endowed with mysterious symbols. When in inventory, Acquired SP +200%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1242,7 +1242,7 @@
 		</skills>
 	</item>
 	<item id="23266" name="SP Rune 200%" additionalName="30-day" type="EtcItem">
-		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 200%. The remaining time decreases even when not playing. -->
+		<!-- Ancient charm endowed with mysterious symbols. When in inventory, Acquired SP +200%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1314,7 +1314,7 @@
 		</skills>
 	</item>
 	<item id="23270" name="Maphr's Rune 50%" additionalName="1-hour" type="EtcItem">
-		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 50%. -->
+		<!-- When in inventory, item drop rate +50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1331,7 +1331,7 @@
 		</skills>
 	</item>
 	<item id="23271" name="Maphr's Rune 100%" additionalName="1-hour" type="EtcItem">
-		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 100%. -->
+		<!-- When in inventory, item drop rate +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1348,7 +1348,7 @@
 		</skills>
 	</item>
 	<item id="23272" name="Maphr's Rune 200%" additionalName="1-hour" type="EtcItem">
-		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 200%. -->
+		<!-- When in inventory, item drop rate +200%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1365,7 +1365,7 @@
 		</skills>
 	</item>
 	<item id="23273" name="Maphr's Rune 50%" additionalName="30-day" type="EtcItem">
-		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 50%. -->
+		<!-- When in inventory, item drop rate +50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1382,7 +1382,7 @@
 		</skills>
 	</item>
 	<item id="23274" name="Maphr's Rune 100%" additionalName="30-day" type="EtcItem">
-		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 100%. -->
+		<!-- When in inventory, item drop rate +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1399,7 +1399,7 @@
 		</skills>
 	</item>
 	<item id="23275" name="Maphr's Rune 200%" additionalName="30-day" type="EtcItem">
-		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 200%. -->
+		<!-- When in inventory, item drop rate +200%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1416,7 +1416,7 @@
 		</skills>
 	</item>
 	<item id="23276" name="XP Rune III (Lv. 1-100+) 50% Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (30-day). -->
+		<!-- Double-click to obtain XP Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1431,11 +1431,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23253" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 30-day -->
+			<item id="23253" min="1" max="1" chance="100" /> <!-- XP Rune 50% - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="23277" name="XP Rune III (Lv. 1-100+) 100% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 100% (1-hour). -->
+		<!-- Double-click to obtain XP Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1450,11 +1450,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% - 1-hour -->
+			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23278" name="XP Rune III (Lv. 1-100+) 100% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 100% (7-day). -->
+		<!-- Double-click to obtain XP Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1469,11 +1469,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23255" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% - 7-day -->
+			<item id="23255" min="1" max="1" chance="100" /> <!-- XP Rune 100% - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="23279" name="XP Rune III (Lv. 1-100+) 100% Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 100% (30-day). -->
+		<!-- Double-click to obtain XP Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1488,11 +1488,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23256" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% - 30-day -->
+			<item id="23256" min="1" max="1" chance="100" /> <!-- XP Rune 100% - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="23280" name="XP Rune III (Lv. 1-100+) 200% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 200% (1-hour). -->
+		<!-- Double-click to obtain XP Rune 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1507,11 +1507,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23257" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 200% - 1-hour -->
+			<item id="23257" min="1" max="1" chance="100" /> <!-- XP Rune 200% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23281" name="XP Rune III (Lv. 1-100+) 200% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 200% (7-day). -->
+		<!-- Double-click to obtain XP Rune 200% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1526,11 +1526,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23258" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 200% - 7-day -->
+			<item id="23258" min="1" max="1" chance="100" /> <!-- XP Rune 200% - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="23282" name="XP Rune III (Lv. 1-100+) 200% Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 200% (30-day). -->
+		<!-- Double-click to obtain XP Rune 200% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1545,11 +1545,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23259" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 200% - 30-day -->
+			<item id="23259" min="1" max="1" chance="100" /> <!-- XP Rune 200% - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="23283" name="SP Rune 50% Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 50% (30-day). -->
+		<!-- Double-click to obtain SP Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1568,7 +1568,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23284" name="SP Rune 100% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 100% (1-hour). -->
+		<!-- Double-click to obtain SP Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1587,7 +1587,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23285" name="SP Rune 100% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 100% (7-day). -->
+		<!-- Double-click to obtain SP Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1606,7 +1606,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23286" name="SP Rune 100% Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 100% (30-day). -->
+		<!-- Double-click to obtain SP Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1625,7 +1625,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23287" name="SP Rune 200% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 200% (1-hour). -->
+		<!-- Double-click to obtain SP Rune 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1644,7 +1644,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23288" name="SP Rune 200% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 200% (7-day). -->
+		<!-- Double-click to obtain SP Rune 200% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1663,7 +1663,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23289" name="SP Rune 200% Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 200% (30-day). -->
+		<!-- Double-click to obtain SP Rune 200% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1682,7 +1682,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23290" name="Eva's Rune Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Eva's Rune (1-hour). -->
+		<!-- Double-click to obtain Eva's Rune (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1701,7 +1701,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23291" name="Eva's Rune Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Eva's Rune (7-day). -->
+		<!-- Double-click to obtain Eva's Rune (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1720,7 +1720,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23292" name="Eva's Rune Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Eva's Rune (30-day). -->
+		<!-- Double-click to obtain Eva's Rune (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1739,7 +1739,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23293" name="Maphr's Rune 50% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 50% (1-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 50% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1758,7 +1758,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23294" name="Maphr's Rune 100% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 100% (1-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1777,7 +1777,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23295" name="Maphr's Rune 200% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 200% (1-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1796,7 +1796,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23296" name="Maphr's Rune 50% Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 50% (30-day). -->
+		<!-- Double-click to obtain Maphr's Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1815,7 +1815,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23297" name="Maphr's Rune 100% Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 100% (30-day). -->
+		<!-- Double-click to obtain Maphr's Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1834,7 +1834,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23298" name="Maphr's Rune 200% Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 200% (30-day). -->
+		<!-- Double-click to obtain Maphr's Rune 200% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1853,7 +1853,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23299" name="Blessed Scroll: Enchant Elemental Shirt Pack" additionalName="Sayha" type="EtcItem">
-		<!-- Wrapped Pack containing 30 Blessed Scroll: Enchant Elemental Shirt. Has a very low chance of acquiring a +7 Sayha's Shirt. -->
+		<!-- Double-click to obtain 30 Blessed Scrolls: Enchant Elemental Shirt. There is a very low chance to obtain +7 Sayha's Shirt. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

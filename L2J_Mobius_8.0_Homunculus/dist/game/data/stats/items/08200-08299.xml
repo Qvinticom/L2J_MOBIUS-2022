@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="8200" name="Corroded Fisherman's Potion - White" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oblivion_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -18,7 +18,7 @@
 		</skills>
 	</item>
 	<item id="8201" name="Corroded Fisherman's Potion - Black" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oblivion_black_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -32,7 +32,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="8202" name="Corroded Fisherman's Recovery Potion" type="EtcItem">
-		<!-- Corroded item. Can be traded for a pack through the Aden Reconstruction Society, and can also be sold in shops. -->
+		<!-- No longer used. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oblivion_black_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -474,7 +474,7 @@
 		</stats>
 	</item>
 	<item id="8223" name="Seed: Twin Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Twin Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -489,7 +489,7 @@
 		</skills>
 	</item>
 	<item id="8224" name="Seed: Great Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Great Codran. For best results, a level 56- 66 character must plant it on a level 56- 66 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Great Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 56-66 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -504,7 +504,7 @@
 		</skills>
 	</item>
 	<item id="8225" name="Seed: Desert Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Desert Codran. For best results, a level 59- 69 character must plant it on a level 59- 69 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Desert Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 59-69 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -519,7 +519,7 @@
 		</skills>
 	</item>
 	<item id="8226" name="Seed: Blue Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. Cannot be transferred between servers. -->
+		<!-- Seed of Blue Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 62-72. -->
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -534,7 +534,7 @@
 		</skills>
 	</item>
 	<item id="8227" name="Seed: Red Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. Cannot be transferred between servers. -->
+		<!-- Seed of Red Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 65-75. -->
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -549,7 +549,7 @@
 		</skills>
 	</item>
 	<item id="8228" name="Seed: Golden Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. Cannot be transferred between servers. -->
+		<!-- Seed of Golden Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 68-78. -->
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -564,7 +564,7 @@
 		</skills>
 	</item>
 	<item id="8229" name="Seed: Desert Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. Cannot be transferred between servers. -->
+		<!-- Seed of Desert Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 71-81. -->
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -579,7 +579,7 @@
 		</skills>
 	</item>
 	<item id="8230" name="Seed: Alternative Twin Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Twin Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -594,7 +594,7 @@
 		</skills>
 	</item>
 	<item id="8231" name="Seed: Alternative Great Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Great Codran. For best results, a level 56- 66 character must plant it on a level 56- 66 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Great Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 56-66 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -609,7 +609,7 @@
 		</skills>
 	</item>
 	<item id="8232" name="Seed: Alternative Desert Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59- 69 character must plant it on a level 59- 69 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Desert Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 59-69 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -624,7 +624,7 @@
 		</skills>
 	</item>
 	<item id="8233" name="Seed: Alternative Blue Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. Cannot be transferred between servers. -->
+		<!-- Seed of Alternative Blue Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 62-72. -->
 		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -639,7 +639,7 @@
 		</skills>
 	</item>
 	<item id="8234" name="Seed: Alternative Red Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. Cannot be transferred between servers. -->
+		<!-- Seed of Alternative Red Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 65-75. -->
 		<set name="icon" val="icon.etc_red_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -654,7 +654,7 @@
 		</skills>
 	</item>
 	<item id="8235" name="Seed: Alternative Golden Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. Cannot be transferred between servers. -->
+		<!-- Seed of Alternative Golden Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 68-78. -->
 		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -669,7 +669,7 @@
 		</skills>
 	</item>
 	<item id="8236" name="Seed: Alternative Desert Coba" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. Cannot be transferred between servers. -->
+		<!-- Seed of Alternative Desert Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 71-81. -->
 		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -684,7 +684,7 @@
 		</skills>
 	</item>
 	<item id="8237" name="Seed: Dark Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Dark Coda. For the best chance of success, it should be planted by a character whose level is between 5-15 onto a monster whose level is between 5-15. -->
+		<!-- A seed of Dark Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 5-15 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -699,7 +699,7 @@
 		</skills>
 	</item>
 	<item id="8238" name="Seed: Red Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Red Coda. For the best chance of success, it should be planted by a character whose level is between 8-18 onto a monster whose level is between 8-18. -->
+		<!-- A seed of Red Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 8-18 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -714,7 +714,7 @@
 		</skills>
 	</item>
 	<item id="8239" name="Seed: Chilly Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Chilly Coda. For best results, a level 11- 21 character must plant it on a level 11- 21 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Chilly Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 11-21 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -729,7 +729,7 @@
 		</skills>
 	</item>
 	<item id="8240" name="Seed: Blue Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Blue Coda. For the best chance of success, it should be planted by a character whose level is between 14- 24 onto a monster whose level is between 14- 24. -->
+		<!-- A seed of Blue Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 14-24 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -744,7 +744,7 @@
 		</skills>
 	</item>
 	<item id="8241" name="Seed: Golden Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Golden Coda. For the best chance of success, it should be planted by a character whose level is between 17- 27 onto a monster whose level is between 17- 27. -->
+		<!-- A seed of Golden Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 17-27 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -759,7 +759,7 @@
 		</skills>
 	</item>
 	<item id="8242" name="Seed: Lute Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Lute Coda. For the best chance of success, it should be planted by a character whose level is between 20- 30 onto a monster whose level is between 20- 30. -->
+		<!-- A seed of Lute Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 20-30 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -774,7 +774,7 @@
 		</skills>
 	</item>
 	<item id="8243" name="Seed: Desert Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Desert Coda. For the best chance of success, it should be planted by a character whose level is between 23- 33 onto a monster whose level is between 23- 33. -->
+		<!-- A seed of Desert Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 23-33 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -789,7 +789,7 @@
 		</skills>
 	</item>
 	<item id="8244" name="Seed: Red Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Red Cobol. For best results, a level 26- 36 character must plant it on a level 26- 36 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Red Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 26-36 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -804,7 +804,7 @@
 		</skills>
 	</item>
 	<item id="8245" name="Seed: Chilly Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Chilly Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 29-39 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -819,7 +819,7 @@
 		</skills>
 	</item>
 	<item id="8246" name="Seed: Blue Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Blue Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 32-42 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -834,7 +834,7 @@
 		</skills>
 	</item>
 	<item id="8247" name="Seed: Thorn Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Thorn Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 35-45 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -849,7 +849,7 @@
 		</skills>
 	</item>
 	<item id="8248" name="Seed: Golden Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Golden Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 38-48 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -864,7 +864,7 @@
 		</skills>
 	</item>
 	<item id="8249" name="Seed: Great Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Great Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 41-51 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -879,7 +879,7 @@
 		</skills>
 	</item>
 	<item id="8250" name="Seed: Red Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Red Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -894,7 +894,7 @@
 		</skills>
 	</item>
 	<item id="8251" name="Seed: Sea Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Sea Codran. For best results, a level 45- 55 character must plant it on a level 45- 55 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Sea Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 45-55 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -909,7 +909,7 @@
 		</skills>
 	</item>
 	<item id="8252" name="Seed: Chilly Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Chilly Codran. For best results, a level 47- 57 character must plant it on a level 47- 57 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Chilly Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 47-57 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -924,7 +924,7 @@
 		</skills>
 	</item>
 	<item id="8253" name="Seed: Blue Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Blue Codran. For best results, a level 50- 60 character must plant it on a level 50- 60 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Blue Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 50-60 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -939,7 +939,7 @@
 		</skills>
 	</item>
 	<item id="8254" name="Seed: Twin Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Twin Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED" />
@@ -954,7 +954,7 @@
 		</skills>
 	</item>
 	<item id="8255" name="Seed: Alternative Dark Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Dark Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 5-15 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -969,7 +969,7 @@
 		</skills>
 	</item>
 	<item id="8256" name="Seed: Alternative Red Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 8-18 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -984,7 +984,7 @@
 		</skills>
 	</item>
 	<item id="8257" name="Seed: Alternative Chilly Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Chilly Coda. For best results, a level 11- 21 character must plant it on a level 11- 21 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 11-21 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -999,7 +999,7 @@
 		</skills>
 	</item>
 	<item id="8258" name="Seed: Alternative Blue Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14- 24 character must plant it on a level 14- 24 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 14-24 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1014,7 +1014,7 @@
 		</skills>
 	</item>
 	<item id="8259" name="Seed: Alternative Golden Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17- 27 character must plant it on a level 17- 27 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Golden Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 17-27 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1029,7 +1029,7 @@
 		</skills>
 	</item>
 	<item id="8260" name="Seed: Alternative Lute Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20- 30 character must plant it on a level 20- 30 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Lute Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 20-30 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1044,7 +1044,7 @@
 		</skills>
 	</item>
 	<item id="8261" name="Seed: Alternative Desert Coda" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23- 33 character must plant it on a level 23- 33 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Desert Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 23-33 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1059,7 +1059,7 @@
 		</skills>
 	</item>
 	<item id="8262" name="Seed: Alternative Red Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26- 36 character must plant it on a level 26- 36 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 26-36 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1074,7 +1074,7 @@
 		</skills>
 	</item>
 	<item id="8263" name="Seed: Alternative Chilly Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 29-39 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1089,7 +1089,7 @@
 		</skills>
 	</item>
 	<item id="8264" name="Seed: Alternative Blue Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 32-42 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1104,7 +1104,7 @@
 		</skills>
 	</item>
 	<item id="8265" name="Seed: Alternative Thorn Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Thorn Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 35-45 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1119,7 +1119,7 @@
 		</skills>
 	</item>
 	<item id="8266" name="Seed: Alternative Golden Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Golden Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 38-48 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1134,7 +1134,7 @@
 		</skills>
 	</item>
 	<item id="8267" name="Seed: Alternative Great Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Great Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 41-51 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_cobol_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1149,7 +1149,7 @@
 		</skills>
 	</item>
 	<item id="8268" name="Seed: Alternative Red Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Red Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1164,7 +1164,7 @@
 		</skills>
 	</item>
 	<item id="8269" name="Seed: Alternative Sea Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 45- 55 character must plant it on a level 45- 55 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Sea Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 45-55 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1179,7 +1179,7 @@
 		</skills>
 	</item>
 	<item id="8270" name="Seed: Alternative Chilly Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47- 57 character must plant it on a level 47- 57 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Chilly Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 47-57 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1194,7 +1194,7 @@
 		</skills>
 	</item>
 	<item id="8271" name="Seed: Alternative Blue Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50- 60 character must plant it on a level 50- 60 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Blue Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 50-60 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1209,7 +1209,7 @@
 		</skills>
 	</item>
 	<item id="8272" name="Seed: Alternative Twin Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Schuttgart area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<!-- A seed of Alternative Twin Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="default_action" val="SEED" />
 		<set name="etcitem_type" val="SEED2" />
@@ -1531,7 +1531,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8294" name="Recipe: Steel Sword" type="EtcItem">
-		<!-- This formula for manufacturing a Steel Sword can only be used by Dwarves and Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Steel Sword. Requires Create Item Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1545,7 +1545,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8295" name="Recipe: Lesser Giant's Sword" type="EtcItem">
-		<!-- This formula for manufacturing a Titan's Sword can only be used by Dwarves and Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Lesser Giant's Sword. Requires Create Item Lv. 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1559,7 +1559,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8296" name="Recipe: Pa'agrian Sword" type="EtcItem">
-		<!-- This formula for manufacturing a Titan's Sword can only be used by Dwarves and Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Pa'agrian Sword. Requires Create Item Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1573,7 +1573,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8297" name="Recipe: Guardian's Sword" type="EtcItem">
-		<!-- This formula for manufacturing a Guardian's Sword can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Guardian's Sword. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1587,7 +1587,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8298" name="Recipe: Guardian's Sword (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Guardian's Sword. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<!-- For Dwarves only. A recipe for Guardian's Sword. Requires Create Item Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1601,7 +1601,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8299" name="Recipe: Infernal Master" type="EtcItem">
-		<!-- This formula for manufacturing an Infernal Master can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Infernal Master. Requires Create Item Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

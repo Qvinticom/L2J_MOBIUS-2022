@@ -241,7 +241,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3415" name="Ragna Chief Notice" type="EtcItem">
-		<!-- He who destroys the Lord of Flame shall be appointed Chief. Take this to Ancestor Martankus. -->
+		<!-- The one who destroys the Lord of Flame shall be appointed Chief. Take this to Ancestor Martankus. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -465,7 +465,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3429" name="Spellbook: Greater Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Greater Heal. Used by Bishops, Elders, and Shillien Elders. Required level: Bishop- 40, Elder, Shillien Elder 48 -->
+		<!-- A spellbook for learning the Greater Heal skill. Used by Bishops, Elven Elders and Shillien Elders. Required level: Bishop - 40, Elven Elder/ Shillien Elder - 48. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -485,7 +485,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3431" name="Spellbook: Greater Group Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Greater Group Heal. Used by Bishops, Shillien Elders, and Elders. Required level: Bishop: 40, Shillien Elder and Elder: 48 -->
+		<!-- A spellbook for learning the Greater Group Heal skill. Used by Bishops, Shillien Elders and Elven Elders. Required level: Bishop - 40, Shillien Elder/ Elven Elder - 48. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -647,7 +647,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3444" name="Gludio Apples" type="EtcItem">
-		<!-- Apple cultivated in the Gludio region. Can be sold at shops. -->
+		<!-- An apple from the Gludio region. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_fruit_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -658,7 +658,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3445" name="Dion Corn Meal" type="EtcItem">
-		<!-- Powder made from corn cultivated in Dion. Can be sold at shops. -->
+		<!-- Corn flour from the Dion region. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_powder_orange_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -669,7 +669,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3446" name="Dire Wolf Pelts" type="EtcItem">
-		<!-- Tanned Dire Wolf pelts. Can be sold at shops. -->
+		<!-- A tanned Dire Wolf's pelt. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_crafted_leather_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -680,7 +680,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3447" name="Moonstone" type="EtcItem">
-		<!-- Jewel of blue and white light called Moonjang Stone or Moonstone. Can be sold at shops. -->
+		<!-- A white jewel called the Moonjang Stone or the Moonstone. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gem_clear_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -691,7 +691,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3448" name="Gludio Wheat Flour" type="EtcItem">
-		<!-- Powder made from wheat cultivated in the Gludio region. Can be sold at shops. -->
+		<!-- Wheat flour from the Gludio region. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_powder_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -702,7 +702,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3449" name="Spidersilk Rope" type="EtcItem">
-		<!-- Strong rope made of weaving tarantula spider silk. Can be sold at shops. -->
+		<!-- A strong rope made of Tarantula's spider silk. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_skein_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -713,7 +713,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3450" name="Alexandrite" type="EtcItem">
-		<!-- Precious jewel that shines green in the sunlight and red in the moonlight. Can be sold at shops. -->
+		<!-- A jewel that shines green in the sunlight and red in the moonlight. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -724,7 +724,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3451" name="Silver Tea Service" type="EtcItem">
-		<!-- High-quality teacup and dish set crafted of silver. Can be sold at shops. -->
+		<!-- A teacup and a saucer made of silver. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -735,7 +735,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3452" name="Mechanic Golem Spare Parts" type="EtcItem">
-		<!-- Component of mechanic golems. Useless for anything else, it is best sold. -->
+		<!-- Components from mechanical golems. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_instrument_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -746,7 +746,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3453" name="Fire Emerald" type="EtcItem">
-		<!-- Precious jewel that shines with an intense red light. Can be sold at shops. -->
+		<!-- A jewel that shines with an intense red light. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -757,7 +757,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3454" name="Avellan Silk Frock" type="EtcItem">
-		<!-- High-quality silk dress imported from Avellan of the east. Can be sold at shops. -->
+		<!-- High-quality silk from Avella. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -768,7 +768,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3455" name="Feriotic Porcelain Urn" type="EtcItem">
-		<!-- As a water cup made for their rituals, it is a relic of the ancient Ferios empire. Can be sold at shops. -->
+		<!-- A ritual water cup from the ancient Ferios empire. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -779,7 +779,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3456" name="Imperial Diamond" type="EtcItem">
-		<!-- Jewel of brilliant light used in decorating the crown of the Elmoreden emperor. Can be sold at shops. -->
+		<!-- A jewel that decorated the crown of Elmoreden emperors. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -834,7 +834,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3461" name="Complete Statue of Shilen" type="EtcItem">
-		<!-- Statue of Shilen made in the time of the ancient Elmoreden empire. Can be sold at shops for a high price. -->
+		<!-- A statue of Shillien made in the time of the ancient Elmoreden Empire. Can be sold in any shop for a high price. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -910,7 +910,7 @@
 		<set name="price" val="10" />
 	</item>
 	<item id="3468" name="Ancient Crown" type="EtcItem">
-		<!-- Crown that is full of jewels but is too big to wear on the head. Let's sell it. -->
+		<!-- A crown decorated with a lot of jewels. It is too heavy to wear. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_mark_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -980,7 +980,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3473" name="Blood Werewolf" type="EtcItem">
-		<!-- Low-grade Coin -->
+		<!-- A coin of low quality. -->
 		<set name="icon" val="icon.etc_magic_coin_blood_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -990,7 +990,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3474" name="Blood Basilisk" type="EtcItem">
-		<!-- Mid-grade Coin -->
+		<!-- A mid-grade coin. -->
 		<set name="icon" val="icon.etc_magic_coin_blood_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1000,7 +1000,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3475" name="Blood Dre Vanul" type="EtcItem">
-		<!-- Low-grade Coin -->
+		<!-- A coin of low quality. -->
 		<set name="icon" val="icon.etc_magic_coin_blood_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1010,7 +1010,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3476" name="Blood Succubus" type="EtcItem">
-		<!-- Mid-grade Coin -->
+		<!-- A mid-grade coin. -->
 		<set name="icon" val="icon.etc_magic_coin_blood_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1040,7 +1040,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3479" name="Manak's Blood Werewolf" type="EtcItem">
-		<!-- Mid-grade Coin -->
+		<!-- A mid-grade coin. -->
 		<set name="icon" val="icon.etc_magic_coin_blood_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1050,7 +1050,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3480" name="Nia's Blood Medusa" type="EtcItem">
-		<!-- Low-grade Coin -->
+		<!-- A coin of low quality. -->
 		<set name="icon" val="icon.etc_magic_coin_blood_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1080,7 +1080,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="3483" name="Gold Knight" type="EtcItem">
-		<!-- Low-grade Coin -->
+		<!-- A coin of low quality. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1090,7 +1090,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3484" name="Gold Giant" type="EtcItem">
-		<!-- Mid-grade Coin -->
+		<!-- A mid-grade coin. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1100,7 +1100,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3485" name="Gold Drake" type="EtcItem">
-		<!-- Low-grade Coin -->
+		<!-- A coin of low quality. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1110,7 +1110,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3486" name="Gold Wyrm" type="EtcItem">
-		<!-- Mid-grade Coin -->
+		<!-- A mid-grade coin. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1130,7 +1130,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3488" name="Manak's Gold Giant" type="EtcItem">
-		<!-- Mid-grade Coin -->
+		<!-- A mid-grade coin. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1140,7 +1140,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3489" name="Nia's Gold Wyvern" type="EtcItem">
-		<!-- Low-grade Coin -->
+		<!-- A coin of low quality. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1160,7 +1160,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3491" name="Silver Fairy" type="EtcItem">
-		<!-- Low-grade Coin -->
+		<!-- A coin of low quality. -->
 		<set name="icon" val="icon.etc_magic_coin_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1170,7 +1170,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3492" name="Silver Dryad" type="EtcItem">
-		<!-- Mid-grade Coin -->
+		<!-- A mid-grade coin. -->
 		<set name="icon" val="icon.etc_magic_coin_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1190,7 +1190,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3494" name="Silver Golem" type="EtcItem">
-		<!-- Low-grade Coin -->
+		<!-- A coin of low quality. -->
 		<set name="icon" val="icon.etc_magic_coin_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1200,7 +1200,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3495" name="Silver Undine" type="EtcItem">
-		<!-- Mid-grade Coin -->
+		<!-- A mid-grade coin. -->
 		<set name="icon" val="icon.etc_magic_coin_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1220,7 +1220,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3497" name="Manak's Silver Dryad" type="EtcItem">
-		<!-- Mid-grade Coin -->
+		<!-- A mid-grade coin. -->
 		<set name="icon" val="icon.etc_magic_coin_silver_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1230,7 +1230,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3498" name="Nia's Silver Fairy" type="EtcItem">
-		<!-- Low-grade Coin -->
+		<!-- A coin of low quality. -->
 		<set name="icon" val="icon.etc_magic_coin_silver_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

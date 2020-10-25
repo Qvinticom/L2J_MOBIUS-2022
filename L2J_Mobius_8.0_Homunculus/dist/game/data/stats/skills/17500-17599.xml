@@ -13,7 +13,7 @@
 		</effects>
 	</skill>
 	<skill id="17501" toLevel="1" name="Fairy Antennae: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_hair_feeler_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -133,7 +133,7 @@
 		</effects>
 	</skill>
 	<skill id="17511" toLevel="1" name="Chapeau: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_archer_hat_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -145,7 +145,7 @@
 		</effects>
 	</skill>
 	<skill id="17512" toLevel="1" name="Chapeau: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_archer_hat_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -185,7 +185,7 @@
 		</effects>
 	</skill>
 	<skill id="17515" toLevel="1" name="Chapeau: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_archer_hat_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -305,7 +305,7 @@
 		</effects>
 	</skill>
 	<skill id="17525" toLevel="1" name="Artisan's Goggles: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -317,7 +317,7 @@
 		</effects>
 	</skill>
 	<skill id="17526" toLevel="1" name="Artisan's Goggles: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -357,7 +357,7 @@
 		</effects>
 	</skill>
 	<skill id="17529" toLevel="1" name="Artisan's Goggles: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -477,7 +477,7 @@
 		</effects>
 	</skill>
 	<skill id="17539" toLevel="1" name="Arrow-pierced Apple: Critical Rate">
-		<!-- Critical Rate +50. -->
+		<!-- Critical Rate for standard attacks +50. -->
 		<icon>icon.accessory_arrow_apple_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -489,7 +489,7 @@
 		</effects>
 	</skill>
 	<skill id="17540" toLevel="1" name="Arrow-pierced Apple: Critical Damage">
-		<!-- P. Critical Damage +90/ M. Critical Damage +68. -->
+		<!-- Critical Damage for standard attacks +90, M. Skill Critical Damage +68. -->
 		<icon>icon.accessory_arrow_apple_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -529,7 +529,7 @@
 		</effects>
 	</skill>
 	<skill id="17543" toLevel="1" name="Arrow-pierced Apple: Evasion">
-		<!-- Evasion +5. -->
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_arrow_apple_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -617,7 +617,7 @@
 		</effects>
 	</skill>
 	<skill id="17549" toLevel="1" name="Agathion Teleport: Town of Giran">
-		<!-- Teleport to the Town of Giran. -->
+		<!-- Teleports to Giran. -->
 		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -702,7 +702,7 @@
 		</effects>
 	</skill>
 	<skill id="17552" toLevel="1" name="Attribute Enchant">
-		<!-- Increases attack speed by 30 and all defense attributes by 30. -->
+		<!-- Attribute Attack +$s1, Attribute Resistance +$s2. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1872,8 +1872,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17568" toLevel="1" name="Enchant Attribute Defense">
-		<!-- All attribute resistance +30. -->
+	<skill id="17568" toLevel="1" name="Enchant Attribute Resistance">
+		<!-- Fire/ Water/ Wind/ Earth/ Dark/ Holy Resistance +30. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1903,7 +1903,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17569" toLevel="1" name="Expertise Rune (D-grade)">
+	<skill id="17569" toLevel="1" name="D-grade Expertise Rune">
 		<!-- When stored in the inventory, it enables you to equip D-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
@@ -1913,7 +1913,7 @@
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
 	</skill>
-	<skill id="17570" toLevel="1" name="Expertise Rune (C-grade)">
+	<skill id="17570" toLevel="1" name="C-grade Expertise Rune">
 		<!-- When stored in the inventory, it enables you to equip C-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
@@ -1923,7 +1923,7 @@
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
 	</skill>
-	<skill id="17571" toLevel="1" name="Expertise Rune (B-grade)">
+	<skill id="17571" toLevel="1" name="B-grade Expertise Rune">
 		<!-- When stored in the inventory, it enables you to equip B-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
@@ -1933,7 +1933,7 @@
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
 	</skill>
-	<skill id="17572" toLevel="1" name="Expertise Rune (A-grade)">
+	<skill id="17572" toLevel="1" name="A-grade Expertise Rune Box">
 		<!-- When stored in the inventory, it enables you to equip A-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
@@ -1943,7 +1943,7 @@
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
 	</skill>
-	<skill id="17573" toLevel="1" name="Expertise Rune (S-grade)">
+	<skill id="17573" toLevel="1" name="S-grade Expertise Rune">
 		<!-- When stored in the inventory, it enables you to equip S-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
@@ -1963,7 +1963,7 @@
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
 	</skill>
-	<skill id="17575" toLevel="1" name="Expertise Rune (R-grade)">
+	<skill id="17575" toLevel="1" name="R-grade Expertise Rune">
 		<!-- When stored in the inventory, it enables you to equip R-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
@@ -1973,7 +1973,7 @@
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
 	</skill>
-	<skill id="17576" toLevel="1" name="Expertise Rune (R95-grade)">
+	<skill id="17576" toLevel="1" name="R95-grade Expertise Rune">
 		<!-- When stored in the inventory, it enables you to equip R95-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
@@ -1983,7 +1983,7 @@
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
 	</skill>
-	<skill id="17577" toLevel="1" name="Expertise Rune (R99-grade)">
+	<skill id="17577" toLevel="1" name="R99-grade Expertise Rune">
 		<!-- When stored in the inventory, it enables you to equip R99-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>

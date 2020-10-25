@@ -270,7 +270,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		return _displayId;
 	}
 	
-	public byte getLevel()
+	public int getLevel()
 	{
 		return _level;
 	}

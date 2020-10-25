@@ -132,7 +132,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5706" toLevel="1" name="Poison">
-		<!-- Instantly decreases HP. After a certain period of time the body is paralyzed. Effect 7. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Momentarily decreases HP because of the poison. Soon your body will be paralyzed. Effect 7.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -159,7 +159,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5707" toLevel="1" name="Paralysis">
-		<!-- Inflicts Paralysis on the target instantly immobilizing it. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Inflicts Paralysis on the target instantly immobilizing it.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -391,7 +391,7 @@
 		</effects>
 	</skill>
 	<skill id="5716" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1021,7 +1021,7 @@
 		</effects>
 	</skill>
 	<skill id="5733" toLevel="6" name="Fear of Steward">
-		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- The target is feared and flees.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1133,7 +1133,7 @@
 		</effects>
 	</skill>
 	<skill id="5735" toLevel="6" name="Curse of Steward">
-		<!-- Instantly inflicts Sleep on the target. While the effect lasts, an additional chance to extend Sleep decreases. Inflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Instantly inflicts Sleep on the target. While the effect lasts, an additional chance to extend Sleep decreases.\n\nInflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1198,7 +1198,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
@@ -1323,7 +1323,7 @@
 		</effects>
 	</skill>
 	<skill id="5739" toLevel="1" name="Invincibility">
-		<!-- Recently resurrected and temporarily immobile. -->
+		<!-- Resurrects and grants invincibility for some time. -->
 		<icon>icon.skill5739</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1347,6 +1347,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -1357,7 +1370,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5740" toLevel="1" name="Recovery Pot">
+	<skill id="5740" toLevel="1" name="Pet's Regeneration">
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1445,6 +1458,19 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<TURN_STONE>100</TURN_STONE>
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-100</amount>
 				<slot>ALL</slot>
@@ -1456,7 +1482,7 @@
 		</effects>
 	</skill>
 	<skill id="5745" toLevel="12" name="Death Blow">
-		<!-- Draws on your HP to summon your strength and unleash a punishing attack. Power $s1. -->
+		<!-- Draws on your HP to summon your strength and unleash a punishing attack. Power $s1 -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-206</value>
@@ -1615,7 +1641,7 @@
 		</effects>
 	</skill>
 	<skill id="5747" toLevel="12" name="Spin Attack">
-		<!-- Instantly stuns the enemy. Power $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Instantly stuns the enemy. Power $s1.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -1696,7 +1722,7 @@
 				</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1758,7 +1784,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5749" toLevel="12" name="Thunder Bolt">
-		<!-- Pours forth the power of thunder upon the enemy. Power $s1. -->
+		<!-- Pours the power of thunder upon the enemies at the front. Power $s1 -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -1939,7 +1965,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5751" toLevel="12" name="Lightning Wave">
-		<!-- Inflicts the power of thunder upon surrounding enemies. Power $s1. -->
+		<!-- Inflicts the power of thunder upon surrounding enemies. Power $s1 -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -2030,7 +2056,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5752" toLevel="12" name="Flare">
-		<!-- Consumes one's own HP to inflict powerful magic on the enemy. Power $s1. -->
+		<!-- Consumes one's own HP to inflict powerful magic on the enemy. Power $s1 -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -2222,7 +2248,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5760" toLevel="9" name="Critical Hit">
-		<!-- Increases Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. Effect $s1. -->
+		<!-- Increases P. Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. Effect $s1. -->
 		<icon>icon.skill5760</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -2292,7 +2318,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5763" toLevel="1" name="Wink">
-		<!-- See the summoned spirit perform cute tricks. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2307,7 +2333,7 @@
 		</conditions>
 	</skill>
 	<skill id="5764" toLevel="1" name="Terror of the Pumpkin Ghost">
-		<!-- Curse of the Pumpkin Ghost causes spontaneous movement. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Curse of the Pumpkin Ghost causes spontaneous movement.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2896,7 +2922,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5795" toLevel="1" name="Poison">
-		<!-- For 30 sec., HP -66 per sec. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- For 30 sec., HP -66 per sec.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2987,7 +3013,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5799" toLevel="1" name="Bleed">
-		<!-- For 20 sec., HP -78 per sec. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- For 20 sec., HP -78 per sec.\n\nInflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>

@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
@@ -42,7 +43,7 @@ import instances.AbstractInstance;
 public class AshenShadowRevolutionaries extends AbstractInstance
 {
 	// NPCs
-	private static final int NETI = 34095;
+	private static final int BENUSTA = 34542;
 	private static final int TREASURE_CHEST = 34101;
 	private static final int[] QUEST_GIVERS =
 	{
@@ -110,6 +111,8 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 		23652, // Unit Guard
 		34103, // Revolutionaries Altar
 	};
+	// Item
+	private static final ItemHolder BENUSTAS_REWARD_BOX = new ItemHolder(81151, 1);
 	// Locations
 	private static final Location QUEST_GIVER_LOCATION = new Location(-77648, 155665, -3190, 21220);
 	private static final Location COMMANDER_LOCATION_1 = new Location(-81911, 154244, -3177);
@@ -136,10 +139,10 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	public AshenShadowRevolutionaries()
 	{
 		super(TEMPLATE_ID);
-		addStartNpc(NETI, TREASURE_CHEST);
+		addStartNpc(BENUSTA, TREASURE_CHEST);
 		addFirstTalkId(TREASURE_CHEST, 34151, 34152, 34153, 34154, 34155);
 		addFirstTalkId(QUEST_GIVERS);
-		addTalkId(NETI, TREASURE_CHEST);
+		addTalkId(BENUSTA, TREASURE_CHEST);
 		addSpawnId(REVOLUTIONARIES);
 		addSpawnId(SPY_DWARF);
 		addSpawnId(COMMANDERS);
@@ -270,6 +273,10 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 						captive.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.MAGIC_SQUARE);
 						captive.broadcastInfo();
 					}
+				}
+				for (PlayerInstance member : world.getPlayers())
+				{
+					giveItems(member, BENUSTAS_REWARD_BOX);
 				}
 				world.spawnGroup("wave_3");
 				world.finishInstance();

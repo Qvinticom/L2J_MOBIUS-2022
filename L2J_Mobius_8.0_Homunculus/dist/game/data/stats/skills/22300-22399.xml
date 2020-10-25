@@ -76,7 +76,7 @@
 		</conditions>
 	</skill>
 	<skill id="22303" toLevel="1" name="Party Cake">
-		<!-- Party Cake's Vitality effect. Maintains all party members' Vitality for 20 min. -->
+		<!-- Party Cake's Vitality bonus for 20 min. -->
 		<icon>BranchSys.icon.br_birthday_cake_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -127,7 +127,7 @@
 			<condition name="OpCanNotUseAirship" />
 		</conditions>
 	</skill>
-	<skill id="22306" toLevel="1" name="Event - Summon Scroll: Bad Bunny">
+	<skill id="22306" toLevel="1" name="Scroll: Summon Bad Bunny - Event">
 		<icon>icon.etc_scroll_of_return_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -142,7 +142,7 @@
 			<condition name="OpCanNotUseAirship" />
 		</conditions>
 	</skill>
-	<skill id="22307" toLevel="1" name="Event - Summon Scroll: Bad Bunny Captain">
+	<skill id="22307" toLevel="1" name="Scroll: Summon Bad Bunny Captain - Event">
 		<icon>icon.etc_scroll_of_return_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -157,7 +157,7 @@
 			<condition name="OpCanNotUseAirship" />
 		</conditions>
 	</skill>
-	<skill id="22308" toLevel="1" name="Event - Summon Scroll: Liverless Bunny">
+	<skill id="22308" toLevel="1" name="Scroll: Summon Gloomy Bunny - Event">
 		<icon>icon.etc_scroll_of_return_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -170,7 +170,7 @@
 			<condition name="OpCanNotUseAirship" />
 		</conditions>
 	</skill>
-	<skill id="22309" toLevel="1" name="Event - Summon Scroll: Liverless Bunny Captain">
+	<skill id="22309" toLevel="1" name="Scroll: Summon Gloomy Bunny Captain - Event">
 		<icon>icon.etc_scroll_of_return_i00</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -244,7 +244,7 @@
 		</conditions>
 	</skill>
 	<skill id="22312" toLevel="1" name="Birthday Vitality Buff">
-		<!-- Birthday gift received once a year. Increases your Vitality whenever you gain XP. This buff is active for 4 h. and is not lost upon death. However, it will disappear if you change to a subclass. -->
+		<!-- Birthday gift received once a year. Increases your Vitality whenever you gain XP. This buff is active for 4 h. and remains after death. However, it will disappear if you change dual class. -->
 		<icon>icon.etc_potion_blue_i00</icon>
 		<abnormalTime>14400</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -277,7 +277,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22313" toLevel="1" name="Pa'agrio's Warm Breeze (4-h.)">
+	<skill id="22313" toLevel="1" name="Pa'agrio's Warm Breeze (4-hour)">
 		<!-- For 4 h., recovers Vitality when XP is acquired through hunting. Will not be deleted upon death. -->
 		<icon>BranchSys2.Icon.pi_wind_of_paagrio</icon>
 		<operateType>A2</operateType>
@@ -362,22 +362,22 @@
 						<item id="6386" count="1" /> <!-- Major Arcana Circlet -->
 					</item>
 					<item chance="3.16">
-						<item id="9570" count="1" /> <!-- Red Soul Crystal - Stage 14 -->
+						<item id="9570" count="1" /> <!-- Red Soul Crystal Lv. 14 -->
 					</item>
 					<item chance="3.16">
-						<item id="9571" count="1" /> <!-- Blue Soul Crystal - Stage 14 -->
+						<item id="9571" count="1" /> <!-- Blue Soul Crystal Lv. 14 -->
 					</item>
 					<item chance="3.16">
-						<item id="9572" count="1" /> <!-- Green Soul Crystal - Stage 14 -->
+						<item id="9572" count="1" /> <!-- Green Soul Crystal Lv. 14 -->
 					</item>
 					<item chance="15.67">
-						<item id="5908" count="1" /> <!-- Red Soul Crystal: Stage 13 -->
+						<item id="5908" count="1" /> <!-- Red Soul Crystal Lv. 13 -->
 					</item>
 					<item chance="15.67">
-						<item id="5911" count="1" /> <!-- Green Soul Crystal - Stage 13 -->
+						<item id="5911" count="1" /> <!-- Green Soul Crystal Lv. 13 -->
 					</item>
 					<item chance="15.67">
-						<item id="5914" count="1" /> <!-- Blue Soul Crystal: Stage 13 -->
+						<item id="5914" count="1" /> <!-- Blue Soul Crystal Lv. 13 -->
 					</item>
 				</items>
 			</effect>
@@ -423,10 +423,10 @@
 						<item id="9551" count="1" /> <!-- Holy Stone -->
 					</item>
 					<item chance="0.28">
-						<item id="959" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+						<item id="959" count="1" /> <!-- Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="3.73">
-						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
+						<item id="960" count="1" /> <!-- Scroll: Enchant S-grade Armor -->
 					</item>
 				</items>
 			</effect>
@@ -445,28 +445,28 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.51">
-						<item id="729" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+						<item id="729" count="1" /> <!-- Scroll: Enchant A-grade Weapon -->
 					</item>
 					<item chance="3.86">
-						<item id="730" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+						<item id="730" count="1" /> <!-- Scroll: Enchant A-grade Armor -->
 					</item>
 					<item chance="1.85">
-						<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon -->
 					</item>
 					<item chance="11.57">
-						<item id="948" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
+						<item id="948" count="1" /> <!-- Scroll: Enchant B-grade Armor -->
 					</item>
 					<item chance="32.15">
-						<item id="8736" count="1" /> <!-- Mid-grade Life Stone - Lv. 55 -->
+						<item id="8736" count="1" /> <!-- Mid-grade Life Stone Lv. 55 -->
 					</item>
 					<item chance="23.15">
-						<item id="8738" count="1" /> <!-- Mid-grade Life Stone - Lv. 61 -->
+						<item id="8738" count="1" /> <!-- Mid-grade Life Stone Lv. 61 -->
 					</item>
 					<item chance="12.86">
-						<item id="8741" count="1" /> <!-- Mid-grade Life Stone - Lv. 70 -->
+						<item id="8741" count="1" /> <!-- Mid-grade Life Stone Lv. 70 -->
 					</item>
 					<item chance="11.57">
-						<item id="8742" count="1" /> <!-- Mid-grade Life Stone - Lv. 76 -->
+						<item id="8742" count="1" /> <!-- Mid-grade Life Stone Lv. 76 -->
 					</item>
 					<item chance="2.48">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
@@ -488,16 +488,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="3.01">
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon -->
 					</item>
 					<item chance="21.30">
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor -->
 					</item>
 					<item chance="6.41">
-						<item id="955" count="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+						<item id="955" count="1" /> <!-- Scroll: Enchant D-grade Weapon -->
 					</item>
 					<item chance="52.72">
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor -->
 					</item>
 					<item chance="2.56">
 						<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
@@ -598,7 +598,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22321" toLevel="1" name="Acumen">
-		<!-- Increases Casting Spd. by 30% for 60 min. -->
+		<!-- Casting Spd. +30% for 60 min. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -614,7 +614,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22322" toLevel="1" name="Magic Barrier">
-		<!-- For 20 min., M. Def. +30%. -->
+		<!-- For 60 min., M. Def. +30%. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -662,7 +662,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22325" toLevel="1" name="Blessed Body">
-		<!-- Increases Max HP by 35% for 60 min. -->
+		<!-- Max HP +35% for 60 min. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -694,7 +694,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22327" toLevel="1" name="Wind Walk">
-		<!-- Increases Speed by 33 for 60 min. -->
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -710,7 +710,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22328" toLevel="1" name="Shield">
-		<!-- Increases P. Def. by 15% for 60 min. -->
+		<!-- P. Def. +15% for 60 min. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -726,7 +726,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22329" toLevel="1" name="Wind Walk">
-		<!-- Increases Speed by 33 for 60 min. -->
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<icon>icon.etc_fruit_cocktail_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -742,7 +742,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22330" toLevel="1" name="Shield">
-		<!-- Increases P. Def. by 15% for 60 min. -->
+		<!-- P. Def. +15% for 60 min. -->
 		<icon>icon.etc_fruit_cocktail_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -758,7 +758,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22331" toLevel="1" name="Haste">
-		<!-- Increases Atk. Spd. by 33% for 60 min. -->
+		<!-- Atk. Spd. +33% for 60 min. -->
 		<icon>icon.etc_fruit_cocktail_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -838,7 +838,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22336" toLevel="1" name="Blessed Body">
-		<!-- Increases Max HP by 35% for 60 min. -->
+		<!-- Max HP +35% for 60 min. -->
 		<icon>icon.etc_fruit_cocktail_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -919,7 +919,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22341" toLevel="1" name="Wind Walk">
-		<!-- Increases Speed by 33 for 60 min. -->
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -936,7 +936,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22342" toLevel="1" name="Haste">
-		<!-- Increases Atk. Spd. by 33% for 60 min. -->
+		<!-- Atk. Spd. +33% for 60 min. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1004,7 +1004,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22346" toLevel="1" name="Acumen">
-		<!-- Increases Casting Spd. by 30% for 60 min. -->
+		<!-- Casting Spd. +30% for 60 min. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1021,7 +1021,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22347" toLevel="1" name="Shield">
-		<!-- For 60 min., P. Def. +15%. -->
+		<!-- P. Def. +15% for 60 min. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1123,7 +1123,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22353" toLevel="6" name="Concentration">
-		<!-- Decreases magic cancel damage by 53 for 60 min. -->
+		<!-- Casting Interruption Rate -42 for 20 min. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1156,43 +1156,43 @@
 						<item id="22202" count="1" /> <!-- Weapon Pack (S80-grade) - Event -->
 					</item>
 					<item chance="0.04161">
-						<item id="22221" count="1" /> <!-- Destruction Scroll: Enchant Weapon (S-grade) - Event -->
+						<item id="22221" count="1" /> <!-- Destruction Scroll: Enchant S-grade Weapon - Event -->
 					</item>
 					<item chance="0.08322">
-						<item id="22223" count="1" /> <!-- Destruction Scroll: Enchant Weapon (A-grade) - Event -->
+						<item id="22223" count="1" /> <!-- Destruction Scroll: Enchant A-grade Weapon - Event -->
 					</item>
 					<item chance="0.178329">
-						<item id="22225" count="1" /> <!-- Destruction Scroll: Enchant Weapon (B-grade) - Event -->
+						<item id="22225" count="1" /> <!-- Destruction Scroll: Enchant B-grade Weapon - Event -->
 					</item>
 					<item chance="0.416101">
-						<item id="22227" count="1" /> <!-- Destruction Scroll: Enchant Weapon (C-grade) - Event -->
+						<item id="22227" count="1" /> <!-- Destruction Scroll: Enchant C-grade Weapon - Event -->
 					</item>
 					<item chance="0.693502">
-						<item id="22229" count="1" /> <!-- Destruction Scroll: Enchant Weapon (D-grade) - Event -->
+						<item id="22229" count="1" /> <!-- Destruction Scroll: Enchant D-grade Weapon - Event -->
 					</item>
 					<item chance="0.082913">
-						<item id="22222" count="1" /> <!-- Destruction Scroll: Enchant Armor (S-grade) - Event -->
+						<item id="22222" count="1" /> <!-- Destruction Scroll: Enchant S-grade Armor - Event -->
 					</item>
 					<item chance="0.207282">
-						<item id="22224" count="1" /> <!-- Destruction Scroll: Enchant Armor (A-grade) - Event -->
+						<item id="22224" count="1" /> <!-- Destruction Scroll: Enchant A-grade Armor - Event -->
 					</item>
 					<item chance="0.497478">
-						<item id="22226" count="1" /> <!-- Destruction Scroll: Enchant Armor (B-grade) - Event -->
+						<item id="22226" count="1" /> <!-- Destruction Scroll: Enchant B-grade Armor - Event -->
 					</item>
 					<item chance="1.066023">
-						<item id="22228" count="1" /> <!-- Destruction Scroll: Enchant Armor (C-grade) - Event -->
+						<item id="22228" count="1" /> <!-- Destruction Scroll: Enchant C-grade Armor - Event -->
 					</item>
 					<item chance="1.865541">
-						<item id="22230" count="1" /> <!-- Destruction Scroll: Enchant Armor (D-grade) - Event -->
+						<item id="22230" count="1" /> <!-- Destruction Scroll: Enchant D-grade Armor - Event -->
 					</item>
 					<item chance="0.002525">
-						<item id="22206" count="1" /> <!-- Soul Crystal - Step 17 Box - Event -->
+						<item id="22206" count="1" /> <!-- Soul Crystal Box Lv. 17 - Event -->
 					</item>
 					<item chance="0.005051">
-						<item id="17077" count="1" /> <!-- Soul Crystal - Step 16 Box -->
+						<item id="17077" count="1" /> <!-- Soul Crystal Box Lv. 16 -->
 					</item>
 					<item chance="0.007576">
-						<item id="17076" count="1" /> <!-- Soul Crystal - Step 15 Box -->
+						<item id="17076" count="1" /> <!-- Soul Crystal Box Lv. 15 -->
 					</item>
 					<item chance="0.005051">
 						<item id="17069" count="1" /> <!-- Vesper Weapon Pack -->
@@ -1219,34 +1219,34 @@
 						<item id="13421" count="1" /> <!-- Honey Wheat Cake -->
 					</item>
 					<item chance="0.25">
-						<item id="14169" count="1" /> <!-- Top-grade Life Stone - Lv. 84 -->
+						<item id="14169" count="1" /> <!-- Top-grade Life Stone Lv. 84 -->
 					</item>
 					<item chance="0.299913">
-						<item id="10486" count="1" /> <!-- Top-grade Life Stone - Lv. 82 -->
+						<item id="10486" count="1" /> <!-- Top-grade Life Stone Lv. 82 -->
 					</item>
 					<item chance="0.359896">
-						<item id="9576" count="1" /> <!-- Top-grade Life Stone - Lv. 80 -->
+						<item id="9576" count="1" /> <!-- Top-grade Life Stone Lv. 80 -->
 					</item>
 					<item chance="0.431875">
-						<item id="8762" count="1" /> <!-- Top-grade Life Stone - Lv. 76 -->
+						<item id="8762" count="1" /> <!-- Top-grade Life Stone Lv. 76 -->
 					</item>
 					<item chance="1">
-						<item id="14168" count="1" /> <!-- High-grade Life Stone - Lv. 84 -->
+						<item id="14168" count="1" /> <!-- High-grade Life Stone Lv. 84 -->
 					</item>
 					<item chance="1.199363">
-						<item id="10485" count="1" /> <!-- High-grade Life Stone - Lv. 82 -->
+						<item id="10485" count="1" /> <!-- High-grade Life Stone Lv. 82 -->
 					</item>
 					<item chance="1.439236">
-						<item id="9575" count="1" /> <!-- High-grade Life Stone - Lv. 80 -->
+						<item id="9575" count="1" /> <!-- High-grade Life Stone Lv. 80 -->
 					</item>
 					<item chance="1.727083">
-						<item id="8752" count="1" /> <!-- High-grade Life Stone - Lv. 76 -->
+						<item id="8752" count="1" /> <!-- High-grade Life Stone Lv. 76 -->
 					</item>
 					<item chance="0.833333">
-						<item id="22233" count="1" /> <!-- Mysterious Blessed Spiritshot Pack (S-grade) - Event -->
+						<item id="22233" count="1" /> <!-- Package: Mysterious Blessed S-grade Spiritshots - Event -->
 					</item>
 					<item chance="2.916667">
-						<item id="22232" count="1" /> <!-- Mysterious Soulshot Pack (S-grade) - Event -->
+						<item id="22232" count="1" /> <!-- Package: Mysterious S-grade Soulshots - Event -->
 					</item>
 					<item chance="1.666667">
 						<item id="9627" count="1" /> <!-- Lesser Giant's Codex - Mastery -->
@@ -1267,28 +1267,28 @@
 						<item id="6622" count="1" /> <!-- Lesser Giant's Codex -->
 					</item>
 					<item chance="7.156795">
-						<item id="2134" count="1" /> <!-- Gemstone (S-grade) -->
+						<item id="2134" count="1" /> <!-- S-grade Gemstone -->
 					</item>
 					<item chance="7.296213">
-						<item id="14687" count="1" /> <!-- Superior Elixir of Life (S-grade) -->
+						<item id="14687" count="1" /> <!-- Superior Elixir of Life -->
 					</item>
 					<item chance="7.296213">
-						<item id="14693" count="1" /> <!-- Superior Elixir of Mind (S-grade) -->
+						<item id="14693" count="1" /> <!-- Superior Elixir of Mind -->
 					</item>
 					<item chance="7.296213">
-						<item id="14699" count="1" /> <!-- Superior Elixir of CP (S-grade) -->
+						<item id="14699" count="1" /> <!-- Superior Elixir of CP -->
 					</item>
 					<item chance="7.342686">
-						<item id="14701" count="2" /> <!-- Superior Quick Healing Potion -->
+						<item id="14701" count="2" /> <!-- Superior Quick HP Replenishing Potion -->
 					</item>
 					<item chance="7.389159">
-						<item id="14686" count="1" /> <!-- Superior Elixir of Life (A-grade) -->
+						<item id="14686" count="1" /> <!-- Superior Elixir of Life -->
 					</item>
 					<item chance="7.389159">
-						<item id="14692" count="1" /> <!-- Superior Elixir of Mind (A-grade) -->
+						<item id="14692" count="1" /> <!-- Superior Elixir of Mind -->
 					</item>
 					<item chance="7.389159">
-						<item id="14698" count="1" /> <!-- Superior Elixir of CP (A-grade) -->
+						<item id="14698" count="1" /> <!-- Superior Elixir of CP -->
 					</item>
 				</items>
 			</effect>
@@ -1309,13 +1309,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33">
-						<item id="15541" count="1" /> <!-- Red Soul Crystal - Stage 17 -->
+						<item id="15541" count="1" /> <!-- Red Soul Crystal Lv. 17 -->
 					</item>
 					<item chance="33">
-						<item id="15542" count="1" /> <!-- Blue Soul Crystal - Stage 17 -->
+						<item id="15542" count="1" /> <!-- Blue Soul Crystal Lv. 17 -->
 					</item>
 					<item chance="34">
-						<item id="15543" count="1" /> <!-- Green Soul Crystal - Stage 17 -->
+						<item id="15543" count="1" /> <!-- Green Soul Crystal Lv. 17 -->
 					</item>
 				</items>
 			</effect>
@@ -1336,13 +1336,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33">
-						<item id="15826" count="1" /> <!-- Red Soul Crystal - Stage 18 -->
+						<item id="15826" count="1" /> <!-- Red Soul Crystal Lv. 18 -->
 					</item>
 					<item chance="33">
-						<item id="15827" count="1" /> <!-- Blue Soul Crystal - Stage 18 -->
+						<item id="15827" count="1" /> <!-- Blue Soul Crystal Lv. 18 -->
 					</item>
 					<item chance="34">
-						<item id="15828" count="1" /> <!-- Green Soul Crystal - Stage 18 -->
+						<item id="15828" count="1" /> <!-- Green Soul Crystal Lv. 18 -->
 					</item>
 				</items>
 			</effect>
@@ -1475,7 +1475,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22359" toLevel="1" name="Destruction Scroll: Enchant Weapon (S-grade)">
+	<skill id="22359" toLevel="1" name="Destruction Scroll: Enchant S-grade Weapon">
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1484,7 +1484,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22360" toLevel="1" name="Destruction Scroll: Enchant Armor (S-grade)">
+	<skill id="22360" toLevel="1" name="Destruction Scroll: Enchant S-grade Armor">
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1493,7 +1493,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22361" toLevel="1" name="Destruction Scroll: Enchant Weapon (A-grade)">
+	<skill id="22361" toLevel="1" name="Destruction Scroll: Enchant A-grade Weapon">
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1502,7 +1502,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22362" toLevel="1" name="Destruction Scroll: Enchant Armor (A-grade)">
+	<skill id="22362" toLevel="1" name="Destruction Scroll: Enchant A-grade Armor">
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1511,7 +1511,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22363" toLevel="1" name="Destruction Scroll: Enchant Weapon (B-grade)">
+	<skill id="22363" toLevel="1" name="Destruction Scroll: Enchant B-grade Weapon">
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1520,7 +1520,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22364" toLevel="1" name="Destruction Scroll: Enchant Armor (B-grade)">
+	<skill id="22364" toLevel="1" name="Destruction Scroll: Enchant B-grade Armor">
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1529,7 +1529,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22365" toLevel="1" name="Destruction Scroll: Enchant Weapon (C-grade)">
+	<skill id="22365" toLevel="1" name="Destruction Scroll: Enchant C-grade Weapon">
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1538,7 +1538,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22366" toLevel="1" name="Destruction Scroll: Enchant Armor (C-grade)">
+	<skill id="22366" toLevel="1" name="Destruction Scroll: Enchant C-grade Armor">
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1547,7 +1547,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22367" toLevel="1" name="Destruction Scroll: Enchant Weapon (D-grade)">
+	<skill id="22367" toLevel="1" name="Destruction Scroll: Enchant D-grade Weapon">
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1556,7 +1556,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22368" toLevel="1" name="Destruction Scroll: Enchant Armor (D-grade)">
+	<skill id="22368" toLevel="1" name="Destruction Scroll: Enchant D-grade Armor">
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1565,7 +1565,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22369" toLevel="1" name="Blessed Spiritshot (S-grade)">
+	<skill id="22369" toLevel="1" name="Blessed S-grade Spiritshot">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1574,7 +1574,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22370" toLevel="1" name="Mysterious Soulshot Pack (S-grade)">
+	<skill id="22370" toLevel="1" name="Package: Mysterious S-grade Soulshots">
 		<itemConsumeId>22232</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1591,7 +1591,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22371" toLevel="1" name="Mysterious Blessed Spiritshot Pack (S-grade)">
+	<skill id="22371" toLevel="1" name="Package: Mysterious Blessed S-grade Spiritshots">
 		<itemConsumeId>22231</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1709,10 +1709,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20">
-						<item id="14773" count="1" /> <!-- Formal Wear (14-day) - 14-day -->
+						<item id="14773" count="1" /> <!-- Formal Wear - 14-day -->
 					</item>
 					<item chance="20">
-						<item id="14776" count="1" /> <!-- Agathion - Juju (14-day) - 14-day -->
+						<item id="14776" count="1" /> <!-- Agathion Chuchu - 14-day -->
 					</item>
 					<item chance="20">
 						<item id="14774" count="1" /> <!-- Wild Rose Pig Candy - 14-day -->
@@ -1770,10 +1770,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="70">
-						<item id="22211" count="1" /> <!-- Bad Bunny's Necklace - 7-day (Event) -->
+						<item id="22211" count="1" /> <!-- Bad Bunny's Necklace - 7-day / Event -->
 					</item>
 					<item chance="30">
-						<item id="22214" count="1" /> <!-- Bad Bunny's Necklace - 30-day (Event) -->
+						<item id="22214" count="1" /> <!-- Bad Bunny's Necklace - 30-day / Event -->
 					</item>
 				</items>
 			</effect>
@@ -1793,10 +1793,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="70">
-						<item id="22212" count="1" /> <!-- Bad Bunny's Earring - 7-day (Event) -->
+						<item id="22212" count="1" /> <!-- Bad Bunny's Earring - 7-day / Event -->
 					</item>
 					<item chance="30">
-						<item id="22215" count="1" /> <!-- Bad Bunny's Earring - 30-day (Event) -->
+						<item id="22215" count="1" /> <!-- Bad Bunny's Earring - 30-day / Event -->
 					</item>
 				</items>
 			</effect>
@@ -1816,10 +1816,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="70">
-						<item id="22213" count="1" /> <!-- Bad Bunny's Ring - 7-day (Event) -->
+						<item id="22213" count="1" /> <!-- Bad Bunny's Ring - 7-day / Event -->
 					</item>
 					<item chance="30">
-						<item id="22216" count="1" /> <!-- Bad Bunny's Ring - 30-day (Event) -->
+						<item id="22216" count="1" /> <!-- Bad Bunny's Ring - 30-day / Event -->
 					</item>
 				</items>
 			</effect>
@@ -1938,12 +1938,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1540" count="3" /> <!-- Quick Healing Potion -->
-						<item id="21850" count="360" /> <!-- Mysterious Soulshot (S-grade) -->
-						<item id="21856" count="360" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
-						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
-						<item id="14687" count="1" /> <!-- Superior Elixir of Life (S-grade) -->
-						<item id="14693" count="1" /> <!-- Superior Elixir of Mind (S-grade) -->
+						<item id="1540" count="3" /> <!-- Quick HP Replenishing Potion -->
+						<item id="21850" count="360" /> <!-- Mysterious S-grade Soulshot -->
+						<item id="21856" count="360" /> <!-- Mysterious Blessed S-grade Spiritshot -->
+						<item id="960" count="1" /> <!-- Scroll: Enchant S-grade Armor -->
+						<item id="14687" count="1" /> <!-- Superior Elixir of Life -->
+						<item id="14693" count="1" /> <!-- Superior Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1963,12 +1963,12 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1540" count="5" /> <!-- Quick Healing Potion -->
-						<item id="21850" count="360" /> <!-- Mysterious Soulshot (S-grade) -->
-						<item id="21856" count="360" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
+						<item id="1540" count="5" /> <!-- Quick HP Replenishing Potion -->
+						<item id="21850" count="360" /> <!-- Mysterious S-grade Soulshot -->
+						<item id="21856" count="360" /> <!-- Mysterious Blessed S-grade Spiritshot -->
 						<item id="22346" count="1" /> <!-- Enchanting Tool Box -->
-						<item id="14687" count="3" /> <!-- Superior Elixir of Life (S-grade) -->
-						<item id="14693" count="3" /> <!-- Superior Elixir of Mind (S-grade) -->
+						<item id="14687" count="3" /> <!-- Superior Elixir of Life -->
+						<item id="14693" count="3" /> <!-- Superior Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -1988,13 +1988,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="1540" count="8" /> <!-- Quick Healing Potion -->
-						<item id="21850" count="360" /> <!-- Mysterious Soulshot (S-grade) -->
-						<item id="21856" count="360" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
+						<item id="1540" count="8" /> <!-- Quick HP Replenishing Potion -->
+						<item id="21850" count="360" /> <!-- Mysterious S-grade Soulshot -->
+						<item id="21856" count="360" /> <!-- Mysterious Blessed S-grade Spiritshot -->
 						<item id="22346" count="1" /> <!-- Enchanting Tool Box -->
-						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
-						<item id="14687" count="5" /> <!-- Superior Elixir of Life (S-grade) -->
-						<item id="14693" count="5" /> <!-- Superior Elixir of Mind (S-grade) -->
+						<item id="960" count="1" /> <!-- Scroll: Enchant S-grade Armor -->
+						<item id="14687" count="5" /> <!-- Superior Elixir of Life -->
+						<item id="14693" count="5" /> <!-- Superior Elixir of Mind -->
 					</item>
 				</items>
 			</effect>
@@ -2061,7 +2061,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="50">
-						<item id="22280" count="1" /> <!-- PA - Blessing (1-hour) - Event -->
+						<item id="22280" count="1" /> <!-- PA Blessing (1-hour) - Event -->
 					</item>
 					<item chance="50">
 						<item id="22279" count="1" /> <!-- PA Vitality (1-hour) - Event -->
@@ -2084,10 +2084,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="50">
-						<item id="22282" count="1" /> <!-- Sujin Transformation Stick Pack (7-day) - Event -->
+						<item id="22282" count="1" /> <!-- Package: Sujin Transformation Stick (7-day) - Event -->
 					</item>
 					<item chance="50">
-						<item id="22284" count="1" /> <!-- Trejuo Transformation Stick Pack (7-day) - Event -->
+						<item id="22284" count="1" /> <!-- Package: Trejuo Transformation Stick (7-day) - Event -->
 					</item>
 				</items>
 			</effect>
@@ -2127,7 +2127,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="21165" count="1" /> <!-- Agathion - Zaken's Spirit Swords -->
+						<item id="21165" count="1" /> <!-- Agathion Zaken's Spirit Swords -->
 					</item>
 				</items>
 			</effect>
@@ -2180,7 +2180,7 @@
 						<item id="9924" count="1" /> <!-- Blue Talisman - Healing -->
 					</item>
 					<item chance="1.1236">
-						<item id="9925" count="1" /> <!-- Red Talisman - HP/ CP Recovery -->
+						<item id="9925" count="1" /> <!-- Red Talisman - HP/CP Recovery -->
 					</item>
 					<item chance="1.1236">
 						<item id="9926" count="1" /> <!-- Blue Talisman - P. Def. -->
@@ -2189,7 +2189,7 @@
 						<item id="9927" count="1" /> <!-- Blue Talisman - M. Def. -->
 					</item>
 					<item chance="1.1236">
-						<item id="9928" count="1" /> <!-- Red Talisman - Mental Regeneration -->
+						<item id="9928" count="1" /> <!-- Red Talisman - MP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
 						<item id="9929" count="1" /> <!-- Blue Talisman - Shield Defense -->
@@ -2246,16 +2246,16 @@
 						<item id="9946" count="1" /> <!-- Yellow Talisman - Healing -->
 					</item>
 					<item chance="1.1236">
-						<item id="9947" count="1" /> <!-- Yellow Talisman - CP Regeneration -->
+						<item id="9947" count="1" /> <!-- Yellow Talisman - CP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="9948" count="1" /> <!-- Yellow Talisman - HP Regeneration -->
+						<item id="9948" count="1" /> <!-- Yellow Talisman - HP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="9949" count="1" /> <!-- Yellow Talisman - MP Regeneration -->
+						<item id="9949" count="1" /> <!-- Yellow Talisman - MP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="9950" count="1" /> <!-- Grey Talisman - Weight Training -->
+						<item id="9950" count="1" /> <!-- Grey Talisman - Weight Limit -->
 					</item>
 					<item chance="1.1236">
 						<item id="9951" count="1" /> <!-- Grey Talisman - Mid-grade Fishing -->
@@ -2285,25 +2285,25 @@
 						<item id="9959" count="1" /> <!-- Black Talisman - Free Speech -->
 					</item>
 					<item chance="1.1236">
-						<item id="9960" count="1" /> <!-- White Talisman - Bravery -->
+						<item id="9960" count="1" /> <!-- White Talisman - Confusion Resistance -->
 					</item>
 					<item chance="1.1236">
-						<item id="9961" count="1" /> <!-- White Talisman - Paralysis Resistance -->
+						<item id="9961" count="1" /> <!-- White Talisman - Confusion Resistance -->
 					</item>
 					<item chance="1.1236">
-						<item id="9962" count="1" /> <!-- White Talisman - Stun Resistance -->
+						<item id="9962" count="1" /> <!-- White Talisman - Confusion Resistance -->
 					</item>
 					<item chance="1.1236">
-						<item id="9963" count="1" /> <!-- White Talisman - Sleep Resistance -->
+						<item id="9963" count="1" /> <!-- White Talisman - Stupor Resistance -->
 					</item>
 					<item chance="1.1236">
-						<item id="9964" count="1" /> <!-- White Talisman - Bleed Resistance -->
+						<item id="9964" count="1" /> <!-- White Talisman - Infection Resistance -->
 					</item>
 					<item chance="1.1236">
 						<item id="9965" count="1" /> <!-- White Talisman - Cancel Resistance -->
 					</item>
 					<item chance="1.1236">
-						<item id="9966" count="1" /> <!-- White Talisman - Hold Resistance -->
+						<item id="9966" count="1" /> <!-- White Talisman - Obstruction Resistance -->
 					</item>
 					<item chance="1.1236">
 						<item id="10141" count="1" /> <!-- Grey Talisman - Yeti Transform -->
@@ -2366,16 +2366,16 @@
 						<item id="10538" count="1" /> <!-- Yellow Talisman - Healing Power -->
 					</item>
 					<item chance="1.1236">
-						<item id="10539" count="1" /> <!-- Yellow Talisman - CP Regeneration -->
+						<item id="10539" count="1" /> <!-- Yellow Talisman - CP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="10540" count="1" /> <!-- Yellow Talisman - HP Regeneration -->
+						<item id="10540" count="1" /> <!-- Yellow Talisman - HP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="10541" count="1" /> <!-- Yellow Talisman - MP Regeneration (Low-grade) -->
+						<item id="10541" count="1" /> <!-- Low-grade Yellow Talisman - MP Recovery Rate -->
 					</item>
 					<item chance="1.1236">
-						<item id="10542" count="1" /> <!-- Red Talisman - HP/ CP Recovery -->
+						<item id="10542" count="1" /> <!-- Red Talisman - HP/CP Recovery -->
 					</item>
 					<item chance="1.1236">
 						<item id="10543" count="1" /> <!-- Yellow Talisman - Speed -->
@@ -2384,7 +2384,7 @@
 						<item id="12815" count="1" /> <!-- Red Talisman - Max CP -->
 					</item>
 					<item chance="1.1236">
-						<item id="12816" count="1" /> <!-- Red Talisman - CP Regeneration -->
+						<item id="12816" count="1" /> <!-- Red Talisman - CP Recovery -->
 					</item>
 					<item chance="1.1236">
 						<item id="12817" count="1" /> <!-- Yellow Talisman - Increase Momentum -->
@@ -2417,7 +2417,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22392" toLevel="1" name="Cake of Happiness (Low-grade)">
+	<skill id="22392" toLevel="1" name="Low-grade Cake of Happiness">
 		<itemConsumeId>22291</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2449,7 +2449,7 @@
 						<item id="22562" count="4" /> <!-- Elixir of Life - Event -->
 					</item>
 					<item chance="20">
-						<item id="21040" count="3" /> <!-- Superior Quick Healing Potion -->
+						<item id="21040" count="3" /> <!-- Superior Quick HP Replenishing Potion -->
 					</item>
 					<item chance="25">
 						<item id="22292" count="1" /> <!-- Tasty Valentine Cake - Event -->
@@ -2458,7 +2458,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22393" toLevel="1" name="Cake of Happiness (Mid-grade)">
+	<skill id="22393" toLevel="1" name="Mid-grade Cake of Happiness">
 		<itemConsumeId>22292</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2472,13 +2472,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="10">
-						<item id="22550" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) - Event -->
+						<item id="22550" count="1" /> <!-- Scroll: Enchant A-grade Weapon - Event -->
 					</item>
 					<item chance="23">
-						<item id="34001" count="1" /> <!-- High-grade Life Stone (R-grade) - Event -->
+						<item id="34001" count="1" /> <!-- High-grade R-grade Life Stone - Event -->
 					</item>
 					<item chance="37">
-						<item id="22551" count="1" /> <!-- Scroll: Enchant Armor (A-grade) - Event -->
+						<item id="22551" count="1" /> <!-- Scroll: Enchant A-grade Armor - Event -->
 					</item>
 					<item chance="30">
 						<item id="22293" count="1" /> <!-- Delicious Valentine Cake - Event -->
@@ -2487,7 +2487,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22394" toLevel="1" name="Cake of Happiness (High-grade)">
+	<skill id="22394" toLevel="1" name="High-grade Cake of Happiness">
 		<itemConsumeId>22293</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2501,13 +2501,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="10">
-						<item id="17264" count="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) - Event -->
+						<item id="17264" count="1" /> <!-- Blessed Scroll: Enchant S-grade Armor - Event -->
 					</item>
 					<item chance="23">
-						<item id="34002" count="1" /> <!-- Top-grade Life Stone (R-grade) - Event -->
+						<item id="34002" count="1" /> <!-- Top-grade R-grade Life Stone - Event -->
 					</item>
 					<item chance="37">
-						<item id="22559" count="1" /> <!-- Scroll: Enchant Armor (S-grade) - Event -->
+						<item id="22559" count="1" /> <!-- Scroll: Enchant S-grade Armor - Event -->
 					</item>
 					<item chance="30">
 						<item id="22294" count="1" /> <!-- Decadent Valentine Cake - Event -->
@@ -2516,7 +2516,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22395" toLevel="1" name="Cake of Happiness (Top-grade)">
+	<skill id="22395" toLevel="1" name="Top-grade Cake of Happiness">
 		<itemConsumeId>22294</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2530,16 +2530,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="5">
-						<item id="22560" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) - Event -->
+						<item id="22560" count="1" /> <!-- Scroll: Enchant R-grade Weapon - Event -->
 					</item>
 					<item chance="12">
-						<item id="22561" count="1" /> <!-- Scroll: Enchant Armor (R-grade) - Event -->
+						<item id="22561" count="1" /> <!-- Scroll: Enchant R-grade Armor - Event -->
 					</item>
 					<item chance="20">
-						<item id="17263" count="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) - Event -->
+						<item id="17263" count="1" /> <!-- Blessed Scroll: Enchant S-grade Weapon - Event -->
 					</item>
 					<item chance="63">
-						<item id="22558" count="1" /> <!-- Scroll: Enchant Weapon (S-grade) - Event -->
+						<item id="22558" count="1" /> <!-- Scroll: Enchant S-grade Weapon - Event -->
 					</item>
 				</items>
 			</effect>
@@ -2565,16 +2565,16 @@
 						<item id="6658" count="1" /> <!-- Baium's Ring -->
 					</item>
 					<item chance="31">
-						<item id="22302" count="1" /> <!-- Antharas' Earring - 3-day (Event) -->
+						<item id="22302" count="1" /> <!-- Antharas' Earring - 3-day / Event -->
 					</item>
 					<item chance="8.6">
-						<item id="22303" count="1" /> <!-- Antharas' Earring - 7-day (Event) -->
+						<item id="22303" count="1" /> <!-- Antharas' Earring - 7-day / Event -->
 					</item>
 					<item chance="42.893">
-						<item id="22304" count="1" /> <!-- Baium's Ring - 3-day (Event) -->
+						<item id="22304" count="1" /> <!-- Baium's Ring - 3-day / Event -->
 					</item>
 					<item chance="17.4">
-						<item id="22305" count="1" /> <!-- Baium's Ring - 7-day (Event) -->
+						<item id="22305" count="1" /> <!-- Baium's Ring - 7-day / Event -->
 					</item>
 				</items>
 			</effect>
@@ -2622,28 +2622,28 @@
 						<item id="21235" count="3" /> <!-- Fresh Milk -->
 					</item>
 					<item chance="0.45">
-						<item id="13276" count="1" /> <!-- Minion Coupon Pack -->
+						<item id="13276" count="1" /> <!-- Package: Minion Coupon (1 pc.) -->
 					</item>
 					<item chance="0.5">
-						<item id="14248" count="1" /> <!-- Superior Minion Coupon Pack -->
+						<item id="14248" count="1" /> <!-- Package: Superior Minion Coupon (1 pc.) -->
 					</item>
 					<item chance="3">
-						<item id="22341" count="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+						<item id="22341" count="1" /> <!-- Blessed Scroll: Enchant C-grade Weapon -->
 					</item>
 					<item chance="8">
-						<item id="22342" count="3" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+						<item id="22342" count="3" /> <!-- Scroll: Enchant C-grade Weapon -->
 					</item>
 					<item chance="10">
-						<item id="22343" count="3" /> <!-- Scroll: Enchant Armor (C-grade) -->
+						<item id="22343" count="3" /> <!-- Scroll: Enchant C-grade Armor -->
 					</item>
 					<item chance="10">
-						<item id="22344" count="3" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+						<item id="22344" count="3" /> <!-- Scroll: Enchant D-grade Weapon -->
 					</item>
 					<item chance="10">
-						<item id="22345" count="3" /> <!-- Scroll: Enchant Armor (D-grade) -->
+						<item id="22345" count="3" /> <!-- Scroll: Enchant D-grade Armor -->
 					</item>
 					<item chance="6">
-						<item id="8753" count="1" /> <!-- Top-grade Life Stone - Lv. 46 -->
+						<item id="8753" count="1" /> <!-- Top-grade Life Stone Lv. 46 -->
 					</item>
 					<item chance="4">
 						<item id="20392" count="1" /> <!-- Vitality Replenishing Potion -->
@@ -2652,19 +2652,19 @@
 						<item id="15440" count="1" /> <!-- Vitality Maintaining Potion (30-min.) -->
 					</item>
 					<item chance="4.5">
-						<item id="21085" count="1" /> <!-- XP Rune III (Lv. 1-100+) 30% Pack (1-hour) -->
+						<item id="21085" count="1" /> <!-- Package: XP Rune 30% (1-hour) -->
 					</item>
 					<item chance="4.1">
-						<item id="20336" count="1" /> <!-- XP Rune III (Lv. 1-100+) 50% - 5-hour -->
+						<item id="20336" count="1" /> <!-- XP Rune 50% - 5-hour -->
 					</item>
 					<item chance="7">
-						<item id="20220" count="1" /> <!-- Agathion - Brown Maneki Neko Pack (7-day) - Vitality -->
+						<item id="20220" count="1" /> <!-- Package: Agathion Brown Maneki Neko (7-day) - Vitality -->
 					</item>
 					<item chance="7">
-						<item id="21166" count="1" /> <!-- Agathion - Zaken's Spirit Swords - 7-day -->
+						<item id="21166" count="1" /> <!-- Agathion Zaken's Spirit Swords - 7-day -->
 					</item>
 					<item chance="7">
-						<item id="20798" count="1" /> <!-- Agathion - Blue Opera Pack (7-day) - Sword of Recovery -->
+						<item id="20798" count="1" /> <!-- Package: Agathion Blue Opera (7-day) - Sword of Recovery -->
 					</item>
 					<item chance="2">
 						<item id="22312" count="1" /> <!-- Top-grade Magic Pin Cloth Belt -->
@@ -2690,22 +2690,22 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.0015">
-						<item id="20521" count="1" /> <!-- Heavenly Scroll: Enchant Weapon (S-grade) -->
+						<item id="20521" count="1" /> <!-- Sacred Crystal: Enchant S-grade Weapon -->
 					</item>
 					<item chance="0.0015">
-						<item id="20522" count="1" /> <!-- Heavenly Scroll: Enchant Armor (S-grade) -->
+						<item id="20522" count="1" /> <!-- Sacred Crystal: Enchant S-grade Armor -->
 					</item>
 					<item chance="0.1">
-						<item id="20519" count="1" /> <!-- Ancient Scroll: Enchant Weapon (S-grade) -->
+						<item id="20519" count="1" /> <!-- Ancient Crystal: Enchant S-grade Weapon -->
 					</item>
 					<item chance="0.25">
-						<item id="20520" count="1" /> <!-- Ancient Scroll: Enchant Armor (S-grade) -->
+						<item id="20520" count="1" /> <!-- Ancient Crystal: Enchant S-grade Armor -->
 					</item>
 					<item chance="0.5">
-						<item id="22314" count="1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+						<item id="22314" count="1" /> <!-- Blessed Scroll: Enchant S-grade Weapon -->
 					</item>
 					<item chance="1">
-						<item id="22315" count="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+						<item id="22315" count="1" /> <!-- Blessed Scroll: Enchant S-grade Armor -->
 					</item>
 					<item chance="3">
 						<item id="9552" count="1" /> <!-- Fire Crystal -->
@@ -2726,16 +2726,16 @@
 						<item id="9557" count="1" /> <!-- Holy Crystal -->
 					</item>
 					<item chance="2">
-						<item id="9576" count="1" /> <!-- Top-grade Life Stone - Lv. 80 -->
+						<item id="9576" count="1" /> <!-- Top-grade Life Stone Lv. 80 -->
 					</item>
 					<item chance="5">
-						<item id="8762" count="1" /> <!-- Top-grade Life Stone - Lv. 76 -->
+						<item id="8762" count="1" /> <!-- Top-grade Life Stone Lv. 76 -->
 					</item>
 					<item chance="10">
-						<item id="9575" count="3" /> <!-- High-grade Life Stone - Lv. 80 -->
+						<item id="9575" count="3" /> <!-- High-grade Life Stone Lv. 80 -->
 					</item>
 					<item chance="13">
-						<item id="8752" count="3" /> <!-- High-grade Life Stone - Lv. 76 -->
+						<item id="8752" count="3" /> <!-- High-grade Life Stone Lv. 76 -->
 					</item>
 					<item chance="10">
 						<item id="9551" count="3" /> <!-- Holy Stone -->

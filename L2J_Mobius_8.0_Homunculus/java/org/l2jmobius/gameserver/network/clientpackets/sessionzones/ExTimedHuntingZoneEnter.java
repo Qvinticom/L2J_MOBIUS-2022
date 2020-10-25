@@ -86,6 +86,10 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		
 		if (((_zoneId == 1) && (player.getLevel() < 100)) //
 			|| ((_zoneId == 6) && (player.getLevel() < 105)) //
+			|| ((_zoneId == 7) && (player.getLevel() < 107)) //
+			|| (((_zoneId == 11) && ((player.getLevel() < 99) || (player.getLevel() > 105)))) //
+			|| (((_zoneId == 12) && ((player.getLevel() < 110) || (player.getLevel() > 130)))) //
+			|| (((_zoneId == 13) && ((player.getLevel() < 105) || (player.getLevel() > 130)))) //
 		)
 		{
 			player.sendMessage("Your level does not correspond the zone equivalent.");
@@ -120,6 +124,26 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 				case 6: // Primeval Isle
 				{
 					player.teleToLocation(9400, -21720, -3634);
+					break;
+				}
+				case 7: // Golden Altar
+				{
+					player.teleToLocation(-122259, 73678, -2872);
+					break;
+				}
+				case 11: // Abandoned Coal Mines
+				{
+					player.teleToLocation(139411, -169382, -1600);
+					break;
+				}
+				case 8: // Tower of Insolence
+				{
+					player.teleToLocation(-82014, 16247, -15416);
+					break;
+				}
+				case 12: // Imperial Tomb
+				{
+					player.teleToLocation(181409, -78389, -2728);
 					break;
 				}
 			}

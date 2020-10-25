@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7100" name="Importance of Strain" type="EtcItem">
-		<!-- Contains information regarding the means to strengthen and the means to defeat the ancient giant. Double-click to view contents. -->
+		<!-- Contains information on how to defeat an ancient Giant. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -18,7 +18,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7101" name="Danger of Ice Spirit" type="EtcItem">
-		<!-- Contains sorcery to surround and defeat the Spirits. Double-click to view contents. -->
+		<!-- Contains spells that can be used to surround and defeat a Spirit. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -137,7 +137,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7108" name="Guild's Secret Report" type="EtcItem">
-		<!-- Document containing information regarding the great angel, Iconoclasis. Double-click to view contents. -->
+		<!-- A document containing information about Grand Guardian Angel. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -154,7 +154,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7109" name="Guild's Secret Report" type="EtcItem">
-		<!-- Document containing information regarding the great angel, Iconoclasis. Double-click to view contents. -->
+		<!-- A document containing information about Grand Guardian Angel. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -171,7 +171,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7110" name="Research Report" type="EtcItem">
-		<!-- Document containing info regarding Shakiel, the guardian of vision. Double-click to view contents. -->
+		<!-- A document containing information about Vision Guardian Shakiel. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -188,7 +188,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7111" name="Research Report" type="EtcItem">
-		<!-- Document containing info regarding Shakiel, the guardian of vision. Double-click to view contents. -->
+		<!-- A document containing information about Vision Guardian Shakiel. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -205,7 +205,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7112" name="Research Report" type="EtcItem">
-		<!-- Document containing info regarding Shakiel, the guardian of vision. Double-click to view contents. -->
+		<!-- A document containing information about Vision Guardian Shakiel. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -543,7 +543,7 @@
 		</skills>
 	</item>
 	<item id="7133" name="Scroll of Escape - Town of Goddard" type="EtcItem">
-		<!-- Magical scroll that relocates you to the Town of Goddard. Cannot be sold in shops. -->
+		<!-- A magical scroll that relocates you to Goddard. Cannot be sold. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -645,7 +645,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="7139" name="Leto Lizardman Bracelet" type="EtcItem">
-		<!-- Bracelet that Leto Lizardman wears. Take this to Guard Rath in Town of Giran. -->
+		<!-- Leto Lizardman Bracelet. Take it to Guard Rath in Giran. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

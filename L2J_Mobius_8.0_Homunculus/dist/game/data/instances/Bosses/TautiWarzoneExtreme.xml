@@ -2,7 +2,6 @@
 <!-- Tauti Warzone Extreme -->
 <instance id="219" maxWorlds="20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
 	<time duration="120" empty="5" />
-	<removeBuffs type="ALL" />
 	<locations>
 		<enter type="FIXED">
 			<location x="-146151" y="186525" z="-11736" />
@@ -13,12 +12,8 @@
 		<condition type="Party" showMessageAndHtml="true">
 			<param name="html" value="condNoGroup.html" />
 		</condition>
-		<condition type="CommandChannel" showMessageAndHtml="true">
-			<param name="html" value="condNoGroup.html" />
-		</condition>
-		<condition type="CommandChannelLeader" />
 		<condition type="GroupMin">
-			<param name="limit" value="14" />
+			<param name="limit" value="2" />
 		</condition>
 		<condition type="GroupMax">
 			<param name="html" value="condBigGroup.html" />

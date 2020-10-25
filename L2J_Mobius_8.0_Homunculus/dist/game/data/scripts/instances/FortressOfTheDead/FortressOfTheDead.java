@@ -114,9 +114,9 @@ public class FortressOfTheDead extends AbstractInstance
 					case "endCinematic":
 					{
 						final QuestState qs = player.getQuestState(Q11026_PathOfDestinyConviction.class.getSimpleName());
-						if ((qs != null) && qs.isCond(3))
+						if ((qs != null) && qs.isCond(18))
 						{
-							qs.setCond(4, true);
+							qs.setCond(19, true);
 							giveItems(player, KAIN_PROPHECY_MACHINE_FRAGMENT, 1);
 						}
 						world.getNpc(KAIN_VAN_HALTER).deleteMe();
@@ -163,7 +163,7 @@ public class FortressOfTheDead extends AbstractInstance
 		{
 			case KAIN_VAN_HALTER:
 			{
-				if ((qs != null) && qs.isCond(3))
+				if ((qs != null) && qs.isCond(18))
 				{
 					htmltext = "33979.html";
 				}
@@ -171,7 +171,7 @@ public class FortressOfTheDead extends AbstractInstance
 			}
 			case MYSTERIOUS_WIZARD:
 			{
-				if ((qs != null) && qs.isCond(3))
+				if ((qs != null) && qs.isCond(18))
 				{
 					htmltext = "33980.html";
 				}

@@ -743,4 +743,43 @@
 		<node X="48400" Y="49391" />
 		<node X="48365" Y="50345" />
 	</zone>
+	<zone name="fafurion_peace_zone1" type="PeaceZone" shape="NPoly" minZ="-2498" maxZ="-598"> <!-- [16_25] -->
+		<node X="168062" Y="234918" />
+		<node X="167992" Y="234168" />
+		<node X="168483" Y="233520" />
+		<node X="169400" Y="233739" />
+		<node X="169486" Y="234239" />
+		<node X="169171" Y="234775" />
+		<node X="168729" Y="234880" />
+	</zone>
+	<zone name="toi_peace_1st_floor" type="PeaceZone" shape="NPoly" minZ="-16000" maxZ="-14000"> <!-- Tower Of Insolence 1st Floor -->
+		<node X="-81861" Y="15757" />
+		<node X="-82172" Y="15757" />
+		<node X="-82424" Y="16000" />
+		<node X="-82418" Y="16313" />
+		<node X="-82171" Y="16561" />
+		<node X="-81862" Y="16563" />
+		<node X="-81608" Y="16312" />
+		<node X="-81613" Y="16004" />
+	</zone>
+	<zone name="toi_peace_2nd_floor" type="PeaceZone" shape="NPoly" minZ="-13000" maxZ="-11000"> <!-- Tower Of Insolence 2nd Floor -->
+		<node X="-82154" Y="15757" />
+		<node X="-82407" Y="16000" />
+		<node X="-82403" Y="16317" />
+		<node X="-82155" Y="16565" />
+		<node X="-81843" Y="16566" />
+		<node X="-81593" Y="16319" />
+		<node X="-81592" Y="16008" />
+		<node X="-81845" Y="15756" />
+	</zone>
+	<zone name="toi_peace_3rd_floor" type="PeaceZone" shape="NPoly" minZ="-11000" maxZ="-9000"> <!-- Tower Of Insolence 3rd Floor -->
+		<node X="-81864" Y="16565" />
+		<node X="-81611" Y="16315" />
+		<node X="-81608" Y="16001" />
+		<node X="-81858" Y="15758" />
+		<node X="-82173" Y="15757" />
+		<node X="-82424" Y="16000" />
+		<node X="-82420" Y="16316" />
+		<node X="-82173" Y="16568" />
+	</zone>
 </list>

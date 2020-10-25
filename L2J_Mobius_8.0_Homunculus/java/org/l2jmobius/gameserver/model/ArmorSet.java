@@ -50,7 +50,9 @@ public class ArmorSet
 		Inventory.PAPERDOLL_LEGS,
 		Inventory.PAPERDOLL_HEAD,
 		Inventory.PAPERDOLL_GLOVES,
-		Inventory.PAPERDOLL_FEET
+		Inventory.PAPERDOLL_FEET,
+		Inventory.PAPERDOLL_HAIR,
+		Inventory.PAPERDOLL_HAIR2
 	};
 	private static final int[] ARTIFACT_1_SLOTS = new int[]
 	{

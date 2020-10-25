@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="22700" name="Equipment Restoration Stone (R-grade)" type="EtcItem">
-		<!-- Restores the original appearance of R-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
+		<!-- Restores the original appearance of R-grade equipment (weapons/ armor) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -22,7 +22,7 @@
 		</skills>
 	</item>
 	<item id="22701" name="Equipment Restoration Stone (S-grade)" type="EtcItem">
-		<!-- Restores the original appearance of S-grade equipment (weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
+		<!-- Restores the original appearance of S-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -43,7 +43,7 @@
 		</skills>
 	</item>
 	<item id="22702" name="Equipment Restoration Stone (A-grade)" type="EtcItem">
-		<!-- Restores the original appearance of A-grade equipment (weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
+		<!-- Restores the original appearance of A-grade equipment (weapons/ armor) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -64,7 +64,7 @@
 		</skills>
 	</item>
 	<item id="22703" name="Equipment Restoration Stone (B-grade)" type="EtcItem">
-		<!-- Restores the original appearance of B-grade equipment (weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
+		<!-- Restores the original appearance of B-grade equipment (weapons/ armor) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -85,7 +85,7 @@
 		</skills>
 	</item>
 	<item id="22704" name="Equipment Restoration Stone (C-grade)" type="EtcItem">
-		<!-- Restores the original appearance of C-grade equipment (weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
+		<!-- Restores the original appearance of C-grade equipment (weapons/ armor) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -106,7 +106,7 @@
 		</skills>
 	</item>
 	<item id="22705" name="Equipment Restoration Stone (D-grade)" type="EtcItem">
-		<!-- Restores the original appearance of D-grade equipment (weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
+		<!-- Restores the original appearance of D-grade equipment (weapons/ armor) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -169,7 +169,7 @@
 		</skills>
 	</item>
 	<item id="22708" name="Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. Consumes 125,000 adena for a 1-slot hair accessory and 200,000 adena for a 2-slot hair accessory. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -190,7 +190,7 @@
 		</skills>
 	</item>
 	<item id="22709" name="Blessed Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -720,7 +720,7 @@
 		</stats>
 	</item>
 	<item id="22727" name="Japanese Sword Appearance Stone" type="EtcItem">
-		<!-- Dimensional item. Changes the appearance of a one-handed sword to that of a Japanese Sword. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Japanese sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -741,7 +741,7 @@
 		</skills>
 	</item>
 	<item id="22728" name="Japanese Dagger Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a dagger to that of a Japanese Dagger. -->
+		<!-- Changes the appearance of a dagger to that of a Japanese dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -762,7 +762,7 @@
 		</skills>
 	</item>
 	<item id="22729" name="Japanese Long Sword Appearance Stone" type="EtcItem">
-		<!-- Dimensional item. Changes the appearance of a two-handed sword to that of a Japanese Long Sword. -->
+		<!-- Changes the appearance of a two-handed sword to that of a Japanese long sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -804,7 +804,7 @@
 		</skills>
 	</item>
 	<item id="22731" name="Japanese Great Spear Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a spear to that of a Japanese Great Spear. -->
+		<!-- Changes the appearance of a spear to that of a Japanese great spear. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -825,7 +825,7 @@
 		</skills>
 	</item>
 	<item id="22732" name="Japanese Bow Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a bow to that of a Japanese Bow. -->
+		<!-- Changes the appearance of a bow to that of a Japanese bow. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -867,7 +867,7 @@
 		</skills>
 	</item>
 	<item id="22734" name="Japanese One-handed Blunt Weapon Appearance Stone" type="EtcItem">
-		<!-- Dimensional item. Changes the appearance of a one-handed blunt weapon to that of a Japanese Blunt Weapon. -->
+		<!-- Changes the appearance of a blunt weapon to that of a Japanese blunt weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -888,7 +888,7 @@
 		</skills>
 	</item>
 	<item id="22735" name="Japanese Giant Blunt Appearance Stone" type="EtcItem">
-		<!-- Dimensional item. Changes the appearance of a two-handed blunt weapon to that of a Japanese Giant Blunt Weapon. -->
+		<!-- Changes the appearance of a two-handed blunt weapon to that of a Japanese giant blunt weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -909,7 +909,7 @@
 		</skills>
 	</item>
 	<item id="22736" name="Japanese One-handed Staff Appearance Stone" type="EtcItem">
-		<!-- Dimensional item. Changes the appearance of a one-handed staff to that of a Japanese One-handed Staff. -->
+		<!-- Changes the appearance of a one-handed staff to that of a Japanese one-handed staff. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -930,7 +930,7 @@
 		</skills>
 	</item>
 	<item id="22737" name="Japanese Giant Two-handed Staff Appearance Stone" type="EtcItem">
-		<!-- Dimensional item. Changes the appearance of a two-handed blunt weapon to that of a Japanese Giant Two-handed Staff. -->
+		<!-- Changes the appearance of a two-handed blunt weapon to that of a Japanese giant two-handed staff. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -951,7 +951,7 @@
 		</skills>
 	</item>
 	<item id="22738" name="Japanese Dual Sword Appearance Stone" type="EtcItem">
-		<!-- Dimensional item. Changes the appearance of a dual sword to that of a Japanese Dual Sword. -->
+		<!-- Changes the appearance of dual swords to that of a Japanese dual swords. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -972,7 +972,7 @@
 		</skills>
 	</item>
 	<item id="22739" name="Japanese Double Dagger Appearance Stone" type="EtcItem">
-		<!-- Dimensional item. Changes the appearance of a dual dagger to that of a Japanese Double Dagger. -->
+		<!-- Changes the appearance of dual daggers to that of a Japanese dual daggers. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -993,7 +993,7 @@
 		</skills>
 	</item>
 	<item id="22740" name="Japanese Double Blunt Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a dual blunt to that of a Japanese double blunt. -->
+		<!-- Changes the appearance of dual blunt weapon to that of a Japanese weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1056,7 +1056,7 @@
 		</skills>
 	</item>
 	<item id="22743" name="Transformation Scroll: Fairweather Borna" type="EtcItem">
-		<!-- For 30 min., transform into a Fairweather Borna, who has the abilities of the Feoh Wizard and Aeore Healer and can also use the Escape: Clan Hall skill. Lv. 80 or above. -->
+		<!-- For 30 min., transform into a Fairweather Borna, who has the abilities of the Feoh Wizard and Aeore Healer and can also use the Escape: Clan Hall skill. Required level: 80+. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1075,7 +1075,7 @@
 		</skills>
 	</item>
 	<item id="22744" name="Vitality Suspending Potion Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Vitality Suspending Potion. -->
+		<!-- Double-click to obtain Vitality Suspending Potion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="36" />
 		<set name="is_clan_depositable" val="false" />
@@ -1096,7 +1096,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22745" name="Scroll: Increase Vitality" type="EtcItem">
-		<!-- Increases the number of Vitality items that can be used per week by 1. Cooldown is 3 days. -->
+		<!-- Increases the number of Vitality items that can be used per week by 1. Cooldown: 3 d. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_count_up" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1117,7 +1117,7 @@
 		</skills>
 	</item>
 	<item id="22746" name="Scroll: Increase Vitality Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Scroll: increase Vitality. -->
+		<!-- Double-click to obtain Scroll: Increase Vitality. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1138,7 +1138,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22747" name="Scroll: Increase Vitality (High-grade)" type="EtcItem">
-		<!-- Increases the number of Vitality items that can be used per week by 2. Cooldown is 3 days. -->
+		<!-- Increases the number of Vitality items that can be used per week by 2. Cooldown: 3 d. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_count_up_2" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1159,7 +1159,7 @@
 		</skills>
 	</item>
 	<item id="22748" name="Scroll: Increase Vitality Pack (High-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing Scroll: increase Vitality (High-grade). -->
+		<!-- Double-click to obtain High-grade Scroll: Increase Vitality. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1176,11 +1176,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22747" min="1" max="1" chance="100" /> <!-- Scroll: Increase Vitality (High-grade) -->
+			<item id="22747" min="1" max="1" chance="100" /> <!-- High-grade Scroll: Increase Vitality -->
 		</capsuled_items>
 	</item>
 	<item id="22749" name="Scroll: Increase Vitality (Top-grade)" type="EtcItem">
-		<!-- Increases the number of Vitality items that can be used per week by 3. Cooldown is 3 days. -->
+		<!-- Increases the number of Vitality items that can be used per week by 3. Cooldown: 3 d. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_count_up_3" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1201,7 +1201,7 @@
 		</skills>
 	</item>
 	<item id="22750" name="Scroll: Increase Vitality Pack (Top-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing Scroll: increase Vitality (Top-grade). -->
+		<!-- Double-click to obtain Top-grade Scroll: Increase Vitality. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1218,7 +1218,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22749" min="1" max="1" chance="100" /> <!-- Scroll: Increase Vitality (Top-grade) -->
+			<item id="22749" min="1" max="1" chance="100" /> <!-- Top-grade Scroll: Increase Vitality -->
 		</capsuled_items>
 	</item>
 	<item id="22751" name="Maphr's Rune 30% (3-hour)" type="EtcItem">
@@ -1426,7 +1426,7 @@
 		</skills>
 	</item>
 	<item id="22763" name="Maphr's Rune 30% Pack (3-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 30% (3-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 30% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1447,7 +1447,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22764" name="Maphr's Rune 30% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 30% (5-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 30% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1468,7 +1468,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22765" name="Maphr's Rune 30% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 30% (7-day. -->
+		<!-- Double-click to obtain Maphr's Rune 30% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1489,7 +1489,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22766" name="Maphr's Rune 50% Pack (3-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 50% (3-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 50% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1510,7 +1510,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22767" name="Maphr's Rune 50% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 50% (5-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 50% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1531,7 +1531,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22768" name="Maphr's Rune 50% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 50% (7-day. -->
+		<!-- Double-click to obtain Maphr's Rune 50% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1552,7 +1552,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22769" name="Maphr's Rune 100% Pack (3-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 100% (3-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1573,7 +1573,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22770" name="Maphr's Rune 100% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 100% (5-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1594,7 +1594,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22771" name="Maphr's Rune 100% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 100% (7-day. -->
+		<!-- Double-click to obtain Maphr's Rune 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1615,7 +1615,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22772" name="Maphr's Rune 200% Pack (3-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 200% (3-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1636,7 +1636,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22773" name="Maphr's Rune 200% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 200% (5-hour). -->
+		<!-- Double-click to obtain Maphr's Rune 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1657,7 +1657,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22774" name="Maphr's Rune 200% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 200% (7-day). -->
+		<!-- Double-click to obtain Maphr's Rune 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1678,7 +1678,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22775" name="Drake Maul" type="Weapon">
-		<!-- Two-handed blunt with special powers used by the Drake Lord. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- A two-handed blunt weapon used by the Drake Lord. Bestows special power upon its wielder. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1842,7 +1842,7 @@
 		</stats>
 	</item>
 	<item id="22780" name="Drake Maul (PvP) - HP Drain" type="Weapon">
-		<!-- <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- <Special Option>. Two-handed blunt with special powers used by the Drake Lord. With a certain chance, absorbs 4% of melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1880,7 +1880,7 @@
 		</stats>
 	</item>
 	<item id="22781" name="Drake Maul (PvP) - HP Regeneration" type="Weapon">
-		<!-- <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Increases HP Recovery Rate. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- <Special Option>. Two-handed blunt weapon with special powers used by the Drake Lord. Increases HP Recovery Rate. Inflicts additional PvP Damage and has a chance to increase inflicted damage. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1918,7 +1918,7 @@
 		</stats>
 	</item>
 	<item id="22782" name="Drake Maul (PvP) - Health" type="Weapon">
-		<!-- <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Max HP increases by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- <Special Option>. Two-handed blunt weapon with special powers used by the Drake Lord. Max HP +25%. Inflicts additional PvP Damage and has a chance to increase inflicted damage. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1956,7 +1956,7 @@
 		</stats>
 	</item>
 	<item id="22783" name="Drake Maul - Evil Spirit" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that has a chance to absorb HP after an attack. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2125,7 +2125,7 @@
 		</stats>
 	</item>
 	<item id="22788" name="Drake Maul - Evil Spirit (PvP) - HP Drain" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack. <Special Option>. Two-handed blunt with special powers used by the Drake Lord. With a certain chance, absorbs 4% of melee physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2203,7 +2203,7 @@
 		</stats>
 	</item>
 	<item id="22790" name="Drake Maul - Evil Spirit (PvP) - Health" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Max HP increases by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack. <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Max HP +25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2242,7 +2242,7 @@
 		</stats>
 	</item>
 	<item id="22791" name="Freya's Staff" type="Weapon">
-		<!-- A two-handed staff used by Freya. Bestows a special power on the user. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- A two-handed staff used by Freya. Bestows special power upon its wielder. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2407,7 +2407,7 @@
 		</stats>
 	</item>
 	<item id="22796" name="Freya's Staff (PvP) - Magic Hold" type="Weapon">
-		<!-- <Special Option>. A two-handed staff used by Freya. Bestows a special power on the user. Has a 20% chance to trigger Dryad Root when casting a magic skill on the target. Inflicts more damage during PvP. Has a chance to increase Casting Spd. when hit. No Soul Crystal option. -->
+		<!-- <Special Option>. A two-handed staff used by Freya. Bestows a special power on the wielder. Has a 20% chance to trigger Dryad Root after magic use. Inflicts additional PvP Damage. Has a chance to increase Casting Spd. after an attack reflection. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2445,7 +2445,7 @@
 		</stats>
 	</item>
 	<item id="22797" name="Freya's Staff (PvP) - Empower" type="Weapon">
-		<!-- <Special Option>. A two-handed staff used by Freya. Bestows a special power on the user. Increases M. Atk. by 177. Inflicts more damage during PvP. Has a chance to increase Casting Spd. when hit. No Soul Crystal option. -->
+		<!-- <Special Option>. A two-handed staff used by Freya. Bestows a special power on the wielder. M. Atk. +177. Inflicts additional PvP Damage. Has a chance to increase Casting Spd. after an attack reflection. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2483,7 +2483,7 @@
 		</stats>
 	</item>
 	<item id="22798" name="Freya's Staff (PvP) - MP Regeneration" type="Weapon">
-		<!-- <Special Option>. A two-handed staff used by Freya. Bestows a special power on the user. Increases MP Recovery Rate. Inflicts more damage during PvP. Has a chance to increase Casting Spd. when hit. No Soul Crystal option. -->
+		<!-- <Special Features>. A two-handed staff used by Freya. Bestows a special power on the wielder. Increases MP Recovery Rate. Inflicts additional PvP Damage. Has a chance to increase Casting Spd. after an attack reflection. Soul Crystal cannot be used. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2521,7 +2521,7 @@
 		</stats>
 	</item>
 	<item id="22799" name="Freya's Staff - Cleverness" type="Weapon">
-		<!-- Masterwork item that increases MP Recovery Rate. A two-handed staff used by Freya. Bestows a special power on the user. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
+		<!-- Masterwork item that increases MP Recovery Rate. A two-handed staff used by Freya. Bestows special power upon its wielder. 1 regular Soul Crystal and 1 special Soul Crystal can be inserted. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

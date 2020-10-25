@@ -45,9 +45,7 @@ public class RecieveAdventurerBuffs extends AbstractNpcAI
 		80000
 	};
 	// Skills
-	// private static final SkillHolder KNIGHT = new SkillHolder(15648, 1); // Knight's Harmony (Adventurer)
-	private static final SkillHolder WARRIOR = new SkillHolder(15649, 1); // Warrior's Harmony (Adventurer)
-	private static final SkillHolder WIZARD = new SkillHolder(15650, 1); // Wizard's Harmony (Adventurer)
+	private static final SkillHolder FANTASIA = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
 	private static final SkillHolder[] GROUP_BUFFS =
 	{
 		new SkillHolder(15642, 1), // Horn Melody (Adventurer)
@@ -84,11 +82,11 @@ public class RecieveAdventurerBuffs extends AbstractNpcAI
 						}
 						if (ClassId.getClassId(FakePlayerData.getInstance().getInfo(npc.getId()).getClassId()).isMage())
 						{
-							SkillCaster.triggerCast(nearby, npc, WIZARD.getSkill());
+							SkillCaster.triggerCast(nearby, npc, FANTASIA.getSkill()); // TODO: Merge events.
 						}
 						else
 						{
-							SkillCaster.triggerCast(nearby, npc, WARRIOR.getSkill());
+							SkillCaster.triggerCast(nearby, npc, FANTASIA.getSkill()); // TODO: Merge events.
 						}
 						break;
 					}

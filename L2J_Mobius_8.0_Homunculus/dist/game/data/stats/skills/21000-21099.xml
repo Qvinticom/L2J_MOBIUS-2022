@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="21000" toLevel="1" name="Summon Agathion - Majo">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21000" toLevel="1" name="Summon Agathion Majo">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>3000</hitTime>
@@ -14,12 +14,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1501</npcId> <!-- Majo Agathion -->
+				<npcId>1501</npcId> <!-- Agathion Majo -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="21001" toLevel="1" name="Release Agathion's Seal - Gold Majo">
-		<!-- Removes the Agathion's seal. -->
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>3000</hitTime>
@@ -32,12 +32,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1502</npcId> <!-- Gold Crown Agathion -->
+				<npcId>1502</npcId> <!-- Agathion Gold Majo -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="21002" toLevel="1" name="Release Agathion's Seal - Black Majo">
-		<!-- Removes the Agathion's seal. -->
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>3000</hitTime>
@@ -50,12 +50,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1503</npcId> <!-- Black Crown Agathion -->
+				<npcId>1503</npcId> <!-- Agathion Black Majo -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21003" toLevel="1" name="Summon Agathion - Plaipitak">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21003" toLevel="1" name="Summon Agathion Plaipitak">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -67,12 +67,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1504</npcId> <!-- Plaipitak Agathion -->
+				<npcId>1504</npcId> <!-- Agathion Plaipitak -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="21004" toLevel="1" name="Wind Walk">
-		<!-- Increases Speed by 20 for 2 min. Cooldown 18 min. -->
+		<!-- For 2 min., Speed +20. Skill Cooldown: 18 min. -->
 		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -99,7 +99,7 @@
 		</effects>
 	</skill>
 	<skill id="21005" toLevel="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 h. Cooldown is 24 h. -->
+		<!-- For 1 h., Evasion +4. Skill Cooldown: 24 h. -->
 		<icon>BranchSys.icon.br_Eye_Glasses_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -138,7 +138,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21007" toLevel="1" name="Mysterious Ability">
-		<!-- Increases the size of your head. -->
+		<!-- Makes your head larger. -->
 		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
 		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -159,8 +159,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21008" toLevel="1" name="Summon Agathion - Baby Panda">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21008" toLevel="1" name="Summon Agathion Baby Panda">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -172,12 +172,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1505</npcId> <!-- Baby Panda Agathion -->
+				<npcId>1505</npcId> <!-- Agathion Baby Panda -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21009" toLevel="1" name="Summon Agathion - Bamboo Panda">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21009" toLevel="1" name="Summon Agathion Bamboo Panda">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -193,8 +193,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21010" toLevel="1" name="Summon Agathion - Sexy Panda">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21010" toLevel="1" name="Summon Agathion Sexy Panda">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -316,7 +316,7 @@
 		</conditions>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>23019</skillId>
+				<skillId>23019</skillId> <!-- Scissors -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
@@ -346,7 +346,7 @@
 		</conditions>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>23019</skillId>
+				<skillId>23019</skillId> <!-- Scissors -->
 				<skillLevel>2</skillLevel>
 			</effect>
 		</selfEffects>
@@ -376,7 +376,7 @@
 		</conditions>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>23019</skillId>
+				<skillId>23019</skillId> <!-- Scissors -->
 				<skillLevel>3</skillLevel>
 			</effect>
 		</selfEffects>
@@ -685,8 +685,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21031" toLevel="1" name="Summon Agathion - Charming Cupid">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21031" toLevel="1" name="Summon Agathion Charming Cupid">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -702,8 +702,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21032" toLevel="1" name="Summon Agathion - Naughty Cupid">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21032" toLevel="1" name="Summon Agathion Naughty Cupid">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -719,8 +719,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21033" toLevel="1" name="Summon Agathion - White Maneki Neko">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21033" toLevel="1" name="Summon Agathion White Maneki Neko">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -736,8 +736,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21034" toLevel="1" name="Summon Agathion - Black Maneki Neko">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21034" toLevel="1" name="Summon Agathion Black Maneki Neko">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -753,8 +753,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21035" toLevel="1" name="Summon Agathion - Brown Maneki Neko">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21035" toLevel="1" name="Summon Agathion Brown Maneki Neko">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -770,8 +770,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21036" toLevel="1" name="Summon Agathion - One-eyed Bat Drove">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21036" toLevel="1" name="Summon Agathion One-eyed Bat Drove">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -783,12 +783,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1513</npcId> <!-- One-eyed Bat Drove Agathion -->
+				<npcId>1513</npcId> <!-- Agathion One-eyed Bat Drove -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21037" toLevel="1" name="Summon Agathion - Pegasus">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21037" toLevel="1" name="Summon Agathion Pegasus">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -800,12 +800,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1514</npcId> <!-- Pegasus Agathion -->
+				<npcId>1514</npcId> <!-- Agathion Pegasus -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21038" toLevel="1" name="Summon Agathion - Yellow-robed Tojigong">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21038" toLevel="1" name="Summon Agathion Yellow-robed Tojigong">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -821,8 +821,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21039" toLevel="1" name="Summon Agathion - Blue-robed Tojigong">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21039" toLevel="1" name="Summon Agathion Blue-robed Tojigong">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -838,8 +838,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21040" toLevel="1" name="Summon Agathion - Green-robed Tojigong">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21040" toLevel="1" name="Summon Agathion Green-robed Tojigong">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -855,8 +855,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21041" toLevel="1" name="Summon Agathion - Bugbear">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21041" toLevel="1" name="Summon Agathion Bugbear">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -868,7 +868,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1518</npcId> <!-- Bugbear Agathion -->
+				<npcId>1518</npcId> <!-- Agathion Bugbear -->
 			</effect>
 		</effects>
 	</skill>
@@ -894,8 +894,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21043" toLevel="1" name="Summon Agathion - Red Sumo Wrestler">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21043" toLevel="1" name="Summon Agathion Red Sumo Wrestler">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -907,12 +907,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1519</npcId> <!-- Red Sumo Wrestler Agathion -->
+				<npcId>1519</npcId> <!-- Agathion Red Sumo Wrestler -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21044" toLevel="1" name="Summon Agathion - Blue Sumo Wrestler">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21044" toLevel="1" name="Summon Agathion Blue Sumo Wrestler">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -924,12 +924,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1520</npcId> <!-- Blue Sumo Wrestler Agathion -->
+				<npcId>1520</npcId> <!-- Agathion Blue Sumo Wrestler -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21045" toLevel="1" name="Summon Agathion - Great Sumo Match">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21045" toLevel="1" name="Summon Agathion Great Sumo Match">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -945,8 +945,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21046" toLevel="1" name="Summon Agathion - Button-eyed Bear Doll">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21046" toLevel="1" name="Summon Agathion Button-eyed Bear Doll">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -958,12 +958,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1522</npcId> <!-- Button-eyed Bear Doll -->
+				<npcId>1522</npcId> <!-- Agathion Teddy Boy -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21047" toLevel="1" name="Summon Agathion - God of Fortune">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21047" toLevel="1" name="Summon Agathion God of Fortune">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -979,8 +979,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21048" toLevel="1" name="Summon Agathion - Dryad">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21048" toLevel="1" name="Summon Agathion Dryad">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -992,12 +992,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1524</npcId> <!-- Dryad Agathion -->
+				<npcId>1524</npcId> <!-- Agathion Dryad -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21049" toLevel="1" name="Summon Agathion - Wonboso">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21049" toLevel="1" name="Summon Agathion Wonboso">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1009,12 +1009,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1525</npcId> <!-- Wonboso Agathion -->
+				<npcId>1525</npcId> <!-- Agathion Wonboso -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21050" toLevel="1" name="Summon Agathion - Daewoonso">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21050" toLevel="1" name="Summon Agathion Daewoonso">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1026,12 +1026,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1526</npcId> <!-- Daewoonso Agathion -->
+				<npcId>1526</npcId> <!-- Agathion Daewoonso -->
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21051" toLevel="1" name="Ride Steam Beetle">
-		<!-- Ride a Steam Beetle. -->
+	<skill id="21051" toLevel="1" name="Mount Steam Beetle">
+		<!-- Allows to mount Steam Beetle. -->
 		<icon>icon.skilltransform3</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1162,7 +1162,7 @@
 		</effects>
 	</skill>
 	<skill id="21056" toLevel="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 h. Cooldown is 24 h. -->
+		<!-- For 1 h., Evasion +4. Skill Cooldown: 24 h. -->
 		<icon>BranchSys.icon.br_mask_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1304,7 +1304,7 @@
 		</effects>
 	</skill>
 	<skill id="21061" toLevel="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 h. Cooldown is 24 h. -->
+		<!-- For 1 h., Evasion +4. Skill Cooldown: 24 h. -->
 		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1331,7 +1331,7 @@
 		</effects>
 	</skill>
 	<skill id="21062" toLevel="1" name="Wild Magic">
-		<!-- For 5 min., increases by 2 the occurrence rate of damage that is caused by magic damage. Cooldown is 1 h. -->
+		<!-- For 5 min., M. Critical Rate +2. Skill Cooldown: 1 h. -->
 		<icon>BranchSys.icon.br_Afro_hair_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1384,7 +1384,7 @@
 		</effects>
 	</skill>
 	<skill id="21064" toLevel="1" name="Mana Regeneration">
-		<!-- Increases MP Recovery Rate 3 for 5 min. Cooldown is 1 h. -->
+		<!-- For 5 min., MP Recovery Rate +3. Skill Cooldown: 1 h. -->
 		<icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1441,7 +1441,7 @@
 		</effects>
 	</skill>
 	<skill id="21066" toLevel="1" name="Vitality Recovery">
-		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 h. -->
+		<!-- For 5 min., recovers Vitality when acquiring XP. Cooldown: 1 h. -->
 		<icon>BranchSys.icon.br_black_gem_mask_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1468,7 +1468,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21067" toLevel="1" name="Blessed Escape">
+	<skill id="21067" toLevel="1" name="Blessed Escape Power">
 		<!-- Allows the use of Blessed Escape. Cooldown is 12 h. -->
 		<icon>BranchSys.icon.br_plastic_hair_f_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1491,7 +1491,7 @@
 		</effects>
 	</skill>
 	<skill id="21068" toLevel="1" name="Dark Resistance">
-		<!-- Increases Dark Resistance by 30 for 5 min. Cooldown is 1 h. -->
+		<!-- For 5 min., Dark Resistance +30. Skill Cooldown: 1 h. -->
 		<icon>icon.accessory_daisy_hairpin_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1573,7 +1573,7 @@
 		</effects>
 	</skill>
 	<skill id="21071" toLevel="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 h. Cooldown is 24 h. -->
+		<!-- For 1 h., Evasion +4. Skill Cooldown: 24 h. -->
 		<icon>icon.accessory_eye_bandage_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1600,7 +1600,7 @@
 		</effects>
 	</skill>
 	<skill id="21072" toLevel="1" name="Wild Magic">
-		<!-- For 5 min., increases by 2 the occurrence rate of damage that is caused by magic damage. Cooldown is 1 h. -->
+		<!-- For 5 min., M. Critical Rate +2. Skill Cooldown: 1 h. -->
 		<icon>icon.accessory_glasses_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1626,7 +1626,7 @@
 		</effects>
 	</skill>
 	<skill id="21073" toLevel="1" name="Mana Regeneration">
-		<!-- Increases MP Recovery Rate 3 for 5 min. Cooldown is 1 h. -->
+		<!-- For 5 min., MP Recovery Rate +3. Skill Cooldown: 1 h. -->
 		<icon>icon.accessory_worldcup_mask_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1715,7 +1715,7 @@
 		</effects>
 	</skill>
 	<skill id="21076" toLevel="1" name="Dark Resistance">
-		<!-- Increases Dark Resistance by 30 for 5 min. Cooldown is 1 h. -->
+		<!-- For 5 min., Dark Resistance +30. Skill Cooldown: 1 h. -->
 		<icon>icon.etc_party_mask_i01</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1797,7 +1797,7 @@
 		</effects>
 	</skill>
 	<skill id="21079" toLevel="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 h. Cooldown is 24 h. -->
+		<!-- For 1 h., Evasion +4. Skill Cooldown: 24 h. -->
 		<icon>icon.accessory_racoon_ear_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1824,7 +1824,7 @@
 		</effects>
 	</skill>
 	<skill id="21080" toLevel="1" name="Wild Magic">
-		<!-- For 5 min., increases by 2 the occurrence rate of damage that is caused by magic damage. Cooldown is 1 h. -->
+		<!-- For 5 min., M. Critical Rate +2. Skill Cooldown: 1 h. -->
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1850,7 +1850,7 @@
 		</effects>
 	</skill>
 	<skill id="21081" toLevel="1" name="Mana Regeneration">
-		<!-- Increases MP Recovery Rate 3 for 5 min. Cooldown is 1 h. -->
+		<!-- For 5 min., MP Recovery Rate +3. Skill Cooldown: 1 h. -->
 		<icon>icon.accessory_hair_ring_i00</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1966,8 +1966,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21085" toLevel="1" name="Summon Agathion - Pomona">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21085" toLevel="1" name="Summon Agathion Pomona">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1979,7 +1979,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1527</npcId> <!-- Pomona Agathion -->
+				<npcId>1527</npcId> <!-- Agathion Pomona -->
 			</effect>
 		</effects>
 	</skill>
@@ -2166,8 +2166,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21091" toLevel="1" name="Summon Agathion - Weaver">
-		<!-- Removes the Agathion's seal. -->
+	<skill id="21091" toLevel="1" name="Summon Agathion Weaver">
+		<!-- Releases the agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2179,7 +2179,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1528</npcId> <!-- Weaver Agathion -->
+				<npcId>1528</npcId> <!-- Agathion Weaver -->
 			</effect>
 		</effects>
 	</skill>

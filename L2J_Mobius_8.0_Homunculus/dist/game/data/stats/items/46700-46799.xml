@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="46700" name="Emperor Shunaiman's Shooter" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
+		<!-- Emperor Shunaiman's Weapon. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.npoint_weapon_crossbow" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -32,7 +32,7 @@
 		</stats>
 	</item>
 	<item id="46701" name="Emperor Shunaiman's Buster" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
+		<!-- Emperor Shunaiman's Weapon. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.npoint_weapon_onehand_magic_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -62,7 +62,7 @@
 		</stats>
 	</item>
 	<item id="46702" name="Emperor Shunaiman's Caster" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
+		<!-- Emperor Shunaiman's Weapon. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.npoint_weapon_onehand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -93,7 +93,7 @@
 		</stats>
 	</item>
 	<item id="46703" name="Emperor Shunaiman's Retributer" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
+		<!-- Emperor Shunaiman's Weapon. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.npoint_weapon_twohand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -124,7 +124,7 @@
 		</stats>
 	</item>
 	<item id="46704" name="Emperor Shunaiman's Dual Sword" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
+		<!-- Emperor Shunaiman's Weapon. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.npoint_weapon_dual_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -154,7 +154,7 @@
 		</stats>
 	</item>
 	<item id="46705" name="Emperor Shunaiman's Dual Dagger" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
+		<!-- Emperor Shunaiman's Weapon. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.npoint_weapon_dual_dagger" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -185,7 +185,7 @@
 		</stats>
 	</item>
 	<item id="46706" name="Emperor Shunaiman's Dual Blunt" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
+		<!-- Emperor Shunaiman's Weapon. All levels. Can be used with No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.npoint_weapon_dual_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -216,7 +216,7 @@
 		</stats>
 	</item>
 	<item id="46707" name="Stylish Color Title" type="EtcItem">
-		<!-- Dimensional Item. Item that can change the color of a character's title. After changing the color of the title, the original title color can be restored through the command '/ resettitle'. If there was no original title, the title disappears. -->
+		<!-- Item that can change the color of a character's title. After changing the color of the title, the original title color can be restored through the command '/ resetname'. If there was no original title, the title disappears. -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
 		<set name="immediate_effect" val="true" />
@@ -229,7 +229,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46708" name="Entrance Pass: Nightmare Kamaloka" type="EtcItem">
-		<!-- Additional pass to the daily instance zone. Double-click to reset cooldown to the Nightmare Kamaloka dungeon. Usable once a day outside instances while on a cooldown. -->
+		<!-- Additional pass to the daily instance zone. Double-click to reset cooldown to Nightmare Kamaloka. Cannot be used if you have never been there. Can be used only once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -239,7 +239,7 @@
 		<set name="reuse_delay" val="86400000" />
 	</item>
 	<item id="46709" name="Pa'agrio's Blessing" type="EtcItem">
-		<!-- Dimensional Item. When used, increases Max HP/ MP/ CP 10%, P. Atk. 20%, M. Atk. 30%, P./ M. Def. 10%, Accuracy 4, Magic Accuracy by 4, Movement Speed 10, Attack/ casting Speed 10%, Attack Attribute 100, and reduces Skill MP Consumption 10% for 30 min. Effect remains after death. Cooldown time is 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
+		<!-- For 30 min., increases Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. 30%, P./ M. Def. +10%, P. Accuracy +4, M. Accuracy +4, Atk./ Casting Spd. +10%, Speed +10, Attribute Attack +100, Skill MP consumption -10%. Effect remains after death. Cooldown: 5 min. The effect cannot be stacked. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -259,7 +259,7 @@
 		</skills>
 	</item>
 	<item id="46710" name="Lindvior's Earring" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, Petrification Atk./ Resistance +50%, Knock Back/ Knock Down Atk./ Resistance +40%, Pulling Success Rate +40%, Pulling/ Danger Zone Resistance +40%, P. Critical Damage +10%, M. Critical Damage +10%, P./ M. Abnormal Status Reflection +10%. Reflect Damage Magic +10%. Movement Speed +5, DEX +3, and WIT +3. Wind/ Dark Attribute Resistance decreased by 30. Active Skill: Enables the skill of canceling Knock Back/ Knock Down and Knock Back/ Knock Down Resistance for 5 sec. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- MP +59, P. Critical Damage/ M. Skill Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Resistance +30, Petrifaction Resistance/ Atk. Rate +50%, Confusion Resistance/ Atk. Rate +40%, Danger Zone Resistance +40%, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs, and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -280,7 +280,7 @@
 		</stats>
 	</item>
 	<item id="46711" name="Lindvior's Earring 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Lindvior's Earring (30-day). -->
+		<!-- Double-click to obtain Lindvior's Earring (30-day). -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -293,7 +293,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46712" name="Blessed Antharas' Earring 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Blessed Antharas' Earring (30-day). -->
+		<!-- Double-click to obtain Blessed Antharas' Earring (30-day). -->
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -306,7 +306,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46713" name="Blessed Valakas' Necklace 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Blessed Valakas' Necklace (30-day). -->
+		<!-- Double-click to obtain Blessed Valakas' Necklace (30-day). -->
 		<set name="icon" val="icon.npoint_valakas_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -319,7 +319,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46714" name="Tauti's Ring 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Tauti's Ring (30-day). -->
+		<!-- Double-click to obtain Tauti's Ring (30-day). -->
 		<set name="icon" val="icon.npoint_tauti_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -332,7 +332,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46715" name="Earth Wyrm Heart Ring 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Earth Wyrm Heart Ring (30-day). -->
+		<!-- Double-click to obtain Earth Wyrm's Heart Ring (30-day). -->
 		<set name="icon" val="icon.npoint_earthworm_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -345,7 +345,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46716" name="Refined Black Romantic Chapeau" type="Armor">
-		<!-- Dimensional Item. Refined Black Romantic Chapeau. Occupies 2 hair accessory slots. -->
+		<!-- Double-click to obtain Refined Black Romantic Chapeau. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.npoint_black_hat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -360,7 +360,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46717" name="Mysterious Talisman - STR" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. STR +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, STR +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -378,7 +378,7 @@
 		</skills>
 	</item>
 	<item id="46718" name="Mysterious Talisman - INT" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. INT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, INT +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -396,7 +396,7 @@
 		</skills>
 	</item>
 	<item id="46719" name="Mysterious Talisman - DEX" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. DEX +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, DEX +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -414,7 +414,7 @@
 		</skills>
 	</item>
 	<item id="46720" name="Mysterious Talisman - WIT" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. WIT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, WIT +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -432,7 +432,7 @@
 		</skills>
 	</item>
 	<item id="46721" name="Mysterious Talisman - CON" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. CON +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, CON +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -450,7 +450,7 @@
 		</skills>
 	</item>
 	<item id="46722" name="Mysterious Talisman - MEN" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MEN +5 when wearing the Talisman. Effect does not stack with identical ones. -->
+		<!-- When equipped, MEN +5. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -468,7 +468,7 @@
 		</skills>
 	</item>
 	<item id="46723" name="Mysterious Talisman - STR 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - STR (30-day). -->
+		<!-- Double-click to obtain Mysterious Talisman - STR (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -481,11 +481,11 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46717" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - STR -->
+			<item id="46717" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - STR - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46724" name="Mysterious Talisman - INT 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - INT (30-day). -->
+		<!-- Double-click to obtain Mysterious Talisman - INT (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -498,11 +498,11 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46718" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - INT -->
+			<item id="46718" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - INT - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46725" name="Mysterious Talisman - DEX 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - DEX (30-day). -->
+		<!-- Double-click to obtain Mysterious Talisman - DEX (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -515,11 +515,11 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46719" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - DEX -->
+			<item id="46719" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - DEX - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46726" name="Mysterious Talisman - WIT 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - WIT (30-day). -->
+		<!-- Double-click to obtain Mysterious Talisman - WIT (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -532,11 +532,11 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46720" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - WIT -->
+			<item id="46720" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - WIT - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46727" name="Mysterious Talisman - CON 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - CON (30-day). -->
+		<!-- Double-click to obtain Mysterious Talisman - CON (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -549,11 +549,11 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46721" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - CON -->
+			<item id="46721" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - CON - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46728" name="Mysterious Talisman - MEN 30-day pack" type="EtcItem">
-		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - MEN (30-day). -->
+		<!-- Double-click to obtain Mysterious Talisman - MEN (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -566,7 +566,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46722" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - MEN -->
+			<item id="46722" min="1" max="1" chance="100" /> <!-- Mysterious Talisman - MEN - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46729" name="Scroll of Escape - Town of Goddard" type="EtcItem">
@@ -675,7 +675,7 @@
 		</skills>
 	</item>
 	<item id="46734" name="Scroll of Escape - Dragon Valley" type="EtcItem">
-		<!-- Use to teleport to Dragon Valley. -->
+		<!-- Teleports to Dragon Valley. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="30" />
@@ -867,7 +867,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46745" name="Ketra's Badge: Soldier" type="EtcItem">
-		<!-- Badge of Orc Soldiers at Ketra Orc Outpost. Take it to Giant's Minion Lugonnes at Ketra Orc Outpost to receive a reward. -->
+		<!-- Badge of a Ketra Soldier. Take it to Giant's Minion Lugonnes in the Ketra Orc Outpost to get a reward. -->
 		<set name="icon" val="icon.etc_barka_badge_grunt_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -877,7 +877,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46746" name="Ketra's Badge: General" type="EtcItem">
-		<!-- Badge of Orc Generals at Ketra Orc Outpost. Take it to Giant's Minion Lugonnes at Ketra Orc Outpost to receive a reward. -->
+		<!-- Badge of a Ketra General. Take it to Giant's Minion Lugonnes in the Ketra Orc Outpost to get a reward. -->
 		<set name="icon" val="icon.etc_barka_badge_officer_i02" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -918,7 +918,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46750" name="Resistance Mark Stage 1" type="EtcItem">
-		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. Collect 40 Marks of Resistance and go to Kekropus to trade with a Stage 2 Mark. -->
+		<!-- Obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. Collect 40 of these and go to Kekropus to get Mark of Resistance Lv. 2. -->
 		<set name="icon" val="icon.etc_barka_friendship_1_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -927,7 +927,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46751" name="Resistance Mark Stage 2" type="EtcItem">
-		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. -->
+		<!-- Obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used. Can be exchanged for a reward through Krenaht in the Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_2_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -936,7 +936,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46752" name="Resistance Mark Stage 3" type="EtcItem">
-		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. -->
+		<!-- Obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used. Can be exchanged for a reward through Krenaht in the Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_3_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -945,7 +945,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46753" name="Resistance Mark Stage 4" type="EtcItem">
-		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. -->
+		<!-- Obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used. Can be exchanged for a reward through Krenaht in the Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_4_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -954,7 +954,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46754" name="Resistance Mark Stage 5" type="EtcItem">
-		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. -->
+		<!-- Obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used. Can be exchanged for a reward through Krenaht in the Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_5_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1043,7 +1043,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46763" name="Scroll of Escape - Giant's Cave" type="EtcItem">
-		<!-- Teleports to Kekropus in the Giant's Cave. -->
+		<!-- Teleports to Krenaht in the Giant's Cave. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="30" />
@@ -1092,7 +1092,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46768" name="Opal Fortune Box" type="EtcItem">
-		<!-- Double-click to obtain one of Level 1-5 Opals. -->
+		<!-- Double-click to obtain Opal Lv. 1-5. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
@@ -1155,7 +1155,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46777" name="Vitality Replenishing Potion of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Replenishes vitality by a certain amount when used. Reuse delay 60 min. No weekly usage limit. -->
+		<!-- Recovers a certain amount of Vitality. Cooldown is 60 min. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1167,7 +1167,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46778" name="Special Bait Coupon of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Exchange for 1 Heine Special Bait of your choice through a fishing guild member. -->
+		<!-- Exchange for a Heine Special Bait of your choice through a fishermen's guild member in any town. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1178,7 +1178,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46779" name="Equipment Enchantment Chest of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Double-click the chest to receive 1 random item relating to equipment enchantment. -->
+		<!-- Double-click to obtain a random item for enchanting. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1189,7 +1189,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46780" name="Skill Enchantment Chest of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Double-click the chest to receive 1 random item relating to skill enchantment. -->
+		<!-- Double-click to obtain a random item for upgrading skills. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1200,7 +1200,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46781" name="Good Fortune Chest of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Double-click the chest to receive 1 random item. -->
+		<!-- Double-click the chest to receive one item at random. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1211,7 +1211,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46782" name="Graduation Gift" type="EtcItem">
-		<!-- Use to obtain Soulshot (R-grade), Blessed Spiritshot (R-grade), Premium Account - Art of Seduction, Blessed Scroll of Resurrection, Blessed Scroll of Escape. -->
+		<!-- A special box for warriors who are looking for adventures in the continent. Double-click to obtain R-grade Soulshots, Blessed R-grade Spiritshots, Freya's Ice Rose, Blessed Scroll of Resurrection, Blessed Scroll of Escape. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -1230,13 +1230,13 @@
 		<capsuled_items>
 			<item id="33640" min="5" max="5" chance="100" /> <!-- Blessed Scroll of Escape -->
 			<item id="33518" min="5" max="5" chance="100" /> <!-- Blessed Scroll of Resurrection -->
-			<item id="33794" min="25000" max="25000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
-			<item id="37928" min="10" max="10" chance="100" /> <!-- PA - Art of Seduction -->
-			<item id="33780" min="50000" max="50000" chance="100" /> <!-- Soulshot (R-grade) -->
+			<item id="33794" min="25000" max="25000" chance="100" /> <!-- Blessed R-grade Spiritshot - Event -->
+			<item id="48848" min="10" max="10" chance="100" /> <!-- Freya's Ice Rose - Event -->
+			<item id="33780" min="50000" max="50000" chance="100" /> <!-- R-grade Soulshot - Event -->
 		</capsuled_items>
 	</item>
 	<item id="46783" name="Blue Dynasty Transformation Potion" type="EtcItem">
-		<!-- Equips the Blue Dynasty for 1 hour. -->
+		<!-- Changes the appearance of your armor into that of the Blue Dynasty for 1 h. -->
 		<set name="icon" val="icon.general_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="5" />
@@ -1248,7 +1248,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46784" name="Red Zubei Transformation Potion" type="EtcItem">
-		<!-- Equips the Red Zubei for 1 hour. -->
+		<!-- Changes the armor appearance to that of Red Zubei for 1 h. -->
 		<set name="icon" val="icon.general_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="5" />
@@ -1325,7 +1325,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46791" name="Paulina's Sword of Revolution" type="Weapon">
-		<!-- A Sword of Revolution imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- Sword of Revolution imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +5%, Critical Rate for standard attacks +30. -->
 		<set name="icon" val="icon.weapon_sword_of_revolution_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1353,7 +1353,7 @@
 		</stats>
 	</item>
 	<item id="46792" name="Paulina's Claymore" type="Weapon">
-		<!-- A Claymore imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- Claymore imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +5%, Critical Rate for standard attacks +30. -->
 		<set name="icon" val="icon.weapon_claymore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1381,7 +1381,7 @@
 		</stats>
 	</item>
 	<item id="46793" name="Paulina's Tarbar" type="Weapon">
-		<!-- A Tarbar imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- Tarbar imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +5%, Critical Rate for standard attacks +30. -->
 		<set name="icon" val="icon.weapon_tarbar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1410,7 +1410,7 @@
 		</stats>
 	</item>
 	<item id="46794" name="Paulina's Scallop Jamadhr" type="Weapon">
-		<!-- A Scallop Jamadhr imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- Scallop Jamadhr imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +5%, Critical Rate for standard attacks +30. -->
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1439,7 +1439,7 @@
 		</stats>
 	</item>
 	<item id="46795" name="Paulina's Light Bow" type="Weapon">
-		<!-- A Light Bow imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- Light Bow imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +5%, Critical Rate for standard attacks +30. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1471,7 +1471,7 @@
 		</stats>
 	</item>
 	<item id="46796" name="Paulina's Mithril Dagger" type="Weapon">
-		<!-- A Mithril Dagger imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- Mithril Dagger imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +5%, Critical Rate for standard attacks +30. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1500,7 +1500,7 @@
 		</stats>
 	</item>
 	<item id="46797" name="Paulina's Ghost Staff" type="Weapon">
-		<!-- A Ghost Staff imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>Atk. Spd. +5%, M. Critical Rate +30. -->
+		<!-- Ghost Staff imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and assigned an attribute. <Special Option>. Casting Spd. +5%, M. Critical Rate +30. -->
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1530,7 +1530,7 @@
 		</stats>
 	</item>
 	<item id="46798" name="Paulina's General's Katzbalger" type="Weapon">
-		<!-- A General's Katzbalger imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- General's Katzbalger imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +5%, Critical Rate for standard attacks +30. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1559,7 +1559,7 @@
 		</stats>
 	</item>
 	<item id="46799" name="Paulina's Grand Épée" type="Weapon">
-		<!-- A Grand Épée imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- Grand ?p?e imbued with the energy of Paulina. Cannot be enchanted, upgraded with Soul Crystal, augmented, and imbued with an attribute. <Special Option>. Atk. Spd. +5%, Critical Rate for standard attacks +30. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />

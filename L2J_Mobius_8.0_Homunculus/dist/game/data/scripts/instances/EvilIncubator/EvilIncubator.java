@@ -495,7 +495,7 @@ public class EvilIncubator extends AbstractInstance
 				spawnedNpcs = world.spawnGroup("wave_" + waveId);
 				waveId++;
 				world.setParameter("WORLD_WAVE", waveId);
-				showOnScreenMsg(world, NpcStringId.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, ExShowScreenMessage.TOP_CENTER, 5000, true);
+				showOnScreenMsg(world, NpcStringId.I_DEATH_WOUND_CHAMPION_OF_SHILLIEN_SHALL_END_YOUR_WORLD, ExShowScreenMessage.TOP_CENTER, 5000, true);
 				getTimers().addTimer("SPAWN_WAVE", 20000, e -> manageWaveSpawn(world));
 				final Npc boss = addSpawn(CLASS_BOSS.get(world.getFirstPlayer().getClassId()).intValue(), BOSS_LOC, false, 0, false, world.getId());
 				world.broadcastPacket(new Earthquake(boss, 50, 10));

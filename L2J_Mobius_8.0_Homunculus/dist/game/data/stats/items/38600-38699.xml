@@ -398,7 +398,7 @@
 		</stats>
 	</item>
 	<item id="38622" name="Steel Avadon Gloves (Robe)" type="Armor">
-		<!-- Steel Avadon Gloves (Robe). -->
+		<!-- Steel Avadon Gloves. -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -416,7 +416,7 @@
 		</stats>
 	</item>
 	<item id="38623" name="Steel Avadon Boots (Robe)" type="Armor">
-		<!-- Steel Avadon Boots (Robe). -->
+		<!-- Steel Avadon Boots. -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -434,7 +434,7 @@
 		</stats>
 	</item>
 	<item id="38624" name="Steel Abaddon Shield" type="Armor">
-		<!-- Steel Abaddon Shield. -->
+		<!-- Steel Avadon Shield. -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -454,7 +454,7 @@
 		</stats>
 	</item>
 	<item id="38625" name="Steel Leather Armor of Doom" type="Armor">
-		<!-- Steel Leather Armor of Doom. -->
+		<!-- Steel Doom Leather Armor. -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -546,7 +546,7 @@
 		</stats>
 	</item>
 	<item id="38630" name="Steel Gauntlets of Nightmare (Heavy Armor)" type="Armor">
-		<!-- Steel Gauntlets of Nightmare (Heavy Armor). -->
+		<!-- Steel Gauntlets of Nightmare. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -564,7 +564,7 @@
 		</stats>
 	</item>
 	<item id="38631" name="Steel Boots of Nightmare (Heavy Armor)" type="Armor">
-		<!-- Steel Boots of Nightmare (Heavy Armor). -->
+		<!-- Steel Boots of Nightmare. -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1633,7 +1633,7 @@
 		</stats>
 	</item>
 	<item id="38689" name="Steel Immortal Earring (30-day)" type="Armor">
-		<!-- 30-day. -->
+		<!-- Available for 30 days. -->
 		<set name="icon" val="icon.r1_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1652,7 +1652,7 @@
 		</stats>
 	</item>
 	<item id="38690" name="Steel Immortal Necklace (30-day)" type="Armor">
-		<!-- 30-day. -->
+		<!-- Available for 30 days. -->
 		<set name="icon" val="icon.r1_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1671,7 +1671,7 @@
 		</stats>
 	</item>
 	<item id="38691" name="Steel Immortal Ring (30-day)" type="Armor">
-		<!-- 30-day. -->
+		<!-- Available for 30 days. -->
 		<set name="icon" val="icon.r1_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1690,7 +1690,7 @@
 		</stats>
 	</item>
 	<item id="38692" name="Steel Stormbringer" type="Weapon">
-		<!-- <Special Option>. Critical +86. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>. Critical Rate for standard attacks +86. No Soul Crystal option. Cannot be augmented. -->
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1847,7 +1847,7 @@
 		</stats>
 	</item>
 	<item id="38698" name="Steel Crystallized Ice Bow" type="Weapon">
-		<!-- <Special Option>. Accuracy +5. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>. P. Accuracy +5. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1873,7 +1873,7 @@
 		</stats>
 	</item>
 	<item id="38699" name="Steel Schlager" type="Weapon">
-		<!-- <Special Option>. Critical +86. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>. Critical Rate for standard attacks +86. No Soul Crystal option. Cannot be augmented. -->
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

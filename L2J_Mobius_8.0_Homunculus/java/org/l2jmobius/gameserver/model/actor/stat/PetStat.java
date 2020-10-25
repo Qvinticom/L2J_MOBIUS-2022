@@ -57,7 +57,7 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public boolean addLevel(byte value)
+	public boolean addLevel(int value)
 	{
 		if ((getLevel() + value) > (getMaxLevel() - 1))
 		{
@@ -115,7 +115,7 @@ public class PetStat extends SummonStat
 	}
 	
 	@Override
-	public void setLevel(byte value)
+	public void setLevel(int value)
 	{
 		getActiveChar().setPetData(PetDataTable.getInstance().getPetLevelData(getActiveChar().getTemplate().getId(), value));
 		if (getActiveChar().getPetLevelData() == null)

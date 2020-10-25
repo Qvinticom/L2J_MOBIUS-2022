@@ -6,7 +6,7 @@
 		<hitTime>5000</hitTime>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="18345" toLevel="5" name="Spellbook: Dignity of the Exalted Lv. 1">
+	<skill id="18345" toLevel="6" name="Spellbook: Dignity of the Exalted Lv. 1">
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -16,6 +16,7 @@
 				<value level="3">45924</value>
 				<value level="4">47852</value>
 				<value level="5">47853</value>
+				<value level="6">80970</value>
 		</itemConsumeId>
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -53,6 +54,11 @@
 				<skillLevel>5</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
+			<condition name="OpSkill" fromLevel="1" toLevel="1" >
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
+				<skillLevel>6</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
 			<condition name="OpSkill" fromLevel="2" toLevel="2">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>1</skillLevel>
@@ -91,6 +97,16 @@
 			<condition name="OpSkill" fromLevel="5" toLevel="5">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>5</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition name="OpSkill" fromLevel="6" toLevel="6" >
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
+				<skillLevel>5</skillLevel>
+				<hasLearned>true</hasLearned>
+			</condition>
+			<condition name="OpSkill" fromLevel="6" toLevel="6" >
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
+				<skillLevel>6</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
@@ -114,6 +130,10 @@
 			<effect name="SetSkill" fromLevel="5" toLevel="5">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>5</skillLevel>
+			</effect>
+			<effect name="SetSkill" fromLevel="6" toLevel="6" >
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
+				<skillLevel>6</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -291,7 +311,7 @@
 		</effects>
 	</skill>
 	<skill id="18354" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- Weight +12800, Inventory Slots +18, AND Damage +6% during PvP. -->
+		<!-- Weight Limit +12,800, Inventory Slots +18, PvP Damage +6%. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -316,7 +336,7 @@
 		</effects>
 	</skill>
 	<skill id="18355" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- Weight +12800, Inventory Slots +18, and Damage Received -7% during PvP. -->
+		<!-- Weight +12800, Inventory Slots +18, and Damage Received -7% during PvE. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -369,7 +389,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18361" toLevel="1" name="Festival Buff - Tipsy Tipsy">
-		<!-- You've drank too much at the festival. For 3 h., Atk. Spd. -5%, Casting Spd. -5%, Speed -20, P. Atk. +10%, M. Atk. +10%, Skill Power +10%, Damage Reflection Resistance +10%. -->
+		<!-- You've drank too much at the festival. For 3 h., Atk. Spd. -5%, Casting Spd. -5%, Speed -20, P. Atk. +10%, M. Atk. +10%, P. Skill Power +10%, Damage Reflection Resistance +10%. -->
 		<icon>icon.ev_festival_herong</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
@@ -390,21 +410,21 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="18364" toLevel="1" name="Festival's Effect">
-		<!-- The festival is not over yet. Obtain 300 Festival Coins after 6 h. Receive the buff once a day. It resets at 6:30 AM every day.<Note:> Cannot receive Festival Coins if you're dead or don't have space in your inventory. -->
+		<!-- The festival is not over yet. The character can obtain 300 Festival Coins after 6 h. from buff removing. The buff can be obtained once a day. It resets at 6:30 AM every day.\n\nNote!\nThe Festival Coins can't be obtained if your character is dead or has no free slots in the inventory. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="18365" toLevel="1" name="Festival's Effect">
-		<!-- The festival is not over yet. Obtain 300 Festival Coins after 10 min. Receive the buff once a day. It resets at 6:30 AM every day.<Note:> Cannot receive Festival Coins if you're dead or don't have space in your inventory. -->
+		<!-- The festival is not over yet. The character can obtain 300 Festival Coins after 10 min. from buff removing. The buff can be obtained once a day. It resets at 6:30 AM every day.\n\nNote!\nThe Festival Coins can't be obtained if your character is dead or has no free slots in the inventory. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="18366" toLevel="1" name="Festival's Effect">
-		<!-- The festival is not over yet. Obtain 600 Festival Coins after 6 h. Receive the buff once a day. It resets at 6:30 AM every day.<Note:> Cannot receive Festival Coins if you're dead or don't have space in your inventory. -->
+		<!-- The festival is not over yet. The character can obtain 600 Festival Coins after 6 h. from buff removing. The buff can be obtained once a day. It resets at 6:30 AM every day.\n\nNote!\nThe Festival Coins can't be obtained if your character is dead or has no free slots in the inventory. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -421,7 +441,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18369" toLevel="1" name="Kableon's Concentration">
-		<!-- Kableon is checking your star rating. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Kableon is checking your star rating.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -542,6 +562,13 @@
 				<amount>5</amount>
 				<stat>STR</stat>
 			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">450</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18381" toLevel="2" name="Mysterious Talisman - INT">
@@ -555,6 +582,13 @@
 			<effect name="StatUp">
 				<amount>5</amount>
 				<stat>INT</stat>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">260</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -570,6 +604,13 @@
 				<amount>5</amount>
 				<stat>DEX</stat>
 			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">25</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18383" toLevel="2" name="Mysterious Talisman - WIT">
@@ -583,6 +624,13 @@
 			<effect name="StatUp">
 				<amount>5</amount>
 				<stat>WIT</stat>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">25</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -598,6 +646,13 @@
 				<amount>5</amount>
 				<stat>CON</stat>
 			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18385" toLevel="2" name="Mysterious Talisman - MEN">
@@ -612,10 +667,17 @@
 				<amount>5</amount>
 				<stat>MEN</stat>
 			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">250</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="18386" toLevel="2" name="PA - Talisman - Attack Attribute">
-		<!-- Attack Attribute +50 when equipped. -->
+	<skill id="18386" toLevel="2" name="PA Talisman - Attribute Attack">
+		<!-- Attribute Attack +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -624,7 +686,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18387" toLevel="1" name="PA - Talisman - Fire Resistance">
+	<skill id="18387" toLevel="1" name="PA Talisman - Fire Resistance">
 		<!-- Fire Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -635,7 +697,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18388" toLevel="1" name="PA - Talisman - Water Resistance">
+	<skill id="18388" toLevel="1" name="PA Talisman - Water Resistance">
 		<!-- Water Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -646,7 +708,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18389" toLevel="1" name="PA - Talisman - Wind Resistance">
+	<skill id="18389" toLevel="1" name="PA Talisman - Wind Resistance">
 		<!-- Wind Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -657,7 +719,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18390" toLevel="1" name="PA - Talisman - Earth Resistance">
+	<skill id="18390" toLevel="1" name="PA Talisman - Earth Resistance">
 		<!-- Earth Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -668,7 +730,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18391" toLevel="1" name="PA - Talisman - Holy Resistance">
+	<skill id="18391" toLevel="1" name="PA Talisman - Holy Resistance">
 		<!-- Holy Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -679,7 +741,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18392" toLevel="1" name="PA - Talisman - Dark Resistance">
+	<skill id="18392" toLevel="1" name="PA Talisman - Dark Resistance">
 		<!-- Dark Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>

@@ -38,7 +38,7 @@
 		</skills>
 	</item>
 	<item id="22302" name="Antharas' Earring" additionalName="3-day (Event)" type="Armor">
-		<!-- MP +37, Bleed Resistance +40%, Bleed Attack Rate +40%, increases Heal Amount, Vampiric Rage Effect, Stun/ Mental Attack Resistance +30%, Stun/ Mental attack rate +30%, decreases MP consumption, and increases Heal Amount and Earth Resistance. Only one effect is applied when two of the same earrings are equipped. -->
+		<!-- Temporary item. MP +37, Infection Resistance/ Atk. Rate +40%, Confusion Resistance/ Atk. Rate +30%. Increases Received Healing and Earth Resistance, grants Vampiric Rage effect, decreases MP Consumption. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -64,7 +64,7 @@
 		</stats>
 	</item>
 	<item id="22303" name="Antharas' Earring" additionalName="7-day (Event)" type="Armor">
-		<!-- MP +37, Bleed Resistance +40%, Bleed Attack Rate +40%, increases Heal Amount, Vampiric Rage Effect, Stun/ Mental Attack Resistance +30%, Stun/ Mental attack rate +30%, decreases MP consumption, and increases Heal Amount and Earth Resistance. Only one effect is applied when two of the same earrings are equipped. -->
+		<!-- Temporary item. MP +37, Infection Resistance/ Atk. Rate +40%, Confusion Resistance/ Atk. Rate +30%. Increases Received Healing and Earth Resistance, grants Vampiric Rage effect, decreases MP Consumption. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -90,7 +90,7 @@
 		</stats>
 	</item>
 	<item id="22304" name="Baium's Ring" additionalName="3-day (Event)" type="Armor">
-		<!-- MP +21, Poison Resistance +40%, Poison Attack Rate +40%, Hold Resistance +30%, Hold attack rate +30%, and increases Accuracy, Critical Damage, P. Atk., and Casting Spd. Only one effect is applied when two of the same ring are equipped. -->
+		<!-- Temporary item. MP +21, Infection Resistance/ Atk. Rate +40%, Obstruction Resistance/ Atk. Rate +30%. Increases P. Accuracy, Critical Damage, Atk. Spd., and Casting Spd. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -116,7 +116,7 @@
 		</stats>
 	</item>
 	<item id="22305" name="Baium's Ring" additionalName="7-day (Event)" type="Armor">
-		<!-- MP +21, Poison Resistance +40%, Poison Attack Rate +40%, Hold Resistance +30%, Hold attack rate +30%, and increases Accuracy, Critical Damage, P. Atk., and Casting Spd. Only one effect is applied when two of the same ring are equipped. -->
+		<!-- Temporary item. MP +21, Infection Resistance/ Atk. Rate +40%, Obstruction Resistance/ Atk. Rate +30%. Increases P. Accuracy, Critical Damage, Atk. Spd., and Casting Spd. Effects of two identical rings do not stack. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -142,7 +142,7 @@
 		</stats>
 	</item>
 	<item id="22306" name="Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 5 for S-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 6 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -157,7 +157,7 @@
 		</skills>
 	</item>
 	<item id="22307" name="Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -172,7 +172,7 @@
 		</skills>
 	</item>
 	<item id="22308" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for S-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -187,7 +187,7 @@
 		</skills>
 	</item>
 	<item id="22309" name="Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- P. Def. +1 for A-grade armor and accessories. When enchanted to +4 or higher, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. HP is gradually increased with each enchant value when enchanted to +4 or higher, Cannot be used on armor or accessories enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -202,7 +202,7 @@
 		</skills>
 	</item>
 	<item id="22310" name="Allegra Box" type="EtcItem">
-		<!-- Has a chance of obtaining a high-grade transformation scroll, scroll: blessed weapon, and Scroll: Enchant Weapon. -->
+		<!-- Double-click to obtain one of the following items: Transformation Scroll, Blessed Scroll: Enchant Weapon/ Armor. -->
 		<set name="icon" val="Branchsys2.icon2.g_alegra_box" />
 		<set name="material" val="STEEL" />
 		<set name="is_clan_depositable" val="false" />
@@ -218,7 +218,7 @@
 		</skills>
 	</item>
 	<item id="22311" name="Latus Box" type="EtcItem">
-		<!-- A Heavenly Scroll: Enchant Weapon and a high -grade Ancient Scroll: Enchant Weapon can be acquired at a constant rate. -->
+		<!-- Double-click to obtain Sacred Crystal: Enchant Weapon or High-grade Ancient Crystal: Enchant Weapon, with a certain chance. -->
 		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
 		<set name="material" val="STEEL" />
 		<set name="is_clan_depositable" val="false" />
@@ -287,7 +287,7 @@
 		</stats>
 	</item>
 	<item id="22314" name="Blessed Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 5 for S-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 6 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -309,7 +309,7 @@
 		</skills>
 	</item>
 	<item id="22315" name="Blessed Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- P. Def. +1 for S-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +3 for common armor and +4 for one-piece armor. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used with equipment enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -331,7 +331,7 @@
 		</skills>
 	</item>
 	<item id="22316" name="Blessed Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -353,7 +353,7 @@
 		</skills>
 	</item>
 	<item id="22317" name="Blessed Scroll: Enchant Weapon (B-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 3 for B-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -375,7 +375,7 @@
 		</skills>
 	</item>
 	<item id="22318" name="Blessed Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- P. Def. +1 for A-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For A-grade armor and accessories. P. Def. +1. When enchanted to +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -397,7 +397,7 @@
 		</skills>
 	</item>
 	<item id="22319" name="Blessed Scroll: Enchant Armor (B-grade)" type="EtcItem">
-		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For B-grade armor and accessories. P. Def. +1. When enchanted to +4, P. Def. +3, HP is increased with each enchant value. The enchanting is safe up to +3 for ordinary armor and up to +4 for one-piece armor. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -419,7 +419,7 @@
 		</skills>
 	</item>
 	<item id="22320" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -441,7 +441,7 @@
 		</skills>
 	</item>
 	<item id="22321" name="Scroll: Enchant Weapon (B-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 3 for B-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -463,7 +463,7 @@
 		</skills>
 	</item>
 	<item id="22322" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For A-grade armor and accessories. P. Def. +1. When enchanted to +4 or higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). HP is gradually increased with each enchant value starting from +4. Cannot be used on armor or accessories above +30. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -485,7 +485,7 @@
 		</skills>
 	</item>
 	<item id="22323" name="Scroll: Enchant Armor (B-grade)" type="EtcItem">
-		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For B-grade armor and accessories. P. Def. +1. When enchanted to +4 or higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). HP is gradually increased with each enchant value starting from +4. Cannot be used on armor or accessories above +30. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -673,7 +673,7 @@
 		</skills>
 	</item>
 	<item id="22331" name="7th Anniversary Box" type="EtcItem">
-		<!-- Gift commemorating the 7th anniversary. Upon use, can receive various items such as Vitality maintaining potions. -->
+		<!-- A gift for Lineage II Anniversary. Double-click to obtain Vitality Maintaining Potion and other valuable items. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -691,14 +691,14 @@
 			<item id="20034" min="5" max="5" chance="100" /> <!-- Revita-Pop (Event) -->
 			<item id="15440" min="5" max="5" chance="100" /> <!-- Vitality Maintaining Potion (30-min.) -->
 			<item id="20867" min="1" max="1" chance="100" /> <!-- Kadomas Transformation Stick - 7-day -->
-			<item id="21166" min="1" max="1" chance="100" /> <!-- Agathion - Zaken's Spirit Swords - 7-day -->
+			<item id="21166" min="1" max="1" chance="100" /> <!-- Agathion Zaken's Spirit Swords - 7-day -->
 			<item id="21235" min="5" max="5" chance="100" /> <!-- Fresh Milk -->
-			<item id="20429" min="1" max="1" chance="100" /> <!-- Black Gem Mask - Vitality (7-day) -->
+			<item id="20429" min="1" max="1" chance="100" /> <!-- Black Gem Mask - Vitality / 7-day -->
 			<item id="21239" min="10" max="10" chance="100" /> <!-- Super Healthy Juice (HP) -->
 		</capsuled_items>
 	</item>
 	<item id="22332" name="7th Anniversary Bonus Gift Box" type="EtcItem">
-		<!-- Bonus gift given to commemorate the 7th anniversary. Upon use, can receive various items such as rocket gun hats. -->
+		<!-- A bonus gift for Lineage II Anniversary. Double-click to obtain Rocket Gun Hat and other items. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -715,15 +715,15 @@
 		<capsuled_items>
 			<item id="20034" min="10" max="10" chance="100" /> <!-- Revita-Pop (Event) -->
 			<item id="15440" min="10" max="10" chance="100" /> <!-- Vitality Maintaining Potion (30-min.) -->
-			<item id="20789" min="1" max="1" chance="100" /> <!-- Rocket Gun Hat - Chain Fireworks -->
-			<item id="20236" min="1" max="1" chance="100" /> <!-- Agathion - Pegasus -->
+			<item id="20789" min="1" max="1" chance="100" /> <!-- Rocket Gun Hat - Large Firecracker -->
+			<item id="20236" min="1" max="1" chance="100" /> <!-- Agathion Pegasus -->
 			<item id="21588" min="1" max="1" chance="100" /> <!-- Festival's Cloak - Pearl White -->
 			<item id="21235" min="10" max="10" chance="100" /> <!-- Fresh Milk -->
-			<item id="21379" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer - 7-day -->
+			<item id="21379" min="1" max="1" chance="100" /> <!-- Darkmane Pacer Bracelet - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="22333" name="Hero's Treasure Chest" type="EtcItem">
-		<!-- Contains a 90-day equipment set pack. -->
+		<!-- Double-click to obtain Package: Equipment Set (90-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -738,11 +738,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="16853" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (90-day) - 90-day -->
+			<item id="16853" min="1" max="1" chance="100" /> <!-- Package: Equipment Set (90-day) - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="22334" name="XP Rune III (Lv. 1-100+) 50%" additionalName="1-hour" type="EtcItem">
-		<!-- Ancient characters that bestow a mysterious ability when possessed in the inventory. Increases acquired XP by 50%. The remaining period decreases even while logged off. -->
+		<!-- Ancient characters that bestow a mysterious ability when possessed in the inventory. Acquired XP +50%. The remaining period decreases even while logged off. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -762,7 +762,7 @@
 		</skills>
 	</item>
 	<item id="22335" name="Essence of Destruction" type="EtcItem">
-		<!-- Item filled with the essence of Shilen's followers that you have defeated. -->
+		<!-- Item filled with the essence of Shillien's followers that you have defeated. -->
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="10" />
@@ -796,7 +796,7 @@
 		</skills>
 	</item>
 	<item id="22337" name="Extra Pass: Rim Kamaloka" type="EtcItem">
-		<!-- Entrance pass that allows you to enter Rim Kamaloka 5 more times. Can cancel the limit on entry if used while a limit on entry to Rim Kamaloka exists. Can only be used once per day from outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. -->
+		<!-- An extra pass to Rim Kamaloka that allows to enter it 5 more times. Double-click to reset the instance zone timer. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. The effect expires when the instance zone timer is reset. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="5" />
@@ -817,7 +817,7 @@
 		</skills>
 	</item>
 	<item id="22338" name="Extra Pass: Rim Kamaloka Pack" type="EtcItem">
-		<!-- Wrapped Pack containing extra entrance pass that lets you enter Rim Kamaloka. -->
+		<!-- Double-click to obtain 1 Extra Pass: Rim Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
@@ -855,7 +855,7 @@
 		</skills>
 	</item>
 	<item id="22341" name="Blessed Scroll: Enchant Weapon (C-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 3 for C-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. In case of failure the item is not crystallized, but its enchant value is reset to 0. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -877,7 +877,7 @@
 		</skills>
 	</item>
 	<item id="22342" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 3 for C-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. The enchanting is safe up to +3. Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -899,7 +899,7 @@
 		</skills>
 	</item>
 	<item id="22343" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
-		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For C-grade armor and accessories. P. Def. +1. When enchanted to +4 or higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). HP is gradually increased with each enchant value starting from +4. Cannot be used on armor or accessories above +30. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -921,7 +921,7 @@
 		</skills>
 	</item>
 	<item id="22344" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 2 for D-grade one-handed sword, one-handed blunt, one-handed staff, dagger, spear, other weapons, two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 4 for bow weapons. Increases M. Atk. by 2 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
+		<!-- P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears, two-handed swords/ blunts/ staffs, dual daggers, dual swords, and fist weapons. P. Atk. +4 for bows. M. Atk. +2 for all weapons. When enchanted to +4 and higher, P./ M. Atk. doubles. Cannot be used on weapons enchanted to +30 and higher. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -943,7 +943,7 @@
 		</skills>
 	</item>
 	<item id="22345" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
-		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For D-grade armor and accessories. P. Def. +1. When enchanted to +4 or higher, P. Def. +3. Can be safely enchanted up to +3 (for ordinary armor) and up to +4 (for one-piece armor). HP is gradually increased with each enchant value starting from +4. Cannot be used on armor or accessories above +30. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -991,7 +991,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="22348" name="Adventurer's Song - Energy of Recovery" type="EtcItem">
-		<!-- Receives the power of a mysterious song of a great adventurer to resurrect with reduced XP when killed by an NPC. <Warning>. The Adventurer's Song button in the resurrection menu is available only in the current game session. -->
+		<!-- Grants the power of a mysterious song of a great adventurer to resurrect with reduced XP when killed by an NPC. Note!. The Adventurer's Song button in the resurrection menu is available only in the current game session. -->
 		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_recovery" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1005,7 +1005,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="22349" name="Adventurer's Song - Eva's Protection" type="EtcItem">
-		<!-- Receives the power of a mysterious song of a great adventurer to decrease the duration of the 'Shilen's Breath' de-buff upon death. The effect lasts for 1 hour upon use. Can only be used by characters level 1 - 84. -->
+		<!-- Receives the power of a mysterious song of a great adventurer to decrease the duration of the 'Shillien's Breath' de-buff upon death. The effect lasts for 1 h. upon use. Can only be used by characters level 1 - 84. -->
 		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_eva_r" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1027,7 +1027,7 @@
 		</skills>
 	</item>
 	<item id="22350" name="Adventurer's Song - Eva's Protection" additionalName="R-grade" type="EtcItem">
-		<!-- Receives the power of a mysterious song of a great adventurer to decrease the duration of the 'Shilen's Breath' de-buff upon death. The effect lasts for 30 min. upon use. Can only be used by characters level 85 and above. -->
+		<!-- Receives the power of a mysterious song of a great adventurer to decrease the duration of the 'Shillien's Breath' de-buff upon death. The effect lasts for 30 min. upon use. Can only be used by characters level 85 and above. -->
 		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_eva_r" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1147,7 +1147,7 @@
 		</skills>
 	</item>
 	<item id="22357" name="Mount - Tame Princess Ant Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Tame Princess Ant (7-day). -->
+		<!-- Double-click to obtain Tame Queen Ant Bracelet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1163,11 +1163,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22355" min="1" max="1" chance="100" /> <!-- Mount - Tame Princess Ant - 7-day -->
+			<item id="22355" min="1" max="1" chance="100" /> <!-- Tame Queen Ant Bracelet - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="22358" name="Mount - Tame Princess Ant Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Tame Princess Ant. -->
+		<!-- Double-click to obtain Tame Queen Ant Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1183,11 +1183,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22356" min="1" max="1" chance="100" /> <!-- Mount - Tame Princess Ant -->
+			<item id="22356" min="1" max="1" chance="100" /> <!-- Tame Queen Ant Bracelet -->
 		</capsuled_items>
 	</item>
 	<item id="22359" name="Weapon Conversion Scroll: Emerald Sword" type="EtcItem">
-		<!-- When used, the equipped weapon changes into an Emerald Sword for 2 hours. Cooldown is 60 min. Only applies when a one-handed sword is equipped. -->
+		<!-- When used, the equipped weapon changes into an Emerald Sword for 2 h. Cooldown is 60 min. Only applies when a one-handed sword is equipped. -->
 		<set name="icon" val="BranchSys3.Icon.g_scroll_beam_1h_sword" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -1208,7 +1208,7 @@
 		</skills>
 	</item>
 	<item id="22360" name="Weapon Conversion Scroll: Emerald Dual Sword" type="EtcItem">
-		<!-- When used, the equipped weapon changes into an Emerald Dual Sword for 2 hours. Cooldown is 60 min. Only applies when a dual sword is equipped. -->
+		<!-- When used, the equipped weapon changes into an Emerald Dual Sword for 2 h. Cooldown is 60 min. Only applies when a dual sword is equipped. -->
 		<set name="icon" val="BranchSys3.Icon.g_scroll_beam_1h_sword" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -1410,7 +1410,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="22369" name="Mount - Black Bear Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Black Bear (7-day). -->
+		<!-- Double-click to obtain Black Bear Bracelet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1426,11 +1426,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22363" min="1" max="1" chance="100" /> <!-- Mount - Black Bear - 7-day -->
+			<item id="22363" min="1" max="1" chance="100" /> <!-- Black Bear Bracelet - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="22370" name="Mount - Black Bear Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Black Bear. -->
+		<!-- Double-click to obtain Black Bear Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1446,11 +1446,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22364" min="1" max="1" chance="100" /> <!-- Mount - Black Bear -->
+			<item id="22364" min="1" max="1" chance="100" /> <!-- Black Bear Bracelet -->
 		</capsuled_items>
 	</item>
 	<item id="22371" name="Black Bear Claw Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Black Bear Claws (7-day). -->
+		<!-- Double-click to obtain Black Bear Claws (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1470,7 +1470,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22372" name="Black Bear Claw Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Black Bear Claws. -->
+		<!-- Double-click to obtain Black Bear Claws. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1490,7 +1490,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22373" name="Black Bear Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Black Bear Hat (7-day). -->
+		<!-- Double-click to obtain Black Bear Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1510,7 +1510,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22374" name="Black Bear Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Black Bear Hat (7-day). -->
+		<!-- Double-click to obtain Black Bear Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1547,7 +1547,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="22376" name="Brilliant Beach Sun Cap" type="Armor">
-		<!-- Brilliant Beach Sun Cap that provides perfect protection from the sun. Uses 2 hair accessory slots. -->
+		<!-- A bright beach cap protecting from the sunlight. Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="BranchSys3.icon.g_beach_cap" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1602,7 +1602,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="22379" name="Brilliant Beach Sun Cap Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Brilliant Beach Sun Cap (7-day). -->
+		<!-- Double-click to obtain Brilliant Beach Sun Cap (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1622,7 +1622,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22380" name="Brilliant Beach Sun Cap Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Brilliant Beach Sun Cap. -->
+		<!-- Double-click to obtain Brilliant Beach Sun Cap. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1642,7 +1642,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22381" name="Stylish Straw Hat Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Stylish Straw Hat (7-day). -->
+		<!-- Double-click to obtain Stylish Straw Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1662,7 +1662,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22382" name="Stylish Straw Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Stylish Straw Hat. -->
+		<!-- Double-click to obtain Stylish Straw Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1682,7 +1682,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22383" name="Halloween Broomstick Mount" additionalName="7-day (Event)" type="Armor">
-		<!-- Can mount a flying Halloween Broomstick. It is a Halloween event reward item that 7-day. -->
+		<!-- Fly like a real witch! A mount item given as a reward for the Halloween event. Available for 7 days. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_flying_broom_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="30" />
@@ -1703,7 +1703,7 @@
 		</skills>
 	</item>
 	<item id="22384" name="Halloween Broomstick Mount" additionalName="Event" type="Armor">
-		<!-- Can mount a flying Halloween Broomstick. It is a Halloween event reward item. -->
+		<!-- Fly like a real witch! A mount item given as a reward for the Halloween event. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_flying_broom_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1724,7 +1724,7 @@
 		</skills>
 	</item>
 	<item id="22385" name="Halloween Cookie" additionalName="Event" type="EtcItem">
-		<!-- Cookie that can be obtained on Halloween. Speed increases by 33 for 60 min. -->
+		<!-- Cookie that can be obtained on Halloween. For 60 min., Speed +33. -->
 		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1748,7 +1748,7 @@
 		</skills>
 	</item>
 	<item id="22386" name="Halloween Special Cookie" additionalName="Event" type="EtcItem">
-		<!-- Special cookie that can be obtained on Halloween. Increases the character's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 2, P. Critical Rate during a standard attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and decreases Received Critical Damage by 30%. Decreases Speed by 15% and Critical power increases during an attack that deals above a certain amount of damage. -->
+		<!-- A special cookie that can be obtained on Halloween. For 60 min., Max MP +20%, HP Recovery Rate +20%, M. Critical Rate +20, P. Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%. Received P. Critical Damage -30%, Speed -15%. With a certain chance, increases Critical Damage when hit. -->
 		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1832,7 +1832,7 @@
 		</stats>
 	</item>
 	<item id="22389" name="Halloween Cloak" additionalName="7-day (Event)" type="Armor">
-		<!-- Cloak that gives off charisma. It is a Halloween event reward item that 7-day. -->
+		<!-- In this cloak you'll look irresistible. A reward for the Halloween event. Available for 7 days. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
@@ -1852,7 +1852,7 @@
 		</stats>
 	</item>
 	<item id="22390" name="Halloween Cloak" additionalName="Event" type="Armor">
-		<!-- Cloak that gives off charisma. It is a Halloween event reward item. -->
+		<!-- In this cloak you'll look irresistible. A reward for the Halloween event. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1872,7 +1872,7 @@
 		</stats>
 	</item>
 	<item id="22391" name="Halloween Pumpkin Hat" additionalName="7-day (Event)" type="Armor">
-		<!-- Scary pumpkin hat. It is a Halloween event reward item. 7-day. Uses 2 hair accessory slots. -->
+		<!-- A scary-looking pumpkin hat given as a reward for the Halloween event. Available for 7 days. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_magic_hat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -1889,7 +1889,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="22392" name="Halloween Pumpkin Hat" additionalName="Event" type="Armor">
-		<!-- Scary pumpkin hat. It is a Halloween event reward item. Uses 2 hair accessory slots. -->
+		<!-- A scary-looking pumpkin hat given as a reward for the Halloween event. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_magic_hat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1908,7 +1908,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="22393" name="Halloween Gift Box" additionalName="Event" type="EtcItem">
-		<!-- It is a Halloween event reward item. Has a chance of obtaining one of the Halloween series items. -->
+		<!-- A reward for the Halloween event. Double-click to obtain a unique Halloween item. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1924,7 +1924,7 @@
 		</skills>
 	</item>
 	<item id="22394" name="Agathion - Valakas" additionalName="Lv. 1" type="Armor">
-		<!-- Bracelet that can summon a level 1 Valakas Agathion. -->
+		<!-- A bracelet for summoning Agathion Valakas Lv. 1. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1945,7 +1945,7 @@
 		</skills>
 	</item>
 	<item id="22395" name="Agathion - Valakas" additionalName="Lv. 2" type="Armor">
-		<!-- Bracelet that can summon a level 2 Valakas Agathion. -->
+		<!-- A bracelet for summoning Agathion Valakas Lv. 2. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1967,7 +1967,7 @@
 		</skills>
 	</item>
 	<item id="22396" name="Agathion - Valakas" additionalName="Lv. 3" type="Armor">
-		<!-- Bracelet that can summon a level 3 Valakas Agathion. -->
+		<!-- A bracelet for summoning Agathion Valakas Lv. 3. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1989,7 +1989,7 @@
 		</skills>
 	</item>
 	<item id="22397" name="Agathion - Valakas" additionalName="Lv. 4" type="Armor">
-		<!-- Bracelet that can summon a level 4 Valakas Agathion. -->
+		<!-- A bracelet for summoning Agathion Valakas Lv. 4. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2011,7 +2011,7 @@
 		</skills>
 	</item>
 	<item id="22398" name="Agathion - Valakas" additionalName="Lv. 5" type="Armor">
-		<!-- Bracelet that can summon a level 5 Valakas Agathion. -->
+		<!-- A bracelet for summoning Agathion Valakas Lv. 5. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2033,7 +2033,7 @@
 		</skills>
 	</item>
 	<item id="22399" name="Agathion - Valakas" additionalName="Lv. 6" type="Armor">
-		<!-- Bracelet that can summon a level 6 Valakas Agathion. -->
+		<!-- A bracelet for summoning Agathion Valakas Lv. 6. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />

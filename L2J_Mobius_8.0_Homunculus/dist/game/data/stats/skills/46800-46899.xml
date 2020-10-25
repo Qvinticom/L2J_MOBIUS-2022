@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="46800" toLevel="6" name="Sayha's Ring">
-		<!-- Gives Speed $s1, Atk. Spd./ Casting Spd. $s2. -->
+		<!-- Speed $s1, Atk. Spd./ Casting Spd. $s2. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -142,7 +142,7 @@
 			</effect>
 			<effect name="CallSkillOnActionTime">
 				<!-- Maphr's Ring -->
-				<skillId>46802</skillId>
+				<skillId>46802</skillId> <!-- Maphr's Ring -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>

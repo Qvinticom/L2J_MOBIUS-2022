@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="47800" name="Red Libra Request - Kartia Labyrinth (Lv. 95 party)" type="EtcItem">
-		<!-- A request issued by the Red Libra Merchants to eliminate Incarnation of Gluttony Kalios (Group) in Kartia's Labyrinth (level 95 party). -->
+		<!-- A request issued by the Red Libra Merchants to eliminate Kalios in Kartia's Labyrinth (Lv. 95, Party). -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -45,7 +45,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47804" name="Faint Scroll: Enchant Elemental Shirt" type="EtcItem">
-		<!-- An Enchant Scroll for T-shirts. If enchanting fails the existing enchant value is maintained.. May not be used on +7 T-shirts or higher. -->
+		<!-- An Enchant Scroll for T-shirts. If enchanting fails the existing enchant value is maintained. May not be used on +7 T-shirts or higher. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -53,7 +53,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47805" name="Scroll: Enchant Brilliant Elemental Shirt" type="EtcItem">
-		<!-- An Enchant Scroll for T-shirts. If enchanting fails the existing enchant value is maintained. -->
+		<!-- An enchant scroll for T-shirts. In case of failure, the enchant value remains the same. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -69,7 +69,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47807" name="Sayha's Talisman Stage 1" type="Armor">
-		<!-- When equipped, through Sayha's strength, P. Def. +112, M. Def. +74, Acquired XP/ SP +1%.. When identical Talismans are equipped, the higher level Talisman's effects are applied. -->
+		<!-- Grants Sayha's power. P. Def. +112, M. Def. +74, acquired XP/ SP +1%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -86,7 +86,7 @@
 		</skills>
 	</item>
 	<item id="47808" name="Sayha's Talisman Stage 2" type="Armor">
-		<!-- When equipped, through Sayha's strength, P. Def. +225, M. Def. +147, Acquired XP/ SP +2%.. When identical Talismans are equipped, the higher level Talisman's effects are applied. -->
+		<!-- Grants Sayha's power. P. Def. +225, M. Def. +147, acquired XP/ SP +2%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -103,7 +103,7 @@
 		</skills>
 	</item>
 	<item id="47809" name="Sayha's Talisman Stage 3" type="Armor">
-		<!-- When equipped, through Sayha's strength, P. Def. +450, M. Def. +294, Acquired XP/ SP +3%.. When identical Talismans are equipped, the higher level Talisman's effects are applied. -->
+		<!-- Grants Sayha's power. P. Def. +450, M. Def. +294, acquired XP/ SP +3%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -120,7 +120,7 @@
 		</skills>
 	</item>
 	<item id="47810" name="Sayha's Talisman Stage 4" type="Armor">
-		<!-- When equipped, through Sayha's strength, P. Def. +676, M. Def. +441, Acquired XP/ SP +5%. When equipped with Venir Talisman Stage 10 or higher, additionally grants Skill power +2% and Cooldown -2%. When identical Talismans are equipped, the higher level Talisman's effects are applied. -->
+		<!-- Grants Sayha's power. P. Def. +676, M. Def. +441, acquired XP/ SP +5%. If equipped with Venir's Talisman Lv. 10+, Skill Power +2%, Skill Cooldown -2%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -137,7 +137,7 @@
 		</skills>
 	</item>
 	<item id="47811" name="Sayha's Talisman Stage 5" type="Armor">
-		<!-- If equipped by Sayha's power, P. Def. +901, M. Def. +589, and Acquired XP/ SP +7%. If equipped along with Stage 10 or higher Venir Talisman, Skill Power +2% and cooldown -2%. <Active Skill>. Sayha's Divine Protection Lv. 1. If identical Talismans are equipped, only the effect of the highest level Talisman applies. -->
+		<!-- Grants Sayha's power. P. Def. +901, M. Def. +589, acquired XP/ SP +7%. If equipped with Venir's Talisman Lv. 10+, Skill Power +2%, Skill Cooldown -2%. Active skill:. Sayha's Grace Lv. 1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -154,7 +154,7 @@
 		</skills>
 	</item>
 	<item id="47812" name="Sayha's Talisman Stage 6" type="Armor">
-		<!-- If equipped by Sayha's power, P. Def. +1126, M. Def. +736, and Acquired XP/ SP +10%. If equipped along with Stage 10 or higher Venir Talisman, Skill Power +3% and cooldown -3%. <Active Skill>. Sayha's Divine Protection Lv. 1. Sayha's Encouragement Lv. 1. If identical Talismans are equipped, only the effect of the highest level Talisman applies. -->
+		<!-- Grants Sayha's power. P. Def. +1126, M. Def. +736, acquired XP/ SP +10%. If equipped with Venir's Talisman Lv. 10+, Skill Power +3%, Skill Cooldown -3%. Active skills:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -172,7 +172,7 @@
 		</skills>
 	</item>
 	<item id="47813" name="Sayha's Talisman Stage 7" type="Armor">
-		<!-- If equipped by Sayha's power, P. Def. +1351, M. Def. +883, and Acquired XP/ SP +15%. If equipped along with Stage 10 or higher Venir Talisman, Skill Power +3% and cooldown -3%. <Active Skill>. Sayha's Divine Protection Lv. 1. Sayha's Encouragement Lv. 1. Sayha's Fury Lv. 1. If identical Talismans are equipped, only the effect of the highest level Talisman applies. -->
+		<!-- Grants Sayha's power. P. Def. +1351, M. Def. +883, acquired XP/ SP +15%. If equipped with Venir's Talisman Lv. 10+, Skill Power +3%, Skill Cooldown -3%. Active skills:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Sayha's Anger Lv. 1. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -190,7 +190,7 @@
 		</skills>
 	</item>
 	<item id="47814" name="Sayha's Talisman Stage 8" type="Armor">
-		<!-- If equipped by Sayha's power, P. Def. +1576, M. Def. +1030, and Acquired XP/ SP +20%. If equipped along with Stage 10 or higher Venir Talisman, Skill Power +5% and cooldown +5%. <Active Skill>. Sayha's Divine Protection Lv. 2. Sayha's Encouragement Lv. 2. Sayha's Fury Lv. 2. If identical Talismans are equipped, only the effect of the highest level Talisman applies. -->
+		<!-- Grants Sayha's power. P. Def. +1576, M. Def. +1030, acquired XP/ SP +20%. If equipped with Venir's Talisman Lv. 10+, Skill Power +5%, Skill Cooldown -5%. Active skills:. Sayha's Grace Lv. 2. Sayha's Encouragement Lv. 2. Sayha's Anger Lv. 2. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -208,7 +208,7 @@
 		</skills>
 	</item>
 	<item id="47815" name="Sayha's Talisman Stage 9" type="Armor">
-		<!-- If equipped by Sayha's power, P. Def. +1801, M. Def. +1178, Acquired XP/ SP +25%, and Recovery Potion/ Miracle Cure effect +1000. If equipped along with Stage 10 or higher Venir Talisman, Skill Power +5% and cooldown -5%. <Active Skill>. Sayha's Divine Protection Lv. 3. Sayha's Encouragement Lv. 3. Sayha's Fury Lv. 3. If identical Talismans are equipped, only the effect of the highest level Talisman applies. -->
+		<!-- Grants Sayha's power. P. Def. +1801, M. Def. +1178, acquired XP/ SP +25%, Recovery Potions' Effect +1000 (except percent recovery items). If equipped with Venir's Talisman Lv. 10+, Skill Power +5%, Skill Cooldown -5%. Active skills:. Sayha's Grace Lv. 3. Sayha's Encouragement Lv. 3. Sayha's Anger Lv. 3. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Compounding with Sayha's Talisman of the same level. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -226,7 +226,7 @@
 		</skills>
 	</item>
 	<item id="47816" name="Sayha's Talisman Stage 10" type="Armor">
-		<!-- If equipped by Sayha's power, P. Def. +2027, M. Def. +1325, Acquired XP/ SP +30%, and Recovery Potion/ Miracle Cure effect +2000. If equipped along with Stage 10 or higher Venir Talisman, Skill Power +9% and cooldown -5%. <Active Skill>. Sayha's Divine Protection Lv. 4. Sayha's Encouragement Lv. 4. Sayha's Fury Lv. 4. If identical Talismans are equipped, only the effect of the highest level Talisman applies. -->
+		<!-- Grants Sayha's power. P. Def. +2027, M. Def. +1325, acquired XP/ SP +30%, Recovery Potions' Effect +2000 (except percent recovery items). If equipped with Venir's Talisman Lv. 10+, Skill Power +9%, Skill Cooldown -5%. Active skills: Sayha's Grace Lv. 4. Sayha's Encouragement Lv. 4. Sayha's Anger Lv. 4. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -244,7 +244,7 @@
 		</skills>
 	</item>
 	<item id="47817" name="Sayha's Talisman Box" type="EtcItem">
-		<!-- When used, Sayha's Talisman Stage 1 can be obtained. -->
+		<!-- Double-click to obtain Sayha's Talisman Lv. 1. -->
 		<set name="icon" val="icon.bm_sayhas_talisman_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -253,11 +253,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29057" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 1 -->
+			<item id="29057" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="47818" name="Dimensional Bracelet - Stage 6 Box" type="EtcItem">
-		<!-- When used, a Dimensional Bracelet Stage 6 (CHA+5) can be obtained. -->
+		<!-- Double-click to obtain Dimensional Bracelet Lv. 6. -->
 		<set name="icon" val="icon.bm_sayha_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -266,7 +266,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47819" name="Dimensional Bracelet - Stage 6" additionalName="CHA +5" type="Armor">
-		<!-- When equipped, activated 6 Talisman sots. Has the CHA+5 function. -->
+		<!-- When equipped, unlocks 6 talisman slots. CHA +5. -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -286,7 +286,7 @@
 		</skills>
 	</item>
 	<item id="47820" name="Saiha's Talisman Stage 9 Box" type="EtcItem">
-		<!-- When used, Sayha's Talisman Stage 9 can be obtained. -->
+		<!-- Double-click to obtain Sayha's Talisman Lv. 9. -->
 		<set name="icon" val="icon.bm_sayhas_talisman_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -295,11 +295,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29065" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 9 -->
+			<item id="29065" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 9 -->
 		</capsuled_items>
 	</item>
 	<item id="47821" name="Saiha's Talisman Stage 10 Box" type="EtcItem">
-		<!-- When used, Sayha's Talisman Stage 10 can be obtained. -->
+		<!-- Double-click to obtain Sayha's Talisman Lv. 10. -->
 		<set name="icon" val="icon.bm_sayhas_talisman_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -308,11 +308,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29066" min="1" max="1" chance="100" /> <!-- Sayha's Talisman - Stage 10 -->
+			<item id="29066" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 10 -->
 		</capsuled_items>
 	</item>
 	<item id="47822" name="Puss the Cat's Evidence Photo" type="EtcItem">
-		<!-- Photo of the cute face of Puss the Cat. Needed to get a blessing buff from Puss the Cat. -->
+		<!-- Photo of the cute face of Puss the Cat. Required to get a blessing buff from Puss the Cat. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -324,7 +324,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47823" name="Chuseok Gift Wrapping" additionalName="Event" type="EtcItem">
-		<!-- A wrapping cloth filled with Chuseok gift from the Green. When you use it, you can get 10 sweet songpyeons and a Hanbok costume. -->
+		<!-- A wrapping cloth filled with Chuseok gift. When used, you can get 10 Sweet Songpyeons. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -353,7 +353,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47825" name="Hanbok Outfit" additionalName="Event" type="EtcItem">
-		<!-- Formal wear for a holiday of the East. Increases all basic abilities by 1 and transforms your appearance to wearing a Hanbok for 30 min. Cooldown is 5 min. -->
+		<!-- Increases all basic abilities by 1 and transforms your appearance to wearing a Hanbok for 30 min. Cooldown is 5 min. -->
 		<set name="icon" val="icon.ev_kr_traditional_dress" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -366,7 +366,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47826" name="Hanbok" type="Armor">
-		<!-- Items to make a Hanbok Outfit. -->
+		<!-- An item to make Hanbok Outfit. -->
 		<set name="icon" val="icon.ev_kr_traditional_dress" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -392,6 +392,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="57" min="1" max="500000" chance="50" /> <!-- Adena -->
+		</capsuled_items>
 	</item>
 	<item id="47828" name="Test Adena Box" type="EtcItem">
 		<!-- When used, either 100 billion or 500 billion Adena can be obtained. -->
@@ -405,7 +411,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47829" name="Lionel Hunter Mission List - 4" type="EtcItem">
-		<!-- List of missions received from Lionel Hunter to new Exalted Power. "Each of the following people will receive a commission and bring a certificate - search for Commando Captain Sporcha the Hellbound Refugee Camp, Giant Tracker Leader Krenaht in the Giant's Cave, Fishing Guild Leader Santiago in Heine, and Hunter Guild Leader Arcturus in the Hunter's Village." -->
+		<!-- List of missions received from Lionel Hunter to new Exalted Power. "Each of the following people will receive a commission and bring a certificate - search for Commando Captain Sporcha the Hellbound Refugee Camp, Giant Tracker Leader Krenaht in the Giant's Cave, Fishermen's Guild Leader Santiago in Heine, and Hunters Guild President Arcturus in the Hunter's Village." -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -441,7 +447,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47832" name="Santiago's Certificate" type="EtcItem">
-		<!-- The certificate received for completing Fishing Guild Leader Santiago's mission. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
+		<!-- The certificate received for completing Fishermen's Guild Leader Santiago's mission. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -561,7 +567,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47842" name="Special Fish Stew" type="EtcItem">
-		<!-- A special fish stew of a special recipe commissioned by Fishing Guild Leader Santiago. The taste is excellent, but it has no other effect. -->
+		<!-- A special fish stew of a special recipe commissioned by Fishermen's Guild Leader Santiago. The taste is excellent, but it has no other effect. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -573,7 +579,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47843" name="Proof of Strength" type="EtcItem">
-		<!-- Proof obtained after killing the monsters spoken of by Master Cyphona in Blackbird Campsite. All you have to do is take it to Ferin in the Blackbird Campsite. -->
+		<!-- A proof for Eva's Knight Lionel Hunter from Heine who asked you to kill monsters. Bring it to Lionel Hunter. -->
 		<set name="icon" val="icon.etc_freezing_core_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -669,14 +675,14 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47851" name="Sayha's Energy" type="EtcItem">
-		<!-- You can increase your stage by combining it with Sayha's Talisman. Can be combined with Sayha's Talismans 1 through 8. In the event of failure, Sayha's Talisman is not destroyed, and Sayha's energy is lost. -->
+		<!-- Required for upgrading Sayha's Talisman Lv. 8 or lower. In case of failure, Sayha's Talisman is not destroyed. However, Sayha's Energy is consumed in any case. -->
 		<set name="icon" val="icon.bm_sayhas_talisman_energy" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47852" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 4" type="EtcItem">
-		<!-- Exalted Inherent Skill Dignity of the Exalted Lv. 4 can be learned from this Book. Can only be learned by Main Class Lv. 99 and above. -->
+		<!-- Required for learning Dignity of the Exalted Lv. 4. Used by main classes only. Required level: 105. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -696,7 +702,7 @@
 		</skills>
 	</item>
 	<item id="47853" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 5" type="EtcItem">
-		<!-- Exalted Inherent Skill Dignity of the Exalted Lv. 5 can be learned from this Book. Can only be learned by Main Class Lv. 99 and above. -->
+		<!-- Required for learning Dignity of the Exalted Lv. 5. Used by main classes only. Required level: 105. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -716,7 +722,7 @@
 		</skills>
 	</item>
 	<item id="47854" name="Spellbook: Vitality of the Exalted" additionalName="Lv. 1" type="EtcItem">
-		<!-- Exalted Inherent Skill Vitality of the Exalted Lv. 1 can be learned from this Book. Can only be learned by Main Class Lv. 99 and above. -->
+		<!-- Required for learning Vitality of the Exalted Lv. 1. Used by main classes only. Required level: 105. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -736,7 +742,7 @@
 		</skills>
 	</item>
 	<item id="47855" name="Spellbook: Vitality of the Exalted" additionalName="Lv. 2" type="EtcItem">
-		<!-- Exalted Inherent Skill Vitality of the Exalted Lv. 2 can be learned from this Book. Can only be learned by Main Class Lv. 99 and above. -->
+		<!-- Required for learning Vitality of the Exalted Lv. 2. Used by main classes only. Required level: 105. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -756,13 +762,13 @@
 		</skills>
 	</item>
 	<item id="47866" name="Star Sign" type="EtcItem">
-		<!-- Achievement of the commission of Fishing Guild Leader Santiago and compensation received. Used as material to Enhance Seed Bracelets. -->
+		<!-- Achievement of the commission of Fishermen's Guild Leader Santiago and compensation received. Used as material to Enhance Seed Bracelets. -->
 		<set name="icon" val="icon.star_sign" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47867" name="Frenzied Tauti's One-handed Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Rate and Attack Attribute by 150, and P. Skill Power by 5%. <Active Skill>. Frenzied Tauti's Authority. Enchantment, Appearance Modification, Crystallization cannot be done. 1 special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- A weapon made from Frenzied Tauti's Fragment. PvP Damage +15%, Max HP +25%, P. Atk. +10%, Atk. Spd. +15%, Critical Rate for standard attacks +150, P. Skill Power +5%, Attribute Attack +150. Additionally, enables the Frenzied Tauti's Wrath skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented, imbued with an attribute. -->
 		<set name="icon" val="icon.tauti_weapon_one_hand_axe_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -791,7 +797,7 @@
 		</stats>
 	</item>
 	<item id="47868" name="Frenzied Tauti's Two-handed Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate and Attack Attribute by 150, and P. Skill Power by 5%. <Active Skill>. Frenzied Tauti's Authority. Enchantment, Appearance Modification, Crystallization cannot be done. 1 special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- A weapon made from Frenzied Tauti's Fragment. PvP Damage +15%, Max HP +25%, P. Atk. +10%, Atk. Spd. +15%, Critical Rate for standard attacks +150, P. Skill Power +5%, Attribute Attack +150. Additionally, enables the Frenzied Tauti's Wrath skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented, imbued with an attribute. -->
 		<set name="icon" val="icon.tauti_weapon_two_hand_axe_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -820,7 +826,7 @@
 		</stats>
 	</item>
 	<item id="47869" name="Frenzied Tauti's Dual Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Rate and Attack Attribute by 150, and P. Skill Power by 5%. <Active Skill>. Frenzied Tauti's Authority. Enchantment, Appearance Modification, Crystallization cannot be done. 1 special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- A weapon made from Frenzied Tauti's Fragment. PvP Damage +15%, Max HP +25%, P. Atk. +10%, Atk. Spd. +15%, Critical Rate for standard attacks +150, P. Skill Power +5%, Attribute Attack +150. Additionally, enables the Frenzied Tauti's Wrath skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented, imbued with an attribute. -->
 		<set name="icon" val="icon.tauti_weapon_dual_axe_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -849,7 +855,7 @@
 		</stats>
 	</item>
 	<item id="47870" name="Insane Kelbim's Dagger" type="Weapon">
-		<!-- Kelbim's Dagger made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150. <Active Skill>. Spirit of Kelbim. Enchantment, Appearance Modification, Crystallization cannot be done. 1 special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- Kelbim's dagger made from Insane Kelbim's Fragment. PvP Damage +15%, Max HP +25%, P. Atk. +10%, Critical Damage for standard attacks +15%, Atk. Spd. +15%, Attribute Attack +150, P. Skill Power +5%. Additionally, enables the Spirit of Kelbim skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented, imbued with an attribute. -->
 		<set name="icon" val="icon.kelbim_weapon_cutter_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -877,7 +883,7 @@
 		</stats>
 	</item>
 	<item id="47871" name="Insane Kelbim's Dual Dagger" type="Weapon">
-		<!-- Kelbim's Dual Dagger made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150. <Active Skill>. Spirit of Kelbim. Enchantment, Appearance Modification, Crystallization cannot be done. 1 special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- Kelbim's dual daggers made from Insane Kelbim's Fragment. PvP Damage +15%, Max HP +25%, P. Atk. +10%, Critical Damage for standard attacks +15%, Atk. Spd. +15%, Attribute Attack +150, P. Skill Power +5%. Additionally, enables the Spirit of Kelbim skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented, assigned an attribute. -->
 		<set name="icon" val="icon.kelbim_weapon_dual_dagger_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -905,7 +911,7 @@
 		</stats>
 	</item>
 	<item id="47872" name="Insane Kelbim's Bow" type="Weapon">
-		<!-- Kelbim's Bow made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150. <Active Skill>. Spirit of Kelbim. Enchantment, Appearance Modification, Crystallization cannot be done. 1 special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- Kelbim's Bow made from Insane Kelbim's Fragment. PvP Damage +15%, Max HP +25%, P. Atk. +10%, Critical Damage for standard attacks +15%, Atk. Spd. +15%, Attribute Attack +150, P. Skill Power +5%. Additionally, enables the Spirit of Kelbim skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented, imbued with an attribute. -->
 		<set name="icon" val="icon.kelbim_weapon_bow_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -934,7 +940,7 @@
 		</stats>
 	</item>
 	<item id="47873" name="Insane Kelbim's Crossbow" type="Weapon">
-		<!-- Kelbim's Crossbow made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150. <Active Skill>. Spirit of Kelbim. Enchantment, Appearance Modification, Crystallization cannot be done. 1 special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- Kelbim's Crossbow made from Insane Kelbim's Fragment. PvP Damage +15%, Max HP +25%, P. Atk. +10%, Critical Damage for standard attacks +15%, Atk. Spd. +15%, Attribute Attack +150, P. Skill Power +5%. Additionally, enables the Spirit of Kelbim skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented, imbued with an attribute. -->
 		<set name="icon" val="icon.kelbim_weapon_crossbow_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -963,7 +969,7 @@
 		</stats>
 	</item>
 	<item id="47874" name="Enhanced Shadow Shaper" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%, Attack Attribute +150.. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
 		<set name="icon" val="icon.shadow_dagger_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -988,7 +994,7 @@
 		</stats>
 	</item>
 	<item id="47875" name="Enhanced Shadow Cutter" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%, Attack Attribute +150.. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
 		<set name="icon" val="icon.shadow_onehand_sword_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1013,7 +1019,7 @@
 		</stats>
 	</item>
 	<item id="47876" name="Enhanced Shadow Slasher" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%, Attack Attribute +150.. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
 		<set name="icon" val="icon.shadow_twohand_sword_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1039,7 +1045,7 @@
 		</stats>
 	</item>
 	<item id="47877" name="Enhanced Shadow Fighter" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%, Attack Attribute +150.. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
 		<set name="icon" val="icon.shadow_fist_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1066,7 +1072,7 @@
 		</stats>
 	</item>
 	<item id="47878" name="Enhanced Shadow Stormer" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%, Attack Attribute +150.. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
 		<set name="icon" val="icon.shadow_spear_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1092,7 +1098,7 @@
 		</stats>
 	</item>
 	<item id="47879" name="Enhanced Shadow Thrower" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%, Attack Attribute +150.. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
 		<set name="icon" val="icon.shadow_bow_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1119,7 +1125,7 @@
 		</stats>
 	</item>
 	<item id="47880" name="Enhanced Shadow Shooter" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15%, Attack Attribute +150.. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for standard attacks +50, Critical Damage for standard attacks +10%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
 		<set name="icon" val="icon.shadow_crossbow_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -1146,7 +1152,7 @@
 		</stats>
 	</item>
 	<item id="47881" name="Enhanced Shadow Buster" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, PvE Damage +10%, Max HP/ MP +15%, M. Atk. +10%, M. Critical Rate +50, M. Critical Damage +10%, Casting Spd. +15%, Attack Attribute +150.. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, M. Atk. +10%, M. Skill Critical Rate +50, M. Skill Critical Damage +10%, Casting Spd. +15%, Attribute Attack +150. Cannot be enchanted, crystallized, appearance modified. One special Soul Crystal can be inserted. Can be augmented and assigned an attribute. -->
 		<set name="icon" val="icon.shadow_onehand_magic_sword_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1172,7 +1178,7 @@
 		</stats>
 	</item>
 	<item id="47882" name="Enhanced Shadow Retributer" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, PvE Damage +10%, Max HP/ MP +15%, P./ M. Atk. +10%, P./ M. Critical Damage +10%, Atk. Spd./ Casting Spd. +15%, Attack Attribute +150.. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P./ M. Atk. +10%, P. Critical Damage/ M. Skill Critical Damage +10%, Atk. Spd./ Casting Spd. +15%, Attribute Attack +150. Cannot be enchanted, crystallized, appearance modified. One special Soul Crystal can be inserted. Can be augmented and assigned an attribute. -->
 		<set name="icon" val="icon.shadow_twohand_magic_blunt_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1200,7 +1206,7 @@
 		</stats>
 	</item>
 	<item id="47883" name="Enhanced Shadow Dual Sword" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15%, Attack Attribute +150.. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE Damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for standard attacks +100, Critical Damage for standard attacks +5%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
 		<set name="icon" val="icon.shadow_dual_sword_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />

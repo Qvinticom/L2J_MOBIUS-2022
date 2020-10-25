@@ -21,7 +21,7 @@
 		</stats>
 	</item>
 	<item id="16901" name="Full Plate Armor of Fortune" additionalName="90-day" type="Armor">
-		<!-- One-piece Body Armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -311,7 +311,7 @@
 		</stats>
 	</item>
 	<item id="16915" name="Armor of Nightmare of Fortune" additionalName="90-day" type="Armor">
-		<!-- One-piece Body Armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -353,7 +353,7 @@
 		</stats>
 	</item>
 	<item id="16917" name="Gauntlets of Nightmare of Fortune - Heavy Armor" additionalName="90-day" type="Armor">
-		<!-- A Set with Armor of Nightmare of Fortune. -->
+		<!-- A piece of the heavy armor set of Nightmare - Fortune. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -374,7 +374,7 @@
 		</stats>
 	</item>
 	<item id="16918" name="Boots of Nightmare of Fortune - Heavy Armor" additionalName="90-day" type="Armor">
-		<!-- A Set with Armor of Nightmare of Fortune. -->
+		<!-- A piece of the heavy armor set of Nightmare - Fortune. -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -417,7 +417,7 @@
 		</stats>
 	</item>
 	<item id="16920" name="Sword of Miracles of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- Casting Spd. +15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -452,7 +452,7 @@
 		</stats>
 	</item>
 	<item id="16921" name="Wizard's Tear of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases Casting Spd. by 15%. -->
+		<!-- Casting Spd. +15%. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -487,7 +487,7 @@
 		</stats>
 	</item>
 	<item id="16922" name="Homunkulus' Sword of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases Casting Spd. by 15%. -->
+		<!-- Casting Spd. +15%. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -554,7 +554,7 @@
 		</stats>
 	</item>
 	<item id="16924" name="Naga's Storm of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases P. Critical Damage by 67. Increases damage inflicted during PvP. -->
+		<!-- P. Critical Damage +67. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -589,7 +589,7 @@
 		</stats>
 	</item>
 	<item id="16925" name="Kris of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases P. Critical Damage by 71. -->
+		<!-- Critical Damage +71. -->
 		<set name="icon" val="icon.weapon_kris_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -624,7 +624,7 @@
 		</stats>
 	</item>
 	<item id="16926" name="Dark Screamer of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases P. Critical Damage by 81. -->
+		<!-- Critical Damage +81. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -690,7 +690,7 @@
 		</stats>
 	</item>
 	<item id="16928" name="Shyeed's Bow of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases P. Critical Damage by 61. Increases damage inflicted during PvP. -->
+		<!-- P. Critical Damage +61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -727,7 +727,7 @@
 		</stats>
 	</item>
 	<item id="16929" name="Bow of Peril of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Has a 42% chance of decreasing MP consumption to 2 during a standard attack. -->
+		<!-- Has a 42% chance of decreasing MP consumption to 2 after a standard attack. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -762,7 +762,7 @@
 		</stats>
 	</item>
 	<item id="16930" name="Eminence Bow of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Has a 42% chance of decreasing MP consumption to 1 during a standard attack. -->
+		<!-- Has a 42% chance of decreasing MP consumption to 1 after a standard attack. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -830,7 +830,7 @@
 		</stats>
 	</item>
 	<item id="16932" name="Barakiel's Axe of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases P. Critical Damage by 61. Increases damage inflicted during PvP. -->
+		<!-- P. Critical Damage +61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -865,7 +865,7 @@
 		</stats>
 	</item>
 	<item id="16933" name="Art of Battle Axe of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Max HP increases by 25%. -->
+		<!-- Max HP +25%. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -900,7 +900,7 @@
 		</stats>
 	</item>
 	<item id="16934" name="Yaksa Mace of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Max HP increases by 25%. -->
+		<!-- Max HP +25%. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -966,7 +966,7 @@
 		</stats>
 	</item>
 	<item id="16936" name="Sirra's Blade of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Max HP +25%. Increases PvP damage. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1000,7 +1000,7 @@
 		</stats>
 	</item>
 	<item id="16937" name="Damascus Sword of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases P. Critical Damage by 64. -->
+		<!-- Critical Damage +64. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1034,7 +1034,7 @@
 		</stats>
 	</item>
 	<item id="16938" name="Samurai Long Sword of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases P. Critical Damage by 73. -->
+		<!-- Critical Damage +73. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1098,7 +1098,7 @@
 		</stats>
 	</item>
 	<item id="16940" name="Sword of Ipos of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases P. Critical Damage by 61. Increases damage inflicted during PvP. -->
+		<!-- P. Critical Damage +61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1132,7 +1132,7 @@
 		</stats>
 	</item>
 	<item id="16941" name="Guardian's Sword of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Max HP increases by 25%. -->
+		<!-- Max HP +25%. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1166,7 +1166,7 @@
 		</stats>
 	</item>
 	<item id="16942" name="Berserker Blade of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases P. Critical Damage by 73. -->
+		<!-- P. Critical Damage +73. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1230,7 +1230,7 @@
 		</stats>
 	</item>
 	<item id="16944" name="Sobekk's Hurricane of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Atk. Spd. +6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1265,7 +1265,7 @@
 		</stats>
 	</item>
 	<item id="16945" name="Bellion Cestus of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases Atk. Spd. by 9% when HP drops to 60% or below. -->
+		<!-- Atk. Spd. +9% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1300,7 +1300,7 @@
 		</stats>
 	</item>
 	<item id="16946" name="Great Pata of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases Atk. Spd. by 11% when HP drops to 60% or below. -->
+		<!-- Atk. Spd. +11% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1366,7 +1366,7 @@
 		</stats>
 	</item>
 	<item id="16948" name="Tallum Blade*Damascus of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases Atk. Spd. by 8%. Increases damage inflicted during PvP. -->
+		<!-- Atk. Spd. +8%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1400,7 +1400,7 @@
 		</stats>
 	</item>
 	<item id="16949" name="Samurai Long Sword*Samurai Long Sword of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases Atk. Spd. by 4%. -->
+		<!-- Atk. Spd. +4%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1434,7 +1434,7 @@
 		</stats>
 	</item>
 	<item id="16950" name="Spirit Sword*Raid Sword of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases P. Critical Damage by 40. -->
+		<!-- P. Critical Damage +40. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1637,7 +1637,7 @@
 		</stats>
 	</item>
 	<item id="16956" name="Durendal of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon. P. Critical Damage +61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1675,7 +1675,7 @@
 		</stats>
 	</item>
 	<item id="16957" name="Dismantler of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon. Increases Max HP by 25%. -->
+		<!-- Kamael-exclusive Weapon. Max HP +25%. -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1713,7 +1713,7 @@
 		</stats>
 	</item>
 	<item id="16958" name="Saber Tooth of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon. Increases Critical by 73. -->
+		<!-- Kamael-exclusive Weapon. P. Critical Damage +73. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1786,7 +1786,7 @@
 		</stats>
 	</item>
 	<item id="16960" name="Éclair Bijou of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon. Atk. Spd. +6%. Inflicts additional PvP Damage. Has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1825,7 +1825,7 @@
 		</stats>
 	</item>
 	<item id="16961" name="Colichemarde of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon. Increases Atk. Spd. by about 6%. There is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon. Atk. Spd. +6%. Has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1864,7 +1864,7 @@
 		</stats>
 	</item>
 	<item id="16962" name="Admiral's Estoc of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon. Increases Atk. Spd. by about 7%. There is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon. Atk. Spd. +7%. Has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1903,7 +1903,7 @@
 		</stats>
 	</item>
 	<item id="16963" name="Grand Épée of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon. Has a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon. Has a chance to increase P./ M. Atk., Received Healing, and decrease Skill MP consumption for you and your party members after a critical attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1941,7 +1941,7 @@
 		</stats>
 	</item>
 	<item id="16964" name="Screaming Vengeance of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon. P. Critical Damage +61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1980,7 +1980,7 @@
 		</stats>
 	</item>
 	<item id="16965" name="Hell Hound of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon. MP consumption decreases by about 12% during skill use. -->
+		<!-- Kamael-exclusive weapon. Skill MP Consumption -12%. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2019,7 +2019,7 @@
 		</stats>
 	</item>
 	<item id="16966" name="Sharpshooter of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive Weapon. MP consumption decreases by about 12% during skill use. -->
+		<!-- Kamael-exclusive weapon. Skill MP Consumption -12%. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2109,21 +2109,21 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="21799" min="1" max="1" chance="100" /> <!-- Dynasty Breastplate of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="21781" min="1" max="1" chance="100" /> <!-- Imperial Crusader of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="16975" min="1" max="1" chance="100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack (A-grade) - 90-day -->
-			<item id="16976" min="1" max="1" chance="100" /> <!-- Doom Plate Armor of Fortune Set Pack (B-grade) - 90-day -->
-			<item id="16977" min="1" max="1" chance="100" /> <!-- Full Plate of Fortune Set Pack (C-grade) - 90-day -->
-			<item id="16978" min="1" max="1" chance="100" /> <!-- Brigandine of Fortune Set Pack (D-grade) - 90-day -->
+			<item id="21799" min="1" max="1" chance="100" /> <!-- Package: Dynasty Breastplate Set - Fortune (S-grade) - 90-day -->
+			<item id="21781" min="1" max="1" chance="100" /> <!-- Package: Imperial Crusader Set - Fortune - 90-day -->
+			<item id="16975" min="1" max="1" chance="100" /> <!-- Package: Heavy Armor of Nightmare Set - Fortune (A-grade) - 90-day -->
+			<item id="16976" min="1" max="1" chance="100" /> <!-- Package: Doom Plate Armor Set - Fortune (B-grade) - 90-day -->
+			<item id="16977" min="1" max="1" chance="100" /> <!-- Package: Full Plate Armor Set - Fortune (C-grade) - 90-day -->
+			<item id="16978" min="1" max="1" chance="100" /> <!-- Package: Brigandine Set - Fortune (D-grade) - 90-day -->
 			<item id="16990" min="1" max="1" chance="100" /> <!-- Blunt Weapon of Fortune Set - 90-day -->
 			<item id="16991" min="1" max="1" chance="100" /> <!-- One-handed Sword of Friendship Set - 90-day -->
 			<item id="16994" min="1" max="1" chance="100" /> <!-- Dual Sword of Friendship Set - 90-day -->
-			<item id="21820" min="1" max="1" chance="100" /> <!-- Dynasty Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="21816" min="1" max="1" chance="100" /> <!-- Tateossian Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="16999" min="1" max="1" chance="100" /> <!-- Jewelry Pack (A-grade) - 90-day -->
-			<item id="17000" min="1" max="1" chance="100" /> <!-- Jewelry Pack (B-grade) - 90-day -->
-			<item id="17001" min="1" max="1" chance="100" /> <!-- Jewelry Pack (C-grade) - 90-day -->
-			<item id="17002" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 90-day -->
+			<item id="21820" min="1" max="1" chance="100" /> <!-- Package: Dynasty Accessories - Fortune (S-grade) - 90-day -->
+			<item id="21816" min="1" max="1" chance="100" /> <!-- Package: Tateossian Accessories - Fortune (S-grade) - 90-day -->
+			<item id="16999" min="1" max="1" chance="100" /> <!-- A-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17000" min="1" max="1" chance="100" /> <!-- B-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17001" min="1" max="1" chance="100" /> <!-- C-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17002" min="1" max="1" chance="100" /> <!-- D-grade Jewelry Set of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16969" name="Mage Class Equipment Set" additionalName="90-day" type="EtcItem">
@@ -2142,19 +2142,19 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="21812" min="1" max="1" chance="100" /> <!-- Dynasty Tunic of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="21792" min="1" max="1" chance="100" /> <!-- Major Arcana Robe of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="16983" min="1" max="1" chance="100" /> <!-- Dark Crystal Robe of Fortune Set Pack (A-grade) - 90-day -->
-			<item id="16984" min="1" max="1" chance="100" /> <!-- Avadon Robe of Fortune Set Pack (B-grade) - 90-day -->
-			<item id="16985" min="1" max="1" chance="100" /> <!-- Karmian of Fortune Set Pack (C-grade) - 90-day -->
-			<item id="16986" min="1" max="1" chance="100" /> <!-- Mithril Tunic of Fortune Set Pack (D-grade) - 90-day -->
+			<item id="21812" min="1" max="1" chance="100" /> <!-- Package: Dynasty Tunic Set - Fortune (S-grade) - 90-day -->
+			<item id="21792" min="1" max="1" chance="100" /> <!-- Package: Major Arcana Robe Set - Fortune (S-grade) - 90-day -->
+			<item id="16983" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Robe Set - Fortune (A-grade) - 90-day -->
+			<item id="16984" min="1" max="1" chance="100" /> <!-- Package: Avadon Robe Set - Fortune (B-grade) - 90-day -->
+			<item id="16985" min="1" max="1" chance="100" /> <!-- Package: Karmian Robe Set - Fortune (C-grade) - 90-day -->
+			<item id="16986" min="1" max="1" chance="100" /> <!-- Package: Mithril Robe Set - Fortune (D-grade) - 90-day -->
 			<item id="16987" min="1" max="1" chance="100" /> <!-- Magic Weapon of Fortune Set - 90-day -->
-			<item id="21820" min="1" max="1" chance="100" /> <!-- Dynasty Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="21816" min="1" max="1" chance="100" /> <!-- Tateossian Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="16999" min="1" max="1" chance="100" /> <!-- Jewelry Pack (A-grade) - 90-day -->
-			<item id="17000" min="1" max="1" chance="100" /> <!-- Jewelry Pack (B-grade) - 90-day -->
-			<item id="17001" min="1" max="1" chance="100" /> <!-- Jewelry Pack (C-grade) - 90-day -->
-			<item id="17002" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 90-day -->
+			<item id="21820" min="1" max="1" chance="100" /> <!-- Package: Dynasty Accessories - Fortune (S-grade) - 90-day -->
+			<item id="21816" min="1" max="1" chance="100" /> <!-- Package: Tateossian Accessories - Fortune (S-grade) - 90-day -->
+			<item id="16999" min="1" max="1" chance="100" /> <!-- A-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17000" min="1" max="1" chance="100" /> <!-- B-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17001" min="1" max="1" chance="100" /> <!-- C-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17002" min="1" max="1" chance="100" /> <!-- D-grade Jewelry Set of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16970" name="Warrior Class Equipment Set" additionalName="90-day" type="EtcItem">
@@ -2173,21 +2173,21 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="21799" min="1" max="1" chance="100" /> <!-- Dynasty Breastplate of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="21781" min="1" max="1" chance="100" /> <!-- Imperial Crusader of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="16975" min="1" max="1" chance="100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack (A-grade) - 90-day -->
-			<item id="16976" min="1" max="1" chance="100" /> <!-- Doom Plate Armor of Fortune Set Pack (B-grade) - 90-day -->
-			<item id="16977" min="1" max="1" chance="100" /> <!-- Full Plate of Fortune Set Pack (C-grade) - 90-day -->
-			<item id="16978" min="1" max="1" chance="100" /> <!-- Brigandine of Fortune Set Pack (D-grade) - 90-day -->
+			<item id="21799" min="1" max="1" chance="100" /> <!-- Package: Dynasty Breastplate Set - Fortune (S-grade) - 90-day -->
+			<item id="21781" min="1" max="1" chance="100" /> <!-- Package: Imperial Crusader Set - Fortune - 90-day -->
+			<item id="16975" min="1" max="1" chance="100" /> <!-- Package: Heavy Armor of Nightmare Set - Fortune (A-grade) - 90-day -->
+			<item id="16976" min="1" max="1" chance="100" /> <!-- Package: Doom Plate Armor Set - Fortune (B-grade) - 90-day -->
+			<item id="16977" min="1" max="1" chance="100" /> <!-- Package: Full Plate Armor Set - Fortune (C-grade) - 90-day -->
+			<item id="16978" min="1" max="1" chance="100" /> <!-- Package: Brigandine Set - Fortune (D-grade) - 90-day -->
 			<item id="16990" min="1" max="1" chance="100" /> <!-- Blunt Weapon of Fortune Set - 90-day -->
 			<item id="16994" min="1" max="1" chance="100" /> <!-- Dual Sword of Friendship Set - 90-day -->
 			<item id="16995" min="1" max="1" chance="100" /> <!-- Spear of Fortune Set - 90-day -->
-			<item id="21820" min="1" max="1" chance="100" /> <!-- Dynasty Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="21816" min="1" max="1" chance="100" /> <!-- Tateossian Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="16999" min="1" max="1" chance="100" /> <!-- Jewelry Pack (A-grade) - 90-day -->
-			<item id="17000" min="1" max="1" chance="100" /> <!-- Jewelry Pack (B-grade) - 90-day -->
-			<item id="17001" min="1" max="1" chance="100" /> <!-- Jewelry Pack (C-grade) - 90-day -->
-			<item id="17002" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 90-day -->
+			<item id="21820" min="1" max="1" chance="100" /> <!-- Package: Dynasty Accessories - Fortune (S-grade) - 90-day -->
+			<item id="21816" min="1" max="1" chance="100" /> <!-- Package: Tateossian Accessories - Fortune (S-grade) - 90-day -->
+			<item id="16999" min="1" max="1" chance="100" /> <!-- A-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17000" min="1" max="1" chance="100" /> <!-- B-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17001" min="1" max="1" chance="100" /> <!-- C-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17002" min="1" max="1" chance="100" /> <!-- D-grade Jewelry Set of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16971" name="Rogue Class Equipment Set" additionalName="90-day" type="EtcItem">
@@ -2206,20 +2206,20 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="21805" min="1" max="1" chance="100" /> <!-- Dynasty Leather Armor of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="21786" min="1" max="1" chance="100" /> <!-- Draconic Leather of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="16979" min="1" max="1" chance="100" /> <!-- Dark Crystal Light Armor of Fortune Set Pack (A-grade) - 90-day -->
-			<item id="16980" min="1" max="1" chance="100" /> <!-- Leather Armor of Doom of Fortune Set Pack (B-grade) - 90-day -->
-			<item id="16981" min="1" max="1" chance="100" /> <!-- Plated Leather of Fortune Set Pack (C-grade) - 90-day -->
-			<item id="16982" min="1" max="1" chance="100" /> <!-- Manticore Leather of Fortune Set Pack (D-grade) - 90-day -->
+			<item id="21805" min="1" max="1" chance="100" /> <!-- Package: Dynasty Leather Armor Set - Fortune (S-grade) - 90-day -->
+			<item id="21786" min="1" max="1" chance="100" /> <!-- Package: Draconic Leather Armor Set - Fortune (S-grade) - 90-day -->
+			<item id="16979" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Light Armor Set - Fortune (A-grade) - 90-day -->
+			<item id="16980" min="1" max="1" chance="100" /> <!-- Package: Doom Leather Armor Set - Fortune (B-grade) - 90-day -->
+			<item id="16981" min="1" max="1" chance="100" /> <!-- Package: Plated Leather Armor Set - Fortune (C-grade) - 90-day -->
+			<item id="16982" min="1" max="1" chance="100" /> <!-- Package: Manticore Leather Armor Set - Fortune (D-grade) - 90-day -->
 			<item id="16988" min="1" max="1" chance="100" /> <!-- Dagger of Fortune Set - 90-day -->
 			<item id="16989" min="1" max="1" chance="100" /> <!-- Bow of Fortune Set - 90-day -->
-			<item id="21820" min="1" max="1" chance="100" /> <!-- Dynasty Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="21816" min="1" max="1" chance="100" /> <!-- Tateossian Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="16999" min="1" max="1" chance="100" /> <!-- Jewelry Pack (A-grade) - 90-day -->
-			<item id="17000" min="1" max="1" chance="100" /> <!-- Jewelry Pack (B-grade) - 90-day -->
-			<item id="17001" min="1" max="1" chance="100" /> <!-- Jewelry Pack (C-grade) - 90-day -->
-			<item id="17002" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 90-day -->
+			<item id="21820" min="1" max="1" chance="100" /> <!-- Package: Dynasty Accessories - Fortune (S-grade) - 90-day -->
+			<item id="21816" min="1" max="1" chance="100" /> <!-- Package: Tateossian Accessories - Fortune (S-grade) - 90-day -->
+			<item id="16999" min="1" max="1" chance="100" /> <!-- A-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17000" min="1" max="1" chance="100" /> <!-- B-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17001" min="1" max="1" chance="100" /> <!-- C-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17002" min="1" max="1" chance="100" /> <!-- D-grade Jewelry Set of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16972" name="Kamael Class Equipment Set" additionalName="90-day" type="EtcItem">
@@ -2238,21 +2238,21 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="21805" min="1" max="1" chance="100" /> <!-- Dynasty Leather Armor of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="21786" min="1" max="1" chance="100" /> <!-- Draconic Leather of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="16979" min="1" max="1" chance="100" /> <!-- Dark Crystal Light Armor of Fortune Set Pack (A-grade) - 90-day -->
-			<item id="16980" min="1" max="1" chance="100" /> <!-- Leather Armor of Doom of Fortune Set Pack (B-grade) - 90-day -->
-			<item id="16981" min="1" max="1" chance="100" /> <!-- Plated Leather of Fortune Set Pack (C-grade) - 90-day -->
-			<item id="16982" min="1" max="1" chance="100" /> <!-- Manticore Leather of Fortune Set Pack (D-grade) - 90-day -->
+			<item id="21805" min="1" max="1" chance="100" /> <!-- Package: Dynasty Leather Armor Set - Fortune (S-grade) - 90-day -->
+			<item id="21786" min="1" max="1" chance="100" /> <!-- Package: Draconic Leather Armor Set - Fortune (S-grade) - 90-day -->
+			<item id="16979" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Light Armor Set - Fortune (A-grade) - 90-day -->
+			<item id="16980" min="1" max="1" chance="100" /> <!-- Package: Doom Leather Armor Set - Fortune (B-grade) - 90-day -->
+			<item id="16981" min="1" max="1" chance="100" /> <!-- Package: Plated Leather Armor Set - Fortune (C-grade) - 90-day -->
+			<item id="16982" min="1" max="1" chance="100" /> <!-- Package: Manticore Leather Armor Set - Fortune (D-grade) - 90-day -->
 			<item id="16996" min="1" max="1" chance="100" /> <!-- Ancient Sword of Fortune Set - 90-day -->
 			<item id="16997" min="1" max="1" chance="100" /> <!-- Short Sword of Fortune Set - 90-day -->
 			<item id="16998" min="1" max="1" chance="100" /> <!-- Crossbow of Fortune Set - 90-day -->
-			<item id="21820" min="1" max="1" chance="100" /> <!-- Dynasty Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="21816" min="1" max="1" chance="100" /> <!-- Tateossian Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="16999" min="1" max="1" chance="100" /> <!-- Jewelry Pack (A-grade) - 90-day -->
-			<item id="17000" min="1" max="1" chance="100" /> <!-- Jewelry Pack (B-grade) - 90-day -->
-			<item id="17001" min="1" max="1" chance="100" /> <!-- Jewelry Pack (C-grade) - 90-day -->
-			<item id="17002" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 90-day -->
+			<item id="21820" min="1" max="1" chance="100" /> <!-- Package: Dynasty Accessories - Fortune (S-grade) - 90-day -->
+			<item id="21816" min="1" max="1" chance="100" /> <!-- Package: Tateossian Accessories - Fortune (S-grade) - 90-day -->
+			<item id="16999" min="1" max="1" chance="100" /> <!-- A-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17000" min="1" max="1" chance="100" /> <!-- B-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17001" min="1" max="1" chance="100" /> <!-- C-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17002" min="1" max="1" chance="100" /> <!-- D-grade Jewelry Set of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16973" name="Orc Fighter Class Equipment Set" additionalName="90-day" type="EtcItem">
@@ -2271,27 +2271,27 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="21799" min="1" max="1" chance="100" /> <!-- Dynasty Breastplate of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="21781" min="1" max="1" chance="100" /> <!-- Imperial Crusader of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="16975" min="1" max="1" chance="100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack (A-grade) - 90-day -->
-			<item id="16976" min="1" max="1" chance="100" /> <!-- Doom Plate Armor of Fortune Set Pack (B-grade) - 90-day -->
-			<item id="16977" min="1" max="1" chance="100" /> <!-- Full Plate of Fortune Set Pack (C-grade) - 90-day -->
-			<item id="16978" min="1" max="1" chance="100" /> <!-- Brigandine of Fortune Set Pack (D-grade) - 90-day -->
-			<item id="21805" min="1" max="1" chance="100" /> <!-- Dynasty Leather Armor of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="21786" min="1" max="1" chance="100" /> <!-- Draconic Leather of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="16979" min="1" max="1" chance="100" /> <!-- Dark Crystal Light Armor of Fortune Set Pack (A-grade) - 90-day -->
-			<item id="16980" min="1" max="1" chance="100" /> <!-- Leather Armor of Doom of Fortune Set Pack (B-grade) - 90-day -->
-			<item id="16981" min="1" max="1" chance="100" /> <!-- Plated Leather of Fortune Set Pack (C-grade) - 90-day -->
-			<item id="16982" min="1" max="1" chance="100" /> <!-- Manticore Leather of Fortune Set Pack (D-grade) - 90-day -->
+			<item id="21799" min="1" max="1" chance="100" /> <!-- Package: Dynasty Breastplate Set - Fortune (S-grade) - 90-day -->
+			<item id="21781" min="1" max="1" chance="100" /> <!-- Package: Imperial Crusader Set - Fortune - 90-day -->
+			<item id="16975" min="1" max="1" chance="100" /> <!-- Package: Heavy Armor of Nightmare Set - Fortune (A-grade) - 90-day -->
+			<item id="16976" min="1" max="1" chance="100" /> <!-- Package: Doom Plate Armor Set - Fortune (B-grade) - 90-day -->
+			<item id="16977" min="1" max="1" chance="100" /> <!-- Package: Full Plate Armor Set - Fortune (C-grade) - 90-day -->
+			<item id="16978" min="1" max="1" chance="100" /> <!-- Package: Brigandine Set - Fortune (D-grade) - 90-day -->
+			<item id="21805" min="1" max="1" chance="100" /> <!-- Package: Dynasty Leather Armor Set - Fortune (S-grade) - 90-day -->
+			<item id="21786" min="1" max="1" chance="100" /> <!-- Package: Draconic Leather Armor Set - Fortune (S-grade) - 90-day -->
+			<item id="16979" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Light Armor Set - Fortune (A-grade) - 90-day -->
+			<item id="16980" min="1" max="1" chance="100" /> <!-- Package: Doom Leather Armor Set - Fortune (B-grade) - 90-day -->
+			<item id="16981" min="1" max="1" chance="100" /> <!-- Package: Plated Leather Armor Set - Fortune (C-grade) - 90-day -->
+			<item id="16982" min="1" max="1" chance="100" /> <!-- Package: Manticore Leather Armor Set - Fortune (D-grade) - 90-day -->
 			<item id="16992" min="1" max="1" chance="100" /> <!-- Two-handed Sword of Friendship Set - 90-day -->
 			<item id="16993" min="1" max="1" chance="100" /> <!-- Fist Weapon of Fortune Set - 90-day -->
 			<item id="16995" min="1" max="1" chance="100" /> <!-- Spear of Fortune Set - 90-day -->
-			<item id="21820" min="1" max="1" chance="100" /> <!-- Dynasty Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="21816" min="1" max="1" chance="100" /> <!-- Tateossian Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="16999" min="1" max="1" chance="100" /> <!-- Jewelry Pack (A-grade) - 90-day -->
-			<item id="17000" min="1" max="1" chance="100" /> <!-- Jewelry Pack (B-grade) - 90-day -->
-			<item id="17001" min="1" max="1" chance="100" /> <!-- Jewelry Pack (C-grade) - 90-day -->
-			<item id="17002" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 90-day -->
+			<item id="21820" min="1" max="1" chance="100" /> <!-- Package: Dynasty Accessories - Fortune (S-grade) - 90-day -->
+			<item id="21816" min="1" max="1" chance="100" /> <!-- Package: Tateossian Accessories - Fortune (S-grade) - 90-day -->
+			<item id="16999" min="1" max="1" chance="100" /> <!-- A-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17000" min="1" max="1" chance="100" /> <!-- B-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17001" min="1" max="1" chance="100" /> <!-- C-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17002" min="1" max="1" chance="100" /> <!-- D-grade Jewelry Set of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16974" name="Orc Mage Class Equipment Set" additionalName="90-day" type="EtcItem">
@@ -2310,30 +2310,30 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="21799" min="1" max="1" chance="100" /> <!-- Dynasty Breastplate of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="21781" min="1" max="1" chance="100" /> <!-- Imperial Crusader of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="16975" min="1" max="1" chance="100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack (A-grade) - 90-day -->
-			<item id="16976" min="1" max="1" chance="100" /> <!-- Doom Plate Armor of Fortune Set Pack (B-grade) - 90-day -->
-			<item id="16977" min="1" max="1" chance="100" /> <!-- Full Plate of Fortune Set Pack (C-grade) - 90-day -->
-			<item id="16978" min="1" max="1" chance="100" /> <!-- Brigandine of Fortune Set Pack (D-grade) - 90-day -->
-			<item id="21812" min="1" max="1" chance="100" /> <!-- Dynasty Tunic of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="21792" min="1" max="1" chance="100" /> <!-- Major Arcana Robe of Fortune Set Pack (S-grade) - 90-day -->
-			<item id="16983" min="1" max="1" chance="100" /> <!-- Dark Crystal Robe of Fortune Set Pack (A-grade) - 90-day -->
-			<item id="16984" min="1" max="1" chance="100" /> <!-- Avadon Robe of Fortune Set Pack (B-grade) - 90-day -->
-			<item id="16985" min="1" max="1" chance="100" /> <!-- Karmian of Fortune Set Pack (C-grade) - 90-day -->
-			<item id="16986" min="1" max="1" chance="100" /> <!-- Mithril Tunic of Fortune Set Pack (D-grade) - 90-day -->
+			<item id="21799" min="1" max="1" chance="100" /> <!-- Package: Dynasty Breastplate Set - Fortune (S-grade) - 90-day -->
+			<item id="21781" min="1" max="1" chance="100" /> <!-- Package: Imperial Crusader Set - Fortune - 90-day -->
+			<item id="16975" min="1" max="1" chance="100" /> <!-- Package: Heavy Armor of Nightmare Set - Fortune (A-grade) - 90-day -->
+			<item id="16976" min="1" max="1" chance="100" /> <!-- Package: Doom Plate Armor Set - Fortune (B-grade) - 90-day -->
+			<item id="16977" min="1" max="1" chance="100" /> <!-- Package: Full Plate Armor Set - Fortune (C-grade) - 90-day -->
+			<item id="16978" min="1" max="1" chance="100" /> <!-- Package: Brigandine Set - Fortune (D-grade) - 90-day -->
+			<item id="21812" min="1" max="1" chance="100" /> <!-- Package: Dynasty Tunic Set - Fortune (S-grade) - 90-day -->
+			<item id="21792" min="1" max="1" chance="100" /> <!-- Package: Major Arcana Robe Set - Fortune (S-grade) - 90-day -->
+			<item id="16983" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Robe Set - Fortune (A-grade) - 90-day -->
+			<item id="16984" min="1" max="1" chance="100" /> <!-- Package: Avadon Robe Set - Fortune (B-grade) - 90-day -->
+			<item id="16985" min="1" max="1" chance="100" /> <!-- Package: Karmian Robe Set - Fortune (C-grade) - 90-day -->
+			<item id="16986" min="1" max="1" chance="100" /> <!-- Package: Mithril Robe Set - Fortune (D-grade) - 90-day -->
 			<item id="16987" min="1" max="1" chance="100" /> <!-- Magic Weapon of Fortune Set - 90-day -->
 			<item id="16990" min="1" max="1" chance="100" /> <!-- Blunt Weapon of Fortune Set - 90-day -->
-			<item id="21820" min="1" max="1" chance="100" /> <!-- Dynasty Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="21816" min="1" max="1" chance="100" /> <!-- Tateossian Accessory of Fortune Pack (S-grade) - 90-day -->
-			<item id="16999" min="1" max="1" chance="100" /> <!-- Jewelry Pack (A-grade) - 90-day -->
-			<item id="17000" min="1" max="1" chance="100" /> <!-- Jewelry Pack (B-grade) - 90-day -->
-			<item id="17001" min="1" max="1" chance="100" /> <!-- Jewelry Pack (C-grade) - 90-day -->
-			<item id="17002" min="1" max="1" chance="100" /> <!-- Jewelry Pack (D-grade) - 90-day -->
+			<item id="21820" min="1" max="1" chance="100" /> <!-- Package: Dynasty Accessories - Fortune (S-grade) - 90-day -->
+			<item id="21816" min="1" max="1" chance="100" /> <!-- Package: Tateossian Accessories - Fortune (S-grade) - 90-day -->
+			<item id="16999" min="1" max="1" chance="100" /> <!-- A-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17000" min="1" max="1" chance="100" /> <!-- B-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17001" min="1" max="1" chance="100" /> <!-- C-grade Jewelry Set of Fortune - 90-day -->
+			<item id="17002" min="1" max="1" chance="100" /> <!-- D-grade Jewelry Set of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16975" name="Fortune Heavy Armor of Nightmare Set Pack (A-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Fortune Heavy Armor of Nightmare Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Heavy Armor of Nightmare Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2349,15 +2349,15 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="16915" min="1" max="1" chance="100" /> <!-- Armor of Nightmare of Fortune - 90-day -->
-			<item id="16916" min="1" max="1" chance="100" /> <!-- Helm of Nightmare of Fortune - 90-day -->
-			<item id="16917" min="1" max="1" chance="100" /> <!-- Gauntlets of Nightmare of Fortune - Heavy Armor - 90-day -->
-			<item id="16918" min="1" max="1" chance="100" /> <!-- Boots of Nightmare of Fortune - Heavy Armor - 90-day -->
-			<item id="16919" min="1" max="1" chance="100" /> <!-- Shield of Nightmare of Fortune - 90-day -->
+			<item id="16915" min="1" max="1" chance="100" /> <!-- Armor of Nightmare - Fortune - 90-day -->
+			<item id="16916" min="1" max="1" chance="100" /> <!-- Helm of Nightmare - Fortune - 90-day -->
+			<item id="16917" min="1" max="1" chance="100" /> <!-- Gauntlets of Nightmare (Heavy) - Fortune - 90-day -->
+			<item id="16918" min="1" max="1" chance="100" /> <!-- Boots of Nightmare (Heavy) - Fortune - 90-day -->
+			<item id="16919" min="1" max="1" chance="100" /> <!-- Shield of Nightmare - Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16976" name="Doom Plate Armor of Fortune Set Pack (B-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Doom Plate Armor of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Doom Plate Armor Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2373,15 +2373,15 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="16889" min="1" max="1" chance="100" /> <!-- Doom Helmet of Fortune - 90-day -->
-			<item id="16890" min="1" max="1" chance="100" /> <!-- Doom Gloves of Fortune - Heavy Armor - 90-day -->
-			<item id="16892" min="1" max="1" chance="100" /> <!-- Doom Boots of Fortune - Heavy Armor - 90-day -->
-			<item id="16894" min="1" max="1" chance="100" /> <!-- Doom Plate Armor of Fortune - 90-day -->
-			<item id="16895" min="1" max="1" chance="100" /> <!-- Doom Shield of Fortune - 90-day -->
+			<item id="16889" min="1" max="1" chance="100" /> <!-- Doom Helmet - Fortune - 90-day -->
+			<item id="16890" min="1" max="1" chance="100" /> <!-- Doom Gloves (Heavy) - Fortune - 90-day -->
+			<item id="16892" min="1" max="1" chance="100" /> <!-- Doom Boots (Heavy) - Fortune - 90-day -->
+			<item id="16894" min="1" max="1" chance="100" /> <!-- Doom Plate Armor - Fortune - 90-day -->
+			<item id="16895" min="1" max="1" chance="100" /> <!-- Doom Shield - Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16977" name="Full Plate of Fortune Set Pack (C-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Full Plate of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Full Plate Armor Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2405,7 +2405,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16978" name="Brigandine of Fortune Set Pack (D-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Brigandine of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Brigandine Armor Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2430,7 +2430,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16979" name="Dark Crystal Light Armor of Fortune Set Pack (A-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Dark Crystal Light Armor of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Dark Crystal Light Armor Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2448,13 +2448,13 @@
 		<capsuled_items>
 			<item id="16884" min="1" max="1" chance="100" /> <!-- Dark Crystal Leather Armor of Fortune - 90-day -->
 			<item id="16885" min="1" max="1" chance="100" /> <!-- Dark Crystal Leggings of Fortune - 90-day -->
-			<item id="16886" min="1" max="1" chance="100" /> <!-- Dark Crystal Gloves of Fortune - Light Armor - 90-day -->
-			<item id="16887" min="1" max="1" chance="100" /> <!-- Dark Crystal Boots of Fortune - Light Armor - 90-day -->
+			<item id="16886" min="1" max="1" chance="100" /> <!-- Dark Crystal Gloves (Light) - Fortune - 90-day -->
+			<item id="16887" min="1" max="1" chance="100" /> <!-- Dark Crystal Boots (Light) - Fortune - 90-day -->
 			<item id="16867" min="1" max="1" chance="100" /> <!-- Dark Crystal Helmet of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16980" name="Leather Armor of Doom of Fortune Set Pack (B-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Leather Armor of Doom of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Doom Leather Armor Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2470,14 +2470,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="16888" min="1" max="1" chance="100" /> <!-- Leather Armor of Doom of Fortune - 90-day -->
-			<item id="16889" min="1" max="1" chance="100" /> <!-- Doom Helmet of Fortune - 90-day -->
-			<item id="16891" min="1" max="1" chance="100" /> <!-- Doom Gloves of Fortune - Light Armor - 90-day -->
-			<item id="16893" min="1" max="1" chance="100" /> <!-- Doom Boots of Fortune - Light Armor - 90-day -->
+			<item id="16888" min="1" max="1" chance="100" /> <!-- Doom Leather Armor - Fortune - 90-day -->
+			<item id="16889" min="1" max="1" chance="100" /> <!-- Doom Helmet - Fortune - 90-day -->
+			<item id="16891" min="1" max="1" chance="100" /> <!-- Doom Gloves (Light) - Fortune - 90-day -->
+			<item id="16893" min="1" max="1" chance="100" /> <!-- Doom Boots (Light) - Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16981" name="Plated Leather of Fortune Set Pack (C-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Plated Leather of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Plated Leather Armor Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2501,7 +2501,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16982" name="Manticore Leather of Fortune Set Pack (D-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Manticore Leather of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Manticore Leather Armor Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2525,7 +2525,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16983" name="Dark Crystal Robe of Fortune Set Pack (A-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Dark Crystal Robe of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Dark Crystal Robe Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2543,13 +2543,13 @@
 		<capsuled_items>
 			<item id="16866" min="1" max="1" chance="100" /> <!-- Dark Crystal Robe of Fortune - 90-day -->
 			<item id="16867" min="1" max="1" chance="100" /> <!-- Dark Crystal Helmet of Fortune - 90-day -->
-			<item id="16868" min="1" max="1" chance="100" /> <!-- Dark Crystal Gloves of Fortune - Robe - 90-day -->
-			<item id="16869" min="1" max="1" chance="100" /> <!-- Dark Crystal Boots of Fortune - Robe - 90-day -->
+			<item id="16868" min="1" max="1" chance="100" /> <!-- Dark Crystal Gloves (Robe) - Fortune - 90-day -->
+			<item id="16869" min="1" max="1" chance="100" /> <!-- Dark Crystal Boots (Robe) - Fortune - 90-day -->
 			<item id="16870" min="1" max="1" chance="100" /> <!-- Dark Crystal Shield of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16984" name="Avadon Robe of Fortune Set Pack (B-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire an Avadon Robe of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Avadon Robe Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2565,15 +2565,15 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="16871" min="1" max="1" chance="100" /> <!-- Avadon Robe of Fortune - 90-day -->
+			<item id="16871" min="1" max="1" chance="100" /> <!-- Avadon Robe - Fortune - 90-day -->
 			<item id="16872" min="1" max="1" chance="100" /> <!-- Avadon Circlet of Fortune - 90-day -->
-			<item id="16873" min="1" max="1" chance="100" /> <!-- Avadon Gloves of Fortune - Robe - 90-day -->
-			<item id="16874" min="1" max="1" chance="100" /> <!-- Avadon Boots of Fortune - Robe - 90-day -->
-			<item id="16875" min="1" max="1" chance="100" /> <!-- Abaddon Shield of Fortune - 90-day -->
+			<item id="16873" min="1" max="1" chance="100" /> <!-- Avadon Gloves of Fortune (Robe) - 90-day -->
+			<item id="16874" min="1" max="1" chance="100" /> <!-- Avadon Boots of Fortune (Robe) - 90-day -->
+			<item id="16875" min="1" max="1" chance="100" /> <!-- Avadon Shield of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16985" name="Karmian of Fortune Set Pack (C-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Karmian of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Karmian Robe Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2589,7 +2589,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="16876" min="1" max="1" chance="100" /> <!-- Karmian Tunic of Fortune - 90-day -->
+			<item id="16876" min="1" max="1" chance="100" /> <!-- Karmian Tunic - Fortune - 90-day -->
 			<item id="16877" min="1" max="1" chance="100" /> <!-- Karmian Stockings of Fortune - 90-day -->
 			<item id="16878" min="1" max="1" chance="100" /> <!-- Karmian Gloves of Fortune - 90-day -->
 			<item id="16879" min="1" max="1" chance="100" /> <!-- Karmian Boots of Fortune - 90-day -->
@@ -2597,7 +2597,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16986" name="Mithril Tunic of Fortune Set Pack (D-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Mithril Tunic of Fortune Set. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Mithril Robe Set - Fortune. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2613,7 +2613,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="16880" min="1" max="1" chance="100" /> <!-- Mithril Tunic of Fortune - 90-day -->
+			<item id="16880" min="1" max="1" chance="100" /> <!-- Mithril Tunic - Fortune - 90-day -->
 			<item id="16881" min="1" max="1" chance="100" /> <!-- Mithril Stockings of Fortune - 90-day -->
 			<item id="16882" min="1" max="1" chance="100" /> <!-- Elven Mithril Gloves of Fortune - 90-day -->
 			<item id="16883" min="1" max="1" chance="100" /> <!-- Elven Mithril Boots of Fortune - 90-day -->
@@ -2621,7 +2621,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16987" name="Magic Weapon of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 magic weapons at S~D-grade s. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain 6 magic weapons of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2646,7 +2646,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16988" name="Dagger of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 daggers at S~D-grade s. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain 6 daggers of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2671,7 +2671,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16989" name="Bow of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 arrows at S~D-grade. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- Double-click to obtain 6 bows of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2696,7 +2696,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16990" name="Blunt Weapon of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 blunts at S~D-grade s. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain 6 blunt weapons of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2721,7 +2721,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16991" name="One-handed Sword of Friendship Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, it rewards 6 S-D grade one-handed swords. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain 6 one-handed swords of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2746,7 +2746,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16992" name="Two-handed Sword of Friendship Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, it rewards 6 S-D grade two-handed swords. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain 6 two-handed swords of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2771,7 +2771,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16993" name="Fist Weapon of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 fist weapons at S~D-grade s. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain 6 fist weapons of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2796,7 +2796,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16994" name="Dual Sword of Friendship Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, it rewards 6 S-D grade dual swords. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain 6 dual swords of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2821,7 +2821,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16995" name="Spear of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 spears at S~D-grade s. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain 6 spears of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2846,7 +2846,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16996" name="Ancient Sword of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 Ancient Swords at S~D-grade s. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain 6 ancient swords of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2871,7 +2871,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16997" name="Short Sword of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 short swords at S~D-grade s. Expires after 90 days if not used. -->
+		<!-- Double-click to obtain 6 rapiers of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2892,11 +2892,11 @@
 			<item id="16960" min="1" max="1" chance="100" /> <!-- ?clair Bijou of Fortune - 90-day -->
 			<item id="16961" min="1" max="1" chance="100" /> <!-- Colichemarde of Fortune - 90-day -->
 			<item id="16962" min="1" max="1" chance="100" /> <!-- Admiral's Estoc of Fortune - 90-day -->
-			<item id="16963" min="1" max="1" chance="100" /> <!-- Grand Épée of Fortune - 90-day -->
+			<item id="16963" min="1" max="1" chance="100" /> <!-- Grand ?p?e of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16998" name="Crossbow of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 crossbows at S~D-grade s. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- Double-click to obtain 6 crossbows of S~D-grades. The package will disappear in 90 d. if not opened. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2921,7 +2921,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16999" name="Jewelry Pack (A-grade)" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire a Jewelry Set of Fortune (A-grade). Expires after 90 days if not used. -->
+		<!-- Double-click to obtain Jewelry Set of Fortune. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

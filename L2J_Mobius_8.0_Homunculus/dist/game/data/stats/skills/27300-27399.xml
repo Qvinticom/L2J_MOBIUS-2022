@@ -809,10 +809,10 @@
 						<item id="33512" count="1800" /> <!-- Returning Hero's Vitality Replenishing Juice -->
 					</item>
 					<item chance="15">
-						<item id="17527" count="3600" /> <!-- Scroll: Enchant Armor (R-grade) -->
+						<item id="17527" count="3600" /> <!-- Scroll: Enchant R-grade Armor -->
 					</item>
 					<item chance="15">
-						<item id="17526" count="3600" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+						<item id="17526" count="3600" /> <!-- Scroll: Enchant R-grade Weapon -->
 					</item>
 					<item chance="25">
 						<item id="23232" count="3600" /> <!-- Traces of Ancient Kartia's Labyrinth -->
@@ -888,6 +888,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<isMagic>22</isMagic>
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -1006,7 +1007,7 @@
 		</effects>
 	</skill>
 	<skill id="27353" toLevel="12" name="Battle Rhapsody">
-		<!-- For 30 sec., P./ M. Atk., and Atik./ Casting Spd. x2. -->
+		<!-- For 30 sec., doubles P./ M. Atk. and Atk. Spd./ Casting Spd. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_skill_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -1020,6 +1021,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<isMagic>22</isMagic>
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -1054,18 +1056,17 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27354" toLevel="12" name="Maiden's Prayer">
+	<skill id="27354" toLevel="12" name="Nemean Lion's Defense">
 		<!-- Invincible for 10 sec. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_july_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>867</effectPoint>
 		<abnormalTime>10</abnormalTime>
-		<isMagic>1</isMagic>
+		<isMagic>22</isMagic>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
@@ -1096,10 +1097,6 @@
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
 				<max>10</max>
-			</effect>
-			<effect name="ResistDispelByCategory">
-				<amount>-100</amount>
-				<slot>ALL</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -1140,7 +1137,7 @@
 		</effects>
 	</skill>
 	<skill id="27356" toLevel="12" name="Scorpion's Mass Exile">
-		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and standard attacks, and lose 282 HP/ second. -->
+		<!-- Banishes enemies near the target into another dimension. The exiled enemies become incapacitated and invincible against attacks, skills, and debuffs. The enemies' HP -282 per sec. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_oct_i00</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -1184,7 +1181,7 @@
 		<reuseDelayGroup>27356</reuseDelayGroup>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 			<effect name="DamOverTime">
 				<power>282</power>
@@ -1262,15 +1259,28 @@
 				<SLEEP>100</SLEEP>
 				<AIRBIND>100</AIRBIND>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="27358" toLevel="12" name="Slippery Scale">
-		<!-- For 60 sec., defends against debuffs 5 times. -->
+		<!-- For 60 sec., blocks up to 5 debuffs. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_feb_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<effectPoint>2</effectPoint>
 		<abnormalType>RACE_KAMAEL1</abnormalType>
+		<abnormalTime>60</abnormalTime>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
 		<basicProperty>NONE</basicProperty>
@@ -1307,12 +1317,11 @@
 		<hitTime>15000</hitTime>
 		<effectPoint>467</effectPoint>
 		<isMagic>4</isMagic>
-		<effectRange>-2</effectRange>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>OTHERS</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<staticReuse>true</staticReuse>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<reuseDelay>
 			<value level="1">6750000</value>
@@ -1329,14 +1338,16 @@
 			<value level="12">1800000</value>
 		</reuseDelay>
 		<reuseDelayGroup>27359</reuseDelayGroup>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 		<conditions>
 			<condition name="OpCallPc" />
-			<condition name="TargetMyParty">
-				<includeMe>false</includeMe>
-			</condition>
 		</conditions>
 		<effects>
-			<effect name="CallPc" />
+			<effect name="CallParty" />
 		</effects>
 	</skill>
 	<skill id="27360" toLevel="12" name="Exoskeletal Shield">
@@ -1349,7 +1360,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1408,7 +1419,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="27366" toLevel="1" name="Matryoshka's Blessing">
-		<!-- For 60 min., Acquired XP/ SP +30%. -->
+		<!-- For 60 min., acquired XP/ SP +30%. -->
 		<icon>icon.exp_bottle_scroll</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1426,7 +1437,7 @@
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
 	<skill id="27368" toLevel="1" name="Minion Eye's Encouragement">
-		<!-- CON +3, MEN +3, Weight Gauge +10000, Max HP/ MP/ CP +300. Skill Cooldown -3%, Skill MP Consumption -3%. -->
+		<!-- CON +3, MEN +3, Weight Limit +10,000, Max HP/ MP/ CP +300. Skill Cooldown -3%, Skill MP Consumption -3%. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1434,8 +1445,8 @@
 		<icon>icon.etc_bm_jewelbox_main_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27370" toLevel="1" name="3rd Anniversary Gift">
-		<!-- Receive the gift from Agathion - Nepal Snow. -->
+	<skill id="27370" toLevel="1" name="Anniversary Gift">
+		<!-- Receive the gift from Agathion Nepal Snow. -->
 		<icon>icon.etc_pi_gift_box_i02</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
@@ -1460,8 +1471,8 @@
 		<effectPoint>1000</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
-	<skill id="27373" toLevel="1" name="6th Anniversary Gift">
-		<!-- Receive the gift from Agathion - Nepal Snow. -->
+	<skill id="27373" toLevel="1" name="Anniversary Gift">
+		<!-- Receive the gift from Agathion Nepal Snow. -->
 		<icon>icon.etc_pi_gift_box_i02</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>

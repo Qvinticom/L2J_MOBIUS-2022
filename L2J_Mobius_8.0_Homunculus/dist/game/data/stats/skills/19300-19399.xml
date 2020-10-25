@@ -14,7 +14,7 @@
 		</effects>
 	</skill>
 	<skill id="19301" toLevel="11" name="Istina Acid Swarm">
-		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for $s1 Enemies within the area suffer P./ M. Def. -$s2 and Atk. Spd./ Speed/ Shield Def. -$s3 and cannot use magic skills. -->
+		<!-- Throws an Istina's poison bottle creating a danger zone for $s1 to poison enemies. Within the area enemies' magic skills are blocked, P./ M. Def. -$s2, Atk. Spd./ Speed/ Shield Defense -$s3. Also cancels enemy's invisibility blocking its recast. -->
 		<icon>icon.skill19301</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
@@ -107,10 +107,17 @@
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>
 			</effect>
+			<effect name="Detection" />
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HIDE</slot>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19302" toLevel="11" name="Thrown Acid Swarm">
-		<!-- Creates a poisonous area. Enemies' P./ M. Def. -$s1, Atk. Spd./ Speed/ Shield Defense -$s2, HP -$s3 per sec. Prevents the enemies from using M. skills. Inflicted status: Danger Zone. -->
+		<!-- Shrouds the enemy with a poisonous cloud. Their P./ M. Def. -$s1, Atk. Spd./ Speed/ Shield Defense -$s2. Prevents them from using magic skills. Their HP -$s3 per sec. Also cancels enemy's invisibility blocking its recast. Inflicted status: Danger Zone. -->
 		<icon>icon.skill19301</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -233,7 +240,7 @@
 			<value level="8">115</value>
 			<value level="9">120</value>
 		</mpConsume>
-		<activateRate>0</activateRate>
+		<activateRate>50</activateRate>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6000</reuseDelay>
@@ -242,6 +249,8 @@
 		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
+		<trait>SHOCK</trait>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -277,19 +286,19 @@
 				<halfLethal>15</halfLethal>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19528</skillId> <!-- Right Angle Reverse - Stun -->
+				<skillId>19528</skillId> <!-- Right Angle Reverse -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19304" toLevel="2" name="Easterly Wind">
-		<!-- Critical Rate/ Critical Damage inflicted from the flank +$s1 and Critical Rate/ Critical Damage inflicted from behind +$s2, and also resets cooldown of Right Angle Reverse and Easterly Wind Strike. -->
+		<!-- Critical Damage/ Rate for standard attacks from the flanks +$s1, Critical Damage/ Rate for standard attacks after a backstab +$s2. Also resets Skill Cooldown of the Right Angle Reverse and Easterly Wind Strike skills. -->
 		<icon>icon.skill10705</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>EASTERLY_WIND_STRIKE</abnormalType>
 		<effectPoint>80</effectPoint>
 		<operateType>A2</operateType>
@@ -299,35 +308,47 @@
 		<reuseDelayGroup>10705</reuseDelayGroup>
 		<effects>
 			<effect name="CriticalDamagePosition">
-				<amount>20</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">25</value>
+				</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
 			</effect>
 			<effect name="CriticalRatePositionBonus">
-				<amount>20</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">25</value>
+				</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
 			</effect>
 			<effect name="CriticalDamagePosition">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
 			</effect>
 			<effect name="CriticalRatePositionBonus">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
 			</effect>
 			<effect name="ReuseSkillById">
-				<skillId>19303</skillId>
+				<skillId>19303</skillId> <!-- Right Angle Reverse -->
 			</effect>
 			<effect name="ReuseSkillById">
-				<skillId>10705</skillId>
+				<skillId>10705</skillId> <!-- Easterly Wind Strike -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19305" toLevel="9" name="Shadow Reverse">
-		<!-- Attempts Deadly Attack on the target with $s1 power added to P. Attack and moves backward. Additionally, decreases Accuracy by $s3 for $s2 Half-kill is possible. Requires dagger/ dual dagger. -->
+		<!-- Makes you move behind the target's back to attack them suddenly with $s1 power. For $s2, their P. Accuracy -$s3. Half-kill. Requires a dagger or dual daggers. -->
 		<icon>icon.skill19305</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -428,6 +449,12 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND_PC</affectObject>
 		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
 			<condition name="TargetMyParty">
 				<includeMe>true</includeMe>
 			</condition>
@@ -439,7 +466,7 @@
 		</effects>
 	</skill>
 	<skill id="19307" toLevel="2" name="Lucky Coin: Attack">
-		<!-- Maphr's Blessing increases Attack by $s2, M. Atk. by $s3, and P./ M. Skill Power by $s4 for $s1 -->
+		<!-- Grants Maphr's blessing: for $s1, P. Atk. +$s2, M. Atk. +$s3, P./ M. Skill Power +$s4. -->
 		<icon>icon.skill19307</icon>
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
@@ -468,7 +495,7 @@
 		</effects>
 	</skill>
 	<skill id="19308" toLevel="1" name="Lucky Coin: Defense">
-		<!-- Maphr's Blessing increases allly's P. Defense/ M. Def. by 10% and enlarges their head size for 1 min. -->
+		<!-- Grants Lady Luck's blessing: for $s1, P./ M. Def. +$s2, your head becomes larger. -->
 		<icon>icon.skill19308</icon>
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
@@ -490,7 +517,7 @@
 		</effects>
 	</skill>
 	<skill id="19309" toLevel="9" name="Reverse Plunder">
-		<!-- Attempts Deadly Attack and item looting with $s1 power added to P. Attack. Requires dagger/ dual dagger. -->
+		<!-- Attempts Deadly Attack and item looting with $s1 power added to P. Atk. Requires dagger/ dual daggers. -->
 		<icon>icon.skill19309</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -557,7 +584,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>POWER_BLUFF</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>120</activateRate>
+		<activateRate>70</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<trait>DERANGEMENT</trait>
 		<operateType>A2</operateType>
@@ -603,7 +630,7 @@
 		</effects>
 	</skill>
 	<skill id="19312" toLevel="1" name="Holy Stance">
-		<!-- Damage received -5%, Damage dealt +5%, and Holy Attribute Resistance +100, and applies Holy to attribute magic. -->
+		<!-- Damage received -$s1, Damage dealt +$s2, and Holy Attribute Resistance +$s3, and applies Holy to attribute magic. -->
 		<icon>icon.skill19312</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -653,13 +680,13 @@
 				<attribute>HOLY</attribute>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19404</skillId>
+				<skillId>19404</skillId> <!-- Fire Attribute -->
 				<skillLevel>5</skillLevel> <!-- Holy Attribute -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19313" toLevel="1" name="Dark Stance">
-		<!-- Increases M. Skill Power by 5% and Dark defense by 100, and applies Dark to attribute magic. -->
+		<!-- Increases M. Skill Power by $s1 and Dark defense by $s2, and applies Dark to attribute magic. -->
 		<icon>icon.skill19313</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -678,13 +705,13 @@
 				<attribute>DARK</attribute>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19404</skillId>
+				<skillId>19404</skillId> <!-- Fire Attribute -->
 				<skillLevel>6</skillLevel> <!-- Dark Attribute -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19314" toLevel="13" name="Elemental Spike (Dark)">
-		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
+		<!-- Deals attribute damage to the target with $s1 power, decreasing their Attribute Resistance. Over-hit. -->
 		<icon>icon.skill11011</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11011</reuseDelayGroup>
@@ -718,7 +745,7 @@
 			<value level="12">59</value>
 			<value level="13">61</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
@@ -825,9 +852,6 @@
 			</effect>
 		</effects>
 		<endEffects>
-			<effect name="ReuseSkillById">
-				<skillId>11066</skillId> <!-- Arcane Comet Strike -->
-			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
 				<skillId>19315</skillId> <!-- Mana Burst -->
 				<skillLevel>2</skillLevel>
@@ -874,7 +898,7 @@
 			<value level="7">336</value>
 			<value level="8">351</value>
 		</mpConsume>
-		<castRange>1100</castRange>
+		<castRange>800</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4780</hitTime>
 		<coolTime>300</coolTime>

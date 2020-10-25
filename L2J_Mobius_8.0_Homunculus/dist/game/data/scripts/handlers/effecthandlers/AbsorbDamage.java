@@ -63,10 +63,12 @@ public class AbsorbDamage extends AbstractEffect
 		
 		if (newDamageLeft > 0)
 		{
+			effected.sendMessage("You absorbed " + (int) damageLeft + " damage from " + (int) event.getDamage() + ".");
 			DIFF_DAMAGE_HOLDER.put(objectId, newDamageLeft);
 		}
 		else
 		{
+			effected.sendMessage("You absorbed " + (int) damageLeft + " damage from " + (int) event.getDamage() + " and barrier has been removed.");
 			effected.stopSkillEffects(skill);
 		}
 		
