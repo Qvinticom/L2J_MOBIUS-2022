@@ -163,6 +163,8 @@ public class PetInfo implements IClientOutgoingPacket
 		
 		packet.writeQ(_summon.getExpForNextLevel()); // 100% absoulte value
 		
+		packet.writeC(0x00); // 286
+		
 		packet.writeD(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0); // weight
 		packet.writeD(_summon.getMaxLoad()); // max weight it can carry
 		packet.writeD(_summon.getPAtk()); // patk

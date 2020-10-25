@@ -101,9 +101,9 @@ public class FishingData implements IXmlReader
 								{
 									final NamedNodeMap attrs = bait.getAttributes();
 									final int itemId = parseInteger(attrs, "itemId");
-									final byte level = parseByte(attrs, "level", (byte) 1);
-									final byte minPlayerLevel = parseByte(attrs, "minPlayerLevel");
-									final byte maxPlayerLevel = parseByte(attrs, "minPlayerLevel", Config.PLAYER_MAXIMUM_LEVEL);
+									final int level = parseInteger(attrs, "level", 1);
+									final int minPlayerLevel = parseInteger(attrs, "minPlayerLevel");
+									final int maxPlayerLevel = parseInteger(attrs, "minPlayerLevel", Config.PLAYER_MAXIMUM_LEVEL);
 									final double chance = parseDouble(attrs, "chance");
 									final int timeMin = parseInteger(attrs, "timeMin");
 									final int timeMax = parseInteger(attrs, "timeMax", timeMin);

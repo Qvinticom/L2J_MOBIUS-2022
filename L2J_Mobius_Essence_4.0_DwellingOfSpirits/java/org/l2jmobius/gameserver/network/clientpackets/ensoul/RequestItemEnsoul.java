@@ -78,41 +78,41 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 		
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
-			player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHEN_PRIVATE_STORE_AND_WORKSHOP_ARE_OPENED);
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_INSERTION_IS_IMPOSSIBLE_WHEN_PRIVATE_STORE_AND_WORKSHOP_ARE_OPENED);
 			return;
 		}
 		if (player.hasAbnormalType(AbnormalType.FREEZING))
 		{
-			player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_IN_FROZEN_STATE);
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_INSERTION_IS_IMPOSSIBLE_WHILE_IN_FROZEN_STATE);
 		}
 		if (player.isDead())
 		{
-			player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_IF_THE_CHARACTER_IS_DEAD);
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_INSERTION_IS_IMPOSSIBLE_IF_THE_CHARACTER_IS_DEAD);
 			return;
 		}
 		if ((player.getActiveTradeList() != null) || player.hasItemRequest())
 		{
-			player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_DURING_EXCHANGE);
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_INSERTION_IS_IMPOSSIBLE_DURING_EXCHANGE);
 			return;
 		}
 		if (player.hasAbnormalType(AbnormalType.PARALYZE))
 		{
-			player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_PETRIFIED);
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_INSERTION_IS_IMPOSSIBLE_WHILE_THE_CHARACTER_IS_PETRIFIED);
 			return;
 		}
 		if (player.isFishing())
 		{
-			player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_DURING_FISHING);
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_INSERTION_IS_IMPOSSIBLE_DURING_FISHING);
 			return;
 		}
 		if (player.isSitting())
 		{
-			player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_SITTING);
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_INSERTION_IS_IMPOSSIBLE_WHILE_SITTING);
 			return;
 		}
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
 		{
-			player.sendPacket(SystemMessageId.RUNE_INSERTION_IS_IMPOSSIBLE_WHILE_IN_COMBAT);
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_INSERTION_IS_IMPOSSIBLE_DURING_COMBAT);
 			return;
 		}
 		
@@ -161,7 +161,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 			final ItemInstance soulCrystal = player.getInventory().getItemByObjectId(itemOption.getSoulCrystalObjectId());
 			if (soulCrystal == null)
 			{
-				player.sendPacket(SystemMessageId.THE_RUNE_DOES_NOT_FIT);
+				player.sendPacket(SystemMessageId.INVALID_SOUL_CRYSTAL);
 				continue;
 			}
 			

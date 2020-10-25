@@ -105,7 +105,7 @@ public class BeastSpiritShot implements IItemHandler
 			// Not enough SpiritShots to use.
 			if (!activeOwner.disableAutoShot(itemId))
 			{
-				activeOwner.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_SERVITOR);
+				activeOwner.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_FOR_THE_SERVITOR);
 			}
 			return false;
 		}
@@ -114,7 +114,7 @@ public class BeastSpiritShot implements IItemHandler
 		{
 			if (!activeOwner.disableAutoShot(itemId))
 			{
-				activeOwner.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_SERVITOR);
+				activeOwner.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_FOR_THE_SERVITOR);
 			}
 			return false;
 		}

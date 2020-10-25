@@ -2690,7 +2690,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="4076" toLevel="3" name="Decrease Speed">
+	<skill id="4076" toLevel="3" name="Slow">
 		<!-- Immediately target's Speed -10%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>
@@ -3585,7 +3585,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="4099" toLevel="2" name="Soul of Berserker">
+	<skill id="4099" toLevel="2" name="Berserker Spirit">
 		<!-- P. Def. -$s1, M. Def. -$s2, P. Evasion -$s3, P. Atk. +$s4, M. Atk. +$s5, Atk. Spd. +$s6, Casting Spd. +$s7, Speed +$s8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLevel>

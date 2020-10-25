@@ -348,6 +348,10 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			id = 13067;
 		}
+		else if (name.equalsIgnoreCase("lcoin"))
+		{
+			id = 91663;
+		}
 		else
 		{
 			id = 0;

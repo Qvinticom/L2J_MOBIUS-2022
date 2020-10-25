@@ -98,6 +98,14 @@ public class ExRequestClassChange implements IClientIncomingPacket
 				player.setBaseClass(player.getActiveClass());
 			}
 			
+			// Death Knight rewards.
+			if ((_classId == 196) || (_classId == 200) || (_classId == 204))
+			{
+				player.addItem("ExRequestClassChange", 93028, 1, player, true); // Aden Sword.
+				player.addItem("ExRequestClassChange", 93493, 1, player, true); // Moon Armor Set.
+				player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+			}
+			
 			// Elemental Spirits.
 			if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP))
 			{

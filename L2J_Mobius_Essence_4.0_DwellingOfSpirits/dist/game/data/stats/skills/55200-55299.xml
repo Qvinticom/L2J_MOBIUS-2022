@@ -347,59 +347,59 @@
 		<icon>icon.etc_potion_green_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55214" toLevel="1" name="Teleport: Entrance to Mithril Mines">
+	<skill id="55214" toLevel="1" name="Scroll of Escape: Entrance to Mithril Mines">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55215" toLevel="1" name="Teleport: Entrance to the School of Dark Arts">
+	<skill id="55215" toLevel="1" name="Scroll of Escape: Entrance to the School of Dark Arts">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55216" toLevel="1" name="Teleport: Entrance to Orc Barracks">
+	<skill id="55216" toLevel="1" name="Scroll of Escape: Entrance to Orc Barracks">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55217" toLevel="1" name="Teleport: Entrance to Ruins of Agony">
+	<skill id="55217" toLevel="1" name="Scroll of Escape: Entrance to Ruins of Agony">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55218" toLevel="1" name="Teleport: Entrance to Ruins of Despair">
+	<skill id="55218" toLevel="1" name="Scroll of Escape: Entrance to Ruins of Despair">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55219" toLevel="1" name="Teleport: Abandoned Camp">
+	<skill id="55219" toLevel="1" name="Scroll of Escape: Abandoned Camp">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55220" toLevel="1" name="Teleport: Entrance to Ant Nest">
+	<skill id="55220" toLevel="1" name="Scroll of Escape: Entrance to Ant Nest">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55221" toLevel="1" name="Teleport: Entrance to Cruma Tower">
+	<skill id="55221" toLevel="1" name="Scroll of Escape: Entrance to Cruma Tower">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55222" toLevel="1" name="Teleport: Death Pass">
+	<skill id="55222" toLevel="1" name="Scroll of Escape: Death Pass">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55223" toLevel="1" name="Teleport: Three-way crossroads at Dragon Valley">
+	<skill id="55223" toLevel="1" name="Scroll of Escape: Crossroads in Dragon Valley">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55224" toLevel="1" name="Teleport: Entrance to Antharas' Lair">
+	<skill id="55224" toLevel="1" name="Scroll of Escape: Entrance to Antharas' Lair">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55225" toLevel="1" name="Teleport: Outlaw Forest">
+	<skill id="55225" toLevel="1" name="Scroll of Escape: Outlaw Forest">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55226" toLevel="1" name="Teleport: Alligator Island">
+	<skill id="55226" toLevel="1" name="Scroll of Escape: Alligator Island">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55227" toLevel="1" name="Teleport: Entrance to Forgotten Temple">
+	<skill id="55227" toLevel="1" name="Scroll of Escape: Entrance to Forgotten Temple">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
@@ -475,7 +475,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55235" toLevel="1" name="Adventurer's Potion - Atk. Spd.">
+	<skill id="55235" toLevel="1" name="Adventurer's Greater Haste Potion">
 		<!-- Increases Atk. Spd. -->
 		<icon>icon.etc_reagent_green_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -500,7 +500,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55236" toLevel="1" name="Adventurer's Potion - Casting Spd.">
+	<skill id="55236" toLevel="1" name="Adventurer's Cast Quickening Potion">
 		<!-- Increases Casting Spd. -->
 		<icon>icon.etc_potion_of_acumen2_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -566,7 +566,7 @@
 		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="55240" toLevel="1" name="Overwhelming Power of a Holiday Hat">
+	<skill id="55240" toLevel="1" name="Holiday Hat's Overwhelming Power">
 		<!-- For 20 min., acquired XP/ SP +5%. Effect remains after death. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
@@ -703,7 +703,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55245" toLevel="8" name="Scroll of Escape: Town of Aden">
+	<skill id="55245" toLevel="8" name="Scroll of Escape: Aden">
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
@@ -875,7 +875,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55253" toLevel="20" name="Sigel's Protection">
+	<skill id="55253" toLevel="20" name="Sigel's Defense">
 		<!-- P. Def. +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
@@ -928,7 +928,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55254" toLevel="20" name="Sigel Protection">
+	<skill id="55254" toLevel="20" name="Sigel's Protection">
 		<!-- Max HP +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
@@ -1246,7 +1246,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55260" toLevel="20" name="Yul Guidance">
+	<skill id="55260" toLevel="20" name="Yul's Guidance">
 		<!-- P. Accuracy +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_yr_lv01</value>
@@ -1299,7 +1299,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55261" toLevel="20" name="Feoh's Magical Power">
+	<skill id="55261" toLevel="20" name="Feoh Magic Might">
 		<!-- M. Atk. +$s1 and skill MP Consumption +15%. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_feoh_lv01</value>
@@ -1589,7 +1589,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55266" toLevel="20" name="Wynn's Lightness">
+	<skill id="55266" toLevel="20" name="Wynn's Decrease Weight">
 		<!-- Weight limit +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_wynn_lv01</value>
@@ -1754,7 +1754,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="55270" toLevel="1" name="Agathion - Dance of Fury">
+	<skill id="55270" toLevel="1" name="Agathion Dance of Fury">
 		<!-- For 20 min., Atk. Spd. +5%. -->
 		<icon>icon.bm_agathion_fury</icon>
 		<operateType>A1</operateType>
@@ -1780,7 +1780,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55271" toLevel="1" name="Agathion - Dance of Concentration">
+	<skill id="55271" toLevel="1" name="Agathion Dance of Concentration">
 		<!-- For 20 min., Casting Spd. +5%. -->
 		<icon>icon.bm_agathion_concentration</icon>
 		<operateType>A1</operateType>
@@ -1806,7 +1806,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55272" toLevel="1" name="Agathion - Song of Wind">
+	<skill id="55272" toLevel="1" name="Agathion Song of Wind">
 		<!-- For 5 min., Speed +20. -->
 		<icon>icon.bm_agathion_wind</icon>
 		<operateType>A2</operateType>

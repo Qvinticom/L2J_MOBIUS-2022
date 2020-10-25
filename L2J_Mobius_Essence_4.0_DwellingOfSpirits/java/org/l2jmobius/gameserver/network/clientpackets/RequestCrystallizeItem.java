@@ -192,7 +192,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		final List<ItemChanceHolder> crystallizationRewards = ItemCrystallizationData.getInstance().getCrystallizationRewards(itemToRemove);
 		if ((crystallizationRewards == null) || crystallizationRewards.isEmpty())
 		{
-			player.sendPacket(SystemMessageId.CRYSTALLIZATION_CANNOT_BE_PROCEEDED_BECAUSE_THERE_ARE_NO_ITEMS_REGISTERED);
+			player.sendPacket(SystemMessageId.ANGEL_NEVIT_S_DESCENT_BONUS_TIME_S1);
 			return;
 		}
 		
@@ -212,7 +212,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			
 			if (itemToRemove.getEnchantLevel() > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
 				sm.addInt(itemToRemove.getEnchantLevel());
 				sm.addItemName(itemToRemove);
 			}
@@ -237,7 +237,7 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 			{
 				// add crystals
 				final ItemInstance createdItem = player.getInventory().addItem("Crystalize", holder.getId(), holder.getCount(), player, player);
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
 				sm.addItemName(createdItem);
 				sm.addLong(holder.getCount());
 				client.sendPacket(sm);

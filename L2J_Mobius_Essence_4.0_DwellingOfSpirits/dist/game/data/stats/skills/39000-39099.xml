@@ -8,12 +8,12 @@
 		<!-- Double-click to randomly obtain a battle item or anywhere between 1 - 1,000,000 Adena. Once a day. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39002" toLevel="1" name="Healing Potion">
+	<skill id="39002" toLevel="1" name="HP Replenishing Potion">
 		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_lesser_potion_red_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39003" toLevel="1" name="Greater Healing Potion">
+	<skill id="39003" toLevel="1" name="High-grade HP Replenishing Potion">
 		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
 		<operateType>A1</operateType>
@@ -231,7 +231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39020" toLevel="1" name="Scroll: PK (No-grade)">
+	<skill id="39020" toLevel="1" name="No-grade Scroll: PK">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<effectPoint>-100</effectPoint>
@@ -254,7 +254,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39021" toLevel="1" name="Scroll: PK (D-grade)">
+	<skill id="39021" toLevel="1" name="D-grade Scroll: PK">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<itemConsumeId>49027</itemConsumeId>
@@ -276,7 +276,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39022" toLevel="1" name="Scroll: PK (C-grade)">
+	<skill id="39022" toLevel="1" name="C-grade Scroll: PK">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<itemConsumeId>49028</itemConsumeId>
@@ -298,7 +298,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39023" toLevel="1" name="Scroll: PK (B-grade)">
+	<skill id="39023" toLevel="1" name="B-grade Scroll: PK">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<itemConsumeId>49029</itemConsumeId>
@@ -320,7 +320,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39024" toLevel="1" name="Scroll: PK (A-grade)">
+	<skill id="39024" toLevel="1" name="A-grade Scroll: PK">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<itemConsumeId>49030</itemConsumeId>
@@ -391,7 +391,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39029" toLevel="1" name="Mysterious Spiritshot (No-grade)">
+	<skill id="39029" toLevel="1" name="Mysterious No-grade Spiritshot">
 		<icon>icon.etc_spell_shot_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -401,7 +401,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="39030" toLevel="1" name="Mysterious Spiritshot (D-grade)">
+	<skill id="39030" toLevel="1" name="Mysterious D-grade Spiritshot">
 		<icon>icon.etc_spell_shot_blue_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -411,7 +411,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="39031" toLevel="1" name="Mysterious Spiritshot (C-grade)">
+	<skill id="39031" toLevel="1" name="Mysterious C-grade Spiritshot">
 		<icon>icon.etc_spell_shot_green_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -421,47 +421,47 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="39032" toLevel="1" name="Lucky Package: Soulshots (No-grade)">
+	<skill id="39032" toLevel="1" name="Lucky Package: No-grade Soulshots">
 		<!-- Open the package to get from 100 to 10 000 Mysterious Soulshots (No-grade). -->
 		<icon>icon.etc_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39033" toLevel="1" name="Lucky Package: Soulshots (D-grade)">
+	<skill id="39033" toLevel="1" name="Lucky Package: D-grade Soulshots">
 		<!-- Open the package to get from 100 to 10 000 Mysterious Soulshots (D-grade). -->
 		<icon>icon.etc_treasure_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39034" toLevel="1" name="Lucky Package: Soulshots (C-grade)">
+	<skill id="39034" toLevel="1" name="Lucky Package: C-grade Soulshots">
 		<!-- Open the package to get from 50 to 5000 Mysterious Soulshots (C-grade). -->
 		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39035" toLevel="1" name="Lucky Package: Spiritshots (No-grade)">
+	<skill id="39035" toLevel="1" name="Lucky Package: No-grade Spiritshots">
 		<!-- Open the package to get from 50 to 1000 Spiritshots (No-grade). -->
 		<icon>icon.etc_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39036" toLevel="1" name="Lucky Package: Spiritshots (D-grade)">
+	<skill id="39036" toLevel="1" name="Lucky Package: D-grade Spiritshots">
 		<!-- Open the package to get from 80 to 3000 Spiritshots (D-grade). -->
 		<icon>icon.etc_treasure_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39037" toLevel="1" name="Lucky Package: Spiritshots (C-grade)">
+	<skill id="39037" toLevel="1" name="Lucky Package: C-grade Spiritshots">
 		<!-- Open the package to get from 30 to 1000 Spiritshots (C-grade). -->
 		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39038" toLevel="1" name="Lucky Package: Blessed Spiritshots (No-grade)">
+	<skill id="39038" toLevel="1" name="Lucky Package: Blessed No-grade Spiritshots">
 		<!-- Open the package to get from 100 to 10 000 Blessed Spiritshots (No-grade). -->
 		<icon>icon.etc_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39039" toLevel="1" name="Lucky Package: Blessed Spiritshots (D-grade)">
+	<skill id="39039" toLevel="1" name="Lucky Package: Blessed D-grade Spiritshots">
 		<!-- Open the package to get from 100 to 10 000 Blessed Spiritshots (D-grade). -->
 		<icon>icon.etc_treasure_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39040" toLevel="1" name="Lucky Package: Blessed Spiritshots (C-grade)">
+	<skill id="39040" toLevel="1" name="Lucky Package: Blessed C-grade Spiritshots">
 		<!-- Open the package to get from 50 to 5000 Blessed Spiritshots (C-grade). -->
 		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
@@ -534,7 +534,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39045" toLevel="1" name="Overwhelming Power of a Holiday Hat">
+	<skill id="39045" toLevel="1" name="Holiday Hat's Overwhelming Power">
 		<!-- For 20 min., acquired XP/ SP +5%. Effect remains after death. -->
 		<icon>icon.skill19226</icon>
 		<!-- increases XP and SP gain by 5% for 20 minutes -->
@@ -767,7 +767,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39056" toLevel="1" name="Agathion Teleport: Oren">
+	<skill id="39056" toLevel="1" name="Agathion Teleport - Oren">
 		<!-- Teleport to Oren -->
 		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -812,7 +812,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39058" toLevel="1" name="Rare Accessory Box">
+	<skill id="39058" toLevel="1" name="Rare Accessory Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29578</itemConsumeId>
@@ -844,7 +844,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39059" toLevel="1" name="Spellbok Box">
+	<skill id="39059" toLevel="1" name="Spellbook Chest">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49541</itemConsumeId>
@@ -984,10 +984,10 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39060" toLevel="1" name="Pendant Varnish">
+	<skill id="39060" toLevel="1" name="Pendant Polish">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39061" toLevel="1" name="Shining Pendant Varnish">
+	<skill id="39061" toLevel="1" name="Shining Pendant Polish">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39062" toLevel="1" name="Black Mask Teleport">
@@ -996,31 +996,31 @@
 		<hitTime>200</hitTime>
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
-	<skill id="39063" toLevel="1" name="Solid Scroll: Enchant Armor (D-grade)">
+	<skill id="39063" toLevel="1" name="Stable Scroll: Enchant D-grade Armor">
 		<icon>icon.giant_scrl_of_ench_am_d</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39064" toLevel="1" name="Solid Scroll: Enchant Weapon (D-grade)">
+	<skill id="39064" toLevel="1" name="Stable Scroll: Enchant D-grade Weapon">
 		<icon>icon.giant_scrl_of_ench_wp_d</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39065" toLevel="1" name="Solid Scroll: Enchant Armor (C-grade)">
+	<skill id="39065" toLevel="1" name="Stable Scroll: Enchant C-grade Armor">
 		<icon>icon.giant_scrl_of_ench_am_c</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39066" toLevel="1" name="Solid Scroll: Enchant Weapon (C-grade)">
+	<skill id="39066" toLevel="1" name="Stable Scroll: Enchant C-grade Weapon">
 		<icon>icon.giant_scrl_of_ench_wp_c</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39067" toLevel="1" name="Solid Scroll: Enchant Armor (B-grade)">
+	<skill id="39067" toLevel="1" name="Stable Scroll: Enchant B-grade Armor">
 		<icon>icon.giant_scrl_of_ench_am_b</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39068" toLevel="1" name="Solid Scroll: Enchant Weapon (B-grade)">
+	<skill id="39068" toLevel="1" name="Stable Scroll: Enchant B-grade Weapon">
 		<icon>icon.giant_scrl_of_ench_wp_b</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39069" toLevel="1" name="Major Warrior Healing Potion">
+	<skill id="39069" toLevel="1" name="Major Hero Healing Potion">
 		<!-- Greatly increases HP Recovery Bonus. -->
 		<icon>icon.etc_reagent_white_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -1041,7 +1041,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39070" toLevel="1" name="Parts of Enchantment Scrolls Chest">
+	<skill id="39070" toLevel="1" name="Chest of Enchant Scroll's Parts">
 		<icon>icon.etc_treasure_box_i08</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1049,7 +1049,7 @@
 		<icon>icon.special_cube_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39072" toLevel="1" name="Weapon Supply Box (D-grade)">
+	<skill id="39072" toLevel="1" name="D-grade Weapon Supply Box">
 		<icon>icon.etc_raid_e_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1115,7 +1115,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39073" toLevel="1" name="Weapon Supply Box (C-grade)">
+	<skill id="39073" toLevel="1" name="C-grade Weapon Supply Box">
 		<icon>icon.etc_raid_e_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1215,7 +1215,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39075" toLevel="1" name="Improved Scroll of Escape">
+	<skill id="39075" toLevel="1" name="Blessed Scroll of Escape">
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1250,7 +1250,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39077" toLevel="1" name="Teleport: Gludin Harbor">
+	<skill id="39077" toLevel="1" name="Scroll of Escape: Gludin Harbor">
 		<!-- Teleports to Gludin Harbor. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1276,7 +1276,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39078" toLevel="1" name="Teleport: Giran Harbor">
+	<skill id="39078" toLevel="1" name="Scroll of Escape: Giran Harbor">
 		<!-- Teleports to Giran Harbor. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1302,7 +1302,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39079" toLevel="1" name="Sheep Resurrection">
+	<skill id="39079" toLevel="1" name="Sheep's Resurrection">
 		<!-- Resurrects the dead. Besides, restores 70% of lost experience. -->
 		<icon>icon.skill11784</icon>
 		<operateType>A1</operateType>
@@ -1324,7 +1324,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="39082" toLevel="1" name="Amulet: Prosperity">
+	<skill id="39082" toLevel="1" name="Glorious Amulet">
 		<!-- All stats +1. -->
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>
@@ -1457,7 +1457,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39089" toLevel="1" name="Pirate Healing Potion">
+	<skill id="39089" toLevel="1" name="Pirate's HP Recovery Potion">
 		<icon>icon.etc_bm_hero_red_potion</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1485,17 +1485,17 @@
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
-	<skill id="39094" toLevel="2" name="Strength of Aries">
+	<skill id="39094" toLevel="2" name="Agathion's Soul">
 		<!-- STR/ INT/ CON/ MEN +1. -->
 		<icon>icon.skill6343_2</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39095" toLevel="2" name="Blessing of Aries">
+	<skill id="39095" toLevel="2" name="Blessed Agathion's Soul">
 		<!-- Mental/ Stun/ Sleep/ Paralysis Attack Resistance +$s1. -->
 		<icon>icon.skill6366_2</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39096" toLevel="1" name="Agathion Teleport: Giran">
+	<skill id="39096" toLevel="1" name="Agathion Teleport - Giran">
 		<!-- Teleport to the Town of Giran. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>

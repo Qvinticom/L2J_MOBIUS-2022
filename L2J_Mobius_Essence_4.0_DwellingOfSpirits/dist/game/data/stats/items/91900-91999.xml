@@ -644,6 +644,9 @@
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="76" />
+		</cond>
 	</item>
 	<item id="91947" name="Admiral's Estoc +7" type="EtcItem">
 		<!-- Double-click to obtain Admiral's Estoc enchanted to +7. -->
@@ -1134,7 +1137,7 @@
 	<item id="91983" name="Primeval Isle's Prolongating Stone" additionalName="Event" type="EtcItem">
 		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_1" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
@@ -1142,6 +1145,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="50177" level="1" /> <!-- Primeval Isle's Prolongating Stone -->
+		</skills>
 	</item>
 	<item id="91984" name="Ancient Pirates' Tomb's Prolongating Stone" additionalName="Event" type="EtcItem">
 		<!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
@@ -1300,6 +1308,18 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91954" min="1" max="1" chance="14" />
+			<item id="91955" min="1" max="1" chance="14" />
+			<item id="91956" min="1" max="1" chance="14" />
+			<item id="91957" min="1" max="1" chance="14" />
+			<item id="91958" min="1" max="1" chance="14" />
+			<item id="91959" min="1" max="1" chance="15" />
+			<item id="91960" min="1" max="1" chance="15" />
+		</capsuled_items>
 	</item>
 	<item id="91996" name="Scroll of Escape Pack: Tower of Insolence" additionalName="Floors 1-7" type="EtcItem">
 		<!-- Double-click to obtain Scroll of Escape: Tower of Insolence (1-7th Floors). -->

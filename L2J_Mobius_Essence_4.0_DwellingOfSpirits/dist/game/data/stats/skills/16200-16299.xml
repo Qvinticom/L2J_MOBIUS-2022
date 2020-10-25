@@ -58,7 +58,7 @@
 		</effectPoint>
 		<coolTime>1000</coolTime>
 	</skill>
-	<skill id="16206" toLevel="4" name="Divine Spike">
+	<skill id="16206" toLevel="4" name="Holy Spike">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -72,7 +72,7 @@
 		</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16207" toLevel="4" name="Dark Spike">
+	<skill id="16207" toLevel="4" name="Unholy Spike">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>600</castRange>
@@ -142,7 +142,7 @@
 		</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16212" toLevel="4" name="Divine Buster">
+	<skill id="16212" toLevel="4" name="Holy Buster">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -304,7 +304,7 @@
 		<effectPoint>83</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16228" toLevel="4" name="Wide Stun">
+	<skill id="16228" toLevel="4" name="Mass Stun">
 		<!-- Attacks nearby enemies and stuns them for $s1. -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>
@@ -344,7 +344,7 @@
 		<abnormalTime>10</abnormalTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16231" toLevel="4" name="Mass Airbind">
+	<skill id="16231" toLevel="4" name="Mass Aerial Yoke">
 		<!-- Throws nearby enemies into the air and binds them for $s1. -->
 		<icon>icon.skill11052</icon>
 		<operateType>A2</operateType>
@@ -371,97 +371,97 @@
 		<effectPoint>-700</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16236" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16236" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- Laum the monster is an Enhanced Mahum created from a common Mahum creature. Disciple Lavidos has kidnapped the creature and infused it with the power of darkness, resulting in a bigger and stronger Mahum type. Now Laum is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16237" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16237" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- Minorta the monster is an enhancement from a minotaur created for fun by Hardin's disciple. Disciple Lavidos has kidnapped the creature and infused it with the power of darkness, resulting in a bigger and stronger Minotaur. Amused by his success after Laum's creation, Lavidos has even created a circle of minions for Minotaur. Now Minotaur is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16238" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16238" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- Sarga the monster is an enhancement from a minotaur created for fun by Hardin's disciple. Disciple Lavidos has kidnapped the creature and infused it with the power of darkness, resulting in a bigger and stronger Minotaur with greater intellect. Amused by his success after Laum's creation, Lavidos has even created a circle of minions for Sarga. Now Sarga is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16239" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16239" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- Hogliff the monster is an enhancement from a minotaur created for fun by Hardin's disciple. Disciple Lavidos has kidnapped the creature and infused it with the power of darkness, resulting in a bigger and stronger Minotaur. Amused by his success after Laum's creation, Lavidos has even created a circle of minions for Hogliff. Now Hogliff is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16240" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16240" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- Artarot the monster is an enhancement from a minotaur created for fun by Hardin's disciple. Disciple Lavidos has kidnapped the creature and infused it with the power of darkness, resulting in a bigger and stronger Minotaur with greater intellect. Amused by his success after Laum's creation, Lavidos has even created a circle of minions for Artarot. Now Artarot is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16241" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16241" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- Excited by his success in enhancing Mahum and Minotaur, Disciple Lavidos began creating his own monsters, and successfully created the Centaur by merging an orc with a Dark Pegasus with the power of darkness. Centaur brings around minions ranging up to tens of thousands, and is on an indiscriminate killing rampage in Gludio to activate the magic circle made of monsters. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16242" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16242" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen, from which rose Gagia the Bloody Earth Dragon. Borne of the essence of Shilen's blood, Gagia has the greatest resemblance to a true Earth Dragon among all of Shilen's offspring, and has an insatiable thirst for blood that spurs an instinctive attack on all living things in sight. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16243" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16243" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen, from which rose Fardune the demon. Borne of the essence of Shilen's blood, Fardune has a close resemblance to Shilen's children, and has an insatiable thirst for blood. His first action upon waking was to gather up monsters in the Bloody Swampland and Altar of Evil areas and rule over the strong ones while slaughtering the rest to drink their blood. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16244" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16244" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen, from which rose Harsia the demon. Borne of the essence of Shilen's blood, Harsia has a close resemblance to Shilen's children, and has an insatiable thirst for blood. Her first action upon waking was to gather up monsters in the Bloody Swampland and Altar of Evil areas and rule over the strong ones while slaughtering the rest to drink their blood. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16245" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16245" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen, from which rose Bedukel the demon. Borne of the essence of Shilen's blood, Bedukel has a close resemblance to Shilen's children, and has an insatiable thirst for blood. His first action upon waking was to gather up monsters in the Bloody Swampland and Altar of Evil areas and rule over the strong ones while slaughtering the rest to drink their blood. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16246" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16246" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen, from which rose Bloody Witch Rumilla. Borne of the essence of Shilen's blood, Rudmilla has a close resemblance to Shilen's children, and has an insatiable thirst for blood. Her first action upon waking was to gather up monsters in the Bloody Swampland and Altar of Evil areas and rule over the strong ones while slaughtering the rest to drink their blood. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16247" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16247" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- The release of Punishment, the 6th Seal, renewed activity at the Altar of Shilen. Having come into the material world through the blood flowing in the Altar of Blood, Shilen's Priest Sasia carries out the goddess' orders to watch the newly-created demons and guard a point in the great magic circle of living monsters. Sasia commands a circle of small dragons, given as gifts from Shilen's dragons. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16248" toLevel="1" name="88Lv. Raid Boss">
+	<skill id="16248" toLevel="1" name="Raid Boss (Lv. 88)">
 		<!-- One of the 3 Hell Weapons created by the 5 Hell Lords of Avarice, Earth Terakan is a voracious eater of souls, regardless of alliance. Though originally of no color or attribute, it absorbed a part of Antharas' soul and was reborn with the power of the earth. Earth Terakan can be summoned through Apparition Stones made of fake souls. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16249" toLevel="1" name="92Lv. Raid Boss">
+	<skill id="16249" toLevel="1" name="Raid Boss (Lv. 92)">
 		<!-- Due to their tradition of carrying dead enemy parts as marks of victory, the great tribe of Amden Orcs have been cursed by Shilen's Disciples, whose influence was amplified by the victory relics' link with death. Controlled by Disciple Nemis, Turahot has come to the Turek Orc Campsite to be a part of the magic circle created by monsters. Though cursed, Turahot retains the tribe's aggression and stamina. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16250" toLevel="1" name="92Lv. Raid Boss">
+	<skill id="16250" toLevel="1" name="Raid Boss (Lv. 92)">
 		<!-- Due to their tradition of carrying dead enemy parts as marks of victory, the great tribe of Amden Orcs have been cursed by Shilen's Disciples, whose influence was amplified by the victory relics' link with death. Controlled by Disciple Nemis, Turation has come to the Turek Orc Campsite to be a part of the magic circle created by monsters. Though cursed, Turation retains the tribe's aggression and stamina. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16251" toLevel="1" name="92Lv. Raid Boss">
+	<skill id="16251" toLevel="1" name="Raid Boss (Lv. 92)">
 		<!-- Due to their tradition of carrying dead enemy parts as marks of victory, the great tribe of Amden Orcs have been cursed by Shilen's Disciples, whose influence was amplified by the victory relics' link with death. Controlled by Disciple Nemis, Turation has come to the Turek Orc Campsite to be a part of the magic circle created by monsters. Though cursed, Turamathia retains the tribe's aggression and stamina. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16252" toLevel="1" name="92Lv. Raid Boss">
+	<skill id="16252" toLevel="1" name="Raid Boss (Lv. 92)">
 		<!-- Due to their tradition of carrying dead enemy parts as marks of victory, the great tribe of Amden Orcs have been cursed by Shilen's Disciples, whose influence was amplified by the victory relics' link with death. Controlled by Disciple Nemis, Turation has come to the Turek Orc Campsite to be a part of the magic circle created by monsters. Though cursed, Turabait retains the tribe's aggression and stamina. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16253" toLevel="1" name="92Lv. Raid Boss">
+	<skill id="16253" toLevel="1" name="Raid Boss (Lv. 92)">
 		<!-- Disciple Nemis revealed the construction of a magic circle to Demon Triol, asking for more monsters to fill the circle. Triol smiled in amusement to see some of the proud Amden Orcs under control of darkness, and took Pa'agrio's form to control a number of Nermion, specialized wizard warrior class within the ranks of Nerva Orc, to be used for Nemis' cause. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16254" toLevel="1" name="92Lv. Raid Boss">
+	<skill id="16254" toLevel="1" name="Raid Boss (Lv. 92)">
 		<!-- Disciple Nemis revealed the construction of a magic circle to Demon Triol, asking for more monsters to fill the circle. Triol smiled in amusement to see some of the proud Amden Orcs under control of darkness, and took Pa'agrio's form to control a number of Nergatt, specialized physical warrior class within the ranks of Nerva Orc, to be used for Nemis' cause. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
@@ -651,42 +651,42 @@
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16292" toLevel="1" name="98Lv. Raid Boss">
+	<skill id="16292" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Having fallen prey to Disciple Lamia's whispers, Tiera the angel became a fallen angel, and proceeded to descend upon the Valley of Saints with other fallen angels. It is said that upon this descent, bodies of angels that had been guarding the heavens above rained down from the sky. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16293" toLevel="1" name="98Lv. Raid Boss">
+	<skill id="16293" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Having fallen prey to Disciple Lamia's whispers, Goblier the angel awoke to darkness. As a full-fledged demon, Goblier opened Hell's Gate to summon demons unto the world to claim them as minions, and proceeded to descend upon the Valley of Saints with other fallen angels. It is said that upon this descent, bodies of angels that had been guarding the heavens above rained down from the sky. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16294" toLevel="1" name="98Lv. Raid Boss">
+	<skill id="16294" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Having fallen prey to Disciple Lamia's whispers, Cherkia the angel awoke to darkness. As a full-fledged demon, Cherkia opened Hell's Gate to summon demons unto the world to claim them as minions, and proceeded to descend upon the Valley of Saints with other fallen angels. It is said that upon this descent, bodies of angels that had been guarding the heavens above rained down from the sky. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16295" toLevel="1" name="98Lv. Raid Boss">
+	<skill id="16295" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Having fallen prey to Disciple Lamia's whispers, Harthemon the angel awoke to darkness. As a full-fledged demon, Harthemon opened Hell's Gate to summon demons unto the world to claim them as minions, and proceeded to descend upon the Valley of Saints with other fallen angels. It is said that upon this descent, bodies of angels that had been guarding the heavens above rained down from the sky. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16296" toLevel="1" name="98Lv. Raid Boss">
+	<skill id="16296" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Having fallen prey to Disciple Lamia's whispers, Sarboth the angel awoke to darkness. As a full-fledged demon, Sarboth opened Hell's Gate to summon demons unto the world to claim them as minions, and proceeded to descend upon the Valley of Saints with other fallen angels. During the descent, Sarboth lost both legs in a battle with angels guarding the gateway between the heavenly sphere and the material world, and has since then been merged with a chair made from Hell. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16297" toLevel="1" name="98Lv. Raid Boss">
+	<skill id="16297" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Having fallen prey to Disciple Lamia's whispers, Eloule the archangel spread darkness among the Pentominos, the wings of angels, to retain their loyalty, and proceeded to descend upon the Valley of Saints with other fallen angels. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16298" toLevel="1" name="98Lv. Raid Boss">
+	<skill id="16298" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Spicula into puppets called Vengeful Eligos, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16299" toLevel="1" name="98Lv. Raid Boss">
+	<skill id="16299" toLevel="1" name="Raid Boss (Lv. 98)">
 		<!-- Nemis manipulated the vengeance embedded in the weapons of the Giants, turning the Spicula into puppets called Vengeful Agarez, who since then have taken a place in the magic circle within Kamael Village and the Isle of Souls. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>

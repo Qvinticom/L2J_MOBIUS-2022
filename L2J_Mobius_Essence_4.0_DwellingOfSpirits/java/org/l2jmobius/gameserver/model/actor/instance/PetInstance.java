@@ -588,7 +588,7 @@ public class PetInstance extends Summon
 			}
 			else if (target.getEnchantLevel() > 0)
 			{
-				smsg = new SystemMessage(SystemMessageId.YOUR_PET_PICKED_UP_S1_S2);
+				smsg = new SystemMessage(SystemMessageId.YOUR_PET_HAS_PICKED_UP_S1_S2);
 				smsg.addInt(target.getEnchantLevel());
 				smsg.addItemName(target);
 				sendPacket(smsg);
@@ -652,7 +652,7 @@ public class PetInstance extends Summon
 			return false;
 		}
 		stopFeed();
-		sendPacket(SystemMessageId.THE_PET_HAS_BEEN_KILLED_IF_YOU_DON_T_RESURRECT_IT_WITHIN_24_HOURS_THE_PET_S_BODY_WILL_DISAPPEAR_ALONG_WITH_ALL_THE_PET_S_ITEMS);
+		sendPacket(SystemMessageId.THE_PET_HAS_BEEN_KILLED_IF_YOU_DON_T_RESURRECT_IT_WITHIN_24_H_THE_PET_S_BODY_WILL_DISAPPEAR_ALONG_WITH_ALL_THE_PET_S_ITEMS);
 		DecayTaskManager.getInstance().add(this);
 		// do not decrease exp if is in duel, arena
 		return true;

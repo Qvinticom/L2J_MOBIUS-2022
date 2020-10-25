@@ -211,8 +211,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			
 			packet.writeQ(charInfoPackage.getSp());
 			packet.writeQ(charInfoPackage.getExp());
-			packet.writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High
-																																																																									// Five
+			packet.writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())));
 			packet.writeD(charInfoPackage.getLevel());
 			
 			packet.writeD(charInfoPackage.getReputation());
@@ -278,6 +277,9 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeC(charInfoPackage.isNoble() ? 0x01 : 0x00);
 			packet.writeC(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x02 : 0x00); // Hero glow
 			packet.writeC(charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00); // Show hair accessory if enabled
+			
+			packet.writeD(0x00); // 235 - ban time left
+			packet.writeD((int) (charInfoPackage.getLastAccess() / 1000)); // 235 - last play time
 		}
 		return true;
 	}

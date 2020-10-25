@@ -59,6 +59,7 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -106,6 +107,7 @@ import org.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendance
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
+import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -389,8 +391,8 @@ public class EnterWorld implements IClientIncomingPacket
 		// Send Adena / Inventory Count Info
 		player.sendPacket(new ExAdenaInvenCount(player));
 		
-		// Send Equipped Items
-		player.sendPacket(new ExUserInfoEquipSlot(player));
+		// Send LCoin count.
+		player.sendPacket(new ExBloodyCoinCount(player));
 		
 		// Send Unread Mail Count
 		if (MailManager.getInstance().hasUnreadPost(player))
@@ -454,6 +456,9 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Expand Skill
 		player.sendPacket(new ExStorageMaxCount(player));
+		
+		// Send Equipped Items
+		player.sendPacket(new ExUserInfoEquipSlot(player));
 		
 		// Friend list
 		client.sendPacket(new L2FriendList(player));
@@ -532,7 +537,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (player.getClanJoinExpiryTime() > System.currentTimeMillis())
 		{
-			player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
+			player.sendPacket(SystemMessageId.YOU_ARE_DISMISSED_FROM_A_CLAN_YOU_CANNOT_JOIN_ANOTHER_FOR_24_H);
 		}
 		
 		// remove combat flag before teleporting
@@ -611,6 +616,13 @@ public class EnterWorld implements IClientIncomingPacket
 			player.sendMessage("Experience gain is disabled.");
 		}
 		
+		player.getStat().mergeAdd(Stat.STAT_STR, player.getVariables().getInt(PlayerVariables.STAT_STR, 0));
+		player.getStat().mergeAdd(Stat.STAT_DEX, player.getVariables().getInt(PlayerVariables.STAT_DEX, 0));
+		player.getStat().mergeAdd(Stat.STAT_CON, player.getVariables().getInt(PlayerVariables.STAT_CON, 0));
+		player.getStat().mergeAdd(Stat.STAT_INT, player.getVariables().getInt(PlayerVariables.STAT_INT, 0));
+		player.getStat().mergeAdd(Stat.STAT_WIT, player.getVariables().getInt(PlayerVariables.STAT_WIT, 0));
+		player.getStat().mergeAdd(Stat.STAT_MEN, player.getVariables().getInt(PlayerVariables.STAT_MEN, 0));
+		
 		player.broadcastUserInfo();
 		
 		if (BeautyShopData.getInstance().hasBeautyData(player.getRace(), player.getAppearance().getSexType()))
@@ -641,10 +653,10 @@ public class EnterWorld implements IClientIncomingPacket
 		if (player.isInTimedHuntingZone())
 		{
 			final long currentTime = System.currentTimeMillis();
-			final long pirateTombExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 2, 0);
-			if ((pirateTombExitTime > currentTime) && player.isInTimedHuntingZone(2))
+			final long primevalIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
+			if ((primevalIsleExitTime > currentTime) && player.isInTimedHuntingZone(1))
 			{
-				player.startTimedHuntingZone(1, pirateTombExitTime - currentTime);
+				player.startTimedHuntingZone(1, primevalIsleExitTime - currentTime);
 			}
 			else
 			{
@@ -768,7 +780,7 @@ public class EnterWorld implements IClientIncomingPacket
 			final PlayerInstance sponsor = World.getInstance().getPlayer(player.getSponsor());
 			if (sponsor != null)
 			{
-				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_APPRENTICE_S1_HAS_LOGGED_IN);
+				final SystemMessage msg = new SystemMessage(SystemMessageId.YOUR_APPRENTICE_C1_HAS_LOGGED_IN);
 				msg.addString(player.getName());
 				sponsor.sendPacket(msg);
 			}

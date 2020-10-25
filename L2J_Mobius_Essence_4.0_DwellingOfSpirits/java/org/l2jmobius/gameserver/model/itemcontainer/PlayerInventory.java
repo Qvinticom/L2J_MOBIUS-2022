@@ -47,6 +47,7 @@ import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 
 public class PlayerInventory extends Inventory
 {
@@ -474,6 +475,12 @@ public class PlayerInventory extends Inventory
 				else
 				{
 					actor.sendItemList();
+				}
+				
+				// LCoin UI update.
+				if (item.getId() == ExBloodyCoinCount.LCOIN_ID)
+				{
+					actor.sendPacket(new ExBloodyCoinCount(actor));
 				}
 			}
 			

@@ -134,7 +134,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4602" toLevel="12" name="P. Atk. Decrease">
+	<skill id="4602" toLevel="12" name="Decrease P. Atk.">
 		<!-- Immediately P. Atk. -17%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLevel>
@@ -233,7 +233,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4603" toLevel="12" name="P. Atk. Decrease">
+	<skill id="4603" toLevel="12" name="Decrease P. Atk.">
 		<!-- Immediately P. Atk. -17%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLevel>
@@ -316,7 +316,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4604" toLevel="12" name="P. Atk. Decrease">
+	<skill id="4604" toLevel="12" name="Decrease P. Atk.">
 		<!-- Immediately P. Atk. -17%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLevel>
@@ -1473,7 +1473,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4625" toLevel="12" name="Decrease Speed">
+	<skill id="4625" toLevel="12" name="Slow">
 		<!-- Speed decreased temporarily. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>
@@ -1612,7 +1612,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4627" toLevel="12" name="Physical Barrier">
+	<skill id="4627" toLevel="12" name="Magical Barrier">
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1875,7 +1875,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4632" toLevel="3" name="Acumen Empower Wild Magic">
+	<skill id="4632" toLevel="3" name="Acumen+Empower+Wild Magic">
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1930,7 +1930,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4633" toLevel="3" name="Acumen Berserker Empower">
+	<skill id="4633" toLevel="3" name="Acumen+Berserker+Empower">
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2017,7 +2017,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4634" toLevel="3" name="Acumen Empower Damage Shield">
+	<skill id="4634" toLevel="3" name="Acumen+Empower+Damage Shield">
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2314,7 +2314,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4638" toLevel="3" name="Acumen Empower Wild Magic">
+	<skill id="4638" toLevel="3" name="Acumen+Empower+Wild Magic">
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2371,7 +2371,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4639" toLevel="3" name="Acumen Empower Berserker">
+	<skill id="4639" toLevel="3" name="Acumen+Empower+Berserker">
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4928,7 +4928,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="4690" toLevel="1" name="Valakas Meteor Storm">
+	<skill id="4690" toLevel="1" name="Valakas' Meteor Storm">
 		<affectRange>300</affectRange>
 		<coolTime>2000</coolTime>
 		<effectPoint>-100</effectPoint>

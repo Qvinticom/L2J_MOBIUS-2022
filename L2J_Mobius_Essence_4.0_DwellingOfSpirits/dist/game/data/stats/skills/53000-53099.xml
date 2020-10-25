@@ -178,17 +178,48 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="53007" toLevel="3" name="Heavy Armor Mastery">
+	<skill id="53007" toLevel="3" name="Power Stance">
 		<!-- Temporarily P. Atk. +$s1 and Atk. Spd. +$s2. -->
 		<icon>icon.skill0232</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="53009" toLevel="1" name="Sharpness">
+	<skill id="53008" toLevel="1" name="Children of Eva">
+		<magicLevel>1</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="53009" toLevel="3" name="Sharpness">
 		<!-- Rate of attacks targeting the enemy's vital parts +10%. -->
 		<icon>icon.skill0409</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="FatalBlowRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="53010" toLevel="5" name="Knight's Protection">
 		<!-- For $s1, Shield Defense Rate +$s2, Shield Defense +$s3.\n\n<Auto-use> -->
@@ -203,5 +234,10 @@
 			<value level="4">70</value>
 			<value level="5">75</value>
 		</mpConsume>
+	</skill>
+	<skill id="53011" toLevel="2" name="Knight's Fortress">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

@@ -46,8 +46,8 @@ public class Q10964_SecretGarden extends Quest
 	private static final int TURAK_BUGBEAR_WARRIOR = 20249;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
-	private static final int MAX_LEVEL = 34;
 	private static final int MIN_LEVEL = 30;
+	private static final int MAX_LEVEL = 35;
 	
 	public Q10964_SecretGarden()
 	{
@@ -55,7 +55,7 @@ public class Q10964_SecretGarden extends Quest
 		addStartNpc(CAPTAIN_BATHIS);
 		addTalkId(CAPTAIN_BATHIS, RAYMOND);
 		addKillId(HARPY, MEDUSA, WYRM, TURAK_BUGBEAR, TURAK_BUGBEAR_WARRIOR);
-		setQuestNameNpcStringId(NpcStringId.LV_30_34_SECRET_GARDEN);
+		setQuestNameNpcStringId(NpcStringId.LV_30_35_SECRET_GARDEN);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 	}
@@ -141,7 +141,7 @@ public class Q10964_SecretGarden extends Quest
 		if ((qs != null) && qs.isCond(2))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_GORGON_FLOWER_GARDEN.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.KILL_MONSTERS_IN_THE_GORGON_FLOWER_GARDEN.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.interfaces.IUpdateTypeComponent;
 public enum UserInfoType implements IUpdateTypeComponent
 {
 	RELATION(0x00, 4),
-	BASIC_INFO(0x01, 16),
+	BASIC_INFO(0x01, 23),
 	BASE_STATS(0x02, 18),
 	MAX_HPCPMP(0x03, 14),
 	CURRENT_HPMPCP_EXP_SP(0x04, 38),
@@ -32,7 +32,7 @@ public enum UserInfoType implements IUpdateTypeComponent
 	APPAREANCE(0x06, 15),
 	STATUS(0x07, 6),
 	
-	STATS(0x08, 56),
+	STATS(0x08, 64),
 	ELEMENTALS(0x09, 14),
 	POSITION(0x0A, 18),
 	SPEED(0x0B, 18),
@@ -51,7 +51,12 @@ public enum UserInfoType implements IUpdateTypeComponent
 	
 	ATT_SPIRITS(0x17, 26),
 	
-	RANKING(0x18, 6);
+	RANKING(0x18, 6),
+	
+	STAT_POINTS(0x19, 16),
+	STAT_ABILITIES(0x1A, 18),
+	
+	ELIXIR_USED(0x1B, 1);
 	
 	/** Int mask. */
 	private final int _mask;

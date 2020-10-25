@@ -2365,9 +2365,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- Damascus Sword -->
-		<acquire exp="422" sp="0" />
+		<acquire exp="423" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1145868.11078" hpRegen="7.5" mp="2008.95" mpRegen="2.7" />
+			<vitals hp="4331599.62756052" hpRegen="7.5" mp="1847.03010577705" mpRegen="2.7" />
 			<attack physical="2331.27036" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="198.95754" />
 			<speed>
@@ -2394,9 +2394,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49758" min="250" max="350" chance="94.66" /> <!-- Blood Crystal -->
-				<item id="49786" min="1" max="3" chance="3.034" /> <!-- A-grade Armor Supply Box -->
-				<item id="49785" min="1" max="3" chance="2.017" /> <!-- Weapon Supply Box (A-grade) -->
+				<item id="49758" min="250" max="350" chance="94.11" /> <!-- Blood Crystal -->
+				<item id="49786" min="1" max="3" chance="3.037" /> <!-- A-grade Armor Pack -->
+				<item id="49785" min="1" max="3" chance="2.028" /> <!-- A-grade Weapon Pack -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2407,9 +2407,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- Keshanberk -->
-		<acquire exp="384" sp="0" />
+		<acquire exp="385" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="381955.87272" hpRegen="7.5" mp="2008.95" mpRegen="2.7" />
+			<vitals hp="1443865.92178771" hpRegen="7.5" mp="1847.03010577705" mpRegen="2.7" />
 			<attack physical="2084.49564" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
 			<speed>
@@ -2436,8 +2436,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49758" min="60" max="90" chance="92.745" /> <!-- Blood Crystal -->
-				<item id="49786" min="1" max="1" chance="2.98" /> <!-- A-grade Armor Supply Box -->
+				<item id="49758" min="60" max="90" chance="91.585" /> <!-- Blood Crystal -->
+				<item id="49786" min="1" max="1" chance="3.061" /> <!-- A-grade Armor Pack -->
 			</drop>
 		</dropLists>
 	</npc>

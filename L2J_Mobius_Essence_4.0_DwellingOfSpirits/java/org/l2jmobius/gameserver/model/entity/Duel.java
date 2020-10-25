@@ -771,7 +771,7 @@ public class Duel
 		SystemMessage sm = null;
 		if (_countdown > 0)
 		{
-			sm = new SystemMessage(SystemMessageId.THE_DUEL_WILL_BEGIN_IN_S1_SECOND_S);
+			sm = new SystemMessage(SystemMessageId.THE_DUEL_STARTS_IN_S1_SEC);
 			sm.addInt(_countdown);
 		}
 		else

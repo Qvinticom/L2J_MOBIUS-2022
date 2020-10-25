@@ -53,7 +53,7 @@ public class AdminLevel implements IAdminCommandHandler
 			{
 				if ((targetChar != null) && targetChar.isPlayable())
 				{
-					((Playable) targetChar).getStat().addLevel(Byte.parseByte(val));
+					((Playable) targetChar).getStat().addLevel(Integer.parseInt(val));
 				}
 			}
 			catch (NumberFormatException e)
@@ -78,7 +78,7 @@ public class AdminLevel implements IAdminCommandHandler
 			
 			try
 			{
-				final byte level = Byte.parseByte(val);
+				final int level = Integer.parseInt(val);
 				if ((level >= 1) && (level <= maxLevel))
 				{
 					final long pXp = targetPlayer.getExp();

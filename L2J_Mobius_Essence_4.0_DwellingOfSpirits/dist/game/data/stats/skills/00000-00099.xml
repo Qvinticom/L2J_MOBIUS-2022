@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1" toLevel="45" name="Triple Slash">
-		<!-- Quickly strikes the target three times with $s1 Power. For $s2, enemy's P. Def. -$s3. Requires dual swords. Ignores shield block. Over-hit. -->
+	<skill id="1" toLevel="50" name="Rising Attack">
+		<!-- Quickly strikes the target from the bottom up with $s1 power. For $s2, enemy's P. Def. -$s3. Requires dual swords.\nIgnores Shield Defense.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0001</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -12,51 +12,56 @@
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
-			<value level="1">-107</value>
-			<value level="2">-110</value>
-			<value level="3">-113</value>
-			<value level="4">-116</value>
-			<value level="5">-119</value>
-			<value level="6">-121</value>
-			<value level="7">-124</value>
-			<value level="8">-127</value>
-			<value level="9">-130</value>
-			<value level="10">-133</value>
-			<value level="11">-136</value>
-			<value level="12">-139</value>
-			<value level="13">-142</value>
-			<value level="14">-144</value>
-			<value level="15">-147</value>
-			<value level="16">-150</value>
-			<value level="17">-153</value>
-			<value level="18">-155</value>
-			<value level="19">-158</value>
-			<value level="20">-161</value>
-			<value level="21">-163</value>
-			<value level="22">-166</value>
-			<value level="23">-168</value>
-			<value level="24">-170</value>
-			<value level="25">-173</value>
-			<value level="26">-175</value>
-			<value level="27">-177</value>
-			<value level="28">-179</value>
-			<value level="29">-181</value>
-			<value level="30">-183</value>
-			<value level="31">-185</value>
-			<value level="32">-187</value>
-			<value level="33">-189</value>
-			<value level="34">-190</value>
-			<value level="35">-192</value>
-			<value level="36">-193</value>
-			<value level="37">-194</value>
-			<value level="38">-196</value>
-			<value level="39">-197</value>
-			<value level="40">-199</value>
-			<value level="41">-202</value>
-			<value level="42">-203</value>
-			<value level="43">-205</value>
-			<value level="44">-206</value>
-			<value level="45">-208</value>
+			<value level="1">-210</value>
+			<value level="2">-215</value>
+			<value level="3">-220</value>
+			<value level="4">-225</value>
+			<value level="5">-230</value>
+			<value level="6">-235</value>
+			<value level="7">-240</value>
+			<value level="8">-245</value>
+			<value level="9">-250</value>
+			<value level="10">-255</value>
+			<value level="11">-260</value>
+			<value level="12">-265</value>
+			<value level="13">-270</value>
+			<value level="14">-275</value>
+			<value level="15">-280</value>
+			<value level="16">-285</value>
+			<value level="17">-290</value>
+			<value level="18">-295</value>
+			<value level="19">-300</value>
+			<value level="20">-305</value>
+			<value level="21">-310</value>
+			<value level="22">-315</value>
+			<value level="23">-320</value>
+			<value level="24">-325</value>
+			<value level="25">-330</value>
+			<value level="26">-335</value>
+			<value level="27">-340</value>
+			<value level="28">-345</value>
+			<value level="29">-350</value>
+			<value level="30">-355</value>
+			<value level="31">-360</value>
+			<value level="32">-365</value>
+			<value level="33">-370</value>
+			<value level="34">-375</value>
+			<value level="35">-380</value>
+			<value level="36">-385</value>
+			<value level="37">-390</value>
+			<value level="38">-400</value>
+			<value level="39">-405</value>
+			<value level="40">-410</value>
+			<value level="41">-420</value>
+			<value level="42">-425</value>
+			<value level="43">-430</value>
+			<value level="44">-435</value>
+			<value level="45">-440</value>
+			<value level="46">-385</value>
+			<value level="47">-390</value>
+			<value level="48">-400</value>
+			<value level="49">-405</value>
+			<value level="50">-410</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1733</hitTime>
@@ -107,6 +112,11 @@
 			<value level="43">82</value>
 			<value level="44">83</value>
 			<value level="45">84</value>
+			<value level="46">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="47">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="48">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="49">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="50">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">42</value>
@@ -171,51 +181,56 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">517</value>
-					<value level="2">549</value>
-					<value level="3">583</value>
-					<value level="4">619</value>
-					<value level="5">656</value>
-					<value level="6">694</value>
-					<value level="7">735</value>
-					<value level="8">777</value>
-					<value level="9">820</value>
-					<value level="10">865</value>
-					<value level="11">912</value>
-					<value level="12">960</value>
-					<value level="13">1010</value>
-					<value level="14">1062</value>
-					<value level="15">1115</value>
-					<value level="16">1169</value>
-					<value level="17">1225</value>
-					<value level="18">1283</value>
-					<value level="19">1342</value>
-					<value level="20">1402</value>
-					<value level="21">1464</value>
-					<value level="22">1527</value>
-					<value level="23">1591</value>
-					<value level="24">1656</value>
-					<value level="25">1722</value>
-					<value level="26">1789</value>
-					<value level="27">1857</value>
-					<value level="28">1926</value>
-					<value level="29">1995</value>
-					<value level="30">2065</value>
-					<value level="31">2135</value>
-					<value level="32">2206</value>
-					<value level="33">2277</value>
-					<value level="34">2347</value>
-					<value level="35">2417</value>
-					<value level="36">2488</value>
-					<value level="37">2557</value>
-					<value level="38">2581</value>
-					<value level="39">2604</value>
-					<value level="40">2627</value>
-					<value level="41">2673</value>
-					<value level="42">2696</value>
-					<value level="43">2719</value>
-					<value level="44">2742</value>
-					<value level="45">2765</value>
+					<value level="1">694</value>
+					<value level="2">765</value>
+					<value level="3">837</value>
+					<value level="4">909</value>
+					<value level="5">981</value>
+					<value level="6">1054</value>
+					<value level="7">1127</value>
+					<value level="8">1200</value>
+					<value level="9">1273</value>
+					<value level="10">1347</value>
+					<value level="11">1421</value>
+					<value level="12">1495</value>
+					<value level="13">1570</value>
+					<value level="14">1645</value>
+					<value level="15">1720</value>
+					<value level="16">1795</value>
+					<value level="17">1871</value>
+					<value level="18">1947</value>
+					<value level="19">2023</value>
+					<value level="20">2099</value>
+					<value level="21">2176</value>
+					<value level="22">2253</value>
+					<value level="23">2330</value>
+					<value level="24">2407</value>
+					<value level="25">2484</value>
+					<value level="26">2562</value>
+					<value level="27">2640</value>
+					<value level="28">2718</value>
+					<value level="29">2796</value>
+					<value level="30">2875</value>
+					<value level="31">2954</value>
+					<value level="32">3033</value>
+					<value level="33">3112</value>
+					<value level="34">3191</value>
+					<value level="35">3271</value>
+					<value level="36">3350</value>
+					<value level="37">3430</value>
+					<value level="38">3511</value>
+					<value level="39">3591</value>
+					<value level="40">3671</value>
+					<value level="41">4461</value>
+					<value level="42">4524</value>
+					<value level="43">4588</value>
+					<value level="44">4652</value>
+					<value level="45">4715</value>
+					<value level="46">4843</value>
+					<value level="47">4971</value>
+					<value level="48">5099</value>
+					<value level="49">5227</value>
+					<value level="50">5356</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
@@ -226,7 +241,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2" toLevel="19" name="Confusion">
+	<skill id="2" toLevel="35" name="Confusion">
 		<!-- Throws the enemy into confusion, changing their target of attack. -->
 		<icon>icon.skill0002</icon>
 		<castRange>600</castRange>
@@ -253,6 +268,22 @@
 			<value level="17">70</value>
 			<value level="18">72</value>
 			<value level="19">74</value>
+			<value level="20">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="21">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="26">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="27">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="31">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="32">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="33">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="34">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">9</value>
@@ -274,6 +305,22 @@
 			<value level="17">26</value>
 			<value level="18">27</value>
 			<value level="19">28</value>
+			<value level="20">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="21">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="26">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="27">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="31">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="32">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="33">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="34">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">3</value>
@@ -295,6 +342,22 @@
 			<value level="17">7</value>
 			<value level="18">7</value>
 			<value level="19">7</value>
+			<value level="20">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="21">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="26">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="27">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="31">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="32">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="33">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="34">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -308,21 +371,36 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3" toLevel="9" name="Power Strike">
-		<!-- Delivers a powerful blow that strikes the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. -->
+	<skill id="3" toLevel="24" name="Power Strike">
+		<!-- Delivers a powerful blow that strikes the target with $s1 power.\n\nRequires a sword/ blunt weapon/ spear/ dual swords.\nOver-hit. -->
 		<icon>icon.skill0003</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
-			<value level="1">-26</value>
-			<value level="2">-27</value>
-			<value level="3">-29</value>
-			<value level="4">-32</value>
-			<value level="5">-34</value>
-			<value level="6">-35</value>
-			<value level="7">-40</value>
-			<value level="8">-42</value>
-			<value level="9">-43</value>
+			<value level="1">-35</value>
+			<value level="2">-40</value>
+			<value level="3">-45</value>
+			<value level="4">-60</value>
+			<value level="5">-65</value>
+			<value level="6">-70</value>
+			<value level="7">-85</value>
+			<value level="8">-90</value>
+			<value level="9">-95</value>
+			<value level="10">-110</value>
+			<value level="11">-115</value>
+			<value level="12">-120</value>
+			<value level="13">-130</value>
+			<value level="14">-135</value>
+			<value level="15">-140</value>
+			<value level="16">-150</value>
+			<value level="17">-155</value>
+			<value level="18">-160</value>
+			<value level="19">-170</value>
+			<value level="20">-175</value>
+			<value level="21">-180</value>
+			<value level="22">-190</value>
+			<value level="23">-195</value>
+			<value level="24">-200</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
@@ -336,6 +414,21 @@
 			<value level="7">13</value>
 			<value level="8">14</value>
 			<value level="9">15</value>
+			<value level="10">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="16">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="17">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="18">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="19">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="20">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="21">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">9</value>
@@ -374,12 +467,27 @@
 					<value level="7">71</value>
 					<value level="8">78</value>
 					<value level="9">84</value>
+					<value level="10">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="12">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="16">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="17">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="18">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="19">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="20">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="21">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="22">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="23">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="24">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4" toLevel="2" name="Dash">
+	<skill id="4" toLevel="2" name="Fast Run">
 		<!-- For $s1, Speed +$s2. -->
 		<icon>icon.skill0004</icon>
 		<abnormalLevel>
@@ -417,46 +525,62 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5" toLevel="34" name="Double Sonic Slash">
-		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires dual sword. Increases Power upon consumption of Momentum, and consumes up to $s2. Critical. Over-hit. -->
+	<skill id="5" toLevel="50" name="Double Sonic Slash">
+		<!-- Attacks the enemy with $s1 power.\nRequires dual swords.\nIncreases power upon consuming up to 3 Momentum.\nIgnores the enemy's defense.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0005</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
-			<value level="1">-186</value>
-			<value level="2">-191</value>
-			<value level="3">-195</value>
-			<value level="4">-199</value>
-			<value level="5">-204</value>
-			<value level="6">-208</value>
-			<value level="7">-212</value>
-			<value level="8">-216</value>
-			<value level="9">-220</value>
-			<value level="10">-225</value>
-			<value level="11">-229</value>
-			<value level="12">-233</value>
-			<value level="13">-237</value>
-			<value level="14">-241</value>
-			<value level="15">-244</value>
-			<value level="16">-248</value>
-			<value level="17">-252</value>
-			<value level="18">-255</value>
-			<value level="19">-259</value>
-			<value level="20">-262</value>
-			<value level="21">-266</value>
-			<value level="22">-269</value>
-			<value level="23">-272</value>
-			<value level="24">-275</value>
-			<value level="25">-278</value>
-			<value level="26">-280</value>
-			<value level="27">-283</value>
-			<value level="28">-285</value>
-			<value level="29">-287</value>
-			<value level="30">-289</value>
-			<value level="31">-291</value>
-			<value level="32">-293</value>
-			<value level="33">-294</value>
-			<value level="34">-296</value>
+			<value level="1">-225</value>
+			<value level="2">-230</value>
+			<value level="3">-235</value>
+			<value level="4">-240</value>
+			<value level="5">-245</value>
+			<value level="6">-250</value>
+			<value level="7">-255</value>
+			<value level="8">-260</value>
+			<value level="9">-265</value>
+			<value level="10">-270</value>
+			<value level="11">-275</value>
+			<value level="12">-280</value>
+			<value level="13">-285</value>
+			<value level="14">-290</value>
+			<value level="15">-295</value>
+			<value level="16">-300</value>
+			<value level="17">-305</value>
+			<value level="18">-310</value>
+			<value level="19">-315</value>
+			<value level="20">-320</value>
+			<value level="21">-325</value>
+			<value level="22">-330</value>
+			<value level="23">-335</value>
+			<value level="24">-340</value>
+			<value level="25">-345</value>
+			<value level="26">-350</value>
+			<value level="27">-355</value>
+			<value level="28">-360</value>
+			<value level="29">-365</value>
+			<value level="30">-370</value>
+			<value level="31">-375</value>
+			<value level="32">-380</value>
+			<value level="33">-385</value>
+			<value level="34">-390</value>
+			<value level="35">-395</value>
+			<value level="36">-400</value>
+			<value level="37">-405</value>
+			<value level="38">-410</value>
+			<value level="39">-415</value>
+			<value level="40">-420</value>
+			<value level="41">-425</value>
+			<value level="42">-430</value>
+			<value level="43">-435</value>
+			<value level="44">-440</value>
+			<value level="45">-445</value>
+			<value level="46">-450</value>
+			<value level="47">-455</value>
+			<value level="48">-460</value>
+			<value level="49">-465</value>
+			<value level="50">-470</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1733</hitTime>
@@ -495,6 +619,22 @@
 			<value level="32">76</value>
 			<value level="33">77</value>
 			<value level="34">78</value>
+			<value level="35">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="41">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="42">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="43">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="44">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="45">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="46">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="47">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="48">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="49">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="50">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">59</value>
@@ -582,6 +722,22 @@
 					<value level="32">3225</value>
 					<value level="33">3254</value>
 					<value level="34">3283</value>
+					<value level="35">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="36">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="37">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="38">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="39">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="40">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="41">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="42">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="43">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="44">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="45">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="46">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="47">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="48">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="49">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="50">3283</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<overHit>true</overHit>
 				<chargeConsume>3</chargeConsume>
@@ -602,51 +758,51 @@
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<effectPoint>
-			<value level="1">-92</value>
-			<value level="2">-94</value>
-			<value level="3">-97</value>
-			<value level="4">-99</value>
-			<value level="5">-102</value>
-			<value level="6">-104</value>
-			<value level="7">-107</value>
-			<value level="8">-109</value>
-			<value level="9">-112</value>
-			<value level="10">-114</value>
-			<value level="11">-117</value>
-			<value level="12">-119</value>
-			<value level="13">-121</value>
-			<value level="14">-124</value>
-			<value level="15">-126</value>
-			<value level="16">-129</value>
-			<value level="17">-131</value>
-			<value level="18">-133</value>
-			<value level="19">-136</value>
-			<value level="20">-138</value>
-			<value level="21">-140</value>
-			<value level="22">-142</value>
-			<value level="23">-144</value>
-			<value level="24">-146</value>
-			<value level="25">-148</value>
-			<value level="26">-150</value>
-			<value level="27">-152</value>
-			<value level="28">-154</value>
-			<value level="29">-156</value>
-			<value level="30">-157</value>
-			<value level="31">-159</value>
-			<value level="32">-160</value>
-			<value level="33">-162</value>
-			<value level="34">-163</value>
-			<value level="35">-164</value>
-			<value level="36">-166</value>
-			<value level="37">-167</value>
-			<value level="38">-168</value>
-			<value level="39">-170</value>
-			<value level="40">-171</value>
-			<value level="41">-174</value>
-			<value level="42">-176</value>
-			<value level="43">-177</value>
-			<value level="44">-179</value>
-			<value level="45">-180</value>
+			<value level="1">-210</value>
+			<value level="2">-215</value>
+			<value level="3">-220</value>
+			<value level="4">-225</value>
+			<value level="5">-230</value>
+			<value level="6">-235</value>
+			<value level="7">-240</value>
+			<value level="8">-245</value>
+			<value level="9">-250</value>
+			<value level="10">-255</value>
+			<value level="11">-260</value>
+			<value level="12">-265</value>
+			<value level="13">-270</value>
+			<value level="14">-275</value>
+			<value level="15">-280</value>
+			<value level="16">-285</value>
+			<value level="17">-290</value>
+			<value level="18">-295</value>
+			<value level="19">-300</value>
+			<value level="20">-305</value>
+			<value level="21">-310</value>
+			<value level="22">-315</value>
+			<value level="23">-320</value>
+			<value level="24">-325</value>
+			<value level="25">-330</value>
+			<value level="26">-335</value>
+			<value level="27">-340</value>
+			<value level="28">-345</value>
+			<value level="29">-350</value>
+			<value level="30">-355</value>
+			<value level="31">-360</value>
+			<value level="32">-365</value>
+			<value level="33">-370</value>
+			<value level="34">-375</value>
+			<value level="35">-380</value>
+			<value level="36">-385</value>
+			<value level="37">-390</value>
+			<value level="38">-400</value>
+			<value level="39">-405</value>
+			<value level="40">-410</value>
+			<value level="41">-420</value>
+			<value level="42">-425</value>
+			<value level="43">-430</value>
+			<value level="44">-435</value>
+			<value level="45">-440</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
@@ -826,37 +982,37 @@
 		<castRange>500</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
-			<value level="1">-57</value>
-			<value level="2">-59</value>
-			<value level="3">-60</value>
-			<value level="4">-61</value>
-			<value level="5">-62</value>
-			<value level="6">-63</value>
-			<value level="7">-65</value>
-			<value level="8">-66</value>
-			<value level="9">-67</value>
-			<value level="10">-68</value>
-			<value level="11">-69</value>
-			<value level="12">-70</value>
-			<value level="13">-71</value>
-			<value level="14">-72</value>
-			<value level="15">-73</value>
-			<value level="16">-74</value>
-			<value level="17">-75</value>
-			<value level="18">-76</value>
-			<value level="19">-77</value>
-			<value level="20">-78</value>
-			<value level="21">-79</value>
-			<value level="22">-80</value>
-			<value level="23">-80</value>
-			<value level="24">-81</value>
-			<value level="25">-82</value>
-			<value level="26">-82</value>
-			<value level="27">-83</value>
-			<value level="28">-84</value>
-			<value level="29">-356</value>
-			<value level="30">-358</value>
-			<value level="31">-359</value>
+			<value level="1">-725</value>
+			<value level="2">-740</value>
+			<value level="3">-755</value>
+			<value level="4">-770</value>
+			<value level="5">-785</value>
+			<value level="6">-800</value>
+			<value level="7">-815</value>
+			<value level="8">-830</value>
+			<value level="9">-845</value>
+			<value level="10">-860</value>
+			<value level="11">-875</value>
+			<value level="12">-890</value>
+			<value level="13">-905</value>
+			<value level="14">-920</value>
+			<value level="15">-935</value>
+			<value level="16">-950</value>
+			<value level="17">-965</value>
+			<value level="18">-980</value>
+			<value level="19">-995</value>
+			<value level="20">-1010</value>
+			<value level="21">-1025</value>
+			<value level="22">-1040</value>
+			<value level="23">-1055</value>
+			<value level="24">-1070</value>
+			<value level="25">-1085</value>
+			<value level="26">-1100</value>
+			<value level="27">-1115</value>
+			<value level="28">-1130</value>
+			<value level="29">-1160</value>
+			<value level="30">-1175</value>
+			<value level="31">-1190</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
@@ -1048,43 +1204,43 @@
 		<castRange>40</castRange>
 		<coolTime>280</coolTime>
 		<effectPoint>
-			<value level="1">-50</value>
-			<value level="2">-51</value>
-			<value level="3">-52</value>
-			<value level="4">-54</value>
-			<value level="5">-55</value>
-			<value level="6">-56</value>
-			<value level="7">-57</value>
-			<value level="8">-59</value>
-			<value level="9">-60</value>
-			<value level="10">-61</value>
-			<value level="11">-62</value>
-			<value level="12">-63</value>
-			<value level="13">-65</value>
-			<value level="14">-66</value>
-			<value level="15">-67</value>
-			<value level="16">-68</value>
-			<value level="17">-69</value>
-			<value level="18">-70</value>
-			<value level="19">-71</value>
-			<value level="20">-72</value>
-			<value level="21">-73</value>
-			<value level="22">-74</value>
-			<value level="23">-75</value>
-			<value level="24">-76</value>
-			<value level="25">-77</value>
-			<value level="26">-78</value>
-			<value level="27">-79</value>
-			<value level="28">-80</value>
-			<value level="29">-80</value>
-			<value level="30">-81</value>
-			<value level="31">-82</value>
-			<value level="32">-82</value>
-			<value level="33">-83</value>
-			<value level="34">-84</value>
-			<value level="35">-85</value>
-			<value level="36">-87</value>
-			<value level="37">-88</value>
+			<value level="1">-635</value>
+			<value level="2">-650</value>
+			<value level="3">-665</value>
+			<value level="4">-680</value>
+			<value level="5">-695</value>
+			<value level="6">-710</value>
+			<value level="7">-725</value>
+			<value level="8">-740</value>
+			<value level="9">-755</value>
+			<value level="10">-770</value>
+			<value level="11">-785</value>
+			<value level="12">-800</value>
+			<value level="13">-815</value>
+			<value level="14">-830</value>
+			<value level="15">-845</value>
+			<value level="16">-860</value>
+			<value level="17">-875</value>
+			<value level="18">-890</value>
+			<value level="19">-905</value>
+			<value level="20">-920</value>
+			<value level="21">-935</value>
+			<value level="22">-950</value>
+			<value level="23">-965</value>
+			<value level="24">-980</value>
+			<value level="25">-995</value>
+			<value level="26">-1010</value>
+			<value level="27">-1025</value>
+			<value level="28">-1040</value>
+			<value level="29">-1055</value>
+			<value level="30">-1070</value>
+			<value level="31">-1085</value>
+			<value level="32">-1100</value>
+			<value level="33">-1115</value>
+			<value level="34">-1130</value>
+			<value level="35">-1160</value>
+			<value level="36">-1175</value>
+			<value level="37">-1190</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;180</fanRange>
@@ -1497,7 +1653,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15" toLevel="54" name="Charm">
+	<skill id="15" toLevel="65" name="Slowdown">
 		<!-- Enemy's aggression toward the user -$s1. -->
 		<icon>icon.skill0015</icon>
 		<castRange>600</castRange>
@@ -1560,6 +1716,17 @@
 			<value level="52">74</value>
 			<value level="53">76</value>
 			<value level="54">78</value>
+			<value level="55">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="56">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="57">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="58">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="59">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="60">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="61">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="62">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="63">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="64">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="65">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">8</value>
@@ -1616,6 +1783,17 @@
 			<value level="52">28</value>
 			<value level="53">39</value>
 			<value level="54">42</value>
+			<value level="55">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="56">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="57">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="58">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="59">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="60">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="61">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="62">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="63">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="64">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="65">42</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">2</value>
@@ -1672,6 +1850,17 @@
 			<value level="52">7</value>
 			<value level="53">7</value>
 			<value level="54">7</value>
+			<value level="55">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="56">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="57">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="58">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="59">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="60">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="61">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="62">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="63">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="64">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="65">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -1736,6 +1925,17 @@
 					<value level="52">-458</value>
 					<value level="53">-461</value>
 					<value level="54">-464</value>
+					<value level="55">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="56">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="57">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="58">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="59">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="60">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="61">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="62">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="63">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="64">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="65">-464</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 		</effects>
@@ -1747,30 +1947,30 @@
 		<affectRange>40</affectRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
-			<value level="1">-26</value>
-			<value level="2">-27</value>
-			<value level="3">-29</value>
-			<value level="4">-32</value>
-			<value level="5">-34</value>
-			<value level="6">-35</value>
-			<value level="7">-40</value>
-			<value level="8">-42</value>
-			<value level="9">-43</value>
-			<value level="10">-48</value>
-			<value level="11">-50</value>
-			<value level="12">-52</value>
-			<value level="13">-56</value>
-			<value level="14">-58</value>
-			<value level="15">-60</value>
-			<value level="16">-64</value>
-			<value level="17">-66</value>
-			<value level="18">-68</value>
-			<value level="19">-73</value>
-			<value level="20">-75</value>
-			<value level="21">-77</value>
-			<value level="22">-82</value>
-			<value level="23">-85</value>
-			<value level="24">-87</value>
+			<value level="1">-35</value>
+			<value level="2">-40</value>
+			<value level="3">-45</value>
+			<value level="4">-60</value>
+			<value level="5">-65</value>
+			<value level="6">-70</value>
+			<value level="7">-85</value>
+			<value level="8">-90</value>
+			<value level="9">-95</value>
+			<value level="10">-110</value>
+			<value level="11">-115</value>
+			<value level="12">-120</value>
+			<value level="13">-130</value>
+			<value level="14">-135</value>
+			<value level="15">-140</value>
+			<value level="16">-150</value>
+			<value level="17">-155</value>
+			<value level="18">-160</value>
+			<value level="19">-170</value>
+			<value level="20">-175</value>
+			<value level="21">-180</value>
+			<value level="22">-190</value>
+			<value level="23">-195</value>
+			<value level="24">-200</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
@@ -1880,43 +2080,43 @@
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
-			<value level="1">-58</value>
-			<value level="2">-60</value>
-			<value level="3">-61</value>
-			<value level="4">-62</value>
-			<value level="5">-64</value>
-			<value level="6">-65</value>
-			<value level="7">-67</value>
-			<value level="8">-68</value>
-			<value level="9">-70</value>
-			<value level="10">-71</value>
-			<value level="11">-72</value>
-			<value level="12">-74</value>
-			<value level="13">-75</value>
-			<value level="14">-77</value>
-			<value level="15">-78</value>
-			<value level="16">-79</value>
-			<value level="17">-81</value>
-			<value level="18">-82</value>
-			<value level="19">-83</value>
-			<value level="20">-84</value>
-			<value level="21">-85</value>
-			<value level="22">-87</value>
-			<value level="23">-88</value>
-			<value level="24">-89</value>
-			<value level="25">-90</value>
-			<value level="26">-91</value>
-			<value level="27">-92</value>
-			<value level="28">-93</value>
-			<value level="29">-94</value>
-			<value level="30">-95</value>
-			<value level="31">-95</value>
-			<value level="32">-96</value>
-			<value level="33">-97</value>
-			<value level="34">-97</value>
-			<value level="35">-99</value>
-			<value level="36">-100</value>
-			<value level="37">-102</value>
+			<value level="1">-635</value>
+			<value level="2">-650</value>
+			<value level="3">-665</value>
+			<value level="4">-680</value>
+			<value level="5">-695</value>
+			<value level="6">-710</value>
+			<value level="7">-725</value>
+			<value level="8">-740</value>
+			<value level="9">-755</value>
+			<value level="10">-770</value>
+			<value level="11">-785</value>
+			<value level="12">-800</value>
+			<value level="13">-815</value>
+			<value level="14">-830</value>
+			<value level="15">-845</value>
+			<value level="16">-860</value>
+			<value level="17">-875</value>
+			<value level="18">-890</value>
+			<value level="19">-905</value>
+			<value level="20">-920</value>
+			<value level="21">-935</value>
+			<value level="22">-950</value>
+			<value level="23">-965</value>
+			<value level="24">-980</value>
+			<value level="25">-995</value>
+			<value level="26">-1010</value>
+			<value level="27">-1025</value>
+			<value level="28">-1040</value>
+			<value level="29">-1055</value>
+			<value level="30">-1070</value>
+			<value level="31">-1085</value>
+			<value level="32">-1100</value>
+			<value level="33">-1115</value>
+			<value level="34">-1130</value>
+			<value level="35">-1160</value>
+			<value level="36">-1175</value>
+			<value level="37">-1190</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;180</fanRange>
@@ -2226,57 +2426,67 @@
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
-	<skill id="19" toLevel="45" name="Double Shot">
-		<!-- Shoots $s1 arrows in succession to attack the enemy with $s2 Power added to P. Atk. Requires a bow. Over-hit. Critical. -->
+	<skill id="19" toLevel="55" name="Double Shot">
+		<!-- Shoots 2 arrows one by one to attack the enemy with $s1 power.\nRequires a bow.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0019</icon>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>
-			<value level="1">-183</value>
-			<value level="2">-188</value>
-			<value level="3">-193</value>
-			<value level="4">-198</value>
-			<value level="5">-203</value>
-			<value level="6">-208</value>
-			<value level="7">-213</value>
-			<value level="8">-218</value>
-			<value level="9">-223</value>
-			<value level="10">-228</value>
-			<value level="11">-233</value>
-			<value level="12">-237</value>
-			<value level="13">-242</value>
-			<value level="14">-247</value>
-			<value level="15">-252</value>
-			<value level="16">-257</value>
-			<value level="17">-261</value>
-			<value level="18">-266</value>
-			<value level="19">-271</value>
-			<value level="20">-275</value>
-			<value level="21">-279</value>
-			<value level="22">-284</value>
-			<value level="23">-288</value>
-			<value level="24">-292</value>
-			<value level="25">-296</value>
-			<value level="26">-300</value>
-			<value level="27">-304</value>
-			<value level="28">-307</value>
-			<value level="29">-311</value>
-			<value level="30">-314</value>
-			<value level="31">-317</value>
-			<value level="32">-320</value>
-			<value level="33">-323</value>
-			<value level="34">-326</value>
-			<value level="35">-328</value>
-			<value level="36">-331</value>
-			<value level="37">-333</value>
-			<value level="38">-334</value>
-			<value level="39">-336</value>
-			<value level="40">-337</value>
-			<value level="41">-340</value>
-			<value level="42">-342</value>
-			<value level="43">-343</value>
-			<value level="44">-345</value>
-			<value level="45">-346</value>
+			<value level="1">-210</value>
+			<value level="2">-215</value>
+			<value level="3">-220</value>
+			<value level="4">-225</value>
+			<value level="5">-230</value>
+			<value level="6">-235</value>
+			<value level="7">-240</value>
+			<value level="8">-245</value>
+			<value level="9">-250</value>
+			<value level="10">-255</value>
+			<value level="11">-260</value>
+			<value level="12">-265</value>
+			<value level="13">-270</value>
+			<value level="14">-275</value>
+			<value level="15">-280</value>
+			<value level="16">-285</value>
+			<value level="17">-290</value>
+			<value level="18">-295</value>
+			<value level="19">-300</value>
+			<value level="20">-305</value>
+			<value level="21">-310</value>
+			<value level="22">-315</value>
+			<value level="23">-320</value>
+			<value level="24">-325</value>
+			<value level="25">-330</value>
+			<value level="26">-335</value>
+			<value level="27">-340</value>
+			<value level="28">-345</value>
+			<value level="29">-350</value>
+			<value level="30">-355</value>
+			<value level="31">-360</value>
+			<value level="32">-365</value>
+			<value level="33">-370</value>
+			<value level="34">-375</value>
+			<value level="35">-380</value>
+			<value level="36">-385</value>
+			<value level="37">-390</value>
+			<value level="38">-400</value>
+			<value level="39">-405</value>
+			<value level="40">-410</value>
+			<value level="41">-420</value>
+			<value level="42">-425</value>
+			<value level="43">-430</value>
+			<value level="44">-435</value>
+			<value level="45">-440</value>
+			<value level="46">-440</value>
+			<value level="47">-440</value>
+			<value level="48">-440</value>
+			<value level="49">-440</value>
+			<value level="50">-440</value>
+			<value level="51">-440</value>
+			<value level="52">-440</value>
+			<value level="53">-440</value>
+			<value level="54">-440</value>
+			<value level="55">-440</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
@@ -2326,6 +2536,16 @@
 			<value level="43">82</value>
 			<value level="44">83</value>
 			<value level="45">84</value>
+			<value level="46">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="47">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="48">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="49">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="50">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="51">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="52">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="53">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="54">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="55">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">76</value>
@@ -2373,6 +2593,16 @@
 			<value level="43">186</value>
 			<value level="44">188</value>
 			<value level="45">191</value>
+			<value level="46">191</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="47">191</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="48">191</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="49">191</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="50">191</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="51">191</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="52">191</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="53">191</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="54">191</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="55">191</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2434,13 +2664,23 @@
 					<value level="43">6727</value>
 					<value level="44">6783</value>
 					<value level="45">6839</value>
+					<value level="46">6839</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="47">6839</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="48">6839</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="49">6839</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="50">6839</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="51">6839</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="52">6839</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="53">6839</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="54">6839</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="55">6839</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21" toLevel="3" name="Poison Recovery">
+	<skill id="21" toLevel="3" name="Recovery">
 		<!-- Cures the user of minor poisoning. -->
 		<icon>icon.skill0021</icon>
 		<effectPoint>
@@ -3913,53 +4153,68 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="36" toLevel="40" name="Spinning Slasher">
-		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. -->
+	<skill id="36" toLevel="55" name="Spinning Slasher">
+		<!-- Swings a spear to attack nearby enemies with $s1 power.\nRequires a spear.\nIgnores Shield Defense.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0036</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<coolTime>733</coolTime>
 		<effectPoint>
-			<value level="1">-92</value>
-			<value level="2">-94</value>
-			<value level="3">-97</value>
-			<value level="4">-99</value>
-			<value level="5">-102</value>
-			<value level="6">-104</value>
-			<value level="7">-107</value>
-			<value level="8">-109</value>
-			<value level="9">-112</value>
-			<value level="10">-114</value>
-			<value level="11">-117</value>
-			<value level="12">-119</value>
-			<value level="13">-121</value>
-			<value level="14">-124</value>
-			<value level="15">-126</value>
-			<value level="16">-129</value>
-			<value level="17">-131</value>
-			<value level="18">-133</value>
-			<value level="19">-136</value>
-			<value level="20">-138</value>
-			<value level="21">-140</value>
-			<value level="22">-142</value>
-			<value level="23">-144</value>
-			<value level="24">-146</value>
-			<value level="25">-148</value>
-			<value level="26">-150</value>
-			<value level="27">-152</value>
-			<value level="28">-154</value>
-			<value level="29">-156</value>
-			<value level="30">-157</value>
-			<value level="31">-159</value>
-			<value level="32">-160</value>
-			<value level="33">-162</value>
-			<value level="34">-163</value>
-			<value level="35">-164</value>
-			<value level="36">-166</value>
-			<value level="37">-167</value>
-			<value level="38">-168</value>
-			<value level="39">-170</value>
-			<value level="40">-171</value>
+			<value level="1">-560</value>
+			<value level="2">-575</value>
+			<value level="3">-590</value>
+			<value level="4">-605</value>
+			<value level="5">-620</value>
+			<value level="6">-635</value>
+			<value level="7">-650</value>
+			<value level="8">-665</value>
+			<value level="9">-680</value>
+			<value level="10">-695</value>
+			<value level="11">-710</value>
+			<value level="12">-725</value>
+			<value level="13">-740</value>
+			<value level="14">-755</value>
+			<value level="15">-770</value>
+			<value level="16">-785</value>
+			<value level="17">-800</value>
+			<value level="18">-815</value>
+			<value level="19">-830</value>
+			<value level="20">-845</value>
+			<value level="21">-860</value>
+			<value level="22">-875</value>
+			<value level="23">-890</value>
+			<value level="24">-905</value>
+			<value level="25">-920</value>
+			<value level="26">-935</value>
+			<value level="27">-950</value>
+			<value level="28">-965</value>
+			<value level="29">-980</value>
+			<value level="30">-995</value>
+			<value level="31">-1010</value>
+			<value level="32">-1025</value>
+			<value level="33">-1040</value>
+			<value level="34">-1055</value>
+			<value level="35">-1070</value>
+			<value level="36">-1085</value>
+			<value level="37">-1100</value>
+			<value level="38">-1115</value>
+			<value level="39">-1130</value>
+			<value level="40">-1145</value>
+			<value level="41">-1160</value>
+			<value level="42">-1175</value>
+			<value level="43">-1190</value>
+			<value level="44">-1205</value>
+			<value level="45">-1220</value>
+			<value level="46">-1235</value>
+			<value level="47">-1250</value>
+			<value level="48">-1265</value>
+			<value level="49">-1280</value>
+			<value level="50">-1295</value>
+			<value level="51">-1310</value>
+			<value level="52">-1325</value>
+			<value level="53">-1340</value>
+			<value level="54">-1355</value>
+			<value level="55">-1370</value>
 		</effectPoint>
 		<hitTime>1067</hitTime>
 		<magicLevel>
@@ -4003,6 +4258,21 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">78</value>
+			<value level="41">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="42">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="43">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="44">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="45">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="46">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="47">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="48">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="49">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="50">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="51">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="52">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="53">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="54">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="55">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">36</value>
@@ -4045,6 +4315,21 @@
 			<value level="38">83</value>
 			<value level="39">84</value>
 			<value level="40">85</value>
+			<value level="41">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="42">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="43">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="44">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="45">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="46">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="47">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="48">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="49">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="50">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="51">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="52">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="53">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="54">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="55">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -4102,6 +4387,21 @@
 					<value level="38">2763</value>
 					<value level="39">2788</value>
 					<value level="40">2813</value>
+					<value level="41">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="42">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="43">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="44">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="45">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="46">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="47">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="48">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="49">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="50">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="51">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="52">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="53">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="54">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="55">2813</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<overHit>true</overHit>
@@ -4171,7 +4471,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45" toLevel="9" name="Divine Heal">
+	<skill id="45" toLevel="15" name="Quick Heal">
 		<!-- Restores the target's HP with $s1 Power. -->
 		<icon>icon.skill0045</icon>
 		<effectPoint>
@@ -4184,6 +4484,12 @@
 			<value level="7">144</value>
 			<value level="8">150</value>
 			<value level="9">156</value>
+			<value level="10">156</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">156</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">156</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">156</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">156</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">156</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -4197,6 +4503,12 @@
 			<value level="7">34</value>
 			<value level="8">35</value>
 			<value level="9">36</value>
+			<value level="10">36</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">36</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">36</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">36</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">36</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">36</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">60</value>
@@ -4208,6 +4520,12 @@
 			<value level="7">79</value>
 			<value level="8">82</value>
 			<value level="9">85</value>
+			<value level="10">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">15</value>
@@ -4219,6 +4537,12 @@
 			<value level="7">20</value>
 			<value level="8">21</value>
 			<value level="9">22</value>
+			<value level="10">22</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">22</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">22</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">22</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">22</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">22</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -4237,6 +4561,12 @@
 					<value level="7">203</value>
 					<value level="8">211</value>
 					<value level="9">219</value>
+					<value level="10">219</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">219</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="12">219</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">219</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">219</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">219</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 		</effects>
@@ -4362,8 +4692,8 @@
 			<effect name="ConsumeBody" />
 		</effects>
 	</skill>
-	<skill id="48" toLevel="45" name="Thunder Storm">
-		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Critical. Over-hit. -->
+	<skill id="48" toLevel="55" name="Thunder Storm">
+		<!-- Swings a spear to attack nearby enemies with $s1 power. Inflicts stun for $s2\nRequires a spear.\nIgnores Shield Defense.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0048</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
@@ -4375,51 +4705,61 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>720</coolTime>
 		<effectPoint>
-			<value level="1">-92</value>
-			<value level="2">-94</value>
-			<value level="3">-97</value>
-			<value level="4">-99</value>
-			<value level="5">-102</value>
-			<value level="6">-104</value>
-			<value level="7">-107</value>
-			<value level="8">-109</value>
-			<value level="9">-112</value>
-			<value level="10">-114</value>
-			<value level="11">-117</value>
-			<value level="12">-119</value>
-			<value level="13">-121</value>
-			<value level="14">-124</value>
-			<value level="15">-126</value>
-			<value level="16">-129</value>
-			<value level="17">-131</value>
-			<value level="18">-133</value>
-			<value level="19">-136</value>
-			<value level="20">-138</value>
-			<value level="21">-140</value>
-			<value level="22">-142</value>
-			<value level="23">-144</value>
-			<value level="24">-146</value>
-			<value level="25">-148</value>
-			<value level="26">-150</value>
-			<value level="27">-152</value>
-			<value level="28">-154</value>
-			<value level="29">-156</value>
-			<value level="30">-157</value>
-			<value level="31">-159</value>
-			<value level="32">-160</value>
-			<value level="33">-162</value>
-			<value level="34">-163</value>
-			<value level="35">-164</value>
-			<value level="36">-166</value>
-			<value level="37">-167</value>
-			<value level="38">-170</value>
-			<value level="39">-173</value>
-			<value level="40">-176</value>
-			<value level="41">-182</value>
-			<value level="42">-185</value>
-			<value level="43">-188</value>
-			<value level="44">-191</value>
-			<value level="45">-194</value>
+			<value level="1">-590</value>
+			<value level="2">-605</value>
+			<value level="3">-620</value>
+			<value level="4">-635</value>
+			<value level="5">-650</value>
+			<value level="6">-665</value>
+			<value level="7">-680</value>
+			<value level="8">-695</value>
+			<value level="9">-710</value>
+			<value level="10">-725</value>
+			<value level="11">-740</value>
+			<value level="12">-755</value>
+			<value level="13">-770</value>
+			<value level="14">-785</value>
+			<value level="15">-800</value>
+			<value level="16">-815</value>
+			<value level="17">-830</value>
+			<value level="18">-845</value>
+			<value level="19">-860</value>
+			<value level="20">-875</value>
+			<value level="21">-890</value>
+			<value level="22">-905</value>
+			<value level="23">-920</value>
+			<value level="24">-935</value>
+			<value level="25">-950</value>
+			<value level="26">-965</value>
+			<value level="27">-980</value>
+			<value level="28">-995</value>
+			<value level="29">-1010</value>
+			<value level="30">-1025</value>
+			<value level="31">-1040</value>
+			<value level="32">-1055</value>
+			<value level="33">-1070</value>
+			<value level="34">-1085</value>
+			<value level="35">-1100</value>
+			<value level="36">-1115</value>
+			<value level="37">-1130</value>
+			<value level="38">-1160</value>
+			<value level="39">-1175</value>
+			<value level="40">-1190</value>
+			<value level="41">-1220</value>
+			<value level="42">-1235</value>
+			<value level="43">-1250</value>
+			<value level="44">-1265</value>
+			<value level="45">-1280</value>
+			<value level="46">-1115</value>
+			<value level="47">-1130</value>
+			<value level="48">-1160</value>
+			<value level="49">-1175</value>
+			<value level="50">-1190</value>
+			<value level="51">-1220</value>
+			<value level="52">-1235</value>
+			<value level="53">-1250</value>
+			<value level="54">-1265</value>
+			<value level="55">-1280</value>
 		</effectPoint>
 		<hitTime>1080</hitTime>
 		<isDebuff>true</isDebuff>
@@ -4470,6 +4810,16 @@
 			<value level="43">85</value>
 			<value level="44">90</value>
 			<value level="45">95</value>
+			<value level="46">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="47">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="48">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="49">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="50">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="51">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="52">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="53">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="54">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="55">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">52</value>
@@ -4517,6 +4867,16 @@
 			<value level="43">122</value>
 			<value level="44">124</value>
 			<value level="45">129</value>
+			<value level="46">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="47">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="48">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="49">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="50">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="51">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="52">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="53">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="54">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="55">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -4580,6 +4940,16 @@
 					<value level="43">2504</value>
 					<value level="44">2556</value>
 					<value level="45">2608</value>
+					<value level="46">2608</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="47">2608</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="48">2608</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="49">2608</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="50">2608</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="51">2608</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="52">2608</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="53">2608</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="54">2608</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="55">2608</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
@@ -4590,37 +4960,41 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="49" toLevel="26" name="Holy Strike">
-		<!-- Inflicts holy damage on the undead with $s1 Power added to M. Atk. -->
+	<skill id="49" toLevel="30" name="Holy Strike">
+		<!-- <Skill with fixed cooldown>\n\nAttacks the target with $s1 power.\nDeals additional damage to demons and undead.\nOver-hit. -->
 		<icon>icon.skill0049</icon>
 		<castRange>400</castRange>
 		<effectPoint>
-			<value level="1">-209</value>
-			<value level="2">-219</value>
-			<value level="3">-224</value>
-			<value level="4">-234</value>
-			<value level="5">-239</value>
-			<value level="6">-248</value>
-			<value level="7">-253</value>
-			<value level="8">-262</value>
-			<value level="9">-266</value>
-			<value level="10">-275</value>
-			<value level="11">-279</value>
-			<value level="12">-283</value>
-			<value level="13">-287</value>
-			<value level="14">-291</value>
-			<value level="15">-295</value>
-			<value level="16">-299</value>
-			<value level="17">-302</value>
-			<value level="18">-306</value>
-			<value level="19">-309</value>
-			<value level="20">-312</value>
-			<value level="21">-315</value>
-			<value level="22">-318</value>
-			<value level="23">-321</value>
-			<value level="24">-323</value>
-			<value level="25">-325</value>
-			<value level="26">-328</value>
+			<value level="1">-240</value>
+			<value level="2">-250</value>
+			<value level="3">-255</value>
+			<value level="4">-265</value>
+			<value level="5">-270</value>
+			<value level="6">-280</value>
+			<value level="7">-285</value>
+			<value level="8">-295</value>
+			<value level="9">-300</value>
+			<value level="10">-310</value>
+			<value level="11">-315</value>
+			<value level="12">-320</value>
+			<value level="13">-325</value>
+			<value level="14">-330</value>
+			<value level="15">-335</value>
+			<value level="16">-340</value>
+			<value level="17">-345</value>
+			<value level="18">-350</value>
+			<value level="19">-355</value>
+			<value level="20">-360</value>
+			<value level="21">-365</value>
+			<value level="22">-370</value>
+			<value level="23">-375</value>
+			<value level="24">-380</value>
+			<value level="25">-385</value>
+			<value level="26">-390</value>
+			<value level="27">-390</value>
+			<value level="28">-390</value>
+			<value level="29">-390</value>
+			<value level="30">-390</value>
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -4654,6 +5028,10 @@
 			<value level="24">72</value>
 			<value level="25">73</value>
 			<value level="26">74</value>
+			<value level="27">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">16</value>
@@ -4682,6 +5060,10 @@
 			<value level="24">27</value>
 			<value level="25">27</value>
 			<value level="26">28</value>
+			<value level="27">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">28</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -4710,6 +5092,10 @@
 			<value level="24">7</value>
 			<value level="25">7</value>
 			<value level="26">7</value>
+			<value level="27">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">7</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
@@ -4750,6 +5136,10 @@
 					<value level="24">84</value>
 					<value level="25">85</value>
 					<value level="26">87</value>
+					<value level="27">87</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="28">87</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="29">87</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="30">87</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 		</effects>
@@ -5538,7 +5928,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="61" toLevel="3" name="Cure Bleed">
+	<skill id="61" toLevel="3" name="Elven Spirit">
 		<!-- Cures minor bleeding. -->
 		<icon>icon.skill0061</icon>
 		<effectPoint>
@@ -5948,7 +6338,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="70" toLevel="56" name="Drain HP">
+	<skill id="70" toLevel="60" name="Emergency Rescue">
 		<!-- Inflicts dark damage on the target with $s1 Power added to M. Atk. Absorbs $s2 of the damage inflicted on target as HP. -->
 		<icon>icon.skill0070</icon>
 		<castRange>600</castRange>
@@ -6009,6 +6399,10 @@
 			<value level="54">-330</value>
 			<value level="55">-332</value>
 			<value level="56">-334</value>
+			<value level="57">-336</value>
+			<value level="58">-338</value>
+			<value level="59">-340</value>
+			<value level="60">-342</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<attributeType>DARK</attributeType>
@@ -6072,6 +6466,10 @@
 			<value level="54">76</value>
 			<value level="55">77</value>
 			<value level="56">78</value>
+			<value level="57">79</value>
+			<value level="58">80</value>
+			<value level="59">81</value>
+			<value level="60">82</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">9</value>
@@ -6130,6 +6528,10 @@
 			<value level="54">42</value>
 			<value level="55">44</value>
 			<value level="56">46</value>
+			<value level="57">48</value>
+			<value level="58">50</value>
+			<value level="59">51</value>
+			<value level="60">53</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">3</value>
@@ -6188,6 +6590,10 @@
 			<value level="54">11</value>
 			<value level="55">11</value>
 			<value level="56">11</value>
+			<value level="57">11</value>
+			<value level="58">11</value>
+			<value level="59">12</value>
+			<value level="60">12</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -6253,6 +6659,10 @@
 					<value level="54">109</value>
 					<value level="55">110</value>
 					<value level="56">111</value>
+					<value level="57">112</value>
+					<value level="58">113</value>
+					<value level="59">114</value>
+					<value level="60">115</value>
 				</power>
 				<percentage>20</percentage>
 			</effect>
@@ -6307,7 +6717,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="75" toLevel="1" name="Detect Insect Weakness">
+	<skill id="75" toLevel="1" name="Detect Weakness">
 		<!-- For 10 min., increases damage against insects +5%. -->
 		<icon>icon.skill0075</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -6329,7 +6739,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="76" toLevel="1" name="Bear Spirit Totem">
+	<skill id="76" toLevel="1" name="Bear Nature">
 		<!-- Possessed by a Bear's Spirit, P. Atk., P. Def. and M. Def. +10%, P. Critical Damage +10% for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0076</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -6383,32 +6793,37 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="77" toLevel="2" name="Attack Aura">
+	<skill id="77" toLevel="3" name="Ability to Attack">
 		<!-- P. Atk. +$s2 for $s1. -->
 		<icon>icon.skill0077</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>
 			<value level="1">138</value>
 			<value level="2">268</value>
+			<value level="3">398</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">28</value>
+			<value level="3">28</value> <!-- TODO: Add proper value. -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">5</value>
 			<value level="2">10</value>
+			<value level="3">15</value> <!-- TODO: Add proper value. -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">2</value>
 			<value level="2">3</value>
+			<value level="3">4</value> <!-- TODO: Add proper value. -->
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -6426,7 +6841,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="78" toLevel="4" name="War Cry">
+	<skill id="78" toLevel="5" name="War Cry">
 		<!-- P. Atk. +$s2 for $s1. -->
 		<icon>icon.skill0078</icon>
 		<abnormalLevel>
@@ -6434,12 +6849,14 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLevel>
 		<abnormalTime>
 			<value level="1">120</value>
 			<value level="2">120</value>
 			<value level="3">120</value>
 			<value level="4">180</value>
+			<value level="5">180</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>
@@ -6447,6 +6864,7 @@
 			<value level="2">408</value>
 			<value level="3">500</value>
 			<value level="4">550</value>
+			<value level="5">550</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<hitTime>1500</hitTime>
 		<magicLevel>
@@ -6454,12 +6872,14 @@
 			<value level="2">43</value>
 			<value level="3">80</value>
 			<value level="4">83</value>
+			<value level="5">83</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">10</value>
 			<value level="2">19</value>
 			<value level="3">28</value>
 			<value level="4">38</value>
+			<value level="5">38</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>45000</reuseDelay>
@@ -6474,12 +6894,13 @@
 					<value level="2">25</value>
 					<value level="3">25</value>
 					<value level="4">25</value>
+					<value level="5">25</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="80" toLevel="1" name="Detect Beast Weakness">
+	<skill id="80" toLevel="1" name="Belief">
 		<!-- For 10 min., damage against monsters +5%. -->
 		<icon>icon.skill0080</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -6602,7 +7023,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="83" toLevel="1" name="Wolf Spirit Totem">
+	<skill id="83" toLevel="1" name="Wolf Nature">
 		<!-- Possessed by a Wolf's Spirit, Speed and Atk. Spd. Boost +10%, P. Accuracy +3 for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0083</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -6768,7 +7189,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="87" toLevel="1" name="Detect Animal Weakness">
+	<skill id="87" toLevel="1" name="Struggle">
 		<!-- For 10 min., damage against animals +5%. -->
 		<icon>icon.skill0087</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -6790,7 +7211,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="88" toLevel="1" name="Detect Dragon Weakness">
+	<skill id="88" toLevel="1" name="Purify">
 		<!-- For 10 min., damage against dragons +5%. -->
 		<icon>icon.skill0088</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -6812,7 +7233,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="91" toLevel="2" name="Defense Aura">
+	<skill id="91" toLevel="2" name="Ability to Protect">
 		<!-- Increases P. Def. by $s2 for $s1. -->
 		<icon>icon.skill0091</icon>
 		<abnormalLevel>
@@ -7173,7 +7594,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="95" toLevel="28" name="Cripple">
+	<skill id="95" toLevel="40" name="Cripple">
 		<!-- Enemy's Speed -$s2 for $s1. Requires a fist weapon. -->
 		<icon>icon.skill0095</icon>
 		<abnormalLevel>
@@ -7205,6 +7626,18 @@
 			<value level="26">3</value>
 			<value level="27">3</value>
 			<value level="28">3</value>
+			<value level="29">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="31">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="32">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="33">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="34">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -7241,6 +7674,18 @@
 			<value level="26">-667</value>
 			<value level="27">-668</value>
 			<value level="28">-670</value>
+			<value level="29">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="31">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="32">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="33">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="34">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">-670</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1604</hitTime>
@@ -7275,6 +7720,18 @@
 			<value level="26">82</value>
 			<value level="27">83</value>
 			<value level="28">84</value>
+			<value level="29">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="31">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="32">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="33">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="34">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">10</value>
@@ -7305,6 +7762,18 @@
 			<value level="26">44</value>
 			<value level="27">46</value>
 			<value level="28">47</value>
+			<value level="29">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="31">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="32">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="33">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="34">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">47</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -7349,6 +7818,18 @@
 					<value level="26">-30</value>
 					<value level="27">-30</value>
 					<value level="28">-30</value>
+					<value level="29">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="30">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="31">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="32">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="33">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="34">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="35">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="36">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="37">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="38">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="39">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="40">-30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -7383,21 +7864,21 @@
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
-			<value level="1">-119</value>
-			<value level="2">-154</value>
-			<value level="3">-237</value>
-			<value level="4">-279</value>
-			<value level="5">-311</value>
-			<value level="6">-323</value>
-			<value level="7">-333</value>
-			<value level="8">-343</value>
-			<value level="9">-353</value>
-			<value level="10">-362</value>
-			<value level="11">-371</value>
-			<value level="12">-380</value>
-			<value level="13">-389</value>
-			<value level="14">-408</value>
-			<value level="15">-417</value>
+			<value level="1">-140</value>
+			<value level="2">-180</value>
+			<value level="3">-265</value>
+			<value level="4">-310</value>
+			<value level="5">-350</value>
+			<value level="6">-370</value>
+			<value level="7">-400</value>
+			<value level="8">-405</value>
+			<value level="9">-410</value>
+			<value level="10">-415</value>
+			<value level="11">-420</value>
+			<value level="12">-425</value>
+			<value level="13">-430</value>
+			<value level="14">-435</value>
+			<value level="15">-440</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
@@ -7479,7 +7960,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="97" toLevel="13" name="Sanctuary">
+	<skill id="97" toLevel="25" name="Sanctuary">
 		<!-- P. Atk. of nearby undead monsters -$s2 for $s1. -->
 		<icon>icon.skill0097</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -7503,6 +7984,18 @@
 			<value level="11">-655</value>
 			<value level="12">-659</value>
 			<value level="13">-663</value>
+			<value level="14">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="16">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="17">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="18">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="19">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="20">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="21">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">-663</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
@@ -7521,6 +8014,18 @@
 			<value level="11">74</value>
 			<value level="12">76</value>
 			<value level="13">78</value>
+			<value level="14">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="16">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="17">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="18">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="19">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="20">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="21">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">35</value>
@@ -7536,6 +8041,18 @@
 			<value level="11">51</value>
 			<value level="12">56</value>
 			<value level="13">57</value>
+			<value level="14">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="16">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="17">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="18">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="19">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="20">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="21">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">57</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -7550,7 +8067,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="98" toLevel="8" name="Sword Symphony">
+	<skill id="98" toLevel="8" name="Symphony">
 		<!-- Attacks the enemy with 825 Power added to P. Atk. and blocks the use of magic skills for 10 sec. Critical. Over-hit. -->
 		<icon>icon.skill0098</icon>
 		<abnormalLevel>1</abnormalLevel>

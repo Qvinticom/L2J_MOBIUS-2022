@@ -211,7 +211,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="7014" toLevel="1" name="Test - P. Critical Damage Boost">
+	<skill id="7014" toLevel="1" name="Test - P. Critical Damage Increase">
 		<!-- Received P. Critical Damage +10%. -->
 		<magicLevel>85</magicLevel>
 		<operateType>T</operateType>
@@ -1304,7 +1304,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7064" toLevel="1" name="Master's Blessing - Chant of Victory">
+	<skill id="7064" toLevel="1" name="Master's Blessing - Victory">
 		<!-- The GM is always by your side. For 1 h., Max CP +12%, CP Recovery Bonus +40%, P. Accuracy +4, P. Evasion +4, P./ M. Atk. +20%, Casting/ Atk. Spd. +10%, P./ M. Critical Rate +20%, P./ M. Critical Damage +15%. -->
 		<icon>icon.skill1363</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -1683,7 +1683,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="7085" toLevel="1" name="Self-Destruct Explosion">
+	<skill id="7085" toLevel="1" name="Self-Destruct Explosion_test">
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2025,7 +2025,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7096" toLevel="1" name="Master's Blessing - Noblesse Blessing">
+	<skill id="7096" toLevel="1" name="Master's Blessing - Blessing of Fire Dragon">
 		<!-- The GM is always by your side. The target's buff/ de-buff doesn't disappear at death but is maintained. But the Noblesse Blessing and the Amulet of Luck disappear. -->
 		<icon>icon.skill1323</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -2049,7 +2049,7 @@
 			<effect name="NoblesseBless" />
 		</effects>
 	</skill>
-	<skill id="7097" toLevel="1" name="Cancel Shadow Move">
+	<skill id="7097" toLevel="1" name="Remove Trick">
 		<icon>icon.skill01702</icon>
 		<operateType>A1</operateType>
 		<effectPoint>709</effectPoint>

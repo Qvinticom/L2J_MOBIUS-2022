@@ -46,12 +46,12 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		long endTime;
 		packet.writeD(1); // zone count
 		
-		// Ancient Pirates' Tomb
+		// Primeval Isle
 		packet.writeD(1); // required item count
 		packet.writeD(57); // item id
 		packet.writeQ(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
 		packet.writeD(1); // reset cycle
-		packet.writeD(2); // zone id
+		packet.writeD(1); // zone id
 		packet.writeD(78); // min level
 		packet.writeD(999); // max level
 		packet.writeD(0); // remain time base?
@@ -64,7 +64,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeD((int) (Config.TIME_LIMITED_MAX_ADDED_TIME / 1000));
 		packet.writeD(3600); // remain refill time
 		packet.writeD(3600); // refill time max
-		packet.writeC(_isInTimedHuntingZone ? 0 : 1); // field activated
+		packet.writeD(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
 		
 		return true;
 	}

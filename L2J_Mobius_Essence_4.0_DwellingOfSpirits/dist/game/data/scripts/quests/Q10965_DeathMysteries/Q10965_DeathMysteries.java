@@ -51,8 +51,8 @@ public class Q10965_DeathMysteries extends Quest
 	private static final ItemHolder ADVENTURERS_AGATHION_GRIFIN = new ItemHolder(91935, 1);
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
-	private static final int MAX_LEVEL = 40;
-	private static final int MIN_LEVEL = 37;
+	private static final int MAX_LEVEL = 35;
+	private static final int MIN_LEVEL = 40;
 	
 	public Q10965_DeathMysteries()
 	{
@@ -60,7 +60,7 @@ public class Q10965_DeathMysteries extends Quest
 		addStartNpc(RAYMOND);
 		addTalkId(RAYMOND, MAXIMILLIAN);
 		addKillId(WYRM, GUARDIAN_BASILISK, ROAD_SCAVENGER, FETTERED_SOUL, WINDUS, GRANDIS);
-		setQuestNameNpcStringId(NpcStringId.LV_37_40_DEATH_MYSTERIES);
+		setQuestNameNpcStringId(NpcStringId.LV_35_40_DEATH_MYSTERIES);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 	}
@@ -168,7 +168,7 @@ public class Q10965_DeathMysteries extends Quest
 		if ((qs != null) && qs.isCond(2))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_DEATH_PASS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.KILL_MONSTERS_IN_THE_DEATH_PASS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);

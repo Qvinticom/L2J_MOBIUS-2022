@@ -75,6 +75,8 @@ public class ExRankingCharInfo implements IClientOutgoingPacket
 			packet.writeD(0); // race rank
 			packet.writeD(0); // server rank snapshot
 			packet.writeD(0); // race rank snapshot
+			packet.writeD(0); // nClassRank
+			packet.writeD(0); // nClassRank_Snapshot snapshot
 		}
 		else
 		{
@@ -82,6 +84,8 @@ public class ExRankingCharInfo implements IClientOutgoingPacket
 			packet.writeD(0); // race rank
 			packet.writeD(0); // server rank snapshot
 			packet.writeD(0); // race rank snapshot
+			packet.writeD(0); // nClassRank
+			packet.writeD(0); // nClassRank_Snapshot snapshot
 		}
 		return true;
 	}

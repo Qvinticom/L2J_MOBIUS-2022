@@ -87,7 +87,7 @@ public class RequestCancelPostAttachment implements IClientIncomingPacket
 		
 		if (player.hasItemRequest())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_DURING_AN_ITEM_ENHANCEMENT_OR_ATTRIBUTE_ENHANCEMENT);
+			player.sendPacket(SystemMessageId.UNAVAILABLE_WHILE_THE_ENCHANTING_IS_IN_PROCESS);
 			return;
 		}
 		

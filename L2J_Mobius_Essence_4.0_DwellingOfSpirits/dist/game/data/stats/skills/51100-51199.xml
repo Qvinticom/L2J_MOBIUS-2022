@@ -5,7 +5,7 @@
 		<icon>icon.agathion_tersi_guard_1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="51101" toLevel="1" name="Agathion Summon - Ignis">
+	<skill id="51101" toLevel="1" name="Summon Agathion Ignis">
 		<!-- Summon Ignis Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -22,7 +22,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51102" toLevel="1" name="Agathion Summon - Nebula">
+	<skill id="51102" toLevel="1" name="Summon Agathion Nebula">
 		<!-- Summon Nebula Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -39,7 +39,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51103" toLevel="1" name="Agathion Summon - Procella">
+	<skill id="51103" toLevel="1" name="Summon Agathion Procella">
 		<!-- Summon Procella Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -56,7 +56,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51104" toLevel="1" name="Agathion Summon - Petram">
+	<skill id="51104" toLevel="1" name="Summon Agathion Petram">
 		<!-- Summon Petram Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -123,7 +123,7 @@
 		<icon>icon.ev_kr_traditional_dress</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51112" toLevel="1" name="Moon Firework">
+	<skill id="51112" toLevel="1" name="Firecracker">
 		<!-- Fires fireworks to honor Lunar Holiday. -->
 		<icon>icon.ev_kr_traditional_dress</icon>
 		<operateType>A1</operateType>
@@ -172,7 +172,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="51120" toLevel="1" name="+15 Weapon Pack (A-grade)">
+	<skill id="51120" toLevel="1" name="+15 Top-grade A-grade Weapon Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -219,7 +219,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51126" toLevel="1" name="Intermediate Spirit's Blessing">
+	<skill id="51126" toLevel="1" name="Mid-grade Spirit's Blessing">
 		<!-- For 20 min., Acquired attribute XP +30%. -->
 		<icon>icon.elemental_bless_scrl_i00</icon>
 		<operateType>A2</operateType>
@@ -373,7 +373,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51141" toLevel="1" name="Wind Big Fish Chest">
+	<skill id="51141" toLevel="1" name="Wind Silver Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -388,7 +388,7 @@
 	<skill id="51144" toLevel="1" name="Shining Sayha's Cloak Enchantment Scroll">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51145" toLevel="1" name="+16 Weapon Pack (B-grade)">
+	<skill id="51145" toLevel="1" name="+8 B-grade Weapon Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -559,7 +559,7 @@
 		<effectPoint>611</effectPoint>
 		<mpConsume>66</mpConsume>
 	</skill>
-	<skill id="51170" toLevel="1" name="Spirit - Dance of Warrior">
+	<skill id="51170" toLevel="1" name="Adventurer - Warrior's Dance">
 		<!-- For 5 min., for all party members P. Atk. +12%. Increases the additional MP Consumption when singing while sing/ dance effect lasts. -->
 		<icon>icon.skill0271</icon>
 		<operateType>A1</operateType>
@@ -613,7 +613,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51176" toLevel="1" name="Relics of the Dragons">
+	<skill id="51176" toLevel="1" name="Dragon's Relic">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -626,7 +626,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51178" toLevel="1" name="Spirit - Dance of Warrior">
+	<skill id="51178" toLevel="1" name="Adventurer - Warrior's Dance">
 		<!-- For 5 min., for all party members P. Atk. +12%. Increases the additional MP Consumption when singing while sing/ dance effect lasts. -->
 		<icon>icon.skill0271</icon>
 		<operateType>A1</operateType>

@@ -1038,7 +1038,7 @@ public class SkillCaster implements Runnable
 			
 			if (player.isInOlympiadMode() && skill.isBlockedInOlympiad())
 			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_OLYMPIAD_MATCH);
+				player.sendPacket(SystemMessageId.THE_SKILL_CANNOT_BE_USED_IN_THE_OLYMPIAD);
 				return false;
 			}
 			

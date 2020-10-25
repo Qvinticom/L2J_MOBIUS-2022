@@ -150,7 +150,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		{
 			if (player.isOnline())
 			{
-				player.sendPacket(SystemMessageId.REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_HAS_BEGUN);
+				player.sendPacket(SystemMessageId.THE_REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_HAS_BEGUN);
 				if (canRegister(player, false))
 				{
 					player.sendPacket(ExCuriousHouseState.REGISTRATION_PACKET);
@@ -172,7 +172,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		{
 			if (player.isOnline())
 			{
-				player.sendPacket(SystemMessageId.REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_HAS_ENDED);
+				player.sendPacket(SystemMessageId.THE_REGISTRATION_FOR_THE_CEREMONY_OF_CHAOS_IS_OVER);
 				if (!isRegistered(player))
 				{
 					player.sendPacket(ExCuriousHouseState.IDLE_PACKET);
@@ -299,7 +299,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		SystemMessageId sm = null;
 		if (player.getLevel() < 85)
 		{
-			sm = SystemMessageId.ONLY_CHARACTERS_LEVEL_85_OR_ABOVE_MAY_PARTICIPATE_IN_THE_TOURNAMENT;
+			sm = SystemMessageId.ONLY_CHARACTERS_OF_LV_85_CAN_PARTICIPATE_IN_THE_TOURNAMENT;
 			canRegister = false;
 		}
 		else if (player.isFlyingMounted())
@@ -354,12 +354,12 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 		else if (player.isInSiege())
 		{
-			sm = SystemMessageId.YOU_CANNOT_REGISTER_FOR_THE_WAITING_LIST_ON_THE_BATTLEFIELD_CASTLE_SIEGE_FORTRESS_SIEGE;
+			sm = SystemMessageId.YOU_CANNOT_REGISTER_FOR_THE_WAITING_LIST_ON_THE_BATTLEFIELD_CASTLE_SIEGE_FORTRESS_BATTLE;
 			canRegister = false;
 		}
 		else if (player.isInsideZone(ZoneId.SIEGE))
 		{
-			sm = SystemMessageId.YOU_CANNOT_REGISTER_IN_THE_WAITING_LIST_WHILE_BEING_INSIDE_OF_A_BATTLEGROUND_CASTLE_SIEGE_FORTRESS_SIEGE;
+			sm = SystemMessageId.YOU_CANNOT_REGISTER_IN_THE_WAITING_LIST_WHILE_BEING_INSIDE_OF_A_BATTLEGROUND_CASTLE_SIEGE_FORTRESS_BATTLE;
 			canRegister = false;
 		}
 		else if (player.isFlyingMounted())

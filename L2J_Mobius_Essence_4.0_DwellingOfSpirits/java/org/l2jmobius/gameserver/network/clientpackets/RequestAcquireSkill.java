@@ -190,7 +190,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 							if (!player.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false))
 							{
 								// Doesn't have required item.
-								player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
+								player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
 								VillageMasterInstance.showPledgeSkillList(player);
 								return;
 							}
@@ -253,7 +253,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				{
 					if (!player.destroyItemByItemId("SubSkills", item.getId(), item.getCount(), trainer, false))
 					{
-						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
+						player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
 						return;
 					}
 					
@@ -521,7 +521,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 							}
 							else
 							{
-								player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
+								player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
 							}
 							return false;
 						}
@@ -539,7 +539,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 						if (reqItemCount < item.getCount())
 						{
 							// Player doesn't have required item.
-							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
+							player.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS_TO_LEARN_THE_SKILL);
 							showSkillList(trainer, player);
 							return false;
 						}

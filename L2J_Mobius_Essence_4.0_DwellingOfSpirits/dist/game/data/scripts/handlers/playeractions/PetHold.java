@@ -34,7 +34,7 @@ public class PetHold implements IPlayerActionHandler
 	{
 		if ((player.getPet() == null) || !player.getPet().isPet())
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
+			player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_A_PET);
 			return;
 		}
 		

@@ -970,7 +970,21 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="max" type="xs:byte" />
+															<xs:element name="max">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="armorTYpe">
 																<xs:complexType>
 																	<xs:sequence>
@@ -1461,8 +1475,6 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="zoneId" type="xs:unsignedByte" />
-															<xs:element name="time" type="xs:unsignedInt" />
 															<xs:element name="damage">
 																<xs:complexType>
 																	<xs:sequence>
@@ -1478,6 +1490,8 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="zoneId" type="xs:unsignedByte" />
+															<xs:element name="time" type="xs:unsignedInt" />
 															<xs:element name="reputation" type="xs:unsignedByte" />
 														</xs:choice>
 													</xs:sequence>
@@ -1906,7 +1920,21 @@
 											<xs:element name="effect">
 												<xs:complexType>
 													<xs:sequence>
-														<xs:element name="power" type="xs:unsignedShort" />
+														<xs:element name="power">
+															<xs:complexType mixed="true">
+																<xs:sequence minOccurs="0">
+																	<xs:element maxOccurs="unbounded" name="value">
+																		<xs:complexType>
+																			<xs:simpleContent>
+																				<xs:extension base="xs:unsignedShort">
+																					<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																				</xs:extension>
+																			</xs:simpleContent>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
 												</xs:complexType>

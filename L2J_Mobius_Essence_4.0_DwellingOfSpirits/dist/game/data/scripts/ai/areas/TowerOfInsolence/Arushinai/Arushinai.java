@@ -144,7 +144,7 @@ public class Arushinai extends AbstractNpcAI
 			return null;
 		}
 		
-		player.sendPacket(SystemMessageId.YOU_ARE_NOT_IN_A_PARTY);
+		player.sendPacket(SystemMessageId.YOU_ARE_NOT_IN_A_PARTY_AND_CAN_T_SEND_MESSAGES_TO_THE_PARTY_CHAT);
 		return null;
 	}
 	

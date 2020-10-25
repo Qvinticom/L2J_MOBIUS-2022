@@ -1727,7 +1727,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1147" toLevel="6" name="Vampiric Touch">
+	<skill id="1147" toLevel="6" name="Fireball">
 		<!-- Inflicts damage by darkness on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
 		<icon>icon.skill1147</icon>
 		<castRange>600</castRange>
@@ -1787,7 +1787,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1148" toLevel="20" name="Death Spike">
+	<skill id="1148" toLevel="30" name="Death Spike">
 		<!-- Throws a bone to inflict damage on the enemy with $s1 Power added to M. Atk. Requires $s2 Cursed Bone(s). -->
 		<icon>icon.skill1148</icon>
 		<castRange>900</castRange>
@@ -1812,6 +1812,16 @@
 			<value level="18">-340</value>
 			<value level="19">-342</value>
 			<value level="20">-344</value>
+			<value level="21">-344</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">-344</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">-344</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">-344</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">-344</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="26">-344</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="27">-344</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">-344</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">-344</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">-344</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>DARK</attributeType>
@@ -1841,6 +1851,16 @@
 			<value level="18">82</value>
 			<value level="19">83</value>
 			<value level="20">84</value>
+			<value level="21">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="26">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="27">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">19</value>
@@ -1863,6 +1883,16 @@
 			<value level="18">67</value>
 			<value level="19">70</value>
 			<value level="20">73</value>
+			<value level="21">73</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">73</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">73</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">73</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">73</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="26">73</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="27">73</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">73</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">73</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">73</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -1885,6 +1915,16 @@
 			<value level="18">11</value>
 			<value level="19">12</value>
 			<value level="20">12</value>
+			<value level="21">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="22">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="23">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="24">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="26">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="27">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
@@ -1914,6 +1954,16 @@
 					<value level="18">127</value>
 					<value level="19">130</value>
 					<value level="20">133</value>
+					<value level="21">133</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="22">133</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="23">133</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="24">133</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="25">133</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="26">133</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="27">133</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="28">133</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="29">133</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="30">133</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<shieldDefPercent>40</shieldDefPercent>
 			</effect>
@@ -2297,7 +2347,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1157" toLevel="10" name="Body To Mind">
+	<skill id="1157" toLevel="10" name="Body to Mind">
 		<!-- Sacrifices your own HP to regenerate MP with $s1 Power. -->
 		<icon>icon.skill1157</icon>
 		<effectPoint>
@@ -2762,7 +2812,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1164" toLevel="26" name="Curse Weakness">
+	<skill id="1164" toLevel="26" name="Weakness">
 		<!-- For $s1, enemy's P. Atk. -$s2. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLevel>
@@ -3038,7 +3088,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1168" toLevel="7" name="Curse Poison">
+	<skill id="1168" toLevel="10" name="Poison">
 		<!-- Poisons the target, causing loss of $s2 HP per sec. for $s1 -->
 		<icon>icon.skill1168</icon>
 		<abnormalLevel>
@@ -3049,6 +3099,9 @@
 			<value level="5">6</value>
 			<value level="6">7</value>
 			<value level="7">8</value>
+			<value level="8">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -3065,6 +3118,9 @@
 			<value level="5">-248</value>
 			<value level="6">-291</value>
 			<value level="7">-323</value>
+			<value level="8">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -3079,6 +3135,9 @@
 			<value level="5">52</value>
 			<value level="6">62</value>
 			<value level="7">72</value>
+			<value level="8">72</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">72</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">72</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">8</value>
@@ -3088,6 +3147,9 @@
 			<value level="5">38</value>
 			<value level="6">46</value>
 			<value level="7">53</value>
+			<value level="8">53</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">53</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">53</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">2</value>
@@ -3097,6 +3159,9 @@
 			<value level="5">10</value>
 			<value level="6">12</value>
 			<value level="7">14</value>
+			<value level="8">14</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">14</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">14</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -3114,6 +3179,9 @@
 					<value level="5">50</value>
 					<value level="6">58</value>
 					<value level="7">63</value>
+					<value level="8">63</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">63</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">63</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<ticks>5</ticks>
 			</effect>
@@ -3766,7 +3834,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1175" toLevel="33" name="Aqua Swirl">
+	<skill id="1175" toLevel="40" name="Aqua Swirl">
 		<!-- Releases a water vortex to inflict Water damage on the enemy with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1175</icon>
 		<castRange>750</castRange>
@@ -3804,6 +3872,13 @@
 			<value level="31">-318</value>
 			<value level="32">-321</value>
 			<value level="33">-323</value>
+			<value level="34">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<effectRange>1250</effectRange>
 		<attributeType>WATER</attributeType>
@@ -3844,6 +3919,13 @@
 			<value level="31">82</value>
 			<value level="32">83</value>
 			<value level="33">84</value>
+			<value level="34">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">14</value>
@@ -3879,6 +3961,13 @@
 			<value level="31">71</value>
 			<value level="32">72</value>
 			<value level="33">74</value>
+			<value level="34">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -3914,6 +4003,13 @@
 			<value level="31">10</value>
 			<value level="32">10</value>
 			<value level="33">10</value>
+			<value level="34">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
@@ -3956,6 +4052,13 @@
 					<value level="31">91</value>
 					<value level="32">93</value>
 					<value level="33">95</value>
+					<value level="34">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="35">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="36">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="37">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="38">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="39">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="40">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<shieldDefPercent>40</shieldDefPercent>
 			</effect>
@@ -4168,7 +4271,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1178" toLevel="33" name="Twister">
+	<skill id="1178" toLevel="40" name="Twister">
 		<!-- Creates a powerful cyclone and inflicts Wind damage on the enemy with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1178</icon>
 		<castRange>750</castRange>
@@ -4206,6 +4309,13 @@
 			<value level="31">-318</value>
 			<value level="32">-321</value>
 			<value level="33">-323</value>
+			<value level="34">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">-323</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<effectRange>1250</effectRange>
 		<attributeType>WIND</attributeType>
@@ -4246,6 +4356,13 @@
 			<value level="31">82</value>
 			<value level="32">83</value>
 			<value level="33">84</value>
+			<value level="34">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">14</value>
@@ -4281,6 +4398,13 @@
 			<value level="31">57</value>
 			<value level="32">58</value>
 			<value level="33">59</value>
+			<value level="34">59</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">59</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">59</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">59</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">59</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">59</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">59</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -4316,6 +4440,13 @@
 			<value level="31">14</value>
 			<value level="32">14</value>
 			<value level="33">15</value>
+			<value level="34">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="35">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="36">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="37">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="38">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="39">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="40">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
@@ -4358,6 +4489,13 @@
 					<value level="31">91</value>
 					<value level="32">93</value>
 					<value level="33">95</value>
+					<value level="34">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="35">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="36">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="37">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="38">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="39">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="40">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 		</effects>
@@ -4523,7 +4661,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1184" toLevel="6" name="Ice Bolt">
+	<skill id="1184" toLevel="10" name="Ice Bolt">
 		<!-- Momentarily freezes the surrounding air, inflicting damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
 		<icon>icon.skill1184</icon>
 		<abnormalLevel>2</abnormalLevel>
@@ -4540,6 +4678,10 @@
 			<value level="4">-81</value>
 			<value level="5">-91</value>
 			<value level="6">-102</value>
+			<value level="7">-102</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">-102</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">-102</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">-102</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<attributeType>WATER</attributeType>
@@ -4555,6 +4697,10 @@
 			<value level="4">14</value>
 			<value level="5">17</value>
 			<value level="6">20</value>
+			<value level="7">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">7</value>
@@ -4563,6 +4709,10 @@
 			<value level="4">12</value>
 			<value level="5">14</value>
 			<value level="6">16</value>
+			<value level="7">16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">2</value>
@@ -4571,6 +4721,10 @@
 			<value level="4">3</value>
 			<value level="5">4</value>
 			<value level="6">4</value>
+			<value level="7">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -4586,6 +4740,10 @@
 					<value level="4">13</value>
 					<value level="5">14</value>
 					<value level="6">16</value>
+					<value level="7">16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">16</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 			<effect name="Speed">

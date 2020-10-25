@@ -455,7 +455,7 @@ public abstract class Summon extends Playable
 				if ((getInventory() != null) && (getInventory().getSize() > 0))
 				{
 					_owner.setPetInvItems(true);
-					sendPacket(SystemMessageId.THERE_ARE_ITEMS_IN_YOUR_PET_INVENTORY_RENDERING_YOU_UNABLE_TO_SELL_TRADE_DROP_PET_SUMMONING_ITEMS_PLEASE_EMPTY_YOUR_PET_INVENTORY);
+					sendPacket(SystemMessageId.THERE_ARE_ITEMS_IN_THE_PET_S_INVENTORY_TAKE_THEM_OUT_FIRST);
 				}
 				else
 				{
@@ -783,7 +783,7 @@ public abstract class Summon extends Playable
 		
 		if (!isDead() && !isHpBlocked() && (_owner != null) && (attacker != null) && (!_owner.isAffected(EffectFlag.DUELIST_FURY) || attacker.isAffected(EffectFlag.FACEOFF)))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_RECEIVES_S3_DAMAGE_FROM_TARGET_C2);
 			sm.addNpcName(this);
 			sm.addString(attacker.getName());
 			sm.addInt((int) damage);

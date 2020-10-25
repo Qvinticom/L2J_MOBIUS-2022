@@ -82,14 +82,14 @@ public class RequestPetition implements IClientIncomingPacket
 		
 		if (PetitionManager.getInstance().getPendingPetitionCount() == Config.MAX_PETITIONS_PENDING)
 		{
-			client.sendPacket(SystemMessageId.THE_PETITION_SERVICE_IS_CURRENTLY_UNAVAILABLE_PLEASE_SEND_A_SUPPORT_TICKET_ON_HTTPS_SUPPORT_4GAME_COM);
+			client.sendPacket(SystemMessageId.THE_PETITION_SERVICE_IS_CURRENTLY_UNAVAILABLE_PLEASE_SEND_A_SUPPORT_TICKET_ON_HTTPS_EU_4GAMESUPPORT_COM);
 			return;
 		}
 		
 		final int totalPetitions = PetitionManager.getInstance().getPlayerTotalPetitionCount(player) + 1;
 		if (totalPetitions > Config.MAX_PETITIONS_PER_PLAYER)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_FROM_YOU_TODAY_AND_THAT_IS_THE_MAXIMUM_THAT_YOU_CAN_SUBMIT_IN_ONE_DAY_YOU_CANNOT_SUBMIT_ANY_MORE_PETITIONS);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_MAXIMUM_NUMBER_OF_PETITIONS_TODAY_YOU_CANNOT_SUBMIT_MORE_PETITIONS);
 			sm.addInt(totalPetitions);
 			client.sendPacket(sm);
 			return;

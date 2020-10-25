@@ -111,7 +111,7 @@ public class MonsterArena extends AbstractInstance
 							player.teleToLocation(world.getNpc(MACHINE), true, world);
 							if ((world.getStatus() > 0) && (world.getStatus() < 5)) // Show remaining countdown.
 							{
-								player.sendPacket(new ExSendUIEvent(player, false, false, (int) (world.getRemainingTime() / 1000), 0, NpcStringId.REMAINING_TIME));
+								player.sendPacket(new ExSendUIEvent(player, false, false, (int) (world.getRemainingTime() / 1000), 0, NpcStringId.TIME_LEFT));
 							}
 							return null;
 						}
@@ -181,7 +181,7 @@ public class MonsterArena extends AbstractInstance
 					world.setStatus(1);
 					for (PlayerInstance plr : world.getPlayers())
 					{
-						plr.sendPacket(new ExSendUIEvent(plr, false, false, 1200, 0, NpcStringId.REMAINING_TIME));
+						plr.sendPacket(new ExSendUIEvent(plr, false, false, 1200, 0, NpcStringId.TIME_LEFT));
 					}
 				}
 				break;
@@ -266,7 +266,7 @@ public class MonsterArena extends AbstractInstance
 	@Override
 	public void onInstanceLeave(PlayerInstance player, Instance instance)
 	{
-		player.sendPacket(new ExSendUIEvent(player, false, false, 0, 0, NpcStringId.REMAINING_TIME));
+		player.sendPacket(new ExSendUIEvent(player, false, false, 0, 0, NpcStringId.TIME_LEFT));
 	}
 	
 	@Override
@@ -298,7 +298,7 @@ public class MonsterArena extends AbstractInstance
 			{
 				for (PlayerInstance plr : world.getPlayers())
 				{
-					plr.sendPacket(new ExSendUIEvent(plr, false, false, 0, 0, NpcStringId.REMAINING_TIME));
+					plr.sendPacket(new ExSendUIEvent(plr, false, false, 0, 0, NpcStringId.TIME_LEFT));
 				}
 				world.finishInstance();
 			}

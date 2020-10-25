@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5200" toLevel="8" name="Pet Recharge">
+	<skill id="5200" toLevel="8" name="Pet's Recharge">
 		<!-- Restores MP. -->
 		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
@@ -67,7 +67,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5201" toLevel="6" name="Pet Concentration">
+	<skill id="5201" toLevel="6" name="Pet's Concentration">
 		<!-- Temporarily the probability of magic being canceled due to damage taken -18. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLevel>

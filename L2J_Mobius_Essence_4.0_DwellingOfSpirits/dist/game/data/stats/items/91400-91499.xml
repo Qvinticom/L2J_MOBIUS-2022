@@ -867,6 +867,9 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="76" />
+		</cond>
 	</item>
 	<item id="91483" name="Scroll - Bind" type="EtcItem">
 		<!-- Scroll needed to learn the Bind skill. Available to Archmage, Soultaker, Mystic Muse, Storm Screamer. Required level: 76. -->
@@ -874,6 +877,9 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="76" />
+		</cond>
 	</item>
 	<item id="91484" name="Scroll - Mass Chain Strike" type="EtcItem">
 		<!-- Scroll needed to learn the Mass Chain Strike skill. Available to Phoenix Knight, Hell Knight, Eva's Templar, and Shillien Templar. Required level: 78. -->
@@ -881,6 +887,9 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="78" />
+		</cond>
 	</item>
 	<item id="91485" name="Scroll - Critical Vulnerability Decrease" type="EtcItem">
 		<!-- Scroll needed to learn the Critical Vulnerability Decrease skill. Available to Phoenix Knight, Hell Knight, Eva's Templar, and Shillien Templar. Required level: 76. -->
@@ -888,6 +897,9 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="76" />
+		</cond>
 	</item>
 	<item id="91486" name="Scroll - Full Swing" type="EtcItem">
 		<!-- Scroll needed to learn the Full Swing skill. Available to Titan. Required level: 76. -->
@@ -895,6 +907,9 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="76" />
+		</cond>
 	</item>
 	<item id="91487" name="Scroll - Seal of Blockade" type="EtcItem">
 		<!-- Scroll needed to learn the Seal of Blockade skill. Available to Dominator. Required level: 79. -->
@@ -902,6 +917,9 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="79" />
+		</cond>
 	</item>
 	<item id="91488" name="Blessed Soulshot (S-grade)" type="EtcItem">
 		<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Used with S-grade weapon. -->

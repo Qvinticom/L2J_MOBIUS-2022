@@ -60,7 +60,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32002" toLevel="1" name="Rice Cake of Flaming Fighting Spirit">
+	<skill id="32002" toLevel="1" name="XP Growth Scroll (Exchangeable)">
 		<!-- Acquired XP/ SP +30% for 3 min. Cooldown - 10 min. Effect remains after death. -->
 		<icon>icon.bm_rice_cake_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -102,7 +102,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="32005" toLevel="1" name="Fighting Spirit Support Box">
+	<skill id="32005" toLevel="1" name="Battle Support Chest">
 		<icon>icon.etc_marguene_collection_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -116,7 +116,7 @@
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32007" toLevel="3" name="Teleport: Entrance to Cruma Tower">
+	<skill id="32007" toLevel="3" name="Scroll of Escape: Entrance to Cruma Tower">
 		<!-- Teleports to Entrance to Cruma Tower -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
@@ -189,7 +189,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32013" toLevel="1" name="Wind Dye Pack">
+	<skill id="32013" toLevel="1" name="Windy Dye Pack">
 		<icon>icon.etc_box_of_adventure_5_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -257,11 +257,11 @@
 		<icon>icon.etc_treasure_box_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32016" toLevel="1" name="Spear Chest">
+	<skill id="32016" toLevel="1" name="Spear Weapon Pack">
 		<icon>icon.etc_treasure_box_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32017" toLevel="1" name="Blunt Weapon Chest">
+	<skill id="32017" toLevel="1" name="Blunt Weapon Pack">
 		<icon>icon.etc_treasure_box_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -277,7 +277,7 @@
 		<icon>icon.etc_treasure_box_i08</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32021" toLevel="1" name="Tulio's Gift Box">
+	<skill id="32021" toLevel="1" name="Gift Box">
 		<icon>icon.new_user_box</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -634,11 +634,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32047" toLevel="1" name="Cube of Sayha - 30-day">
+	<skill id="32047" toLevel="1" name="Cube of Sayha - 30 d.">
 		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32048" toLevel="1" name="Cube of Sayha - 90-day">
+	<skill id="32048" toLevel="1" name="Cube of Sayha - 90 d.">
 		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -653,7 +653,7 @@
 		<icon>icon.etc_pi_gift_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32051" toLevel="1" name="Soul of Berserker">
+	<skill id="32051" toLevel="1" name="Berserker Spirit">
 		<!-- For 20 min., P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>

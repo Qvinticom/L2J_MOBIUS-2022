@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="94100" name="Sealed Kookaburra Necklace" type="EtcItem">
+		<!-- Double-click to obtain Kookaburra Necklace.\n -->
+		<set name="icon" val="icon.kukaburo_necklace_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94101" name="Sealed Dragon's Necklace" type="EtcItem">
+		<!-- Double-click to obtain Dragon's Necklace.\n -->
+		<set name="icon" val="icon.strider_necklace_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94102" name="Sealed Hawk Necklace" type="EtcItem">
+		<!-- Double-click to obtain Hawk Necklace.\n -->
+		<set name="icon" val="icon.thunder_bird_necklace_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94103" name="Package: Opal Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Opal Lv. 3. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94104" name="Package: Opal Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Opal Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94105" name="Package: Coral Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Coral Lv. 3. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_coral_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94106" name="Package: Coral Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Coral Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_coral_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94107" name="Package: Onyx Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Onyx Lv. 3. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_onyx_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94108" name="Package: Onyx Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Onyx Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_onyx_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94109" name="Package: Spinel Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Spinel Lv. 3. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94110" name="Package: Spinel Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Spinel Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94111" name="Package: Zircon Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Zircon Lv. 3. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_bloodstone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94112" name="Package: Zircon Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Zircon Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_bloodstone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94113" name="Package: Moonstone Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Moonstone Lv. 3. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_moonstone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94114" name="Package: Moonstone Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Moonstone Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_moonstone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94115" name="Package: Amber Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Amber Lv. 3. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_amber_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94116" name="Package: Amber Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Amber Lv. 5. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_amber_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94117" name="Advanced Pet Training Guide" type="EtcItem">
+		<!-- Required for the 2nd pet evolution. -->
+		<set name="icon" val="icon.etc_grankain_protect" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94118" name="Pet Guide" type="EtcItem">
+		<!-- A guide helping you to learn more about your pets. -->
+		<set name="icon" val="icon.etc_letter_in_bottle_white_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94119" name="Talisman of Baium" additionalName="Sealed" type="Armor">
+		<!-- <Properties>\nP. Atk. +284\nM. Atk. +392\nM. Damage Resistance +10%\nSkill Power +5%\nResistance to All Weapons +5\nP. Critical Rate +20\nM. Skill Critical Rate +20\nMP Consumption -5%\nSkill Cooldown -3%\nSTR/ INT +1\nDEX/ WIT +1\nCON/ MEN +1\n\nRequired level: 60+. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.baium_talisman_new" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="113" addName="1">
+			<player level="60" />
+		</cond>
+	</item>
+	<item id="94120" name="Package: Talisman of Baium" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Talisman of Baium (Unexchangeable). -->
+		<set name="icon" val="icon.baium_talisman_new" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94121" name="Package: Zaken's Blood Sword" type="EtcItem">
+		<!-- Double-click to obtain Zaken's Blood Sword (Exchangeable). -->
+		<set name="icon" val="icon.special_weapon_onehandsword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94122" name="Package: Core's Plasmic Bow" type="EtcItem">
+		<!-- Double-click to obtain Core's Plasmic Bow (Exchangeable). -->
+		<set name="icon" val="icon.weapon_karupis_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94123" name="Package: Queen Ant's Stone Breaker" type="EtcItem">
+		<!-- Double-click to obtain Queen Ant's Stone Breaker (Exchangeable). -->
+		<set name="icon" val="icon.special_weapon_onehandblunt" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94124" name="Package: Orfen's Venom Sword" type="EtcItem">
+		<!-- Double-click to obtain Orfen's Venom Sword (Exchangeable). -->
+		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94125" name="Package: Baium's Thunder Breaker" type="EtcItem">
+		<!-- Double-click to obtain Baium's Thunder Breaker (Exchangeable). -->
+		<set name="icon" val="icon.weapon_terakan_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94126" name="Package: Zaken's Blood Sword" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Zaken's Blood Sword (Unexchangeable). -->
+		<set name="icon" val="icon.special_weapon_onehandsword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94127" name="Package: Core's Plasmic Bow" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Core's Plasmic Bow (Unexchangeable). -->
+		<set name="icon" val="icon.weapon_karupis_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94128" name="Package: Queen Ant's Stone Breaker" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Queen Ant's Stone Breaker (Unexchangeable). -->
+		<set name="icon" val="icon.special_weapon_onehandblunt" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94129" name="Package: Orfen's Venom Sword" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Orfen's Venom Sword (Unexchangeable). -->
+		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94130" name="Package: Baium's Thunder Breaker" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain Baium's Thunder Breaker (Unexchangeable). -->
+		<set name="icon" val="icon.weapon_terakan_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94132" name="Pet Test Weapon" type="Weapon">
+		<set name="icon" val="icon.special_weapon_onehandsword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="94133" name="Daily Kit: Seals" type="EtcItem">
+		<!-- Double-click to obtain Primeval Isle's Time Stone, Primeval Garden's Time Stone, Combat Scroll (50 pcs.), Battle Scroll (50 pcs.), Sayha's Storm Lv. 3 (50 pcs.), Giran Seal (20 pcs.). -->
+		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94134" name="Spellbook: Amazing Spike Thrust Mastery" type="EtcItem">
+		<!-- A spellbook for learning the Amazing Spike Thrust Mastery skill.\n\n<Class>\nDreadnought\n\n<Skill effect>\nSpike Thrust is enhanced and replaced by Amazing Spike Thrust. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94135" name="Spellbook: Might" type="EtcItem">
+		<!-- A spellbook for learning Might Lv. 4.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases P. Atk. -->
+		<set name="icon" val="icon.rare_skill_book01" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94136" name="Spellbook: Shield" type="EtcItem">
+		<!-- A spellbook for learning Shield Lv. 4.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases P. Def. -->
+		<set name="icon" val="icon.rare_skill_book01" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94137" name="Spellbook: Devour" type="EtcItem">
+		<!-- A spellbook for learning the Devour skill.\n\n<Class>\nDeath Knight\n\n<Skill effect>\nRecovers DP. -->
+		<set name="icon" val="icon.etc_spell_books_black_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94138" name="Spellbook: Pain of Sagittarius" type="EtcItem">
+		<!-- A spellbook for learning Pain of Sagittarius Lv. 8.\n\n<Class>\nSagittarius\n\n<Skill effect>\nRecovers target's MP at the cost of HP. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94139" name="Spellbook: Morale" type="EtcItem">
+		<!-- A spellbook for learning Morale Lv. 9.\n\n<Class>\nMoonlight Sentinel\n\n<Skill effect>\nIncreases HP/ MP Recovery Rate when running. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94140" name="Spellbook: Dark Sense" type="EtcItem">
+		<!-- A spellbook for learning the Dark Sense skill.\n\n<Class>\nGhost Sentinel\n\n<Skill effect>\nRecovers MP after Double Shot and Lethal Shot critical attacks. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94141" name="Spellbook: Buff Thief" type="EtcItem">
+		<!-- A spellbook for learning the Buff Thief skill.\n\n<Classes>\nDreadnought, Fortune Seeker\n\n<Skill effect>\nWith a certain chance, steals enemy's buffs. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94142" name="Dumpling Soup" additionalName="Event" type="EtcItem">
+		<!-- For 20 min. P./ M. Atk. +150, P./ M. Def. +100, Max HP/ MP +150, All Critical Rate +10%. -->
+		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94143" name="Hanbok" additionalName="7-day" type="Armor">
+		<!-- Changes armor appearance to that of a Hanbok. When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. The Head Enlargement and Firecracker skills can be used. -->
+		<set name="icon" val="icon.ev_kr_traditional_dress" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="94144" name="Christmas Cube" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Christmas Sack. There is a low chance to obtain a sack containing Hanbok (unlimited) after the 7th use. -->
+		<set name="icon" val="icon.etc_11th_event_group" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94145" name="Christmas Sack - Day 1" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Dumpling Soup (10 pcs.), Soulshot Ticket (30 pcs.), Spirit Ore (300 pcs.), Common Dice. -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94146" name="Christmas Sack - Day 2" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Dumpling Soup (10 pcs.), Soulshot Ticket (50 pcs.), Spirit Ore (500 pcs.), Primeval Isle's Time Stone, Combat Scroll (5 pcs.), Common Dice. -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94147" name="Christmas Sack - Day 3" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Dumpling Soup (10 pcs.), Soulshot Ticket (50 pcs.), Spirit Ore (500 pcs.), Primeval Isle's Time Stone, Combat Scroll (5 pcs.), XP Growth Scroll (5 pcs.), Common Dice. -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94148" name="Christmas Sack - Day 4" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Dumpling Soup (10 pcs.), Soulshot Ticket (80 pcs.), Spirit Ore (800 pcs.), Primeval Isle's Time Stone, Combat Scroll (5 pcs.), XP Growth Scroll (5 pcs.), Battle Scroll (5 pcs.), Common Dice. -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94149" name="Christmas Sack - Day 5" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Dumpling Soup (10 pcs.), Soulshot Ticket (80 pcs.), Spirit Ore (800 pcs.), Primeval Isle's Time Stone, Combat Scroll (10 pcs.), XP Growth Scroll (10 pcs.), Battle Scroll (5 pcs.), Common Dice. -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94150" name="Christmas Sack - Day 6" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Dumpling Soup (10 pcs.), Soulshot Ticket (200 pcs.), Spirit Ore (1000 pcs.), Primeval Isle's Time Stone (2 pcs.), Primeval Garden's Time Stone (2 pcs.), Combat Scroll (10 pcs.), XP Growth Scroll (10 pcs.), Battle Scroll (10 pcs.), Common Dice (3 pcs.), Enhanced Dice (2 pcs.). -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94151" name="Christmas Sack - Day 7" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Hanbok (7-day), Dumpling Soup (50 pcs.), Soulshot Ticket (1000 pcs.), Spirit Ore (5000 pcs.), Primeval Isle's Time Stone (2 pcs.), Primeval Garden's Time Stone (2 pcs.), Combat Scroll (10 pcs.), XP Growth Scroll (10 pcs.), Battle Scroll (10 pcs.), Common Dice (3 pcs.), Enhanced Dice (2 pcs.). -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94152" name="Hanbok Christmas Sack - Day 7" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Hanbok, Dumpling Soup (50 pcs.), Soulshot Ticket (1000 pcs.), Spirit Ore (5000 pcs.), Primeval Isle's Time Stone (2 pcs.), Primeval Garden's Time Stone (2 pcs.), Combat Scroll (10 pcs.), XP Growth Scroll (10 pcs.), Battle Scroll (10 pcs.), Common Dice (3 pcs.), Enhanced Dice (2 pcs.). -->
+		<set name="icon" val="icon.christmas_card_box2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94153" name="Baium Doll Lv. 1" type="EtcItem">
+		<!-- <Baium Doll's Sorcery Lv. 1>\nSkill Cooldown -2%\nP. Def. +5%\nM. Def. +5%\nSilence Resistance +10%\nFear Resistance +10%\nParalysis Resistance +5%\nKnock Down Resistance +5%\nPull Resistance +5%\n\nBoosts parameters when in inventory.\nCan be upgraded through Compound. -->
+		<set name="icon" val="icon.bm_baium_doll_30d" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94154" name="Queen Ant Doll Lv. 1" type="EtcItem">
+		<!-- <Queen Ant Doll's Sorcery Lv. 1>\nP. Atk. +2%\nP. Critical Damage +3%\nP. Skill Critical Damage +3%\nMax HP +4%\n\nBoosts parameters when in inventory.\nCan be upgraded through compounding. -->
+		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94155" name="Orfen Doll Lv. 1" type="EtcItem">
+		<!-- <Orfen Doll's Sorcery Lv. 1>\nM. Atk. +2%\nM. Skill Critical Damage +3%\nMax MP +4%\n\nBoosts parameters when in inventory.\nCan be upgraded through compounding. -->
+		<set name="icon" val="icon.bm_orfen_doll_30d" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94156" name="Package: Baium Doll Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain Baium Doll Lv. 1. -->
+		<set name="icon" val="icon.bm_baium_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94157" name="Package: Baium Doll Lv. 2" type="EtcItem">
+		<!-- Double-click to obtain Baium Doll Lv. 2. -->
+		<set name="icon" val="icon.bm_baium_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94158" name="Package: Baium Doll Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Baium Doll Lv. 3. -->
+		<set name="icon" val="icon.bm_baium_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94159" name="Package: Queen Ant Doll Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain Queen Ant Doll Lv. 1. -->
+		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94160" name="Package: Queen Ant Doll Lv. 2" type="EtcItem">
+		<!-- Double-click to obtain Queen Ant Doll Lv. 2. -->
+		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94161" name="Package: Queen Ant Doll Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Queen Ant Doll Lv. 3. -->
+		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94162" name="Package: Orfen Doll Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain Orfen Doll Lv. 1. -->
+		<set name="icon" val="icon.bm_orfen_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94163" name="Package: Orfen Doll Lv. 2" type="EtcItem">
+		<!-- Double-click to obtain Orfen Doll Lv. 2. -->
+		<set name="icon" val="icon.bm_orfen_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94164" name="Package: Orfen Doll Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Orfen Doll Lv. 3. -->
+		<set name="icon" val="icon.bm_orfen_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94174" name="Venir's Talisman Lv. 16" type="Armor">
+		<!-- <When equipped>\nCON +3\nMEN +3\nDEX +3\nWIT +3\nSTR +2\nINT +2\nMax HP +100\nAll received Critical Rate -10%\nP./ M. Skill Cooldown -7%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12.\nEffects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94175" name="Venir's Talisman Lv. 17" type="Armor">
+		<!-- <When equipped>\nCON +3\nMEN +3\nDEX +3\nWIT +3\nSTR +3\nINT +2\nMax HP +200\nAll received Critical Rate -10%\nP./ M. Skill Cooldown -9%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12.\nEffects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94176" name="Venir's Talisman Lv. 18" type="Armor">
+		<!-- <When equipped>\nCON +3\nMEN +3\nDEX +3\nWIT +3\nSTR +3\nINT +3\nMax HP +300\nAll received Critical Rate -12%\nP./ M. Skill Cooldown -9%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94177" name="Venir's Talisman Lv. 19" type="Armor">
+		<!-- <When equipped>\nCON +4\nMEN +4\nDEX +3\nWIT +3\nSTR +3\nINT +3\nMax HP +400\nAll received Critical Rate -12%\nP./ M. Skill Cooldown -11%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94178" name="Venir's Talisman Lv. 20" type="Armor">
+		<!-- <When equipped>\nCON +4\nMEN +4\nDEX +4\nWIT +4\nSTR +3\nINT +3\nMax HP +500\nAll received Critical Rate -14%\nP./ M. Skill Cooldown -11%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94179" name="Venir's Talisman Lv. 21" type="Armor">
+		<!-- <When equipped>\nCON +4\nMEN +4\nDEX +4\nWIT +4\nSTR +4\nINT +4\nMax HP +600\nAll received Critical Rate -14%\nP./ M. Skill Cooldown -13%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94180" name="Venir's Talisman Lv. 22" type="Armor">
+		<!-- <When equipped>\nCON +5\nMEN +5\nDEX +4\nWIT +4\nSTR +4\nINT +4\nMax HP +700\nAll received Critical Rate -16%\nP./ M. Skill Cooldown -13%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94181" name="Venir's Talisman Lv. 23" type="Armor">
+		<!-- <When equipped>\nCON +5\nMEN +5\nDEX +5\nWIT +5\nSTR +4\nINT +4\nMax HP +800\nAll received Critical Rate -16%\nP./ M. Skill Cooldown -15%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94182" name="Venir's Talisman Lv. 24" type="Armor">
+		<!-- <When equipped>\nCON +5\nMEN +5\nDEX +5\nWIT +5\nSTR +5\nINT +5\nMax HP +900\nAll received Critical Rate -18%\nP./ M. Skill Cooldown -15%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 24.\nEffects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94183" name="Venir's Talisman Lv. 25" type="Armor">
+		<!-- <When equipped>\nCON +6\nMEN +6\nDEX +6\nWIT +6\nSTR +6\nINT +6\nMax HP +1000\nAll received Critical Rate -18%\nP./ M. Skill Cooldown -17%\n\nEffects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.benir_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

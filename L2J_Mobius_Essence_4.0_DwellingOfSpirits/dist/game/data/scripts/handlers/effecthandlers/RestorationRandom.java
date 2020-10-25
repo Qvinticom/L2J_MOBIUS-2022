@@ -97,7 +97,7 @@ public class RestorationRandom extends AbstractEffect
 		final PlayerInstance player = effected.getActingPlayer();
 		if (creationList.isEmpty())
 		{
-			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
+			player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_THE_ITEM);
 			return;
 		}
 		
@@ -166,7 +166,7 @@ public class RestorationRandom extends AbstractEffect
 		}
 		else if (item.getEnchantLevel() > 0)
 		{
-			sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2);
 			sm.addInt(item.getEnchantLevel());
 			sm.addItemName(item);
 		}

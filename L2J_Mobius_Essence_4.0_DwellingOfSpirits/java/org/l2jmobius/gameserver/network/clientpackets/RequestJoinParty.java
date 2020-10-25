@@ -56,7 +56,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 		{
 			if (player.getParty() == null)
 			{
-				player.sendPacket(SystemMessageId.THE_PARTY_HAS_DISPERSED);
+				player.sendPacket(SystemMessageId.THE_PARTY_IS_DISBANDED);
 			}
 			else
 			{
@@ -95,7 +95,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 		final PlayerInstance target = World.getInstance().getPlayer(_name);
 		if (target == null)
 		{
-			requestor.sendPacket(SystemMessageId.YOU_MUST_FIRST_SELECT_A_USER_TO_INVITE_TO_YOUR_PARTY);
+			requestor.sendPacket(SystemMessageId.SELECT_A_PLAYER_YOU_WANT_TO_INVITE_TO_YOUR_PARTY);
 			return;
 		}
 		
@@ -143,7 +143,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 		
 		if (BlockList.isBlocked(target, requestor))
 		{
-			sm = new SystemMessage(SystemMessageId.C1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
+			sm = new SystemMessage(SystemMessageId.S1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
 			sm.addString(target.getName());
 			requestor.sendPacket(sm);
 			return;
@@ -151,7 +151,7 @@ public class RequestJoinParty implements IClientIncomingPacket
 		
 		if (target == requestor)
 		{
-			requestor.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+			requestor.sendPacket(SystemMessageId.THE_TARGET_CANNOT_BE_INVITED);
 			return;
 		}
 		

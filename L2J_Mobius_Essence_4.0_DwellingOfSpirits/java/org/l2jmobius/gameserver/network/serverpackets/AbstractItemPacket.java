@@ -71,8 +71,9 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 	protected void writeItem(PacketWriter packet, ItemInfo item)
 	{
 		final int mask = calculateMask(item);
-		// cddcQcchQccddc
+		
 		packet.writeC(mask);
+		packet.writeC(0x00); // 286 protocol
 		packet.writeD(item.getObjectId()); // ObjectId
 		packet.writeD(item.getItem().getDisplayId()); // ItemId
 		packet.writeC(item.getItem().isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocation()); // T1
@@ -82,12 +83,14 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		packet.writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
 		packet.writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
 		packet.writeC(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-		packet.writeC(item.getCustomType2()); // Pet name exists or not shown in control item
+		packet.writeC(0x00); // 286 protocol
 		packet.writeD(item.getMana());
+		packet.writeC(0x00); // 270 protocol
 		packet.writeD(item.getTime());
 		packet.writeC(item.isAvailable() ? 1 : 0); // GOD Item enabled = 1 disabled (red) = 0
 		packet.writeC(0x00); // 140 protocol
 		packet.writeC(0x00); // 140 protocol
+		
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
 			writeItemAugment(packet, item);
@@ -113,7 +116,9 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 	protected void writeItem(PacketWriter packet, ItemInfo item, long count)
 	{
 		final int mask = calculateMask(item);
+		
 		packet.writeC(mask);
+		packet.writeC(0x00); // 286 protocol
 		packet.writeD(item.getObjectId()); // ObjectId
 		packet.writeD(item.getItem().getDisplayId()); // ItemId
 		packet.writeC(item.getItem().isQuestItem() || (item.getEquipped() == 1) ? 0xFF : item.getLocation()); // T1
@@ -123,12 +128,14 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		packet.writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
 		packet.writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
 		packet.writeC(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
-		packet.writeC(0x01); // TODO : Find me
+		packet.writeC(0x00); // 286 protocol
 		packet.writeD(item.getMana());
+		packet.writeC(0x00); // 270 protocol
 		packet.writeD(item.getTime());
 		packet.writeC(item.isAvailable() ? 1 : 0); // GOD Item enabled = 1 disabled (red) = 0
 		packet.writeC(0x00); // 140 protocol
 		packet.writeC(0x00); // 140 protocol
+		
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
 			writeItemAugment(packet, item);
@@ -147,16 +154,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 		if (containsMask(mask, ItemListType.SOUL_CRYSTAL))
 		{
-			packet.writeC(item.getSoulCrystalOptions().size());
-			for (EnsoulOption option : item.getSoulCrystalOptions())
-			{
-				packet.writeD(option.getId());
-			}
-			packet.writeC(item.getSoulCrystalSpecialOptions().size());
-			for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
-			{
-				packet.writeD(option.getId());
-			}
+			writeItemEnsoulOptions(packet, item);
 		}
 	}
 	

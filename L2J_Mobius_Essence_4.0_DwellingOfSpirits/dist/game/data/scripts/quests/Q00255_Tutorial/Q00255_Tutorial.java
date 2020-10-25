@@ -148,6 +148,12 @@ public class Q00255_Tutorial extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		// Death Knights.
+		if ((player == null) || (player.getClassId().getId() > 195))
+		{
+			return null;
+		}
+		
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
@@ -223,6 +229,12 @@ public class Q00255_Tutorial extends Quest
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
+		// Death Knights.
+		if (player.getClassId().getId() > 195)
+		{
+			return null;
+		}
+		
 		final QuestState qs = getQuestState(player, false);
 		if (qs != null)
 		{
@@ -398,6 +410,12 @@ public class Q00255_Tutorial extends Quest
 		
 		final PlayerInstance player = event.getPlayer();
 		if (player.getLevel() > 6)
+		{
+			return;
+		}
+		
+		// Death Knights.
+		if (player.getClassId().getId() > 195)
 		{
 			return;
 		}

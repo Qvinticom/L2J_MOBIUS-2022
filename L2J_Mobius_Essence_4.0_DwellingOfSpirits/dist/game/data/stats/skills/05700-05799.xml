@@ -22,7 +22,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5701" toLevel="7" name="P. Atk. Decrease">
+	<skill id="5701" toLevel="7" name="Decrease P. Atk.">
 		<!-- P. Atk. -66%. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLevel>9</abnormalLevel>
@@ -1242,7 +1242,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5737" toLevel="6" name="Power Strike">
+	<skill id="5737" toLevel="6" name="Power Stamp">
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
@@ -1347,7 +1347,7 @@
 			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
-	<skill id="5740" toLevel="1" name="Pet Regeneration">
+	<skill id="5740" toLevel="1" name="Recovery Pot">
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2192,7 +2192,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5760" toLevel="9" name="Critical Blow">
+	<skill id="5760" toLevel="9" name="Critical Hit">
 		<!-- P. Critical Rate +30%, Atk. Spd. +33%. Successful physical critical attacks allow to gather energy for powerful distance attacks. -->
 		<icon>icon.skill5760</icon>
 		<abnormalLevel>

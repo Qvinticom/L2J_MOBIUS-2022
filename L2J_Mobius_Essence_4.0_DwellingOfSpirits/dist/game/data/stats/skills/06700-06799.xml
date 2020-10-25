@@ -676,7 +676,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6734" toLevel="1" name="Energy of Destruction">
+	<skill id="6734" toLevel="1" name="Destructive Energy">
 		<!-- For 5 sec., inflicted with poison with 800 HP decrease per sec. -->
 		<icon>icon.skill0129</icon>
 		<operateType>A2</operateType>
@@ -698,7 +698,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6735" toLevel="1" name="Petrify">
+	<skill id="6735" toLevel="1" name="Petrifies the target.">
 		<!-- Petrified and unable to move temporarily. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
@@ -958,7 +958,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6748" toLevel="1" name="Shock Attack">
+	<skill id="6748" toLevel="1" name="Stun Attack">
 		<!-- Inflicts Stun for 5 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1169,7 +1169,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6757" toLevel="1" name="Decrease Speed">
+	<skill id="6757" toLevel="1" name="Slow">
 		<!-- Enemy's Speed -30% for 15 sec. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -1425,7 +1425,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6768" toLevel="1" name="Shock Attack">
+	<skill id="6768" toLevel="1" name="Stun Attack">
 		<!-- Inflicts Stun for 5 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1589,7 +1589,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6774" toLevel="1" name="Shock Attack">
+	<skill id="6774" toLevel="1" name="Stun Attack">
 		<!-- Inflicts Stun for 10 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>

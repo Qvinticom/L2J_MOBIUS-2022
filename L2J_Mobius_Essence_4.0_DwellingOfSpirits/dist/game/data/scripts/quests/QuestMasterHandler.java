@@ -42,6 +42,9 @@ import quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringThe
 import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
 import quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend;
 import quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle;
+import quests.Q10957_TheLifeOfADeathKnight.Q10957_TheLifeOfADeathKnight;
+import quests.Q10958_ExploringNewOpportunities.Q10958_ExploringNewOpportunities;
+import quests.Q10959_ChallengingYourDestiny.Q10959_ChallengingYourDestiny;
 import quests.Q10961_EffectiveTraining.Q10961_EffectiveTraining;
 import quests.Q10962_NewHorizons.Q10962_NewHorizons;
 import quests.Q10963_ExploringTheAntNest.Q10963_ExploringTheAntNest;
@@ -124,6 +127,9 @@ public class QuestMasterHandler
 		Q10868_TheDarkSideOfPower.class, // TODO: Not done.
 		Q10870_UnfinishedDevice.class, // TODO: Not done.
 		Q10871_DeathToThePirateKing.class, // TODO: Not done.
+		Q10957_TheLifeOfADeathKnight.class,
+		Q10958_ExploringNewOpportunities.class,
+		Q10959_ChallengingYourDestiny.class,
 		Q10961_EffectiveTraining.class,
 		Q10962_NewHorizons.class,
 		Q10963_ExploringTheAntNest.class,

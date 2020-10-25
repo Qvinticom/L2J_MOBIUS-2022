@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
-import org.l2jmobius.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
+import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeSetAlarm;
 
 /**
  * Saga of Legend (10673)
@@ -100,6 +100,7 @@ public class Q10673_SagaOfLegend extends Quest
 	private static final int SPELLBOOK_ORC = 90042; // Spellbook: Mount Black Bear
 	private static final int SPELLBOOK_DWARF = 90041; // Spellbook: Mount Kukuru
 	private static final int SPELLBOOK_KAMAEL = 91946; // Spellbook: Mount Griffin
+	private static final int SPELLBOOK_DEATH_KNIGHT = 93383; // Spellbook: Mount Nightmare Steed
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	private static final String KILL_COUNT_VAR = "KillCount";
@@ -160,7 +161,7 @@ public class Q10673_SagaOfLegend extends Quest
 					qs.exitQuest(false, true);
 					if (CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()))
 					{
-						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+						player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 					}
 					htmltext = event;
 				}
@@ -275,7 +276,7 @@ public class Q10673_SagaOfLegend extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCompleted())
 		{
-			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+			player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 		}
 	}
 	
@@ -297,6 +298,13 @@ public class Q10673_SagaOfLegend extends Quest
 		// Avoid reward more than once.
 		if (player.getVariables().getBoolean("ITEMS_REWARDED", false))
 		{
+			return;
+		}
+		
+		// Death Knights.
+		if (player.getClassId().getId() > 195)
+		{
+			giveItems(player, SPELLBOOK_DEATH_KNIGHT, 1);
 			return;
 		}
 		

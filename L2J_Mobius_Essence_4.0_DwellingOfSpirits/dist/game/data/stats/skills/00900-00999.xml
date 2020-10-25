@@ -871,7 +871,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="914" toLevel="1" name="Song of Purification">
+	<skill id="914" toLevel="1" name="Immunity Barrier">
 		<!-- With 50% probability removes debuffs from party members. Debuff Resistance +80%, Healing Power +30% for 5 min. -->
 		<icon>icon.skill0914</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -906,7 +906,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="915" toLevel="1" name="Dance of Berserker">
+	<skill id="915" toLevel="1" name="Moving Shadows">
 		<!-- For 5 min., all party members' P. Def. -4%, M. Def. -8%, P. Evasion -2; P. Atk. +4%, M. Atk. +8%, Atk. Spd. +4%, Casting Spd. +4% and Speed +4. Requires a dual sword. -->
 		<icon>icon.skill0915</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1271,12 +1271,26 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="921" toLevel="1" name="Cursed Pierce">
-		<!-- Attacks the enemy with bonus 3849 Power. Ignores Shield Defense. Requires a Spear. Critical. Over-hit-->
+	<skill id="921" toLevel="15" name="Spike Thrust">
+		<!-- Attacks the target with $s1 power.\nRequires a spear.\nIgnores Shield Defense.\nIgnores $s2 of the target's defense.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0921</icon>
-		<castRange>80</castRange>
-		<coolTime>720</coolTime>
-		<effectPoint>-337</effectPoint>
+		<effectPoint>
+			<value level="1">-400</value>
+			<value level="2">-405</value>
+			<value level="3">-410</value>
+			<value level="4">-415</value>
+			<value level="5">-420</value>
+			<value level="6">-425</value>
+			<value level="7">-430</value>
+			<value level="8">-435</value>
+			<value level="9">-440</value>
+			<value level="10">-445</value>
+			<value level="11">-450</value>
+			<value level="12">-455</value>
+			<value level="13">-460</value>
+			<value level="14">-465</value>
+			<value level="15">-470</value>
+		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
 		<magicLevel>76</magicLevel>
@@ -3551,7 +3565,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="964" toLevel="1" name="Children of Shilen">
+	<skill id="964" toLevel="1" name="Children of Shillien">
 		<!-- Casting Spd. +13 and MP Recovery Bonus +2%. -->
 		<icon>icon.skill0294</icon>
 		<magicLevel>14</magicLevel>
@@ -3942,7 +3956,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="976" toLevel="7" name="Transformation - Wind Strike">
+	<skill id="976" toLevel="7" name="Transformation Skill - Wind Strike">
 		<!-- Creates a powerful hurricane and inflicts Wind damage on the enemy with bonus %s M. Atk. Power. -->
 		<icon>icon.skill1177</icon>
 		<castRange>600</castRange>
@@ -4356,34 +4370,41 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="984" toLevel="23" name="Shield Strike">
-		<!-- Attacks the enemy using a shield with $s1 Power added to P. Atk, and provokes the enemy. Requires a shield. Over-hit. -->
+	<skill id="984" toLevel="30" name="Shield Strike">
+		<!-- Attacks the enemy using a shield with $s1 power, and provokes the enemy.\nRequires a shield.\nIgnores Shield Defense.\nIgnores $s2 of the target's defense.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0984</icon>
 		<castRange>40</castRange>
 		<effectPoint>
-			<value level="1">-3125</value>
-			<value level="2">-3366</value>
-			<value level="3">-3609</value>
-			<value level="4">-3849</value>
-			<value level="5">-4084</value>
-			<value level="6">-4312</value>
-			<value level="7">-4530</value>
-			<value level="8">-4668</value>
-			<value level="9">-4798</value>
-			<value level="10">-4922</value>
-			<value level="11">-5036</value>
-			<value level="12">-5142</value>
-			<value level="13">-5238</value>
-			<value level="14">-5323</value>
-			<value level="15">-5397</value>
-			<value level="16">-5462</value>
-			<value level="17">-5492</value>
-			<value level="18">-5520</value>
-			<value level="19">-5571</value>
-			<value level="20">-5595</value>
-			<value level="21">-5618</value>
-			<value level="22">-5640</value>
-			<value level="23">-5661</value>
+			<value level="1">-2200</value>
+			<value level="2">-2350</value>
+			<value level="3">-2500</value>
+			<value level="4">-2650</value>
+			<value level="5">-2800</value>
+			<value level="6">-2950</value>
+			<value level="7">-3100</value>
+			<value level="8">-3200</value>
+			<value level="9">-3300</value>
+			<value level="10">-3400</value>
+			<value level="11">-3500</value>
+			<value level="12">-3600</value>
+			<value level="13">-3700</value>
+			<value level="14">-3800</value>
+			<value level="15">-3900</value>
+			<value level="16">-4000</value>
+			<value level="17">-4050</value>
+			<value level="18">-4100</value>
+			<value level="19">-4200</value>
+			<value level="20">-4250</value>
+			<value level="21">-4300</value>
+			<value level="22">-4350</value>
+			<value level="23">-4400</value>
+			<value level="24">-4400</value>
+			<value level="25">-4400</value>
+			<value level="26">-4400</value>
+			<value level="27">-4400</value>
+			<value level="28">-4400</value>
+			<value level="29">-4400</value>
+			<value level="30">-4400</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
@@ -4411,6 +4432,13 @@
 			<value level="21">81</value>
 			<value level="22">82</value>
 			<value level="23">83</value>
+			<value level="24">83</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">83</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="26">83</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="27">83</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">83</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">83</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">83</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">38</value>
@@ -4436,6 +4464,13 @@
 			<value level="21">83</value>
 			<value level="22">84</value>
 			<value level="23">85</value>
+			<value level="24">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="25">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="26">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="27">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="28">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="30">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -4473,6 +4508,13 @@
 					<value level="21">4312</value>
 					<value level="22">4399</value>
 					<value level="23">4482</value>
+					<value level="24">4482</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="25">4482</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="26">4482</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="27">4482</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="28">4482</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="29">4482</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="30">4482</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 			</effect>
 			<effect name="GetAgro" />

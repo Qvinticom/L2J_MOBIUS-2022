@@ -229,7 +229,7 @@ public class MonsterRace
 				{
 					final SystemMessage msg = new SystemMessage(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1);
 					msg.addInt(_raceNumber);
-					final SystemMessage msg2 = new SystemMessage(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S);
+					final SystemMessage msg2 = new SystemMessage(SystemMessageId.TICKET_SALES_FOR_MONSTER_RACE_S1_ARE_CLOSED);
 					msg2.addInt(10);
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, msg, msg2);
 					break;
@@ -238,7 +238,7 @@ public class MonsterRace
 				{
 					final SystemMessage msg = new SystemMessage(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1);
 					msg.addInt(_raceNumber);
-					final SystemMessage msg2 = new SystemMessage(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S);
+					final SystemMessage msg2 = new SystemMessage(SystemMessageId.TICKET_SALES_FOR_MONSTER_RACE_S1_ARE_CLOSED);
 					msg2.addInt(5);
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, msg, msg2);
 					break;
@@ -247,7 +247,7 @@ public class MonsterRace
 				{
 					final SystemMessage msg = new SystemMessage(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1);
 					msg.addInt(_raceNumber);
-					final SystemMessage msg2 = new SystemMessage(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S);
+					final SystemMessage msg2 = new SystemMessage(SystemMessageId.TICKET_SALES_FOR_MONSTER_RACE_S1_ARE_CLOSED);
 					msg2.addInt(1);
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, msg, msg2);
 					break;
@@ -260,7 +260,7 @@ public class MonsterRace
 					
 					final SystemMessage msg = new SystemMessage(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1);
 					msg.addInt(_raceNumber);
-					final SystemMessage msg2 = new SystemMessage(SystemMessageId.TICKETS_SALES_ARE_CLOSED_FOR_MONSTER_RACE_S1_ODDS_ARE_POSTED);
+					final SystemMessage msg2 = new SystemMessage(SystemMessageId.TICKETS_SALES_ARE_CLOSED_FOR_MONSTER_RACE_S1_YOU_CAN_SEE_THE_AMOUNT_OF_WIN);
 					msg2.addInt(_raceNumber);
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, msg, msg2);
 					break;
@@ -269,7 +269,7 @@ public class MonsterRace
 				case 1020: // 17 min
 				{
 					final int minutes = (_finalCountdown == 960) ? 2 : 1;
-					final SystemMessage msg = new SystemMessage(SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MINUTE_S);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MIN);
 					msg.addInt(minutes);
 					msg.addInt(_raceNumber);
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, msg);
@@ -277,14 +277,14 @@ public class MonsterRace
 				}
 				case 1050: // 17 min 30 sec
 				{
-					final SystemMessage msg = new SystemMessage(SystemMessageId.MONSTER_RACE_S1_WILL_BEGIN_IN_30_SECONDS);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_30_SEC);
 					msg.addInt(_raceNumber);
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, msg);
 					break;
 				}
 				case 1070: // 17 min 50 sec
 				{
-					final SystemMessage msg = new SystemMessage(SystemMessageId.MONSTER_RACE_S1_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_FIVE_SECONDS);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.MONSTER_RACE_S1_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_5_SEC);
 					msg.addInt(_raceNumber);
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, msg);
 					break;
@@ -296,7 +296,7 @@ public class MonsterRace
 				case 1079: // 17 min 59 sec
 				{
 					final int seconds = 1080 - _finalCountdown;
-					final SystemMessage msg = new SystemMessage(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.THE_RACE_BEGINS_IN_S1_SEC);
 					msg.addInt(seconds);
 					Broadcast.toAllPlayersInZoneType(DerbyTrackZone.class, msg);
 					break;

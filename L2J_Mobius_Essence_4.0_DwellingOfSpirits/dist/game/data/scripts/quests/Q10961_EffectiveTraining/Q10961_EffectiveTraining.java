@@ -144,7 +144,7 @@ public class Q10961_EffectiveTraining extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_MONSTERS_ON_THE_HILL_OF_HOPE.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.KILL_MONSTERS_ON_THE_HILL_OF_HOPE.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);

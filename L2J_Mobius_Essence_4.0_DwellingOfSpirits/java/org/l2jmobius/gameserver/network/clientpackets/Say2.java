@@ -92,7 +92,11 @@ public class Say2 implements IClientIncomingPacket
 	{
 		_text = packet.readS();
 		_type = packet.readD();
-		_target = (_type == ChatType.WHISPER.getClientId()) ? packet.readS() : null;
+		if (_type == ChatType.WHISPER.getClientId())
+		{
+			packet.readC();
+			_target = packet.readS();
+		}
 		return true;
 	}
 	

@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
+import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeSetAlarm;
 
 /**
  * New Horizons (10982)
@@ -157,7 +157,7 @@ public class Q10982_SpiderHunt extends Quest
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
-						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+						player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 					}
 					qs.exitQuest(false, true);
 					htmltext = event;
@@ -180,7 +180,7 @@ public class Q10982_SpiderHunt extends Quest
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
-						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+						player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 					}
 					qs.exitQuest(false, true);
 					htmltext = event;
@@ -203,7 +203,7 @@ public class Q10982_SpiderHunt extends Quest
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
-						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+						player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 					}
 					qs.exitQuest(false, true);
 					htmltext = event;
@@ -315,7 +315,7 @@ public class Q10982_SpiderHunt extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCompleted())
 		{
-			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+			player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 		}
 	}
 }

@@ -229,7 +229,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		OutgoingPackets.EX_PET_INFO.writeId(packet);
 		
 		packet.writeD(_summon.getObjectId());
-		packet.writeC(_value); // // 0=teleported 1=default 2=summoned
+		packet.writeC(_value); // 0=teleported 1=default 2=summoned
 		packet.writeH(37); // mask_bits_37
 		packet.writeB(_masks);
 		

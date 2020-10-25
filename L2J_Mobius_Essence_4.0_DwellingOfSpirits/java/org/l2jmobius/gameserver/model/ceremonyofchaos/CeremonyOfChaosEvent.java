@@ -257,7 +257,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			final PlayerInstance player = member.getPlayer();
 			if (player != null)
 			{
-				player.sendPacket(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT);
+				player.sendPacket(SystemMessageId.THE_MATCH_HAS_BEGUN_FIGHT);
 				player.setImmobilized(false);
 				player.setInvisible(false);
 				player.broadcastInfo();
@@ -290,7 +290,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		final SystemMessage msg;
 		if (winners.isEmpty() || (winners.size() > 1))
 		{
-			msg = new SystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
+			msg = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
 		}
 		else
 		{
@@ -535,7 +535,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			case "match_start_countdown":
 			{
 				final int time = params.getInt("time", 0);
-				final SystemMessage countdown = new SystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
+				final SystemMessage countdown = new SystemMessage(SystemMessageId.THE_MATCH_BEGINS_IN_S1_SEC);
 				countdown.addByte(time);
 				broadcastPacket(countdown);
 				

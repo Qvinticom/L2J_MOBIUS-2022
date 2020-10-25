@@ -272,7 +272,7 @@ public class Castle extends AbstractResidence
 		}
 		setSide(side);
 		setOwner(clan);
-		final SystemMessage msg = new SystemMessage(SystemMessageId.CLAN_S1_HAS_SUCCEEDED_IN_S2);
+		final SystemMessage msg = new SystemMessage(SystemMessageId.S2_CLAN_S1_WINS);
 		msg.addString(clan.getName());
 		msg.addString(getName());
 		getSiege().announceToPlayer(msg, true);

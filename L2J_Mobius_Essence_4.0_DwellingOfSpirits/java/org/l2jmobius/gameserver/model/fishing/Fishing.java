@@ -155,7 +155,7 @@ public class Fishing
 		{
 			if (Config.PREMIUM_ONLY_FISHING && !_player.hasPremiumStatus())
 			{
-				_player.sendPacket(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_FISHING);
+				_player.sendPacket(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_HE_OR_SHE_IS_CURRENTLY_FISHING);
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
 				stopFishing(FishingEndType.ERROR);
 				return;
@@ -183,7 +183,7 @@ public class Fishing
 		final ItemInstance rod = _player.getActiveWeaponInstance();
 		if ((rod == null) || (rod.getItemType() != WeaponType.FISHINGROD))
 		{
-			_player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
+			_player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_A_FISHING_ROD_EQUIPPED);
 			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			stopFishing(FishingEndType.ERROR);
 			return;
@@ -192,7 +192,7 @@ public class Fishing
 		final FishingRod rodData = FishingData.getInstance().getRodData(rod.getId());
 		if (rodData == null)
 		{
-			_player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
+			_player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_A_FISHING_ROD_EQUIPPED);
 			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			stopFishing(FishingEndType.ERROR);
 			return;
@@ -317,7 +317,7 @@ public class Fishing
 					final long sp = (long) (Rnd.get(fishingData.getSpRateMin(), fishingData.getSpRateMax()) * lvlModifier * _player.getStat().getValue(Stat.FISHING_EXP_SP_BONUS, 1));
 					_player.addExpAndSp(xp, sp, true);
 					_player.getInventory().addItem("Fishing Reward", fishingCatchData.getItemId(), 1, _player, null);
-					final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+					final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1);
 					msg.addItemName(fishingCatchData.getItemId());
 					_player.sendPacket(msg);
 					_player.unchargeShot(ShotType.FISH_SOULSHOTS);

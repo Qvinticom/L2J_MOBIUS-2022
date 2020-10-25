@@ -52,6 +52,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("CheckLevel", CheckLevelSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("CheckSex", CheckSexSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("ConsumeBody", ConsumeBodySkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("DeathPoints", DeathPointsSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EnergySaved", EnergySavedSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EquipArmor", EquipArmorSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("EquipShield", EquipShieldSkillCondition::new);

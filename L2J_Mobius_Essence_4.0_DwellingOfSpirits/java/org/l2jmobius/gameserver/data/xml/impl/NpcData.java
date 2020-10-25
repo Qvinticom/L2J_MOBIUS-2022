@@ -96,6 +96,7 @@ public class NpcData implements IXmlReader
 						NamedNodeMap attrs = listNode.getAttributes();
 						final StatSet set = new StatSet(new HashMap<>());
 						final int npcId = parseInteger(attrs, "id");
+						final String type;
 						Map<String, Object> parameters = null;
 						Map<Integer, Skill> skills = null;
 						Set<Integer> clans = null;
@@ -104,7 +105,8 @@ public class NpcData implements IXmlReader
 						set.set("id", npcId);
 						set.set("displayId", parseInteger(attrs, "displayId"));
 						set.set("level", parseByte(attrs, "level"));
-						set.set("type", parseString(attrs, "type"));
+						type = parseString(attrs, "type");
+						set.set("type", type);
 						set.set("name", parseString(attrs, "name"));
 						set.set("usingServerSideName", parseBoolean(attrs, "usingServerSideName"));
 						set.set("title", parseString(attrs, "title"));
@@ -628,6 +630,12 @@ public class NpcData implements IXmlReader
 						
 						if (dropLists != null)
 						{
+							// Add LCoin drop for bosses.
+							if (type.contains("boss"))
+							{
+								dropLists.add(new DropHolder(DropType.DROP, 91663, 1, 1, 100));
+							}
+							
 							for (DropHolder dropHolder : dropLists)
 							{
 								switch (dropHolder.getDropType())

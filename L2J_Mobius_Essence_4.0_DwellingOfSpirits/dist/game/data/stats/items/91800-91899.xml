@@ -705,8 +705,16 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1" />
 		<set name="price" val="2000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50132" level="1" /> <!-- Mid-grade HP Recovery Potion -->
+		</skills>
 	</item>
 	<item id="91858" name="Lit Red Lantern" additionalName="1st place" type="EtcItem">
 		<!-- Magic lantern given as a reward for achieving the 1st place. XP +100,000,000, SP +2,700,000. Cannot be transferred to lower-level characters. -->
@@ -779,7 +787,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91864" name="Dragon Belt Chest" type="EtcItem">
+	<item id="91864" name="Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain Dragon Belt and 10 Scrolls: Enchant Dragon Belt. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -790,6 +798,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91862" min="1" max="1" chance="100" /> <!-- Dragon Belt -->
+			<item id="91863" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="91865" name="Pa'agrio's Summoning Stick (PA Event)" type="EtcItem">
 		<!-- Double-click to summon 1 of the 2 random Orc monsters. Cooldown: 5 sec. -->

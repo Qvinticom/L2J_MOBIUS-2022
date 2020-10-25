@@ -260,7 +260,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1507" toLevel="1" name="Lord of Vampires">
+	<skill id="1507" toLevel="1" name="Spirit of Shillien">
 		<!-- For 30 sec., recovers as HP 80% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.skill1507</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -2252,7 +2252,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1533" toLevel="1" name="Enlightenment">
+	<skill id="1533" toLevel="2" name="Enlightenment">
 		<!-- User receives mystical enlightenment for 20 sec., M. Atk. +10%, Heal +20%, Casting Spd. + 30% and M. Critical Rate +50%, and MP Consumption -70%. -->
 		<icon>icon.skill1532</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2322,7 +2322,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1535" toLevel="2" name="Chant of Movement">
+	<skill id="1535" toLevel="2" name="Chant of Wind Walk">
 		<!-- Party member's Speed +$s2 for $s1. -->
 		<icon>icon.skill1535</icon>
 		<abnormalLevel>
@@ -2478,7 +2478,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1539" toLevel="11" name="Stigma of Shilen">
+	<skill id="1539" toLevel="15" name="Stigma of Shillien">
 		<!-- For $s1, Melee Weapon Resistance -$s2. -->
 		<icon>icon.skill1539</icon>
 		<abnormalLevel>
@@ -2493,6 +2493,10 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 			<value level="11">11</value>
+			<value level="12">11</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">11</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">11</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">11</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>STIGMA_OF_SILEN</abnormalType>
@@ -2509,6 +2513,10 @@
 			<value level="9">900</value>
 			<value level="10">900</value>
 			<value level="11">900</value>
+			<value level="12">900</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">900</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">900</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">900</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</castRange>
 		<effectPoint>
 			<value level="1">-379</value>
@@ -2522,6 +2530,10 @@
 			<value level="9">-652</value>
 			<value level="10">-654</value>
 			<value level="11">-656</value>
+			<value level="12">-656</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">-656</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">-656</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">-656</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<effectRange>
 			<value level="1">1100</value>
@@ -2535,6 +2547,10 @@
 			<value level="9">1500</value>
 			<value level="10">1500</value>
 			<value level="11">1500</value>
+			<value level="12">1500</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">1500</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">1500</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">1500</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
@@ -2550,6 +2566,10 @@
 			<value level="9">82</value>
 			<value level="10">83</value>
 			<value level="11">84</value>
+			<value level="12">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">18</value>
@@ -2563,6 +2583,10 @@
 			<value level="9">46</value>
 			<value level="10">47</value>
 			<value level="11">48</value>
+			<value level="12">48</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">48</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">48</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">48</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2586,6 +2610,10 @@
 					<value level="9">-52</value>
 					<value level="10">-53</value>
 					<value level="11">-54</value>
+					<value level="12">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</SWORD>
 				<DAGGER>
 					<value level="1">-16</value>
@@ -2599,6 +2627,10 @@
 					<value level="9">-52</value>
 					<value level="10">-53</value>
 					<value level="11">-54</value>
+					<value level="12">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</DAGGER>
 				<DUALFIST>
 					<value level="1">-16</value>
@@ -2612,6 +2644,10 @@
 					<value level="9">-52</value>
 					<value level="10">-53</value>
 					<value level="11">-54</value>
+					<value level="12">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</DUALFIST>
 				<ANCIENTSWORD>
 					<value level="1">-16</value>
@@ -2625,6 +2661,10 @@
 					<value level="9">-52</value>
 					<value level="10">-53</value>
 					<value level="11">-54</value>
+					<value level="12">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</ANCIENTSWORD>
 				<DUALDAGGER>
 					<value level="1">-16</value>
@@ -2638,6 +2678,10 @@
 					<value level="9">-52</value>
 					<value level="10">-53</value>
 					<value level="11">-54</value>
+					<value level="12">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</DUALDAGGER>
 				<BLUNT>
 					<value level="1">-16</value>
@@ -2651,6 +2695,10 @@
 					<value level="9">-52</value>
 					<value level="10">-53</value>
 					<value level="11">-54</value>
+					<value level="12">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</BLUNT>
 				<POLE>
 					<value level="1">-16</value>
@@ -2664,6 +2712,10 @@
 					<value level="9">-52</value>
 					<value level="10">-53</value>
 					<value level="11">-54</value>
+					<value level="12">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</POLE>
 				<DUAL>
 					<value level="1">-16</value>
@@ -2677,6 +2729,10 @@
 					<value level="9">-52</value>
 					<value level="10">-53</value>
 					<value level="11">-54</value>
+					<value level="12">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</DUAL>
 				<RAPIER>
 					<value level="1">-16</value>
@@ -2690,6 +2746,10 @@
 					<value level="9">-52</value>
 					<value level="10">-53</value>
 					<value level="11">-54</value>
+					<value level="12">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">-54</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</RAPIER>
 			</effect>
 		</effects>
@@ -3138,7 +3198,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1549" toLevel="1" name="Chant of Elements">
+	<skill id="1549" toLevel="2" name="Chant of Magic Barrier">
 		<!-- For 20 min., party members' elemental resistance +20. -->
 		<icon>icon.skill1549</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -3177,7 +3237,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1550" toLevel="1" name="Mass Cure Poison">
+	<skill id="1550" toLevel="2" name="Mass Cure">
 		<!-- Cures all poisoned party members. -->
 		<icon>icon.skill1550</icon>
 		<affectRange>1000</affectRange>
@@ -3752,7 +3812,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1562" toLevel="2" name="Chant of Berserker">
+	<skill id="1562" toLevel="2" name="Chant of Battle">
 		<!-- For $s1, all party members' P. Def. -$s2, M. Def. -$s3, and P. Evasion -$s4, P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, Speed +$s9. -->
 		<icon>icon.skill1562</icon>
 		<abnormalLevel>

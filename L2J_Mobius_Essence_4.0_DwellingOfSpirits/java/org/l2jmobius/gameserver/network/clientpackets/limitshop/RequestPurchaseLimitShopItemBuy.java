@@ -1,0 +1,149 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package org.l2jmobius.gameserver.network.clientpackets.limitshop;
+
+import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.data.xml.impl.LCoinShopData;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
+import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
+import org.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.ExBrProductReplyType;
+
+/**
+ * @author Mobius
+ */
+public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
+{
+	@SuppressWarnings("unused")
+	private int _category;
+	private int _productId;
+	private int _amount;
+	
+	@Override
+	public boolean read(GameClient client, PacketReader packet)
+	{
+		_category = packet.readC();
+		_productId = packet.readD();
+		_amount = packet.readD();
+		return true;
+	}
+	
+	@Override
+	public void run(GameClient client)
+	{
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		if (_amount < 1)
+		{
+			return;
+		}
+		
+		final LCoinShopProductHolder product = LCoinShopData.getInstance().getProduct(_productId);
+		if (product == null)
+		{
+			return;
+		}
+		
+		if (player.hasItemRequest() || player.hasRequest(PrimeShopRequest.class))
+		{
+			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
+			return;
+		}
+		
+		// Add request.
+		player.addRequest(new PrimeShopRequest(player));
+		
+		// Check account daily limit.
+		if (product.getAccountDailyLimit() > 0)
+		{
+			if (player.getAccountVariables().getInt("LCSCount" + product.getProductionId(), 0) >= product.getAccountDailyLimit())
+			{
+				if ((player.getAccountVariables().getLong("LCSTime" + product.getProductionId(), 0) + 86400000) > System.currentTimeMillis())
+				{
+					player.sendMessage("You have reached your daily limit."); // TODO: Retail system message?
+					player.removeRequest(PrimeShopRequest.class);
+					return;
+				}
+				// Reset limit.
+				player.getAccountVariables().set("LCSCount" + product.getProductionId(), 0);
+			}
+		}
+		
+		// Check existing items.
+		for (int i = 0; i < 3; i++)
+		{
+			if (product.getIngredientIds()[i] == 0)
+			{
+				continue;
+			}
+			if (product.getIngredientIds()[i] == Inventory.ADENA_ID)
+			{
+				if (player.getAdena() < (product.getIngredientQuantities()[i] * _amount))
+				{
+					player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+					player.removeRequest(PrimeShopRequest.class);
+					return;
+				}
+			}
+			else if (player.getInventory().getInventoryItemCount(product.getIngredientIds()[i], -1, true) < (product.getIngredientQuantities()[i] * _amount))
+			{
+				player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+				player.removeRequest(PrimeShopRequest.class);
+				return;
+			}
+		}
+		
+		// Remove items.
+		for (int i = 0; i < 3; i++)
+		{
+			if (product.getIngredientIds()[i] == 0)
+			{
+				continue;
+			}
+			if (product.getIngredientIds()[i] == Inventory.ADENA_ID)
+			{
+				player.reduceAdena("LCoinShop", product.getIngredientQuantities()[i] * _amount, player, true);
+			}
+			else
+			{
+				player.destroyItemByItemId("LCoinShop", product.getIngredientIds()[i], product.getIngredientQuantities()[i] * _amount, player, true);
+			}
+		}
+		
+		// Reward.
+		player.addItem("LCoinShop", product.getProductionId(), _amount, player, true);
+		
+		// Update player variables.
+		if (product.getAccountDailyLimit() > 0)
+		{
+			player.getAccountVariables().set("LCSTime" + product.getProductionId(), System.currentTimeMillis());
+			player.getAccountVariables().set("LCSCount" + product.getProductionId(), player.getAccountVariables().getInt("LCSCount" + product.getProductionId(), 0) + 1);
+		}
+		
+		// Remove request.
+		player.removeRequest(PrimeShopRequest.class);
+	}
+}

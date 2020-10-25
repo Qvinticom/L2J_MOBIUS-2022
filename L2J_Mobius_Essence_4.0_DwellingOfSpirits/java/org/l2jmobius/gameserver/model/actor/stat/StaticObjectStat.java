@@ -32,7 +32,7 @@ public class StaticObjectStat extends CreatureStat
 	}
 	
 	@Override
-	public byte getLevel()
+	public int getLevel()
 	{
 		return (byte) getActiveChar().getLevel();
 	}

@@ -577,7 +577,7 @@ public class VillageMasterInstance extends NpcInstance
 						player.setActiveClass(player.getTotalSubClasses());
 						
 						html.setFile(player, "data/html/villagemaster/SubClass_AddOk.htm");
-						player.sendPacket(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED); // Subclass added.
+						player.sendPacket(SystemMessageId.THE_NEW_DUAL_CLASS_S1_HAS_BEEN_ADDED_CONGRATS); // Subclass added.
 					}
 					else
 					{
@@ -689,7 +689,7 @@ public class VillageMasterInstance extends NpcInstance
 						
 						html.setFile(player, "data/html/villagemaster/SubClass_ModifyOk.htm");
 						html.replace("%name%", ClassListData.getInstance().getClass(paramTwo).getClientCode());
-						player.sendPacket(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED); // Subclass added.
+						player.sendPacket(SystemMessageId.THE_NEW_DUAL_CLASS_S1_HAS_BEEN_ADDED_CONGRATS); // Subclass added.
 					}
 					else
 					{
@@ -1016,7 +1016,7 @@ public class VillageMasterInstance extends NpcInstance
 		}
 		if ((clan.getCastleId() != 0) || (clan.getHideoutId() != 0) || (clan.getFortId() != 0))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_WHILE_OWNING_A_CLAN_HALL_OR_CASTLE);
+			player.sendPacket(SystemMessageId.YOU_CAN_T_DISBAND_THE_CLAN_THAT_HAS_A_CLAN_HALL_OR_CASTLE);
 			return;
 		}
 		
@@ -1220,7 +1220,7 @@ public class VillageMasterInstance extends NpcInstance
 		}
 		if (leaderName.length() > 16)
 		{
-			player.sendPacket(SystemMessageId.YOUR_TITLE_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN);
+			player.sendPacket(SystemMessageId.ENTER_THE_CHARACTER_S_NAME_BETWEEN_1_AND_16_CHARACTERS);
 			return;
 		}
 		if (player.getName().equals(leaderName))

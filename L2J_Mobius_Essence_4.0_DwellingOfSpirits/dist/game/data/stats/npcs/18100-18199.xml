@@ -240,20 +240,25 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="18132" level="80" type="Npc" name="Imperial Healer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="18132" level="85" type="Monster" name="Imperial Healer">
+		<race>BUG</race>
 		<sex>FEMALE</sex>
+		<acquire exp="5564" sp="26960" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="40504.6242774566" hpRegen="10.5" mp="2252.80528052805" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="4950.45286845088" magical="913.314550866536" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="310.919540229885" magical="123.234610622566" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+		</skillList>
 		<collision>
 			<radius normal="19" />
 			<height normal="54.5" />
@@ -671,20 +676,23 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18151" level="80" type="Npc" name="Victim">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="18151" level="85" type="Monster" name="Victim">
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<acquire exp="5564" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="40504.6242774566" hpRegen="10.5" mp="2252.80528052805" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="4950.45286845088" magical="913.314550866536" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="310.919540229885" magical="218.125260801942" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="23" />
@@ -899,20 +907,29 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="18163" level="80" type="Npc" name="Halisha's Executioner">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="18163" level="85" type="Monster" name="Halisha's Executioner">
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="5564" sp="48922" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="40504.6242774566" hpRegen="10.5" mp="2252.80528052805" mpRegen="3.6" />
 			<speed>
 				<walk ground="31" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2796.86602737338" magical="291.793786219341" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="175.660757192025" magical="123.234610622566" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="50" />

@@ -198,7 +198,7 @@ public final class LimitBarrier extends AbstractNpcAI
 				npc.abortAttack();
 				npc.abortCast();
 				npc.doCast(LIMIT_BARRIER.getSkill());
-				npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_RAID_BOSS_USES_THE_LIMIT_BARRIER_NFOCUS_YOUR_ATTACKS_TO_DESTROY_THE_LIMIT_BARRIER_IN_15_SEC, 2, 5000, true));
+				npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_RAID_BOSS_USES_THE_LIMIT_BARRIER_NFOCUS_YOUR_ATTACKS_TO_DESTROY_THE_LIMIT_BARRIER_IN_15_SECONDS, 2, 5000, true));
 				startQuestTimer("RESTORE_FULL_HP", 15000, npc, attacker);
 			}
 		}
@@ -210,7 +210,7 @@ public final class LimitBarrier extends AbstractNpcAI
 				npc.abortAttack();
 				npc.abortCast();
 				npc.doCast(LIMIT_BARRIER.getSkill());
-				npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_RAID_BOSS_USES_THE_LIMIT_BARRIER_NFOCUS_YOUR_ATTACKS_TO_DESTROY_THE_LIMIT_BARRIER_IN_15_SEC, 2, 5000, true));
+				npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_RAID_BOSS_USES_THE_LIMIT_BARRIER_NFOCUS_YOUR_ATTACKS_TO_DESTROY_THE_LIMIT_BARRIER_IN_15_SECONDS, 2, 5000, true));
 				startQuestTimer("RESTORE_FULL_HP", 15000, npc, attacker);
 			}
 		}
@@ -222,7 +222,7 @@ public final class LimitBarrier extends AbstractNpcAI
 				npc.abortAttack();
 				npc.abortCast();
 				npc.doCast(LIMIT_BARRIER.getSkill());
-				npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_RAID_BOSS_USES_THE_LIMIT_BARRIER_NFOCUS_YOUR_ATTACKS_TO_DESTROY_THE_LIMIT_BARRIER_IN_15_SEC, 2, 5000, true));
+				npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_RAID_BOSS_USES_THE_LIMIT_BARRIER_NFOCUS_YOUR_ATTACKS_TO_DESTROY_THE_LIMIT_BARRIER_IN_15_SECONDS, 2, 5000, true));
 				startQuestTimer("RESTORE_FULL_HP", 15000, npc, attacker);
 			}
 		}

@@ -32,7 +32,7 @@ public class ServitorStop implements IPlayerActionHandler
 	{
 		if (!player.hasServitors())
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
+			player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_A_SERVITOR);
 			return;
 		}
 		

@@ -222,7 +222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1403" toLevel="1" name="Summon Friend">
+	<skill id="1403" toLevel="1" name="Summon Your Spouse">
 		<!-- Teleports a party member to one's current location. Requires a Summoning Crystal on the target. -->
 		<icon>icon.skill1403</icon>
 		<effectPoint>467</effectPoint>
@@ -602,7 +602,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1413" toLevel="1" name="Chant of Magnus">
+	<skill id="1413" toLevel="2" name="Chant of Wild Magic">
 		<!-- For 5 min., a powerful spirit acts to get all party members' Max MP +15%, MP Recovery Bonus +1.5 when equipped with light or heavy armor, MP Recovery Bonus +4 when equipped with a robe, M. Def. +30%, M. Atk. +30%, Casting Spd. +20%, Fire/ Water/ Wind/ Earth Resistance +10, Debuff Resistance +25%, and Buff-canceling Attack Resistance +40%. Consumes 40 Spirit Ore. -->
 		<icon>icon.skill1413</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -682,7 +682,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1414" toLevel="2" name="Victories of Pa'agrio">
+	<skill id="1414" toLevel="2" name="Prophecy of Pa'agrio">
 		<!-- For $s1, party member's Max CP +$s2, CP Recovery Bonus +$s3, P./ M. Accuracy +$s4, P./ M. Evasion +$s5, P./ M. Atk. +$s6, Atk. Spd./ Casting Spd. +$s7, P./ M. Critical Rate +$s8, P./ M. Critical Damage +$s9. Consumes $s10 Spirit Ore. -->
 		<icon>icon.skill1414</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1272,7 +1272,7 @@
 			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
-	<skill id="1428" toLevel="10" name="Mass Recharge">
+	<skill id="1428" toLevel="10" name="Rapid Recharge">
 		<!-- Recovers up to $s1 MP depending on the party member level. Consumes $s2 Spirit Ore. -->
 		<icon>icon.skill1428</icon>
 		<affectRange>1000</affectRange>
@@ -2410,7 +2410,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1444" toLevel="5" name="Art of Rapier">
+	<skill id="1444" toLevel="5" name="Rapier Master">
 		<!-- Atk. Spd. +$s1 when equipping a Rapier -->
 		<icon>icon.skill1444</icon>
 		<operateType>P</operateType>
@@ -3151,7 +3151,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1460" toLevel="6" name="Mana Gain">
+	<skill id="1460" toLevel="10" name="Mana Gain">
 		<!-- When using the Recharge skill, target's MP Recovery Bonus +$s1 for 20 min. -->
 		<icon>icon.skill1460</icon>
 		<abnormalLevel>
@@ -3161,6 +3161,10 @@
 			<value level="4">4</value>
 			<value level="5">5</value>
 			<value level="6">6</value>
+			<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RECHARGE_UP</abnormalType>
@@ -3176,6 +3180,10 @@
 			<value level="4">82</value>
 			<value level="5">83</value>
 			<value level="6">84</value>
+			<value level="7">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">144</value>
@@ -3184,6 +3192,10 @@
 			<value level="4">154</value>
 			<value level="5">157</value>
 			<value level="6">160</value>
+			<value level="7">160</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">160</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">160</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">160</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">36</value>
@@ -3192,6 +3204,10 @@
 			<value level="4">38</value>
 			<value level="5">39</value>
 			<value level="6">40</value>
+			<value level="7">40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -3214,6 +3230,10 @@
 					<value level="4">91</value>
 					<value level="5">93</value>
 					<value level="6">95</value>
+					<value level="7">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 			</effect>

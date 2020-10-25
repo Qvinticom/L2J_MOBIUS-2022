@@ -721,11 +721,11 @@
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="273" /> <!-- Compound Bow -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2845.61943" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
+			<vitals hp="10756.9832402235" hpRegen="7.5" mp="2939.78844589097" mpRegen="2.7" />
 			<attack physical="235.8991855" magical="72.49711" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="106.7406795" magical="91.89199" evasion="10" />
 			<speed>
@@ -745,9 +745,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49758" min="1" max="9" chance="92.105" /> <!-- Blood Crystal -->
-				<item id="49664" min="1" max="1" chance="1.945" /> <!-- Weapon Supply Box (B-grade) -->
-				<item id="49665" min="1" max="1" chance="0.75" /> <!-- Armor Supply Box (B-grade) -->
+				<item id="49758" min="1" max="9" chance="94.275" /> <!-- Blood Crystal -->
+				<item id="49664" min="1" max="1" chance="2.053" /> <!-- B-grade Weapon Pack -->
+				<item id="49665" min="1" max="1" chance="0.75" /> <!-- B-grade Armor Pack -->
 			</drop>
 		</dropLists>
 	</npc>

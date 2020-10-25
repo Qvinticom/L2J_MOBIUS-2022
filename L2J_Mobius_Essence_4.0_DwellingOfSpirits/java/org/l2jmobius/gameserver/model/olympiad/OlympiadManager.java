@@ -178,20 +178,20 @@ public class OlympiadManager
 	{
 		if (!Olympiad._inCompPeriod)
 		{
-			player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+			player.sendPacket(SystemMessageId.THE_OLYMPIAD_IS_NOT_HELD_RIGHT_NOW);
 			return false;
 		}
 		
 		if (Olympiad.getInstance().getMillisToCompEnd() < 1200000)
 		{
-			player.sendPacket(SystemMessageId.PARTICIPATION_REQUESTS_ARE_NO_LONGER_BEING_ACCEPTED);
+			player.sendPacket(SystemMessageId.GAME_PARTICIPATION_REQUEST_MUST_BE_FILED_NOT_EARLIER_THAN_10_MIN_AFTER_THE_GAME_ENDS);
 			return false;
 		}
 		
 		final int charId = player.getObjectId();
 		if (Olympiad.getInstance().getRemainingWeeklyMatches(charId) < 1)
 		{
-			player.sendPacket(SystemMessageId.THE_MAXIMUM_MATCHES_YOU_CAN_PARTICIPATE_IN_1_WEEK_IS_30);
+			player.sendPacket(SystemMessageId.THE_MAXIMUM_NUMBER_OF_MATCHES_YOU_CAN_PARTICIPATE_IN_1_WEEK_IS_25);
 			return false;
 		}
 		
@@ -236,7 +236,7 @@ public class OlympiadManager
 				}
 				
 				_classBasedRegisters.computeIfAbsent(getClassGroup(player), k -> ConcurrentHashMap.newKeySet()).add(charId);
-				player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REGISTERED_FOR_THE_OLYMPIAD_WAITING_LIST_FOR_A_CLASS_BATTLE);
+				player.sendPacket(SystemMessageId.YOU_VE_BEEN_REGISTERED_FOR_THE_OLYMPIAD_CLASS_MATCHES);
 				break;
 			}
 			case NON_CLASSED:
@@ -257,7 +257,7 @@ public class OlympiadManager
 				}
 				
 				_nonClassBasedRegisters.add(charId);
-				player.sendPacket(SystemMessageId.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_1V1_CLASS_IRRELEVANT_MATCH);
+				player.sendPacket(SystemMessageId.YOU_HAVE_REGISTERED_IN_THE_WORLD_OLYMPIAD);
 				break;
 			}
 		}
@@ -268,7 +268,7 @@ public class OlympiadManager
 	{
 		if (!Olympiad._inCompPeriod)
 		{
-			noble.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+			noble.sendPacket(SystemMessageId.THE_OLYMPIAD_IS_NOT_HELD_RIGHT_NOW);
 			return false;
 		}
 		

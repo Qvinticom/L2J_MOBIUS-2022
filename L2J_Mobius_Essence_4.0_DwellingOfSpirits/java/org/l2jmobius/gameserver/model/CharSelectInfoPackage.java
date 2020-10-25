@@ -152,7 +152,26 @@ public class CharSelectInfoPackage
 	
 	public void setBaseClassId(int baseClassId)
 	{
-		_baseClassId = baseClassId;
+		// DK Human
+		if ((baseClassId >= 196) && (baseClassId <= 199))
+		{
+			_baseClassId = 196;
+		}
+		// DK Elf
+		else if ((baseClassId >= 200) && (baseClassId <= 203))
+		{
+			_baseClassId = 200;
+		}
+		// DK Dark Elf
+		else if ((baseClassId >= 204) && (baseClassId <= 207))
+		{
+			_baseClassId = 204;
+		}
+		// Other Classes
+		else
+		{
+			_baseClassId = baseClassId;
+		}
 	}
 	
 	public double getCurrentHp()

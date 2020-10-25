@@ -26,7 +26,7 @@ public class NpcStat extends CreatureStat
 	}
 	
 	@Override
-	public byte getLevel()
+	public int getLevel()
 	{
 		return getActiveChar().getTemplate().getLevel();
 	}

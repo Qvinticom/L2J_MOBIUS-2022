@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
  */
 public class SubClass
 {
-	private static final byte MAX_LEVEL = Config.MAX_SUBCLASS_LEVEL < ExperienceData.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
+	private static final int MAX_LEVEL = Config.MAX_SUBCLASS_LEVEL < ExperienceData.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : ExperienceData.getInstance().getMaxLevel() - 1;
 	
 	private static final int MAX_VITALITY_POINTS = 140000;
 	private static final int MIN_VITALITY_POINTS = 0;
@@ -34,7 +34,7 @@ public class SubClass
 	private ClassId _class;
 	private long _exp = ExperienceData.getInstance().getExpForLevel(Config.BASE_SUBCLASS_LEVEL);
 	private long _sp = 0;
-	private byte _level = Config.BASE_SUBCLASS_LEVEL;
+	private int _level = Config.BASE_SUBCLASS_LEVEL;
 	private int _classIndex = 1;
 	private int _vitalityPoints = 0;
 	private boolean _dualClass = false;
@@ -65,7 +65,7 @@ public class SubClass
 		return _sp;
 	}
 	
-	public byte getLevel()
+	public int getLevel()
 	{
 		return _level;
 	}
@@ -124,7 +124,7 @@ public class SubClass
 		_dualClass = dualClass;
 	}
 	
-	public void setLevel(byte levelValue)
+	public void setLevel(int levelValue)
 	{
 		if (!_dualClass && (levelValue > MAX_LEVEL))
 		{

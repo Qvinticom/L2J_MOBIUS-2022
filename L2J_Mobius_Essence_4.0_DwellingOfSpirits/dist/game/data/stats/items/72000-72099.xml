@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="72007" name="Dragon's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nDragon Coin (3 pcs.)\n\n<Random>\nSpellbook: Ultimate Death Knight Transformation\nTalisman of Baium\nBaium's Ring Lv. 1\nBaium Doll Lv. 1\nBaium's Thunder Breaker\nZaken's Blood Sword\nCore's Plasmic Bow\nQueen Ant's Stone Breaker\nOrfen's Venom Sword\n+ other items. -->
+		<set name="icon" val="icon.bm_dragon_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="72016" name="Giran Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\n- Giran Seal\n\n<Random>\n- Spellbook: Ultimate Death Knight Transformation\n- Boss Weapon Pack\n- Baium's Ring\n- Zaken's Earring\n- Queen Ant's Ring\n- Orfen's Earring\n- Ring of Core\n- Spellbook: Divine Beam\n- Spellbook: White Guardian\n- Ice Crystal Breastplate\n- Ice Crystal Gaiters\n- Leather Armor of Lightning\n- Leather Leggings of Lightning\n- Flaming Tunic\n+ other items -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="72018" name="Special Kit: Adena" type="EtcItem">
+		<!-- Double-click to obtain following items.\n- Sayha's Blessing (200 pcs.)\n- Special HP Recovery Potion (500 pcs.)\n- Alligator Island's Time Stone (7 pcs.)\n- Sayha's Storm Lv. 3 (50 pcs.)\n- Venir's Talisman Fragment (30 pcs.) -->
+		<set name="icon" val="icon.etc_treasure_box_i09" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

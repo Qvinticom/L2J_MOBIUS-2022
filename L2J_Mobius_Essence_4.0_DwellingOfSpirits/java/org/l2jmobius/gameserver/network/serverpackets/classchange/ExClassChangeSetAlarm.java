@@ -23,18 +23,18 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 /**
  * @author Mobius
  */
-public class ExRequestClassChangeUi implements IClientOutgoingPacket
+public class ExClassChangeSetAlarm implements IClientOutgoingPacket
 {
-	public static final ExRequestClassChangeUi STATIC_PACKET = new ExRequestClassChangeUi();
+	public static final IClientOutgoingPacket STATIC_PACKET = new ExClassChangeSetAlarm();
 	
-	public ExRequestClassChangeUi()
+	public ExClassChangeSetAlarm()
 	{
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_REQUEST_CLASS_CHANGE.writeId(packet);
+		OutgoingPackets.EX_CLASS_CHANGE_SET_ALARM.writeId(packet);
 		return true;
 	}
 }

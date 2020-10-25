@@ -1,0 +1,1529 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="92900" name="Behemoth' Tuning Fork Piece" type="EtcItem">
+		<!-- Key material for Dwarves to make Behemoth' Tuning Fork. -->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92901" name="Naga's Storm Piece" type="EtcItem">
+		<!-- Key material for Dwarves to make Naga's Storm. -->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92902" name="Tiphon's Spear Edge" type="EtcItem">
+		<!-- Key material for Dwarves to make Tiphon's Spear. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92903" name="Shyeed's Bow Shaft" type="EtcItem">
+		<!-- Key material for Dwarves to make Shyeed's Bow. -->
+		<set name="icon" val="icon.etc_branch_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92904" name="Sobekk's Hurricane Edge" type="EtcItem">
+		<!-- Key material for Dwarves to make Sobekk's Hurricane. -->
+		<set name="icon" val="icon.etc_sword_body_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92905" name="Themis' Tongue Piece" type="EtcItem">
+		<!-- Key material for Dwarves to make Themis' Tongue. -->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92906" name="Cabrio's Hand Head" type="EtcItem">
+		<!-- Key material for Dwarves to make Cabrio's Hand. -->
+		<set name="icon" val="icon.etc_squares_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92907" name="Daimon Crystal Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make Daimon Crystal. -->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92908" name="Material: Lump of Wood" type="EtcItem">
+		<!-- Craft points +100. -->
+		<set name="icon" val="icon.etc_branch_gold_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92909" name="Material: Pack of Knickknacks" type="EtcItem">
+		<!-- Craft points +500. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92910" name="Material: Rags" type="EtcItem">
+		<!-- Craft points +1000. -->
+		<set name="icon" val="icon.etc_suede_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92911" name="Material: Leather Scraps" type="EtcItem">
+		<!-- Craft points +3000. -->
+		<set name="icon" val="icon.etc_leather_brown_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92912" name="Material: Plain Fabric" type="EtcItem">
+		<!-- Craft points +5000. -->
+		<set name="icon" val="icon.etc_skein_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92913" name="Material: Unknown Metal" type="EtcItem">
+		<!-- Craft points +10,000. -->
+		<set name="icon" val="icon.etc_lump_gray_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92914" name="Material: Sack Shreds" type="EtcItem">
+		<!-- Craft points +30,000. -->
+		<set name="icon" val="icon.etc_coal_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92915" name="Material: Bag of Low-grade Stuff" type="EtcItem">
+		<!-- Craft points +50,000. -->
+		<set name="icon" val="icon.etc_charcoal_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92916" name="Material: Animal Spirit" type="EtcItem">
+		<!-- Craft points +100,000. -->
+		<set name="icon" val="icon.etc_piece_bone_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92917" name="Material: Metal Ingot" type="EtcItem">
+		<!-- Craft points +300,000. -->
+		<set name="icon" val="icon.etc_silver_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92918" name="Material: Blacksmith's Power" type="EtcItem">
+		<!-- Craft points +500,000. -->
+		<set name="icon" val="icon.etc_oriharukon_ore_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92919" name="Material: Blacksmith's High-grade Power" type="EtcItem">
+		<!-- Craft points +1,000,000. -->
+		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="92920" name="Lilith' Soul Crystal Lv. 11" additionalName="Rare" type="EtcItem">
+		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +11\n- P. Atk. +11%\n- Recovers 900 HP after standard attacks and using attacking skills. -->
+		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92921" name="Lilith' Soul Crystal Lv. 12" additionalName="Rare" type="EtcItem">
+		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +12\n- P. Atk. +11%\n- Recovers 900 HP after standard attacks and using attacking skills.\n- CON +1 -->
+		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92922" name="Lilith' Soul Crystal Lv. 13" additionalName="Rare" type="EtcItem">
+		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +13\n- P. Atk. +12%\n- Recovers 900 HP after standard attacks and using attacking skills.\n- CON +1 -->
+		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92923" name="Lilith' Soul Crystal Lv. 14" additionalName="Rare" type="EtcItem">
+		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +14\n- P. Atk. +12%\n- Recovers 900 HP after standard attacks and using attacking skills.\n- CON +2 -->
+		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92924" name="Lilith' Soul Crystal Lv. 15" additionalName="Rare" type="EtcItem">
+		<!-- A crystal containing Lilith' power. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +15\n- P. Atk. +15%\n- Recovers 900 HP after standard attacks and using attacking skills.\n- CON +3 -->
+		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92925" name="Anakim's Soul Crystal Lv. 11" additionalName="Rare" type="EtcItem">
+		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +11\n- M. Atk. +11%\n- Recovers 600 MP after standard attacks and using attacking skills. -->
+		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92926" name="Anakim's Soul Crystal Lv. 12" additionalName="Rare" type="EtcItem">
+		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +12\n- M. Atk. +11%\n- Recovers 600 MP after standard attacks and using attacking skills.\n- MEN +1 -->
+		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92927" name="Anakim's Soul Crystal Lv. 13" additionalName="Rare" type="EtcItem">
+		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +13\n- M. Atk. +12%\n- Recovers 600 MP after standard attacks and using attacking skills.\n- MEN +1 -->
+		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92928" name="Anakim's Soul Crystal Lv. 14" additionalName="Rare" type="EtcItem">
+		<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +14\n- M. Atk. +12%\n- Recovers 600 MP after standard attacks and using attacking skills.\n- MEN +2 -->
+		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92929" name="Anakim's Soul Crystal Lv. 15" additionalName="Rare" type="EtcItem">
+		<!-- A crystal containing Anakim's power. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +15\n- M. Atk. +15%\n- Recovers 600 MP after standard attacks and using attacking skills.\n- MEN +3 -->
+		<set name="icon" val="icon.etc_water_rune_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92930" name="Tallum Blade" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_tallum_blade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1330" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">213</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92931" name="Dragon Slayer" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1840" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">282</stat>
+			<stat type="mAtk">129</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92932" name="Halberd" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_halbard_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1900" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="9" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">213</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92933" name="Elemental Sword" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_elemental_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="830" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">170</stat>
+			<stat type="mAtk">163</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92934" name="Sword of Miracles" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_sword_of_miracle_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="840" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">186</stat>
+			<stat type="mAtk">173</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92935" name="Elysian" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_elysian_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1580" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="4" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">232</stat>
+			<stat type="mAtk">129</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92936" name="Dasparion's Staff" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_dasparions_staff_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="920" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="7" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">207</stat>
+			<stat type="mAtk">178</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">14843</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92937" name="Branch of the Mother Tree" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="900" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="7" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">226</stat>
+			<stat type="mAtk">190</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">14975</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92938" name="Bloody Orchid" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_bloody_orchid_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="960" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="8" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">186</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">1.2</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92939" name="Soul Separator" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_soul_separator_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="950" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="8" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">203</stat>
+			<stat type="mAtk">129</stat>
+			<stat type="rCrit">1.2</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92940" name="Blood Tornado" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_blood_tornado_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1370" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">14833</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92941" name="Dragon Grinder" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1350" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">282</stat>
+			<stat type="mAtk">129</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">14833</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92942" name="Carnage Bow" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_carnium_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1670" />
+		<set name="soulshots" val="4" />
+		<set name="spiritshots" val="5" />
+		<set name="mp_consume" val="11" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">440</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">1.2</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92943" name="Soul Bow" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_soul_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1660" />
+		<set name="soulshots" val="4" />
+		<set name="spiritshots" val="5" />
+		<set name="mp_consume" val="11" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">528</stat>
+			<stat type="mAtk">142</stat>
+			<stat type="rCrit">1.2</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92944" name="Tallum Glaive" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1840" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="9" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">232</stat>
+			<stat type="mAtk">129</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92945" name="Dark Legion's Edge" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1320" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">232</stat>
+			<stat type="mAtk">129</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92946" name="Meteor Shower" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_meteor_shower_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1600" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="4" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">213</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92947" name="Keshanberk*Keshanberk" additionalName="Sealed" type="Weapon">
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2080" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="13" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92948" name="Keshanberk*Damascus" additionalName="Sealed" type="Weapon">
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2080" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="13" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">275</stat>
+			<stat type="mAtk">127</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92949" name="Damascus*Damascus" additionalName="Sealed" type="Weapon">
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2080" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="13" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">282</stat>
+			<stat type="mAtk">129</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92950" name="Infernal Master" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_inferno_master_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1900" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92951" name="Spiritual Eye" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="6" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">170</stat>
+			<stat type="mAtk">163</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92952" name="Flaming Dragon Skull" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="6" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">186</stat>
+			<stat type="mAtk">173</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92953" name="Destroyer Hammer" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1910" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92954" name="Doom Crusher" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_doom_crusher_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1900" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">282</stat>
+			<stat type="mAtk">129</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92955" name="Sirra's Blade" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_sirr_blade_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92956" name="Sword of Ipos" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92957" name="Barakiel's Axe" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="4" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92958" name="Behemoth' Tuning Fork" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1890" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92959" name="Naga's Storm" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_naga_storm_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="930" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="8" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">220</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="rCrit">1.2</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92960" name="Tiphon's Spear" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="9" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">251</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92961" name="Shyeed's Bow" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_shyid_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1640" />
+		<set name="soulshots" val="4" />
+		<set name="spiritshots" val="5" />
+		<set name="mp_consume" val="11" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="rCrit">1.2</stat>
+			<stat type="pAtkSpd">227</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92962" name="Sobekk's Hurricane" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1330" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">14833</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92963" name="Themis' Tongue" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="820" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">202</stat>
+			<stat type="mAtk">183</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92964" name="Cabrio's Hand" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1510" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="6" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">202</stat>
+			<stat type="mAtk">183</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92965" name="Daimon Crystal" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="880" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="7" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">245</stat>
+			<stat type="mAtk">201</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">14843</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92966" name="Tallum Blade*Damascus" additionalName="Sealed" type="Weapon">
+		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1890" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="13" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="92967" name="Durendal" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_death_bringer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="18" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">277</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="rCrit">1</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+	</item>
+	<item id="92968" name="Undertaker" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_death_bringer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="18" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">256</stat>
+			<stat type="mAtk">129</stat>
+			<stat type="rCrit">1</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+	</item>
+	<item id="92969" name="Divine Pain" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_pain_of_godness_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1530" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="18" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">235</stat>
+			<stat type="mAtk">121</stat>
+			<stat type="rCrit">1</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+	</item>
+	<item id="92970" name="?clair Bijou" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_greed_stinger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="16" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">239</stat>
+			<stat type="mAtk">165</stat>
+			<stat type="rCrit">1</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92971" name="Lacerator" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_greed_stinger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="16" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">221</stat>
+			<stat type="mAtk">156</stat>
+			<stat type="rCrit">1</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92972" name="White Lightning" additionalName="Sealed" type="Weapon">
+		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="4" />
+		<set name="mp_consume" val="16" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">203</stat>
+			<stat type="mAtk">129</stat>
+			<stat type="rCrit">1</stat>
+			<stat type="pAtkSpd">406</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="92973" name="Scroll of Escape Chest: Tower of Insolence" additionalName="Floors 8-12" type="EtcItem">
+		<!-- Double-click to obtain Scroll of Escape: Tower of Insolence (8-12th Floors). -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="91961" min="1" max="1" chance="20" />
+			<item id="91962" min="1" max="1" chance="20" />
+			<item id="91963" min="1" max="1" chance="20" />
+			<item id="91964" min="1" max="1" chance="20" />
+			<item id="91965" min="1" max="1" chance="20" />
+		</capsuled_items>
+	</item>
+	<item id="92974" name="Stone of Purity" type="EtcItem">
+		<!-- The stone is containing increditable energy. After charging it produces one craft point. -->
+		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92975" name="B-grade (and higher) Helmet Crafting" type="EtcItem">
+		<!-- Enables to get a helmet (B-grade and higher). -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92976" name="Armor Crafting (B-grade and higher)" type="EtcItem">
+		<!-- Enables to get an armor (B-grade and higher). -->
+		<set name="icon" val="icon.armor_t74_u_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92977" name="Full Armor Crafting (B-grade and higher)" type="EtcItem">
+		<!-- Enables to get a full armor (B-grade and higher). -->
+		<set name="icon" val="icon.armor_t83_ul_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92978" name="Gloves Crafting (B-grade and higher)" type="EtcItem">
+		<!-- Enables to get gloves (B-grade and higher). -->
+		<set name="icon" val="icon.armor_t15_g_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92979" name="Boots Crafting (B-grade and higher)" type="EtcItem">
+		<!-- Enables to get boots (B-grade and higher). -->
+		<set name="icon" val="icon.armor_t75_b_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92980" name="Accessory Crafting (B-grade and higher)" type="EtcItem">
+		<!-- Enables to get accessories (B-grade and higher). -->
+		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92981" name="Dagger" type="EtcItem">
+		<!-- Enables to get a dagger (B-grade and higher). -->
+		<set name="icon" val="icon.weapon_soul_separator_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92982" name="dualfist" type="EtcItem">
+		<!-- Enables to get a fist weapon (B-grade and higher). -->
+		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92983" name="Bow" type="EtcItem">
+		<!-- Enables to get a bow (B-grade and higher). -->
+		<set name="icon" val="icon.weapon_soul_bow_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92984" name="ancientsword" type="EtcItem">
+		<!-- Enables to get an ancient sword (B-grade and higher). -->
+		<set name="icon" val="icon.weapon_death_bringer_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92985" name="Rapier" type="EtcItem">
+		<!-- Enables to get a rapier (B-grade and higher). -->
+		<set name="icon" val="icon.weapon_greed_stinger_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92986" name="A-grade Accessories" type="EtcItem">
+		<!-- Enables to get accessories (A-grade and higher). -->
+		<set name="icon" val="icon.accessory_group" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92987" name="A-grade Armor" type="EtcItem">
+		<!-- Enables to get an armor (B-grade and higher). -->
+		<set name="icon" val="icon.armor_group" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92988" name="Orcish Treasure" type="EtcItem">
+		<!-- Double-click to obtain various items including Ziggo's Jewel, Evolution Stone, Gold Medal. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92989" name="Orc King's Treasure" type="EtcItem">
+		<!-- Double-click to obtain various items including Ziggo's Jewel, Evolution Stone, A-grade weapon. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92990" name="Boss Weapon Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Baium's Thunder Breaker, Zaken's Blood Sword, Core's Plasmic Bow, Queen Ant's Stone Breaker, Orfen's Venom Sword. -->
+		<set name="icon" val="icon.zariche_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92991" name="Einhasad's Blessing Scroll" type="EtcItem">
+		<!-- Acquired XP/ SP +50% for 20 min. Cooldown: 1 min. The effect remains after death.\n\nNote!\nWhen used with Einhasad's Protection, Dandy's Home Run Ball, or Dandy's Golden Ball, the most powerful effect is active. -->
+		<set name="icon" val="icon.exp_bottle_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92992" name="Full Buff Pack" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Buff Scroll (72 pcs.), Battle Scroll (72 pcs.), Sayha's Storm Lv. 3 (72 pcs.), Einhasad's Blessing Scroll (72 pcs.), Mysterious Talisman Pack (2 pcs.). -->
+		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92993" name="Enria" type="EtcItem">
+		<!-- The stone is containing incredible energy. After charging, craft points +500,000. -->
+		<set name="icon" val="icon.etc_gem_red_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92994" name="Asofe" type="EtcItem">
+		<!-- The stone is containing incredible energy. After charging, craft points +100,000. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92995" name="Thons" type="EtcItem">
+		<!-- The stone is containing incredible energy. After charging, craft points +10,000. -->
+		<set name="icon" val="icon.etc_gem_clear_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92996" name="Old Resources" type="EtcItem">
+		<!-- After charging, craft points +100. -->
+		<set name="icon" val="icon.etc_mold_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92997" name="Unknown Resources" type="EtcItem">
+		<!-- After charging, craft points +500. -->
+		<set name="icon" val="icon.etc_silver_mold_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92998" name="Shining Resources" type="EtcItem">
+		<!-- After charging, craft points +1000. -->
+		<set name="icon" val="icon.etc_blacksmiths_frame_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92999" name="High-grade Resources" type="EtcItem">
+		<!-- After charging, craft points +5000. -->
+		<set name="icon" val="icon.etc_artisans_frame_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

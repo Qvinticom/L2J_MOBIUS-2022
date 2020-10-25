@@ -68,6 +68,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.olympiad.Participant;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -105,8 +106,14 @@ public class Quest extends AbstractScript implements IIdentifiable
 	private static final int RESET_HOUR = 6;
 	private static final int RESET_MINUTES = 30;
 	
-	private static final int STEEL_DOOR_COIN = 37045; // Steel Door Guild Coin
-	private static final SkillHolder STORY_QUEST_REWARD = new SkillHolder(27580, 1);
+	private static final SkillHolder[] STORY_QUEST_BUFFS =
+	{
+		new SkillHolder(1068, 1), // Might
+		new SkillHolder(1040, 1), // Shield
+		new SkillHolder(1204, 1), // Wind Walk
+		new SkillHolder(1086, 1), // Haste
+		new SkillHolder(1085, 1), // Acumen
+	};
 	
 	/**
 	 * @return the reset hour for a daily quest, could be overridden on a script.
@@ -3205,12 +3212,14 @@ public class Quest extends AbstractScript implements IIdentifiable
 	{
 	}
 	
-	public void giveStoryQuestReward(PlayerInstance player, int steelDoorCoinCount)
+	public void giveStoryBuffReward(Npc npc, PlayerInstance player)
 	{
-		giveItems(player, STEEL_DOOR_COIN, steelDoorCoinCount);
 		if (Config.ENABLE_STORY_QUEST_BUFF_REWARD)
 		{
-			STORY_QUEST_REWARD.getSkill().applyEffects(player, player);
+			for (SkillHolder holder : STORY_QUEST_BUFFS)
+			{
+				SkillCaster.triggerCast(npc, player, holder.getSkill());
+			}
 		}
 	}
 }

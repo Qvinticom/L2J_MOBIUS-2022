@@ -471,7 +471,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="627" toLevel="5" name="Soul Panic">
+	<skill id="627" toLevel="5" name="Mental Panic">
 		<!-- Inflicts Fear on the enemy for $s1 -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1690,7 +1690,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="692" toLevel="1" name="Divine Wizard Divine Prayer">
+	<skill id="692" toLevel="1" name="Divine Wizard: Divine Prayer">
 		<!-- Deals non-attribute magic damage to target. Power 102. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>0</abnormalLevel>
@@ -1770,7 +1770,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="695" toLevel="1" name="Divine Wizard Divine Cloud">
+	<skill id="695" toLevel="1" name="Divine Wizard: Divine Cloud">
 		<!-- Momentarily bring divine clouds making nearby enemies Sleep. Decrease probability of additional Sleep state while effects last. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1807,7 +1807,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="696" toLevel="1" name="Divine Wizard Surrender to Holy">
+	<skill id="696" toLevel="1" name="Divine Wizard: Surrender to Holy">
 		<!-- Immediately decreases Holy Attacks Resistance and increases Dark Attacks Resistance. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>3</abnormalLevel>

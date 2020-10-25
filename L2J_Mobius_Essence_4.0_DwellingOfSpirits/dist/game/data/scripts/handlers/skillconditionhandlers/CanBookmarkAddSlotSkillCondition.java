@@ -47,7 +47,7 @@ public class CanBookmarkAddSlotSkillCondition implements ISkillCondition
 		
 		if ((player.getBookMarkSlot() + _teleportBookmarkSlots) > 18)
 		{
-			player.sendPacket(SystemMessageId.YOUR_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_REACHED_ITS_MAXIMUM_LIMIT);
+			player.sendPacket(SystemMessageId.YOU_HAVE_REACHED_THE_MAXIMUM_NUMBER_OF_MY_TELEPORT_SLOTS_OR_USE_CONDITIONS_ARE_NOT_OBSERVED);
 			return false;
 		}
 		

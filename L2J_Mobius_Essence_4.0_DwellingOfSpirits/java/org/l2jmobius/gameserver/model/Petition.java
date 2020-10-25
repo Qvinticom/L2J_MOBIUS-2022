@@ -83,7 +83,7 @@ public class Petition
 				if (endState == PetitionState.PETITIONER_CANCEL)
 				{
 					// Receipt No. <ID> petition cancelled.
-					sm = new SystemMessage(SystemMessageId.RECEIPT_NO_S1_PETITION_CANCELLED);
+					sm = new SystemMessage(SystemMessageId.PETITION_NO_S1_CANCELLED);
 					sm.addInt(_id);
 					_responder.sendPacket(sm);
 				}

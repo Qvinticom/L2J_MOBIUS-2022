@@ -987,6 +987,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="1902">
+			<player levelRange="1;39" />
+		</cond>
 	</item>
 	<item id="71774" name="Aden Supply Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Talisman of Baium, Zaken's Earring, Queen Ant's Ring, Exquisite Jewel Box, Rice Cake of Flaming Fighting Spirit, Dragon Scroll, Sayha's Effect Scroll. -->

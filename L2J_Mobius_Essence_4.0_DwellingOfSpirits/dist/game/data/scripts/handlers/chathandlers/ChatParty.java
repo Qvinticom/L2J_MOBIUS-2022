@@ -40,7 +40,7 @@ public class ChatParty implements IChatHandler
 	{
 		if (!activeChar.isInParty())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_IN_A_PARTY);
+			activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_IN_A_PARTY_AND_CAN_T_SEND_MESSAGES_TO_THE_PARTY_CHAT);
 			return;
 		}
 		

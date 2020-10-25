@@ -59,7 +59,7 @@ public class FatedSupportBox implements IItemHandler
 		
 		if (!player.isInventoryUnder80(false))
 		{
-			player.sendPacket(SystemMessageId.EMPTY_463);
+			player.sendPacket(SystemMessageId.NOT_ENOUGH_SPACE_IN_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_IS_LESS_THAN_80_AND_SLOT_COUNT_IS_LESS_THAN_90_OF_CAPACITY);
 			return false;
 		}
 		

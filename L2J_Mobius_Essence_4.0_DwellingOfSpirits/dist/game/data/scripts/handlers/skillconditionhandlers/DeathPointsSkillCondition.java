@@ -14,26 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets;
+package handlers.skillconditionhandlers;
 
-import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.network.OutgoingPackets;
+import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.skills.ISkillCondition;
+import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * @author Mobius
  */
-public class ExShowTeleportUi implements IClientOutgoingPacket
+public class DeathPointsSkillCondition implements ISkillCondition
 {
-	public static final ExShowTeleportUi STATIC_PACKET = new ExShowTeleportUi();
+	private final int _amount;
 	
-	public ExShowTeleportUi()
+	public DeathPointsSkillCondition(StatSet params)
 	{
+		_amount = params.getInt("amount");
 	}
 	
 	@Override
-	public boolean write(PacketWriter packet)
+	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		OutgoingPackets.EX_SHOW_TELEPORT_UI.writeId(packet);
-		return true;
+		return caster.getActingPlayer().getDeathPoints() >= _amount;
 	}
 }

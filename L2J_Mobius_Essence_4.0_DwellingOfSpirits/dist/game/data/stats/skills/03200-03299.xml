@@ -136,7 +136,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3203" toLevel="1" name="Item Skill: Mystery Skill">
+	<skill id="3203" toLevel="1" name="Item Skill: Mysterious Ability">
 		<!-- Active: Increases your head size. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>0</abnormalLevel>
@@ -1368,7 +1368,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3231" toLevel="10" name="Item Skill: Paralyze">
+	<skill id="3231" toLevel="10" name="Item Skill: Paralysis">
 		<!-- In case of success: Momentarily paralyzes the target when you are attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLevel>
@@ -2329,7 +2329,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="3263" toLevel="1" name="Blessed Resurrection">
+	<skill id="3263" toLevel="1" name="Blessed Resurrection Power">
 		<!-- Allows the use of Blessed Resurrection. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -2354,7 +2354,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3264" toLevel="1" name="Blessed Escape">
+	<skill id="3264" toLevel="1" name="Blessed Escape Power">
 		<!-- Allows the use of Blessed Teleport. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
@@ -2423,7 +2423,7 @@
 			<effect name="UnsummonAgathion" />
 		</effects>
 	</skill>
-	<skill id="3268" toLevel="1" name="Release Agathion's Seal - Castle">
+	<skill id="3268" toLevel="1" name="Summon Agathion - Castle">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2440,7 +2440,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3269" toLevel="1" name="Release Agathion's Seal - Rainbow Clan Hall">
+	<skill id="3269" toLevel="1" name="Summon Agathion - Rainbow Agathion">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2457,7 +2457,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3270" toLevel="1" name="Release Agathion's Seal - Beast Farm">
+	<skill id="3270" toLevel="1" name="Summon Agathion - Beast Farm">
 		<!-- Summon Agathion -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2543,7 +2543,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3274" toLevel="3" name="Blue Talisman - Physical Skill Evasion Rate">
+	<skill id="3274" toLevel="3" name="Blue Talisman - P. Skill Evasion">
 		<!-- Physical skill Evasion Rate +10%. Effects from two such Talismans do not stack. -->
 		<icon>
 			<value level="1">icon.etc_talisman_i01</value>
@@ -2640,7 +2640,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3278" toLevel="3" name="Blue Talisman - Magic Skill Evasion Rate">
+	<skill id="3278" toLevel="3" name="Blue Talisman - M. Skill Evasion">
 		<!-- Magic Skill Evasion Rate +10%. Effects from two such Talismans do not stack. -->
 		<icon>
 			<value level="1">icon.etc_talisman_i01</value>
@@ -2665,7 +2665,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3279" toLevel="3" name="Blue Talisman - Max. HP">
+	<skill id="3279" toLevel="3" name="Blue Talisman - Max HP">
 		<!-- Max. HP +3%. Effects from two such Talismans do not stack. -->
 		<icon>
 			<value level="1">icon.etc_talisman_i01</value>
@@ -2690,7 +2690,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3280" toLevel="3" name="Blue Talisman - Max. MP">
+	<skill id="3280" toLevel="3" name="Blue Talisman - Max MP">
 		<!-- Max. MP +3%. Effects from two such Talismans do not stack. -->
 		<icon>
 			<value level="1">icon.etc_talisman_i01</value>
@@ -2715,7 +2715,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3281" toLevel="1" name="Grey Talisman Box - Guard">
+	<skill id="3281" toLevel="1" name="Grey Talisman - Guard">
 		<!-- For 10 sec., can protect from debuffs 5 times, when used. Effects from two such Talismans do not stack. Cooldown - 5 min. -->
 		<icon>icon.etc_talisman_i07</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -3024,7 +3024,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3293" toLevel="1" name="Talisman of Darkness - Healing Power">
+	<skill id="3293" toLevel="1" name="Talisman of Darkness - Received Healing">
 		<!-- Healing Power +4%. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_wise_man_stone_i04</icon>
 		<magicLevel>55</magicLevel>
@@ -3037,7 +3037,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3294" toLevel="1" name="Talisman of Darkness - Power of Healing Magic">
+	<skill id="3294" toLevel="1" name="Talisman of Darkness - Healing Power">
 		<!-- Power of healing magic +43. Effects from two such Talismans do not stack. -->
 		<icon>icon.etc_wise_man_stone_i04</icon>
 		<magicLevel>55</magicLevel>

@@ -45,7 +45,7 @@ public class KeyPacket implements IClientOutgoingPacket
 		packet.writeD(Config.SERVER_ID); // server id
 		packet.writeC(0x01);
 		packet.writeD(0x00); // obfuscation key
-		packet.writeC((Config.SERVER_LIST_TYPE & 0x400) == 0x400 ? 0x01 : 0x00); // isClassic
+		packet.writeC((Config.SERVER_LIST_TYPE & 0x400) == 0x400 ? 0x04 : 0x00); // isClassic
 		return true;
 	}
 }

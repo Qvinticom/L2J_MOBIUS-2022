@@ -174,7 +174,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="5808" toLevel="1" name="Bursting Flame">
+	<skill id="5808" toLevel="1" name="Burst Flame">
 		<effectPoint>-676</effectPoint>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1339,7 +1339,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5862" toLevel="1" name="Destruction of the Body">
+	<skill id="5862" toLevel="1" name="Destruction of Body">
 		<affectLimit>10-10</affectLimit>
 		<effectPoint>-1000</effectPoint>
 		<magicLevel>99</magicLevel>
@@ -1359,7 +1359,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5863" toLevel="1" name="Destruction of the Soul">
+	<skill id="5863" toLevel="1" name="Destruction of Soul">
 		<affectLimit>10-10</affectLimit>
 		<effectPoint>-1000</effectPoint>
 		<magicLevel>99</magicLevel>

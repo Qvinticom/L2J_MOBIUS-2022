@@ -486,7 +486,7 @@ public class RecipeController
 				grabItems -= count;
 				if (_target == _player)
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.EQUIPPED_S1_S2); // you equipped ...
+					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_EQUIPPED); // you equipped ...
 					sm.addLong(count);
 					sm.addItemName(item.getItemId());
 					_player.sendPacket(sm);
@@ -706,14 +706,14 @@ public class RecipeController
 			
 			if (itemCount > 1)
 			{
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
 				sm.addItemName(itemId);
 				sm.addLong(itemCount);
 				_target.sendPacket(sm);
 			}
 			else
 			{
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+				sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1);
 				sm.addItemName(itemId);
 				_target.sendPacket(sm);
 			}

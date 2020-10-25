@@ -530,7 +530,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="price" val="400" />
+		<set name="price" val="0" /> <!-- Prevent exploit from event rewarded Spirit Ore -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>

@@ -298,7 +298,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						{
 							if (item.getEnchantLevel() > 0)
 							{
-								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
 								sm.addInt(item.getEnchantLevel());
 								sm.addItemName(item);
 								client.sendPacket(sm);
@@ -398,7 +398,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							{
 								crystals = player.getInventory().addItem("Enchant", crystalId, count, player, item);
 								
-								final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+								final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2_PC_S);
 								sm.addItemName(crystals);
 								sm.addLong(count);
 								client.sendPacket(sm);

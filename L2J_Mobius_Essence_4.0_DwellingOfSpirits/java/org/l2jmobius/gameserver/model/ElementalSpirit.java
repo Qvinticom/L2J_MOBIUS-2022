@@ -67,7 +67,7 @@ public class ElementalSpirit
 	public void addExperience(long experience)
 	{
 		_data.addExperience(experience);
-		_owner.sendPacket(new SystemMessage(SystemMessageId.OBTAINED_S2_ATTRIBUTE_XP_OF_S1).addInt((int) experience).addElementalSpirit(getType()));
+		_owner.sendPacket(new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_S2_ATTRIBUTE_XP).addInt((int) experience).addElementalSpirit(getType()));
 		if (_data.getExperience() > getExperienceToNextLevel())
 		{
 			levelUp();

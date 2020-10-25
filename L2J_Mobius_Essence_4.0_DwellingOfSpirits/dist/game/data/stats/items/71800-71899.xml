@@ -303,6 +303,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="1902">
+			<player levelRange="1;60" />
+		</cond>
 	</item>
 	<item id="71829" name="XP and SP Rune Pack 50% (1-hour)" type="EtcItem">
 		<!-- Double-click to obtain XP and SP Rune 50% (1-hour). -->
@@ -532,5 +535,72 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71844" name="Cheer Pompoms from Don Quijote" additionalName="Event" type="Weapon">
+		<!-- An item commemorating the collaboration with Don Quijote. Fulfill all your cherished dreams! Enables the Inspiring Crackers skill. -->
+		<set name="icon" val="BranchIcon.Icon.etc_ev_don_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="MITHRIL" />
+		<set name="mp_consume" val="13" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">14833</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">8</stat>
+		</stats>
+	</item>
+	<item id="71856" name="L-Coin Pouch" type="EtcItem">
+		<!-- Double-click to obtain 20-100 L-Coins. -->
+		<set name="icon" val="icon.etc_golden_spice_new_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71890" name="Ultimate Death Knight - China" additionalName="Not Available" type="Armor">
+		<set name="icon" val="BranchSys3.iconArmar.g_co_japan_general_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="CLOTH" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71891" name="ADEN Storm Gatcha Ticket" type="EtcItem">
+		<!-- Double-click to obtain 300 L-Coins and Sayha's Storm Lv. 3 (1-1000 pcs.). -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71899" name="Limited Sayha's Blessing" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to get the Limited Sayha's effect for 30 d. If Sayha's Grace is inactive, Acquired XP/ SP +200%, adena's drop rate penalty is decreased. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_limited_sayha_01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
 	</item>
 </list>

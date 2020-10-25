@@ -72,7 +72,7 @@ public class RequestWithDrawPremiumItem implements IClientIncomingPacket
 		}
 		else if (player.isProcessingTransaction())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_A_DIMENSIONAL_ITEM_DURING_AN_EXCHANGE);
+			client.sendPacket(SystemMessageId.ITEMS_FROM_GAME_ASSISTANTS_CANNOT_BE_EXCHANGED);
 			return;
 		}
 		

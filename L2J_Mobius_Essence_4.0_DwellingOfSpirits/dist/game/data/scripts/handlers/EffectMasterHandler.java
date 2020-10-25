@@ -225,6 +225,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("MaxHp", MaxHp::new);
 		EffectHandler.getInstance().registerHandler("MaxMagicCriticalRate", MaxMagicCriticalRate::new);
 		EffectHandler.getInstance().registerHandler("MaxMp", MaxMp::new);
+		EffectHandler.getInstance().registerHandler("ModifyDeathPoints", ModifyDeathPoints::new);
 		EffectHandler.getInstance().registerHandler("ModifyVital", ModifyVital::new);
 		EffectHandler.getInstance().registerHandler("Mp", Mp::new);
 		EffectHandler.getInstance().registerHandler("MpConsumePerLevel", MpConsumePerLevel::new);

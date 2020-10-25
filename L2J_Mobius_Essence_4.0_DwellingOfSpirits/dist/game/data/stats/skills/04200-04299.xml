@@ -1024,7 +1024,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4217" toLevel="1" name="">
+	<skill id="4217" toLevel="1" name="Mass Scatter Enemy">
 		<affectRange>300</affectRange>
 		<castRange>800</castRange>
 		<coolTime>100</coolTime>
@@ -1514,7 +1514,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4235" toLevel="1" name="">
+	<skill id="4235" toLevel="1" name="Ram">
 		<hitTime>15000</hitTime>
 		<magicLevel>70</magicLevel>
 		<operateType>A1</operateType>
@@ -3144,7 +3144,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4283" toLevel="1" name="Greater Magic Attack Resistance">
+	<skill id="4283" toLevel="1" name="Greater Magic Damage Resistance">
 		<!-- Very resistant to magic attack. -->
 		<icon>icon.skill4283_new</icon>
 		<magicLevel>1</magicLevel>

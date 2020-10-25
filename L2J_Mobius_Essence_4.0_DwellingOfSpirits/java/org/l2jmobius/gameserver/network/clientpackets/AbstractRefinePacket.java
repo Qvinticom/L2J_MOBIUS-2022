@@ -65,16 +65,19 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			return false;
 		}
 		
+		// TODO: Update XMLs.
 		// Check for item id
-		if (fee.getItemId() != feeItem.getId())
-		{
-			return false;
-		}
+		// if (fee.getItemId() != feeItem.getId())
+		// {
+		// return false;
+		// }
+		
+		// TODO: Update XMLs.
 		// Count must be greater or equal of required number
-		if (fee.getItemCount() > feeItem.getCount())
-		{
-			return false;
-		}
+		// if (fee.getItemCount() > feeItem.getCount())
+		// {
+		// return false;
+		// }
 		
 		return true;
 	}

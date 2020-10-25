@@ -347,7 +347,7 @@ public class ItemAuction
 				{
 					_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_5_MIN;
 					_endingTime += ENDING_TIME_EXTEND_5;
-					broadcastToAllBidders(new SystemMessage(SystemMessageId.BIDDER_EXISTS_THE_AUCTION_TIME_HAS_BEEN_EXTENDED_BY_5_MINUTES));
+					broadcastToAllBidders(new SystemMessage(SystemMessageId.BIDDER_EXISTS_THE_AUCTION_TIME_HAS_BEEN_EXTENDED_FOR_5_MIN));
 					break;
 				}
 				case EXTEND_BY_5_MIN:
@@ -356,7 +356,7 @@ public class ItemAuction
 					{
 						_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_3_MIN;
 						_endingTime += ENDING_TIME_EXTEND_3;
-						broadcastToAllBidders(new SystemMessage(SystemMessageId.BIDDER_EXISTS_AUCTION_TIME_HAS_BEEN_EXTENDED_BY_3_MINUTES));
+						broadcastToAllBidders(new SystemMessage(SystemMessageId.BIDDER_EXISTS_AUCTION_TIME_HAS_BEEN_EXTENDED_FOR_3_MIN));
 					}
 					break;
 				}

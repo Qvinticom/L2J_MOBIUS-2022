@@ -33,18 +33,18 @@
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="13654" toLevel="1" name="Put on Lv. 2 Brooch">
+	<skill id="13654" toLevel="1" name="Brooch Lv. 2 On">
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="13655" toLevel="1" name="Remove Lv. 2 Brooch">
+	<skill id="13655" toLevel="1" name="Brooch Lv. 2 Off">
 		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="13656" toLevel="1" name="Lv. 1 Brooch">
+	<skill id="13656" toLevel="1" name="Brooch Lv. 1">
 		<!-- Activates 2 jewel slots. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i00</icon>
 		<operateType>P</operateType>
@@ -94,7 +94,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13661" toLevel="5" name="Lv. 2 Brooch - Additional Effect">
+	<skill id="13661" toLevel="5" name="Brooch - Additional Effect">
 		<!-- Inventory Slot +5. -->
 		<icon>
 			<value level="1">icon.etc_bm_brooch_lavianrose_i00</value>

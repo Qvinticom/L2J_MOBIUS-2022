@@ -45,7 +45,7 @@ public class RollingDice implements IItemHandler
 		final int itemId = item.getId();
 		if (player.isInOlympiadMode())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_OLYMPIAD_MATCH);
+			player.sendPacket(SystemMessageId.THE_ITEM_CANNOT_BE_USED_IN_THE_OLYMPIAD);
 			return false;
 		}
 		

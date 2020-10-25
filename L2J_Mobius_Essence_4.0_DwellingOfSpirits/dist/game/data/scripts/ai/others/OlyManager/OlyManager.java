@@ -279,7 +279,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 			{
 				if (!Olympiad.getInstance().inCompPeriod())
 				{
-					player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+					player.sendPacket(SystemMessageId.THE_OLYMPIAD_IS_NOT_HELD_RIGHT_NOW);
 					return false;
 				}
 				
@@ -296,7 +296,7 @@ public class OlyManager extends AbstractNpcAI implements IBypassHandler
 			}
 			else if (!Olympiad.getInstance().inCompPeriod())
 			{
-				player.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+				player.sendPacket(SystemMessageId.THE_OLYMPIAD_IS_NOT_HELD_RIGHT_NOW);
 				return false;
 			}
 			else if (player.isOnEvent())

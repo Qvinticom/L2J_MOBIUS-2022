@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
-import org.l2jmobius.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
+import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeSetAlarm;
 
 import ai.AbstractNpcAI;
 
@@ -58,7 +58,7 @@ public class SecondClassChange extends AbstractNpcAI
 			return;
 		}
 		
-		player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+		player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
@@ -81,7 +81,7 @@ public class SecondClassChange extends AbstractNpcAI
 			return;
 		}
 		
-		player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+		player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 	}
 	
 	public static void main(String[] args)

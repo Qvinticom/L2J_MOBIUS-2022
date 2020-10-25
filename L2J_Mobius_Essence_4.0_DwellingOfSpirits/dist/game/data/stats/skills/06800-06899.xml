@@ -697,7 +697,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6826" toLevel="1" name="Critical Blow">
+	<skill id="6826" toLevel="1" name="Critical Strike">
 		<effectPoint>-10000</effectPoint>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -709,7 +709,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6827" toLevel="1" name="Petrify">
+	<skill id="6827" toLevel="1" name="Petrifies the target.">
 		<!-- Petrified and unable to move for 30 sec. -->
 		<icon>icon.skill4111</icon>
 		<abnormalTime>3</abnormalTime>
@@ -1796,7 +1796,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="6881" toLevel="1" name="Critical Blow">
+	<skill id="6881" toLevel="1" name="Critical Strike">
 		<castRange>40</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1817,7 +1817,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6882" toLevel="1" name="Petrify">
+	<skill id="6882" toLevel="1" name="Petrifies the target.">
 		<!-- Petrified and unable to move momentarily. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2232,14 +2232,14 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6898" toLevel="1" name="84 Lv. Raid Boss">
+	<skill id="6898" toLevel="1" name="Raid Boss (Lv. 84)">
 		<!-- It was one of the dragons that was born out of the blood that was thrown up by Antharas. After swallowing the Ancient Drake and absorbing its power, it quickly arose as a Commander that rules over the monsters nearby. It has good hearing but its vision is very poor, so it waits in a quiet, dark place, listening to the enemy's heartbeat, before swooping in for an attack. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6899" toLevel="1" name="84 Lv. Raid Boss">
+	<skill id="6899" toLevel="1" name="Raid Boss (Lv. 84)">
 		<!-- It was one of the dragons that was born out of the blood that was thrown up by Antharas. It swallowed up its brethren and gained a greater power. Antharas, whose heart was filled with innate cruelty and madness of a Dust Rider, appointed him as the Valley's Eradicator and commanded him to build the Tower of Corpses. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>

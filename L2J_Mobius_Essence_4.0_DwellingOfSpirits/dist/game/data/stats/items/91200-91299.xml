@@ -16,30 +16,45 @@
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="81" />
+		</cond>
 	</item>
 	<item id="91202" name="Scroll: Sublime Self-Sacrifice" type="EtcItem">
 		<!-- Scroll needed to learn Sublime Self-Sacrifice. Used by Cardinal. Required level: 81 -->
 		<set name="icon" val="icon.etc_magic_book_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="81" />
+		</cond>
 	</item>
 	<item id="91203" name="Scroll: Summon Feline Queen" type="EtcItem">
 		<!-- Scroll needed to learn Summon Feline Queen. Used by Arcana Lord. Required level: 77 -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="77" />
+		</cond>
 	</item>
 	<item id="91204" name="Scroll: Summon Seraphim the Unicorn" type="EtcItem">
 		<!-- Scroll needed to learn Summon Seraphim the Unicorn. Used by Elemental Master. Required level: 77 -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="77" />
+		</cond>
 	</item>
 	<item id="91205" name="Scroll: Summon Nightshade" type="EtcItem">
 		<!-- Scroll needed to learn Summon Nightshade. Used by Spectral Master. Required level: 77 -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<cond msgId="113" addName="1">
+			<player level="77" />
+		</cond>
 	</item>
 	<item id="91206" name="Chronicle Token" type="EtcItem">
 		<!-- When in inventory, CON, MEN, DEX, WIT, STR, INT +1, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold. Can be transferred between characters on one account and stored in a private warehouse. Will be deleted after the event. -->

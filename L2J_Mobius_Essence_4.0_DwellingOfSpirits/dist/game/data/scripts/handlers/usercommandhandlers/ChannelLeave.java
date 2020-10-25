@@ -53,7 +53,7 @@ public class ChannelLeave implements IUserCommandHandler
 			final CommandChannel channel = player.getParty().getCommandChannel();
 			final Party party = player.getParty();
 			channel.removeParty(party);
-			party.getLeader().sendPacket(SystemMessageId.YOU_HAVE_QUIT_THE_COMMAND_CHANNEL);
+			party.getLeader().sendPacket(SystemMessageId.YOU_HAVE_LEFT_THE_COMMAND_CHANNEL);
 			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_S_PARTY_HAS_LEFT_THE_COMMAND_CHANNEL);
 			sm.addPcName(party.getLeader());

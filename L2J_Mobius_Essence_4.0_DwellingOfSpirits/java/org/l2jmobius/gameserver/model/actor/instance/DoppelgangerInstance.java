@@ -168,7 +168,7 @@ public class DoppelgangerInstance extends Npc
 		
 		if ((getSummoner() != null) && getSummoner().isPlayer() && (attacker != null) && !isDead() && !isHpBlocked())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_RECEIVES_S3_DAMAGE_FROM_TARGET_C2);
 			sm.addNpcName(this);
 			sm.addString(attacker.getName());
 			sm.addInt((int) damage);

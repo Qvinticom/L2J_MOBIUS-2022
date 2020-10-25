@@ -564,12 +564,30 @@
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="90694" name="Sealed Rune - Stage 1" type="EtcItem">
+	<item id="90694" name="Sealed Soul Crystal - Level 1" type="EtcItem">
 		<!-- Double-click to obtain one Rune - Stage 1, which you can insert into your weapon. Cannot be sold in the grocery store. -->
 		<set name="icon" val="BranchIcon.Icon.g_green_sealed_rune" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="90534" min="1" max="1" chance="12" />
+			<item id="90554" min="1" max="1" chance="13" />
+			<item id="90574" min="1" max="1" chance="12" />
+			<item id="90594" min="1" max="1" chance="13" />
+			<item id="90614" min="1" max="1" chance="12" />
+			<item id="90634" min="1" max="1" chance="13" />
+			<item id="90654" min="1" max="1" chance="12" />
+			<item id="90674" min="1" max="1" chance="13" />
+		</capsuled_items>
 	</item>
 	<item id="90695" name="Sealed Rune - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain one Rune - Stage 2, which you can insert into your weapon. Cannot be sold in the grocery store. -->

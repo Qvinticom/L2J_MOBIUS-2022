@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="55000" toLevel="4" name="XP/SP Scroll">
+	<skill id="55000" toLevel="4" name="Acquired XP/ SP">
 		<!-- For $s1, Acquired XP/ SP +$s2. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLevel>
@@ -46,7 +46,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55001" toLevel="1" name="Blessed Scroll of Escape">
+	<skill id="55001" toLevel="1" name="Improved Scroll of Escape">
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 	</skill>
@@ -189,31 +189,31 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="55005" toLevel="1" name="Scroll: Enchant Weapon (D-grade)">
+	<skill id="55005" toLevel="1" name="Scroll: Enchant D-grade Weapon">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55006" toLevel="1" name="Scroll: Enchant Armor (D-grade)">
+	<skill id="55006" toLevel="1" name="Scroll: Enchant D-grade Armor">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55007" toLevel="1" name="Scroll: Enchant Weapon (C-grade)">
+	<skill id="55007" toLevel="1" name="Scroll: Enchant C-grade Weapon">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55008" toLevel="1" name="Scroll: Enchant Armor (C-grade)">
+	<skill id="55008" toLevel="1" name="Scroll: Enchant C-grade Armor">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55009" toLevel="1" name="Blessed Scroll: Enchant Weapon (D-grade)">
+	<skill id="55009" toLevel="1" name="Blessed Scroll: Enchant D-grade Weapon">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55010" toLevel="1" name="Blessed Scroll: Enchant Weapon (C-grade)">
+	<skill id="55010" toLevel="1" name="Blessed Scroll: Enchant C-grade Weapon">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55011" toLevel="1" name="Blessed Scroll: Enchant Armor (D-grade)">
+	<skill id="55011" toLevel="1" name="Blessed Scroll: Enchant D-grade Armor">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55012" toLevel="1" name="Blessed Scroll: Enchant Armor (C-grade)">
+	<skill id="55012" toLevel="1" name="Blessed Scroll: Enchant C-grade Armor">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55013" toLevel="1" name="Blessed Scroll of Escape">
+	<skill id="55013" toLevel="1" name="Improved Scroll of Escape">
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 	</skill>
@@ -390,7 +390,7 @@
 		<reuseDelay>43200000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="55033" toLevel="1" name="Blessed Scroll of Escape">
+	<skill id="55033" toLevel="1" name="Improved Scroll of Escape">
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 	</skill>
@@ -1165,7 +1165,7 @@
 	<skill id="55050" toLevel="1" name="Chronic Noble Successor Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55051" toLevel="4" name="XP/SP Scroll">
+	<skill id="55051" toLevel="4" name="Acquired XP/ SP">
 		<!-- For $s1, Acquired XP/ SP +$s2. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1450,7 +1450,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55062" toLevel="2" name="Castle XP/SP Scroll - Medium">
+	<skill id="55062" toLevel="2" name="Castle XP/ SP Scroll - Medium">
 		<!-- For 20 min., Acquired XP/ SP +45%. Effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLevel>
@@ -1596,7 +1596,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55067" toLevel="1" name="Blessed Castle Scroll of Escape">
+	<skill id="55067" toLevel="1" name="Improved Scroll of Escape: Castle">
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2406,7 +2406,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="55087" toLevel="1" name="Minor Blessed Scroll of Escape">
+	<skill id="55087" toLevel="1" name="Minor Improved Scroll of Escape">
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 	</skill>
@@ -2462,7 +2462,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55091" toLevel="10" name="Enchantment Effect: Fire Dragon Pendant Lv. 1">
+	<skill id="55091" toLevel="10" name="Enchant Effect: Fire Dragon Pendant Lv. 1">
 		<!-- P. Atk. +6. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLevel>1</magicLevel>
@@ -2503,7 +2503,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55093" toLevel="10" name="Enchantment Effect: Fire Dragon Pendant Lv. 2">
+	<skill id="55093" toLevel="10" name="Enchant Effect: Fire Dragon Pendant Lv. 2">
 		<!-- P. Atk. +6 and P. Critical Damage +38. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLevel>1</magicLevel>
@@ -2563,7 +2563,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55095" toLevel="10" name="Enchantment Effect: Fire Dragon Pendant Lv. 3">
+	<skill id="55095" toLevel="10" name="Enchant Effect: Fire Dragon Pendant Lv. 3">
 		<!-- P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLevel>1</magicLevel>
@@ -2642,7 +2642,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55097" toLevel="10" name="Enchantment Effect: Fire Dragon Pendant Lv. 4">
+	<skill id="55097" toLevel="10" name="Enchant Effect: Fire Dragon Pendant Lv. 4">
 		<!-- P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%, P. Atk. +1.5%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLevel>1</magicLevel>
@@ -2740,7 +2740,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55099" toLevel="10" name="Enchantment Effect: Fire Dragon Pendant Lv. 5">
+	<skill id="55099" toLevel="10" name="Enchant Effect: Fire Dragon Pendant Lv. 5">
 		<!-- P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%, P. Atk. +1.5%, P. Critical Damage +2%. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLevel>1</magicLevel>

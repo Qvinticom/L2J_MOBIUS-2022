@@ -51,7 +51,7 @@ public class OlympiadAnnouncer implements Runnable
 				{
 					case NON_CLASSED:
 					{
-						npcString = NpcStringId.OLYMPIAD_CLASS_FREE_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
+						npcString = NpcStringId.THE_WORLD_OLYMPIAD_WILL_BEGIN_IN_ARENA_S1_SOON;
 						break;
 					}
 					case CLASSED:

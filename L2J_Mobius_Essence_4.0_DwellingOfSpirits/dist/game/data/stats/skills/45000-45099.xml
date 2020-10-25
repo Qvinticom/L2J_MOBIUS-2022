@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="45000" toLevel="20" name="Item Skill: Stun">
+	<skill id="45000" toLevel="20" name="Tyrr's Critical Stun">
 		<!-- In case of success: Momentarily inflicts Stun on the target during a normal physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>100</castRange>
 	</skill>
-	<skill id="45001" toLevel="25" name="Tyrr Critical Stun">
+	<skill id="45001" toLevel="25" name="Tyrr's Critical Stun">
 		<!-- Has a 9% chance to cast Stun on the target upon a critical attack. Requires a polearm. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_tir_lv00</value>
@@ -45,7 +45,7 @@
 			</condition>
 		</passiveConditions>
 	</skill>
-	<skill id="45002" toLevel="25" name="Sigel's Protection">
+	<skill id="45002" toLevel="25" name="Sigel's Defense">
 		<!-- P. Def. +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
@@ -108,7 +108,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45003" toLevel="25" name="Sigel Protection">
+	<skill id="45003" toLevel="25" name="Sigel's Protection">
 		<!-- Max HP +$s1 -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_sigel_lv00</value>
@@ -417,7 +417,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45008" toLevel="22" name="Yul Guidance">
+	<skill id="45008" toLevel="22" name="Yul's Guidance">
 		<!-- P. Accuracy +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_yr_lv01</value>
@@ -474,7 +474,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45009" toLevel="20" name="Feoh Magic Focus">
+	<skill id="45009" toLevel="20" name="Feoh's Magic Focus">
 		<!-- M. Critical Rate +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_feoh_lv01</value>
@@ -580,7 +580,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45011" toLevel="25" name="Iss Acumen">
+	<skill id="45011" toLevel="25" name="Iss' Acumen">
 		<!-- Casting Spd. +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_is_lv01</value>
@@ -643,7 +643,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45012" toLevel="25" name="Iss Wind Walk">
+	<skill id="45012" toLevel="25" name="Iss' Wind Walk">
 		<!-- Speed +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_is_lv01</value>
@@ -759,7 +759,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45014" toLevel="20" name="Wynn's Lightness">
+	<skill id="45014" toLevel="20" name="Wynn's Decrease Weight">
 		<!-- Weight limit +$s1. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_wynn_lv01</value>

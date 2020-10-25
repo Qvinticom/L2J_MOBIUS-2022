@@ -349,7 +349,7 @@ public class ClanHallManager extends AbstractNpcAI
 										{
 											final int funcVal = (int) oldFunc.getTemplate().getValue();
 											htmltext = getHtm(player, "ClanHallManager-manageFuncAlreadySet.html");
-											htmltext = htmltext.replace("%funcEffect%", "<fstring p1=\"" + (funcVal > 0 ? funcVal : oldFunc.getLevel()) + "\">" + (funcVal > 0 ? NpcStringId.S1.getId() : NpcStringId.STAGE_S1.getId()) + "</fstring>");
+											htmltext = htmltext.replace("%funcEffect%", "<fstring p1=\"" + (funcVal > 0 ? funcVal : oldFunc.getLevel()) + "\">" + (funcVal > 0 ? NpcStringId.S1.getId() : NpcStringId.LV_S1.getId()) + "</fstring>");
 										}
 										else if ((funcId >= 1) && (funcId <= 8))
 										{

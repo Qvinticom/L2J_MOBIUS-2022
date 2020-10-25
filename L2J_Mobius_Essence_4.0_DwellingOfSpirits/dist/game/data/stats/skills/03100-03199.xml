@@ -41,7 +41,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3101" toLevel="10" name="Item Skill: Paralyze">
+	<skill id="3101" toLevel="10" name="Item Skill: Paralysis">
 		<!-- In case of success: Normal magic attack slows the enemy down for $s1, after that the enemy is fully paralysed for $s2. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -748,7 +748,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3116" toLevel="10" name="Item Skill: Paralyze">
+	<skill id="3116" toLevel="10" name="Item Skill: Paralysis">
 		<!-- In case of success: physical critical attack slows the enemy down for $s1, after that the enemy is fully paralysed for $s2. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -6293,7 +6293,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3192" toLevel="10" name="Item Skill: Paralyze">
+	<skill id="3192" toLevel="10" name="Item Skill: Paralysis">
 		<!-- Active: Slows the enemy down for $s1, after that the enemy is fully paralysed for $s2. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>1</abnormalLevel>

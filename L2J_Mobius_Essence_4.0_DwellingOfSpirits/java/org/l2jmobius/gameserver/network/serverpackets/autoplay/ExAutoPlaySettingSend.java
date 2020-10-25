@@ -54,6 +54,7 @@ public class ExAutoPlaySettingSend implements IClientOutgoingPacket
 		packet.writeH(_nextTargetMode);
 		packet.writeC(_longRange ? 1 : 0);
 		packet.writeD(_potionPercent);
+		packet.writeD(0); // 272
 		packet.writeC(_respectfulHunting ? 1 : 0);
 		return true;
 	}

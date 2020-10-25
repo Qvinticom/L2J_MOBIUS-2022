@@ -1784,7 +1784,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5157" toLevel="10" name="Power in Duel">
+	<skill id="5157" toLevel="10" name="Duel Might">
 		<!-- In case of success: Increases P. Atk. in PvP for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1932,7 +1932,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5160" toLevel="10" name="Weakness in Duel">
+	<skill id="5160" toLevel="10" name="Duel Weakness">
 		<!-- In case of success: Decreases enemy's P. Atk. in PvP for a certain amount of time. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2228,7 +2228,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5166" toLevel="15" name="Decrease Speed">
+	<skill id="5166" toLevel="15" name="Slow">
 		<!-- In case of success: Momentarily target's Speed -30%. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -2810,21 +2810,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5179" toLevel="1" name="80 Lv. Raid Boss">
+	<skill id="5179" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- The younger brother of the Elrokian chief, Mushika, he is notoriously ambitious, jealous and prone to fits of violence. Where his legendary brother is concerned, he also suffers from something of an inferiority complex. He currently leads the Elrokian faction opposed to Mushika's policies and is scheming to depose his brother and make himself chief. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5180" toLevel="1" name="80 Lv. Raid Boss">
+	<skill id="5180" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- Sailren, an enormous, vicious and dangerous dinosaur who inhabits the Primeval Isle, was sealed inside the Lost Nest ages ago by Shilen and the ancient Elrokian warriors. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5181" toLevel="1" name="80 Lv. Raid Boss">
+	<skill id="5181" toLevel="1" name="Raid Boss (Lv. 80)">
 		<!-- Wandering near Goddard Castle, this seemingly ordinary Human knight is actually a demon searching for a powerful weapon to increase its strength. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
@@ -2888,7 +2888,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5186" toLevel="2" name="Pet Haste">
+	<skill id="5186" toLevel="2" name="Pet's Haste">
 		<!-- Temporarily Atk. Spd. +15%. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>
@@ -2930,7 +2930,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5187" toLevel="4" name="Pet Vampiric Rage">
+	<skill id="5187" toLevel="4" name="Pet's Vampiric Rage">
 		<!-- Temporarily increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLevel>
@@ -2982,7 +2982,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5188" toLevel="3" name="Pet Regeneration">
+	<skill id="5188" toLevel="3" name="Pet's Regeneration">
 		<!-- HP Recovery Bonus +10% for a certain amount of time. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLevel>
@@ -3033,7 +3033,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5189" toLevel="6" name="Pet Blessed Body">
+	<skill id="5189" toLevel="6" name="Pet's Blessed Body">
 		<!-- Max HP +10% for a certain amount of time. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLevel>
@@ -3171,7 +3171,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5191" toLevel="3" name="Pet Guidance">
+	<skill id="5191" toLevel="3" name="Pet's Guidance">
 		<!-- Temporarily P. Accuracy +2. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLevel>
@@ -3222,7 +3222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5192" toLevel="2" name="Pet Wind Walk">
+	<skill id="5192" toLevel="2" name="Pet's Wind Walk">
 		<!-- Temporarily Speed +20. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLevel>
@@ -3267,7 +3267,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5193" toLevel="3" name="Pet Acumen">
+	<skill id="5193" toLevel="3" name="Pet's Acumen">
 		<!-- Temporarily Atk. Spd. +15%. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLevel>
@@ -3318,7 +3318,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5194" toLevel="3" name="Pet Empower">
+	<skill id="5194" toLevel="3" name="Pet's Empower">
 		<!-- Temporarily M. Atk. +55%. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>
@@ -3369,7 +3369,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5195" toLevel="12" name="Pet Greater Heal">
+	<skill id="5195" toLevel="12" name="Pet's Greater Heal">
 		<!-- Recovers HP and momentarily increases HP Recovery Bonus. -->
 		<icon>icon.skill1217</icon>
 		<abnormalLevel>
@@ -3474,7 +3474,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5196" toLevel="3" name="Pet Wind Shackle">
+	<skill id="5196" toLevel="3" name="Pet's Wind Shackle">
 		<!-- Receives help from the Spirit of the Wind. Momentarily decreases the enemy's Atk. Spd. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -3520,7 +3520,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5197" toLevel="3" name="Pet Hex">
+	<skill id="5197" toLevel="3" name="Pet's Hex">
 		<!-- Momentarily decreases the enemy's P. Def. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -3566,7 +3566,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5198" toLevel="3" name="Pet Slow">
+	<skill id="5198" toLevel="3" name="Pet's Slow">
 		<!-- Momentarily decreases the enemy's speed. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>3</abnormalLevel>
@@ -3612,7 +3612,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5199" toLevel="3" name="Pet Curse Gloom">
+	<skill id="5199" toLevel="3" name="Pet's Curse Gloom">
 		<!-- Casts a curse that instantly decreases the enemy's M. Def. -->
 		<icon>icon.skill1263</icon>
 		<abnormalLevel>3</abnormalLevel>

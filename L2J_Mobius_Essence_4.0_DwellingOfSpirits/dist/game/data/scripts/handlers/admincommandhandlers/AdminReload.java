@@ -39,6 +39,7 @@ import org.l2jmobius.gameserver.data.xml.impl.EquipmentUpgradeData;
 import org.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import org.l2jmobius.gameserver.data.xml.impl.FishingData;
 import org.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
+import org.l2jmobius.gameserver.data.xml.impl.LCoinShopData;
 import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
@@ -278,6 +279,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					PrimeShopData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Prime Shop data.");
+					break;
+				}
+				case "limitshop":
+				{
+					LCoinShopData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Limit Shop data.");
 					break;
 				}
 				case "appearance":

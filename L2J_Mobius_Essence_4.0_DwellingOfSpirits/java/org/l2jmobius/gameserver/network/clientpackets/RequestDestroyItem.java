@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -181,7 +182,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		{
 			if (itemToRemove.getEnchantLevel() > 0)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2_UNEQUIPPED);
 				sm.addInt(itemToRemove.getEnchantLevel());
 				sm.addItemName(itemToRemove);
 				client.sendPacket(sm);
@@ -224,6 +225,12 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		else
 		{
 			player.sendItemList();
+		}
+		
+		// LCoin UI update.
+		if (removedItem.getId() == ExBloodyCoinCount.LCOIN_ID)
+		{
+			player.sendPacket(new ExBloodyCoinCount(player));
 		}
 	}
 }

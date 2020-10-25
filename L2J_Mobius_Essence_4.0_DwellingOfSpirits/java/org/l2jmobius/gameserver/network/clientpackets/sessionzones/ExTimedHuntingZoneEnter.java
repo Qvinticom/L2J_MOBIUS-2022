@@ -83,7 +83,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_zoneId == 2) && (player.getLevel() < 78))
+		if ((_zoneId == 1) && (player.getLevel() < 78))
 		{
 			player.sendMessage("Your level does not correspond the zone equivalent.");
 		}
@@ -109,9 +109,9 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			
 			switch (_zoneId)
 			{
-				case 2: // Ancient Pirates' Tomb
+				case 1: // Primeval Isle
 				{
-					player.teleToLocation(17613, -76862, -6265);
+					player.teleToLocation(9400, -21720, -3634);
 					break;
 				}
 			}

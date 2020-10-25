@@ -166,7 +166,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="304" toLevel="2" name="Song of Vitality">
+	<skill id="304" toLevel="2" name="Song of Earth">
 		<!-- All party members' Max HP +30% for 5 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0304</icon>
 		<abnormalLevel>
@@ -207,7 +207,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="305" toLevel="1" name="Song of Vengeance">
+	<skill id="305" toLevel="1" name="Song of Wind">
 		<!-- For 5 min., gives a party member the ability to transfer 20% of received damage back to the enemy. Additionally increases MP Consumption when singing while song/ dance is in effect. -->
 		<icon>icon.skill0305</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -351,7 +351,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="310" toLevel="1" name="Dance of the Vampire">
+	<skill id="310" toLevel="1" name="Dance of Fury">
 		<!-- For 5 min., recovers as HP 8% of the physical melee damage inflicted on the enemy with a certain probability. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0310</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -385,7 +385,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="311" toLevel="2" name="Dance of Protection">
+	<skill id="311" toLevel="2" name="Dark Elven Buff Cancel Resistance">
 		<!-- For 5 min., grants all party members +10% Damage Reflect Resistance. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires dual swords. -->
 		<icon>icon.skill0311</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -505,7 +505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="313" toLevel="9" name="Snipe">
+	<skill id="313" toLevel="10" name="Snipe">
 		<!-- For $s1, P. Accuracy +$s2, P. Atk. +$s3, Range +$s4, P. Critical Rate +$s5. Movement is impossible while skill is being used. Requires a bow. -->
 		<icon>icon.skill0313</icon>
 		<abnormalLevel>
@@ -518,6 +518,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
+			<value level="10">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
@@ -531,6 +532,7 @@
 			<value level="7">646</value>
 			<value level="8">655</value>
 			<value level="9">664</value>
+			<value level="10">664</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLevel>
@@ -543,6 +545,7 @@
 			<value level="7">72</value>
 			<value level="8">74</value>
 			<value level="9">80</value>
+			<value level="10">80</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">28</value>
@@ -554,6 +557,7 @@
 			<value level="7">34</value>
 			<value level="8">34</value>
 			<value level="9">35</value>
+			<value level="10">35</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>75000</reuseDelay>
@@ -581,6 +585,7 @@
 					<value level="7">-60</value>
 					<value level="8">-60</value>
 					<value level="9">-40</value>
+					<value level="10">-40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -598,6 +603,7 @@
 					<value level="7">188</value>
 					<value level="8">199</value>
 					<value level="9">210</value>
+					<value level="10">210</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -615,6 +621,7 @@
 					<value level="7">6</value>
 					<value level="8">6</value>
 					<value level="9">6</value>
+					<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -632,6 +639,7 @@
 					<value level="7">200</value>
 					<value level="8">200</value>
 					<value level="9">200</value>
+					<value level="10">200</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -867,7 +875,7 @@
 			<effect name="PhysicalShieldAngleAll" />
 		</effects>
 	</skill>
-	<skill id="317" toLevel="6" name="Focus Attack">
+	<skill id="317" toLevel="8" name="Focus Attack">
 		<!-- Attacks a single enemy when equipped with a spear. Additionally, P. Accuracy +$s1 and P. Critical Damage +$s2. Applies to standard attacks only. -->
 		<icon>icon.skill0317</icon>
 		<magicLevel>
@@ -877,6 +885,8 @@
 			<value level="4">66</value>
 			<value level="5">74</value>
 			<value level="6">76</value>
+			<value level="7">76</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">76</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">18</value>
@@ -885,6 +895,8 @@
 			<value level="4">31</value>
 			<value level="5">34</value>
 			<value level="6">37</value>
+			<value level="7">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">37</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -900,6 +912,8 @@
 					<value level="4">5</value>
 					<value level="5">6</value>
 					<value level="6">6</value>
+					<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -914,6 +928,8 @@
 					<value level="4">6</value>
 					<value level="5">7</value>
 					<value level="6">8</value>
+					<value level="7">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -1277,7 +1293,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="328" toLevel="1" name="Dignity of Kamael">
+	<skill id="328" toLevel="1" name="Kamael's Dignity">
 		<!-- With the original power of Kamael, Speed +$s1, Atk. Spd. +$s2, Casting Spd. +$s3. -->
 		<icon>icon.skill0328</icon>
 		<magicLevel>10</magicLevel>
@@ -1670,20 +1686,26 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="343" toLevel="9" name="Lethal Shot">
-		<!-- Shoots an arrow at a vital spot. Attacks the enemy with $s1 Power added to P. Atk. Ignores $s2 enemy's defense. Requires a bow. Critical. Over-hit. -->
+	<skill id="343" toLevel="15" name="Lethal Shot">
+		<!-- Shoots a deadly arrow that pierces the target with $s1 power.\nRequires a bow.\nIgnores Shield Defense.\nIgnores $s2 of the target's defense.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0343</icon>
 		<castRange>900</castRange>
 		<effectPoint>
-			<value level="1">-449</value>
-			<value level="2">-458</value>
-			<value level="3">-467</value>
-			<value level="4">-477</value>
-			<value level="5">-487</value>
-			<value level="6">-497</value>
-			<value level="7">-507</value>
-			<value level="8">-517</value>
-			<value level="9">-528</value>
+			<value level="1">-400</value>
+			<value level="2">-405</value>
+			<value level="3">-410</value>
+			<value level="4">-415</value>
+			<value level="5">-420</value>
+			<value level="6">-425</value>
+			<value level="7">-430</value>
+			<value level="8">-435</value>
+			<value level="9">-440</value>
+			<value level="10">-445</value>
+			<value level="11">-450</value>
+			<value level="12">-455</value>
+			<value level="13">-460</value>
+			<value level="14">-465</value>
+			<value level="15">-470</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
@@ -1697,6 +1719,12 @@
 			<value level="7">82</value>
 			<value level="8">83</value>
 			<value level="9">84</value>
+			<value level="10">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">168</value>
@@ -1708,6 +1736,12 @@
 			<value level="7">204</value>
 			<value level="8">211</value>
 			<value level="9">218</value>
+			<value level="10">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
@@ -1734,25 +1768,57 @@
 					<value level="7">7762</value>
 					<value level="8">7994</value>
 					<value level="9">8233</value>
+					<value level="10">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="12">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="344" toLevel="2" name="Lethal Blow">
-		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Requires a dagger. Critical. Over-hit. -->
+	<skill id="344" toLevel="15" name="Lethal Blow">
+		<!-- Attacks the enemy's vital spot with $s1 power.\nRequires a dagger.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0344</icon>
 		<castRange>40</castRange>
 		<effectPoint>
-			<value level="1">-169</value>
-			<value level="2">-175</value>
+			<value level="1">-400</value>
+			<value level="2">-405</value>
+			<value level="3">-410</value>
+			<value level="4">-415</value>
+			<value level="5">-420</value>
+			<value level="6">-425</value>
+			<value level="7">-430</value>
+			<value level="8">-435</value>
+			<value level="9">-440</value>
+			<value level="10">-445</value>
+			<value level="11">-450</value>
+			<value level="12">-455</value>
+			<value level="13">-460</value>
+			<value level="14">-465</value>
+			<value level="15">-470</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1800</hitTime>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">82</value>
+			<value level="3">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="4">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="6">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="7">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="9">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">85</value>
@@ -1777,6 +1843,19 @@
 				<power>
 					<value level="1">7148</value>
 					<value level="2">8577</value>
+					<value level="3">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="7">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="8">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="9">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="12">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="13">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="14">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="15">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</power>
 				<criticalChance>20</criticalChance>
 				<chanceBoost>300</chanceBoost>
@@ -2013,20 +2092,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="348" toLevel="8" name="Spoil Crush">
-		<!-- Causes a change inside the monster while attacking the enemy and permits use of the Sweeper skill. Requires a sword or blunt weapon to be equipped. Critical. Over-hit. -->
+	<skill id="348" toLevel="15" name="Spoil Crush">
+		<!-- Deals damage with $s1 power to the target, also has a certain chance of stealing items from monsters.\nRequires a sword, a blunt weapon, or a spear.\nIgnores Shield Defense.\nIgnores $s2 of Def.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0348</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
-			<value level="1">-337</value>
-			<value level="2">-340</value>
-			<value level="3">-343</value>
-			<value level="4">-346</value>
-			<value level="5">-349</value>
-			<value level="6">-352</value>
-			<value level="7">-355</value>
-			<value level="8">-358</value>
+			<value level="1">-400</value>
+			<value level="2">-405</value>
+			<value level="3">-410</value>
+			<value level="4">-415</value>
+			<value level="5">-420</value>
+			<value level="6">-425</value>
+			<value level="7">-430</value>
+			<value level="8">-435</value>
+			<value level="9">-440</value>
+			<value level="10">-445</value>
+			<value level="11">-450</value>
+			<value level="12">-455</value>
+			<value level="13">-460</value>
+			<value level="14">-465</value>
+			<value level="15">-470</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1700</hitTime>
@@ -2039,6 +2125,13 @@
 			<value level="6">82</value>
 			<value level="7">83</value>
 			<value level="8">84</value>
+			<value level="9">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</magicLevel>
 		<mpConsume>
 			<value level="1">70</value>
@@ -2049,6 +2142,13 @@
 			<value level="6">80</value>
 			<value level="7">82</value>
 			<value level="8">84</value>
+			<value level="9">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="11">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="12">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="13">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="14">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="15">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -2073,7 +2173,7 @@
 			<effect name="Spoil" />
 		</effects>
 	</skill>
-	<skill id="349" toLevel="2" name="Song of Renewal">
+	<skill id="349" toLevel="2" name="Song of Vitality">
 		<!-- For $s1, all party members' physical/ magic/ song/ dance skills' MP Consumption -$s2, and physical/ magic skills' Cooldown -$s3. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill0349</icon>
 		<abnormalLevel>
@@ -2823,7 +2923,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="364" toLevel="1" name="Champion Song">
+	<skill id="364" toLevel="1" name="Elven Revival">
 		<!-- For 5 min., all party members' physical/ sing/ dance skill use MP Consumption -20% and physical/ sing/ dance skill Cooldown -10%. Additionally increases MP Consumption when singing while song/ dance is in effect. -->
 		<icon>icon.skill0364</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2865,7 +2965,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="365" toLevel="2" name="Dance of Siren">
+	<skill id="365" toLevel="2" name="Dark Elven Magic Affinity">
 		<!-- All party members' M. Critical Rate +$s2 for $s1 MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill0365</icon>
 		<abnormalLevel>
@@ -2913,7 +3013,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="366" toLevel="3" name="Dance of Shadows">
+	<skill id="366" toLevel="3" name="Dance of Berserker">
 		<!-- For $s1, all party members' Speed -$s2 prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party member launches an attack. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0366</icon>
 		<abnormalLevel>
@@ -3639,7 +3739,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="393" toLevel="1" name="Shine Soul Finding">
+	<skill id="393" toLevel="1" name="Absorb Light Souls">
 		<effectPoint>150</effectPoint>
 		<hitTime>500</hitTime>
 		<hpConsume>30</hpConsume>
@@ -3664,7 +3764,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="394" toLevel="1" name="Shadow Soul Finding">
+	<skill id="394" toLevel="1" name="Absorb Shadow Souls">
 		<!-- TODO: Shadow Souls Implementation -->
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
@@ -3781,7 +3881,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="397" toLevel="2" name="Shine Side">
+	<skill id="397" toLevel="2" name="Light Veil">
 		<!-- Enough Shine Souls have been gathered to be in the Shine Side state. <Acceleration Stage 1>. P. Atk. +130, Atk. Spd. +30, Casting Spd. +40, Speed +10. P./M. Def. +5%. Has a chance to recover MP when attacking. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3859,7 +3959,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="398" toLevel="2" name="Shadow Side">
+	<skill id="398" toLevel="2" name="Shadow Veil">
 		<!-- Enough Shadow Souls have been gathered to be in the Shadow Side state. <Acceleration Stage 2>. P. Atk. +280, Atk. Spd. +80, Casting Spd. +120, Speed +15. Has a chance to activate powerful attack skills. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

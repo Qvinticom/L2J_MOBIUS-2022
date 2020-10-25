@@ -1,0 +1,1204 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="93700" name="Sweet Ingredient Pack" type="EtcItem">
+		<!-- Double-click to obtain Honey (42 pcs.), Beans (21 pcs.), Sesame (8 pcs.). -->
+		<set name="icon" val="icon.etc_grave_goods_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93701" name="Charging Stone of Random Craft - 1 charge (Event)" type="EtcItem">
+		<!-- After charging, a number of craft efforts +1. -->
+		<set name="icon" val="icon.etc_chaser_stone" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93702" name="Daily Kit: Blessing" type="EtcItem">
+		<!-- Double-click to obtain the following items: Sayha's Blessing (50 pcs.), Sayha's Storm Lv. 3 (50 pcs.), Soulshot Ticket (200 pcs.), Combat Scroll (50 pcs.), Battle Scroll (50 pcs.), Primeval Isle's Time Stone. -->
+		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93703" name="Reinforced Jewel Box Lv. 2-3" type="EtcItem">
+		<!-- Double-click to obtain one of the following Lv. 2-3 jewels: Amber, Opal, Coral, Onyx, Spinel, Zircon, Moonstone. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93704" name="Alligator Island's Time Stone" type="EtcItem">
+		<!-- Prolongs your Alligator Island's raid for 60 min. -->
+		<set name="icon" val="icon.timezone_refill_lost_mine_60" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93705" name="Top-grade Resource" type="EtcItem">
+		<!-- After charging, craft points +50,000. -->
+		<set name="icon" val="icon.etc_artisans_frame_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93706" name="Random Craft Charging Pack" type="EtcItem">
+		<!-- Double-click to obtain Charging Stone of Random Craft - 1 charge, and Top-grade Resources (2-100 pcs.). -->
+		<set name="icon" val="icon.etc_chaser_stone" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93707" name="Mark of Revenge - Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Soulshot Ticket, Spirit Ore, HP Recovery Potion, Mid-grade HP Recovery Potion, Combat Scroll, XP Growth Scroll. Can be exchanged for valuable items through the Farmers' Representative in any village. -->
+		<set name="icon" val="icon.ev_big_daebak_token1" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93708" name="Mid-grade HP Recovery Potion - Event" type="EtcItem">
+		<!-- Instantly restores 200 HP. If HP is full, CP is restored. -->
+		<set name="icon" val="icon.etc_super_potion_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93709" name="High-grade Spellbook Chest - Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Spellbook: Ultimate Death Knight Transformation, Spellbook: Divine Beam, Spellbook: White Guardian, Spellbook: Hellfire, Book of Shadows, Book of Light, Magical Tablet, a 3rd class spellbook. -->
+		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93710" name="A-grade Equipment Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: an A-grade weapon, A-grade Weapon Coupon (1-3 pcs.). -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93711" name="+16 S-grade Weapon Pack" type="EtcItem">
+		<!-- Double-click to obtain an S-grade weapon enchanted to +16. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93712" name="+10 S-grade Armor Pack" type="EtcItem">
+		<!-- Double-click to obtain an S-grade armor or accessory enchanted to +10. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93713" name="Giran Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Storm Lv. 3, Special Dragon Fruit Lv. 2, Special Dragon's Miracle Potion Lv. 2 (5 pcs.). Additionally, gives a chance to acquire one of the following items: +16 S-grade Weapon Pack, Venir's Talisman Lv. 24, Frintezza's Necklace Lv. 3. -->
+		<set name="icon" val="icon.bm_circlet_upgrade_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93714" name="Shining Scroll of Mood Melody - Event" type="EtcItem">
+		<!-- For 20 min., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death.\n\nNote!\n1. Cannot be used together with Scroll of Mood Melody.\n\n2. The effect of the last applied item will be active. -->
+		<set name="icon" val="icon.bm_magmeld" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93715" name="Siege Support Box" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Blessing (5 pcs.) and a random useful item. -->
+		<set name="icon" val="icon.bm_gold_relic_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93716" name="+3~8 Talisman/ Belt Coupon Box" type="EtcItem">
+		<!-- Double-click to obtain a coupon for a talisman or a belt enchanted from +3 to +8. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93717" name="+3 Talisman/ Belt Coupon" type="EtcItem">
+		<!-- Can be exchanged for +3 Talisman of Aden Pack/ +3 Talisman of Eva Pack/ +3 Talisman of Speed Pack, or for +3 Dragon Belt Pack through the Game Assistant. -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93718" name="+4 Talisman/ Belt Coupon" type="EtcItem">
+		<!-- Can be exchanged for +4 Talisman of Aden Pack/ +4 Talisman of Eva Pack/ +4 Talisman of Speed Pack, or for +4 Dragon Belt Pack through the Game Assistant. -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93719" name="+5 Talisman/ Belt Coupon" type="EtcItem">
+		<!-- Can be exchanged for +5 Talisman of Aden Pack/ +5 Talisman of Eva Pack/ +5 Talisman of Speed Pack, or for +5 Dragon Belt Pack through the Game Assistant. -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93720" name="+6 Talisman/ Belt Coupon" type="EtcItem">
+		<!-- Can be exchanged for +6 Talisman of Aden Pack/ +6 Talisman of Eva Pack/ +6 Talisman of Speed Pack, or for +6 Dragon Belt Pack through the Game Assistant. -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93721" name="+7 Talisman/ Belt Coupon" type="EtcItem">
+		<!-- Can be exchanged for +7 Talisman of Aden Pack/ +7 Talisman of Eva Pack/ +7 Talisman of Speed Pack, or for +7 Dragon Belt Pack through the Game Assistant. -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93722" name="+8 Talisman/ Belt Coupon" type="EtcItem">
+		<!-- Can be exchanged for +8 Talisman of Aden Pack/ +8 Talisman of Eva Pack/ +8 Talisman of Speed Pack, or for +8 Dragon Belt Pack through the Game Assistant. -->
+		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93723" name="+1 Dragon Belt Pack" type="EtcItem">
+		<!-- Double-click to obtain Dragon Belt enchanted to +1. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93724" name="+2 Dragon Belt Pack" type="EtcItem">
+		<!-- Double-click to obtain Dragon Belt enchanted to +2. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93725" name="+3 Dragon Belt Pack" type="EtcItem">
+		<!-- Double-click to obtain Dragon Belt enchanted to +3. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93726" name="+4 Dragon Belt Pack" type="EtcItem">
+		<!-- Double-click to obtain +4 Dragon Belt. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93727" name="+5 Dragon Belt Pack" type="EtcItem">
+		<!-- Double-click to obtain Dragon Belt enchanted to +5. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93728" name="+6 Dragon Belt Pack" type="EtcItem">
+		<!-- Double-click to obtain Dragon Belt enchanted to +6. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93729" name="+7 Dragon Belt Pack" type="EtcItem">
+		<!-- Double-click to obtain Dragon Belt enchanted to +7. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93730" name="+8 Dragon Belt Pack" type="EtcItem">
+		<!-- Double-click to obtain Dragon Belt enchanted to +8. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93731" name="+9 Dragon Belt Pack" type="EtcItem">
+		<!-- Double-click to obtain Dragon Belt enchanted to +9. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93732" name="+10 Dragon Belt Pack" type="EtcItem">
+		<!-- Double-click to obtain +10 Dragon Belt. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93733" name="Flaming Tunic" type="Armor">
+		<!-- <Properties>\nWIT +1\nMEN +1\nOverweight limit +1500\nM. Def. +15\nMax MP +200\nStun Resistance +20%\nParalysis Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<set name="icon" val="icon.armor_t96_u_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">103</stat>
+			<stat type="maxMp">409</stat>
+		</stats>
+	</item>
+	<item id="93734" name="Flaming Stockings" type="Armor">
+		<!-- <Properties>\nWIT +1\nOverweight limit +1000\nM. Def. +10\nMax MP +100\nStun Resistance +20%\nParalysis Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<set name="icon" val="icon.armor_t96_l_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">64</stat>
+			<stat type="maxMp">256</stat>
+		</stats>
+	</item>
+	<item id="93735" name="Flaming Tunic" additionalName="Sealed" type="Armor">
+		<!-- <Properties>\nWIT +1\nMEN +1\nOverweight limit +1500\nM. Def. +15\nMax MP +200\nStun Resistance +20%\nParalysis Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<set name="icon" val="icon.armor_t96_u_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">103</stat>
+			<stat type="maxMp">409</stat>
+		</stats>
+	</item>
+	<item id="93736" name="Flaming Stockings" additionalName="Sealed" type="Armor">
+		<!-- <Properties>\nWIT +1\nOverweight limit +1000\nM. Def. +10\nMax MP +100\nStun Resistance +20%\nParalysis Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<set name="icon" val="icon.armor_t96_l_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">64</stat>
+			<stat type="maxMp">256</stat>
+		</stats>
+	</item>
+	<item id="93737" name="Highest Grade Stable Scroll: Enchant S-grade Weapon (Exchangeable)" type="EtcItem">
+		<!-- For S-grade weapons\nP. Atk. +15 for one-handed swords/ blunts, daggers, spears\nP. Atk. +19 for two-handed swords/ blunts, dual sword, fists\nP. Atk. +31 for bows\nM. Atk. +10 for all weapons\nWhen enchanted to +4 and higher, bonuses change:\nP. Atk. +43 for one-handed swords/ blunts, daggers, spears\nP. Atk. +77 for two-handed swords/ blunts, dual sword, fists\nP. Atk. +126 for bows\nM. Atk. +43 for all weapons\nIn case of failure the item is not crystallized, but its enchant value is reset to 0.\nCan be used with weapons enchanted from +16 to +19. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_s" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93738" name="Highest Grade Stable Scroll: Enchant S-grade Armor (Exchangeable)" type="EtcItem">
+		<!-- For S-grade armor and accessories\nP. Def. +7 for armor\nM. Def. +5 for accessories\nWhen enchanted to +4 and higher, Def. +26, M. Def. +20, Max HP is increased with each enchant value.\nIn case of failure the item is not crystallized, but its enchant value is reset to 0.\nCan be used with equipment enchanted from +10 to +13. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_s" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93739" name="Package: Giran Seal (1000 pcs.)" type="EtcItem">
+		<!-- Double-click to obtain 1000 Giran Seals. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92314" min="1000" max="1000" chance="100" /> <!-- Giran Seal -->
+		</capsuled_items>
+	</item>
+	<item id="93740" name="Giran Seal Pack" type="EtcItem">
+		<!-- Double-click to obtain 1 to 1000 Giran Seals. -->
+		<set name="icon" val="icon.bm_circlet_upgrade_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="92314" min="1" max="1" chance="17" /> <!-- Giran Seal -->
+			<item id="92314" min="2" max="2" chance="17" /> <!-- Giran Seal -->
+			<item id="92314" min="5" max="5" chance="17" /> <!-- Giran Seal -->
+			<item id="92314" min="10" max="10" chance="16" /> <!-- Giran Seal -->
+			<item id="92314" min="100" max="100" chance="16" /> <!-- Giran Seal -->
+			<item id="93739" min="1" max="1" chance="17" /> <!-- Giran Seal 1000 pcs-->
+		</capsuled_items>
+	</item>
+	<item id="93741" name="Test - Reanimated Corpse Mask" type="Armor">
+		<set name="icon" val="BranchSys.icon.br_frankenstein_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="93742" name="Test - Shriek Mask" type="Armor">
+		<set name="icon" val="icon.ev_scream_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="93743" name="Test - Red Devil Mask" type="Armor">
+		<set name="icon" val="icon.ev_doccabi_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="93744" name="Test - Mummy Mask" type="Armor">
+		<set name="icon" val="icon.ev_mummy_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="93745" name="Test - Alien Mask" type="Armor">
+		<set name="icon" val="icon.ev_alien_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="93746" name="Test - Golden Jack O'Lantern Mask" type="Armor">
+		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="93747" name="Reanimated Corpse Mask" type="EtcItem">
+		<!-- Changes appearance to that of Reanimated Corpse Mask. Acquired XP/ SP +30% for 20 min. The effect remains after death. Cooldown: 1 min. -->
+		<set name="icon" val="BranchSys.icon.br_frankenstein_mask_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93748" name="Shriek Mask" type="EtcItem">
+		<!-- Changes appearance to that of Shriek Mask. Acquired XP/ SP +30% for 20 min. The effect remains after death. Cooldown: 1 min. -->
+		<set name="icon" val="icon.ev_scream_mask_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93749" name="Red Devil Mask" type="EtcItem">
+		<!-- Changes appearance to that of Red Devil Mask. Acquired XP/ SP +30% for 20 min. The effect remains after death. Cooldown: 1 min. -->
+		<set name="icon" val="icon.ev_doccabi_mask_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93750" name="Mummy Mask" type="EtcItem">
+		<!-- Changes appearance to that of Mummy Mask. Acquired XP/ SP +30% for 20 min. The effect remains after death. Cooldown: 1 min. -->
+		<set name="icon" val="icon.ev_mummy_mask_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93751" name="Alien Mask" type="EtcItem">
+		<!-- Changes appearance to that of Alien Mask. Acquired XP/ SP +30% for 20 min. The effect remains after death. Cooldown: 1 min. -->
+		<set name="icon" val="icon.ev_alien_mask_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93752" name="Golden Jack O'Lantern Mask" type="EtcItem">
+		<!-- Changes appearance to that of Golden Jack O'Lantern Mask. Acquired XP/ SP +50% for 20 min. The effect remains after death. Cooldown: 1 min. -->
+		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93753" name="Pumpkin Ghost�s Noble Candy - Event" type="EtcItem">
+		<!-- STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1 for 1 h. Renewed every hour, lasts for 24 h. Halloween Candy Box is given after every renewal.\nNote!\nCannot be obtain if your character is dead. -->
+		<set name="icon" val="icon.ev_jack_ghost_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93754" name="Halloween Mask Box - Event" type="EtcItem">
+		<!-- Double-click to obtain one Halloween Mask. -->
+		<set name="icon" val="icon.bm_elmoaden_gold_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93755" name="Halloween Candy Box - Event" type="EtcItem">
+		<!-- Double-click to obtain 3 Halloween Masks or 10-1000 Halloween Candies. -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93756" name="Revita-Pop (Event)" type="EtcItem">
+		<!-- Instantly recovers 50 HP. The remaining points are used to recover CP. Can be exchanged through Pumpkin Ghost in any town for various items. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93757" name="Package: Sirra's Blade" type="EtcItem">
+		<!-- Double-click to obtain Sirra's Blade (Exchangeable). -->
+		<set name="icon" val="icon.weapon_sirr_blade_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93758" name="Package: Sword of Ipos" type="EtcItem">
+		<!-- Double-click to obtain a Sword of Ipos (Exchangeable). -->
+		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93759" name="Package: Barakiel's Axe" type="EtcItem">
+		<!-- Double-click to obtain Barakiel's Axe (Exchangeable). -->
+		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93760" name="Package: Behemoth' Tuning Fork" type="EtcItem">
+		<!-- Double-click to obtain Behemoth' Tuning Fork (Exchangeable). -->
+		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93761" name="Package: Naga's Storm" type="EtcItem">
+		<!-- Double-click to obtain Naga's Storm (Exchangeable). -->
+		<set name="icon" val="icon.weapon_naga_storm_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93762" name="Package: Tiphon's Spear" type="EtcItem">
+		<!-- Double-click to obtain Tiphon's Spear (Exchangeable). -->
+		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93763" name="Package: Shyeed's Bow" type="EtcItem">
+		<!-- Double-click to obtain Shyeed's Bow (Exchangeable). -->
+		<set name="icon" val="icon.weapon_shyid_bow_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93764" name="Package: Sobekk's Hurricane" type="EtcItem">
+		<!-- Double-click to obtain Sobekk's Hurricane (Exchangeable). -->
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93765" name="Package: Themis' Tongue" type="EtcItem">
+		<!-- Double-click to obtain Themis' Tongue (Exchangeable). -->
+		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93766" name="Package: Cabrio's Hand" type="EtcItem">
+		<!-- Double-click to obtain Cabrio's Hand (Exchangeable). -->
+		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93767" name="Package: Daimon Crystal" type="EtcItem">
+		<!-- Double-click to obtain Daimon Crystal (Exchangeable). -->
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93768" name="Package: Tallum Blade*Damascus" type="EtcItem">
+		<!-- Double-click to obtain Sirra's Blade (Exchangeable). -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93769" name="Package: ?clair Bijou" type="EtcItem">
+		<!-- Double-click to obtain ?clair Bijou (Exchangeable). -->
+		<set name="icon" val="icon.weapon_greed_stinger_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93770" name="Package: Durendal" type="EtcItem">
+		<!-- Double-click to obtain Durendal (Exchangeable). -->
+		<set name="icon" val="icon.weapon_death_bringer_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93771" name="Package: Armor of Nightmare" type="EtcItem">
+		<!-- Double-click to obtain Armor of Nightmare (Exchangeable). -->
+		<set name="icon" val="icon.armor_t80_ul_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93772" name="Package: Helm of Nightmare (Heavy)" type="EtcItem">
+		<!-- Double-click to obtain Helm of Nightmare - Heavy Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93773" name="Package: Gauntlets of Nightmare (Heavy)" type="EtcItem">
+		<!-- Double-click to obtain Gauntlets of Nightmare - Heavy Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_t80_g_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93774" name="Package: Boots of Nightmare (Heavy)" type="EtcItem">
+		<!-- Double-click to obtain Boots of Nightmare - Heavy Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_t80_b_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93775" name="Package: Majestic Plate Armor" type="EtcItem">
+		<!-- Double-click to obtain Majestic Plate Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_t83_ul_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93776" name="Package: Majestic Circlet (Heavy)" type="EtcItem">
+		<!-- Double-click to obtain Majestic Circlet - Heavy Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93777" name="Package: Majestic Gauntlets (Heavy)" type="EtcItem">
+		<!-- Double-click to obtain Majestic Gauntlets - Heavy Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_t83_g_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93778" name="Package: Majestic Boots (Heavy)" type="EtcItem">
+		<!-- Double-click to obtain Majestic Boots - Heavy Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_t83_b_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93779" name="Package: Leather Armor of Nightmare" type="EtcItem">
+		<!-- Double-click to obtain Leather Armor of Nightmare (Exchangeable). -->
+		<set name="icon" val="icon.armor_t81_ul_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93780" name="Package: Helm of Nightmare (Light)" type="EtcItem">
+		<!-- Double-click to obtain Helm of Nightmare - Light Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93781" name="Package: Gauntlets of Nightmare (Light)" type="EtcItem">
+		<!-- Double-click to obtain Gauntlets of Nightmare - Light Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_t81_g_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93782" name="Package: Boots of Nightmare (Light)" type="EtcItem">
+		<!-- Double-click to obtain Boots of Nightmare - Light Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_t81_b_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93783" name="Package: Majestic Leather Armor" type="EtcItem">
+		<!-- Double-click to obtain Majestic Leather Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_t84_ul_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93784" name="Package: Majestic Circlet (Light)" type="EtcItem">
+		<!-- Double-click to obtain Majestic Circlet - Light Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93785" name="Package: Majestic Gauntlets (Light)" type="EtcItem">
+		<!-- Double-click to obtain Majestic Gauntlets - Light Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_t84_g_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93786" name="Package: Majestic Boots (Light)" type="EtcItem">
+		<!-- Double-click to obtain Majestic Boots - Light Armor (Exchangeable). -->
+		<set name="icon" val="icon.armor_t84_b_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93787" name="Package: Robe of Nightmare" type="EtcItem">
+		<!-- Double-click to obtain Robe of Nightmare (Exchangeable). -->
+		<set name="icon" val="icon.armor_t82_ul_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93788" name="Package: Helm of Nightmare (Robe)" type="EtcItem">
+		<!-- Double-click to obtain Helm of Nightmare - Robe (Exchangeable). -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93789" name="Package: Gauntlets of Nightmare (Robe)" type="EtcItem">
+		<!-- Double-click to obtain Gauntlets of Nightmare - Robe (Exchangeable). -->
+		<set name="icon" val="icon.armor_t82_g_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93790" name="Package: Boots of Nightmare (Robe)" type="EtcItem">
+		<!-- Double-click to obtain Boots of Nightmare - Robe (Exchangeable). -->
+		<set name="icon" val="icon.armor_t82_b_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93791" name="Package: Majestic Robe" type="EtcItem">
+		<!-- Double-click to obtain Majestic Robe (Exchangeable). -->
+		<set name="icon" val="icon.armor_t85_ul_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93792" name="Package: Majestic Circlet (Robe)" type="EtcItem">
+		<!-- Double-click to obtain Majestic Circlet - Robe (Exchangeable). -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93793" name="Package: Majestic Gauntlets (Robe)" type="EtcItem">
+		<!-- Double-click to obtain Majestic Gauntlets - Robe (Exchangeable). -->
+		<set name="icon" val="icon.armor_t85_g_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93794" name="Package: Majestic Boots (Robe)" type="EtcItem">
+		<!-- Double-click to obtain Majestic Boots - Robe (Exchangeable). -->
+		<set name="icon" val="icon.armor_t85_b_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93795" name="Package: Leather Armor of Lightning" type="EtcItem">
+		<!-- Double-click to obtain Leather Armor of Lightning (Exchangeable). -->
+		<set name="icon" val="icon.armor_t101_u_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93796" name="Package: Leather Leggings of Lightning" type="EtcItem">
+		<!-- Double-click to obtain Leather Leggings of Lightning (Exchangeable). -->
+		<set name="icon" val="icon.armor_t101_l_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93797" name="Package: Ice Crystal Breastplate" type="EtcItem">
+		<!-- Double-click to obtain Ice Crystal Breastplate (Exchangeable). -->
+		<set name="icon" val="icon.armor_t94_u_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93798" name="Package: Ice Crystal Gaiters" type="EtcItem">
+		<!-- Double-click to obtain Ice Crystal Gaiters (Exchangeable). -->
+		<set name="icon" val="icon.armor_t94_l_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="93799" name="Package: Flaming Tunic" type="EtcItem">
+		<!-- Double-click to obtain Flaming Tunic (Exchangeable). -->
+		<set name="icon" val="icon.armor_t96_u_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

@@ -55,7 +55,7 @@ public class CreatureStat
 	private final Creature _creature;
 	private long _exp = 0;
 	private long _sp = 0;
-	private byte _level = 1;
+	private int _level = 1;
 	/** Creature's maximum buff count. */
 	private int _maxBuffCount = Config.BUFFS_MAX_AMOUNT;
 	private double _vampiricSum = 0;
@@ -209,12 +209,12 @@ public class CreatureStat
 		return (int) getValue(Stat.STAT_INT);
 	}
 	
-	public byte getLevel()
+	public int getLevel()
 	{
 		return _level;
 	}
 	
-	public void setLevel(byte value)
+	public void setLevel(int value)
 	{
 		_level = value;
 	}

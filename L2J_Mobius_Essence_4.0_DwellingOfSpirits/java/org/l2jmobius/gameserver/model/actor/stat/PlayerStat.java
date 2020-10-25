@@ -187,7 +187,7 @@ public class PlayerStat extends PlayableStat
 		}
 		else if (expAdded && !spAdded)
 		{
-			sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_XP);
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP);
 			sm.addLong(finalExp);
 		}
 		else
@@ -233,7 +233,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public boolean addLevel(byte value)
+	public boolean addLevel(int value)
 	{
 		if ((getLevel() + value) > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
@@ -275,7 +275,7 @@ public class PlayerStat extends PlayableStat
 			final PetInstance pet = (PetInstance) sPet;
 			if (pet.getPetData().isSynchLevel() && (pet.getLevel() != getLevel()))
 			{
-				final byte availableLevel = (byte) Math.min(pet.getPetData().getMaxLevel(), getLevel());
+				final int availableLevel = Math.min(pet.getPetData().getMaxLevel(), getLevel());
 				pet.getStat().setLevel(availableLevel);
 				pet.getStat().getExpForLevel(availableLevel);
 				pet.setCurrentHp(pet.getMaxHp());
@@ -388,7 +388,7 @@ public class PlayerStat extends PlayableStat
 	}
 	
 	@Override
-	public byte getLevel()
+	public int getLevel()
 	{
 		if (getActiveChar().isDualClassActive())
 		{
@@ -401,18 +401,18 @@ public class PlayerStat extends PlayableStat
 		return super.getLevel();
 	}
 	
-	public byte getBaseLevel()
+	public int getBaseLevel()
 	{
 		return super.getLevel();
 	}
 	
 	@Override
-	public void setLevel(byte value)
+	public void setLevel(int value)
 	{
-		byte level = value;
+		int level = value;
 		if (level > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
-			level = (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
+			level = ExperienceData.getInstance().getMaxLevel() - 1;
 		}
 		
 		if (getActiveChar().isSubClassActive())
@@ -500,11 +500,11 @@ public class PlayerStat extends PlayableStat
 		{
 			if (points < getVitalityPoints())
 			{
-				getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_DECREASED);
+				getActiveChar().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_HAS_DECREASED);
 			}
 			else
 			{
-				getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_INCREASED);
+				getActiveChar().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_HAS_INCREASED);
 			}
 		}
 		
@@ -512,11 +512,11 @@ public class PlayerStat extends PlayableStat
 		
 		if (points == 0)
 		{
-			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_IS_FULLY_EXHAUSTED);
+			getActiveChar().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_IS_FULLY_EXHAUSTED);
 		}
 		else if (points == MAX_VITALITY_POINTS)
 		{
-			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_IS_AT_MAXIMUM);
+			getActiveChar().sendPacket(SystemMessageId.YOUR_SAYHA_S_GRACE_IS_AT_MAXIMUM);
 		}
 		
 		final PlayerInstance player = getActiveChar();

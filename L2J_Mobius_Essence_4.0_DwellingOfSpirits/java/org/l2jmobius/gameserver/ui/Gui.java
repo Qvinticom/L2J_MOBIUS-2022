@@ -52,6 +52,7 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.xml.impl.AdminData;
 import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
+import org.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -217,6 +218,17 @@ public class Gui
 			}
 		});
 		mnReload.add(mntmBuylists);
+		
+		final JMenuItem mntmPrimeShop = new JMenuItem("PrimeShop");
+		mntmPrimeShop.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+		mntmPrimeShop.addActionListener(arg0 ->
+		{
+			if (JOptionPane.showOptionDialog(null, "Reload PrimeShop?", "Select an option", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, confirmOptions, confirmOptions[1]) == 0)
+			{
+				PrimeShopData.getInstance().load();
+			}
+		});
+		mnReload.add(mntmPrimeShop);
 		
 		final JMenu mnAnnounce = new JMenu("Announce");
 		mnAnnounce.setFont(new Font("Segoe UI", Font.PLAIN, 13));

@@ -21,6 +21,7 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestSound;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -33,19 +34,21 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
  * A Trip Begins (10966)
- * @author RobikBobik
- * @Notee: Based on NA server September 2019
+ * @author RobikBobik, Mobius
+ * @Note: Updated based on 4game server October 2020
+ * @TODO: Update gatekeeper dialogs.
  */
 public class Q10966_ATripBegins extends Quest
 {
 	// NPCs
 	private static final int CAPTAIN_BATHIS = 30332;
+	private static final int MATHORN = 34139;
 	private static final int BELLA = 30256;
 	// Items
 	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
-	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 10); // TODO: Replace with Advanced Scroll of Escape Event(s)
-	private static final ItemHolder TALISMAN_OF_ADEN = new ItemHolder(91745, 1); // TODO: Fix item
-	private static final ItemHolder SCROLL_OF_ENCHANT_TALISMAN_OF_ADEN = new ItemHolder(91756, 1); // TODO: Fix item
+	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 10);
+	private static final ItemHolder TALISMAN_OF_ADEN = new ItemHolder(91745, 1);
+	private static final ItemHolder SCROLL_OF_ENCHANT_TALISMAN_OF_ADEN = new ItemHolder(91756, 1);
 	private static final ItemHolder ADVENTURERS_BRACELET = new ItemHolder(91934, 1);
 	// Monsters
 	private static final int ARACHNID_PREDATOR = 20926;
@@ -54,6 +57,8 @@ public class Q10966_ATripBegins extends Quest
 	private static final int RAGING_SPARTOI = 20060;
 	private static final int TUMRAN_BUGBEAR = 20062;
 	private static final int TUMRAN_BUGBEAR_WARRIOR = 20064;
+	// Location
+	private static final Location TELEPORT_LOCATION = new Location(-14443, 123984, -3120);
 	// Misc
 	private static final int MIN_LEVEL = 20;
 	private static final int MAX_LEVEL = 25;
@@ -62,8 +67,8 @@ public class Q10966_ATripBegins extends Quest
 	public Q10966_ATripBegins()
 	{
 		super(10966);
-		addStartNpc(CAPTAIN_BATHIS);
-		addTalkId(CAPTAIN_BATHIS, BELLA);
+		addStartNpc(CAPTAIN_BATHIS, MATHORN);
+		addTalkId(CAPTAIN_BATHIS, MATHORN, BELLA);
 		addKillId(ARACHNID_PREDATOR, SKELETON_BOWMAN, RUIN_SPARTOI, RAGING_SPARTOI, RAGING_SPARTOI, TUMRAN_BUGBEAR, TUMRAN_BUGBEAR_WARRIOR);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
@@ -90,7 +95,19 @@ public class Q10966_ATripBegins extends Quest
 		switch (event)
 		{
 			case "30332-01.htm":
+			case "34139-01.htm":
+			case "34139-02.html":
+			case "34139-03.html":
+			case "34139-04.html":
+			case "34139-05.html":
+			case "34139-06.htm":
 			{
+				htmltext = event;
+				break;
+			}
+			case "34139-00.htm":
+			{
+				showOnScreenMsg(player, NpcStringId.CHECK_YOUR_INVENTORY_AND_EQUIP_YOUR_WEAPON, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
 				htmltext = event;
 				break;
 			}
@@ -102,7 +119,7 @@ public class Q10966_ATripBegins extends Quest
 			case "30332-03.htm":
 			{
 				qs.startQuest();
-				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.TALK_TO_BELLA));
+				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.USING_THE_GATEKEEPER));
 				htmltext = event;
 				break;
 			}
@@ -114,9 +131,9 @@ public class Q10966_ATripBegins extends Quest
 			}
 			case "30332-05.html":
 			{
-				if (qs.isStarted())
+				if (qs.isCond(3))
 				{
-					addExpAndSp(player, 500000, 12500);
+					addExpAndSp(player, 1000000, 27000);
 					giveItems(player, SOE_NOVICE);
 					giveItems(player, TALISMAN_OF_ADEN);
 					giveItems(player, SCROLL_OF_ENCHANT_TALISMAN_OF_ADEN);
@@ -126,45 +143,22 @@ public class Q10966_ATripBegins extends Quest
 				}
 				break;
 			}
+			case "34139-07.htm":
+			{
+				qs.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "teleport":
+			{
+				if (qs.isCond(1))
+				{
+					player.teleToLocation(TELEPORT_LOCATION);
+				}
+				break;
+			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
-	{
-		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(2))
-		{
-			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (killCount < 300)
-			{
-				qs.set(KILL_COUNT_VAR, killCount);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				sendNpcLogList(killer);
-			}
-			else
-			{
-				qs.setCond(3, true);
-				qs.unset(KILL_COUNT_VAR);
-				killer.sendPacket(new ExShowScreenMessage("You have taken your first step as an adventurer.#Return to Bathis and get your reward.", 5000));
-				giveItems(killer, SOE_TO_CAPTAIN_BATHIS);
-			}
-		}
-		return super.onKill(npc, killer, isSummon);
-	}
-	
-	@Override
-	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
-	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(2))
-		{
-			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_MONSTERS_IN_THE_RUINS_OF_AGONY.getId(), true, qs.getInt(KILL_COUNT_VAR)));
-			return holder;
-		}
-		return super.getNpcLogList(player);
 	}
 	
 	@Override
@@ -174,7 +168,31 @@ public class Q10966_ATripBegins extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			htmltext = "30332.htm";
+			switch (npc.getId())
+			{
+				case CAPTAIN_BATHIS:
+				{
+					// Death Knights.
+					if (player.getClassId().getId() > 195)
+					{
+						return htmltext;
+					}
+					
+					htmltext = "30332.htm";
+					break;
+				}
+				case MATHORN:
+				{
+					// Death Knights.
+					if (player.getClassId().getId() < 196)
+					{
+						return htmltext;
+					}
+					
+					htmltext = "34139-01.htm";
+					break;
+				}
+			}
 		}
 		else if (qs.isStarted())
 		{
@@ -184,11 +202,31 @@ public class Q10966_ATripBegins extends Quest
 				{
 					if (qs.isCond(1))
 					{
+						// Death Knights.
+						if (player.getClassId().getId() > 195)
+						{
+							return htmltext;
+						}
+						
 						htmltext = "30332-03.htm";
 					}
 					else if (qs.isCond(3))
 					{
 						htmltext = "30332-04.html";
+					}
+					break;
+				}
+				case MATHORN:
+				{
+					// Death Knights.
+					if (player.getClassId().getId() < 196)
+					{
+						return htmltext;
+					}
+					
+					if (qs.isCond(1))
+					{
+						htmltext = "34139-07.htm";
 					}
 					break;
 				}
@@ -204,11 +242,45 @@ public class Q10966_ATripBegins extends Quest
 		}
 		else if (qs.isCompleted())
 		{
-			if (npc.getId() == CAPTAIN_BATHIS)
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-			}
+			htmltext = getAlreadyCompletedMsg(player);
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(2))
+		{
+			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
+			if (killCount < 70)
+			{
+				qs.set(KILL_COUNT_VAR, killCount);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				sendNpcLogList(killer);
+			}
+			else
+			{
+				qs.setCond(3, true);
+				qs.unset(KILL_COUNT_VAR);
+				showOnScreenMsg(killer, NpcStringId.YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_CAPTAIN_BATHIS_IN_GLUDIO, ExShowScreenMessage.TOP_CENTER, 10000, killer.getName());
+				giveItems(killer, SOE_TO_CAPTAIN_BATHIS);
+			}
+		}
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(2))
+		{
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			holder.add(new NpcLogListHolder(NpcStringId.KILL_MONSTERS_IN_THE_RUINS_OF_AGONY.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			return holder;
+		}
+		return super.getNpcLogList(player);
 	}
 }

@@ -52,7 +52,7 @@ public class LastImperialTomb extends AbstractInstance
 {
 	// NPCs
 	private static final int GUIDE = 32011;
-	private static final int CUBE = 29061;
+	private static final int CUBE = 31843; // 29061
 	private static final int HALL_ALARM = 18328;
 	private static final int HALL_KEEPER_SUICIDAL_SOLDIER = 18333;
 	private static final int DUMMY = 29052;

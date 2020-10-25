@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="35000" toLevel="1" name="Blessing of Fire Dragon">
+	<skill id="35000" toLevel="1" name="Fire Dragon's Blessing">
 		<!-- Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<icon>icon.bm_blessing_dragon</icon>
 		<operateType>A1</operateType>
@@ -18,7 +18,7 @@
 		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="35002" toLevel="1" name="Land Dragon Breath">
+	<skill id="35002" toLevel="1" name="Earth Dragon's Breath">
 		<!-- For 15 sec., Atk. Spd. -50% and Casting Spd. -50%. -->
 		<icon>icon.bm_dragon_breath</icon>
 		<operateType>A1</operateType>
@@ -28,7 +28,7 @@
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-190</effectPoint>
 	</skill>
-	<skill id="35003" toLevel="1" name="Land Dragon Defense">
+	<skill id="35003" toLevel="1" name="Earth Dragon's Defense">
 		<!-- For 15 sec., P. Def. +3600, M. Def. +3240, and Buff-canceling Attack Resistance +80%, and restricts movement. -->
 		<icon>icon.bm_dragon_defence</icon>
 		<operateType>A1</operateType>
@@ -36,12 +36,12 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>438</effectPoint>
 	</skill>
-	<skill id="35004" toLevel="1" name="Land Dragon Pendant">
+	<skill id="35004" toLevel="1" name="Earth Dragon Pendant">
 		<!-- M. Def. +9. -->
 		<icon>icon.bm_pendant_pvp</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35005" toLevel="11" name="Land Dragon Pendant +1">
+	<skill id="35005" toLevel="11" name="+1 Earth Dragon Pendant">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.bm_pendant_pvp</icon>
 		<operateType>P</operateType>
@@ -230,13 +230,13 @@
 		<icon>icon.Accessary_demon_circlet_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="35015" toLevel="1" name="Circlet of Devil: Teleport">
+	<skill id="35015" toLevel="1" name="Demon's Circlet: Teleport">
 		<!-- Teleports character to the nearest village. Cooldown - 2 h. -->
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
-	<skill id="35016" toLevel="1" name="Ring of Core - Special Ability">
+	<skill id="35016" toLevel="1" name="Core's Blessing">
 		<!-- Cancels all debuffs. Cannot be used if the character is inflicted with Fear/ Silence. -->
 		<icon>icon.accessory_ring_of_core_i03</icon>
 		<reuseDelay>120000</reuseDelay>
@@ -257,7 +257,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35017" toLevel="7" name="Talisman of Insolence I">
+	<skill id="35017" toLevel="7" name="Talisman: Talisman of Insolence I">
 		<!-- P. Atk. +14, M. Atk. +22. Effects from two such Talismans do not stack. -->
 		<icon>
 			<value level="1">icon.tallisman_oman_i02</value>
@@ -544,7 +544,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35018" toLevel="1" name="Talisman of Insolence VI">
+	<skill id="35018" toLevel="1" name="Talisman of Insolence">
 		<!-- Imbues with Talisman of Insolence power. -->
 		<icon>icon.tallisman_oman_i01</icon>
 		<abnormalType>SEED_TALISMAN1</abnormalType>
@@ -564,7 +564,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="35019" toLevel="1" name="Talisman of Insolence VI - removal">
+	<skill id="35019" toLevel="1" name="Remove Talisman of Insolence">
 		<!-- The effect of Talisman of Insolence weakens. -->
 		<icon>icon.tallisman_oman_i01</icon>
 		<operateType>A1</operateType>
@@ -631,7 +631,7 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
-	<skill id="35024" toLevel="21" name="Talisman of Border Lv. 1">
+	<skill id="35024" toLevel="21" name="Talisman of Border">
 		<!-- Activates Dimensional Border Power. <Defence>: P./ M. Def. +12. -->
 		<icon>
 			<value level="1">icon.bm_magic_square_talisman</value>
@@ -1441,7 +1441,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35041" toLevel="1" name="Rag Belt">
+	<skill id="35041" toLevel="1" name="Cloth Belt">
 		<!-- When using the Belt, Inventory slot +2, weight limit +2000. HP Recovery Bonus +1.24, MP Recovery Bonus +0.83, CP Recovery +1.66. You can enhance it to Leather Belt with magic. -->
 		<icon>icon.belt_i01</icon>
 		<operateType>P</operateType>
@@ -1602,7 +1602,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35046" toLevel="1" name="Land Dragon Belt">
+	<skill id="35046" toLevel="1" name="Earth Dragon Belt">
 		<!-- When using the Belt, adds 6 slots to the inventory, Weight Limit +7000, CON +1, MEN +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/ MP/ CP +15%, Healing Potions Effect +100. (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Warrior's Quick Healing Potion) -->
 		<icon>icon.bm_antaras_belt</icon>
 		<operateType>P</operateType>

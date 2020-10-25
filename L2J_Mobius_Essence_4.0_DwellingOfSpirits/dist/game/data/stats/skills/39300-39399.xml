@@ -9,29 +9,29 @@
 		<icon>icon.bookmark_book_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39302" toLevel="2" name="Baium's Doll Spell">
+	<skill id="39302" toLevel="2" name="Baium Doll's Sorcery">
 		<!-- Mental Resistance +$s1, Paralysis/ Knockdown/ Pull Resistance +$s2, P./ M. Def. +$s3, Skill Cooldown -$s4. -->
 		<icon>icon.bm_baium_doll_30d</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39303" toLevel="2" name="Queen Ant's Doll Spell">
+	<skill id="39303" toLevel="2" name="Queen Ant Doll's Sorcery">
 		<!-- P. Atk. +$s1, P. Critical Damage +$s2, Max HP +$s3. -->
 		<icon>icon.bm_queen_ant_doll_30d</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39304" toLevel="2" name="Orfen's Doll Spell">
+	<skill id="39304" toLevel="2" name="Orfen Doll's Sorcery">
 		<!-- M. Atk. +$s1, M. Critical Damage +$s2, Max MP +$s3. -->
 		<icon>icon.bm_orfen_doll_30d</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39305" toLevel="3" name="Transformation Scroll: Dark Knight">
+	<skill id="39305" toLevel="3" name="Dark Knight Transformation">
 		<!-- You are transformed into Dark Knight. For 15 min., Max HP/ MP +10%, P. Atk. in PvP +5%, P. Def. in PvP +5%, Stun/ Paralysis/ Mental Resistance +5%. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i05</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39306" toLevel="1" name="Transformation Scroll: White Assassin">
+	<skill id="39306" toLevel="1" name="White Assassin Transformation">
 		<!-- You are transformed into White Assassin. For 15 min., Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. Effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i00</icon>
 		<operateType>A1</operateType>
@@ -67,37 +67,37 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="39312" toLevel="1" name="Hair Accessory Enchantment Effect">
+	<skill id="39312" toLevel="1" name="Enchant Effect: Hair Accessory">
 		<!-- Max HP +2%. -->
 		<icon>icon.etc_scroll_of_enchant_armor_i05</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39313" toLevel="1" name="Hair Accessory Enchantment Effect">
+	<skill id="39313" toLevel="1" name="Enchant Effect: Hair Accessory">
 		<!-- Max HP +4%. -->
 		<icon>icon.etc_scroll_of_enchant_armor_i05</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39314" toLevel="1" name="Hair Accessory Enchantment Effect">
+	<skill id="39314" toLevel="1" name="Enchant Effect: Hair Accessory">
 		<!-- Max HP +8%, Max MP +2%. -->
 		<icon>icon.etc_scroll_of_enchant_armor_i05</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39315" toLevel="1" name="Hair Accessory Enchantment Effect">
+	<skill id="39315" toLevel="1" name="Enchant Effect: Hair Accessory">
 		<!-- Max HP +12%, Max MP +6%, Max CP +6%. -->
 		<icon>icon.etc_scroll_of_enchant_armor_i05</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39316" toLevel="1" name="Hair Accessory Enchantment Effect">
+	<skill id="39316" toLevel="1" name="Enchant Effect: Hair Accessory">
 		<!-- Max HP +16%, Max MP +10%, Max CP +10%. -->
 		<icon>icon.etc_scroll_of_enchant_armor_i05</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39317" toLevel="1" name="Hair Accessory Enchantment Effect">
+	<skill id="39317" toLevel="1" name="Enchant Effect: Hair Accessory">
 		<!-- Max HP +20%, Max MP +14%, Max CP +14%, P./ M. Damage Received -4%. -->
 		<icon>icon.etc_scroll_of_enchant_armor_i05</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39318" toLevel="3" name="Item Skill: Mental Attack Resistance">
+	<skill id="39318" toLevel="3" name="Item Skill: Silence/Fear">
 		<!-- Mental Attack Resistance +$s1. -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
@@ -132,14 +132,14 @@
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39325" toLevel="1" name="Eva's Exhilarate">
+	<skill id="39325" toLevel="1" name="Arcane Deliverance">
 		<!-- HP Recovery +5000, MP Recovery +2000, CP Recovery +3000. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>900000</reuseDelay>
 	</skill>
-	<skill id="39326" toLevel="1" name="Eva's Speed">
+	<skill id="39326" toLevel="1" name="Arcane Speed">
 		<!-- For 2 min., Atk. Spd./ Casting Spd. +8%, Speed +8. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -147,7 +147,7 @@
 		<reuseDelay>900000</reuseDelay>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="39327" toLevel="1" name="Eva's Shield">
+	<skill id="39327" toLevel="1" name="Arcane Barrier">
 		<!-- For 10 sec., becomes invincible. The effect disappears when character attacks. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -155,7 +155,7 @@
 		<reuseDelay>900000</reuseDelay>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="39328" toLevel="1" name="Eva's Immunity">
+	<skill id="39328" toLevel="1" name="Arcane Immunity">
 		<!-- For 10 sec., makes you immune to all debuffs. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -163,7 +163,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="39329" toLevel="1" name="Eva's Ultimate Defense">
+	<skill id="39329" toLevel="1" name="Arcane Protection">
 		<!-- For 10 sec., P. Def. +3000 and M. Def. +2100. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -171,7 +171,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="39330" toLevel="1" name="Eva's Sleep">
+	<skill id="39330" toLevel="1" name="Arcane Paralysis">
 		<!-- For 5 sec., use Sleep on target. Can only use on PCs. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -182,7 +182,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="39331" toLevel="1" name="Eva's Silence">
+	<skill id="39331" toLevel="1" name="Arcane Silence">
 		<!-- For 5 sec., interrupts P./ M. skills casting. Can only use on PCs. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -193,7 +193,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="39332" toLevel="1" name="Eva's Critical Weakness">
+	<skill id="39332" toLevel="1" name="Arcane Critical Sense">
 		<!-- For 10 sec., P. Critical Damage and P. Critical Rate +50% against character, when character attacked. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -204,7 +204,7 @@
 		<effectPoint>-671</effectPoint>
 		<mpConsume>43</mpConsume>
 	</skill>
-	<skill id="39333" toLevel="1" name="Blood of Eva">
+	<skill id="39333" toLevel="1" name="Arcane Power">
 		<!-- For 5 min., PvE Damage +10%. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -389,7 +389,7 @@
 		<effectPoint>1</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="39352" toLevel="1" name="Greater Might - 13th Anniversary Event">
+	<skill id="39352" toLevel="1" name="Greater Might - Anniversary">
 		<!-- For 1 h., P. Atk. +10%. -->
 		<icon>icon.skill1388</icon>
 		<operateType>A1</operateType>
@@ -399,7 +399,7 @@
 		<effectPoint>1</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="39353" toLevel="1" name="Greater Shield - 13th Anniversary Event">
+	<skill id="39353" toLevel="1" name="Greater Shield - Anniversary">
 		<!-- For 1 h., P. Def. +15%. -->
 		<icon>icon.skill1389</icon>
 		<operateType>A1</operateType>
@@ -429,7 +429,7 @@
 		<effectPoint>1</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="39356" toLevel="1" name="Prophecy of Water - 13th Anniversary Event">
+	<skill id="39356" toLevel="1" name="Prophecy of Water - Anniversary">
 		<!-- For 1 h., for a party member MP +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. -->
 		<icon>icon.skill1355</icon>
 		<operateType>A1</operateType>
@@ -439,7 +439,7 @@
 		<effectPoint>1</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="39357" toLevel="1" name="Prophecy of Fire - 13th Anniversary Event">
+	<skill id="39357" toLevel="1" name="Prophecy of Fire - Anniversary">
 		<!-- For 1 h., for a party member Max. HP +10%, HP Recovery bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. -->
 		<icon>icon.skill1356</icon>
 		<operateType>A1</operateType>
@@ -449,7 +449,7 @@
 		<effectPoint>1</effectPoint>
 		<mpConsume>1</mpConsume>
 	</skill>
-	<skill id="39358" toLevel="1" name="Prophecy of Wind - 13th Anniversary Event">
+	<skill id="39358" toLevel="1" name="Prophecy of Wind - Anniversary">
 		<!-- For 1 h., for a party member P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, P. Critical Damage +15%, Speed +10%, Debuff Resistance +10%, damage to Raid Bosses +15%. -->
 		<icon>icon.skill1357</icon>
 		<operateType>A1</operateType>
@@ -471,7 +471,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="39361" toLevel="3" name="Angler's Blessing">
+	<skill id="39361" toLevel="3" name="Master Fisherman's Blessing">
 		<!-- For $s1, Acquired XP/ SP during fishing +100%. Effect remains after death. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A1</operateType>
@@ -491,7 +491,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="39364" toLevel="1" name="Angler's Gold Box">
+	<skill id="39364" toLevel="1" name="Angler's Golden Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -504,7 +504,7 @@
 	<skill id="39366" toLevel="1" name="Improved Scroll: Enchant Fishing Weapon">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39367" toLevel="1" name="Transformation Scroll: Teddy Bear">
+	<skill id="39367" toLevel="1" name="Transformation into Teddy Bear">
 		<!-- Transforms into a Teddy Bear. Max HP/ MP +20%, Sayha Grace XP/ SP +20%, while hunting. Effect remains after death. -->
 		<icon>icon.gomdori_chest_change</icon>
 		<operateType>A1</operateType>
@@ -512,7 +512,7 @@
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39368" toLevel="1" name="Weapon Supply Box +15 (A-grade)">
+	<skill id="39368" toLevel="1" name="+15 A-grade Weapon Pack">
 		<icon>icon.etc_treasure_box_i07</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -637,7 +637,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39369" toLevel="1" name="Transformation Scroll: White Knight">
+	<skill id="39369" toLevel="1" name="White Knight Transformation">
 		<!-- Transforms into White Knight. Max HP/ MP +10%, Stun/ Paralysis/ Mental Resistance +5%, PvE P. Atk. +5%, Received Damage -5%. -->
 		<icon>icon.etc_charm_of_courage_i00</icon>
 		<operateType>A1</operateType>

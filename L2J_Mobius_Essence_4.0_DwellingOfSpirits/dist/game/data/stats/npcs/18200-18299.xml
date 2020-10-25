@@ -524,20 +524,26 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18222" level="80" type="Npc" name="Assassin of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="18222" level="85" type="Monster" name="Assassin of Darkness">
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="3056175" sp="45843" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="40504.6242774566" hpRegen="10.5" mp="2252.80528052805" mpRegen="3.6" />
 			<speed>
 				<walk ground="41" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2313.29573292097" magical="913.314550866536" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="145.28950478032" magical="218.125260801942" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="37.5" />
@@ -959,21 +965,28 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18243" level="80" type="Npc" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="18243" level="85" type="Monster" name="Statue of Protection">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5795" />
+		<acquire exp="5564" sp="74493" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="40504.6242774566" hpRegen="10.5" mp="2252.80528052805" mpRegen="3.6" />
 			<speed>
 				<walk ground="53" />
 				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="2796.86602737338" magical="913.314550866536" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="175.660757192025" magical="218.125260801942" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="42" />

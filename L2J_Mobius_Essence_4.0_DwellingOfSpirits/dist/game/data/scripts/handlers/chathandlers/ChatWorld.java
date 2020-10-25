@@ -75,7 +75,7 @@ public class ChatWorld implements IChatHandler
 		}
 		else if (activeChar.getWorldChatUsed() >= activeChar.getWorldChatPoints())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_HAVE_SPENT_YOUR_WORLD_CHAT_QUOTA_FOR_THE_DAY_A_NEW_DAY_STARTS_EVERY_DAY_AT_18_30);
+			activeChar.sendPacket(SystemMessageId.YOU_HAVE_SPENT_YOUR_WORLD_CHAT_QUOTA_FOR_THE_DAY_IT_IS_RESET_DAILY_AT_7_A_M);
 		}
 		else
 		{

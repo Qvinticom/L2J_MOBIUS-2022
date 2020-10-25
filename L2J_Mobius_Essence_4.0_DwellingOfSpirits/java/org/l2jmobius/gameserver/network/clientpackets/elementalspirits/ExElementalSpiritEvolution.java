@@ -68,7 +68,7 @@ public class ExElementalSpiritEvolution implements IClientIncomingPacket
 		if (canEvolve)
 		{
 			spirit.upgrade();
-			client.sendPacket(new SystemMessage(SystemMessageId.S1_EVOLVED_TO_S2_STAR).addElementalSpirit(_type).addInt(spirit.getStage()));
+			client.sendPacket(new SystemMessage(SystemMessageId.S1_HAS_EVOLVED_TO_LV_S2).addElementalSpirit(_type).addInt(spirit.getStage()));
 			final UserInfo userInfo = new UserInfo(player);
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
 			client.sendPacket(userInfo);

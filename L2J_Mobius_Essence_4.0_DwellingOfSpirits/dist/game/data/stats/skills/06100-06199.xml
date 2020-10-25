@@ -296,7 +296,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6118" toLevel="1" name="Christmas Blessing">
+	<skill id="6118" toLevel="1" name="Holiday Blessing">
 		<!-- Grants for 1 h. the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A1</operateType>
@@ -615,7 +615,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6136" toLevel="1" name="Agathion Cute Trick - Juju">
+	<skill id="6136" toLevel="1" name="Agathion Chuchu's Cute Trick">
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
@@ -631,7 +631,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="6137" toLevel="1" name="Agathion Juju - Mysterious Effect">
+	<skill id="6137" toLevel="1" name="Agathion Chuchu - Mysterious Effect">
 		<!-- The target's head is enlarged. -->
 		<icon>icon.skill2513</icon>
 		<abnormalLevel>0</abnormalLevel>
@@ -652,7 +652,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6138" toLevel="1" name="Agathion Juju - Large Firecracker">
+	<skill id="6138" toLevel="1" name="Agathion Chuchu - Large Firecracker">
 		<!-- Can set off large firecrackers. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>1500</hitTime>

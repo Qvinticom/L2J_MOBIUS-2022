@@ -2177,7 +2177,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 		if (target == null)
 		{
-			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+			player.sendPacket(SystemMessageId.THE_TARGET_CANNOT_BE_INVITED);
 			return false;
 		}
 		if (player.getObjectId() == target.getObjectId())
@@ -2187,7 +2187,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 		if (_charPenaltyExpiryTime > System.currentTimeMillis())
 		{
-			player.sendPacket(SystemMessageId.AFTER_A_CLAN_MEMBER_IS_DISMISSED_FROM_A_CLAN_THE_CLAN_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_ACCEPTING_A_NEW_MEMBER);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_ACCEPT_A_NEW_CLAN_MEMBER_FOR_24_H_AFTER_DISMISSING_SOMEONE);
 			return false;
 		}
 		if (target.getClanId() != 0)
@@ -2199,7 +2199,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 		if (target.getClanJoinExpiryTime() > System.currentTimeMillis())
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_CANNOT_JOIN_THE_CLAN_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_THEY_LEFT_ANOTHER_CLAN);
+			final SystemMessage sm = new SystemMessage(SystemMessageId.C1_WILL_BE_ABLE_TO_JOIN_YOUR_CLAN_IN_24_H_AFTER_LEAVING_THE_PREVIOUS_ONE);
 			sm.addString(target.getName());
 			player.sendPacket(sm);
 			return false;
@@ -2209,7 +2209,7 @@ public class Clan implements IIdentifiable, INamable
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY);
 			sm.addString(target.getName());
 			player.sendPacket(sm);
-			player.sendPacket(SystemMessageId.IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FPR_BOTH_MAIN_AND_SUBCLASS);
+			player.sendPacket(SystemMessageId.IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FOR_BOTH_MAIN_AND_SUBCLASS);
 			return false;
 		}
 		if (getSubPledgeMembersCount(pledgeType) >= getMaxNrOfMembers(pledgeType))
@@ -2248,12 +2248,12 @@ public class Clan implements IIdentifiable, INamable
 		final Clan leaderClan = player.getClan();
 		if ((leaderClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis()) && (leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN))
 		{
-			player.sendPacket(SystemMessageId.YOU_MAY_NOT_ACCEPT_ANY_CLAN_WITHIN_A_DAY_AFTER_EXPELLING_ANOTHER_CLAN);
+			player.sendPacket(SystemMessageId.YOU_CAN_ACCEPT_A_NEW_CLAN_IN_THE_ALLIANCE_IN_24_H_AFTER_DISMISSING_ANOTHER_ONE);
 			return false;
 		}
 		if (target == null)
 		{
-			player.sendPacket(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET);
+			player.sendPacket(SystemMessageId.THE_TARGET_CANNOT_BE_INVITED);
 			return false;
 		}
 		if (player.getObjectId() == target.getObjectId())
@@ -2294,7 +2294,7 @@ public class Clan implements IIdentifiable, INamable
 			}
 			if (targetClan.getAllyPenaltyType() == PENALTY_TYPE_CLAN_DISMISSED)
 			{
-				player.sendPacket(SystemMessageId.A_CLAN_THAT_HAS_WITHDRAWN_OR_BEEN_EXPELLED_CANNOT_ENTER_INTO_AN_ALLIANCE_WITHIN_ONE_DAY_OF_WITHDRAWAL_OR_EXPULSION);
+				player.sendPacket(SystemMessageId.A_CLAN_CAN_JOIN_ANOTHER_ALLIANCE_IN_24_H_AFTER_LEAVING_THE_PREVIOUS_ONE);
 				return false;
 			}
 		}
@@ -2305,7 +2305,7 @@ public class Clan implements IIdentifiable, INamable
 		}
 		if (leaderClan.isAtWarWith(targetClan.getId()))
 		{
-			player.sendPacket(SystemMessageId.YOU_MAY_NOT_ALLY_WITH_A_CLAN_YOU_ARE_CURRENTLY_AT_WAR_WITH_THAT_WOULD_BE_DIABOLICAL_AND_TREACHEROUS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_MAKE_AN_ALLIANCE_WITH_A_CLAN_YOU_ARE_IN_WAR_WITH);
 			return false;
 		}
 		
@@ -2431,7 +2431,7 @@ public class Clan implements IIdentifiable, INamable
 			return;
 		}
 		
-		broadcastToOnlineAllyMembers(new SystemMessage(SystemMessageId.THE_ALLIANCE_HAS_BEEN_DISSOLVED));
+		broadcastToOnlineAllyMembers(new SystemMessage(SystemMessageId.THE_ALLIANCE_IS_DISBANDED));
 		
 		final long currentTime = System.currentTimeMillis();
 		for (Clan clan : ClanTable.getInstance().getClanAllies(getAllyId()))

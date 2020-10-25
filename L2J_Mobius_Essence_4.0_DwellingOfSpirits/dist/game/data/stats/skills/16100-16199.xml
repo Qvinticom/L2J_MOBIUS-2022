@@ -75,7 +75,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16106" toLevel="2" name="Orc Thunder">
+	<skill id="16106" toLevel="2" name="Chain Smash">
 		<!-- Pulls the target into your reach. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
@@ -202,14 +202,14 @@
 		<effectPoint>-10000</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16116" toLevel="2" name="Self-Destruct">
+	<skill id="16116" toLevel="2" name="Self-Devastation">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16117" toLevel="1" name="Amplify Damage - Stage 1">
+	<skill id="16117" toLevel="1" name="Amplify Damage Lv. 1">
 		<!-- Damage +20% toward normal monsters. -->
 		<icon>icon.skill6367_1</icon>
 		<operateType>A2</operateType>
@@ -219,7 +219,7 @@
 		<effectPoint>650</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16118" toLevel="1" name="Amplify Damage - Stage 2">
+	<skill id="16118" toLevel="1" name="Amplify Damage Lv. 2">
 		<!-- Damage +30% toward normal monsters. -->
 		<icon>icon.skill6367_2</icon>
 		<operateType>A2</operateType>
@@ -454,7 +454,7 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16139" toLevel="1" name="Reward x 16">
+	<skill id="16139" toLevel="1" name="Reward x16">
 		<!-- Hero's powers give you x 16 the rewards. Disappears upon death or expiration. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<operateType>A2</operateType>
@@ -582,7 +582,7 @@
 		<effectPoint>-150</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16150" toLevel="5" name="Decrease Speed">
+	<skill id="16150" toLevel="5" name="Slow">
 		<!-- Immediately target's Speed -30%. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -756,7 +756,7 @@
 		<effectPoint>-1500</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16164" toLevel="1" name="Fire Flare">
+	<skill id="16164" toLevel="1" name="Flame Flare">
 		<operateType>A1</operateType>
 		<mpConsume>101</mpConsume>
 		<castRange>40</castRange>

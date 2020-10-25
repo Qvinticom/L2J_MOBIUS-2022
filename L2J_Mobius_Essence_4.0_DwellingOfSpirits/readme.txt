@@ -1,11 +1,10 @@
-L2J-Mobius The Kamael
-Client Mirror 1: https://drive.google.com/uc?id=1rXtgV9l67b5lBeK_wmCKITE1DQ7EgEJ8&export=download
-Client Mirror 2: https://drive.google.com/uc?id=1IugZjcpS5n9_EJPLCecB3H_tLmVlqo2L&export=download
-System: https://mega.nz/#!98likSra!vP3uaDwJs8oiY5q60UzBSXAbgNELWX_dycWb98Mz96U
+L2J-Mobius Dwelling of Spirits
+Client: https://drive.google.com/u/0/uc?id=1Xlk2uzmxveJtrvaWXmZ6wBVFjd6E-ws7&export=download
+System: https://mega.nz/file/xl1njaTY#BdVHadGs9bTDyrDE3QgBGvAqkmqSqPtn8hLpcCil1Fs
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/fzw7fplavow88wb/L2J_Mobius_Classic_3.0_TheKamael_Geodata.zip
+Geodata: http://www.mediafire.com/file/57ljmw3wpo3unwl/L2J_Mobius_Essence_4.0_DwellingOfSpirits_Geodata.zip
 
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
@@ -107,8 +106,15 @@ The Kamael: https://eu.4game.com/patchnotes/lineage2classic/154/
 -Auto potion system
 -Rank system
 
-Essence: https://eu.4game.com/patchnotes/lineage2essence/188/
--Just enter game support
+Death Knight: https://eu.4game.com/patchnotes/lineage2essence/196/
+-Death Knight creation support
+-Player bonus stats system
+
+Fluffy Reinforcement: https://eu.4game.com/patchnotes/lineage2essence/204/
+-Teleport favorites system
+
+Dwelling of Spirits: https://eu.4game.com/patchnotes/lineage2essence/261/
+-Login support.
 
 Customs:
 -Newbie Helper NPC location info
