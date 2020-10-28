@@ -109,7 +109,7 @@ public class TeleportToPlayer extends AbstractEffect
 			}
 			
 			final Instance instance = target.getInstanceWorld();
-			if (((instance != null) && !instance.isPlayerSummonAllowed()) || target.isInTimedHuntingZone())
+			if (((instance != null) && !instance.isPlayerSummonAllowed()) || target.isInsideZone(ZoneId.TIMED_HUNTING))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 				sm.addString(target.getName());

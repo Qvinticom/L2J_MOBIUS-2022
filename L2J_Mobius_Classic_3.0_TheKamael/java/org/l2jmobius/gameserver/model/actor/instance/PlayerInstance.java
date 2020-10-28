@@ -10224,7 +10224,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// Close time limited zone window.
-		if (!isInTimedHuntingZone())
+		if (!isInsideZone(ZoneId.TIMED_HUNTING))
 		{
 			stopTimedHuntingZoneTask();
 		}
@@ -14113,11 +14113,6 @@ public class PlayerInstance extends Playable
 	public AutoUseSettingsHolder getAutoUseSettings()
 	{
 		return _autoUseSettings;
-	}
-	
-	public boolean isInTimedHuntingZone()
-	{
-		return isInTimedHuntingZone(getX(), getY());
 	}
 	
 	public boolean isInTimedHuntingZone(int x, int y)

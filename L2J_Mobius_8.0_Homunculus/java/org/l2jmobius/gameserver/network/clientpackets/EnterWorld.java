@@ -40,7 +40,6 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
-import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -658,46 +657,6 @@ public class EnterWorld implements IClientIncomingPacket
 		if (!player.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
 		{
 			player.updateAbnormalVisualEffects();
-		}
-		
-		// Check if in time limited hunting zone.
-		if (player.isInTimedHuntingZone())
-		{
-			final long currentTime = System.currentTimeMillis();
-			final long stormIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
-			final long primevalIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 6, 0);
-			final long goldenAltarExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 7, 0);
-			final long coalMinesExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 11, 0);
-			final long toiExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 8, 0);
-			final long imperialTombExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 12, 0);
-			if ((stormIsleExitTime > currentTime) && player.isInTimedHuntingZone(1))
-			{
-				player.startTimedHuntingZone(1, stormIsleExitTime - currentTime);
-			}
-			else if ((primevalIsleExitTime > currentTime) && player.isInTimedHuntingZone(6))
-			{
-				player.startTimedHuntingZone(6, primevalIsleExitTime - currentTime);
-			}
-			else if ((goldenAltarExitTime > currentTime) && player.isInTimedHuntingZone(7))
-			{
-				player.startTimedHuntingZone(7, goldenAltarExitTime - currentTime);
-			}
-			else if ((coalMinesExitTime > currentTime) && player.isInTimedHuntingZone(11))
-			{
-				player.startTimedHuntingZone(11, coalMinesExitTime - currentTime);
-			}
-			else if ((toiExitTime > currentTime) && player.isInTimedHuntingZone(11))
-			{
-				player.startTimedHuntingZone(8, toiExitTime - currentTime);
-			}
-			else if ((imperialTombExitTime > currentTime) && player.isInTimedHuntingZone(11))
-			{
-				player.startTimedHuntingZone(12, imperialTombExitTime - currentTime);
-			}
-			else
-			{
-				player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
-			}
 		}
 		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)

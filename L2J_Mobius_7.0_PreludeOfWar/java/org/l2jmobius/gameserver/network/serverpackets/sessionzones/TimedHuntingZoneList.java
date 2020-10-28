@@ -20,6 +20,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -34,7 +35,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 	public TimedHuntingZoneList(PlayerInstance player)
 	{
 		_player = player;
-		_isInTimedHuntingZone = player.isInTimedHuntingZone();
+		_isInTimedHuntingZone = player.isInsideZone(ZoneId.TIMED_HUNTING);
 	}
 	
 	@Override

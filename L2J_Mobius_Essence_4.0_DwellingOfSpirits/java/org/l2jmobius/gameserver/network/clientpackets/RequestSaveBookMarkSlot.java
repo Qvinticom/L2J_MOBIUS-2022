@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
@@ -48,7 +49,7 @@ public class RequestSaveBookMarkSlot implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.isInTimedHuntingZone())
+		if (player.isInsideZone(ZoneId.TIMED_HUNTING))
 		{
 			player.sendMessage("You cannot bookmark this location.");
 			return;

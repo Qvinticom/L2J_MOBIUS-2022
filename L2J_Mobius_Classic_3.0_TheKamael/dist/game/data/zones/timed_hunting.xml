@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- Timed Hunting Zones -->
+	<zone name="pirate_tomb_hz" type="TimedHuntingZone" shape="Cuboid" minZ="-16000" maxZ="-5000">
+		<node X="0" Y="-98304" />
+		<node X="32767" Y="-65537" />
+	</zone>
+</list>

@@ -107,6 +107,8 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 				return;
 			}
 			
+			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, endTime);
+			
 			switch (_zoneId)
 			{
 				case 1: // Primeval Isle
@@ -115,9 +117,6 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 					break;
 				}
 			}
-			
-			player.getVariables().set(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, endTime);
-			player.startTimedHuntingZone(_zoneId, endTime - currentTime);
 		}
 		else
 		{
