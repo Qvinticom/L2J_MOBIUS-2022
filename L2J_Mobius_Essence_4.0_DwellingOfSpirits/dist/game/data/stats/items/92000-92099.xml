@@ -405,6 +405,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems"/>
+		<capsuled_items>
+			<item id="92176" min="1" max="1" chance="14"/>
+			<item id="92186" min="1" max="1" chance="15"/>
+			<item id="92196" min="1" max="1" chance="14"/>
+			<item id="92206" min="1" max="1" chance="15"/>
+			<item id="92216" min="1" max="1" chance="14"/>
+			<item id="92226" min="1" max="1" chance="14"/>
+			<item id="92236" min="1" max="1" chance="14"/>
+		</capsuled_items>
 	</item>
 	<item id="92035" name="Shiny Jewelry Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following Lv. 1 jewels: Amber, Opal, Coral, Onyx, Spinel, Zircon, Moonstone. -->
