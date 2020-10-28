@@ -177,15 +177,15 @@ public class PlayerStat extends PlayableStat
 			if (masterInstance != null)
 			{
 				final int curLevel = getActiveChar().getClassId().level();
-				if ((getLevel() >= 20) && (curLevel == 0))
+				if ((getLevel() >= 20) && (curLevel == 0) && Config.ALLOW_CLASS_MASTERS_FIRST_CLASS)
 				{
 					ClassMasterInstance.getInstance().onAction(getActiveChar());
 				}
-				else if ((getLevel() >= 40) && (curLevel == 1))
+				else if ((getLevel() >= 40) && (curLevel == 1) && Config.ALLOW_CLASS_MASTERS_SECOND_CLASS)
 				{
 					ClassMasterInstance.getInstance().onAction(getActiveChar());
 				}
-				else if ((getLevel() >= 76) && (curLevel == 2))
+				else if ((getLevel() >= 76) && (curLevel == 2) && Config.ALLOW_CLASS_MASTERS_THIRD_CLASS)
 				{
 					ClassMasterInstance.getInstance().onAction(getActiveChar());
 				}
