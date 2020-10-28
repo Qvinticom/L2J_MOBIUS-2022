@@ -1779,6 +1779,7 @@ public class ItemInstance extends WorldObject
 		{
 			return true;
 		}
+		
 		final Creature owner = getActingPlayer();
 		if (owner != null)
 		{
@@ -1788,18 +1789,14 @@ public class ItemInstance extends WorldObject
 				{
 					continue;
 				}
-				try
+				
+				if (!condition.testImpl(owner, owner, null, _item))
 				{
-					if (!condition.test(owner, owner, null, null))
-					{
-						return false;
-					}
-				}
-				catch (Exception e)
-				{
+					return false;
 				}
 			}
 		}
+		
 		return true;
 	}
 	
