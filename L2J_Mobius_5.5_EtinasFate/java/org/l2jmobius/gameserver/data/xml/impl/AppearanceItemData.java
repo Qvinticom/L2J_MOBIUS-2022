@@ -17,8 +17,10 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
@@ -40,7 +42,8 @@ public class AppearanceItemData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(AppearanceItemData.class.getName());
 	
-	private final Map<Integer, AppearanceStone> _stones = new HashMap<>();
+	private AppearanceStone[] _stones;
+	private final Map<Integer, AppearanceStone> _stoneMap = new HashMap<>();
 	
 	protected AppearanceItemData()
 	{
@@ -51,7 +54,14 @@ public class AppearanceItemData implements IXmlReader
 	public void load()
 	{
 		parseDatapackFile("data/AppearanceStones.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _stones.size() + " stones.");
+		
+		_stones = new AppearanceStone[Collections.max(_stoneMap.keySet()) + 1];
+		for (Entry<Integer, AppearanceStone> stone : _stoneMap.entrySet())
+		{
+			_stones[stone.getKey()] = stone.getValue();
+		}
+		
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _stoneMap.size() + " stones.");
 		
 		//@formatter:off
 		/*
@@ -70,6 +80,8 @@ public class AppearanceItemData implements IXmlReader
 		}
 		*/
 		//@formatter:on
+		
+		_stoneMap.clear();
 	}
 	
 	@Override
@@ -126,7 +138,7 @@ public class AppearanceItemData implements IXmlReader
 						}
 						if (ItemTable.getInstance().getTemplate(stone.getId()) != null)
 						{
-							_stones.put(stone.getId(), stone);
+							_stoneMap.put(stone.getId(), stone);
 						}
 						else
 						{
@@ -138,14 +150,9 @@ public class AppearanceItemData implements IXmlReader
 		}
 	}
 	
-	public int getLoadedElementsCount()
-	{
-		return _stones.size();
-	}
-	
 	public AppearanceStone getStone(int stone)
 	{
-		return _stones.get(stone);
+		return _stones[stone];
 	}
 	
 	/**
