@@ -55,13 +55,16 @@ public class AppearanceItemData implements IXmlReader
 	{
 		parseDatapackFile("data/AppearanceStones.xml");
 		
-		_stones = new AppearanceStone[Collections.max(_stoneMap.keySet()) + 1];
-		for (Entry<Integer, AppearanceStone> stone : _stoneMap.entrySet())
+		if (!_stoneMap.isEmpty())
 		{
-			_stones[stone.getKey()] = stone.getValue();
+			_stones = new AppearanceStone[Collections.max(_stoneMap.keySet()) + 1];
+			for (Entry<Integer, AppearanceStone> stone : _stoneMap.entrySet())
+			{
+				_stones[stone.getKey()] = stone.getValue();
+			}
+			
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _stoneMap.size() + " stones.");
 		}
-		
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _stoneMap.size() + " stones.");
 		
 		//@formatter:off
 		/*
