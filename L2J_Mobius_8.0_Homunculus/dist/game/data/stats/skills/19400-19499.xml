@@ -1728,13 +1728,13 @@
 		<!-- When the Melody/ Harmony/ Drum/ Ditty/ Rhapsody effects are used, enhances Frenzy buffs for clan members. Consumes $s1 Spirit Ore, when Frenzy skills are used. If used again, the effect is canceled. -->
 		<icon>icon.skill19437_a</icon>
 		<operateType>A2</operateType>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>-1</abnormalTime>
 		<effectPoint>1733</effectPoint>
 		<mpConsume>185</mpConsume>
 		<hitTime>4000</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<coolTime>500</coolTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectRange>1000</affectRange>
@@ -1883,7 +1883,10 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="TrackLimitedSkill" />
+			<effect name="CallSkill">
+				<skillId>30873</skillId> <!-- Limit of Iss -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19440" toLevel="1" name="Divine Strike">

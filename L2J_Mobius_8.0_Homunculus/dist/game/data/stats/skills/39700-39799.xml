@@ -14,8 +14,13 @@
 	</skill>
 	<skill id="39703" toLevel="1" name="Vitality Maintaining Rune - 30 d.">
 		<!-- Maintains Vitality when you have it in the inventory. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.ev_charge_run</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39704" toLevel="1" name="Scroll: Enchant Anhel's Protection">
 		<!-- A scroll to enchant Anhel's Protection. -->

@@ -1496,6 +1496,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38858" min="1" max="1" chance="14.2857" /> <!-- Ruby Lv. 4 -->
+			<item id="38930" min="1" max="1" chance="14.2857" /> <!-- Sapphire Lv. 4 -->
+			<item id="38893" min="1" max="1" chance="14.2857" /> <!-- Diamond Lv. 4 -->
+			<item id="38898" min="1" max="1" chance="14.2857" /> <!-- Pearl Lv. 4 -->
+			<item id="38878" min="1" max="1" chance="14.2857" /> <!-- Opal Lv. 4 -->
+			<item id="38883" min="1" max="1" chance="14.2857" /> <!-- Emerald Lv. 4 -->
+			<item id="47680" min="1" max="1" chance="14.2857" /> <!-- Red Cat's Eye Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="80781" name="Freya's Limited Box" type="EtcItem">
 		<!-- Double-click to obtain a random rare item. -->

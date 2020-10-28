@@ -889,12 +889,193 @@
 	</skill>
 	<skill id="35624" toLevel="6" name="Enchantment Effect: Expert's Mask">
 		<!-- CHA +$s1. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.explorer_mask</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+				</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35625" toLevel="12" name="Enchantment Effect: Atlas' Earring">
 		<!-- Stupor Resistance +$s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceTrait">
@@ -1139,7 +1320,7 @@
 	</skill>
 	<skill id="35626" toLevel="6" name="Enhanced La Vie En Rose's Brooch">
 		<!-- Inventory Slots +$s1, all stats +$s2. After a standard attack or skill use, has a certain chance to inflict La Vie En Rose s Blessing for 15 sec. (P./ M. Atk. +$s3). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_brooch_6slot_lavianrose_4</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="JewelSlot">
@@ -1248,7 +1429,7 @@
 	</skill>
 	<skill id="35627" toLevel="11" name="Top-grade La Vie En Rose's Brooch">
 		<!-- Inventory Slots +$s1, all stats +$s2, Damage Reflection Resistance +$s3, Vitality bonus +$s4, Fixed Damage Resistance +$s5, Received damage when immobilized -$s6. After a standard attack or skill use, has a certain chance to inflict La Vie En Rose s Shining Blessing for 15 sec. (P./ M. Atk. +$s7). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_brooch_6slot_lavianrose_5</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="JewelSlot">
@@ -1532,7 +1713,7 @@
 	</skill>
 	<skill id="35628" toLevel="2" name="La Vie En Rose's Blessing">
 		<!-- For 15 sec., P./ M. Atk. +$s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_brooch_6slot_lavianrose_4</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -3005,7 +3186,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<!-- Need defense against P. Skill Critical Rate -->
 		</effects>
 	</skill>
 	<skill id="35687" toLevel="7" name="Angel's Necklace Augmentation: All Received Critical Damage Decrease">
@@ -3037,7 +3217,18 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<!-- Need defense against P. Skill Critical Damage -->
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35688" toLevel="3" name="Top Armor Augmentation: P. Evasion">

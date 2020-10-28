@@ -2548,24 +2548,42 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24560" level="85" type="Npc" name="Resurrected Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="24560" level="118" type="Monster" name="Resurrected Knight">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="7893794080" sp="7104304" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="575547.792345" hpRegen="9.5" mp="3701.404" mpRegen="3.3" />
+			<attack physical="99425" magical="92851" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="9829" magical="5711" />
 			<speed>
 				<walk ground="63" />
 				<run ground="139" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="37.5" />
 			<height normal="72" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="580000" max="780000" chance="70" /> <!-- Adena -->
+				<item id="3031" min="1" max="1" chance="34.98" /> <!-- Spirit Ore -->
+				<item id="1785" min="1" max="1" chance="34.63" /> <!-- Soulstone -->
+				<item id="80762" min="1" max="1" chance="1.09" /> <!-- Dye Powder -->
+				<item id="81053" min="1" max="1" chance="0.3" /> <!-- Vitality (item) -->
+				<item id="39738" min="1" max="1" chance="0.03" /> <!-- Rune Stone -->
+				<item id="81453" min="1" max="1" chance="0.0009" /> <!-- Improved Rune Stone -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="24561" level="118" type="Monster" name="Watchman of the Resurrected" title="Vadin's Servant">
 		<race>UNDEAD</race>

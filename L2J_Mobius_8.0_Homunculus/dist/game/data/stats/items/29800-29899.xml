@@ -473,7 +473,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="39703" level="1" /> <!-- Vitality Maintaining Rune (30-day) -->
+		</skills>
 	</item>
 	<item id="29845" name="Vitality Maintaining Rune" additionalName="10-day" type="EtcItem">
 		<!-- Available for 10 days. When in inventory, maintains the Vitality level. -->
@@ -484,6 +488,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="14400" />
+		<skills>
+			<skill id="29417" level="1" /> <!-- Vitality Maintaining Rune -->
+		</skills>
 	</item>
 	<item id="29846" name="Vitality Maintaining Rune Pack" type="EtcItem">
 		<!-- Double-click to obtain Vitality Maintaining Rune (10-day). -->
@@ -493,6 +500,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="29845" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Rune (10-day) -->
+		</capsuled_items>
 	</item>
 	<item id="29847" name="Radiant Toy Box" type="EtcItem">
 		<!-- Double-click to obtain rare items. -->
@@ -536,6 +548,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="120" />
+		<skills>
+			<skill id="29417" level="1" /> <!-- Vitality Maintaining Rune -->
+		</skills>
 	</item>
 	<item id="29850" name="Basket with Thank-you Gifts" type="EtcItem">
 		<!-- Double-click to obtain the following items. <Contents>. Dandy's Home Run Ball (2 pcs.). Vitality Maintaining Rune (2-hour). Emperor's Special Cocktail (2 pcs.). Freya's Ice Rose (10 pcs.). Dragon Claw Coupon -->

@@ -1500,6 +1500,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37718" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Shiny Elemental Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="47987" name="Challenger's Weapon Enhancement Ticket" type="EtcItem">
 		<!-- Take it to the Game Assistant to enchant a Challenger's weapon. -->

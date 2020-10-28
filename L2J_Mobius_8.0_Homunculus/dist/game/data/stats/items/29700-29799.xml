@@ -940,7 +940,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="80712" min="1" max="1" chance="100" /> <!-- Red Libra Blessing - Event -->
+			<item id="29844" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Rune (30-day) -->
 		</capsuled_items>
 	</item>
 	<item id="29770" name="Mochi" additionalName="Event" type="EtcItem">
@@ -963,6 +963,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="4320" />
+		<skills>
+			<skill id="29417" level="1" /> <!-- Vitality Maintaining Rune -->
+		</skills>
 	</item>
 	<item id="29772" name="Dragon's Relic" type="EtcItem">
 		<!-- Double-click to obtain a rare item. Additionally, you will get Glittering Freya's Scroll of Storm (3 pcs.) and Glittering Freya's Ice Rose. -->

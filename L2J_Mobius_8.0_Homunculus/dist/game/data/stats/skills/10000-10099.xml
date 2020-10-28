@@ -1695,7 +1695,10 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="TrackLimitedSkill" />
+			<effect name="CallSkill">
+				<skillId>30874</skillId> <!-- Limit of Sigel -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10020" toLevel="7" name="Focus Shield">
@@ -1995,6 +1998,10 @@
 				<skillId>19568</skillId> <!-- Nine Aegis -->
 				<skillLevel>1</skillLevel>
 			</effect>
+			<effect name="CallSkill">
+				<skillId>30874</skillId> <!-- Limit of Sigel -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="MagicalDefence">
 				<amount>50</amount>
 				<mode>PER</mode>
@@ -2023,7 +2030,6 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="TrackLimitedSkill" />
 		</effects>
 	</skill>
 	<skill id="10025" toLevel="4" name="Knight Frenzy">

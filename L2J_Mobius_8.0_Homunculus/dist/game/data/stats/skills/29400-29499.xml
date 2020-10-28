@@ -10,8 +10,13 @@
 	</skill>
 	<skill id="29402" toLevel="1" name="Vitality Maintaining Rune">
 		<!-- Maintains Vitality when you have it in the inventory. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.ev_charge_run</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="29403" toLevel="1" name="Amulet: Prosperity">
 		<!-- STR/ INT/ CON/ DEX/ WIT/ MEN/ LUC/ CHA +1. -->
@@ -153,18 +158,33 @@
 	</skill>
 	<skill id="29415" toLevel="1" name="Vitality Maintaining Rune">
 		<!-- Maintains Vitality when you have it in the inventory. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.ev_charge_run</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="29416" toLevel="1" name="Vitality Maintaining Rune">
 		<!-- Maintains Vitality when you have it in the inventory. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.ev_charge_run</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="29417" toLevel="1" name="Vitality Maintaining Rune">
 		<!-- Maintains Vitality when you have it in the inventory. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.ev_charge_run</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="29418" toLevel="1" name="Thankful Heart">
 		<!-- For $s1, acquired XP/ SP +$s2, SP/ Vitality bonus +$s3, P. Atk./ P. Def./ M. Atk./ M. Def. +$s4. The effect remains after death. Cannot be used in the Olympiad and the Ceremony of Chaos. -->

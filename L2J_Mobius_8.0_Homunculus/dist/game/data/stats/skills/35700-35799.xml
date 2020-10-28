@@ -1570,7 +1570,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<!-- Need defense against P. Skill Critical Rate -->
 		</effects>
 	</skill>
 	<skill id="35758" toLevel="7" name="Angel's Earring Augmentation: All Received Critical Damage Decrease">
@@ -1602,7 +1601,18 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<!-- Need defense against P. Skill Critical Damage -->
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35759" toLevel="3" name="Angel's Ring Augmentation: MP Consumption Decrease">
@@ -1862,7 +1872,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<!-- Need defense against P. Skill Critical Rate -->
 		</effects>
 	</skill>
 	<skill id="35773" toLevel="7" name="Angel's Ring Augmentation: All Received Critical Damage Decrease">
@@ -1894,7 +1903,18 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<!-- Need defense against P. Skill Critical Damage -->
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35774" toLevel="3" name="Fallen Angel's Ring Augmentation: MP Consumption Decrease">
@@ -2154,7 +2174,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<!-- Need defense against P. Skill Critical Rate -->
 		</effects>
 	</skill>
 	<skill id="35788" toLevel="7" name="Fallen Angel's Ring Augmentation: All Received Critical Damage Decrease">
@@ -2186,7 +2205,18 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<!-- Need defense against P. Skill Critical Damage -->
+			<effect name="DefenceSkillCriticalDamage">
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2</value>
+					<value level="3">-3</value>
+					<value level="4">-4</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35789" toLevel="3" name="Atlas' Earring Augmentation: MP Consumption Decrease">

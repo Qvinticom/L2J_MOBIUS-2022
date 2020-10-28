@@ -167,6 +167,9 @@
 					<item>POLE</item>
 				</weaponType>
 			</effect>
+			<effect name="DispelBySlot">
+				<dispel>FOCUS_ATTACK,-1</dispel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30611" toLevel="1" name="Edge of Storm">

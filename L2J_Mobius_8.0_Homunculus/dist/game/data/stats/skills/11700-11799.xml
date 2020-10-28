@@ -817,7 +817,10 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
 				</power>
 			</effect>
-			<effect name="TrackLimitedSkill" />
+			<effect name="CallSkill">
+				<skillId>30872</skillId> <!-- Limit of Aeore -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11759" toLevel="1" name="Celestial Party Protection">
@@ -892,7 +895,10 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
 				</power>
 			</effect>
-			<effect name="TrackLimitedSkill" />
+			<effect name="CallSkill">
+				<skillId>30872</skillId> <!-- Limit of Aeore -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11760" toLevel="13" name="Radiant Recharge">

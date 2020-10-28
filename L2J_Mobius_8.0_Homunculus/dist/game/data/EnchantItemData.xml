@@ -82,12 +82,19 @@
 		<item id="48584" /> <!-- Savior's Mask -->
 		<item id="81153" /> <!-- Navari's Mask -->
 	</enchant>
+	
+	<!-- Scroll: Enchant Expert's Mask -->
+	<enchant id="81346" maxEnchant="10"> <!-- TODO: Only this +10 -->
+		<item id="81345" /> <!-- Expert's Mask -->
+	</enchant>
 
+	<!-- Guard Agathion's Book of Growth -->
 	<enchant id="48570" maxEnchant="10">
 		<item id="48572" /> <!-- Masia's Guard Agathion Charm -->
 		<item id="48573" /> <!-- Paulina's Guard Agathion Charm -->
 		<item id="48574" /> <!-- Tersi's Guard Agathion Charm -->
 	</enchant>
+	<!-- Ancient Guard Agathion's Book of Growth -->
 	<enchant id="48571" maxEnchant="7">
 		<item id="48572" /> <!-- Masia's Guard Agathion Charm -->
 		<item id="48573" /> <!-- Paulina's Guard Agathion Charm -->

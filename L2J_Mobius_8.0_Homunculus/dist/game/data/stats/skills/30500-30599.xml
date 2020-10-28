@@ -1679,13 +1679,11 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillByAttack">
-				<!-- Damage Up -->
-				<minDamage>100</minDamage>
-				<skillId>30521</skillId> <!-- Damage Up -->
-				<skillLevel>1</skillLevel>
-				<chance>13</chance>
-				<targetType>TARGET</targetType>
+				<chance>7</chance>
+				<targetType>ENEMY</targetType>
 				<affectScope>SINGLE</affectScope>
+				<skillId>30861</skillId> <!-- Damage Up -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>

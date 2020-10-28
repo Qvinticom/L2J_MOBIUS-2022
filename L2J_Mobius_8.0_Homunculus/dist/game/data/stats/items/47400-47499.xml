@@ -718,6 +718,14 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="37718" min="1" max="1" minEnchant="8" maxEnchant="8" chance="33.33" /> <!-- Shiny Elemental Shirt -->
+			<item id="46193" min="1" max="1" minEnchant="8" maxEnchant="8" chance="33.33" /> <!-- Physical Reflect Shirt -->
+			<item id="46194" min="1" max="1" minEnchant="8" maxEnchant="8" chance="33.33" /> <!-- Magical Elemental Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="47452" name="+9 T-shirt Box (Shiny/ Attack/ Magic)" type="EtcItem">
 		<!-- Double-click to obtain one of the following +9 shirts: Shiny Elemental/ Physical Reflect/ Magical Reflect. -->
@@ -725,6 +733,14 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="37718" min="1" max="1" minEnchant="9" maxEnchant="9" chance="33.33" /> <!-- Shiny Elemental Shirt -->
+			<item id="46193" min="1" max="1" minEnchant="9" maxEnchant="9" chance="33.33" /> <!-- Physical Reflect Shirt -->
+			<item id="46194" min="1" max="1" minEnchant="9" maxEnchant="9" chance="33.33" /> <!-- Magical Elemental Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="47453" name="Seven Signs Soul Crystal Box (Stage 4-8)" type="EtcItem">
 		<!-- Double-click to obtain Seven Signs' Soul Crystal Lv. 4-8. -->
@@ -753,6 +769,27 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="38853" min="1" max="1" chance="6.25" /> <!-- Topaz Lv. 4 -->
+			<item id="38858" min="1" max="1" chance="6.25" /> <!-- Ruby Lv. 4 -->
+			<item id="38930" min="1" max="1" chance="6.25" /> <!-- Sapphire Lv. 4 -->
+			<item id="38878" min="1" max="1" chance="6.25" /> <!-- Opal Lv. 4 -->
+			<item id="38873" min="1" max="1" chance="6.25" /> <!-- Obsidian Lv. 4 -->
+			<item id="38893" min="1" max="1" chance="6.25" /> <!-- Diamond Lv. 4 -->
+			<item id="38883" min="1" max="1" chance="6.25" /> <!-- Emerald Lv. 4 -->
+			<item id="38888" min="1" max="1" chance="6.25" /> <!-- Aquamarine Lv. 4 -->
+			<item id="38898" min="1" max="1" chance="6.25" /> <!-- Pearl Lv. 4 -->
+			<item id="46673" min="1" max="1" chance="6.25" /> <!-- Vital Stone Lv. 4 -->
+			<item id="46678" min="1" max="1" chance="6.25" /> <!-- Garnet Lv. 4 -->
+			<item id="46683" min="1" max="1" chance="6.25" /> <!-- Tanzanite Lv. 4 -->
+			<item id="26500" min="1" max="1" chance="6.25" /> <!-- Cat's Eye Lv. 4 -->
+			<item id="47680" min="1" max="1" chance="6.25" /> <!-- Red Cat's Eye Lv. 4 -->
+			<item id="47685" min="1" max="1" chance="6.25" /> <!-- Blue Cat's Eye Lv. 4 -->
+			<item id="26505" min="1" max="1" chance="6.25" /> <!-- Amethyst Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="47457" name="Level 5 Box of Gems" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry of Lv. 5. -->
@@ -760,6 +797,27 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="38854" min="1" max="1" chance="6.25" /> <!-- Topaz Lv. 5 -->
+			<item id="38859" min="1" max="1" chance="6.25" /> <!-- Ruby Lv. 5 -->
+			<item id="38931" min="1" max="1" chance="6.25" /> <!-- Sapphire Lv. 5 -->
+			<item id="38879" min="1" max="1" chance="6.25" /> <!-- Opal Lv. 5 -->
+			<item id="38874" min="1" max="1" chance="6.25" /> <!-- Obsidian Lv. 5 -->
+			<item id="38894" min="1" max="1" chance="6.25" /> <!-- Diamond Lv. 5 -->
+			<item id="38884" min="1" max="1" chance="6.25" /> <!-- Emerald Lv. 5 -->
+			<item id="38889" min="1" max="1" chance="6.25" /> <!-- Aquamarine Lv. 5 -->
+			<item id="38899" min="1" max="1" chance="6.25" /> <!-- Pearl Lv. 5 -->
+			<item id="46674" min="1" max="1" chance="6.25" /> <!-- Vital Stone Lv. 5 -->
+			<item id="46679" min="1" max="1" chance="6.25" /> <!-- Garnet Lv. 5 -->
+			<item id="46684" min="1" max="1" chance="6.25" /> <!-- Tanzanite Lv. 5 -->
+			<item id="26501" min="1" max="1" chance="6.25" /> <!-- Cat's Eye Lv. 5 -->
+			<item id="47681" min="1" max="1" chance="6.25" /> <!-- Red Cat's Eye Lv. 5 -->
+			<item id="47686" min="1" max="1" chance="6.25" /> <!-- Blue Cat's Eye Lv. 5 -->
+			<item id="26506" min="1" max="1" chance="6.25" /> <!-- Amethyst Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="47458" name="Shadow Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain a Shadow Weapon. -->

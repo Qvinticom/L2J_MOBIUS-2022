@@ -1094,6 +1094,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37718" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Shiny Elemental Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="80059" name="+5 Reflect Attack T-shirt Box" type="EtcItem">
 		<!-- Double-click to obtain +5 Physical Reflect Shirt. -->
@@ -1102,6 +1106,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46193" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Physical Reflect Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="80060" name="+5 Reflect Magic T-shirt Box" type="EtcItem">
 		<!-- Double-click to obtain +5 Magical Reflect Shirt. -->
@@ -1110,6 +1118,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46194" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Magical Reflect Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="80061" name="Emperor's Special Cocktail" additionalName="Attack" type="EtcItem">
 		<!-- For 60 min., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Warrior's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->

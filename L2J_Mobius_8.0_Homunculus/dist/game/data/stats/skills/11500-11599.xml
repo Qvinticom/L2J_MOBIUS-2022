@@ -3478,7 +3478,10 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="TrackLimitedSkill" />
+			<effect name="CallSkill">
+				<skillId>30873</skillId> <!-- Limit of Iss -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11545" toLevel="1" name="Crazy Nocturne">

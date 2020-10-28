@@ -1135,7 +1135,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26391" name="Rune of Feather Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain Rune of Feather (7-day). -->
+		<!-- Wrapped Pack containing Rune of Feather (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />

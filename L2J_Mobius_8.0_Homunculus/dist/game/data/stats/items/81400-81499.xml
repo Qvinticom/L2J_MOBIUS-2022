@@ -334,6 +334,7 @@
 	</item>
 	<item id="81430" name="Artifact - Attribute Attack" additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases Attribute Attack. Can be equipped in an attack artifact slot. When enchanted, increases Attribute Attack bonus. Only an attack artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_b_attribute_att_up" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
@@ -342,6 +343,7 @@
 	</item>
 	<item id="81431" name="Artifact - P. Skill Power" additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases P. Skill Power. Can be equipped in an attack artifact slot. When enchanted, increases P. Skill Power bonus. Only an attack artifact can be used as a material for upgrade. -->
+		<set name="icon" val="icon.artifact_b_skill_power" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
@@ -353,99 +355,99 @@
 		<set name="icon" val="icon.artifact_b_spell_power" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="1" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81433" name="Artifact - Attribute Resistance" additionalName="Defense" type="Armor">
 		<!-- An artifact that increases Attribute Resistance. Can be equipped in a defense artifact slot. When enchanted, increases Attribute Resistance bonus. Only a defense artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_c_attribute_def_up" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="2" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81434" name="Artifact - Received Damage When Immobilized" additionalName="Defense" type="Armor">
 		<!-- An artifact that decreases Received Damage when Immobilized. Can be equipped in a defense artifact slot. When enchanted, increases Received Damage when Immobilized bonus. Only a defense artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_c_block_act_dmg" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="2" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81435" name="Artifact - Received P. Critical Damage" additionalName="Defense" type="Armor">
 		<!-- An artifact that decreases All received Critical Damage. Can be equipped in a defense artifact slot. When enchanted, increases Received P. Critical Damage bonus. Only a defense artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_c_receive_crt_dmg" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="2" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81436" name="Artifact - Recovery Potions' Effect" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Recovery Potions' Effect. Can be equipped in a support artifact slot. When enchanted, increases Recovery Potions' Effect bonus. Only a support artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_d_hp_special" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="3" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81437" name="Artifact - Fixed Damage Resistance" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Fixed Damage Resistance. Can be equipped in a support artifact slot. When enchanted, increases Fixed Damage Resistance bonus. Only a support artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_d_dmg_by_atk" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="3" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81438" name="Artifact - Damage Reflection Resistance" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Damage Reflection Resistance. Can be equipped in a support artifact slot. When enchanted, increases Damage Reflection Resistance bonus. Only a support artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_d_dmg_shield_resist" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="3" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81439" name="Artifact - Vitality Bonus" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Vitality bonus. Can be equipped in a balance artifact slot. When enchanted, increases Vitality bonus. Only a balance artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_a_vital_bonus" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair2" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81440" name="Artifact - Received Healing" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Received Healing. Can be equipped in a balance artifact slot. When enchanted, increases Received Healing bonus. Only a balance artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_a_heal_effect" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair2" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81441" name="Artifact - Skill MP Consumption" additionalName="Balance" type="Armor">
 		<!-- An artifact that decreases Skill MP Consumption. Can be equipped in a balance artifact slot. When enchanted, increases Skill MP Consumption bonus. Only a balance artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_a_skill_mp_cost" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair2" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81442" name="Artifact - Received P. Critical Rate" additionalName="Balance" type="Armor">
 		<!-- An artifact that decreases Received P. Critical Rate. Can be equipped in a balance artifact slot. When enchanted, increases Received P. Critical Rate bonus. Only a balance artifact can be used as a material for upgrade. -->
 		<set name="icon" val="icon.artifact_a_receive_crt_per" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair2" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="81443" name="Agathion Fire Dragon Charm" type="Armor">
 		<!-- Contains the power of Agathion Fire Dragon. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. <Enchanting>. Use Divine Book of Growth: Agathion Dragon. <Enhancing>. +10 Agathion can be enhanced to Greater Agathion through Fishermen's Guild's leader Santiago in Heine. -->

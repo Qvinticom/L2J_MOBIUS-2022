@@ -344,14 +344,20 @@
 	<item id="81731" name="Certificate - Dual Class (Enhanced)" type="EtcItem">
 		<!-- Spellbook that contains the enhanced concentrated power of a dual class. It is said that if you take it to Trandon in Talking Island Village or to Gallias in Aden, you can get the power in this spellbook. -->
 		<set name="icon" val="icon.etc_dualchange" />
-		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="81732" name="Vitality Maintaining Rune Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Vitality Maintaining Rune (30-day). -->
@@ -364,6 +370,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="81733" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Rune (Event) -->
+		</capsuled_items>
 	</item>
 	<item id="81733" name="Vitality Maintaining Rune" additionalName="Event" type="EtcItem">
 		<!-- Available for 30 d. When in inventory, maintains the Vitality level. -->
@@ -372,8 +384,13 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="39703" level="1" /> <!-- Vitality Maintaining Rune (30-day) -->
+		</skills>
 	</item>
 	<item id="81734" name="Gran Kain Treasure Chest" type="EtcItem">
 		<!-- A precious treasure chest of Gran Kain. Double-click on it to obtain a rare item. -->

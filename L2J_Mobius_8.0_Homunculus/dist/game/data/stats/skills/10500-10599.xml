@@ -2058,18 +2058,36 @@
 			</effect>
 			<effect name="TargetCancel" />
 			<effect name="DisableTargeting" />
-			<effect name="MagicalEvasion">
-				<amount>-10</amount>
-				<mode>DIFF</mode>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-12</value>
+					<value level="3">-14</value>
+					<value level="4">-16</value>
+					<value level="5">-18</value>
+					<value level="6">-20</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceMagicCriticalRate">
+			<effect name="MagicCriticalRate">
 				<amount>
 					<value level="1">-10</value>
 					<value level="2">-11</value>
 					<value level="3">-12</value>
-					<value level="4">-15</value>
-					<value level="5">-16</value>
-					<value level="6">-17</value>			
+					<value level="4">-13</value>
+					<value level="5">-14</value>
+					<value level="6">-15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-11</value>
+					<value level="3">-12</value>
+					<value level="4">-13</value>
+					<value level="5">-14</value>
+					<value level="6">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2617,6 +2635,7 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<staticReuse>true</staticReuse>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
