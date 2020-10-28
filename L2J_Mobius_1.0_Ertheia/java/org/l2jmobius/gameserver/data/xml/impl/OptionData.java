@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.data.xml.impl;
 import java.io.File;
 import java.util.Collections;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
@@ -39,7 +40,8 @@ public class OptionData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(OptionData.class.getName());
 	
-	private final Map<Integer, Options> _optionData = new ConcurrentHashMap<>();
+	private static Options[] _options;
+	private static Map<Integer, Options> _optionMap = new ConcurrentHashMap<>();
 	
 	protected OptionData()
 	{
@@ -49,9 +51,16 @@ public class OptionData implements IXmlReader
 	@Override
 	public synchronized void load()
 	{
-		_optionData.clear();
 		parseDatapackDirectory("data/stats/augmentation/options", false);
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _optionData.size() + " options.");
+		
+		_options = new Options[Collections.max(_optionMap.keySet()) + 1];
+		for (Entry<Integer, Options> option : _optionMap.entrySet())
+		{
+			_options[option.getKey()] = option.getValue();
+		}
+		
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _optionMap.size() + " options.");
+		_optionMap.clear();
 	}
 	
 	@Override
@@ -104,13 +113,13 @@ public class OptionData implements IXmlReader
 					}
 				}
 			});
-			_optionData.put(option.getId(), option);
+			_optionMap.put(option.getId(), option);
 		}));
 	}
 	
 	public Options getOptions(int id)
 	{
-		return _optionData.get(id);
+		return _options[id];
 	}
 	
 	/**

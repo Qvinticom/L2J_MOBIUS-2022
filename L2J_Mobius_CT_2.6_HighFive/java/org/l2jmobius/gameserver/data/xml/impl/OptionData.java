@@ -17,9 +17,11 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -39,7 +41,10 @@ import org.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
  */
 public class OptionData implements IXmlReader
 {
-	private final Map<Integer, Options> _optionData = new ConcurrentHashMap<>();
+	private static final Logger LOGGER = Logger.getLogger(OptionData.class.getName());
+	
+	private static Options[] _options;
+	private static Map<Integer, Options> _optionMap = new ConcurrentHashMap<>();
 	
 	protected OptionData()
 	{
@@ -49,9 +54,16 @@ public class OptionData implements IXmlReader
 	@Override
 	public synchronized void load()
 	{
-		_optionData.clear();
 		parseDatapackDirectory("data/stats/augmentation/options", false);
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _optionData.size() + " options.");
+		
+		_options = new Options[Collections.max(_optionMap.keySet()) + 1];
+		for (Entry<Integer, Options> option : _optionMap.entrySet())
+		{
+			_options[option.getKey()] = option.getValue();
+		}
+		
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _optionMap.size() + " options.");
+		_optionMap.clear();
 	}
 	
 	@Override
@@ -66,7 +78,7 @@ public class OptionData implements IXmlReader
 					if ("option".equalsIgnoreCase(d.getNodeName()))
 					{
 						final int id = parseInteger(d.getAttributes(), "id");
-						final Options op = new Options(id);
+						final Options option = new Options(id);
 						for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 						{
 							switch (cd.getNodeName())
@@ -86,7 +98,7 @@ public class OptionData implements IXmlReader
 											case "enchant":
 											case "enchanthp":
 											{
-												parseFuncs(fd.getAttributes(), fd.getNodeName(), op);
+												parseFuncs(fd.getAttributes(), fd.getNodeName(), option);
 											}
 										}
 									}
@@ -94,32 +106,32 @@ public class OptionData implements IXmlReader
 								}
 								case "active_skill":
 								{
-									op.setActiveSkill(new SkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level")));
+									option.setActiveSkill(new SkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level")));
 									break;
 								}
 								case "passive_skill":
 								{
-									op.setPassiveSkill(new SkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level")));
+									option.setPassiveSkill(new SkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level")));
 									break;
 								}
 								case "attack_skill":
 								{
-									op.addActivationSkill(new OptionsSkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level"), parseDouble(cd.getAttributes(), "chance"), OptionsSkillType.ATTACK));
+									option.addActivationSkill(new OptionsSkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level"), parseDouble(cd.getAttributes(), "chance"), OptionsSkillType.ATTACK));
 									break;
 								}
 								case "magic_skill":
 								{
-									op.addActivationSkill(new OptionsSkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level"), parseDouble(cd.getAttributes(), "chance"), OptionsSkillType.MAGIC));
+									option.addActivationSkill(new OptionsSkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level"), parseDouble(cd.getAttributes(), "chance"), OptionsSkillType.MAGIC));
 									break;
 								}
 								case "critical_skill":
 								{
-									op.addActivationSkill(new OptionsSkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level"), parseDouble(cd.getAttributes(), "chance"), OptionsSkillType.CRITICAL));
+									option.addActivationSkill(new OptionsSkillHolder(parseInteger(cd.getAttributes(), "id"), parseInteger(cd.getAttributes(), "level"), parseDouble(cd.getAttributes(), "chance"), OptionsSkillType.CRITICAL));
 									break;
 								}
 							}
 						}
-						_optionData.put(op.getId(), op);
+						_optionMap.put(option.getId(), option);
 					}
 				}
 			}
@@ -141,7 +153,7 @@ public class OptionData implements IXmlReader
 	
 	public Options getOptions(int id)
 	{
-		return _optionData.get(id);
+		return _options[id];
 	}
 	
 	/**
