@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
+	<option id="34700" name="homunculus_artifact_opt">
+		<!-- Skill MP Consumption -9% -->
+		<passive_skill id="35395" level="8" />
+	</option>
+	<option id="34701" name="homunculus_artifact_opt">
+		<!-- Skill MP Consumption -11% -->
+		<passive_skill id="35395" level="9" />
+	</option>
+	<option id="34702" name="homunculus_artifact_opt">
+		<!-- Skill MP Consumption -13% -->
+		<passive_skill id="35395" level="10" />
+	</option>
+	<option id="34703" name="homunculus_artifact_opt">
+		<!-- Skill MP Consumption -15% -->
+		<passive_skill id="35395" level="11" />
+	</option>
+	<option id="34704" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate decreased when upgraded -->
+		<passive_skill id="35631" level="1" />
+	</option>
+	<option id="34705" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate -1% -->
+		<passive_skill id="35631" level="2" />
+	</option>
+	<option id="34706" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate -2% -->
+		<passive_skill id="35631" level="3" />
+	</option>
+	<option id="34707" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate -3% -->
+		<passive_skill id="35631" level="4" />
+	</option>
+	<option id="34708" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate -5% -->
+		<passive_skill id="35631" level="5" />
+	</option>
+	<option id="34709" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate -6% -->
+		<passive_skill id="35631" level="6" />
+	</option>
+	<option id="34710" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate -7% -->
+		<passive_skill id="35631" level="7" />
+	</option>
+	<option id="34711" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate -9% -->
+		<passive_skill id="35631" level="8" />
+	</option>
+	<option id="34712" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate -11% -->
+		<passive_skill id="35631" level="9" />
+	</option>
+	<option id="34713" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate -13% -->
+		<passive_skill id="35631" level="10" />
+	</option>
+	<option id="34714" name="homunculus_artifact_opt">
+		<!-- eceived P. Critical Rate -15% -->
+		<passive_skill id="35631" level="11" />
+	</option>
 	<option id="34719" name="homun_artifact_book_enchant">
 		<!-- Unlocks all artifact slots. -->
 		<passive_skill id="39395" level="1" />
@@ -131,5 +191,193 @@
 	<option id="34752" name="homun_seed_bracelet_lv4_enchant">
 		<!-- Max HP/ MP/ CP +20%, P./ M. Skill Power +5%. When using a sword, a blunt weapon, a spear or a fist weapon, P. Atk. +20%. When using a dagger, Critical Damage for standard attacks +10%. When using a staff or a magic sword, M. Skill Critical Damage +10%. When using a bow or a crossbow, P. Skill Critical Damage +10%. -->
 		<passive_skill id="35658" level="10" />
+	</option>
+	<option id="34753" name="helmet_aug">
+		<!-- P. Evasion +1 -->
+		<passive_skill id="35659" level="1" />
+	</option>
+	<option id="34754" name="helmet_aug">
+		<!-- P. Evasion +2 -->
+		<passive_skill id="35659" level="2" />
+	</option>
+	<option id="34755" name="helmet_aug">
+		<!-- P. Evasion +3 -->
+		<passive_skill id="35659" level="3" />
+	</option>
+	<option id="34756" name="helmet_aug">
+		<!-- M. Evasion +1 -->
+		<passive_skill id="35660" level="1" />
+	</option>
+	<option id="34757" name="helmet_aug">
+		<!-- M. Evasion +2 -->
+		<passive_skill id="35660" level="2" />
+	</option>
+	<option id="34758" name="helmet_aug">
+		<!-- M. Evasion +3 -->
+		<passive_skill id="35660" level="3" />
+	</option>
+	<option id="34759" name="helmet_aug">
+		<!-- P. Def. +282 -->
+		<passive_skill id="35661" level="1" />
+	</option>
+	<option id="34760" name="helmet_aug">
+		<!-- P. Def. +288 -->
+		<passive_skill id="35661" level="2" />
+	</option>
+	<option id="34761" name="helmet_aug">
+		<!-- P. Def. +293 -->
+		<passive_skill id="35661" level="3" />
+	</option>
+	<option id="34762" name="helmet_aug">
+		<!-- P. Def. +299 -->
+		<passive_skill id="35661" level="4" />
+	</option>
+	<option id="34763" name="helmet_aug">
+		<!-- P. Def. +305 -->
+		<passive_skill id="35661" level="5" />
+	</option>
+	<option id="34764" name="helmet_aug">
+		<!-- P. Def. +311 -->
+		<passive_skill id="35661" level="6" />
+	</option>
+	<option id="34765" name="helmet_aug">
+		<!-- P. Def. +1% -->
+		<passive_skill id="35661" level="7" />
+	</option>
+	<option id="34766" name="helmet_aug">
+		<!-- P. Def. +2% -->
+		<passive_skill id="35661" level="8" />
+	</option>
+	<option id="34767" name="helmet_aug">
+		<!-- P. Def. +3% -->
+		<passive_skill id="35661" level="9" />
+	</option>
+	<option id="34768" name="helmet_aug">
+		<!-- M. Def. +151 -->
+		<passive_skill id="35662" level="1" />
+	</option>
+	<option id="34769" name="helmet_aug">
+		<!-- M. Def. +155 -->
+		<passive_skill id="35662" level="2" />
+	</option>
+	<option id="34770" name="helmet_aug">
+		<!-- M. Def. +159 -->
+		<passive_skill id="35662" level="3" />
+	</option>
+	<option id="34771" name="helmet_aug">
+		<!-- M. Def. +163 -->
+		<passive_skill id="35662" level="4" />
+	</option>
+	<option id="34772" name="helmet_aug">
+		<!-- M. Def. +167 -->
+		<passive_skill id="35662" level="5" />
+	</option>
+	<option id="34773" name="helmet_aug">
+		<!-- M. Def. +171 -->
+		<passive_skill id="35662" level="6" />
+	</option>
+	<option id="34774" name="helmet_aug">
+		<!-- M. Def. +1% -->
+		<passive_skill id="35662" level="7" />
+	</option>
+	<option id="34775" name="helmet_aug">
+		<!-- M. Def. +2% -->
+		<passive_skill id="35662" level="8" />
+	</option>
+	<option id="34776" name="helmet_aug">
+		<!-- M. Def. +3% -->
+		<passive_skill id="35662" level="9" />
+	</option>
+	<option id="34777" name="helmet_aug">
+		<!-- Attribute Resistance +4 -->
+		<passive_skill id="35663" level="1" />
+	</option>
+	<option id="34778" name="helmet_aug">
+		<!-- Attribute Resistance +5 -->
+		<passive_skill id="35663" level="2" />
+	</option>
+	<option id="34779" name="helmet_aug">
+		<!-- Attribute Resistance +6 -->
+		<passive_skill id="35663" level="3" />
+	</option>
+	<option id="34780" name="helmet_aug">
+		<!-- Attribute Resistance +7 -->
+		<passive_skill id="35663" level="4" />
+	</option>
+	<option id="34781" name="helmet_aug">
+		<!-- Attribute Resistance +10 -->
+		<passive_skill id="35663" level="5" />
+	</option>
+	<option id="34782" name="helmet_aug">
+		<!-- Attribute Resistance +15 -->
+		<passive_skill id="35663" level="6" />
+	</option>
+	<option id="34783" name="helmet_aug">
+		<!-- Attribute Resistance +30 -->
+		<passive_skill id="35663" level="7" />
+	</option>
+	<option id="34784" name="helmet_aug">
+		<!-- Attribute Resistance +50 -->
+		<passive_skill id="35663" level="8" />
+	</option>
+	<option id="34785" name="helmet_aug">
+		<!-- PvE damage -1% -->
+		<passive_skill id="35664" level="1" />
+	</option>
+	<option id="34786" name="helmet_aug">
+		<!-- PvE damage -2% -->
+		<passive_skill id="35664" level="2" />
+	</option>
+	<option id="34787" name="helmet_aug">
+		<!-- PvP damage -1% -->
+		<passive_skill id="35665" level="1" />
+	</option>
+	<option id="34788" name="helmet_aug">
+		<!-- PvP damage -2% -->
+		<passive_skill id="35665" level="2" />
+	</option>
+	<option id="34789" name="helmet_aug">
+		<!-- P. Accuracy +1 -->
+		<passive_skill id="35666" level="1" />
+	</option>
+	<option id="34790" name="helmet_aug">
+		<!-- P. Accuracy +2 -->
+		<passive_skill id="35666" level="2" />
+	</option>
+	<option id="34791" name="helmet_aug">
+		<!-- P. Accuracy +3 -->
+		<passive_skill id="35666" level="3" />
+	</option>
+	<option id="34792" name="helmet_aug">
+		<!-- M. Accuracy +1 -->
+		<passive_skill id="35667" level="1" />
+	</option>
+	<option id="34793" name="helmet_aug">
+		<!-- M. Accuracy +2 -->
+		<passive_skill id="35667" level="2" />
+	</option>
+	<option id="34794" name="helmet_aug">
+		<!-- M. Accuracy +3 -->
+		<passive_skill id="35667" level="3" />
+	</option>
+	<option id="34795" name="helmet_aug">
+		<!-- P. Atk. +763 -->
+		<passive_skill id="35668" level="1" />
+	</option>
+	<option id="34796" name="helmet_aug">
+		<!-- P. Atk. +786 -->
+		<passive_skill id="35668" level="2" />
+	</option>
+	<option id="34797" name="helmet_aug">
+		<!-- P. Atk. +809 -->
+		<passive_skill id="35668" level="3" />
+	</option>
+	<option id="34798" name="helmet_aug">
+		<!-- P. Atk. +834 -->
+		<passive_skill id="35668" level="4" />
+	</option>
+	<option id="34799" name="helmet_aug">
+		<!-- P. Atk. +859 -->
+		<passive_skill id="35668" level="5" />
 	</option>
 </list>
