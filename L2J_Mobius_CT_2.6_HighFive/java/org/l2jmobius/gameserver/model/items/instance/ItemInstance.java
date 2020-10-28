@@ -87,8 +87,9 @@ public class ItemInstance extends WorldObject
 	private static final Logger LOGGER = Logger.getLogger(ItemInstance.class.getName());
 	private static final Logger LOG_ITEMS = Logger.getLogger("item");
 	
-	/** ID of the owner */
+	/** Owner */
 	private int _ownerId;
+	private PlayerInstance _owner;
 	
 	/** ID of who dropped the item last, used for knownlist */
 	private int _dropperObjectId = 0;
@@ -284,13 +285,13 @@ public class ItemInstance extends WorldObject
 	/**
 	 * Sets the ownerID of the item
 	 * @param process : String Identifier of process triggering this action
-	 * @param owner_id : int designating the ID of the owner
+	 * @param ownerId : int designating the ID of the owner
 	 * @param creator : PlayerInstance Player requesting the item creation
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 */
-	public void setOwnerId(String process, int owner_id, PlayerInstance creator, Object reference)
+	public void setOwnerId(String process, int ownerId, PlayerInstance creator, Object reference)
 	{
-		setOwnerId(owner_id);
+		setOwnerId(ownerId);
 		
 		if (Config.LOG_ITEMS)
 		{
@@ -351,6 +352,7 @@ public class ItemInstance extends WorldObject
 		// Remove any inventory skills from the old owner.
 		removeSkillsFromOwner();
 		
+		_owner = null;
 		_ownerId = ownerId;
 		_storedInDb = false;
 		
@@ -2070,7 +2072,11 @@ public class ItemInstance extends WorldObject
 	@Override
 	public PlayerInstance getActingPlayer()
 	{
-		return World.getInstance().getPlayer(getOwnerId());
+		if ((_owner == null) && (_ownerId != 0))
+		{
+			_owner = World.getInstance().getPlayer(_ownerId);
+		}
+		return _owner;
 	}
 	
 	public int getEquipReuseDelay()

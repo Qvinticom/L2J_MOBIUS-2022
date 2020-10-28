@@ -97,8 +97,9 @@ public class ItemInstance extends WorldObject
 	private static final Logger LOGGER = Logger.getLogger(ItemInstance.class.getName());
 	private static final Logger LOG_ITEMS = Logger.getLogger("item");
 	
-	/** ID of the owner */
+	/** Owner */
 	private int _ownerId;
+	private PlayerInstance _owner;
 	
 	/** ID of who dropped the item last, used for knownlist */
 	private int _dropperObjectId = 0;
@@ -303,13 +304,13 @@ public class ItemInstance extends WorldObject
 	/**
 	 * Sets the ownerID of the item
 	 * @param process : String Identifier of process triggering this action
-	 * @param owner_id : int designating the ID of the owner
+	 * @param ownerId : int designating the ID of the owner
 	 * @param creator : PlayerInstance Player requesting the item creation
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 */
-	public void setOwnerId(String process, int owner_id, PlayerInstance creator, Object reference)
+	public void setOwnerId(String process, int ownerId, PlayerInstance creator, Object reference)
 	{
-		setOwnerId(owner_id);
+		setOwnerId(ownerId);
 		
 		if (Config.LOG_ITEMS)
 		{
@@ -358,11 +359,11 @@ public class ItemInstance extends WorldObject
 	
 	/**
 	 * Sets the ownerID of the item
-	 * @param owner_id : int designating the ID of the owner
+	 * @param ownerId : int designating the ID of the owner
 	 */
-	public void setOwnerId(int owner_id)
+	public void setOwnerId(int ownerId)
 	{
-		if (owner_id == _ownerId)
+		if (ownerId == _ownerId)
 		{
 			return;
 		}
@@ -370,7 +371,8 @@ public class ItemInstance extends WorldObject
 		// Remove any inventory skills from the old owner.
 		removeSkillsFromOwner();
 		
-		_ownerId = owner_id;
+		_owner = null;
+		_ownerId = ownerId;
 		_storedInDb = false;
 		
 		// Give any inventory skills to the new owner only if the item is in inventory
@@ -400,11 +402,11 @@ public class ItemInstance extends WorldObject
 	 * Sets the location of the item.<br>
 	 * <u><i>Remark :</i></u> If loc and loc_data different from database, say datas not up-to-date
 	 * @param loc : ItemLocation (enumeration)
-	 * @param loc_data : int designating the slot where the item is stored or the village for freights
+	 * @param locData : int designating the slot where the item is stored or the village for freights
 	 */
-	public void setItemLocation(ItemLocation loc, int loc_data)
+	public void setItemLocation(ItemLocation loc, int locData)
 	{
-		if ((loc == _loc) && (loc_data == _locData))
+		if ((loc == _loc) && (locData == _locData))
 		{
 			return;
 		}
@@ -413,7 +415,7 @@ public class ItemInstance extends WorldObject
 		removeSkillsFromOwner();
 		
 		_loc = loc;
-		_locData = loc_data;
+		_locData = locData;
 		_storedInDb = false;
 		
 		// Give any inventory skills to the new owner only if the item is in inventory
@@ -1805,9 +1807,9 @@ public class ItemInstance extends WorldObject
 		return _decrease;
 	}
 	
-	public void setInitCount(int InitCount)
+	public void setInitCount(int initCount)
 	{
-		_initCount = InitCount;
+		_initCount = initCount;
 	}
 	
 	public long getInitCount()
@@ -1882,7 +1884,7 @@ public class ItemInstance extends WorldObject
 		{
 			return;
 		}
-		else if (getRemainingTime() <= 0)
+		if (getRemainingTime() <= 0)
 		{
 			endOfLife();
 		}
@@ -2078,7 +2080,11 @@ public class ItemInstance extends WorldObject
 	@Override
 	public PlayerInstance getActingPlayer()
 	{
-		return World.getInstance().getPlayer(getOwnerId());
+		if ((_owner == null) && (_ownerId != 0))
+		{
+			_owner = World.getInstance().getPlayer(_ownerId);
+		}
+		return _owner;
 	}
 	
 	public int getEquipReuseDelay()

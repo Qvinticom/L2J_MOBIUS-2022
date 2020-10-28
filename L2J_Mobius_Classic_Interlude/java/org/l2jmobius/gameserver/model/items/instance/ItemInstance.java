@@ -97,8 +97,9 @@ public class ItemInstance extends WorldObject
 	private static final Logger LOGGER = Logger.getLogger(ItemInstance.class.getName());
 	private static final Logger LOG_ITEMS = Logger.getLogger("item");
 	
-	/** ID of the owner */
+	/** Owner */
 	private int _ownerId;
+	private PlayerInstance _owner;
 	
 	/** ID of who dropped the item last, used for knownlist */
 	private int _dropperObjectId = 0;
@@ -370,6 +371,7 @@ public class ItemInstance extends WorldObject
 		// Remove any inventory skills from the old owner.
 		removeSkillsFromOwner();
 		
+		_owner = null;
 		_ownerId = ownerId;
 		_storedInDb = false;
 		
@@ -1572,6 +1574,8 @@ public class ItemInstance extends WorldObject
 		ThreadPool.execute(new ItemDropTask(this, dropper, x, y, z));
 		if ((dropper != null) && dropper.isPlayer())
 		{
+			_owner = null;
+			
 			// Notify to scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(dropper.getActingPlayer(), this, new Location(x, y, z)), getItem());
 		}
@@ -2065,7 +2069,11 @@ public class ItemInstance extends WorldObject
 	@Override
 	public PlayerInstance getActingPlayer()
 	{
-		return World.getInstance().getPlayer(getOwnerId());
+		if ((_owner == null) && (_ownerId != 0))
+		{
+			_owner = World.getInstance().getPlayer(_ownerId);
+		}
+		return _owner;
 	}
 	
 	public int getEquipReuseDelay()
