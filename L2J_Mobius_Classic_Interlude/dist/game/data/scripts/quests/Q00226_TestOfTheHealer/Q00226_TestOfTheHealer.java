@@ -141,9 +141,9 @@ public class Q00226_TestOfTheHealer extends Quest
 			{
 				if (qs.isMemoState(4) && !hasAtLeastOneQuestItem(player, PICTURE_OF_WINDY, WINDYS_PEBBLES, GOLDEN_STATUE))
 				{
-					if (getQuestItemsCount(player, ADENA) >= 100000)
+					if (getQuestItemsCount(player, ADENA) >= 1000)
 					{
-						takeItems(player, ADENA, 100000);
+						takeItems(player, ADENA, 1000);
 						giveItems(player, PICTURE_OF_WINDY, 1);
 						qs.setCond(7, true);
 						htmltext = event;
@@ -480,41 +480,41 @@ public class Q00226_TestOfTheHealer extends Quest
 					{
 						if (hasQuestItems(player, SECRET_LETTER1) && !hasQuestItems(player, SECRET_LETTER2))
 						{
-							if (npc.getSummonedNpcCount() < 36)
+							if ((npc.getSummonedNpcCount() < 36) && !player.isSimulatingTalking())
 							{
 								addSpawn(npc, LERO_LIZARDMAN_ASSASSIN, npc, true, 200000);
 								addSpawn(npc, LERO_LIZARDMAN_ASSASSIN, npc, true, 200000);
 								addSpawn(npc, LERO_LIZARDMAN_ASSASSIN, npc, true, 200000);
 								playSound(player, QuestSound.ITEMSOUND_QUEST_BEFORE_BATTLE);
+								npc.deleteMe();
 							}
 							qs.setCond(14);
-							npc.deleteMe();
 							htmltext = "30661-01.html";
 						}
 						else if (hasQuestItems(player, SECRET_LETTER1, SECRET_LETTER2) && !hasQuestItems(player, SECRET_LETTER3))
 						{
-							if (npc.getSummonedNpcCount() < 36)
+							if ((npc.getSummonedNpcCount() < 36) && !player.isSimulatingTalking())
 							{
 								addSpawn(npc, LERO_LIZARDMAN_SNIPER, npc, true, 200000);
 								addSpawn(npc, LERO_LIZARDMAN_SNIPER, npc, true, 200000);
 								addSpawn(npc, LERO_LIZARDMAN_SNIPER, npc, true, 200000);
 								playSound(player, QuestSound.ITEMSOUND_QUEST_BEFORE_BATTLE);
+								npc.deleteMe();
 							}
 							qs.setCond(16);
-							npc.deleteMe();
 							htmltext = "30661-02.html";
 						}
 						else if (hasQuestItems(player, SECRET_LETTER1, SECRET_LETTER2, SECRET_LETTER3) && !hasQuestItems(player, SECRET_LETTER4))
 						{
-							if (npc.getSummonedNpcCount() < 36)
+							if ((npc.getSummonedNpcCount() < 36) && !player.isSimulatingTalking())
 							{
 								addSpawn(npc, LERO_LIZARDMAN_WIZARD, npc, true, 200000);
 								addSpawn(npc, LERO_LIZARDMAN_WIZARD, npc, true, 200000);
 								addSpawn(npc, LERO_LIZARDMAN_LORD, npc, true, 200000);
 								playSound(player, QuestSound.ITEMSOUND_QUEST_BEFORE_BATTLE);
+								npc.deleteMe();
 							}
 							qs.setCond(18);
-							npc.deleteMe();
 							htmltext = "30661-03.html";
 						}
 						else if ((getQuestItemsCount(player, SECRET_LETTER1) + getQuestItemsCount(player, SECRET_LETTER2) + getQuestItemsCount(player, SECRET_LETTER3) + getQuestItemsCount(player, SECRET_LETTER4)) == 4)
@@ -614,7 +614,7 @@ public class Q00226_TestOfTheHealer extends Quest
 						}
 						else if (!hasAtLeastOneQuestItem(player, SECRET_LETTER1, ORDER_OF_SORIUS))
 						{
-							if (npc.getSummonedNpcCount() < 4)
+							if ((npc.getSummonedNpcCount() < 4) && !player.isSimulatingTalking())
 							{
 								addSpawn(npc, LERO_LIZARDMAN_AGENT, npc, true, 200000);
 								addSpawn(npc, LERO_LIZARDMAN_LEADER, npc, true, 200000);
