@@ -51,6 +51,7 @@ public class ArmorSetData implements IXmlReader
 	
 	private ArmorSet[] _armorSets;
 	private final Map<Integer, ArmorSet> _armorSetMap = new HashMap<>();
+	private List<ArmorSet>[] _itemSets;
 	private final Map<Integer, List<ArmorSet>> _armorSetItems = new HashMap<>();
 	
 	protected ArmorSetData()
@@ -59,6 +60,7 @@ public class ArmorSetData implements IXmlReader
 	}
 	
 	@Override
+	@SuppressWarnings("unchecked")
 	public void load()
 	{
 		parseDatapackDirectory("data/stats/armorsets", false);
@@ -69,8 +71,15 @@ public class ArmorSetData implements IXmlReader
 			_armorSets[armorSet.getKey()] = armorSet.getValue();
 		}
 		
+		_itemSets = new ArrayList[Collections.max(_armorSetItems.keySet()) + 1];
+		for (Entry<Integer, List<ArmorSet>> armorSet : _armorSetItems.entrySet())
+		{
+			_itemSets[armorSet.getKey()] = armorSet.getValue();
+		}
+		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _armorSetMap.size() + " armor sets.");
 		_armorSetMap.clear();
+		_armorSetItems.clear();
 	}
 	
 	@Override
@@ -189,7 +198,15 @@ public class ArmorSetData implements IXmlReader
 	 */
 	public List<ArmorSet> getSets(int itemId)
 	{
-		return _armorSetItems.getOrDefault(itemId, Collections.emptyList());
+		if (_itemSets.length >= itemId)
+		{
+			final List<ArmorSet> sets = _itemSets[itemId];
+			if (sets != null)
+			{
+				return sets;
+			}
+		}
+		return Collections.emptyList();
 	}
 	
 	/**
