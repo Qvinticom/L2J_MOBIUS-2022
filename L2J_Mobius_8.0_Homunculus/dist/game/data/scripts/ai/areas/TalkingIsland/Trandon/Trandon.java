@@ -50,7 +50,7 @@ public class Trandon extends AbstractNpcAI
 	private static final int DUAL_CERTIFICATE = 36078;
 	// Misc @formatter:off
 	private static final int[] SUB_SKILL_LEVELS = {65, 70, 75, 80};
-	private static final int[] DUAL_SKILL_LEVELS = {85, 90, 95, 99, 101, 103, 105};
+	private static final int[] DUAL_SKILL_LEVELS = {85, 90, 95, 99, 101, 103, 105, 107, 109, 110};
 	// @formatter:on
 	private static final String SUB_CERTIFICATE_COUNT_VAR = "SUB_CERTIFICATE_COUNT";
 	private static final String DUAL_CERTIFICATE_COUNT_VAR = "DUAL_CERTIFICATE_COUNT";
