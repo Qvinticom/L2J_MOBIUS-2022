@@ -174,6 +174,8 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	private boolean _isAppearanceable;
 	private boolean _isBlessed;
 	
+	private int _artifactSlot;
+	
 	/**
 	 * Constructor of the Item that fill class variables.
 	 * @param set : StatSet corresponding to a set of couples (key,value) for description of the item
@@ -224,6 +226,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_forNpc = set.getBoolean("for_npc", false);
 		_isAppearanceable = set.getBoolean("isAppearanceable", false);
 		_isBlessed = set.getBoolean("blessed", false);
+		_artifactSlot = set.getInt("artifactSlot", 0);
 		_immediateEffect = set.getBoolean("immediate_effect", false);
 		_exImmediateEffect = set.getBoolean("ex_immediate_effect", false);
 		_defaultAction = set.getEnum("default_action", ActionType.class, ActionType.NONE);
@@ -941,6 +944,11 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	public boolean isBlessed()
 	{
 		return _isBlessed;
+	}
+	
+	public int getArtifactSlot()
+	{
+		return _artifactSlot;
 	}
 	
 	/**

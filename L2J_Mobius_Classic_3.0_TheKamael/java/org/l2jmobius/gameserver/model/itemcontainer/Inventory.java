@@ -2145,168 +2145,58 @@ public abstract class Inventory extends ItemContainer
 	
 	private void equipArtifact(ItemInstance item)
 	{
-		if (getArtifactSlots() == 0)
+		final int slotNumber = getArtifactSlots();
+		if (slotNumber == 0)
 		{
 			return;
 		}
 		
-		switch (getArtifactSlots())
+		switch (item.getItem().getArtifactSlot())
 		{
-			case 1:
+			case 1: // Attack
 			{
-				// 4 Balance Artifact Equip
-				if ((item.getId() >= 48969) && (item.getId() <= 48985))
+				for (int i = PAPERDOLL_ARTIFACT13; i < (PAPERDOLL_ARTIFACT13 + slotNumber); i++)
 				{
-					for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + 4); i++)
+					if (_paperdoll[i] == null)
 					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
-					}
-				}
-				
-				// 1 Spirit Artifact Equip
-				if ((item.getId() >= 48957) && (item.getId() <= 48960))
-				{
-					for (int i = PAPERDOLL_ARTIFACT13; i < (PAPERDOLL_ARTIFACT13 + 1); i++)
-					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
-					}
-				}
-				// 1 Protection Artifact Equip
-				if ((item.getId() >= 48961) && (item.getId() <= 48964))
-				{
-					for (int i = PAPERDOLL_ARTIFACT16; i < (PAPERDOLL_ARTIFACT16 + 1); i++)
-					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
-					}
-				}
-				// 1 Support Artifact Equip
-				if ((item.getId() >= 48965) && (item.getId() <= 48968))
-				{
-					for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + 1); i++)
-					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
+						setPaperdollItem(i, item);
+						return;
 					}
 				}
 				break;
 			}
-			case 2:
+			case 2: // Protection
 			{
-				// 8 Balance Artifact Equip
-				if ((item.getId() >= 48969) && (item.getId() <= 48985))
+				for (int i = PAPERDOLL_ARTIFACT16; i < (PAPERDOLL_ARTIFACT16 + slotNumber); i++)
 				{
-					for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + 8); i++)
+					if (_paperdoll[i] == null)
 					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
-					}
-				}
-				
-				// 2 Spirit Artifact Equip
-				if ((item.getId() >= 48957) && (item.getId() <= 48960))
-				{
-					for (int i = PAPERDOLL_ARTIFACT13; i < (PAPERDOLL_ARTIFACT13 + 2); i++)
-					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
-					}
-				}
-				// 2 Protection Artifact Equip
-				if ((item.getId() >= 48961) && (item.getId() <= 48964))
-				{
-					for (int i = PAPERDOLL_ARTIFACT16; i < (PAPERDOLL_ARTIFACT16 + 2); i++)
-					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
-					}
-				}
-				// 2 Support Artifact Equip
-				if ((item.getId() >= 48965) && (item.getId() <= 48968))
-				{
-					for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + 2); i++)
-					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
+						setPaperdollItem(i, item);
+						return;
 					}
 				}
 				break;
 			}
-			case 3:
+			case 3: // Support
 			{
-				// 12 Balance Artifact Equip
-				if ((item.getId() >= 48969) && (item.getId() <= 48985))
+				for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + slotNumber); i++)
 				{
-					for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + 12); i++)
+					if (_paperdoll[i] == null)
 					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
+						setPaperdollItem(i, item);
+						return;
 					}
 				}
-				
-				// 3 Spirit Artifact Equip
-				if ((item.getId() >= 48957) && (item.getId() <= 48960))
+				break;
+			}
+			case 4: // Balance
+			{
+				for (int i = PAPERDOLL_ARTIFACT1; i < (PAPERDOLL_ARTIFACT1 + (4 * slotNumber)); i++)
 				{
-					for (int i = PAPERDOLL_ARTIFACT13; i < (PAPERDOLL_ARTIFACT13 + 3); i++)
+					if (_paperdoll[i] == null)
 					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
-					}
-				}
-				// 3 Protection Artifact Equip
-				if ((item.getId() >= 48961) && (item.getId() <= 48964))
-				{
-					for (int i = PAPERDOLL_ARTIFACT16; i < (PAPERDOLL_ARTIFACT16 + 3); i++)
-					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
-					}
-				}
-				// 3 Support Artifact Equip
-				if ((item.getId() >= 48965) && (item.getId() <= 48968))
-				{
-					for (int i = PAPERDOLL_ARTIFACT19; i < (PAPERDOLL_ARTIFACT19 + 3); i++)
-					{
-						if (_paperdoll[i] == null)
-						{
-							setPaperdollItem(i, item);
-							return;
-						}
+						setPaperdollItem(i, item);
+						return;
 					}
 				}
 				break;
