@@ -46,6 +46,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ItemsAutoDestroy;
@@ -839,6 +840,18 @@ public class PlayerInstance extends Playable
 	// Training Camp
 	private static final String TRAINING_CAMP_VAR = "TRAINING_CAMP";
 	private static final String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
+	
+	// Shared dualclass skills.
+	private static final String KNOWN_DUAL_SKILLS_VAR = "KNOWN_DUAL_SKILLS";
+	private static final int[] DUAL_CLASS_SKILLS = new int[]
+	{
+		19222, // Dignity of the Exalted
+		19223, // Belief of the Exalted
+		19224, // Blessing of the Exalted
+		19225, // Summon Battle Potion
+		19226, // Favor of the Exalted
+		19229, // Fate of the Exalted
+	};
 	
 	// Save responder name for log it
 	private String _lastPetitionGmName = null;
@@ -7356,6 +7369,24 @@ public class PlayerInstance extends Playable
 		if (store)
 		{
 			storeSkill(newSkill, oldSkill, -1);
+			
+			if (CommonUtil.contains(DUAL_CLASS_SKILLS, newSkill.getId()))
+			{
+				final List<Skill> dualClassSkills = getVariables().getList(KNOWN_DUAL_SKILLS_VAR, Skill.class, new ArrayList<>());
+				if (!dualClassSkills.contains(newSkill))
+				{
+					for (Skill dualSkill : dualClassSkills)
+					{
+						if (dualSkill.getId() == newSkill.getId())
+						{
+							dualClassSkills.remove(dualSkill);
+							break;
+						}
+					}
+					dualClassSkills.add(newSkill);
+					getVariables().set(KNOWN_DUAL_SKILLS_VAR, dualClassSkills);
+				}
+			}
 		}
 		return oldSkill;
 	}
@@ -7507,6 +7538,8 @@ public class PlayerInstance extends Playable
 	 */
 	private void restoreSkills()
 	{
+		final List<Skill> dualClassSkills = getVariables().getList(KNOWN_DUAL_SKILLS_VAR, Skill.class, new ArrayList<>());
+		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(RESTORE_SKILLS_FOR_CHAR))
 		{
@@ -7529,6 +7562,20 @@ public class PlayerInstance extends Playable
 						continue;
 					}
 					
+					if (CommonUtil.contains(DUAL_CLASS_SKILLS, id) && !dualClassSkills.contains(skill))
+					{
+						for (Skill dualSkill : dualClassSkills)
+						{
+							if (dualSkill.getId() == skill.getId())
+							{
+								dualClassSkills.remove(dualSkill);
+								break;
+							}
+						}
+						dualClassSkills.add(skill);
+						getVariables().set(KNOWN_DUAL_SKILLS_VAR, dualClassSkills);
+					}
+					
 					// Add the Skill object to the Creature _skills and its Func objects to the calculator set of the Creature
 					addSkill(skill);
 					
@@ -7546,6 +7593,15 @@ public class PlayerInstance extends Playable
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, "Could not restore character " + this + " skills: " + e.getMessage(), e);
+		}
+		
+		// Learn known dualclass skills.
+		if (isDualClassActive() || !isSubClassActive())
+		{
+			for (Skill skill : dualClassSkills)
+			{
+				addSkill(skill, true);
+			}
 		}
 	}
 	
