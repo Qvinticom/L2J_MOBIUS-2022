@@ -16,7 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets.raidbossinfo;
 
-import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -27,11 +28,11 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExRaidBossSpawnInfo implements IClientOutgoingPacket
 {
-	private final List<Integer> _bossIds;
+	private final Map<Integer, Integer> _statuses;
 	
-	public ExRaidBossSpawnInfo(List<Integer> bossIds)
+	public ExRaidBossSpawnInfo(Map<Integer, Integer> statuses)
 	{
-		_bossIds = bossIds;
+		_statuses = statuses;
 	}
 	
 	@Override
@@ -39,10 +40,12 @@ public class ExRaidBossSpawnInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_RAID_BOSS_SPAWN_INFO.writeId(packet);
 		
-		packet.writeD(_bossIds.size()); // alive count
-		for (int id : _bossIds) // alive ids
+		packet.writeD(_statuses.size()); // count
+		for (Entry<Integer, Integer> entry : _statuses.entrySet())
 		{
-			packet.writeD(id);
+			packet.writeD(entry.getKey());
+			packet.writeD(entry.getValue());
+			packet.writeD(0);
 		}
 		return true;
 	}

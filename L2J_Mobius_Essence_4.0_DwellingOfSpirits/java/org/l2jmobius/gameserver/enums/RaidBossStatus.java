@@ -21,7 +21,8 @@ package org.l2jmobius.gameserver.enums;
  */
 public enum RaidBossStatus
 {
-	ALIVE,
 	DEAD,
-	UNDEFINED
+	ALIVE,
+	COMBAT,
+	UNDEFINED,
 }

@@ -16,13 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets.raidbossinfo;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpawnInfo;
@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.raidbossinfo.ExRaidBossSpa
  */
 public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 {
-	private final List<Integer> _bossIds = new ArrayList<>();
+	private final Map<Integer, Integer> _statuses = new HashMap<>();
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -41,18 +41,34 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int bossId = packet.readD();
-			if (DBSpawnManager.getInstance().getNpcStatusId(bossId) == RaidBossStatus.ALIVE)
+			final GrandBossInstance boss = GrandBossManager.getInstance().getBoss(bossId);
+			if (boss == null)
 			{
-				_bossIds.add(bossId);
+				final int status = DBSpawnManager.getInstance().getNpcStatusId(bossId).ordinal();
+				if (status != 3)
+				{
+					_statuses.put(bossId, status);
+				}
+				else
+				{
+					LOGGER.warning("Could not find spawn info for boss " + bossId + ".");
+				}
 			}
-			else if (GrandBossManager.getInstance().getBossStatus(bossId) == 0)
+			else
 			{
-				_bossIds.add(bossId);
+				if (boss.isDead() || !boss.isSpawned())
+				{
+					_statuses.put(bossId, 0);
+				}
+				else if (boss.isInCombat())
+				{
+					_statuses.put(bossId, 2);
+				}
+				else
+				{
+					_statuses.put(bossId, 1);
+				}
 			}
-			/*
-			 * else { String message = "Could not find spawn info for boss " + bossId; final NpcTemplate template = NpcData.getInstance().getTemplate(bossId); if (template != null) { message += " - " + template.getName() + "."; } else { message += " - NPC template not found."; }
-			 * System.out.println(message); }
-			 */
 		}
 		return true;
 	}
@@ -60,6 +76,6 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		client.sendPacket(new ExRaidBossSpawnInfo(_bossIds));
+		client.sendPacket(new ExRaidBossSpawnInfo(_statuses));
 	}
 }
