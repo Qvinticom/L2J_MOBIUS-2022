@@ -210,7 +210,14 @@ public abstract class ItemContainer
 	 */
 	public boolean haveItemForSelfResurrection()
 	{
-		return _items.values().stream().anyMatch(item -> item.getItem().isAllowSelfResurrection());
+		for (ItemInstance item : _items.values())
+		{
+			if (item.getItem().isAllowSelfResurrection())
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**
