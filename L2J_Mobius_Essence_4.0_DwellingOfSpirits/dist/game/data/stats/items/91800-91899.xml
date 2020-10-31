@@ -765,13 +765,18 @@
 		<set name="icon" val="icon.r2_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="waist" />
+		<set name="bodypart" val="belt" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4950" />
+		<set name="price" val="15577000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">14</stat>
 		</stats>
@@ -780,12 +785,22 @@
 		<!-- Required to enchant Dragon Belt. The maximum enchant level is +10. -->
 		<set name="icon" val="icon.etc_blesscharm_ward_val_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="price" val="4500000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="51292" level="1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+		</skills>
 	</item>
 	<item id="91864" name="Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain Dragon Belt and 10 Scrolls: Enchant Dragon Belt. -->

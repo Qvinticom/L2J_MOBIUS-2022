@@ -1059,6 +1059,249 @@
 		<!-- Weight Limit +$s1, Inventory Slots +$s2, DEX +$s3, WIT +$s4, CON +$s5, MEN +$s6. -->
 		<icon>icon.r2_belt_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>
+					<value level="1">1000</value>
+					<value level="2">2000</value>
+					<value level="3">3000</value>
+					<value level="4">4000</value>
+					<value level="5">5000</value>
+					<value level="6">6000</value>
+					<value level="7">7000</value>
+					<value level="8">8000</value>
+					<value level="9">9000</value>
+					<value level="10">10000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+					<value level="6">6</value>
+					<value level="7">6</value>
+					<value level="8">8</value>
+					<value level="9">8</value>
+					<value level="10">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="5">100</value>
+					<value level="6">150</value>
+					<value level="7">200</value>
+					<value level="8">300</value>
+					<value level="9">400</value>
+					<value level="10">600</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="5">50</value>
+					<value level="6">100</value>
+					<value level="7">150</value>
+					<value level="8">200</value>
+					<value level="9">250</value>
+					<value level="10">300</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="5">100</value>
+					<value level="6">200</value>
+					<value level="7">300</value>
+					<value level="8">500</value>
+					<value level="9">700</value>
+					<value level="10">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionCp">
+				<amount>
+					<value level="6">80</value>
+					<value level="7">100</value>
+					<value level="8">120</value>
+					<value level="9">150</value>
+					<value level="10">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionHp">
+				<amount>
+					<value level="6">80</value>
+					<value level="7">100</value>
+					<value level="8">120</value>
+					<value level="9">150</value>
+					<value level="10">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionMp">
+				<amount>
+					<value level="6">80</value>
+					<value level="7">100</value>
+					<value level="8">120</value>
+					<value level="9">150</value>
+					<value level="10">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="6">30</value>
+					<value level="7">40</value>
+					<value level="8">50</value>
+					<value level="9">80</value>
+					<value level="10">100</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="6">20</value>
+					<value level="7">30</value>
+					<value level="8">40</value>
+					<value level="9">50</value>
+					<value level="10">80</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="8">20</value>
+					<value level="9">30</value>
+					<value level="10">50</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="8">10</value>
+					<value level="9">20</value>
+					<value level="10">30</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="8">10</value>
+					<value level="9">20</value>
+					<value level="10">30</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="9">5</value>
+					<value level="10">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">4</value>
+					<value level="8">4</value>
+					<value level="9">5</value>
+					<value level="10">5</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">4</value>
+					<value level="8">4</value>
+					<value level="9">5</value>
+					<value level="10">5</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54083" toLevel="1" name="Lucky Sack">
 		<operateType>A1</operateType>
