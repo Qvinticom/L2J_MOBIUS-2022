@@ -993,9 +993,9 @@ public abstract class Inventory extends ItemContainer
 	
 	public boolean isItemEquipped(int itemId)
 	{
-		for (ItemInstance item : getItemsByItemId(itemId))
+		for (ItemInstance item : _paperdoll)
 		{
-			if (item.isEquipped())
+			if ((item != null) && (item.getId() == itemId))
 			{
 				return true;
 			}
