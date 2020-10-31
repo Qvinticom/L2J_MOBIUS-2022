@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
- * @author Sdw
+ * @author Mobius
  */
 public class OpEquipItemSkillCondition implements ISkillCondition
 {
@@ -45,23 +45,49 @@ public class OpEquipItemSkillCondition implements ISkillCondition
 		{
 			case CASTER:
 			{
-				return !caster.getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).isEmpty();
+				for (ItemInstance item : caster.getInventory().getPaperdollItems())
+				{
+					if (item.getId() == _itemId)
+					{
+						return true;
+					}
+				}
+				return false;
 			}
 			case TARGET:
 			{
 				if ((target != null) && target.isPlayer())
 				{
-					return !target.getActingPlayer().getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).isEmpty();
+					for (ItemInstance item : target.getActingPlayer().getInventory().getPaperdollItems())
+					{
+						if (item.getId() == _itemId)
+						{
+							return true;
+						}
+					}
 				}
-				break;
+				return false;
 			}
 			case BOTH:
 			{
 				if ((target != null) && target.isPlayer())
 				{
-					return !caster.getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).isEmpty() && target.getActingPlayer().getInventory().getItems(ItemInstance::isEquipped, i -> i.getId() == _itemId).isEmpty();
+					for (ItemInstance item : caster.getInventory().getPaperdollItems())
+					{
+						if (item.getId() == _itemId)
+						{
+							for (ItemInstance i : target.getActingPlayer().getInventory().getPaperdollItems())
+							{
+								if (i.getId() == _itemId)
+								{
+									return true;
+								}
+							}
+							return false;
+						}
+					}
 				}
-				break;
+				return false;
 			}
 		}
 		return false;
