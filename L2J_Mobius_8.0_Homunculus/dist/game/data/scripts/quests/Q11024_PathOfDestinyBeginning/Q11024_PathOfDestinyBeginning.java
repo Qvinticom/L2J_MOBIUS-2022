@@ -277,9 +277,9 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 				{
 					case TARTI:
 					{
+						htmltext = "34505-04.html";
 						if (qs.isCond(1))
 						{
-							htmltext = "34505-04.html";
 							if (!player.isSimulatingTalking())
 							{
 								startQuestTimer("shotsreward", 100, npc, player);
