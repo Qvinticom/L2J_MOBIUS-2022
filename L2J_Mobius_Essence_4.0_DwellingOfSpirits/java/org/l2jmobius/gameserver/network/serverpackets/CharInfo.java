@@ -220,9 +220,18 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeC(_player.isFishing() ? 1 : 0); // Confirmed
 		
 		final ILocational baitLocation = _player.getFishing().getBaitLocation();
-		packet.writeD(baitLocation.getX()); // Confirmed
-		packet.writeD(baitLocation.getY()); // Confirmed
-		packet.writeD(baitLocation.getZ()); // Confirmed
+		if (baitLocation != null)
+		{
+			packet.writeD(baitLocation.getX()); // Confirmed
+			packet.writeD(baitLocation.getY()); // Confirmed
+			packet.writeD(baitLocation.getZ()); // Confirmed
+		}
+		else
+		{
+			packet.writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
+		}
 		
 		packet.writeD(_player.getAppearance().getNameColor()); // Confirmed
 		
