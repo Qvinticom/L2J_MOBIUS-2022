@@ -152,7 +152,11 @@ public class AppearanceItemData implements IXmlReader
 	
 	public AppearanceStone getStone(int stone)
 	{
-		return _stones[stone];
+		if (_stones.length >= stone)
+		{
+			return _stones[stone];
+		}
+		return null;
 	}
 	
 	/**
