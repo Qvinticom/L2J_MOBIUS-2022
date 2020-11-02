@@ -93,12 +93,12 @@ public class ArmorSetData implements IXmlReader
 	
 	public boolean setExists(int chestId)
 	{
-		return (_armorSets.length >= chestId) && (_armorSets[chestId] != null);
+		return (_armorSets.length > chestId) && (_armorSets[chestId] != null);
 	}
 	
 	public ArmorSet getSet(int chestId)
 	{
-		if (_armorSets.length >= chestId)
+		if (_armorSets.length > chestId)
 		{
 			return _armorSets[chestId];
 		}
