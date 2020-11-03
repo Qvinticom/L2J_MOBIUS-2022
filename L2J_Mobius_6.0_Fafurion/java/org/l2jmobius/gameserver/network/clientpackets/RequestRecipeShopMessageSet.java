@@ -53,9 +53,6 @@ public class RequestRecipeShopMessageSet implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.hasManufactureShop())
-		{
-			player.setStoreName(_name);
-		}
+		player.setStoreName(_name);
 	}
 }
