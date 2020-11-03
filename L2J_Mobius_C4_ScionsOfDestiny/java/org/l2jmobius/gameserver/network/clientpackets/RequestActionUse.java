@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.ManufactureList;

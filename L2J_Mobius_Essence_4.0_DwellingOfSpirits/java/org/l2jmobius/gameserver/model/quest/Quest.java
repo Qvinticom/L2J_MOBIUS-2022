@@ -39,7 +39,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.enums.Race;

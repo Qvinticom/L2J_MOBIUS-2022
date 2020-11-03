@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.Objects;
 
-import org.l2jmobius.gameserver.data.xml.impl.OptionData;
+import org.l2jmobius.gameserver.data.xml.OptionData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.options.Options;
 

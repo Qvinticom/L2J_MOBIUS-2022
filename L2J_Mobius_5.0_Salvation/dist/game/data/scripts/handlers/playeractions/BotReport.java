@@ -17,7 +17,7 @@
 package handlers.playeractions;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.BotReportTable;
+import org.l2jmobius.gameserver.data.BotReportTable;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

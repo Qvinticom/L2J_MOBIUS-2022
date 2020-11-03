@@ -22,7 +22,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
+import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Set;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
+import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.enums.SkillEnchantType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.EnchantSkillHolder;

@@ -16,7 +16,7 @@
  */
 package ai.others.CastleCourtMagician;
 
-import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
+import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.enums.CastleSide;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.Npc;

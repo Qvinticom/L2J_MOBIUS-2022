@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;

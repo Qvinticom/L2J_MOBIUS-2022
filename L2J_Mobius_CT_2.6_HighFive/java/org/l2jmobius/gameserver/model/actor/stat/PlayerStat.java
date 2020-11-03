@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.actor.stat;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.model.PetLevelData;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;

@@ -20,7 +20,7 @@ import java.util.Calendar;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.SevenSigns;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;

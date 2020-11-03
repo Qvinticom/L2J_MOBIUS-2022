@@ -16,7 +16,7 @@
  */
 package handlers.actionshifthandlers;
 
-import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.handler.IActionShiftHandler;
 import org.l2jmobius.gameserver.model.WorldObject;

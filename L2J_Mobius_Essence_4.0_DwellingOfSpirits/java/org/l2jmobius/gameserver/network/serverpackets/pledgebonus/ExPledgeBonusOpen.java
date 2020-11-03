@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets.pledgebonus;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.ClanRewardData;
+import org.l2jmobius.gameserver.data.xml.ClanRewardData;
 import org.l2jmobius.gameserver.enums.ClanRewardType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;

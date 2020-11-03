@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.ControllableMobAI;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ControllableMobInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

@@ -19,7 +19,7 @@ package handlers.communityboard;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IWriteBoardHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

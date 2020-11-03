@@ -16,7 +16,7 @@
  */
 package handlers.admincommandhandlers;
 
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.MobGroup;
 import org.l2jmobius.gameserver.model.MobGroupTable;

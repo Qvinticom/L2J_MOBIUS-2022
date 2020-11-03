@@ -16,7 +16,7 @@
  */
 package ai.areas.HellboundIsland.Theorn;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

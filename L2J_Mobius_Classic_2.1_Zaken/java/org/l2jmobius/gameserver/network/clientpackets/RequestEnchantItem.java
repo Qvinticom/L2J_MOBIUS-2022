@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
+import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.World;

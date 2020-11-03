@@ -16,7 +16,7 @@
  */
 package handlers.telnethandlers.chat;
 
-import org.l2jmobius.gameserver.data.xml.impl.AdminData;
+import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;

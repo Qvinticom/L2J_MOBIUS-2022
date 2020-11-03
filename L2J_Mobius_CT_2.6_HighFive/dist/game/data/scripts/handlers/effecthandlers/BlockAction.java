@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.datatables.BotReportTable;
+import org.l2jmobius.gameserver.data.BotReportTable;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;

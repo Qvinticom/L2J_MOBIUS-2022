@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
-import org.l2jmobius.gameserver.datatables.xml.ZoneData;
+import org.l2jmobius.gameserver.data.xml.MapRegionData;
+import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

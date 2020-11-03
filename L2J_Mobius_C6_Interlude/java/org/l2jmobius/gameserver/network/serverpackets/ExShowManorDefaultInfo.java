@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
+import org.l2jmobius.gameserver.data.xml.ManorSeedData;
 
 /**
  * format(packet 0xFE) ch cd [ddddcdcd] c - id h - sub id c d - size [ d - level d - seed price d - seed level d - crop price c d - reward 1 id c d - reward 2 id ]

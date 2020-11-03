@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

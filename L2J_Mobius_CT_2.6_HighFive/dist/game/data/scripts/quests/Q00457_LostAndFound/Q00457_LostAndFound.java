@@ -19,7 +19,7 @@ package quests.Q00457_LostAndFound;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.Spawn;

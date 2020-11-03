@@ -18,8 +18,8 @@ package handlers.voicedcommandhandlers;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import org.l2jmobius.gameserver.data.xml.impl.AdminData;
+import org.l2jmobius.gameserver.data.sql.CharNameTable;
+import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.model.World;

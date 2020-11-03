@@ -49,10 +49,10 @@ import org.l2jmobius.commons.util.LimitLinesDocumentListener;
 import org.l2jmobius.commons.util.SplashScreen;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.data.xml.impl.AdminData;
-import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
-import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
-import org.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
+import org.l2jmobius.gameserver.data.xml.AdminData;
+import org.l2jmobius.gameserver.data.xml.BuyListData;
+import org.l2jmobius.gameserver.data.xml.MultisellData;
+import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
 

@@ -17,7 +17,7 @@
 package quests.Q11026_PathOfDestinyConviction;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;

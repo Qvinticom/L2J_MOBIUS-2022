@@ -21,7 +21,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.util.SkillEnchantConverter;
 

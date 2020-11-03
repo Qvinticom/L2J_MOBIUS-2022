@@ -19,8 +19,8 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;

@@ -49,7 +49,7 @@ import org.l2jmobius.commons.util.LimitLinesDocumentListener;
 import org.l2jmobius.commons.util.SplashScreen;
 import org.l2jmobius.gameserver.Shutdown;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.datatables.xml.MultisellData;
+import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.util.Broadcast;

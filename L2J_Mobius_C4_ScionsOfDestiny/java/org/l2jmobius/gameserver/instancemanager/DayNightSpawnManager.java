@@ -30,8 +30,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.GameTimeController;
-import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;

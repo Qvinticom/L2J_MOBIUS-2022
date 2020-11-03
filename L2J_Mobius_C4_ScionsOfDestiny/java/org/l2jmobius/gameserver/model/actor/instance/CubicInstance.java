@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
-import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.model.Effect;

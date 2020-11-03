@@ -19,7 +19,7 @@ package handlers.telnethandlers.player;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.entity.Message;

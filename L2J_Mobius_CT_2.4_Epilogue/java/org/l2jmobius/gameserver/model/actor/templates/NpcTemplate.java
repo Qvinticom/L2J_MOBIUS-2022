@@ -26,8 +26,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.enums.AISkillScope;
 import org.l2jmobius.gameserver.enums.AIType;
 import org.l2jmobius.gameserver.enums.DropType;

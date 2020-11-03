@@ -16,7 +16,7 @@
  */
 package village_master.KamaelChange1;
 
-import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;

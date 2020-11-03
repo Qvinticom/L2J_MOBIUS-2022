@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.TradeController;
-import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
+import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.StoreTradeList;

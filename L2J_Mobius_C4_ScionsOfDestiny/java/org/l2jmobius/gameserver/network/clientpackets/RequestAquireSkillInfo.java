@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.sql.SkillSpellbookTable;
-import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
+import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.SkillSpellbookTable;
+import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.model.PledgeSkillLearn;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;

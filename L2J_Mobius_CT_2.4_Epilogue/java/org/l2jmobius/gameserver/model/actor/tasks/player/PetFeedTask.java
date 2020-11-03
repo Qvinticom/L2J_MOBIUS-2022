@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
+import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

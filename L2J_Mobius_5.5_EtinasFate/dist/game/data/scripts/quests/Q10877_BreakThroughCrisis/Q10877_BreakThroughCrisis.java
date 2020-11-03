@@ -19,7 +19,7 @@ package quests.Q10877_BreakThroughCrisis;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.xml.impl.MonsterBookData;
+import org.l2jmobius.gameserver.data.xml.MonsterBookData;
 import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.Npc;

@@ -32,9 +32,9 @@ import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
+import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.BasicProperty;
 import org.l2jmobius.gameserver.enums.NextActionType;

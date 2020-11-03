@@ -19,7 +19,7 @@ package ai.bosses;
 import java.util.Collection;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;

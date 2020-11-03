@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;

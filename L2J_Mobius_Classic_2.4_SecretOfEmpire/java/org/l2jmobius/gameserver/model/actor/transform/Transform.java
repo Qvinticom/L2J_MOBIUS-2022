@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.transform;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
+import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.InventoryBlockType;
 import org.l2jmobius.gameserver.enums.Sex;
 import org.l2jmobius.gameserver.model.SkillLearn;

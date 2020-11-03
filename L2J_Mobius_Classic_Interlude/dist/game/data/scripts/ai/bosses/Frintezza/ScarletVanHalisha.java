@@ -23,7 +23,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;

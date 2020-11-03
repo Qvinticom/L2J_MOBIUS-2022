@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

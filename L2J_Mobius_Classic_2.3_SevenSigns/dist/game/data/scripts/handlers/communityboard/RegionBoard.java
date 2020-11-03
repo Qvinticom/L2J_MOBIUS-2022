@@ -17,7 +17,7 @@
 package handlers.communityboard;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.TaxType;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IWriteBoardHandler;

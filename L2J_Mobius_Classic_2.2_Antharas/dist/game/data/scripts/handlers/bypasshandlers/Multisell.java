@@ -18,7 +18,7 @@ package handlers.bypasshandlers;
 
 import java.util.logging.Level;
 
-import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
+import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;

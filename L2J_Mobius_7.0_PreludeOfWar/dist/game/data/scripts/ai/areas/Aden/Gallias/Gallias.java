@@ -19,7 +19,7 @@ package ai.areas.Aden.Gallias;
 import java.util.Set;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.SubClass;

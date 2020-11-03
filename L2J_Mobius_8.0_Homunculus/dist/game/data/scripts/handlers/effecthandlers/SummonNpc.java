@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.StatSet;

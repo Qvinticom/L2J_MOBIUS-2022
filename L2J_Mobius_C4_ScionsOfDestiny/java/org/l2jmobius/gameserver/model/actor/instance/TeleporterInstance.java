@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
-import org.l2jmobius.gameserver.datatables.xml.ZoneData;
+import org.l2jmobius.gameserver.data.sql.TeleportLocationTable;
+import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;

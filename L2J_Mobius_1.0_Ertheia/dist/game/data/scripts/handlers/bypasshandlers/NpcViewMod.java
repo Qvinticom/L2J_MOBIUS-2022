@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.DropType;
 import org.l2jmobius.gameserver.handler.IBypassHandler;

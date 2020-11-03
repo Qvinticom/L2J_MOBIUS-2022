@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.stats.finalizers;
 
 import java.util.OptionalDouble;
 
-import org.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
+import org.l2jmobius.gameserver.data.xml.EnchantItemHPBonusData;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

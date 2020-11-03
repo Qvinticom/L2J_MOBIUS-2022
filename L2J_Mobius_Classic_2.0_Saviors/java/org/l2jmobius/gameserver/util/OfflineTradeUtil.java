@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.util;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.sql.impl.OfflineTraderTable;
+import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Summon;

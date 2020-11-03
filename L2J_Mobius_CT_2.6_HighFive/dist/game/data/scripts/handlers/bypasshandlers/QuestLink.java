@@ -24,7 +24,7 @@ import java.util.Set;
 import java.util.logging.Level;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.World;

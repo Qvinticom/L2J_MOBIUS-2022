@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.sql.impl.CrestTable;
+import org.l2jmobius.gameserver.data.sql.CrestTable;
 import org.l2jmobius.gameserver.model.Crest;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;

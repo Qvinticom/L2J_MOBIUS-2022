@@ -32,7 +32,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.tasks.StartMovingTask;
 import org.l2jmobius.gameserver.model.Location;

@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.data.sql.NpcTable;
+import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

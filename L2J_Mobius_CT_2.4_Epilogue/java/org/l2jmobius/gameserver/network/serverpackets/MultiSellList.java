@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import static org.l2jmobius.gameserver.data.xml.impl.MultisellData.PAGE_SIZE;
+import static org.l2jmobius.gameserver.data.xml.MultisellData.PAGE_SIZE;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.multisell.Entry;

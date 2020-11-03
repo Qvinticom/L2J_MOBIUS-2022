@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.SevenSigns;
-import org.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
+import org.l2jmobius.gameserver.data.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.TeleportLocation;
 import org.l2jmobius.gameserver.model.actor.Npc;

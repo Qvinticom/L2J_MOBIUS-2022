@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.xml.DoorData;
+import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;

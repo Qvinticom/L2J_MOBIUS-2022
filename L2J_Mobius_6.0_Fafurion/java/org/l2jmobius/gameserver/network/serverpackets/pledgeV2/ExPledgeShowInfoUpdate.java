@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.pledgeV2;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.ClanLevelData;
+import org.l2jmobius.gameserver.data.xml.ClanLevelData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.OutgoingPackets;

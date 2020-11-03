@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.enums;
 
 import java.util.function.Function;
 
-import org.l2jmobius.gameserver.data.xml.impl.ClanRewardData;
+import org.l2jmobius.gameserver.data.xml.ClanRewardData;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanRewardBonus;
 

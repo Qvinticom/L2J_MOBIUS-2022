@@ -27,8 +27,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.HeroSkillTable;
-import org.l2jmobius.gameserver.datatables.sql.ClanTable;
+import org.l2jmobius.gameserver.data.HeroSkillTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;

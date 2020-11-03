@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
+import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;

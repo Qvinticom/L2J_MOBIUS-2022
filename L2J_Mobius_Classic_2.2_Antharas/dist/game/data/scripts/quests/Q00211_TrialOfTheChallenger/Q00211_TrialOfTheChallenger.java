@@ -17,7 +17,7 @@
 package quests.Q00211_TrialOfTheChallenger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;

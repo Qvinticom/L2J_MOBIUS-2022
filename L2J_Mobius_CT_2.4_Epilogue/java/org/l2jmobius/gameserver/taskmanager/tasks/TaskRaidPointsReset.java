@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.taskmanager.Task;

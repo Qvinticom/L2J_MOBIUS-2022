@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets.compound;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
+import org.l2jmobius.gameserver.data.xml.CombinationItemsData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.CompoundRequest;
 import org.l2jmobius.gameserver.model.items.combination.CombinationItem;

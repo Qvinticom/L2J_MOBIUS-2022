@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.zone;
 
 import java.awt.geom.Line2D;
 
-import org.l2jmobius.gameserver.datatables.xml.ZoneData;
+import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 

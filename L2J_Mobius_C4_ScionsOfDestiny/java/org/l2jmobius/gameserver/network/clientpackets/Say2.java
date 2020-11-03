@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
+import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.handler.VoicedCommandHandler;

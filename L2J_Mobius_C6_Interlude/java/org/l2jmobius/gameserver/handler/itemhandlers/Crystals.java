@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Playable;

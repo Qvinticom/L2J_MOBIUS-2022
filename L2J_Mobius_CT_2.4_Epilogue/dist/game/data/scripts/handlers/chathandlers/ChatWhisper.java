@@ -17,7 +17,7 @@
 package handlers.chathandlers;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
+import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IChatHandler;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;

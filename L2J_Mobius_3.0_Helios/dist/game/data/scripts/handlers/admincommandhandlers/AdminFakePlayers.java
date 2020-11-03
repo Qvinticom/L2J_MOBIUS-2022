@@ -16,7 +16,7 @@
  */
 package handlers.admincommandhandlers;
 
-import org.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
+import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import org.l2jmobius.gameserver.model.World;

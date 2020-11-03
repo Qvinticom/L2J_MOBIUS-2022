@@ -21,8 +21,8 @@ import java.util.Set;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
-import org.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
+import org.l2jmobius.gameserver.data.xml.EnchantItemData;
+import org.l2jmobius.gameserver.data.xml.EnchantItemGroupsData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;

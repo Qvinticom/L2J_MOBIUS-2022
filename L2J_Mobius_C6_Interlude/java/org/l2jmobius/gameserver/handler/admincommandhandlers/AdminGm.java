@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import org.l2jmobius.gameserver.datatables.xml.AdminData;
+import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.util.BuilderUtil;

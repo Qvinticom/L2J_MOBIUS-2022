@@ -27,7 +27,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 import org.l2jmobius.gameserver.communitybbs.BB.Post;
 import org.l2jmobius.gameserver.communitybbs.BB.Topic;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Set;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
+import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExEnchantSkillInfo implements IClientOutgoingPacket

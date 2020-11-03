@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.MapRegion;

@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;

@@ -21,7 +21,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.base.SocialClass;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;

@@ -20,7 +20,7 @@ import static org.l2jmobius.gameserver.model.actor.Npc.INTERACTION_DISTANCE;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
+import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;

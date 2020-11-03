@@ -23,7 +23,7 @@ import java.util.Set;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;

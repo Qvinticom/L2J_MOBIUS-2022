@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.sayune;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.SayuneData;
+import org.l2jmobius.gameserver.data.xml.SayuneData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.SayuneEntry;

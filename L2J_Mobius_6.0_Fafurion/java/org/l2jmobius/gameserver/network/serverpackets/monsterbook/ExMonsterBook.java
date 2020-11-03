@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.MonsterBookData;
+import org.l2jmobius.gameserver.data.xml.MonsterBookData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;

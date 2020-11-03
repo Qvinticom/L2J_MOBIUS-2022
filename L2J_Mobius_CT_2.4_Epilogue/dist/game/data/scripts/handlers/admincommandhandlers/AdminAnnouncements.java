@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
+import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.PageResult;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

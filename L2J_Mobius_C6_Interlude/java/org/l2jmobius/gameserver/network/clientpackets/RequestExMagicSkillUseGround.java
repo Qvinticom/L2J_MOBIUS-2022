@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

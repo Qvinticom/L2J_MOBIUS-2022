@@ -20,7 +20,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;

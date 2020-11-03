@@ -25,8 +25,8 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.SevenSigns;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;

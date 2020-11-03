@@ -20,7 +20,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
-import org.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
+import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.WorldObject;

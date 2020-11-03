@@ -18,7 +18,7 @@ package custom.FakePlayers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
+import org.l2jmobius.gameserver.data.xml.FakePlayerData;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

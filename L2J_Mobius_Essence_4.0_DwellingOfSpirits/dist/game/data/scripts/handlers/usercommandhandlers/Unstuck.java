@@ -19,7 +19,7 @@ package handlers.usercommandhandlers;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;

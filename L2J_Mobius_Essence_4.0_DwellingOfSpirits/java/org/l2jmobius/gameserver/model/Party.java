@@ -33,7 +33,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;

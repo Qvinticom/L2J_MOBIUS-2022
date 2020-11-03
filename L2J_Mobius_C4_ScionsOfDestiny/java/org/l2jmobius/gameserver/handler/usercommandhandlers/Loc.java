@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.usercommandhandlers;
 
-import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
+import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;

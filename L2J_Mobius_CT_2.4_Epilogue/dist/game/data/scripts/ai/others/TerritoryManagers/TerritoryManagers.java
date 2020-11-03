@@ -16,7 +16,7 @@
  */
 package ai.others.TerritoryManagers;
 
-import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
+import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;

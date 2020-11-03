@@ -24,7 +24,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.DoorAI;
-import org.l2jmobius.gameserver.data.xml.impl.DoorData;
+import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.DoorOpenType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Race;

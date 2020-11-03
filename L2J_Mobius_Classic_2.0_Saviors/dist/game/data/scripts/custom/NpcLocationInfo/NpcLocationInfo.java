@@ -19,7 +19,7 @@ package custom.NpcLocationInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

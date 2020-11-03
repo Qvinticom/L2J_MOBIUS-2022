@@ -21,8 +21,8 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.TradeController;
-import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
+import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.TeleportLocationTable;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.Skill;

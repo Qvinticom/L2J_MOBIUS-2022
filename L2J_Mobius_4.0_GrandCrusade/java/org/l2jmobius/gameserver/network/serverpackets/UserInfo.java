@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.ItemGrade;
 import org.l2jmobius.gameserver.enums.UserInfoType;

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import org.l2jmobius.gameserver.datatables.xml.MultisellData;
+import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 
 /**

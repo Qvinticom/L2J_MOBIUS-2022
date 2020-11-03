@@ -17,7 +17,7 @@
 package quests.Q00604_DaimonTheWhiteEyedPart2;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;

@@ -17,7 +17,7 @@
 package quests.Q10360_CertificationOfFate;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
+import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.Race;

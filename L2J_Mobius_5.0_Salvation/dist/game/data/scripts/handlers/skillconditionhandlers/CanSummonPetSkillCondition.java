@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
+import org.l2jmobius.gameserver.data.sql.CharSummonTable;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;

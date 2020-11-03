@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.model.base;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
 
 /**
  * Character Sub-Class Definition.<br>

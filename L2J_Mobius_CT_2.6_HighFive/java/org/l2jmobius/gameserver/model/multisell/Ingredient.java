@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.multisell;
 
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.Item;

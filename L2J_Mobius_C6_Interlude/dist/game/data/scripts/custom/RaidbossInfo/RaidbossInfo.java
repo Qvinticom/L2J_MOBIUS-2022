@@ -19,8 +19,8 @@ package custom.RaidbossInfo;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.data.sql.NpcTable;
+import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

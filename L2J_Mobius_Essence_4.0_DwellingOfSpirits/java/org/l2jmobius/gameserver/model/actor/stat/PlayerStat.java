@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.stat;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.PartySmallWindowUpdateType;
 import org.l2jmobius.gameserver.enums.UserInfoType;

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.skills.effects;
 
-import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.skills.Env;

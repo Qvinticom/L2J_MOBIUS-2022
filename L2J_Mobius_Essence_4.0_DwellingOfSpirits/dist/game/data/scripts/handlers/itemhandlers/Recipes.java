@@ -17,7 +17,7 @@
 package handlers.itemhandlers;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.RecipeData;
+import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.actor.Playable;

@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.datatables.xml.ManorSeedData;
+import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.xml.ManorSeedData;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
 import org.l2jmobius.gameserver.model.actor.instance.ManorManagerInstance;

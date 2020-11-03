@@ -22,7 +22,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.data.xml.impl.DoorData;
+import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;

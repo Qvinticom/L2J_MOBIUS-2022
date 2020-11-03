@@ -18,7 +18,7 @@ package teleports.GrandBossTeleporters;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.xml.DoorData;
+import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;

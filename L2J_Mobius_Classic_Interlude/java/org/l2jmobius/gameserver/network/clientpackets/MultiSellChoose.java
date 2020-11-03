@@ -22,8 +22,8 @@ import java.util.List;
 import java.util.OptionalLong;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.SpecialItemType;
 import org.l2jmobius.gameserver.model.ItemInfo;

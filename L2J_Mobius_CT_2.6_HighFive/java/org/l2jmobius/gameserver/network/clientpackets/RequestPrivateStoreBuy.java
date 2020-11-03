@@ -23,7 +23,7 @@ import java.util.Set;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.sql.impl.OfflineTraderTable;
+import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.ItemRequest;
 import org.l2jmobius.gameserver.model.TradeList;

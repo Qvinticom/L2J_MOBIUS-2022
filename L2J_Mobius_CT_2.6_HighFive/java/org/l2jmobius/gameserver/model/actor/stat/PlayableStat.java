@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.actor.stat;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;

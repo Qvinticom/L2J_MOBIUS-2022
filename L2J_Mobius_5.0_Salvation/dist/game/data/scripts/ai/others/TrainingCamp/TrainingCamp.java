@@ -19,7 +19,7 @@ package ai.others.TrainingCamp;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

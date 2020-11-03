@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.data.xml.impl.FenceData;
+import org.l2jmobius.gameserver.data.xml.FenceData;
 import org.l2jmobius.gameserver.enums.FenceState;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.PageResult;

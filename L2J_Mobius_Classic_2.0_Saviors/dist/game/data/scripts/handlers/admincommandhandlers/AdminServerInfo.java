@@ -27,7 +27,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.data.xml.impl.AdminData;
+import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

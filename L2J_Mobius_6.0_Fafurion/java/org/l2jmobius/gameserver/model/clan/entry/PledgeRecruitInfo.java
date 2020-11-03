@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.clan.entry;
 
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.clan.Clan;
 
 /**

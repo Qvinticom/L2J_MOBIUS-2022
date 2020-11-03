@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.datatables.xml.RecipeData;
+import org.l2jmobius.gameserver.data.xml.RecipeData;
 
 /**
  * @version $Revision: 1.1.2.2.2.1 $ $Date: 2005/03/27 15:29:32 $

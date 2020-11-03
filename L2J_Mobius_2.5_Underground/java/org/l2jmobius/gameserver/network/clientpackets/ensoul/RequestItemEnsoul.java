@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets.ensoul;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.EnsoulData;
+import org.l2jmobius.gameserver.data.xml.EnsoulData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;

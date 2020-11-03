@@ -25,7 +25,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.NextAction;
-import org.l2jmobius.gameserver.data.xml.impl.VariationData;
+import org.l2jmobius.gameserver.data.xml.VariationData;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;

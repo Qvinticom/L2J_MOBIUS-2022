@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;

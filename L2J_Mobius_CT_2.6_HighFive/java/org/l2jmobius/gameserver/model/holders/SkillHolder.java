@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.holders;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**

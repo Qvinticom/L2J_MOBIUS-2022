@@ -16,7 +16,7 @@
  */
 package handlers.dailymissionhandlers;
 
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.DailyMissionStatus;
 import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;

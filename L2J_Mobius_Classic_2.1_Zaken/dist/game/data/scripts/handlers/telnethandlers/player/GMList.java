@@ -17,7 +17,7 @@
 package handlers.telnethandlers.player;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.AdminData;
+import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 
 import io.netty.channel.ChannelHandlerContext;

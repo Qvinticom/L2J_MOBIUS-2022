@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
+import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 

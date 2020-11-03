@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.data.xml.impl.TransformData;
+import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;

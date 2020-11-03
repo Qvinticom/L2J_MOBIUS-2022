@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.ai.CtrlEvent;
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Location;

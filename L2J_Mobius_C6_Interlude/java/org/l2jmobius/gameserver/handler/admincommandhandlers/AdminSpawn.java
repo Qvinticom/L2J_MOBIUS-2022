@@ -23,10 +23,10 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
-import org.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
-import org.l2jmobius.gameserver.datatables.xml.AdminData;
+import org.l2jmobius.gameserver.data.sql.NpcTable;
+import org.l2jmobius.gameserver.data.sql.SpawnTable;
+import org.l2jmobius.gameserver.data.sql.TeleportLocationTable;
+import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;

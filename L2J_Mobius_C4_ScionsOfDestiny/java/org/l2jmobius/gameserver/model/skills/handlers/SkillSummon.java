@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.skills.handlers;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
-import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
+import org.l2jmobius.gameserver.data.sql.NpcTable;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;

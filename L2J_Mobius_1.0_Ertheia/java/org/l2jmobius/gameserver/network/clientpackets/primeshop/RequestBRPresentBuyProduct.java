@@ -20,8 +20,8 @@ import java.util.Calendar;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import org.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
+import org.l2jmobius.gameserver.data.sql.CharNameTable;
+import org.l2jmobius.gameserver.data.xml.PrimeShopData;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

@@ -23,8 +23,8 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.Race;

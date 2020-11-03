@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.data.xml.impl.DoorData;
-import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
+import org.l2jmobius.gameserver.data.xml.DoorData;
+import org.l2jmobius.gameserver.data.xml.TeleporterData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.TeleportType;
 import org.l2jmobius.gameserver.model.actor.Creature;

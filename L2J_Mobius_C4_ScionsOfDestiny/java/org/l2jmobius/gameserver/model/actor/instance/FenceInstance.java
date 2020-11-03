@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import org.l2jmobius.gameserver.datatables.xml.FenceData;
+import org.l2jmobius.gameserver.data.xml.FenceData;
 import org.l2jmobius.gameserver.enums.FenceState;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.WorldObject;

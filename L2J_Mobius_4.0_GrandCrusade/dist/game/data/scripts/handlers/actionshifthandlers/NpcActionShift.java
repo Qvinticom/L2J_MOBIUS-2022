@@ -20,8 +20,8 @@ import java.util.Set;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.data.xml.ClanHallData;
+import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.handler.IActionShiftHandler;

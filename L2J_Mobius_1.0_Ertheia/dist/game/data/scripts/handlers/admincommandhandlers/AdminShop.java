@@ -18,8 +18,8 @@ package handlers.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
-import org.l2jmobius.gameserver.data.xml.impl.MultisellData;
+import org.l2jmobius.gameserver.data.xml.BuyListData;
+import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.buylist.ProductList;

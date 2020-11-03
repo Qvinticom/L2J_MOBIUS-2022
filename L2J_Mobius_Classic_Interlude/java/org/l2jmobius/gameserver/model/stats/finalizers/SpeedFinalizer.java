@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.stats.finalizers;
 import java.util.OptionalDouble;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
+import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.PetLevelData;
 import org.l2jmobius.gameserver.model.actor.Creature;

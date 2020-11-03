@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.SpecialItemType;
 import org.l2jmobius.gameserver.enums.TeleportType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;

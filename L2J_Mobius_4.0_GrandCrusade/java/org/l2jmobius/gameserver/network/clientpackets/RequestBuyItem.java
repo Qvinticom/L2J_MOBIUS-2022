@@ -24,7 +24,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
+import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.enums.TaxType;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;

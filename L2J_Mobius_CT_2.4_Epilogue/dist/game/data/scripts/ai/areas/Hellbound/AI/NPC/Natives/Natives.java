@@ -16,7 +16,7 @@
  */
 package ai.areas.Hellbound.AI.NPC.Natives;
 
-import org.l2jmobius.gameserver.data.xml.impl.DoorData;
+import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;

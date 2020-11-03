@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;

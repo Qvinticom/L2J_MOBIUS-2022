@@ -20,7 +20,7 @@ import java.util.Arrays;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

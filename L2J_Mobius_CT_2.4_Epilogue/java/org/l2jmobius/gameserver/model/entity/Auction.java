@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.AuctionItemType;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;

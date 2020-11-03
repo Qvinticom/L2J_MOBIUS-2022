@@ -20,9 +20,9 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.sql.ClanTable;
-import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
-import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
+import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;

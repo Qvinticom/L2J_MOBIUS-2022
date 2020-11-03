@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.data.xml.impl.AdminData;
+import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.util.BuilderUtil;

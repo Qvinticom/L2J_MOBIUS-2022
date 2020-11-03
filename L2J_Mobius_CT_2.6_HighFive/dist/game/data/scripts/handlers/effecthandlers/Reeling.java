@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.data.xml.impl.FishingRodsData;
+import org.l2jmobius.gameserver.data.xml.FishingRodsData;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;

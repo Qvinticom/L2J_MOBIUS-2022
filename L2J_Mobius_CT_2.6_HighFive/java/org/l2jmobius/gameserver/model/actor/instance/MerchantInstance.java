@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
-import org.l2jmobius.gameserver.datatables.MerchantPriceConfigTable;
-import org.l2jmobius.gameserver.datatables.MerchantPriceConfigTable.MerchantPriceConfig;
+import org.l2jmobius.gameserver.data.MerchantPriceConfigTable;
+import org.l2jmobius.gameserver.data.MerchantPriceConfigTable.MerchantPriceConfig;
+import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;

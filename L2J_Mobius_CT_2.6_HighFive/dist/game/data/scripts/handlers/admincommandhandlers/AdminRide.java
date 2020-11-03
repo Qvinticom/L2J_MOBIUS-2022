@@ -16,7 +16,7 @@
  */
 package handlers.admincommandhandlers;
 
-import org.l2jmobius.gameserver.data.xml.impl.TransformData;
+import org.l2jmobius.gameserver.data.xml.TransformData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;

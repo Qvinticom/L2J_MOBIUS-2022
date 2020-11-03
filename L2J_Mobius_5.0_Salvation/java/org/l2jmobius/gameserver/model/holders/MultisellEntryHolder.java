@@ -20,7 +20,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.items.Item;
 
 /**

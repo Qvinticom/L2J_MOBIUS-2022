@@ -16,7 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.enums.ResidenceType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;

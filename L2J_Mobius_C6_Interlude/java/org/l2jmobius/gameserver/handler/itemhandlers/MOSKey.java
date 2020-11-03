@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
-import org.l2jmobius.gameserver.datatables.xml.DoorData;
+import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Playable;

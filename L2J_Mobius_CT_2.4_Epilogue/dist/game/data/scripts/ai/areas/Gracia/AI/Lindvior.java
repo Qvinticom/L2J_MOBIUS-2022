@@ -19,7 +19,7 @@ package ai.areas.Gracia.AI;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.model.World;

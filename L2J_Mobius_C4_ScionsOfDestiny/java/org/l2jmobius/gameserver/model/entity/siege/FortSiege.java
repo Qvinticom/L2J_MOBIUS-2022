@@ -26,8 +26,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.datatables.sql.ClanTable;
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeGuardManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;

@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import java.util.List;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
+import org.l2jmobius.gameserver.data.xml.SkillData;
+import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.model.SkillLearn;

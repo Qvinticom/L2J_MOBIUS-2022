@@ -22,7 +22,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
-import org.l2jmobius.gameserver.data.xml.impl.SayuneData;
+import org.l2jmobius.gameserver.data.xml.SayuneData;
 import org.l2jmobius.gameserver.enums.SayuneType;
 import org.l2jmobius.gameserver.model.SayuneEntry;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

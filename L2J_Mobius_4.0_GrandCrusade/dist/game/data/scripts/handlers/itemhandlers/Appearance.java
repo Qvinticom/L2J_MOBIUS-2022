@@ -16,7 +16,7 @@
  */
 package handlers.itemhandlers;
 
-import org.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
+import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

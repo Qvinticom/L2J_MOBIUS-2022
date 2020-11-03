@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.Set;
 import java.util.TreeMap;
 
-import org.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
+import org.l2jmobius.gameserver.data.xml.EnchantSkillGroupsData;
 import org.l2jmobius.gameserver.model.EnchantSkillGroup.EnchantSkillHolder;
 
 public class EnchantSkillLearn

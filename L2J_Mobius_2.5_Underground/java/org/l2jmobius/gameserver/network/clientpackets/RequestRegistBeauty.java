@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
+import org.l2jmobius.gameserver.data.xml.BeautyShopData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.beautyshop.BeautyData;
 import org.l2jmobius.gameserver.model.beautyshop.BeautyItem;

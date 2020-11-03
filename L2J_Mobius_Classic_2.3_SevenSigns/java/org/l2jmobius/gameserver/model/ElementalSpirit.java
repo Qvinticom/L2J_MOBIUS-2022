@@ -23,7 +23,7 @@ import java.sql.PreparedStatement;
 import java.util.List;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.data.xml.impl.ElementalSpiritData;
+import org.l2jmobius.gameserver.data.xml.ElementalSpiritData;
 import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

@@ -26,7 +26,7 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
+import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**

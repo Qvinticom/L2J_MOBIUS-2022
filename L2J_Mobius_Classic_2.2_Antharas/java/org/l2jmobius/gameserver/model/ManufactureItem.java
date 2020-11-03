@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.data.xml.impl.RecipeData;
+import org.l2jmobius.gameserver.data.xml.RecipeData;
 
 public class ManufactureItem
 {

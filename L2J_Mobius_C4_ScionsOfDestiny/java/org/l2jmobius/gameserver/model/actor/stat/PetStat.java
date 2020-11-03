@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.stat;
 
-import org.l2jmobius.gameserver.datatables.sql.PetDataTable;
-import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
+import org.l2jmobius.gameserver.data.sql.PetDataTable;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
+import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.TaxType;
 import org.l2jmobius.gameserver.model.actor.Creature;

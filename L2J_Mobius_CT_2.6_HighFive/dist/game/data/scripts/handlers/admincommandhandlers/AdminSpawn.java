@@ -28,9 +28,9 @@ import java.util.regex.Pattern;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.SevenSigns;
-import org.l2jmobius.gameserver.data.xml.impl.AdminData;
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
-import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.data.SpawnTable;
+import org.l2jmobius.gameserver.data.xml.AdminData;
+import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;

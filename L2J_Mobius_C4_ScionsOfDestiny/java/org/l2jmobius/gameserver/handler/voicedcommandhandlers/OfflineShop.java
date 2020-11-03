@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.handler.voicedcommandhandlers;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.TradeList;

@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import java.util.logging.Level;
 
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
-import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
+import org.l2jmobius.gameserver.data.xml.NpcData;
+import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.model.PetData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;

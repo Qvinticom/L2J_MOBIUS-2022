@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.holders;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 

@@ -19,7 +19,7 @@ package ai.others.SubclassCertification;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
+import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.xml.MapRegionData;
-import org.l2jmobius.gameserver.datatables.xml.ZoneData;
+import org.l2jmobius.gameserver.data.xml.MapRegionData;
+import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;

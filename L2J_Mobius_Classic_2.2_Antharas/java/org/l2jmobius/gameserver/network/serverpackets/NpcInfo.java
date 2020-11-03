@@ -20,9 +20,9 @@ import java.util.Set;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
-import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.xml.NpcData;
+import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.enums.NpcInfoType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.model.actor.Npc;

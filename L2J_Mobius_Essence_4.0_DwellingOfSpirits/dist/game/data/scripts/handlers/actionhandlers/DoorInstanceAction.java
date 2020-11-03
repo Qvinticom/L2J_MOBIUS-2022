@@ -17,7 +17,7 @@
 package handlers.actionhandlers;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.handler.IActionHandler;
 import org.l2jmobius.gameserver.model.WorldObject;

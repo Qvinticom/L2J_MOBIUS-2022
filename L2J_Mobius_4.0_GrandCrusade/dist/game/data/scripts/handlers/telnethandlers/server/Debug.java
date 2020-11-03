@@ -38,7 +38,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.LoginServerThread;
-import org.l2jmobius.gameserver.data.xml.impl.AdminData;
+import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;

@@ -37,7 +37,7 @@ import java.util.stream.Collectors;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
 import org.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
 import org.l2jmobius.gameserver.model.clan.entry.PledgeWaitingInfo;

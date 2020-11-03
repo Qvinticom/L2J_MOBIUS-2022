@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.equipmentupgrade;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.EquipmentUpgradeData;
+import org.l2jmobius.gameserver.data.xml.EquipmentUpgradeData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.EquipmentUpgradeHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;

@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.data.xml.impl.AdminData;
+import org.l2jmobius.gameserver.data.xml.AdminData;
 
 /**
  * @author HorridoJoho

@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.NpcNameLocalisationData;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
 import org.l2jmobius.gameserver.instancemanager.TownManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;

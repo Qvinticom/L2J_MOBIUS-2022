@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.stat;
 
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.PetDataTable;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;

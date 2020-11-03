@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.items;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.gameserver.datatables.SkillTable;
+import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;

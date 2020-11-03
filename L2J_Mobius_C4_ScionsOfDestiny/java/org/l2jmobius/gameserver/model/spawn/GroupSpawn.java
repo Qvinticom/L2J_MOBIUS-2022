@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.spawn;
 import java.lang.reflect.Constructor;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.sql.TerritoryTable;
+import org.l2jmobius.gameserver.data.sql.TerritoryTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;

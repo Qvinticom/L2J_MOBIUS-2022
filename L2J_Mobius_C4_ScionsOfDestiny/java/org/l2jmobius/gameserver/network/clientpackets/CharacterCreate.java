@@ -22,12 +22,12 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.datatables.SkillTable;
-import org.l2jmobius.gameserver.datatables.sql.CharNameTable;
-import org.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
-import org.l2jmobius.gameserver.datatables.xml.ExperienceData;
-import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
+import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.data.sql.CharNameTable;
+import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
+import org.l2jmobius.gameserver.data.xml.ExperienceData;
+import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.ShortCut;

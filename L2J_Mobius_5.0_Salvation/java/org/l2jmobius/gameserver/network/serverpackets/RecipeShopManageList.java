@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.RecipeData;
+import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.RecipeHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;

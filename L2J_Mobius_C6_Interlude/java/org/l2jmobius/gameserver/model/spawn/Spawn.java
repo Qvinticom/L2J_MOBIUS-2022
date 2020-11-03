@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.sql.TerritoryTable;
+import org.l2jmobius.gameserver.data.sql.TerritoryTable;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.WorldObject;

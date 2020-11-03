@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.holders;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
+import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.interfaces.ISkillsHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;

@@ -19,7 +19,7 @@ package handlers.communityboard;
 import java.util.List;
 
 import org.l2jmobius.gameserver.cache.HtmCache;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.handler.IWriteBoardHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;

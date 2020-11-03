@@ -20,7 +20,7 @@ import java.util.Arrays;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.ActionData;
+import org.l2jmobius.gameserver.data.xml.ActionData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.handler.PlayerActionHandler;

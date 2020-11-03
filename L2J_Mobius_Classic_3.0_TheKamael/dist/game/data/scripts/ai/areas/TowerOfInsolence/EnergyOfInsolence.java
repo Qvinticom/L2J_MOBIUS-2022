@@ -22,7 +22,7 @@ import java.util.concurrent.ScheduledFuture;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.impl.SpawnData;
+import org.l2jmobius.gameserver.data.xml.SpawnData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.ChanceLocation;
 import org.l2jmobius.gameserver.model.Location;

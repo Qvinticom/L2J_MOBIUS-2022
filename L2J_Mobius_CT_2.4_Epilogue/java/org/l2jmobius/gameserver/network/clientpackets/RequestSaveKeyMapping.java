@@ -22,7 +22,7 @@ import java.util.Map;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.UIData;
+import org.l2jmobius.gameserver.data.xml.UIData;
 import org.l2jmobius.gameserver.model.ActionKey;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ConnectionState;

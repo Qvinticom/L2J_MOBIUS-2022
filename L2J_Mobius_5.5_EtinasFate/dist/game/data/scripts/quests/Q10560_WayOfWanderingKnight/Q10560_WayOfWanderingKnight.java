@@ -16,7 +16,7 @@
  */
 package quests.Q10560_WayOfWanderingKnight;
 
-import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.enums.QuestType;

@@ -16,8 +16,8 @@
  */
 package handlers.playeractions;
 
-import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.PetDataTable;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;

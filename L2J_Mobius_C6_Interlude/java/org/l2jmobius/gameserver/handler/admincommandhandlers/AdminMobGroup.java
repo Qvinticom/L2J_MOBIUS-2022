@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import org.l2jmobius.gameserver.datatables.MobGroupTable;
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.data.MobGroupTable;
+import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.MobGroup;
 import org.l2jmobius.gameserver.model.World;

@@ -19,7 +19,7 @@ package handlers.actionshifthandlers;
 import java.util.Set;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.SpawnTable;
+import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.handler.IActionShiftHandler;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;

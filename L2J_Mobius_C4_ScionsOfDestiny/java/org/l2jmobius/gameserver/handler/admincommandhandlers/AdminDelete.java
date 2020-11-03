@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import org.l2jmobius.gameserver.datatables.sql.SpawnTable;
+import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;

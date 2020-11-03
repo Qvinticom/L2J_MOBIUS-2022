@@ -25,8 +25,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.DoorData;
-import org.l2jmobius.gameserver.data.xml.impl.FenceData;
+import org.l2jmobius.gameserver.data.xml.DoorData;
+import org.l2jmobius.gameserver.data.xml.FenceData;
 import org.l2jmobius.gameserver.geoengine.geodata.ABlock;
 import org.l2jmobius.gameserver.geoengine.geodata.BlockComplex;
 import org.l2jmobius.gameserver.geoengine.geodata.BlockFlat;

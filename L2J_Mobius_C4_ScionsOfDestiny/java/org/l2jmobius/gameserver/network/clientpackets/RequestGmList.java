@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.datatables.xml.AdminData;
+import org.l2jmobius.gameserver.data.xml.AdminData;
 
 /**
  * This class handles RequestGmLista packet triggered by /gmlist command

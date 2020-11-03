@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 import org.l2jmobius.gameserver.communitybbs.BB.Post;
 import org.l2jmobius.gameserver.communitybbs.BB.Topic;
-import org.l2jmobius.gameserver.datatables.sql.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class TopicBBSManager extends BaseBBSManager

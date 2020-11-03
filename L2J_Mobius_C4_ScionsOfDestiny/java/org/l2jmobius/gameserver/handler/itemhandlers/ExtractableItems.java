@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.handler.itemhandlers;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.ItemTable;
-import org.l2jmobius.gameserver.datatables.xml.ExtractableItemData;
+import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.xml.ExtractableItemData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.ExtractableItem;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;

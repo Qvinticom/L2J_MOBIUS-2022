@@ -20,7 +20,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.gameserver.datatables.xml.WalkerRouteData;
+import org.l2jmobius.gameserver.data.xml.WalkerRouteData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.NpcWalkerNode;
 import org.l2jmobius.gameserver.model.actor.Creature;

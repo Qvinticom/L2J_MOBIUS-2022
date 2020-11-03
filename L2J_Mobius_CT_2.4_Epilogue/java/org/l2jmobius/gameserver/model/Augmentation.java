@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.data.xml.impl.OptionData;
+import org.l2jmobius.gameserver.data.xml.OptionData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.options.Options;
 

@@ -24,8 +24,8 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
-import org.l2jmobius.gameserver.datatables.SchemeBufferTable;
+import org.l2jmobius.gameserver.data.SchemeBufferTable;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;

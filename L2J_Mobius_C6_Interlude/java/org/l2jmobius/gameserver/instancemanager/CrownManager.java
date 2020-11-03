@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.instancemanager;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.datatables.CrownTable;
+import org.l2jmobius.gameserver.data.CrownTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;

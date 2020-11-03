@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import org.l2jmobius.gameserver.datatables.xml.DoorData;
+import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.WorldObject;

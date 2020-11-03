@@ -16,10 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-//import java.util.Calendar; //signed time related
-//
-
-import org.l2jmobius.gameserver.datatables.sql.ClanTable;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.siege.Fort;

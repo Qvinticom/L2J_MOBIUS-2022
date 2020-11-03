@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.MobGroupTable;
+import org.l2jmobius.gameserver.data.MobGroupTable;
 import org.l2jmobius.gameserver.model.MobGroup;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;

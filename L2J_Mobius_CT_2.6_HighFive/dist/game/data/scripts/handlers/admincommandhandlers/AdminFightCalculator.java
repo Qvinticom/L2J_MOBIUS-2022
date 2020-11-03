@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
+import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;

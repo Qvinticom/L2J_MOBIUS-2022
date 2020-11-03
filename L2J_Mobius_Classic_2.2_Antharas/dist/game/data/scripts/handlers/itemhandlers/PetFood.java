@@ -18,8 +18,8 @@ package handlers.itemhandlers;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.data.xml.PetDataTable;
+import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.actor.Playable;

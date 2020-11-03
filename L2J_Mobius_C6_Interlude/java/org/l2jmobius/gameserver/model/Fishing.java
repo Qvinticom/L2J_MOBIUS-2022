@@ -20,7 +20,7 @@ import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.model.actor.instance.PenaltyMonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

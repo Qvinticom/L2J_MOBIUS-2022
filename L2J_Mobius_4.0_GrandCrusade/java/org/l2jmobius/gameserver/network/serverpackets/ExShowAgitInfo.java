@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.ClanHallData;
+import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 

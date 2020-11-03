@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.enums.ItemGrade;
 import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;

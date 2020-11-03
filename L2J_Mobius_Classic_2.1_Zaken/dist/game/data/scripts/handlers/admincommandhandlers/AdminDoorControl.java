@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import java.awt.Color;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.data.xml.impl.DoorData;
+import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.World;

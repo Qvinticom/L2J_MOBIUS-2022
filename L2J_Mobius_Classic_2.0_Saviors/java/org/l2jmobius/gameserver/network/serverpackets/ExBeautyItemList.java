@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
+import org.l2jmobius.gameserver.data.xml.BeautyShopData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.beautyshop.BeautyData;
 import org.l2jmobius.gameserver.model.beautyshop.BeautyItem;

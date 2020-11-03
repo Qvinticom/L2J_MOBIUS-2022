@@ -21,8 +21,8 @@ import java.util.Date;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.data.xml.impl.ResidenceFunctionsData;
-import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
+import org.l2jmobius.gameserver.data.xml.ResidenceFunctionsData;
+import org.l2jmobius.gameserver.data.xml.TeleporterData;
 import org.l2jmobius.gameserver.enums.ClanHallGrade;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;

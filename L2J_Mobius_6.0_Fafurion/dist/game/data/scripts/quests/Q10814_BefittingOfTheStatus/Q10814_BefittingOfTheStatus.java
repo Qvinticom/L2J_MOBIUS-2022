@@ -20,7 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

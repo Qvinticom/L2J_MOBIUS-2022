@@ -26,7 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.datatables.sql.NpcTable;
+import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.actor.instance.MinionInstance;

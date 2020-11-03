@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.limitshop;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.data.xml.impl.LCoinShopData;
+import org.l2jmobius.gameserver.data.xml.LCoinShopData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;

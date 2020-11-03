@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.clientpackets.alchemy;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.data.xml.impl.AlchemyData;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.xml.AlchemyData;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

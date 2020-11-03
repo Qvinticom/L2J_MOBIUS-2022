@@ -18,7 +18,7 @@ package ai.areas.TalkingIsland.MonkOfChaos;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.data.xml.impl.SkillTreeData;
+import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.SubclassType;
 import org.l2jmobius.gameserver.model.SkillLearn;

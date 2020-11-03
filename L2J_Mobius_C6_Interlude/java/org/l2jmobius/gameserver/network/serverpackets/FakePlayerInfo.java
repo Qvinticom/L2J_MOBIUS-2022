@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.datatables.xml.PlayerTemplateData;
+import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 
 public class FakePlayerInfo extends GameServerPacket

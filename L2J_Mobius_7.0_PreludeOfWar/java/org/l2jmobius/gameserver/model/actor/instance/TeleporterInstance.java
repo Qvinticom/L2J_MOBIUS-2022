@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.data.xml.impl.TeleporterData;
+import org.l2jmobius.gameserver.data.xml.TeleporterData;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.TeleportType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;

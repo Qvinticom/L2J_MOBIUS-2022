@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.stats.functions;
 
-import org.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
+import org.l2jmobius.gameserver.data.xml.EnchantItemHPBonusData;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;

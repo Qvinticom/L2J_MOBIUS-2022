@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
+import org.l2jmobius.gameserver.data.xml.BuyListData;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;

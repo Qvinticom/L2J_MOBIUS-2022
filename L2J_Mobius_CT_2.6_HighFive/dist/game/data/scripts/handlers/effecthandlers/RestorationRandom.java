@@ -21,7 +21,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.gameserver.datatables.ItemTable;
+import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
 import org.l2jmobius.gameserver.model.ExtractableSkill;
 import org.l2jmobius.gameserver.model.StatSet;
