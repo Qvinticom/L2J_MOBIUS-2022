@@ -16,13 +16,21 @@
  */
 package org.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.engines.DocumentEngine;
+import org.l2jmobius.Config;
+import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.file.filter.XMLFilter;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.util.DocumentSkill;
 
 /**
  * Skill data.
@@ -34,23 +42,103 @@ public class SkillData
 	private final Map<Integer, Skill> _skills = new ConcurrentHashMap<>();
 	private final Map<Integer, Integer> _skillMaxLevel = new ConcurrentHashMap<>();
 	private final Set<Integer> _enchantable = ConcurrentHashMap.newKeySet();
+	private final List<File> _skillFiles = new ArrayList<>();
+	private static int count = 0;
 	
 	protected SkillData()
 	{
+		processDirectory("data/stats/skills", _skillFiles);
+		if (Config.CUSTOM_SKILLS_LOAD)
+		{
+			processDirectory("data/stats/skills/custom", _skillFiles);
+		}
+		
 		load();
 	}
 	
-	public void reload()
+	private void processDirectory(String dirName, List<File> list)
 	{
-		load();
-		// Reload Skill Tree as well.
-		SkillTreeData.getInstance().load();
+		final File dir = new File(Config.DATAPACK_ROOT, dirName);
+		if (!dir.exists())
+		{
+			LOGGER.warning("Dir " + dir.getAbsolutePath() + " does not exist.");
+			return;
+		}
+		final File[] files = dir.listFiles(new XMLFilter());
+		for (File file : files)
+		{
+			list.add(file);
+		}
+	}
+	
+	public List<Skill> loadSkills(File file)
+	{
+		if (file == null)
+		{
+			LOGGER.warning("Skill file not found.");
+			return null;
+		}
+		final DocumentSkill doc = new DocumentSkill(file);
+		doc.parse();
+		return doc.getSkills();
+	}
+	
+	public void loadAllSkills(Map<Integer, Skill> allSkills)
+	{
+		if (Config.THREADS_FOR_LOADING)
+		{
+			final Collection<ScheduledFuture<?>> jobs = ConcurrentHashMap.newKeySet();
+			for (File file : _skillFiles)
+			{
+				jobs.add(ThreadPool.schedule(() ->
+				{
+					final List<Skill> skills = loadSkills(file);
+					if (skills == null)
+					{
+						return;
+					}
+					for (Skill skill : skills)
+					{
+						allSkills.put(SkillData.getSkillHashCode(skill), skill);
+						count++;
+					}
+				}, 0));
+			}
+			while (!jobs.isEmpty())
+			{
+				for (ScheduledFuture<?> job : jobs)
+				{
+					if ((job == null) || job.isDone() || job.isCancelled())
+					{
+						jobs.remove(job);
+					}
+				}
+			}
+		}
+		else
+		{
+			for (File file : _skillFiles)
+			{
+				final List<Skill> skills = loadSkills(file);
+				if (skills == null)
+				{
+					return;
+				}
+				for (Skill skill : skills)
+				{
+					allSkills.put(SkillData.getSkillHashCode(skill), skill);
+					count++;
+				}
+			}
+		}
+		
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " Skill templates from XML files.");
 	}
 	
 	private void load()
 	{
 		final Map<Integer, Skill> temp = new ConcurrentHashMap<>();
-		DocumentEngine.getInstance().loadAllSkills(temp);
+		loadAllSkills(temp);
 		
 		_skills.clear();
 		_skills.putAll(temp);
@@ -77,6 +165,13 @@ public class SkillData
 				_skillMaxLevel.put(skillId, skillLevel);
 			}
 		}
+	}
+	
+	public void reload()
+	{
+		load();
+		// Reload Skill Tree as well.
+		SkillTreeData.getInstance().load();
 	}
 	
 	/**

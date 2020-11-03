@@ -16,27 +16,91 @@
  */
 package org.l2jmobius.gameserver.datatables;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.engines.DocumentEngine;
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.util.DocumentSkill;
 
 public class SkillTable
 {
+	protected static final Logger LOGGER = Logger.getLogger(SkillTable.class.getName());
+	
+	private final List<File> _skillFiles = new ArrayList<>();
 	private final Map<Integer, Skill> _skills = new HashMap<>();
 	private final boolean _initialized = true;
 	
 	private SkillTable()
 	{
+		hashFiles("data/stats/skills", _skillFiles);
+		
 		reload();
+	}
+	
+	private void hashFiles(String dirname, List<File> hash)
+	{
+		final File dir = new File(Config.DATAPACK_ROOT, dirname);
+		if (!dir.exists())
+		{
+			LOGGER.info("Dir " + dir.getAbsolutePath() + " not exists");
+			return;
+		}
+		final File[] files = dir.listFiles();
+		for (File f : files)
+		{
+			if (f.getName().endsWith(".xml") && !f.getName().startsWith("custom"))
+			{
+				hash.add(f);
+			}
+		}
+		final File customfile = new File(Config.DATAPACK_ROOT, dirname + "/custom.xml");
+		if (customfile.exists())
+		{
+			hash.add(customfile);
+		}
+	}
+	
+	public List<Skill> loadSkills(File file)
+	{
+		if (file == null)
+		{
+			LOGGER.warning("Skill file not found.");
+			return null;
+		}
+		final DocumentSkill doc = new DocumentSkill(file);
+		doc.parse();
+		return doc.getSkills();
+	}
+	
+	public void loadAllSkills(Map<Integer, Skill> allSkills)
+	{
+		int count = 0;
+		for (File file : _skillFiles)
+		{
+			final List<Skill> s = loadSkills(file);
+			if (s == null)
+			{
+				continue;
+			}
+			for (Skill skill : s)
+			{
+				allSkills.put(SkillTable.getSkillHashCode(skill), skill);
+				count++;
+			}
+		}
+		LOGGER.info("SkillsEngine: Loaded " + count + " skill templates.");
 	}
 	
 	public void reload()
 	{
 		_skills.clear();
-		DocumentEngine.getInstance().loadAllSkills(_skills);
+		loadAllSkills(_skills);
 	}
 	
 	public boolean isInitialized()

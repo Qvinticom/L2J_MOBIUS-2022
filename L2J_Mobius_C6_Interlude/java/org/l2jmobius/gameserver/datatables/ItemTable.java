@@ -16,9 +16,12 @@
  */
 package org.l2jmobius.gameserver.datatables;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
@@ -30,8 +33,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.datatables.sql.PetDataTable;
-import org.l2jmobius.gameserver.engines.DocumentEngine;
-import org.l2jmobius.gameserver.engines.ItemDataHolder;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -45,6 +46,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance.ItemLocation;
+import org.l2jmobius.gameserver.util.DocumentItem;
 
 /**
  * @version $Revision: 1.9.2.6.2.9 $ $Date: 2005/04/02 15:57:34 $
@@ -58,6 +60,7 @@ public class ItemTable
 	private final Map<Integer, EtcItem> _etcItems;
 	private final Map<Integer, Armor> _armors;
 	private final Map<Integer, Weapon> _weapons;
+	private final List<File> _itemFiles = new ArrayList<>();
 	
 	private static final Map<String, Integer> _crystalTypes = new HashMap<>();
 	static
@@ -70,24 +73,48 @@ public class ItemTable
 		_crystalTypes.put("none", Item.CRYSTAL_NONE);
 	}
 	
-	/**
-	 * Returns a new object Item
-	 * @return
-	 */
-	public ItemDataHolder newItem()
-	{
-		return new ItemDataHolder();
-	}
-	
-	/**
-	 * Constructor.
-	 */
 	private ItemTable()
 	{
+		hashFiles("data/stats/items", _itemFiles);
 		_etcItems = new HashMap<>();
 		_armors = new HashMap<>();
 		_weapons = new HashMap<>();
 		load();
+	}
+	
+	private void hashFiles(String dirname, List<File> hash)
+	{
+		final File dir = new File(Config.DATAPACK_ROOT, dirname);
+		if (!dir.exists())
+		{
+			LOGGER.info("Dir " + dir.getAbsolutePath() + " not exists");
+			return;
+		}
+		final File[] files = dir.listFiles();
+		for (File f : files)
+		{
+			if (f.getName().endsWith(".xml") && !f.getName().startsWith("custom"))
+			{
+				hash.add(f);
+			}
+		}
+		final File customfile = new File(Config.DATAPACK_ROOT, dirname + "/custom.xml");
+		if (customfile.exists())
+		{
+			hash.add(customfile);
+		}
+	}
+	
+	public List<Item> loadItems()
+	{
+		final List<Item> list = new ArrayList<>();
+		for (File f : _itemFiles)
+		{
+			final DocumentItem document = new DocumentItem(f);
+			document.parse();
+			list.addAll(document.getItemList());
+		}
+		return list;
 	}
 	
 	private void load()
@@ -96,7 +123,7 @@ public class ItemTable
 		_armors.clear();
 		_etcItems.clear();
 		_weapons.clear();
-		for (Item item : DocumentEngine.getInstance().loadItems())
+		for (Item item : loadItems())
 		{
 			if (highest < item.getItemId())
 			{

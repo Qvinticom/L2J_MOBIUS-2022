@@ -18,11 +18,16 @@ package org.l2jmobius.gameserver.datatables;
 
 import static org.l2jmobius.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,8 +35,8 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.file.filter.XMLFilter;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
-import org.l2jmobius.gameserver.engines.DocumentEngine;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.World;
@@ -47,6 +52,7 @@ import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.util.DocumentItem;
 import org.l2jmobius.gameserver.util.GMAudit;
 
 /**
@@ -100,18 +106,74 @@ public class ItemTable
 	private final Map<Integer, EtcItem> _etcItems = new HashMap<>();
 	private final Map<Integer, Armor> _armors = new HashMap<>();
 	private final Map<Integer, Weapon> _weapons = new HashMap<>();
-	
-	/**
-	 * @return a reference to this ItemTable object
-	 */
-	public static ItemTable getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
+	private final List<File> _itemFiles = new ArrayList<>();
 	
 	protected ItemTable()
 	{
+		processDirectory("data/stats/items", _itemFiles);
+		if (Config.CUSTOM_ITEMS_LOAD)
+		{
+			processDirectory("data/stats/items/custom", _itemFiles);
+		}
+		
 		load();
+	}
+	
+	private void processDirectory(String dirName, List<File> list)
+	{
+		final File dir = new File(Config.DATAPACK_ROOT, dirName);
+		if (!dir.exists())
+		{
+			LOGGER.warning("Dir " + dir.getAbsolutePath() + " does not exist.");
+			return;
+		}
+		final File[] files = dir.listFiles(new XMLFilter());
+		for (File file : files)
+		{
+			list.add(file);
+		}
+	}
+	
+	/**
+	 * Return created items
+	 * @return List of {@link Item}
+	 */
+	public Collection<Item> loadItems()
+	{
+		final Collection<Item> list = ConcurrentHashMap.newKeySet();
+		if (Config.THREADS_FOR_LOADING)
+		{
+			final Collection<ScheduledFuture<?>> jobs = ConcurrentHashMap.newKeySet();
+			for (File file : _itemFiles)
+			{
+				jobs.add(ThreadPool.schedule(() ->
+				{
+					final DocumentItem document = new DocumentItem(file);
+					document.parse();
+					list.addAll(document.getItemList());
+				}, 0));
+			}
+			while (!jobs.isEmpty())
+			{
+				for (ScheduledFuture<?> job : jobs)
+				{
+					if ((job == null) || job.isDone() || job.isCancelled())
+					{
+						jobs.remove(job);
+					}
+				}
+			}
+		}
+		else
+		{
+			for (File file : _itemFiles)
+			{
+				final DocumentItem document = new DocumentItem(file);
+				document.parse();
+				list.addAll(document.getItemList());
+			}
+		}
+		return list;
 	}
 	
 	private void load()
@@ -120,7 +182,7 @@ public class ItemTable
 		_armors.clear();
 		_etcItems.clear();
 		_weapons.clear();
-		for (Item item : DocumentEngine.getInstance().loadItems())
+		for (Item item : loadItems())
 		{
 			if (highest < item.getId())
 			{
@@ -433,6 +495,11 @@ public class ItemTable
 	public int getArraySize()
 	{
 		return _allTemplates.length;
+	}
+	
+	public static ItemTable getInstance()
+	{
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
