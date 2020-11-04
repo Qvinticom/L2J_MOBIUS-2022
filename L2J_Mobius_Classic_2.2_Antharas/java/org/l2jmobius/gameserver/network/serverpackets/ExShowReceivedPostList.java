@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
-import org.l2jmobius.gameserver.model.entity.Message;
+import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 

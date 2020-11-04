@@ -22,8 +22,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.siege.clanhalls.DevastatedCastle;
 
 /**
  * @author Mobius

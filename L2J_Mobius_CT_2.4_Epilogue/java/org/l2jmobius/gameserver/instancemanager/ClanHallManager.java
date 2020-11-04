@@ -30,9 +30,9 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.model.entity.clanhall.AuctionableHall;
-import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import org.l2jmobius.gameserver.model.residences.AuctionableHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
+import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 
 /**

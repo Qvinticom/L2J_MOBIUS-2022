@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
  * Populates the Siege Defender List in the SiegeInfo Window<br>

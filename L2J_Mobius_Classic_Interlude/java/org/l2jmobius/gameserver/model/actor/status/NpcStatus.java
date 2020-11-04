@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.actor.status;
 
+import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Duel;
 
 public class NpcStatus extends CreatureStatus
 {

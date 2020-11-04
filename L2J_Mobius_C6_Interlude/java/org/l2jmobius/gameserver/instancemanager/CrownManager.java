@@ -22,8 +22,8 @@ import org.l2jmobius.gameserver.data.CrownTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.entity.siege.Castle;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
  * @author evill33t Reworked by NB4L1

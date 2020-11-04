@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.taskmanager.tasks;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.taskmanager.Task;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
 import org.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;

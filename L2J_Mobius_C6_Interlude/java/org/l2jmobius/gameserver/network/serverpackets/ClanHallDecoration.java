@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.model.entity.ClanHall.ClanHallFunction;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall.ClanHallFunction;
 
 /**
  * @author Steuf

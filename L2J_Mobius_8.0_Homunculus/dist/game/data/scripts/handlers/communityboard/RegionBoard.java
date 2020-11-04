@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.handler.IWriteBoardHandler;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.Castle;
+import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.util.Util;
 
 /**

@@ -27,16 +27,16 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.entity.Castle.CastleFunction;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.model.entity.Fort;
-import org.l2jmobius.gameserver.model.entity.Fort.FortFunction;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.quest.Event;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.model.siege.Castle.CastleFunction;
+import org.l2jmobius.gameserver.model.siege.Fort.FortFunction;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**

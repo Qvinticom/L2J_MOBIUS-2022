@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.entity.Hero;
-import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.olympiad.Hero;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 
 /**
  * Format: (ch) d [SdSdSdd] d: size [ S: hero name d: hero class ID S: hero clan name d: hero clan crest id S: hero ally name d: hero Ally id d: count ]

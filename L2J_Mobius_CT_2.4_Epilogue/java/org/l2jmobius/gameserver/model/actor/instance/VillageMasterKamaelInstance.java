@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
 public class VillageMasterKamaelInstance extends VillageMasterInstance

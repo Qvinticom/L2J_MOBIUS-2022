@@ -40,7 +40,7 @@ import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.ClassMasterSettings;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
-import org.l2jmobius.gameserver.model.entity.olympiad.OlympiadPeriod;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadPeriod;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
 import org.l2jmobius.loginserver.LoginController;

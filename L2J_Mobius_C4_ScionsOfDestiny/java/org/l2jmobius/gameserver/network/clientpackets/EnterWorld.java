@@ -28,6 +28,7 @@ import java.util.regex.PatternSyntaxException;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.communitybbs.Manager.MailBBSManager;
+import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -39,31 +40,30 @@ import org.l2jmobius.gameserver.instancemanager.CrownManager;
 import org.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import org.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
+import org.l2jmobius.gameserver.instancemanager.RebirthManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
+import org.l2jmobius.gameserver.instancemanager.events.CTF;
+import org.l2jmobius.gameserver.instancemanager.events.DM;
+import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
+import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.Effect;
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.Wedding;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.Announcements;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.model.entity.Hero;
-import org.l2jmobius.gameserver.model.entity.Rebirth;
-import org.l2jmobius.gameserver.model.entity.Wedding;
-import org.l2jmobius.gameserver.model.entity.event.CTF;
-import org.l2jmobius.gameserver.model.entity.event.DM;
-import org.l2jmobius.gameserver.model.entity.event.GameEvent;
-import org.l2jmobius.gameserver.model.entity.event.TvT;
-import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
-import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
-import org.l2jmobius.gameserver.model.entity.siege.Castle;
-import org.l2jmobius.gameserver.model.entity.siege.FortSiege;
-import org.l2jmobius.gameserver.model.entity.siege.Siege;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.olympiad.Hero;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.FortSiege;
+import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -401,7 +401,7 @@ public class EnterWorld extends GameClientPacket
 		// Rebirth's skills must be actived only on main class
 		if (Config.REBIRTH_ENABLE && !player.isSubClassActive())
 		{
-			Rebirth.getInstance().grantRebirthSkills(player);
+			RebirthManager.getInstance().grantRebirthSkills(player);
 		}
 		
 		if (TvT._savePlayers.contains(player.getName()))

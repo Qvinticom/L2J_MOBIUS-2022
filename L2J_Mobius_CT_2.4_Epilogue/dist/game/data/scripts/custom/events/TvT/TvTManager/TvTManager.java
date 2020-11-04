@@ -20,9 +20,9 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
+import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.TvTEvent;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 

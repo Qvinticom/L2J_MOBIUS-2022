@@ -29,10 +29,10 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
-import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.model.entity.Fort;
-import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**

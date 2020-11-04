@@ -22,9 +22,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
+import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Message;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 

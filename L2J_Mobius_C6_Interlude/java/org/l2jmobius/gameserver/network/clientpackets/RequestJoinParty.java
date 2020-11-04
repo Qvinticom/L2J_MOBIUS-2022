@@ -16,13 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.instancemanager.events.CTF;
+import org.l2jmobius.gameserver.instancemanager.events.DM;
+import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.event.CTF;
-import org.l2jmobius.gameserver.model.entity.event.DM;
-import org.l2jmobius.gameserver.model.entity.event.TvT;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;

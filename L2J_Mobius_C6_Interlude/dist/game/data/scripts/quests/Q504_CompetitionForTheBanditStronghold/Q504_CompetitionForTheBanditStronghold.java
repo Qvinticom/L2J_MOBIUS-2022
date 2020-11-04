@@ -19,10 +19,10 @@ package quests.Q504_CompetitionForTheBanditStronghold;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.siege.clanhalls.BanditStrongholdSiege;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.siege.clanhalls.BanditStrongholdSiege;
 
 /**
  * @author Mobius

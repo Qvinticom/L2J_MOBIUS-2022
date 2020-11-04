@@ -18,7 +18,7 @@ package ai.others;
 
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.entity.Castle;
+import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.ExCastleState;
 

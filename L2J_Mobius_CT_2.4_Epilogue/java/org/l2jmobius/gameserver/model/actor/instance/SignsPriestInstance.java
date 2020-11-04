@@ -20,12 +20,12 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.SevenSigns;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;

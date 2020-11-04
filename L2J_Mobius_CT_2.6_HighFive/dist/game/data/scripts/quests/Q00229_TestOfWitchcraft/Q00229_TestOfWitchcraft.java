@@ -18,11 +18,11 @@ package quests.Q00229_TestOfWitchcraft;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;

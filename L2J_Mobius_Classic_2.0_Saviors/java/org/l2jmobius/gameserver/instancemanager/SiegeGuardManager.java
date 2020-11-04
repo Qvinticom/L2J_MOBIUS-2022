@@ -34,10 +34,10 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.DefenderInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.holders.SiegeGuardHolder;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
  * Siege Guard Manager.

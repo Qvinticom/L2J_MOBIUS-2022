@@ -20,7 +20,7 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.entity.siege.FortSiege;
+import org.l2jmobius.gameserver.model.siege.FortSiege;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;

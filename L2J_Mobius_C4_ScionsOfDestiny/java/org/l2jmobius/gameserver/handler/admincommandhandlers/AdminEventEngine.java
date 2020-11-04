@@ -31,10 +31,10 @@ import java.util.StringTokenizer;
 
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.event.GameEvent;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;

@@ -29,8 +29,8 @@ import org.l2jmobius.gameserver.instancemanager.AuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.Auction;
-import org.l2jmobius.gameserver.model.entity.Auction.Bidder;
+import org.l2jmobius.gameserver.model.residences.ClanHallAuction;
+import org.l2jmobius.gameserver.model.residences.ClanHallAuction.Bidder;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -42,7 +42,7 @@ public class AuctioneerInstance extends FolkInstance
 	private static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
 	private static final int COND_REGULAR = 3;
 	
-	private final Map<Integer, Auction> _pendingAuctions = new HashMap<>();
+	private final Map<Integer, ClanHallAuction> _pendingAuctions = new HashMap<>();
 	
 	public AuctioneerInstance(int objectId, NpcTemplate template)
 	{
@@ -130,7 +130,7 @@ public class AuctioneerInstance extends FolkInstance
 							bid = Integer.parseInt(st.nextToken());
 						}
 						
-						final Auction a = new Auction(player.getClan().getHideoutId(), player.getClan(), days * 86400000, bid, ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getName());
+						final ClanHallAuction a = new ClanHallAuction(player.getClan().getHideoutId(), player.getClan(), days * 86400000, bid, ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getName());
 						if (_pendingAuctions.get(a.getId()) != null)
 						{
 							_pendingAuctions.remove(a.getId());
@@ -165,7 +165,7 @@ public class AuctioneerInstance extends FolkInstance
 			{
 				try
 				{
-					final Auction a = _pendingAuctions.get(player.getClan().getHideoutId());
+					final ClanHallAuction a = _pendingAuctions.get(player.getClan().getHideoutId());
 					a.confirmAuction();
 					_pendingAuctions.remove(player.getClan().getHideoutId());
 				}
@@ -187,7 +187,7 @@ public class AuctioneerInstance extends FolkInstance
 					final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 					final int auctionId = Integer.parseInt(val);
 					final String filename = "data/html/auction/AgitAuctionInfo.htm";
-					final Auction a = AuctionManager.getInstance().getAuction(auctionId);
+					final ClanHallAuction a = AuctionManager.getInstance().getAuction(auctionId);
 					final NpcHtmlMessage html = new NpcHtmlMessage(1);
 					html.setFile(filename);
 					if (a != null)
@@ -299,7 +299,7 @@ public class AuctioneerInstance extends FolkInstance
 			}
 			else if (actualCommand.equalsIgnoreCase("list"))
 			{
-				final List<Auction> auctions = AuctionManager.getInstance().getAuctions();
+				final List<ClanHallAuction> auctions = AuctionManager.getInstance().getAuctions();
 				final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 				/** Limit for make new page, prevent client crash **/
 				int limit = 15;
@@ -323,7 +323,7 @@ public class AuctioneerInstance extends FolkInstance
 					items += "<td><center><a action=\"bypass -h npc_" + getObjectId() + "_list " + j + "\"> Page " + j + " </a></center></td>";
 				}
 				items += "</tr></table><table width=280 border=0>";
-				for (Auction a : auctions)
+				for (ClanHallAuction a : auctions)
 				{
 					if (i > limit)
 					{
@@ -392,7 +392,7 @@ public class AuctioneerInstance extends FolkInstance
 					final String filename = "data/html/auction/AgitBidInfo.htm";
 					final NpcHtmlMessage html = new NpcHtmlMessage(1);
 					html.setFile(filename);
-					final Auction a = AuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt());
+					final ClanHallAuction a = AuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt());
 					if (a != null)
 					{
 						html.replace("%AGIT_NAME%", a.getItemName());
@@ -423,7 +423,7 @@ public class AuctioneerInstance extends FolkInstance
 					final String filename = "data/html/auction/AgitSaleInfo.htm";
 					final NpcHtmlMessage html = new NpcHtmlMessage(1);
 					html.setFile(filename);
-					final Auction a = AuctionManager.getInstance().getAuction(player.getClan().getHideoutId());
+					final ClanHallAuction a = AuctionManager.getInstance().getAuction(player.getClan().getHideoutId());
 					if (a != null)
 					{
 						html.replace("%AGIT_NAME%", a.getItemName());
@@ -568,7 +568,7 @@ public class AuctioneerInstance extends FolkInstance
 					final String filename = "data/html/auction/AgitBid2.htm";
 					final NpcHtmlMessage html = new NpcHtmlMessage(1);
 					html.setFile(filename);
-					final Auction a = AuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt());
+					final ClanHallAuction a = AuctionManager.getInstance().getAuction(player.getClan().getAuctionBiddedAt());
 					if (a != null)
 					{
 						html.replace("%AGIT_AUCTION_BID%", String.valueOf(a.getBidders().get(player.getClanId()).getBid()));

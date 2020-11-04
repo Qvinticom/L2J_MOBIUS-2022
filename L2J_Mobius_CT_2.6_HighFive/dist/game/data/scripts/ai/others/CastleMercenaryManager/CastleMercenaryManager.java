@@ -18,13 +18,13 @@ package ai.others.CastleMercenaryManager;
 
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.SevenSigns;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
-import org.l2jmobius.gameserver.model.entity.Castle;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;

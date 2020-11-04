@@ -85,6 +85,7 @@ import org.l2jmobius.gameserver.enums.CastleSide;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.ClanWarState;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.GroupType;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
@@ -126,11 +127,13 @@ import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.SellBuffsManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
+import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.ContactList;
+import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.ElementalSpirit;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Macro;
@@ -181,8 +184,6 @@ import org.l2jmobius.gameserver.model.actor.tasks.player.WarnUserTakeBreakTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.WaterTask;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.actor.transform.Transform;
-import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -191,12 +192,6 @@ import org.l2jmobius.gameserver.model.clan.ClanWar;
 import org.l2jmobius.gameserver.model.cubic.CubicInstance;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.entity.Duel;
-import org.l2jmobius.gameserver.model.entity.Fort;
-import org.l2jmobius.gameserver.model.entity.GameEvent;
-import org.l2jmobius.gameserver.model.entity.Hero;
-import org.l2jmobius.gameserver.model.entity.Siege;
 import org.l2jmobius.gameserver.model.eventengine.AbstractEvent;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -232,6 +227,7 @@ import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.holders.TrainingHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -252,6 +248,7 @@ import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.matching.MatchingRoom;
+import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
@@ -261,6 +258,9 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
@@ -455,7 +455,7 @@ public class PlayerInstance extends Playable
 	private boolean _petItems = false;
 	
 	/** The list of sub-classes this character has. */
-	private final Map<Integer, SubClass> _subClasses = new ConcurrentHashMap<>();
+	private final Map<Integer, SubClassHolder> _subClasses = new ConcurrentHashMap<>();
 	
 	private final PlayerAppearance _appearance;
 	
@@ -6506,7 +6506,7 @@ public class PlayerInstance extends Playable
 					// Restore Subclass Data (cannot be done earlier in function)
 					if (restoreSubClassData(player) && (activeClassId != player.getBaseClass()))
 					{
-						for (SubClass subClass : player.getSubClasses().values())
+						for (SubClassHolder subClass : player.getSubClasses().values())
 						{
 							if (subClass.getClassId() == activeClassId)
 							{
@@ -6728,7 +6728,7 @@ public class PlayerInstance extends Playable
 			{
 				while (rset.next())
 				{
-					final SubClass subClass = new SubClass();
+					final SubClassHolder subClass = new SubClassHolder();
 					subClass.setClassId(rset.getInt("class_id"));
 					subClass.setDualClassActive(rset.getBoolean("dual_class"));
 					subClass.setVitalityPoints(rset.getInt("vitality_points"));
@@ -7053,7 +7053,7 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(UPDATE_CHAR_SUBCLASS))
 		{
-			for (SubClass subClass : getSubClasses().values())
+			for (SubClassHolder subClass : getSubClasses().values())
 			{
 				statement.setLong(1, subClass.getExp());
 				statement.setLong(2, subClass.getSp());
@@ -9372,7 +9372,7 @@ public class PlayerInstance extends Playable
 			
 			// Note: Never change _classIndex in any method other than setActiveClass().
 			
-			final SubClass newClass = new SubClass();
+			final SubClassHolder newClass = new SubClassHolder();
 			newClass.setClassId(classId);
 			newClass.setClassIndex(classIndex);
 			newClass.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS);
@@ -9463,7 +9463,7 @@ public class PlayerInstance extends Playable
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
 			}
 			
-			final SubClass subClass = getSubClasses().get(classIndex);
+			final SubClassHolder subClass = getSubClasses().get(classIndex);
 			if (subClass == null)
 			{
 				return false;
@@ -9557,7 +9557,7 @@ public class PlayerInstance extends Playable
 		{
 			return false;
 		}
-		final SubClass subClass = _subClasses.get(_classIndex);
+		final SubClassHolder subClass = _subClasses.get(_classIndex);
 		if (subClass == null)
 		{
 			return false;
@@ -9567,7 +9567,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean hasDualClass()
 	{
-		for (SubClass subClass : _subClasses.values())
+		for (SubClassHolder subClass : _subClasses.values())
 		{
 			if (subClass.isDualClass())
 			{
@@ -9577,9 +9577,9 @@ public class PlayerInstance extends Playable
 		return false;
 	}
 	
-	public SubClass getDualClass()
+	public SubClassHolder getDualClass()
 	{
-		for (SubClass subClass : _subClasses.values())
+		for (SubClassHolder subClass : _subClasses.values())
 		{
 			if (subClass.isDualClass())
 			{
@@ -9589,7 +9589,7 @@ public class PlayerInstance extends Playable
 		return null;
 	}
 	
-	public Map<Integer, SubClass> getSubClasses()
+	public Map<Integer, SubClassHolder> getSubClasses()
 	{
 		return _subClasses;
 	}

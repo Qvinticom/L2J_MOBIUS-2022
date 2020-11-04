@@ -26,9 +26,9 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2jmobius.gameserver.model.base.ClassId;
 
 /**
  * @author Mobius

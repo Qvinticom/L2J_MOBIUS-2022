@@ -23,7 +23,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.model.CropProcure;
-import org.l2jmobius.gameserver.model.entity.Castle;
+import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

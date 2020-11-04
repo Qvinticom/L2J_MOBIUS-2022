@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
-import org.l2jmobius.gameserver.model.entity.Fort;
+import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**

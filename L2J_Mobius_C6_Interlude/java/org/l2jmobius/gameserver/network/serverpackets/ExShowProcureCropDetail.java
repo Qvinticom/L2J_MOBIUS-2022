@@ -23,7 +23,7 @@ import java.util.Map.Entry;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManorManager.CropProcure;
-import org.l2jmobius.gameserver.model.entity.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
  * format(packet 0xFE) ch dd [dddc] c - id h - sub id d - crop id d - size [ d - manor name d - buy residual d - buy price c - reward type ]

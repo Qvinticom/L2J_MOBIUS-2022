@@ -18,13 +18,13 @@ package quests.Q10752_WindsOfFateAPromise;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.CategoryType;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;

@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
-import org.l2jmobius.gameserver.model.entity.siege.Castle;
-import org.l2jmobius.gameserver.model.entity.siege.Fort;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.network.serverpackets.FortSiegeDefenderList;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
 

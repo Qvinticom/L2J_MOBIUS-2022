@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.event.VIP;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 

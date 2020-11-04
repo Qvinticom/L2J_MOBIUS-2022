@@ -21,7 +21,7 @@ import java.util.List;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.Fort;
+import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

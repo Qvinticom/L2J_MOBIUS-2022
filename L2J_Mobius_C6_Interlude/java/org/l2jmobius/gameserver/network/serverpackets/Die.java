@@ -18,16 +18,16 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
+import org.l2jmobius.gameserver.instancemanager.events.CTF;
+import org.l2jmobius.gameserver.instancemanager.events.DM;
+import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.SiegeClan;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.event.CTF;
-import org.l2jmobius.gameserver.model.entity.event.DM;
-import org.l2jmobius.gameserver.model.entity.event.TvT;
-import org.l2jmobius.gameserver.model.entity.siege.Castle;
-import org.l2jmobius.gameserver.model.entity.siege.Fort;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
 
 public class Die extends GameServerPacket
 {

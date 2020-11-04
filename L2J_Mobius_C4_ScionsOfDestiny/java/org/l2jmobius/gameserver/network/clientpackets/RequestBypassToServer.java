@@ -24,6 +24,12 @@ import org.l2jmobius.gameserver.communitybbs.CommunityBoard;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.AdminCommandHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.RebirthManager;
+import org.l2jmobius.gameserver.instancemanager.events.CTF;
+import org.l2jmobius.gameserver.instancemanager.events.DM;
+import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
+import org.l2jmobius.gameserver.instancemanager.events.TvT;
+import org.l2jmobius.gameserver.instancemanager.events.VIP;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -31,13 +37,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SymbolMakerInstance;
-import org.l2jmobius.gameserver.model.entity.Rebirth;
-import org.l2jmobius.gameserver.model.entity.event.CTF;
-import org.l2jmobius.gameserver.model.entity.event.DM;
-import org.l2jmobius.gameserver.model.entity.event.GameEvent;
-import org.l2jmobius.gameserver.model.entity.event.TvT;
-import org.l2jmobius.gameserver.model.entity.event.VIP;
-import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.util.GMAudit;
@@ -334,7 +334,7 @@ public class RequestBypassToServer extends GameClientPacket
 			}
 			else if (_command.startsWith("custom_rebirth_"))
 			{
-				Rebirth.getInstance().handleCommand(player, _command);
+				RebirthManager.getInstance().handleCommand(player, _command);
 			}
 		}
 		catch (Exception e)

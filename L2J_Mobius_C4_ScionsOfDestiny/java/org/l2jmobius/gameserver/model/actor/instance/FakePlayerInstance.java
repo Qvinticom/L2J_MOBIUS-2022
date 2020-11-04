@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.FakePlayerTable;
-import org.l2jmobius.gameserver.model.base.ClassId;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 
 /**

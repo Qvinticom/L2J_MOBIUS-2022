@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeGuardInstance;
-import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.spawn.SpawnListener;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;

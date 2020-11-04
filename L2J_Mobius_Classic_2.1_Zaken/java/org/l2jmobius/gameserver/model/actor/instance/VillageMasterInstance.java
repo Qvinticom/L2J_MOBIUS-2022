@@ -31,7 +31,9 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
+import org.l2jmobius.gameserver.enums.AcquireSkillType;
 import org.l2jmobius.gameserver.enums.CategoryType;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -41,15 +43,13 @@ import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.base.AcquireSkillType;
-import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.entity.Fort;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -452,9 +452,9 @@ public class VillageMasterInstance extends NpcInstance
 							content2.append("<a action=\"bypass -h npc_%objectId%_Subclass 5 0\">" + ClassListData.getInstance().getClass(player.getBaseClass()).getClientCode() + "</a><br>");
 						}
 						
-						for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
+						for (Iterator<SubClassHolder> subList = iterSubClasses(player); subList.hasNext();)
 						{
-							final SubClass subClass = subList.next();
+							final SubClassHolder subClass = subList.next();
 							if (checkVillageMaster(subClass.getClassDefinition()))
 							{
 								content2.append("<a action=\"bypass -h npc_%objectId%_Subclass 5 " + subClass.getClassIndex() + "\">" + ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode() + "</a><br>");
@@ -485,9 +485,9 @@ public class VillageMasterInstance extends NpcInstance
 						html.setFile(player, "data/html/villagemaster/SubClass_ModifyCustom.htm");
 						final StringBuilder content3 = new StringBuilder(200);
 						int classIndex = 1;
-						for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
+						for (Iterator<SubClassHolder> subList = iterSubClasses(player); subList.hasNext();)
 						{
-							final SubClass subClass = subList.next();
+							final SubClassHolder subClass = subList.next();
 							content3.append("Sub-class " + classIndex++ + "<br><a action=\"bypass -h npc_%objectId%_Subclass 6 " + subClass.getClassIndex() + "\">" + ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode() + "</a><br>");
 						}
 						html.replace("%list%", content3.toString());
@@ -547,9 +547,9 @@ public class VillageMasterInstance extends NpcInstance
 					
 					if (allowAddition && !player.getSubClasses().isEmpty())
 					{
-						for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
+						for (Iterator<SubClassHolder> subList = iterSubClasses(player); subList.hasNext();)
 						{
-							final SubClass subClass = subList.next();
+							final SubClassHolder subClass = subList.next();
 							if (subClass.getLevel() < 75)
 							{
 								allowAddition = false;
@@ -793,9 +793,9 @@ public class VillageMasterInstance extends NpcInstance
 				// scan for already used subclasses
 				final int availClassId = pclass.getId();
 				final ClassId cid = ClassId.getClassId(availClassId);
-				SubClass prevSubClass;
+				SubClassHolder prevSubClass;
 				ClassId subClassId;
-				for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
+				for (Iterator<SubClassHolder> subList = iterSubClasses(player); subList.hasNext();)
 				{
 					prevSubClass = subList.next();
 					subClassId = ClassId.getClassId(prevSubClass.getClassId());
@@ -911,9 +911,9 @@ public class VillageMasterInstance extends NpcInstance
 		}
 		
 		final ClassId cid = ClassId.getClassId(classId);
-		SubClass sub;
+		SubClassHolder sub;
 		ClassId subClassId;
-		for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
+		for (Iterator<SubClassHolder> subList = iterSubClasses(player); subList.hasNext();)
 		{
 			sub = subList.next();
 			subClassId = ClassId.getClassId(sub.getClassId());
@@ -990,7 +990,7 @@ public class VillageMasterInstance extends NpcInstance
 		return checkVillageMasterRace(pclass) && checkVillageMasterTeachType(pclass);
 	}
 	
-	private static Iterator<SubClass> iterSubClasses(PlayerInstance player)
+	private static Iterator<SubClassHolder> iterSubClasses(PlayerInstance player)
 	{
 		return player.getSubClasses().values().iterator();
 	}

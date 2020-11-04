@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.instancemanager;
 
-import org.l2jmobius.gameserver.model.entity.Castle;
+import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.TownZone;
 

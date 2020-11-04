@@ -17,9 +17,9 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.model.entity.ClanHall.ClanHallFunction;
-import org.l2jmobius.gameserver.model.entity.clanhall.AuctionableHall;
+import org.l2jmobius.gameserver.model.residences.AuctionableHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall.ClanHallFunction;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

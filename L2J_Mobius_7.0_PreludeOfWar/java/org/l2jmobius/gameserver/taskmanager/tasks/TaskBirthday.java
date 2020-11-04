@@ -29,7 +29,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
-import org.l2jmobius.gameserver.model.entity.Message;
+import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.itemcontainer.Mail;
 import org.l2jmobius.gameserver.taskmanager.Task;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;

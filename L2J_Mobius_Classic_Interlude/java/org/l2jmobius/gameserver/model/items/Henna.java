@@ -21,8 +21,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.BaseStat;
 

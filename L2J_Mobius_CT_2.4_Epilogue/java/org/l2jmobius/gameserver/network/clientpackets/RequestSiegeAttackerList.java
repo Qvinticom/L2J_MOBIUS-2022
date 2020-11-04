@@ -20,8 +20,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.SiegeAttackerList;
 

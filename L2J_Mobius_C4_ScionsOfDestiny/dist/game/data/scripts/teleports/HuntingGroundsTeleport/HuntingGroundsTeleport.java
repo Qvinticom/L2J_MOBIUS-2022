@@ -18,8 +18,8 @@ package teleports.HuntingGroundsTeleport;
 
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.util.Util;
 
 public class HuntingGroundsTeleport extends Quest

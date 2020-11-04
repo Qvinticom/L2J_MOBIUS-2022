@@ -20,8 +20,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
 

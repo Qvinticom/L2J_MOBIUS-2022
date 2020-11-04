@@ -28,9 +28,9 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.entity.Fort;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
 
 import instances.AbstractInstance;
 

@@ -18,10 +18,10 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.instancemanager.games.BlockChecker;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.entity.BlockCheckerEngine;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -55,7 +55,7 @@ public class BlockInstance extends MonsterInstance
 		// Do not update color while sending old info
 		synchronized (this)
 		{
-			final BlockCheckerEngine event = holder.getEvent();
+			final BlockChecker event = holder.getEvent();
 			if (_colorEffect == 0x53)
 			{
 				// Change color
@@ -141,7 +141,7 @@ public class BlockInstance extends MonsterInstance
 		}
 	}
 	
-	private void increaseTeamPointsAndSend(PlayerInstance player, int team, BlockCheckerEngine eng)
+	private void increaseTeamPointsAndSend(PlayerInstance player, int team, BlockChecker eng)
 	{
 		eng.increasePlayerPoints(player, team);
 		
@@ -153,7 +153,7 @@ public class BlockInstance extends MonsterInstance
 		eng.getHolder().broadCastPacketToTeam(secretPoints);
 	}
 	
-	private void dropItem(int id, BlockCheckerEngine eng, PlayerInstance player)
+	private void dropItem(int id, BlockChecker eng, PlayerInstance player)
 	{
 		final ItemInstance drop = ItemTable.getInstance().createItem("Loot", id, 1, player, this);
 		final int x = getX() + Rnd.get(50);

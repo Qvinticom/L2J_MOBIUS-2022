@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.model.actor.templates;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**

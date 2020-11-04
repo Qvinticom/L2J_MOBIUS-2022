@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.model;
 import java.util.List;
 import java.util.function.Function;
 
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.DailyMissionStatus;
 import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2jmobius.gameserver.handler.DailyMissionHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**

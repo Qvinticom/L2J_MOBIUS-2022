@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.base.ClassId;
 
 public class VillageMasterDElfInstance extends VillageMasterInstance
 {

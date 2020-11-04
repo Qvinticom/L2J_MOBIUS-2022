@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
-import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**

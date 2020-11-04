@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Castle;
+import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 

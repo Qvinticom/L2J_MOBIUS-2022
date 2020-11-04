@@ -19,11 +19,11 @@ package ai.areas.DragonValley;
 import java.util.EnumMap;
 
 import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 

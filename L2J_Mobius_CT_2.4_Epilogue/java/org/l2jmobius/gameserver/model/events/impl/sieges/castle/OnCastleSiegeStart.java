@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.sieges.castle;
 
-import org.l2jmobius.gameserver.model.entity.Siege;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
+import org.l2jmobius.gameserver.model.siege.Siege;
 
 /**
  * @author UnAfraid

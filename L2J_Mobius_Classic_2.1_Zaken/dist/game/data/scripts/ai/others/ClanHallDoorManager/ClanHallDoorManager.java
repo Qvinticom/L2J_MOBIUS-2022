@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
 
 import ai.AbstractNpcAI;
 

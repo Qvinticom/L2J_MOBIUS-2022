@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
+import org.l2jmobius.gameserver.instancemanager.games.BlockChecker;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.BlockCheckerEngine;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -34,14 +34,14 @@ public class ArenaParticipantsHolder
 	private final int _arena;
 	private final List<PlayerInstance> _redPlayers;
 	private final List<PlayerInstance> _bluePlayers;
-	private final BlockCheckerEngine _engine;
+	private final BlockChecker _engine;
 	
 	public ArenaParticipantsHolder(int arena)
 	{
 		_arena = arena;
 		_redPlayers = new ArrayList<>(6);
 		_bluePlayers = new ArrayList<>(6);
-		_engine = new BlockCheckerEngine(this, _arena);
+		_engine = new BlockChecker(this, _arena);
 	}
 	
 	public List<PlayerInstance> getRedPlayers()
@@ -129,7 +129,7 @@ public class ArenaParticipantsHolder
 		_bluePlayers.clear();
 	}
 	
-	public BlockCheckerEngine getEvent()
+	public BlockChecker getEvent()
 	{
 		return _engine;
 	}

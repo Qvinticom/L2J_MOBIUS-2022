@@ -22,6 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
+import org.l2jmobius.gameserver.enums.AcquireSkillType;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.UserInfoType;
@@ -30,14 +31,13 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.VillageMasterInstance;
-import org.l2jmobius.gameserver.model.base.AcquireSkillType;
-import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSkillLearn;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -487,7 +487,7 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 				
 				if (skillLearn.getDualClassLevel() > 0)
 				{
-					final SubClass playerDualClass = player.getDualClass();
+					final SubClassHolder playerDualClass = player.getDualClass();
 					if ((playerDualClass == null) || (playerDualClass.getLevel() < skillLearn.getDualClassLevel()))
 					{
 						return false;

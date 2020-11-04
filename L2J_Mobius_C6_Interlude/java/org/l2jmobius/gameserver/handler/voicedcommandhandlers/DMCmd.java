@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.handler.voicedcommandhandlers;
 
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.events.DM;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.event.DM;
 
 public class DMCmd implements IVoicedCommandHandler
 {

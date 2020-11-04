@@ -50,8 +50,6 @@ import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.RecipeController;
-import org.l2jmobius.gameserver.SevenSigns;
-import org.l2jmobius.gameserver.SevenSignsFestival;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.PlayerAI;
@@ -82,6 +80,7 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.HtmlActionScope;
 import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.enums.InstanceType;
@@ -117,15 +116,19 @@ import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
+import org.l2jmobius.gameserver.instancemanager.events.GameEvent;
+import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.AccessLevel;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.BlockList;
 import org.l2jmobius.gameserver.model.ContactList;
+import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Macro;
 import org.l2jmobius.gameserver.model.MacroList;
 import org.l2jmobius.gameserver.model.ManufactureItem;
+import org.l2jmobius.gameserver.model.Nevit;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.PetLevelData;
@@ -173,21 +176,11 @@ import org.l2jmobius.gameserver.model.actor.tasks.player.WarnUserTakeBreakTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.WaterTask;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.actor.transform.Transform;
-import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.entity.Duel;
-import org.l2jmobius.gameserver.model.entity.Fort;
-import org.l2jmobius.gameserver.model.entity.GameEvent;
-import org.l2jmobius.gameserver.model.entity.Hero;
-import org.l2jmobius.gameserver.model.entity.NevitSystem;
-import org.l2jmobius.gameserver.model.entity.Siege;
-import org.l2jmobius.gameserver.model.entity.TvTEvent;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.playable.OnPlayableExpChanged;
@@ -214,6 +207,7 @@ import org.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.IEventListener;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -235,6 +229,7 @@ import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.multisell.PreparedListContainer;
+import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
@@ -246,6 +241,11 @@ import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.QuestTimer;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
@@ -444,7 +444,7 @@ public class PlayerInstance extends Playable
 	private boolean _petItems = false;
 	
 	/** The list of sub-classes this character has. */
-	private final Map<Integer, SubClass> _subClasses = new ConcurrentHashMap<>();
+	private final Map<Integer, SubClassHolder> _subClasses = new ConcurrentHashMap<>();
 	
 	private final PlayerAppearance _appearance;
 	
@@ -6845,7 +6845,7 @@ public class PlayerInstance extends Playable
 					// Restore Subclass Data (cannot be done earlier in function)
 					if (restoreSubClassData(player) && (activeClassId != player.getBaseClass()))
 					{
-						for (SubClass subClass : player.getSubClasses().values())
+						for (SubClassHolder subClass : player.getSubClasses().values())
 						{
 							if (subClass.getClassId() == activeClassId)
 							{
@@ -7073,7 +7073,7 @@ public class PlayerInstance extends Playable
 			{
 				while (rs.next())
 				{
-					final SubClass subClass = new SubClass();
+					final SubClassHolder subClass = new SubClassHolder();
 					subClass.setClassId(rs.getInt("class_id"));
 					subClass.setLevel(rs.getByte("level"));
 					subClass.setExp(rs.getLong("exp"));
@@ -7381,7 +7381,7 @@ public class PlayerInstance extends Playable
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_CHAR_SUBCLASS))
 		{
-			for (SubClass subClass : getSubClasses().values())
+			for (SubClassHolder subClass : getSubClasses().values())
 			{
 				ps.setLong(1, subClass.getExp());
 				ps.setLong(2, subClass.getSp());
@@ -9994,7 +9994,7 @@ public class PlayerInstance extends Playable
 			
 			// Note: Never change _classIndex in any method other than setActiveClass().
 			
-			final SubClass newClass = new SubClass();
+			final SubClassHolder newClass = new SubClassHolder();
 			newClass.setClassId(classId);
 			newClass.setClassIndex(classIndex);
 			
@@ -10126,7 +10126,7 @@ public class PlayerInstance extends Playable
 		return _classIndex > 0;
 	}
 	
-	public Map<Integer, SubClass> getSubClasses()
+	public Map<Integer, SubClassHolder> getSubClasses()
 	{
 		return _subClasses;
 	}
@@ -14294,9 +14294,9 @@ public class PlayerInstance extends Playable
 	}
 	
 	// High Five: Nevit's Bonus System
-	private final NevitSystem _nevitSystem = new NevitSystem(this);
+	private final Nevit _nevitSystem = new Nevit(this);
 	
-	public NevitSystem getNevitSystem()
+	public Nevit getNevitSystem()
 	{
 		return _nevitSystem;
 	}

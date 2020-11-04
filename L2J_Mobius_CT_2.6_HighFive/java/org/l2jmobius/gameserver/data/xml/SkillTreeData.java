@@ -35,19 +35,19 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.enums.AcquireSkillType;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.enums.SocialClass;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.SkillLearn.SubClassData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.AcquireSkillType;
-import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.SocialClass;
-import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.PlayerSkillHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.interfaces.ISkillsHolder;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -841,7 +841,7 @@ public class SkillTreeData implements IXmlReader
 			if (player.getLevel() >= skill.getGetLevel())
 			{
 				List<SubClassData> subClassConds = null;
-				for (SubClass subClass : player.getSubClasses().values())
+				for (SubClassHolder subClass : player.getSubClasses().values())
 				{
 					subClassConds = skill.getSubClassConditions();
 					if (!subClassConds.isEmpty() && (subClass.getClassIndex() <= subClassConds.size()) && (subClass.getClassIndex() == subClassConds.get(subClass.getClassIndex() - 1).getSlot()) && (subClassConds.get(subClass.getClassIndex() - 1).getLvl() <= subClass.getLevel()))

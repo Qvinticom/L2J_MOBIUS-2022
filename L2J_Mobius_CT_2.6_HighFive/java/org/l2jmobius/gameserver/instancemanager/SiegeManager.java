@@ -36,9 +36,9 @@ import org.l2jmobius.gameserver.model.TowerSpawn;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.entity.Siege;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 public class SiegeManager

@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.knownlist.SiegeGuardKnownList;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
+import org.l2jmobius.gameserver.model.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;

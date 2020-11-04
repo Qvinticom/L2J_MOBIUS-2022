@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.model.zone.type;
 
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.model.entity.clanhall.AuctionableHall;
+import org.l2jmobius.gameserver.model.residences.AuctionableHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.AgitDecoInfo;
 

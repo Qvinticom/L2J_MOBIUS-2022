@@ -31,13 +31,13 @@ import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.stat.PlayerStat;
-import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.eventengine.AbstractEvent;
 import org.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
 import org.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
@@ -111,7 +111,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		for (PlayerInstance player : World.getInstance().getPlayers())
 		{
 			player.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS, false);
-			for (SubClass subclass : player.getSubClasses().values())
+			for (SubClassHolder subclass : player.getSubClasses().values())
 			{
 				subclass.setVitalityPoints(PlayerStat.MAX_VITALITY_POINTS);
 			}

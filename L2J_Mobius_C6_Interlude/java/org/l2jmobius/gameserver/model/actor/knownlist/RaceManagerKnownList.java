@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.actor.knownlist;
 
+import org.l2jmobius.gameserver.instancemanager.games.MonsterRace;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.RaceManagerInstance;
-import org.l2jmobius.gameserver.model.entity.event.MonsterRace;
 import org.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 
 public class RaceManagerKnownList extends NpcKnownList

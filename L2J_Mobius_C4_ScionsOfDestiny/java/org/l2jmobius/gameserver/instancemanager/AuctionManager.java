@@ -24,12 +24,12 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.entity.Auction;
+import org.l2jmobius.gameserver.model.residences.ClanHallAuction;
 
 public class AuctionManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(AuctionManager.class.getName());
-	private final List<Auction> _auctions = new ArrayList<>();
+	private final List<ClanHallAuction> _auctions = new ArrayList<>();
 	private static final String[] ITEM_INIT_DATA =
 	{
 		"(23, 0, 'NPC', 'NPC Clan', 'ClanHall', 23, 0, 'Onyx Hall', 1, 20000000, 0, 1164841200000)",
@@ -139,7 +139,7 @@ public class AuctionManager
 			rs = statement.executeQuery();
 			while (rs.next())
 			{
-				_auctions.add(new Auction(rs.getInt("id")));
+				_auctions.add(new ClanHallAuction(rs.getInt("id")));
 			}
 			statement.close();
 			rs.close();
@@ -152,7 +152,7 @@ public class AuctionManager
 		}
 	}
 	
-	public Auction getAuction(int auctionId)
+	public ClanHallAuction getAuction(int auctionId)
 	{
 		final int index = getAuctionIndex(auctionId);
 		if (index >= 0)
@@ -164,7 +164,7 @@ public class AuctionManager
 	
 	public int getAuctionIndex(int auctionId)
 	{
-		Auction auction;
+		ClanHallAuction auction;
 		for (int i = 0; i < _auctions.size(); i++)
 		{
 			auction = _auctions.get(i);
@@ -176,7 +176,7 @@ public class AuctionManager
 		return -1;
 	}
 	
-	public List<Auction> getAuctions()
+	public List<ClanHallAuction> getAuctions()
 	{
 		return _auctions;
 	}
@@ -209,7 +209,7 @@ public class AuctionManager
 			statement.execute();
 			statement.close();
 			
-			_auctions.add(new Auction(id));
+			_auctions.add(new ClanHallAuction(id));
 		}
 		catch (Exception e)
 		{

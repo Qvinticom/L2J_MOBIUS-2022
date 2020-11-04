@@ -19,7 +19,7 @@ package ai.others.MonumentOfHeroes;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Hero;
+import org.l2jmobius.gameserver.model.olympiad.Hero;
 
 import ai.AbstractNpcAI;
 

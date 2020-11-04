@@ -20,7 +20,7 @@ import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.Siege;
+import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.model.zone.type.SiegeZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;

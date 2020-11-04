@@ -50,9 +50,9 @@ import org.l2jmobius.gameserver.model.SeedProduction;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
-import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.interfaces.IStorable;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
+import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**

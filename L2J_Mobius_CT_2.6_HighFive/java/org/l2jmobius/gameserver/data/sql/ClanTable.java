@@ -42,16 +42,16 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
-import org.l2jmobius.gameserver.model.entity.Auction;
-import org.l2jmobius.gameserver.model.entity.Fort;
-import org.l2jmobius.gameserver.model.entity.FortSiege;
-import org.l2jmobius.gameserver.model.entity.Siege;
-import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarFinish;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarStart;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.clan.OnPlayerClanCreate;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.clan.OnPlayerClanDestroy;
+import org.l2jmobius.gameserver.model.residences.ClanHallAuction;
+import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.model.siege.FortSiege;
+import org.l2jmobius.gameserver.model.siege.Siege;
+import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
@@ -257,7 +257,7 @@ public class ClanTable
 			}
 		}
 		
-		final Auction auction = ClanHallAuctionManager.getInstance().getAuction(clan.getAuctionBiddedAt());
+		final ClanHallAuction auction = ClanHallAuctionManager.getInstance().getAuction(clan.getAuctionBiddedAt());
 		if (auction != null)
 		{
 			auction.cancelBid(clan.getId());

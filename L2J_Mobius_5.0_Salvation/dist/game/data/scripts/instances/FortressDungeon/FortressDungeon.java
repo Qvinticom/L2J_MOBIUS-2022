@@ -29,10 +29,10 @@ import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Fort;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.siege.Fort;
 
 import instances.AbstractInstance;
 import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;

@@ -21,11 +21,11 @@ import java.util.Map;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.CommonUtil;
-import org.l2jmobius.gameserver.SevenSigns;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Fort;
-import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 
 import ai.AbstractNpcAI;
 

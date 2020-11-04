@@ -28,7 +28,6 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.SevenSigns;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.MapRegion;
@@ -37,11 +36,12 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SiegeFlagInstance;
-import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
-import org.l2jmobius.gameserver.model.entity.Fort;
-import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.siege.Fort;
+import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import org.l2jmobius.gameserver.model.zone.type.RespawnZone;
 

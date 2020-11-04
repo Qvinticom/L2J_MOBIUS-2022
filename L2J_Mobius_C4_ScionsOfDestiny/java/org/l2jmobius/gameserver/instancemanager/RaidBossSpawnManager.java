@@ -31,6 +31,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
@@ -38,7 +39,6 @@ import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.RaidBossInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.skills.Stat;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 

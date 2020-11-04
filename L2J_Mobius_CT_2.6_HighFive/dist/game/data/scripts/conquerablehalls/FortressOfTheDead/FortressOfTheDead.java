@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
+import org.l2jmobius.gameserver.model.siege.clanhalls.ClanHallSiegeEngine;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 /**

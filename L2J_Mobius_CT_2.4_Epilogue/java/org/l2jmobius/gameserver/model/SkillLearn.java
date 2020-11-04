@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.SocialClass;
+import org.l2jmobius.gameserver.enums.SocialClass;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 

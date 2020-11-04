@@ -17,10 +17,10 @@
 package org.l2jmobius.gameserver.model.conditions;
 
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.TvTEvent;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
 

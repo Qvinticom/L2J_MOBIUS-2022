@@ -20,7 +20,7 @@ import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.entity.Hero;
+import org.l2jmobius.gameserver.model.olympiad.Hero;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 

@@ -25,8 +25,8 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.model.holders.DoorRequestHolder;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 
 public class DoorInstanceAction implements IActionHandler

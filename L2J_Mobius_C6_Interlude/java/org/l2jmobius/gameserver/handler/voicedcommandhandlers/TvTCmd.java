@@ -18,8 +18,8 @@ package org.l2jmobius.gameserver.handler.voicedcommandhandlers;
 
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.events.TvT;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.event.TvT;
 
 public class TvTCmd implements IVoicedCommandHandler
 {

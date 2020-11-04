@@ -24,8 +24,8 @@ import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.Castle;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
+import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.model.items;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.base.ClassId;
 
 /**
  * Class for the Henna object.

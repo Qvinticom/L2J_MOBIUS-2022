@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.InstanceListManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
-import org.l2jmobius.gameserver.model.entity.Castle;
+import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
  * @author KenM

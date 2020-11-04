@@ -22,7 +22,7 @@ import java.util.List;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.enums.MailType;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
-import org.l2jmobius.gameserver.model.entity.Message;
+import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Mail;
 import org.l2jmobius.gameserver.network.telnet.ITelnetCommand;

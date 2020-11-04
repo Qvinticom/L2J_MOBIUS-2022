@@ -16,10 +16,10 @@
  */
 package org.l2jmobius.gameserver.model.actor.status;
 
+import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.util.Util;
 

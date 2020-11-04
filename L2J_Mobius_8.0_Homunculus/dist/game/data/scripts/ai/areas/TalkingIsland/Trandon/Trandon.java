@@ -23,13 +23,13 @@ import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSubChange;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -210,7 +210,7 @@ public class Trandon extends AbstractNpcAI
 					takeItems(player, SUB_CERTIFICATE, -1);
 					player.getWarehouse().destroyItemByItemId("Quest", SUB_CERTIFICATE, -1, player, npc);
 					takeItems(player, Inventory.ADENA_ID, Config.FEE_DELETE_SUBCLASS_SKILLS);
-					for (SubClass subclass : player.getSubClasses().values())
+					for (SubClassHolder subclass : player.getSubClasses().values())
 					{
 						player.getVariables().remove(SUB_CERTIFICATE_COUNT_VAR + subclass.getClassId());
 					}

@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
-import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 
 public class CastleDoormanInstance extends DoormanInstance
 {

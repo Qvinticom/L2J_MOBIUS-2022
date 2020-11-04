@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.script.faenor;
 import java.util.List;
 import java.util.logging.Logger;
 
+import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.script.DateRange;
 import org.l2jmobius.gameserver.script.EngineInterface;
 import org.l2jmobius.gameserver.script.EventDroplist;

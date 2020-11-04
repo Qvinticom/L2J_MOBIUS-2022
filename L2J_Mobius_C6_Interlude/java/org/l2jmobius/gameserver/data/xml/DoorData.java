@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
 
 /**
  * @author Mobius

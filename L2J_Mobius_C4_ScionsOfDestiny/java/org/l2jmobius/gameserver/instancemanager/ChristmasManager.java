@@ -23,6 +23,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.sql.SpawnTable;
@@ -33,7 +34,6 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.network.SystemMessageId;

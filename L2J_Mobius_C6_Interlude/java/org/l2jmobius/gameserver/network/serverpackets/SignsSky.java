@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 
 /**
  * Changes the sky color depending on the outcome of the Seven Signs competition. packet type id 0xf8 format: c h

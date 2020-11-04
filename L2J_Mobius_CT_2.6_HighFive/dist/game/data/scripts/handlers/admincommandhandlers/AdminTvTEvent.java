@@ -18,11 +18,11 @@ package handlers.admincommandhandlers;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.instancemanager.events.TvTEvent;
+import org.l2jmobius.gameserver.instancemanager.events.TvTEventTeleporter;
+import org.l2jmobius.gameserver.instancemanager.events.TvTManager;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.TvTEvent;
-import org.l2jmobius.gameserver.model.entity.TvTEventTeleporter;
-import org.l2jmobius.gameserver.model.entity.TvTManager;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**

@@ -20,11 +20,11 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
+import org.l2jmobius.gameserver.instancemanager.events.TvT;
+import org.l2jmobius.gameserver.model.SubClass;
 import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.SubClass;
-import org.l2jmobius.gameserver.model.entity.event.TvT;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;

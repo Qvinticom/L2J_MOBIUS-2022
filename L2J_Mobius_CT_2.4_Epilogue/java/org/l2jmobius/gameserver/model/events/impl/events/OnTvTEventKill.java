@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.events;
 
+import org.l2jmobius.gameserver.instancemanager.events.TvTEventTeam;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.TvTEventTeam;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 

@@ -31,13 +31,13 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.EnchantSkillLearn;
 import org.l2jmobius.gameserver.model.PledgeSkillLearn;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.skills.holders.ISkillsHolder;
 import org.l2jmobius.gameserver.model.skills.holders.PlayerSkillHolder;
 

@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.events.impl.creature.player;
 
+import org.l2jmobius.gameserver.enums.AcquireSkillType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.AcquireSkillType;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import org.l2jmobius.gameserver.model.skills.Skill;

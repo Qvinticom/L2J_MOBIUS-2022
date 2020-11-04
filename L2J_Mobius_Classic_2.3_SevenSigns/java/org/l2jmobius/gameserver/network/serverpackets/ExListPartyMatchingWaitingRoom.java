@@ -23,10 +23,10 @@ import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 

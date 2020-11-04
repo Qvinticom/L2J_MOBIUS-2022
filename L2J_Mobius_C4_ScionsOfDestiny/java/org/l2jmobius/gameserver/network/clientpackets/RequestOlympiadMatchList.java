@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x13

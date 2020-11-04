@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.AutoAnnouncementHandler;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Announcements;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.BuilderUtil;

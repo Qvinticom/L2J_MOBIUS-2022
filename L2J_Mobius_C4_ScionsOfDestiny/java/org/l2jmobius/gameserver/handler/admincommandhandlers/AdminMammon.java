@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawn;
 import org.l2jmobius.gameserver.model.spawn.AutoSpawn.AutoSpawnInstance;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;

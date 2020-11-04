@@ -23,10 +23,10 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.clanhallauction.ClanHallAuction;
 import org.l2jmobius.gameserver.model.eventengine.AbstractEvent;
 import org.l2jmobius.gameserver.model.eventengine.AbstractEventManager;
 import org.l2jmobius.gameserver.model.eventengine.ScheduleTarget;
+import org.l2jmobius.gameserver.model.residences.ClanHallAuction;
 
 /**
  * @author Sdw

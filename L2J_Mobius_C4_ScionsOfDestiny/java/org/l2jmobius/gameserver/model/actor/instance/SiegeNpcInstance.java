@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.entity.siege.Siege;
+import org.l2jmobius.gameserver.model.siege.Siege;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;

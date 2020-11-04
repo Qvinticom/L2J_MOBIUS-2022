@@ -31,18 +31,18 @@ import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.ClassListData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.CategoryType;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.Id;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMenuSelect;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
@@ -232,7 +232,7 @@ public class Raina extends AbstractNpcAI
 				{
 					final StringBuilder sb = new StringBuilder();
 					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "subclassRemoveList.html");
-					for (SubClass subClass : player.getSubClasses().values())
+					for (SubClassHolder subClass : player.getSubClasses().values())
 					{
 						if (subClass != null)
 						{
@@ -662,7 +662,7 @@ public class Raina extends AbstractNpcAI
 				// scan for already used subclasses
 				final int availClassId = pclass.getId();
 				final ClassId cid = ClassId.getClassId(availClassId);
-				for (SubClass subList : player.getSubClasses().values())
+				for (SubClassHolder subList : player.getSubClasses().values())
 				{
 					final ClassId subId = ClassId.getClassId(subList.getClassId());
 					if (subId.equalsOrChildOf(cid))
@@ -693,7 +693,7 @@ public class Raina extends AbstractNpcAI
 	{
 		final ClassId cid = ClassId.getClassId(classId);
 		ClassId subClassId;
-		for (SubClass subList : player.getSubClasses().values())
+		for (SubClassHolder subList : player.getSubClasses().values())
 		{
 			subClassId = ClassId.getClassId(subList.getClassId());
 			if (subClassId.equalsOrChildOf(cid))
@@ -729,7 +729,7 @@ public class Raina extends AbstractNpcAI
 	private boolean hasAllSubclassLeveled(PlayerInstance player)
 	{
 		boolean leveled = true;
-		for (SubClass sub : player.getSubClasses().values())
+		for (SubClassHolder sub : player.getSubClasses().values())
 		{
 			if ((sub != null) && (sub.getLevel() < 75))
 			{

@@ -23,7 +23,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.enums.SubclassType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.SubClass;
+import org.l2jmobius.gameserver.model.holders.SubClassHolder;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -43,7 +43,7 @@ public class ExSubjobInfo implements IClientOutgoingPacket
 		_type = type.ordinal();
 		_subs = new ArrayList<>();
 		_subs.add(0, new SubInfo(player));
-		for (SubClass sub : player.getSubClasses().values())
+		for (SubClassHolder sub : player.getSubClasses().values())
 		{
 			_subs.add(new SubInfo(sub));
 		}
@@ -56,7 +56,7 @@ public class ExSubjobInfo implements IClientOutgoingPacket
 		private final int _level;
 		private final int _type;
 		
-		public SubInfo(SubClass sub)
+		public SubInfo(SubClassHolder sub)
 		{
 			_index = sub.getClassIndex();
 			_classId = sub.getClassId();

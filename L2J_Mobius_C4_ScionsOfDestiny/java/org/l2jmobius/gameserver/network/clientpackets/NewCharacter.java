@@ -17,8 +17,8 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.network.serverpackets.CharTemplates;
 
 public class NewCharacter extends GameClientPacket

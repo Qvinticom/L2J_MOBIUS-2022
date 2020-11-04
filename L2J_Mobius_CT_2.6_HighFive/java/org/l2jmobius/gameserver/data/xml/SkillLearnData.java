@@ -26,7 +26,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.base.ClassId;
+import org.l2jmobius.gameserver.enums.ClassId;
 
 /**
  * Holds all skill learn data for all NPCs.

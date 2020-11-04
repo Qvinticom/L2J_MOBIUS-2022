@@ -24,12 +24,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.DropCategory;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.skills.Stat;

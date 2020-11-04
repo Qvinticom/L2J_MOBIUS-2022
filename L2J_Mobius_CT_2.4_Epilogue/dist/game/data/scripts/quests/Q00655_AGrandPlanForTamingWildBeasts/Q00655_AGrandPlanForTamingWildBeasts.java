@@ -25,10 +25,10 @@ import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
-import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.siege.clanhalls.ClanHallSiegeEngine;
+import org.l2jmobius.gameserver.model.siege.clanhalls.SiegableHall;
 import org.l2jmobius.gameserver.util.Util;
 
 /**

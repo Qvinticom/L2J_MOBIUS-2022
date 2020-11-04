@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 
 /**
  * sample format d

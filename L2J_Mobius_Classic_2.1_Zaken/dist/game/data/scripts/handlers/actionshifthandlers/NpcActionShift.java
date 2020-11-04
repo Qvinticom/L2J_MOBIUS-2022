@@ -32,8 +32,8 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.ClanHall;
 import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 

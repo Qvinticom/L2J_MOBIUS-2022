@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
-import org.l2jmobius.gameserver.model.entity.Message;
+import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.taskmanager.Task;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
 import org.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;

@@ -21,7 +21,7 @@ import java.util.Map;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
-import org.l2jmobius.gameserver.model.entity.clanhall.AuctionableHall;
+import org.l2jmobius.gameserver.model.residences.AuctionableHall;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**

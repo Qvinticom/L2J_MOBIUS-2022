@@ -31,9 +31,9 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.enums.MailType;
+import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.entity.Message;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2jmobius.gameserver.network.serverpackets.ExUnReadMailCount;
 import org.l2jmobius.gameserver.taskmanager.MessageDeletionTaskManager;

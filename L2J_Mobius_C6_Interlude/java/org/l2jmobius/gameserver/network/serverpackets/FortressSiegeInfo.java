@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
-import org.l2jmobius.gameserver.model.entity.siege.Fort;
+import org.l2jmobius.gameserver.model.siege.Fort;
 
 /**
  * Shows the Siege Info<br>

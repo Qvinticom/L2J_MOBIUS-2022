@@ -24,8 +24,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.events.AbstractScript;
+import org.l2jmobius.gameserver.model.siege.Castle;
 
 /**
  * Siege Flag Of Protection Manager.

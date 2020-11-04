@@ -18,9 +18,9 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.base.ClassId;
 
 public class VillageMasterFighterInstance extends VillageMasterInstance
 {

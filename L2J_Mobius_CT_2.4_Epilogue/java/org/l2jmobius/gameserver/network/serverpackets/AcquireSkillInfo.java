@@ -21,8 +21,8 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.enums.AcquireSkillType;
 import org.l2jmobius.gameserver.model.SkillLearn;
-import org.l2jmobius.gameserver.model.base.AcquireSkillType;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;

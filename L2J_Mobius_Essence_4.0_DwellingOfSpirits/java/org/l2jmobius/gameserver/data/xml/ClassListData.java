@@ -26,8 +26,8 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.ClassInfo;
+import org.l2jmobius.gameserver.enums.ClassId;
+import org.l2jmobius.gameserver.model.holders.ClassInfoHolder;
 
 /**
  * Loads the the list of classes and it's info.
@@ -37,7 +37,7 @@ public class ClassListData implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(ClassListData.class.getName());
 	
-	private final Map<ClassId, ClassInfo> _classData = new ConcurrentHashMap<>();
+	private final Map<ClassId, ClassInfoHolder> _classData = new ConcurrentHashMap<>();
 	
 	/**
 	 * Instantiates a new class list data.
@@ -82,7 +82,7 @@ public class ClassListData implements IXmlReader
 						className = attr.getNodeValue();
 						attr = attrs.getNamedItem("parentClassId");
 						parentClassId = (attr != null) ? ClassId.getClassId(parseInteger(attr)) : null;
-						_classData.put(classId, new ClassInfo(classId, className, parentClassId));
+						_classData.put(classId, new ClassInfoHolder(classId, className, parentClassId));
 					}
 				}
 			}
@@ -93,7 +93,7 @@ public class ClassListData implements IXmlReader
 	 * Gets the class list.
 	 * @return the complete class list.
 	 */
-	public Map<ClassId, ClassInfo> getClassList()
+	public Map<ClassId, ClassInfoHolder> getClassList()
 	{
 		return _classData;
 	}
@@ -103,7 +103,7 @@ public class ClassListData implements IXmlReader
 	 * @param classId the class Id.
 	 * @return the class info related to the given {@code classId}.
 	 */
-	public ClassInfo getClass(ClassId classId)
+	public ClassInfoHolder getClass(ClassId classId)
 	{
 		return _classData.get(classId);
 	}
@@ -113,7 +113,7 @@ public class ClassListData implements IXmlReader
 	 * @param classId the class Id as integer.
 	 * @return the class info related to the given {@code classId}.
 	 */
-	public ClassInfo getClass(int classId)
+	public ClassInfoHolder getClass(int classId)
 	{
 		final ClassId id = ClassId.getClassId(classId);
 		return (id != null) ? _classData.get(id) : null;

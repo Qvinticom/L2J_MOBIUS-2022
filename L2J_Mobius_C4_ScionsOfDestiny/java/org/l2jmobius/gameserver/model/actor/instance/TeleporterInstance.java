@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeManager;
 import org.l2jmobius.gameserver.model.TeleportLocation;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.zone.type.BossZone;
 import org.l2jmobius.gameserver.model.zone.type.TownZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;

@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.taskmanager.tasks;
 
-import org.l2jmobius.gameserver.SevenSigns;
-import org.l2jmobius.gameserver.SevenSignsFestival;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSignsFestival;
 import org.l2jmobius.gameserver.taskmanager.Task;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
 import org.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;

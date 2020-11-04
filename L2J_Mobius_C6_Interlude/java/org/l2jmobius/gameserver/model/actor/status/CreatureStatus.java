@@ -25,13 +25,13 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
+import org.l2jmobius.gameserver.model.Duel;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.SummonInstance;
 import org.l2jmobius.gameserver.model.actor.stat.CreatureStat;
-import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.skills.Formulas;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 

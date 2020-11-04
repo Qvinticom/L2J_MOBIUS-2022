@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.enums.MailType;
-import org.l2jmobius.gameserver.model.entity.Message;
+import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;

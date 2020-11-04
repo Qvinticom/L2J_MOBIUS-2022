@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import org.l2jmobius.gameserver.SevenSigns;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.sevensigns.SevenSigns;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 

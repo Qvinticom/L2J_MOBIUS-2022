@@ -28,10 +28,10 @@ import java.util.stream.Collectors;
 import org.w3c.dom.Document;
 
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
