@@ -19,17 +19,15 @@ package org.l2jmobius.gameserver.model.buylist;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Objects;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
+import org.l2jmobius.gameserver.taskmanager.BuyListTaskManager;
 
 /**
  * @author NosBit
@@ -45,7 +43,6 @@ public class Product
 	private final long _maxCount;
 	private final double _baseTax;
 	private AtomicLong _count = null;
-	private ScheduledFuture<?> _restockTask = null;
 	
 	public Product(int buyListId, Item item, long price, long restockDelay, long maxCount, int baseTax)
 	{
@@ -122,10 +119,9 @@ public class Product
 		{
 			return false;
 		}
-		if ((_restockTask == null) || _restockTask.isDone())
-		{
-			_restockTask = ThreadPool.schedule(this::restock, _restockDelay);
-		}
+		
+		BuyListTaskManager.getInstance().add(this, _restockDelay);
+		
 		final boolean result = _count.addAndGet(-value) >= 0;
 		save();
 		return result;
@@ -141,7 +137,7 @@ public class Product
 		final long remainTime = nextRestockTime - System.currentTimeMillis();
 		if (remainTime > 0)
 		{
-			_restockTask = ThreadPool.schedule(this::restock, remainTime);
+			BuyListTaskManager.getInstance().update(this, remainTime);
 		}
 		else
 		{
@@ -164,9 +160,10 @@ public class Product
 			statement.setInt(2, _item.getId());
 			statement.setLong(3, getCount());
 			statement.setLong(5, getCount());
-			if ((_restockTask != null) && (_restockTask.getDelay(TimeUnit.MILLISECONDS) > 0))
+			
+			final long nextRestockTime = BuyListTaskManager.getInstance().getRestockDelay(this);
+			if (nextRestockTime > 0)
 			{
-				final long nextRestockTime = System.currentTimeMillis() + _restockTask.getDelay(TimeUnit.MILLISECONDS);
 				statement.setLong(4, nextRestockTime);
 				statement.setLong(6, nextRestockTime);
 			}
@@ -175,6 +172,7 @@ public class Product
 				statement.setLong(4, 0);
 				statement.setLong(6, 0);
 			}
+			
 			statement.executeUpdate();
 		}
 		catch (Exception e)

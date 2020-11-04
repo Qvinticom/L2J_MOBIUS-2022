@@ -25,7 +25,6 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -49,6 +48,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.taskmanager.ItemManaTaskManager;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -94,7 +94,6 @@ public class ItemInstance extends WorldObject
 	private Augmentation _augmentation = null;
 	private int _mana = -1;
 	private boolean _consumingMana = false;
-	private static final int MANA_CONSUMPTION_RATE = 60000;
 	private int _type1;
 	private int _type2;
 	private long _dropTime;
@@ -703,39 +702,6 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Used to decrease mana (mana means life time for shadow items).
-	 */
-	public class ScheduleConsumeManaTask implements Runnable
-	{
-		private final ItemInstance _shadowItem;
-		
-		/**
-		 * Instantiates a new schedule consume mana task.
-		 * @param item the item
-		 */
-		public ScheduleConsumeManaTask(ItemInstance item)
-		{
-			_shadowItem = item;
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				// decrease mana
-				if (_shadowItem != null)
-				{
-					_shadowItem.decreaseMana(true);
-				}
-			}
-			catch (Throwable t)
-			{
-			}
-		}
-	}
-	
-	/**
 	 * Returns true if this item is a shadow item Shadow items have a limited life-time.
 	 * @return true, if is shadow item
 	 */
@@ -883,7 +849,7 @@ public class ItemInstance extends WorldObject
 	private void scheduleConsumeManaTask()
 	{
 		_consumingMana = true;
-		ThreadPool.schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
+		ItemManaTaskManager.getInstance().add(this);
 	}
 	
 	/**

@@ -31,7 +31,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.EnchantItemOptionsData;
@@ -76,6 +75,8 @@ import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SpawnItem;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.taskmanager.ItemLifeTimeTaskManager;
+import org.l2jmobius.gameserver.taskmanager.ItemManaTaskManager;
 import org.l2jmobius.gameserver.util.GMAudit;
 
 /**
@@ -127,7 +128,6 @@ public class ItemInstance extends WorldObject
 	/** Shadow item */
 	private int _mana = -1;
 	private boolean _consumingMana = false;
-	private static final int MANA_CONSUMPTION_RATE = 60000;
 	
 	/** Custom item types (used loto, race tickets) */
 	private int _type1;
@@ -157,7 +157,6 @@ public class ItemInstance extends WorldObject
 	private Elementals[] _elementals = null;
 	
 	private ScheduledFuture<?> _itemLootShedule = null;
-	private ScheduledFuture<?> _lifeTimeTask;
 	
 	private final DropProtection _dropProtection = new DropProtection();
 	
@@ -1208,37 +1207,6 @@ public class ItemInstance extends WorldObject
 	}
 	
 	/**
-	 * Used to decrease mana (mana means life time for shadow items)
-	 */
-	public static class ScheduleConsumeManaTask implements Runnable
-	{
-		private static final Logger LOGGER = Logger.getLogger(ScheduleConsumeManaTask.class.getName());
-		private final ItemInstance _shadowItem;
-		
-		public ScheduleConsumeManaTask(ItemInstance item)
-		{
-			_shadowItem = item;
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				// decrease mana
-				if (_shadowItem != null)
-				{
-					_shadowItem.decreaseMana(true);
-				}
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.SEVERE, "", e);
-			}
-		}
-	}
-	
-	/**
 	 * Returns true if this item is a shadow item Shadow items have a limited life-time
 	 * @return
 	 */
@@ -1393,7 +1361,7 @@ public class ItemInstance extends WorldObject
 			return;
 		}
 		_consumingMana = true;
-		ThreadPool.schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
+		ItemManaTaskManager.getInstance().add(this);
 	}
 	
 	/**
@@ -1539,69 +1507,53 @@ public class ItemInstance extends WorldObject
 	 * <b><u>Example of use</u>:</b><br>
 	 * <li>Drop item</li>
 	 * <li>Call Pet</li>
+	 * @param dropper
+	 * @param locX
+	 * @param locY
+	 * @param locZ
 	 */
-	public class ItemDropTask implements Runnable
+	public void dropMe(Creature dropper, int locX, int locY, int locZ)
 	{
-		private int _x;
-		private int _y;
-		private int _z;
-		private final Creature _dropper;
-		private final ItemInstance _itm;
+		int x = locX;
+		int y = locY;
+		int z = locZ;
 		
-		public ItemDropTask(ItemInstance item, Creature dropper, int x, int y, int z)
+		if (dropper != null)
 		{
-			_x = x;
-			_y = y;
-			_z = z;
-			_dropper = dropper;
-			_itm = item;
+			final Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, dropper.getInstanceId());
+			x = dropDest.getX();
+			y = dropDest.getY();
+			z = dropDest.getZ();
 		}
 		
-		@Override
-		public void run()
+		if (dropper != null)
 		{
-			if (_dropper != null)
-			{
-				final Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(_dropper.getX(), _dropper.getY(), _dropper.getZ(), _x, _y, _z, _dropper.getInstanceId());
-				_x = dropDest.getX();
-				_y = dropDest.getY();
-				_z = dropDest.getZ();
-			}
-			
-			if (_dropper != null)
-			{
-				setInstanceId(_dropper.getInstanceId()); // Inherit instancezone when dropped in visible world
-			}
-			else
-			{
-				setInstanceId(0); // No dropper? Make it a global item...
-			}
-			
-			synchronized (_itm)
-			{
-				// Set the x,y,z position of the ItemInstance dropped and update its _worldregion
-				_itm.setSpawned(true);
-				_itm.setXYZ(_x, _y, _z);
-			}
-			
-			_itm.setDropTime(System.currentTimeMillis());
-			_itm.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
-			
-			// Add the ItemInstance dropped in the world as a visible object
-			World.getInstance().addVisibleObject(_itm, _itm.getWorldRegion());
-			if (Config.SAVE_DROPPED_ITEM)
-			{
-				ItemsOnGroundManager.getInstance().save(_itm);
-			}
-			_itm.setDropperObjectId(0); // Set the dropper Id back to 0 so it no longer shows the drop packet
+			setInstanceId(dropper.getInstanceId()); // Inherit instancezone when dropped in visible world
 		}
-	}
-	
-	public void dropMe(Creature dropper, int x, int y, int z)
-	{
-		ThreadPool.execute(new ItemDropTask(this, dropper, x, y, z));
+		else
+		{
+			setInstanceId(0); // No dropper? Make it a global item...
+		}
+		
+		// Set the x,y,z position of the ItemInstance dropped and update its world region
+		setSpawned(true);
+		setXYZ(x, y, z);
+		
+		setDropTime(System.currentTimeMillis());
+		setDropperObjectId(dropper != null ? dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
+		
+		// Add the ItemInstance dropped in the world as a visible object
+		World.getInstance().addVisibleObject(this, getWorldRegion());
+		if (Config.SAVE_DROPPED_ITEM)
+		{
+			ItemsOnGroundManager.getInstance().save(this);
+		}
+		setDropperObjectId(0); // Set the dropper Id back to 0 so it no longer shows the drop packet
+		
 		if ((dropper != null) && dropper.isPlayer())
 		{
+			_owner = null;
+			
 			// Notify to scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(dropper.getActingPlayer(), this, new Location(x, y, z)), getItem());
 		}
@@ -1870,38 +1822,7 @@ public class ItemInstance extends WorldObject
 		}
 		else
 		{
-			if (_lifeTimeTask != null)
-			{
-				_lifeTimeTask.cancel(true);
-			}
-			_lifeTimeTask = ThreadPool.schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
-		}
-	}
-	
-	public static class ScheduleLifeTimeTask implements Runnable
-	{
-		private static final Logger LOGGER = Logger.getLogger(ScheduleLifeTimeTask.class.getName());
-		private final ItemInstance _limitedItem;
-		
-		public ScheduleLifeTimeTask(ItemInstance item)
-		{
-			_limitedItem = item;
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				if (_limitedItem != null)
-				{
-					_limitedItem.endOfLife();
-				}
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.SEVERE, "", e);
-			}
+			ItemLifeTimeTaskManager.getInstance().add(this, getRemainingTime());
 		}
 	}
 	
@@ -2199,10 +2120,6 @@ public class ItemInstance extends WorldObject
 	
 	public void stopAllTasks()
 	{
-		if ((_lifeTimeTask != null) && !_lifeTimeTask.isDone())
-		{
-			_lifeTimeTask.cancel(false);
-			_lifeTimeTask = null;
-		}
+		ItemLifeTimeTaskManager.getInstance().remove(this);
 	}
 }

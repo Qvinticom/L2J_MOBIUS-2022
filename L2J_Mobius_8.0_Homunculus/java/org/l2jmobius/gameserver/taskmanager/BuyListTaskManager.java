@@ -1,0 +1,86 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package org.l2jmobius.gameserver.taskmanager;
+
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
+
+import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.model.buylist.Product;
+
+/**
+ * @author Mobius
+ */
+public class BuyListTaskManager
+{
+	private static final Map<Product, Long> PRODUCTS = new ConcurrentHashMap<>();
+	private static boolean _working = false;
+	
+	public BuyListTaskManager()
+	{
+		ThreadPool.scheduleAtFixedRate(() ->
+		{
+			if (_working)
+			{
+				return;
+			}
+			_working = true;
+			
+			final long currentTime = System.currentTimeMillis();
+			for (Entry<Product, Long> entry : PRODUCTS.entrySet())
+			{
+				if (currentTime > entry.getValue().longValue())
+				{
+					final Product product = entry.getKey();
+					PRODUCTS.remove(product);
+					product.restock();
+				}
+			}
+			
+			_working = false;
+		}, 1000, 60000);
+	}
+	
+	public void add(Product product, long endTime)
+	{
+		if (!PRODUCTS.containsKey(product))
+		{
+			PRODUCTS.put(product, endTime);
+		}
+	}
+	
+	public void update(Product product, long endTime)
+	{
+		PRODUCTS.put(product, endTime);
+	}
+	
+	public long getRestockDelay(Product product)
+	{
+		return PRODUCTS.getOrDefault(product, 0L);
+	}
+	
+	public static BuyListTaskManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final BuyListTaskManager INSTANCE = new BuyListTaskManager();
+	}
+}

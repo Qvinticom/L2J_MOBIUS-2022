@@ -18,15 +18,13 @@ package org.l2jmobius.gameserver.model.buylist;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.taskmanager.BuyListTaskManager;
 
 /**
  * @author NosBit
@@ -41,7 +39,6 @@ public class Product
 	private final long _restockDelay;
 	private final long _maxCount;
 	private AtomicLong _count = null;
-	private ScheduledFuture<?> _restockTask = null;
 	
 	public Product(int buyListId, Item item, long price, long restockDelay, long maxCount)
 	{
@@ -111,10 +108,9 @@ public class Product
 		{
 			return false;
 		}
-		if ((_restockTask == null) || _restockTask.isDone())
-		{
-			_restockTask = ThreadPool.schedule(new RestockTask(), _restockDelay);
-		}
+		
+		BuyListTaskManager.getInstance().add(this, _restockDelay);
+		
 		final boolean result = _count.addAndGet(-value) >= 0;
 		save();
 		return result;
@@ -130,7 +126,7 @@ public class Product
 		final long remainTime = nextRestockTime - System.currentTimeMillis();
 		if (remainTime > 0)
 		{
-			_restockTask = ThreadPool.schedule(new RestockTask(), remainTime);
+			BuyListTaskManager.getInstance().update(this, remainTime);
 		}
 		else
 		{
@@ -144,36 +140,29 @@ public class Product
 		save();
 	}
 	
-	protected final class RestockTask implements Runnable
-	{
-		@Override
-		public void run()
-		{
-			restock();
-		}
-	}
-	
 	private void save()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO `buylists`(`buylist_id`, `item_id`, `count`, `next_restock_time`) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `count` = ?, `next_restock_time` = ?"))
+			PreparedStatement statement = con.prepareStatement("INSERT INTO `buylists`(`buylist_id`, `item_id`, `count`, `next_restock_time`) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `count` = ?, `next_restock_time` = ?"))
 		{
-			ps.setInt(1, _buyListId);
-			ps.setInt(2, _item.getId());
-			ps.setLong(3, getCount());
-			ps.setLong(5, getCount());
-			if ((_restockTask != null) && (_restockTask.getDelay(TimeUnit.MILLISECONDS) > 0))
+			statement.setInt(1, _buyListId);
+			statement.setInt(2, _item.getId());
+			statement.setLong(3, getCount());
+			statement.setLong(5, getCount());
+			
+			final long nextRestockTime = BuyListTaskManager.getInstance().getRestockDelay(this);
+			if (nextRestockTime > 0)
 			{
-				final long nextRestockTime = System.currentTimeMillis() + _restockTask.getDelay(TimeUnit.MILLISECONDS);
-				ps.setLong(4, nextRestockTime);
-				ps.setLong(6, nextRestockTime);
+				statement.setLong(4, nextRestockTime);
+				statement.setLong(6, nextRestockTime);
 			}
 			else
 			{
-				ps.setLong(4, 0);
-				ps.setLong(6, 0);
+				statement.setLong(4, 0);
+				statement.setLong(6, 0);
 			}
-			ps.executeUpdate();
+			
+			statement.executeUpdate();
 		}
 		catch (Exception e)
 		{
