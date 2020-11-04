@@ -38,7 +38,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClanHallTeleportHolder;
-import org.l2jmobius.gameserver.model.olympiad.ClanHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
 
 /**
  * @author St3eT

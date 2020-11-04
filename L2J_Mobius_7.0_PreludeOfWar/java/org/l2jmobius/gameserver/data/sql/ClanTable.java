@@ -49,7 +49,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.clan.OnClanWarFinish;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanCreate;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanDestroy;
-import org.l2jmobius.gameserver.model.olympiad.ClanHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.FortSiege;
 import org.l2jmobius.gameserver.model.siege.Siege;

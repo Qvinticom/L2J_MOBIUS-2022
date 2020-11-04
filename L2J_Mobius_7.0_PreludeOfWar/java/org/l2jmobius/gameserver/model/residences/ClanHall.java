@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model.olympiad;
+package org.l2jmobius.gameserver.model.residences;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -42,7 +42,6 @@ import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.ClanHallTeleportHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import org.l2jmobius.gameserver.model.residences.AbstractResidence;
 import org.l2jmobius.gameserver.model.zone.type.ClanHallZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.model.clanhallauction;
+package org.l2jmobius.gameserver.model.residences;
 
 import java.time.Instant;
 import java.time.ZoneId;

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
-import org.l2jmobius.gameserver.model.olympiad.ClanHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunction;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunctionTemplate;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunctionType;

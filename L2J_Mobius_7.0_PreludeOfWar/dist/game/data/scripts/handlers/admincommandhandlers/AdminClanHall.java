@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.html.PageResult;
 import org.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
 import org.l2jmobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
 import org.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
-import org.l2jmobius.gameserver.model.olympiad.ClanHall;
+import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunction;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
