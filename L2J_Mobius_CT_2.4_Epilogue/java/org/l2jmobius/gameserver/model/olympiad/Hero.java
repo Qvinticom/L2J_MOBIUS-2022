@@ -452,7 +452,7 @@ public class Hero
 							fList.append("<table width=270>");
 						}
 						fList.append("<tr><td width=270><font color=\"LEVEL\">" + diaryEntry.getString("date") + ":xx</font></td></tr>");
-						fList.append("<tr><td width=270>" + diaryEntry.getString("action") + "</td></tr>");
+						fList.append("<tr><td width=270>" + diaryEntry.getString("action", "") + "</td></tr>");
 						fList.append("<tr><td>&nbsp;</td></tr></table>");
 						fList.append("</td></tr>");
 						color = !color;
