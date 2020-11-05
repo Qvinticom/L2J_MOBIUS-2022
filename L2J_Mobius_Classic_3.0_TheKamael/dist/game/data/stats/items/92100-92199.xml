@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="92100" name="Moonstone" additionalName="Lv. 5" type="Armor">
+	<item id="92100" name="Moonstone" additionalName="Lv. 6" type="Armor">
 		<!-- While Sayha's Grace is active, Acquired XP/ SP +15%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -12,8 +12,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="50208" level="6"/>
+		</skills>
 	</item>
-	<item id="92101" name="Moonstone" additionalName="Lv. 6" type="Armor">
+	<item id="92101" name="Moonstone" additionalName="Lv. 7" type="Armor">
 		<!-- While Sayha's Grace is active, Acquired XP/ SP +17%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -25,8 +28,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="50208" level="7"/>
+		</skills>
 	</item>
-	<item id="92102" name="Moonstone" additionalName="Lv. 7" type="Armor">
+	<item id="92102" name="Moonstone" additionalName="Lv. 8" type="Armor">
 		<!-- While Sayha's Grace is active, Acquired XP/ SP +19%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -38,8 +44,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="50208" level="8"/>
+		</skills>
 	</item>
-	<item id="92103" name="Moonstone" additionalName="Lv. 8" type="Armor">
+	<item id="92103" name="Moonstone" additionalName="Lv. 8 (Not Used)" type="Armor">
 		<!-- While Sayha's Grace is active, Acquired XP/ SP +21%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -52,7 +61,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="92104" name="Moonstone" additionalName="Lv. 9" type="Armor">
+	<item id="92104" name="Moonstone" additionalName="Lv. 9 (Not Used)" type="Armor">
 		<!-- While Sayha's Grace is active, Acquired XP/ SP +23%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -65,7 +74,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="92105" name="Moonstone" additionalName="Lv. 10" type="Armor">
+	<item id="92105" name="Moonstone" additionalName="Lv. 10 (Not Used)" type="Armor">
 		<!-- While Sayha's Grace is active, Acquired XP/ SP +25%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
