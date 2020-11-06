@@ -27,6 +27,7 @@ public class AutoUseSettingsHolder
 	private final Collection<Integer> _autoSupplyItems = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoPotionItems = ConcurrentHashMap.newKeySet();
 	private final Collection<Integer> _autoSkills = ConcurrentHashMap.newKeySet();
+	private final Collection<Integer> _autoActions = ConcurrentHashMap.newKeySet();
 	
 	public AutoUseSettingsHolder()
 	{
@@ -45,5 +46,10 @@ public class AutoUseSettingsHolder
 	public Collection<Integer> getAutoSkills()
 	{
 		return _autoSkills;
+	}
+	
+	public Collection<Integer> getAutoActions()
+	{
+		return _autoActions;
 	}
 }

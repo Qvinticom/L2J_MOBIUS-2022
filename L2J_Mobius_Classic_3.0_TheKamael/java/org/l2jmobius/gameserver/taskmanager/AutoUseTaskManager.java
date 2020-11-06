@@ -16,22 +16,32 @@
  */
 package org.l2jmobius.gameserver.taskmanager;
 
+import java.util.Arrays;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.data.xml.ActionData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
+import org.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
+import org.l2jmobius.gameserver.handler.PlayerActionHandler;
+import org.l2jmobius.gameserver.model.ActionDataHolder;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.skills.AbnormalType;
+import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.AffectScope;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 
 /**
  * @author Mobius
@@ -175,6 +185,42 @@ public class AutoUseTaskManager
 							}
 						}
 					}
+					
+					ACTIONS: for (Integer actionId : player.getAutoUseSettings().getAutoActions())
+					{
+						final BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
+						if (info != null)
+						{
+							for (AbstractEffect effect : info.getEffects())
+							{
+								if (!effect.checkCondition(actionId))
+								{
+									player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_SO_YOUR_ACTIONS_HAVE_BEEN_RESTRICTED);
+									break ACTIONS;
+								}
+							}
+						}
+						
+						// Do not allow to do some action if player is transformed.
+						if (player.isTransformed())
+						{
+							final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
+							if (Arrays.binarySearch(allowedActions, actionId) < 0)
+							{
+								continue ACTIONS;
+							}
+						}
+						
+						final ActionDataHolder actionHolder = ActionData.getInstance().getActionData(actionId);
+						if (actionHolder != null)
+						{
+							final IPlayerActionHandler actionHandler = PlayerActionHandler.getInstance().getHandler(actionHolder.getHandler());
+							if (actionHandler != null)
+							{
+								actionHandler.useAction(player, actionHolder, false, false);
+							}
+						}
+					}
 				}
 			}
 			
@@ -228,6 +274,18 @@ public class AutoUseTaskManager
 	public void removeAutoSkill(PlayerInstance player, int skillId)
 	{
 		player.getAutoUseSettings().getAutoSkills().remove(skillId);
+		stopAutoUseTask(player);
+	}
+	
+	public void addAutoAction(PlayerInstance player, Integer actionId)
+	{
+		player.getAutoUseSettings().getAutoActions().add(actionId);
+		startAutoUseTask(player);
+	}
+	
+	public void removeAutoAction(PlayerInstance player, int actionId)
+	{
+		player.getAutoUseSettings().getAutoActions().remove(actionId);
 		stopAutoUseTask(player);
 	}
 	
