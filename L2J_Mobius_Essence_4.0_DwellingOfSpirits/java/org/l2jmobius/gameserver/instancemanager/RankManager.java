@@ -145,8 +145,8 @@ public class RankManager
 					if (Hero.getInstance().getCompleteHeroes().containsKey(charId))
 					{
 						final StatSet hero = Hero.getInstance().getCompleteHeroes().get(charId);
-						player.set("count", hero.getInt("count"));
-						player.set("legend_count", hero.getInt("legend_count"));
+						player.set("count", hero.getInt("count", 0));
+						player.set("legend_count", hero.getInt("legend_count", 0));
 					}
 					else
 					{
