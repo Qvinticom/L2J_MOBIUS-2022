@@ -1831,7 +1831,7 @@ public class ItemInstance extends WorldObject
 		}
 		else
 		{
-			ItemLifeTimeTaskManager.getInstance().add(this, getRemainingTime());
+			ItemLifeTimeTaskManager.getInstance().add(this, getTime());
 		}
 	}
 	
