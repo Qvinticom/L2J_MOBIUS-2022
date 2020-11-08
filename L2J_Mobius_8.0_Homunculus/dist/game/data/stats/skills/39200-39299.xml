@@ -41,7 +41,7 @@
 		<!-- For $s1 Attribute Attack +$s2, Attribute Resistance +$s3, Acquired XP/ SP +$s4. The effect remains after death. -->
 		<icon>icon.bm_dragon_posion_special</icon>
 		<operateType>A2</operateType>
-		<isMagic>2</isMagic>
+		<isMagic>4</isMagic>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -422,41 +422,6 @@
 					<value level="11">-5</value>
 				</amount>
 				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">-1</value>
-					<value level="8">-2</value>
-					<value level="9">-3</value>
-					<value level="10">-4</value>
-					<value level="11">-5</value>
-				</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">-1</value>
-					<value level="8">-2</value>
-					<value level="9">-3</value>
-					<value level="10">-4</value>
-					<value level="11">-5</value>
-				</amount>
-				<mode>PER</mode>
-				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

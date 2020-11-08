@@ -549,6 +549,13 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
 				<amount>10</amount>
 				<mode>PER</mode>

@@ -2209,7 +2209,7 @@
 	<skill id="30854" toLevel="1" name="Last Stance">
 		<!-- For $s1, when using a bow or a crossbow, P. Atk. +$s2, P. Skill Power +$s3, P. Def. +$s4, M. Def. +$s5, P. Skill Cooldown -$s6. Consumes $s7 Soulstone(s). -->
 		<icon>icon.skill30854</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>SHOOTING_STANCE</abnormalType>
 		<operateType>A2</operateType>
@@ -2373,7 +2373,6 @@
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-			<!-- Missing defense against P. Skill Critical Rate effect, no idea if one exists -->
 			<effect name="PhysicalDefence">
 				<amount>10</amount>
 				<mode>PER</mode>
@@ -3022,6 +3021,10 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceMagicCriticalDamage">
+				<amount>-5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceSkillCriticalDamage">
 				<amount>-5</amount>
 				<mode>PER</mode>
 			</effect>

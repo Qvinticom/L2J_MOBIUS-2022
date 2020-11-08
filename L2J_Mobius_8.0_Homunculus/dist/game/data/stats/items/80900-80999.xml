@@ -5,7 +5,7 @@
 		<set name="icon" val="icon.aka_manaf_dual_blunt_2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -537,6 +537,28 @@
 		<skills>
 			<skill id="28132" level="1" type="ON_EQUIP" /> <!-- Summon Libra Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+			<skill id="35059" level="5" type="ON_ENCHANT" type_value="0" /> <!-- Primary Skill: Agathion Libra Lv. 5 -->
+			<skill id="35059" level="5" type="ON_ENCHANT" type_value="1" /> <!-- Primary Skill: Agathion Libra Lv. 5 -->
+			<skill id="35059" level="5" type="ON_ENCHANT" type_value="2" /> <!-- Primary Skill: Agathion Libra Lv. 5 -->
+			<skill id="35059" level="5" type="ON_ENCHANT" type_value="3" /> <!-- Primary Skill: Agathion Libra Lv. 5 -->
+			<skill id="35059" level="6" type="ON_ENCHANT" type_value="4" /> <!-- Primary Skill: Agathion Libra Lv. 6 -->
+			<skill id="35059" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Primary Skill: Agathion Libra Lv. 6 -->
+			<skill id="35059" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Primary Skill: Agathion Libra Lv. 6 -->
+			<skill id="35059" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Primary Skill: Agathion Libra Lv. 7 -->
+			<skill id="35059" level="7" type="ON_ENCHANT" type_value="8" /> <!-- Primary Skill: Agathion Libra Lv. 7 -->
+			<skill id="35059" level="7" type="ON_ENCHANT" type_value="9" /> <!-- Primary Skill: Agathion Libra Lv. 7 -->
+			<skill id="35059" level="8" type="ON_ENCHANT" type_value="10" /> <!-- Primary Skill: Agathion Libra Lv. 8 -->
+			<skill id="35047" level="12" type="ON_ENCHANT" type_value="0" /> <!-- Secondary Skill: Agathion Libra Lv. 12 -->
+			<skill id="35047" level="13" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Libra Lv. 13 -->
+			<skill id="35047" level="14" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Libra Lv. 14 -->
+			<skill id="35047" level="15" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Libra Lv. 15 -->
+			<skill id="35047" level="16" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Libra Lv. 16 -->
+			<skill id="35047" level="17" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Libra Lv. 17 -->
+			<skill id="35047" level="18" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Libra Lv. 18 -->
+			<skill id="35047" level="19" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Libra Lv. 19 -->
+			<skill id="35047" level="20" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Libra Lv. 20 -->
+			<skill id="35047" level="21" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Libra Lv. 21 -->
+			<skill id="35047" level="22" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Libra Lv. 22 -->
 		</skills>
 	</item>
 	<item id="80939" name="Greater Aries Agathion Charm" type="Armor">

@@ -865,6 +865,57 @@
 			<effect name="AgathionSlot">
 				<amount>1</amount>
 			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>30</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="35622" toLevel="1" name="Agathion Fairy Support">
@@ -1644,7 +1695,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceSkillCriticalDamage"> <!-- Need to make sure this works -->
+			<effect name="DefenceSkillCriticalDamage">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1720,6 +1771,7 @@
 		<magicLevel>40</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2238,8 +2290,80 @@
 	</skill>
 	<skill id="35644" toLevel="1" name="Blessed Exalted Seed Bracelet">
 		<!-- Unlocks the agathion's main slot. STR/ DEX/ CON/ INT/ WIT/ MEN +$s1, Attribute Attack +$s2, Attribute Resistance +$s3. Additionally, P./ M. Atk. and P./ M. Def. +$s4. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.lbracelet_agathion_charm</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>1</amount>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>30</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35645" toLevel="1" name="Minor War">
 		<!-- P. Atk. +7%, additional damage +3%. -->

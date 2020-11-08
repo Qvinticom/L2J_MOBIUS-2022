@@ -507,7 +507,6 @@
 		<set name="commissionItemType" val="HELMET" />
 		<skills>
 			<skill id="8805" level="1" /> <!-- PvP Defense -->
-			<skill id="13801" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">186</stat>
@@ -533,7 +532,6 @@
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="8806" level="1" /> <!-- PvP Defense -->
-			<skill id="13802" level="1" /> <!-- Additional Ability Might -->
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
 		</skills>
 		<stats>
@@ -559,7 +557,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8807" level="1" /> <!-- PvP Defense -->
-			<skill id="13803" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">311</stat>
@@ -583,7 +580,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8808" level="1" /> <!-- PvP Defense -->
-			<skill id="13804" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -607,7 +603,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8809" level="1" /> <!-- PvP Defense -->
-			<skill id="13805" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -630,7 +625,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8810" level="1" /> <!-- PvP Defense -->
-			<skill id="13806" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">186</stat>
@@ -656,7 +650,6 @@
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="8811" level="1" /> <!-- PvP Defense -->
-			<skill id="13807" level="1" /> <!-- Additional Ability Might -->
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
 		</skills>
 		<stats>
@@ -684,7 +677,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8812" level="1" /> <!-- PvP Defense -->
-			<skill id="13808" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">248</stat>
@@ -710,7 +702,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8813" level="1" /> <!-- PvP Defense -->
-			<skill id="13809" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -734,7 +725,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8814" level="1" /> <!-- PvP Defense -->
-			<skill id="13810" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -757,7 +747,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8815" level="1" /> <!-- PvP Defense -->
-			<skill id="13811" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">186</stat>
@@ -783,7 +772,6 @@
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="8816" level="1" /> <!-- PvP Defense -->
-			<skill id="13812" level="1" /> <!-- Additional Ability Might -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
 		</skills>
 		<stats>
@@ -811,7 +799,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8817" level="1" /> <!-- PvP Defense -->
-			<skill id="13813" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="mDef">45</stat>
@@ -837,7 +824,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8818" level="1" /> <!-- PvP Defense -->
-			<skill id="13814" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -861,7 +847,6 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="8819" level="1" /> <!-- PvP Defense -->
-			<skill id="13815" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">124</stat>
@@ -883,8 +868,9 @@
 		<set name="commissionItemType" val="HELMET" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27682" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28323" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8805" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8834" level="1" /> <!-- PvE Defense -->
+			<skill id="13801" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">198</stat>
@@ -909,8 +895,9 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
-			<skill id="27683" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28324" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8806" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8835" level="1" /> <!-- PvE Defense -->
+			<skill id="13802" level="1" /> <!-- Additional Ability Might -->
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
 		</skills>
 		<stats>
@@ -935,8 +922,9 @@
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27684" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28325" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8807" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8836" level="1" /> <!-- PvE Defense -->
+			<skill id="13803" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">330</stat>
@@ -959,8 +947,9 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27685" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28326" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8808" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8837" level="1" /> <!-- PvE Defense -->
+			<skill id="13804" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">132</stat>
@@ -983,8 +972,9 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27686" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28327" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8809" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8838" level="1" /> <!-- PvE Defense -->
+			<skill id="13805" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">132</stat>
@@ -1006,8 +996,9 @@
 		<set name="commissionItemType" val="HELMET" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27687" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28328" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8810" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8839" level="1" /> <!-- PvE Defense -->
+			<skill id="13806" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">198</stat>
@@ -1032,8 +1023,9 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
-			<skill id="27688" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28329" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8811" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8840" level="1" /> <!-- PvE Defense -->
+			<skill id="13807" level="1" /> <!-- Additional Ability Might -->
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
 		</skills>
 		<stats>
@@ -1060,8 +1052,9 @@
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27689" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28330" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8812" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8841" level="1" /> <!-- PvE Defense -->
+			<skill id="13808" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">264</stat>
@@ -1086,8 +1079,9 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27690" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28331" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8813" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8842" level="1" /> <!-- PvE Defense -->
+			<skill id="13809" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">132</stat>
@@ -1110,8 +1104,9 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27691" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28332" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8814" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8843" level="1" /> <!-- PvE Defense -->
+			<skill id="13810" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">132</stat>
@@ -1133,8 +1128,9 @@
 		<set name="commissionItemType" val="HELMET" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27692" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28333" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8815" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8844" level="1" /> <!-- PvE Defense -->
+			<skill id="13811" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">198</stat>
@@ -1159,8 +1155,9 @@
 		<set name="blessed" val="true" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
-			<skill id="27693" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28334" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8816" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8845" level="1" /> <!-- PvE Defense -->
+			<skill id="13812" level="1" /> <!-- Additional Ability Might -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
 		</skills>
 		<stats>
@@ -1187,8 +1184,9 @@
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27694" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28335" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8817" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8846" level="1" /> <!-- PvE Defense -->
+			<skill id="13813" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="mDef">49</stat>
@@ -1213,8 +1211,9 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27695" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28336" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8818" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8847" level="1" /> <!-- PvE Defense -->
+			<skill id="13814" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">132</stat>
@@ -1237,8 +1236,9 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="blessed" val="true" />
 		<skills>
-			<skill id="27696" level="1" /> <!-- Inherent Abilities - Damage Reduction -->
-			<skill id="28337" level="1" /> <!-- Additional Ability Might -->
+			<skill id="8819" level="1" /> <!-- Unique Effect - Defense in PvP -->
+			<skill id="8848" level="1" /> <!-- PvE Defense -->
+			<skill id="13815" level="1" /> <!-- Additional Ability Might -->
 		</skills>
 		<stats>
 			<stat type="pDef">132</stat>
