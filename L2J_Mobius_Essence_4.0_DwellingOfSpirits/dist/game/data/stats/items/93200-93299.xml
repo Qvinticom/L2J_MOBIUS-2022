@@ -1188,8 +1188,11 @@
 		<stats>
 			<stat type="pDef">39</stat>
 		</stats>
+		<skills>
+			<skill id="50341" level="1"/> <!-- Pendant: Einhasad's Pendant -->
+		</skills>
 	</item>
-	<item id="93297" name="Einhasad�s Pendant Lv. 2" type="Armor">
+	<item id="93297" name="Einhasad's Pendant Lv. 2" type="Armor">
 		<!-- <Einhasad's Pendant>\nM. Def. +20\nAcquired XP/ SP +20%\nReceived Damage -10%\nAtk. Spd. +3%\nCasting Spd. +3%\n\nCan be compounded with Einhasad's Pendant of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
@@ -1203,8 +1206,11 @@
 		<stats>
 			<stat type="pDef">48</stat>
 		</stats>
+		<skills>
+			<skill id="50341" level="2"/> <!-- Pendant: Einhasad's Pendant -->
+		</skills>
 	</item>
-	<item id="93298" name="Einhasad�s Pendant Lv. 3" type="Armor">
+	<item id="93298" name="Einhasad's Pendant Lv. 3" type="Armor">
 		<!-- <Einhasad's Pendant>\nM. Def. +30\nAcquired XP/ SP +25%\nReceived Damage -15%\nAtk. Spd. +4%\nCasting Spd. +4%\nP. Critical Damage +6%\nM. Skill Critical Damage +6%\n\nCan be compounded with Einhasad's Pendant of the same level. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
@@ -1218,6 +1224,9 @@
 		<stats>
 			<stat type="pDef">57</stat>
 		</stats>
+		<skills>
+			<skill id="50341" level="3"/> <!-- Pendant: Einhasad's Pendant -->
+		</skills>
 	</item>
 	<item id="93299" name="Einhasad's Pendant Lv. 4" type="Armor">
 		<!-- <Invocation>\nIncreases Speed and recovers HP/ MP for 15 sec.\n\n<Einhasad's Pendant>\nM. Def. +35\nAcquired XP/ SP +30%\nReceived Damage -20%\nAtk. Spd. +5%\nCasting Spd. +5%\nP. Critical Damage +8%\nM. Skill Critical Damage +8%\nP. Atk. +10%\nM. Atk. +10%\n\nCan be compounded with Einhasad's Pendant of the same level. -->
@@ -1233,5 +1242,8 @@
 		<stats>
 			<stat type="pDef">66</stat>
 		</stats>
+		<skills>
+			<skill id="50341" level="4"/> <!-- Pendant: Einhasad's Pendant Lv1 -->
+		</skills>
 	</item>
 </list>
