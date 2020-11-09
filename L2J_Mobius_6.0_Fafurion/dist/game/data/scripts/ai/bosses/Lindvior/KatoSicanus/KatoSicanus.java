@@ -78,6 +78,13 @@ public class KatoSicanus extends AbstractNpcAI
 				final boolean isInCC = party.isInCommandChannel();
 				final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 				final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
+				for (PlayerInstance member : members)
+				{
+					if (!member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
+					{
+						return "33881-4.html";
+					}
+				}
 				if (!isPartyLeader)
 				{
 					return "33881-3.html";

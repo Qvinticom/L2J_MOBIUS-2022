@@ -313,7 +313,6 @@ public class Kelbim extends AbstractNpcAI
 			{
 				return "34052-1.html";
 			}
-			
 			if (!player.isInParty())
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
@@ -327,6 +326,13 @@ public class Kelbim extends AbstractNpcAI
 			final boolean isInCC = party.isInCommandChannel();
 			final List<PlayerInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
 			final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
+			for (PlayerInstance member : members)
+			{
+				if (!member.isInsideRadius3D(npc, 1000))
+				{
+					return "34052-2.html";
+				}
+			}
 			if (!isPartyLeader)
 			{
 				return "34052-3.html";
@@ -342,17 +348,17 @@ public class Kelbim extends AbstractNpcAI
 			{
 				for (PlayerInstance member : members)
 				{
-					if (member.isInsideRadius3D(npc, 1000))
+					if ((status == ALIVE) && member.isInsideRadius3D(npc, 1000))
 					{
+						GrandBossManager.getInstance().setBossStatus(KELBIM, WAITING);
+						startQuestTimer("stage_1_start", Config.KELBIM_WAIT_TIME * 60 * 1000, null, null);
 						member.teleToLocation(KELBIM_LOCATION, true);
 					}
+					else
+					{
+						return "34052-3.html";
+					}
 				}
-			}
-			
-			if (status == ALIVE)
-			{
-				GrandBossManager.getInstance().setBossStatus(KELBIM, WAITING);
-				startQuestTimer("stage_1_start", Config.KELBIM_WAIT_TIME * 60 * 1000, null, null);
 			}
 		}
 		return super.onTalk(npc, player);
