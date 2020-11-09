@@ -250,10 +250,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 				htmltext = npc.getId() == CLASS_MASTERS.get(0) ? "test_server_helper001a.html" : "test_server_helper001b.html";
 				break;
 			}
-			/*
-			 * case "setnoble": { if (player.isNoble()) { htmltext = "test_server_helper025b.html"; } else if (player.getLevel() < 75) { htmltext = "test_server_helper025a.html"; } else { player.setNoble(true); player.broadcastUserInfo(); // TODO: SetOneTimeQuestFlag(talker, 10385, 1); htmltext =
-			 * "test_server_helper025.html"; } break; }
-			 */
 			case "firstclass":
 			{
 				htmltext = getFirstOccupationChangeHtml(player);
@@ -279,21 +275,12 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 				{
 					htmltext = "test_server_helper011.html";
 				}
-				// else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
-				// {
-				// htmltext = "test_server_helper011a.html";
-				// }
 				else
 				{
 					htmltext = "test_server_helper024.html";
 				}
 				break;
 			}
-			/*
-			 * case "awaken": { if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() > 84)) { if (changeToNextClass(player)) { player.sendPacket(new PlaySound("ItemSound.quest_fanfare_2")); player.broadcastUserInfo(); player.store(false); // Save player cause if server
-			 * crashes before this char is saved, he will lose class and the money payed for class change. htmltext = "test_server_helper021.html"; } } else if (player.isInCategory(CategoryType.AWAKEN_GROUP)) { htmltext = "test_server_helper011a.html"; } else { htmltext =
-			 * "test_server_helper011b.html"; } break; }
-			 */
 			case "setclass":
 			{
 				if (!st.hasMoreTokens())
@@ -315,10 +302,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 				{
 					canChange = CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, classId);
 				}
-				// else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85)) // 9
-				// {
-				// canChange = CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, classId); // 11
-				// }
 				if (canChange)
 				{
 					int classDataIndex = -1;
@@ -383,14 +366,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
-					// if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-					// {
-					// for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
-					// {
-					// player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
-					// }
-					// SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false);
-					// }
 					if (Config.AUTO_LEARN_SKILLS)
 					{
 						player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
@@ -410,15 +385,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			}
 			case "learnskills":
 			{
-				// Retail class master only lets you learn all third class skills.
-				// if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-				// {
-				// htmltext = "test_server_helper001_failed.html";
-				// }
-				// else
-				// {
 				player.giveAvailableSkills(true, true);
-				// }
 				break;
 			}
 			case "clanlevelup":
@@ -534,10 +501,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		{
 			htmltext = "test_server_helper011.html";
 		}
-		// else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
-		// {
-		// htmltext = "test_server_helper011a.html";
-		// }
 		return htmltext;
 	}
 	
@@ -685,10 +648,19 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 						htmltext = "test_server_helper020a.html";
 						break;
 					}
-					case KAMAEL_SOLDIER:
 					case TROOPER:
 					{
 						htmltext = "test_server_helper020c.html";
+						break;
+					}
+					case SOUL_FINDER:
+					{
+						htmltext = "test_server_helper020d.html";
+						break;
+					}
+					case WARDER:
+					{
+						htmltext = "test_server_helper020e.html";
 						break;
 					}
 				}
@@ -702,10 +674,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		{
 			htmltext = "test_server_helper011.html";
 		}
-		// else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
-		// {
-		// htmltext = "test_server_helper011a.html";
-		// }
 		else
 		{
 			htmltext = "test_server_helper029.html";
@@ -792,14 +760,6 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			// if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-			// {
-			// for (SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
-			// {
-			// player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
-			// }
-			// SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false);
-			// }
 			if (Config.AUTO_LEARN_SKILLS)
 			{
 				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
@@ -821,11 +781,10 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		//@formatter:off
 		if ((player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getLevel() >= 20)) ||
 			((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) ||
-			(player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76)) /*||
-			(player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85))*/)
+			(player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76)))
 		//@formatter:on
 		{
-			player.sendPacket(new TutorialShowQuestionMark(2, 0)); // mark id was 1001 - used 2 for quest text
+			player.sendPacket(new TutorialShowQuestionMark(102, 0));
 		}
 	}
 	
@@ -834,13 +793,13 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
 		final PlayerInstance player = event.getPlayer();
-		if (!_showPopupWindow || (event.getMarkId() != 2)) // mark id was 1001 - used 2 for quest text
+		if (!_showPopupWindow || (event.getMarkId() != 102))
 		{
 			return;
 		}
 		
 		String html = null;
-		if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation
+		if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getRace() != Race.KAMAEL))) && (player.getLevel() >= 40)) // In retail you can skip first occupation
 		{
 			html = getHtm(player, getSecondOccupationChangeHtml(player));
 		}
@@ -852,14 +811,9 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 		{
 			html = getHtm(player, "qm_thirdclass.html");
 		}
-		// else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85)) // 9
-		// {
-		// html = getHtm(player, "qm_awaken.html");
-		// }
 		if (html != null)
 		{
 			showResult(event.getPlayer(), html);
-			// player.sendPacket(new TutorialShowHtml(html));
 		}
 	}
 	

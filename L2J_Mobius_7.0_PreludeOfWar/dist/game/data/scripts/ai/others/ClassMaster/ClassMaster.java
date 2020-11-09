@@ -897,7 +897,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 			(player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85)))
 		//@formatter:on
 		{
-			player.sendPacket(new TutorialShowQuestionMark(1, 0)); // mark id was 1001 - used 1 for tutorial text
+			player.sendPacket(new TutorialShowQuestionMark(102, 0));
 		}
 	}
 	
@@ -906,7 +906,7 @@ public class ClassMaster extends AbstractNpcAI implements IXmlReader
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
 		final PlayerInstance player = event.getPlayer();
-		if (!_showPopupWindow || (event.getMarkId() != 1)) // mark id was 1001 - used 1 for tutorial text
+		if (!_showPopupWindow || (event.getMarkId() != 102))
 		{
 			return;
 		}
