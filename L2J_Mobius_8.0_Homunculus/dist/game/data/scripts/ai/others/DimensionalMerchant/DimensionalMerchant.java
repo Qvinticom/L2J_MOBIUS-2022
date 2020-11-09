@@ -111,6 +111,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 			case "32478-21.html":
 			case "32478-22.html":
 			case "32478-23.html":
+			case "32478-24.html":
 			{
 				htmltext = event;
 				break;
