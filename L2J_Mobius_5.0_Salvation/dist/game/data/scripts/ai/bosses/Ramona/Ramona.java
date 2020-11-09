@@ -111,7 +111,7 @@ public class Ramona extends AbstractNpcAI
 	};
 	// Locations
 	private static final Location DEFAULT_LOC = new Location(86338, 172099, -10602, 16383);
-	private static final Location RAMONA_SPAWN_LOC = new Location(86327, 169759, -10465, 16383);
+	private static final Location RAMONA_SPAWN_LOC = new Location(86376, 172072, -10602, 16383);
 	// Other
 	private static final int ROOM_CONTROL_DOOR = 22230711;
 	private static final NoSummonFriendZone ZONE = ZoneManager.getInstance().getZoneById(210108, NoSummonFriendZone.class);
@@ -521,7 +521,7 @@ public class Ramona extends AbstractNpcAI
 						door.closeMe();
 					}
 				});
-				startQuestTimer("SPAWN_RAMONA_1", 10000, npc, null);
+				startQuestTimer("SPAWN_RAMONA_1", 6000, npc, null);
 				break;
 			}
 			case RAMONA_1:
