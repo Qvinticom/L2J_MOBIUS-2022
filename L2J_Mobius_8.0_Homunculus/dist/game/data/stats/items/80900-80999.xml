@@ -891,19 +891,20 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80963" name="Bloodstained Talisman of Protection" additionalName="8-hour" type="Armor">
+	<item id="80963" name="Blood-stained Talisman of Protection" additionalName="8 Hours" type="Armor">
 		<!-- Talisman of Protection stained with the blood of Zariche or Akamanah. P./ M. Def. +850, Received Damage -3%, Bow/ Crossbow Resistance +3%, Dagger/ Dual Daggers Resistance +3%, Fixed Damage Resistance +5%, received M. Skill Critical Damage -3%, received damage when immobilized -3%. -->
 		<set name="icon" val="icon.cursed_defend_talisman_lv1" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false"/>
 		<set name="time" val="480" />
+		<skills>
+			<skill id="35554" level="1" /> <!-- Blood-stained Talisman of Protection Lv1 -->
+		</skills>
 	</item>
 	<item id="80964" name="Energy of Protection" type="EtcItem">
 		<!-- A compound material for upgrading Talisman of Protection Lv. 9 or lower. In case of failure, Talisman of Protection is not destroyed, but its upgrade level is reset to a certain value. However, Energy of Protection is consumed in any case. -->

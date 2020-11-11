@@ -1189,41 +1189,75 @@
 				<amount>36</amount>
 			</effect>
 			<effect name="DamageShieldResist">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+			</effect>
+			<effect name="RealDamageResist">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDamageBonus">
-				<amount>8</amount>
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+				</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>8</amount>
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+				</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>8</amount>
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+				</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>8</amount>
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>8</amount>
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>8</amount>
+				<amount>
+					<value level="1">8</value>
+					<value level="2">10</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DamageByAttack">
-				<amount>-9</amount>
+				<amount>
+					<value level="1">-9</value>
+					<value level="2">-10</value>
+				</amount>
 				<type>PK</type>
 			</effect>
 			<effect name="DamageByAttack">
-				<amount>-9</amount>
+				<amount>
+					<value level="1">-9</value>
+					<value level="2">-10</value>
+				</amount>
 				<type>ENEMY_ALL</type>
 			</effect>
 		</effects>

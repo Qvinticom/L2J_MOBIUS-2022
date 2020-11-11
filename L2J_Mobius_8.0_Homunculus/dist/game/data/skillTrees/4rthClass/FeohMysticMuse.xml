@@ -153,9 +153,6 @@
 		<skill skillName="Superior Weapon Mastery" skillId="11001" skillLevel="1" getLevel="85" autoGet="true">
 			<removeSkill id="30719" /> <!-- Intermediate Weapon Mastery -->
 		</skill>
-		<skill skillName="Superior Sigil Mastery" skillId="11004" skillLevel="1" getLevel="85" autoGet="true">
-			<removeSkill id="30721" /> <!-- Intermediate Sigil Mastery -->
-		</skill>
 		<skill skillName="Superior Mental Attack Resistance" skillId="11006" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Superior MP Boost" skillId="11185" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Elemental Burst" skillId="11112" skillLevel="1" getLevel="85" levelUpSp="0" />
@@ -527,5 +524,10 @@
 		<skill skillName="Superior Burst Casting" skillId="30855" skillLevel="1" getLevel="110" levelUpSp="17455723311">
 			<item id="81453" count="1" /> <!-- Improved Rune Stone -->
 		</skill>
+		<skill skillName="Feoh's Defense Mastery" skillId="11004" skillLevel="1" getLevel="85" autoGet="true">
+			<removeSkill id="30721" /> <!-- Intermediate Sigil Mastery -->
+		</skill>
+		<skill skillName="Feoh's Defense Mastery" skillId="11004" skillLevel="2" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Feoh's Defense Mastery" skillId="11004" skillLevel="3" getLevel="110" levelUpSp="17455723311" />
 	</skillTree>
 </list>

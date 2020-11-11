@@ -153,9 +153,6 @@
 		<skill skillName="Superior Magic Weapon Mastery" skillId="11751" skillLevel="1" getLevel="85" autoGet="true">
 			<removeSkill id="30733" /> <!-- Intermediate Magic Weapon Mastery -->
 		</skill>
-		<skill skillName="Superior Sigil Mastery" skillId="11791" skillLevel="1" getLevel="85" autoGet="true">
-			<removeSkill id="30735" /> <!-- Intermediate Sigil Mastery -->
-		</skill>
 		<skill skillName="Superior Mental Attack Resistance" skillId="11792" skillLevel="1" getLevel="85" autoGet="true" />
 		<skill skillName="Fatal Sleep" skillId="11778" skillLevel="1" getLevel="85" levelUpSp="0" />
 		<skill skillName="Giant's Favor" skillId="11772" skillLevel="1" getLevel="85" levelUpSp="0" />
@@ -578,5 +575,10 @@
 		<skill skillName="Solid Resistance" skillId="30858" skillLevel="1" getLevel="110" levelUpSp="17455723311">
 			<item id="81453" count="1" /> <!-- Improved Rune Stone -->
 		</skill>
+		<skill skillName="Aeore's Defense Mastery" skillId="11791" skillLevel="1" getLevel="85" autoGet="true">
+			<removeSkill id="30735" /> <!-- Intermediate Sigil Mastery -->
+		</skill>
+		<skill skillName="Aeore's Defense Mastery" skillId="11791" skillLevel="2" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Aeore's Defense Mastery" skillId="11791" skillLevel="3" getLevel="110" levelUpSp="17455723311" />
 	</skillTree>
 </list>

@@ -3071,7 +3071,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11791" toLevel="1" name="Aeore's Defense Mastery">
+	<skill id="11791" toLevel="3" name="Aeore's Defense Mastery">
 		<!-- When using a sigil, MP Recovery Rate +$s1, Healing Power +$s2, M. Skill Power +$s3. When using a magic sword or a one-hand staff, M. Atk. +$s4. Additionally, INT $s5. -->
 		<icon>icon.skill11791</icon>
 		<operateType>P</operateType>
@@ -3095,6 +3095,29 @@
 				<armorType>
 					<item>SIGIL</item>
 				</armorType>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>SIGIL</item>
+				</armorType>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>

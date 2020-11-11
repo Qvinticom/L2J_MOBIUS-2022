@@ -2878,6 +2878,9 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DisableSkill">
 				<disable>11759</disable>
@@ -2894,6 +2897,9 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DisableSkill">
 				<disable>11544;19439;26122;27353;28086;28098</disable>
@@ -2910,6 +2916,9 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DisableSkill">
 				<disable>10019</disable>

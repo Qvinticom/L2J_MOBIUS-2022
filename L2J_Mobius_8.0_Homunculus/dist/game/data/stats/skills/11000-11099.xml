@@ -209,7 +209,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11004" toLevel="1" name="Feoh's Defense Mastery">
+	<skill id="11004" toLevel="3" name="Feoh's Defense Mastery">
 		<!-- When a sigil is used, M. Atk. +$s1, MP Recovery Rate +$s2, M. Skill Critical Damage +$s3. -->
 		<icon>icon.skill11791</icon>
 		<magicLevel>85</magicLevel>
@@ -225,6 +225,28 @@
 			</effect>
 			<effect name="MpRegen">
 				<amount>20</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>SIGIL</item>
+				</armorType>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>SIGIL</item>
+				</armorType>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+				</amount>
 				<mode>PER</mode>
 				<armorType>
 					<item>SIGIL</item>
