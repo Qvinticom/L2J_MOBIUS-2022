@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
- * @author Sdw
+ * @author Sdw, Mobius
  */
 public class RealDamage extends AbstractEffect
 {
@@ -45,6 +45,12 @@ public class RealDamage extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
+		// Check if effected is dead.
+		if (effected.isDead())
+		{
+			return;
+		}
+		
 		// Check if fake players should aggro each other.
 		if (effector.isFakePlayer() && !Config.FAKE_PLAYER_AGGRO_FPC && effected.isFakePlayer())
 		{
@@ -54,7 +60,17 @@ public class RealDamage extends AbstractEffect
 		// Calculate resistance.
 		final double damage = _power - (_power * (Math.min(effected.getStat().getValue(Stat.REAL_DAMAGE_RESIST, 1), 1.8) - 1));
 		
-		effected.reduceCurrentHp(damage, effector, skill, false, true, false, false);
+		// Do damage.
+		if (damage > 0)
+		{
+			effected.setCurrentHp(Math.max(effected.getCurrentHp() - damage, effected.isUndying() ? 1 : 0));
+			if ((effected.getCurrentHp() < 0.5)) // Die.
+			{
+				effected.doDie(effector);
+			}
+		}
+		
+		// Send message.
 		if (effector.isPlayer())
 		{
 			effector.sendDamageMessage(effected, skill, (int) damage, false, false);
