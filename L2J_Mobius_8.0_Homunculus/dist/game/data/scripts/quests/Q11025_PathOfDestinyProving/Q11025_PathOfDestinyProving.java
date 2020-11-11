@@ -106,9 +106,9 @@ public class Q11025_PathOfDestinyProving extends Quest
 	private static final String R_GRADE_ITEMS_REWARDED_VAR = "R_GRADE_ITEMS_REWARDED";
 	private static final String KILL_COUNT_VAR = "KillCount";
 	private static final String KILL_COUNT_VAR2 = "KillCount2";
-	private static final String EXPSP_REWARD_CHECK_VAR1 = "EXPSP_REWARD_CHECK";
-	private static final String EXPSP_REWARD_CHECK_VAR2 = "EXPSP_REWARD_CHECK2";
-	private static final String EXPSP_REWARD_CHECK_VAR3 = "EXPSP_REWARD_CHECK3";
+	private static final String REWARD_CHECK_VAR1 = "Q11025_REWARD_1";
+	private static final String REWARD_CHECK_VAR2 = "Q11025_REWARD_2";
+	private static final String REWARD_CHECK_VAR3 = "Q11025_REWARD_3";
 	private static final int LEVEL_20 = 20;
 	private static final int LEVEL_40 = 40;
 	private static boolean INSTANT_LEVEL_40 = false;
@@ -176,9 +176,9 @@ public class Q11025_PathOfDestinyProving extends Quest
 				{
 					takeItems(player, SECRET_MATERIAL, 15);
 					qs.setCond(3, true);
-					if (!player.getVariables().getBoolean(EXPSP_REWARD_CHECK_VAR1, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR1, false))
 					{
-						player.getVariables().set(EXPSP_REWARD_CHECK_VAR1, true);
+						player.getVariables().set(REWARD_CHECK_VAR1, true);
 						addExpAndSp(player, 1640083, 1476);
 					}
 					htmltext = event;
@@ -201,9 +201,9 @@ public class Q11025_PathOfDestinyProving extends Quest
 				if (qs.isCond(5))
 				{
 					qs.setCond(6, true);
-					if (!player.getVariables().getBoolean(EXPSP_REWARD_CHECK_VAR2, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR2, false))
 					{
-						player.getVariables().set(EXPSP_REWARD_CHECK_VAR2, true);
+						player.getVariables().set(REWARD_CHECK_VAR2, true);
 						addExpAndSp(player, 913551, 822);
 					}
 					htmltext = event;
@@ -227,9 +227,9 @@ public class Q11025_PathOfDestinyProving extends Quest
 				{
 					takeItems(player, BREATH_OF_DEATH, 15);
 					qs.setCond(9, true);
-					if (!player.getVariables().getBoolean(EXPSP_REWARD_CHECK_VAR3, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR3, false))
 					{
-						player.getVariables().set(EXPSP_REWARD_CHECK_VAR3, true);
+						player.getVariables().set(REWARD_CHECK_VAR3, true);
 						if (INSTANT_LEVEL_40 && (player.getLevel() < LEVEL_40))
 						{
 							addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(LEVEL_40) + 100) - player.getExp(), 4457);

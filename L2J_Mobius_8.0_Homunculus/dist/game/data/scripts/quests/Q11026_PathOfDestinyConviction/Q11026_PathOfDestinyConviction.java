@@ -84,11 +84,11 @@ public class Q11026_PathOfDestinyConviction extends Quest
 	private static final String KILL_COUNT_VAR = "KillCount";
 	private static final String KILL_COUNT_VAR2 = "KillCount2";
 	private static final String KILL_COUNT_VAR3 = "KillCount3";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR1 = "EXPSPADENA_REWARD_CHECK_VAR1";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR2 = "EXPSPADENA_REWARD_CHECK_VAR2";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR3 = "EXPSPADENA_REWARD_CHECK_VAR3";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR4 = "EXPSPADENA_REWARD_CHECK_VAR4";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR5 = "EXPSPADENA_REWARD_CHECK_VAR5";
+	private static final String REWARD_CHECK_VAR1 = "Q11026_REWARD_1";
+	private static final String REWARD_CHECK_VAR2 = "Q11026_REWARD_2";
+	private static final String REWARD_CHECK_VAR3 = "Q11026_REWARD_3";
+	private static final String REWARD_CHECK_VAR4 = "Q11026_REWARD_4";
+	private static final String REWARD_CHECK_VAR5 = "Q11026_REWARD_5";
 	private static final int LEVEL_40 = 40;
 	private static final int LEVEL_76 = 76;
 	private static boolean INSTANT_LEVEL_76 = false;
@@ -153,9 +153,9 @@ public class Q11026_PathOfDestinyConviction extends Quest
 				{
 					qs.setCond(3, true);
 					htmltext = event;
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR1, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR1, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR1, true);
+						player.getVariables().set(REWARD_CHECK_VAR1, true);
 						addExpAndSp(player, 14281098, 12852);
 					}
 				}
@@ -176,9 +176,9 @@ public class Q11026_PathOfDestinyConviction extends Quest
 				if (qs.isCond(5))
 				{
 					qs.setCond(6, true);
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR2, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR2, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR2, true);
+						player.getVariables().set(REWARD_CHECK_VAR2, true);
 						addExpAndSp(player, 30949789, 27854);
 					}
 				}
@@ -202,9 +202,9 @@ public class Q11026_PathOfDestinyConviction extends Quest
 					takeItems(player, CORRUPTED_ENERGY, 15);
 					qs.setCond(9, true);
 					htmltext = event;
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR3, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR3, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR3, true);
+						player.getVariables().set(REWARD_CHECK_VAR3, true);
 						addExpAndSp(player, 76142825, 68528);
 					}
 				}
@@ -227,9 +227,9 @@ public class Q11026_PathOfDestinyConviction extends Quest
 					takeItems(player, EMBEDDED_SHARD, 15);
 					qs.setCond(12, true);
 					htmltext = event;
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR4, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR4, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR4, true);
+						player.getVariables().set(REWARD_CHECK_VAR4, true);
 						addExpAndSp(player, 174520303, 157068);
 					}
 				}
@@ -250,9 +250,9 @@ public class Q11026_PathOfDestinyConviction extends Quest
 				if (qs.isCond(14))
 				{
 					qs.setCond(15, true);
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR5, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR5, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR5, true);
+						player.getVariables().set(REWARD_CHECK_VAR5, true);
 						if (INSTANT_LEVEL_76 && (player.getLevel() < LEVEL_76))
 						{
 							addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(LEVEL_76) + 100) - player.getExp(), 595042);

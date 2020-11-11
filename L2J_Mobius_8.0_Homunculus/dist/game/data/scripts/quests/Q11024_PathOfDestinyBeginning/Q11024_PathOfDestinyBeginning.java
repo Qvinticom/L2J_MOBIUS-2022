@@ -69,8 +69,8 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 	private static final Location TRAINING_GROUNDS_TELEPORT2 = new Location(-16744, 140209, -3872);
 	// Misc
 	private static final String SHOTS_REWARD_CHECK_VAR = "SHOTS_REWARD_CHECK";
-	private static final String EXPSP_REWARD_CHECK_VAR = "EXPSP_REWARD_CHECK";
-	private static final String EXPSP_REWARD_CHECK_VAR2 = "EXPSP_REWARD_CHECK2";
+	private static final String REWARD_CHECK_VAR1 = "Q11024_REWARD_1";
+	private static final String REWARD_CHECK_VAR2 = "Q11024_REWARD_2";
 	private static final String KILL_COUNT_VAR = "KillCount";
 	private static final String KILL_COUNT_VAR2 = "KillCount2";
 	private static boolean INSTANT_LEVEL_20 = false;
@@ -133,9 +133,9 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 				if (qs.isCond(7))
 				{
 					qs.setCond(8, true);
-					if (!player.getVariables().getBoolean(EXPSP_REWARD_CHECK_VAR2, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR2, false))
 					{
-						player.getVariables().set(EXPSP_REWARD_CHECK_VAR2, true);
+						player.getVariables().set(REWARD_CHECK_VAR2, true);
 						if (INSTANT_LEVEL_20 && (player.getLevel() < 20))
 						{
 							addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(20) + 100) - player.getExp(), 708);
@@ -182,9 +182,9 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 				if (qs.isCond(4))
 				{
 					qs.setCond(5, true);
-					if (!player.getVariables().getBoolean(EXPSP_REWARD_CHECK_VAR, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR1, false))
 					{
-						player.getVariables().set(EXPSP_REWARD_CHECK_VAR, true);
+						player.getVariables().set(REWARD_CHECK_VAR1, true);
 						addExpAndSp(player, 48229, 43);
 					}
 					htmltext = event;

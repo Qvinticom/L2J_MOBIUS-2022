@@ -109,12 +109,12 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 	private static final String KILL_COUNT_VAR2 = "KillCount2";
 	private static final String KILL_COUNT_VAR3 = "KillCount3";
 	private static final String KILL_COUNT_VAR4 = "KillCount3";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR1 = "EXPSPADENA_REWARD_CHECK_VAR1";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR2 = "EXPSPADENA_REWARD_CHECK_VAR2";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR3 = "EXPSPADENA_REWARD_CHECK_VAR3";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR4 = "EXPSPADENA_REWARD_CHECK_VAR4";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR5 = "EXPSPADENA_REWARD_CHECK_VAR5";
-	private static final String EXPSPADENA_REWARD_CHECK_VAR6 = "EXPSPADENA_REWARD_CHECK_VAR6";
+	private static final String REWARD_CHECK_VAR1 = "Q11027_REWARD_1";
+	private static final String REWARD_CHECK_VAR2 = "Q11027_REWARD_2";
+	private static final String REWARD_CHECK_VAR3 = "Q11027_REWARD_3";
+	private static final String REWARD_CHECK_VAR4 = "Q11027_REWARD_4";
+	private static final String REWARD_CHECK_VAR5 = "Q11027_REWARD_5";
+	private static final String REWARD_CHECK_VAR6 = "Q11027_REWARD_6";
 	private static final String AWAKE_POWER_REWARDED_VAR = "AWAKE_POWER_REWARDED";
 	private static final int LEVEL_76 = 76;
 	private static final int LEVEL_85 = 85;
@@ -187,9 +187,9 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 				{
 					qs.setCond(3, true);
 					htmltext = event;
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR1, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR1, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR1, true);
+						player.getVariables().set(REWARD_CHECK_VAR1, true);
 						addExpAndSp(player, 392513005, 353261);
 					}
 				}
@@ -211,9 +211,9 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 				{
 					qs.setCond(6, true);
 					htmltext = event;
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR2, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR2, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR2, true);
+						player.getVariables().set(REWARD_CHECK_VAR2, true);
 						addExpAndSp(player, 581704958, 523534);
 					}
 				}
@@ -236,9 +236,9 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 					takeItems(player, ORC_EMPOWERING_POTION, 15);
 					qs.setCond(9, true);
 					htmltext = event;
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR3, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR3, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR3, true);
+						player.getVariables().set(REWARD_CHECK_VAR3, true);
 						addExpAndSp(player, 750392145, 675352);
 					}
 				}
@@ -260,9 +260,9 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 				{
 					qs.setCond(12, true);
 					htmltext = event;
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR4, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR4, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR4, true);
+						player.getVariables().set(REWARD_CHECK_VAR4, true);
 						addExpAndSp(player, 452984693, 407686);
 					}
 				}
@@ -285,9 +285,9 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 					takeItems(player, KETRA_ORDER, 15);
 					qs.setCond(15, true);
 					htmltext = event;
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR5, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR5, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR5, true);
+						player.getVariables().set(REWARD_CHECK_VAR5, true);
 						addExpAndSp(player, 514892511, 463403);
 					}
 				}
@@ -309,9 +309,9 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 				{
 					qs.setCond(18, true);
 					htmltext = event;
-					if (!player.getVariables().getBoolean(EXPSPADENA_REWARD_CHECK_VAR6, false))
+					if (!player.getVariables().getBoolean(REWARD_CHECK_VAR6, false))
 					{
-						player.getVariables().set(EXPSPADENA_REWARD_CHECK_VAR6, true);
+						player.getVariables().set(REWARD_CHECK_VAR6, true);
 						if (INSTANT_LEVEL_85 && (player.getLevel() < LEVEL_85))
 						{
 							addExpAndSp(player, (ExperienceData.getInstance().getExpForLevel(LEVEL_85) + 100) - player.getExp(), 527586);
