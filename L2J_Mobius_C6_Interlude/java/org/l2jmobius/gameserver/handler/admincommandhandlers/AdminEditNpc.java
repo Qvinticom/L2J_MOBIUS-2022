@@ -1358,6 +1358,24 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			dropDataList.close();
 			statement.close();
+			
+			final PreparedStatement statement2 = con.prepareStatement("SELECT mobId,itemId,min,max,category,chance FROM custom_droplist WHERE mobId=?");
+			statement.setInt(1, npcId);
+			final ResultSet dropDataList2 = statement2.executeQuery();
+			
+			while (dropDataList2.next())
+			{
+				dropData = new DropData();
+				dropData.setItemId(dropDataList2.getInt("itemId"));
+				dropData.setMinDrop(dropDataList2.getInt("min"));
+				dropData.setMaxDrop(dropDataList2.getInt("max"));
+				dropData.setChance(dropDataList2.getInt("chance"));
+				
+				final int category = dropDataList2.getInt("category");
+				npcData.addDropData(dropData, category);
+			}
+			dropDataList2.close();
+			statement2.close();
 		}
 		catch (Exception e)
 		{
