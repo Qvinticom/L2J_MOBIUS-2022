@@ -1228,7 +1228,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26442" level="85" type="Npc" name="Mad Cullan" title="Raid Boss">
+	<npc id="26442" level="85" type="RaidBoss" name="Mad Cullan" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1247,7 +1247,7 @@
 			<height normal="67" />
 		</collision>
 	</npc>
-	<npc id="26443" level="120" type="Monster" name="Akrikhin Charon" title="Raid Boss">
+	<npc id="26443" level="120" type="RaidBoss" name="Akrikhin Charon" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17332" />
