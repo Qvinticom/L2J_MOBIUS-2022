@@ -416,32 +416,37 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		// XXX: ML2 Rewards ForGlory, ForHonor and ForVictory quests
 		for (CeremonyOfChaosMember member : getMembers().values())
 		{
-			final QuestState qs = member.getPlayer().getQuestState("Q10813_ForGlory");
-			final QuestState qs1 = member.getPlayer().getQuestState("Q10819_ForHonor");
-			final QuestState qs2 = member.getPlayer().getQuestState("Q10825_ForVictory");
+			final PlayerInstance player = member.getPlayer();
+			if (player == null)
+			{
+				continue;
+			}			
+			final QuestState qs = player.getQuestState("Q10813_ForGlory");
+			final QuestState qs1 = player.getQuestState("Q10819_ForHonor");
+			final QuestState qs2 = player.getQuestState("Q10825_ForVictory");
 			if ((qs != null) && !qs.isCompleted() && qs.isCond(1))
 			{
-				AbstractScript.giveItems(member.getPlayer(), Config.EXALTED_FOR_GLORY_ITEM_MAX.getId(), 1);
-				AbstractScript.playSound(member.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (AbstractScript.getQuestItemsCount(member.getPlayer(), Config.EXALTED_FOR_GLORY_ITEM_MAX.getId()) >= Config.EXALTED_FOR_GLORY_ITEM_MAX.getCount())
+				AbstractScript.giveItems(player, Config.EXALTED_FOR_GLORY_ITEM_MAX.getId(), 1);
+				AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if (AbstractScript.getQuestItemsCount(player, Config.EXALTED_FOR_GLORY_ITEM_MAX.getId()) >= Config.EXALTED_FOR_GLORY_ITEM_MAX.getCount())
 				{
 					qs.setCond(2, true);
 				}
 			}
 			else if ((qs1 != null) && !qs1.isCompleted() && qs1.isCond(1))
 			{
-				AbstractScript.giveItems(member.getPlayer(), Config.EXALTED_FOR_HONOR_ITEM_MAX.getId(), 1);
-				AbstractScript.playSound(member.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (AbstractScript.getQuestItemsCount(member.getPlayer(), Config.EXALTED_FOR_HONOR_ITEM_MAX.getId()) >= Config.EXALTED_FOR_HONOR_ITEM_MAX.getCount())
+				AbstractScript.giveItems(player, Config.EXALTED_FOR_HONOR_ITEM_MAX.getId(), 1);
+				AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if (AbstractScript.getQuestItemsCount(player, Config.EXALTED_FOR_HONOR_ITEM_MAX.getId()) >= Config.EXALTED_FOR_HONOR_ITEM_MAX.getCount())
 				{
 					qs1.setCond(2, true);
 				}
 			}
 			else if ((qs2 != null) && !qs2.isCompleted() && qs2.isCond(3))
 			{
-				AbstractScript.giveItems(member.getPlayer(), Config.EXALTED_FOR_VICTORY_ITEM_MAX.getId(), 1);
-				AbstractScript.playSound(member.getPlayer(), QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (AbstractScript.getQuestItemsCount(member.getPlayer(), Config.EXALTED_FOR_VICTORY_ITEM_MAX.getId()) >= Config.EXALTED_FOR_VICTORY_ITEM_MAX.getCount())
+				AbstractScript.giveItems(player, Config.EXALTED_FOR_VICTORY_ITEM_MAX.getId(), 1);
+				AbstractScript.playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if (AbstractScript.getQuestItemsCount(player, Config.EXALTED_FOR_VICTORY_ITEM_MAX.getId()) >= Config.EXALTED_FOR_VICTORY_ITEM_MAX.getCount())
 				{
 					qs2.setCond(4, true);
 				}
