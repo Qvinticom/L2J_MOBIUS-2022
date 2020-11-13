@@ -678,19 +678,28 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	}
 	
 	@Override
-	protected final void addDamage(PlayerInstance player, int damage)
+	protected void addDamage(PlayerInstance player, int damage)
 	{
-		if ((_playerOne.getPlayer() == null) || (_playerTwo.getPlayer() == null))
+		final PlayerInstance player1 = _playerOne.getPlayer();
+		final PlayerInstance player2 = _playerOne.getPlayer();
+		if ((player1 == null) || (player2 == null))
 		{
 			return;
 		}
-		if (player == _playerOne.getPlayer())
+		
+		if (player == player1)
 		{
-			_damageP1 += damage;
+			if (!player2.isInvul() && !player2.isHpBlocked())
+			{
+				_damageP1 += damage;
+			}
 		}
-		else if (player == _playerTwo.getPlayer())
+		else if (player == player2)
 		{
-			_damageP2 += damage;
+			if (!player1.isInvul() && !player1.isHpBlocked())
+			{
+				_damageP2 += damage;
+			}
 		}
 	}
 	

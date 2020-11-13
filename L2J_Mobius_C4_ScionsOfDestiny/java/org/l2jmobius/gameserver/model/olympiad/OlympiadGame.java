@@ -918,13 +918,20 @@ class OlympiadGame
 		{
 			return;
 		}
+		
 		if (player == _playerOne)
 		{
-			_damageP1 += damage;
+			if (!_playerTwo.isInvul())
+			{
+				_damageP1 += damage;
+			}
 		}
 		else if (player == _playerTwo)
 		{
-			_damageP2 += damage;
+			if (!_playerOne.isInvul())
+			{
+				_damageP2 += damage;
+			}
 		}
 	}
 	
