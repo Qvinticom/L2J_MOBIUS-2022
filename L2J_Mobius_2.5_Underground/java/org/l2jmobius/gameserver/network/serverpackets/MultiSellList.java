@@ -83,14 +83,15 @@ public class MultiSellList extends AbstractItemPacket
 			{
 				final Item template = ItemTable.getInstance().getTemplate(product.getId());
 				final ItemInfo displayItemEnchantment = (_list.isMaintainEnchantment() && (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass())) ? itemEnchantment : null;
-				packet.writeD(product.getId());
 				if (template != null)
 				{
+					packet.writeD(template.getDisplayId());
 					packet.writeQ(template.getBodyPart());
 					packet.writeH(template.getType2());
 				}
 				else
 				{
+					packet.writeD(product.getId());
 					packet.writeQ(0);
 					packet.writeH(65535);
 				}
@@ -106,8 +107,16 @@ public class MultiSellList extends AbstractItemPacket
 			{
 				final Item template = ItemTable.getInstance().getTemplate(ingredient.getId());
 				final ItemInfo displayItemEnchantment = ((itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId())) ? itemEnchantment : null;
-				packet.writeD(ingredient.getId());
-				packet.writeH(template != null ? template.getType2() : 65535);
+				if (template != null)
+				{
+					packet.writeD(template.getDisplayId());
+					packet.writeH(template.getType2());
+				}
+				else
+				{
+					packet.writeD(ingredient.getId());
+					packet.writeH(65535);
+				}
 				packet.writeQ(_list.getIngredientCount(ingredient));
 				packet.writeH(ingredient.getEnchantmentLevel() > 0 ? ingredient.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
 				writeItemAugment(packet, displayItemEnchantment);

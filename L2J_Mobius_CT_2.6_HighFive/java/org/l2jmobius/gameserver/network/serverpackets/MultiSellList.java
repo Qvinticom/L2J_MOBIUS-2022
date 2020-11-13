@@ -80,14 +80,15 @@ public class MultiSellList implements IClientOutgoingPacket
 			
 			for (Ingredient ing : ent.getProducts())
 			{
-				packet.writeD(ing.getItemId());
 				if (ing.getTemplate() != null)
 				{
+					packet.writeD(ing.getTemplate().getDisplayId());
 					packet.writeD(ing.getTemplate().getBodyPart());
 					packet.writeH(ing.getTemplate().getType2());
 				}
 				else
 				{
+					packet.writeD(ing.getItemId());
 					packet.writeD(0);
 					packet.writeH(65535);
 				}
@@ -124,7 +125,7 @@ public class MultiSellList implements IClientOutgoingPacket
 			
 			for (Ingredient ing : ent.getIngredients())
 			{
-				packet.writeD(ing.getItemId());
+				packet.writeD(ing.getTemplate() != null ? ing.getTemplate().getDisplayId() : ing.getItemId());
 				packet.writeH(ing.getTemplate() != null ? ing.getTemplate().getType2() : 65535);
 				packet.writeQ(ing.getItemCount());
 				if (ing.getItemInfo() != null)
