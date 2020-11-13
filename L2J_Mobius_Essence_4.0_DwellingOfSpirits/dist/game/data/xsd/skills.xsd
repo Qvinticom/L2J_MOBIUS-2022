@@ -400,7 +400,7 @@
 															</xs:complexType>
 														</xs:element>
 														<xs:element minOccurs="0" name="isWithin" type="xs:boolean" />
-														<xs:element minOccurs="0" name="transformId" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="transformId" type="xs:int" />
 														<xs:element minOccurs="0" name="npcIds">
 															<xs:complexType>
 																<xs:sequence>
@@ -1325,7 +1325,7 @@
 															<xs:element name="PHYSICAL_ATTACK_SPEED" type="xs:unsignedByte" />
 															<xs:element name="MAGIC_ATTACK_SPEED" type="xs:unsignedByte" />
 															<xs:element name="pDefMod" type="xs:decimal" />
-															<xs:element name="transformationId" type="xs:unsignedByte" />
+															<xs:element name="transformationId" type="xs:int" />
 															<xs:element name="distance" type="xs:unsignedByte" />
 															<xs:element name="speed" type="xs:unsignedShort" />
 															<xs:element name="knockDown" type="xs:boolean" />

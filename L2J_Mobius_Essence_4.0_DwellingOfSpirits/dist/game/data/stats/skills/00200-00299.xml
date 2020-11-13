@@ -5699,11 +5699,11 @@
 		<effects>
 			<effect name="ReflectMagic">
 				<amount>30</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="ReflectSkill">
 				<amount>30</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -5855,7 +5855,7 @@
 		<effects>
 			<effect name="DamageShield">
 				<amount>20</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -6062,6 +6062,7 @@
 		<effects>
 			<effect name="ReflectMagic">
 				<chance>20</chance>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

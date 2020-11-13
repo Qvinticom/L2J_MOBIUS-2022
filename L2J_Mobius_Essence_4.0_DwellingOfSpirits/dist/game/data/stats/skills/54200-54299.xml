@@ -21,14 +21,65 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54204" toLevel="1" name="Worthy Warrior Transformation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalVisualEffect>RANKER_DECO_HUMAN</abnormalVisualEffect>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>385</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MaxHp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>385</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54205" toLevel="1" name="Worthy Warrior Transformation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalVisualEffect>RANKER_DECO_KAMAEL</abnormalVisualEffect>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>386</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54206" toLevel="1" name="Ultimate Death Knight Transformation">
 		<abnormalLevel>1</abnormalLevel>
@@ -97,11 +148,6 @@
 		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanTransform">
-				<transformId>208</transformId>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="Transformation">
 				<transformationId>208</transformationId>
@@ -114,24 +160,116 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54209" toLevel="1" name="Worthy Warrior Transformation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalVisualEffect>RANKER_DECO_ORC</abnormalVisualEffect>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>424</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54210" toLevel="1" name="Worthy Warrior Transformation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+ 		<abnormalVisualEffect>RANKER_DECO_ELF</abnormalVisualEffect>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>428</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54211" toLevel="1" name="Worthy Warrior Transformation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalVisualEffect>RANKER_DECO_DARKELF</abnormalVisualEffect>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>429</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54212" toLevel="1" name="Worthy Warrior Transformation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalVisualEffect>RANKER_DECO_DWARF</abnormalVisualEffect>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+ 		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>430</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54213" toLevel="1" name="Mount Air Bike">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

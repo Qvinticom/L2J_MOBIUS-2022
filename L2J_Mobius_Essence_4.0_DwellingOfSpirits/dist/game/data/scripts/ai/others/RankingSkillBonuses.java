@@ -47,6 +47,12 @@ public class RankingSkillBonuses extends AbstractNpcAI
 	private static final Skill SERVER_RANKING_BENEFIT_2 = SkillData.getInstance().getSkill(60013, 1);
 	private static final Skill SERVER_RANKING_BENEFIT_3 = SkillData.getInstance().getSkill(60014, 1);
 	private static final Skill RACE_RANKING_BENEFIT = SkillData.getInstance().getSkill(60015, 1);
+	private static final Skill HUMAN_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54204, 1);
+	private static final Skill ELF_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54210, 1);
+	private static final Skill DARK_ELF_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54211, 1);
+	private static final Skill ORC_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54209, 1);
+	private static final Skill DWARF_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54512, 1);
+	private static final Skill KAMAEL_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54205, 1);
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
@@ -68,6 +74,12 @@ public class RankingSkillBonuses extends AbstractNpcAI
 		player.getEffectList().stopSkillEffects(true, ORC_LEVEL_RANKING_1ST_CLASS);
 		player.getEffectList().stopSkillEffects(true, DWARF_LEVEL_RANKING_1ST_CLASS);
 		player.getEffectList().stopSkillEffects(true, KAMAEL_LEVEL_RANKING_1ST_CLASS);
+		player.getEffectList().stopSkillEffects(true, HUMAN_LEVEL_TRANSFORM_CLASS);
+		player.getEffectList().stopSkillEffects(true, ELF_LEVEL_TRANSFORM_CLASS);
+		player.getEffectList().stopSkillEffects(true, DARK_ELF_LEVEL_TRANSFORM_CLASS);
+		player.getEffectList().stopSkillEffects(true, ORC_LEVEL_TRANSFORM_CLASS);
+		player.getEffectList().stopSkillEffects(true, DWARF_LEVEL_TRANSFORM_CLASS);
+		player.getEffectList().stopSkillEffects(true, KAMAEL_LEVEL_TRANSFORM_CLASS);
 		player.removeSkill(SERVER_RANKING_BENEFIT_1);
 		player.removeSkill(SERVER_RANKING_BENEFIT_2);
 		player.removeSkill(SERVER_RANKING_BENEFIT_3);
@@ -135,6 +147,46 @@ public class RankingSkillBonuses extends AbstractNpcAI
 				}
 			}
 			player.addSkill(RACE_RANKING_BENEFIT, false);
+		}
+		
+		// Add race rank transform skills.
+		final int raceTransform = RankManager.getInstance().getPlayerRaceRank(player);
+		if ((raceTransform > 0) && (raceTransform <= 3))
+		{
+			switch (player.getRace())
+			{
+				case HUMAN:
+				{
+					
+					player.addSkill(HUMAN_LEVEL_TRANSFORM_CLASS, false);
+					break;
+				}
+				case ELF:
+				{
+					player.addSkill(ELF_LEVEL_TRANSFORM_CLASS, false);
+					break;
+				}
+				case DARK_ELF:
+				{
+					player.addSkill(DARK_ELF_LEVEL_TRANSFORM_CLASS, false);
+					break;
+				}
+				case ORC:
+				{
+					player.addSkill(ORC_LEVEL_TRANSFORM_CLASS, false);
+					break;
+				}
+				case DWARF:
+				{
+					player.addSkill(DWARF_LEVEL_TRANSFORM_CLASS, false);
+					break;
+				}
+				case KAMAEL:
+				{
+					player.addSkill(KAMAEL_LEVEL_TRANSFORM_CLASS, false);
+					break;
+				}
+			}
 		}
 	}
 	

@@ -3746,6 +3746,8 @@
 			<value level="4">50</value>
 			<value level="5">54</value>
 		</mpConsume>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -3764,7 +3766,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
-					<item>DUALSWORD</item>
+					<item>DUAL</item>
 					<item>BLUNT</item>
 				</weaponType>
 			</condition>
