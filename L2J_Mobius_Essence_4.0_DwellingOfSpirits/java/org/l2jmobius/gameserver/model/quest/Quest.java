@@ -562,6 +562,11 @@ public class Quest extends AbstractScript implements IIdentifiable
 		String res = null;
 		try
 		{
+			// Simulated talk should not exist when event runs.
+			if (player != null)
+			{
+				player.setSimulatedTalking(false);
+			}
 			res = onAdvEvent(event, npc, player);
 		}
 		catch (Exception e)
@@ -601,10 +606,15 @@ public class Quest extends AbstractScript implements IIdentifiable
 		try
 		{
 			// Simulated talk should not exist when killing.
-			final QuestState qs = getQuestState(killer, false);
-			if (qs != null)
+			if (killer != null)
 			{
-				qs.setSimulated(false);
+				killer.setSimulatedTalking(false);
+				
+				final QuestState qs = getQuestState(killer, false);
+				if (qs != null)
+				{
+					qs.setSimulated(false);
+				}
 			}
 			
 			res = onKill(npc, killer, isSummon);
