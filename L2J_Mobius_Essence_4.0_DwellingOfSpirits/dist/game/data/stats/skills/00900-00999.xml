@@ -894,7 +894,7 @@
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
 				<rate>50</rate>
-				<max>3</max>
+				<max>5</max>
 			</effect>
 			<effect name="HealEffect">
 				<amount>30</amount>
@@ -910,21 +910,19 @@
 		<!-- For 5 min., all party members' P. Def. -4%, M. Def. -8%, P. Evasion -2; P. Atk. +4%, M. Atk. +8%, Atk. Spd. +4%, Casting Spd. +4% and Speed +4. Requires a dual sword. -->
 		<icon>icon.skill0915</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_BERSERKER</abnormalType>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<affectRange>1000</affectRange>
 		<effectPoint>679</effectPoint>
-		<hitTime>2500</hitTime>
+		<hitTime>2</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 		<magicLevel>80</magicLevel>
 		<mpConsume>73</mpConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<operateType>T</operateType>
+		<reuseDelay>1</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -933,37 +931,15 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>-4</amount>
-				<mode>PER</mode>
+			<effect name="SilentMove">
+				<chance>100</chance>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>-8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>-2</amount>
-				<mode>DIFF</mode>
+			<effect name="Hide">
+				<chance>100</chance>
 			</effect>
 			<effect name="PAtk">
-				<amount>4</amount>
+				<amount>-30</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>4</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

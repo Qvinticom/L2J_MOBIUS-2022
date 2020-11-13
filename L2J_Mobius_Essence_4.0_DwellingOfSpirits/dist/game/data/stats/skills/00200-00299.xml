@@ -5697,18 +5697,12 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="MaxMp">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
-				</amount>
+			<effect name="ReflectMagic">
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">15</value>
-					<value level="2">20</value>
-				</amount>
+			<effect name="ReflectSkill">
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -5742,12 +5736,9 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalDefence">
-				<amount>
-					<value level="1">30</value>
-					<value level="2">35</value>
-				</amount>
-				<mode>PER</mode>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -5862,18 +5853,8 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="DefenceCriticalRate">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefenceMagicCriticalRate">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">10</value>
-				</amount>
+			<effect name="DamageShield">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -5914,11 +5895,8 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">12</value>
-					<value level="2">16</value>
-				</amount>
+			<effect name="CriticalDamage">
+				<amount>40</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -6037,12 +6015,9 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CriticalDamage">
-				<amount>
-					<value level="1">35</value>
-					<value level="2">38</value>
-				</amount>
-				<mode>PER</mode>
+			<effect name="PAtk">
+				<amount>200</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -6085,12 +6060,8 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalAttackSpeed">
-				<amount>
-					<value level="1">15</value>
-					<value level="2">20</value>
-				</amount>
-				<mode>PER</mode>
+			<effect name="ReflectMagic">
+				<chance>20</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -6177,9 +6148,9 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="AttackAttribute">
-				<amount>20</amount>
-				<attribute>HOLY</attribute>
+			<effect name="SkillEvasion">
+				<amount>30</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
