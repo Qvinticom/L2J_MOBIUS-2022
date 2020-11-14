@@ -2866,6 +2866,19 @@
 	</skill>
 	<skill id="45355" toLevel="1" name="Change Armor">
 		<operateType>T</operateType>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>DK_CHANGE_ARMOR</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>76</magicLevel>
+		<stayAfterDeath>true</stayAfterDeath>
+		<hitTime>1500</hitTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="45356" toLevel="1" name="Forbidden To Revive">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
