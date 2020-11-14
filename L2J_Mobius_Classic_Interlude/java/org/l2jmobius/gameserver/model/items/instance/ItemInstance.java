@@ -777,7 +777,7 @@ public class ItemInstance extends WorldObject
 		{
 			return true;
 		}
-		return !isAugmented() && _item.isDropable();
+		return !isAugmented() && (getVisualId() == 0) && _item.isDropable();
 	}
 	
 	/**
