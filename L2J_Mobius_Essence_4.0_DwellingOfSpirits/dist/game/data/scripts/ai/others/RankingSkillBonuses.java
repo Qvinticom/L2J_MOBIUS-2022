@@ -51,7 +51,7 @@ public class RankingSkillBonuses extends AbstractNpcAI
 	private static final Skill ELF_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54210, 1);
 	private static final Skill DARK_ELF_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54211, 1);
 	private static final Skill ORC_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54209, 1);
-	private static final Skill DWARF_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54512, 1);
+	private static final Skill DWARF_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54212, 1);
 	private static final Skill KAMAEL_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54205, 1);
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
