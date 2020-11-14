@@ -1944,27 +1944,11 @@
 		<reuseDelay>1000</reuseDelay>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
-		<isTriggeredSkill>true</isTriggeredSkill>
 		<effectPoint>707</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<specialLevel>-1</specialLevel>
-		<isMagic>2</isMagic>
+		<isMagic>22</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpCheckClassList">
-				<classIds>
-					<item>ISS_ENCHANTER</item>
-					<item>ISS_HIEROPHANT</item>
-					<item>ISS_SWORD_MUSE</item>
-					<item>ISS_SPECTRAL_DANCER</item>
-					<item>ISS_DOMINATOR</item>
-					<item>ISS_DOOMCRYER</item>
-				</classIds>
-				<affectType>CASTER</affectType>
-				<isWithin>true</isWithin>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>20</amount>

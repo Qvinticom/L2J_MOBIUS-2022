@@ -1421,6 +1421,9 @@
 			<effect name="SpModify">
 				<amount>30</amount>
 			</effect>
+			<effect name="DispelBySlot">
+				<dispel>EXP_SPECIAL,-1;FREYA_SCROLL_VIT,-1</dispel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="17188" toLevel="1" name="Dandy's Faith">
