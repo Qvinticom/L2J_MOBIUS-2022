@@ -70,7 +70,7 @@ public class AutoPlayTaskManager
 						// Check if actually attacking.
 						if (player.hasAI() && player.getAI().isAutoAttacking() && !player.isAttackingNow() && !player.isCastingNow())
 						{
-							player.doAutoAttack(monster);
+							player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, monster);
 						}
 						continue PLAY;
 					}
