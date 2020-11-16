@@ -5954,6 +5954,87 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
+		
+		<!-- brooch augmenting stone -->
+		<variation mineralId="47983">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="40073" to="40122" chance="2.0" /> <!-- P. Def. + 22 -> MEN + 2 -->
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="40031" to="40072" chance="2.083" /> <!-- PvP Damage + 1% when equipping Topaz Lv. 4 or above -> M. Skill Power + 5% when equipping Blue Cat's Eye Lv. 4 or above -->
+					<optionRange from="40223" to="40227" chance="2.083" /> <!-- PvP Damage + 1% when equipping Amethyst Lv. 4 or above -> Reflect 2% of Received Damage when equipping Cat's Eye Lv. 4 or above -->
+					<option id="40228" chance="2.099" /> <!-- Reflect 5% of Received Damage when equipping Cat's Eye Lv. 4 or above -->
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- armor augmenting stone CHEST -->
+		<variation mineralId="81728">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="34753" to="34788" chance="2.083"/>
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+			<optionCategory chance="100.0">
+				<optionRange from="34789" to="34824" chance="2.083"/>
+			</optionCategory>
+		</optionGroup>
+		</variation>
+		<!-- armor augmenting stone PANTS -->
+		<variation mineralId="81728">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="34825" to="34860" chance="2.083"/>
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="34861" to="34896" chance="2.083"/>
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- armor augmenting stone HELMET -->
+		<variation mineralId="81728">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="35041" to="35076" chance="2.083"/>
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="35077" to="35112" chance="2.083"/>
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- armor augmenting stone GLOVES -->
+		<variation mineralId="81728">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="34897" to="34932" chance="2.083"/>
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="34933" to="34968" chance="2.083"/>
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- armor augmenting stone BOOTS -->
+		<variation mineralId="81728">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="35003" to="35004" chance="2.083"/>
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="35039" to="35040" chance="2.083"/>
+				</optionCategory>
+			</optionGroup>
+		</variation>
 	</variations>
 	<itemGroups>
 		<!--[c_46] -->
@@ -10733,7 +10814,7 @@
 			<item id="23383" /> <!-- Adenian Cyber Underwear -->
 			<item id="23384" /> <!-- Adenian Cute Underwear -->
 		</itemGroup>
-		<!-- Giant's Energy Weapon Augmenting Stone -->
+		<!-- Life Stone Instilled with Giants -->
 		<itemGroup id="36">
 			<item id="46629" /> <!-- Practice Stormbringer -->
 			<item id="17290" /> <!-- Requiem Shaper -->
@@ -16992,8 +17073,10 @@
 			<item id="28488" /> <!-- La Vie En Rose's Radiant Brooch (Rare-Type) -->
 			<item id="81359" /> <!-- Enchanced La Vie En Rose's Brooch -->
 			<item id="29546" /> <!-- Enchanced La Vie En Rose's Brooch -->
-			<item id="81360" /> <!-- Top-Grade La Vie En Rose's Brooch -->
 			<item id="29547" /> <!-- Top-Grade La Vie En Rose's Brooch -->
+		</itemGroup>
+		<itemGroup id="78">
+			<item id="81360" />
 		</itemGroup>
 		<!-- [circlet_life_stone] -->
 		<itemGroup id="74">
@@ -17175,146 +17258,152 @@
 			<item id="80089" /> <!-- Fafurion Dual Swords(Top Grade) -->
 			<item id="80318" /> <!-- Fafurion Dual Daggers  -->
 		</itemGroup>
-		<!-- R99/R110 Armor -->
-		<itemGroup id="78">
-			<item id="19570" /> <!-- Eternal Helmet (Reinforced Heavy) -->
-			<item id="19571" /> <!-- Eternal Breastplate (Reinforced Heavy) -->
-			<item id="19572" /> <!-- Eternal Gaiters (Reinforced Heavy) -->
-			<item id="19573" /> <!-- Eternal Gauntlets (Reinforced Heavy) -->
-			<item id="19574" /> <!-- Eternal Boots (Reinforced Heavy) -->
-			<item id="19581" /> <!-- Eternal Circlet (Reinforced Robe) -->
-			<item id="19582" /> <!-- Eternal Tunic (Reinforced Robe) -->
-			<item id="19583" /> <!-- Eternal Stockings (Reinforced Robe) -->
-			<item id="19584" /> <!-- Eternal Gloves (Reinforced Robe) -->
-			<item id="19585" /> <!-- Eternal Shoes (Reinforced Robe) -->
-			<item id="19784" /> <!-- Eternal Leather Helmet (Reinforced Light) -->
-			<item id="19785" /> <!-- Eternal Leather Armor (Reinforced Light) -->
-			<item id="19786" /> <!-- Eternal Leather Leggings (Reinforced Light) -->
-			<item id="19787" /> <!-- Eternal Leather Gloves (Reinforced Light) -->
-			<item id="19788" /> <!-- Eternal Leather Boots (Reinforced Light) -->
-			<item id="19698" /> <!-- Blessed Eternal Helmet (Reinforced Heavy) -->
-			<item id="19699" /> <!-- Blessed Eternal Breastplate (Reinforced Heavy) -->
-			<item id="19700" /> <!-- Blessed Eternal Gaiters (Reinforced Heavy) -->
-			<item id="19701" /> <!-- Blessed Eternal Gauntlets (Reinforced Heavy) -->
-			<item id="19702" /> <!-- Blessed Eternal Boots (Reinforced Heavy) -->
-			<item id="19709" /> <!-- Blessed Eternal Circlet (Reinforced Robe) -->
-			<item id="19710" /> <!-- Blessed Eternal Tunic (Reinforced Robe) -->
-			<item id="19711" /> <!-- Blessed Eternal Stockings (Reinforced Robe) -->
-			<item id="19712" /> <!-- Blessed Eternal Gloves (Reinforced Robe) -->
-			<item id="19713" /> <!-- Blessed Eternal Shoes (Reinforced Robe) -->
-			<item id="19912" /> <!-- Blessed Eternal Leather Helmet (Reinforced Light) -->
-			<item id="19913" /> <!-- Blessed Eternal Leather Armor (Reinforced Light) -->
-			<item id="19914" /> <!-- Blessed Eternal Leather Leggings (Reinforced Light) -->
-			<item id="19915" /> <!-- Blessed Eternal Leather Gloves (Reinforced Light) -->
-			<item id="19916" /> <!-- Blessed Eternal Leather Boots (Reinforced Light) -->
-			<item id="35002" /> <!-- Dark Eternal Helmet (Reinforced Heavy) -->
-			<item id="35003" /> <!-- Dark Eternal Breastplate (Reinforced Heavy) -->
-			<item id="35004" /> <!-- Dark Eternal Gaiters (Reinforced Heavy) -->
-			<item id="35005" /> <!-- Dark Eternal Gauntlets (Reinforced Heavy) -->
-			<item id="35006" /> <!-- Dark Eternal Boots (Reinforced Heavy) -->
-			<item id="35013" /> <!-- Dark Eternal Circlet (Reinforced Robe) -->
-			<item id="35014" /> <!-- Dark Eternal Tunic (Reinforced Robe) -->
-			<item id="35015" /> <!-- Dark Eternal Stockings (Reinforced Robe) -->
-			<item id="35016" /> <!-- Dark Eternal Gloves (Reinforced Robe) -->
-			<item id="35017" /> <!-- Dark Eternal Shoes (Reinforced Robe) -->
-			<item id="35023" /> <!-- Dark Eternal Leather Helmet (Reinforced Light) -->
-			<item id="35024" /> <!-- Dark Eternal Leather Armor (Reinforced Light) -->
-			<item id="35025" /> <!-- Dark Eternal Leather Leggings (Reinforced Light) -->
-			<item id="35026" /> <!-- Dark Eternal Leather Gloves (Reinforced Light) -->
-			<item id="35027" /> <!-- Dark Eternal Leather Boots (Reinforced Light) -->
-			<item id="35033" /> <!-- Bloody Eternal Helmet (Reinforced Heavy) -->
-			<item id="35034" /> <!-- Bloody Eternal Breastplate (Reinforced Heavy) -->
-			<item id="35035" /> <!-- Bloody Eternal Gaiters (Reinforced Heavy) -->
-			<item id="35036" /> <!-- Bloody Eternal Gauntlets (Reinforced Heavy) -->
-			<item id="35037" /> <!-- Bloody Eternal Boots (Reinforced Heavy) -->
-			<item id="35043" /> <!-- Bloody Eternal Circlet (Reinforced Robe) -->
-			<item id="35044" /> <!-- Bloody Eternal Tunic (Reinforced Robe) -->
-			<item id="35045" /> <!-- Bloody Eternal Stockings (Reinforced Robe) -->
-			<item id="35046" /> <!-- Bloody Eternal Gloves (Reinforced Robe) -->
-			<item id="35047" /> <!-- Bloody Eternal Shoes (Reinforced Robe) -->
-			<item id="35053" /> <!-- Bloody Eternal Leather Helmet (Reinforced Light) -->
-			<item id="35054" /> <!-- Bloody Eternal Leather Armor (Reinforced Light) -->
-			<item id="35055" /> <!-- Bloody Eternal Leather Leggings (Reinforced Light) -->
-			<item id="35056" /> <!-- Bloody Eternal Leather Gloves (Reinforced Light) -->
-			<item id="35057" /> <!-- Bloody Eternal Leather Boots (Reinforced Light) -->
-			<item id="80104" /> <!-- Leviathan Helmet (Heavy Armor) -->
-			<item id="80105" /> <!-- Leviathan Breastplate (Heavy Armor) -->
-			<item id="80106" /> <!-- Leviathan Gaiters (Heavy Armor) -->
-			<item id="80107" /> <!-- Leviathan Gauntlets (Heavy Armor) -->
-			<item id="80108" /> <!-- Leviathan Boots (Heavy Armor) -->
-			<item id="80110" /> <!-- Leviathan Leather Helmet (Light Armor) -->
-			<item id="80111" /> <!-- Leviathan Leather Armor (Light Armor) -->
-			<item id="80112" /> <!-- Leviathan Leather Leggings (Light Armor) -->
-			<item id="80113" /> <!-- Leviathan Leather Gloves (Light Armor) -->
-			<item id="80114" /> <!-- Leviathan Leather Boots (Light Armor) -->
-			<item id="80115" /> <!-- Leviathan Circlet (Robe) -->
-			<item id="80116" /> <!-- Leviathan Tunic (Robe) -->
-			<item id="80117" /> <!-- Leviathan Stockings (Robe) -->
-			<item id="80118" /> <!-- Leviathan Gloves (Robe) -->
-			<item id="80119" /> <!-- Leviathan Shoes (Robe) -->
-			<item id="80189" /> <!-- Enchanted Leviathan Helmet (Heavy Armor) -->
-			<item id="80190" /> <!-- Enchanted Leviathan Breastplate (Heavy Armor) -->
-			<item id="80191" /> <!-- Enchanted Leviathan Gaiters (Heavy Armor) -->
-			<item id="80192" /> <!-- Enchanted Leviathan Gauntlets (Heavy Armor) -->
-			<item id="80193" /> <!-- Enchanted Leviathan Boots (Heavy Armor) -->
-			<item id="80195" /> <!-- Enchanted Leviathan Leather Helmet (Light Armor) -->
-			<item id="80196" /> <!-- Enchanted Leviathan Leather Armor (Light Armor) -->
-			<item id="80197" /> <!-- Enchanted Leviathan Leather Leggings (Light Armor) -->
-			<item id="80198" /> <!-- Enchanted Leviathan Leather Gloves (Light Armor) -->
-			<item id="80199" /> <!-- Enchanted Leviathan Leather Boots (Light Armor) -->
-			<item id="80200" /> <!-- Enchanted Leviathan Circlet (Robe) -->
-			<item id="80201" /> <!-- Enchanted Leviathan Tunic (Robe) -->
-			<item id="80202" /> <!-- Enchanted Leviathan Stockings (Robe) -->
-			<item id="80203" /> <!-- Enchanted Leviathan Gloves (Robe) -->
-			<item id="80204" /> <!-- Enchanted Leviathan Shoes (Robe) -->
-			<item id="80205" /> <!-- Bloody Leviathan Helmet (Heavy Armor) -->
-			<item id="80206" /> <!-- Bloody Leviathan Breastplate (Heavy Armor) -->
-			<item id="80207" /> <!-- Bloody Leviathan Gaiters (Heavy Armor) -->
-			<item id="80208" /> <!-- Bloody Leviathan Gauntlets (Heavy Armor) -->
-			<item id="80209" /> <!-- Bloody Leviathan Boots (Heavy Armor) -->
-			<item id="80210" /> <!-- Bloody Leviathan Leather Helmet (Light Armor) -->
-			<item id="80211" /> <!-- Bloody Leviathan Leather Armor (Light Armor) -->
-			<item id="80212" /> <!-- Bloody Leviathan Leather Leggings (Light Armor) -->
-			<item id="80213" /> <!-- Bloody Leviathan Leather Gloves (Light Armor) -->
-			<item id="80214" /> <!-- Bloody Leviathan Leather Boots (Light Armor) -->
-			<item id="80215" /> <!-- Bloody Leviathan Circlet (Robe) -->
-			<item id="80216" /> <!-- Bloody Leviathan Tunic (Robe) -->
-			<item id="80217" /> <!-- Bloody Leviathan Stockings (Robe) -->
-			<item id="80218" /> <!-- Bloody Leviathan Gloves (Robe) -->
-			<item id="80219" /> <!-- Bloody Leviathan Shoes (Robe) -->
-			<item id="80220" /> <!-- Dark Leviathan Helmet (Heavy Armor) -->
-			<item id="80221" /> <!-- Dark Leviathan Breastplate (Heavy Armor) -->
-			<item id="80222" /> <!-- Dark Leviathan Gaiters (Heavy Armor) -->
-			<item id="80223" /> <!-- Dark Leviathan Gauntlets (Heavy Armor) -->
-			<item id="80224" /> <!-- Dark Leviathan Boots (Heavy Armor) -->
-			<item id="80225" /> <!-- Dark Leviathan Leather Helmet (Light Armor) -->
-			<item id="80226" /> <!-- Dark Leviathan Leather Armor (Light Armor) -->
-			<item id="80227" /> <!-- Dark Leviathan Leather Leggings (Light Armor) -->
-			<item id="80228" /> <!-- Dark Leviathan Leather Gloves (Light Armor) -->
-			<item id="80229" /> <!-- Dark Leviathan Leather Boots (Light Armor) -->
-			<item id="80230" /> <!-- Dark Leviathan Circlet (Robe) -->
-			<item id="80231" /> <!-- Dark Leviathan Tunic (Robe) -->
-			<item id="80232" /> <!-- Dark Leviathan Stockings (Robe) -->
-			<item id="80233" /> <!-- Dark Leviathan Gloves (Robe) -->
-			<item id="80234" /> <!-- Dark Leviathan Shoes (Robe) -->
-			<item id="80235" /> <!-- Supreme Leviathan Helmet (Heavy Armor) -->
-			<item id="80236" /> <!-- Supreme Leviathan Breastplate (Heavy Armor) -->
-			<item id="80237" /> <!-- Supreme Leviathan Gaiters (Heavy Armor) -->
-			<item id="80238" /> <!-- Supreme Leviathan Gauntlets (Heavy Armor) -->
-			<item id="80239" /> <!-- Supreme Leviathan Boots (Heavy Armor) -->
-			<item id="80240" /> <!-- Supreme Leviathan Leather Helmet (Light Armor) -->
-			<item id="80241" /> <!-- Supreme Leviathan Leather Armor (Light Armor) -->
-			<item id="80242" /> <!-- Supreme Leviathan Leather Leggings (Light Armor) -->
-			<item id="80243" /> <!-- Supreme Leviathan Leather Gloves (Light Armor) -->
-			<item id="80244" /> <!-- Supreme Leviathan Leather Boots (Light Armor) -->
-			<item id="80245" /> <!-- Supreme Leviathan Circlet (Robe) -->
-			<item id="80246" /> <!-- Supreme Leviathan Tunic (Robe) -->
-			<item id="80247" /> <!-- Supreme Leviathan Stockings (Robe) -->
-			<item id="80248" /> <!-- Supreme Leviathan Gloves (Robe) -->
-			<item id="80249" /> <!-- Supreme Leviathan Shoes (Robe) -->
-		</itemGroup>
-		<!-- Accessories -->
 		<itemGroup id="79">
+			<item id="17431" /> <!-- eternal Breastplate (heavy) -->
+			<item id="17437" /> <!-- eternal leather amor (light) -->
+			<item id="17442" /> <!-- eternal tunic (robe) -->
+			<item id="18084" /> <!-- blessed eternal Breastplate (heavy) -->
+			<item id="18090" /> <!-- blessed eternal leather amor (light) -->
+			<item id="18095" /> <!-- blessed eternal tunic (robe) -->
+			<item id="35034" /> <!-- bloody eternal Breastplate (heavy) -->
+			<item id="35054" /> <!-- bloody eternal leather amor (light) -->
+			<item id="35044" /> <!-- bloody eternal tunic (robe) -->
+			<item id="35003" /> <!-- dark eternal Breastplate (heavy) -->
+			<item id="35024" /> <!-- dark eternal leather amor (light) -->
+			<item id="35014" /> <!-- dark eternal tunic (robe) -->
+			<item id="80105" /> <!-- leviathan Breastplate (heavy) -->
+			<item id="80111" /> <!-- leviathan leather amor (light) -->
+			<item id="80116" /> <!-- leviathan tunic (robe) -->
+			<item id="80190" /> <!-- enchanted leviathan Breastplate (heavy) -->
+			<item id="80196" /> <!-- enchanted leviathan leather amor (light) -->
+			<item id="80201" /> <!-- enchanted leviathan tunic (robe) -->
+			<item id="80206" /> <!-- bloody leviathan Breastplate (heavy) -->
+			<item id="80211" /> <!-- bloody leviathan leather amor (light) -->
+			<item id="80216" /> <!-- bloody leviathan tunic (robe) -->
+			<item id="80221" /> <!-- dark leviathan Breastplate (heavy) -->
+			<item id="80226" /> <!-- dark leviathan leather amor (light) -->
+			<item id="80231" /> <!-- dark leviathan tunic (robe) -->
+			<item id="80236" /> <!-- supreme leviathan Breastplate (heavy) -->
+			<item id="80241" /> <!-- supreme leviathan leather amor (light) -->
+			<item id="80246" /> <!-- supreme leviathan tunic (robe) -->
+		</itemGroup>
+		<itemGroup id="80">
+			<item id="17432" /> <!-- eternal Gaiters (heavy) -->
+			<item id="17438" /> <!-- eternal leather Leggings (light) -->
+			<item id="17443" /> <!-- eternal stockings (robe) -->
+			<item id="18085" /> <!-- blessed eternal Gaiters (heavy) -->
+			<item id="35035" /> <!-- bloody eternal Gaiters (heavy) -->
+			<item id="35004" /> <!-- dark eternal Gaiters (heavy) -->
+			<item id="80106" /> <!-- leviathan Gaiters (heavy) -->
+			<item id="80191" /> <!-- enchanted leviathan Gaiters (heavy) -->
+			<item id="80207" /> <!-- bloody leviathan Gaiters (heavy) -->
+			<item id="80222" /> <!-- dark leviathan Gaiters (heavy) -->
+			<item id="80237" /> <!-- supreme leviathan Gaiters (heavy) -->
+			<item id="18091" /> <!-- blessed eternal leather Leggings (light) -->
+			<item id="35055" /> <!-- bloody eternal leather Leggings (light) -->
+			<item id="35025" /> <!-- dark eternal leather Leggings (light) -->
+			<item id="80112" /> <!-- leviathan leather Leggings (light) -->
+			<item id="80197" /> <!-- enchanted leviathan leather Leggings (light) -->
+			<item id="80212" /> <!-- bloody leviathan leather Leggings (light) -->
+			<item id="80227" /> <!-- dark leviathan leather Leggings (light) -->
+			<item id="80242" /> <!-- supreme leviathan leather Leggings (light) -->
+			<item id="18096" /> <!-- blessed eternal stockings (robe) -->
+			<item id="35045" /> <!-- bloody eternal stockings (robe) -->
+			<item id="35015" /> <!-- dark eternal stockings (robe) -->
+			<item id="80117" /> <!-- leviathan stockings (robe) -->
+			<item id="80202" /> <!-- enchanted leviathan stockings (robe) -->
+			<item id="80217" /> <!-- bloody leviathan stockings (robe) -->
+			<item id="80232" /> <!-- dark leviathan stockings (robe) -->
+			<item id="80247" /> <!-- supreme leviathan stockings (robe) -->
+		</itemGroup>
+		<itemGroup id="81">
+			<item id="17430" /> <!-- eternal helmet (heavy) -->
+			<item id="17436" /> <!-- eternal leather helmet (light) -->
+			<item id="18083" /> <!-- blessed eternal helmet (heavy) -->
+			<item id="18089" /> <!-- blessed eternal leather helmet (light) -->
+			<item id="35033" /> <!-- bloody eternal helmet (heavy) -->
+			<item id="35053" /> <!-- bloody eternal leather helmet (light) -->
+			<item id="35002" /> <!-- dark eternal helmet (heavy) -->
+			<item id="35023" /> <!-- dark eternal leather helmet (light) -->
+			<item id="80104" /> <!-- leviathan helmet (heavy) -->
+			<item id="80110" /> <!-- leviathan leather helmet (light) -->
+			<item id="80189" /> <!-- enchanted leviathan helmet (heavy) -->
+			<item id="80195" /> <!-- enchanted leviathan leather helmet (light) -->
+			<item id="80205" /> <!-- bloody leviathan helmet (heavy) -->
+			<item id="80210" /> <!-- bloody leviathan leather helmet (light) -->
+			<item id="80220" /> <!-- dark leviathan helmet (heavy) -->
+			<item id="80225" /> <!-- dark leviathan leather helmet (light) -->
+			<item id="80235" /> <!-- supreme leviathan helmet (heavy) -->
+			<item id="80240" /> <!-- supreme leviathan leather helmet (light) -->
+			<item id="17441" /> <!-- eternal Circlet (robe) -->
+			<item id="18094" /> <!-- blessed eternal Circlet (robe) -->
+			<item id="35043" /> <!-- bloody eternal Circlet (robe) -->
+			<item id="35013" /> <!-- dark eternal Circlet (robe) -->
+			<item id="80115" /> <!-- leviathan Circlet (robe) -->
+			<item id="80200" /> <!-- enchanted leviathan Circlet (robe) -->
+			<item id="80215" /> <!-- bloody leviathan Circlet (robe) -->
+			<item id="80230" /> <!-- dark leviathan Circlet (robe) -->
+			<item id="80245" /> <!-- supreme leviathan Circlet (robe) -->
+		</itemGroup>
+		<itemGroup id="82">
+			<item id="17439" /> <!-- eternal leather gloves (light) -->
+			<item id="17444" /> <!-- eternal gloves (robe) -->
+			<item id="18092" /> <!-- blessed eternal leather gloves (light) -->
+			<item id="18097" /> <!-- blessed eternal gloves (robe) -->
+			<item id="35056" /> <!-- bloody eternal leather gloves (light) -->
+			<item id="35046" /> <!-- bloody eternal gloves (robe) -->
+			<item id="35026" /> <!-- dark eternal leather gloves (light) -->
+			<item id="35016" /> <!-- dark eternal gloves (robe) -->
+			<item id="80113" /> <!-- leviathan leather gloves (light) -->
+			<item id="80118" /> <!-- leviathan gloves (robe) -->
+			<item id="80198" /> <!-- enchanted leviathan leather gloves (light) -->
+			<item id="80203" /> <!-- enchanted leviathan gloves (robe) -->
+			<item id="80213" /> <!-- bloody leviathan leather gloves (light) -->
+			<item id="80218" /> <!-- bloody leviathan gloves (robe) -->
+			<item id="80228" /> <!-- dark leviathan leather gloves (light) -->
+			<item id="80233" /> <!-- dark leviathan gloves (robe) -->
+			<item id="80243" /> <!-- supreme leviathan leather gloves (light) -->
+			<item id="80248" /> <!-- supreme leviathan gloves (robe) -->
+			<item id="17433" /> <!-- eternal Gauntlets (heavy) -->
+			<item id="18086" /> <!-- blessed eternal Gauntlets (heavy) -->
+			<item id="35036" /> <!-- bloody eternal Gauntlets (heavy) -->
+			<item id="35005" /> <!-- dark eternal Gauntlets (heavy) -->
+			<item id="80107" /> <!-- leviathan Gauntlets (heavy) -->
+			<item id="80192" /> <!-- enchanted leviathan Gauntlets (heavy) -->
+			<item id="80208" /> <!-- bloody leviathan Gauntlets (heavy) -->
+			<item id="80223" /> <!-- dark leviathan Gauntlets (heavy) -->
+			<item id="80238" /> <!-- supreme leviathan Gauntlets (heavy) -->
+		</itemGroup>
+		<itemGroup id="83">
+			<item id="17434" /> <!-- eternal Boots (heavy) -->
+			<item id="17440" /> <!-- eternal leather boots (light) -->
+			<item id="18087" /> <!-- blessed eternal Boots (heavy) -->
+			<item id="18093" /> <!-- blessed eternal leather boots (light) -->
+			<item id="35037" /> <!-- bloody eternal Boots (heavy) -->
+			<item id="35057" /> <!-- bloody eternal leather boots (light) -->
+			<item id="35006" /> <!-- dark eternal Boots (heavy) -->
+			<item id="35027" /> <!-- dark eternal leather boots (light) -->
+			<item id="80108" /> <!-- leviathan Boots (heavy) -->
+			<item id="80114" /> <!-- leviathan leather boots (light) -->
+			<item id="80193" /> <!-- enchanted leviathan Boots (heavy) -->
+			<item id="80199" /> <!-- enchanted leviathan leather boots (light) -->
+			<item id="80209" /> <!-- bloody leviathan Boots (heavy) -->
+			<item id="80214" /> <!-- bloody leviathan leather boots (light) -->
+			<item id="80224" /> <!-- dark leviathan Boots (heavy) -->
+			<item id="80229" /> <!-- dark leviathan leather boots (light) -->
+			<item id="80239" /> <!-- supreme leviathan Boots (heavy) -->
+			<item id="80244" /> <!-- supreme leviathan leather boots (light) -->
+			<item id="17445" /> <!-- eternal shoes (robe) -->
+			<item id="18098" /> <!-- blessed eternal shoes (robe) -->
+			<item id="35047" /> <!-- bloody eternal shoes (robe) -->
+			<item id="35017" /> <!-- dark eternal shoes (robe) -->
+			<item id="80119" /> <!-- leviathan shoes (robe) -->
+			<item id="80204" /> <!-- enchanted leviathan shoes (robe) -->
+			<item id="80219" /> <!-- bloody leviathan shoes (robe) -->
+			<item id="80234" /> <!-- dark leviathan shoes (robe) -->
+			<item id="80249" /> <!-- supreme leviathan shoes (robe) -->
+		</itemGroup>
+		<itemGroup id="84">
 			<item id="48669" /> <!-- Angel's Necklace -->
 			<item id="81212" /> <!-- Angel's Necklace -->
 			<item id="81370" /> <!-- Angel's Necklace (Assault Lv. 1) -->
@@ -17718,9 +17807,9 @@
 		<fee itemGroup="35" itemId="2133" itemCount="26" cancelFee="2400000">
 			<mineral id="23385" /> <!-- Life Stone: Adenian Underwear -->
 		</fee>
-		<!-- Giant's Energy Weapon Augmenting Stone -->
+		<!-- Life Stone Instilled with Giants -->
 		<fee itemGroup="36" itemId="19440" itemCount="118" cancelFee="6485800"> <!-- Gemstone (R-grade) -->
-			<mineral id="36731" /> <!-- Giant's Energy Weapon Augmenting Stone -->
+			<mineral id="36731" /> <!-- Life Stone Instilled with Giants -->
 		</fee>
 		<!-- Aria's Life Stone -->
 		<fee itemGroup="37" itemId="19440" itemCount="100" cancelFee="16000000"> <!-- Gemstone (R-grade) -->
@@ -17728,152 +17817,152 @@
 		</fee>
 		<!-- [c_46_new] -->
 		<fee itemGroup="38" itemId="2132" itemCount="25" cancelFee="95000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [c_49_new] -->
 		<fee itemGroup="39" itemId="2132" itemCount="25" cancelFee="115000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [c_52_new] -->
 		<fee itemGroup="40" itemId="2132" itemCount="25" cancelFee="150000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [c_55_new] -->
 		<fee itemGroup="41" itemId="2132" itemCount="25" cancelFee="210000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [b_58_new] -->
 		<fee itemGroup="42" itemId="2132" itemCount="25" cancelFee="240000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [b_61_new] -->
 		<fee itemGroup="43" itemId="2132" itemCount="25" cancelFee="270000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [a_64_new] -->
 		<fee itemGroup="44" itemId="2132" itemCount="25" cancelFee="330000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [a_67_new] -->
 		<fee itemGroup="45" itemId="2132" itemCount="25" cancelFee="390000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [a_70_new] -->
 		<fee itemGroup="46" itemId="2132" itemCount="25" cancelFee="420000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [s_75_new] -->
 		<fee itemGroup="47" itemId="2132" itemCount="25" cancelFee="480000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [s_80_new] -->
 		<fee itemGroup="48" itemId="2132" itemCount="25" cancelFee="920000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [s_84_new] -->
 		<fee itemGroup="49" itemId="2132" itemCount="25" cancelFee="1400000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [s_85_new] -->
 		<fee itemGroup="50" itemId="2132" itemCount="25" cancelFee="2800000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [s_86_new] -->
 		<fee itemGroup="51" itemId="2132" itemCount="25" cancelFee="3200000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [r_new] -->
 		<fee itemGroup="52" itemId="2133" itemCount="20" cancelFee="3492800"> <!-- Gemstone (A-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [r95_new] -->
 		<fee itemGroup="53" itemId="2134" itemCount="12" cancelFee="2943200"> <!-- Gemstone (S-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [r99_new] -->
-		<fee itemGroup="54" itemId="19440" itemCount="10" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
-			<mineralRange from="45929" to="45932" /> <!-- Weapon Augmenting Stone -> Top-grade Weapon Augmenting Stone -->
-			<mineral id="27584" /> <!-- Top-grade Weapon Augmenting Stone -->
+		<fee itemGroup="54" itemId="19440" itemCount="5" cancelFee="6485800"> <!-- Gemstone (R-grade) -->
+			<mineralRange from="45929" to="45932" /> <!-- Spirit Stone -> Top-grade Spirit Stone -->
+			<mineral id="27584" /> <!-- Top-grade Spirit Stone -->
 		</fee>
 		<!-- [c_46_acc_new] -->
 		<fee itemGroup="55" itemId="2132" itemCount="125" cancelFee="95000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [c_49_acc_new] -->
 		<fee itemGroup="56" itemId="2132" itemCount="125" cancelFee="115000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [c_52_acc_new] -->
 		<fee itemGroup="57" itemId="2132" itemCount="125" cancelFee="150000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [c_55_acc_new] -->
 		<fee itemGroup="58" itemId="2132" itemCount="125" cancelFee="210000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [b_58_acc_new] -->
 		<fee itemGroup="59" itemId="2132" itemCount="125" cancelFee="240000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [b_61_acc_new] -->
 		<fee itemGroup="60" itemId="2132" itemCount="125" cancelFee="270000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [a_64_acc_new] -->
 		<fee itemGroup="61" itemId="2132" itemCount="125" cancelFee="330000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [a_67_acc_new] -->
 		<fee itemGroup="62" itemId="2132" itemCount="125" cancelFee="390000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [s_75_acc_new] -->
 		<fee itemGroup="63" itemId="2132" itemCount="125" cancelFee="480000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [s_80_acc_new] -->
 		<fee itemGroup="64" itemId="2132" itemCount="125" cancelFee="920000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [s_84_acc_new] -->
 		<fee itemGroup="65" itemId="2132" itemCount="125" cancelFee="1400000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [s_85_acc_new] -->
 		<fee itemGroup="66" itemId="2132" itemCount="125" cancelFee="2800000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [s_86_acc_new] -->
 		<fee itemGroup="67" itemId="2132" itemCount="125" cancelFee="3600000"> <!-- Gemstone (B-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [r_acc_new] -->
 		<fee itemGroup="68" itemId="2133" itemCount="30" cancelFee="2400000"> <!-- Gemstone (A-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [r95_acc_new] -->
 		<fee itemGroup="69" itemId="2134" itemCount="18" cancelFee="8100000"> <!-- Gemstone (S-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [r99_acc_new] -->
 		<fee itemGroup="70" itemId="19440" itemCount="8" cancelFee="21000000"> <!-- Gemstone (R-grade) -->
-			<mineralRange from="45933" to="45936" /> <!-- Weapon Augmenting Stone: Accessory -> Top-grade Weapon Augmenting Stone: Accessory -->
+			<mineralRange from="45933" to="45936" /> <!-- Spirit Stone: Accessory -> Top-grade Spirit Stone: Accessory -->
 		</fee>
 		<!-- [c_46_acc_new] -->
 		<fee itemGroup="55" itemId="2132" itemCount="125" cancelFee="95000"> <!-- Gemstone (B-grade) -->
@@ -18005,41 +18094,61 @@
 		</fee>
 		<!-- [hair_acc_new] -->
 		<fee itemGroup="71" itemId="2133" itemCount="30" cancelFee="2400000"> <!-- Gemstone (A-grade) -->
-			<mineral id="45937" /> <!-- Weapon Augmenting Stone: Hair Accessory -->
+			<mineral id="45937" /> <!-- Spirit Stone: Hair Accessory -->
 		</fee>
 		<!-- [brooch_life_stone] -->
 		<fee itemGroup="72" itemId="19440" itemCount="10" cancelFee="130000"> <!-- Gemstone (R-grade) -->
-			<mineral id="28484" /> <!-- Brooch Augmenting Stone -->
-			<mineral id="28530" /> <!-- Top-grade Brooch Augmenting Stone -->
-			<mineral id="28539" /> <!-- Brooch Augmenting Stone -->
+			<mineral id="28484" /> <!-- Brooch Spirit Stone -->
+			<mineral id="28530" /> <!-- Top-grade Brooch Spirit Stone -->
+			<mineral id="28539" /> <!-- Brooch Spirit Stone -->
 		</fee>
 		<!-- [brooch_life_stone1] -->
 		<fee itemGroup="73" itemId="19440" itemCount="10" cancelFee="130000"> <!-- Gemstone (R-grade) -->
-			<mineral id="28485" /> <!-- Brooch Augmenting Stone (Rare-Type) -->
-			<mineral id="28540" /> <!-- Brooch Augmenting Stone (Rare-Type) -->
+			<mineral id="28485" /> <!-- Brooch Spirit Stone (Rare-Type) -->
+			<mineral id="28540" /> <!-- Brooch Spirit Stone (Rare-Type) -->
 		</fee>
 		<!-- [circlet_life_stone] -->
-		<fee itemGroup="74" itemId="2133" itemCount="1" cancelFee="698560"> <!-- Gemstone (A-grade) -->
-			<mineral id="48215" /> <!-- Circlet Augmenting Stone -->
+		<fee itemGroup="74" itemId="19440" itemCount="6" cancelFee="1000000"> <!-- Gemstone (A-grade) -->
+			<mineral id="48215" /> <!-- Circlet Spirit Stone -->
 		</fee>
 		<!-- [q10462_practice_life_stone] -->
 		<fee itemGroup="75" itemId="36719" itemCount="20" cancelFee="1"> <!-- Augmentation Practice Gemstone (D-grade) -->
-			<mineral id="36718" /> <!-- Augmentation Practice Weapon Augmenting Stone (46) -->
+			<mineral id="36718" /> <!-- Augmentation Practice Spirit Stone (46) -->
 		</fee>
 		<!-- [r110_new] -->
-		<fee itemGroup="76" itemId="19440" itemCount="10" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
-			<mineral id="80130" /> <!-- Superior Weapon Augmenting Stone -->
+		<fee itemGroup="76" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+			<mineral id="80130" /> <!-- Super Advanced Spirit Stone -->
 		</fee>
 		<!-- Dragon Weapons -->
-		<fee itemGroup="77" itemId="19440" itemCount="10" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
-			<mineral id="81135" /> <!-- Dragon Weapon Augmenting Stone -->
+		<fee itemGroup="77" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+			<mineral id="81135" /> <!-- Dragon Spirit Stone -->
 		</fee>
-		<!-- Armors -->
-		<fee itemGroup="78" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
-			<mineral id="81728" /> <!-- Armor Augmenting Stone -->
+		<!-- Superior la vie en Rose's brooch -->
+		<fee itemGroup="78" itemId="19440" itemCount="7" cancelFee="12650000">
+			<mineral id="47983" /> <!-- brooch augmenting stone -->
+		</fee>
+		<!-- armor augmenting chest -->
+		<fee itemGroup="79" itemId="19440" itemCount="7" cancelFee="12650000">
+			<mineral id="81728" />
+		</fee>
+		<!-- Armor augmenting pants -->
+		<fee itemGroup="80" itemId="19440" itemCount="7" cancelFee="12650000">
+			<mineral id="81728" />
+		</fee>
+		<!-- Armor augmenting helmet -->
+		<fee itemGroup="81" itemId="19440" itemCount="7" cancelFee="12650000">
+			<mineral id="81728" />
+		</fee>
+		<!-- Armor augmenting gloves -->
+		<fee itemGroup="82" itemId="19440" itemCount="7" cancelFee="12650000">
+			<mineral id="81728" />
+		</fee>
+		<!-- Armor augmenting boots -->
+		<fee itemGroup="83" itemId="19440" itemCount="7" cancelFee="12650000">
+			<mineral id="81728" />
 		</fee>
 		<!-- Accessories -->
-		<fee itemGroup="79" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+		<fee itemGroup="84" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
 			<mineral id="81729" /> <!-- Accessory Augmenting Stone -->
 		</fee>
 	</fees>
