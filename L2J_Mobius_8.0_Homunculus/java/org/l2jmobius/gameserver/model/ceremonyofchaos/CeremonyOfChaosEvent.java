@@ -459,7 +459,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			}
 		}
 		
-		getMembers().clear();
+		clearMembers();
 		_instance.destroy();
 	}
 	

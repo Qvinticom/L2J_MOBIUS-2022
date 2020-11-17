@@ -17,7 +17,9 @@
 package org.l2jmobius.gameserver.model.eventengine;
 
 import java.nio.file.Path;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -35,17 +37,35 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>>extends Abs
 	
 	public Map<Integer, T> getMembers()
 	{
-		return _members;
+		final Map<Integer, T> members = new HashMap<>();
+		for (Entry<Integer, T> entry : _members.entrySet())
+		{
+			final T member = entry.getValue();
+			if (member != null)
+			{
+				final PlayerInstance player = member.getPlayer();
+				if ((player != null) && player.isOnline() && !player.isInOfflineMode())
+				{
+					members.putIfAbsent(entry.getKey(), member);
+				}
+			}
+		}
+		return members;
 	}
 	
 	public T getMember(int objectId)
 	{
-		return _members.get(objectId);
+		return getMembers().get(objectId);
 	}
 	
 	public void addMember(T member)
 	{
 		_members.put(member.getObjectId(), member);
+	}
+	
+	public void clearMembers()
+	{
+		_members.clear();
 	}
 	
 	public void broadcastPacket(IClientOutgoingPacket... packets)

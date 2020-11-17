@@ -51,7 +51,7 @@ public abstract class AbstractEventMember<T extends AbstractEvent<?>>
 	public void sendPacket(IClientOutgoingPacket... packets)
 	{
 		final PlayerInstance player = getPlayer();
-		if (player != null)
+		if ((player != null) && player.isOnline() && !player.isInOfflineMode())
 		{
 			for (IClientOutgoingPacket packet : packets)
 			{
