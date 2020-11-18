@@ -100,14 +100,14 @@ public class Lilith extends AbstractNpcAI
 			}
 			else
 			{
-				_tempLilith = (GrandBossInstance) addSpawn(LILITH, -113360, -244676, -15536, 0, false, 0);
+				_tempLilith = (GrandBossInstance) addSpawn(LILITH, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_tempLilith);
 				GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
 			}
 		}
 		else
 		{
-			_tempLilith = (GrandBossInstance) addSpawn(LILITH, -113360, -244676, -15536, 0, false, 0);
+			_tempLilith = (GrandBossInstance) addSpawn(LILITH, -126920, -234182, -15563, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(_tempLilith);
 			GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
 		}
@@ -120,7 +120,7 @@ public class Lilith extends AbstractNpcAI
 		{
 			case "unlock_lilith":
 			{
-				_tempLilith = (GrandBossInstance) addSpawn(LILITH, -113360, -244676, -15536, 0, false, 0);
+				_tempLilith = (GrandBossInstance) addSpawn(LILITH, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_tempLilith);
 				GrandBossManager.getInstance().setBossStatus(LILITH, ALIVE);
 				break;

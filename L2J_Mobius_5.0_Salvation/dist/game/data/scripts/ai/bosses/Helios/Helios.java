@@ -157,14 +157,14 @@ public class Helios extends AbstractNpcAI
 			}
 			else
 			{
-				_tempHelios = (GrandBossInstance) addSpawn(HELIOS3, -113360, -244676, -15536, 0, false, 0);
+				_tempHelios = (GrandBossInstance) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_tempHelios);
 				GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
 			}
 		}
 		else
 		{
-			_tempHelios = (GrandBossInstance) addSpawn(HELIOS3, -113360, -244676, -15536, 0, false, 0);
+			_tempHelios = (GrandBossInstance) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(_tempHelios);
 			GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
 		}
@@ -333,7 +333,7 @@ public class Helios extends AbstractNpcAI
 		{
 			case "unlock_helios":
 			{
-				_tempHelios = (GrandBossInstance) addSpawn(HELIOS3, -113360, -244676, -15536, 0, false, 0);
+				_tempHelios = (GrandBossInstance) addSpawn(HELIOS3, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_tempHelios);
 				GrandBossManager.getInstance().setBossStatus(HELIOS3, ALIVE);
 				break;

@@ -91,14 +91,14 @@ public class Fafurion extends AbstractNpcAI
 			}
 			else
 			{
-				final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -113360, -244676, -15536, 0, false, 0);
+				final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(fafurion);
 				GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 			}
 		}
 		else
 		{
-			final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -113360, -244676, -15536, 0, false, 0);
+			final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -126920, -234182, -15563, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(fafurion);
 			GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 		}
@@ -112,7 +112,7 @@ public class Fafurion extends AbstractNpcAI
 		{
 			case "unlock_fafurion":
 			{
-				final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -113360, -244676, -15536, 0, false, 0);
+				final GrandBossInstance fafurion = (GrandBossInstance) addSpawn(FAFURION_GRANDBOSS_ID, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(fafurion);
 				GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 				break;

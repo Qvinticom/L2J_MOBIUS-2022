@@ -219,7 +219,7 @@ public class Lindvior extends AbstractNpcAI
 			}
 			else
 			{
-				_lindviorForSpawn = (GrandBossInstance) addSpawn(LINDVIOR_RAID, -113360, -244676, -15536, 0, false, 0);
+				_lindviorForSpawn = (GrandBossInstance) addSpawn(LINDVIOR_RAID, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_lindviorForSpawn);
 				GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, ALIVE);
 				
@@ -227,7 +227,7 @@ public class Lindvior extends AbstractNpcAI
 		}
 		else
 		{
-			_lindviorForSpawn = (GrandBossInstance) addSpawn(LINDVIOR_RAID, -113360, -244676, -15536, 0, false, 0);
+			_lindviorForSpawn = (GrandBossInstance) addSpawn(LINDVIOR_RAID, -126920, -234182, -15563, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(_lindviorForSpawn);
 			GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, ALIVE);
 		}
@@ -638,7 +638,7 @@ public class Lindvior extends AbstractNpcAI
 		{
 			case "unlock_lindvior":
 			{
-				_lindviorForSpawn = (GrandBossInstance) addSpawn(LINDVIOR_RAID, -113360, -244676, -15536, 0, false, 0);
+				_lindviorForSpawn = (GrandBossInstance) addSpawn(LINDVIOR_RAID, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_lindviorForSpawn);
 				GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, ALIVE);
 				break;

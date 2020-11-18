@@ -101,14 +101,14 @@ public class Anakim extends AbstractNpcAI
 			}
 			else
 			{
-				_anakimTemp = (GrandBossInstance) addSpawn(ANAKIM, -113360, -244676, -15536, 0, false, 0);
+				_anakimTemp = (GrandBossInstance) addSpawn(ANAKIM, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_anakimTemp);
 				GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
 			}
 		}
 		else
 		{
-			_anakimTemp = (GrandBossInstance) addSpawn(ANAKIM, -113360, -244676, -15536, 0, false, 0);
+			_anakimTemp = (GrandBossInstance) addSpawn(ANAKIM, -126920, -234182, -15563, 0, false, 0);
 			GrandBossManager.getInstance().addBoss(_anakimTemp);
 			GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
 		}
@@ -121,7 +121,7 @@ public class Anakim extends AbstractNpcAI
 		{
 			case "unlock_anakim":
 			{
-				_anakimTemp = (GrandBossInstance) addSpawn(ANAKIM, -113360, -244676, -15536, 0, false, 0);
+				_anakimTemp = (GrandBossInstance) addSpawn(ANAKIM, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_anakimTemp);
 				GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
 				break;
