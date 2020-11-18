@@ -651,7 +651,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	protected void addDamage(PlayerInstance player, int damage)
 	{
 		final PlayerInstance player1 = _playerOne.getPlayer();
-		final PlayerInstance player2 = _playerOne.getPlayer();
+		final PlayerInstance player2 = _playerTwo.getPlayer();
 		if ((player1 == null) || (player2 == null))
 		{
 			return;
