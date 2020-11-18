@@ -125,7 +125,7 @@ public class Q242_PossessorOfAPreciousSoul extends Quest
 		{
 			if (st.hasQuestItems(ORB_OF_BINDING))
 			{
-				npc.deleteMe();
+				npc.doDie(npc);
 				st.takeItems(ORB_OF_BINDING, 1);
 				
 				int cornerstones = st.getInt("cornerstone");
