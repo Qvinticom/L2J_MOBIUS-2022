@@ -100,46 +100,111 @@
 	<skill id="39318" toLevel="3" name="Item Skill: Silence/Fear">
 		<!-- Mental Attack Resistance +$s1. -->
 		<icon>icon.skill11825</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</DERANGEMENT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39319" toLevel="3" name="Item Skill: Stun Resistance">
 		<!-- Stun Resistance +$s1. -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39320" toLevel="3" name="Item Skill: Paralysis Resistance">
 		<!-- Paralysis Resistance +$s1. -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<PARALYZE>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</PARALYZE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39321" toLevel="3" name="Item Skill: Bleed Resistance">
 		<!-- Bleed Resistance +$s1. -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLEED>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</BLEED>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39322" toLevel="3" name="Item Skill: Poison Resistance">
 		<!-- Poison Resistance +$s1. -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<POISON>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</POISON>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39323" toLevel="3" name="Item Skill: Hold Resistance">
 		<!-- Hold Resistance +$s1. -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39324" toLevel="3" name="Item Skill: XP Gain">
 		<!-- When in inventory, Acquired XP +$s1. -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="39325" toLevel="1" name="Arcane Deliverance">
+	<skill id="39325" toLevel="3" name="Arcane Deliverance">
 		<!-- HP Recovery +5000, MP Recovery +2000, CP Recovery +3000. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>900000</reuseDelay>
 	</skill>
-	<skill id="39326" toLevel="1" name="Arcane Speed">
+	<skill id="39326" toLevel="3" name="Arcane Speed">
 		<!-- For 2 min., Atk. Spd./ Casting Spd. +8%, Speed +8. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -147,7 +212,7 @@
 		<reuseDelay>900000</reuseDelay>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="39327" toLevel="1" name="Arcane Barrier">
+	<skill id="39327" toLevel="3" name="Arcane Barrier">
 		<!-- For 10 sec., becomes invincible. The effect disappears when character attacks. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -155,7 +220,7 @@
 		<reuseDelay>900000</reuseDelay>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="39328" toLevel="1" name="Arcane Immunity">
+	<skill id="39328" toLevel="3" name="Arcane Immunity">
 		<!-- For 10 sec., makes you immune to all debuffs. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -163,7 +228,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="39329" toLevel="1" name="Arcane Protection">
+	<skill id="39329" toLevel="3" name="Arcane Protection">
 		<!-- For 10 sec., P. Def. +3000 and M. Def. +2100. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -171,7 +236,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="39330" toLevel="1" name="Arcane Paralysis">
+	<skill id="39330" toLevel="3" name="Arcane Paralysis">
 		<!-- For 5 sec., use Sleep on target. Can only use on PCs. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -182,7 +247,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="39331" toLevel="1" name="Arcane Silence">
+	<skill id="39331" toLevel="3" name="Arcane Silence">
 		<!-- For 5 sec., interrupts P./ M. skills casting. Can only use on PCs. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -193,7 +258,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="39332" toLevel="1" name="Arcane Critical Sense">
+	<skill id="39332" toLevel="3" name="Arcane Critical Sense">
 		<!-- For 10 sec., P. Critical Damage and P. Critical Rate +50% against character, when character attacked. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
@@ -204,7 +269,7 @@
 		<effectPoint>-671</effectPoint>
 		<mpConsume>43</mpConsume>
 	</skill>
-	<skill id="39333" toLevel="1" name="Arcane Power">
+	<skill id="39333" toLevel="3" name="Arcane Power">
 		<!-- For 5 min., PvE Damage +10%. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>

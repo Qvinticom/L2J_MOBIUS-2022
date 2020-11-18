@@ -17,6 +17,7 @@
 													<xs:element type="xs:string" name="attribute" minOccurs="0" maxOccurs="1" />
 													<xs:element type="xs:byte" name="magicType" minOccurs="0" maxOccurs="1" />
 													<xs:element type="xs:string" name="stat" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:string" name="slot" minOccurs="0" maxOccurs="1" />
 												</xs:sequence>
 												<xs:attribute name="name" type="xs:string" />
 											</xs:complexType>

@@ -834,4 +834,55 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="94184" name="Scroll of Blessing" type="EtcItem">
+		<!-- TODO: Create Item -->
+		<set name="icon" val="icon.star_scrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94185" name="Life Stone Lv. 1 - Weapon" type="EtcItem">
+		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
+		<set name="icon" val="icon.renewal_mineral_r" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94186" name="Life Stone Lv. 2 - Weapon" type="EtcItem">
+		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
+		<set name="icon" val="icon.renewal_mineral_r" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94187" name="Life Stone Lv. 2 - Armor" type="EtcItem">
+		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
+		<set name="icon" val="icon.renewal_mineral_r" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94188" name="Life Stone Lv. 2 - Armor" type="EtcItem">
+		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
+		<set name="icon" val="icon.renewal_mineral_r" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 </list>
