@@ -48,7 +48,7 @@ public class TimedHuntingZone extends ZoneType
 			{
 				player.startTimedHuntingZone(2, pirateTombExitTime - currentTime);
 			}
-			else
+			else if (!player.isGM())
 			{
 				player.teleToLocation(MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN));
 			}
