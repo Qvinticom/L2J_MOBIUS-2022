@@ -46,6 +46,7 @@ public enum EtcItemType implements ItemType
 	GIANT_ENCHT_AM,
 	BLESS_ENCHT_WP,
 	BLESS_ENCHT_AM,
+	BLESS_ENCHT_AM_DOWN,
 	COUPON,
 	ELIXIR,
 	ENCHT_ATTR,

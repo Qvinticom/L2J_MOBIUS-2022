@@ -320,12 +320,19 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							player.broadcastUserInfo();
 						}
 						
-						if (scrollTemplate.isBlessed() || ((supportTemplate != null) && supportTemplate.isBlessed()))
+						if (scrollTemplate.isBlessed() || scrollTemplate.isBlessedDown() || ((supportTemplate != null) && supportTemplate.isBlessed()))
 						{
+							// blessed enchant - enchant value down by 1
+							if (scrollTemplate.isBlessedDown())
+							{
+								item.setEnchantLevel(item.getEnchantLevel() - 1);
+							}
+							else
 							// blessed enchant - clear enchant value
-							client.sendPacket(SystemMessageId.THE_BLESSED_ENCHANT_FAILED_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0);
-							
-							item.setEnchantLevel(0);
+							{
+								client.sendPacket(SystemMessageId.THE_BLESSED_ENCHANT_FAILED_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0);
+								item.setEnchantLevel(0);
+							}
 							item.updateDatabase();
 							client.sendPacket(new EnchantResult(EnchantResult.BLESSED_FAIL, 0, 0));
 							if (Config.LOG_ITEM_ENCHANTS)

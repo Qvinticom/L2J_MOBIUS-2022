@@ -39,6 +39,7 @@ public abstract class AbstractEnchantItem
 		EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM,
 		EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP,
 		EtcItemType.BLESS_ENCHT_AM,
+		EtcItemType.BLESS_ENCHT_AM_DOWN,
 		EtcItemType.BLESS_ENCHT_WP,
 		EtcItemType.ENCHT_AM,
 		EtcItemType.ENCHT_WP,
@@ -56,6 +57,7 @@ public abstract class AbstractEnchantItem
 	
 	private final int _id;
 	private final CrystalType _grade;
+	private final int _minEnchantLevel;
 	private final int _maxEnchantLevel;
 	private final double _bonusRate;
 	
@@ -71,6 +73,7 @@ public abstract class AbstractEnchantItem
 			throw new IllegalAccessError();
 		}
 		_grade = set.getEnum("targetGrade", CrystalType.class, CrystalType.NONE);
+		_minEnchantLevel = set.getInt("maxEnchant", 0);
 		_maxEnchantLevel = set.getInt("maxEnchant", 127);
 		_bonusRate = set.getDouble("bonusRate", 0);
 	}
@@ -113,6 +116,14 @@ public abstract class AbstractEnchantItem
 	public abstract boolean isWeapon();
 	
 	/**
+	 * @return the minimum enchant level that this scroll/item can be used with
+	 */
+	public int getMinEnchantLevel()
+	{
+		return _minEnchantLevel;
+	}
+	
+	/**
 	 * @return the maximum enchant level that this scroll/item can be used with
 	 */
 	public int getMaxEnchantLevel()
@@ -139,7 +150,7 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if ((_maxEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevel))
+		else if (((_minEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() < _minEnchantLevel)) && ((_maxEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevel)))
 		{
 			return false;
 		}
