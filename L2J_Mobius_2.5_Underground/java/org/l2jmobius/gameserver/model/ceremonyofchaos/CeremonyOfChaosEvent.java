@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -481,7 +482,8 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				player.sendPacket(ExCuriousHouseObserveMode.STATIC_DISABLED);
 				
 				// Teleport player back
-				player.teleToLocation(player.getLastLocation(), null);
+				final Location lastLocation = player.getLastLocation();
+				player.teleToLocation(lastLocation != null ? lastLocation : new Location(82201, 147587, -3473), null);
 				
 				// Restore player information
 				final PlayerAppearance app = player.getAppearance();
