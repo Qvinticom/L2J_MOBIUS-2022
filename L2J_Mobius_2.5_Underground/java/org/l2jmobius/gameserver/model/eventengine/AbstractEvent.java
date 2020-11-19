@@ -63,6 +63,11 @@ public abstract class AbstractEvent<T extends AbstractEventMember<?>>extends Abs
 		_members.put(member.getObjectId(), member);
 	}
 	
+	public void removeMember(int objectId)
+	{
+		_members.remove(objectId);
+	}
+	
 	public void clearMembers()
 	{
 		_members.clear();

@@ -649,7 +649,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		final PlayerInstance player = event.getPlayer();
 		if (player != null)
 		{
-			getMembers().remove(player.getObjectId());
+			removeMember(player.getObjectId());
 		}
 	}
 	
