@@ -50,6 +50,7 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -636,6 +637,17 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				}
 				break;
 			}
+		}
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	private void OnPlayerLogout(OnPlayerLogout event)
+	{
+		final PlayerInstance player = event.getPlayer();
+		if (player != null)
+		{
+			getMembers().remove(player.getObjectId());
 		}
 	}
 	
