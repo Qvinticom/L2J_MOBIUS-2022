@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.ceremonyofchaos;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.OptionalInt;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -31,6 +32,7 @@ import org.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
 import org.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.Party.MessageType;
 import org.l2jmobius.gameserver.model.StatSet;
@@ -47,6 +49,7 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -111,10 +114,11 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	
 	public void preparePlayers()
 	{
-		final ExCuriousHouseMemberList membersList = new ExCuriousHouseMemberList(_id, CeremonyOfChaosManager.getInstance().getMaxPlayersInArena(), getMembers().values());
+		final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+		final ExCuriousHouseMemberList membersList = new ExCuriousHouseMemberList(_id, CeremonyOfChaosManager.getInstance().getMaxPlayersInArena(), members.values());
 		final NpcHtmlMessage msg = new NpcHtmlMessage(0);
 		int index = 0;
-		for (CeremonyOfChaosMember member : getMembers().values())
+		for (CeremonyOfChaosMember member : members.values())
 		{
 			final PlayerInstance player = member.getPlayer();
 			if (player.inObserverMode())
@@ -276,7 +280,8 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	
 	public void stopFight()
 	{
-		for (CeremonyOfChaosMember member : getMembers().values())
+		final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+		for (CeremonyOfChaosMember member : members.values())
 		{
 			if (member.getLifeTime() == 0)
 			{
@@ -286,8 +291,8 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		validateWinner();
 		
 		final List<CeremonyOfChaosMember> winners = getWinners();
-		final List<CeremonyOfChaosMember> members = new ArrayList<>(getMembers().size());
-		final SystemMessage msg;
+		final List<CeremonyOfChaosMember> memberList = new ArrayList<>(members.size());
+		SystemMessage msg = null;
 		if (winners.isEmpty() || (winners.size() > 1))
 		{
 			msg = new SystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
@@ -295,113 +300,119 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		else
 		{
 			final PlayerInstance winner = winners.get(0).getPlayer();
-			msg = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
-			msg.addString(winner.getName());
-			
-			// Rewards according to https://l2wiki.com/Ceremony_of_Chaos
-			final int marksRewarded = Rnd.get(2, 4);
-			winner.addItem("CoC-Winner", 34900, marksRewarded, winner, true); // Mysterious Marks
-			
-			// Possible additional rewards
-			
-			// Improved Life Stone
-			if (Rnd.get(10) < 3) // Chance to get reward (30%)
+			if (winner != null)
 			{
-				switch (Rnd.get(4))
+				msg = new SystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
+				msg.addString(winner.getName());
+				
+				// Rewards according to https://l2wiki.com/Ceremony_of_Chaos
+				final int marksRewarded = Rnd.get(2, 4);
+				winner.addItem("CoC-Winner", 34900, marksRewarded, winner, true); // Mysterious Marks
+				
+				// Possible additional rewards
+				
+				// Improved Life Stone
+				if (Rnd.get(10) < 3) // Chance to get reward (30%)
 				{
-					case 0:
+					switch (Rnd.get(4))
 					{
-						winner.addItem("CoC-Winner", 18570, 1, winner, true); // Improved Life Stone (R95-grade)
-						break;
-					}
-					case 1:
-					{
-						winner.addItem("CoC-Winner", 18571, 1, winner, true); // Improved Life Stone (R95-grade)
-						break;
-					}
-					case 2:
-					{
-						winner.addItem("CoC-Winner", 18575, 1, winner, true); // Improved Life Stone (R99-grade)
-						break;
-					}
-					case 3:
-					{
-						winner.addItem("CoC-Winner", 18576, 1, winner, true); // Improved Life Stone (R99-grade)
-						break;
+						case 0:
+						{
+							winner.addItem("CoC-Winner", 18570, 1, winner, true); // Improved Life Stone (R95-grade)
+							break;
+						}
+						case 1:
+						{
+							winner.addItem("CoC-Winner", 18571, 1, winner, true); // Improved Life Stone (R95-grade)
+							break;
+						}
+						case 2:
+						{
+							winner.addItem("CoC-Winner", 18575, 1, winner, true); // Improved Life Stone (R99-grade)
+							break;
+						}
+						case 3:
+						{
+							winner.addItem("CoC-Winner", 18576, 1, winner, true); // Improved Life Stone (R99-grade)
+							break;
+						}
 					}
 				}
-			}
-			// Soul Crystal Fragment
-			else if (Rnd.get(10) < 3) // Chance to get reward (30%)
-			{
-				switch (Rnd.get(6))
+				// Soul Crystal Fragment
+				else if (Rnd.get(10) < 3) // Chance to get reward (30%)
 				{
-					case 0:
+					switch (Rnd.get(6))
 					{
-						winner.addItem("CoC-Winner", 19467, 1, winner, true); // Yellow Soul Crystal Fragment (R99-Grade)
-						break;
-					}
-					case 1:
-					{
-						winner.addItem("CoC-Winner", 19468, 1, winner, true); // Teal Soul Crystal Fragment (R99-Grade)
-						break;
-					}
-					case 2:
-					{
-						winner.addItem("CoC-Winner", 19469, 1, winner, true); // Purple Soul Crystal Fragment (R99-Grade)
-						break;
-					}
-					case 3:
-					{
-						winner.addItem("CoC-Winner", 19511, 1, winner, true); // Yellow Soul Crystal Fragment (R95-Grade)
-						break;
-					}
-					case 4:
-					{
-						winner.addItem("CoC-Winner", 19512, 1, winner, true); // Teal Soul Crystal Fragment (R95-Grade)
-						break;
-					}
-					case 5:
-					{
-						winner.addItem("CoC-Winner", 19513, 1, winner, true); // Purple Soul Crystal Fragment (R95-Grade)
-						break;
+						case 0:
+						{
+							winner.addItem("CoC-Winner", 19467, 1, winner, true); // Yellow Soul Crystal Fragment (R99-Grade)
+							break;
+						}
+						case 1:
+						{
+							winner.addItem("CoC-Winner", 19468, 1, winner, true); // Teal Soul Crystal Fragment (R99-Grade)
+							break;
+						}
+						case 2:
+						{
+							winner.addItem("CoC-Winner", 19469, 1, winner, true); // Purple Soul Crystal Fragment (R99-Grade)
+							break;
+						}
+						case 3:
+						{
+							winner.addItem("CoC-Winner", 19511, 1, winner, true); // Yellow Soul Crystal Fragment (R95-Grade)
+							break;
+						}
+						case 4:
+						{
+							winner.addItem("CoC-Winner", 19512, 1, winner, true); // Teal Soul Crystal Fragment (R95-Grade)
+							break;
+						}
+						case 5:
+						{
+							winner.addItem("CoC-Winner", 19513, 1, winner, true); // Purple Soul Crystal Fragment (R95-Grade)
+							break;
+						}
 					}
 				}
-			}
-			// Mysterious Belt
-			else if (Rnd.get(10) < 1) // Chance to get reward (10%)
-			{
-				winner.addItem("CoC-Winner", 35565, 1, winner, true); // Mysterious Belt
-			}
-			
-			// Save monthly progress.
-			final int totalMarks = winner.getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_MARKS, 0) + marksRewarded;
-			winner.getVariables().set(PlayerVariables.CEREMONY_OF_CHAOS_MARKS, totalMarks);
-			if (totalMarks > GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TOP_MARKS, 0))
-			{
-				GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MARKS, totalMarks);
-				GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MEMBER, winner.getObjectId());
+				// Mysterious Belt
+				else if (Rnd.get(10) < 1) // Chance to get reward (10%)
+				{
+					winner.addItem("CoC-Winner", 35565, 1, winner, true); // Mysterious Belt
+				}
+				
+				// Save monthly progress.
+				final int totalMarks = winner.getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_MARKS, 0) + marksRewarded;
+				winner.getVariables().set(PlayerVariables.CEREMONY_OF_CHAOS_MARKS, totalMarks);
+				if (totalMarks > GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TOP_MARKS, 0))
+				{
+					GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MARKS, totalMarks);
+					GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MEMBER, winner.getObjectId());
+				}
 			}
 		}
 		
-		for (CeremonyOfChaosMember member : getMembers().values())
+		for (CeremonyOfChaosMember member : members.values())
 		{
 			final PlayerInstance player = member.getPlayer();
 			if (player != null)
 			{
 				// Send winner message
-				player.sendPacket(msg);
+				if (msg != null)
+				{
+					player.sendPacket(msg);
+				}
 				
 				// Send result
 				player.sendPacket(new ExCuriousHouseResult(member.getResultType(), this));
-				members.add(member);
+				memberList.add(member);
 			}
 		}
 		getTimers().cancelTimer("update", null, null);
 		final StatSet params = new StatSet();
 		params.set("time", 30);
 		getTimers().addTimer("match_end_countdown", params, 30 * 1000, null, null);
-		EventDispatcher.getInstance().notifyEvent(new OnCeremonyOfChaosMatchResult(winners, members));
+		EventDispatcher.getInstance().notifyEvent(new OnCeremonyOfChaosMatchResult(winners, memberList));
 	}
 	
 	private void teleportPlayersOut()
@@ -440,7 +451,8 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				player.sendPacket(ExCuriousHouseObserveMode.STATIC_DISABLED);
 				
 				// Teleport player back
-				player.teleToLocation(player.getLastLocation(), null);
+				final Location lastLocation = player.getLastLocation();
+				player.teleToLocation(lastLocation != null ? lastLocation : new Location(82201, 147587, -3473), null);
 				
 				// Restore player information
 				final PlayerAppearance app = player.getAppearance();
@@ -465,14 +477,16 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	public List<CeremonyOfChaosMember> getWinners()
 	{
 		final List<CeremonyOfChaosMember> winners = new ArrayList<>();
+		final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+		
 		//@formatter:off
-		final OptionalInt winnerLifeTime = getMembers().values().stream()
+		final OptionalInt winnerLifeTime = members.values().stream()
 			.mapToInt(CeremonyOfChaosMember::getLifeTime)
 			.max();
 		
 		if(winnerLifeTime.isPresent())
 		{
-			getMembers().values().stream()
+			members.values().stream()
 				.sorted(Comparator.comparingLong(CeremonyOfChaosMember::getLifeTime)
 					.reversed()
 					.thenComparingInt(CeremonyOfChaosMember::getScore)
@@ -482,6 +496,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		}
 		
 		//@formatter:on
+		
 		return winners;
 	}
 	
@@ -498,13 +513,15 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		{
 			case "update":
 			{
+				final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+				
 				final int time = (int) CeremonyOfChaosManager.getInstance().getScheduler("stopFight").getRemainingTime(TimeUnit.SECONDS);
 				broadcastPacket(new ExCuriousHouseRemainTime(time));
-				getMembers().values().forEach(p -> broadcastPacket(new ExCuriousHouseMemberUpdate(p)));
+				members.values().forEach(p -> broadcastPacket(new ExCuriousHouseMemberUpdate(p)));
 				
 				// Validate winner
 				int count = 0;
-				for (CeremonyOfChaosMember member : getMembers().values())
+				for (CeremonyOfChaosMember member : members.values())
 				{
 					if (!member.isDefeated())
 					{
@@ -589,6 +606,26 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		}
 	}
 	
+	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	private void OnPlayerLogout(OnPlayerLogout event)
+	{
+		final PlayerInstance player = event.getPlayer();
+		if (player != null)
+		{
+			final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+			final int playerObjectId = player.getObjectId();
+			if (members.containsKey(playerObjectId))
+			{
+				removeMember(playerObjectId);
+				if (members.size() <= 1)
+				{
+					stopFight();
+				}
+			}
+		}
+	}
+	
 	@RegisterEvent(EventType.ON_CREATURE_DEATH)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerDeath(OnCreatureDeath event)
@@ -597,8 +634,9 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		{
 			final PlayerInstance attackerPlayer = event.getAttacker().getActingPlayer();
 			final PlayerInstance targetPlayer = event.getTarget().getActingPlayer();
-			final CeremonyOfChaosMember attackerMember = getMembers().get(attackerPlayer.getObjectId());
-			final CeremonyOfChaosMember targetMember = getMembers().get(targetPlayer.getObjectId());
+			final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+			final CeremonyOfChaosMember attackerMember = members.get(attackerPlayer.getObjectId());
+			final CeremonyOfChaosMember targetMember = members.get(targetPlayer.getObjectId());
 			final DeleteObject deleteObject = new DeleteObject(targetPlayer);
 			if ((attackerMember != null) && (targetMember != null))
 			{
@@ -609,7 +647,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				targetMember.setDefeated(true);
 				
 				// Delete target player
-				for (CeremonyOfChaosMember member : getMembers().values())
+				for (CeremonyOfChaosMember member : members.values())
 				{
 					if (member.getObjectId() != targetPlayer.getObjectId())
 					{

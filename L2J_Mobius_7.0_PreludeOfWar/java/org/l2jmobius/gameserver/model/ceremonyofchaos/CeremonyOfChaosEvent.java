@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.ceremonyofchaos;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.OptionalInt;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -117,10 +118,11 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	
 	public void preparePlayers()
 	{
-		final ExCuriousHouseMemberList membersList = new ExCuriousHouseMemberList(_id, CeremonyOfChaosManager.getInstance().getMaxPlayersInArena(), getMembers().values());
+		final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+		final ExCuriousHouseMemberList membersList = new ExCuriousHouseMemberList(_id, CeremonyOfChaosManager.getInstance().getMaxPlayersInArena(), members.values());
 		final NpcHtmlMessage msg = new NpcHtmlMessage(0);
 		int index = 0;
-		for (CeremonyOfChaosMember member : getMembers().values())
+		for (CeremonyOfChaosMember member : members.values())
 		{
 			final PlayerInstance player = member.getPlayer();
 			if (player.inObserverMode())
@@ -282,7 +284,8 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	
 	public void stopFight()
 	{
-		for (CeremonyOfChaosMember member : getMembers().values())
+		final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+		for (CeremonyOfChaosMember member : members.values())
 		{
 			if (member.getLifeTime() == 0)
 			{
@@ -292,7 +295,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		validateWinner();
 		
 		final List<CeremonyOfChaosMember> winners = getWinners();
-		final List<CeremonyOfChaosMember> members = new ArrayList<>(getMembers().size());
+		final List<CeremonyOfChaosMember> memberList = new ArrayList<>(members.size());
 		SystemMessage msg = null;
 		if (winners.isEmpty() || (winners.size() > 1))
 		{
@@ -393,7 +396,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			}
 		}
 		
-		for (CeremonyOfChaosMember member : getMembers().values())
+		for (CeremonyOfChaosMember member : members.values())
 		{
 			final PlayerInstance player = member.getPlayer();
 			if (player != null)
@@ -406,14 +409,14 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				
 				// Send result
 				player.sendPacket(new ExCuriousHouseResult(member.getResultType(), this));
-				members.add(member);
+				memberList.add(member);
 			}
 		}
 		getTimers().cancelTimer("update", null, null);
 		final StatSet params = new StatSet();
 		params.set("time", 30);
 		getTimers().addTimer("match_end_countdown", params, 30 * 1000, null, null);
-		EventDispatcher.getInstance().notifyEvent(new OnCeremonyOfChaosMatchResult(winners, members));
+		EventDispatcher.getInstance().notifyEvent(new OnCeremonyOfChaosMatchResult(winners, memberList));
 		
 		// XXX: ML2 Rewards ForGlory, ForHonor and ForVictory quests
 		for (CeremonyOfChaosMember member : getMembers().values())
@@ -422,7 +425,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			if (player == null)
 			{
 				continue;
-			}			
+			}
 			final QuestState qs = player.getQuestState("Q10813_ForGlory");
 			final QuestState qs1 = player.getQuestState("Q10819_ForHonor");
 			final QuestState qs2 = player.getQuestState("Q10825_ForVictory");
@@ -518,14 +521,16 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	public List<CeremonyOfChaosMember> getWinners()
 	{
 		final List<CeremonyOfChaosMember> winners = new ArrayList<>();
+		final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+		
 		//@formatter:off
-		final OptionalInt winnerLifeTime = getMembers().values().stream()
+		final OptionalInt winnerLifeTime = members.values().stream()
 			.mapToInt(CeremonyOfChaosMember::getLifeTime)
 			.max();
 		
 		if(winnerLifeTime.isPresent())
 		{
-			getMembers().values().stream()
+			members.values().stream()
 				.sorted(Comparator.comparingLong(CeremonyOfChaosMember::getLifeTime)
 					.reversed()
 					.thenComparingInt(CeremonyOfChaosMember::getScore)
@@ -535,6 +540,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		}
 		
 		//@formatter:on
+		
 		return winners;
 	}
 	
@@ -551,13 +557,15 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		{
 			case "update":
 			{
+				final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+				
 				final int time = (int) CeremonyOfChaosManager.getInstance().getScheduler("stopFight").getRemainingTime(TimeUnit.SECONDS);
 				broadcastPacket(new ExCuriousHouseRemainTime(time));
-				getMembers().values().forEach(p -> broadcastPacket(new ExCuriousHouseMemberUpdate(p)));
+				members.values().forEach(p -> broadcastPacket(new ExCuriousHouseMemberUpdate(p)));
 				
 				// Validate winner
 				int count = 0;
-				for (CeremonyOfChaosMember member : getMembers().values())
+				for (CeremonyOfChaosMember member : members.values())
 				{
 					if (!member.isDefeated())
 					{
@@ -649,7 +657,16 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		final PlayerInstance player = event.getPlayer();
 		if (player != null)
 		{
-			removeMember(player.getObjectId());
+			final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+			final int playerObjectId = player.getObjectId();
+			if (members.containsKey(playerObjectId))
+			{
+				removeMember(playerObjectId);
+				if (members.size() <= 1)
+				{
+					stopFight();
+				}
+			}
 		}
 	}
 	
@@ -661,8 +678,9 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		{
 			final PlayerInstance attackerPlayer = event.getAttacker().getActingPlayer();
 			final PlayerInstance targetPlayer = event.getTarget().getActingPlayer();
-			final CeremonyOfChaosMember attackerMember = getMembers().get(attackerPlayer.getObjectId());
-			final CeremonyOfChaosMember targetMember = getMembers().get(targetPlayer.getObjectId());
+			final Map<Integer, CeremonyOfChaosMember> members = getMembers();
+			final CeremonyOfChaosMember attackerMember = members.get(attackerPlayer.getObjectId());
+			final CeremonyOfChaosMember targetMember = members.get(targetPlayer.getObjectId());
 			final DeleteObject deleteObject = new DeleteObject(targetPlayer);
 			if ((attackerMember != null) && (targetMember != null))
 			{
@@ -673,7 +691,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				targetMember.setDefeated(true);
 				
 				// Delete target player
-				for (CeremonyOfChaosMember member : getMembers().values())
+				for (CeremonyOfChaosMember member : members.values())
 				{
 					if (member.getObjectId() != targetPlayer.getObjectId())
 					{
