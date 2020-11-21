@@ -322,7 +322,7 @@ public class BuffInfo
 		
 		for (AbstractEffect effect : _effects)
 		{
-			if (effect.isInstant() || (_effected.isDead() && !_skill.isPassive()))
+			if (effect.isInstant() || (_effected.isDead() && !_skill.isPassive() && !_skill.isStayAfterDeath()))
 			{
 				continue;
 			}

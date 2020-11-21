@@ -58,18 +58,16 @@ public class EnemyOnly implements ITargetTypeHandler
 			{
 				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
-			
 			return null;
 		}
 		
 		// You cannot attack dead targets.
-		if (target.isDead())
+		if (target.isDead() && !skill.isStayAfterDeath())
 		{
 			if (sendMessage)
 			{
 				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
-			
 			return null;
 		}
 		
@@ -80,7 +78,6 @@ public class EnemyOnly implements ITargetTypeHandler
 			{
 				creature.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
-			
 			return null;
 		}
 		
@@ -94,7 +91,6 @@ public class EnemyOnly implements ITargetTypeHandler
 				{
 					creature.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 				}
-				
 				return null;
 			}
 			
@@ -105,7 +101,6 @@ public class EnemyOnly implements ITargetTypeHandler
 				{
 					creature.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				}
-				
 				return null;
 			}
 			
@@ -116,7 +111,6 @@ public class EnemyOnly implements ITargetTypeHandler
 				{
 					creature.sendPacket(SystemMessageId.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE);
 				}
-				
 				return null;
 			}
 			
@@ -127,7 +121,6 @@ public class EnemyOnly implements ITargetTypeHandler
 				{
 					creature.sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
 				}
-				
 				return null;
 			}
 			
