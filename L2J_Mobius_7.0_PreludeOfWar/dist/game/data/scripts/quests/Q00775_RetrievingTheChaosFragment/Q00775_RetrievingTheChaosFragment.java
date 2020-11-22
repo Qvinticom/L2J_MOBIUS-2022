@@ -30,7 +30,7 @@ import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 /**
  * Retrieving the Fragment of Chaos (775)
  * @URL https://l2wiki.com/Retrieving_the_Fragment_of_Chaos
- * @author Dmitri
+ * @author Dmitri, CostyKiller
  */
 public class Q00775_RetrievingTheChaosFragment extends Quest
 {
@@ -39,34 +39,26 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 	// Monsters
 	private static final int[] MONSTERS =
 	{
-		23388, // Kandiloth
-		23387, // Kanzaroth
-		23385, // Lunatikan
-		23384, // Smaug
-		23386, // Jabberwok
-		23395, // Garion
-		23397, // Desert Wendigo
-		23399, // Bend Beetle
-		23398, // Koraza
-		23395, // Garion
-		23396, // Garion Neti
-		23357, // Disorder Warrior
-		23356, // Klien Soldier
-		23361, // Mutated Fly
-		23358, // Blow Archer
+		// Desert Quarry
+		23811, // Cantera Tanya
+		23812, // Cantera Deathmoz
+		23813, // Cantera Floxis
+		23814, // Cantera Belika
+		23815, // Cantera Bridget
+		
+		// Beleth Magic Circle
+		23354, // Decay Hannibal
 		23355, // Armor Beast
-		23360, // Bizuard
-		23354, // Dacey Hannibal
+		23356, // Klein Soldier
 		23357, // Disorder Warrior
-		23363, // Amos Officer
-		23364, // Amos Master
-		23362, // Amos Soldier
-		23365, // Ailith Hunter
+		23360, // Bizuard
+		23361, // Mutated Fly
 	};
 	// Misc
 	private static final int MIN_LEVEL = 99;
 	// Items
 	private static final int CHAOS_FRAGMENT = 37766;
+	private static final int BASIC_SUPPLY_BOX = 47172;
 	private static final int INTERMEDIATE_SUPPLY_BOX = 47173;
 	private static final int ADVANCED_SUPPLY_BOX = 47174;
 	
@@ -173,7 +165,7 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 							}
 							else if (chance < 100)
 							{
-								giveItems(player, CHAOS_FRAGMENT, 1);
+								giveItems(player, BASIC_SUPPLY_BOX, 1);
 							}
 							addExpAndSp(player, 12_113_489_880L, 12_113_460);
 							addFactionPoints(player, Faction.BLACKBIRD_CLAN, 100);
@@ -196,7 +188,7 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 							}
 							else if (chance < 20)
 							{
-								giveItems(player, CHAOS_FRAGMENT, 1);
+								giveItems(player, BASIC_SUPPLY_BOX, 1);
 							}
 							else if (chance < 100)
 							{
@@ -219,7 +211,7 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 						{
 							if (chance < 2)
 							{
-								giveItems(player, CHAOS_FRAGMENT, 1);
+								giveItems(player, BASIC_SUPPLY_BOX, 1);
 							}
 							else if (chance < 20)
 							{

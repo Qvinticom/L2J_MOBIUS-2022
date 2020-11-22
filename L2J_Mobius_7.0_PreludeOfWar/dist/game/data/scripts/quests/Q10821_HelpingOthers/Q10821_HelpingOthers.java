@@ -16,6 +16,9 @@
  */
 package quests.Q10821_HelpingOthers;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -23,9 +26,11 @@ import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
+import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercomesTheLimit;
 
@@ -49,6 +54,7 @@ public class Q10821_HelpingOthers extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 99;
 	private static final int MENTEE_MARKS_NEEDED = 45000;
+	private static final int KILLING_NPCSTRING_ID = NpcStringId.BE_PARTY_LEADER.getId();
 	
 	public Q10821_HelpingOthers()
 	{
@@ -87,6 +93,7 @@ public class Q10821_HelpingOthers extends Quest
 			case "30756-06a.html":
 			{
 				qs.setCond(2);
+				qs.setMemoState(0);
 				htmltext = event;
 				break;
 			}
@@ -151,7 +158,7 @@ public class Q10821_HelpingOthers extends Quest
 						}
 						break;
 					}
-					case 2:
+					case 3:
 					{
 						if (qs.isMemoState(2))
 						{
@@ -164,6 +171,7 @@ public class Q10821_HelpingOthers extends Quest
 						break;
 					}
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{
@@ -209,12 +217,24 @@ public class Q10821_HelpingOthers extends Quest
 		{
 			final int memo = qs.getMemoState() + 1;
 			qs.setMemoState(memo);
-			// sendNpcLogList(player);
-			
+			sendNpcLogList(player);
 			if (memo >= 2)
 			{
 				qs.setCond(3, true);
 			}
 		}
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(2))
+		{
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID, true, qs.getMemoState()));
+			return holder;
+		}
+		return super.getNpcLogList(player);
 	}
 }

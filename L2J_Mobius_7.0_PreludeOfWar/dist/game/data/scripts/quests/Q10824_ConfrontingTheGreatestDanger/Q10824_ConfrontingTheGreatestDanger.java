@@ -109,6 +109,7 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 	private static final int SPELLBOOK_BLESSING_OF_THE_EXALTED = 45926;
 	// Misc
 	private static final int MIN_LEVEL = 100;
+	private static final int PROOF_OF_PREPARATION_NEEDED = 20000;
 	
 	public Q10824_ConfrontingTheGreatestDanger()
 	{
@@ -194,7 +195,7 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 						{
 							htmltext = event;
 						}
-						takeItems(player, PROOF_OF_PREPARATION, -20000);
+						takeItems(player, PROOF_OF_PREPARATION, PROOF_OF_PREPARATION_NEEDED);
 						giveItems(player, MERLOT_CERTIFICATE, 1);
 						giveItems(player, SPELLBOOK_BLESSING_OF_THE_EXALTED, 1);
 						qs.exitQuest(false, true);
@@ -273,7 +274,7 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 		{
 			giveItems(player, PROOF_OF_PREPARATION, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			if (getQuestItemsCount(player, PROOF_OF_PREPARATION) >= 20000)
+			if (getQuestItemsCount(player, PROOF_OF_PREPARATION) >= PROOF_OF_PREPARATION_NEEDED)
 			{
 				qs.setCond(4, true);
 			}

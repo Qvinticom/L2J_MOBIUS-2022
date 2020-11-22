@@ -50,21 +50,21 @@ public class Q10818_ConfrontingAGiantMonster extends Quest
 	{
 		// Giant's Cave Monsters
 		23727, // Shaqrima Bathus
-		23728, // Shaqrima Carcass -->
-		23729, // Shaqrima Kshana -->
-		23733, // Lesser Giant Warrior -->
-		23734, // Lesser Giant Wizard -->
-		23735, // Captive Familiar Spirit -->
-		23736, // Captive Hell Demon -->
-		23737, // Captive Succubus -->
-		23738, // Captive Phantom -->
-		23742, // Naia Bathus, Demons Foreman -->
-		23743, // Naia Karkus, Demons Foreman -->
-		23744, // Naia Kshana, Demons Foreman -->
-		23746, // Recovering Lesser Giant Warrior -->
-		23747, // Recovering Lesser Giant Wizard -->
-		23749, // Root of the Lesser Giant -->
-		23754, // Essence of the Lesser Giant -->
+		23728, // Shaqrima Carcass
+		23729, // Shaqrima Kshana
+		23733, // Lesser Giant Warrior
+		23734, // Lesser Giant Wizard
+		23735, // Captive Familiar Spirit
+		23736, // Captive Hell Demon
+		23737, // Captive Succubus
+		23738, // Captive Phantom
+		23742, // Naia Bathus, Demons Foreman
+		23743, // Naia Karkus, Demons Foreman
+		23744, // Naia Kshana, Demons Foreman
+		23746, // Recovering Lesser Giant Warrior
+		23747, // Recovering Lesser Giant Wizard
+		23749, // Root of the Lesser Giant
+		23754, // Essence of the Lesser Giant
 		
 		// Fairy Settlement Monsters
 		18972, // Treekin Defender Scout
@@ -149,7 +149,7 @@ public class Q10818_ConfrontingAGiantMonster extends Quest
 		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "30537-02.html");
 		addCondStartedQuest(Q10817_ExaltedOneWhoOvercomesTheLimit.class.getSimpleName(), "30537-03.html");
-		registerQuestItems(DARK_SOUL_STONE, VERIDAN_SOUL_STONE, KECHI_SOUL_STONE, MICHAELA_SOUL_STONE);
+		registerQuestItems(DARK_SOUL_STONE, VERIDAN_SOUL_STONE, KECHI_SOUL_STONE, MICHAELA_SOUL_STONE, PROOF_OF_RESISTANCE);
 	}
 	
 	@Override
@@ -200,10 +200,6 @@ public class Q10818_ConfrontingAGiantMonster extends Quest
 						{
 							htmltext = "30537-10.html";
 						}
-						else
-						{
-							htmltext = event;
-						}
 						if (qs.isCond(2))
 						{
 							takeItems(player, DARK_SOUL_STONE, 1);
@@ -212,6 +208,7 @@ public class Q10818_ConfrontingAGiantMonster extends Quest
 							qs.unset(Integer.toString(TAUTI));
 							qs.unset(Integer.toString(EKIMUS));
 						}
+						htmltext = event;
 						giveItems(player, DAICHIR_CERTIFICATE, 1);
 						addExpAndSp(player, EXP_AMOUNT, 0);
 						qs.exitQuest(false, true);
@@ -299,7 +296,7 @@ public class Q10818_ConfrontingAGiantMonster extends Quest
 	@Override
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		executeForEachPlayer(player, npc, isSummon, true, false);
+		executeForEachPlayer(player, npc, isSummon, true, true); // Since enter requirement is cc, every cc member should be rewarded.
 		return super.onKill(npc, player, isSummon);
 	}
 	

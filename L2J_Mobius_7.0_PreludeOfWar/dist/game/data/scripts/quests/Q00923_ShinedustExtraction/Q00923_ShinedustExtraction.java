@@ -33,25 +33,24 @@ import org.l2jmobius.gameserver.model.quest.State;
 public class Q00923_ShinedustExtraction extends Quest
 {
 	// NPCs
-	private static final int SHUMADRIBA = 34217;
+	private static final int SCHUMADRIBA = 34217;
 	// Monsters
 	private static final int[] MONSTERS =
 	{
-		23748, // Hero of the Younger Giants
-		23733, // Junior Giant Warrior
-		23734, // Junior Giant Mage
-		23746, // Evolving Giant Warrior
-		23747, // Mage of the Evolving Giants
-		23739, // Mark
-		23740, // Surien
-		23741, // Berima
-		23742, // Batus Nyei
-		23743, // Krakos Nayi
-		23744, // Kshana Nayi
-		23745, // Lucus nyei
+		23733, // Lesser Giant Warrior
+		23734, // Lesser Giant Wizard
+		23746, // Recovering Lesser Giant Warrior
+		23747, // Recovering Lesser Giant Wizard
+		23739, // Marka
+		23740, // Schlien
+		23741, // Berimah
+		23742, // Naia Bathus
+		23743, // Naia Carcass
+		23744, // Naia Kshana
+		23745, // Naia Lucas
 	};
 	// Items
-	private static final int SHINING_DUST = 46747;
+	private static final int SHINEDUST = 46747;
 	private static final int BASIC_SUPPLY_BOX = 47184;
 	private static final int INTERMEDIATE_SUPPLY_BOX = 47185;
 	private static final int ADVANCED_SUPPLY_BOX = 47186;
@@ -61,10 +60,10 @@ public class Q00923_ShinedustExtraction extends Quest
 	public Q00923_ShinedustExtraction()
 	{
 		super(923);
-		addStartNpc(SHUMADRIBA);
-		addTalkId(SHUMADRIBA);
+		addStartNpc(SCHUMADRIBA);
+		addTalkId(SCHUMADRIBA);
 		addKillId(MONSTERS);
-		registerQuestItems(SHINING_DUST);
+		registerQuestItems(SHINEDUST);
 		addCondMinLevel(MIN_LEVEL, "34217-00.htm");
 	}
 	
@@ -148,7 +147,7 @@ public class Q00923_ShinedustExtraction extends Quest
 				{
 					case 5:
 					{
-						if ((getQuestItemsCount(player, SHINING_DUST) == 200) && (player.getLevel() >= MIN_LEVEL))
+						if ((getQuestItemsCount(player, SHINEDUST) == 200) && (player.getLevel() >= MIN_LEVEL))
 						{
 							if (chance < 2)
 							{
@@ -175,7 +174,7 @@ public class Q00923_ShinedustExtraction extends Quest
 					}
 					case 6:
 					{
-						if ((getQuestItemsCount(player, SHINING_DUST) == 400) && (player.getLevel() >= MIN_LEVEL))
+						if ((getQuestItemsCount(player, SHINEDUST) == 400) && (player.getLevel() >= MIN_LEVEL))
 						{
 							if (chance < 2)
 							{
@@ -202,7 +201,7 @@ public class Q00923_ShinedustExtraction extends Quest
 					}
 					case 7:
 					{
-						if ((getQuestItemsCount(player, SHINING_DUST) == 600) && (player.getLevel() >= MIN_LEVEL))
+						if ((getQuestItemsCount(player, SHINEDUST) == 600) && (player.getLevel() >= MIN_LEVEL))
 						{
 							if (chance < 2)
 							{
@@ -324,7 +323,7 @@ public class Q00923_ShinedustExtraction extends Quest
 			{
 				case 2:
 				{
-					if (giveItemRandomly(player, npc, SHINING_DUST, 1, 200, 1, true))
+					if (giveItemRandomly(player, npc, SHINEDUST, 1, 200, 1, true))
 					{
 						qs.setCond(5, true);
 					}
@@ -332,7 +331,7 @@ public class Q00923_ShinedustExtraction extends Quest
 				}
 				case 3:
 				{
-					if (giveItemRandomly(player, npc, SHINING_DUST, 1, 400, 1, true))
+					if (giveItemRandomly(player, npc, SHINEDUST, 1, 400, 1, true))
 					{
 						qs.setCond(6, true);
 					}
@@ -340,7 +339,7 @@ public class Q00923_ShinedustExtraction extends Quest
 				}
 				case 4:
 				{
-					if (giveItemRandomly(player, npc, SHINING_DUST, 1, 600, 1, true))
+					if (giveItemRandomly(player, npc, SHINEDUST, 1, 600, 1, true))
 					{
 						qs.setCond(7, true);
 					}

@@ -115,18 +115,15 @@ public class Q10825_ForVictory extends Quest
 						{
 							htmltext = "30870-10.html";
 						}
-						else
-						{
-							htmltext = event;
-						}
 						if (qs.isCond(2))
 						{
 							takeItems(player, MARK_OF_VALOR, MARK_OF_VALOR_NEEDED);
 						}
-						if (qs.isCond(4))
+						else if (qs.isCond(4))
 						{
 							takeItems(player, PROOF_OF_SETTLEMENT, PROOF_OF_SETTLEMENT_NEEDED);
 						}
+						htmltext = event;
 						giveItems(player, KURTIZ_CERTIFICATE, 1);
 						giveItems(player, SPELLBOOK_SUMMON_BATTLE_POTION, 1);
 						qs.exitQuest(false, true);
@@ -236,27 +233,29 @@ public class Q10825_ForVictory extends Quest
 				{
 					case 1:
 					{
+						htmltext = "30870-07.html";
+						break;
+					}
+					case 2:
+					{
 						if (getQuestItemsCount(player, MARK_OF_VALOR) >= MARK_OF_VALOR_NEEDED)
 						{
 							htmltext = "30870-08.html";
-						}
-						else
-						{
-							htmltext = "30870-07.html";
 						}
 						break;
 					}
 					case 3:
 					{
+						htmltext = "30870-07a.html";
+						break;
+					}
+					case 4:
+					{
 						if (getQuestItemsCount(player, PROOF_OF_SETTLEMENT) >= PROOF_OF_SETTLEMENT_NEEDED)
 						{
 							htmltext = "30870-08a.html";
+							break;
 						}
-						else
-						{
-							htmltext = "30870-07a.html";
-						}
-						break;
 					}
 				}
 				break;
@@ -275,7 +274,7 @@ public class Q10825_ForVictory extends Quest
 		if (player != null)
 		{
 			final QuestState qs = getQuestState(player, false);
-			if ((qs != null) && qs.isCond(1))
+			if ((qs != null) && qs.isCond(3))
 			{
 				giveItems(player, PROOF_OF_SETTLEMENT, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

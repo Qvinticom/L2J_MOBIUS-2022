@@ -79,13 +79,14 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 				{
 					giveItems(player, LIONEL_MISSION_LIST_4, 1);
 					qs.startQuest();
+					qs.setMemoState(1);
 					htmltext = event;
 				}
 				break;
 			}
 			case "33907-05a.html":
 			{
-				qs.setCond(3);
+				qs.setMemoState(2);
 				htmltext = event;
 				break;
 			}
@@ -118,7 +119,7 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (qs.getCond())
+				switch (qs.getMemoState())
 				{
 					case 1:
 					{
@@ -132,7 +133,7 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 						}
 						break;
 					}
-					case 3:
+					case 2:
 					{
 						if (hasQuestItems(player, SYLVAIN_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 						{

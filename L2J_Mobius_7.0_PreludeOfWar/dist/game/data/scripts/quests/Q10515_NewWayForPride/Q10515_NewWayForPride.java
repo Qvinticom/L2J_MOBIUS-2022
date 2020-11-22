@@ -40,7 +40,7 @@ public class Q10515_NewWayForPride extends Quest
 	private static final int CARDINAL_SERESIN = 30657;
 	// Items
 	private static final int SERESIN_CERTIFICATE = 80829;
-	private static final int PROOF_OF_REPUTATION = 80826;
+	private static final int PROOF_OF_PRIDE = 80827;
 	private static final ItemHolder LIONEL_HUNTERS_LIST_PART_5 = new ItemHolder(47834, 1);
 	// Monsters
 	private static final int[] MONSTERS =
@@ -92,7 +92,7 @@ public class Q10515_NewWayForPride extends Quest
 	
 	// Misc
 	private static final int MIN_LEVEL = 104;
-	private static final int PROOF_OF_REPUTATION_NEEDED = 80000;
+	private static final int PROOF_OF_PRIDE_NEEDED = 80000;
 	
 	public Q10515_NewWayForPride()
 	{
@@ -102,7 +102,7 @@ public class Q10515_NewWayForPride extends Quest
 		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "30657-00.html");
 		addCondStartedQuest(Q10879_ExaltedGuideToPower.class.getSimpleName(), "30657-00.html");
-		registerQuestItems(PROOF_OF_REPUTATION);
+		registerQuestItems(PROOF_OF_PRIDE);
 	}
 	
 	@Override
@@ -136,11 +136,11 @@ public class Q10515_NewWayForPride extends Quest
 			}
 			case "30657-08.html":
 			{
-				if (qs.isCond(2) && (getQuestItemsCount(player, PROOF_OF_REPUTATION) >= PROOF_OF_REPUTATION_NEEDED))
+				if (qs.isCond(2) && (getQuestItemsCount(player, PROOF_OF_PRIDE) >= PROOF_OF_PRIDE_NEEDED))
 				{
 					if ((player.getLevel() >= MIN_LEVEL))
 					{
-						takeItems(player, PROOF_OF_REPUTATION, PROOF_OF_REPUTATION_NEEDED);
+						takeItems(player, PROOF_OF_PRIDE, PROOF_OF_PRIDE_NEEDED);
 						giveItems(player, SERESIN_CERTIFICATE, 1);
 						addExpAndSp(player, 3480527972686L, 0);
 						qs.exitQuest(false, true);
@@ -184,7 +184,14 @@ public class Q10515_NewWayForPride extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = "30657-05.html";
+				if (getQuestItemsCount(player, PROOF_OF_PRIDE) >= PROOF_OF_PRIDE_NEEDED)
+				{
+					htmltext = "30657-07.html";
+				}
+				else
+				{
+					htmltext = "30657-06.html";
+				}
 				break;
 			}
 			case State.COMPLETED:
@@ -209,10 +216,10 @@ public class Q10515_NewWayForPride extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE) && CommonUtil.contains(MONSTERS, npc.getId()))
 		{
-			giveItems(player, PROOF_OF_REPUTATION, 1);
+			giveItems(player, PROOF_OF_PRIDE, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			
-			if (getQuestItemsCount(player, PROOF_OF_REPUTATION) >= PROOF_OF_REPUTATION_NEEDED)
+			if (getQuestItemsCount(player, PROOF_OF_PRIDE) >= PROOF_OF_PRIDE_NEEDED)
 			{
 				qs.setCond(2, true);
 			}
