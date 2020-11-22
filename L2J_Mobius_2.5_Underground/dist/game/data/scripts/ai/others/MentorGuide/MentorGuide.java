@@ -525,7 +525,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	
 	private void sendMail(int objectId, String title, String body, int itemId, long amount)
 	{
-		final Message msg = new Message(MENTOR_GUIDE, objectId, title, body, MailType.MENTOR_NPC);
+		final Message msg = new Message(objectId, title, body, MailType.MENTOR_NPC);
 		final Mail attachments = msg.createAttachments();
 		attachments.addItem(getName(), itemId, amount, null, null);
 		MailManager.getInstance().sendMessage(msg);
