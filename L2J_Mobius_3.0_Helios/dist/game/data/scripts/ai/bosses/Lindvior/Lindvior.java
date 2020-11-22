@@ -198,6 +198,7 @@ public class Lindvior extends AbstractNpcAI
 	public Lindvior()
 	{
 		super();
+		
 		addAttackId(LINDVIOR_GROUND, LINDVIOR_FLY, LINDVIOR_RAID);
 		addEnterZoneId(ZONE_ID);
 		addExitZoneId(ZONE_ID);
@@ -222,7 +223,6 @@ public class Lindvior extends AbstractNpcAI
 				_lindviorForSpawn = (GrandBossInstance) addSpawn(LINDVIOR_RAID, -126920, -234182, -15563, 0, false, 0);
 				GrandBossManager.getInstance().addBoss(_lindviorForSpawn);
 				GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, ALIVE);
-				
 			}
 		}
 		else
@@ -246,6 +246,40 @@ public class Lindvior extends AbstractNpcAI
 		{
 			npc.teleToLocation(CENTER_LOCATION, true);
 			LOGGER.warning(getName() + ": Character: " + attacker.getName() + " attacked: " + npc.getName() + " wich is out of the boss zone!");
+		}
+		
+		if ((npc.getId() == LINDVIOR_GROUND) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.80)) && (npc.getCurrentHp() > (npc.getMaxHp() * 0.70)))
+		{
+			_stage = 1;
+			npc.deleteMe();
+			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_FLY, npc.getLocation(), false, 0, false);
+			_lindvior.setCurrentHp(_lindvior.getMaxHp() * 0.80);
+			startQuestTimer("lindvior2", 1000, null, null);
+		}
+		else if ((npc.getId() == LINDVIOR_FLY) && (_stage == 1) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.70)) && (npc.getCurrentHp() > (npc.getMaxHp() * 0.50)))
+		{
+			_stage = 2;
+			npc.deleteMe();
+			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_GROUND, npc.getLocation(), false, 0, false);
+			_lindvior.setCurrentHp(_lindvior.getMaxHp() * 0.70);
+			startQuestTimer("lindvior3", 1000, null, null);
+		}
+		else if ((npc.getId() == LINDVIOR_GROUND) && (_stage == 2) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.50)))
+		{
+			_stage = 3;
+			npc.deleteMe();
+			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_FLY, npc.getLocation(), false, 0, false);
+			_lindvior.setCurrentHp(_lindvior.getMaxHp() * 0.50);
+			startQuestTimer("lindvior4", 1000, null, null);
+		}
+		else if ((npc.getId() == LINDVIOR_FLY) && (_stage == 3) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.25)))
+		{
+			_stage = 4;
+			npc.deleteMe();
+			_zoneLair.broadcastPacket(new ExShowScreenMessage(NpcStringId.LINDVIOR_HAS_LANDED, 2, 5000, true));
+			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_RAID, npc.getLocation(), false, 0, false);
+			_lindvior.setCurrentHp(_lindvior.getMaxHp() * 0.25);
+			startQuestTimer("lindvior5", 1000, null, null);
 		}
 		
 		double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100;
@@ -408,6 +442,7 @@ public class Lindvior extends AbstractNpcAI
 						player.sendPacket(new ExShowScreenMessage(NpcStringId.S1_HAS_CHARGED_THE_CANNON, ExShowScreenMessage.TOP_CENTER, 10000, true, caster.getName()));
 						player.sendPacket(new ExSendUIEvent(player, ExSendUIEvent.TYPE_NORNIL, _chargedValues[index], 6, NpcStringId.CHARGING));
 					});
+					
 					if (_chargedValues[index] >= 6)
 					{
 						_chargedMask |= 1 << index;
@@ -811,36 +846,7 @@ public class Lindvior extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		if ((npc.getId() == LINDVIOR_GROUND) && (_stage == 0))
-		{
-			_stage = 1;
-			npc.deleteMe();
-			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_FLY, npc.getLocation(), false, 0, false);
-			startQuestTimer("lindvior2", 1000, null, null);
-		}
-		else if ((npc.getId() == LINDVIOR_FLY) && (_stage == 1))
-		{
-			_stage = 2;
-			npc.deleteMe();
-			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_GROUND, npc.getLocation(), false, 0, false);
-			startQuestTimer("lindvior3", 1000, null, null);
-		}
-		else if ((npc.getId() == LINDVIOR_GROUND) && (_stage == 2))
-		{
-			_stage = 3;
-			npc.deleteMe();
-			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_FLY, npc.getLocation(), false, 0, false);
-			startQuestTimer("lindvior4", 1000, null, null);
-		}
-		else if ((npc.getId() == LINDVIOR_FLY) && (_stage == 3))
-		{
-			_stage = 4;
-			npc.deleteMe();
-			_zoneLair.broadcastPacket(new ExShowScreenMessage(NpcStringId.LINDVIOR_HAS_LANDED, 2, 5000, true));
-			_lindvior = (GrandBossInstance) addSpawn(LINDVIOR_RAID, npc.getLocation(), false, 0, false);
-			startQuestTimer("lindvior5", 1000, null, null);
-		}
-		else if (npc.getId() == LINDVIOR_RAID)
+		if (npc.getId() == LINDVIOR_RAID)
 		{
 			Broadcast.toAllOnlinePlayers(new ExShowScreenMessage(NpcStringId.HONORABLE_WARRIORS_HAVE_DRIVEN_OFF_LINDVIOR_THE_EVIL_WIND_DRAGON, ExShowScreenMessage.TOP_CENTER, 10000, true));
 			if (_mobsSpawnTask != null)
