@@ -1517,17 +1517,72 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>MULTI_BUFF</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22254" toLevel="1" name="Blessed Scroll: Enchant Power Shirt">
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1555,17 +1610,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>PA_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22257" toLevel="1" name="Wind Walk">
 		<!-- Temporarily increases Speed. Effect 2. -->
@@ -1573,17 +1632,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>SPEED_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22258" toLevel="1" name="Haste">
 		<!-- Atk. Spd. +33% for 60 min. -->
@@ -1591,17 +1654,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>33</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22259" toLevel="1" name="Vampiric Rage">
 		<!-- For 60 min., has a chance of recovering 9% of the physical damage inflicted on the enemy as HP. -->
@@ -1609,17 +1676,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>80</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22260" toLevel="1" name="Berserker Spirit">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 min. -->
@@ -1627,17 +1698,45 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>BERSERKER</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22261" toLevel="1" name="Empower">
 		<!-- Increases M. Atk. by 75% for 60 min. -->
@@ -1645,17 +1744,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>MA_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>75</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22262" toLevel="1" name="Acumen">
 		<!-- Casting Spd. +30% for 60 min. -->
@@ -1663,17 +1766,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22263" toLevel="1" name="Shield">
 		<!-- P. Def. +15% for 60 min. -->
@@ -1681,17 +1788,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>PD_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22264" toLevel="1" name="Focus">
 		<!-- Increases Critical Rate by 30% for 60 min. -->
@@ -1699,17 +1810,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22265" toLevel="1" name="Death Whisper">
 		<!-- Increases Critical Damage by 35% for 60 min. -->
@@ -1717,17 +1832,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22266" toLevel="1" name="Guidance">
 		<!-- Increases Accuracy by 4 for 60 min. -->
@@ -1735,17 +1854,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>HIT_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22267" toLevel="1" name="Clarity">
 		<!-- For 60 min., decreases P. skill MP Consumption by 20%, M. skill MP Consumption by 10%, and song/ dance skill MP Consumption by 20%. -->
@@ -1753,17 +1876,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22268" toLevel="1" name="Wild Magic">
 		<!-- For 60 min., M. Critical Rate +2. -->
@@ -1771,17 +1898,21 @@
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22269" toLevel="6" name="Concentration">
 		<!-- Casting Interruption Rate -42 for 20 min. -->
@@ -1790,16 +1921,20 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<basicProperty>NONE</basicProperty>
 		<magicLevel>1</magicLevel>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ReduceCancel">
+				<amount>-42</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22270" toLevel="1" name="Letter Collector's Gift">
 		<!-- For 2 h., increases Atk. Spd. by 15%, Casting Spd. by 15%, and Speed by 20. -->
