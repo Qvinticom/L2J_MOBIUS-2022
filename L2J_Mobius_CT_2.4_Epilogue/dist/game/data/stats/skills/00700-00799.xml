@@ -1901,7 +1901,7 @@
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
-		<set name="activateRate" val="80" />
+		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="100" /> <!-- Epilogue Modification -->
 		<set name="basicProperty" val="MEN" />
@@ -1919,8 +1919,6 @@
 		<for>
 			<effect name="Fear">
 				<mul stat="runSpd" val="0.67" />
-				<mul stat="pDef" val="0.67" />
-				<sub stat="rEvas" val="10" />
 			</effect>
 		</for>
 	</skill>
