@@ -65,7 +65,6 @@ public class Q10818_ConfrontingAGiantMonster extends Quest
 		23747, // Recovering Lesser Giant Wizard
 		23749, // Root of the Lesser Giant
 		23754, // Essence of the Lesser Giant
-		
 		// Fairy Settlement Monsters
 		18972, // Treekin Defender Scout
 		18973, // Treekin Defender Experienced Scout
@@ -121,9 +120,8 @@ public class Q10818_ConfrontingAGiantMonster extends Quest
 		22908, // Satyr Witch Brutal
 		22909, // Satyr Witch Fully Enraged
 		22910, // Satyr Witch Slightly Enraged
-		23041 // Pan Direm
+		23041, // Pan Direm
 	};
-	
 	// Items
 	private static final int DARK_SOUL_STONE = 46055;
 	private static final int OLYMPIAD_MANAGER_CERTIFICATE = 45629;
