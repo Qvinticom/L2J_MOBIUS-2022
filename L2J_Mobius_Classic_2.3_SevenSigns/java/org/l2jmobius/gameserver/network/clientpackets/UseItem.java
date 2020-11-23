@@ -40,6 +40,7 @@ import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.ActionType;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -72,6 +73,12 @@ public class UseItem implements IClientIncomingPacket
 		// Flood protect UseItem
 		if (!client.getFloodProtectors().getUseItem().tryPerformAction("use item"))
 		{
+			return;
+		}
+		
+		if (player.isInsideZone(ZoneId.JAIL))
+		{
+			player.sendMessage("You cannot use items while jailed.");
 			return;
 		}
 		

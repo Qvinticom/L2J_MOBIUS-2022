@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
+import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -115,6 +116,13 @@ public class UseItem extends GameClientPacket
 		{
 			return;
 		}
+		
+		if (player.isInsideZone(ZoneId.JAIL))
+		{
+			player.sendMessage("You cannot use items while jailed.");
+			return;
+		}
+		
 		if (player.isStunned() || player.isConfused() || player.isParalyzed() || player.isSleeping())
 		{
 			player.sendMessage("You cannot use items right now.");
