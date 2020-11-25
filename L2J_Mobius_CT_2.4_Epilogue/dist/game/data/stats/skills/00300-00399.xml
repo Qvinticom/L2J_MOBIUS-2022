@@ -2434,7 +2434,7 @@
 	<skill id="367" levels="1" name="Dance of Medusa" enchantGroup1="5" enchantGroup2="5">
 		<!-- Dances to stir up the illusion of Medusa. Petrifies nearby enemies for 10 seconds. Requires a dualsword. -->
 		<table name="#ench1ActivateRates">42 45 48 50 53 56 58 61 64 66 69 72 74 77 80</table>
-		<table name="#ench2AbnormalTimes">11 12 13 14 15 16 17 18 19 20 21 22 23 24 25</table>
+		<table name="#ench2AbnormalTimes">36 42 48 54 60 66 72 78 84 90 96 102 108 114 120</table>
 		<table name="#ench2ActivateRates">41 42 43 44 45 46 47 48 49 50 51 52 53 54 55</table>
 		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />

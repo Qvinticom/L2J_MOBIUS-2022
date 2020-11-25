@@ -716,20 +716,17 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="832" levels="2" name="Fast Recovery">
+	<skill id="832" levels="1" name="Fast Recovery">
 		<!-- Increases HP/MP/CP Recovery Bonus. -->
-		<table name="#magicLevel">43 49</table>
-		<table name="#regHpCp">4 6</table>
-		<table name="#regMp">2 4</table>
 		<set name="icon" val="icon.skill0832" />
-		<set name="magicLevel" val="#magicLevel" />
+		<set name="magicLevel" val="43" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="regHp" val="#regHpCp" />
-				<add stat="regMp" val="#regMp" />
-				<add stat="regCp" val="#regHpCp" />
+				<add stat="regHp" val="4" />
+				<add stat="regMp" val="2" />
+				<add stat="regCp" val="4" />
 			</effect>
 		</for>
 	</skill>

@@ -9,7 +9,7 @@
 		<table name="#power">770 879 955 1034 1115 1197 1281 1366 1451 1535</table> <!-- Epilogue Modification -->
 		<table name="#rCrit">0.7 0.7 0.7 0.7 0.7 0.6 0.6 0.6 0.6 0.5</table>
 		<table name="#traits">-12 -12 -12 -12 -12 -16 -16 -16 -16 -20</table>
-		<table name="#ench1Power">1568 1601 1634 1668 1701 1734 1768 1801 1834 1868 1901 1934 1967 2001 2034 2067 2101 2134 2167 2201 2234 2267 2300 2334 2367 2400 2434 2467 2500 2534</table> <!-- Epilogue Modification -->
+		<table name="#ench1Power">1548 1562 1576 1590 1604 1617 1631 1645 1659 1673 1686 1700 1714 1728 1742 1755 1769 1783 1797 1811 1824 1838 1852 1866 1880 1893 1907 1921 1935 1949</table> <!-- Epilogue Modification -->
 		<table name="#ench2ActivateRates">81 82 82 83 84 84 85 86 86 87 87 88 89 89 90 91 91 92 93 93 94 94 95 96 96 97 98 98 99 100</table>
 		<table name="#ench3cAtk">0.95 0.95 0.94 0.94 0.94 0.93 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.91 0.9 0.9 0.9 0.89 0.89 0.89 0.88 0.88 0.88 0.87 0.87 0.87 0.86 0.86 0.86 0.85</table>
 		<table name="#enchElementPower">21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50</table>
@@ -111,7 +111,7 @@
 		<table name="#effectPoints">-1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309</table>
 		<table name="#magicLevel">55 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">52 56 58 60 62 64 66 68 70 72</table>
-		<table name="#power">1056 1205 1309 1417 1528 1642 1757 1873 1989 2104</table>
+		<table name="#power">880 1004 1091 1181 1274 1368 1464 1561 1658 1754</table>
 		<table name="#traits">-12 -12 -12 -12 -12 -16 -16 -16 -16 -20</table>
 		<table name="#ench1Power">1769 1785 1801 1817 1833 1848 1864 1880 1896 1912 1927 1943 1959 1975 1991 2006 2022 2038 2054 2070 2085 2101 2117 2133 2149 2164 2180 2196 2212 2228</table> <!-- Epilogue Modification -->
 		<table name="#ench2AbnormalTimes">33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120</table>
@@ -502,7 +502,7 @@
 		<set name="abnormalLevel" val="#abnormalLevels" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ALL_ATTACK_DOWN" />
-		<set name="activateRate" val="50" />
+		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="baseCritRate" val="15" /> <!-- Epilogue Modification -->

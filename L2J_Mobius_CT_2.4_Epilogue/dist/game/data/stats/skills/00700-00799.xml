@@ -1618,7 +1618,7 @@
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
-		<set name="activateRate" val="90" />
+		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="100" /> <!-- Epilogue Modification -->
 		<set name="basicProperty" val="MEN" />
@@ -1666,8 +1666,7 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
 			<effect name="DefenceTrait">
-				<param BOW="10" />
-				<param CROSSBOW="5" />
+				<param BOW="30" />
 			</effect>
 		</for>
 	</skill>
@@ -1702,8 +1701,7 @@
 				<mul stat="mAtk" val="0.01" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param BOW="45" />
-				<param CROSSBOW="25" />
+				<param BOW="99" />
 			</effect>
 		</for>
 	</skill>
@@ -1833,9 +1831,6 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="CallSkill">
-				<param skillId="23298" skillLevel="1" />
-			</effect>
 		</for>
 	</skill>
 	<skill id="772" levels="1" name="Arrow Rain">
@@ -1869,9 +1864,9 @@
 	<skill id="773" levels="1" name="Ghost Piercing">
 		<!-- Shoots an arrow mixed with the energy of a ghost to attack the enemies in front with 8452 Power added to P. Atk. For 10 seconds, inflicts 300 dark damage every second. Requires a bow. Over-hit and Critical are possible. -->
 		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="900" />
+		<set name="affectRange" val="100" /> <!-- Epilogue Modification -->
 		<set name="baseCritRate" val="15" />
-		<set name="castRange" val="80" /> <!-- Epilogue Modification -->
+		<set name="castRange" val="900" /> 
 		<set name="coolTime" val="1000" />
 		<set name="effectPoint" val="-686" />
 		<set name="effectRange" val="1400" />
@@ -1890,9 +1885,6 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="CallSkill">
-				<param skillId="23300" skillLevel="1" />
-			</effect>
 		</for>
 	</skill>
 	<skill id="774" levels="1" name="Dread Pool">
@@ -1961,7 +1953,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="FORCE_OF_DESTRUCTION" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
-		<set name="activateRate" val="80" />
+		<set name="activateRate" val="70" />
 		<set name="baseCritRate" val="20" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
@@ -1986,7 +1978,7 @@
 		</cond>
 		<for>
 			<effect name="EnergyAttack">
-				<param power="4500" />
+				<param power="2516" />
 				<param criticalChance="20" />
 			</effect>
 			<effect name="DamOverTime" ticks="1">
@@ -2175,7 +2167,7 @@
 		<!-- Receives the will of the phoenix to drastically increase the fighting ability of party members. For 1 minute, increases Resistance to de-buff attacks by 40%, P. Def. by 50%, M. Def. by 50%, Atk. Spd. by 30%, Accuracy by 6, Speed by 30, and Resistance to buff canceling attacks by 40%. Decreases the effectiveness of received recovery magic by 80% . When a sword is equipped, increases Critical Rate by 100. When a blunt is equipped, increases Critical Damage by 100%. -->
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="POSSESSION_SPECIAL" />
+		<set name="abnormalType" val="POSSESSION" />
 		<set name="affectRange" val="1000" />
 		<set name="effectPoint" val="835" />
 		<set name="hitTime" val="1800" />
@@ -2298,7 +2290,7 @@
 		<!-- Receives the will of Shilen to drastically increase the fighting ability of party members. For 1 minute, increases P. Atk. by 30%, Speed by 30, Atk. Spd. by 30%, Critical Rate when a sword is equipped by 100, and Critical Damage when a blunt weapon is equipped by 100%. Recovers as HP 40% of standard melee damage inflicted on the enemy. Decreases the power of received HP recovery magic by 80%. -->
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="POSSESSION_SPECIAL" />
+		<set name="abnormalType" val="POSSESSION" />
 		<set name="affectRange" val="1000" />
 		<set name="effectPoint" val="835" />
 		<set name="hitTime" val="1800" />
@@ -2344,7 +2336,7 @@
 		<set name="mpConsume" val="120" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="power" val="7475" />
+		<set name="power" val="5750" />
 		<set name="reuseDelay" val="75000" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -2357,7 +2349,10 @@
 	</skill>
 	<skill id="791" levels="1" name="Lightning Shock">
 		<!-- Sends an electric current to attack nearby enemies with 69 Power added to M. Atk. Makes the enemy's body rigid for 5 seconds, then paralyzed for 5 seconds. Increases Power upon the consumption of up to 5 souls. -->
-		<set name="abnormalTime" val="5" />
+		<set name="abnormalLevel" val="1" />
+		<set name="abnormalTime" val="9" />
+		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
@@ -2367,28 +2362,18 @@
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill0791" />
 		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLevel" val="83" />
 		<set name="mpConsume" val="52" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="69" />
+		<set name="power" val="1510" />
 		<set name="reuseDelay" val="5000" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalSoulAttack" />
-			<effect name="Debuff">
-				<mul stat="pAtkSpd" val="0.5" />
-				<mul stat="runSpd" val="0.5" />
-				<mul stat="mAtkSpd" val="0.5" />
-			</effect>
+			<effect name="PhysicalSoulAttack" />
+			<effect name="Paralyze" />
 		</for>
-		<endEffects>
-			<effect name="CallSkill">
-				<param skillId="6092" skillLevel="1" />
-			</effect>
-		</endEffects>
 	</skill>
 	<skill id="792" levels="1" name="Betrayal Mark">
 		<!-- Stamps the Mark of Betrayal on the enemy. When attacking the enemy that has the mark, inflicts damage to the enemy's party with a fixed rate. -->

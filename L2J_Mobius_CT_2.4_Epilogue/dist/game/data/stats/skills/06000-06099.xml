@@ -968,7 +968,7 @@
 	<skill id="6091" levels="1" name="Anchor">
 		<!-- The target is paralyzed. -->
 		<set name="abnormalLevel" val="1" />
-		<set name="abnormalTime" val="5" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="effectPoint" val="1" />

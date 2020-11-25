@@ -776,8 +776,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<!-- H5 hitTime -->
-		<set name="hitTime" val="6000" />
+		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<cond>
@@ -815,8 +814,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<!-- H5 hitTime -->
-		<set name="hitTime" val="6000" />
+		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<cond>
@@ -854,8 +852,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
-		<!-- H5 hitTime -->
-		<set name="hitTime" val="6000" />
+		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<cond>
@@ -1300,7 +1297,7 @@
 	</skill>
 	<skill id="1343" levels="1" name="Dark Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<!-- Stirs up a vortex connecting to the dimension of darkness and inflicts dark damage on the enemy with 139 Power added to M. Atk. Absorbs 25% as HP. For 30 seconds, decreases Accuracy by 6 and Resistance to Dark by 30. Consumes 12 MP every second. -->
-		<table name="#ench1Power">147 147 148 148 148 149 149 149 150 150 151 151 151 152 152</table>
+		<table name="#ench1Power">118 118 118 119 119 119 119 120 120 120 121 121 121 121 122</table>
 		<table name="#ench2mpConsume">81 78 74 72 70 66 64 61 58 56 53 50 46 44 42</table>
 		<table name="#ench2mpInitialConsume">20 19 19 18 17 17 16 15 14 14 13 12 12 11 10</table>
 		<table name="#ench3ActivateRates">82 83 84 86 87 88 90 91 92 94 95 96 97 99 100</table>
@@ -1325,7 +1322,7 @@
 		<set name="mpConsume" val="84" />
 		<set name="mpInitialConsume" val="21" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="139" />
+		<set name="power" val="111" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
@@ -2543,16 +2540,16 @@
 		<table name="#magicLevel">58 62 66 70 74</table>
 		<table name="#mpConsume">64 69 74 78 82</table>
 		<table name="#mpInitialConsume">16 18 19 20 21</table>
-		<table name="#ench1ActivateRates">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 86 86 86 87 87 87 88 88 88 89 89 89 90 90 90</table>
+		<table name="#ench1ActivateRates">31 32 32 33 34 34 35 36 36 37 37 38 39 39 40 41 41 42 43 43 44 44 45 46 46 47 48 48 49 50</table>
 		<table name="#ench1MpConsume">80 78 77 76 74 73 72 70 69 68 66 65 63 62 61 59 58 57 55 54 53 51 50 48 47 46 44 43 42 40</table>
 		<table name="#ench1MpInitialConsume">20 19 19 19 18 18 18 17 17 17 16 16 15 15 15 14 14 14 13 13 13 12 12 12 11 11 11 10 10 10</table>
-		<table name="#ench2ActivateRates">80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100</table>
+		<table name="#ench2ActivateRates">31 32 34 35 36 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 58 59 60 62 63 64 66 67 68 70</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="1" />
-		<set name="abnormalTime" val="5" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
-		<set name="activateRate" val="80" />
+		<set name="activateRate" val="30" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -2588,15 +2585,14 @@
 		<table name="#magicLevel">58 62 66 70 74</table>
 		<table name="#mpConsume">80 87 93 98 103</table>
 		<table name="#power">33 36 39 41 44</table>
-		<table name="#vuln">5 10 15 20 25</table>
 		<table name="#ench1MpConsume">100 97 96 95 92 91 90 87 86 85 82 81 78 77 76 73 72 71 68 67 66 63 62 60 58 57 55 53 52 50</table>
-		<table name="#ench2ActivateRates">71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 87 88 89 90</table>
-		<table name="#ench2Vuln">26 27 28 29 30 30 31 32 33 34 34 35 36 37 38 38 39 40 41 42 42 43 44 45 46 46 47 48 49 50</table>
+		<table name="#ench1ActivateRates">41 42 42 43 44 44 45 46 46 47 47 48 49 49 50 51 51 52 53 53 54 54 55 56 56 57 58 58 59 60</table>
+		<table name="#ench2ActivateRates">41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70</table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<set name="abnormalLevel" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MD_DOWN" />
-		<set name="activateRate" val="70" />
+		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="basicProperty" val="MEN" />
@@ -2620,12 +2616,13 @@
 		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="activateRate" val="#ench1ActivateRates" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
 		<for>
 			<!-- <effect name="MagicalAttack" /> --> <!-- Epilogue Modification -->
 			<effect name="Debuff">
-				<mul stat="mDef" val="0.85" />
+				<mul stat="mDef" val="0.77" />
 				<!-- <sub stat="waterRes" val="#vuln" />
 				<sub stat="fireRes" val="#vuln" />
 				<sub stat="windRes" val="#vuln" />
@@ -2637,7 +2634,7 @@
 		<enchant1for>
 			<!-- <effect name="MagicalAttack" /> --> <!-- Epilogue Modification -->
 			<effect name="Debuff">
-				<mul stat="mDef" val="0.85" />
+				<mul stat="mDef" val="0.77" />
 				<!-- <sub stat="waterRes" val="25" />
 				<sub stat="fireRes" val="25" />
 				<sub stat="windRes" val="25" />
@@ -2649,7 +2646,7 @@
 		<enchant2for>
 			<effect name="MagicalAttack" />
 			<effect name="Debuff">
-				<mul stat="mDef" val="0.85" />
+				<mul stat="mDef" val="0.77" />
 				<!-- <sub stat="waterRes" val="#ench2Vuln" />
 				<sub stat="fireRes" val="#ench2Vuln" />
 				<sub stat="windRes" val="#ench2Vuln" />

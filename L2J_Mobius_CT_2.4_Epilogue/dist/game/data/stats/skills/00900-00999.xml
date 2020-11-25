@@ -696,7 +696,7 @@
 		<!-- <enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" /> --> <!-- Epilogue Modification -->
 		<cond msgId="113" addName="1">
-			<using kind="SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER" />
+			<using kind="BLUNT" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1220,15 +1220,9 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="#pAtk">
-					<using kind="SWORD,BLUNT" />
+					<using kind="BLUNT" />
 				</add>
 				<mul stat="rShld" val="#rShld" />
-			</effect>
-			<effect name="TriggerSkillBySkill">
-				<param castSkillId="997" /> <!-- Crushing Strike -->
-				<param chance="30" />
-				<param skillId="6920" skillLevel="1" /> <!-- Collector's Fortune -->
-				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
