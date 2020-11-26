@@ -160,19 +160,20 @@ public class Q10514_NewPathToGlory extends Quest
 	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
+		final QuestState mainQs = player.getQuestState("Q10873_ExaltedReachingAnotherLevel");
+		String htmltext = getNoQuestMsg(player);
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				if (hasItem(player, LIONEL_HUNTERS_LIST_PART_4))
+				if (hasItem(player, LIONEL_HUNTERS_LIST_PART_4) && mainQs.isMemoState(2))
 				{
 					htmltext = "30070-01.htm";
 				}
 				else
 				{
-					htmltext = "30070-00.htm";
+					htmltext = "30070-00.html";
 				}
 				break;
 			}

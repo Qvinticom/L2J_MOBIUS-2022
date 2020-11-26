@@ -167,12 +167,13 @@ public class Q10515_NewWayForPride extends Quest
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
+		final QuestState mainQs = player.getQuestState("Q10879_ExaltedGuideToPower");
 		String htmltext = getNoQuestMsg(player);
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				if ((npc.getId() == CARDINAL_SERESIN) && (hasItem(player, LIONEL_HUNTERS_LIST_PART_5)))
+				if ((npc.getId() == CARDINAL_SERESIN) && (hasItem(player, LIONEL_HUNTERS_LIST_PART_5)) && mainQs.isMemoState(2))
 				{
 					htmltext = "30657-01.htm";
 				}
