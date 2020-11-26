@@ -2546,8 +2546,9 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
-		<targetType>TARGET</targetType>
+		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND_PC</affectObject>
 		<staticReuse>true</staticReuse>
 		<excludedFromCheck>true</excludedFromCheck>
 		<canBeDispelled>false</canBeDispelled>

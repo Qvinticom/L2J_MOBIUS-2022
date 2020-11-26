@@ -329,7 +329,7 @@
 		<itemConsumeCount>300</itemConsumeCount>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectObject>NOT_FRIEND_PC</affectObject>
 		<stayAfterDeath>true</stayAfterDeath>
 		<staticReuse>true</staticReuse>
 		<conditions>
@@ -360,7 +360,7 @@
 		<itemConsumeCount>300</itemConsumeCount>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectObject>NOT_FRIEND_PC</affectObject>
 		<stayAfterDeath>true</stayAfterDeath>
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
