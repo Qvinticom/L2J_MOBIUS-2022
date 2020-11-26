@@ -4,18 +4,8 @@
 		<npc>30098</npc> <!-- Alexandria -->
 	</npcs>
 	<item>
-		<ingredient count="560000000" id="57" /> <!-- Adena -->
+		<ingredient count="600000000" id="57" /> <!-- Adena -->
 		<production count="1" id="48954" /> <!-- Artifact Book - Level 1 -->
-	</item>
-	<item>
-		<ingredient count="1" id="48954" /> <!-- Artifact Book - Level 1 -->
-		<ingredient count="100" id="80000" /> <!-- Artifact Fragment -->
-		<production count="1" id="48955" /> <!-- Artifact Book - Level 2 -->
-	</item>
-	<item>
-		<ingredient count="1" id="48955" /> <!-- Artifact Book - Level 2 -->
-		<ingredient count="100" id="80000" /> <!-- Artifact Fragment -->
-		<production count="1" id="48956" /> <!-- Artifact Book - Level 3 -->
 	</item>
 	<item>
 		<ingredient count="600000000" id="57" /> <!-- Adena -->
@@ -26,11 +16,37 @@
 		<production count="1" id="48981" /> <!-- Artifact - Defense Attribute Balance -->
 	</item>
 	<item>
-		<ingredient count="1" id="48980" /> <!-- Artifact - Attack Attribute Balance -->
-		<production count="600000000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="48954" /> <!-- Artifact Book - Level 1 -->
+		<ingredient count="5600000000" id="57" /> <!-- Adena -->
+		<production count="1" id="48955" /> <!-- Artifact Book - Level 2 -->
 	</item>
 	<item>
-		<ingredient count="1" id="48981" /> <!-- Artifact - Defense Attribute Balance -->
-		<production count="600000000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="48955" /> <!-- Artifact Book - Level 2 -->
+		<ingredient count="6980000000" id="57" /> <!-- Adena -->
+		<production count="1" id="48956" /> <!-- Artifact Book - Level 3 -->
+	</item>
+	<item>
+		<ingredient count="100000000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="80000" /> <!-- Artifact Fragment -->
+		<production count="1" id="80423" /> <!-- Balance Artifact Pack -->
+	</item>
+	<item>
+		<ingredient count="100000000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="80000" /> <!-- Artifact Fragment -->
+		<production count="1" id="80420" /> <!-- Attack Artifact Pack -->
+	</item>
+	<item>
+		<ingredient count="100000000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="80000" /> <!-- Artifact Fragment -->
+		<production count="1" id="80421" /> <!-- Defense Artifact Pack -->
+	</item>
+	<item>
+		<ingredient count="100000000" id="57" /> <!-- Adena -->
+		<ingredient count="1" id="80000" /> <!-- Artifact Fragment -->
+		<production count="1" id="80422" /> <!-- Support Artifact Pack -->
+	</item>
+	<item>
+		<ingredient count="3" id="80000" /> <!-- Artifact Fragment -->
+		<production count="1" id="81694" /> <!-- Blessed Scroll: Enchant Artifact Book -->
 	</item>
 </list>
