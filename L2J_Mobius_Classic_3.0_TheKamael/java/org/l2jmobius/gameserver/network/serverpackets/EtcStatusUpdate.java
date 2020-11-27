@@ -41,8 +41,8 @@ public class EtcStatusUpdate implements IClientOutgoingPacket
 		
 		if (_player.getRace() == Race.KAMAEL)
 		{
-			_isLight = _player.getLightMasterLevel() > 0;
 			_isShadow = _player.getShadowMasterLevel() > 0;
+			_isLight = !_isShadow && (_player.getLightMasterLevel() > 0);
 		}
 		else
 		{
