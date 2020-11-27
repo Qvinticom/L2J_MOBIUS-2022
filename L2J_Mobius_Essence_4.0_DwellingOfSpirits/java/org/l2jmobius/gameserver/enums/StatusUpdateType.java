@@ -52,7 +52,10 @@ public enum StatusUpdateType
 	REPUTATION(0x1B, creature -> creature.isPlayer() ? creature.getActingPlayer().getReputation() : 0),
 	
 	CUR_CP(0x21, creature -> (int) creature.getCurrentCp()),
-	MAX_CP(0x22, Creature::getMaxCp);
+	MAX_CP(0x22, Creature::getMaxCp),
+	
+	CUR_DP(0x28, creature -> creature.isPlayer() ? creature.getActingPlayer().getDeathPoints() : 0),
+	MAX_DP(0x29, creature -> creature.isPlayer() ? creature.getActingPlayer().getMaxDeathPoints() : 0);
 	
 	private int _clientId;
 	private Function<Creature, Integer> _valueSupplier;

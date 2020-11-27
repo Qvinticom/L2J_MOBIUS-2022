@@ -648,6 +648,14 @@ public class EnterWorld implements IClientIncomingPacket
 			player.updateAbnormalVisualEffects();
 		}
 		
+		// Death Knight death points init.
+		if (player.getClassId().getId() > 195)
+		{
+			// Send twice.
+			player.setDeathPoints(500);
+			player.setDeathPoints(0); // TODO: Store death point values?
+		}
+		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)
 		{
 			ThreadPool.schedule(() ->

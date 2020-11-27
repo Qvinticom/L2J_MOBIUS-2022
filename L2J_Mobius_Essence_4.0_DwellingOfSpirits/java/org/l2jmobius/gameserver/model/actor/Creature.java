@@ -5408,6 +5408,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			if ((oldValue == null) || (oldValue != newValue))
 			{
 				su.addUpdate(type, newValue);
+				if ((type == StatusUpdateType.MAX_DP) && isPlayer())
+				{
+					su.addUpdate(StatusUpdateType.CUR_DP, getActingPlayer().getDeathPoints());
+				}
 				return newValue;
 			}
 			return oldValue;

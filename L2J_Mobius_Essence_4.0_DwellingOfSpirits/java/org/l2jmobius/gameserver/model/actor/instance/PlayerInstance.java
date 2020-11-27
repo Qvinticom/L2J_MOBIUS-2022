@@ -677,6 +677,7 @@ public class PlayerInstance extends Playable
 	private final static int DEATH_POINTS_PASSIVE = 45352;
 	private final static int DEVASTATING_MIND = 45300;
 	private int _deathPoints = 0;
+	private int _maxDeathPoints = 0;
 	
 	// WorldPosition used by TARGET_SIGNET_GROUND
 	private Location _currentSkillWorldPosition;
@@ -11317,30 +11318,34 @@ public class PlayerInstance extends Playable
 		return _deathPoints;
 	}
 	
+	public int getMaxDeathPoints()
+	{
+		return _maxDeathPoints;
+	}
+	
 	public void setDeathPoints(int value)
 	{
-		// Find current max points.
-		int maxPoints = 0;
+		// Check current death points passive level.
 		switch (getAffectedSkillLevel(DEATH_POINTS_PASSIVE))
 		{
 			case 1:
 			{
-				maxPoints = 500;
+				_maxDeathPoints = 500;
 				break;
 			}
 			case 2:
 			{
-				maxPoints = 700;
+				_maxDeathPoints = 700;
 				break;
 			}
 			case 3:
 			{
-				maxPoints = 1000;
+				_maxDeathPoints = 1000;
 				break;
 			}
 		}
 		// Set current points.
-		_deathPoints = Math.min(maxPoints, Math.max(0, value));
+		_deathPoints = Math.min(_maxDeathPoints, Math.max(0, value));
 		// Apply devastating mind.
 		final int expectedLevel = _deathPoints / 100;
 		if (expectedLevel > 0)
@@ -11355,6 +11360,11 @@ public class PlayerInstance extends Playable
 		{
 			getEffectList().stopSkillEffects(true, DEVASTATING_MIND);
 		}
+		// Send StatusUpdate.
+		final StatusUpdate su = new StatusUpdate(this);
+		computeStatusUpdate(su, StatusUpdateType.MAX_DP);
+		computeStatusUpdate(su, StatusUpdateType.CUR_DP);
+		sendPacket(su);
 	}
 	
 	@Override
@@ -13920,6 +13930,10 @@ public class PlayerInstance extends Playable
 		addStatusUpdateValue(StatusUpdateType.LEVEL);
 		addStatusUpdateValue(StatusUpdateType.MAX_CP);
 		addStatusUpdateValue(StatusUpdateType.CUR_CP);
+		if (isPlayer() && (getActingPlayer().getClassId().getId() > 195))
+		{
+			addStatusUpdateValue(StatusUpdateType.CUR_DP);
+		}
 	}
 	
 	public TrainingHolder getTraingCampInfo()
