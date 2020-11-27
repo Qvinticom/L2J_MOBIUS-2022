@@ -49,6 +49,8 @@ public class EtcStatusUpdate implements IClientOutgoingPacket
 		packet.writeC(0); // Death Penalty [1-15, 0 = disabled)], not used anymore in Ertheia
 		packet.writeC(_player.getChargedSouls());
 		packet.writeC(_mask);
+		packet.writeC(0); // Shadow souls
+		packet.writeC(0); // Light souls
 		return true;
 	}
 }
