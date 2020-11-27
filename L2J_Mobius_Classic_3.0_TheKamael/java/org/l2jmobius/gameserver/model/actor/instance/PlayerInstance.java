@@ -11193,7 +11193,7 @@ public class PlayerInstance extends Playable
 		// TODO: Unhardcode?
 		if ((getRace() == Race.KAMAEL) && (_souls >= 100))
 		{
-			int skillLevel = getSkillLevel(KAMAEL_SHADOW_MASTER);
+			int skillLevel = getShadowMasterLevel();
 			if (skillLevel > 0)
 			{
 				abortCast();
@@ -11202,7 +11202,7 @@ public class PlayerInstance extends Playable
 			}
 			else
 			{
-				skillLevel = getSkillLevel(KAMAEL_LIGHT_MASTER);
+				skillLevel = getLightMasterLevel();
 				if (skillLevel > 0)
 				{
 					abortCast();
@@ -11211,6 +11211,16 @@ public class PlayerInstance extends Playable
 				}
 			}
 		}
+	}
+	
+	public int getLightMasterLevel()
+	{
+		return getSkillLevel(KAMAEL_LIGHT_MASTER);
+	}
+	
+	public int getShadowMasterLevel()
+	{
+		return getSkillLevel(KAMAEL_SHADOW_MASTER);
 	}
 	
 	/**
