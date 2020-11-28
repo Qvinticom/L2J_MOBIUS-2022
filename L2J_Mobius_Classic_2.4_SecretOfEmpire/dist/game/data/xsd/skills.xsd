@@ -798,6 +798,8 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="hpPercent" type="xs:unsignedByte" />
+															<xs:element name="mpPercent" type="xs:unsignedByte" />
+															<xs:element name="cpPercent" type="xs:unsignedByte" />
 															<xs:element name="attribute" type="xs:string" />
 															<xs:element name="attackerType" type="xs:string" />
 															<xs:element name="minAttackerLevel" type="xs:unsignedByte" />

@@ -37,11 +37,17 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 public class ResurrectionSpecial extends AbstractEffect
 {
 	private final int _power;
+	private final int _hpPercent;
+	private final int _mpPercent;
+	private final int _cpPercent;
 	private final Set<Integer> _instanceId;
 	
 	public ResurrectionSpecial(StatSet params)
 	{
 		_power = params.getInt("power", 0);
+		_hpPercent = params.getInt("hpPercent", 0);
+		_mpPercent = params.getInt("mpPercent", 0);
+		_cpPercent = params.getInt("cpPercent", 0);
 		
 		final String instanceIds = params.getString("instanceId", null);
 		if ((instanceIds != null) && !instanceIds.isEmpty())
@@ -87,12 +93,12 @@ public class ResurrectionSpecial extends AbstractEffect
 		
 		if (effected.isPlayer())
 		{
-			effected.getActingPlayer().reviveRequest(caster, false, _power);
+			effected.getActingPlayer().reviveRequest(caster, false, _power, _hpPercent, _mpPercent, _cpPercent);
 		}
 		else if (effected.isPet())
 		{
 			final PetInstance pet = (PetInstance) effected;
-			effected.getActingPlayer().reviveRequest(pet.getActingPlayer(), true, _power);
+			effected.getActingPlayer().reviveRequest(pet.getActingPlayer(), true, _power, _hpPercent, _mpPercent, _cpPercent);
 		}
 	}
 }

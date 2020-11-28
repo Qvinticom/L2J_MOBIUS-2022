@@ -756,6 +756,9 @@ public class PlayerInstance extends Playable
 	private boolean _canRevive = true;
 	private int _reviveRequested = 0;
 	private double _revivePower = 0;
+	private int _reviveHpPercent = 0;
+	private int _reviveMpPercent = 0;
+	private int _reviveCpPercent = 0;
 	private boolean _revivePet = false;
 	
 	private double _cpUpdateIncCheck = .0;
@@ -10181,7 +10184,7 @@ public class PlayerInstance extends Playable
 		restoreExp(revivePower);
 	}
 	
-	public void reviveRequest(PlayerInstance reviver, boolean isPet, int power)
+	public void reviveRequest(PlayerInstance reviver, boolean isPet, int power, int reviveHp, int reviveMp, int reviveCp)
 	{
 		if (isResurrectionBlocked())
 		{
@@ -10208,6 +10211,9 @@ public class PlayerInstance extends Playable
 		{
 			_reviveRequested = 1;
 			_revivePower = Formulas.calculateSkillResurrectRestorePercent(power, reviver);
+			_reviveHpPercent = reviveHp;
+			_reviveMpPercent = reviveMp;
+			_reviveCpPercent = reviveCp;
 			_revivePet = isPet;
 			if (hasCharmOfCourage())
 			{
@@ -10260,6 +10266,43 @@ public class PlayerInstance extends Playable
 		}
 		_reviveRequested = 0;
 		_revivePower = 0;
+		
+		// Support for specific HP/MP/CP percentage restored.
+		final Creature effected = _revivePet ? _pet : this;
+		if (effected == null)
+		{
+			_reviveHpPercent = 0;
+			_reviveMpPercent = 0;
+			_reviveCpPercent = 0;
+			return;
+		}
+		if (_reviveHpPercent > 0)
+		{
+			final double amount = (effected.getMaxHp() * _reviveHpPercent) / 100;
+			if (amount > 0)
+			{
+				effected.setCurrentHp(amount, true);
+			}
+			_reviveHpPercent = 0;
+		}
+		if (_reviveMpPercent > 0)
+		{
+			final double amount = (effected.getMaxMp() * _reviveMpPercent) / 100;
+			if (amount > 0)
+			{
+				effected.setCurrentMp(amount, true);
+			}
+			_reviveMpPercent = 0;
+		}
+		if (_reviveCpPercent > 0)
+		{
+			final double amount = (effected.getMaxCp() * _reviveCpPercent) / 100;
+			if (amount > 0)
+			{
+				effected.setCurrentCp(amount, true);
+			}
+			_reviveCpPercent = 0;
+		}
 	}
 	
 	public boolean isReviveRequested()
