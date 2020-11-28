@@ -1338,12 +1338,6 @@ public class Skill implements IIdentifiable
 			{
 				effected.getEffectList().add(info);
 			}
-			
-			// Support for buff sharing feature including healing herbs.
-			if (effected.isPlayer() && effected.hasServitor() && (_abnormalType != AbnormalType.TRANSFORM) && ((addContinuousEffects && isContinuous() && !_isDebuff) || _isRecoveryHerb))
-			{
-				applyEffects(effector, effected.getSummon(), _isRecoveryHerb, 0);
-			}
 		}
 		
 		if (self)
@@ -1362,13 +1356,6 @@ public class Skill implements IIdentifiable
 			if (addContinuousEffects && hasEffectType(EffectType.BUFF))
 			{
 				info.getEffector().getEffectList().add(info);
-			}
-			
-			// Support for buff sharing feature.
-			// Avoiding Servitor Share since it's implementation already "shares" the effect.
-			if (addContinuousEffects && info.getEffected().isPlayer() && info.getEffected().hasServitor() && isContinuous() && !_isDebuff && (getId() != CommonSkill.SERVITOR_SHARE.getId()))
-			{
-				applyEffects(effector, info.getEffected().getSummon(), false, 0);
 			}
 		}
 		

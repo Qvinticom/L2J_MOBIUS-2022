@@ -256,6 +256,8 @@
 		<table name="#npcIds">14111 14112 14113 14114 14115 14116 14117 14118 14119 14120 14121 14122 14123 14124 14125 14126 14127 14128</table>
 		<table name="#summonLifeTime">1200 1200 1200 1200 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600</table>
 		<table name="#enchNpcId">14129 14130 14131 14132 14133 14134 14135 14136 14137 14138 14139 14140 14141 14142 14143 14144 14145 14146 14147 14148 14149 14150 14151 14152 14153 14154 14155 14156 14157 14158</table>
+		<table name="#summonExpMultiplier">0.70 0.70 0.70 0.70 0.70 0.70 0.70 0.71 0.72 0.73 0.74 0.75 0.76 0.77 0.78 0.79 0.80 0.82</table>
+		<table name="#summonExpMultiplierEnch">0.84 0.86 0.88 0.90 0.92 0.94 0.96 0.98 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
@@ -273,6 +275,7 @@
 				<param npcId="#npcIds" />
 				<param consumeItemId="1458" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="#summonLifeTime" />
+				<param expMultiplier="#summonExpMultiplier" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -280,6 +283,7 @@
 				<param npcId="#enchNpcId" />
 				<param consumeItemId="1458" consumeItemCount="2" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
+				<param expMultiplier="#summonExpMultiplierEnch" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -368,6 +372,8 @@
 		<set name="icon" val="icon.skill1128" />
 		<table name="#itemConsumeCount">3 4 1 3 5 3 4 4 5 6 6 7 5 6 7 9 7 8</table> <!-- Epilogue Modification -->
 		<table name="#itemConsumeCountOT">0 0 1 1 1 2 2 3 3 3 4 4 5 5 5 5 6 6</table> <!-- Epilogue Modification -->
+		<table name="#summonExpMultiplier">0.70 0.70 0.70 0.70 0.70 0.70 0.70 0.71 0.72 0.73 0.74 0.75 0.76 0.77 0.78 0.79 0.80 0.82</table>
+		<table name="#summonExpMultiplierEnch">0.84 0.86 0.88 0.90 0.92 0.94 0.96 0.98 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
 		<table name="#npcIds">14479 14480 14481 14482 14483 14484 14485 14486 14487 14488 14489 14490 14491 14492 14493 14494 14495 14496</table>
 		<table name="#summonLifeTime">1200 1200 1200 1200 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600</table>
 		<set name="hitTime" val="15000" />
@@ -387,6 +393,7 @@
 				<param npcId="#npcIds" />
 				<param consumeItemId="1458" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="#summonLifeTime" />
+				<param expMultiplier="#summonExpMultiplier" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -394,6 +401,7 @@
 				<param npcId="#enchNpcId" />
 				<param consumeItemId="1458" consumeItemCount="2" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
+				<param expMultiplier="#summonExpMultiplierEnch" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -406,9 +414,10 @@
 		<table name="#mpInitialConsume">16 19 22 24 26 27 28</table>
 		<table name="#npcIds">14001 14002 14003 14004 14005 14006 14007</table>
 		<table name="#enchNpcId">14008 14009 14010 14011 14012 14013 14014 14015 14016 14017 14018 14019 14020 14021 14022 14023 14024 14025 14026 14027 14028 14029 14030 14031 14032 14033 14034 14035 14036 14037</table>
+		<table name="#summonExpMultiplierEnch">0.86 0.87 0.88 0.89 0.90 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
 		<set name="icon" val="icon.skill1129" />
-		<!-- set name="castRange" val="40" / -->
-		<!-- set name="effectRange" val="400" / -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
@@ -417,7 +426,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CORPSE_MOB" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
@@ -426,14 +435,18 @@
 				<param npcId="#npcIds" />
 				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
+				<param expMultiplier="0.85" />
 			</effect>
+			<effect name="ConsumeBody" />
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
 				<param consumeItemId="1459" consumeItemCount="2" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
+				<param expMultiplier="#summonExpMultiplierEnch" />
 			</effect>
+			<effect name="ConsumeBody" />
 		</enchant1for>
 	</skill>
 	<skill id="1139" levels="2" name="Servitor Magic Shield" enchantGroup1="1" enchantGroup2="1">
@@ -775,8 +788,8 @@
 		<table name="#npcIds">14038 14039 14040 14041 14042 14043</table>
 		<table name="#enchNpcId">14044 14045 14046 14047 14048 14049 14050 14051 14052 14053 14054 14055 14056 14057 14058 14059 14060 14061 14062 14063 14064 14065 14066 14067 14068 14069 14070 14071 14072 14073</table>
 		<set name="icon" val="icon.skill1154" />
-		<!-- set name="castRange" val="40" / -->
-		<!-- set name="effectRange" val="400" / -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="3" /> <!-- Epilogue Modification -->
@@ -785,7 +798,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CORPSE_MOB" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
@@ -795,6 +808,7 @@
 				<param lifeTime="3600" />
 				<param expMultiplier="0.1" />
 			</effect>
+			<effect name="ConsumeBody" />
 		</for>
 		<enchant1for>
 			<effect name="Summon">
@@ -802,6 +816,7 @@
 				<param lifeTime="3600" />
 				<param expMultiplier="0.1" />
 			</effect>
+			<effect name="ConsumeBody" />
 		</enchant1for>
 	</skill>
 	<skill id="1155" levels="15" name="Corpse Burst" enchantGroup1="2" enchantGroup2="2">

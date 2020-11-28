@@ -70,12 +70,12 @@ public class Summon extends AbstractEffect
 			return;
 		}
 		
-		final PlayerInstance player = info.getEffected().getActingPlayer();
+		final PlayerInstance player = info.getEffector().getActingPlayer();
 		final NpcTemplate template = NpcData.getInstance().getTemplate(_npcId);
 		final ServitorInstance summon = new ServitorInstance(template, player);
 		final int consumeItemInterval = (_consumeItemInterval > 0 ? _consumeItemInterval : (template.getRace() != Race.SIEGE_WEAPON ? 240 : 60)) * 1000;
 		summon.setName(template.getName());
-		summon.setTitle(info.getEffected().getName());
+		summon.setTitle(info.getEffector().getName());
 		summon.setReferenceSkill(info.getSkill().getId());
 		summon.setExpMultiplier(_expMultiplier);
 		summon.setLifeTime(_lifeTime);

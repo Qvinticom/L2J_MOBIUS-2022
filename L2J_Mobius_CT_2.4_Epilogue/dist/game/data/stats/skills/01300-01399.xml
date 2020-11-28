@@ -768,6 +768,7 @@
 		<table name="#mpInitialConsume">14 16 18 19 21 22 22 23 24 25</table>
 		<table name="#npcIds">14251 14252 14253 14254 14255 14256 14257 14258 14259 14260</table>
 		<table name="#enchNpcId">14265 14266 14267 14268 14269 14270 14271 14272 14273 14274 14275 14276 14277 14278 14279 14280 14281 14282 14283 14284 14285 14286 14287 14288 14289 14290 14291 14292 14293 14294</table>
+		<!-- <table name="#summonExpMultiplier">0.95 0.95 0.97 0.97 0.97 0.97 1 1 1 1</table> -->
 		<set name="icon" val="icon.skill1331" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="1459" /> <!-- Epilogue Modification -->
@@ -787,6 +788,7 @@
 				<param npcId="#npcIds" />
 				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
+				<!-- <param summonExpMultiplier="#summonExpMultiplier" /> -->
 			</effect>
 		</for>
 		<enchant1for>
@@ -806,6 +808,7 @@
 		<table name="#mpInitialConsume">14 16 18 19 21 22 22 23 24 25</table>
 		<table name="#npcIds">14435 14436 14437 14438 14439 14440 14441 14442 14443 14444</table>
 		<table name="#enchNpcId">14449 14450 14451 14452 14453 14454 14455 14456 14457 14458 14459 14460 14461 14462 14463 14464 14465 14466 14467 14468 14469 14470 14471 14472 14473 14474 14475 14476 14477 14478</table>
+		<!-- <table name="#summonExpMultiplier">0.95 0.95 0.97 0.97 0.97 0.97 1 1 1 1</table> -->
 		<set name="icon" val="icon.skill1332" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="1459" /> <!-- Epilogue -->
@@ -825,6 +828,7 @@
 				<param npcId="#npcIds" />
 				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue -->
 				<param lifeTime="3600" />
+				<!-- <param summonExpMultiplier="#summonExpMultiplier" /> -->
 			</effect>
 		</for>
 		<enchant1for>
@@ -844,6 +848,7 @@
 		<table name="#mpInitialConsume">14 16 18 19 21 22 22 23 24 25</table>
 		<table name="#npcIds">14619 14620 14621 14622 14623 14624 14625 14626 14627 14628</table>
 		<table name="#enchNpcId">14633 14634 14635 14636 14637 14638 14639 14640 14641 14642 14643 14644 14645 14646 14647 14648 14649 14650 14651 14652 14653 14654 14655 14656 14657 14658 14659 14660 14661 14662</table>
+		<!-- <table name="#summonExpMultiplier">0.95 0.95 0.97 0.97 0.97 0.97 1 1 1 1</table> -->
 		<set name="icon" val="icon.skill1333" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="1459" /> <!-- Epilogue Modification -->
@@ -863,6 +868,7 @@
 				<param npcId="#npcIds" />
 				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
+				<!-- <param summonExpMultiplier="#summonExpMultiplier" /> -->
 			</effect>
 		</for>
 		<enchant1for>
@@ -882,34 +888,39 @@
 		<table name="#mpInitialConsume">21 22 24 26 26 27 28</table>
 		<table name="#npcIds">14074 14075 14076 14077 14078 14079 14080</table>
 		<table name="#enchNpcId">14081 14082 14083 14084 14085 14086 14087 14088 14089 14090 14091 14092 14093 14094 14095 14096 14097 14098 14099 14100 14101 14102 14103 14104 14105 14106 14107 14108 14109 14110</table>
+		<table name="#summonExpMultiplierEnch">0.86 0.87 0.88 0.89 0.90 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
 		<set name="icon" val="icon.skill1334" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="1459" /> <!-- Epilogue Modification -->
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<!-- set name="castRange" val="40" / -->
-		<!-- set name="effectRange" val="400" / -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="CORPSE_MOB" />
 		<cond>
 			<player canSummon="true" />
 		</cond>
 		<for>
+			<effect name="ConsumeBody" />
 			<effect name="Summon">
 				<param npcId="#npcIds" />
 				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
+				<param expMultiplier="0.85" />
 			</effect>
 		</for>
 		<enchant1for>
+			<effect name="ConsumeBody" />
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
 				<param consumeItemId="1459" consumeItemCount="2" /> <!-- Epilogue Modification -->
 				<param lifeTime="1200" /> <!-- Epilogue Modification -->
+				<param expMultiplier="#summonExpMultiplierEnch" />
 			</effect>
 		</enchant1for>
 	</skill>
