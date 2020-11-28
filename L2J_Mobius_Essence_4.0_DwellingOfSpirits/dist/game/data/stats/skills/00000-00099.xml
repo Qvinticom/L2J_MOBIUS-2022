@@ -494,7 +494,7 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLevel>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>
 			<value level="1">204</value>
@@ -518,8 +518,8 @@
 		<effects>
 			<effect name="Speed">
 				<amount>
-					<value level="1">40</value>
-					<value level="2">66</value>
+					<value level="1">10</value>
+					<value level="2">30</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
