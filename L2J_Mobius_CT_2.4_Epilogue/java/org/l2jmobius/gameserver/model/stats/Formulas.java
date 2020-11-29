@@ -1858,7 +1858,34 @@ public class Formulas
 		return Rnd.get(100) < rate;
 	}
 	
-	public static List<BuffInfo> calcCancelStealEffects(Creature creature, Creature target, Skill skill, String slot, int rate, int max)
+	public static List<BuffInfo> calcStealEffects(Creature target, int amount)
+	{
+		final List<BuffInfo> canceled = new ArrayList<>(amount);
+
+		// Prevent initialization.
+		final List<BuffInfo> buffs = target.getEffectList().hasBuffs() ? new ArrayList<>(target.getEffectList().getBuffs()) : new ArrayList<>(1);
+		if (target.getEffectList().hasTriggered())
+		{
+			buffs.addAll(target.getEffectList().getTriggered());
+		}
+		if (target.getEffectList().hasDances())
+		{
+			buffs.addAll(target.getEffectList().getDances());
+		}
+
+		for (int i = buffs.size() - 1; i >= 0 && canceled.size() < amount; i--) // reverse order
+		{
+			final BuffInfo info = buffs.get(i);
+			if (!info.getSkill().canBeStolen())
+			{
+				continue;
+			}
+			canceled.add(info);
+		}
+		return canceled;
+	}
+
+	public static List<BuffInfo> calcCancelEffects(Creature creature, Creature target, Skill skill, String slot, int rate, int max)
 	{
 		final List<BuffInfo> canceled = new ArrayList<>(max);
 		switch (slot)

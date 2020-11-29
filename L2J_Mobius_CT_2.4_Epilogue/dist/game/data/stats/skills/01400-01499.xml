@@ -1369,7 +1369,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="StealAbnormal">
-				<param slot="buff" rate="25" max="#maxNegated" />
+				<param amount="#maxNegated" />
 			</effect>
 		</for>
 	</skill>

@@ -32,17 +32,12 @@ import org.l2jmobius.gameserver.model.stats.Formulas;
  */
 public class StealAbnormal extends AbstractEffect
 {
-	private final String _slot;
-	private final int _rate;
-	private final int _max;
+	private final int _amount;
 	
 	public StealAbnormal(Condition attachCond, Condition applyCond, StatSet set, StatSet params)
 	{
 		super(attachCond, applyCond, set, params);
-		
-		_slot = params.getString("slot", null);
-		_rate = params.getInt("rate", 0);
-		_max = params.getInt("max", 0);
+		_amount = params.getInt("amount", 0);
 	}
 	
 	@Override
@@ -62,7 +57,7 @@ public class StealAbnormal extends AbstractEffect
 	{
 		if ((info.getEffected() != null) && info.getEffected().isPlayer() && (info.getEffector() != info.getEffected()))
 		{
-			final List<BuffInfo> toSteal = Formulas.calcCancelStealEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max);
+			final List<BuffInfo> toSteal = Formulas.calcStealEffects(info.getEffected(), _amount);
 			if (toSteal.isEmpty())
 			{
 				return;

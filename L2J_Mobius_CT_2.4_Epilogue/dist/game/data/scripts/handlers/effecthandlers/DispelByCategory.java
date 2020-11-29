@@ -64,7 +64,7 @@ public class DispelByCategory extends AbstractEffect
 			return;
 		}
 		
-		final List<BuffInfo> canceled = Formulas.calcCancelStealEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max);
+		final List<BuffInfo> canceled = Formulas.calcCancelEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max);
 		for (BuffInfo can : canceled)
 		{
 			info.getEffected().getEffectList().stopSkillEffects(true, can.getSkill());
