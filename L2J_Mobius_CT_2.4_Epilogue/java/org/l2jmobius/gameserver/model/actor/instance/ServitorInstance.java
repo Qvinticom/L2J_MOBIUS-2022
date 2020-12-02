@@ -375,19 +375,19 @@ public class ServitorInstance extends Summon implements Runnable
 	@Override
 	public byte getAttackElement()
 	{
-		return getOwner() != null ? getOwner().getAttackElement() : super.getAttackElement();
+		return super.getAttackElement();
 	}
 	
 	@Override
 	public int getAttackElementValue(byte attackAttribute)
 	{
-		return getOwner() != null ? getOwner().getAttackElementValue(attackAttribute) : super.getAttackElementValue(attackAttribute);
+		return super.getAttackElementValue(attackAttribute);
 	}
 	
 	@Override
 	public int getDefenseElementValue(byte defenseAttribute)
 	{
-		return getOwner() != null ? getOwner().getDefenseElementValue(defenseAttribute) : super.getDefenseElementValue(defenseAttribute);
+		return super.getDefenseElementValue(defenseAttribute);
 	}
 	
 	@Override
