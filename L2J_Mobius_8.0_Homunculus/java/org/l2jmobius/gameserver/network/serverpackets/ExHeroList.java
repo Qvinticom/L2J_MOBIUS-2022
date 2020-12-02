@@ -47,11 +47,12 @@ public class ExHeroList implements IClientOutgoingPacket
 			packet.writeS(hero.getString(Olympiad.CHAR_NAME));
 			packet.writeD(hero.getInt(Olympiad.CLASS_ID));
 			packet.writeS(hero.getString(Hero.CLAN_NAME, ""));
-			packet.writeD(hero.getInt(Hero.CLAN_CREST, 0));
+			packet.writeD(0x00); // hero.getInt(Hero.CLAN_CREST, 0)
 			packet.writeS(hero.getString(Hero.ALLY_NAME, ""));
-			packet.writeD(hero.getInt(Hero.ALLY_CREST, 0));
+			packet.writeD(0x00); // hero.getInt(Hero.ALLY_CREST, 0)
 			packet.writeD(hero.getInt(Hero.COUNT));
 			packet.writeD(0x00);
+			packet.writeC(0x00); // 272
 		}
 		return true;
 	}
