@@ -123,7 +123,7 @@
 		<set name="bodypart" val="underwear" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
-		<set name="enchant_enabled" val="5" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -256,7 +256,7 @@
 		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="price" val="11394000" />
 		<set name="commissionItemType" val="EARRING" />
 		<skills>
@@ -699,7 +699,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">69</stat>
 			<stat type="mAtk">47</stat>
@@ -727,7 +727,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">79</stat>
 			<stat type="mAtk">47</stat>
@@ -753,7 +753,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">96</stat>
 			<stat type="mAtk">47</stat>
@@ -779,7 +779,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">63</stat>
 			<stat type="mAtk">63</stat>
@@ -807,7 +807,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">79</stat>
 			<stat type="mAtk">47</stat>
@@ -835,7 +835,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">77</stat>
 			<stat type="mAtk">69</stat>
@@ -863,7 +863,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">96</stat>
 			<stat type="mAtk">47</stat>
@@ -891,7 +891,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -923,7 +923,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">179</stat>
 			<stat type="mAtk">51</stat>
@@ -951,7 +951,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
@@ -982,7 +982,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">63</stat>
 			<stat type="mAtk">63</stat>
@@ -1008,7 +1008,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">96</stat>
 			<stat type="mAtk">47</stat>
@@ -1034,7 +1034,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">96</stat>
 			<stat type="mAtk">47</stat>
@@ -1062,7 +1062,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1094,7 +1094,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">100</stat>
 			<stat type="mAtk">47</stat>
@@ -1257,7 +1257,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1276,7 +1276,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1295,7 +1295,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1314,7 +1314,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />

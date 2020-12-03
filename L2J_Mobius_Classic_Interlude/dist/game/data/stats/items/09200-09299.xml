@@ -181,7 +181,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -201,7 +201,7 @@
 		<set name="change_weaponId" val="123" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -238,7 +238,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -268,7 +268,7 @@
 		<set name="change_weaponId" val="7880" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<cond msgId="1518">
@@ -300,7 +300,7 @@
 		<set name="change_weaponId" val="274" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="400" />
@@ -333,7 +333,7 @@
 		<set name="change_weaponId" val="69" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -368,7 +368,7 @@
 		<set name="change_weaponId" val="125" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -403,7 +403,7 @@
 		<set name="change_weaponId" val="126" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -439,7 +439,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -469,7 +469,7 @@
 		<set name="change_weaponId" val="275" />
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="400" />
@@ -502,7 +502,7 @@
 		<set name="change_weaponId" val="127" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -537,7 +537,7 @@
 		<set name="change_weaponId" val="130" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -574,7 +574,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -604,7 +604,7 @@
 		<set name="change_weaponId" val="278" />
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="400" />
@@ -637,7 +637,7 @@
 		<set name="change_weaponId" val="129" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -674,7 +674,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -704,7 +704,7 @@
 		<set name="change_weaponId" val="279" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="400" />
@@ -737,7 +737,7 @@
 		<set name="change_weaponId" val="2499" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -774,7 +774,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -804,7 +804,7 @@
 		<set name="change_weaponId" val="280" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="400" />
@@ -837,7 +837,7 @@
 		<set name="change_weaponId" val="72" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -871,7 +871,7 @@
 		<set name="change_weaponId" val="4681" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="oncrit_chance" val="10" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
@@ -908,7 +908,7 @@
 		<set name="change_weaponId" val="4682" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -943,7 +943,7 @@
 		<set name="change_weaponId" val="4683" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -981,7 +981,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1010,7 +1010,7 @@
 		<set name="change_weaponId" val="4711" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1044,7 +1044,7 @@
 		<set name="change_weaponId" val="4712" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1078,7 +1078,7 @@
 		<set name="change_weaponId" val="4713" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1113,7 +1113,7 @@
 		<set name="change_weaponId" val="281" />
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="400" />
@@ -1145,7 +1145,7 @@
 		<set name="change_weaponId" val="4810" />
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
@@ -1180,7 +1180,7 @@
 		<set name="change_weaponId" val="4811" />
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
@@ -1215,7 +1215,7 @@
 		<set name="change_weaponId" val="4812" />
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="332" />
@@ -1248,7 +1248,7 @@
 		<set name="change_weaponId" val="73" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1282,7 +1282,7 @@
 		<set name="change_weaponId" val="4684" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1317,7 +1317,7 @@
 		<set name="change_weaponId" val="4685" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1352,7 +1352,7 @@
 		<set name="change_weaponId" val="4686" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1388,7 +1388,7 @@
 		<set name="change_weaponId" val="74" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1422,7 +1422,7 @@
 		<set name="change_weaponId" val="4687" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1457,7 +1457,7 @@
 		<set name="change_weaponId" val="4688" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1492,7 +1492,7 @@
 		<set name="change_weaponId" val="4689" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1528,7 +1528,7 @@
 		<set name="change_weaponId" val="131" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1562,7 +1562,7 @@
 		<set name="change_weaponId" val="4690" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1597,7 +1597,7 @@
 		<set name="change_weaponId" val="4691" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="oncrit_chance" val="15" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
@@ -1633,7 +1633,7 @@
 		<set name="change_weaponId" val="4692" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1669,7 +1669,7 @@
 		<set name="change_weaponId" val="133" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1703,7 +1703,7 @@
 		<set name="change_weaponId" val="4693" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1738,7 +1738,7 @@
 		<set name="change_weaponId" val="4694" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="oncrit_chance" val="35" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
@@ -1774,7 +1774,7 @@
 		<set name="change_weaponId" val="4695" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="oncrit_chance" val="15" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
@@ -1811,7 +1811,7 @@
 		<set name="change_weaponId" val="282" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="400" />
@@ -1843,7 +1843,7 @@
 		<set name="change_weaponId" val="4813" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
@@ -1878,7 +1878,7 @@
 		<set name="change_weaponId" val="4814" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
@@ -1911,7 +1911,7 @@
 		<set name="change_weaponId" val="4815" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="320" />
@@ -1944,7 +1944,7 @@
 		<set name="change_weaponId" val="285" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="400" />
@@ -1976,7 +1976,7 @@
 		<set name="change_weaponId" val="4816" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
@@ -2011,7 +2011,7 @@
 		<set name="change_weaponId" val="4817" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
@@ -2044,7 +2044,7 @@
 		<set name="change_weaponId" val="4818" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
@@ -2080,7 +2080,7 @@
 		<set name="change_weaponId" val="75" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2114,7 +2114,7 @@
 		<set name="change_weaponId" val="4696" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2149,7 +2149,7 @@
 		<set name="change_weaponId" val="4697" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2184,7 +2184,7 @@
 		<set name="change_weaponId" val="4698" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2220,7 +2220,7 @@
 		<set name="change_weaponId" val="76" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2254,7 +2254,7 @@
 		<set name="change_weaponId" val="4699" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2289,7 +2289,7 @@
 		<set name="change_weaponId" val="4700" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2324,7 +2324,7 @@
 		<set name="change_weaponId" val="4701" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2360,7 +2360,7 @@
 		<set name="change_weaponId" val="77" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2394,7 +2394,7 @@
 		<set name="change_weaponId" val="4702" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2429,7 +2429,7 @@
 		<set name="change_weaponId" val="4703" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2464,7 +2464,7 @@
 		<set name="change_weaponId" val="4704" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2500,7 +2500,7 @@
 		<set name="change_weaponId" val="134" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2534,7 +2534,7 @@
 		<set name="change_weaponId" val="4705" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2569,7 +2569,7 @@
 		<set name="change_weaponId" val="4706" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2604,7 +2604,7 @@
 		<set name="change_weaponId" val="4707" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2640,7 +2640,7 @@
 		<set name="change_weaponId" val="132" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2674,7 +2674,7 @@
 		<set name="change_weaponId" val="6307" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2709,7 +2709,7 @@
 		<set name="change_weaponId" val="6308" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="oncrit_chance" val="35" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
@@ -2745,7 +2745,7 @@
 		<set name="change_weaponId" val="6309" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2783,7 +2783,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2812,7 +2812,7 @@
 		<set name="change_weaponId" val="8102" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2846,7 +2846,7 @@
 		<set name="change_weaponId" val="8103" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2880,7 +2880,7 @@
 		<set name="change_weaponId" val="8104" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -2915,7 +2915,7 @@
 		<set name="change_weaponId" val="283" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reuse_delay" val="400" />
@@ -2947,7 +2947,7 @@
 		<set name="change_weaponId" val="4819" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
@@ -2982,7 +2982,7 @@
 		<set name="change_weaponId" val="4820" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
@@ -3017,7 +3017,7 @@
 		<set name="change_weaponId" val="4821" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
@@ -3051,7 +3051,7 @@
 		<set name="change_weaponId" val="135" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -3085,7 +3085,7 @@
 		<set name="change_weaponId" val="4708" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -3120,7 +3120,7 @@
 		<set name="change_weaponId" val="4709" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -3155,7 +3155,7 @@
 		<set name="change_weaponId" val="4710" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -3193,7 +3193,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -3222,7 +3222,7 @@
 		<set name="change_weaponId" val="6347" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -3256,7 +3256,7 @@
 		<set name="change_weaponId" val="6348" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -3290,7 +3290,7 @@
 		<set name="change_weaponId" val="6349" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">

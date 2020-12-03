@@ -526,7 +526,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="price" val="3" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2181-1" /> <!-- Item - Fishing Shot -->
@@ -540,7 +540,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="price" val="5" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2182-1" /> <!-- Item - Fishing Shot -->
@@ -554,7 +554,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="price" val="7" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2183-1" /> <!-- Item - Fishing Shot -->
@@ -568,7 +568,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="price" val="25" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2184-1" /> <!-- Item - Fishing Shot -->
@@ -582,7 +582,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="price" val="40" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2185-1" /> <!-- Item - Fishing Shot -->
@@ -596,7 +596,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="price" val="50" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2186-1" /> <!-- Item - Fishing Shot -->
@@ -983,7 +983,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
 			<set stat="pAtk" val="225" />
@@ -1013,7 +1013,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="enchant4_skill" val="3570-1" />
 		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
@@ -1044,7 +1044,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3564-1" /> <!-- Special Ability: Haste -->
 		<for>
 			<set stat="pAtk" val="281" />
@@ -1074,7 +1074,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="281" />
@@ -1104,7 +1104,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3566-1" /> <!-- Special Ability: Focus -->
 		<for>
 			<set stat="pAtk" val="281" />
@@ -1133,7 +1133,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3568-1" /> <!-- Special Ability: HP Drain -->
 		<for>
 			<set stat="pAtk" val="281" />
@@ -1163,7 +1163,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="281" />
@@ -1193,7 +1193,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3569-1" /> <!-- Special Ability: HP Regeneration -->
 		<for>
 			<set stat="pAtk" val="281" />
@@ -1223,7 +1223,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3575-1" /> <!-- Special Ability: Empower -->
 		<for>
@@ -1254,7 +1254,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3576-1" /> <!-- Special Ability: MP Regeneration -->
 		<for>
@@ -1285,7 +1285,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="20" />
 		<set name="onmagic_skill" val="3577-1" />
@@ -1318,7 +1318,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3572-1" /> <!-- Special Ability: Crt. Damage -->
 		<for>
 			<set stat="pAtk" val="246" />
@@ -1348,7 +1348,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3568-1" /> <!-- Special Ability: HP Drain -->
 		<for>
 			<set stat="pAtk" val="246" />
@@ -1378,7 +1378,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3564-1" /> <!-- Special Ability: Haste -->
 		<for>
 			<set stat="pAtk" val="246" />
@@ -1408,7 +1408,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="820" />
 		<for>
 			<set stat="pAtk" val="581" />
@@ -1438,7 +1438,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="820" />
 		<for>
 			<set stat="pAtk" val="581" />
@@ -1468,7 +1468,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="820" />
 		<for>
 			<set stat="pAtk" val="581" />
@@ -1498,7 +1498,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3569-1" /> <!-- Special Ability: HP Regeneration -->
 		<for>
 			<set stat="pAtk" val="342" />
@@ -1528,7 +1528,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="342" />
@@ -1558,7 +1558,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3568-1" /> <!-- Special Ability: HP Drain -->
 		<for>
 			<set stat="pAtk" val="342" />
@@ -1588,7 +1588,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3013-4" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="281" />

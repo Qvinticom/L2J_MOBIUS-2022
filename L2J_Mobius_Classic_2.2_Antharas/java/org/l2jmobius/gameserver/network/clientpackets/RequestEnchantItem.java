@@ -158,7 +158,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		synchronized (item)
 		{
 			// last validation check
-			if ((item.getOwnerId() != player.getObjectId()) || (item.isEnchantable() == 0))
+			if ((item.getOwnerId() != player.getObjectId()) || !item.isEnchantable())
 			{
 				client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 				player.removeRequest(request.getClass());

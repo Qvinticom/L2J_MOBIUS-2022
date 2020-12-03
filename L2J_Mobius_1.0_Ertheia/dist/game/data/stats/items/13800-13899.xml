@@ -50,7 +50,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="70" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -133,7 +133,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="70" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -753,7 +753,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">78</stat>
 			<stat type="mAtk">39</stat>
@@ -776,7 +776,7 @@
 		<set name="weight" val="300" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1476,7 +1476,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1515,7 +1515,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<cond msgId="1518">
@@ -1554,7 +1554,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="isAppearanceable" val="true" />
 		<cond msgId="1518">
@@ -1589,7 +1589,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="940" />
 		<set name="price" val="3355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="SIGIL" />
 		<stats>
@@ -1611,7 +1611,7 @@
 		<set name="price" val="6404000" />
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="pDef">15</stat>
@@ -1629,7 +1629,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="SIGIL" />
@@ -1782,7 +1782,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="500" />
 		<set name="price" val="45100" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="BELT" />
 		<stats>
 			<stat type="pDef">10</stat>
@@ -1801,7 +1801,7 @@
 		<set name="weight" val="480" />
 		<set name="price" val="165000" />
 		<set name="commissionItemType" val="BELT" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">11</stat>
 		</stats>
@@ -1819,7 +1819,7 @@
 		<set name="weight" val="460" />
 		<set name="price" val="371300" />
 		<set name="commissionItemType" val="BELT" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">12</stat>
 		</stats>
@@ -1837,7 +1837,7 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="commissionItemType" val="BELT" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">14</stat>
 		</stats>

@@ -125,7 +125,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	private boolean _destroyable;
 	private boolean _tradeable;
 	private boolean _depositable;
-	private int _enchantable;
+	private boolean _enchantable;
 	private boolean _elementable;
 	private boolean _questItem;
 	private boolean _freightable;
@@ -185,7 +185,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_tradeable = set.getBoolean("is_tradable", true);
 		_depositable = set.getBoolean("is_depositable", true);
 		_elementable = set.getBoolean("element_enabled", false);
-		_enchantable = set.getInt("enchant_enabled", 0);
+		_enchantable = set.getBoolean("enchant_enabled", false);
 		_questItem = set.getBoolean("is_questitem", false);
 		_freightable = set.getBoolean("is_freightable", false);
 		_allowSelfResurrection = set.getBoolean("allow_self_resurrection", false);
@@ -651,9 +651,9 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	 * This method also check the enchant blacklist.
 	 * @return {@code true} if the item can be enchanted, {@code false} otherwise.
 	 */
-	public int isEnchantable()
+	public boolean isEnchantable()
 	{
-		return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0 ? _enchantable : 0;
+		return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0 ? _enchantable : false;
 	}
 	
 	/**

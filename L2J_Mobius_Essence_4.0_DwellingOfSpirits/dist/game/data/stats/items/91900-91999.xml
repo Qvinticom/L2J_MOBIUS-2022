@@ -12,7 +12,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="13100000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">185</stat>
 			<stat type="mAtk">135</stat>
@@ -34,7 +34,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="8680000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">167</stat>
 			<stat type="mAtk">124</stat>
@@ -56,7 +56,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="26968400" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">239</stat>
 			<stat type="mAtk">165</stat>
@@ -78,7 +78,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="20741000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">221</stat>
 			<stat type="mAtk">156</stat>
@@ -100,7 +100,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="14098000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">203</stat>
 			<stat type="mAtk">129</stat>
@@ -122,7 +122,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pAtk">267</stat>
 			<stat type="mAtk">182</stat>
@@ -406,7 +406,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<skills>
@@ -427,7 +427,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SpiritShot" />
 		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<skills>
@@ -448,7 +448,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSoulShots" />
 		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<skills>
@@ -469,7 +469,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
 		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<skills>

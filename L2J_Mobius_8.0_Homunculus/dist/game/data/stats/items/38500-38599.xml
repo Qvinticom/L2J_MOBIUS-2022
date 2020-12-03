@@ -992,7 +992,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="BRACELET" />
-		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13584" level="1" /> <!-- Aria's Bracelet: CON -->
 		</skills>
@@ -1012,7 +1011,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="BRACELET" />
-		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13585" level="1" /> <!-- Aria's Bracelet: MEN -->
 		</skills>
@@ -1032,7 +1030,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="BRACELET" />
-		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13586" level="1" /> <!-- Aria's Bracelet: DEX -->
 		</skills>
@@ -1052,7 +1049,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="BRACELET" />
-		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13587" level="1" /> <!-- Aria's Bracelet: WIT -->
 		</skills>
@@ -1072,7 +1068,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="BRACELET" />
-		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13588" level="1" /> <!-- Aria's Bracelet: STR -->
 		</skills>
@@ -1092,7 +1087,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="BRACELET" />
-		<set name="enchant_enabled" val="0" />
 		<skills>
 			<skill id="13589" level="1" /> <!-- Aria's Bracelet: INT -->
 		</skills>
@@ -1369,7 +1363,7 @@
 		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="440" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="13652" level="1" /> <!-- Tiat's Belt Skill -->
 		</skills>
@@ -1385,7 +1379,7 @@
 		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="440" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="13653" level="1" /> <!-- Ekimus' Belt Skill -->
 		</skills>

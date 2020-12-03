@@ -493,7 +493,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="mDef">151</stat>
 		</stats>
@@ -511,7 +511,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="BRACELET" />
 		<skills>
 			<skill id="35214" level="3" /> <!-- Lucien's Bracelet - Attack -->
@@ -530,7 +530,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="BRACELET" />
 		<skills>
 			<skill id="35215" level="3" /> <!-- Lucien's Bracelet - Magic -->
@@ -549,7 +549,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="BRACELET" />
 		<skills>
 			<skill id="35216" level="3" /> <!-- Lucien's Bracelet - Defense -->
@@ -859,7 +859,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="mDef">101</stat>
 		</stats>

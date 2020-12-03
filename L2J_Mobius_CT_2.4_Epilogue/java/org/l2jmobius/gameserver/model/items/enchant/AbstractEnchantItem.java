@@ -123,7 +123,7 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if (itemToEnchant.isEnchantable() == 0)
+		else if (!itemToEnchant.isEnchantable())
 		{
 			return false;
 		}

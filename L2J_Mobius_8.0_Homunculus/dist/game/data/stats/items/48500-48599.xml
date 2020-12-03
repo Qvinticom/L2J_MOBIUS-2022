@@ -1252,7 +1252,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="39222" level="1" type="ON_EQUIP" /> <!-- Summon Masia's Guard Agathion -->
 			<skill id="39224" level="1" /> <!-- Masia's Guard Unique Ability -->
@@ -1286,7 +1286,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="39226" level="1" type="ON_EQUIP" /> <!-- Summon Paulina's Guard Agathion -->
 			<skill id="39228" level="1" /> <!-- Paulina's Guard Unique Ability -->
@@ -1320,7 +1320,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="39330" level="1" type="ON_EQUIP" /> <!-- Summon Tersi's Guard Agathion -->
 			<skill id="39332" level="1" /> <!-- Tersi's Guard Unique Ability -->
@@ -1390,7 +1390,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="35082" level="4" /> <!-- Super Advanced Seed Bracelet - Stage 4 -->
 			<skill id="35083" level="1" /> <!-- Seed Teleport: Town of Aden -->
@@ -1509,7 +1509,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="10" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="35205" level="1" /> <!-- Savior's Mask Basic Effect -->
 			<skill id="35207" level="1" type="ON_ENCHANT" type_value="7" /> <!-- Warrior's Circlet Enchant Effect -->

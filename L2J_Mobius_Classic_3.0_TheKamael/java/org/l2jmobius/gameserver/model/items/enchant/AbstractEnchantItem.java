@@ -142,7 +142,7 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if ((itemToEnchant.isEnchantable() == 0) || (!(itemToEnchant.getItem().getEnchantLimit() == 0) && (itemToEnchant.getEnchantLevel() == itemToEnchant.getItem().getEnchantLimit())))
+		else if (!itemToEnchant.isEnchantable() || (!(itemToEnchant.getItem().getEnchantLimit() == 0) && (itemToEnchant.getEnchantLevel() == itemToEnchant.getItem().getEnchantLimit())))
 		{
 			return false;
 		}

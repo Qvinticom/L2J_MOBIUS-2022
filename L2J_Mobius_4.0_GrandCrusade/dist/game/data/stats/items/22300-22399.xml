@@ -249,7 +249,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
 		<skills>
@@ -276,7 +276,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
 		<skills>
@@ -1238,7 +1238,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -1261,7 +1261,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
@@ -1404,7 +1404,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
@@ -1560,7 +1560,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
@@ -1596,7 +1596,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
@@ -1784,7 +1784,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="bodypart" val="lrhand" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
@@ -1815,7 +1815,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="bodypart" val="lrhand" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
@@ -1902,7 +1902,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="enchant_enabled" val="7" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />

@@ -666,7 +666,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -683,7 +683,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -700,7 +700,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="1" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -717,7 +717,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -734,7 +734,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1083,7 +1083,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="1730000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3561-1" /> <!-- Ring of Baium -->
 		<for>
 			<add order="0" stat="mDef" val="48" />
@@ -1102,7 +1102,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="616000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3562-1" /> <!-- Ring of Ant Queen -->
 		<for>
 			<add order="0" stat="mDef" val="48" />
@@ -1120,7 +1120,7 @@
 		<set name="crystal_type" val="S84" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3559-2" /> <!-- Earring of Zaken -->
 		<for>
 			<add order="0" stat="mDef" val="94" />

@@ -240,7 +240,7 @@
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -262,7 +262,7 @@
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -287,7 +287,7 @@
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -312,7 +312,7 @@
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -337,7 +337,7 @@
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -361,7 +361,7 @@
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -381,7 +381,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -401,7 +401,7 @@
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -421,7 +421,7 @@
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -442,7 +442,7 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="170" />
 			<enchant stat="pDef" val="0" />
@@ -461,7 +461,7 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player categoryType="DAGGER_MASTER" />
 		</cond>
@@ -483,7 +483,7 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player categoryType="BOW_MASTER" />
 		</cond>
@@ -504,7 +504,7 @@
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="106" />
 			<enchant stat="pDef" val="0" />
@@ -521,7 +521,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="92" />
 			<enchant stat="pDef" val="0" />
@@ -538,7 +538,7 @@
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="61" />
 			<enchant stat="pDef" val="0" />
@@ -555,7 +555,7 @@
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="61" />
 			<enchant stat="pDef" val="0" />
@@ -573,7 +573,7 @@
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -596,7 +596,7 @@
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -622,7 +622,7 @@
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -648,7 +648,7 @@
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -674,7 +674,7 @@
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<and>
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -699,7 +699,7 @@
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -720,7 +720,7 @@
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -740,7 +740,7 @@
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -760,7 +760,7 @@
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -779,7 +779,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1150" />
 		<set name="price" val="6404000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -809,7 +809,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set stat="pAtk" val="333" />
 			<set stat="mAtk" val="151" />
@@ -838,7 +838,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set stat="pAtk" val="405" />
 			<set stat="mAtk" val="151" />
@@ -866,7 +866,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
 			<set stat="pAtk" val="267" />
@@ -897,7 +897,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="1500" />
 		<for>
 			<set stat="pAtk" val="654" />
@@ -927,7 +927,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set stat="pAtk" val="291" />
 			<set stat="mAtk" val="151" />
@@ -956,7 +956,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="333" />
@@ -986,7 +986,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set stat="pAtk" val="333" />
 			<set stat="mAtk" val="151" />
@@ -1015,7 +1015,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<for>
 			<set stat="pAtk" val="267" />
@@ -1045,7 +1045,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set stat="pAtk" val="405" />
 			<set stat="mAtk" val="151" />
@@ -1076,7 +1076,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="4032000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="mDef" val="71" />
 			<enchant stat="mDef" val="0" />
@@ -1093,7 +1093,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5376000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="mDef" val="95" />
 			<enchant stat="mDef" val="0" />
@@ -1110,7 +1110,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="2688000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="mDef" val="53" />
 			<enchant stat="mDef" val="0" />
@@ -1127,7 +1127,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="mDef" val="79" />
 			<add stat="maxMp" val="35" />
@@ -1145,7 +1145,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
 			<add stat="maxMp" val="46" />
@@ -1163,7 +1163,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="mDef" val="60" />
 			<add stat="maxMp" val="23" />
@@ -1181,7 +1181,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3367-1" /> <!-- Dynasty Resistance Earring -->
 		<for>
 			<add order="0" stat="mDef" val="27" />
@@ -1200,7 +1200,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3365-1" /> <!-- Dynasty Resistance Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="36" />
@@ -1219,7 +1219,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3366-1" /> <!-- Dynasty Resistance Ring -->
 		<for>
 			<add order="0" stat="mDef" val="18" />
@@ -1238,7 +1238,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3379-1" /> <!-- Dynasty Resistance Earring -->
 		<for>
 			<add order="0" stat="mDef" val="27" />
@@ -1257,7 +1257,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3377-1" /> <!-- Dynasty Resistance Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="36" />
@@ -1276,7 +1276,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3378-1" /> <!-- Dynasty Resistance Ring -->
 		<for>
 			<add order="0" stat="mDef" val="18" />
@@ -1295,7 +1295,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3373-1" /> <!-- Dynasty Resistance Earring -->
 		<for>
 			<add order="0" stat="mDef" val="27" />
@@ -1314,7 +1314,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3371-1" /> <!-- Dynasty Resistance Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="36" />
@@ -1333,7 +1333,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3372-1" /> <!-- Dynasty Resistance Ring -->
 		<for>
 			<add order="0" stat="mDef" val="18" />
@@ -1352,7 +1352,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3397-1" /> <!-- Dynasty Resistance Earring -->
 		<for>
 			<add order="0" stat="mDef" val="27" />
@@ -1371,7 +1371,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3395-1" /> <!-- Dynasty Resistance Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="36" />
@@ -1390,7 +1390,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3396-1" /> <!-- Dynasty Resistance Ring -->
 		<for>
 			<add order="0" stat="mDef" val="18" />
@@ -1409,7 +1409,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3385-1" /> <!-- Dynasty Resistance Earring -->
 		<for>
 			<add order="0" stat="mDef" val="27" />
@@ -1428,7 +1428,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3383-1" /> <!-- Dynasty Resistance Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="36" />
@@ -1447,7 +1447,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3384-1" /> <!-- Dynasty Resistance Ring -->
 		<for>
 			<add order="0" stat="mDef" val="18" />
@@ -1466,7 +1466,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3391-1" /> <!-- Dynasty Resistance Earring -->
 		<for>
 			<add order="0" stat="mDef" val="27" />
@@ -1485,7 +1485,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3389-1" /> <!-- Dynasty Resistance Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="36" />
@@ -1504,7 +1504,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3390-1" /> <!-- Dynasty Resistance Ring -->
 		<for>
 			<add order="0" stat="mDef" val="18" />
@@ -1523,7 +1523,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3403-1" /> <!-- Dynasty Resistance Earring -->
 		<for>
 			<add order="0" stat="mDef" val="27" />
@@ -1542,7 +1542,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3401-1" /> <!-- Dynasty Resistance Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="36" />
@@ -1561,7 +1561,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3402-1" /> <!-- Dynasty Resistance Ring -->
 		<for>
 			<add order="0" stat="mDef" val="18" />
@@ -1580,7 +1580,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="mDef" val="27" />
 			<add stat="maxMp" val="35" />
@@ -1598,7 +1598,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="mDef" val="36" />
 			<add stat="maxMp" val="46" />
@@ -1616,7 +1616,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="mDef" val="18" />
 			<add stat="maxMp" val="23" />

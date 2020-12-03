@@ -521,9 +521,9 @@ public class ItemInstance extends WorldObject
 	 * Return true if item can be enchanted
 	 * @return boolean
 	 */
-	public int isEnchantable()
+	public boolean isEnchantable()
 	{
-		return (_loc == ItemLocation.INVENTORY) || (_loc == ItemLocation.PAPERDOLL) ? _item.isEnchantable() : 0;
+		return (_loc == ItemLocation.INVENTORY) || (_loc == ItemLocation.PAPERDOLL) ? _item.isEnchantable() : false;
 	}
 	
 	/**

@@ -349,7 +349,7 @@
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="1500" />
 		<set name="for_npc" val="true" />
 		<for>
@@ -375,7 +375,7 @@
 		<set name="weight" val="1200" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="for_npc" val="true" />
 		<for>
@@ -447,7 +447,7 @@
 		<set name="weight" val="1060" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="for_npc" val="true" />
 		<for>
@@ -473,7 +473,7 @@
 		<set name="weight" val="1510" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="for_npc" val="true" />
 		<for>
 			<set stat="pAtk" val="51" />
@@ -497,7 +497,7 @@
 		<set name="weight" val="1490" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="for_npc" val="true" />
 		<for>
 			<set stat="pAtk" val="64" />
@@ -756,7 +756,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="3" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />

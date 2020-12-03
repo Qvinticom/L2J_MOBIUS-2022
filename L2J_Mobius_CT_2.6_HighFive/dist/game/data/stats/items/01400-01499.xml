@@ -644,7 +644,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="650" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1459" type="EtcItem" name="Crystal (C-Grade)">
@@ -654,7 +654,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="3000" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1460" type="EtcItem" name="Crystal (B-Grade)">
@@ -664,7 +664,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="9000" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1461" type="EtcItem" name="Crystal (A-Grade)">
@@ -674,7 +674,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="15000" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1462" type="EtcItem" name="Crystal (S-Grade)">
@@ -684,7 +684,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1463" type="EtcItem" name="Soulshot (D-Grade)">
@@ -696,7 +696,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="price" val="14" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2150-1" /> <!-- Soulshot: D-Grade -->
@@ -710,7 +710,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="price" val="22" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2151-1" /> <!-- Soulshot: C-Grade -->
@@ -724,7 +724,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="50" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2152-1" /> <!-- Soulshot: B-Grade -->
@@ -738,7 +738,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="80" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2153-1" /> <!-- Soulshot: A-Grade -->
@@ -752,7 +752,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="100" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="2154-1" /> <!-- Soulshot: S-Grade -->
@@ -763,7 +763,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1469" type="EtcItem" name="Gludin Vermouth">
@@ -772,7 +772,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1470" type="EtcItem" name="Artemeter">
@@ -781,7 +781,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="PAPER" />
-		<!-- <set name="enchant_enabled" val="1" />NOTE: Retail typo. -->
+		<!-- <set name="enchant_enabled" val="true" />NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1471" type="Weapon" name="Silenos Blowgun">
@@ -800,7 +800,7 @@
 		<set name="price" val="409000" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<set stat="pAtk" val="5" />
 			<set stat="mAtk" val="5" />
@@ -827,7 +827,7 @@
 		<set name="price" val="409000" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="50" />

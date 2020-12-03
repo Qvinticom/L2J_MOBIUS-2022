@@ -216,7 +216,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="440" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BELT" />
 		<skills>
@@ -1303,7 +1303,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<cond>
 			<player level="85" />
 		</cond>
@@ -1330,7 +1330,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<cond>
 			<player level="99" />
 		</cond>
@@ -1354,7 +1354,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<cond>
 			<player level="105" />
 		</cond>

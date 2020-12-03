@@ -11,7 +11,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="590" />
 		<set name="price" val="618800" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3717-1" /> <!-- Blue Wolf Gloves -->
 		<for>
 			<add order="0" stat="pDef" val="44" />
@@ -29,7 +29,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="590" />
 		<set name="price" val="618800" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3720-1" /> <!-- Blue Wolf Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -51,7 +51,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1920" />
 		<set name="price" val="1857000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3721-1" /> <!-- Blue Wolf Tunic -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -73,7 +73,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="928300" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3714-1" /> <!-- Blue Wolf Helmet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -95,7 +95,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="920" />
 		<set name="price" val="1160300" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3722-1" /> <!-- Blue Wolf Stockings -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -118,7 +118,7 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="7820" />
 		<set name="price" val="2475000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3710-1" /> <!-- Blue Wolf Breastplate -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -140,7 +140,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="910" />
 		<set name="price" val="1160300" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3708-1" /> <!-- Stockings of Doom -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -163,7 +163,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="3320" />
 		<set name="price" val="2226000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3726-1" /> <!-- Dark Crystal Gaiters -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -184,7 +184,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3727-1" /> <!-- Dark Crystal Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -205,7 +205,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3731-1" /> <!-- Dark Crystal Gloves -->
 		<for>
 			<add order="0" stat="pDef" val="46" />
@@ -223,7 +223,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3735-1" /> <!-- Dark Crystal Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -245,7 +245,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4300" />
 		<set name="price" val="2671000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3730-1" /> <!-- Dark Crystal Leather Armor -->
 		<for>
 			<add order="0" stat="pDef" val="128" />
@@ -264,7 +264,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="2450" />
 		<set name="price" val="4341000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3736-1" /> <!-- Dark Crystal Robe -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -286,7 +286,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1110" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3728-1" /> <!-- Dark Crystal Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -307,7 +307,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1110" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3732-1" /> <!-- Dark Crystal Boots -->
 		<for>
 			<add order="0" stat="pDef" val="46" />
@@ -325,7 +325,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1110" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3737-1" /> <!-- Dark Crystal Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -346,7 +346,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1190" />
 		<set name="price" val="935000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3729-1" /> <!-- Dark Crystal Shield -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -370,7 +370,7 @@
 		<set name="weight" val="570" />
 		<set name="price" val="1336000" />
 		<set name="soulshots" val="2" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3724-1" /> <!-- Dark Crystal Helmet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -392,7 +392,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="7700" />
 		<set name="price" val="3562000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3725-1" /> <!-- Dark Crystal Breastplate -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -414,7 +414,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1480" />
 		<set name="price" val="1670000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3734-1" /> <!-- Dark Crystal Leggings -->
 		<for>
 			<add order="0" stat="pDef" val="80" />
@@ -433,7 +433,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="3320" />
 		<set name="price" val="2226000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -453,7 +453,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -471,7 +471,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4300" />
 		<set name="price" val="2671000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="128" />
 			<enchant stat="pDef" val="0" />
@@ -489,7 +489,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="2450" />
 		<set name="price" val="4341000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -510,7 +510,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1110" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -527,7 +527,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1190" />
 		<set name="price" val="935000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -549,7 +549,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="570" />
 		<set name="price" val="1336000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -570,7 +570,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="7700" />
 		<set name="price" val="3562000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -591,7 +591,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1480" />
 		<set name="price" val="1670000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="80" />
 			<enchant stat="pDef" val="0" />
@@ -608,7 +608,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -626,7 +626,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5400" />
 		<set name="price" val="4341000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="209" />
 			<enchant stat="pDef" val="0" />
@@ -643,7 +643,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="46" />
 			<enchant stat="pDef" val="0" />
@@ -661,7 +661,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1860" />
 		<set name="price" val="2671000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -683,7 +683,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="9780" />
 		<set name="price" val="5788000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -703,7 +703,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="570" />
 		<set name="price" val="1336000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -724,7 +724,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="920" />
 		<set name="price" val="1670000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -745,7 +745,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<set name="price" val="1160000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="18" />
 			<enchant stat="pDef" val="0" />
@@ -762,7 +762,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3739-1" /> <!-- Tallum Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -783,7 +783,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3744-1" /> <!-- Tallum Gloves -->
 		<for>
 			<add order="0" stat="pDef" val="46" />
@@ -801,7 +801,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3747-1" /> <!-- Tallum Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -823,7 +823,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5400" />
 		<set name="price" val="4341000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3743-1" /> <!-- Tallum Leather Armor -->
 		<for>
 			<add order="0" stat="pDef" val="209" />
@@ -841,7 +841,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3740-1" /> <!-- Tallum Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -862,7 +862,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3745-1" /> <!-- Tallum Boots -->
 		<for>
 			<add order="0" stat="pDef" val="46" />
@@ -880,7 +880,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
 		<set name="price" val="890000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3748-1" /> <!-- Tallum Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -902,7 +902,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1860" />
 		<set name="price" val="2671000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3749-1" /> <!-- Tallum Tunic -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -925,7 +925,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="9780" />
 		<set name="price" val="5788000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3741-1" /> <!-- Tallum Plate Armor -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -946,7 +946,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="570" />
 		<set name="price" val="1336000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3742-1" /> <!-- Tallum Helmet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -968,7 +968,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="920" />
 		<set name="price" val="1670000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3750-1" /> <!-- Tallum Stockings -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -990,7 +990,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3752-1" /> <!-- Majestic Gauntlet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1011,7 +1011,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3756-1" /> <!-- Majestic Gauntlet -->
 		<for>
 			<add order="0" stat="pDef" val="49" />
@@ -1029,7 +1029,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3760-1" /> <!-- Majestic Gauntlet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1051,7 +1051,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5350" />
 		<set name="price" val="6603000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3757-1" /> <!-- Majestic Leather Armor -->
 		<for>
 			<add order="0" stat="pDef" val="220" />
@@ -1070,7 +1070,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="2330" />
 		<set name="price" val="6603000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3761-1" /> <!-- Majestic Robe -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1092,7 +1092,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3755-1" /> <!-- Majestic Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1113,7 +1113,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3758-1" /> <!-- Majestic Boots -->
 		<for>
 			<add order="0" stat="pDef" val="49" />
@@ -1131,7 +1131,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3762-1" /> <!-- Majestic Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1152,7 +1152,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
 		<set name="price" val="2032000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3753-1" /> <!-- Majestic Circlet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1174,7 +1174,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="9200" />
 		<set name="price" val="8804000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3754-1" /> <!-- Majestic Plate Armor -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1195,7 +1195,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
@@ -1213,7 +1213,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5350" />
 		<set name="price" val="6603000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="220" />
 			<enchant stat="pDef" val="0" />
@@ -1231,7 +1231,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="2330" />
 		<set name="price" val="6603000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1252,7 +1252,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
@@ -1269,7 +1269,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
 		<set name="price" val="2032000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1290,7 +1290,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="9200" />
 		<set name="price" val="8804000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1311,7 +1311,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="9580" />
 		<set name="price" val="8804000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1331,7 +1331,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
@@ -1349,7 +1349,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5300" />
 		<set name="price" val="6603000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="220" />
 			<enchant stat="pDef" val="0" />
@@ -1367,7 +1367,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="2300" />
 		<set name="price" val="6603000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1388,7 +1388,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
@@ -1405,7 +1405,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1180" />
 		<set name="price" val="1422000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1427,7 +1427,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="560" />
 		<set name="price" val="2032000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1448,7 +1448,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="9580" />
 		<set name="price" val="8804000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3764-1" /> <!-- Armor of Nightmare -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1469,7 +1469,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3765-1" /> <!-- Gauntlet of Nightmare -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1490,7 +1490,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3769-1" /> <!-- Gauntlet of Nightmare -->
 		<for>
 			<add order="0" stat="pDef" val="49" />
@@ -1508,7 +1508,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3771-1" /> <!-- Gauntlet of Nightmare -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1530,7 +1530,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5300" />
 		<set name="price" val="6603000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3768-1" /> <!-- Leather Armor of Nightmare -->
 		<for>
 			<add order="0" stat="pDef" val="220" />
@@ -1549,7 +1549,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="2300" />
 		<set name="price" val="6603000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3772-1" /> <!-- Robe of Nightmare -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1571,7 +1571,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3766-1" /> <!-- Boots of Nightmare -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1592,7 +1592,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3770-1" /> <!-- Boots of Nightmare -->
 		<for>
 			<add order="0" stat="pDef" val="49" />
@@ -1610,7 +1610,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1110" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3773-1" /> <!-- Boots of Nightmare -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1631,7 +1631,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1180" />
 		<set name="price" val="1422000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3774-1" /> <!-- Shield of Nightmare -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1654,7 +1654,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="560" />
 		<set name="price" val="2032000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3767-1" /> <!-- Helm of Nightmare -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1693,7 +1693,7 @@
 		<set name="weight" val="540" />
 		<set name="price" val="3195000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3775-1" /> <!-- Draconic Leather Gloves -->
 		<for>
 			<add order="0" stat="pDef" val="55" />
@@ -1712,7 +1712,7 @@
 		<set name="weight" val="1110" />
 		<set name="price" val="3195000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3776-1" /> <!-- Draconic Leather Boots -->
 		<for>
 			<add order="0" stat="pDef" val="55" />
@@ -1732,7 +1732,7 @@
 		<set name="weight" val="4950" />
 		<set name="price" val="15577000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3777-1" /> <!-- Draconic Leather Armor -->
 		<for>
 			<add order="0" stat="pDef" val="249" />
@@ -1751,7 +1751,7 @@
 		<set name="weight" val="550" />
 		<set name="price" val="4793000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3778-1" /> <!-- Draconic Leather Helmet -->
 		<for>
 			<add order="0" stat="pDef" val="83" />
@@ -1770,7 +1770,7 @@
 		<set name="weight" val="540" />
 		<set name="price" val="3195000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3779-1" /> <!-- Major Arcana Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1793,7 +1793,7 @@
 		<set name="weight" val="2300" />
 		<set name="price" val="15577000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3780-1" /> <!-- Major Arcana Robe -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1816,7 +1816,7 @@
 		<set name="weight" val="1110" />
 		<set name="price" val="3195000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3781-1" /> <!-- Major Arcana Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1838,7 +1838,7 @@
 		<set name="weight" val="550" />
 		<set name="price" val="4793000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3782-1" /> <!-- Major Arcana Circlet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1860,7 +1860,7 @@
 		<set name="weight" val="540" />
 		<set name="price" val="3195000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="55" />
 			<enchant stat="pDef" val="0" />
@@ -1878,7 +1878,7 @@
 		<set name="weight" val="1110" />
 		<set name="price" val="3195000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="55" />
 			<enchant stat="pDef" val="0" />
@@ -1897,7 +1897,7 @@
 		<set name="weight" val="4950" />
 		<set name="price" val="15577000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="236" />
 			<enchant stat="pDef" val="0" />
@@ -1915,7 +1915,7 @@
 		<set name="weight" val="550" />
 		<set name="price" val="4793000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<for>
 			<add order="0" stat="pDef" val="83" />
 			<enchant stat="pDef" val="0" />
@@ -1933,7 +1933,7 @@
 		<set name="weight" val="540" />
 		<set name="price" val="3195000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1955,7 +1955,7 @@
 		<set name="weight" val="2300" />
 		<set name="price" val="15577000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1977,7 +1977,7 @@
 		<set name="weight" val="1110" />
 		<set name="price" val="3195000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1998,7 +1998,7 @@
 		<set name="weight" val="550" />
 		<set name="price" val="4793000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2020,7 +2020,7 @@
 		<set name="weight" val="3260" />
 		<set name="price" val="7988000" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>

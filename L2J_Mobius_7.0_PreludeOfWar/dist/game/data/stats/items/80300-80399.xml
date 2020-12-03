@@ -281,7 +281,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="920" />
 		<set name="price" val="88681000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="35295" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Leviathan Sigil Enchantment Effect -->
 		</skills>
@@ -459,7 +459,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="mDef">292</stat>
 		</stats>
@@ -474,7 +474,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="mDef">219</stat>
 		</stats>
@@ -489,7 +489,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="8" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="mDef">146</stat>
 		</stats>

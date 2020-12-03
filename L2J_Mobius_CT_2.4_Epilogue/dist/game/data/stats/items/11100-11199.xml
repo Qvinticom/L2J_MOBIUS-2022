@@ -17,7 +17,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3892-1" /> <!-- Blunt Weapon of Clarity -->
 		<for>
@@ -47,7 +47,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3892-1;3047-2" /> <!-- Blunt Weapon of Clarity -->
 		<for>
@@ -77,7 +77,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3892-1;3073-2" /> <!-- Blunt Weapon of Clarity -->
 		<for>
@@ -107,7 +107,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="10" />
 		<set name="onmagic_skill" val="3074-2" />
@@ -139,7 +139,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3901-1" /> <!-- Staff of Mana Boost -->
 		<for>
@@ -169,7 +169,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3901-1;3048-2" /> <!-- Staff of Mana Boost -->
 		<for>
@@ -199,7 +199,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="30" />
 		<set name="onmagic_skill" val="3049-2" />
@@ -231,7 +231,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3901-1;3047-2" /> <!-- Staff of Mana Boost -->
 		<for>
@@ -261,7 +261,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3856-1" /> <!-- Sword of Divine Power -->
 		<for>
@@ -290,7 +290,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3856-1;3073-2" /> <!-- Sword of Divine Power -->
 		<for>
@@ -319,7 +319,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="10" />
 		<set name="onmagic_skill" val="3074-2" />
@@ -350,7 +350,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3856-1;3047-2" /> <!-- Sword of Divine Power -->
 		<for>
@@ -380,7 +380,7 @@
 		<set name="change_weaponId" val="11124" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3870-1" /> <!-- Crossbow of Long Shot -->
 		<cond msgId="1518">
@@ -414,7 +414,7 @@
 		<set name="change_weaponId" val="11125" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3552-1;3360-1;3870-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
@@ -448,7 +448,7 @@
 		<set name="change_weaponId" val="11126" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="332" />
 		<set name="item_skill" val="3870-1;3552-1" /> <!-- Crossbow of Long Shot -->
 		<cond msgId="1518">
@@ -482,7 +482,7 @@
 		<set name="change_weaponId" val="11127" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="oncrit_chance" val="18" />
 		<set name="oncrit_skill" val="3062-2" />
@@ -517,7 +517,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3860-1" /> <!-- Dagger of Regeneration -->
 		<for>
 			<set stat="pAtk" val="203" />
@@ -546,7 +546,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3860-1;3064-1" /> <!-- Dagger of Regeneration -->
 		<for>
 			<set stat="pAtk" val="203" />
@@ -575,7 +575,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3860-1;3066-2" /> <!-- Dagger of Regeneration -->
 		<for>
 			<set stat="pAtk" val="203" />
@@ -604,7 +604,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3860-1;3056-2" /> <!-- Dagger of Regeneration -->
 		<for>
 			<set stat="pAtk" val="203" />
@@ -633,7 +633,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3886-1" /> <!-- Blunt Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="232" />
@@ -662,7 +662,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3886-1;3013-3" /> <!-- Blunt Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="232" />
@@ -691,7 +691,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3886-1;3057-2" /> <!-- Blunt Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="232" />
@@ -720,7 +720,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="oncrit_chance" val="24" />
 		<set name="oncrit_skill" val="3059-2" />
 		<set name="item_skill" val="3886-1;3552-1" /> <!-- Blunt Weapon of Haste -->
@@ -753,7 +753,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="5" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="820" />
 		<set name="item_skill" val="3865-1" /> <!-- Bow of Long Shot -->
 		<for>
@@ -785,7 +785,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="5" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="820" />
 		<set name="item_skill" val="3865-1;3552-1" /> <!-- Bow of Long Shot -->
 		<set name="reduced_mp_consume" val="38,2" />
@@ -818,7 +818,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="5" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="697" />
 		<set name="item_skill" val="3865-1;3552-1" /> <!-- Bow of Long Shot -->
 		<for>
@@ -850,7 +850,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="5" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="820" />
 		<set name="oncrit_chance" val="18" />
 		<set name="oncrit_skill" val="3062-2" />
@@ -882,7 +882,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3875-1;3599-1" /> <!-- Polearm of Regeneration -->
 		<for>
 			<set stat="pAtk" val="232" />
@@ -911,7 +911,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3875-1;3602-8" /> <!-- Polearm of Regeneration -->
 		<for>
 			<set stat="pAtk" val="232" />
@@ -940,7 +940,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3875-1;3013-4" /> <!-- Polearm of Regeneration -->
 		<for>
 			<set stat="pAtk" val="232" />
@@ -969,7 +969,7 @@
 		<set name="price" val="20741000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3875-1;3552-2" /> <!-- Polearm of Regeneration -->
 		<for>
 			<set stat="pAtk" val="232" />
@@ -1021,7 +1021,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3861-1" /> <!-- Dagger of Poison -->
 		<for>
 			<set stat="pAtk" val="220" />
@@ -1050,7 +1050,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3861-1;3051-2" /> <!-- Dagger of Poison -->
 		<for>
 			<set stat="pAtk" val="220" />
@@ -1079,7 +1079,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3861-1;3066-2" /> <!-- Dagger of Poison -->
 		<for>
 			<set stat="pAtk" val="220" />
@@ -1108,7 +1108,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3861-1;3063-1" /> <!-- Dagger of Poison -->
 		<for>
 			<set stat="pAtk" val="220" />
@@ -1137,7 +1137,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3902-1" /> <!-- Staff of Clarity -->
 		<for>
@@ -1167,7 +1167,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3902-1;3014-3" /> <!-- Staff of Clarity -->
 		<for>
@@ -1197,7 +1197,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3902-1;3047-3" /> <!-- Staff of Clarity -->
 		<for>
@@ -1227,7 +1227,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="50" />
 		<set name="onmagic_skill" val="1035-4" />
@@ -1259,7 +1259,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3887-1" /> <!-- Blunt Weapon of Regeneration -->
 		<for>
 			<set stat="pAtk" val="251" />
@@ -1288,7 +1288,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3887-1;3013-5" /> <!-- Blunt Weapon of Regeneration -->
 		<for>
 			<set stat="pAtk" val="251" />
@@ -1317,7 +1317,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3887-1;3068-3" /> <!-- Blunt Weapon of Regeneration -->
 		<for>
 			<set stat="pAtk" val="251" />
@@ -1346,7 +1346,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3887-1;3050-2" /> <!-- Blunt Weapon of Regeneration -->
 		<for>
 			<set stat="pAtk" val="251" />
@@ -1376,7 +1376,7 @@
 		<set name="change_weaponId" val="11157" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3868-4" /> <!-- Crossbow of Guidance -->
 		<cond msgId="1518">
@@ -1410,7 +1410,7 @@
 		<set name="change_weaponId" val="11158" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3552-1;3360-1;3868-4" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
@@ -1444,7 +1444,7 @@
 		<set name="change_weaponId" val="11159" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="400" />
 		<set name="item_skill" val="3868-4;3050-2" /> <!-- Crossbow of Guidance -->
 		<cond msgId="1518">
@@ -1478,7 +1478,7 @@
 		<set name="change_weaponId" val="11160" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="332" />
 		<set name="item_skill" val="3868-4;3552-1" /> <!-- Crossbow of Guidance -->
 		<cond msgId="1518">
@@ -1511,7 +1511,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3897-1" /> <!-- Two-handed Blunt Weapon of Might -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -1540,7 +1540,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3897-1;3050-2" /> <!-- Two-handed Blunt Weapon of Might -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -1569,7 +1569,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3897-1;3013-5" /> <!-- Two-handed Blunt Weapon of Might -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -1598,7 +1598,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3897-1;3057-3" /> <!-- Two-handed Blunt Weapon of Might -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -1628,7 +1628,7 @@
 		<set name="change_weaponId" val="11161" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3849-1" /> <!-- Ancient Sword of Boost HP -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1661,7 +1661,7 @@
 		<set name="change_weaponId" val="11162" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3849-1;3050-2" /> <!-- Ancient Sword of Boost HP -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1694,7 +1694,7 @@
 		<set name="change_weaponId" val="11163" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3849-1;3068-3" /> <!-- Ancient Sword of Boost HP -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1727,7 +1727,7 @@
 		<set name="change_weaponId" val="11164" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3849-1;3013-5" /> <!-- Ancient Sword of Boost HP -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1761,7 +1761,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="5" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="820" />
 		<set name="item_skill" val="3863-4" /> <!-- Bow of Guidance -->
 		<for>
@@ -1793,7 +1793,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="5" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="820" />
 		<set name="item_skill" val="3863-4;3552-1" /> <!-- Bow of Guidance -->
 		<set name="reduced_mp_consume" val="30,1" />
@@ -1826,7 +1826,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="5" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="820" />
 		<set name="item_skill" val="3863-4;3050-2" /> <!-- Bow of Guidance -->
 		<for>
@@ -1858,7 +1858,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="5" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="639" />
 		<set name="item_skill" val="3863-4;3552-1" /> <!-- Bow of Guidance -->
 		<for>
@@ -1889,7 +1889,7 @@
 		<set name="change_weaponId" val="11153" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3843-1" /> <!-- Two-handed Sword of Boost HP -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -1918,7 +1918,7 @@
 		<set name="change_weaponId" val="11154" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3843-1;3050-2" /> <!-- Two-handed Sword of Boost HP -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -1947,7 +1947,7 @@
 		<set name="change_weaponId" val="11155" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3843-1;3068-3" /> <!-- Two-handed Sword of Boost HP -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -1976,7 +1976,7 @@
 		<set name="change_weaponId" val="11156" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3843-1;3013-5" /> <!-- Two-handed Sword of Boost HP -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -2004,7 +2004,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3882-1" /> <!-- Fist Weapon of Stun -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -2033,7 +2033,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3882-1;3056-3" /> <!-- Fist Weapon of Stun -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -2062,7 +2062,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3882-1;3068-3" /> <!-- Fist Weapon of Stun -->
 		<for>
 			<set stat="pAtk" val="305" />
@@ -2091,7 +2091,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="oncrit_chance" val="10" />
 		<set name="oncrit_skill" val="3039-7" />
 		<set name="item_skill" val="3882-1;3552-1" /> <!-- Fist Weapon of Stun -->
@@ -2123,7 +2123,7 @@
 		<set name="change_weaponId" val="11173" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3829-1" /> <!-- Sword of Stun -->
 		<for>
 			<set stat="pAtk" val="251" />
@@ -2152,7 +2152,7 @@
 		<set name="change_weaponId" val="11174" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3829-1;3068-3" /> <!-- Sword of Stun -->
 		<for>
 			<set stat="pAtk" val="251" />
@@ -2181,7 +2181,7 @@
 		<set name="change_weaponId" val="11175" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3829-1;3013-5" /> <!-- Sword of Stun -->
 		<for>
 			<set stat="pAtk" val="251" />
@@ -2210,7 +2210,7 @@
 		<set name="change_weaponId" val="11176" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="oncrit_chance" val="10" />
 		<set name="oncrit_skill" val="3061-3" />
 		<set name="item_skill" val="3829-1;3552-1" /> <!-- Sword of Stun -->
@@ -2241,7 +2241,7 @@
 		<set name="change_weaponId" val="11169" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3834-1" /> <!-- Rapier of Stun -->
 		<cond msgId="1518">
@@ -2275,7 +2275,7 @@
 		<set name="change_weaponId" val="11170" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3834-1;3068-3" /> <!-- Rapier of Stun -->
 		<cond msgId="1518">
@@ -2309,7 +2309,7 @@
 		<set name="change_weaponId" val="11171" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="item_skill" val="3834-1;3013-5" /> <!-- Rapier of Stun -->
 		<cond msgId="1518">
@@ -2343,7 +2343,7 @@
 		<set name="change_weaponId" val="11172" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="oncrit_chance" val="10" />
 		<set name="oncrit_skill" val="3061-3" />
@@ -2378,7 +2378,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3876-1;3599-1" /> <!-- Polearm of Stun -->
 		<for>
 			<set stat="pAtk" val="251" />
@@ -2407,7 +2407,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="oncrit_chance" val="25" />
 		<set name="oncrit_skill" val="3070-3" />
 		<set name="item_skill" val="3876-1;3552-2" /> <!-- Polearm of Stun -->
@@ -2438,7 +2438,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3876-1;3552-2" /> <!-- Polearm of Stun -->
 		<for>
 			<set stat="pAtk" val="251" />
@@ -2468,7 +2468,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3876-1;3552-2" /> <!-- Polearm of Stun -->
 		<for>
 			<set stat="pAtk" val="251" />
@@ -2497,7 +2497,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="enchant4_skill" val="3045-17" />
 		<set name="item_skill" val="3839-1;3552-1" /> <!-- Dual-Blade Weapon of Stun -->
 		<for>
@@ -2526,7 +2526,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3853-2" /> <!-- Sword of Mana Regeneration -->
 		<for>
@@ -2555,7 +2555,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3853-2;3014-3" /> <!-- Sword of Mana Regeneration -->
 		<for>
@@ -2584,7 +2584,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="50" />
 		<set name="onmagic_skill" val="1035-4" />
@@ -2615,7 +2615,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="20" />
 		<set name="onmagic_skill" val="1077-3" />
@@ -2646,7 +2646,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3893-1" /> <!-- Blunt Weapon of Mana Regeneration -->
 		<for>
@@ -2676,7 +2676,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3893-1;3048-3" /> <!-- Blunt Weapon of Mana Regeneration -->
 		<for>
@@ -2706,7 +2706,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="item_skill" val="3893-1;3014-3" /> <!-- Blunt Weapon of Mana Regeneration -->
 		<for>
@@ -2736,7 +2736,7 @@
 		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="10" />
 		<set name="onmagic_skill" val="3074-2" />
@@ -2770,7 +2770,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3850-1" /> <!-- Ancient Sword of Critical Power -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -2804,7 +2804,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3850-1;3564-1" /> <!-- Ancient Sword of Critical Power -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -2838,7 +2838,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3850-1;3013-3" /> <!-- Ancient Sword of Critical Power -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -2872,7 +2872,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3850-1;3566-1" /> <!-- Ancient Sword of Critical Power -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -2905,7 +2905,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3883-1" /> <!-- Fist Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
@@ -2935,7 +2935,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3883-1;3565-1" /> <!-- Fist Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
@@ -2965,7 +2965,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="item_skill" val="3883-1;3013-3" /> <!-- Fist Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
@@ -2995,7 +2995,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="oncrit_chance" val="27" />
 		<set name="oncrit_skill" val="3571-1" />
 		<set name="item_skill" val="3883-1;3552-1" /> <!-- Fist Weapon of Critical Power -->
@@ -3029,7 +3029,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3867-1" /> <!-- Bow of Boost HP -->
 		<for>
@@ -3062,7 +3062,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="1500" />
 		<set name="item_skill" val="3867-1;3552-1" /> <!-- Bow of Boost HP -->
 		<set name="reduced_mp_consume" val="26,1" />

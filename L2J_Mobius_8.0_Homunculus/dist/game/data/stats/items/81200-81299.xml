@@ -224,7 +224,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
@@ -242,7 +242,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
@@ -260,12 +260,12 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="enchant_enabled" val="10" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="35612" level="1" /> <!-- Enchantment Effect: Angel's Ring -->
 			<skill id="35612" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Enchantment Effect: Angel's Ring -->
