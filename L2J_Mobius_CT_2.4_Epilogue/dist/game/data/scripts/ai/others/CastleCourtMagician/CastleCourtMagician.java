@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.ClanPrivilege;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.RequestAcquireSkill;
 
 import ai.AbstractNpcAI;
@@ -144,6 +145,11 @@ public class CastleCourtMagician extends AbstractNpcAI
 				if (getQuestItemsCount(player, EPAULETTE) < 10)
 				{
 					htmltext = "courtmagician-06.html";
+					break;
+				}
+				if (player.getInventory().getSize() == player.getInventoryLimit())
+				{
+					player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 					break;
 				}
 				
