@@ -142,7 +142,7 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if (itemToEnchant.isEnchantable() == 0)
+		else if ((itemToEnchant.isEnchantable() == 0) || (!(itemToEnchant.getItem().getEnchantLimit() == 0) && (itemToEnchant.getEnchantLevel() == itemToEnchant.getItem().getEnchantLimit())))
 		{
 			return false;
 		}
@@ -150,7 +150,7 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if (((_minEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() < _minEnchantLevel)) && ((_maxEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevel)))
+		else if (((_minEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() < _minEnchantLevel)) || ((_maxEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevel)))
 		{
 			return false;
 		}

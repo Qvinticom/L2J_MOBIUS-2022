@@ -143,6 +143,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	private boolean _tradeable;
 	private boolean _depositable;
 	private int _enchantable;
+	private int _enchantLimit;
 	private boolean _elementable;
 	private boolean _questItem;
 	private boolean _freightable;
@@ -219,6 +220,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		
 		_elementable = set.getBoolean("element_enabled", false);
 		_enchantable = set.getInt("enchant_enabled", 0);
+		_enchantLimit = set.getInt("enchant_limit", 0);
 		_freightable = set.getBoolean("is_freightable", false);
 		_allowSelfResurrection = set.getBoolean("allow_self_resurrection", false);
 		_isOlyRestricted = set.getBoolean("is_oly_restricted", false);
@@ -621,6 +623,15 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	public int isEnchantable()
 	{
 		return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0 ? _enchantable : 0;
+	}
+	
+	/**
+	 * Returns the enchantment limit of the item
+	 * @return int
+	 */
+	public int getEnchantLimit()
+	{
+		return _enchantLimit > 0 ? _enchantLimit : 0;
 	}
 	
 	/**

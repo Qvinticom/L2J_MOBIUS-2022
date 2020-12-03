@@ -460,6 +460,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="enchant_enabled" val="5" />
+		<set name="enchant_limit" val="5" />
 		<skills>
 			<skill id="35524" level="1" /> <!-- Kaliel's Bracelet -->
 			<skill id="35524" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Bracelet -->
@@ -478,6 +479,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="5" />
+		<set name="enchant_limit" val="5" />
 		<skills>
 			<skill id="35525" level="1" /> <!-- Kaliel's Greater Bracelet -->
 			<skill id="35525" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Greater Bracelet -->

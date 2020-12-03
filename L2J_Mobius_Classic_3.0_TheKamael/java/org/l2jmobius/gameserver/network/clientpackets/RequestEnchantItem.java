@@ -119,7 +119,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		}
 		
 		// first validation check - also over enchant check
-		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && (item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel())))
+		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && ((item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel()) || (!(item.getItem().getEnchantLimit() == 0) && (item.getEnchantLevel() == item.getItem().getEnchantLimit())))))
 		{
 			client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.removeRequest(request.getClass());
