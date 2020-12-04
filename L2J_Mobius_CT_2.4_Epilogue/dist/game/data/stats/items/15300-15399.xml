@@ -594,7 +594,7 @@
 		<!-- PC Cafe exclusive item with a power of Draconic Bow Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Increases Critical by 88 additionally, and increases damage inflicted during PvP. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		
 		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
@@ -605,7 +605,7 @@
 		<set name="weight" val="1650" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="6" />
+		<set name="mp_consume" val="11" />
 		<set name="enchant_enabled" val="true" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
