@@ -30,10 +30,12 @@ import org.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 public class ReuseSkillById extends AbstractEffect
 {
 	private final int _skillId;
+	private final int _amount;
 	
 	public ReuseSkillById(StatSet params)
 	{
 		_skillId = params.getInt("skillId", 0);
+		_amount = params.getInt("amount", 0);
 	}
 	
 	@Override
@@ -51,9 +53,22 @@ public class ReuseSkillById extends AbstractEffect
 			final Skill s = player.getKnownSkill(_skillId);
 			if (s != null)
 			{
-				player.removeTimeStamp(s);
-				player.enableSkill(s);
-				player.sendPacket(new SkillCoolTime(player));
+				if (_amount > 0)
+				{
+					final long reuse = player.getSkillRemainingReuseTime(s.getReuseHashCode());
+					if (reuse > 0)
+					{
+						player.removeTimeStamp(s);
+						player.addTimeStamp(s, Math.max(0, reuse - _amount));
+						player.sendPacket(new SkillCoolTime(player));
+					}
+				}
+				else
+				{
+					player.removeTimeStamp(s);
+					player.enableSkill(s);
+					player.sendPacket(new SkillCoolTime(player));
+				}
 			}
 		}
 	}
