@@ -462,6 +462,14 @@
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
+			<effect name="ReuseSkillById">
+				<skillId>10020</skillId>
+				<amount>2500</amount>
+			</effect>
+			<effect name="ReuseSkillById">
+				<skillId>10021</skillId>
+				<amount>2500</amount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10008" toLevel="13" name="Shield Charge">
