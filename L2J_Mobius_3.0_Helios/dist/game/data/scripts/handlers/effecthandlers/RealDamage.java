@@ -51,6 +51,12 @@ public class RealDamage extends AbstractEffect
 			return;
 		}
 		
+		// Check if effected is not attackable.
+		if (!effected.isAttackable())
+		{
+			return;
+		}
+		
 		// Check if fake players should aggro each other.
 		if (effector.isFakePlayer() && !Config.FAKE_PLAYER_AGGRO_FPC && effected.isFakePlayer())
 		{
