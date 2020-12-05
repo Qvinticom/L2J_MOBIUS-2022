@@ -51,8 +51,8 @@ public class RealDamage extends AbstractEffect
 			return;
 		}
 		
-		// Check if effected is not attackable.
-		if (!effected.isAttackable())
+		// Check if effected NPC is not attackable.
+		if (effected.isNpc() && !effected.isAttackable())
 		{
 			return;
 		}
