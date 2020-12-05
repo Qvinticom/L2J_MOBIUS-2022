@@ -1643,7 +1643,7 @@
 		</for>
 	</skill>
 	<skill id="8284" levels="1" name="Vesper Noble Heavy Armor Set">
-		<!-- When equipped, increases P. Atk./P. Def. by 5.57%, Max HP by 540, and resistance to sleep/hold attacks by 70%. Cloak equip possible. STR+2, DEX-2 -->
+		<!-- When equipped, increases P. Atk./P. Def. by 5.57%, Max HP by 541, and resistance to sleep/hold attacks by 70%. Cloak equip possible. STR+2, DEX-2 -->
 		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="magicLevel" val="1" />
 		<set name="operateType" val="P" />
@@ -1654,10 +1654,7 @@
 				<param SLEEP="70" />
 				<mul stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 				<mul stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
-				<add stat="maxHp" val="540" /> <!-- Max HP 540 -->
-				<add stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
-				<add stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
-				<mul stat="magicSuccRes" val="1.01" /> <!-- Resistance to magic damage by 1% -->
+				<add stat="maxHp" val="541" /> <!-- Max HP 541 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -1684,14 +1681,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait">
-				<param PARALYZE="50" />
+			<effect name="Buff">
 				<mul stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 				<mul stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
 				<mul stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
 				<add stat="maxMp" val="354" /> <!-- Max MP by 354 -->
-				<add stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
-				<add stat="critDmgAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
@@ -1725,23 +1719,19 @@
 				<mul stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
 				<mul stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
 				<sub stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
-				<add stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-				<mul stat="magicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
 			</effect>
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="8289" levels="3" name="Special Ability Focus">
+	<skill id="8289" levels="1" name="Special Ability Focus">
 		<!-- Increases critical attack rate and damage inflicted during PvP. -->
-		<table name="#magicLevel">84 85 86</table>
-		<table name="#rCrit">128.7 137.1 137.1</table>
 		<set name="icon" val="icon.skill1077" />
-		<set name="magicLevel" val="#magicLevel" />
+		<set name="magicLevel" val="84" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="critRate" val="#rCrit" />
+				<add stat="critRate" val="102" />
 				<mul stat="pvpPhysDmg" val="1.05" />
 				<mul stat="pvpPhysSkillsDmg" val="1.05" />
 				<mul stat="pvpMagicalDmg" val="1.05" />

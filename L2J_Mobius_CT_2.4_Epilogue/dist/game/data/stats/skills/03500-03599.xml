@@ -957,10 +957,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3565" levels="5" name="Special Ability: Focus">
+	<skill id="3565" levels="3" name="Special Ability: Focus">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
-		<table name="#magicLevel">75 80 84 85 86</table>
-		<table name="#rCrit">80.6 107 123.5 129 129</table>
+		<table name="#magicLevel">75 80 84</table>
+		<table name="#rCrit">80.6 107 96</table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
@@ -974,10 +974,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3566" levels="5" name="Special Ability: Focus">
+	<skill id="3566" levels="3" name="Special Ability: Focus">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
-		<table name="#magicLevel">75 80 84 85 86</table>
-		<table name="#rCrit">84.3 111.5 133.3 134.4 134.4</table>
+		<table name="#magicLevel">75 80 84</table>
+		<table name="#rCrit">84.3 111.5 100.1</table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
@@ -991,10 +991,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3567" levels="5" name="Special Ability: Focus">
+	<skill id="3567" levels="3" name="Special Ability: Focus">
 		<!-- Increases critical attack success rate and damage inflicted during PvP. -->
-		<table name="#magicLevel">75 80 84 85 86</table>
-		<table name="#rCrit">88.1 116 133.9 139.9 139.9</table>
+		<table name="#magicLevel">75 80 84</table>
+		<table name="#rCrit">88.1 116 104.1</table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="P" />
