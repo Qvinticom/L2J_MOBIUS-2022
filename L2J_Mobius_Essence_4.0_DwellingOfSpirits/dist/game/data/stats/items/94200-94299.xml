@@ -60,6 +60,44 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="94263" name="Stun Gauntlets" type="Armor">
+		<set name="icon" val="icon.armor_t85_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="71" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="1355000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<stats>
+			<stat type="pDef">65</stat>
+		</stats>
+		<skills>
+			<skill id="50428" level="1"/>
+		</skills>
+	</item>
+	<item id="94264" name="Sealed Stun Gauntlets" type="Armor">
+		<!-- Sealed Majestic Gauntlets. The seal can be removed by a blacksmith in any village. -->
+		<set name="icon" val="icon.armor_t83_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="108" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="price" val="1355000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
+		<stats>
+			<stat type="pDef">65</stat>
+		</stats>
+	</item>
 	<item id="94269" name="Scroll: Enchant Attack" type="EtcItem">
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -91,5 +129,20 @@
 		<skills>
 			<skill id="40221" level="1" /> <!-- Scroll: Enchant Protection -->
 		</skills>
+	</item>
+	<item id="94299" name="Sigil of Inevitability" type="Armor">
+		<set name="icon" val="icon.weapon_karyen_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1200" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">56</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
 	</item>
 </list>
