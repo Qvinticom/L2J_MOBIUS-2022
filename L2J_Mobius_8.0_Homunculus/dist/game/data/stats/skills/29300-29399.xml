@@ -165,6 +165,7 @@
 		<!-- For 10 min., Vitality Consumption +$s1 and Acquired XP/ SP +$s2 while hunting. Remains after death. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. -->
 		<icon>icon.bm_freya_storm_scroll</icon>
 		<operateType>A2</operateType>
+		<abnormalType>FREYA_SCROLL_VIT</abnormalType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
 		<itemConsumeId>29676</itemConsumeId>

@@ -425,6 +425,9 @@
 			<effect name="DefenceTrait">
 				<DAGGER>50</DAGGER>
 				<DUALDAGGER>50</DUALDAGGER>
+				<BOW>50</BOW>
+				<CROSSBOW>50</CROSSBOW>
+				<TWOHANDCROSSBOW>50</TWOHANDCROSSBOW>
 			</effect>
 		</effects>
 	</skill>
@@ -1687,6 +1690,7 @@
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelayGroup>10270</reuseDelayGroup> <!-- Second Wind -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>35</amount>

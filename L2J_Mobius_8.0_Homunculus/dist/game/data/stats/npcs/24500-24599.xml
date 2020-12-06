@@ -3210,75 +3210,90 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="24588" level="85" type="Npc" name="Kastia's Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24588" level="115" type="Monster" name="Kastia's Keeper">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="52023.75" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="90711" magical="80013" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8726" magical="5068" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="18" />
-			<height normal="35" />
+			<radius normal="33" />
+			<height normal="78" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24589" level="85" type="Npc" name="Kastia's Overseer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24589" level="115" type="Monster" name="Kastia's Overseer">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="52023.75" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="90711" magical="80013" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8726" magical="5068" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="12" />
-			<height normal="33.5" />
+			<radius normal="33" />
+			<height normal="78" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24590" level="85" type="Npc" name="Kastia's Warder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24590" level="115" type="Monster" name="Kastia's Warder">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="637229.596" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="90711" magical="80013" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8726" magical="5068" />
 			<speed>
 				<walk ground="60" />
-				<run ground="180" />
+				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="27" />
-			<height normal="53.25" />
+			<radius normal="33" />
+			<height normal="78" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24591" level="115" type="Npc" name="Vishes" title="Kastia�s Ruler">
+	<npc id="24591" level="115" type="RaidBoss" name="Vishes" title="Kastia�s Ruler">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1057279142304" sp="951551112" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="659135.838150289" hpRegen="10.5" mp="3012.54125412541" mpRegen="3.6" />
+			<vitals hp="719435.529075" hpRegen="9.5" mp="3701.404" mpRegen="3.3" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
 			<speed>
 				<walk ground="63" />
 				<run ground="150" />
 			</speed>
-			<attack physical="496445.442520967" magical="1170.79895685402" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="4294.60784313726" magical="1646.92939882224" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -3293,82 +3308,103 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="24592" level="85" type="Npc" name="Kastia's Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="17421" />
+	<npc id="24592" level="120" type="Monster" name="Kastia's Keeper">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="57226.125" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="99782" magical="88014" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="9598" magical="5574"/>
 			<speed>
 				<walk ground="60" />
-				<run ground="180" />
+				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="24593" level="85" type="Npc" name="Kastia's Overseer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="34.5" />
-		</collision>
-	</npc>
-	<npc id="24594" level="85" type="Npc" name="Kastia's Warder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="33" />
-			<height normal="43.5" />
+			<height normal="78" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="24595" level="85" type="Npc" name="Tykan" title="Kastia�s Ruler">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24593" level="120" type="Monster" name="Kastia's Overseer">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="57226.125" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="99782" magical="88014" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="9598" magical="5574"/>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="33" />
+			<height normal="78" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+	</npc>
+	<npc id="24594" level="120" type="Monster" name="Kastia's Warder">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="700951.9" hpRegen="9.5" mp="3450.805" mpRegen="3.3" />
+			<attack physical="99782" magical="88014" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="9598" magical="5574"/>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="33" />
+			<height normal="78" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+	</npc>
+	<npc id="24595" level="120" type="Monster" name="Tykan" title="Kastia�s Ruler">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="1727214451200" sp="1554492960" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1438871.689065" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10541" magical="6125" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="32" />
 			<height normal="51" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="24596" level="85" type="Npc" name="Water Dragon's Elite Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

@@ -299,6 +299,7 @@
 		<affectObject>FRIEND</affectObject>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
+		<canBeDispelled>false</canBeDispelled>
 		<conditions>
 			<condition name="OpCanEscape" />
 			<condition name="OpSocialClass">
@@ -325,6 +326,7 @@
 		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>300</itemConsumeCount>
 		<targetType>ENEMY_ONLY</targetType>
@@ -332,6 +334,7 @@
 		<affectObject>NOT_FRIEND_PC</affectObject>
 		<stayAfterDeath>true</stayAfterDeath>
 		<staticReuse>true</staticReuse>
+		<canBeDispelled>false</canBeDispelled>
 		<conditions>
 			<condition name="OpTargetPc" />
 			<condition name="OpSocialClass">
@@ -363,6 +366,7 @@
 		<affectObject>NOT_FRIEND_PC</affectObject>
 		<stayAfterDeath>true</stayAfterDeath>
 		<staticReuse>true</staticReuse>
+		<canBeDispelled>false</canBeDispelled>
 		<isMagic>1</isMagic>
 		<conditions>
 			<condition name="OpTargetPc" />

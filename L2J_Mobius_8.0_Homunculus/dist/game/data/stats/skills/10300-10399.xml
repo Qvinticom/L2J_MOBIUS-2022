@@ -1727,10 +1727,7 @@
 				</weaponType>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">10</value>
-				</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>

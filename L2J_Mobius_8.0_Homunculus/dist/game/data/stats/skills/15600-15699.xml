@@ -604,15 +604,11 @@
 			</effect>
 			<effect name="MaxMp">
 				<amount>
-					<value level="1">37</value>
-					<value level="2">39</value>
-					<value level="3">41</value>
-					<value level="4">43</value>
+					<value level="1">62</value>
+					<value level="2">64</value>
+					<value level="3">66</value>
+					<value level="4">68</value>
 				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="HpRegen">
-				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxHp">
@@ -675,15 +671,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">15</value>
-					<value level="4">15</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MagicMpCost">
 				<amount>-10</amount>
 				<mode>PER</mode>
@@ -703,6 +690,11 @@
 				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>2</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -1039,28 +1031,19 @@
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
 			<effect name="PAtk">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>20</amount>
+			<effect name="MAtk">
+				<amount>33</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ReduceCancel">
-				<amount>-53</amount>
+				<amount>-40</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicMpCost">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
 			<effect name="VampiricAttack">
-				<amount>9</amount>
+				<amount>8</amount>
 				<chance>30</chance>
 			</effect>
 		</effects>
@@ -1087,21 +1070,12 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
-			<effect name="Speed">
-				<amount>20</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>25</amount>
+				<amount>40</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>25</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DamageShield">
@@ -1159,18 +1133,23 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="MpRegen">
-				<amount>50</amount>
+				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-22</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-22</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-22</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>

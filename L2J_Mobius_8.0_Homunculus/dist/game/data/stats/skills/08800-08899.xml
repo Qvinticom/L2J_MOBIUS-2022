@@ -2265,6 +2265,9 @@
 			<condition name="OpNotInCeremonyOfChaos" />
 		</conditions>
 		<effects>
+			<effect name="DisableSkill">
+				<disable>11764;10279;11093</disable>
+			</effect>
 			<effect name="DebuffBlock" />
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>

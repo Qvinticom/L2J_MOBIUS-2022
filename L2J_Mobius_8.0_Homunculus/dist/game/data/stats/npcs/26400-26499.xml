@@ -1228,24 +1228,90 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26442" level="85" type="RaidBoss" name="Mad Cullan" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26442" level="110" type="RaidBoss" name="Mad Cullan">
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<acquire exp="3794387889600" sp="3414948999" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="197467891.52763" hpRegen="488.1839242" mp="91061.513" mpRegen="3.6" />
+			<attack physical="330509.599" magical="237025.0379" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="38319.09589" magical="18703.71877" />
 			<speed>
 				<walk ground="25" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="32.5" />
 			<height normal="67" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17445" min="1" max="1" chance="0.075" /> <!-- Eternal Shoes -->
+				<item id="17432" min="1" max="1" chance="0.075" /> <!-- Eternal Gaiters -->
+				<item id="17433" min="1" max="1" chance="0.075" /> <!-- Eternal Gauntlets -->
+				<item id="17434" min="1" max="1" chance="0.075" /> <!-- Eternal Boots -->
+				<item id="17436" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Helmet -->
+				<item id="17437" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Armor -->
+				<item id="17438" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Leggings -->
+				<item id="17439" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Gloves -->
+				<item id="17440" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Boots -->
+				<item id="17441" min="1" max="1" chance="0.075" /> <!-- Eternal Circlet -->
+				<item id="17442" min="1" max="1" chance="0.075" /> <!-- Eternal Tunic -->
+				<item id="17443" min="1" max="1" chance="0.075" /> <!-- Eternal Stockings -->
+				<item id="17444" min="1" max="1" chance="0.075" /> <!-- Eternal Gloves -->
+				<item id="17431" min="1" max="1" chance="0.075" /> <!-- Eternal Breastplate -->
+				<item id="17430" min="1" max="1" chance="0.075" /> <!-- Eternal Helmet -->
+				<item id="17429" min="1" max="1" chance="0.03" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17417" min="1" max="1" chance="0.03" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.03" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.03" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.03" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.03" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.03" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.03" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.03" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.03" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.03" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.03" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.03" /> <!-- Helios Dual Daggers -->
+				<item id="17416" min="1" max="1" chance="0.03" /> <!-- Helios Shaper -->
+				<item id="28484" min="2" max="2" chance="26.01" /> <!-- Brooch Augmenting Stone -->
+				<item id="39738" min="1" max="1" chance="25.5" /> <!-- Rune Stone -->
+				<item id="45931" min="3" max="3" chance="25.04" /> <!-- High-grade Weapon Augmenting Stone -->
+				<item id="48215" min="2" max="2" chance="24.42" /> <!-- Circlet Augmenting Stone -->
+				<item id="46489" min="1" max="1" chance="11.31" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="10.8" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="10.78" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.518" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.468" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="7.234" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="7.233" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.193" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.549" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.541" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46491" min="1" max="1" chance="3.517" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46476" min="1" max="1" chance="3.509" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46506" min="1" max="1" chance="3.474" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46446" min="1" max="1" chance="2.3885" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="2.3575" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="19447" min="1" max="1" chance="1.489" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26443" level="120" type="RaidBoss" name="Akrikhin Charon" title="Raid Boss">
 		<race>DEMONIC</race>
@@ -1253,13 +1319,13 @@
 		<equipment rhand="17332" />
 		<acquire exp="5046717312000" sp="4542045552" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="122450150.867052" hpRegen="10.5" mp="81899.0099009901" mpRegen="3.6" />
+			<vitals hp="133652251.89632" hpRegen="581.2031907" mp="100626.447" mpRegen="3.6" />
+			<attack physical="393485.373" magical="282188.1292" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="45620.47149" magical="22267.55222" />
 			<speed>
 				<walk ground="70" />
 				<run ground="155" />
 			</speed>
-			<attack physical="617815.429469286" magical="1368.16567732246" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="5043.54066985646" magical="1934.40396671246" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1380,24 +1446,90 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26444" level="85" type="Npc" name="Scorpion King Votan" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26444" level="118" type="RaidBoss" name="Scorpion King Votan">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="4879895267520" sp="4391905713" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="133652251.89632" hpRegen="561.9508371" mp="100626.447" mpRegen="3.6" />
+			<attack physical="380451.1715" magical="272840.6485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44109.29354" magical="21529.93964" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="86" />
 			<height normal="98" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17445" min="1" max="1" chance="0.075" /> <!-- Eternal Shoes -->
+				<item id="17432" min="1" max="1" chance="0.075" /> <!-- Eternal Gaiters -->
+				<item id="17433" min="1" max="1" chance="0.075" /> <!-- Eternal Gauntlets -->
+				<item id="17434" min="1" max="1" chance="0.075" /> <!-- Eternal Boots -->
+				<item id="17436" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Helmet -->
+				<item id="17437" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Armor -->
+				<item id="17438" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Leggings -->
+				<item id="17439" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Gloves -->
+				<item id="17440" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Boots -->
+				<item id="17441" min="1" max="1" chance="0.075" /> <!-- Eternal Circlet -->
+				<item id="17442" min="1" max="1" chance="0.075" /> <!-- Eternal Tunic -->
+				<item id="17443" min="1" max="1" chance="0.075" /> <!-- Eternal Stockings -->
+				<item id="17444" min="1" max="1" chance="0.075" /> <!-- Eternal Gloves -->
+				<item id="17431" min="1" max="1" chance="0.075" /> <!-- Eternal Breastplate -->
+				<item id="17430" min="1" max="1" chance="0.075" /> <!-- Eternal Helmet -->
+				<item id="17429" min="1" max="1" chance="0.03" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17417" min="1" max="1" chance="0.03" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.03" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.03" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.03" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.03" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.03" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.03" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.03" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.03" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.03" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.03" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.03" /> <!-- Helios Dual Daggers -->
+				<item id="17416" min="1" max="1" chance="0.03" /> <!-- Helios Shaper -->
+				<item id="39738" min="1" max="1" chance="26.01" /> <!-- Rune Stone -->
+				<item id="48215" min="2" max="2" chance="25.94" /> <!-- Circlet Augmenting Stone -->
+				<item id="45931" min="3" max="3" chance="25.38" /> <!-- High-grade Weapon Augmenting Stone -->
+				<item id="28484" min="2" max="2" chance="25.21" /> <!-- Brooch Augmenting Stone -->
+				<item id="46489" min="1" max="1" chance="11.11" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="10.3" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="10.26" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.528" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.448" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="7.255" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.236" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="7.16" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.514" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.441" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46491" min="1" max="1" chance="3.436" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46476" min="1" max="1" chance="3.403" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46506" min="1" max="1" chance="3.393" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46446" min="1" max="1" chance="2.3215" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="2.2705" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="19447" min="1" max="1" chance="1.537" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26445" level="85" type="Npc" name="Slaughter Bathin" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

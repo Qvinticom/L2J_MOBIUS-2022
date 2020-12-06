@@ -901,6 +901,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
 		<skills>
 			<skill id="39618" level="1" /> <!-- Time Stone of Abandoned Coal Mines -->
 		</skills>

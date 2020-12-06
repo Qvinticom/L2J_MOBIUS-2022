@@ -5,7 +5,7 @@
 		<set name="icon" val="icon.aka_manaf_dual_blunt_2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="bodypart" val="rhand" />
+		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -14,6 +14,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="35531" level="1" /> <!-- Blood-stained Akamanah - Warrior -->
 			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
@@ -52,18 +53,60 @@
 	<item id="80903" name="Zariche's Sealed Box" type="EtcItem">
 		<!-- A chest in which the madness of the Demonic Sword Zariche is sealed. Double-click to obtain a Bloodthirsty Zariche weapon or Zariche's Blood. -->
 		<set name="icon" val="icon.zariche_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80901" min="1" max="1" chance="86" /> <!-- Zariche's Blood -->
+			<item id="80698" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Shaper -->
+			<item id="80699" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Cutter -->
+			<item id="80700" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Slasher -->
+			<item id="80701" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Avenger -->
+			<item id="80702" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Fighter -->
+			<item id="80703" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Stormer -->
+			<item id="80704" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Thrower -->
+			<item id="80705" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Shooter -->
+			<item id="80706" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Buster -->
+			<item id="80707" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Caster -->
+			<item id="80708" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Retributer -->
+			<item id="80709" min="1" max="1" chance="1" /> <!-- Bloodthirsty Zariche Dual Swords -->
+			<item id="80710" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Dual Dagger -->
+			<item id="80711" min="1" max="1" chance="1" /> <!-- Blood-thirsty Zariche Dual Blunt Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="80904" name="Akamanah's Sealed Box" type="EtcItem">
 		<!-- A chest in which the madness of the Blood Sword Akamanah is sealed. Double-click to obtain a Bloodthirsty Akamanah weapon or Akamanah's Blood. -->
 		<set name="icon" val="icon.aka_manaf_box" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80902" min="1" max="1" chance="86" /> <!-- Akamanah's Blood -->
+			<item id="80859" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Shaper -->
+			<item id="80860" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Cutter -->
+			<item id="80861" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Slasher -->
+			<item id="80862" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Avenger -->
+			<item id="80863" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Fighter -->
+			<item id="80864" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Stormer -->
+			<item id="80865" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Thrower -->
+			<item id="80866" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Shooter -->
+			<item id="80867" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Buster -->
+			<item id="80868" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Caster -->
+			<item id="80869" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Retributer -->
+			<item id="80870" min="1" max="1" chance="1" /> <!-- Bloodthirsty Akamanah Dual Swords -->
+			<item id="80871" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Dual Dagger -->
+			<item id="80872" min="1" max="1" chance="1" /> <!-- Blood-thirsty Akamanah Dual Blunt Weapon -->
+		</capsuled_items>
 	</item>
 	<item id="80905" name="Storm Isle Time Recharge Stone" type="EtcItem">
 		<!-- Adds 60 min. to the hunting time on the Storm Isle. -->
@@ -1087,8 +1130,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
 		<set name="useSkillDisTime" val="6" />
-		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
@@ -1139,10 +1182,14 @@
 		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false"/>
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="time" val="480" />
 		<skills>
 			<skill id="35554" level="1" /> <!-- Blood-stained Talisman of Protection Lv1 -->
@@ -1472,6 +1519,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
 		<skills>
 			<skill id="39565" level="1" /> <!-- Storm Isle's Time Stone -->
 		</skills>
@@ -1489,6 +1537,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
 		<skills>
 			<skill id="39566" level="1" /> <!-- Primeval Isle's Time Stone -->
 		</skills>
@@ -1506,6 +1555,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
 		<skills>
 			<skill id="39567" level="1" /> <!-- Golden Altar's Time Stone -->
 		</skills>

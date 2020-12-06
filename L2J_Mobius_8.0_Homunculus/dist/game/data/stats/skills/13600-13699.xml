@@ -1431,7 +1431,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="DispelBySlot">
-				<dispel>OLYMPIAD_SPEED,1</dispel>
+				<dispel>OLYMPIAD_SPEED,-1</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -1480,7 +1480,7 @@
 				<magicType>22</magicType>
 			</effect>
 			<effect name="DispelBySlot">
-				<dispel>OLYMPIAD_ATTACK,1</dispel>
+				<dispel>OLYMPIAD_ATTACK,-1</dispel>
 			</effect>
 		</effects>
 	</skill>

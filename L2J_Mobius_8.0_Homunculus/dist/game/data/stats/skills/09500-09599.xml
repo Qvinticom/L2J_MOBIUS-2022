@@ -549,6 +549,8 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>35931</itemConsumeId> <!-- Mysterious Scroll -->
+		<itemConsumeCount>1</itemConsumeCount>
 		<conditions>
 			<condition name="OpAlignment">
 				<affectType>TARGET</affectType>
@@ -557,6 +559,11 @@
 			<condition name="OpCanEscape" />
 			<condition name="OpTargetPc" />
 		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9524" toLevel="1" name="HP Replenishing Potion of Chaos">
 		<operateType>A1</operateType>

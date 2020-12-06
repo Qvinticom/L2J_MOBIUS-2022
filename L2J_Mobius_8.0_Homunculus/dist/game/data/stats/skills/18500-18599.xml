@@ -210,7 +210,9 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<reuseDelay>600000</reuseDelay>
+		<affectRange>1000</affectRange>
 		<staticReuse>true</staticReuse>
+		<reuseDelayGroup>17917</reuseDelayGroup>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>RHAPSODY</dispel>

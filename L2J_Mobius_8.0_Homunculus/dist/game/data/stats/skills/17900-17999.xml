@@ -228,6 +228,7 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
+		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
@@ -237,6 +238,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelayGroup>17914</reuseDelayGroup>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>RHAPSODY</dispel>
@@ -273,6 +275,7 @@
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
+		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
@@ -282,6 +285,7 @@
 		<affectScope>SINGLE</affectScope>
 		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
+		<reuseDelayGroup>17914</reuseDelayGroup>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>RHAPSODY</dispel>
@@ -318,6 +322,7 @@
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
+		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
@@ -327,6 +332,7 @@
 		<affectScope>SINGLE</affectScope>
 		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
+		<reuseDelayGroup>17914</reuseDelayGroup>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>RHAPSODY</dispel>
@@ -363,6 +369,7 @@
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
+		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
 		<basicProperty>NONE</basicProperty>
@@ -372,6 +379,7 @@
 		<affectScope>SINGLE</affectScope>
 		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
+		<reuseDelayGroup>17914</reuseDelayGroup>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>RHAPSODY</dispel>

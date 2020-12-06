@@ -1941,6 +1941,7 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelayGroup>11861</reuseDelayGroup>
 		<conditions>
 			<condition name="TargetMyParty">
 				<includeMe>true</includeMe>
@@ -2002,6 +2003,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<isMagic>1</isMagic>
+		<reuseDelayGroup>11861</reuseDelayGroup>
 		<conditions>
 			<condition name="TargetMyParty">
 				<includeMe>true</includeMe>
@@ -2058,6 +2060,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<isMagic>1</isMagic>
+		<reuseDelayGroup>11861</reuseDelayGroup>
 		<conditions>
 			<condition name="TargetMyParty">
 				<includeMe>true</includeMe>

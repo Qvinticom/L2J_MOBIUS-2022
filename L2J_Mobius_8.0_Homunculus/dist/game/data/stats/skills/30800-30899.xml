@@ -1423,15 +1423,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-					<value level="4">25</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MagicMpCost">
 				<amount>-10</amount>
 				<mode>PER</mode>
@@ -1451,6 +1442,11 @@
 				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>2</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -1478,7 +1474,7 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
 			<effect name="MaxHp">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1489,11 +1485,11 @@
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
 			<effect name="PAtk">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>33</amount>
+				<amount>22</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ReduceCancel">
@@ -1501,7 +1497,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="VampiricAttack">
-				<amount>8</amount>
+				<amount>6</amount>
 				<chance>30</chance>
 			</effect>
 		</effects>
@@ -1537,28 +1533,28 @@
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>40</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>23</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DamageShield">
-				<amount>10</amount>
+				<amount>7</amount>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>-8</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>-8</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>-8</amount>
 				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
@@ -1595,30 +1591,40 @@
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>5</amount>
+				<amount>3</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalEvasion">
-				<amount>5</amount>
+				<amount>3</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="HpRegen">
-				<amount>75</amount>
+				<amount>60</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MpRegen">
-				<amount>100</amount>
+				<amount>80</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-22</amount>
+				<amount>-15</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-22</amount>
+				<amount>-15</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>2</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -1667,6 +1673,14 @@
 				<amount>30</amount>
 				<attribute>EARTH</attribute>
 			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30831" toLevel="1" name="Basic Debuff Resistance">
@@ -1692,8 +1706,17 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
 			<effect name="DefenceTrait">
-				<BLEED>50</BLEED>
-				<POISON>50</POISON>
+				<HOLD>50</HOLD>
+				<SLEEP>50</SLEEP>
+				<DERANGEMENT>50</DERANGEMENT>
+				<CHANGEBODY>50</CHANGEBODY>
+				<PARALYZE>50</PARALYZE>
+				<SHOCK>50</SHOCK>
+				<CHANGEBODY>50</CHANGEBODY>
+				<KNOCKBACK>50</KNOCKBACK>
+				<KNOCKDOWN>50</KNOCKDOWN>
+				<AIRBIND>50</AIRBIND>
+				<TURN_STONE>50</TURN_STONE>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_ALIGNMENT;ARMOR_UNHOLY;DANCE_OF_LIGHT;SONG_OF_INVOCATION;RESIST_BLEEDING</dispel>
@@ -1701,14 +1724,6 @@
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_ALIGNMENT;ARMOR_UNHOLY;DANCE_OF_LIGHT;SONG_OF_INVOCATION;RESIST_BLEEDING</slot>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>30</amount>
-				<attribute>HOLY</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>30</amount>
-				<attribute>DARK</attribute>
 			</effect>
 		</effects>
 	</skill>
@@ -1733,11 +1748,6 @@
 		<itemConsumeCount>30</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
-			<effect name="DefenceTrait">
-				<HOLD>50</HOLD>
-				<DERANGEMENT>50</DERANGEMENT>
-				<SLEEP>50</SLEEP>
-			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_PROTECTION;RESIST_DEBUFF_DISPEL</dispel>
 				<rate>100</rate>
@@ -1750,7 +1760,7 @@
 				<slot>BUFF</slot>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
-				<amount>20</amount>
+				<amount>30</amount>
 				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
@@ -1823,7 +1833,22 @@
 			<effect name="MagicMpCost">
 				<amount>-15</amount>
 				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>2</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
 			</effect>
 			<effect name="Reuse">
 				<amount>-20</amount>
@@ -1934,8 +1959,26 @@
 	</skill>
 	<skill id="30847" toLevel="1" name="Traces of Wind">
 		<!-- For $s1, Received Damage -$s2, blocks the rest of the damage by consuming MP. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill30847</icon>
+		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<abnormalTime>3</abnormalTime>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<isMagic>2</isMagic>
+		<effects>
+			<effect name="DamageShield">
+				<amount>10</amount>
+			</effect>
+			<effect name="MpShield">
+				<amount>
+					<value level="1">90</value>
+					<value level="2">95</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30848" toLevel="1" name="Spirit of Iss">
 		<!-- For $s1, P./ M. Atk. and P./ M. Def. +$s2. -->
@@ -2211,7 +2254,7 @@
 		<toggleGroupId>2</toggleGroupId>
 		<reuseDelay>30000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<reuseDelayGroup>10757</reuseDelayGroup>
+		<reuseDelayGroup>30854</reuseDelayGroup>
 		<effects>
 			<effect name="PAtk">
 				<amount>25</amount>

@@ -907,7 +907,7 @@
 				<stat>LUC</stat>
 			</effect>
 			<effect name="TriggerSkillByMagicType" fromLevel="2" toLevel="2">
-				<magicTypes>0;1</magicTypes>
+				<magicTypes>0</magicTypes>
 				<skillId>16755</skillId> <!-- Activate.Paralysis -->
 				<skillLevel>1</skillLevel>
 				<chance>100</chance>
@@ -992,7 +992,7 @@
 				<stat>LUC</stat>
 			</effect>
 			<effect name="TriggerSkillByMagicType" fromLevel="2" toLevel="2">
-				<magicTypes>0;1</magicTypes>
+				<magicTypes>1</magicTypes>
 				<skillId>16756</skillId> <!-- Activate.Knock Down -->
 				<skillLevel>1</skillLevel>
 				<chance>100</chance>
