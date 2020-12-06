@@ -52,6 +52,7 @@ import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.ItemType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
@@ -1810,9 +1811,19 @@ public abstract class Inventory extends ItemContainer
 		else if (targetSlot == Item.SLOT_L_HAND)
 		{
 			final ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
-			if ((rh != null) && (rh.getItem().getBodyPart() == Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || (((rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
+			if (rh != null)
 			{
-				setPaperdollItem(PAPERDOLL_RHAND, null);
+				if (item.getItemType() == ArmorType.SIGIL)
+				{
+					if ((rh.getItem().getBodyPart() == Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) || (rh.getItemType() == WeaponType.POLE) || (rh.getItemType() == WeaponType.DUALFIST) || (rh.getItemType() == WeaponType.DUALBLUNT) || (rh.getItemType() == WeaponType.DUALDAGGER) || (rh.getItemType() == WeaponType.DUAL) || (rh.getItemType() == WeaponType.BLUNT) || (rh.getItemType() == WeaponType.SWORD) || (rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWOHANDCROSSBOW)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
+					{
+						setPaperdollItem(PAPERDOLL_RHAND, null);
+					}
+				}
+				else if ((rh.getItem().getBodyPart() == Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || (((rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
+				{
+					setPaperdollItem(PAPERDOLL_RHAND, null);
+				}
 			}
 			setPaperdollItem(PAPERDOLL_LHAND, item);
 		}
