@@ -65,62 +65,17 @@ public class Q10818_ConfrontingAGiantMonster extends Quest
 		23747, // Recovering Lesser Giant Wizard
 		23749, // Root of the Lesser Giant
 		23754, // Essence of the Lesser Giant
-		// Fairy Settlement Monsters
-		18972, // Treekin Defender Scout
-		18973, // Treekin Defender Experienced Scout
-		18974, // Centaur Archer Scout
-		18975, // Centaur Archer Experienced Scout
-		18976, // Beorning Berserker Scout
-		18977, // Beorning Berserker Experienced Scout
-		22863, // Fairy Warrior
-		22864, // Fairy Warrior Wicked
-		22865, // Fairy Warrior Mature
-		22866, // Fairy Warrior Imperfect
-		22867, // Fairy Warrior Violent
-		22868, // Fairy Warrior Brutal
-		22869, // Fairy Warrior Fully Enraged
-		22870, // Fairy Warrior Slightly Enraged
-		22871, // Fairy Rogue
-		22875, // Fairy Rogue Wicked
-		22873, // Fairy Rogue Mature
-		22874, // Fairy Rogue Imperfect
-		22875, // Fairy Rogue Violent
-		22876, // Fairy Rogue Brutal
-		22877, // Fairy Rogue Fully Enraged
-		22878, // Fairy Rogue Slightly Enraged
-		22879, // Fairy Knight
-		22880, // Fairy Knight Wicked
-		22881, // Fairy Knight Mature
-		22882, // Fairy Knight Imperfect
-		22883, // Fairy Knight Violent
-		22884, // Fairy Knight Brutal
-		22885, // Fairy Knight Fully Enraged
-		22886, // Fairy Knight Slightly Enraged
-		22887, // Satyr Wizard
-		22888, // Satyr Wizard Wicked
-		22889, // Satyr Wizard Mature
-		22890, // Satyr Wizard Imperfect
-		22891, // Satyr Wizard Violent
-		22892, // Satyr Wizard Brutal
-		22893, // Satyr Wizard Fully Enraged
-		22894, // Satyr Wizard Slightly Enraged
-		22895, // Satyr Summoner
-		22896, // Satyr Summoner Wicked
-		22897, // Satyr Summoner Mature
-		22898, // Satyr Summoner Imperfect
-		22899, // Satyr Summoner Violent
-		22900, // Satyr Summoner Brutal
-		22901, // Satyr Summoner Fully Enraged
-		22902, // Satyr Summoner Slightly Enraged
-		22903, // Satyr Witch
-		22904, // Satyr Witch Wicked
-		22905, // Satyr Witch Mature
-		22906, // Satyr Witch Imperfect
-		22907, // Satyr Witch Violent
-		22908, // Satyr Witch Brutal
-		22909, // Satyr Witch Fully Enraged
-		22910, // Satyr Witch Slightly Enraged
-		23041, // Pan Direm
+		// Enchanted Valley
+		23566, // Nymph Rose
+		23567, // Nymph Rose
+		23568, // Nymph Lily
+		23569, // Nymph Lily
+		23570, // Nymph Tulip
+		23571, // Nymph Tulip
+		23572, // Nymph Astra
+		23573, // Nymph Astra
+		23578, // Nymph Sentinel
+		23581 // Afros
 	};
 	// Items
 	private static final int DARK_SOUL_STONE = 46055;
