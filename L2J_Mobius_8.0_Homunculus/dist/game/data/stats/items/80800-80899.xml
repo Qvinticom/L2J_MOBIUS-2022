@@ -498,6 +498,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="10" />
 		<skills>
 			<skill id="35526" level="1" /> <!-- Kaliel's Top-grade Bracelet -->
 			<skill id="35526" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Top-grade Bracelet -->

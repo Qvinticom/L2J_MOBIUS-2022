@@ -7,7 +7,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="S" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -42,7 +42,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="S" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2024,6 +2024,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="CharmOfCourage" />
 	</item>
 	<item id="33476" name="Rune of Destiny" type="EtcItem">
 		<!-- When in inventory, Acquired XP/ SP +100%. For characters of Lv. 1-85. -->
@@ -2094,7 +2095,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
-		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />

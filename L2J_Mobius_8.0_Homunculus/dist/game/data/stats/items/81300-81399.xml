@@ -561,7 +561,7 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="57" min="1" max="1" chance="2.4390243902439" /> <!-- Adena -->
+			<item id="57" min="70000" max="70000" chance="2.4390243902439" /> <!-- Adena -->
 			<item id="48841" min="1" max="1" chance="2.4390243902439" /> <!-- Angel's Earring -->
 			<item id="48669" min="1" max="1" chance="2.4390243902439" /> <!-- Angel's Necklace -->
 			<item id="81154" min="1" max="1" chance="2.4390243902439" /> <!-- Angel's Ring -->
@@ -619,7 +619,7 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="57" min="1" max="1" chance="1.3888888888889" /> <!-- Adena -->
+			<item id="57" min="200000" max="200000" chance="1.3888888888889" /> <!-- Adena -->
 			<item id="48841" min="1" max="1" chance="1.3888888888889" /> <!-- Angel's Earring -->
 			<item id="48669" min="1" max="1" chance="1.3888888888889" /> <!-- Angel's Necklace -->
 			<item id="81154" min="1" max="1" chance="1.3888888888889" /> <!-- Angel's Ring -->
@@ -901,7 +901,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="reuse_delay" val="36000000" />
 		<skills>
 			<skill id="39618" level="1" /> <!-- Time Stone of Abandoned Coal Mines -->
 		</skills>
@@ -917,6 +916,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_commissionable" val="false" />
+		<set name="enchant_limit" val="5" />
 		<skills>
 			<skill id="35626" level="1" /> <!-- Enhanced La Vie En Rose's Brooch -->
 			<skill id="35626" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Enhanced La Vie En Rose's Brooch -->
@@ -940,6 +940,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_commissionable" val="false" />
+		<set name="enchant_limit" val="10" />
 		<skills>
 			<skill id="35627" level="1" /> <!-- Top-grade La Vie En Rose's Brooch" -->
 			<skill id="35627" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Top-grade La Vie En Rose's Brooch -->

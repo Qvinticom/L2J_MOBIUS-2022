@@ -396,7 +396,7 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="57" min="1" max="500000" chance="50" /> <!-- Adena -->
+			<item id="57" min="2147483647" max="2147483647" chance="100" /> <!-- Adena - max integer value is 2147483647 -->
 		</capsuled_items>
 	</item>
 	<item id="47828" name="Test Adena Box" type="EtcItem">

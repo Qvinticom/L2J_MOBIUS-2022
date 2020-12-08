@@ -250,7 +250,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
-		<set name="etcitem_type" val="POTION" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -267,7 +267,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
-		<set name="enchant_enabled" val="true" />
+		<set name="enchant_enabled" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -804,7 +804,6 @@
 		<set name="weight" val="300" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -830,7 +829,6 @@
 		<set name="weight" val="300" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<skills>

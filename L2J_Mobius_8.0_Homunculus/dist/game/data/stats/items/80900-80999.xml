@@ -53,6 +53,7 @@
 	<item id="80903" name="Zariche's Sealed Box" type="EtcItem">
 		<!-- A chest in which the madness of the Demonic Sword Zariche is sealed. Double-click to obtain a Bloodthirsty Zariche weapon or Zariche's Blood. -->
 		<set name="icon" val="icon.zariche_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -82,6 +83,7 @@
 	<item id="80904" name="Akamanah's Sealed Box" type="EtcItem">
 		<!-- A chest in which the madness of the Blood Sword Akamanah is sealed. Double-click to obtain a Bloodthirsty Akamanah weapon or Akamanah's Blood. -->
 		<set name="icon" val="icon.aka_manaf_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1130,8 +1132,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
 		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
-		<set name="reuse_delay" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
@@ -1519,7 +1521,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="reuse_delay" val="36000000" />
 		<skills>
 			<skill id="39565" level="1" /> <!-- Storm Isle's Time Stone -->
 		</skills>
@@ -1537,7 +1538,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="reuse_delay" val="36000000" />
 		<skills>
 			<skill id="39566" level="1" /> <!-- Primeval Isle's Time Stone -->
 		</skills>
@@ -1555,7 +1555,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="reuse_delay" val="36000000" />
 		<skills>
 			<skill id="39567" level="1" /> <!-- Golden Altar's Time Stone -->
 		</skills>

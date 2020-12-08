@@ -760,7 +760,6 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<itemConsumeCount>1000</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
-		<staticReuse>true</staticReuse>
 		<conditions>
 			<condition name="OpNotInCeremonyOfChaos" />
 		</conditions>
@@ -793,7 +792,6 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<itemConsumeCount>1000</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
-		<staticReuse>true</staticReuse>
 		<conditions>
 			<condition name="OpNotInCeremonyOfChaos" />
 		</conditions>
@@ -844,7 +842,6 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<itemConsumeCount>1000</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
-		<staticReuse>true</staticReuse>
 		<conditions>
 			<condition name="OpNotInCeremonyOfChaos" />
 		</conditions>
@@ -871,7 +868,6 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<itemConsumeCount>1000</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
-		<staticReuse>true</staticReuse>
 		<conditions>
 			<condition name="OpNotInCeremonyOfChaos" />
 		</conditions>
@@ -904,7 +900,6 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<itemConsumeCount>1000</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
-		<staticReuse>true</staticReuse>
 		<conditions>
 			<condition name="OpNotInCeremonyOfChaos" />
 		</conditions>
@@ -955,7 +950,6 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<itemConsumeCount>1000</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
-		<staticReuse>true</staticReuse>
 		<conditions>
 			<condition name="OpNotInCeremonyOfChaos" />
 		</conditions>
@@ -2324,23 +2318,59 @@
 		<icon>icon.renewal_mineral_dragon</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="DamageByAttack">
+			<effect name="PveMagicalSkillDefenceBonus">
 				<amount>
-					<value level="1">-1</value>
-					<value level="2">-2</value>
-					<value level="3">-3</value>
-					<value level="4">-5</value>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
 				</amount>
-				<type>PK</type>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DamageByAttack">
+			<effect name="PvePhysicalAttackDefenceBonus">
 				<amount>
-					<value level="1">-1</value>
-					<value level="2">-2</value>
-					<value level="3">-3</value>
-					<value level="4">-5</value>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
 				</amount>
-				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
