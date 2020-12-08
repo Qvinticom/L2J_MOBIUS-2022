@@ -2932,66 +2932,123 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24570" level="85" type="Npc" name="Dire Stakato Drone">
+	<npc id="24570" level="116" type="Monster" name="Dire Stakato Drone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="132" />
+		<acquire exp="18281547400" sp="16453360" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="601731.791907514" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
 			<speed>
-				<walk ground="25" />
-				<run ground="155" />
+				<walk ground="55" />
+				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="21636" max="50440" chance="70" /> <!-- Adena -->
+				<item id="81219" min="2" max="6" chance="1.19" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="3" chance="1.127" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.113" /> <!-- Dragon Scales -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="15.05" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24571" level="85" type="Npc" name="Dire Stakato Berserker">
+	<npc id="24571" level="116" type="Monster" name="Dire Stakato Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="18281547400" sp="16453360" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="601731.791907514" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
 			<speed>
-				<walk ground="34" />
-				<run ground="250" />
+				<walk ground="55" />
+				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="42" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="21636" max="50440" chance="70" /> <!-- Adena -->
+				<item id="81219" min="2" max="6" chance="1.19" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="3" chance="1.127" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.113" /> <!-- Dragon Scales -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="15.05" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24572" level="85" type="Npc" name="Dire Stakato Shaman">
+	<npc id="24572" level="116" type="Monster" name="Dire Stakato Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="221" />
+		<acquire exp="18281547400" sp="16453360" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="601731.791907514" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
 			<speed>
-				<walk ground="25" />
-				<run ground="155" />
+				<walk ground="55" />
+				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="21636" max="50440" chance="70" /> <!-- Adena -->
+				<item id="81219" min="2" max="6" chance="1.19" /> <!-- Angel s Feather -->
+				<item id="81217" min="1" max="3" chance="1.127" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.113" /> <!-- Dragon Scales -->
+				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
+			</drop>
+			<spoil>
+				<item id="81344" min="1" max="1" chance="15.05" /> <!-- Augmenting Stone Crystal -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24573" level="116" type="Npc" name="Dire Stakato Witch">
+	<npc id="24573" level="116" type="Monster" name="Dire Stakato Witch">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="18281547400" sp="16453360" />
@@ -3004,7 +3061,7 @@
 			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
 			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -3190,19 +3247,24 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="24587" level="85" type="Npc" name="Tanor Silenos">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="88" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="24587" level="108" type="Monster" name="Tanor Silenos">
+		<parameters>
+			<skill name="Skill01_ID" id="32823" level="1" />
+			<skill name="Skill02_ID" id="32824" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="1199922336" sp="1079854" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="209844.164037855" hpRegen="9.5" mp="32077.0478507705" mpRegen="3.3" />
+			<attack physical="355435.279187817" magical="2207.48679091661" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3093.40101522843" magical="1459.44232423909" />
 			<speed>
 				<walk ground="34" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
