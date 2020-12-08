@@ -65,6 +65,13 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			return;
 		}
 		
+		// Karma related configurations.
+		if ((!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT || !Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK) && (player.getReputation() < 0))
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_RIGHT_NOW);
+			return;
+		}
+		
 		if (!Config.TELEPORT_WHILE_SIEGE_IN_PROGRESS)
 		{
 			final Castle castle = CastleManager.getInstance().getCastle(teleport.getX(), teleport.getY(), teleport.getZ());
