@@ -135,6 +135,12 @@ public class RequestRefine extends AbstractRefinePacket
 			return;
 		}
 		
+		// Remove the augmentation if any (286).
+		if (targetItem.isAugmented())
+		{
+			targetItem.removeAugmentation();
+		}
+		
 		targetItem.setAugmentation(augment, true);
 		player.sendPacket(new ExVariationResult(augment.getOption1Id(), augment.getOption2Id(), true));
 		iu.addModifiedItem(targetItem);

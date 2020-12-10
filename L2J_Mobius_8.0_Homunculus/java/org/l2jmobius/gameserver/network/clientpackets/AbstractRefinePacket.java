@@ -128,10 +128,11 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		{
 			return false;
 		}
-		if (item.isAugmented())
-		{
-			return false;
-		}
+		// Remove the augmentation if any (286).
+		// if (item.isAugmented())
+		// {
+		// return false;
+		// }
 		if (item.isHeroItem())
 		{
 			return false;
