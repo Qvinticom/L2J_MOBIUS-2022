@@ -760,6 +760,8 @@ public class PlayerInstance extends Playable
 	private int _cursedWeaponEquippedId = 0;
 	private boolean _combatFlagEquippedId = false;
 	
+	private boolean _isDragonWeaponEquipped = false;
+	
 	private boolean _canRevive = true;
 	private int _reviveRequested = 0;
 	private double _revivePower = 0;
@@ -11363,6 +11365,16 @@ public class PlayerInstance extends Playable
 	public int getCursedWeaponEquippedId()
 	{
 		return _cursedWeaponEquippedId;
+	}
+	
+	public void setDragonWeaponEquipped(boolean value)
+	{
+		_isDragonWeaponEquipped = value;
+	}
+	
+	public boolean isDragonWeaponEquipped()
+	{
+		return _isDragonWeaponEquipped;
 	}
 	
 	public boolean isCombatFlagEquipped()

@@ -1604,7 +1604,18 @@ public class Formulas
 				pvpDefense = target.getStat().getValue(Stat.PVP_PHYSICAL_ATTACK_DEFENCE, 1) * Config.PVP_PHYSICAL_ATTACK_DEFENCE_MULTIPLIERS[targetPlayer.getClassId().getId()];
 			}
 			
-			return Math.max(0.05, 1 + (pvpAttack - pvpDefense)); // Bonus should not be negative.
+			// Dragon weapon defence stat.
+			final double dragonDefense;
+			if (attackerPlayer.isDragonWeaponEquipped())
+			{
+				dragonDefense = target.getStat().getValue(Stat.DRAGON_WEAPON_DEFENCE, 1);
+			}
+			else
+			{
+				dragonDefense = 1;
+			}
+			
+			return Math.max(0.05, dragonDefense * (1 + (pvpAttack - pvpDefense))); // Bonus should not be negative.
 		}
 		
 		// PvE Bonus
