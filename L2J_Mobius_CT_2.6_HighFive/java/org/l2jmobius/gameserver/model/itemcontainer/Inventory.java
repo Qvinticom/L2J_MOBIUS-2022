@@ -36,7 +36,10 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.ArmorSet;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemUnequip;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -1116,6 +1119,17 @@ public abstract class Inventory extends ItemContainer
 				item.updateDatabase();
 			}
 		}
+		
+		// Notify to scripts
+		if (old != null)
+		{
+			final Creature owner = getOwner();
+			if ((owner != null) && owner.isPlayer())
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemUnequip(owner.getActingPlayer(), old), old.getItem());
+			}
+		}
+		
 		return old;
 	}
 	

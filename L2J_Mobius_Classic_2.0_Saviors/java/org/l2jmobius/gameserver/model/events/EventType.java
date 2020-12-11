@@ -76,7 +76,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerClanWH
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCreate;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDelete;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDlgAnswer;
-import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerEquipItem;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemEquip;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFameChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFishing;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerHennaAdd;
@@ -114,6 +114,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummon
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonTalk;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTakeHero;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTransform;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemUnequip;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerUnsummonAgathion;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnTrapAction;
 import org.l2jmobius.gameserver.model.events.impl.instance.OnInstanceCreated;
@@ -232,7 +233,6 @@ public enum EventType
 	ON_PLAYER_CREATE(OnPlayerCreate.class, void.class),
 	ON_PLAYER_DELETE(OnPlayerDelete.class, void.class),
 	ON_PLAYER_DLG_ANSWER(OnPlayerDlgAnswer.class, void.class, TerminateReturn.class),
-	ON_PLAYER_EQUIP_ITEM(OnPlayerEquipItem.class, void.class),
 	ON_PLAYER_FAME_CHANGED(OnPlayerFameChanged.class, void.class),
 	ON_PLAYER_FISHING(OnPlayerFishing.class, void.class),
 	// Henna events
@@ -244,6 +244,8 @@ public enum EventType
 	ON_PLAYER_ITEM_DROP(OnPlayerItemDrop.class, void.class),
 	ON_PLAYER_ITEM_PICKUP(OnPlayerItemPickup.class, void.class),
 	ON_PLAYER_ITEM_TRANSFER(OnPlayerItemTransfer.class, void.class),
+	ON_PLAYER_ITEM_EQUIP(OnPlayerItemEquip.class, void.class),
+	ON_PLAYER_ITEM_UNEQUIP(OnPlayerItemUnequip.class, void.class),
 	// Mentoring events
 	ON_PLAYER_MENTEE_ADD(OnPlayerMenteeAdd.class, void.class),
 	ON_PLAYER_MENTEE_LEFT(OnPlayerMenteeLeft.class, void.class),

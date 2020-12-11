@@ -197,10 +197,10 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAbilityPointsChanged;
-import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerEquipItem;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFameChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerHennaAdd;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerHennaRemove;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemEquip;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogout;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerMenteeStatus;
@@ -2184,6 +2184,9 @@ public class PlayerInstance extends Playable
 				{
 					rechargeShots(true, true, false);
 				}
+				
+				// Notify to scripts
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemEquip(this, item), item.getItem());
 			}
 			else
 			{
@@ -2206,9 +2209,6 @@ public class PlayerInstance extends Playable
 		{
 			sendPacket(new ExStorageMaxCount(this));
 		}
-		
-		// Notify to scripts
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerEquipItem(this, item), this);
 	}
 	
 	/**

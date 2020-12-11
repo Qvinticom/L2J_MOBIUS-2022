@@ -54,10 +54,11 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerChat;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerCreate;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDelete;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerDlgAnswer;
-import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerEquipItem;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerFameChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerHennaAdd;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerHennaRemove;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemEquip;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemUnequip;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerKarmaChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
@@ -187,7 +188,6 @@ public enum EventType
 	ON_PLAYER_CREATE(OnPlayerCreate.class, void.class),
 	ON_PLAYER_DELETE(OnPlayerDelete.class, void.class),
 	ON_PLAYER_DLG_ANSWER(OnPlayerDlgAnswer.class, void.class, TerminateReturn.class),
-	ON_PLAYER_EQUIP_ITEM(OnPlayerEquipItem.class, void.class),
 	ON_PLAYER_FAME_CHANGED(OnPlayerFameChanged.class, void.class),
 	// Henna events
 	ON_PLAYER_HENNA_ADD(OnPlayerHennaAdd.class, void.class),
@@ -198,6 +198,8 @@ public enum EventType
 	ON_PLAYER_ITEM_DROP(OnPlayerItemDrop.class, void.class),
 	ON_PLAYER_ITEM_PICKUP(OnPlayerItemPickup.class, void.class),
 	ON_PLAYER_ITEM_TRANSFER(OnPlayerItemTransfer.class, void.class),
+	ON_PLAYER_ITEM_EQUIP(OnPlayerItemEquip.class, void.class),
+	ON_PLAYER_ITEM_UNEQUIP(OnPlayerItemUnequip.class, void.class),
 	// Other player events
 	ON_PLAYER_KARMA_CHANGED(OnPlayerKarmaChanged.class, void.class),
 	ON_PLAYER_LEVEL_CHANGED(OnPlayerLevelChanged.class, void.class),

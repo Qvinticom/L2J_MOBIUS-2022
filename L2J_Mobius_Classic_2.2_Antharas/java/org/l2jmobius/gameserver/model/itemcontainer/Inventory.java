@@ -44,7 +44,10 @@ import org.l2jmobius.gameserver.model.ArmorSet;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.VariationInstance;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemUnequip;
 import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.items.EtcItem;
@@ -1302,6 +1305,17 @@ public abstract class Inventory extends ItemContainer
 				getOwner().sendPacket(new ExUserInfoEquipSlot(getOwner().getActingPlayer()));
 			}
 		}
+		
+		// Notify to scripts
+		if (old != null)
+		{
+			final Creature owner = getOwner();
+			if ((owner != null) && owner.isPlayer())
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemUnequip(owner.getActingPlayer(), old), old.getItem());
+			}
+		}
+		
 		return old;
 	}
 	
