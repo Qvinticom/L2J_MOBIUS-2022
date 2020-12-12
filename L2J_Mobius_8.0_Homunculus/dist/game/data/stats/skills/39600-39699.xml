@@ -589,8 +589,28 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39657" toLevel="1" name="Tower of Insolence's Prolongation Stone">
-		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>81463</itemConsumeId> <!-- Time Stone: Tower of Insolence (Lower Floor) -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>110</minLevel>
+				<maxLevel>120</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>8</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39658" toLevel="1" name="Superior Ruby">
 		<!-- Soulshot Damage +$s1. -->
