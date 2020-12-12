@@ -51,7 +51,7 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 				}
 				else
 				{
-					LOGGER.warning("Could not find spawn info for boss " + bossId + ".");
+					// LOGGER.warning("Could not find spawn info for boss " + bossId + ".");
 				}
 			}
 			else
