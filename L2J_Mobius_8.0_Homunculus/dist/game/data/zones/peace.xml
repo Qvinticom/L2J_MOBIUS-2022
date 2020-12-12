@@ -743,7 +743,7 @@
 		<node X="48400" Y="49391" />
 		<node X="48365" Y="50345" />
 	</zone>
-	<zone name="fafurion_peace_zone1" type="PeaceZone" shape="NPoly" minZ="-2498" maxZ="-598"> <!-- [16_25] -->
+	<zone name="fafurion_peace_zone1" type="PeaceZone" shape="NPoly" minZ="-2498" maxZ="-598"> <!-- Fafurion's Temple -->
 		<node X="168062" Y="234918" />
 		<node X="167992" Y="234168" />
 		<node X="168483" Y="233520" />
@@ -751,6 +751,198 @@
 		<node X="169486" Y="234239" />
 		<node X="169171" Y="234775" />
 		<node X="168729" Y="234880" />
+	</zone>
+	<zone name="dragon_valley_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-5000" maxZ="-2500"> <!-- Dragon Valley -->
+		<node X="73078" Y="116728" />
+		<node X="72420" Y="116748" />
+		<node X="72146" Y="116549" />
+		<node X="72033" Y="116268" />
+		<node X="72173" Y="115932" />
+		<node X="72416" Y="115789" />
+		<node X="72960" Y="116347" />
+	</zone>
+	<zone name="breka_stronghold_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-5000" maxZ="-2500"> <!-- Breka's Stronghold -->
+		<node X="86265" Y="131959" />
+		<node X="86131" Y="131665" />
+		<node X="85922" Y="131467" />
+		<node X="85762" Y="131474" />
+		<node X="85416" Y="131733" />
+		<node X="85379" Y="131855" />
+		<node X="85553" Y="132325" />
+		<node X="85892" Y="132217" />
+	</zone>
+	<zone name="massacre_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3000" maxZ="-2000"> <!-- Fields of Massacre -->
+		<node X="183685" Y="-16251" />
+		<node X="183505" Y="-16244" />
+		<node X="183293" Y="-16063" />
+		<node X="183289" Y="-15869" />
+		<node X="183402" Y="-15637" />
+		<node X="183760" Y="-15634" />
+	</zone>
+	<zone name="silence_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3700" maxZ="-3000"> <!-- Field of Silence -->
+		<node X="96199" Y="171359" />
+		<node X="95877" Y="171405" />
+		<node X="95786" Y="171331" />
+		<node X="95720" Y="171232" />
+		<node X="95603" Y="170958" />
+		<node X="95622" Y="170901" />
+		<node X="95701" Y="170815" />
+		<node X="96115" Y="170746" />
+		<node X="96243" Y="170989" />
+		<node X="96287" Y="171209" />
+	</zone>
+	<zone name="whispers_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3672" maxZ="-3018"> <!-- Field of Whispers -->
+		<node X="81045" Y="226286" />
+		<node X="81385" Y="226104" />
+		<node X="81630" Y="226251" />
+		<node X="81783" Y="226535" />
+		<node X="81747" Y="226602" />
+		<node X="81412" Y="226828" />
+		<node X="81303" Y="226760" />
+		<node X="81024" Y="226446" />
+	</zone>
+	<zone name="prayer_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3900" maxZ="-3100"> <!-- Isle of Prayer -->
+		<node X="150152" Y="195194" />
+		<node X="150504" Y="195308" />
+		<node X="150552" Y="195746" />
+		<node X="150393" Y="195845" />
+		<node X="149860" Y="195840" />
+		<node X="149841" Y="195659" />
+		<node X="149866" Y="195425" />
+		<node X="149979" Y="195219" />
+		<node X="150118" Y="195198" />
+	</zone>
+	<zone name="alligator_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3772" maxZ="-3225"> <!-- Alligator Island -->
+		<node X="121356" Y="185870" />
+		<node X="121018" Y="185830" />
+		<node X="120941" Y="185633" />
+		<node X="121082" Y="185360" />
+		<node X="121444" Y="185330" />
+		<node X="121716" Y="185455" />
+		<node X="121670" Y="185581" />
+		<node X="121591" Y="185797" />
+		<node X="121484" Y="185885" />
+	</zone>
+	<zone name="tanor_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-2872" maxZ="-2258"> <!-- Tanor Canyon -->
+		<node X="56451" Y="165020" />
+		<node X="56433" Y="164734" />
+		<node X="56257" Y="164384" />
+		<node X="55658" Y="164313" />
+		<node X="55489" Y="164384" />
+		<node X="55460" Y="164899" />
+		<node X="55572" Y="164987" />
+	</zone>
+	<zone name="silent_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-5472" maxZ="-5928"> <!-- Silent Valley -->
+		<node X="171851" Y="56035" />
+		<node X="172207" Y="55720" />
+		<node X="172207" Y="55225" />
+		<node X="172100" Y="55009" />
+		<node X="171835" Y="54729" />
+		<node X="171769" Y="54924" />
+		<node X="171514" Y="55200" />
+		<node X="171529" Y="55675" />
+	</zone>
+	<zone name="spores_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3872" maxZ="-3218"> <!-- Sea of Spores -->
+		<node X="63817" Y="26299" />
+		<node X="63930" Y="26390" />
+		<node X="64225" Y="26286" />
+		<node X="64276" Y="25985" />
+		<node X="64233" Y="25717" />
+		<node X="63946" Y="25725" />
+		<node X="63979" Y="25945" />
+		<node X="63966" Y="26003" />
+		<node X="63797" Y="26213" />
+	</zone>
+	<zone name="mahum_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3932" maxZ="-3333"> <!-- Sel Mahum Training Grounds -->
+		<node X="88426" Y="60461" />
+		<node X="88847" Y="60584" />
+		<node X="88739" Y="61068" />
+		<node X="88560" Y="61181" />
+		<node X="88306" Y="61074" />
+		<node X="88245" Y="60849" />
+		<node X="88294" Y="60539" />
+	</zone>
+	<zone name="lizard_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3072" maxZ="-2523"> <!-- Plains of the Lizardmen -->
+		<node X="86461" Y="85750" />
+		<node X="86603" Y="86014" />
+		<node X="86603" Y="86345" />
+		<node X="86404" Y="86613" />
+		<node X="85936" Y="86621" />
+		<node X="85452" Y="86301" />
+		<node X="85300" Y="86244" />
+		<node X="85330" Y="85945" />
+		<node X="85490" Y="85853" />
+		<node X="85887" Y="85605" />
+		<node X="86206" Y="85612" />
+	</zone>
+	<zone name="ivory_crater_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-5253" maxZ="-4633"> <!-- Ivory Tower Crater -->
+		<node X="89486" Y="11905" />
+		<node X="89852" Y="12151" />
+		<node X="90023" Y="12125" />
+		<node X="90285" Y="11990" />
+		<node X="90446" Y="11763" />
+		<node X="89808" Y="11372" />
+		<node X="89520" Y="11638" />
+	</zone>
+	<zone name="desert_quarry_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-2112" maxZ="-1517"> <!-- Desert Quarry -->
+		<node X="-9033" Y="241303" />
+		<node X="-9552" Y="241295" />
+		<node X="-9469" Y="241915" />
+		<node X="-9079" Y="241914" />
+		<node X="-8841" Y="241697" />
+		<node X="-8729" Y="241512" />
+	</zone>
+	<zone name="beleth_circle_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3555" maxZ="-2555"> <!-- Beleth's Magic Circle -->
+		<node X="-21912" Y="243368" />
+		<node X="-21697" Y="242964" />
+		<node X="-21481" Y="242898" />
+		<node X="-21234" Y="242925" />
+		<node X="-21034" Y="243121" />
+		<node X="-20968" Y="243327" />
+	</zone>
+	<zone name="phantasmal_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3672" maxZ="-3063"> <!-- Phantasmal Ridge -->
+		<node X="-13173" Y="251765" />
+		<node X="-13018" Y="251867" />
+		<node X="-12967" Y="252101" />
+		<node X="-13021" Y="252353" />
+		<node X="-13084" Y="252451" />
+		<node X="-13435" Y="252431" />
+		<node X="-13585" Y="252261" />
+		<node X="-13616" Y="251967" />
+		<node X="-13324" Y="251735" />
+	</zone>
+	<zone name="hellbound_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-2572" maxZ="-1953"> <!-- Hellbound -->
+		<node X="-27688" Y="254568" />
+		<node X="-27464" Y="255080" />
+		<node X="-27416" Y="255272" />
+		<node X="-27528" Y="255768" />
+		<node X="-27736" Y="256184" />
+		<node X="-28072" Y="257224" />
+		<node X="-28520" Y="258392" />
+		<node X="-29368" Y="258280" />
+		<node X="-29736" Y="257800" />
+		<node X="-29864" Y="254472" />
+		<node X="-28952" Y="253480" />
+		<node X="-28456" Y="253688" />
+		<node X="-28040" Y="254008" />
+	</zone>
+	<zone name="mirrors_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3666" maxZ="-2828"> <!-- Forest of Mirrors -->
+		<node X="160408" Y="68584" />
+		<node X="160408" Y="68344" />
+		<node X="160136" Y="68120" />
+		<node X="159864" Y="68232" />
+		<node X="159688" Y="68440" />
+		<node X="159704" Y="68648" />
+		<node X="160253" Y="68761" />
+	</zone>
+	<zone name="wasteland_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3972" maxZ="-3328"> <!-- Wasteland -->
+		<node X="-14360" Y="208824" />
+		<node X="-15048" Y="210648" />
+		<node X="-15368" Y="210792" />
+		<node X="-18296" Y="210584" />
+		<node X="-18424" Y="209672" />
+		<node X="-17336" Y="207688" />
+		<node X="-15656" Y="207432" />
 	</zone>
 	<zone name="toi_peace_1st_floor" type="PeaceZone" shape="NPoly" minZ="-16000" maxZ="-14000"> <!-- Tower Of Insolence 1st Floor -->
 		<node X="-81861" Y="15757" />
