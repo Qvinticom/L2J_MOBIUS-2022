@@ -16,6 +16,7 @@
  */
 package quests.Q10873_ExaltedReachingAnotherLevel;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -34,26 +35,46 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 	// NPC
 	private static final int LIONEL = 33907;
 	// Items
-	private static final int SPORCHA_CERTIFICATE = 47830;
-	private static final int KEKROPUS_CERTIFICATE = 47831;
-	private static final int SANTIAGO_CERTIFICATE = 47832;
-	private static final int ARCTURUS_CERTIFICATE = 47833;
-	private static final int SYLVAIN_CERTIFICATE = 80828;
+	private static final int PROOF_OF_REPUTATION = 80826;
 	private static final int LIONEL_MISSION_LIST_4 = 47829;
 	// Rewards
 	private static final int DIGNITY_OF_THE_EXALTED = 47852;
+	private static final int VITALITY_OF_THE_EXALTED = 47854;
 	// Misc
 	private static final int MIN_LEVEL = 103;
-	private static final int MIN_COMPLETE_LEVEL = 104;
+	private static final int MIN_COMPLETE_LEVEL = 105;
+	private static final int PROOF_OF_REPUTATION_NEEDED = 80000;
+	// Monsters
+	private static final int[] MONSTERS =
+	{
+		// Hellbound monsters
+		23811, // Cantera Tanya
+		23812, // Cantera Deathmoz
+		23813, // Cantera Floxis
+		23814, // Cantera Belika
+		23815, // Cantera Bridget
+		23354, // Decay Hannibal
+		23355, // Armor Beast
+		23356, // Klein Soldier
+		23357, // Disorder Warrior
+		23360, // Bizuard
+		23361, // Mutated Fly
+		24511, // Lunatikan
+		24515, // Kandiloth
+		24512, // Garion Neti
+		24513, // Desert Wendigo
+		24514, // Koraza
+	};
 	
 	public Q10873_ExaltedReachingAnotherLevel()
 	{
 		super(10873);
 		addStartNpc(LIONEL);
 		addTalkId(LIONEL);
+		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "33907-00.htm");
 		addCondCompletedQuest(Q10823_ExaltedOneWhoShattersTheLimit.class.getSimpleName(), "33907-00.htm");
-		registerQuestItems(LIONEL_MISSION_LIST_4, SPORCHA_CERTIFICATE, KEKROPUS_CERTIFICATE, SANTIAGO_CERTIFICATE, ARCTURUS_CERTIFICATE, SYLVAIN_CERTIFICATE);
+		registerQuestItems(LIONEL_MISSION_LIST_4, PROOF_OF_REPUTATION);
 	}
 	
 	@Override
@@ -92,10 +113,10 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 			}
 			case "33907-08.html":
 			{
-				if ((hasQuestItems(player, SYLVAIN_CERTIFICATE) || hasQuestItems(player, SPORCHA_CERTIFICATE, KEKROPUS_CERTIFICATE, SANTIAGO_CERTIFICATE, ARCTURUS_CERTIFICATE)) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+				if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
 					giveItems(player, DIGNITY_OF_THE_EXALTED, 1);
-					addExpAndSp(player, 1178303740714L, 1178303740);
+					giveItems(player, VITALITY_OF_THE_EXALTED, 1);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -123,25 +144,13 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 				{
 					case 1:
 					{
-						if (hasQuestItems(player, SPORCHA_CERTIFICATE, KEKROPUS_CERTIFICATE, SANTIAGO_CERTIFICATE, ARCTURUS_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+						if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 						{
 							htmltext = "33907-07.html";
 						}
 						else
 						{
 							htmltext = "33907-06.html";
-						}
-						break;
-					}
-					case 2:
-					{
-						if (hasQuestItems(player, SYLVAIN_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
-						{
-							htmltext = "33907-07a.html";
-						}
-						else
-						{
-							htmltext = "33907-06a.html";
 						}
 						break;
 					}
@@ -155,5 +164,29 @@ public class Q10873_ExaltedReachingAnotherLevel extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
+	{
+		executeForEachPlayer(player, npc, isSummon, true, false);
+		return super.onKill(npc, player, isSummon);
+	}
+	
+	@Override
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
+		{
+			if (getQuestItemsCount(player, PROOF_OF_REPUTATION) < PROOF_OF_REPUTATION_NEEDED)
+			{
+				giveItemRandomly(player, PROOF_OF_REPUTATION, 1, PROOF_OF_REPUTATION_NEEDED, 1, true);
+			}
+			if ((getQuestItemsCount(player, PROOF_OF_REPUTATION) >= PROOF_OF_REPUTATION_NEEDED) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+			{
+				qs.setCond(2, true);
+			}
+		}
 	}
 }

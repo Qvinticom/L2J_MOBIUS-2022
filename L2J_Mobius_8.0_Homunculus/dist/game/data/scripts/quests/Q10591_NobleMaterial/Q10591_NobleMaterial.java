@@ -21,10 +21,10 @@ import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
-import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.util.Util;
@@ -101,7 +101,7 @@ public class Q10591_NobleMaterial extends Quest
 		{
 			case "34513-02.htm":
 			case "34513-07.html":
-			case "34513-04.html":
+			case "34513-04.htm":
 			case "34014-03.html":
 			case "34362-03.html":
 			case "33907-03.html":

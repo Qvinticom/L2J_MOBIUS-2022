@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -51,6 +52,7 @@ public class Q10589_WhereFatesIntersect extends Quest
 	};
 	// Item
 	private static final int MONSTER_DROP = 80853; // Undead Blood
+	private static final ItemHolder SOE_HERPHAH = new ItemHolder(80857, 1); // Scroll of Escape: Herphah
 	// Misc
 	private static final int REQUIRED_DROP_COUNT = 200;
 	private static final int KILLING_NPCSTRING_ID1 = NpcStringId.LV_85_WHERE_FATES_INTERSECT_IN_PROGRESS.getId();
@@ -90,13 +92,13 @@ public class Q10589_WhereFatesIntersect extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "34505-01.htm": // TARTI
+			case "34505-01.htm":
 			case "34505-02.htm":
 			case "34505-04.html":
-			case "34362-02.html": // HERPHAH
+			case "34362-02.html":
 			case "34362-05.html":
-			case "30137-02.html": // VOLLODOS
-			case "34513-02.html": // JOACHIM
+			case "30137-02.html":
+			case "34513-02.html":
 			{
 				htmltext = event;
 				break;
@@ -252,6 +254,7 @@ public class Q10589_WhereFatesIntersect extends Quest
 			giveItemRandomly(player, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
 			if ((getQuestItemsCount(player, MONSTER_DROP) >= REQUIRED_DROP_COUNT) && (player.getLevel() >= 95))
 			{
+				giveItems(killer, SOE_HERPHAH);
 				qs.setCond(FINISH_COND, true);
 			}
 			
