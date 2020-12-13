@@ -161,6 +161,7 @@ public class SecondClassChange extends Quest
 						st.giveItems(SHADOW_WEAPON_COUPON_CGRADE, 15);
 						player.setClassId(array[0]);
 						player.setBaseClass(array[0]);
+						player.rewardSkills();
 						player.sendPacket(new HennaInfo(player));
 						player.broadcastUserInfo();
 						suffix = "-" + array[6];

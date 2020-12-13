@@ -277,6 +277,7 @@ public class SagasSuperClass extends Quest
 					{
 						player.setBaseClass(playerClass);
 					}
+					player.rewardSkills();
 					player.broadcastUserInfo();
 					Cast(npc, player, 4339, 1);
 					
@@ -814,6 +815,7 @@ public class SagasSuperClass extends Quest
 									{
 										st.getPlayer().setBaseClass(playerClass);
 									}
+									st.getPlayer().rewardSkills();
 									st.getPlayer().broadcastUserInfo();
 									Cast(npc, st.getPlayer(), 4339, 1);
 									

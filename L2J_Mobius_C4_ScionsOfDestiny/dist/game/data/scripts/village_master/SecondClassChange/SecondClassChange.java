@@ -156,6 +156,7 @@ public class SecondClassChange extends Quest
 						st.takeItems(array[9], -1);
 						player.setClassId(array[0]);
 						player.setBaseClass(array[0]);
+						player.rewardSkills();
 						player.sendPacket(new HennaInfo(player));
 						player.broadcastUserInfo();
 						suffix = "-" + array[6];
