@@ -6647,6 +6647,11 @@ public class PlayerInstance extends Playable
 					player.addItem("CoC-Hero", 35564, 1, player, true); // Ruler's Authority
 					player.setFame(player.getFame() + 5000);
 					player.sendMessage("You have been rewarded with 5.000 fame points.");
+					final Clan clan = player.getClan();
+					if (clan != null)
+					{
+						clan.addReputationScore(150000, true);
+					}
 				}
 				player.setTrueHero(true);
 			}
