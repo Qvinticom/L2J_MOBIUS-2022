@@ -214,8 +214,11 @@
 	<appearance_stone id="37919" targetType="WEAPON" type="FIXED" visualId="10167" weaponType="SWORD" lifeTime="15days" /> <!-- Pig Lollipop Appearance Stone: One-handed Sword (15 days ) -->
 	<appearance_stone id="38189" targetType="WEAPON" type="FIXED" visualId="38211" weaponType="SWORD" lifeTime="30days" /> <!-- Blue Mackerel Appearance Stone: One-handed Sword (30 days ) -->
 	<appearance_stone id="38200" targetType="WEAPON" type="FIXED" visualId="38211" weaponType="SWORD" /> <!-- Blue Mackerel Appearance Stone: One-handed Sword -->
+	<appearance_stone id="38183" targetType="WEAPON" type="FIXED" visualId="21919" weaponType="SWORD" /> <!-- Hellblade Appearance Stone -->
 	<appearance_stone id="37840" targetType="WEAPON" type="FIXED" visualId="37696" weaponType="SWORD" magicType="MAGICAL" lifeTime="15days" /> <!-- Valentine Appearance Stone: One-handed Magic Sword (15 days ) -->
 	<appearance_stone id="37856" targetType="WEAPON" type="FIXED" visualId="37696" weaponType="SWORD" magicType="MAGICAL" lifeTime="30days" /> <!-- Valentine Appearance Stone: One-handed Magic Sword (30 days ) -->
+	<appearance_stone id="38175" targetType="WEAPON" type="FIXED" visualId="38382" weaponType="SWORD" magicType="MAGICAL" /> <!-- Apprentice's Spellbook Appearance Stone -->
+	<appearance_stone id="38188" targetType="WEAPON" type="FIXED" visualId="21973" weaponType="SWORD" magicType="MAGICAL" /> <!-- Mardil's Wind Appearance Stone -->
 
 	<appearance_stone id="22668" targetType="WEAPON" type="FIXED" visualId="22652" weaponType="SWORD" handType="TWO_HANDED" /> <!-- Emerald Weapon Appearance Stone: Two-handed Sword -->
 	<appearance_stone id="22729" targetType="WEAPON" type="FIXED" visualId="22713" weaponType="SWORD" handType="TWO_HANDED" /> <!-- Japanese Long Sword Appearance Stone -->
@@ -228,6 +231,7 @@
 	<appearance_stone id="38191" targetType="WEAPON" type="FIXED" visualId="38213" weaponType="SWORD" handType="TWO_HANDED" lifeTime="30days" /> <!-- Shark Appearance Stone: Two-handed Sword ( 30 days ) -->
 	<appearance_stone id="37674" targetType="WEAPON" type="FIXED" visualId="37683" weaponType="SWORD" handType="TWO_HANDED" lifeTime="30days" /> <!-- Scroll: Modify Demonic Sword Zariche ( 30 days ) -->
 	<appearance_stone id="38202" targetType="WEAPON" type="FIXED" visualId="38213" weaponType="SWORD" handType="TWO_HANDED" /> <!-- Shark Appearance Stone: Two-handed Sword -->
+	<appearance_stone id="38187" targetType="WEAPON" type="FIXED" visualId="21959" weaponType="SWORD" handType="TWO_HANDED" /> <!-- Yehan Klanikus' Tirbing Appearance Stone -->
 
 	<appearance_stone id="22667" targetType="WEAPON" type="FIXED" visualId="22651" weaponType="DAGGER" /> <!-- Emerald Weapon Appearance Stone: Dagger -->
 	<appearance_stone id="22728" targetType="WEAPON" type="FIXED" visualId="22712" weaponType="DAGGER" /> <!-- Japanese Dagger Appearance Stone -->
@@ -257,6 +261,7 @@
 	<appearance_stone id="38199" targetType="WEAPON" type="FIXED" visualId="38221" weaponType="DUAL" lifeTime="30days" /> <!-- Blue Mackerel Appearance Stone: Dualsword ( 30 days ) -->
 	<appearance_stone id="37675" targetType="WEAPON" type="FIXED" visualId="37684" weaponType="DUAL" lifeTime="30days" /> <!-- Scroll: Modify Blood Sword Akamanah ( 30 days ) -->
 	<appearance_stone id="38210" targetType="WEAPON" type="FIXED" visualId="38221" weaponType="DUAL" /> <!-- Blue Mackerel Appearance Stone: Dualsword -->
+	<appearance_stone id="38186" targetType="WEAPON" type="FIXED" visualId="21955" weaponType="DUAL" /> <!-- Aenkinel's Astaroth Appearance Stone -->
 
 	<appearance_stone id="22669" targetType="WEAPON" type="FIXED" visualId="22653" weaponType="DUALFIST" /> <!-- Emerald Weapon Appearance Stone: Fist Weapon -->
 	<appearance_stone id="22730" targetType="WEAPON" type="FIXED" visualId="22714" weaponType="DUALFIST" /> <!-- Japanese Fist Weapon Appearance Stone -->
@@ -314,6 +319,8 @@
 	<appearance_stone id="37408" targetType="WEAPON" type="FIXED" visualId="22657" weaponType="BLUNT" lifeTime="15days" /> <!-- Emerald Weapon Appearance Stone: One-handed Blunt Weapon ( 15 days ) -->
 	<appearance_stone id="36655" targetType="WEAPON" type="FIXED" visualId="22657" weaponType="BLUNT" lifeTime="7days" /> <!-- Emerald Weapon Appearance Stone: One-handed Blunt Weapon ( 7 days ) -->
 	<appearance_stone id="22734" targetType="WEAPON" type="FIXED" visualId="22718" weaponType="BLUNT" /> <!-- Japanese Blunt Appearance Stone -->
+	<appearance_stone id="38420" targetType="WEAPON" type="FIXED" visualId="38421" weaponType="BLUNT" /> <!-- Blue Mackerel Appearance Stone: One-handed Blunt Weapon -->
+	<appearance_stone id="38185" targetType="WEAPON" type="FIXED" visualId="21939" weaponType="BLUNT" /> <!-- Tiat's Tiatenon Appearance Stone -->
 	<appearance_stone id="37835" targetType="WEAPON" type="FIXED" visualId="37691" weaponType="BLUNT" lifeTime="15days" /> <!-- Valentine Appearance Stone: One-handed Blunt Weapon ( 15 days ) -->
 	<appearance_stone id="37851" targetType="WEAPON" type="FIXED" visualId="37691" weaponType="BLUNT" lifeTime="30days" /> <!-- Valentine Appearance Stone: One-handed Blunt Weapon ( 30 days ) -->
 
@@ -342,12 +349,15 @@
 	<appearance_stone id="37412" targetType="WEAPON" type="FIXED" visualId="22662" weaponType="DUALDAGGER" lifeTime="15days" /> <!-- Emerald Weapon Appearance Stone: Dual Dagger ( 15 days ) -->
 	<appearance_stone id="36660" targetType="WEAPON" type="FIXED" visualId="22662" weaponType="DUALDAGGER" lifeTime="7days" /> <!-- Emerald Weapon Appearance Stone: Dual Dagger ( 7 days ) -->
 	<appearance_stone id="22739" targetType="WEAPON" type="FIXED" visualId="22723" weaponType="DUALDAGGER" /> <!-- Japanese Double Dagger Appearance Stone -->
+	<appearance_stone id="38418" targetType="WEAPON" type="FIXED" visualId="38422" weaponType="DUALDAGGER" /> <!-- Trumpetfish Appearance Stone: Daul Dagger -->
+	<appearance_stone id="38184" targetType="WEAPON" type="FIXED" visualId="21935" weaponType="DUALDAGGER" /> <!-- Doll's Butcher Blades Appearance Stone -->
 	<appearance_stone id="37844" targetType="WEAPON" type="FIXED" visualId="37700" weaponType="DUALDAGGER" lifeTime="15days" /> <!-- Valentine Appearance Stone: Dual Dagger ( 15 days ) -->
 	<appearance_stone id="37860" targetType="WEAPON" type="FIXED" visualId="37700" weaponType="DUALDAGGER" lifeTime="30days" /> <!-- Valentine Appearance Stone: Dual Dagger ( 30 days ) -->
 
 	<appearance_stone id="22679" targetType="WEAPON" type="FIXED" visualId="22663" weaponType="DUALBLUNT" /> <!-- Emerald Weapon Appearance Stone: Dual Blunt Weapon -->
 	<appearance_stone id="37413" targetType="WEAPON" type="FIXED" visualId="22663" weaponType="DUALBLUNT" lifeTime="15days" /> <!-- Emerald Weapon Appearance Stone: Dual Blunt Weapon ( 15 days ) -->
 	<appearance_stone id="36661" targetType="WEAPON" type="FIXED" visualId="22663" weaponType="DUALBLUNT" lifeTime="7days" /> <!-- Emerald Weapon Appearance Stone: Dual Blunt Weapon ( 7 days ) -->
+	<appearance_stone id="38417" targetType="WEAPON" type="FIXED" visualId="38423" weaponType="DUALBLUNT" /> <!-- Blue Mackerel Appearance Stone: Dual Blunt Weapon -->
 	<appearance_stone id="22740" targetType="WEAPON" type="FIXED" visualId="22724" weaponType="DUALBLUNT" /> <!-- Japanese Double Blunt Appearance Stone -->
 	<appearance_stone id="37845" targetType="WEAPON" type="FIXED" visualId="37701" weaponType="DUALBLUNT" lifeTime="15days" /> <!-- Valentine Appearance Stone: Dual Blunt Weapon ( 15 days ) -->
 	<appearance_stone id="37861" targetType="WEAPON" type="FIXED" visualId="37701" weaponType="DUALBLUNT" lifeTime="30days" /> <!-- Valentine Appearance Stone: Dual Blunt Weapon ( 30 days ) -->
@@ -4163,8 +4173,8 @@
 	<appearance_stone id="40220" targetType="WEAPON" type="FIXED" race="ERTHEIA" visualId="40058" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" lifeTime="90days" /> <!-- Cat Staff Appearance Stone - Ertheia Only 90days -->
 	<appearance_stone id="47593" targetType="WEAPON" type="FIXED" race="ERTHEIA" visualId="39718" weaponType="DUALFIST" /> <!-- Boxing Glove Appearance Stone -->
 	<appearance_stone id="47592" targetType="WEAPON" type="FIXED" visualId="47600" weaponType="DUALFIST" /> <!-- Warm Bear Paws Appearance Stone -->
-	<appearance_stone id="47594" targetType="WEAPON" type="FIXED" visualId="47597" weaponType="BOW" /> <!-- Cupid's Arrow Appearance Stone -->
-	<appearance_stone id="47595" targetType="WEAPON" type="FIXED" visualId="47598" weaponType="BLUNT" handType="ONE_HANDED" /> <!-- Wedding Bouquet Appearance Stone -->
+	<appearance_stone id="47594" targetType="WEAPON" type="FIXED" visualId="47598" weaponType="BOW" /> <!-- Cupid's Arrow Appearance Stone -->
+	<appearance_stone id="47595" targetType="WEAPON" type="FIXED" visualId="47597" weaponType="BLUNT" handType="ONE_HANDED" /> <!-- Wedding Bouquet Appearance Stone -->
 	<appearance_stone id="47596" targetType="WEAPON" type="FIXED" visualId="47599" weaponType="DAGGER" /> <!-- Pig Lollipop Appearance Stone -->
 
 	<appearance_stone id="47672" targetType="ARMOR" type="FIXED" visualId="39379"> <!-- Formal Wear Appearance Stone -->
@@ -4278,7 +4288,7 @@
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
 
-		<!-- Healer Outfit Outfit -->
+	<!-- Healer Outfit Outfit -->
 	<appearance_stone id="48024" targetType="ARMOR" type="FIXED" visualId="48017"> <!-- Healer Outfit Outfit Appearance Stone -->
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
@@ -4411,73 +4421,73 @@
 	</appearance_stone>
 	
 	<!-- Turtle Shield Appearance -->
-	<appearance_stone id="38209" targetType="ARMOR" type="FIXED" visualId="38220" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="38209" targetType="ARMOR" type="FIXED" visualId="38220" armorType="SHIELD" />
 	
 	<!-- Starfish Sigil Appearance -->
-	<appearance_stone id="38208" targetType="ARMOR" type="FIXED" visualId="38219" armorType="SIGIL" raceNot="ERTHEIA" />
+	<appearance_stone id="38208" targetType="ARMOR" type="FIXED" visualId="38219" armorType="SIGIL" />
 	
 	<!-- Burnstein Aufgabe Shield -->
-	<appearance_stone id="48343" targetType="ARMOR" type="FIXED" visualId="48326" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48343" targetType="ARMOR" type="FIXED" visualId="48326" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Kelbim Geffelen Shulter Shield -->
-	<appearance_stone id="48344" targetType="ARMOR" type="FIXED" visualId="48327" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48344" targetType="ARMOR" type="FIXED" visualId="48327" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Superion Core Shard Shield -->
-	<appearance_stone id="48345" targetType="ARMOR" type="FIXED" visualId="48328" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48345" targetType="ARMOR" type="FIXED" visualId="48328" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Istina's Reflector Shield -->
-	<appearance_stone id="48346" targetType="ARMOR" type="FIXED" visualId="48329" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48346" targetType="ARMOR" type="FIXED" visualId="48329" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Taiga Kite Shield -->
-	<appearance_stone id="48347" targetType="ARMOR" type="FIXED" visualId="48330" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48347" targetType="ARMOR" type="FIXED" visualId="48330" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Tanta Tribe Skull Shield -->
-	<appearance_stone id="48348" targetType="ARMOR" type="FIXED" visualId="48331" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48348" targetType="ARMOR" type="FIXED" visualId="48331" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Rael Tribe Wrist Shield -->
-	<appearance_stone id="48349" targetType="ARMOR" type="FIXED" visualId="48332" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48349" targetType="ARMOR" type="FIXED" visualId="48332" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Kunda's Battle Shield -->
-	<appearance_stone id="48350" targetType="ARMOR" type="FIXED" visualId="48333" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48350" targetType="ARMOR" type="FIXED" visualId="48333" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Freya's Ice Flower Shield -->
-	<appearance_stone id="48351" targetType="ARMOR" type="FIXED" visualId="48334" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48351" targetType="ARMOR" type="FIXED" visualId="48334" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Deathmask Shield -->
-	<appearance_stone id="48352" targetType="ARMOR" type="FIXED" visualId="48335" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48352" targetType="ARMOR" type="FIXED" visualId="48335" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Berserker's Crusader Shield -->
-	<appearance_stone id="48353" targetType="ARMOR" type="FIXED" visualId="48336" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48353" targetType="ARMOR" type="FIXED" visualId="48336" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Makkum's Cartwheel Shield -->
-	<appearance_stone id="48354" targetType="ARMOR" type="FIXED" visualId="48337" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48354" targetType="ARMOR" type="FIXED" visualId="48337" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Fallen Angel Shulter Shield -->
-	<appearance_stone id="48355" targetType="ARMOR" type="FIXED" visualId="48338" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48355" targetType="ARMOR" type="FIXED" visualId="48338" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Silver Scarab Shield -->
-	<appearance_stone id="48356" targetType="ARMOR" type="FIXED" visualId="48339" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48356" targetType="ARMOR" type="FIXED" visualId="48339" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Vampire Fang Shield -->
-	<appearance_stone id="48357" targetType="ARMOR" type="FIXED" visualId="48340" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48357" targetType="ARMOR" type="FIXED" visualId="48340" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Ice Shard Shield -->
-	<appearance_stone id="48358" targetType="ARMOR" type="FIXED" visualId="48341" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48358" targetType="ARMOR" type="FIXED" visualId="48341" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Angelus Shield Shield -->
-	<appearance_stone id="48359" targetType="ARMOR" type="FIXED" visualId="48342" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48359" targetType="ARMOR" type="FIXED" visualId="48342" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Burnstein's Pflicht Shield -->
-	<appearance_stone id="48396" targetType="ARMOR" type="FIXED" visualId="48395" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48396" targetType="ARMOR" type="FIXED" visualId="48395" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Blackish Scarab Shield -->
-	<appearance_stone id="48408" targetType="ARMOR" type="FIXED" visualId="48405" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48408" targetType="ARMOR" type="FIXED" visualId="48405" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Scarlet Scarab Shield -->
-	<appearance_stone id="48409" targetType="ARMOR" type="FIXED" visualId="48406" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48409" targetType="ARMOR" type="FIXED" visualId="48406" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Gold Scarab Shield -->
-	<appearance_stone id="48410" targetType="ARMOR" type="FIXED" visualId="48407" armorType="SHIELD" raceNot="ERTHEIA" />
+	<appearance_stone id="48410" targetType="ARMOR" type="FIXED" visualId="48407" armorType="SHIELD" lifeTime="30days" />
 	
 	<!-- Transparent Armor -->
 	<appearance_stone id="23853" targetType="ARMOR" type="FIXED" visualId="23852">
