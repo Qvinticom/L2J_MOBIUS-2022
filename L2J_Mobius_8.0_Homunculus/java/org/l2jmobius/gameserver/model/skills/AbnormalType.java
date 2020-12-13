@@ -246,12 +246,14 @@ public enum AbnormalType
 	OLYMPIAD_SPEED(-1),
 	OLYMPIAD_ATTACK(-1),
 	FOCUS_ATTACK(-1),
-	SONG_WEAPON(-1), // TODO: need find proper name
-	HEAL_RESISTANCE(-1), // TODO: need find proper name
+	SONG_WEAPON(-1),
+	HEAL_RESISTANCE(-1),
 	TRIAD(-1),
 	TALISMAN_SPECIAL(-1),
 	EXP_HERB(-1),
 	AURA_DEBUFF(-1),
+	HEIR_PVE(-1),
+	HEIR_PVP(-1),
 	AB_HAWK_EYE(0),
 	ALL_ATTACK_DOWN(1),
 	ALL_ATTACK_UP(2),

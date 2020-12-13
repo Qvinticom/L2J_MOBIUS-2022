@@ -1029,8 +1029,6 @@
 															</xs:element>
 															<xs:element name="pAccuracyMode" type="xs:string" />
 															<xs:element name="hpPercent" type="xs:unsignedByte" />
-															<xs:element name="mpPercent" type="xs:unsignedByte" />
-															<xs:element name="cpPercent" type="xs:unsignedByte" />
 															<xs:element name="attribute" type="xs:string" />
 															<xs:element name="attackerType" type="xs:string" />
 															<xs:element name="minAttackerLevel" type="xs:unsignedByte" />
@@ -1909,6 +1907,7 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="blockedActions" type="xs:byte" />
+															<xs:element name="disable" type="xs:string" />
 															<xs:element name="skillId1" type="xs:unsignedShort" />
 															<xs:element name="skillId3" type="xs:unsignedShort" />
 															<xs:element name="skillId2" type="xs:unsignedShort" />
@@ -1930,7 +1929,6 @@
 															</xs:element>
 															<xs:element name="fame" type="xs:unsignedInt" />
 															<xs:element name="affectScope" type="xs:string" />
-															<xs:element name="disable" type="xs:string" />
 															<xs:element name="AGGRESSION">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -1999,6 +1997,8 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="mpPercent" type="xs:unsignedByte" />
+															<xs:element name="cpPercent" type="xs:unsignedByte" />
 															<xs:element name="FIRE" type="xs:byte" />
 															<xs:element name="hp" type="xs:unsignedByte" />
 															<xs:element name="mp" type="xs:unsignedByte" />
@@ -2632,6 +2632,7 @@
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
+														<xs:element minOccurs="0" name="skillLevelScaleTo" type="xs:unsignedByte" />
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
 													<xs:attribute name="fromLevel" type="xs:unsignedByte" use="optional" />

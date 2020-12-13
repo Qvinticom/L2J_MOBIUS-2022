@@ -749,8 +749,12 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29382" level="1" /> <!-- Heir's Radiance Lv. 1 -->
+		</skills>
 	</item>
 	<item id="29751" name="Heir's Radiance Lv. 2" additionalName="PvE" type="Armor">
 		<!-- When equipped, Debuff Resistance +2%, Max HP +1500, all stats +1. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +1%. Warrior's Circlet: P. Atk. +1%. Wizard's Circlet: M. Atk. +1%. Cannot be enchanted. -->
@@ -762,8 +766,12 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29383" level="1" /> <!-- Heir's Radiance Lv. 2 -->
+		</skills>
 	</item>
 	<item id="29752" name="Heir's Radiance Lv. 3" additionalName="PvE" type="Armor">
 		<!-- When equipped, Debuff Resistance +3%, Max HP +3000, all stats +2, PvE damage +3%, received damage from Dragon's weapons -1%. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +3%. Warrior's Circlet: P. Atk. +3%. Wizard's Circlet: M. Atk. +3%. Cannot be enchanted. -->
@@ -775,8 +783,12 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29384" level="1" /> <!-- Heir's Radiance Lv. 3 -->
+		</skills>
 	</item>
 	<item id="29753" name="Heir's Radiance Lv. 4" additionalName="PvE" type="Armor">
 		<!-- When equipped, Debuff Resistance +5%, Max HP +4000, all stats +3, PvE damage +5%, received damage from Dragon's weapons -3%. Enables the Heir's Radiance - PvE skill. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +7%. Warrior's Circlet: P. Atk. +7%. Wizard's Circlet: M. Atk. +7%. Cannot be enchanted. -->
@@ -788,6 +800,11 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29385" level="1" /> <!-- Heir's Radiance Lv. 4 -->
+			<skill id="29390" level="1" /> <!-- Heir's Radiance - PvE -->
+		</skills>
 	</item>
 	<item id="29754" name="Heir's Radiance Lv. 1" additionalName="PvP" type="Armor">
 		<!-- When equipped, Debuff Resistance +1%, Max HP +1000. Cannot be enchanted. -->
@@ -799,8 +816,12 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29386" level="1" /> <!-- Heir's Radiance Lv. 1 -->
+		</skills>
 	</item>
 	<item id="29755" name="Heir's Radiance Lv. 2" additionalName="PvP" type="Armor">
 		<!-- When equipped, Debuff Resistance +2%, Max HP +1500, all stats +1. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +1%. Warrior's Circlet: P. Atk. +1%. Wizard's Circlet: M. Atk. +1%. Cannot be enchanted. -->
@@ -812,8 +833,12 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29387" level="1" /> <!-- Heir's Radiance Lv. 2 -->
+		</skills>
 	</item>
 	<item id="29756" name="Heir's Radiance Lv. 3" additionalName="PvP" type="Armor">
 		<!-- When equipped, Debuff Resistance +3%, Max HP +3000, all stats +2, PvP damage +3%, received damage from Dragon's weapons -1%. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +3%. Warrior's Circlet: P. Atk. +3%. Wizard's Circlet: M. Atk. +3%. Cannot be enchanted. -->
@@ -825,8 +850,12 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29388" level="1" /> <!-- Heir's Radiance Lv. 3 -->
+		</skills>
 	</item>
 	<item id="29757" name="Heir's Radiance Lv. 4" additionalName="PvP" type="Armor">
 		<!-- When equipped, Debuff Resistance +5%, Max HP +4000, all stats +3, PvP damage +5%, received damage from Dragon's weapons -3%. Enables the Heir's Radiance - PvP skill. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +7%. Warrior's Circlet: P. Atk. +7%. Wizard's Circlet: M. Atk. +7%. Cannot be enchanted. -->
@@ -838,6 +867,11 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29389" level="1" /> <!-- Heir's Radiance Lv. 4 -->
+			<skill id="29391" level="1" /> <!-- Heir's Radiance - PvP -->
+		</skills>
 	</item>
 	<item id="29758" name="Hidden Secret Book" type="EtcItem">
 		<!-- Required for upgrading Heir's Radiance. Take it to Denign. -->
