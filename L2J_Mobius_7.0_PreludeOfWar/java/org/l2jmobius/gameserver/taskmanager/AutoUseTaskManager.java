@@ -69,12 +69,14 @@ public class AutoUseTaskManager
 					continue;
 				}
 				
-				if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead() || player.isInsideZone(ZoneId.PEACE))
+				if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead())
 				{
 					continue;
 				}
 				
-				if (Config.ENABLE_AUTO_ITEM)
+				final boolean isInPeaceZone = player.isInsideZone(ZoneId.PEACE);
+				
+				if (Config.ENABLE_AUTO_ITEM && !isInPeaceZone)
 				{
 					ITEMS: for (Integer itemId : player.getAutoUseSettings().getAutoSupplyItems())
 					{
@@ -107,7 +109,7 @@ public class AutoUseTaskManager
 					}
 				}
 				
-				if (Config.ENABLE_AUTO_POTION && (player.getCurrentHpPercent() <= player.getAutoPlaySettings().getAutoPotionPercent()))
+				if (Config.ENABLE_AUTO_POTION && !isInPeaceZone && (player.getCurrentHpPercent() <= player.getAutoPlaySettings().getAutoPotionPercent()))
 				{
 					POTIONS: for (Integer itemId : player.getAutoUseSettings().getAutoPotionItems())
 					{
@@ -132,20 +134,33 @@ public class AutoUseTaskManager
 				
 				if (Config.ENABLE_AUTO_BUFF && !player.isMoving())
 				{
-					BUFFS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
+					SKILLS: for (Integer skillId : player.getAutoUseSettings().getAutoSkills())
 					{
 						final Skill skill = player.getKnownSkill(skillId.intValue());
 						if (skill == null)
 						{
 							player.getAutoUseSettings().getAutoSkills().remove(skillId);
-							continue BUFFS; // TODO: break?
+							continue SKILLS; // TODO: break?
 						}
 						
-						// Check bad skill target.
 						final WorldObject target = player.getTarget();
-						if ((skill.isBad() && (target == null)) || (target == player))
+						// Casting on self stops movement.
+						if (target == player)
 						{
-							continue BUFFS;
+							continue SKILLS;
+						}
+						// Check bad skill target.
+						if (skill.isBad())
+						{
+							if (target == null)
+							{
+								continue SKILLS;
+							}
+						}
+						// Fixes start area issue.
+						else if (isInPeaceZone)
+						{
+							continue SKILLS;
 						}
 						
 						if (!player.isAffectedBySkill(skillId.intValue()) && !player.hasSkillReuse(skill.getReuseHashCode()) && skill.checkCondition(player, player, false))
@@ -155,7 +170,7 @@ public class AutoUseTaskManager
 							{
 								if (!player.hasServitors()) // Is this check truly needed?
 								{
-									continue BUFFS;
+									continue SKILLS;
 								}
 								int occurrences = 0;
 								for (Summon servitor : player.getServitors().values())
@@ -167,7 +182,7 @@ public class AutoUseTaskManager
 								}
 								if (occurrences == player.getServitors().size())
 								{
-									continue BUFFS;
+									continue SKILLS;
 								}
 							}
 							
