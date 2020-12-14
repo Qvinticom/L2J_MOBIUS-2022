@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -141,6 +142,13 @@ public class AutoPlayTaskManager
 				if (monster != null)
 				{
 					player.setTarget(monster);
+					
+					// We take granted that non Orc mage classes do not auto hit when mana is over 5%.
+					if (player.isMageClass() && (player.getRace() != Race.ORC) && (player.getCurrentMpPercent() > 5))
+					{
+						continue PLAY;
+					}
+					
 					player.sendPacket(ExAutoPlayDoMacro.STATIC_PACKET);
 				}
 			}
