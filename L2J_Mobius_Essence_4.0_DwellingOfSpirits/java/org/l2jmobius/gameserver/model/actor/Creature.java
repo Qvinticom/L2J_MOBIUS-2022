@@ -3828,15 +3828,22 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		if (isPlayer() && !target.isHpBlocked())
 		{
-			if (((PlayerInstance) this).isCursedWeaponEquipped())
+			final PlayerInstance player = getActingPlayer();
+			
+			if (player.isCursedWeaponEquipped())
 			{
 				// If hit by a cursed weapon, CP is reduced to 0
 				target.setCurrentCp(0);
 			}
-			else if (((PlayerInstance) this).isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
+			else if (player.isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
 			{
 				// If a cursed weapon is hit by a Hero, CP is reduced to 0
 				target.setCurrentCp(0);
+			}
+			
+			if (player.isDeathKnight())
+			{
+				player.setDeathPoints(player.getDeathPoints() + 1);
 			}
 		}
 	}

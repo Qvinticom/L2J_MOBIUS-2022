@@ -445,6 +445,7 @@ public class PlayerInstance extends Playable
 	protected int _baseClass;
 	protected int _activeClass;
 	protected int _classIndex = 0;
+	private boolean _isDeathKnight = false;
 	
 	/** data for mounted pets */
 	private int _controlItemId;
@@ -6568,6 +6569,10 @@ public class PlayerInstance extends Playable
 					{
 						player._activeClass = activeClassId;
 					}
+					if ((activeClassId > 195) && (activeClassId < 208))
+					{
+						player._isDeathKnight = true;
+					}
 					
 					player.setApprentice(rset.getInt("apprentice"));
 					player.setSponsor(rset.getInt("sponsor"));
@@ -8447,6 +8452,14 @@ public class PlayerInstance extends Playable
 	public boolean isMageClass()
 	{
 		return getClassId().isMage();
+	}
+	
+	/**
+	 * @return True if the PlayerInstance is a Death Knight.
+	 */
+	public boolean isDeathKnight()
+	{
+		return _isDeathKnight;
 	}
 	
 	public boolean isMounted()
