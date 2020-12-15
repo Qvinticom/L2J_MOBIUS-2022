@@ -99,7 +99,7 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			}
 			
 			// Death Knight rewards.
-			if ((_classId == 196) || (_classId == 200) || (_classId == 204))
+			if ((_classId == 197) || (_classId == 201) || (_classId == 205))
 			{
 				player.addItem("ExRequestClassChange", 93028, 1, player, true); // Aden Sword.
 				player.addItem("ExRequestClassChange", 93493, 1, player, true); // Moon Armor Set.
