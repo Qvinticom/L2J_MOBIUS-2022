@@ -744,6 +744,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39535" level="1" /> <!-- Scroll of Escape: Herphah -->
+		</skills>
 	</item>
 	<item id="80858" name="Scroll of Escape: Joachim" type="EtcItem">
 		<!-- Teleports you to where Joachim is. -->
@@ -756,6 +760,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39536" level="1" /> <!-- Scroll of Escape: Joachim -->
+		</skills>
 	</item>
 	<item id="80859" name="Blood-thirsty Akamanah Shaper" type="Weapon">
 		<!-- Weapon born from Demonic Sword Akamanah. Upgrade through Kaysia in the Town of Oren. Max HP can increase by more than 150,000. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->

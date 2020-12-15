@@ -748,9 +748,13 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39535" level="1" /> <!-- Scroll of Escape: Herphah -->
+		</skills>
 	</item>
 	<item id="80858" name="Scroll of Escape: Joachim" type="EtcItem">
 		<!-- Teleports you to where Joachim is. -->
@@ -760,9 +764,13 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39536" level="1" /> <!-- Scroll of Escape: Joachim -->
+		</skills>
 	</item>
 	<item id="80859" name="Blood-thirsty Akamanah Shaper" type="Weapon">
 		<!-- A weapon created from Blood Sword Akamanah. Max HP can be more than 150,000. Its appearance cannot be changed. Cannot be assigned an attribute, crystallized, augmented, enchanted, or enhanced with a soul crystal. <Enhancing>. Take the weapon and Akamanah's Blood to Kaysia in Oren to get a Bloodstained Akamanah weapon. -->
