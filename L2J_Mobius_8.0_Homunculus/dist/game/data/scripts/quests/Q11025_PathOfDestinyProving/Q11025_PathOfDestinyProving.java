@@ -338,12 +338,13 @@ public class Q11025_PathOfDestinyProving extends Quest
 			}
 			case "BacktoRaymond":
 			{
-				if (qs.isCond(13))
+				if (qs.isCond(13) && (npc != null))
 				{
 					qs.setCond(14, true);
 					showOnScreenMsg(player, NpcStringId.RETURN_TO_RAYMOND_OF_THE_TOWN_OF_GLUDIO, ExShowScreenMessage.TOP_CENTER, 10000);
 					giveItems(player, WIND_SPIRIT_REALM_RELIC, 1);
 					player.teleToLocation(TRAINING_GROUNDS_TELEPORT5);
+					npc.deleteMe();
 				}
 				break;
 			}
