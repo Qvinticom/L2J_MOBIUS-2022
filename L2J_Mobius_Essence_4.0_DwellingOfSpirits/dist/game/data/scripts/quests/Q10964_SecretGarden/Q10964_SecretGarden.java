@@ -22,6 +22,7 @@ import java.util.Set;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -44,6 +45,8 @@ public class Q10964_SecretGarden extends Quest
 	private static final int WYRM = 20176;
 	private static final int TURAK_BUGBEAR = 20248;
 	private static final int TURAK_BUGBEAR_WARRIOR = 20249;
+	// Items
+	private static final ItemHolder SCROLL_ENCHANT_ADEN_WEAPON = new ItemHolder(93038, 2);
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	private static final int MIN_LEVEL = 30;
@@ -101,7 +104,8 @@ public class Q10964_SecretGarden extends Quest
 				if (qs.isStarted())
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_MISSION_ADVENTURER_S_JOURNEY_II_IS_NOW_AVAILABLE_NCLICK_THE_YELLOW_QUESTION_MARK_IN_THE_RIGHT_BOTTOM_CORNER_OF_YOUR_SCREEN_TO_SEE_THE_QUEST_S_INFO, 2, 5000));
-					addExpAndSp(player, 2500000, 75000);
+					addExpAndSp(player, 3500000, 95000);
+					giveItems(player, SCROLL_ENCHANT_ADEN_WEAPON);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;
@@ -118,7 +122,7 @@ public class Q10964_SecretGarden extends Quest
 		if ((qs != null) && qs.isCond(2))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (killCount < 500)
+			if (killCount < 150)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
