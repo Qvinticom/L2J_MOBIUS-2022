@@ -1055,7 +1055,7 @@
 		<icon>icon.r2_belt_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="54082" toLevel="10" name="Belt: Dragon Belt">
+	<skill id="54082" toLevel="11" name="Belt: Dragon Belt">
 		<!-- Weight Limit +$s1, Inventory Slots +$s2, DEX +$s3, WIT +$s4, CON +$s5, MEN +$s6. -->
 		<icon>icon.r2_belt_i01</icon>
 		<operateType>P</operateType>
@@ -1072,6 +1072,7 @@
 					<value level="8">8000</value>
 					<value level="9">9000</value>
 					<value level="10">10000</value>
+					<value level="11">12000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1086,6 +1087,7 @@
 					<value level="8">8</value>
 					<value level="9">8</value>
 					<value level="10">10</value>
+					<value level="11">12</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1097,6 +1099,7 @@
 					<value level="8">300</value>
 					<value level="9">400</value>
 					<value level="10">600</value>
+					<value level="11">1000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1108,6 +1111,7 @@
 					<value level="8">200</value>
 					<value level="9">250</value>
 					<value level="10">300</value>
+					<value level="11">500</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1119,6 +1123,7 @@
 					<value level="8">500</value>
 					<value level="9">700</value>
 					<value level="10">1000</value>
+					<value level="11">1500</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1129,6 +1134,7 @@
 					<value level="8">120</value>
 					<value level="9">150</value>
 					<value level="10">200</value>
+					<value level="11">300</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1139,6 +1145,7 @@
 					<value level="8">120</value>
 					<value level="9">150</value>
 					<value level="10">200</value>
+					<value level="11">300</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1159,6 +1166,7 @@
 					<value level="8">50</value>
 					<value level="9">80</value>
 					<value level="10">100</value>
+					<value level="11">100</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1169,6 +1177,7 @@
 					<value level="8">40</value>
 					<value level="9">50</value>
 					<value level="10">80</value>
+					<value level="11">120</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1177,6 +1186,7 @@
 					<value level="8">20</value>
 					<value level="9">30</value>
 					<value level="10">50</value>
+					<value level="11">100</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1185,6 +1195,7 @@
 					<value level="8">10</value>
 					<value level="9">20</value>
 					<value level="10">30</value>
+					<value level="11">50</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1193,6 +1204,7 @@
 					<value level="8">10</value>
 					<value level="9">20</value>
 					<value level="10">30</value>
+					<value level="11">50</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1200,6 +1212,7 @@
 				<amount>
 					<value level="9">5</value>
 					<value level="10">10</value>
+					<value level="11">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1215,6 +1228,7 @@
 					<value level="8">4</value>
 					<value level="9">4</value>
 					<value level="10">5</value>
+					<value level="11">5</value>
 				</amount>
 				<stat>DEX</stat>
 			</effect>
@@ -1230,6 +1244,7 @@
 					<value level="8">4</value>
 					<value level="9">4</value>
 					<value level="10">5</value>
+					<value level="11">5</value>
 				</amount>
 				<stat>WIT</stat>
 			</effect>
@@ -1244,6 +1259,7 @@
 					<value level="8">4</value>
 					<value level="9">4</value>
 					<value level="10">5</value>
+					<value level="11">5</value>
 				</amount>
 				<stat>CON</stat>
 			</effect>
@@ -1258,6 +1274,7 @@
 					<value level="8">4</value>
 					<value level="9">5</value>
 					<value level="10">5</value>
+					<value level="11">5</value>
 				</amount>
 				<stat>MEN</stat>
 			</effect>
@@ -1272,6 +1289,7 @@
 					<value level="8">4</value>
 					<value level="9">5</value>
 					<value level="10">5</value>
+					<value level="11">5</value>
 				</amount>
 				<stat>CON</stat>
 			</effect>
@@ -1285,6 +1303,7 @@
 					<value level="8">4</value>
 					<value level="9">4</value>
 					<value level="10">4</value>
+					<value level="11">5</value>
 				</amount>
 				<stat>STR</stat>
 			</effect>
@@ -1298,6 +1317,7 @@
 					<value level="8">4</value>
 					<value level="9">4</value>
 					<value level="10">4</value>
+					<value level="11">5</value>
 				</amount>
 				<stat>INT</stat>
 			</effect>
