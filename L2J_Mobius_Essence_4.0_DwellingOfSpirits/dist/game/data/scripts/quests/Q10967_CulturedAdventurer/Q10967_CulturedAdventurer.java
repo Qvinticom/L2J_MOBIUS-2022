@@ -48,6 +48,7 @@ public class Q10967_CulturedAdventurer extends Quest
 	// Items
 	private static final ItemHolder ADVENTURERS_BROOCH = new ItemHolder(91932, 1);
 	private static final ItemHolder ADVENTURERS_BROOCH_GEMS = new ItemHolder(91936, 1);
+	private static final ItemHolder SCROLL_ENCHANT_ADEN_WEAPON = new ItemHolder(93038, 2);
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	private static final int MAX_LEVEL = 30;
@@ -100,6 +101,7 @@ public class Q10967_CulturedAdventurer extends Quest
 					addExpAndSp(player, 2000000, 50000);
 					giveItems(player, ADVENTURERS_BROOCH);
 					giveItems(player, ADVENTURERS_BROOCH_GEMS);
+					giveItems(player, SCROLL_ENCHANT_ADEN_WEAPON);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;
@@ -155,7 +157,7 @@ public class Q10967_CulturedAdventurer extends Quest
 				qs.unset(KILL_COUNT_VAR);
 				killer.sendPacket(new ExShowScreenMessage(NpcStringId.MONSTERS_OF_THE_ABANDONED_CAMP_ARE_KILLED_NUSE_THE_TELEPORT_TO_GET_TO_BATHIS_IN_GLUDIO, 2, 5000));
 			}
-			else if (killCount < 300)
+			else if (killCount < 150)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
