@@ -58,6 +58,7 @@ public class ChamberOfProphecies extends AbstractInstance
 	private static final int PROPHECY_MACHINE = 39540;
 	private static final int ATELIA = 39542;
 	private static final Location FIRST_ROOM_LOC = new Location(-88503, 184754, -10440, 48891);
+	private static final Location THIRD_ROOM_LOC = new Location(-88506, 177151, -10445, 48891);
 	
 	public ChamberOfProphecies()
 	{
@@ -145,10 +146,29 @@ public class ChamberOfProphecies extends AbstractInstance
 				{
 					return null;
 				}
-				world.getNpc(FERIN).deleteMe(); // probably needs another npc id for initial room
-				world.spawnGroup("q10753_16_instance_halter_1_1");
-				world.spawnGroup("wof_room1");
-				player.teleToLocation(FIRST_ROOM_LOC);
+				final Npc valHalter = world.getNpc(VAN_HALTER);
+				if (valHalter != null)
+				{
+					valHalter.deleteMe(); // probably needs another npc id for initial room
+				}
+				final Npc ferin = world.getNpc(FERIN);
+				if (ferin != null)
+				{
+					ferin.deleteMe(); // probably needs another npc id for initial room
+				}
+				if (world.isStatus(0) && world.getAliveNpcs(MonsterInstance.class).isEmpty())
+				{
+					world.spawnGroup("q10753_16_instance_halter_1_1");
+					world.spawnGroup("wof_room1");
+				}
+				if (world.getStatus() < 3)
+				{
+					player.teleToLocation(FIRST_ROOM_LOC);
+				}
+				else
+				{
+					player.teleToLocation(THIRD_ROOM_LOC);
+				}
 				cancelQuestTimer("CHECK_STATUS", npc, player);
 				startQuestTimer("CHECK_STATUS", 7000, world.getNpc(KAIN_VAN_HALTER), player);
 				break;
@@ -160,7 +180,7 @@ public class ChamberOfProphecies extends AbstractInstance
 				{
 					return null;
 				}
-				if (world.isStatus(0))
+				if (world.getStatus() < 5)
 				{
 					htmltext = "31639-01.html";
 					break;
@@ -302,7 +322,7 @@ public class ChamberOfProphecies extends AbstractInstance
 			}
 			case "SEY2":
 			{
-				if (npc.getId() == FERIN)
+				if ((npc != null) && (npc.getId() == FERIN))
 				{
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.YOU_CAN_T_DIE_HERE_I_DIDN_T_LEARN_RESURRECT_YET));
 					player.sendPacket(new PlaySound(3, "Npcdialog1.apple_quest_4", 0, 0, 0, 0, 0));
@@ -311,17 +331,17 @@ public class ChamberOfProphecies extends AbstractInstance
 			}
 			case "SEY_KAIN":
 			{
-				if (npc.getId() == VAN_HALTER)
+				if ((npc != null) && (npc.getId() == VAN_HALTER))
 				{
-					startQuestTimer("ATTACK1", 200, npc, player, true);
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.GISELLE_WAS_SUCH_A_SWEET_CHILD));
 					player.sendPacket(new PlaySound(3, "Npcdialog1.holter_quest_1", 0, 0, 0, 0, 0));
 				}
+				startQuestTimer("ATTACK1", 200, npc, player, true);
 				break;
 			}
 			case "SEY3":
 			{
-				if (npc.getId() == FERIN)
+				if ((npc != null) && (npc.getId() == FERIN))
 				{
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.DO_YOU_THINK_I_LL_GROW_TALLER_IF_I_EAT_LOTS_AND_LOTS));
 					player.sendPacket(new PlaySound(3, "Npcdialog1.apple_quest_6", 0, 0, 0, 0, 0));
@@ -330,7 +350,7 @@ public class ChamberOfProphecies extends AbstractInstance
 			}
 			case "SEY_KAIN_1":
 			{
-				if (npc.getId() == VAN_HALTER)
+				if ((npc != null) && (npc.getId() == VAN_HALTER))
 				{
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.SUCH_MONSTERS_IN_A_PLACE_LIKE_THIS_UNBELIEVABLE));
 				}
@@ -338,41 +358,41 @@ public class ChamberOfProphecies extends AbstractInstance
 			}
 			case "SEY_KAIN_2":
 			{
-				if (npc.getId() == VAN_HALTER)
+				if ((npc != null) && (npc.getId() == VAN_HALTER))
 				{
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THAT_S_THE_MONSTER_THAT_ATTACKED_FAERON_YOU_RE_OUTMATCHED_HERE_GO_AHEAD_I_LL_CATCH_UP));
 					player.sendPacket(new PlaySound(3, "Npcdialog1.holter_quest_6", 0, 0, 0, 0, 0));
-					startQuestTimer("SEY_KAIN_3", 7000, npc, player);
 				}
+				startQuestTimer("SEY_KAIN_3", 7000, npc, player);
 				break;
 			}
 			case "SEY4":
 			{
-				if (npc.getId() == FERIN)
+				if ((npc != null) && (npc.getId() == FERIN))
 				{
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.GO_NOW_KAIN_CAN_HANDLE_THIS));
-					startQuestTimer("REST", 5000, npc, player);
 					npc.setScriptValue(1);
 				}
+				startQuestTimer("REST", 5000, npc, player);
 				break;
 			}
 			case "SEY_KAIN_3":
 			{
-				if (npc.getId() == VAN_HALTER)
+				if ((npc != null) && (npc.getId() == VAN_HALTER))
 				{
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.LEAVE_THIS_TO_ME_GO));
-					startQuestTimer("SEY_KAIN_4", 1000, npc, player);
 					npc.setScriptValue(1);
 				}
+				startQuestTimer("SEY_KAIN_4", 1000, npc, player);
 				break;
 			}
 			case "REST":
 			{
-				if (npc.getId() == FERIN)
+				if ((npc != null) && (npc.getId() == FERIN))
 				{
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, player);
-					cancelQuestTimer("BROADCAST_TEXT", npc, player);
 				}
+				cancelQuestTimer("BROADCAST_TEXT", npc, player);
 				break;
 			}
 			case "SEY_KAIN_4":
@@ -387,7 +407,10 @@ public class ChamberOfProphecies extends AbstractInstance
 				showOnScreenMsg(player, NpcStringId.LEAVE_THIS_PLACE_TO_KAIN_NGO_TO_THE_NEXT_ROOM, ExShowScreenMessage.TOP_CENTER, 6000);
 				world.openCloseDoor(DOOR_4, true);
 				cancelQuestTimer("ATTACK2", npc, player);
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, player);
+				if (npc != null)
+				{
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, player);
+				}
 				startQuestTimer("CLOSE", 15000, null, player);
 				break;
 			}
