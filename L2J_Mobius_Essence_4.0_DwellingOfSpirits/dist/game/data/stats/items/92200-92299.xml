@@ -732,9 +732,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">171</stat>
 		</stats>
+		<skills>
+			<skill id="50221" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Breastplate -->
+		</skills>
 	</item>
 	<item id="92256" name="Armor of Nightmare" type="Armor">
 		<!-- <Options>. Full Body. Weight Limit +2500. M. Def. +25. CON +2. Max HP +200. Sleep Resistance +70%. Hold Resistance +70%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -750,9 +754,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">293</stat>
 		</stats>
+		<skills>
+			<skill id="50231" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Armor of Nightmare -->
+		</skills>
 	</item>
 	<item id="92257" name="Dark Crystal Gaiters" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. CON +1. Max HP +200. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -768,9 +776,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">107</stat>
 		</stats>
+		<skills>
+			<skill id="50224" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Gaiters -->
+		</skills>
 	</item>
 	<item id="92258" name="Dark Crystal Helmet" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
@@ -800,6 +812,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">69</stat>
 		</stats>
@@ -815,6 +828,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -835,9 +849,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">278</stat>
 		</stats>
+		<skills>
+			<skill id="50234" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Plate Armor -->
+		</skills>
 	</item>
 	<item id="92262" name="Majestic Plate Armor" type="Armor">
 		<!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. CON +2. Max HP +200. Stun Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -853,9 +871,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">293</stat>
 		</stats>
+		<skills>
+			<skill id="50228" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Plate Armor -->
+		</skills>
 	</item>
 	<item id="92263" name="Dark Crystal Leather Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +15. DEX +1. Paralysis Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -871,9 +893,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
+		<skills>
+			<skill id="50222" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Leather Armor -->
+		</skills>
 	</item>
 	<item id="92264" name="Dark Crystal Leggings" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. DEX +1. Max HP +80. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -889,9 +915,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">80</stat>
 		</stats>
+		<skills>
+			<skill id="50225" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Leggings -->
+		</skills>
 	</item>
 	<item id="92265" name="Tallum Leather Armor" type="Armor">
 		<!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. MEN +2. Max HP +150. Max MP +80. Mental Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -907,9 +937,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">209</stat>
 		</stats>
+		<skills>
+			<skill id="50235" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Leather Armor -->
+		</skills>
 	</item>
 	<item id="92266" name="Leather Armor of Nightmare" type="Armor">
 		<!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. MEN +2. Max HP +150. Max MP +80. Sleep Resistance +70%. Hold Resistance +70%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -925,9 +959,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">220</stat>
 		</stats>
+		<skills>
+			<skill id="50233" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Leather Armor of Nightmare -->
+		</skills>
 	</item>
 	<item id="92267" name="Majestic Leather Armor" type="Armor">
 		<!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. DEX +2. Max HP +150. Max MP +80. Stun Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -943,9 +981,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">220</stat>
 		</stats>
+		<skills>
+			<skill id="50230" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Leather Armor -->
+		</skills>
 	</item>
 	<item id="92268" name="Tallum Tunic" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +15. WIT +1. Mental Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -961,10 +1003,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">86</stat>
 			<stat type="maxMp">409</stat>
 		</stats>
+		<skills>
+			<skill id="50223" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Tunic -->
+		</skills>
 	</item>
 	<item id="92269" name="Tallum Stockings" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. WIT +1. Max HP +100. Max MP +120. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -980,10 +1026,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">53</stat>
 			<stat type="maxMp">256</stat>
 		</stats>
+		<skills>
+			<skill id="50226" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Stockings -->
+		</skills>
 	</item>
 	<item id="92270" name="Dark Crystal Robe" type="Armor">
 		<!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. WIT +2. Max HP +100. Max MP +120. Paralysis Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -999,10 +1049,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">139</stat>
 			<stat type="maxMp">665</stat>
 		</stats>
+		<skills>
+			<skill id="50227" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Robe -->
+		</skills>
 	</item>
 	<item id="92271" name="Robe of Nightmare" type="Armor">
 		<!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. WIT +2. Max HP +100. Max MP +120. Sleep Resistance +70%. Hold Resistance +70%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1018,10 +1072,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">147</stat>
 			<stat type="maxMp">718</stat>
 		</stats>
+		<skills>
+			<skill id="50232" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Robe of Nightmare -->
+		</skills>
 	</item>
 	<item id="92272" name="Majestic Robe" type="Armor">
 		<!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. WIT +2. Max HP +100. Max MP +120. Stun Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1037,10 +1095,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">147</stat>
 			<stat type="maxMp">718</stat>
 		</stats>
+		<skills>
+			<skill id="50229" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Robe -->
+		</skills>
 	</item>
 	<item id="92273" name="Helm of Nightmare" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
@@ -1120,9 +1182,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50236" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Gloves-->
+		</skills>
 	</item>
 	<item id="92278" name="Dark Crystal Gloves" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1137,9 +1203,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50238" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Gloves-->
+		</skills>
 	</item>
 	<item id="92279" name="Dark Crystal Gloves" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1154,9 +1225,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50237" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Gloves-->
+		</skills>
 	</item>
 	<item id="92280" name="Tallum Gloves" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1171,9 +1246,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50245" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Gloves -->
+		</skills>
 	</item>
 	<item id="92281" name="Tallum Gloves" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1188,9 +1267,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50247" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Gloves -->
+		</skills>
 	</item>
 	<item id="92282" name="Tallum Gloves" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1205,9 +1288,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50246" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Gloves -->
+		</skills>
 	</item>
 	<item id="92283" name="Gauntlets of Nightmare" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1222,9 +1309,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50242" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Gauntlets of Nightmare -->
+		</skills>
 	</item>
 	<item id="92284" name="Gauntlets of Nightmare" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1239,9 +1330,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50244" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Gauntlets of Nightmare -->
+		</skills>
 	</item>
 	<item id="92285" name="Gauntlets of Nightmare" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1256,9 +1351,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50243" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Gauntlets of Nightmare -->
+		</skills>
 	</item>
 	<item id="92286" name="Majestic Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1273,9 +1372,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50239" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Gauntlets -->
+		</skills>
 	</item>
 	<item id="92287" name="Majestic Gauntlets" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1290,9 +1393,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50241" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Gauntlets -->
+		</skills>
 	</item>
 	<item id="92288" name="Majestic Gauntlets" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1307,9 +1414,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50240" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Gauntlets -->
+		</skills>
 	</item>
 	<item id="92289" name="Dark Crystal Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1324,9 +1435,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50248" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Boots -->
+		</skills>
 	</item>
 	<item id="92290" name="Dark Crystal Boots" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1341,9 +1456,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50250" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Boots -->
+		</skills>
 	</item>
 	<item id="92291" name="Dark Crystal Boots" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1358,9 +1477,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50249" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Boots -->
+		</skills>
 	</item>
 	<item id="92292" name="Tallum Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1375,9 +1498,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50257" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Boots -->
+		</skills>
 	</item>
 	<item id="92293" name="Tallum Boots" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1392,9 +1519,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50259" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Boots -->
+		</skills>
 	</item>
 	<item id="92294" name="Tallum Boots" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1409,9 +1540,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
+		<skills>
+			<skill id="50258" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Boots -->
+		</skills>
 	</item>
 	<item id="92295" name="Boots of Nightmare" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1426,9 +1561,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50254" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Boots of Nightmare -->
+		</skills>
 	</item>
 	<item id="92296" name="Boots of Nightmare" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1443,9 +1582,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50256" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Boots of Nightmare -->
+		</skills>
 	</item>
 	<item id="92297" name="Boots of Nightmare" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1460,9 +1603,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50255" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Boots of Nightmare -->
+		</skills>
 	</item>
 	<item id="92298" name="Majestic Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1477,9 +1624,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50251" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Boots -->
+		</skills>
 	</item>
 	<item id="92299" name="Majestic Boots" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -1494,8 +1645,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50253" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Boots -->
+		</skills>
 	</item>
 </list>

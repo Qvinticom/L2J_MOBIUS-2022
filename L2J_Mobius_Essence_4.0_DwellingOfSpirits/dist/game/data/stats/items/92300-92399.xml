@@ -13,9 +13,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50252" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Boots -->
+		</skills>
 	</item>
 	<item id="92301" name="Tallum Helmet" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. INT +1. Max HP +100. Magic Attack Resistance +5%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -30,9 +34,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">69</stat>
 		</stats>
+		<skills>
+			<skill id="50218" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Helmet -->
+		</skills>
 	</item>
 	<item id="92302" name="Tallum Helmet" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. MEN +1. Max MP +100. M. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -47,9 +55,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">69</stat>
 		</stats>
+		<skills>
+			<skill id="50220" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Helmet -->
+		</skills>
 	</item>
 	<item id="92303" name="Tallum Helmet" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. MEN +1. Max MP +100. Received P. Critical Rate -20%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -64,9 +76,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">69</stat>
 		</stats>
+		<skills>
+			<skill id="50219" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Helmet -->
+		</skills>
 	</item>
 	<item id="92304" name="Dark Crystal Helmet" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. DEX +1. Max HP +250. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -81,9 +97,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">69</stat>
 		</stats>
+		<skills>
+			<skill id="50209" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Helmet -->
+		</skills>
 	</item>
 	<item id="92305" name="Dark Crystal Helmet" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. DEX +1. Max HP +100. M. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -98,9 +118,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">69</stat>
 		</stats>
+		<skills>
+			<skill id="50211" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Helmet -->
+		</skills>
 	</item>
 	<item id="92306" name="Dark Crystal Helmet" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max HP +100. Speed +7. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -115,9 +139,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">69</stat>
 		</stats>
+		<skills>
+			<skill id="50210" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Helmet -->
+		</skills>
 	</item>
 	<item id="92307" name="Helm of Nightmare" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. DEX +1. Max HP +100. Received Damage -5%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -132,9 +160,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">73</stat>
 		</stats>
+		<skills>
+			<skill id="50215" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Helm of Nightmare -->
+		</skills>
 	</item>
 	<item id="92308" name="Helm of Nightmare" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max MP +100. Melee Weapon Resistance +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -149,9 +181,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">73</stat>
 		</stats>
+		<skills>
+			<skill id="50217" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Helm of Nightmare -->
+		</skills>
 	</item>
 	<item id="92309" name="Helm of Nightmare" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max MP +100. P. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -166,9 +202,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">73</stat>
 		</stats>
+		<skills>
+			<skill id="50216" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Helm of Nightmare -->
+		</skills>
 	</item>
 	<item id="92310" name="Majestic Circlet" additionalName="Heavy Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. CON +1. Max HP +100. Speed +7. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -183,9 +223,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">73</stat>
 		</stats>
+		<skills>
+			<skill id="50212" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Circlet -->
+		</skills>
 	</item>
 	<item id="92311" name="Majestic Circlet" additionalName="Light Armor" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. CON +1. Max HP +100. P. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -200,9 +244,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">73</stat>
 		</stats>
+		<skills>
+			<skill id="50214" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Circlet -->
+		</skills>
 	</item>
 	<item id="92312" name="Majestic Circlet" additionalName="Robe" type="Armor">
 		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max HP +250. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
@@ -217,9 +265,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">73</stat>
 		</stats>
+		<skills>
+			<skill id="50213" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Circlet -->
+		</skills>
 	</item>
 	<item id="92313" name="Giran Trophy Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following rare items: Ignis' Necklace, Procella's Necklace, Petram's Necklace, Brooch Lv. 3. -->
