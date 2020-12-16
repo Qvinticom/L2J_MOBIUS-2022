@@ -196,11 +196,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="targetType" val="ONE" />
-		<cond msgId="113" addName="1">
-			<not>
-				<target npcType="Attackable" />
-			</not>
-		</cond>
 		<for>
 			<effect name="CpHeal">
 				<param power="9000" />

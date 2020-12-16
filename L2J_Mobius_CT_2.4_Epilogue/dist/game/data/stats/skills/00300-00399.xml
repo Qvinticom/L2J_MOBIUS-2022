@@ -1303,11 +1303,6 @@
 		<enchant1 name="magicLevel" val="#enchMagicLvl" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<enchant2 name="magicLevel" val="#enchMagicLvl" />
-		<cond msgId="113" addName="1">
-			<not>
-				<target npcType="Attackable" />
-			</not>
-		</cond>
 		<for>
 			<effect name="Buff">
 				<sub stat="cancelVuln" val="100" />
