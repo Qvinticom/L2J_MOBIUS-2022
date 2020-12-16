@@ -1737,6 +1737,30 @@
 				<slotsPercent>10</slotsPercent>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="16.666666666667">
+						<item id="38154" count="50" /> <!-- Fishing Shot -->
+					</item>
+					<item chance="16.666666666667">
+						<item id="39720" count="1" /> <!-- Freya's Luck Potion -->
+					</item>
+					<item chance="16.666666666667">
+						<item id="8034" count="1" /> <!-- Rainbow Springs Clan Hall War Decree -->
+					</item>
+					<item chance="16.666666666667">
+						<item id="47556" count="1" /> <!-- Stardust -->
+					</item>
+					<item chance="16.666666666667">
+						<item id="45494" count="1" /> <!-- Sturdy Fishing Rod -->
+					</item>
+					<item chance="16.666666666667">
+						<item id="48065" count="1" /> <!-- Zodiac Cube Fragment -->
+					</item>
+				</items>
+			</effect>	
+		</effects>
 	</skill>
 	<skill id="18664" toLevel="7" name="Reward for Defeating the Giant Monsters">
 		<!-- Double click to obtain the reward for Defeating the Giant Monsters. -->
