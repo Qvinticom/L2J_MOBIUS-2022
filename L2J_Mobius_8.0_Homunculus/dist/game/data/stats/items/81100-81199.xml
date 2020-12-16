@@ -407,8 +407,11 @@
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Required level: 99+. Fishing with this bait you have a low chance to obtain Santiago s Star Energy Pack. -->
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="bodypart" val="lhand" />
+		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81147" name="Kastia's Pack" additionalName="Lv. 1" type="EtcItem">
@@ -620,6 +623,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
+		</skills>
 		<stats>
 			<stat type="pAtk">698</stat>
 			<stat type="mAtk">303</stat>
@@ -645,6 +653,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
+		</skills>
 		<stats>
 			<stat type="pAtk">849</stat>
 			<stat type="mAtk">303</stat>
@@ -669,7 +682,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
 		<stats>
@@ -697,6 +713,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
+		</skills>
 		<stats>
 			<stat type="pAtk">849</stat>
 			<stat type="mAtk">303</stat>
@@ -723,6 +744,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">698</stat>
 			<stat type="mAtk">303</stat>
@@ -749,6 +776,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35614" level="1" /> <!-- Blessing of the Exalted - Combat -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1374</stat>
 			<stat type="mAtk">303</stat>
@@ -774,6 +806,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35614" level="1" /> <!-- Blessing of the Exalted - Combat -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1237</stat>
 			<stat type="mAtk">303</stat>
@@ -799,6 +836,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35615" level="1" /> <!-- Blessing of the Exalted - Combat -->
+		</skills>
 		<stats>
 			<stat type="pAtk">558</stat>
 			<stat type="mAtk">405</stat>
@@ -811,7 +853,7 @@
 		<!-- A weapon for those who have taken their path of honor not so long ago. PvE damage +10%, Max HP +15%, Casting Spd. +15%, M. Skill Critical Damage +10%, M. Critical Rate +50. Cannot be enchanted, crystallized, given another appearance, augmented, assigned an attribute, or imbued with a soul crystal. Can be exchanged for another Exalted weapon through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -822,6 +864,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35615" level="1" /> <!-- Blessing of the Exalted - Magic -->
+		</skills>
 		<stats>
 			<stat type="pAtk">558</stat>
 			<stat type="mAtk">405</stat>
@@ -848,6 +895,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35616" level="1" /> <!-- Blessing of the Exalted - Combat -->
+		</skills>
 		<stats>
 			<stat type="pAtk">679</stat>
 			<stat type="mAtk">445</stat>
@@ -874,6 +926,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
+		</skills>
 		<stats>
 			<stat type="pAtk">849</stat>
 			<stat type="mAtk">303</stat>
@@ -896,6 +953,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
+			<skill id="35614" level="1" /> <!-- Blessing of the Exalted - Combat -->
+		</skills>
 		<stats>
 			<stat type="pAtk">698</stat>
 			<stat type="mAtk">303</stat>
@@ -924,6 +986,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -956,6 +1019,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -988,6 +1052,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -1020,6 +1085,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -1053,6 +1119,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -1087,6 +1154,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35614" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -1120,6 +1188,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35614" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -1154,6 +1223,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35615" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -1186,9 +1256,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
-			<skill id="35615" level="1" /> <!-- Blessing of the Exalted - Combat -->
+			<skill id="35615" level="1" /> <!-- Blessing of the Exalted - Magic -->
 		</skills>
 		<stats>
 			<stat type="pAtk">666</stat>
@@ -1220,6 +1291,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35616" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -1253,6 +1325,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35613" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -1285,6 +1358,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="damage_range" val="0;0;44;120" />
+		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35614" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -1331,6 +1405,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- R-grade Cloak Slot Activation -->
+		</skills>
 		<stats>
 			<stat type="pDef">417</stat>
 		</stats>
@@ -1349,6 +1427,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="pDef">260</stat>
 		</stats>
@@ -1366,6 +1445,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="pDef">104</stat>
 		</stats>
@@ -1383,6 +1463,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="pDef">104</stat>
 		</stats>
@@ -1400,6 +1481,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -1437,6 +1519,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- R-grade Cloak Slot Activation -->
+		</skills>
 		<stats>
 			<stat type="pDef">333</stat>
 			<stat type="rEvas">5</stat>
@@ -1456,6 +1542,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="pDef">208</stat>
 			<stat type="rEvas">3</stat>
@@ -1474,6 +1561,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="pDef">104</stat>
 		</stats>
@@ -1491,6 +1579,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="pDef">104</stat>
 		</stats>
@@ -1526,6 +1615,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- R-grade Cloak Slot Activation -->
+		</skills>
 		<stats>
 			<stat type="mDef">49</stat>
 			<stat type="pDef">229</stat>
@@ -1546,6 +1639,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="mDef">33</stat>
 			<stat type="pDef">143</stat>
@@ -1565,6 +1659,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="pDef">104</stat>
 		</stats>
@@ -1582,6 +1677,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="pDef">104</stat>
 		</stats>
@@ -1600,6 +1696,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="isAppearanceable" val="false" />
 		<stats>
 			<stat type="pDef">52</stat>
 			<stat type="pAtkRange">40</stat>
