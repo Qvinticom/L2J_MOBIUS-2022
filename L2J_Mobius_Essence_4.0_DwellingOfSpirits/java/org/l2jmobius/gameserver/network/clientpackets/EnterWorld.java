@@ -649,7 +649,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		// Death Knight death points init.
-		if (player.getClassId().getId() > 195)
+		if (player.isDeathKnight())
 		{
 			// Send twice.
 			player.setDeathPoints(500);
