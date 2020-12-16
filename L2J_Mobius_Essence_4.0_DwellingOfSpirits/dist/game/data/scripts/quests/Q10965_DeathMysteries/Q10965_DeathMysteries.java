@@ -145,7 +145,7 @@ public class Q10965_DeathMysteries extends Quest
 		if ((qs != null) && qs.isCond(2))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (killCount < 500)
+			if (killCount < 150)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
