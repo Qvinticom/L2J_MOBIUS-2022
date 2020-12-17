@@ -99,9 +99,14 @@
 		</effects>
 	</skill>
 	<skill id="40116" toLevel="1" name="Scroll: Enchant Talisman of Authority">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40117" toLevel="1" name="Summon Deton">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

@@ -376,6 +376,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="40116" level="1" /> <!-- Scroll: Enchant Talisman of Authority -->
+		</skills>
 	</item>
 	<item id="93330" name="Enchant Kit: Talisman of Authority" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Authority and Scroll: Enchant Talisman of Authority (10 pcs.).\n\nDepending on enchant value of Talisman of Authority, P./ M. Atk., P./ M. Def., Max HP/ MP, P./ M. Skill Critical Damage, P./ M. Skill Power are increased. -->
@@ -388,6 +393,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91061" min="1" max="1" chance="100" /> <!-- Talisman of Authority -->
+			<item id="93329" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Talisman of Authority -->
+		</capsuled_items>
 	</item>
 	<item id="93331" name="Combat flag" type="Weapon">
 		<!-- Put this into a the flagpole to win Fortress War. You are forced to wear it once you acquire it, during which time use of Attack and Attack Skills is impossible, but Flag Display Skills can be used. -->
