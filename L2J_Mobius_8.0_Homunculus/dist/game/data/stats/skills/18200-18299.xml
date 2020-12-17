@@ -56,11 +56,11 @@
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">VOTE,1</value>
+					<value level="1">VOTE,1;SHINING_HOURGLASS,1</value>
 				</dispel>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>VOTE</slot>
+				<slot>VOTE;SHINING_HOURGLASS</slot>
 			</effect>
 		</effects>
 	</skill>

@@ -285,10 +285,10 @@
 				<amount>100</amount>
 			</effect>
 			<effect name="DispelBySlot">
-				<dispel>BUFF_PCCAFE_EXP1,1</dispel>
+				<dispel>BUFF_PCCAFE_EXP1,1;SHINING_HOURGLASS,1</dispel>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>BUFF_PCCAFE_EXP1</slot>
+				<slot>BUFF_PCCAFE_EXP1;SHINING_HOURGLASS</slot>
 			</effect>
 		</effects>
 	</skill>

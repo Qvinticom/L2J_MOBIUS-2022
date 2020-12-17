@@ -401,7 +401,20 @@
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<cond>
+			<player MinimumVitalityPoints="35000" />
+		</cond>
+		<skills>
+			<skill id="39612" level="1" /> <!-- Santiago's Sea Wind Scroll -->
+		</skills>
 	</item>
 	<item id="81146" name="Santiago's Bait" type="EtcItem">
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Required level: 99+. Fishing with this bait you have a low chance to obtain Santiago s Star Energy Pack. -->

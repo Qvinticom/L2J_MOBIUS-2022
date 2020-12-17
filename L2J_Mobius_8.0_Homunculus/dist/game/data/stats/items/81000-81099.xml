@@ -197,6 +197,10 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39245" level="1" /> <!-- Shining Nevit's Gold Hourglass -->
+		</skills>
 	</item>
 	<item id="81014" name="Potion of Appearance for PA Event - Bear" type="EtcItem">
 		<!-- Changes the armor appearance to that of Bear Costume for 24 h. -->

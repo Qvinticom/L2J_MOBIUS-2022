@@ -1405,7 +1405,7 @@
 		<isMagic>4</isMagic>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<abnormalType>PREMIUM_BUFF</abnormalType>
+		<abnormalType>DANDY_CHALLENGE</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37731</itemConsumeId> <!-- Dandy's Scroll: Challenge -->
@@ -1422,7 +1422,7 @@
 				<amount>30</amount>
 			</effect>
 			<effect name="DispelBySlot">
-				<dispel>EXP_SPECIAL,-1;FREYA_SCROLL_VIT,-1</dispel>
+				<dispel>EXP_SPECIAL,-1;FREYA_SCROLL_VIT,-1;DANDY_FAITH,-1;DANDY_PASSION,-1</dispel>
 			</effect>
 		</effects>
 	</skill>
@@ -1434,7 +1434,7 @@
 		<isMagic>4</isMagic>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<abnormalType>PREMIUM_BUFF</abnormalType>
+		<abnormalType>DANDY_FAITH</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37729</itemConsumeId> <!-- Dandy's Scroll: Faith -->
@@ -1503,6 +1503,9 @@
 				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
+			<effect name="DispelBySlot">
+				<dispel>DANDY_CHALLENGE,-1;DANDY_PASSION,-1</dispel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="17189" toLevel="1" name="Dandy's Passion">
@@ -1513,7 +1516,7 @@
 		<isMagic>4</isMagic>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
-		<abnormalType>PREMIUM_BUFF</abnormalType>
+		<abnormalType>DANDY_PASSION</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37730</itemConsumeId> <!-- Dandy's Scroll: Passion -->
@@ -1546,6 +1549,9 @@
 			<effect name="PvpPhysicalSkillDefenceBonus">
 				<amount>10</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>DANDY_CHALLENGE,-1;DANDY_FAITH,-1</dispel>
 			</effect>
 		</effects>
 	</skill>
