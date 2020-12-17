@@ -17,12 +17,15 @@
 package org.l2jmobius.gameserver.network.clientpackets.teleports;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.TeleportListData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.TeleportListHolder;
 import org.l2jmobius.gameserver.model.siege.Castle;
+import org.l2jmobius.gameserver.model.skills.CommonSkill;
+import org.l2jmobius.gameserver.model.skills.SkillCaster;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -105,6 +108,14 @@ public class ExRequestTeleport implements IClientIncomingPacket
 		
 		player.abortCast();
 		player.stopMove(null);
-		player.teleToLocation(teleport.getX(), teleport.getY(), teleport.getZ());
+		player.setImmobilized(true);
+		
+		SkillCaster.triggerCast(player, player, CommonSkill.TELEPORT.getSkill());
+		
+		ThreadPool.schedule(() ->
+		{
+			player.teleToLocation(teleport.getX(), teleport.getY(), teleport.getZ());
+			player.setImmobilized(false);
+		}, 2500);
 	}
 }

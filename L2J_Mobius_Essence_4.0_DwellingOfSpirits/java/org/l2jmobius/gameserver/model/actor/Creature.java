@@ -767,14 +767,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// Abort any client actions, casting and remove target.
-		sendPacket(ActionFailed.get(SkillCastingType.NORMAL));
-		sendPacket(ActionFailed.get(SkillCastingType.NORMAL_SECOND));
-		if (isMoving())
+		if (isPlayer() && !_isImmobilized)
 		{
-			stopMove(null);
+			sendPacket(ActionFailed.get(SkillCastingType.NORMAL));
+			sendPacket(ActionFailed.get(SkillCastingType.NORMAL_SECOND));
+			if (isMoving())
+			{
+				stopMove(null);
+			}
+			abortCast();
+			setTarget(null);
 		}
-		abortCast();
-		setTarget(null);
 		
 		setTeleporting(true);
 		
