@@ -11222,6 +11222,12 @@ public class PlayerInstance extends Playable
 			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
 		
+		// Make sure player variables are stored.
+		getVariables().storeMe();
+		
+		// Make sure account variables are stored.
+		getAccountVariables().storeMe();
+		
 		// Set the online Flag to True or False and update the characters table of the database with online status and lastAccess (called when login and logout)
 		try
 		{

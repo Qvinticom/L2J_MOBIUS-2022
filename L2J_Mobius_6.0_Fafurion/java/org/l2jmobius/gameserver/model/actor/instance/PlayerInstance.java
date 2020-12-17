@@ -10880,6 +10880,12 @@ public class PlayerInstance extends Playable
 			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
 		
+		// Make sure player variables are stored.
+		getVariables().storeMe();
+		
+		// Make sure account variables are stored.
+		getAccountVariables().storeMe();
+		
 		// Recommendations must be saved before task (timer) is canceled
 		try
 		{
