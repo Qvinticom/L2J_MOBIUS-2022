@@ -155,6 +155,7 @@ public class Config
 	public static boolean PREMIUM_ONLY_ATTENDANCE_REWARDS;
 	public static boolean ATTENDANCE_REWARDS_SHARE_ACCOUNT;
 	public static int ATTENDANCE_REWARD_DELAY;
+	public static boolean ATTENDANCE_POPUP_START;
 	public static boolean ATTENDANCE_POPUP_WINDOW;
 	public static boolean BALTHUS_KNIGHTS_ENABLED;
 	public static int BALTHUS_KNIGHTS_LEVEL;
@@ -1577,6 +1578,7 @@ public class Config
 			PREMIUM_ONLY_ATTENDANCE_REWARDS = Attandance.getBoolean("PremiumOnlyAttendanceRewards", false);
 			ATTENDANCE_REWARDS_SHARE_ACCOUNT = Attandance.getBoolean("AttendanceRewardsShareAccount", false);
 			ATTENDANCE_REWARD_DELAY = Attandance.getInt("AttendanceRewardDelay", 30);
+			ATTENDANCE_POPUP_START = Attandance.getBoolean("AttendancePopupStart", true);
 			ATTENDANCE_POPUP_WINDOW = Attandance.getBoolean("AttendancePopupWindow", false);
 			
 			// Load AttributeSystem config file (if exists)

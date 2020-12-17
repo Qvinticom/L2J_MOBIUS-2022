@@ -648,6 +648,11 @@ public class EnterWorld implements IClientIncomingPacket
 					}
 				}
 			}, Config.ATTENDANCE_REWARD_DELAY * 60 * 1000);
+			
+			if (Config.ATTENDANCE_POPUP_START)
+			{
+				player.sendPacket(new ExVipAttendanceItemList(player));
+			}
 		}
 		
 		if (Config.HARDWARE_INFO_ENABLED)
