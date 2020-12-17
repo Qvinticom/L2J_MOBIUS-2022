@@ -400,7 +400,10 @@
 															</xs:complexType>
 														</xs:element>
 														<xs:element minOccurs="0" name="isWithin" type="xs:boolean" />
-														<xs:element minOccurs="0" name="transformId" type="xs:int" />
+														<xs:element minOccurs="0" name="transformId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="skillLevel" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="hasLearned" type="xs:boolean" />
 														<xs:element minOccurs="0" name="npcIds">
 															<xs:complexType>
 																<xs:sequence>
@@ -410,8 +413,6 @@
 														</xs:element>
 														<xs:element minOccurs="0" name="range" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="isAround" type="xs:boolean" />
-														<xs:element minOccurs="0" name="skillId" type="xs:unsignedShort" />
-														<xs:element minOccurs="0" name="hasLearned" type="xs:boolean" />
 														<xs:element minOccurs="0" name="type" type="xs:string" />
 														<xs:element minOccurs="0" name="level" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="hasAbnormal" type="xs:boolean" />
@@ -808,8 +809,6 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="hpPercent" type="xs:unsignedByte" />
-															<xs:element name="mpPercent" type="xs:unsignedByte" />
-															<xs:element name="cpPercent" type="xs:unsignedByte" />
 															<xs:element name="attribute" type="xs:string" />
 															<xs:element name="attackerType" type="xs:string" />
 															<xs:element name="minAttackerLevel" type="xs:unsignedByte" />
@@ -1025,7 +1024,6 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="magicTypes" type="xs:string" />
 															<xs:element name="exp">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -1117,6 +1115,7 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="npcCount" type="xs:unsignedByte" />
+															<xs:element name="magicTypes" type="xs:string" />
 															<xs:element name="halfLethal" type="xs:unsignedByte" />
 															<xs:element name="shieldDefPercent" type="xs:unsignedByte" />
 															<xs:element name="CROSSBOW">
@@ -1327,7 +1326,7 @@
 															<xs:element name="PHYSICAL_ATTACK_SPEED" type="xs:unsignedByte" />
 															<xs:element name="MAGIC_ATTACK_SPEED" type="xs:unsignedByte" />
 															<xs:element name="pDefMod" type="xs:decimal" />
-															<xs:element name="transformationId" type="xs:int" />
+															<xs:element name="transformationId" type="xs:unsignedShort" />
 															<xs:element name="distance" type="xs:unsignedByte" />
 															<xs:element name="speed" type="xs:unsignedShort" />
 															<xs:element name="knockDown" type="xs:boolean" />
