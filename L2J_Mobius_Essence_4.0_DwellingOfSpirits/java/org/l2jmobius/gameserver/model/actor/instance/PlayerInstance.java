@@ -10766,6 +10766,12 @@ public class PlayerInstance extends Playable
 			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
 		
+		// Store death points.
+		if (_isDeathKnight)
+		{
+			getVariables().set(PlayerVariables.DEATH_POINT_COUNT, _deathPoints);
+		}
+		
 		// Make sure player variables are stored.
 		getVariables().storeMe();
 		

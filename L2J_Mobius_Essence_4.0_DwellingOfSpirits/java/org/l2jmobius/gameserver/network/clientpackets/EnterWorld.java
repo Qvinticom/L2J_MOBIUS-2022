@@ -653,7 +653,7 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			// Send twice.
 			player.setDeathPoints(500);
-			player.setDeathPoints(0); // TODO: Store death point values?
+			player.setDeathPoints(player.getVariables().getInt(PlayerVariables.DEATH_POINT_COUNT, 0));
 		}
 		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)
