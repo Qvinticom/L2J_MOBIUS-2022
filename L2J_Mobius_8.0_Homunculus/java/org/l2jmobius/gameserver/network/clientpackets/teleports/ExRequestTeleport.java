@@ -58,8 +58,15 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			return;
 		}
 		
+		// Dead characters cannot use teleports.
+		if (player.isDead())
+		{
+			player.sendPacket(SystemMessageId.CANNOT_TELEPORT_WHILE_DEAD);
+			return;
+		}
+		
 		// Players should not be able to teleport if in combat, or in a special location.
-		if (player.isCastingNow() || player.isInCombat() || player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInsideZone(ZoneId.TIMED_HUNTING))
+		if (player.isCastingNow() || player.isInCombat() || player.isImmobilized() || player.isInInstance() || player.isOnEvent() || player.isInOlympiadMode() || player.inObserverMode() || player.isInTraingCamp() || player.isInsideZone(ZoneId.TIMED_HUNTING))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_RIGHT_NOW);
 			return;
