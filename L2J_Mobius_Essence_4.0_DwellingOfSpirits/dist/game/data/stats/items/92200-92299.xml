@@ -737,7 +737,8 @@
 			<stat type="pDef">171</stat>
 		</stats>
 		<skills>
-			<skill id="50221" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Breastplate -->
+			<skill id="50221" level="1"/> <!-- A-grade: Dark Crystal Breastplate -->
+			<skill id="50261" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top Armor -->
 		</skills>
 	</item>
 	<item id="92256" name="Armor of Nightmare" type="Armor">
@@ -759,7 +760,8 @@
 			<stat type="pDef">293</stat>
 		</stats>
 		<skills>
-			<skill id="50231" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Armor of Nightmare -->
+			<skill id="50231" level="1" /> <!-- A-grade: Armor of Nightmare -->
+			<skill id="50261" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top Armor -->
 		</skills>
 	</item>
 	<item id="92257" name="Dark Crystal Gaiters" type="Armor">
@@ -781,7 +783,8 @@
 			<stat type="pDef">107</stat>
 		</stats>
 		<skills>
-			<skill id="50224" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Gaiters -->
+			<skill id="50224" level="1" /> <!-- A-grade: Dark Crystal Gaiters -->
+			<skill id="50262" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92258" name="Dark Crystal Helmet" type="Armor">
@@ -854,7 +857,8 @@
 			<stat type="pDef">278</stat>
 		</stats>
 		<skills>
-			<skill id="50234" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Plate Armor -->
+			<skill id="50234" level="1" /> <!-- A-grade: Tallum Plate Armor -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92262" name="Majestic Plate Armor" type="Armor">
@@ -876,7 +880,8 @@
 			<stat type="pDef">293</stat>
 		</stats>
 		<skills>
-			<skill id="50228" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Plate Armor -->
+			<skill id="50228" level="1" /> <!-- A-grade: Majestic Plate Armor -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92263" name="Dark Crystal Leather Armor" type="Armor">
@@ -898,7 +903,8 @@
 			<stat type="pDef">128</stat>
 		</stats>
 		<skills>
-			<skill id="50222" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Leather Armor -->
+			<skill id="50222" level="1" /> <!-- A-grade: Dark Crystal Leather Armor -->
+			<skill id="50261" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top Armor -->
 		</skills>
 	</item>
 	<item id="92264" name="Dark Crystal Leggings" type="Armor">
@@ -920,7 +926,8 @@
 			<stat type="pDef">80</stat>
 		</stats>
 		<skills>
-			<skill id="50225" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Leggings -->
+			<skill id="50225" level="1" /> <!-- A-grade: Dark Crystal Leggings -->
+			<skill id="50262" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92265" name="Tallum Leather Armor" type="Armor">
@@ -942,7 +949,8 @@
 			<stat type="pDef">209</stat>
 		</stats>
 		<skills>
-			<skill id="50235" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Leather Armor -->
+			<skill id="50235" level="1" /> <!-- A-grade: Tallum Leather Armor -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92266" name="Leather Armor of Nightmare" type="Armor">
@@ -964,7 +972,8 @@
 			<stat type="pDef">220</stat>
 		</stats>
 		<skills>
-			<skill id="50233" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Leather Armor of Nightmare -->
+			<skill id="50233" level="1" /> <!-- A-grade: Leather Armor of Nightmare -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92267" name="Majestic Leather Armor" type="Armor">
@@ -986,7 +995,8 @@
 			<stat type="pDef">220</stat>
 		</stats>
 		<skills>
-			<skill id="50230" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Leather Armor -->
+			<skill id="50230" level="1" /> <!-- A-grade: Majestic Leather Armor -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92268" name="Tallum Tunic" type="Armor">
@@ -1009,7 +1019,8 @@
 			<stat type="maxMp">409</stat>
 		</stats>
 		<skills>
-			<skill id="50223" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Tunic -->
+			<skill id="50223" level="1" /> <!-- A-grade: Tallum Tunic -->
+			<skill id="50261" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top Armor -->
 		</skills>
 	</item>
 	<item id="92269" name="Tallum Stockings" type="Armor">
@@ -1032,7 +1043,8 @@
 			<stat type="maxMp">256</stat>
 		</stats>
 		<skills>
-			<skill id="50226" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Stockings -->
+			<skill id="50226" level="1" /> <!-- A-grade: Tallum Stockings -->
+			<skill id="50262" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92270" name="Dark Crystal Robe" type="Armor">
@@ -1055,7 +1067,8 @@
 			<stat type="maxMp">665</stat>
 		</stats>
 		<skills>
-			<skill id="50227" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Robe -->
+			<skill id="50227" level="1" /> <!-- A-grade: Dark Crystal Robe -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92271" name="Robe of Nightmare" type="Armor">
@@ -1078,7 +1091,8 @@
 			<stat type="maxMp">718</stat>
 		</stats>
 		<skills>
-			<skill id="50232" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Robe of Nightmare -->
+			<skill id="50232" level="1" /> <!-- A-grade: Robe of Nightmare -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92272" name="Majestic Robe" type="Armor">
@@ -1101,7 +1115,8 @@
 			<stat type="maxMp">718</stat>
 		</stats>
 		<skills>
-			<skill id="50229" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Robe -->
+			<skill id="50229" level="1" /> <!-- A-grade: Majestic Robe -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
 		</skills>
 	</item>
 	<item id="92273" name="Helm of Nightmare" type="Armor">
@@ -1187,7 +1202,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50236" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Gloves-->
+			<skill id="50236" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Gloves -->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
 		</skills>
 	</item>
 	<item id="92278" name="Dark Crystal Gloves" additionalName="Light Armor" type="Armor">
@@ -1209,7 +1225,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50238" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Gloves-->
+			<skill id="50238" level="1" /> <!-- A-grade: Dark Crystal Gloves -->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
 		</skills>
 	</item>
 	<item id="92279" name="Dark Crystal Gloves" additionalName="Robe" type="Armor">
@@ -1230,7 +1247,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50237" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Gloves-->
+			<skill id="50237" level="1" /> <!-- A-grade: Dark Crystal Gloves -->
+			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic)-->
 		</skills>
 	</item>
 	<item id="92280" name="Tallum Gloves" additionalName="Heavy Armor" type="Armor">
@@ -1251,7 +1269,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50245" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Gloves -->
+			<skill id="50245" level="1" /> <!-- A-grade: Tallum Gloves -->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
 		</skills>
 	</item>
 	<item id="92281" name="Tallum Gloves" additionalName="Light Armor" type="Armor">
@@ -1272,7 +1291,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50247" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Gloves -->
+			<skill id="50247" level="1" /> <!-- A-grade: Tallum Gloves -->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
 		</skills>
 	</item>
 	<item id="92282" name="Tallum Gloves" additionalName="Robe" type="Armor">
@@ -1293,7 +1313,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50246" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Gloves -->
+			<skill id="50246" level="1" /> <!-- A-grade: Tallum Gloves -->
+			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic)-->
 		</skills>
 	</item>
 	<item id="92283" name="Gauntlets of Nightmare" additionalName="Heavy Armor" type="Armor">
@@ -1314,7 +1335,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50242" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Gauntlets of Nightmare -->
+			<skill id="50242" level="1" /> <!-- A-grade: Gauntlets of Nightmare -->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
 		</skills>
 	</item>
 	<item id="92284" name="Gauntlets of Nightmare" additionalName="Light Armor" type="Armor">
@@ -1335,7 +1357,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50244" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Gauntlets of Nightmare -->
+			<skill id="50244" level="1" /> <!-- A-grade: Gauntlets of Nightmare -->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
 		</skills>
 	</item>
 	<item id="92285" name="Gauntlets of Nightmare" additionalName="Robe" type="Armor">
@@ -1356,7 +1379,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50243" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Gauntlets of Nightmare -->
+			<skill id="50243" level="1" /> <!-- A-grade: Gauntlets of Nightmare -->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic)-->
 		</skills>
 	</item>
 	<item id="92286" name="Majestic Gauntlets" additionalName="Heavy Armor" type="Armor">
@@ -1377,7 +1401,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50239" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Gauntlets -->
+			<skill id="50239" level="1" /> <!-- A-grade: Majestic Gauntlets -->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
 		</skills>
 	</item>
 	<item id="92287" name="Majestic Gauntlets" additionalName="Light Armor" type="Armor">
@@ -1398,7 +1423,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50241" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Gauntlets -->
+			<skill id="50241" level="1" /> <!-- A-grade: Majestic Gauntlets -->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
 		</skills>
 	</item>
 	<item id="92288" name="Majestic Gauntlets" additionalName="Robe" type="Armor">
@@ -1419,7 +1445,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50240" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Gauntlets -->
+			<skill id="50240" level="1" /> <!-- A-grade: Majestic Gauntlets -->
+			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic)-->
 		</skills>
 	</item>
 	<item id="92289" name="Dark Crystal Boots" additionalName="Heavy Armor" type="Armor">
@@ -1440,7 +1467,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50248" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Boots -->
+			<skill id="50248" level="1" /> <!-- A-grade: Dark Crystal Boots -->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
 		</skills>
 	</item>
 	<item id="92290" name="Dark Crystal Boots" additionalName="Light Armor" type="Armor">
@@ -1461,7 +1489,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50250" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Boots -->
+			<skill id="50250" level="1" /> <!-- A-grade: Dark Crystal Boots -->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
 		</skills>
 	</item>
 	<item id="92291" name="Dark Crystal Boots" additionalName="Robe" type="Armor">
@@ -1482,7 +1511,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50249" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Boots -->
+			<skill id="50249" level="1" /> <!-- A-grade: Dark Crystal Boots -->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic)-->
 		</skills>
 	</item>
 	<item id="92292" name="Tallum Boots" additionalName="Heavy Armor" type="Armor">
@@ -1503,7 +1533,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50257" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Boots -->
+			<skill id="50257" level="1" /> <!-- A-grade: Tallum Boots -->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
 		</skills>
 	</item>
 	<item id="92293" name="Tallum Boots" additionalName="Light Armor" type="Armor">
@@ -1524,7 +1555,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50259" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Boots -->
+			<skill id="50259" level="1" /> <!-- A-grade: Tallum Boots -->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
 		</skills>
 	</item>
 	<item id="92294" name="Tallum Boots" additionalName="Robe" type="Armor">
@@ -1545,7 +1577,8 @@
 			<stat type="pDef">46</stat>
 		</stats>
 		<skills>
-			<skill id="50258" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Tallum Boots -->
+			<skill id="50258" level="1" /> <!-- A-grade: Tallum Boots -->
+			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic)-->
 		</skills>
 	</item>
 	<item id="92295" name="Boots of Nightmare" additionalName="Heavy Armor" type="Armor">
@@ -1566,7 +1599,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50254" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Boots of Nightmare -->
+			<skill id="50254" level="1" /> <!-- A-grade: Boots of Nightmare -->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
 		</skills>
 	</item>
 	<item id="92296" name="Boots of Nightmare" additionalName="Light Armor" type="Armor">
@@ -1587,7 +1621,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50256" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Boots of Nightmare -->
+			<skill id="50256" level="1" /> <!-- A-grade: Boots of Nightmare -->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
 		</skills>
 	</item>
 	<item id="92297" name="Boots of Nightmare" additionalName="Robe" type="Armor">
@@ -1608,7 +1643,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50255" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Boots of Nightmare -->
+			<skill id="50255" level="1" /> <!-- A-grade: Boots of Nightmare -->
+			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic)-->
 		</skills>
 	</item>
 	<item id="92298" name="Majestic Boots" additionalName="Heavy Armor" type="Armor">
@@ -1629,7 +1665,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50251" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Boots -->
+			<skill id="50251" level="1" /> <!-- A-grade: Majestic Boots -->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
 		</skills>
 	</item>
 	<item id="92299" name="Majestic Boots" additionalName="Light Armor" type="Armor">
@@ -1650,7 +1687,8 @@
 			<stat type="pDef">49</stat>
 		</stats>
 		<skills>
-			<skill id="50253" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Majestic Boots -->
+			<skill id="50253" level="1" /> <!-- A-grade: Majestic Boots -->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
 		</skills>
 	</item>
 </list>
