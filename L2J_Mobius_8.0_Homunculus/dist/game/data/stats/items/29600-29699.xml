@@ -753,7 +753,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29377" level="1" /> <!-- Silver Strider Rider Scroll -->
+		</skills>
 	</item>
 	<item id="29680" name="Black Strider Rider Scroll" type="EtcItem">
 		<!-- A scroll to learn the skill to mount Black Strider. -->
@@ -764,7 +769,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29379" level="1" /> <!-- Black Strider Rider Scroll -->
+		</skills>
 	</item>
 	<item id="29681" name="Iron Strider Rider Scroll" type="EtcItem">
 		<!-- A scroll to learn the skill to mount Iron Strider. -->
@@ -775,7 +785,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29381" level="1" /> <!-- Iron Strider Rider Scroll -->
+		</skills>
 	</item>
 	<item id="29682" name="Freya's Fortune Stick" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: 2 Scrolls: Enchant Freya's Staff, 2 Freya's Ice Roses, 1 Scroll: Enchant Freya s Ice Staff. Additionally, you have a chance to get Freya's or Snowman's Fortune Box. -->

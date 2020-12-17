@@ -36,35 +36,50 @@
 	<item id="71905" name="Silver Strider Rider Scroll" type="EtcItem">
 		<!-- A scroll to learn the skill to mount Silver Strider. -->
 		<set name="icon" val="icon.etc_transform_warrior_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="59708" level="1" /> <!-- Silver Strider Rider Scroll -->
+		</skills>
 	</item>
 	<item id="71906" name="Black Strider Rider Scroll" type="EtcItem">
 		<!-- A scroll to learn the skill to mount Black Strider. -->
 		<set name="icon" val="icon.etc_transform_warrior_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="59709" level="1" /> <!-- Black Strider Rider Scroll -->
+		</skills>
 	</item>
 	<item id="71907" name="Iron Strider Rider Scroll" type="EtcItem">
 		<!-- A scroll to learn the skill to mount Iron Strider. -->
 		<set name="icon" val="icon.etc_transform_warrior_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="59710" level="1" /> <!-- Iron Strider Rider Scroll -->
+		</skills>
 	</item>
 	<item id="71927" name="Ninja" type="Armor">
 		<!-- Ninja Assassin outfit. -->
