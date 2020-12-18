@@ -980,11 +980,61 @@
 			<value level="10">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
 		</icon>
 		<operateType>A1</operateType>
+		<abnormalLevel>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+			<value level="7">8</value>
+			<value level="8">9</value>
+			<value level="9">10</value>
+			<value level="10">11</value>
+		</abnormalLevel>
+		<magicLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+		</magicLevel>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<reuseDelay>30000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<pvpEffects>
+			<effect name="BlockSkill">
+				<magicTypes>1;3</magicTypes>
+			</effect>
+			<effect name="SkillTurning">
+				<chance>100</chance>
+				<staticChance>true</staticChance>
+			</effect>
+			<effect name="RealDamage">
+				<power>
+					<value level="1">475</value>
+					<value level="2">633</value>
+					<value level="3">950</value>
+					<value level="4">1357</value>
+					<value level="5">2375</value>
+					<value level="6">2375</value>
+					<value level="7">2375</value>
+					<value level="8">2375</value>
+					<value level="9">2375</value>
+					<value level="10">2375</value>
+				</power>
+			</effect>
+		</pvpEffects>
 	</skill>
 	<skill id="55472" toLevel="10" name="Vital Stone">
 		<!-- Acquired XP/ SP from Sayha Grace +$s1 while hunting. -->
@@ -1357,9 +1407,27 @@
 					<value level="10">40</value>
 				</PARALYZE>
 				<POISON>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
 					<value level="10">10</value>
 				</POISON>
 				<SLEEP>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">0</value>
 					<value level="10">10</value>
 				</SLEEP>
 			</effect>

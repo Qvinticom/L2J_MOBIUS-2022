@@ -1885,10 +1885,13 @@
 								<xs:element name="pvpEffects">
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="effect">
+											<xs:element maxOccurs="unbounded" name="effect">
 												<xs:complexType>
 													<xs:sequence>
-														<xs:element name="power">
+														<xs:element minOccurs="0" name="chance" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="staticChance" type="xs:boolean" />
+														<xs:element minOccurs="0" name="magicTypes" type="xs:string" />
+														<xs:element minOccurs="0" name="power">
 															<xs:complexType mixed="true">
 																<xs:sequence minOccurs="0">
 																	<xs:element maxOccurs="unbounded" name="value">
@@ -1936,6 +1939,8 @@
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
+														<xs:element minOccurs="0" name="criticalChance" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="overHit" type="xs:boolean" />
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
 												</xs:complexType>
