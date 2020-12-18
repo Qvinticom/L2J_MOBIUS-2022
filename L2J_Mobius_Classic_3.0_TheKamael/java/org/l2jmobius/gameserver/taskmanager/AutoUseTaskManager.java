@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.taskmanager;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -34,6 +35,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import org.l2jmobius.gameserver.model.items.EtcItem;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -87,12 +89,20 @@ public class AutoUseTaskManager
 							continue ITEMS; // TODO: break?
 						}
 						
-						for (ItemSkillHolder itemSkillHolder : item.getItem().getAllSkills())
+						final Item it = item.getItem();
+						if (it != null)
 						{
-							final Skill skill = itemSkillHolder.getSkill();
-							if (player.isAffectedBySkill(skill.getId()) || player.hasSkillReuse(skill.getReuseHashCode()) || !skill.checkCondition(player, player, false))
+							final List<ItemSkillHolder> skills = it.getAllSkills();
+							if (skills != null)
 							{
-								continue ITEMS;
+								for (ItemSkillHolder itemSkillHolder : skills)
+								{
+									final Skill skill = itemSkillHolder.getSkill();
+									if (player.isAffectedBySkill(skill.getId()) || player.hasSkillReuse(skill.getReuseHashCode()) || !skill.checkCondition(player, player, false))
+									{
+										continue ITEMS;
+									}
+								}
 							}
 						}
 						
