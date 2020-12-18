@@ -1516,7 +1516,7 @@
 					<value level="6">15219</value>
 				</npcId>
 				<npcCount>1</npcCount>
-				<despawnDelay>120000</despawnDelay>
+				<despawnDelay>30000</despawnDelay>
 				<singleInstance>true</singleInstance>
 			</effect>
 		</effects>
@@ -3498,7 +3498,9 @@
 	<skill id="11298" toLevel="13" name="Mark of Fire">
 		<!-- Carves a burning mark on the target dealing magic damage with $s1 power and inflicting Fear. Speed -$s2.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11298</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">63</value>
 			<value level="2">65</value>
@@ -3544,6 +3546,8 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="Fear" />
+			<effect name="BlockControl" />
 			<effect name="MagicalAttackRange">
 				<power>
 					<value level="1">218</value>

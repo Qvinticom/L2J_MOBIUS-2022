@@ -3893,7 +3893,7 @@
 		<affectRange>600</affectRange>
 		<effectPoint>-457</effectPoint>
 		<abnormalTime>10</abnormalTime>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<castRange>800</castRange>
 		<mpConsume>423</mpConsume>
 		<hitTime>2000</hitTime>
@@ -4083,6 +4083,10 @@
 					<value fromLevel="1" toLevel="2" fromSubLevel="3019" toSubLevel="3019">5462</value>
 					<value fromLevel="1" toLevel="2" fromSubLevel="3020" toSubLevel="3020">5631</value>
 				</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>20007</skillId> <!-- Blocked Invincibility -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>

@@ -124,6 +124,8 @@
 		<abnormalTime>50</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>360000</reuseDelay>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>34903</itemConsumeId> <!-- Mysterious Shadow -->

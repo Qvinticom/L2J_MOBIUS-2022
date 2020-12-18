@@ -220,7 +220,7 @@
 			<value level="29">82</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -753,10 +753,9 @@
 		<icon>icon.skill30507</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
-		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate> <!-- Unconfirmed -->
-			<value fromLevel="1" toLevel="26">80</value>
+			<value fromLevel="1" toLevel="26">60</value>
 			<value fromLevel="20" toLevel="26" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<effectPoint>-687</effectPoint>
@@ -832,7 +831,7 @@
 		<operateType>DA5</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<activateRate>90</activateRate>
+		<activateRate>60</activateRate>
 		<mpConsume>
 			<value level="1">7</value>
 			<value level="2">9</value>

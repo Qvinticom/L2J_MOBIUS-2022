@@ -513,6 +513,9 @@
 		</collision>
 	</npc>
 	<npc id="13423" level="95" type="Npc" name="Protection Stone">
+		<parameters>
+			<skill name="union_skill" id="11359" level="1" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -531,6 +534,9 @@
 		</collision>
 	</npc>
 	<npc id="13424" level="97" type="Npc" name="Protection Stone">
+		<parameters>
+			<skill name="union_skill" id="11359" level="2" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -549,6 +555,9 @@
 		</collision>
 	</npc>
 	<npc id="13425" level="99" type="Npc" name="Protection Stone">
+		<parameters>
+			<skill name="union_skill" id="11359" level="3" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">

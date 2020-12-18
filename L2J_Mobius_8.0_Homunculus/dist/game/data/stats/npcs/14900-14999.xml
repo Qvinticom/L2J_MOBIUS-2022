@@ -1157,6 +1157,9 @@
 		</collision>
 	</npc>
 	<npc id="14927" level="99" type="EffectPoint" name="Death Gate">
+		<parameters>
+			<skill name="union_skill" id="11266" level="1" />
+		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
