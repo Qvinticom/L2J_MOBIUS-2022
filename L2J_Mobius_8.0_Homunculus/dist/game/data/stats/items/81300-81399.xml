@@ -755,6 +755,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="81345" min="1" max="1" chance="100" /> <!-- Expert's Mask -->
+			<item id="81346" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Expert's Mask -->
+			<item id="81349" min="1" max="1" chance="100" /> <!-- Belt of Seeker Captain -->
+		</capsuled_items>
 	</item>
 	<item id="81349" name="Belt of Seeker Captain" type="Armor">
 		<!-- Damage +3%, Received damage -3%, Weight limit +12,800, inventory slots +18. -->
@@ -770,6 +776,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35623" level="1" /> <!-- Belt of Seeker Captain -->
+		</skills>
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
