@@ -1017,6 +1017,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40093" level="1" /> <!-- Inventory Expansion Ticket of Glory -->
+		</skills>
 	</item>
 	<item id="93064" name="Weight Limit Ticket of Glory" type="EtcItem">
 		<!-- Double-click to learn Increased Weight Limit of Glory.\n\n<Classes>\nAll classes\n\n<Skill effect>\nIncreases weight limit. -->
@@ -1028,6 +1032,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40094" level="1" /> <!-- Weight Limit Ticket of Glory -->
+		</skills>
 	</item>
 	<item id="93065" name="Adventurer's Rough Jewel" additionalName="Lv. 2" type="Armor">
 		<!-- Fragments of an unknown jewel. Max HP +10. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->

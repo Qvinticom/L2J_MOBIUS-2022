@@ -1628,12 +1628,29 @@
 		</conditions>
 	</skill>
 	<skill id="45234" toLevel="1" name="Expand Inventory of Glory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<operateType>A1</operateType>
+		<!-- Increases the number of items an individual can possess. -->
+		<icon>icon.skill0332</icon>
+		<excludedFromCheck>true</excludedFromCheck>
+		<magicLevel>-1</magicLevel>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="EnlargeSlot">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45235" toLevel="1" name="Increased Weight Limit of Glory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<operateType>A1</operateType>
+		<!-- Weight limit +10000. -->
+		<operateType>P</operateType>
+		<magicLevel>-1</magicLevel>
+		<excludedFromCheck>true</excludedFromCheck>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>10000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45236" toLevel="2" name="Prophecy of Light">
 		<abnormalLevel>2</abnormalLevel>

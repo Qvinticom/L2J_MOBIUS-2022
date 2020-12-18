@@ -666,14 +666,48 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40093" toLevel="1" name="Inventory Expansion Ticket of Glory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93063</itemConsumeId> <!-- Inventory Expansion Ticket of Glory -->
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSkill">
+				<skillId>45234</skillId> <!-- Inventory Expansion Ticket of Glory -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>45234</skillId> <!-- Inventory Expansion Ticket of Glory -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40094" toLevel="1" name="Weight Limit Ticket of Glory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93064</itemConsumeId> <!-- Weight Limit Ticket of Glory -->
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSkill">
+				<skillId>45235</skillId> <!-- Weight Limit Ticket of Glory -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>45235</skillId> <!-- Weight Limit Ticket of Glory -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40095" toLevel="1" name="Spellbook: Mount Glory of Champion">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
