@@ -55,7 +55,7 @@ public class Q10590_ReawakenedFate extends Quest
 		24459, // Marsh Vampire Wizard
 		24460 // Marsh Vampire Shooter
 	};
-	// Item
+	// Items
 	private static final int VAMPIRE_ICHOR = 80854; // Vampire Ichor - monster drop
 	private static final ItemHolder SOE_JOACHIM = new ItemHolder(80858, 1);
 	// Rewards

@@ -70,6 +70,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 	// Items
 	private static final int MENTEE_CERT = 33800;
 	private static final int MENTEE_MARK = 33804;
+	private static final int GRADUTION_BOX = 81348;
 	private static final int MENTEE_HEADPHONE = 34759;
 	private static final int DIPLOMA = 33805;
 	// Skills
@@ -486,7 +487,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 			// Clear mentee status
 			player.sendPacket(new ExMentorList(player));
 			player.sendPacket(new SystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addPcName(player));
-			sendMail(player.getObjectId(), MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, MENTEE_CERT, 1);
+			sendMail(player.getObjectId(), MENTEE_GRADUATE_TITLE, MENTEE_GRADUATE_BODY, GRADUTION_BOX, 1);
 		}
 	}
 	

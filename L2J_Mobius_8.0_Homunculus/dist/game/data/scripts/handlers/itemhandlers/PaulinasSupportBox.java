@@ -595,9 +595,14 @@ public class PaulinasSupportBox implements IItemHandler
 					case ELF:
 					case DARK_ELF:
 					{
-						if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_FEOH_GROUP, classId.getId()) || (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_WYNN_GROUP, classId.getId())))
+						if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_FEOH_GROUP, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_R_ROBE, 1, player, true);
+							player.addItem(getClass().getSimpleName(), WEAPON_STAFF_R, 1, player, true);
+						}
+						else if ((CategoryData.getInstance().isInCategory(CategoryType.SIXTH_WYNN_GROUP, classId.getId())))
+						{
+							player.addItem(getClass().getSimpleName(), BOX_R_LIGHT, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_STAFF_R, 1, player, true);
 						}
 						else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_EOLH_GROUP, classId.getId()))
