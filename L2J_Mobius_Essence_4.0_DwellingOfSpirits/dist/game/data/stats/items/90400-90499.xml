@@ -1180,12 +1180,26 @@
 	<item id="90479" name="Shiny Jewelry Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 1 Jewel (Lv.1). Cannot be exchanged, dropped, stored in private warehouse or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90353" min="1" max="1" chance="12.5" /> <!-- Vital Stone -->
+			<item id="90343" min="1" max="1" chance="12.5" /> <!-- Pearl -->
+			<item id="90338" min="1" max="1" chance="12.5" /> <!-- Diamond -->
+			<item id="90333" min="1" max="1" chance="12.5" /> <!-- Sapphire -->
+			<item id="90328" min="1" max="1" chance="12.5" /> <!-- Ruby -->
+			<item id="90323" min="1" max="1" chance="12.5" /> <!-- Jade -->
+			<item id="90318" min="1" max="1" chance="12.5" /> <!-- Garnet -->
+			<item id="90313" min="1" max="1" chance="12.5" /> <!-- Topaz -->
+		</capsuled_items>
 	</item>
 	<item id="90480" name="Lucky Enchant Stone: Save Armor (D-grade)" type="EtcItem">
 		<!-- Enchant success rate +10% for armor (D-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Cannot be dropped. -->
