@@ -213,6 +213,10 @@ public class TrapInstance extends Npc
 	
 	public Skill getSkill()
 	{
+		if (_skill == null)
+		{
+			return null;
+		}
 		return _skill.getSkill();
 	}
 	

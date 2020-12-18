@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.actor.tasks.npc.trap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
+import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 /**
@@ -57,7 +58,8 @@ public class TrapTask implements Runnable
 					}
 				}
 				
-				if (!_trap.getSkill().getTargetsAffected(_trap, _trap).isEmpty())
+				final Skill skill = _trap.getSkill();
+				if ((skill != null) && !skill.getTargetsAffected(_trap, _trap).isEmpty())
 				{
 					_trap.triggerTrap(_trap);
 				}
