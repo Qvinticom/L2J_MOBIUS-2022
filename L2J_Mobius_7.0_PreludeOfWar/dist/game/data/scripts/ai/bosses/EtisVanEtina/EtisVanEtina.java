@@ -361,7 +361,10 @@ public class EtisVanEtina extends AbstractNpcAI
 			{
 				if ((_lastAction + 900000) < System.currentTimeMillis())
 				{
-					GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, ALIVE);
+					if (GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1) != ALIVE)
+					{
+						GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, ALIVE);
+					}
 					for (Creature creature : BOSS_ZONE.getCharactersInside())
 					{
 						if (creature != null)
@@ -502,7 +505,7 @@ public class EtisVanEtina extends AbstractNpcAI
 		closeDoor(DOOR2, 0);
 		closeDoor(DOOR3, 0);
 		closeDoor(DOOR4, 0);
-		if (GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1) != DEAD)
+		if ((GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1) != DEAD) && (GrandBossManager.getInstance().getBossStatus(ETIS_VAN_ETINA1) != ALIVE))
 		{
 			GrandBossManager.getInstance().setBossStatus(ETIS_VAN_ETINA1, ALIVE);
 		}
