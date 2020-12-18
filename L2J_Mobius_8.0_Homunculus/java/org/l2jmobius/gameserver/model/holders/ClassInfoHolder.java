@@ -62,6 +62,7 @@ public class ClassInfoHolder
 	/**
 	 * @return the class client Id.
 	 */
+	@SuppressWarnings("unused")
 	private int getClassClientId()
 	{
 		int classClientId = _classId.getId();
@@ -97,7 +98,9 @@ public class ClassInfoHolder
 	 */
 	public String getClientCode()
 	{
-		return "&$" + getClassClientId() + ";";
+		// TODO: Verify client ids above.
+		// return "&$" + getClassClientId() + ";";
+		return _className;
 	}
 	
 	/**
