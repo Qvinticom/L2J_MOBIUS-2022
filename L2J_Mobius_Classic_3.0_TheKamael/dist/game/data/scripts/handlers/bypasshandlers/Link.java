@@ -36,6 +36,7 @@ public class Link implements IBypassHandler
 		"common/craft_01.htm",
 		"common/craft_02.htm",
 		"common/runes_01.htm",
+		"common/sealed_runes_01.htm",
 		"common/sealed_runes_02.htm",
 		"common/sealed_runes_03.htm",
 		"common/sealed_runes_04.htm",
