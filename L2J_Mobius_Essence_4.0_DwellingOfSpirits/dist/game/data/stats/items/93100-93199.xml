@@ -443,6 +443,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91129" min="1" max="1" chance="100" /> <!-- Agathion Ignis -->
+		</capsuled_items>
 	</item>
 	<item id="93135" name="Package: Agathion Nebula" type="EtcItem">
 		<!-- Double-click to obtain Agathion Nebula and 10 Scrolls: Enchant Agathion.\n\nWhen the agathion is equipped, all Critical Rate is increased. When enchanted to +5 and higher, decreases Skill Cooldown. -->
@@ -455,6 +459,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91130" min="1" max="1" chance="100" /> <!-- Agathion Nebula -->
+		</capsuled_items>
 	</item>
 	<item id="93136" name="Package: Agathion Procella" type="EtcItem">
 		<!-- Double-click to obtain Agathion Procella and 10 Scrolls: Enchant Agathion.\n\nWhen the agathion is equipped, Atk. Spd./ Casting Spd. is increased. When enchanted to +5 and higher, decreases Skill MP consumption. -->
@@ -467,6 +475,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91131" min="1" max="1" chance="100" /> <!-- Agathion Procella -->
+		</capsuled_items>
 	</item>
 	<item id="93137" name="Package: Agathion Petram" type="EtcItem">
 		<!-- Double-click to obtain Agathion Petram and 10 Scrolls: Enchant Agathion.\n\nWhen the agathion is equipped, P./ M. Def. is increased. When enchanted to +5 and higher, increases Silence/ Fear/ Stun Atk. Rate. -->
@@ -479,6 +491,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91132" min="1" max="1" chance="100" /> <!-- Agathion Petram -->
+		</capsuled_items>
 	</item>
 	<item id="93138" name="Package: Agathion Joy" type="EtcItem">
 		<!-- Double-click to obtain Agathion Joy and 10 Scrolls: Enchant Agathion.\n\nWhen the agathion is equipped, the acquired XP/ SP bonus from Sayha's Grace is increased. When enchanted to +5 and higher, increases Max HP/ MP/ CP and acquired XP/ SP. -->
@@ -491,6 +507,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90896" min="1" max="1" chance="100" /> <!-- Agathion Joy -->
+		</capsuled_items>
 	</item>
 	<item id="93139" name="Ice Crystal Breastplate" type="Armor">
 		<!-- <Properties>\nCON +2\nOverweight limit +1500\nM. Def. +15\nMax HP +150\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
