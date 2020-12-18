@@ -885,6 +885,10 @@
 		<stats>
 			<stat type="pDef">171</stat>
 		</stats>
+		<skills>
+			<skill id="50221" level="1"/> <!-- A-grade: Dark Crystal Breastplate -->
+			<skill id="50261" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top Armor -->
+		</skills>
 	</item>
 	<item id="374" name="Armor of Nightmare" type="Armor">
 		<!-- Full body armor. -->
@@ -904,6 +908,10 @@
 		<stats>
 			<stat type="pDef">293</stat>
 		</stats>
+		<skills>
+			<skill id="50231" level="1" /> <!-- A-grade: Armor of Nightmare -->
+			<skill id="50261" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top Armor -->
+		</skills>
 	</item>
 	<item id="376" name="Iron Plate Gaiters" type="Armor">
 		<set name="icon" val="icon.armor_t12_l_i00" />
@@ -1138,6 +1146,10 @@
 		<stats>
 			<stat type="pDef">107</stat>
 		</stats>
+		<skills>
+			<skill id="50224" level="1" /> <!-- A-grade: Dark Crystal Gaiters -->
+			<skill id="50262" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Bottom Armor -->
+		</skills>
 	</item>
 	<item id="390" name="Cotton Shirt" type="Armor">
 		<set name="icon" val="icon.armor_t07_u_i00" />

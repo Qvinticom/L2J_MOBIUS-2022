@@ -18,6 +18,10 @@
 			<stat type="pDef">86</stat>
 			<stat type="maxMp">409</stat>
 		</stats>
+		<skills>
+			<skill id="50223" level="1" /> <!-- A-grade: Tallum Tunic -->
+			<skill id="50261" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top Armor -->
+		</skills>
 	</item>
 	<item id="2401" name="Mithril Stockings" type="Armor">
 		<set name="icon" val="icon.armor_elven_hose_i00" />
@@ -113,6 +117,10 @@
 			<stat type="pDef">53</stat>
 			<stat type="maxMp">256</stat>
 		</stats>
+		<skills>
+			<skill id="50226" level="1" /> <!-- A-grade: Tallum Stockings -->
+			<skill id="50262" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Bottom Armor -->
+		</skills>
 	</item>
 	<item id="2406" name="Avadon Robe" type="Armor">
 		<!-- Full body armor. -->
@@ -153,6 +161,10 @@
 			<stat type="pDef">139</stat>
 			<stat type="maxMp">665</stat>
 		</stats>
+		<skills>
+			<skill id="50227" level="1" /> <!-- A-grade: Dark Crystal Robe -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
+		</skills>
 	</item>
 	<item id="2408" name="Robe of Nightmare" type="Armor">
 		<!-- Full body armor. -->
@@ -173,6 +185,10 @@
 			<stat type="pDef">147</stat>
 			<stat type="maxMp">718</stat>
 		</stats>
+		<skills>
+			<skill id="50232" level="1" /> <!-- A-grade: Robe of Nightmare -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
+		</skills>
 	</item>
 	<item id="2409" name="Majestic Robe" type="Armor">
 		<!-- Full body armor. -->
@@ -193,6 +209,10 @@
 			<stat type="pDef">147</stat>
 			<stat type="maxMp">718</stat>
 		</stats>
+		<skills>
+			<skill id="50229" level="1" /> <!-- A-grade: Majestic Robe -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
+		</skills>
 	</item>
 	<item id="2411" name="Brigandine Helmet" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />

@@ -1128,6 +1128,10 @@
 		<stats>
 			<stat type="pDef">278</stat>
 		</stats>
+		<skills>
+			<skill id="50234" level="1" /> <!-- A-grade: Tallum Plate Armor -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
+		</skills>
 	</item>
 	<item id="2383" name="Majestic Plate Armor" type="Armor">
 		<!-- Full body armor. -->
@@ -1147,6 +1151,10 @@
 		<stats>
 			<stat type="pDef">293</stat>
 		</stats>
+		<skills>
+			<skill id="50228" level="1" /> <!-- A-grade: Majestic Plate Armor -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
+		</skills>
 	</item>
 	<item id="2384" name="Zubei's Leather Shirt" type="Armor">
 		<set name="icon" val="icon.armor_t65_u_i00" />
@@ -1183,6 +1191,10 @@
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
+		<skills>
+			<skill id="50222" level="1" /> <!-- A-grade: Dark Crystal Leather Armor -->
+			<skill id="50261" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top Armor -->
+		</skills>
 	</item>
 	<item id="2386" name="Wooden Gaiters" type="Armor">
 		<set name="icon" val="icon.armor_t06_l_i00" />
@@ -1252,6 +1264,10 @@
 		<stats>
 			<stat type="pDef">80</stat>
 		</stats>
+		<skills>
+			<skill id="50225" level="1" /> <!-- A-grade: Dark Crystal Leggings -->
+			<skill id="50262" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Bottom Armor -->
+		</skills>
 	</item>
 	<item id="2390" name="Avadon Leather Armor" type="Armor">
 		<!-- Full body armor. -->
@@ -1328,6 +1344,10 @@
 		<stats>
 			<stat type="pDef">209</stat>
 		</stats>
+		<skills>
+			<skill id="50235" level="1" /> <!-- A-grade: Tallum Leather Armor -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
+		</skills>
 	</item>
 	<item id="2394" name="Leather Armor of Nightmare" type="Armor">
 		<!-- Full body armor. -->
@@ -1347,6 +1367,10 @@
 		<stats>
 			<stat type="pDef">220</stat>
 		</stats>
+		<skills>
+			<skill id="50233" level="1" /> <!-- A-grade: Leather Armor of Nightmare -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
+		</skills>
 	</item>
 	<item id="2395" name="Majestic Leather Armor" type="Armor">
 		<!-- Full body armor. -->
@@ -1366,6 +1390,10 @@
 		<stats>
 			<stat type="pDef">220</stat>
 		</stats>
+		<skills>
+			<skill id="50230" level="1" /> <!-- A-grade: Majestic Leather Armor -->
+			<skill id="50260" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Top/ Bottom Armor -->
+		</skills>
 	</item>
 	<item id="2396" name="Elven Mithril Tunic" type="Armor">
 		<set name="icon" val="icon.armor_elven_tunic_i00" />
