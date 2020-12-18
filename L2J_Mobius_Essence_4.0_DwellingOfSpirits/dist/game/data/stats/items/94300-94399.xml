@@ -63,6 +63,18 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="94328" name="Elixir Powder" type="EtcItem">
+		<!-- Powder imbued with power of immortality.\nMaterial to make Elixir. -->
+		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="94359" name="For Monster Only (Crossbow)" type="Weapon">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -82,6 +94,22 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
+	</item>
+	<item id="94377" name="Supply Pouch" type="EtcItem">
+		<!-- Double-click to obtain the following item:\n 10 Soulshot Ticket and 200 Spirit Ore -->
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91927" min="10" max="10" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="3031" min="200" max="200" chance="100" /> <!-- Spirit Ore -->
+		</capsuled_items>
 	</item>
 	<item id="94380" name="Scroll: Boost Attack" type="EtcItem">
 		<set name="default_action" val="SKILL_REDUCE" />
