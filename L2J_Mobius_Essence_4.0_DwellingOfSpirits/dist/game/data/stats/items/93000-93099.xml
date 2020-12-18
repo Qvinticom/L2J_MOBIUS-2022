@@ -971,6 +971,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40095" level="1" /> <!-- Spellbook: Mount Glory of Champion -->
+		</skills>
 	</item>
 	<item id="93060" name="Spellbook: Mount White Wing" type="EtcItem">
 		<!-- Double-click to learn how to ride White Wing.\n\n<Classes>\nAll classes\n\n<Skill effect>\nAllows to mount White Wing. -->
@@ -982,6 +986,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40096" level="1" /> <!-- Spellbook: Mount White Wing -->
+		</skills>
 	</item>
 	<item id="93061" name="Spellbook: Mount Shining Lady" type="EtcItem">
 		<!-- Double-click to learn how to ride Shining Lady. Shining Lady can use Silent Ride.\n\n<Classes>\nAll classes\n\n<Skill effect>\nAllows to mount Shining Lady. -->
@@ -993,6 +1001,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40097" level="1" /> <!-- Spellbook: Mount Shining Lady -->
+		</skills>
 	</item>
 	<item id="93062" name="Hat of Glory" type="Armor">
 		<!-- A plumed hat with wide flaps. STR/ INT+1, HP +300. Uses 2 hair accessory slots. -->
