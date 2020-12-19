@@ -2439,29 +2439,7 @@
 				<chance>10</chance>
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>10537</skillId> <!-- Block Magic -->
-				<skillLevel>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">1</value>
-					<value level="4">2</value>
-				</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<!-- Weakness Critical -->
-				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<isCritical>false</isCritical>
-				<targetType>TARGET</targetType>
-				<skillId>10538</skillId> <!-- Weakness Critical -->
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-					<value level="4">4</value>
-				</skillLevel>
-				<allowWeapons>ALL</allowWeapons>
-				<chance>30</chance>
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
