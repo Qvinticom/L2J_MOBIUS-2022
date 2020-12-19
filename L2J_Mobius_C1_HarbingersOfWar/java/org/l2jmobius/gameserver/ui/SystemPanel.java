@@ -25,6 +25,7 @@ import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 import java.util.jar.Attributes;
 import java.util.jar.JarFile;
+import java.util.logging.Logger;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -40,6 +41,8 @@ import org.l2jmobius.util.Locator;
  */
 public class SystemPanel extends JPanel
 {
+	private static final Logger LOGGER = Logger.getLogger(SystemPanel.class.getName());
+	
 	private static final long START_TIME = System.currentTimeMillis();
 	
 	public SystemPanel()
@@ -120,6 +123,10 @@ public class SystemPanel extends JPanel
 				if (World.MAX_CONNECTED_COUNT < playerCount)
 				{
 					World.MAX_CONNECTED_COUNT = playerCount;
+					if (playerCount > 1)
+					{
+						LOGGER.info("New maximum connected count of " + playerCount + "!");
+					}
 				}
 				lblConnected.setText("Connected: " + playerCount);
 				lblMaxConnected.setText("Max connected: " + World.MAX_CONNECTED_COUNT);
