@@ -167,7 +167,7 @@ public class SkillData implements IXmlReader
 		// requested level too high
 		if ((maxLevel > 0) && (level > maxLevel))
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Call to unexisting skill level id: " + skillId + " requested level: " + level + " max level: " + maxLevel + ".", new Throwable());
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Call to unexisting skill level id: " + skillId + " requested level: " + level + " max level: " + maxLevel + ".");
 			return _skills.get(getSkillHashCode(skillId, maxLevel));
 		}
 		
