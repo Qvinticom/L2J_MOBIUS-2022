@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
+import org.l2jmobius.gameserver.instancemanager.PrecautionaryRestartManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import org.l2jmobius.gameserver.model.World;
@@ -195,6 +196,11 @@ public class Shutdown extends Thread
 			_counterInstance._abort();
 		}
 		
+		if (Config.PRECAUTIONARY_RESTART_ENABLED)
+		{
+			PrecautionaryRestartManager.getInstance().restartEnabled();
+		}
+		
 		// the main instance should only run for shutdown hook, so we start a new instance
 		_counterInstance = new Shutdown(seconds, restart);
 		_counterInstance.start();
@@ -220,6 +226,11 @@ public class Shutdown extends Thread
 		if (_counterInstance != null)
 		{
 			_counterInstance._abort();
+		}
+		
+		if (Config.PRECAUTIONARY_RESTART_ENABLED)
+		{
+			PrecautionaryRestartManager.getInstance().restartAborted();
 		}
 	}
 	

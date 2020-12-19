@@ -1162,6 +1162,12 @@ public class Config
 	public static int SERVER_RESTART_SCHEDULE_COUNTDOWN;
 	public static String[] SERVER_RESTART_SCHEDULE;
 	public static List<Integer> SERVER_RESTART_DAYS;
+	public static boolean PRECAUTIONARY_RESTART_ENABLED;
+	public static boolean PRECAUTIONARY_RESTART_CPU;
+	public static boolean PRECAUTIONARY_RESTART_MEMORY;
+	public static boolean PRECAUTIONARY_RESTART_CHECKS;
+	public static int PRECAUTIONARY_RESTART_PERCENTAGE;
+	public static int PRECAUTIONARY_RESTART_DELAY;
 	
 	public static int IP_UPDATE_TIME;
 	public static boolean SHOW_LICENCE;
@@ -1263,6 +1269,12 @@ public class Config
 				SERVER_RESTART_DAYS.add(Integer.parseInt(day));
 			}
 		}
+		PRECAUTIONARY_RESTART_ENABLED = serverConfig.getBoolean("PrecautionaryRestartEnabled", false);
+		PRECAUTIONARY_RESTART_CPU = serverConfig.getBoolean("PrecautionaryRestartCpu", true);
+		PRECAUTIONARY_RESTART_MEMORY = serverConfig.getBoolean("PrecautionaryRestartMemory", false);
+		PRECAUTIONARY_RESTART_CHECKS = serverConfig.getBoolean("PrecautionaryRestartChecks", true);
+		PRECAUTIONARY_RESTART_PERCENTAGE = serverConfig.getInt("PrecautionaryRestartPercentage", 95);
+		PRECAUTIONARY_RESTART_DELAY = serverConfig.getInt("PrecautionaryRestartDelay", 60) * 1000;
 	}
 	
 	public static void loadTelnetConfig()

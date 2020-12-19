@@ -134,6 +134,7 @@ import org.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
+import org.l2jmobius.gameserver.instancemanager.PrecautionaryRestartManager;
 import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -435,6 +436,10 @@ public class GameServer
 			ServerRestartManager.getInstance();
 		}
 		
+		if (Config.PRECAUTIONARY_RESTART_ENABLED)
+		{
+			PrecautionaryRestartManager.getInstance();
+		}
 		if (Config.DEADLOCK_DETECTOR)
 		{
 			_deadDetectThread = new DeadLockDetector(Duration.ofSeconds(Config.DEADLOCK_CHECK_INTERVAL), () ->

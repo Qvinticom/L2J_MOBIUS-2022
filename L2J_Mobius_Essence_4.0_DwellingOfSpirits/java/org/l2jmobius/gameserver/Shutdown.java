@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
+import org.l2jmobius.gameserver.instancemanager.PrecautionaryRestartManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -310,6 +311,11 @@ public class Shutdown extends Thread
 			_counterInstance._abort();
 		}
 		
+		if (Config.PRECAUTIONARY_RESTART_ENABLED)
+		{
+			PrecautionaryRestartManager.getInstance().restartEnabled();
+		}
+		
 		// the main instance should only run for shutdown hook, so we start a new instance
 		_counterInstance = new Shutdown(seconds, restart);
 		_counterInstance.start();
@@ -325,6 +331,12 @@ public class Shutdown extends Thread
 		if (_counterInstance != null)
 		{
 			_counterInstance._abort();
+			
+			if (Config.PRECAUTIONARY_RESTART_ENABLED)
+			{
+				PrecautionaryRestartManager.getInstance().restartAborted();
+			}
+			
 			Broadcast.toAllOnlinePlayers("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!", false);
 		}
 	}

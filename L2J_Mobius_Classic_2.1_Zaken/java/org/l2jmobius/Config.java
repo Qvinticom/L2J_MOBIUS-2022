@@ -774,6 +774,12 @@ public class Config
 	public static int SERVER_RESTART_SCHEDULE_COUNTDOWN;
 	public static String[] SERVER_RESTART_SCHEDULE;
 	public static List<Integer> SERVER_RESTART_DAYS;
+	public static boolean PRECAUTIONARY_RESTART_ENABLED;
+	public static boolean PRECAUTIONARY_RESTART_CPU;
+	public static boolean PRECAUTIONARY_RESTART_MEMORY;
+	public static boolean PRECAUTIONARY_RESTART_CHECKS;
+	public static int PRECAUTIONARY_RESTART_PERCENTAGE;
+	public static int PRECAUTIONARY_RESTART_DELAY;
 	
 	// --------------------------------------------------
 	// Vitality Settings
@@ -1384,6 +1390,12 @@ public class Config
 					SERVER_RESTART_DAYS.add(Integer.parseInt(day));
 				}
 			}
+			PRECAUTIONARY_RESTART_ENABLED = serverSettings.getBoolean("PrecautionaryRestartEnabled", false);
+			PRECAUTIONARY_RESTART_CPU = serverSettings.getBoolean("PrecautionaryRestartCpu", true);
+			PRECAUTIONARY_RESTART_MEMORY = serverSettings.getBoolean("PrecautionaryRestartMemory", false);
+			PRECAUTIONARY_RESTART_CHECKS = serverSettings.getBoolean("PrecautionaryRestartChecks", true);
+			PRECAUTIONARY_RESTART_PERCENTAGE = serverSettings.getInt("PrecautionaryRestartPercentage", 95);
+			PRECAUTIONARY_RESTART_DELAY = serverSettings.getInt("PrecautionaryRestartDelay", 60) * 1000;
 			
 			// Hosts and Subnets
 			final IPConfigData ipcd = new IPConfigData();

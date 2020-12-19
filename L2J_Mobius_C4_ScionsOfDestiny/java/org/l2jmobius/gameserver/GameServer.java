@@ -100,6 +100,7 @@ import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import org.l2jmobius.gameserver.instancemanager.PetitionManager;
+import org.l2jmobius.gameserver.instancemanager.PrecautionaryRestartManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import org.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
@@ -469,6 +470,11 @@ public class GameServer
 		if (Config.SERVER_RESTART_SCHEDULE_ENABLED)
 		{
 			ServerRestartManager.getInstance();
+		}
+		
+		if (Config.PRECAUTIONARY_RESTART_ENABLED)
+		{
+			PrecautionaryRestartManager.getInstance();
 		}
 		
 		System.gc();
