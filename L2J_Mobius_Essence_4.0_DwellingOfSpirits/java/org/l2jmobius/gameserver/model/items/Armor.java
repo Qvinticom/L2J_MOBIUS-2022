@@ -42,7 +42,7 @@ public class Armor extends Item
 		_type = set.getEnum("armor_type", ArmorType.class, ArmorType.NONE);
 		
 		final long bodyPart = getBodyPart();
-		if (bodyPart == Item.SLOT_ARTIFACT)
+		if ((bodyPart == Item.SLOT_ARTIFACT) || (bodyPart == Item.SLOT_AGATHION))
 		{
 			_type1 = Item.TYPE1_SHIELD_ARMOR;
 			_type2 = Item.TYPE2_ACCESSORY;
