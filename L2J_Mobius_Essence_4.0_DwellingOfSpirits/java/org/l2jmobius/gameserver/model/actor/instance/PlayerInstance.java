@@ -3253,7 +3253,7 @@ public class PlayerInstance extends Playable
 				}
 				else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest"))
 				{
-					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1_S2);
+					final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1);
 					sm.addItemName(itemId);
 					sendPacket(sm);
 				}
