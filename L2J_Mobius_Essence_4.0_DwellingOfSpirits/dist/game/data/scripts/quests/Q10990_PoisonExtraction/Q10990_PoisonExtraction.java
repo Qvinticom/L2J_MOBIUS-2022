@@ -16,13 +16,9 @@
  */
 package quests.Q10990_PoisonExtraction;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
-import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -31,7 +27,6 @@ import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
@@ -52,10 +47,11 @@ public class Q10990_PoisonExtraction extends Quest
 	private static final int HUNTER_TARANTULA = 20403;
 	private static final int PLUNDER_TARANTULA = 20508;
 	// Items
+	private static final int VENOM_SAC = 91653;
 	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 20);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 50);
-	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50); // TODO: Finish Item
+	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50);
 	private static final ItemHolder RICE_CAKE_OF_FLAMING_FIGHTING_SPIRIT_EVENT = new ItemHolder(91840, 1);
 	// HELMET FOR ALL ARMORS
 	private static final ItemHolder MOON_HELMET = new ItemHolder(7850, 1);
@@ -73,7 +69,6 @@ public class Q10990_PoisonExtraction extends Quest
 	private static final ItemHolder MOON_SANDALS = new ItemHolder(7859, 1);
 	// Misc
 	private static final int MAX_LEVEL = 20;
-	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10990_PoisonExtraction()
 	{
@@ -81,15 +76,9 @@ public class Q10990_PoisonExtraction extends Quest
 		addStartNpc(GERALD);
 		addTalkId(GERALD, CAPTAIN_BATHIS);
 		addKillId(HUNTER_TARANTULA, PLUNDER_TARANTULA);
+		registerQuestItems(VENOM_SAC);
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_15_20_POISON_EXTRACTION);
-	}
-	
-	@Override
-	public boolean checkPartyMember(PlayerInstance member, Npc npc)
-	{
-		final QuestState qs = getQuestState(member, false);
-		return ((qs != null) && qs.isStarted());
 	}
 	
 	@Override
@@ -111,20 +100,8 @@ public class Q10990_PoisonExtraction extends Quest
 				break;
 			}
 			case "30332-01.html":
-			{
-				htmltext = event;
-				break;
-			}
 			case "30332-02.html":
-			{
-				htmltext = event;
-				break;
-			}
 			case "30332-03.html":
-			{
-				htmltext = event;
-				break;
-			}
 			case "30332.html":
 			{
 				htmltext = event;
@@ -214,43 +191,6 @@ public class Q10990_PoisonExtraction extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
-	{
-		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
-		{
-			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (killCount < 30)
-			{
-				qs.set(KILL_COUNT_VAR, killCount);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				sendNpcLogList(killer);
-			}
-			else
-			{
-				qs.setCond(2, true);
-				qs.unset(KILL_COUNT_VAR);
-				killer.sendPacket(new ExShowScreenMessage("You hunted all monsters.#Use the Scroll of Escape in you inventory to go to Captain Bathis in the Town of Gludio.", 5000));
-				giveItems(killer, SOE_TO_CAPTAIN_BATHIS);
-			}
-		}
-		return super.onKill(npc, killer, isSummon);
-	}
-	
-	@Override
-	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
-	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(1))
-		{
-			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.LV_15_20_POISON_EXTRACTION_IN_PROGRESS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
-			return holder;
-		}
-		return super.getNpcLogList(player);
-	}
-	
-	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
@@ -289,6 +229,22 @@ public class Q10990_PoisonExtraction extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(1))
+		{
+			if (giveItemRandomly(killer, VENOM_SAC, 1, 30, 100, true))
+			{
+				qs.setCond(2, true);
+				killer.sendPacket(new ExShowScreenMessage("You hunted all monsters.#Use the Scroll of Escape in you inventory to go to Captain Bathis in the Town of Gludio.", 5000));
+				giveItems(killer, SOE_TO_CAPTAIN_BATHIS);
+			}
+		}
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)

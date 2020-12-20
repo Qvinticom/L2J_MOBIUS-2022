@@ -582,6 +582,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="91654" name="Adventurer's Mark Lv. 1" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +5%, MP Recovery Bonus +10%. The effect doesn't stack if several identical marks are in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
