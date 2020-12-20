@@ -476,7 +476,7 @@ public class Attackable extends Npc
 								final int addsp = (int) attacker.calcStat(Stat.EXPSP_RATE, sp, null, null);
 								
 								attacker.addExpAndSp(addexp, addsp, useVitalityRate());
-								if (addexp > 0)
+								if ((addexp > 0) && useVitalityRate())
 								{
 									attacker.updateVitalityPoints(getVitalityPoints(damage), true, false);
 								}

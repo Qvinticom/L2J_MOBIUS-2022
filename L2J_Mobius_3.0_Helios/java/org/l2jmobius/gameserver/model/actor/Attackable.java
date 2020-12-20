@@ -521,8 +521,11 @@ public class Attackable extends Npc
 										}
 										clan.addHuntingPoints(attacker, this, finalExp);
 									}
-									attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
-									PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+									if (useVitalityRate())
+									{
+										attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
+										PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+									}
 								}
 							}
 						}
