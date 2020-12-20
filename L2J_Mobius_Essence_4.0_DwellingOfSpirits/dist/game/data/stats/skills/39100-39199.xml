@@ -1878,7 +1878,18 @@
 	</skill>
 	<skill id="39191" toLevel="1" name="Sayha's Blessing">
 		<operateType>A1</operateType>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>300</reuseDelay>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>35000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39192" toLevel="1" name="Sayha's Silver Light Blessing">
 		<operateType>A1</operateType>

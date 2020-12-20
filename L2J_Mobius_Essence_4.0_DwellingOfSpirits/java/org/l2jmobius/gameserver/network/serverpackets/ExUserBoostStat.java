@@ -40,21 +40,9 @@ public class ExUserBoostStat implements IClientOutgoingPacket
 		
 		final int currentVitalityPoints = _player.getStat().getVitalityPoints();
 		int vitalityBonus = 0;
-		if (currentVitalityPoints > 105000)
+		if (currentVitalityPoints > 0)
 		{
 			vitalityBonus = 300;
-		}
-		else if (currentVitalityPoints > 70000)
-		{
-			vitalityBonus = 250;
-		}
-		else if (currentVitalityPoints > 35000)
-		{
-			vitalityBonus = 200;
-		}
-		else if (currentVitalityPoints > 0)
-		{
-			vitalityBonus = 150;
 		}
 		
 		// final int bonus = (int) (_player.getStat().getExpBonusMultiplier() * 100);

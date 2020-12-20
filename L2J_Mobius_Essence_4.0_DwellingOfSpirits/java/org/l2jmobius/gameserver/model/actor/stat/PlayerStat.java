@@ -57,7 +57,7 @@ public class PlayerStat extends PlayableStat
 	private boolean _cloakSlot = false;
 	private int _vitalityPoints = 0;
 	
-	public static final int MAX_VITALITY_POINTS = 140000;
+	public static final int MAX_VITALITY_POINTS = 3500000;
 	public static final int MIN_VITALITY_POINTS = 0;
 	
 	private static final int FANCY_FISHING_ROD_SKILL = 21484;
@@ -472,7 +472,17 @@ public class PlayerStat extends PlayableStat
 	
 	public double getVitalityExpBonus()
 	{
-		return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1.0;
+		final double bonus = (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1;
+		if ((bonus == 1) && (getActiveChar().getLimitedSayhaGraceEndTime() > System.currentTimeMillis()))
+		{
+			return getLimitedSayhaGraceExpBonus();
+		}
+		return bonus;
+	}
+	
+	public double getLimitedSayhaGraceExpBonus()
+	{
+		return Config.RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
 	}
 	
 	public void setVitalityPoints(int value)
@@ -483,6 +493,7 @@ public class PlayerStat extends PlayableStat
 			return;
 		}
 		_vitalityPoints = Math.min(Math.max(value, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
+		getActiveChar().sendPacket(new ExVitalityPointInfo(_vitalityPoints));
 	}
 	
 	/*

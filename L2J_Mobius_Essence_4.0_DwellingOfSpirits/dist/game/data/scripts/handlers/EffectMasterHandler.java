@@ -306,6 +306,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Root", Root::new);
 		EffectHandler.getInstance().registerHandler("SacrificeSummon", SacrificeSummon::new);
 		EffectHandler.getInstance().registerHandler("SafeFallHeight", SafeFallHeight::new);
+		EffectHandler.getInstance().registerHandler("SayhaGraceSupport", SayhaGraceSupport::new);
 		EffectHandler.getInstance().registerHandler("SendSystemMessageToClan", SendSystemMessageToClan::new);
 		EffectHandler.getInstance().registerHandler("ServitorShare", ServitorShare::new);
 		EffectHandler.getInstance().registerHandler("SetHp", SetHp::new);

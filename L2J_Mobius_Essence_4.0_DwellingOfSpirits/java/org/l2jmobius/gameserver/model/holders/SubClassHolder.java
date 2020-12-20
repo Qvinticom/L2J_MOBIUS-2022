@@ -29,7 +29,7 @@ public class SubClassHolder
 {
 	private static final int MAX_LEVEL = Config.MAX_SUBCLASS_LEVEL < ExperienceData.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : ExperienceData.getInstance().getMaxLevel() - 1;
 	
-	private static final int MAX_VITALITY_POINTS = 140000;
+	private static final int MAX_VITALITY_POINTS = 3500000;
 	private static final int MIN_VITALITY_POINTS = 0;
 	
 	private ClassId _class;

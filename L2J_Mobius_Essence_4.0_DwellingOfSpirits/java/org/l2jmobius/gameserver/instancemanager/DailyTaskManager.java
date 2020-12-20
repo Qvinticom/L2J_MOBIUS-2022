@@ -18,8 +18,12 @@ package org.l2jmobius.gameserver.instancemanager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -68,6 +72,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		resetRecommends();
 		resetWorldChatPoints();
 		resetTrainingCamp();
+		resetVitality();
 	}
 	
 	@ScheduleTarget
@@ -80,6 +85,71 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			Olympiad.getInstance().saveOlympiadStatus();
 			LOGGER.info("Olympiad System: Data updated.");
 		}
+	}
+	
+	private void resetVitality()
+	{
+		if (!Config.ENABLE_VITALITY)
+		{
+			return;
+		}
+		
+		for (PlayerInstance player : World.getInstance().getPlayers())
+		{
+			player.updateVitalityPoints(Config.STARTING_VITALITY_POINTS, false, false);
+			for (SubClassHolder subclass : player.getSubClasses().values())
+			{
+				subclass.setVitalityPoints(Math.min(PlayerStat.MAX_VITALITY_POINTS, subclass.getVitalityPoints() + Config.STARTING_VITALITY_POINTS));
+			}
+		}
+		
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			Map<Integer, Integer> currPoints = new HashMap<>();
+			try (PreparedStatement st = con.prepareStatement("SELECT charId, vitality_points FROM character_subclasses"))
+			{
+				ResultSet rs = st.executeQuery();
+				while (rs.next())
+				{
+					currPoints.put(rs.getInt(1), rs.getInt(2));
+				}
+			}
+			try (PreparedStatement st = con.prepareStatement("UPDATE character_subclasses SET vitality_points = ? WHERE charId = ?"))
+			{
+				for (Entry<Integer, Integer> entry : currPoints.entrySet())
+				{
+					st.setInt(1, Math.min(PlayerStat.MAX_VITALITY_POINTS, entry.getValue() + Config.STARTING_VITALITY_POINTS));
+					st.setInt(2, entry.getKey());
+					st.addBatch();
+				}
+				st.executeBatch();
+			}
+			
+			currPoints.clear();
+			try (PreparedStatement st = con.prepareStatement("SELECT charId, vitality_points FROM characters"))
+			{
+				ResultSet rs = st.executeQuery();
+				while (rs.next())
+				{
+					currPoints.put(rs.getInt(1), rs.getInt(2));
+				}
+			}
+			try (PreparedStatement st = con.prepareStatement("UPDATE characters SET vitality_points = ? WHERE charId = ?"))
+			{
+				for (Entry<Integer, Integer> entry : currPoints.entrySet())
+				{
+					st.setInt(1, Math.min(PlayerStat.MAX_VITALITY_POINTS, entry.getValue() + Config.STARTING_VITALITY_POINTS));
+					st.setInt(2, entry.getKey());
+					st.addBatch();
+				}
+				st.executeBatch();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Error while updating Vitality", e);
+		}
+		LOGGER.info("Vitality resetted");
 	}
 	
 	@ScheduleTarget

@@ -16,25 +16,21 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.gameserver.enums.UserInfoType;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
- * Vitality Point Up effect implementation.
- * @author Adry_85
+ * @author Mode
  */
-public class VitalityPointUp extends AbstractEffect
+public class SayhaGraceSupport extends AbstractEffect
 {
-	private final int _value;
-	
-	public VitalityPointUp(StatSet params)
+	public SayhaGraceSupport(StatSet params)
 	{
-		_value = params.getInt("value", 0);
 	}
 	
 	@Override
@@ -52,9 +48,23 @@ public class VitalityPointUp extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
-		effected.getActingPlayer().updateVitalityPoints(_value, false, false);
-		final UserInfo ui = new UserInfo(effected.getActingPlayer());
-		ui.addComponentType(UserInfoType.VITA_FAME);
-		effected.getActingPlayer().sendPacket(ui);
+		final PlayerInstance player = effected.getActingPlayer();
+		final double rnd = Rnd.nextDouble() * 100;
+		if (rnd <= 0.1) // 4h
+		{
+			player.setSayhaGraceSupportEndTime(System.currentTimeMillis() + (3600000 * 4));
+		}
+		else if (rnd <= 0.3) // 3h
+		{
+			player.setSayhaGraceSupportEndTime(System.currentTimeMillis() + (3600000 * 3));
+		}
+		else if (rnd <= 0.6) // 2h
+		{
+			player.setSayhaGraceSupportEndTime(System.currentTimeMillis() + (3600000 * 2));
+		}
+		else if (rnd <= 1.1) // 1h
+		{
+			player.setSayhaGraceSupportEndTime(System.currentTimeMillis() + (3600000 * 1));
+		}
 	}
 }

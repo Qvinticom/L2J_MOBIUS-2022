@@ -17,25 +17,29 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * @author GodKratos
+ * @author Mode
  */
-public class ExVitalityPointInfo implements IClientOutgoingPacket
+public class ExVitalExInfo implements IClientOutgoingPacket
 {
-	private final int _vitalityPoints;
+	private final PlayerInstance _player;
 	
-	public ExVitalityPointInfo(int vitPoints)
+	public ExVitalExInfo(PlayerInstance player)
 	{
-		_vitalityPoints = vitPoints;
+		_player = player;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_VITALITY_POINT_INFO.writeId(packet);
-		packet.writeD(_vitalityPoints);
+		OutgoingPackets.EX_VITAL_EX_INFO.writeId(packet);
+		packet.writeD((int) (_player.getLimitedSayhaGraceEndTime() / 1000)); // currentmilis / 1000, when limited sayha ends
+		packet.writeD((int) (_player.getSayhaGraceSupportEndTime() / 1000)); // currentmilis / 1000, when sayha grace suport ends
+		packet.writeD((int) (_player.getStat().getLimitedSayhaGraceExpBonus() * 100)); // Limited sayha bonus
+		packet.writeD(0x82); // Limited sayha bonus adena (shown as 130%, actually 30%)
 		return true;
 	}
 }

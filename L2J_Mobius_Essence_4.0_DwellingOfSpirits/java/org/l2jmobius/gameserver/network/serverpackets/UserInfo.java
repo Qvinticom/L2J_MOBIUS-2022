@@ -339,7 +339,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.VITA_FAME))
 		{
 			packet.writeH(19); // 196
-			packet.writeD(0x00); // _player.getVitalityPoints()
+			packet.writeD(_player.getVitalityPoints());
 			packet.writeC(0x00); // Vita Bonus
 			packet.writeD(0x00); // _player.getFame()
 			packet.writeD(0x00); // _player.getRaidbossPoints()
@@ -459,6 +459,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.VITA_FAME))
 		{
 			_player.sendPacket(new ExUserBoostStat(_player));
+			if (Config.ENABLE_VITALITY)
+			{
+				_player.sendPacket(new ExVitalityEffectInfo(_player));
+			}
 		}
 		
 		return true;

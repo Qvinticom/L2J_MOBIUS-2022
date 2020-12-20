@@ -523,8 +523,14 @@ public class Attackable extends Npc
 										}
 										clan.addHuntingPoints(attacker, this, finalExp);
 									}
-									attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
-									PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+									if (useVitalityRate())
+									{
+										if (attacker.getSayhaGraceSupportEndTime() < System.currentTimeMillis())
+										{
+											attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
+										}
+										PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+									}
 								}
 								
 								rewardAttributeExp(attacker, damage, totalDamage);
@@ -1674,15 +1680,7 @@ public class Attackable extends Npc
 			return 0;
 		}
 		
-		int points;
-		if (level < 85)
-		{
-			points = Math.max((int) ((exp / 1000) * Math.max(level - getLevel(), 1)), 1);
-		}
-		else
-		{
-			points = Math.max((int) ((exp / (isBoss ? Config.VITALITY_CONSUME_BY_BOSS : Config.VITALITY_CONSUME_BY_MOB)) * Math.max(level - getLevel(), 1)), 1);
-		}
+		final int points = Math.max((int) ((exp / (isBoss ? Config.VITALITY_CONSUME_BY_BOSS : Config.VITALITY_CONSUME_BY_MOB)) * Math.max(level - getLevel(), 1)), level < 40 ? 5 : 100);
 		
 		return -points;
 	}

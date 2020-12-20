@@ -198,18 +198,58 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="51436" toLevel="1" name="Sayha's Storm Lv. 3">
-		<!-- For 20 min., Momentum Consumption +100%, Acquired XP/ SP +200%. Cooldown: 1 min. The effect remains after death. -->
+		<!-- For 20 min., Sayha's Grace Consumption +100%%, acquired XP/ SP +200%%. Cooldown: 1 min.\nThe effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_sayha_storm</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGracePointsRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>200</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>200</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51437" toLevel="1" name="Sayha's Storm Lv. 3 (Exchangeable)">
-		<!-- For 20 min., Momentum Consumption +100%, Acquired XP/ SP +200%. Cooldown: 1 min. The effect remains after death. -->
+		<!-- For 20 min., Sayha's Grace Consumption +100%%, acquired XP/ SP +200%%. Cooldown: 1 min.\nThe effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_sayha_storm</icon>
-		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
+		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
+		<abnormalTime>1200</abnormalTime>
+		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGracePointsRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>200</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>200</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51438" toLevel="1" name="Sayha's Summoning Stick">
 		<!-- Use it to summon various monsters. -->

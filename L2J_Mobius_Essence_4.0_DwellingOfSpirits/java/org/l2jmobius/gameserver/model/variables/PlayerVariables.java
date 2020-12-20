@@ -63,6 +63,8 @@ public class PlayerVariables extends AbstractVariables
 	public static final String FORTUNE_TELLING_BLACK_CAT_VARIABLE = "FortuneTellingBlackCat";
 	public static final String DELUSION_RETURN = "DELUSION_RETURN";
 	public static final String HUNTING_ZONE_RESET_TIME = "HUNTING_ZONE_RESET_TIME_";
+	public static final String SAYHA_GRACE_SUPPORT_ENDTIME = "SAYHA_GRACE_SUPPORT_ENDTIME";
+	public static final String LIMITED_SAYHA_GRACE_ENDTIME = "LIMITED_SAYHA_GRACE_ENDTIME";
 	public static final String DEATH_POINT_COUNT = "DEATH_POINT_COUNT";
 	public static final String STAT_POINTS = "STAT_POINTS";
 	public static final String STAT_STR = "STAT_STR";

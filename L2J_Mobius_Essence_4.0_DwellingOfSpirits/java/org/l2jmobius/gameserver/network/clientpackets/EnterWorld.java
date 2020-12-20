@@ -315,11 +315,6 @@ public class EnterWorld implements IClientIncomingPacket
 			showClanNotice = clan.isNoticeEnabled();
 		}
 		
-		if (Config.ENABLE_VITALITY)
-		{
-			player.sendPacket(new ExVitalityEffectInfo(player));
-		}
-		
 		// Send time.
 		player.sendPacket(new ExEnterWorld());
 		
@@ -654,6 +649,12 @@ public class EnterWorld implements IClientIncomingPacket
 			// Send twice.
 			player.setDeathPoints(500);
 			player.setDeathPoints(player.getVariables().getInt(PlayerVariables.DEATH_POINT_COUNT, 0));
+		}
+		
+		// Sayha's Grace.
+		if (Config.ENABLE_VITALITY)
+		{
+			player.sendPacket(new ExVitalityEffectInfo(player));
 		}
 		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)

@@ -792,6 +792,7 @@ public class Config
 	public static int STARTING_VITALITY_POINTS;
 	public static boolean RAIDBOSS_USE_VITALITY;
 	public static float RATE_VITALITY_EXP_MULTIPLIER;
+	public static float RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER;
 	public static int VITALITY_MAX_ITEMS_ALLOWED;
 	public static float RATE_VITALITY_LOST;
 	public static float RATE_VITALITY_GAIN;
@@ -2157,8 +2158,13 @@ public class Config
 			RATE_QUEST_REWARD_RECIPE = RatesSettings.getFloat("RateQuestRewardRecipe", 1);
 			RATE_QUEST_REWARD_MATERIAL = RatesSettings.getFloat("RateQuestRewardMaterial", 1);
 			RATE_RAIDBOSS_POINTS = RatesSettings.getFloat("RateRaidbossPointsReward", 1);
-			RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 2);
+			RATE_VITALITY_EXP_MULTIPLIER = RatesSettings.getFloat("RateVitalityExpMultiplier", 3);
+			RATE_LIMITED_SAYHA_GRACE_EXP_MULTIPLIER = RatesSettings.getFloat("RateLimitedSayhaGraceExpMultiplier", 2);
 			VITALITY_MAX_ITEMS_ALLOWED = RatesSettings.getInt("VitalityMaxItemsAllowed", 999);
+			if (VITALITY_MAX_ITEMS_ALLOWED == 0)
+			{
+				VITALITY_MAX_ITEMS_ALLOWED = Integer.MAX_VALUE;
+			}
 			RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
 			RATE_VITALITY_GAIN = RatesSettings.getFloat("RateVitalityGain", 1);
 			RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);

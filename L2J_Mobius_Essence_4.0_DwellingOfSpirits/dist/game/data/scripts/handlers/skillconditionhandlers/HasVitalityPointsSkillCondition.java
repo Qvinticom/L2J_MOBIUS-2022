@@ -22,15 +22,28 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.ISkillCondition;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
-public class CanUseVitalityConsumeItemSkillCondition implements ISkillCondition
+/**
+ * @author Mode
+ */
+public class HasVitalityPointsSkillCondition implements ISkillCondition
 {
-	public CanUseVitalityConsumeItemSkillCondition(StatSet params)
+	private final int _amount;
+	
+	public HasVitalityPointsSkillCondition(StatSet params)
 	{
+		_amount = params.getInt("amount");
 	}
 	
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		return true;
+		if (caster.isPlayer())
+		{
+			if (caster.getActingPlayer().getVitalityPoints() >= _amount)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 }

@@ -306,9 +306,12 @@ import org.l2jmobius.gameserver.network.serverpackets.ExStopScenePlayer;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
+import org.l2jmobius.gameserver.network.serverpackets.ExUserBoostStat;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import org.l2jmobius.gameserver.network.serverpackets.ExVitalExInfo;
+import org.l2jmobius.gameserver.network.serverpackets.ExVitalityEffectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 import org.l2jmobius.gameserver.network.serverpackets.HennaInfo;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -11585,6 +11588,40 @@ public class PlayerInstance extends Playable
 	public void updateVitalityPoints(int points, boolean useRates, boolean quiet)
 	{
 		getStat().updateVitalityPoints(points, useRates, quiet);
+	}
+	
+	public void setSayhaGraceSupportEndTime(long endTime)
+	{
+		if (getVariables().getLong(PlayerVariables.SAYHA_GRACE_SUPPORT_ENDTIME, 0) < System.currentTimeMillis())
+		{
+			getVariables().set(PlayerVariables.SAYHA_GRACE_SUPPORT_ENDTIME, endTime);
+			sendPacket(new ExUserBoostStat(this));
+			sendPacket(new ExVitalityEffectInfo(this));
+			sendPacket(new ExVitalExInfo(this));
+		}
+	}
+	
+	public long getSayhaGraceSupportEndTime()
+	{
+		return getVariables().getLong(PlayerVariables.SAYHA_GRACE_SUPPORT_ENDTIME, 0);
+	}
+	
+	public boolean setLimitedSayhaGraceEndTime(long endTime)
+	{
+		if (endTime > getVariables().getLong(PlayerVariables.LIMITED_SAYHA_GRACE_ENDTIME, 0))
+		{
+			getVariables().set(PlayerVariables.LIMITED_SAYHA_GRACE_ENDTIME, endTime);
+			sendPacket(new ExUserBoostStat(this));
+			sendPacket(new ExVitalityEffectInfo(this));
+			sendPacket(new ExVitalExInfo(this));
+			return true;
+		}
+		return false;
+	}
+	
+	public long getLimitedSayhaGraceEndTime()
+	{
+		return getVariables().getLong(PlayerVariables.LIMITED_SAYHA_GRACE_ENDTIME, 0);
 	}
 	
 	public void checkItemRestriction()
