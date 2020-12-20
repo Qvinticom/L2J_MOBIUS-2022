@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 
 /**
  * @author Mobius
@@ -67,6 +68,7 @@ public class TimedHuntingZone extends ZoneType
 		if (player != null)
 		{
 			player.setInsideZone(ZoneId.TIMED_HUNTING, false);
+			player.sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
 		}
 	}
 }

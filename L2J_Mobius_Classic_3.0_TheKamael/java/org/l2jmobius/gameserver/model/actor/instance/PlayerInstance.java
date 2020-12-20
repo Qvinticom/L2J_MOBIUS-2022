@@ -14231,7 +14231,6 @@ public class PlayerInstance extends Playable
 			_timedHuntingZoneFinishTask.cancel(true);
 			_timedHuntingZoneFinishTask = null;
 		}
-		sendPacket(TimedHuntingZoneExit.STATIC_PACKET);
 	}
 	
 	public long getTimedHuntingZoneRemainingTime()
