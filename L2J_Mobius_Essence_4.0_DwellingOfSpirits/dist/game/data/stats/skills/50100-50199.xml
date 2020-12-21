@@ -367,6 +367,18 @@
 	</skill>
 	<skill id="50149" toLevel="1" name="Sayha's Blessing (Event)">
 		<operateType>A1</operateType>
+		<reuseDelay>300</reuseDelay>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>35000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50150" toLevel="1" name="Sayha's Buff Scroll - Event">
 		<!-- A magic scroll which allows getting various buffs. -->
