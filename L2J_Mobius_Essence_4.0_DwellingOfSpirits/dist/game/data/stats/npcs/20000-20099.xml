@@ -1686,11 +1686,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>ELEMENTAL2</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="35" />
@@ -2446,11 +2441,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clanList>
-				<clan>SKELETON</clan>
-			</clanList>
-		</ai>
+		<ai type="ARCHER" dodge="15" />
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
@@ -2610,11 +2601,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>SKELETON</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
@@ -2964,11 +2950,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>SKELETON</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
@@ -3179,11 +3160,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="1000" clanHelpRange="300">
-			<clanList>
-				<clan>BUGBEAR</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="35" />
@@ -3284,11 +3260,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>OL_MAHUM</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
@@ -3831,11 +3802,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>OL_MAHUM</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />

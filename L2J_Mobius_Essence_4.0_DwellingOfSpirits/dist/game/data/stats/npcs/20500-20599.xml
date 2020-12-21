@@ -2361,11 +2361,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>ALL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="34" />
 			<height normal="25" />
@@ -2420,11 +2415,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>ALL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -2477,7 +2467,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="12" />
 			<height normal="21" />
@@ -2524,11 +2513,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>ALL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="35" />
 			<height normal="27" />
@@ -4677,11 +4661,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="400" isAggressive="false">
-			<clanList>
-				<clan>ELEMENTAL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="35" />
@@ -4739,11 +4718,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>ELEMENTAL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -4807,11 +4781,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>ELEMENTAL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
@@ -4869,11 +4838,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="300">
-			<clanList>
-				<clan>ELEMENTAL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="35" />
@@ -4935,11 +4899,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>ELEMENTAL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="30" />
@@ -5000,11 +4959,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>ELEMENTAL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="25.5" />
@@ -5065,11 +5019,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>ELEMENTAL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="35" />
@@ -5131,11 +5080,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300">
-			<clanList>
-				<clan>ELEMENTAL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -5185,11 +5129,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>ELEMENTAL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
@@ -5307,11 +5246,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>ELEMENTAL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="30" />

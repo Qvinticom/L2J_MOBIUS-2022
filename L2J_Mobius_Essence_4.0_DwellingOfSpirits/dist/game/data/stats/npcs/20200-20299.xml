@@ -757,11 +757,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai clanHelpRange="400" aggroRange="450">
-			<clanList>
-				<clan>PORTA</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="31" />
@@ -812,11 +807,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai clanHelpRange="400" aggroRange="450">
-			<clanList>
-				<clan>PORTA</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="20" />
@@ -879,11 +869,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="400" isAggressive="true">
-			<clanList>
-				<clan>PORTA</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="14.5" />
@@ -935,11 +920,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai clanHelpRange="400" aggroRange="450">
-			<clanList>
-				<clan>PORTA</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
@@ -1007,11 +987,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="400" isAggressive="true">
-			<clanList>
-				<clan>PORTA</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="31" />
@@ -1074,11 +1049,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai clanHelpRange="400" aggroRange="450">
-			<clanList>
-				<clan>PORTA</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="21" grown="25" />
 			<height normal="35" grown="43" />
@@ -1136,11 +1106,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai clanHelpRange="400" aggroRange="450">
-			<clanList>
-				<clan>TORFE</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="29" />
@@ -1196,11 +1161,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="400" isAggressive="true">
-			<clanList>
-				<clan>TORFE</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="25.5" />
@@ -1249,11 +1209,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>TORFE</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="34" />
@@ -1324,11 +1279,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>TORFE</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="29" />
@@ -2518,7 +2468,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="29" />
 			<height normal="72" />
@@ -2744,11 +2693,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>BUGBEAR</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="35" />
@@ -2807,11 +2751,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>BUGBEAR</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="35" />
@@ -4063,17 +4002,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>CAVE_SERVANT</clan>
-				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
@@ -4262,7 +4190,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300" />
 		<collision>
 			<radius normal="30" grown="15.5" />
 			<height normal="40" grown="48.5" />
@@ -4313,11 +4240,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>ALL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="21" />
 			<height normal="31" />

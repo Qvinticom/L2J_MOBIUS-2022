@@ -1759,11 +1759,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>PORTA</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
@@ -1835,11 +1830,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>PORTA</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="20" grown="24" />
@@ -1887,11 +1877,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>TORFE</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -1966,11 +1951,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>UNDEAD</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="22" />
@@ -2097,11 +2077,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>UNDEAD</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />

@@ -1611,11 +1611,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>OL_MAHUM</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
@@ -1723,11 +1718,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>OL_MAHUM</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
@@ -2908,11 +2898,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>ALL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="26" />
 			<height normal="25.5" />
