@@ -974,4 +974,41 @@
 		<node X="-82420" Y="16316" />
 		<node X="-82173" Y="16568" />
 	</zone>
+	<zone name="swamp_screams_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3500" maxZ="-2500"> <!-- Swamp of Screams -->
+		<node X="68987" Y="-49652" />
+		<node X="69678" Y="-49773" />
+		<node X="70006" Y="-50094" />
+		<node X="70030" Y="-50149" />
+		<node X="69842" Y="-50503" />
+		<node X="69784" Y="-50583" />
+		<node X="69545" Y="-50765" />
+		<node X="69243" Y="-50702" />
+		<node X="68911" Y="-50706" />
+		<node X="68784" Y="-50249" />
+		<node X="68896" Y="-49759" />
+	</zone>
+	<zone name="ketra_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3800" maxZ="-2500"> <!-- Ketra Orc Outpost -->
+		<node X="145894" Y="-68284" />
+		<node X="146523" Y="-68753" />
+		<node X="146808" Y="-68849" />
+		<node X="147044" Y="-68144" />
+		<node X="147350" Y="-67786" />
+		<node X="146913" Y="-67560" />
+		<node X="146721" Y="-67472" />
+		<node X="146070" Y="-67273" />
+		<node X="146054" Y="-67847" />
+	</zone>
+	<zone name="varka_spawn_peace" type="PeaceZone" shape="NPoly" minZ="-3800" maxZ="-2500"> <!-- Varka Silenos Barracks -->
+		<node X="125361" Y="-40907" />
+		<node X="125515" Y="-41122" />
+		<node X="125743" Y="-41289" />
+		<node X="125578" Y="-41566" />
+		<node X="125352" Y="-41920" />
+		<node X="125246" Y="-42032" />
+		<node X="125024" Y="-42002" />
+		<node X="124609" Y="-41544" />
+		<node X="124723" Y="-41379" />
+		<node X="124826" Y="-41249" />
+		<node X="124920" Y="-41220" />
+	</zone>
 </list>
