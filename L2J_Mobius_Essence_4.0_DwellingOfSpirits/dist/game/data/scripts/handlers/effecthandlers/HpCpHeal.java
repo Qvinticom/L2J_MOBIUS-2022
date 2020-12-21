@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.CrystalType;
+import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.model.stats.Stat;
@@ -120,12 +121,27 @@ public class HpCpHeal extends AbstractEffect
 			}
 		}
 		
+		// Additional potion HP.
+		double additionalHp = 0;
+		if ((item != null) && (item.isPotion() || item.isElixir()))
+		{
+			additionalHp = effected.getStat().getValue(Stat.ADDITIONAL_POTION_HP, 0);
+			
+			// Classic Potion Mastery
+			// TODO: Create an effect if more mastery skills are added.
+			amount *= 1 + (effected.getAffectedSkillLevel(CommonSkill.POTION_MASTERY.getId()) / 100);
+		}
+		
 		// Prevents overheal and negative amount
 		final double healAmount = Math.max(Math.min(amount, effected.getMaxRecoverableHp() - effected.getCurrentHp()), 0);
 		if (healAmount != 0)
 		{
 			final double newHp = healAmount + effected.getCurrentHp();
-			effected.setCurrentHp(newHp, false);
+			if ((newHp + additionalHp) > effected.getMaxRecoverableHp())
+			{
+				additionalHp = Math.max(effected.getMaxRecoverableHp() - newHp, 0);
+			}
+			effected.setCurrentHp(newHp + additionalHp, false);
 		}
 		
 		if (effected.isPlayer())
@@ -134,13 +150,13 @@ public class HpCpHeal extends AbstractEffect
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
 				sm.addString(effector.getName());
-				sm.addInt((int) healAmount);
+				sm.addInt((int) (healAmount + additionalHp));
 				effected.sendPacket(sm);
 			}
 			else
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
-				sm.addInt((int) healAmount);
+				sm.addInt((int) (healAmount + additionalHp));
 				effected.sendPacket(sm);
 			}
 			

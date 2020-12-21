@@ -120,12 +120,23 @@ public class HpCpHeal extends AbstractEffect
 			}
 		}
 		
+		// Additional potion HP.
+		double additionalHp = 0;
+		if ((item != null) && (item.isPotion() || item.isElixir()))
+		{
+			additionalHp = effected.getStat().getValue(Stat.ADDITIONAL_POTION_HP, 0);
+		}
+		
 		// Prevents overheal and negative amount
 		final double healAmount = Math.max(Math.min(amount, effected.getMaxRecoverableHp() - effected.getCurrentHp()), 0);
 		if (healAmount != 0)
 		{
 			final double newHp = healAmount + effected.getCurrentHp();
-			effected.setCurrentHp(newHp, false);
+			if ((newHp + additionalHp) > effected.getMaxRecoverableHp())
+			{
+				additionalHp = Math.max(effected.getMaxRecoverableHp() - newHp, 0);
+			}
+			effected.setCurrentHp(newHp + additionalHp, false);
 		}
 		
 		if (effected.isPlayer())
@@ -134,13 +145,13 @@ public class HpCpHeal extends AbstractEffect
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
 				sm.addString(effector.getName());
-				sm.addInt((int) healAmount);
+				sm.addInt((int) (healAmount + additionalHp));
 				effected.sendPacket(sm);
 			}
 			else
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
-				sm.addInt((int) healAmount);
+				sm.addInt((int) (healAmount + additionalHp));
 				effected.sendPacket(sm);
 			}
 			
