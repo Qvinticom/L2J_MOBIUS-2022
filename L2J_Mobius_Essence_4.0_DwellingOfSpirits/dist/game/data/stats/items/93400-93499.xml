@@ -58,67 +58,115 @@
 		<!-- For B-grade weapons.\nP. Atk. +4 for one-handed swords/ blunts, daggers, spears.\nP. Atk. +5 for two-handed swords/ blunts, fists, dual swords.\nP. Atk. +8 for bows.\nM. Atk. +3 for all weapons.\nStarting from +4, P./ M. Atk. bonus is doubled. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="2015" level="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+		</skills>
 	</item>
 	<item id="93407" name="Scroll: Enchant B-grade Armor" type="EtcItem">
 		<!-- For B-grade armor and accessories\nP. Def. +1\nWhen enchanted to +4 or higher, P. Def. +3, HP is increased with each enchant value. Can be safely enchanted up to +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="2016" level="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
+		</skills>
 	</item>
 	<item id="93408" name="Scroll: Enchant C-grade Weapon" type="EtcItem">
 		<!-- For C-grade weapons.\nP. Atk. +4 for one-handed swords/ blunts, daggers, spears.\nP. Atk. +5 for two-handed swords/ blunts, fists, dual swords.\nP. Atk. +8 for bows.\nM. Atk. +3 for all weapons.\nStarting from +4, P./ M. Atk. bonus is doubled. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="2017" level="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+		</skills>
 	</item>
 	<item id="93409" name="Scroll: Enchant C-grade Armor" type="EtcItem">
 		<!-- For C-grade armor and accessories\nP. Def. +1\nWhen enchanted to +4 or higher, P. Def. +3, HP is increased with each enchant value. Can be safely enchanted up to +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="2018" level="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+		</skills>
 	</item>
 	<item id="93410" name="Scroll: Enchant D-grade Weapon" type="EtcItem">
 		<!-- For D-grade weapons. P. Atk. +4 for one-handed swords/ blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords/ blunts, dual swords, and fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. When enchanted to +4 and higher, P./ M. Atk. bonus is doubled. Enchanting is safe up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="2019" level="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+		</skills>
 	</item>
 	<item id="93411" name="Scroll: Enchant D-grade Armor" type="EtcItem">
 		<!-- For D-grade armor and accessories\nP. Def. +1\nWhen enchanted to +4 or higher, P. Def. +3, HP is increased with each enchant value. Can be safely enchanted up to +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="2020" level="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
+		</skills>
 	</item>
 	<item id="93412" name="Letter K" type="EtcItem">
 		<!-- Combine with other letters to create a special word and get a reward! -->
