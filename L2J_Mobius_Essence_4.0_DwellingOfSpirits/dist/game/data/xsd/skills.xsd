@@ -1024,21 +1024,6 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="exp">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:byte">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
 															<xs:element name="deathPenalty">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -1116,6 +1101,21 @@
 															</xs:element>
 															<xs:element name="npcCount" type="xs:unsignedByte" />
 															<xs:element name="magicTypes" type="xs:string" />
+															<xs:element name="exp">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:byte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="halfLethal" type="xs:unsignedByte" />
 															<xs:element name="shieldDefPercent" type="xs:unsignedByte" />
 															<xs:element name="CROSSBOW">
@@ -1491,6 +1491,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="attackSkillId" type="xs:unsignedShort" />
 															<xs:element name="zoneId" type="xs:unsignedByte" />
 															<xs:element name="time" type="xs:unsignedInt" />
 															<xs:element name="reputation" type="xs:unsignedByte" />
