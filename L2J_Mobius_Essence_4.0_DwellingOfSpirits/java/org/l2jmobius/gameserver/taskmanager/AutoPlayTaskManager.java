@@ -57,6 +57,11 @@ public class AutoPlayTaskManager
 					continue PLAY;
 				}
 				
+				if (player.isCastingNow() || (player.getQueuedSkill() != null))
+				{
+					continue PLAY;
+				}
+				
 				// Skip thinking.
 				final WorldObject target = player.getTarget();
 				if ((target != null) && target.isMonster())
