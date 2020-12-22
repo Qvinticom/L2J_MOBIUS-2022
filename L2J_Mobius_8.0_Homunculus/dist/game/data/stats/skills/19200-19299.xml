@@ -2652,6 +2652,9 @@
 			<effect name="DispelBySlot">
 				<dispel>COUNTER_FLIP,-1</dispel>
 			</effect>
+			<effect name="DisableSkill">
+				<disable>19296</disable>
+			</effect>
 			<effect name="TeleportToTarget" />
 			<effect name="KnockBack">
 				<speed>400</speed>

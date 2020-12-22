@@ -1479,7 +1479,15 @@
 		<icon>icon.skill11018</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>100</attributeValue>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>
+			<value fromLevel="1" toLevel="13">60</value>
+			<value fromLevel="1" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+		</activateRate>
+		<abnormalTime>3</abnormalTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<reuseDelayGroup>11017</reuseDelayGroup>
@@ -1516,6 +1524,7 @@
 		<castRange>800</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>2780</hitTime>
+		<isDebuff>true</isDebuff>
 		<coolTime>300</coolTime>
 		<reuseDelay>2400</reuseDelay>
 		<effectPoint>
@@ -1570,10 +1579,7 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1020" toSubLevel="1020">{base + (base / 100 * (8 + 0.1 * (subIndex - 19)))}</value>
 				</power>
 			</effect>
-			<effect name="CallSkill">
-				<skillId>11141</skillId> <!-- Freezing Slow -->
-				<skillLevel>1</skillLevel>
-			</effect>
+			<effect name="Root" />
 		</effects>
 	</skill>
 	<skill id="11022" toLevel="13" name="Elemental Crash (Holy)">
@@ -1581,7 +1587,16 @@
 		<icon>icon.skill11018</icon>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>100</attributeValue>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<trait>SHOCK</trait>
+		<activateRate>
+			<value fromLevel="1" toLevel="13">60</value>
+			<value fromLevel="1" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+		</activateRate>
+		<abnormalTime>3</abnormalTime>
 		<reuseDelayGroup>11017</reuseDelayGroup>
 		<magicLevel>
 			<value level="1">85</value>
@@ -1639,6 +1654,7 @@
 		</magicCriticalRate>
 		<hitCancelTime>0.8</hitCancelTime>
 		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1672,6 +1688,9 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="1019" toSubLevel="1019">{base + (base / 100 * (7 + 0.7 * (subIndex - 18)))}</value>
 					<value fromLevel="7" toLevel="13" fromSubLevel="1020" toSubLevel="1020">{base + (base / 100 * (8 + 0.1 * (subIndex - 19)))}</value>
 				</power>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
 	</skill>

@@ -2870,8 +2870,8 @@
 			<effect name="SilentMove">
 			</effect>
 			<effect name="Speed">
-				<amount>20</amount>
-				<mode>PER</mode>
+				<amount>60</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>-20</amount>

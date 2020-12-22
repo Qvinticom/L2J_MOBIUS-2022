@@ -2362,6 +2362,9 @@
 					<value fromLevel="1" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="KnockBack">
 				<speed>700</speed>
 				<distance>50</distance>
@@ -2486,7 +2489,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<isMagic>4</isMagic>

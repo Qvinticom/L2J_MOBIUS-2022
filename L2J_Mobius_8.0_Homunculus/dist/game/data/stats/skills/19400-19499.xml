@@ -556,7 +556,10 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>100</activateRate> <!-- Guessed -->
+		<activateRate>
+			<value fromLevel="1" toLevel="9">60</value>
+			<value fromLevel="7" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
+		</activateRate>
 		<magicLevel>
 			<value level="1">85</value>
 			<value level="2">90</value>

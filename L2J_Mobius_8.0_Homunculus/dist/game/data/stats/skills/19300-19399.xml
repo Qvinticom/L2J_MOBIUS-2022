@@ -214,9 +214,10 @@
 		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk. and stun the target for $s2 Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill19303</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>1</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<operateType>DA5</operateType>
+		<reuseDelayGroup>10705</reuseDelayGroup>
 		<castRange>80</castRange>
 		<magicLevel>
 			<value level="1">85</value>
@@ -305,6 +306,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isTriggeredSkill>true</isTriggeredSkill>
+		<reuseDelay>6000</reuseDelay>
 		<reuseDelayGroup>10705</reuseDelayGroup>
 		<effects>
 			<effect name="CriticalDamagePosition">
