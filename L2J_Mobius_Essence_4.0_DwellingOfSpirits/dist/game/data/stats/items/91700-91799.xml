@@ -846,14 +846,15 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<cond msgId="1902">
-			<player levelRange="1;74" />
+			<player levelRange="1;75" />
 		</cond>
 		<skills>
-			<skill id="54068" level="1" /> <!-- Sayha's Gust -->
+			<skill id="54068" level="1" /> <!-- Sayha's Gust - Event -->
 		</skills>
 	</item>
 	<item id="91777" name="Magic Fire" additionalName="Event" type="EtcItem">

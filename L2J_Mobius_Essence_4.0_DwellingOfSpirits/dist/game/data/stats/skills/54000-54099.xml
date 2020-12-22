@@ -952,7 +952,16 @@
 		<isMagic>4</isMagic>
 		<stayAfterDeath>true</stayAfterDeath>
 		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
 		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="ExpModify">
 				<amount>300</amount>
 			</effect>
@@ -978,7 +987,7 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<abnormalTime>-1</abnormalTime><!-- 60000 TODO:aaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+		<abnormalTime>-1</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
 		<stayAfterDeath>true</stayAfterDeath>
