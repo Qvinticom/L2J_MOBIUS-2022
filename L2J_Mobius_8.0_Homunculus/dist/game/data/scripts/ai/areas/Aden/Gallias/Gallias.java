@@ -47,12 +47,13 @@ public class Gallias extends AbstractNpcAI
 	// Items
 	private static final int SUB_CERTIFICATE = 10280;
 	private static final int DUAL_CERTIFICATE = 36078;
+	private static final int DUAL_CERTIFICATE_ENHANCED = 81731;
 	private static final int ENERGY_OF_POWER = 80924;
 	// Skills
 	private static final int DUAL_CLASS_RENEWED_ENERGY_OF_POWER = 30820;
 	// Misc @formatter:off
 	private static final int[] SUB_SKILL_LEVELS = {65, 70, 75, 80};
-	private static final int[] DUAL_SKILL_LEVELS = {85, 90, 95, 99, 101, 103, 105};
+	private static final int[] DUAL_SKILL_LEVELS = {85, 90, 95, 99, 101, 103, 105, 107, 109, 110};
 	// @formatter:on
 	private static final String SUB_CERTIFICATE_COUNT_VAR = "SUB_CERTIFICATE_COUNT";
 	private static final String DUAL_CERTIFICATE_COUNT_VAR = "DUAL_CERTIFICATE_COUNT";
@@ -275,7 +276,7 @@ public class Gallias extends AbstractNpcAI
 					{
 						player.getVariables().set(DUAL_CERTIFICATE_COUNT_VAR, currentCount + 1);
 						vars.set(getDualSkillVariableName(level), true);
-						giveItems(player, DUAL_CERTIFICATE, 1);
+						giveItems(player, level < 7 ? DUAL_CERTIFICATE : DUAL_CERTIFICATE_ENHANCED, 1);
 					}
 					htmltext = getHtm(player, "34514-29.html");
 				}
@@ -289,7 +290,7 @@ public class Gallias extends AbstractNpcAI
 				{
 					htmltext = "34514-30.html";
 				}
-				else if (!ownsAtLeastOneItem(player, DUAL_CERTIFICATE))
+				else if (!ownsAtLeastOneItem(player, DUAL_CERTIFICATE) && !ownsAtLeastOneItem(player, DUAL_CERTIFICATE_ENHANCED))
 				{
 					htmltext = "34514-31.html";
 				}
@@ -323,7 +324,9 @@ public class Gallias extends AbstractNpcAI
 				{
 					htmltext = null; // TODO: Unknown html
 					takeItems(player, DUAL_CERTIFICATE, -1);
+					takeItems(player, DUAL_CERTIFICATE_ENHANCED, -1);
 					player.getWarehouse().destroyItemByItemId("Quest", DUAL_CERTIFICATE, -1, player, npc);
+					player.getWarehouse().destroyItemByItemId("Quest", DUAL_CERTIFICATE_ENHANCED, -1, player, npc);
 					takeItems(player, Inventory.ADENA_ID, Config.FEE_DELETE_DUALCLASS_SKILLS);
 					player.getVariables().remove(DUAL_CERTIFICATE_COUNT_VAR);
 					
