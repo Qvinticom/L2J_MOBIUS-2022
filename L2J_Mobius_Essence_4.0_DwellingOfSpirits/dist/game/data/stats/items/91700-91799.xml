@@ -843,18 +843,18 @@
 		<!-- Required level: 1-74. Sayha's Grace points +100%, Acquired XP/ SP +300%. The effect remains after death. Duration: 20 min. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
 		<set name="icon" val="icon.ev_magic_flame_game_wind2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="immediate_effect" val="true" />
 		<cond msgId="1902">
-			<player levelRange="1;75" />
+			<player levelRange="1;74" />
 		</cond>
 		<skills>
-			<skill id="54068" level="1" /> <!-- Sayha's Gust - Event -->
+			<skill id="54068" level="1" /> <!-- Sayha's Gust -->
 		</skills>
 	</item>
 	<item id="91777" name="Magic Fire" additionalName="Event" type="EtcItem">

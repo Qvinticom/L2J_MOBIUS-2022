@@ -205,6 +205,7 @@ import handlers.itemhandlers.FishShots;
 import handlers.itemhandlers.Harvester;
 import handlers.itemhandlers.ItemSkills;
 import handlers.itemhandlers.ItemSkillsTemplate;
+import handlers.itemhandlers.LimitedSayha;
 import handlers.itemhandlers.Maps;
 import handlers.itemhandlers.MercTicket;
 import handlers.itemhandlers.NicknameColor;
@@ -553,6 +554,7 @@ public class MasterHandler
 			Harvester.class,
 			ItemSkills.class,
 			ItemSkillsTemplate.class,
+			LimitedSayha.class,
 			Maps.class,
 			MercTicket.class,
 			NicknameColor.class,
