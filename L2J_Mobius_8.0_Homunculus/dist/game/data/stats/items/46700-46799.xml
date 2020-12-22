@@ -1074,6 +1074,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38855" min="1" max="1" chance="20" /> <!-- Ruby Lv. 1 -->
+			<item id="38856" min="1" max="1" chance="20" /> <!-- Ruby Lv. 2 -->
+			<item id="38857" min="1" max="1" chance="20" /> <!-- Ruby Lv. 3 -->
+			<item id="38858" min="1" max="1" chance="20" /> <!-- Ruby Lv. 4 -->
+			<item id="38859" min="1" max="1" chance="20" /> <!-- Ruby Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46766" name="Sapphire Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of Level 1-5 Sapphires. -->
@@ -1081,6 +1091,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38927" min="1" max="1" chance="20" /> <!-- Sapphire Lv. 1 -->
+			<item id="38928" min="1" max="1" chance="20" /> <!-- Sapphire Lv. 2 -->
+			<item id="38929" min="1" max="1" chance="20" /> <!-- Sapphire Lv. 3 -->
+			<item id="38930" min="1" max="1" chance="20" /> <!-- Sapphire Lv. 4 -->
+			<item id="38931" min="1" max="1" chance="20" /> <!-- Sapphire Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46767" name="Topaz Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of Level 1-5 Topazes. -->
@@ -1088,6 +1108,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38850" min="1" max="1" chance="20" /> <!-- Topaz Lv. 1 -->
+			<item id="38851" min="1" max="1" chance="20" /> <!-- Topaz Lv. 2 -->
+			<item id="38852" min="1" max="1" chance="20" /> <!-- Topaz Lv. 3 -->
+			<item id="38853" min="1" max="1" chance="20" /> <!-- Topaz Lv. 4 -->
+			<item id="38854" min="1" max="1" chance="20" /> <!-- Topaz Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46768" name="Opal Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain Opal Lv. 1-5. -->
@@ -1095,6 +1125,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38875" min="1" max="1" chance="20" /> <!-- Opal Lv. 1 -->
+			<item id="38876" min="1" max="1" chance="20" /> <!-- Opal Lv. 2 -->
+			<item id="38877" min="1" max="1" chance="20" /> <!-- Opal Lv. 3 -->
+			<item id="38878" min="1" max="1" chance="20" /> <!-- Opal Lv. 4 -->
+			<item id="38879" min="1" max="1" chance="20" /> <!-- Opal Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46769" name="Obsidian Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of Level 1-5 Obsidians. -->
@@ -1102,6 +1142,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38870" min="1" max="1" chance="20" /> <!-- Obsidian Lv. 1 -->
+			<item id="38871" min="1" max="1" chance="20" /> <!-- Obsidian Lv. 2 -->
+			<item id="38872" min="1" max="1" chance="20" /> <!-- Obsidian Lv. 3 -->
+			<item id="38873" min="1" max="1" chance="20" /> <!-- Obsidian Lv. 4 -->
+			<item id="38874" min="1" max="1" chance="20" /> <!-- Obsidian Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46770" name="Diamond Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of Level 1-5 Diamonds. -->
@@ -1109,6 +1159,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38890" min="1" max="1" chance="20" /> <!-- Diamond Lv. 1 -->
+			<item id="38891" min="1" max="1" chance="20" /> <!-- Diamond Lv. 2 -->
+			<item id="38892" min="1" max="1" chance="20" /> <!-- Diamond Lv. 3 -->
+			<item id="38893" min="1" max="1" chance="20" /> <!-- Diamond Lv. 4 -->
+			<item id="38894" min="1" max="1" chance="20" /> <!-- Diamond Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46771" name="Emerald Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of Level 1-5 Emeralds. -->
@@ -1116,6 +1176,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38880" min="1" max="1" chance="20" /> <!-- Emerald Lv. 1 -->
+			<item id="38881" min="1" max="1" chance="20" /> <!-- Emerald Lv. 2 -->
+			<item id="38882" min="1" max="1" chance="20" /> <!-- Emerald Lv. 3 -->
+			<item id="38883" min="1" max="1" chance="20" /> <!-- Emerald Lv. 4 -->
+			<item id="38884" min="1" max="1" chance="20" /> <!-- Emerald Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46772" name="Aquamarine Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of Level 1-5 Aquamarines. -->
@@ -1123,6 +1193,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38885" min="1" max="1" chance="20" /> <!-- Aquamarine 1 -->
+			<item id="38886" min="1" max="1" chance="20" /> <!-- Aquamarine 2 -->
+			<item id="38887" min="1" max="1" chance="20" /> <!-- Aquamarine 3 -->
+			<item id="38888" min="1" max="1" chance="20" /> <!-- Aquamarine 4 -->
+			<item id="38889" min="1" max="1" chance="20" /> <!-- Aquamarine 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46773" name="Pearl Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of Level 1-5 Pearls. -->
@@ -1130,6 +1210,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38895" min="1" max="1" chance="20" /> <!-- Pearl Lv. 1 -->
+			<item id="38896" min="1" max="1" chance="20" /> <!-- Pearl Lv. 2 -->
+			<item id="38897" min="1" max="1" chance="20" /> <!-- Pearl Lv. 3 -->
+			<item id="38898" min="1" max="1" chance="20" /> <!-- Pearl Lv. 4 -->
+			<item id="38899" min="1" max="1" chance="20" /> <!-- Pearl Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46774" name="Vital Stone Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of Level 1-5 Vital Stones. -->
@@ -1137,6 +1227,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46670" min="1" max="1" chance="20" /> <!-- Vital Stone 1 -->
+			<item id="46671" min="1" max="1" chance="20" /> <!-- Vital Stone 2 -->
+			<item id="46672" min="1" max="1" chance="20" /> <!-- Vital Stone 3 -->
+			<item id="46673" min="1" max="1" chance="20" /> <!-- Vital Stone 4 -->
+			<item id="46674" min="1" max="1" chance="20" /> <!-- Vital Stone 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46775" name="Garnet Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of Level 1-5 Garnets. -->
@@ -1144,6 +1244,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46675" min="1" max="1" chance="20" /> <!-- Garnet Lv. 1 -->
+			<item id="46676" min="1" max="1" chance="20" /> <!-- Garnet Lv. 2 -->
+			<item id="46677" min="1" max="1" chance="20" /> <!-- Garnet Lv. 3 -->
+			<item id="46678" min="1" max="1" chance="20" /> <!-- Garnet Lv. 4 -->
+			<item id="46679" min="1" max="1" chance="20" /> <!-- Garnet Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46776" name="Tanzanite Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain one of Level 1-5 Tanzanites. -->
@@ -1151,6 +1261,16 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46680" min="1" max="1" chance="20" /> <!-- Tanzanite Lv. 1 -->
+			<item id="46681" min="1" max="1" chance="20" /> <!-- Tanzanite Lv. 2 -->
+			<item id="46682" min="1" max="1" chance="20" /> <!-- Tanzanite Lv. 3 -->
+			<item id="46683" min="1" max="1" chance="20" /> <!-- Tanzanite Lv. 4 -->
+			<item id="46684" min="1" max="1" chance="20" /> <!-- Tanzanite Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="46777" name="Vitality Replenishing Potion of Quest Pride" additionalName="Event" type="EtcItem">
 		<!-- Recovers a certain amount of Vitality. Cooldown is 60 min. No weekly usage limit. -->
