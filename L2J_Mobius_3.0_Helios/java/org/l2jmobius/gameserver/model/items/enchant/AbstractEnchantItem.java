@@ -59,6 +59,7 @@ public abstract class AbstractEnchantItem
 	private final CrystalType _grade;
 	private final int _minEnchantLevel;
 	private final int _maxEnchantLevel;
+	private final int _safeEnchantLevel;
 	private final double _bonusRate;
 	
 	public AbstractEnchantItem(StatSet set)
@@ -73,8 +74,9 @@ public abstract class AbstractEnchantItem
 			throw new IllegalAccessError();
 		}
 		_grade = set.getEnum("targetGrade", CrystalType.class, CrystalType.NONE);
-		_minEnchantLevel = set.getInt("maxEnchant", 0);
+		_minEnchantLevel = set.getInt("minEnchant", 0);
 		_maxEnchantLevel = set.getInt("maxEnchant", 127);
+		_safeEnchantLevel = set.getInt("safeEnchant", 0);
 		_bonusRate = set.getDouble("bonusRate", 0);
 	}
 	
@@ -129,6 +131,14 @@ public abstract class AbstractEnchantItem
 	public int getMaxEnchantLevel()
 	{
 		return _maxEnchantLevel;
+	}
+	
+	/**
+	 * @return the safe enchant level of this scroll/item
+	 */
+	public int getSafeEnchant()
+	{
+		return _safeEnchantLevel;
 	}
 	
 	/**

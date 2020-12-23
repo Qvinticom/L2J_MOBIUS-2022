@@ -187,6 +187,12 @@ public class EnchantScroll extends AbstractEnchantItem
 			LOGGER.warning(getClass().getSimpleName() + ": Couldn't find enchant item group for scroll: " + getId() + " requested by: " + player);
 			return -1;
 		}
+		
+		if ((getSafeEnchant() > 0) && (enchantItem.getEnchantLevel() < getSafeEnchant()))
+		{
+			return 100;
+		}
+		
 		return group.getChance(enchantItem.getEnchantLevel());
 	}
 	
