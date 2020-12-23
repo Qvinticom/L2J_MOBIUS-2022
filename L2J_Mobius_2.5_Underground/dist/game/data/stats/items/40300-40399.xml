@@ -209,115 +209,226 @@
 	</item>
 	<item id="40314" name="Santa Hat" additionalName="STR" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. STR + 3. -->
-		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<skills>
+			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
+		</skills>
 	</item>
 	<item id="40315" name="Santa Hat" additionalName="DEX" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. DEX + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
+		</skills>
 	</item>
 	<item id="40316" name="Santa Hat" additionalName="CON" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. CON + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9556" level="1" /> <!-- Hair Accessory: CON -->
+		</skills>
 	</item>
 	<item id="40317" name="Santa Hat" additionalName="MEN" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. MEN + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9557" level="1" /> <!-- Hair Accessory: MEN -->
+		</skills>
 	</item>
 	<item id="40318" name="Santa Hat" additionalName="INT" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. INT + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<skills>
+			<skill id="9558" level="1" /> <!-- Hair Accessory: INT -->
+		</skills>
 	</item>
 	<item id="40319" name="Santa Hat" additionalName="WIT" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. WIT + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9559" level="1" /> <!-- Hair Accessory: WIT -->
+		</skills>
 	</item>
 	<item id="40320" name="Santa Hat" additionalName="Critical Rate" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Critical Rate + 50. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
+		</skills>
 	</item>
 	<item id="40321" name="Santa Hat" additionalName="Critical Damage" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Critical Damage + 90, M. Critical Damage + 68. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
+		</skills>
 	</item>
 	<item id="40322" name="Santa Hat" additionalName="P. Def." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Def. + 5%. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
+		</skills>
 	</item>
 	<item id="40323" name="Santa Hat" additionalName="M. Def." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. M. Def. + 5%. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
+		</skills>
 	</item>
 	<item id="40324" name="Santa Hat" additionalName="Evasion" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Evasion + 5. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
+		</skills>
 	</item>
 	<item id="40325" name="Santa Hat" additionalName="P. Atk." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Atk. + 5%. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
+		</skills>
 	</item>
 	<item id="40326" name="Santa Hat" additionalName="M. Atk." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. M. Atk. + 10%. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
+		</skills>
 	</item>
 	<item id="40327" name="Santa Hat" additionalName="Accuracy" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Accuracy + 5. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="9567" level="1" /> <!-- Hair Accessory: Accuracy -->
+		</skills>
 	</item>
 	<item id="40328" name="Santa Hat" additionalName="LUC" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. LUC + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Hair Accessory: LUC -->
+		</skills>
 	</item>
 	<item id="40329" name="Santa Hat" additionalName="CHA" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. CHA + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Hair Accessory: CHA -->
+		</skills>
 	</item>
 	<item id="40330" name="Appearance Stone: Santa Suit" type="EtcItem">
 		<!-- Changes the appearance of your entire armor into that of a Santa Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
