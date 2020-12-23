@@ -99,7 +99,7 @@
 		<!-- P. Atk. +800\nM. Atk. +800\nMax HP +1000\nAll received Critical Damage -100\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>PA_UP</abnormalType>
+		<abnormalType>BOOST_ATTACK</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>94269</itemConsumeId>
 		<hitTime>1000</hitTime>
@@ -139,7 +139,7 @@
 		<!-- P. Def. +500\nM. Def. +500\nMax MP +800\nSpeed +2\nAll Critical Rate +30\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
-		<abnormalType>PD_UP</abnormalType>
+		<abnormalType>BOOST_DEFENCE</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>94271</itemConsumeId>
 		<hitTime>1000</hitTime>
