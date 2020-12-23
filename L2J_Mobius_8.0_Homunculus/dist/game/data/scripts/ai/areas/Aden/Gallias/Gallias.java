@@ -289,7 +289,7 @@ public class Gallias extends AbstractNpcAI
 					{
 						player.getVariables().set(DUAL_CERTIFICATE_COUNT_VAR, currentCount + 1);
 						vars.set(getDualSkillVariableName(level), true);
-						giveItems(player, level < 7 ? DUAL_CERTIFICATE : DUAL_CERTIFICATE_ENHANCED, 1);
+						giveItems(player, level < 107 ? DUAL_CERTIFICATE : DUAL_CERTIFICATE_ENHANCED, 1);
 					}
 					htmltext = getHtm(player, "34514-29.html");
 				}
