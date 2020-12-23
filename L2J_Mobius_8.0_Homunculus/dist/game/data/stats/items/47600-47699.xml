@@ -124,7 +124,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -174,7 +174,7 @@
 		<set name="weight" val="1000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
@@ -253,7 +253,7 @@
 		<set name="weight" val="130" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -275,7 +275,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -291,7 +291,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -319,7 +319,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -335,7 +335,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -351,7 +351,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -367,7 +367,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -383,7 +383,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -399,7 +399,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -417,7 +417,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26478" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 3 - Not available -->
+			<item id="46672" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="47636" name="Garnet Lv. 3 Jewelry Box" type="EtcItem">
@@ -429,7 +429,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26483" min="1" max="1" chance="100" /> <!-- Garnet Lv. 3 - Not available -->
+			<item id="46677" min="1" max="1" chance="100" /> <!-- Garnet Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="47637" name="Tanzanite Lv. 3 Jewelry Box" type="EtcItem">
@@ -441,7 +441,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26488" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 3 - Not available -->
+			<item id="46682" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 3 -->
 		</capsuled_items>
 	</item>
 	<item id="47638" name="Ruby Lv. 4 Jewelry Box" type="EtcItem">
@@ -451,7 +451,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -467,7 +467,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -495,7 +495,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -511,7 +511,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -527,7 +527,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -543,7 +543,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -559,7 +559,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -575,7 +575,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -685,7 +685,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
@@ -782,7 +782,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
