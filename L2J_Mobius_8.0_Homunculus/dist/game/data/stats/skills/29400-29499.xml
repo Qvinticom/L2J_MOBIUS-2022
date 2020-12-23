@@ -201,4 +201,85 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="29437" toLevel="1" name="+10 Limited Leviathan Heavy Armor Pack Lv. 1">
+		<!-- Double-click to acquire Limited Leviathan Heavy Armor Set that has been enchanted to +10. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>29918</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="80235" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80236" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80237" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80238" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80239" count="1" minEnchant="10" maxEnchant="10"/>
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29438" toLevel="1" name="+10 Limited Leviathan Light Armor Pack Lv. 1">
+		<!-- Double-click to acquire Limited Leviathan Light Armor Set that has been enchanted to +10. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>29919</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="80240" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80241" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80242" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80243" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80244" count="1" minEnchant="10" maxEnchant="10"/>
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29439" toLevel="1" name="+10 Limited Leviathan Robe Pack Lv. 1">
+		<!-- Double-click to acquire Limited Leviathan Robe Set that has been enchanted to +10. -->
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>29920</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="80245" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80246" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80247" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80248" count="1" minEnchant="10" maxEnchant="10"/>
+						<item id="80249" count="1" minEnchant="10" maxEnchant="10"/>
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
 </list>

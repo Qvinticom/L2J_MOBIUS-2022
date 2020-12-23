@@ -1,5 +1,61 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="29917" name="+10 Limited Leviathan Armor Set Pack" type="EtcItem">
+		<!-- Double-click to acquire one of the following: +10 Limited Leviathan Heavy Armor Pack, +10 Limited Leviathan Light Armor Pack or +10 Limited Leviathan Robe Pack. -->
+		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29918" min="1" max="1" chance="33" />
+			<item id="29919" min="1" max="1" chance="33" />
+			<item id="29920" min="1" max="1" chance="34" />
+		</capsuled_items>
+	</item>
+	<item id="29918" name="+10 Limited Leviathan Heavy Armor Pack" type="EtcItem">
+		<!-- Double-click to acquire Limited Leviathan Heavy Armor Set that has been enchanted to +10. -->
+		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29437" level="1" /> <!-- +10 Limited Leviathan Heavy Armor Pack Lv. 1 -->
+		</skills>
+	</item>
+	<item id="29919" name="+10 Limited Leviathan Light Armor Pack" type="EtcItem">
+		<!-- Double-click to acquire Limited Leviathan Armor Light Armor Set that has been enchanted to +10. -->
+		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29438" level="1" /> <!-- +10 Limited Leviathan Light Armor Pack Lv. 1 -->
+		</skills>
+	</item>
+	<item id="29920" name="+10 Limited Leviathan Robe Pack" type="EtcItem">
+		<!-- Double-click to acquire Limited Leviathan Armor Robe Set that has been enchanted to +10. -->
+		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29439" level="1" /> <!-- +10 Limited Leviathan Robe Pack Lv. 1 -->
+		</skills>
+	</item>
 	<item id="29989" name="White Day Warrior Two-handed Blunt" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Two-handed Blunt Weapon form. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
