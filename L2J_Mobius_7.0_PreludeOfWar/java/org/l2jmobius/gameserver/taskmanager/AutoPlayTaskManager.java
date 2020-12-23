@@ -22,7 +22,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -73,6 +72,12 @@ public class AutoPlayTaskManager
 					}
 					else if (monster.getTarget() == player)
 					{
+						// We take granted that mage classes do not auto hit.
+						if (player.isMageClass())
+						{
+							continue PLAY;
+						}
+						
 						// Check if actually attacking.
 						if (player.hasAI() && player.getAI().isAutoAttacking() && !player.isAttackingNow() && !player.isCastingNow() && !player.isMoving())
 						{
@@ -148,8 +153,8 @@ public class AutoPlayTaskManager
 				{
 					player.setTarget(monster);
 					
-					// We take granted that non Orc mage classes do not auto hit when mana is over 5%.
-					if (player.isMageClass() && (player.getRace() != Race.ORC) && (player.getCurrentMpPercent() > 5))
+					// We take granted that mage classes do not auto hit.
+					if (player.isMageClass())
 					{
 						continue PLAY;
 					}
