@@ -241,6 +241,19 @@ public class Trandon extends AbstractNpcAI
 				}
 				break;
 			}
+			case "33490-35.html":
+			{
+				// TODO: What happens when you have all dual certificates?
+				if (!player.isDualClassActive())
+				{
+					htmltext = "33490-24.html";
+				}
+				else if (!player.isInventoryUnder90(false) || (player.getWeightPenalty() >= 2))
+				{
+					htmltext = "33490-25.html";
+				}
+				break;
+			}
 			case "dualCertify":
 			{
 				if ((substrings.length < 2) || !player.isDualClassActive())
