@@ -389,9 +389,32 @@
 			</drop>
 		</dropLists>
 	</npc>
+	<npc id="25918" level="82" type="Monster" name="Wolf">
+		<race>BEAST</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="214.619883040936" magical="120.385041801683" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="94097" min="1" max="1" chance="100" /> <!-- Sealed Wolf Necklace -->
+			</drop>
+		</dropLists>
+	</npc>
 	<npc id="25919" level="82" type="Monster" name="Buffalo">
 		<race>BEAST</race>
-		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="60567.0391061452" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
 			<speed>
@@ -416,7 +439,6 @@
 	</npc>
 	<npc id="25920" level="82" type="Monster" name="Tiger">
 		<race>BEAST</race>
-		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="42337.9888268156" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
 			<speed>
@@ -441,7 +463,6 @@
 	</npc>
 	<npc id="25921" level="82" type="Monster" name="Kookaburra">
 		<race>BEAST</race>
-		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="30577.2811918063" hpRegen="9.5" mp="4240.032546786" mpRegen="3.3" />
 			<speed>
@@ -464,9 +485,56 @@
 			</drop>
 		</dropLists>
 	</npc>
+	<npc id="25922" level="82" type="Monster" name="Strider">
+		<race>DRAGON</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="53804.469273743" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="214.619883040936" magical="120.385041801683" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="94101" min="1" max="1" chance="100" /> <!-- Sealed Dragon's Necklace -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25923" level="82" type="Monster" name="Hawk">
+		<race>ANIMAL</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="41162.0111731844" hpRegen="9.5" mp="3667.20911310008" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="214.619883040936" magical="120.385041801683" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="94102" min="1" max="1" chance="100" /> <!-- Sealed Hawk Necklace -->
+			</drop>
+		</dropLists>
+	</npc>
 	<npc id="25924" level="82" type="Monster" name="Sin Eater">
 		<race>FAIRY</race>
-		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
 			<speed>

@@ -1794,137 +1794,321 @@
 			<height normal="58.5" />
 		</collision>
 	</npc>
-	<npc id="22293" level="85" type="Npc" name="Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22293" level="70" type="Monster" name="Bear">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="11096" sp="490" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12526.5895953757" hpRegen="10.5" mp="1454.78547854785" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 		<collision>
 			<radius normal="34" />
 			<height normal="32.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="324" max="757" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="4.261" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="4.25" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="2.104" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="2.082" /> <!-- Shining Resources -->
+				<item id="92911" min="1" max="1" chance="0.75" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="54.45" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="10.93" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.332" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="1.05" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22294" level="85" type="Npc" name="Windsus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22294" level="70" type="Monster" name="Windsus">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="11096" sp="490" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12526.5895953757" hpRegen="10.5" mp="1454.78547854785" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="27" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="324" max="757" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="4.234" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="4.197" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92998" min="1" max="1" chance="2.147" /> <!-- Shining Resources -->
+				<item id="92910" min="1" max="1" chance="2.143" /> <!-- Material: Rags -->
+				<item id="92911" min="1" max="1" chance="0.75" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="54.32" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="10.64" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.377" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="1.106" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22295" level="85" type="Npc" name="Kima">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22295" level="70" type="Monster" name="Kima">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="11096" sp="490" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12526.5895953757" hpRegen="10.5" mp="1454.78547854785" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="30" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="324" max="757" chance="70" /> <!-- Adena -->
+				<item id="92909" min="1" max="1" chance="4.246" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="4.23" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="2.151" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="2.063" /> <!-- Shining Resources -->
+				<item id="92911" min="1" max="1" chance="0.75" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="54.73" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="10.52" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.403" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="1.084" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22296" level="85" type="Npc" name="Honeybee">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22296" level="70" type="Monster" name="Honeybee">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="11096" sp="490" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="12526.5895953757" hpRegen="10.5" mp="1454.78547854785" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="20" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="324" max="757" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="4.254" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="4.21" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="2.167" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="2.123" /> <!-- Shining Resources -->
+				<item id="92911" min="1" max="1" chance="0.75" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="54.25" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="11.06" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.362" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="1.057" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22297" level="85" type="Npc" name="Tag" title="Slayer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22297" level="70" type="Monster" name="Tag" title="Slayer">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="36961" sp="490" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="25053.7572254335" hpRegen="10.5" mp="1454.78547854785" mpRegen="3.6" />
 			<speed>
 				<walk ground="56" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="30.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="356" max="833" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="4.685" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="4.593" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92998" min="1" max="1" chance="2.28" /> <!-- Shining Resources -->
+				<item id="92910" min="1" max="1" chance="2.262" /> <!-- Material: Rags -->
+				<item id="92911" min="1" max="1" chance="0.75" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="58.8" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="11.85" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.886" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="1.207" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22298" level="85" type="Npc" name="Mighty Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22298" level="80" type="Monster" name="Mighty Bear">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="17600" sp="5815" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="598" max="1397" chance="70" /> <!-- Adena -->
+				<item id="92910" min="1" max="1" chance="2.615" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="2.563" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.75" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="53.29" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="10.42" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.348" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.991" /> <!-- High-grade Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="22299" level="85" type="Npc" name="Balky Boar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22299" level="80" type="Monster" name="Balky Boar">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="17600" sp="5815" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
 		<collision>
 			<radius normal="44" />
 			<height normal="32" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="598" max="1397" chance="70" /> <!-- Adena -->
+				<item id="92998" min="1" max="1" chance="2.575" /> <!-- Shining Resources -->
+				<item id="92910" min="1" max="1" chance="2.574" /> <!-- Material: Rags -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.75" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="53.41" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="10.3" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.373" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="1.036" /> <!-- High-grade Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
 </list>

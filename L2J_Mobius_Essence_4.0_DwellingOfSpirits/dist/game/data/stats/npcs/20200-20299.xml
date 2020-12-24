@@ -1995,7 +1995,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20235" level="82" type="Monster" name="Shackle" element="EARTH">
+	<npc id="20235" level="77" type="Monster" name="Shackle" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2009,11 +2009,11 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="1341237" sp="40238" attributeExp="1230" /> 
+		<acquire exp="11422" sp="4233" attributeExp="847" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="85940" hpRegen="5.5" mp="2902.05" mpRegen="2.1" /> <!-- Hp x 1.58 // mp x 1.11 -->
-			<attack physical="1060.5439" magical="800.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="390" magical="260" /> <!-- physical="195.566206" magical="130.09715" -->
+			<vitals hp="11401.303538175" hpRegen="5.5" mp="2098.45402766477" mpRegen="2.1" /> <!-- Hp x 1.58 // mp x 1.11 -->
+			<attack physical="864.070808373158" magical="326.940963851517" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="189.759036144578" magical="120.089797758977" /> <!-- physical="195.566206" magical="130.09715" -->
 			<speed>
 				<walk ground="15" />
 				<run ground="174" />
@@ -2023,12 +2023,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="9" /> <!-- NPC HP Drain -->
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4002" level="9" /> <!-- NPC HP Drain -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -2041,11 +2041,29 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="2094" max="4886" chance="70" /> <!-- Adena -->
+				<item id="57" min="671" max="1568" chance="70" /> <!-- Adena -->
+				<item id="2508" min="1" max="1" chance="14.17" /> <!-- Cursed Bone -->
+				<item id="3031" min="1" max="1" chance="5.481" /> <!-- Spirit Ore -->
+				<item id="92997" min="1" max="1" chance="4.321" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.154" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="73.2" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.43" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.453" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20236" level="83" type="Monster" name="Cave Servant" element="EARTH">
+	<npc id="20236" level="78" type="Monster" name="Cave Servant" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -2059,11 +2077,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" lhand="945" />
-		<acquire exp="1374149" sp="41225" attributeExp="1328" />
+		<acquire exp="11533" sp="5158" attributeExp="943" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="86910.30" hpRegen="5.5" mp="2959.74" mpRegen="2.1" />
-			<attack physical="1240.0526" magical="845.38777" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="360.18816" magical="266.31739" /> <!-- physical="182.18816" magical="133.31739" -->
+			<vitals hp="11568.9013035382" hpRegen="5.5" mp="2142.39218877136" mpRegen="2.1" />
+			<attack physical="931.656240591443" magical="350.979150159845" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="199.40119760479" magical="120.832379179801" /> <!-- physical="182.18816" magical="133.31739" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2077,7 +2095,11 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2092,13 +2114,29 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5314" min="1" max="1" chance="0.03" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
-				<item id="57" min="2094 " max="4886" chance="70" /> <!-- Adena -->
+				<item id="57" min="673" max="1575" chance="70" /> <!-- Adena -->
+				<item id="2508" min="1" max="1" chance="16.03" /> <!-- Cursed Bone -->
+				<item id="92997" min="1" max="1" chance="4.766" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.344" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="58.69" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="12.26" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="6.009" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="5428" min="1" max="1" chance="0.03" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20237" level="83" type="Monster" name="Cave Servant Archer" element="EARTH">
+	<npc id="20237" level="78" type="Monster" name="Cave Servant Archer" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -2113,11 +2151,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> 
-		<acquire exp="1316282" sp="39489" attributeExp="1328" />
+		<acquire exp="11533" sp="5158" attributeExp="943" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="86910.30" hpRegen="5.5" mp="2959.74" mpRegen="2.1" />
-			<attack physical="1305.69549" magical="890.7041" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="372.63569" magical="272.5719" /> <!-- <defence physical="186.63569" magical="136.5719" /> -->
+			<vitals hp="11568.9013035382" hpRegen="5.5" mp="2142.39218877136" mpRegen="2.1" />
+			<attack physical="931.656240591443" magical="350.979150159845" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="199.40119760479" magical="120.832379179801" /> <!-- <defence physical="186.63569" magical="136.5719" /> -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2131,8 +2169,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4040" level="9" /> <!-- NPC Bow Attack -->
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4040" level="9" /> <!-- NPC Bow Attack -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2147,13 +2189,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.01" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5318" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="57" min="1862 " max="4344" chance="70" /> <!-- Adena -->
+				<item id="57" min="673" max="1575" chance="70" /> <!-- Adena -->
+				<item id="1344" min="10" max="30" chance="28.72" /> <!-- Mithril Arrow -->
+				<item id="92997" min="1" max="1" chance="4.845" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.399" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="75.44" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.87" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.437" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20238" level="84" type="Monster" name="Cave Servant Warrior" element="EARTH">
+	<npc id="20238" level="79" type="Monster" name="Cave Servant Warrior" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -2168,11 +2225,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="77" lhand="2495" />
-		<acquire exp="1480702" sp="44422" attributeExp="1428" />
+		<acquire exp="11642" sp="2835" attributeExp="1042" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="43915.54" hpRegen="5.5" mp="3017.43" mpRegen="2.1" />
-			<attack physical="1375.82705" magical="940.35412" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="286.12803" magical="208.8592" /> <!-- physical="191.12803" magical="139.8592" -->
+			<vitals hp="11730.9124767225" hpRegen="5.5" mp="2187.95768917819" mpRegen="2.1" />
+			<attack physical="907.821229050279" magical="390.426530357209" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="211.904761904762" magical="129.315355108683" /> <!-- physical="191.12803" magical="139.8592" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2186,8 +2243,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4075" level="9" /> <!-- Stun -->
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4075" level="9" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2202,11 +2263,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="91038" min="1" max="1" chance="0.005" /> <!-- Earth Spirit Ore -->
+				<item id="57" min="678" max="1582" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.291" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.611" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="74.77" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="15.2" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.562" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20239" level="84" type="Monster" name="Cave Servant Captain" element="EARTH">
+	<npc id="20239" level="80" type="Monster" name="Cave Servant Captain" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2221,11 +2298,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="73" lhand="2495" />
-		<acquire exp="1404286" sp="42129" attributeExp="1428" />
+		<acquire exp="11935" sp="2908" attributeExp="1056" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="87829.82" hpRegen="5.5" mp="3017.43" mpRegen="2.1" />
-			<attack physical="1450.44588" magical="990.33688" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="292.66302" magical="214.17771" />
+			<vitals hp="11730.9124767225" hpRegen="5.5" mp="2187.95768917819" mpRegen="2.1" />
+			<attack physical="880.962612806188" magical="374.772117747942" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.402410195425" />
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2239,8 +2316,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4075" level="9" /> <!-- Stun -->
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4075" level="9" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2261,14 +2342,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6328" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Ring -->
-				<item id="6326" min="1" max="1" chance="0.005" /> <!-- Sealed Majestic Necklace -->
-				<item id="57" min="2082" max="4857" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="0.5" /> <!-- A-grade Gemstone -->
+				<item id="57" min="678" max="1584" chance="70" /> <!-- Adena -->
+				<item id="3031" min="1" max="1" chance="6.013" /> <!-- Spirit Ore -->
+				<item id="92997" min="1" max="1" chance="4.781" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.458" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="74.96" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.95" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.58" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20240" level="85" type="Monster" name="Royal Cave Servant">
+	<npc id="20240" level="80" type="Monster" name="Royal Cave Servant" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2283,11 +2378,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" />
-		<acquire exp="1471516" sp="44146" attributeExp="1530" />
+		<acquire exp="11729" sp="3601" attributeExp="1144" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="88700.27" hpRegen="6.5" mp="3075.12" mpRegen="2.4" />
-			<attack physical="1605.13207" magical="1095.29157" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="306.85194" magical="223.90176" /> <!-- physical="204.85194" magical="149.90176" -->
+			<vitals hp="11890.1303538175" hpRegen="6.5" mp="2232.70951993491" mpRegen="2.4" />
+			<attack physical="880.962612806188" magical="374.772117747942" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.402410195425" /> <!-- physical="204.85194" magical="149.90176" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2301,8 +2396,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4067" level="10" /> <!-- NPC Mortal Blow -->
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4067" level="10" /> <!-- NPC Mortal Blow -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2325,16 +2424,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="8688" min="1" max="1" chance="0.001" /> <!-- Daimon Crystal -->
-				<item id="57" min="2210" max="5158" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="0.5" /> <!-- A-grade Gemstone -->
+				<item id="57" min="678" max="1584" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.215" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.623" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="8710" min="1" max="1" chance="0.1" /> <!-- Recipe: Daimon Crystal (60%) -->
+				<item id="92996" min="1" max="1" chance="61.4" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="12.16" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.956" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="5394" min="1" max="1" chance="0.03" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20241" level="82" type="Monster" name="Hunter Gargoyle" element="EARTH">
+	<npc id="20241" level="77" type="Monster" name="Hunter Gargoyle" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2346,13 +2457,13 @@
 			<param name="LongRangeGuardRate" value="10" />
 			<skill name="PhysicalSpecial" id="4032" level="9" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="1396911" sp="41908" attributeExp="1230" />
+		<acquire exp="11427" sp="4233" attributeExp="847" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="42970.63" hpRegen="6.5" mp="2902.05" mpRegen="2.4" />
-			<attack physical="1685.18867" magical="1150.25615" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="418.50106" magical="306.30378" /> <!-- p atack 209 m atack 153 -->
+			<vitals hp="11401.303538175" hpRegen="6.5" mp="2098.45402766477" mpRegen="2.4" />
+			<attack physical="864.070808373158" magical="326.940963851517" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="189.759036144578" magical="120.089797758977" /> <!-- p atack 209 m atack 153 -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2366,9 +2477,11 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4073" level="9" /> <!-- Stun -->
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2379,11 +2492,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="91038" min="1" max="1" chance="0.5" /> <!-- Earth Spirit Ore -->
+				<item id="57" min="671" max="1568" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.264" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.569" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="75.67" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.87" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.484" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20242" level="82" type="Monster" name="Dustwind Gargoyle" element="EARTH">
+	<npc id="20242" level="77" type="Monster" name="Dustwind Gargoyle" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2395,13 +2524,13 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4073" level="9" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="1332159" sp="39965" attributeExp="1230" />
+		<acquire exp="11422" sp="4233" attributeExp="847" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="85939.99" hpRegen="6.5" mp="2902.05" mpRegen="2.4" />
-			<attack physical="1765.71092" magical="1205.5387" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="456.18326" magical="312.73001" />
+			<vitals hp="11401.303538175" hpRegen="6.5" mp="2098.45402766477" mpRegen="2.4" />
+			<attack physical="864.070808373158" magical="326.940963851517" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="189.759036144578" magical="120.089797758977" />
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2415,8 +2544,10 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4073" level="9" /> <!-- Stun -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4073" level="9" /> <!-- Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2427,13 +2558,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5312" min="1" max="1" chance="0.005" /> <!-- Sealed Helm of Nightmare -->
-				<item id="5317" min="1" max="1" chance="0.005" /> <!-- Sealed Majestic Circlet -->
-				<item id="57" min="2057" max="4799" chance="70" /> <!-- Adena -->
+				<item id="57" min="671" max="1568" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.203" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.607" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="73.4" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.18" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.498" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20243" level="83" type="Monster" name="Thunder Wyrm" element="EARTH">
+	<npc id="20243" level="78" type="Monster" name="Thunder Wyrm" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2446,11 +2591,11 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="1365883" sp="40977" attributeExp="1328" />
+		<acquire exp="11533" sp="5158" attributeExp="943" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="86910.30" hpRegen="6.5" mp="2959.74" mpRegen="2.4" />
-			<attack physical="1850.68904" magical="1265.13256" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="414.89589" magical="320.17851" />
+			<vitals hp="11568.9013035382" hpRegen="6.5" mp="2142.39218877136" mpRegen="2.4" />
+			<attack physical="931.656240591443" magical="350.979150159845" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="199.40119760479" magical="120.832379179801" />
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2465,6 +2610,8 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2474,13 +2621,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5320" min="1" max="1" chance="0.001" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5323" min="1" max="1" chance="0.001" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="57" min="2061" max="4809" chance="70" /> <!-- Adena -->
+				<item id="57" min="673" max="1575" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.265" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.573" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="75.61" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="15.69" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.536" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20244" level="83" type="Monster" name="Maluk Succubus" element="EARTH">
+	<npc id="20244" level="78" type="Monster" name="Maluk Succubus" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2494,11 +2655,11 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1472524" sp="44176" attributeExp="1328" />
+		<acquire exp="11543" sp="5158" attributeExp="943" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="43455.15" hpRegen="6.5" mp="2959.74" mpRegen="2.4" />
-			<attack physical="1940.11142" magical="1325.02979" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="446.6362" magical="326.64727" /> <!-- <defence physical="223.6362" magical="163.64727" /> -->
+			<vitals hp="11568.9013035382" hpRegen="6.5" mp="2142.39218877136" mpRegen="2.4" />
+			<attack physical="931.656240591443" magical="350.979150159845" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="199.40119760479" magical="120.832379179801" /> <!-- <defence physical="223.6362" magical="163.64727" /> -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2512,8 +2673,10 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4039" level="9" /> <!-- NPC MP Drain -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4039" level="9" /> <!-- NPC MP Drain -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2528,16 +2691,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="8682" min="1" max="1" chance="0.0009" /> <!-- Naga's Storm -->
-				<item id="91038" min="1" max="1" chance="0.005" /> <!-- Earth Spirit Ore -->
-				<item id="57" min="1267" max="2956" chance="70" /> <!-- Adena -->
+				<item id="57" min="673" max="1575" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.274" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.648" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="8698" min="1" max="1" chance="0.1" /> <!-- Recipe: Naga's Storm (60%) -->
+				<item id="92996" min="1" max="1" chance="58.36" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="11.94" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.935" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="5370" min="1" max="1" chance="0.03" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20245" level="83" type="Monster" name="Maluk Succubus Turen" element="EARTH">
+	<npc id="20245" level="79" type="Monster" name="Maluk Succubus Turen" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2551,11 +2726,11 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1374149" sp="41225" attributeExp="1328" />
+		<acquire exp="11831" sp="5291" attributeExp="955" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="86910.30" hpRegen="6.5" mp="2959.74" mpRegen="2.4" />
-			<attack physical="2025.96455" magical="1385.22116" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="456.40135" magical="334.1342" /> <!-- <defence physical="228.40135" magical="167.1342" /> -->
+			<vitals hp="11568.9013035382" hpRegen="6.5" mp="2142.39218877136" mpRegen="2.4" />
+			<attack physical="907.821229050279" magical="390.426530357209" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="211.904761904762" magical="129.315355108683" /> <!-- <defence physical="228.40135" magical="167.1342" /> -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2569,8 +2744,10 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4034" level="9" /> <!-- Decrease Speed -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4034" level="9" /> <!-- Decrease Speed -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2585,13 +2762,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5326" min="1" max="1" chance="0.001" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5329" min="1" max="1" chance="0.001" /> <!-- Sealed Majestic Robe -->
-				<item id="57" min="2094" max="4886" chance="70" /> <!-- Adena -->
+				<item id="57" min="678" max="1582" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.343" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.573" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="75.16" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="15.06" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.441" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20246" level="84" type="Monster" name="Cave Keeper" element="EARTH">
+	<npc id="20246" level="80" type="Monster" name="Cave Keeper" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2606,11 +2797,11 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="223" /> 
-		<acquire exp="1508220" sp="45247" attributeExp="1428" />
+		<acquire exp="11939" sp="2908" attributeExp="1056" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="43915.54" hpRegen="6.5" mp="3017.43" mpRegen="2.4" />
-			<attack physical="2210.8992" magical="1510.44274" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="355.99429" magical="261.1539" /> <!-- physical="237.99429" magical="174.1539" -->
+			<vitals hp="11730.9124767225" hpRegen="6.5" mp="2187.95768917819" mpRegen="2.4" />
+			<attack physical="880.962612806188" magical="374.772117747942" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.402410195425" /> <!-- physical="237.99429" magical="174.1539" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -2624,8 +2815,10 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2650,8 +2843,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="91038" min="1" max="1" chance="0.005" /> <!-- Earth Spirit Ore -->
+				<item id="57" min="678" max="1584" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.235" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.649" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="73.3" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="15.56" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.484" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="20248" level="31" type="Monster" name="Turak Bugbear">
@@ -2670,7 +2879,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="88" /> <!-- Morning Star -->
-		<acquire exp="2009" sp="61" />
+		<acquire exp="835" sp="61" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="986.033519553073" hpRegen="4.5" mp="344.182262001627" mpRegen="1.8" />
 			<attack physical="90.19987273" magical="67.7543" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2684,10 +2893,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 		</skillList>
@@ -2699,17 +2904,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="86" min="1" max="1" chance="0.003" /> <!-- Tomahawk -->
-				<item id="179" min="1" max="1" chance="0.003" /> <!-- Mace of Prayer -->
-				<item id="180" min="1" max="1" chance="0.003" /> <!-- Mace of Judgment -->
-				<item id="181" min="1" max="1" chance="0.003" /> <!-- Mace of Miracle -->
-				<item id="182" min="1" max="1" chance="0.003" /> <!-- Doom Hammer -->
-				<item id="183" min="1" max="1" chance="0.003" /> <!-- Mystic Staff -->
-				<item id="184" min="1" max="1" chance="0.003" /> <!-- Conjuror's Staff -->
-				<item id="185" min="1" max="1" chance="0.003" /> <!-- Staff of Mana -->
-				<item id="57" min="124" max="288" chance="70" /> <!-- Adena -->
-				<item id="1834" min="1" max="1" chance="4.814" /> <!-- Emergency Dressing -->
-				<item id="1832" min="1" max="1" chance="4.787" /> <!-- Greater Antidote -->
+				<item id="86" min="1" max="1" chance="0.0009" /> <!-- Tomahawk -->
+				<item id="179" min="1" max="1" chance="0.0009" /> <!-- Mace of Prayer -->
+				<item id="180" min="1" max="1" chance="0.0009" /> <!-- Mace of Judgment -->
+				<item id="181" min="1" max="1" chance="0.0009" /> <!-- Mace of Miracle -->
+				<item id="182" min="1" max="1" chance="0.0009" /> <!-- Doom Hammer -->
+				<item id="183" min="1" max="1" chance="0.0009" /> <!-- Mystic Staff -->
+				<item id="184" min="1" max="1" chance="0.0009" /> <!-- Conjuror's Staff -->
+				<item id="185" min="1" max="1" chance="0.0009" /> <!-- Staff of Mana -->
+				<item id="57" min="6" max="15" chance="70" /> <!-- Adena -->
+				<item id="1832" min="1" max="1" chance="0.075" /> <!-- Greater Antidote -->
+				<item id="1834" min="1" max="1" chance="0.075" /> <!-- Emergency Dressing -->
+				<item id="92908" min="1" max="1" chance="0.075" /> <!-- Material: Lump of Wood -->
+				<item id="3031" min="1" max="1" chance="0.03" /> <!-- Spirit Ore -->
+				<item id="92909" min="1" max="1" chance="0.03" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.0075" /> <!-- Material: Rags -->
+				<item id="92911" min="1" max="1" chance="0.003" /> <!-- Material: Leather Scraps -->
+				<item id="92598" min="1" max="1" chance="0.0009" /> <!-- Conjuror's Staff Head -->
+				<item id="92597" min="1" max="1" chance="0.0009" /> <!-- Mace of Judgment Head -->
+				<item id="92915" min="1" max="1" chance="0.0009" /> <!-- Material: Bag of Low-grade Stuff -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2727,7 +2940,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="73" /> <!-- Shamshir -->
-		<acquire exp="4243" sp="128" />
+		<acquire exp="938" sp="128" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1088.45437616387" hpRegen="4.5" mp="372.660699755899" mpRegen="1.8" />
 			<attack physical="103.1733182" magical="77.49941" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2741,11 +2954,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
@@ -2757,9 +2965,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="260" min="1" max="1" chance="0.03" /> <!-- Triple-Edged Jamadhr -->
-				<item id="57" min="259" max="607" chance="70" /> <!-- Adena -->
-				<item id="2977" min="1" max="1" chance="1.563" /> <!-- Recipe: Brigandine Boots -->
+				<item id="260" min="1" max="1" chance="0.0009" /> <!-- Triple-Edged Jamadhr -->
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="0.3" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="0.03" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.03" /> <!-- Material: Rags -->
+				<item id="2977" min="1" max="1" chance="0.003" /> <!-- Recipe: Brigandine Boots -->
+				<item id="92911" min="1" max="1" chance="0.003" /> <!-- Material: Leather Scraps -->
+				<item id="92915" min="1" max="1" chance="0.0009" /> <!-- Material: Bag of Low-grade Stuff -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3809,7 +4022,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20272" level="83" type="Monster" name="Cave Servant" element="EARTH">
+	<npc id="20272" level="78" type="Monster" name="Cave Servant" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -3823,11 +4036,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" lhand="945" />
-		<acquire exp="1374149" sp="41225" attributeExp="1328" />
+		<acquire exp="11533" sp="5158" attributeExp="943" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="86910.30" hpRegen="5.5" mp="2959.74" mpRegen="2.1" />
-			<attack physical="1240.0526" magical="845.38777" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="360.18816" magical="266.31739" /> <!-- physical="182.18816" magical="133.31739" -->
+			<vitals hp="11568.9013035382" hpRegen="5.5" mp="2142.39218877136" mpRegen="2.1" />
+			<attack physical="931.656240591443" magical="350.979150159845" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="199.40119760479" magical="120.832379179801" /> <!-- physical="182.18816" magical="133.31739" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -3841,7 +4054,11 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3856,13 +4073,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5312" min="1" max="1" chance="0.005" /> <!-- Sealed Helm of Nightmare -->
-				<item id="5317" min="1" max="1" chance="0.005" /> <!-- Sealed Majestic Circlet -->
-				<item id="57" min="2094" max="4886" chance="70" /> <!-- Adena -->
+				<item id="57" min="673" max="1575" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.247" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.634" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="76.38" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="15.31" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.537" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20273" level="83" type="Monster" name="Cave Servant Archer" element="EARTH">
+	<npc id="20273" level="78" type="Monster" name="Cave Servant Archer" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -3876,11 +4107,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="275" /> 
-		<acquire exp="1316282" sp="39489" attributeExp="1328" />
+		<acquire exp="11533" sp="5158" attributeExp="943" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="86910.30" hpRegen="5.5" mp="2959.74" mpRegen="2.1" />
-			<attack physical="1305.69549" magical="890.7041" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="372.63569" magical="272.5719" /> <!-- <defence physical="186.63569" magical="136.5719" /> -->
+			<vitals hp="11568.9013035382" hpRegen="5.5" mp="2142.39218877136" mpRegen="2.1" />
+			<attack physical="931.656240591443" magical="350.979150159845" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="199.40119760479" magical="120.832379179801" /> <!-- <defence physical="186.63569" magical="136.5719" /> -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -3894,7 +4125,11 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3909,13 +4144,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1862" max="4344" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.1" /> <!-- Scroll: Enchant A-grade Armor (Exchangeable) -->
-				<item id="729" min="1" max="1" chance="0.01" /> <!-- Scroll: Enchant A-grade Weapon (Exchangeable) -->
+				<item id="57" min="673" max="1575" chance="70" /> <!-- Adena -->
+				<item id="1344" min="10" max="30" chance="29.44" /> <!-- Mithril Arrow -->
+				<item id="92997" min="1" max="1" chance="4.817" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.417" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="75.41" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.99" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.441" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20274" level="84" type="Monster" name="Cave Servant Warrior" element="EARTH">
+	<npc id="20274" level="79" type="Monster" name="Cave Servant Warrior" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -3929,11 +4179,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="77" /> 
-		<acquire exp="1480702" sp="44422" attributeExp="1428" />
+		<acquire exp="11642" sp="2835" attributeExp="1042" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="43915.54" hpRegen="5.5" mp="3017.43" mpRegen="2.1" />
-			<attack physical="1375.82705" magical="940.35412" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="286.12803" magical="208.8592" /> <!-- physical="191.12803" magical="139.8592" -->
+			<vitals hp="11730.9124767225" hpRegen="5.5" mp="2187.95768917819" mpRegen="2.1" />
+			<attack physical="907.821229050279" magical="390.426530357209" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="211.904761904762" magical="129.315355108683" /> <!-- physical="191.12803" magical="139.8592" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -3947,7 +4197,11 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3962,11 +4216,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="91038" min="1" max="1" chance="0.005" /> <!-- Earth Spirit Ore -->
+				<item id="57" min="678" max="1582" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.308" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.708" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="74.99" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="15.4" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.541" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20275" level="84" type="Monster" name="Cave Servant Captain" element="EARTH">
+	<npc id="20275" level="80" type="Monster" name="Cave Servant Captain" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3980,11 +4250,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="73" /> 
-		<acquire exp="1404286" sp="42129" attributeExp="1428" />
+		<acquire exp="11935" sp="2908" attributeExp="1056" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="87829.82" hpRegen="5.5" mp="3017.43" mpRegen="2.1" />
-			<attack physical="1450.44588" magical="990.33688" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="292.66302" magical="214.17771" />
+			<vitals hp="11730.9124767225" hpRegen="5.5" mp="2187.95768917819" mpRegen="2.1" />
+			<attack physical="880.962612806188" magical="374.772117747942" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.402410195425" />
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -3998,7 +4268,11 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4008,16 +4282,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="8679" min="1" max="1" chance="0.001" /> <!-- Sword of Ipos -->
-				<item id="2133" min="1" max="1" chance="0.5" /> <!-- A-grade Gemstone -->
-				<item id="57" min="2082" max="4857" chance="70" /> <!-- Adena -->
+				<item id="57" min="678" max="1584" chance="70" /> <!-- Adena -->
+				<item id="3031" min="1" max="1" chance="5.978" /> <!-- Spirit Ore -->
+				<item id="92997" min="1" max="1" chance="4.868" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.401" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="8692" min="1" max="1" chance="0.1" /> <!-- Recipe: Sword of Ipos (60%) -->
+				<item id="92996" min="1" max="1" chance="75.84" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="15.79" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.462" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20276" level="85" type="Monster" name="Royal Cave Servant">
+	<npc id="20276" level="80" type="Monster" name="Royal Cave Servant" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4032,11 +4318,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" />
-		<acquire exp="1471516" sp="44146" attributeExp="1530" />
+		<acquire exp="11729" sp="3601" attributeExp="1144" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="88700.27" hpRegen="6.5" mp="3075.12" mpRegen="2.4" />
-			<attack physical="1605.13207" magical="1095.29157" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="306.85194" magical="223.90176" /> <!-- physical="204.85194" magical="149.90176" -->
+			<vitals hp="11890.1303538175" hpRegen="6.5" mp="2232.70951993491" mpRegen="2.4" />
+			<attack physical="880.962612806188" magical="374.772117747942" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.402410195425" /> <!-- physical="204.85194" magical="149.90176" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -4050,8 +4336,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4046" level="10" /> <!-- Sleep -->
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4046" level="10" /> <!-- Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4074,16 +4364,29 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="8680" min="1" max="1" chance="0.001" /> <!-- Barakiel's Axe -->
-				<item id="57" min="2210" max="5158" chance="70" /> <!-- Adena -->
-				<item id="2133" min="1" max="1" chance="0.5" /> <!-- A-grade Gemstone -->
+				<item id="57" min="678" max="1584" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="2.173" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="0.992" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
+				<item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
 			</drop>
 			<spoil>
-				<item id="8694" min="1" max="1" chance="0.1" /> <!-- Recipe: Barakiel's Axe (60%) -->
+				<item id="92996" min="1" max="1" chance="75.34" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="15.5" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.522" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20277" level="84" type="Monster" name="Cave Keeper" element="EARTH">
+	<npc id="20277" level="80" type="Monster" name="Cave Keeper" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4098,11 +4401,11 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="223" /> 
-		<acquire exp="1493403" sp="44803" attributeExp="1428" />
+		<acquire exp="11939" sp="2908" attributeExp="1056" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="43915.54" hpRegen="6.5" mp="3017.43" mpRegen="2.4" />
-			<attack physical="2210.8992" magical="1510.44274" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="355.99429" magical="261.1539" /> <!-- physical="237.99429" magical="174.1539" -->
+			<vitals hp="11730.9124767225" hpRegen="6.5" mp="2187.95768917819" mpRegen="2.4" />
+			<attack physical="880.962612806188" magical="374.772117747942" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.402410195425" /> <!-- physical="237.99429" magical="174.1539" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -4116,8 +4419,10 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4002" level="9" /> <!-- NPC HP Drain -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4002" level="9" /> <!-- NPC HP Drain -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4142,17 +4447,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="8685" min="1" max="1" chance="0.0009" /> <!-- Sobekk's Hurricane -->
-				<item id="2133" min="1" max="1" chance="0.1" /> <!-- A-grade Gemstone -->
-				<item id="57" min="1209" max="2820" chance="70" /> <!-- Adena -->
-				<item id="91038" min="1" max="3" chance="0.005" /> <!-- Earth Spirit Ore -->
+				<item id="57" min="678" max="1584" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.296" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.629" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="8704" min="1" max="1" chance="0.1" /> <!-- Recipe: Sobekk's Hurricane (60%) -->
+				<item id="92996" min="1" max="1" chance="75.65" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.8" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.582" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20279" level="82" type="Monster" name="Shackle" element="EARTH">
+	<npc id="20279" level="77" type="Monster" name="Shackle" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -4166,11 +4481,11 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="1341237" sp="40238" attributeExp="1230" />
+		<acquire exp="11422" sp="4233" attributeExp="847" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="85940" hpRegen="5.5" mp="2902.05" mpRegen="2.1" /> <!-- Hp x 1.58 // mp x 1.1 -->
-			<attack physical="1060.5439" magical="800.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="390" magical="260" /> <!-- physical="195.566206" magical="130.09715" -->
+			<vitals hp="11401.303538175" hpRegen="5.5" mp="2098.45402766477" mpRegen="2.1" /> <!-- Hp x 1.58 // mp x 1.1 -->
+			<attack physical="864.070808373158" magical="326.940963851517" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="189.759036144578" magical="120.089797758977" /> <!-- physical="195.566206" magical="130.09715" -->
 			<speed>
 				<walk ground="15" />
 				<run ground="120" />
@@ -4179,12 +4494,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="9" /> <!-- NPC HP Drain -->
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4002" level="9" /> <!-- NPC HP Drain -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -4196,13 +4511,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5314" min="1" max="1" chance="0.01" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5319" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Boots -->
-				<item id="57" min="2094" max="4886" chance="70" /> <!-- Adena -->
+				<item id="57" min="671" max="1568" chance="70" /> <!-- Adena -->
+				<item id="3031" min="1" max="1" chance="5.895" /> <!-- Spirit Ore -->
+				<item id="92997" min="1" max="1" chance="4.823" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.337" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="75.32" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.43" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.38" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20280" level="85" type="Monster" name="Headless Knight" element="EARTH">
+	<npc id="20280" level="80" type="Monster" name="Headless Knight" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4217,11 +4547,11 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="124" /> 
-		<acquire exp="1475851" sp="44276" attributeExp="1530" />
+		<acquire exp="11729" sp="3601" attributeExp="1144" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="88700.27" hpRegen="5.5" mp="3075.12" mpRegen="2.1" />
-			<attack physical="1525.54906" magical="1040.6504" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="300.23844" magical="219.5258" /> <!-- physical="200.23844" magical="146.5258" -->
+			<vitals hp="11890.1303538175" hpRegen="5.5" mp="2232.70951993491" mpRegen="2.1" />
+			<attack physical="880.962612806188" magical="374.772117747942" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.402410195425" /> <!-- physical="200.23844" magical="146.5258" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -4235,8 +4565,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4078" level="9" /> <!-- NPC Flamestrike -->
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4078" level="9" /> <!-- NPC Flamestrike -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4246,17 +4580,30 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="8686" min="1" max="1" chance="0.001" /> <!-- Themis' Tongue -->
-				<item id="2133" min="1" max="1" chance="0.5" /> <!-- A-grade Gemstone -->
-				<item id="57" min="2227" max="5197" chance="70" /> <!-- Adena -->
+				<item id="91885" min="1" max="1" chance="0.0009" /> <!-- Dismantler -->
+				<item id="91900" min="1" max="1" chance="0.0009" /> <!-- Colichemarde -->
+				<item id="57" min="678" max="1584" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="2.15" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="1.031" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="90045" min="1" max="1" chance="0.5" /> <!-- Magical Tablet -->
-				<item id="8706" min="1" max="1" chance="0.1" /> <!-- Recipe: Themis' Tongue (60%) -->
+				<item id="92996" min="1" max="1" chance="61.47" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="11.45" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.95" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="5368" min="1" max="1" chance="0.03" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20281" level="82" type="Monster" name="Dustwind Gargoyle" element="EARTH">
+	<npc id="20281" level="77" type="Monster" name="Dustwind Gargoyle" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4267,13 +4614,13 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="1326108" sp="39784" attributeExp="1230" />
+		<acquire exp="11422" sp="4233" attributeExp="847" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="85939.99" hpRegen="6.5" mp="2902.05" mpRegen="2.4" />
-			<attack physical="1765.71092" magical="1205.5387" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="456.18326" magical="312.73001" />
+			<vitals hp="11401.303538175" hpRegen="6.5" mp="2098.45402766477" mpRegen="2.4" />
+			<attack physical="864.070808373158" magical="326.940963851517" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="189.759036144578" magical="120.089797758977" />
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -4287,6 +4634,8 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4297,13 +4646,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.01" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5318" min="1" max="1" chance="0.01" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="57" min="2032" max="4741" chance="70" /> <!-- Adena -->
+				<item id="57" min="671" max="1568" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.263" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.67" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="73.48" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.87" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.469" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20282" level="83" type="Monster" name="Thunder Wyrm" element="EARTH">
+	<npc id="20282" level="78" type="Monster" name="Thunder Wyrm" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4316,11 +4679,11 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="1351416" sp="40543" attributeExp="1328" />
+		<acquire exp="11533" sp="5158" attributeExp="943" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="86910.30" hpRegen="6.5" mp="2959.74" mpRegen="2.4" />
-			<attack physical="1850.68904" magical="1265.13256" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="414.89589" magical="320.17851" />
+			<vitals hp="11568.9013035382" hpRegen="6.5" mp="2142.39218877136" mpRegen="2.4" />
+			<attack physical="931.656240591443" magical="350.979150159845" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="199.40119760479" magical="120.832379179801" />
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -4335,6 +4698,8 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4345,16 +4710,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="8681" min="1" max="1" chance="0.001" /> <!-- Behemoth' Tuning Fork -->
-				<item id="57" min="1066" max="2487" chance="70" /> <!-- Adena -->
-
+				<item id="57" min="673" max="1575" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.266" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.605" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="8696" min="1" max="1" chance="0.1" /> <!-- Recipe: Behemoth' Tuning Fork (60%) -->
+				<item id="92996" min="1" max="1" chance="60.13" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="11.84" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="6.026" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="5364" min="1" max="1" chance="0.03" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20283" level="83" type="Monster" name="Maluk Succubus" element="EARTH">
+	<npc id="20283" level="78" type="Monster" name="Maluk Succubus" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4368,11 +4745,11 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1472524" sp="44176" attributeExp="1328" />
+		<acquire exp="11543" sp="5158" attributeExp="943" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="43455.15" hpRegen="6.5" mp="2959.74" mpRegen="2.4" />
-			<attack physical="1940.11142" magical="1325.02979" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="446.6362" magical="326.64727" /> <!-- <defence physical="223.6362" magical="163.64727" /> -->
+			<vitals hp="11568.9013035382" hpRegen="6.5" mp="2142.39218877136" mpRegen="2.4" />
+			<attack physical="931.656240591443" magical="350.979150159845" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="199.40119760479" magical="120.832379179801" /> <!-- <defence physical="223.6362" magical="163.64727" /> -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -4385,8 +4762,10 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4046" level="9" /> <!-- Sleep -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4046" level="9" /> <!-- Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4401,11 +4780,31 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="91038" min="1" max="1" chance="0.005" /> <!-- Earth Spirit Ore -->
+				<item id="91885" min="1" max="1" chance="0.0009" /> <!-- Dismantler -->
+				<item id="91900" min="1" max="1" chance="0.0009" /> <!-- Colichemarde -->
+				<item id="57" min="673" max="1575" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="2.042" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="1.047" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
+				<item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="75.86" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.28" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.453" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20284" level="83" type="Monster" name="Maluk Succubus Turen" element="EARTH">
+	<npc id="20284" level="79" type="Monster" name="Maluk Succubus Turen" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4419,11 +4818,11 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1374149" sp="41225" attributeExp="1328" />
+		<acquire exp="11831" sp="5291" attributeExp="955" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="86910.30" hpRegen="6.5" mp="2959.74" mpRegen="2.4" />
-			<attack physical="2025.96455" magical="1385.22116" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="456.40135" magical="334.1342" /> <!-- <defence physical="228.40135" magical="167.1342" /> -->
+			<vitals hp="11568.9013035382" hpRegen="6.5" mp="2142.39218877136" mpRegen="2.4" />
+			<attack physical="907.821229050279" magical="390.426530357209" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="211.904761904762" magical="129.315355108683" /> <!-- <defence physical="228.40135" magical="167.1342" /> -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -4436,8 +4835,10 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4046" level="9" /> <!-- Sleep -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+			<skill id="4046" level="9" /> <!-- Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4452,14 +4853,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5312" min="1" max="1" chance="0.005" /> <!-- Sealed Helm of Nightmare -->
-				<item id="5317" min="1" max="1" chance="0.005" /> <!-- Sealed Majestic Circlet -->
-				<item id="2133" min="1" max="1" chance="0.5" /> <!-- A-grade Gemstone -->
-				<item id="57" min="2094" max="4886" chance="70" /> <!-- Adena -->
+				<item id="57" min="678" max="1582" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.248" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.676" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="76.21" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.62" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.461" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20285" level="85" type="Monster" name="Drake" element="EARTH">
+	<npc id="20285" level="80" type="Monster" name="Drake" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4472,11 +4886,11 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="1462846" sp="43886" attributeExp="1530" />
+		<acquire exp="11729" sp="3601" attributeExp="1144" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="88700.27" hpRegen="6.5" mp="3075.12" mpRegen="2.4" />
-			<attack physical="2120.23295" magical="1445.69611" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="349.18839" magical="255.63714" /> <!-- physical="233.18839" magical="170.63714" -->
+			<vitals hp="11890.1303538175" hpRegen="6.5" mp="2232.70951993491" mpRegen="2.4" />
+			<attack physical="880.962612806188" magical="374.772117747942" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.402410195425" /> <!-- physical="233.18839" magical="170.63714" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -4491,6 +4905,8 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4505,17 +4921,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="8687" min="1" max="1" chance="0.001" /> <!-- Cabrio's Hand -->
-				<item id="2133" min="1" max="1" chance="0.5" /> <!-- A-grade Gemstone -->
-				<item id="57" min="2177" max="5080" chance="70" /> <!-- Adena -->
+				<item id="57" min="678" max="1584" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.233" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.658" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="90045" min="1" max="1" chance="0.5" /> <!-- Magical Tablet -->
-				<item id="8708" min="1" max="1" chance="0.1" /> <!-- Recipe: Cabrio's Hand (60%) -->
+				<item id="92996" min="1" max="1" chance="75.65" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="14.28" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.518" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20286" level="82" type="Monster" name="Hunter Gargoyle" element="EARTH">
+	<npc id="20286" level="77" type="Monster" name="Hunter Gargoyle" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4526,13 +4952,13 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="1396911" sp="41908" attributeExp="1230" />
+		<acquire exp="11427" sp="4233" attributeExp="847" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="42970.63" hpRegen="6.5" mp="2902.05" mpRegen="2.4" />
-			<attack physical="1685.18867" magical="1150.25615" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="418.50106" magical="306.30378" /> <!-- p atack 209 m atack 153 -->
+			<vitals hp="11401.303538175" hpRegen="6.5" mp="2098.45402766477" mpRegen="2.4" />
+			<attack physical="864.070808373158" magical="326.940963851517" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="189.759036144578" magical="120.089797758977" /> <!-- p atack 209 m atack 153 -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -4546,6 +4972,8 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4556,11 +4984,27 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="91038" min="1" max="1" chance="0.5" /> <!-- Earth Spirit Ore -->
+				<item id="57" min="671" max="1568" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.172" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.551" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="72.83" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="15.08" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="7.378" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20287" level="84" type="Monster" name="Cave Maiden" element="EARTH">
+	<npc id="20287" level="80" type="Monster" name="Cave Maiden" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4574,11 +5018,11 @@
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="68" /> 
-		<acquire exp="1394760" sp="41843" attributeExp="1428" />
+		<acquire exp="11935" sp="2908" attributeExp="1056" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="87829.82" hpRegen="6.5" mp="3017.43" mpRegen="2.4" />
-			<attack physical="2305.94387" magical="1575.44778" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="363.81593" magical="265.68216" /> <!-- physical="242.81593" magical="177.68216" physical="461.94387" magical="315.44778" -->
+			<vitals hp="11730.9124767225" hpRegen="6.5" mp="2187.95768917819" mpRegen="2.4" />
+			<attack physical="880.962612806188" magical="374.772117747942" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.402410195425" /> <!-- physical="242.81593" magical="177.68216" physical="461.94387" magical="315.44778" -->
 			<attribute>
 				<attack type="earth" value="20" />
 				<defence fire="20" water="20" wind="-32" earth="53" holy="20" dark="20" />
@@ -4593,6 +5037,8 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4618,12 +5064,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="8678" min="1" max="1" chance="0.001" /> <!-- Sirra's Blade -->
-				<item id="2133" min="1" max="1" chance="0.5" /> <!-- A-grade Gemstone -->
-				<item id="57" min="2103" max="4906" chance="70" /> <!-- Adena -->
+				<item id="57" min="678" max="1584" chance="70" /> <!-- Adena -->
+				<item id="92997" min="1" max="1" chance="5.289" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.698" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+				<item id="92916" min="1" max="1" chance="0.03" /> <!-- Material: Animal Spirit -->
+				<item id="92919" min="1" max="1" chance="0.003" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="8690" min="1" max="1" chance="0.1" /> <!-- Recipe: Sirra's Blade (60%) -->
+				<item id="92996" min="1" max="1" chance="61.55" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="11.91" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.952" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="5392" min="1" max="1" chance="0.03" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>

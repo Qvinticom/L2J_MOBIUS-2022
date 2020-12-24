@@ -703,7 +703,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="81061" sp="2432" attributeExp="684" />
+		<acquire exp="5187" sp="2432" attributeExp="684" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3432.17665615142" hpRegen="8.5" mp="2309.81346309813" mpRegen="3" />
 			<attack physical="646.17968" magical="441.25696" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -719,11 +719,6 @@
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
@@ -739,6 +734,31 @@
 			<radius normal="17" />
 			<height normal="34" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="338" max="789" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="6.037" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="6.025" /> <!-- Material: Lump of Wood -->
+				<item id="92997" min="1" max="1" chance="1.232" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="1.199" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.93" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.789" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.416" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21814" level="76" type="Monster" name="Canyon Antelope Warrior" element="EARTH">
 		<!-- Classic Seven Sings -->
@@ -758,7 +778,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="82724" sp="2482" attributeExp="684" />
+		<acquire exp="5187" sp="2482" attributeExp="684" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3432.17665615142" hpRegen="8.5" mp="2309.81346309813" mpRegen="3" />
 			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -774,10 +794,6 @@
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
@@ -795,6 +811,31 @@
 			<radius normal="17" />
 			<height normal="34" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="338" max="789" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="6.002" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="5.991" /> <!-- Material: Lump of Wood -->
+				<item id="92997" min="1" max="1" chance="1.18" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="1.164" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="23" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.826" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.406" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21815" level="77" type="Monster" name="Canyon Bandersnatch" element="EARTH">
 		<!-- Classic Seven Sings -->
@@ -812,7 +853,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="50338" sp="1511" attributeExp="770" />
+		<acquire exp="5265" sp="1511" attributeExp="770" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3485.17350157729" hpRegen="8.5" mp="2359.28629359286" mpRegen="3" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -828,9 +869,6 @@
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4579" level="7" /> <!-- Bleed -->
@@ -847,6 +885,31 @@
 			<radius normal="18" />
 			<height normal="25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="339" max="792" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="6.078" /> <!-- Material: Lump of Wood -->
+				<item id="92996" min="1" max="1" chance="6.062" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="1.277" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="1.181" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="23.48" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.818" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.41" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21816" level="77" type="Monster" name="Canyon Bandersnatch Warrior" element="EARTH">
 		<!-- Classic Seven Sings -->
@@ -866,9 +929,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="88473" sp="2655" attributeExp="770" />
+		<acquire exp="5265" sp="2655" attributeExp="770" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3484.85804416404" hpRegen="8.5" mp="2359.28629359286" mpRegen="3" />
+			<vitals hp="3485.17350157729" hpRegen="8.5" mp="2359.28629359286" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
 			<speed>
@@ -882,10 +945,6 @@
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
@@ -903,8 +962,33 @@
 			<radius normal="18" />
 			<height normal="25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="339" max="792" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="6.109" /> <!-- Material: Lump of Wood -->
+				<item id="92996" min="1" max="1" chance="6.104" /> <!-- Old Resources -->
+				<item id="92909" min="1" max="1" chance="1.26" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.23" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.47" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.832" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.381" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21817" level="77" type="Monster" name="Eye of Restrainer" element="EARTH">
+	<npc id="21817" level="78" type="Monster" name="Eye of Restrainer" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -919,11 +1003,11 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="85627" sp="2569" attributeExp="770" />
+		<acquire exp="5318" sp="2636" attributeExp="858" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3484.85804416404" hpRegen="8.5" mp="2359.28629359286" mpRegen="3" />
-			<attack physical="710.2185" magical="484.98717" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="300.65359" magical="220.00525" />
+			<vitals hp="3535.64668769716" hpRegen="8.5" mp="2409.5701540957" mpRegen="3" />
+			<attack physical="555.888223552894" magical="287.679322902196" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="199.40119760479" magical="120.440384437937" />
 			<speed>
 				<walk ground="90" />
 				<run ground="140" />
@@ -935,9 +1019,6 @@
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
@@ -954,6 +1035,31 @@
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="794" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="6.092" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="6.074" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="1.243" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.201" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.01" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.896" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.455" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21818" level="78" type="Monster" name="Valley Buffalo" element="EARTH">
 		<parameters>
@@ -1010,7 +1116,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="21819" level="78" type="Monster" name="Eye of Guide" element="EARTH">
+	<npc id="21819" level="79" type="Monster" name="Eye of Guide" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1029,11 +1135,11 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="56363" sp="1691" attributeExp="858" />
+		<acquire exp="5363" sp="1735" attributeExp="948" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3535.64668769716" hpRegen="8.5" mp="2409.5701540957" mpRegen="3" />
-			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="310.02959" magical="206.421198742611" />
+			<vitals hp="3585.48895899054" hpRegen="8.5" mp="2459.04298459043" mpRegen="3" />
+			<attack physical="541.666666666667" magical="320.01228518863" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="211.904761904762" magical="128.895840574673" />
 			<speed>
 				<walk ground="30" />
 				<run ground="155" />
@@ -1045,10 +1151,6 @@
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4046" level="7" /> <!-- Sleep -->
@@ -1069,8 +1171,33 @@
 			<radius normal="17.5" />
 			<height normal="43.2" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="342" max="798" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="6.154" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="6.074" /> <!-- Material: Lump of Wood -->
+				<item id="92997" min="1" max="1" chance="1.249" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="1.227" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.68" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.914" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.41" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21820" level="79" type="Monster" name="Gaze of Nightmares" element="EARTH">
+	<npc id="21820" level="80" type="Monster" name="Gaze of Nightmares" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -1090,11 +1217,11 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="99981" sp="3000" attributeExp="948" />
+		<acquire exp="5408" sp="2769" attributeExp="1040" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3585.80441640379" hpRegen="8.5" mp="2459.04298459043" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="203.311781207645" />
+			<vitals hp="3634.70031545741" hpRegen="8.5" mp="2510.13787510138" mpRegen="3" />
+			<attack physical="525.641025641026" magical="307.181178788679" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.015054444588" />
 			<speed>
 				<walk ground="70" />
 				<run ground="195" />
@@ -1106,11 +1233,6 @@
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4046" level="7" /> <!-- Sleep -->
@@ -1131,8 +1253,33 @@
 			<radius normal="15" />
 			<height normal="30" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="342" max="799" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="6.103" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="6.064" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="1.294" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.201" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.12" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.871" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.438" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21821" level="79" type="Monster" name="Eye of the Watchman" element="EARTH">
+	<npc id="21821" level="80" type="Monster" name="Eye of the Watchman" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1151,11 +1298,11 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="96873" sp="2907" attributeExp="948" />
+		<acquire exp="5408" sp="2683" attributeExp="1040" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3585.80441640379" hpRegen="8.5" mp="2459.04298459043" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<vitals hp="3634.70031545741" hpRegen="8.5" mp="2510.13787510138" mpRegen="3" />
+			<attack physical="525.641025641026" magical="307.181178788679" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.015054444588" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
@@ -1167,11 +1314,6 @@
 		<skillList>
 			<skill id="4071" level="4" /> <!-- Bow Resistance -->
 			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4047" level="7" /> <!-- Hold -->
@@ -1193,8 +1335,35 @@
 			<radius normal="20" />
 			<height normal="49.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="342" max="799" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="2.51" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="2.507" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="0.3" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
+				<item id="92997" min="1" max="1" chance="0.3" /> <!-- Unknown Resources -->
+				<item id="92911" min="1" max="1" chance="0.075" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.03" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.03" /> <!-- Material: Plain Fabric -->
+				<item id="92914" min="1" max="1" chance="0.0075" /> <!-- Material: Sack Shreds -->
+				<item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+				<item id="92915" min="1" max="1" chance="0.003" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+				<item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.96" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.89" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.453" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21822" level="79" type="Monster" name="Homunculus" element="EARTH">
+	<npc id="21822" level="76" type="Monster" name="Homunculus" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1211,11 +1380,11 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="162778" sp="4884" attributeExp="948" />
+		<acquire exp="5187" sp="4068" attributeExp="684" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3585.64668769716" hpRegen="8.5" mp="2678.83211678832" mpRegen="3" />
-			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="310.02959" magical="206.421198742611" />
+			<vitals hp="3432.17665615142" hpRegen="8.5" mp="2515.00405515004" mpRegen="3" />
+			<attack physical="403.535353535354" magical="261.421995682426" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="193.333333333333" magical="114.527267811939" />
 			<speed>
 				<walk ground="30" />
 				<run ground="185" />
@@ -1225,9 +1394,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4561" level="7" /> <!-- NPC Fire Burn - Magic -->
@@ -1245,8 +1411,33 @@
 			<radius normal="10" />
 			<height normal="26" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="338" max="789" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="6.091" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="6.037" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="1.23" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.19" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="23.52" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.757" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.433" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21823" level="80" type="Monster" name="Canyon Grendel Warrior" element="EARTH">
+	<npc id="21823" level="76" type="Monster" name="Canyon Grendel Warrior" element="EARTH">
 		<!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
@@ -1267,11 +1458,11 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="132365" sp="3971" attributeExp="1040" />
+		<acquire exp="5187" sp="3226" attributeExp="684" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3634.49001051525" hpRegen="8.5" mp="2510.13787510138" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="209.50409325236" />
+			<vitals hp="3432.17665615142" hpRegen="8.5" mp="2309.81346309813" mpRegen="3" />
+			<attack physical="403.535353535354" magical="261.421995682426" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="193.333333333333" magical="114.527267811939" />
 			<speed>
 				<walk ground="36" />
 				<run ground="140" />
@@ -1281,11 +1472,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4089" level="1" /> <!-- NPC Bear Spirit Totem -->
@@ -1305,6 +1491,31 @@
 			<radius normal="15" grown="18" />
 			<height normal="39" grown="47.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="338" max="789" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="6.086" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="6.042" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="1.215" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.164" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.83" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.763" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.363" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21824" level="80" type="Monster" name="Eye of Pilgrim" element="EARTH">
 		<parameters>
@@ -1365,7 +1576,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="21825" level="80" type="Monster" name="Elder Homunculus" element="EARTH">
+	<npc id="21825" level="77" type="Monster" name="Elder Homunculus" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1382,11 +1593,11 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="137012" sp="4111" attributeExp="1040" />
+		<acquire exp="5265" sp="3428" attributeExp="770" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3634.49001051525" hpRegen="8.5" mp="3007.29927007299" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="212.557735094503" />
+			<vitals hp="3485.17350157729" hpRegen="8.5" mp="2826.4395782644" mpRegen="3" />
+			<attack physical="515.562248995984" magical="267.976474006963" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="189.759036144578" magical="119.700212040376" />
 			<speed>
 				<walk ground="30" />
 				<run ground="200" />
@@ -1396,11 +1607,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
@@ -1419,8 +1625,33 @@
 			<radius normal="12" />
 			<height normal="32.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="339" max="792" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="6.123" /> <!-- Material: Lump of Wood -->
+				<item id="92996" min="1" max="1" chance="6.077" /> <!-- Old Resources -->
+				<item id="92909" min="1" max="1" chance="1.194" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.185" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.37" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.787" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.415" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21826" level="80" type="Monster" name="Eye of Ruler" element="EARTH">
+	<npc id="21826" level="78" type="Monster" name="Eye of Ruler" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1439,11 +1670,11 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="133556" sp="4007" attributeExp="1040" />
+		<acquire exp="5318" sp="3428" attributeExp="858" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3634.49001051525" hpRegen="8.5" mp="3007.29927007299" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<vitals hp="3535.64668769716" hpRegen="8.5" mp="2886.45579886456" mpRegen="3" />
+			<attack physical="555.888223552894" magical="287.679322902196" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="199.40119760479" magical="120.440384437937" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
@@ -1453,10 +1684,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4047" level="7" /> <!-- Hold -->
@@ -1478,6 +1705,31 @@
 			<radius normal="22.5" />
 			<height normal="56.4" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="794" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="6.118" /> <!-- Material: Lump of Wood -->
+				<item id="92996" min="1" max="1" chance="6.015" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="1.286" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="1.262" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="25.33" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.799" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.37" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21827" level="81" type="Monster" name="Sly Hound Dog" element="EARTH">
 		<parameters>
@@ -1531,7 +1783,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21828" level="81" type="Monster" name="Disciple of Protection" element="EARTH">
+	<npc id="21828" level="79" type="Monster" name="Disciple of Protection" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1547,11 +1799,11 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
-		<acquire exp="178210" sp="5347" attributeExp="1134" />
+		<acquire exp="5363" sp="4577" attributeExp="948" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3680.28391167192" hpRegen="8.5" mp="2789.94322789943" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="209.50409325236" />
+			<vitals hp="3585.48895899054" hpRegen="8.5" mp="2678.83211678832" mpRegen="3" />
+			<attack physical="541.666666666667" magical="320.01228518863" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="211.904761904762" magical="128.895840574673" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
@@ -1561,11 +1813,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
@@ -1582,8 +1829,33 @@
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="342" max="798" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="6.072" /> <!-- Material: Lump of Wood -->
+				<item id="92996" min="1" max="1" chance="6.054" /> <!-- Old Resources -->
+				<item id="92909" min="1" max="1" chance="1.289" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.211" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.35" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.913" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.408" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21829" level="81" type="Monster" name="Disciple of Punishment" element="EARTH">
+	<npc id="21829" level="79" type="Monster" name="Disciple of Punishment" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1601,11 +1873,11 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
-		<acquire exp="184115" sp="5524" attributeExp="1134" />
+		<acquire exp="5363" sp="4729" attributeExp="948" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3680.28391167192" hpRegen="8.5" mp="3068.93755068938" mpRegen="3" />
-			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="328.27073" magical="240.21427" />
+			<vitals hp="3585.48895899054" hpRegen="8.5" mp="2946.47201946472" mpRegen="3" />
+			<attack physical="541.666666666667" magical="320.01228518863" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="211.904761904762" magical="128.895840574673" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
@@ -1615,11 +1887,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4033" level="8" /> <!-- NPC Burn -->
@@ -1638,8 +1905,33 @@
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="342" max="798" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="6.17" /> <!-- Material: Lump of Wood -->
+				<item id="92996" min="1" max="1" chance="6.062" /> <!-- Old Resources -->
+				<item id="92909" min="1" max="1" chance="1.29" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.286" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.4" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.829" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.382" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21830" level="82" type="Monster" name="Disciple of Conquest" element="EARTH">
+	<npc id="21830" level="79" type="Monster" name="Disciple of Conquest" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1655,11 +1947,11 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
-		<acquire exp="190828" sp="5725" attributeExp="1230" />
+		<acquire exp="5363" sp="4783" attributeExp="948" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3724.29022082019" hpRegen="8.5" mp="3439.57826439578" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="209.50409325236" />
+			<vitals hp="3585.48895899054" hpRegen="8.5" mp="3238.44282238443" mpRegen="3" />
+			<attack physical="541.666666666667" magical="320.01228518863" random="30" critical="4.75" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="211.904761904762" magical="128.895840574673" />
 			<speed>
 				<walk ground="50" />
 				<run ground="190" />
@@ -1669,11 +1961,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
@@ -1690,8 +1977,33 @@
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="342" max="798" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="6.075" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="6.052" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="1.189" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.169" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="23.81" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.873" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.393" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21831" level="82" type="Monster" name="Disciple of Power" element="EARTH">
+	<npc id="21831" level="80" type="Monster" name="Disciple of Power" element="EARTH">
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1706,11 +2018,11 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
-		<acquire exp="232947" sp="6989" attributeExp="1230" />
+		<acquire exp="5408" sp="5987" attributeExp="1040" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3724.16403785489" hpRegen="8.5" mp="2845.09326845093" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="215.579412824268" />
+			<vitals hp="3634.70031545741" hpRegen="8.5" mp="2733.98215733982" mpRegen="3" />
+			<attack physical="525.641025641026" magical="307.181178788679" random="50" critical="4.75" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="208.284023668639" magical="119.015054444588" />
 			<speed>
 				<walk ground="50" />
 				<run ground="155" />
@@ -1720,11 +2032,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
@@ -1742,20 +2049,45 @@
 			<radius normal="11" grown="13" />
 			<height normal="38.5" grown="46.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="342" max="799" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="6.091" /> <!-- Material: Lump of Wood -->
+				<item id="92996" min="1" max="1" chance="6.068" /> <!-- Old Resources -->
+				<item id="92909" min="1" max="1" chance="1.269" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.179" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="25.26" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.867" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.421" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="21832" level="82" type="Npc" name="Disciple of Authority">
+	<npc id="21832" level="80" type="Monster" name="Disciple of Authority" element="EARTH">
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6718" />
-		<acquire exp="190827" sp="5724" attributeExp="1230" />
+		<acquire exp="5408" sp="5975" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+			<vitals hp="3330.05780346821" hpRegen="10.5" mp="2447.52475247525" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="155" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1763,13 +2095,35 @@
 			<height normal="38.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
 		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="342" max="799" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="5.738" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="5.683" /> <!-- Material: Lump of Wood -->
+				<item id="92478" min="1" max="1" chance="1.158" /> <!-- Varnish -->
+				<item id="92997" min="1" max="1" chance="1.13" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="1.098" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="24.83" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="4.87" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.485" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21833" level="81" type="Monster" name="Hot Springs Bandersnatchling">
 		<!-- Classic Seven Sings -->
@@ -5886,7 +6240,7 @@
 	<npc id="21895" level="76" type="Monster" name="Mausoleum Prophet">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="56921" sp="1708" />
+		<acquire exp="5187" sp="1537" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2620.23121387283" hpRegen="8.5" mp="1252.80528052805" mpRegen="3" />
 			<speed>
@@ -5902,34 +6256,40 @@
 			<height normal="52" />
 		</collision>
 		<skillList>
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="6324" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Earring -->
-				<item id="6325" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Ring -->
-				<item id="6323" min="1" max="1" chance="0.0075" /> <!-- Sealed Phoenix Necklace -->
-				<item id="57" min="2086" max="4866" chance="70" /> <!-- Adena -->
+				<item id="57" min="169" max="394" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="3.09" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="2.972" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="0.75" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="0.75" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.075" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.075" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92915" min="1" max="1" chance="0.0075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="6333" min="1" max="1" chance="4.24" /> <!-- Recipe: Sealed Phoenix Ring (70%) -->
-				<item id="6331" min="1" max="1" chance="2.777" /> <!-- Recipe: Sealed Phoenix Earring (70%) -->
-				<item id="6329" min="1" max="1" chance="2.194" /> <!-- Recipe: Sealed Phoenix Necklace (70%) -->
+				<item id="92996" min="1" max="1" chance="11.6" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="2.356" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="1.143" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21896" level="77" type="Monster" name="Ancient Holy Ground's Hermit">
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="58760" sp="1763" />
+		<acquire exp="5265" sp="1587" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2660.40462427746" hpRegen="8.5" mp="1279.86798679868" mpRegen="3" />
+			<vitals hp="2660.6936416185" hpRegen="8.5" mp="1279.86798679868" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -5943,25 +6303,33 @@
 			<height normal="25" />
 		</collision>
 		<skillList>
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="6328" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Ring -->
-				<item id="6326" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Necklace -->
-				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
-				<item id="57" min="2168" max="5063" chance="70" /> <!-- Adena -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Low-grade Life Stone - Weapon -->
+				<item id="243" min="1" max="1" chance="0.0009" /> <!-- Twilight Knife -->
+				<item id="57" min="170" max="396" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="1.215" /> <!-- Material: Lump of Wood -->
+				<item id="92996" min="1" max="1" chance="1.179" /> <!-- Old Resources -->
+				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
+				<item id="92909" min="1" max="1" chance="0.3" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
+				<item id="92997" min="1" max="1" chance="0.3" /> <!-- Unknown Resources -->
+				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.03" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.03" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.03" /> <!-- Material: Leather Scraps -->
+				<item id="92915" min="1" max="1" chance="0.003" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92795" min="1" max="1" chance="0.003" /> <!-- Twilight Knife Edge -->
+				<item id="92914" min="1" max="1" chance="0.003" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="6339" min="1" max="1" chance="2.985" /> <!-- Recipe: Sealed Majestic Ring (70%) -->
-				<item id="6337" min="1" max="1" chance="1.909" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
-				<item id="6335" min="1" max="1" chance="1.507" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
+				<item id="92996" min="1" max="1" chance="11.9" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="2.432" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="1.14" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -5969,9 +6337,9 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="135" />
-		<acquire exp="59258" sp="1778" />
+		<acquire exp="5265" sp="1600" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2660.40462427746" hpRegen="8.5" mp="1279.86798679868" mpRegen="3" />
+			<vitals hp="2660.6936416185" hpRegen="8.5" mp="1279.86798679868" mpRegen="3" />
 			<speed>
 				<walk ground="25" />
 				<run ground="160" />
@@ -5987,36 +6355,40 @@
 		<skillList>
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="3" /> <!-- Hold Resistance -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
-				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
-				<item id="5295" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Gloves -->
-				<item id="5296" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Boots -->
-				<item id="57" min="2203" max="5145" chance="70" /> <!-- Adena -->
+				<item id="57" min="170" max="396" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="3.039" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="2.978" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="0.75" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="0.75" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.075" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.075" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92915" min="1" max="1" chance="0.0075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="5394" min="1" max="1" chance="2.751" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
-				<item id="5370" min="1" max="1" chance="2.731" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
-				<item id="5368" min="1" max="1" chance="2.701" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
-				<item id="5392" min="1" max="1" chance="2.688" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+				<item id="92996" min="1" max="1" chance="12.42" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="2.395" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="1.252" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21898" level="78" type="Monster" name="Ancient Holy Ground's Witch">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="60297" sp="1809" />
+		<acquire exp="5318" sp="1628" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2699.71098265896" hpRegen="8.5" mp="1306.93069306931" mpRegen="3" />
+			<vitals hp="2699.42196531792" hpRegen="8.5" mp="1306.93069306931" mpRegen="3" />
 			<speed>
 				<walk ground="80" />
 				<run ground="200" />
@@ -6031,22 +6403,35 @@
 		</collision>
 		<skillList>
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5292" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Shield -->
-				<item id="5315" min="1" max="1" chance="0.03" /> <!-- Sealed Shield of Nightmare -->
-				<item id="57" min="2231" max="5207" chance="70" /> <!-- Adena -->
+				<item id="148" min="1" max="1" chance="0.0009" /> <!-- Sword of Valhalla -->
+				<item id="57" min="170" max="397" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="1.195" /> <!-- Material: Lump of Wood -->
+				<item id="92996" min="1" max="1" chance="1.155" /> <!-- Old Resources -->
+				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
+				<item id="92909" min="1" max="1" chance="0.3" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
+				<item id="92997" min="1" max="1" chance="0.3" /> <!-- Unknown Resources -->
+				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.03" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.03" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.03" /> <!-- Material: Leather Scraps -->
+				<item id="92915" min="1" max="1" chance="0.003" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92793" min="1" max="1" chance="0.003" /> <!-- Sword of Valhalla Blade -->
+				<item id="92914" min="1" max="1" chance="0.003" /> <!-- Material: Sack Shreds -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="5364" min="1" max="1" chance="6.4665" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
-				<item id="5366" min="1" max="1" chance="4.308" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
+				<item id="92996" min="1" max="1" chance="8.145" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="1.607" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="4186" min="1" max="1" chance="9" /> <!-- Recipe: Sword of Valhalla -->
+				<item id="4967" min="1" max="1" chance="9" /> <!-- Recipe: Sword of Valhalla (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -6054,9 +6439,9 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="78" />
-		<acquire exp="60893" sp="1827" />
+		<acquire exp="5318" sp="1645" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2699.71098265896" hpRegen="8.5" mp="1306.93069306931" mpRegen="3" />
+			<vitals hp="2699.42196531792" hpRegen="8.5" mp="1306.93069306931" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="190" />
@@ -6072,27 +6457,31 @@
 		<skillList>
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="3" /> <!-- Hold Resistance -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.0075" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5314" min="1" max="1" chance="0.0075" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5318" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5319" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Boots -->
-				<item id="57" min="2273" max="5306" chance="70" /> <!-- Adena -->
+				<item id="57" min="170" max="397" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="3.096" /> <!-- Material: Lump of Wood -->
+				<item id="92996" min="1" max="1" chance="3.081" /> <!-- Old Resources -->
+				<item id="92909" min="1" max="1" chance="0.75" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="0.75" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.075" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.075" /> <!-- Material: Plain Fabric -->
+				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
+				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+				<item id="92915" min="1" max="1" chance="0.0075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
 			</drop>
 			<spoil>
-				<item id="5382" min="1" max="1" chance="1.878" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
-				<item id="5404" min="1" max="1" chance="1.832" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
-				<item id="5380" min="1" max="1" chance="1.813" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
-				<item id="5406" min="1" max="1" chance="1.808" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+				<item id="92996" min="1" max="1" chance="11.56" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="2.418" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="1.274" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
 	</npc>

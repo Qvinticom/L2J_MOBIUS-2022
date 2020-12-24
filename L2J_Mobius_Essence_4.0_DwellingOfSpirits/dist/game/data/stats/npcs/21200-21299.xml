@@ -2090,7 +2090,7 @@
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="793" sp="24" />
+		<acquire exp="313" sp="24" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="467.411545623836" hpRegen="2.5" mp="174.125305126119" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2105,9 +2105,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
-			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
 			<skill id="4152" level="1" /> <!-- NPC HP Drain - Magic -->
 			<skill id="4160" level="1" /> <!-- NPC Aura Burn - Magic -->
 		</skillList>
@@ -2124,12 +2123,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="217" min="1" max="1" chance="0.075" /> <!-- Shining Knife -->
-				<item id="218" min="1" max="1" chance="0.075" /> <!-- Throwing Knife -->
-				<item id="57" min="41" max="97" chance="70" /> <!-- Adena -->
+				<item id="217" min="1" max="1" chance="0.0009" /> <!-- Shining Knife -->
+				<item id="218" min="1" max="1" chance="0.0009" /> <!-- Throwing Knife -->
+				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="0.3" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="0.03" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.03" /> <!-- Material: Rags -->
+				<item id="92914" min="1" max="1" chance="0.0009" /> <!-- Material: Sack Shreds -->
 			</drop>
 			<spoil>
-				<item id="734" min="1" max="1" chance="4.337" /> <!-- Wind Walk Potion -->
+				<item id="734" min="1" max="1" chance="0.3" /> <!-- Wind Walk Potion -->
+				<item id="92484" min="1" max="1" chance="0.03" /> <!-- Necklace of Wisdom Chain -->
 			</spoil>
 		</dropLists>
 	</npc>

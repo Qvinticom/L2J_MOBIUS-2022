@@ -314,10 +314,10 @@
 	<npc id="24014" level="66" type="Monster" name="Vanor" title="Mercenary of Glory" element="WIND">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="15277" sp="459" attributeExp="23" />
+		<acquire exp="5007" sp="459" attributeExp="23" />
 		<equipment rhand="160" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3482.30912476723" hpRegen="7.5" mp="1222.13181448332" mpRegen="2.7" />
+			<vitals hp="5606.14525139665" hpRegen="7.5" mp="1222.13181448332" mpRegen="2.7" />
 			<speed>
 				<walk ground="36" />
 				<run ground="174" />
@@ -330,8 +330,6 @@
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
 			<skill id="48046" level="1" /> <!-- Monster of Wind Element -->
@@ -340,6 +338,33 @@
 			<radius normal="15.6" />
 			<height normal="37.8" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="1419" min="1" max="1" chance="1" /> <!-- Proof of Blood -->
+				<item id="633" min="1" max="1" chance="0.003" /> <!-- Zubei's Shield -->
+				<item id="57" min="236" max="552" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="1.997" /> <!-- Old Resources -->
+				<item id="92908" min="1" max="1" chance="1.987" /> <!-- Material: Lump of Wood -->
+				<item id="92997" min="1" max="1" chance="0.3" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
+				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
+				<item id="92909" min="1" max="1" chance="0.3" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92477" min="1" max="1" chance="0.3" /> <!-- Wood -->
+				<item id="92911" min="1" max="1" chance="0.075" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
+				<item id="92786" min="1" max="1" chance="0.03" /> <!-- Zubei's Shield Fragment -->
+				<item id="92912" min="1" max="1" chance="0.03" /> <!-- Material: Plain Fabric -->
+				<item id="92914" min="1" max="1" chance="0.0075" /> <!-- Material: Sack Shreds -->
+				<item id="92918" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's Power -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="14" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="2.7" /> <!-- Unknown Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="4961" min="1" max="1" chance="0.03" /> <!-- Recipe: Zubei's Shield (60%) -->
+				<item id="4178" min="1" max="1" chance="0.0075" /> <!-- Recipe: Zubei's Shield -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="24015" level="76" type="Monster" name="Barif Camrin">
 		<race>ETC</race>
