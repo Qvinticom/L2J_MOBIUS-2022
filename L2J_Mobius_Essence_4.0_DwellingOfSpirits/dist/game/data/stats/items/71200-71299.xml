@@ -698,217 +698,313 @@
 		<!-- When equipped, CON +1. Can be upgraded to higher level using Venir's Talisman Fragment. Does not disappear if upgrade fails. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="1" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71272" name="Venir's Talisman Lv. 2" type="Armor">
 		<!-- When equipped, CON, MEN +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 1. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="2" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71273" name="Venir's Talisman Lv. 3" type="Armor">
 		<!-- When equipped, CON, MEN, DEX +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 1. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="3" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71274" name="Venir's Talisman Lv. 4" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 1. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="4" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71275" name="Venir's Talisman Lv. 5" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 1. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="5" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71276" name="Venir's Talisman Lv. 6" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="6" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71277" name="Venir's Talisman Lv. 7" type="Armor">
 		<!-- When equipped, CON +2, MEN, DEX, WIT, STR, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="7" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71278" name="Venir's Talisman Lv. 8" type="Armor">
 		<!-- When equipped, CON, MEN +2, DEX, WIT, STR, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="8" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71279" name="Venir's Talisman Lv. 9" type="Armor">
 		<!-- When equipped, CON, MEN, DEX +2, WIT, STR, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="9" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71280" name="Venir's Talisman Lv. 10" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT +2, STR, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="10" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71281" name="Venir's Talisman Lv. 11" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR +2, INT +1. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 6. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="11" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71282" name="Venir's Talisman Lv. 12" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="12" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71283" name="Venir's Talisman Lv. 13" type="Armor">
 		<!-- When equipped, CON +3, MEN, DEX, WIT, STR, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="13" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71284" name="Venir's Talisman Lv. 14" type="Armor">
 		<!-- When equipped, CON, MEN +3, DEX, WIT, STR, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="14" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71285" name="Venir's Talisman Lv. 15" type="Armor">
 		<!-- When equipped, CON, MEN, DEX +3, WIT, STR, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="15" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71286" name="Venir's Talisman Lv. 16" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT +3, STR, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="16" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71287" name="Venir's Talisman Lv. 17" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR +3, INT +2. Additionally has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Can be upgraded to higher level using Venir's Talisman Fragment. If upgrade fails, you'll get Venir's Talisman Lv. 12. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="17" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71288" name="Venir's Talisman Lv. 18" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 4% of damage inflicted on the enemy as HP or 2% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="18" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71289" name="Venir's Talisman Lv. 19" type="Armor">
 		<!-- When equipped, CON +4, MEN, DEX, WIT, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="19" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71290" name="Venir's Talisman Lv. 20" type="Armor">
 		<!-- When equipped, CON, MEN +4, DEX, WIT, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="20" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71291" name="Venir's Talisman Lv. 21" type="Armor">
 		<!-- When equipped, CON, MEN, DEX +4, WIT, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="21" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71292" name="Venir's Talisman Lv. 22" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT +4, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="22" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71293" name="Venir's Talisman Lv. 23" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR +4, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="23" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71294" name="Venir's Talisman Lv. 24" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +4, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_all_stat_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="24" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="71295" name="Artisan's Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubleds. If enchanting is failed, items are not broken into crystals and remain enchanted to prior level. Cannot be applied to items enchanted to +20 or higher. -->

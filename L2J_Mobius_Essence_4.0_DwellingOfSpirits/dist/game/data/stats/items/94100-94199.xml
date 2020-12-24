@@ -777,111 +777,151 @@
 		<!-- <When equipped>\nCON +3\nMEN +3\nDEX +3\nWIT +3\nSTR +2\nINT +2\nMax HP +100\nAll received Critical Rate -10%\nP./ M. Skill Cooldown -7%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12.\nEffects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="16" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="94175" name="Venir's Talisman Lv. 17" type="Armor">
 		<!-- <When equipped>\nCON +3\nMEN +3\nDEX +3\nWIT +3\nSTR +3\nINT +2\nMax HP +200\nAll received Critical Rate -10%\nP./ M. Skill Cooldown -9%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12.\nEffects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="17" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="94176" name="Venir's Talisman Lv. 18" type="Armor">
 		<!-- <When equipped>\nCON +3\nMEN +3\nDEX +3\nWIT +3\nSTR +3\nINT +3\nMax HP +300\nAll received Critical Rate -12%\nP./ M. Skill Cooldown -9%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="18" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="94177" name="Venir's Talisman Lv. 19" type="Armor">
 		<!-- <When equipped>\nCON +4\nMEN +4\nDEX +3\nWIT +3\nSTR +3\nINT +3\nMax HP +400\nAll received Critical Rate -12%\nP./ M. Skill Cooldown -11%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="19" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="94178" name="Venir's Talisman Lv. 20" type="Armor">
 		<!-- <When equipped>\nCON +4\nMEN +4\nDEX +4\nWIT +4\nSTR +3\nINT +3\nMax HP +500\nAll received Critical Rate -14%\nP./ M. Skill Cooldown -11%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="20" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="94179" name="Venir's Talisman Lv. 21" type="Armor">
 		<!-- <When equipped>\nCON +4\nMEN +4\nDEX +4\nWIT +4\nSTR +4\nINT +4\nMax HP +600\nAll received Critical Rate -14%\nP./ M. Skill Cooldown -13%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="21" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="94180" name="Venir's Talisman Lv. 22" type="Armor">
 		<!-- <When equipped>\nCON +5\nMEN +5\nDEX +4\nWIT +4\nSTR +4\nINT +4\nMax HP +700\nAll received Critical Rate -16%\nP./ M. Skill Cooldown -13%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="22" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="94181" name="Venir's Talisman Lv. 23" type="Armor">
 		<!-- <When equipped>\nCON +5\nMEN +5\nDEX +5\nWIT +5\nSTR +4\nINT +4\nMax HP +800\nAll received Critical Rate -16%\nP./ M. Skill Cooldown -15%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="23" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="94182" name="Venir's Talisman Lv. 24" type="Armor">
 		<!-- <When equipped>\nCON +5\nMEN +5\nDEX +5\nWIT +5\nSTR +5\nINT +5\nMax HP +900\nAll received Critical Rate -18%\nP./ M. Skill Cooldown -15%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 24.\nEffects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="24" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="94183" name="Venir's Talisman Lv. 25" type="Armor">
 		<!-- <When equipped>\nCON +6\nMEN +6\nDEX +6\nWIT +6\nSTR +6\nINT +6\nMax HP +1000\nAll received Critical Rate -18%\nP./ M. Skill Cooldown -17%\n\nEffects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18024" level="25" /> <!-- Venir Talisman -->
+		</skills>
 	</item>
 	<item id="94184" name="Scroll of Blessing" type="EtcItem">
 		<!-- TODO: Create Item -->
