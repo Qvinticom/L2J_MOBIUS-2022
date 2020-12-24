@@ -168,11 +168,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>DOOM</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
@@ -290,11 +285,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>UNDEAD</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="80" grown="96" />
@@ -350,11 +340,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>ALL</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="35" />
 			<height normal="35" />
@@ -415,11 +400,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>DOOM</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="30" grown="15.5" />
 			<height normal="40" grown="48.5" />
@@ -478,11 +458,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>DOOM</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="30" grown="15.5" />
 			<height normal="40" grown="48.5" />

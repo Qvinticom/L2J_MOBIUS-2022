@@ -4173,7 +4173,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="50" />
@@ -4524,11 +4523,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>DOOM</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
@@ -4965,11 +4959,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>SILENOS</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="29" />
@@ -5087,11 +5076,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>SILENOS</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="31" />
@@ -5151,11 +5135,6 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>SILENOS</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
@@ -5213,11 +5192,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>SILENOS</clan>
-			</clanList>
-		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="31.5" />
