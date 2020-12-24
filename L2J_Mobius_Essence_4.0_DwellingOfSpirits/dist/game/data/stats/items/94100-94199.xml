@@ -724,6 +724,17 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="94165" name="PA Lineage 2 Festival Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: A-grade Weapon Coupon, A-grade Armor Coupon. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="94166" name="Circlet of Hero" type="Armor">
 		<!-- Can be enchanted up to +10 with Scroll: Enchant Circlet of Hero. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1.\n\nUses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_circlet_of_hero_i00" />
@@ -739,6 +750,17 @@
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<!-- skills handled by option data -->
+	</item>
+	<item id="94167" name="Hero's Shining Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94168" name="Enchant Kit: Circlet of Hero" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -772,6 +794,50 @@
 		<skills>
 			<skill id="40210" level="1" /> <!-- Scroll: Enchant Circlet of Hero -->
 		</skills>
+	</item>
+	<item id="94170" name="Package: Sayha's Blessing (2 pcs.)" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Blessing (2 pcs.). -->
+		<set name="icon" val="icon.etc_wind_potion_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94171" name="Agathion Bracelet Pack Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.agathion_magmeld_teleport" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94172" name="Brooch Chest Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94173" name="Talisman Bracelet Pack Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.dimension_bracelet_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94174" name="Venir's Talisman Lv. 16" type="Armor">
 		<!-- <When equipped>\nCON +3\nMEN +3\nDEX +3\nWIT +3\nSTR +2\nINT +2\nMax HP +100\nAll received Critical Rate -10%\nP./ M. Skill Cooldown -7%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12.\nEffects of two identical talismans do not stack. -->
@@ -969,6 +1035,111 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94189" name="Life Stone Lv. 1 - Hair Accessory" type="EtcItem">
+		<set name="icon" val="icon.etc_mineral_general_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="2" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94190" name="Life Stone Lv. 2 - Hair Accessory" type="EtcItem">
+		<set name="icon" val="icon.etc_mineral_general_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="2" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94191" name="New Year Horoscope - Minor Luck" additionalName="Event" type="EtcItem">
+		<!-- Acquired XP/ SP +50% for 20 min.\n5 Scrolls: New Year Horoscope - Minor Luck can be exchanged for one Scroll: New Year Horoscope - Medium Luck. -->
+		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94192" name="New Year Horoscope - Medium Luck" additionalName="Event" type="EtcItem">
+		<!-- STR/ DEX/ INT/ CON/ MEN/ WIT +1, HP +500 for 20 min.\n5 Scrolls: New Year Horoscope - Medium Luck can be exchanged for one Scroll: New Year Horoscope - Great Luck. -->
+		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94193" name="New Year Horoscope - Great Luck" additionalName="Event" type="EtcItem">
+		<!-- For 20 min., STR/ DEX/ INT/ CON/ MEN/ WIT +3, MP +300, P./ M. Def. +200, All received Critical Damage -5%, P./ M. Atk. +200. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94194" name="Small Rat Bell" additionalName="Event" type="EtcItem">
+		<!-- Can be received as a reward for capturing Brown Rat. Can be exchanged for a Haughty Rat reward. -->
+		<set name="icon" val="icon.mouse_bell_a" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94195" name="Big Rat Bell" additionalName="Event" type="EtcItem">
+		<!-- Can be received as a reward for capturing Pink Rat. Can be exchanged for a Haughty Rat reward. -->
+		<set name="icon" val="icon.mouse_bell_b" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94196" name="New Year Lucky Pouch" additionalName="Event" type="EtcItem">
+		<!-- A pouch containing a Haughty Rat reward. Double-click to obtain one of the following rare items: A-grade Weapon Coupon, A-grade Armor Coupon, Blessed Scroll: Enchant A-grade Weapon, Scroll: Enchant A-grade Weapon, Queen Ant's Ring, Baium's Ring. -->
+		<set name="icon" val="icon.christmas_card_box1" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94197" name="Rat Hole Key" additionalName="Event" type="EtcItem">
+		<!-- A key for a secret rat door. Double-click to obtain Extra Pass: Transcendent Instance Zone, Primeval Isle's Time Stone, Primeval Garden's Time Stone, Time Stone, Antharas' Lair. -->
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94198" name="Order to Destroy Black Anvil Guild Camp" additionalName="Event" type="EtcItem">
+		<!-- Required to enter the Black Anvil Guild Camp. -->
+		<set name="icon" val="icon.event_orc_memo" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="94199" name="Black Anvil Guild Camp's Time Stone" additionalName="Event" type="EtcItem">
+		<!-- Prolongs your Session Zone's raid for 15 min.\n\n<Hunting Zone>\nBlack Anvil Guild Camp - World Hunting Zone. -->
+		<set name="icon" val="icon.timezone_refill_oman_a_60" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
