@@ -406,6 +406,28 @@
 			<height normal="38" />
 		</collision>
 	</npc>
+	<npc id="24217" level="106" type="Monster" name="Lahkdoom">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="24033039.8843931" hpRegen="11.5" mp="26106.2706270627" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="262294.197031039" magical="751.580784340321" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="2849.74358974359" magical="1092.32461707709" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
 	<npc id="24218" level="110" type="Monster" name="Valanga Orc Scout">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -432,6 +454,16 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="286" max="665" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -461,6 +493,16 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="286" max="665" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -489,6 +531,16 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="286" max="665" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -517,6 +569,16 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="286" max="665" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -642,9 +704,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4896" max="11429" chance="70" /> <!-- Adena -->
-				<item id="81217" min="1" max="1" chance="1.377" /> <!-- Oriharukon Ore -->
-				<item id="81219" min="1" max="1" chance="1.353" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="1" chance="1.267" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.319" /> <!-- Angel's Feather -->
+				<item id="81217" min="1" max="1" chance="1.281" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.254" /> <!-- Dragon Scales -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>
@@ -698,9 +760,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4798" max="11208" chance="70" /> <!-- Adena -->
-				<item id="81218" min="1" max="1" chance="1.338" /> <!-- Dragon Scales -->
-				<item id="81217" min="1" max="1" chance="1.303" /> <!-- Oriharukon Ore -->
-				<item id="81219" min="1" max="1" chance="1.257" /> <!-- Angel s Feather -->
+				<item id="81218" min="1" max="1" chance="1.291" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="1.274" /> <!-- Angel's Feather -->
+				<item id="81217" min="1" max="1" chance="1.268" /> <!-- Oriharukon Ore -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>
@@ -753,9 +815,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4798" max="11208" chance="70" /> <!-- Adena -->
-				<item id="81217" min="1" max="1" chance="1.339" /> <!-- Oriharukon Ore -->
-				<item id="81219" min="1" max="1" chance="1.328" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="1" chance="1.293" /> <!-- Dragon Scales -->
+				<item id="81218" min="1" max="1" chance="1.334" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.322" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.251" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>
@@ -812,9 +874,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4896" max="11429" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.349" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="1" chance="1.319" /> <!-- Dragon Scales -->
-				<item id="81217" min="1" max="1" chance="1.246" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.325" /> <!-- Angel's Feather -->
+				<item id="81218" min="1" max="1" chance="1.276" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.245" /> <!-- Oriharukon Ore -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>
@@ -871,9 +933,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4896" max="11429" chance="70" /> <!-- Adena -->
-				<item id="81217" min="1" max="1" chance="1.362" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="1" chance="1.309" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="1.269" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="1.371" /> <!-- Angel's Feather -->
+				<item id="81217" min="1" max="1" chance="1.324" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.242" /> <!-- Dragon Scales -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>
@@ -922,9 +984,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4896" max="11429" chance="70" /> <!-- Adena -->
-				<item id="81217" min="1" max="1" chance="1.368" /> <!-- Oriharukon Ore -->
-				<item id="81219" min="1" max="1" chance="1.305" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="1" chance="1.268" /> <!-- Dragon Scales -->
+				<item id="81218" min="1" max="1" chance="1.348" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.345" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.291" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>
@@ -973,9 +1035,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4995" max="11650" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.391" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="1" chance="1.382" /> <!-- Dragon Scales -->
-				<item id="81217" min="1" max="1" chance="1.352" /> <!-- Oriharukon Ore -->
+				<item id="81217" min="1" max="1" chance="1.386" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.33" /> <!-- Angel's Feather -->
+				<item id="81218" min="1" max="1" chance="1.298" /> <!-- Dragon Scales -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>
@@ -1150,7 +1212,7 @@
 				<item id="57" min="2847" max="6650" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>
@@ -1193,7 +1255,7 @@
 				<item id="57" min="2905" max="6782" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>
@@ -1238,7 +1300,7 @@
 				<item id="57" min="2905" max="6782" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>
@@ -1283,9 +1345,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4995" max="11650" chance="70" /> <!-- Adena -->
-				<item id="81219" min="1" max="1" chance="1.385" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="1" chance="1.361" /> <!-- Dragon Scales -->
-				<item id="81217" min="1" max="1" chance="1.334" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.392" /> <!-- Angel's Feather -->
+				<item id="81217" min="1" max="1" chance="1.391" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="1.278" /> <!-- Dragon Scales -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 			</drop>
 		</dropLists>

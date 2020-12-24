@@ -48,7 +48,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -112,7 +112,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -175,7 +175,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -236,7 +236,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -292,7 +292,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -352,7 +352,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -417,7 +417,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -474,7 +474,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1365,15 +1365,15 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="27" />
+			<height normal="25.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="13" max="31" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="27" />
-			<height normal="25.5" />
-		</collision>
 	</npc>
 	<npc id="21126" level="20" type="Monster" name="Kerope Werewolf">
 		<parameters>
@@ -1667,5 +1667,183 @@
 				<item id="57" min="18" max="41" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
+	</npc>
+	<npc id="21178" level="85" type="Monster" name="Lilim Marauder">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="836939.884393064" hpRegen="9.5" mp="18652.8052805281" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="4950.45286845088" magical="913.314550866536" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="310.919540229885" magical="256.617953884638" />
+		</stats>
+		<skillList>
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="21180" level="87" type="Monster" name="Lilim Knight">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="861282.080924856" hpRegen="9.5" mp="19361.7161716172" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="3542.60731855246" magical="311.986420791137" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="224.431818181818" magical="80.6330633063306" />
+		</stats>
+		<skillList>
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="3" /> <!-- Hold Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="21181" level="86" type="Monster" name="Lilim Assassin">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="837776.878612717" hpRegen="9.5" mp="19005.9405940594" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="4770.09424970878" magical="222.273580181183" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="158.285714285714" magical="66.5612779765372" />
+		</stats>
+		<skillList>
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="21182" level="87" type="Monster" name="Lilim Soldier">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="574187.861271676" hpRegen="9.5" mp="29042.2442244224" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="3542.60731855246" magical="311.986420791137" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="224.431818181818" magical="80.6330633063306" />
+		</stats>
+		<skillList>
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="21184" level="87" type="Monster" name="Lilim Slayer">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="861282.080924856" hpRegen="9.5" mp="19361.7161716172" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="3542.60731855246" magical="311.986420791137" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="224.431818181818" magical="94.8624274192125" />
+		</stats>
+		<skillList>
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="21185" level="88" type="Monster" name="Lilim Great Magus">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="574860.115606936" hpRegen="9.5" mp="29578.8778877888" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="15566.2491152685" magical="976.546635117258" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="301.129943502825" magical="116.350618112659" />
+		</stats>
+		<skillList>
+			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="21186" level="89" type="Monster" name="Lilim Royal Knight">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2363495.95375723" hpRegen="9.5" mp="20078.5478547855" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="2336.14122866538" magical="102.908786293457" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="163.537017084808" magical="60.4493264471899" />
+		</stats>
+		<skillList>
+			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="3" /> <!-- Hold Resistance -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="21199" level="90" type="Monster" name="Nephilim Guard">
+		<race>DIVINE</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="887498.843930636" hpRegen="9.5" mp="20440.2640264026" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="2751.88324892016" magical="105.483332280184" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="213.40782122905" magical="125.375666058226" />
+		</stats>
+		<skillList>
+			<skill id="4287" level="5" /> <!-- Hold Resistance -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
 	</npc>
 </list>

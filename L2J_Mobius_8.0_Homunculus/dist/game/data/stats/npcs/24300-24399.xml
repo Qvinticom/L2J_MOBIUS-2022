@@ -114,7 +114,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -141,16 +141,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="3285" max="7658" chance="70" /> <!-- Adena -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.296" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="2.295" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -192,7 +202,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -219,16 +229,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="3285" max="7658" chance="70" /> <!-- Adena -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.281" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="2.281" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -270,7 +290,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -297,16 +317,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="3285" max="7658" chance="70" /> <!-- Adena -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.334" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="2.267" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -348,7 +378,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -375,31 +405,41 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="3285" max="7658" chance="70" /> <!-- Adena -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.326" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="2.346" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="24308" level="110" type="Monster" name="Water Drake" title="Fafurion's Henchman">
+	<npc id="24308" level="112" type="Monster" name="Water Drake" title="Fafurion's Henchman">
 		<parameters>
 			<skill name="Skill01_ID" id="32666" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3680457000" sp="3303300" />
+		<acquire exp="1364210176" sp="1227682" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8262970.09566" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
-			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6981" magical="4055" />
+			<vitals hp="261623.121387283" hpRegen="9.5" mp="2890.42904290429" mpRegen="3.3" />
+			<attack physical="420724.767563222" magical="1040.79519617782" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -411,28 +451,69 @@
 			<height normal="80.5" />
 		</collision>
 		<skillList>
-			<skill id="32666" level="1" /> <!-- Water Spike -->
+			<skill id="4116" level="10" /> <!-- Magic Damage Resistance -->
+			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
-			<skill id="4116" level="10" /> <!-- Magic Attack Resistance -->
 			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
-			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="14765" level="3" /> <!-- Vampiric Rage Resistance -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
 			<skill id="32677" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="32666" level="1" /> <!-- Water Spike -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Helios Thrower -->
-				<item id="57" min="48285" max="112817" chance="70" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35457" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0009" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0009" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0009" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0009" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0009" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0009" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.0009" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.0009" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.0009" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
+				<item id="57" min="3285" max="7658" chance="70" /> <!-- Adena -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
+				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
+				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="45932" min="1" max="1" chance="1.059" /> <!-- Top-grade Weapon Augmenting Stone -->
+				<item id="81344" min="1" max="1" chance="2.241" /> <!-- Soul Crystal -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.18" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24317" level="120" type="Monster" name="Temple Guard Captain">
@@ -477,7 +558,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -504,25 +585,35 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
-				<item id="81218" min="1" max="3" chance="1.469" /> <!-- Dragon Scales -->
-				<item id="81217" min="1" max="3" chance="1.463" /> <!-- Oriharukon Ore -->
-				<item id="81219" min="2" max="6" chance="1.41" /> <!-- Angel s Feather -->
+				<item id="81219" min="2" max="6" chance="1.5" /> <!-- Angel's Feather -->
+				<item id="81218" min="1" max="3" chance="1.446" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="3" chance="1.406" /> <!-- Oriharukon Ore -->
 				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="19.01" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="19.38" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="24318" level="120" type="Monster" name="Temple Guard Captain">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="4633012800" sp="4161600" />
+		<acquire exp="1750248000" sp="1575216" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<vitals hp="2614895.95375723" hpRegen="9.5" mp="3221.78217821782" mpRegen="3.3" />
 			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="10541" magical="6125" />
 			<speed>
@@ -543,13 +634,20 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="5599" level="12" /> <!-- Confusion Resistance -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33086" level="2" /> <!-- Enhanced Dragon Scale -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+			<skill id="33123" level="1" /> <!-- Night of Temple -->
 		</skillList>
 		<dropLists>
 			<drop>
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -576,16 +674,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
-				<item id="81217" min="1" max="3" chance="1.501" /> <!-- Oriharukon Ore -->
-				<item id="81219" min="2" max="6" chance="1.447" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="3" chance="1.428" /> <!-- Dragon Scales -->
+				<item id="81219" min="2" max="6" chance="1.47" /> <!-- Angel's Feather -->
+				<item id="81217" min="1" max="3" chance="1.427" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.395" /> <!-- Dragon Scales -->
 				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="18.44" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="18.27" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -627,7 +735,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -654,16 +762,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
-				<item id="81217" min="1" max="3" chance="1.501" /> <!-- Oriharukon Ore -->
-				<item id="81219" min="2" max="6" chance="1.447" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="3" chance="1.428" /> <!-- Dragon Scales -->
+				<item id="81219" min="2" max="6" chance="1.517" /> <!-- Angel's Feather -->
+				<item id="81217" min="1" max="3" chance="1.514" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.462" /> <!-- Dragon Scales -->
 				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="18.44" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="18.39" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -705,7 +823,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -732,16 +850,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
-				<item id="81219" min="2" max="6" chance="1.441" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="3" chance="1.429" /> <!-- Oriharukon Ore -->
-				<item id="81218" min="1" max="3" chance="1.4" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="3" chance="1.48" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="2" max="6" chance="1.473" /> <!-- Angel's Feather -->
+				<item id="81218" min="1" max="3" chance="1.415" /> <!-- Dragon Scales -->
 				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="19.67" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="18.33" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -783,7 +911,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -810,16 +938,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
-				<item id="81218" min="1" max="3" chance="1.504" /> <!-- Dragon Scales -->
-				<item id="81219" min="2" max="6" chance="1.497" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="3" chance="1.447" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="2" max="6" chance="1.518" /> <!-- Angel's Feather -->
+				<item id="81218" min="1" max="3" chance="1.478" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="3" chance="1.442" /> <!-- Oriharukon Ore -->
 				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="18.46" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="19.86" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -861,7 +999,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -888,16 +1026,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
-				<item id="81219" min="2" max="6" chance="1.523" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="3" chance="1.488" /> <!-- Dragon Scales -->
-				<item id="81217" min="1" max="3" chance="1.415" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="2" max="6" chance="1.476" /> <!-- Angel's Feather -->
+				<item id="81217" min="1" max="3" chance="1.449" /> <!-- Oriharukon Ore -->
+				<item id="81218" min="1" max="3" chance="1.418" /> <!-- Dragon Scales -->
 				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="19.51" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="18.81" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -945,7 +1093,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -972,16 +1120,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
 				<item id="81218" min="1" max="3" chance="1.492" /> <!-- Dragon Scales -->
-				<item id="81219" min="2" max="6" chance="1.478" /> <!-- Angel s Feather -->
-				<item id="81217" min="1" max="3" chance="1.401" /> <!-- Oriharukon Ore -->
+				<item id="81217" min="1" max="3" chance="1.487" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="2" max="6" chance="1.474" /> <!-- Angel's Feather -->
 				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="19.41" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="19.77" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1029,7 +1187,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -1056,16 +1214,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
-				<item id="81219" min="2" max="6" chance="1.512" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="3" chance="1.416" /> <!-- Dragon Scales -->
-				<item id="81217" min="1" max="3" chance="1.408" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="2" max="6" chance="1.405" /> <!-- Angel's Feather -->
+				<item id="81218" min="1" max="3" chance="1.4" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="3" chance="1.395" /> <!-- Oriharukon Ore -->
 				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="18.85" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="19.64" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1112,7 +1280,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -1139,16 +1307,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="27255" max="63772" chance="70" /> <!-- Adena -->
-				<item id="81217" min="1" max="3" chance="1.483" /> <!-- Oriharukon Ore -->
-				<item id="81219" min="2" max="6" chance="1.462" /> <!-- Angel s Feather -->
-				<item id="81218" min="1" max="3" chance="1.425" /> <!-- Dragon Scales -->
+				<item id="81218" min="1" max="3" chance="1.516" /> <!-- Dragon Scales -->
+				<item id="81219" min="2" max="6" chance="1.513" /> <!-- Angel's Feather -->
+				<item id="81217" min="1" max="3" chance="1.465" /> <!-- Oriharukon Ore -->
 				<item id="81216" min="2" max="6" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="19.53" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="18.11" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1342,18 +1520,17 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="24366" level="85" type="Npc" name="Priest of Purification" title="Zariche">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24366" level="100" type="Monster" name="Priest of Purification" title="Zariche">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="250464.739884393" hpRegen="10.5" mp="24166.99669967" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="88222.9046795392" magical="466.620941924112" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="967.195767195767" magical="370.195749733704" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1491,7 +1668,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -1518,18 +1695,49 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.103" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="2.099" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
+	</npc>
+	<npc id="24374" level="108" type="Monster" name="Crokian Lad Warrior">
+		<race>HUMANOID</race>
+		<acquire exp="1176396048" sp="1058742" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="192256.069364162" hpRegen="11.5" mp="26106.2706270627" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="316176.675333863" magical="852.565665508686" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3093.40101522843" magical="1187.78375299459" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
 	</npc>
 	<npc id="24376" level="108" type="Monster" name="Nos Lad">
 		<parameters>
@@ -1565,7 +1773,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -1592,16 +1800,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.171" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="2.142" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1640,7 +1858,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -1667,16 +1885,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.122" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="2.178" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1719,7 +1947,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -1746,16 +1974,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.194" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="2.106" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" aggroRange="300" clanHelpRange="300" isAggressive="true">
@@ -1799,7 +2037,7 @@
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0009" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0009" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -1826,16 +2064,26 @@
 				<item id="17427" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Swords -->
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="3070" max="7160" chance="70" /> <!-- Adena -->
 				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81342" min="1" max="1" chance="0.3" /> <!-- Aden's Treasure Chest -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="2.172" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="2.137" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>

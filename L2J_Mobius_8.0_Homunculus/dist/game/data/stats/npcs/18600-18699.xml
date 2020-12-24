@@ -3044,7 +3044,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3099,7 +3099,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3139,6 +3139,10 @@
 				<clan>VARKA_SILENOS</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="41" />
+		</collision>
 		<dropLists>
 			<drop>
 				<!-- Also drops herbs. -->
@@ -3150,13 +3154,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="16" />
-			<height normal="41" />
-		</collision>
 	</npc>
 	<npc id="18656" level="74" type="Monster" name="Varka's Chief Magus">
 		<parameters>
@@ -3211,7 +3211,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3251,6 +3251,10 @@
 				<clan>VARKA_SILENOS</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="41" />
+		</collision>
 		<dropLists>
 			<drop>
 				<!-- Also drops herbs. -->
@@ -3262,13 +3266,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="16" />
-			<height normal="41" />
-		</collision>
 	</npc>
 	<npc id="18658" level="74" type="Monster" name="Prophet's Disciple">
 		<parameters>
@@ -3307,6 +3307,10 @@
 				<clan>VARKA_SILENOS</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="41.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<!-- Also drops herbs. -->
@@ -3318,13 +3322,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="9" />
-			<height normal="41.5" />
-		</collision>
 	</npc>
 	<npc id="18659" level="74" type="Monster" name="Varka's Prophet">
 		<parameters>
@@ -3379,7 +3379,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>

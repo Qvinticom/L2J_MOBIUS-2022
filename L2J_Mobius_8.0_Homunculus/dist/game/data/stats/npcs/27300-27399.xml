@@ -1,5 +1,64 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="27316" level="55" type="Monster" name="Fallen Chieftain Vegus">
+		<race>HUMANOID</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1532.94797687861" hpRegen="6.5" mp="730.693069306931" mpRegen="2.4" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="274.380199324603" magical="71.4860425312335" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="169.444444444444" magical="90.59729502362" />
+		</stats>
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="27317" level="70" type="Monster" name="Restrainer of Splendor">
+		<race>DIVINE</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2239.3063583815" hpRegen="7.5" mp="1105.61056105611" mpRegen="2.7" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="111.842482805439" />
+		</stats>
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="27320" level="20" type="Monster" name="Timora Orc">
+		<race>HUMANOID</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="313.294797687861" hpRegen="2.5" mp="157.755775577558" mpRegen="1.2" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="35.3642861514816" magical="14.6861740902431" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="77.0642201834862" magical="38.7561691949011" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
 	<npc id="27338" level="38" type="Monster" name="Fallen Angel" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />

@@ -1,5 +1,83 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="27104" level="39" type="Monster" name="Shadow Turen">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="847.398843930636" hpRegen="4.5" mp="380.858085808581" mpRegen="1.8" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="176.635470719051" magical="65.9268866938029" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="147.65625" magical="62.9125412541254" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="27113" level="36" type="Monster" name="Baraham">
+		<race>BEAST</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="741.040462427746" hpRegen="4.5" mp="342.574257425743" mpRegen="1.8" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="103.187546330615" magical="33.649479546387" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="112" magical="53.8613861386139" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="27116" level="35" type="Monster" name="Lava Salamander">
+		<race>ELEMENTAL</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="707.514450867052" hpRegen="4.5" mp="330.693069306931" mpRegen="1.8" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="113.584734211722" magical="35.356239989643" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="111.290322580645" magical="57.4896199297349" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="27139" level="47" type="Monster" name="Secret Keeper Tree">
+		<race>ELEMENTAL</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1168.78612716763" hpRegen="5.5" mp="546.534653465347" mpRegen="2.1" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="172.240875594122" magical="53.1644556352244" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="147.058823529412" magical="67.947971267715" />
+		</stats>
+		<skillList>
+			<skill id="4277" level="5" /> <!-- Poison Resistance -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
 	<npc id="27165" level="60" type="Monster" name="Abyssal Jewel 1" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />

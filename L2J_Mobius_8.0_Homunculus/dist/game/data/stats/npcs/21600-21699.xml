@@ -17,9 +17,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="40957" sp="9" />
+		<acquire exp="40958" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<vitals hp="4887.69716088328" hpRegen="7.5" mp="1358.47526358475" mpRegen="2.7" />
 			<attack physical="951.019630264913" magical="445.241062044149" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="296.023076559323" magical="216.924882948847" />
 			<speed>
@@ -31,15 +31,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4592" level="7" /> <!-- Decrease P. Def. -->
 			<skill id="4649" level="7" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
@@ -57,14 +54,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5323" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="57" min="107" max="249" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Armor -->
+				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21601" level="70" type="Monster" name="Requiem Behemoth">
@@ -84,9 +75,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="51118" sp="12" />
+		<acquire exp="51119" sp="13" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444.16403785489" hpRegen="7.5" mp="1345.49878345499" mpRegen="2.7" />
+			<vitals hp="4887.69716088328" hpRegen="7.5" mp="1358.47526358475" mpRegen="2.7" />
 			<attack physical="951.019630264913" magical="445.241062044149" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="296.023076559323" magical="216.924882948847" />
 			<speed>
@@ -98,15 +89,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4579" level="7" /> <!-- Bleed -->
 			<skill id="4649" level="7" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- Teleport -->
@@ -124,14 +112,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="5323" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="57" min="134" max="311" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant A-grade Armor -->
+				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21602" level="92" type="Monster" name="Zaken's Pikeman">
@@ -567,7 +549,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2465,9 +2447,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2507" /> <!-- Lizardspear -->
-		<acquire exp="1666" sp="0" />
+		<acquire exp="2454" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="810.094637223975" hpRegen="4.5" mp="417.680454176805" mpRegen="1.8" />
+			<vitals hp="404.416403785489" hpRegen="4.5" mp="420.924574209246" mpRegen="1.8" />
 			<attack physical="155.430155430155" magical="93.6840544074111" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="141.090909090909" magical="103.22200103222" />
 			<speed>
@@ -2479,17 +2461,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4124" level="3" /> <!-- Spear Attack -->
 			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="9" /> <!-- Bow -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4444" level="2" /> <!-- Greater Bow/ Crossbow Resistance -->
+			<skill id="4124" level="3" /> <!-- Spear Attack -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2499,10 +2479,13 @@
 				<clan>LIZARDMAN</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="22" grown="27" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="294" min="1" max="1" chance="0.0075" /> <!-- War Pick -->
-				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
+				<item id="57" min="31" max="73" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2512,16 +2495,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="10" grown="12" />
-			<height normal="22" grown="27" />
-		</collision>
 	</npc>
 	<npc id="21640" level="37" type="Monster" name="Tasaba Lizardman Shaman">
 		<parameters>
@@ -2539,9 +2515,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- Apprentice's Rod -->
-		<acquire exp="1612" sp="0" />
+		<acquire exp="1804" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="847.94952681388" hpRegen="4.5" mp="432.27899432279" mpRegen="1.8" />
+			<vitals hp="423.343848580442" hpRegen="4.5" mp="436.334144363341" mpRegen="1.8" />
 			<attack physical="202.888172812985" magical="99.8517207521455" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="115.914786967419" magical="124.948600689262" />
 			<speed>
@@ -2553,15 +2529,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4153" level="3" /> <!-- Decrease Speed -->
-			<skill id="4160" level="3" /> <!-- Aura Burn -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4153" level="3" /> <!-- Decrease Speed -->
+			<skill id="4160" level="3" /> <!-- Aura Burn -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2571,10 +2545,13 @@
 				<clan>LIZARDMAN</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="29" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="90" min="1" max="1" chance="0.0075" /> <!-- Goat Head Staff -->
-				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
+				<item id="57" min="33" max="77" chance="70" /> <!-- Adena -->
 				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2584,16 +2561,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="10" />
-			<height normal="29" />
-		</collision>
 	</npc>
 	<npc id="21642" level="39" type="Monster" name="Tasaba Lizardman Sniper">
 		<parameters>
@@ -2657,7 +2627,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2932,7 +2902,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2991,7 +2961,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3046,7 +3016,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3105,7 +3075,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3171,7 +3141,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3229,7 +3199,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3278,6 +3248,10 @@
 				<clan>SAINT</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="13" grown="15" />
+			<height normal="28" grown="34" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="101" max="235" chance="70" /> <!-- Adena -->
@@ -3290,12 +3264,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="13" grown="15" />
-			<height normal="28" grown="34" />
-		</collision>
 	</npc>
 </list>

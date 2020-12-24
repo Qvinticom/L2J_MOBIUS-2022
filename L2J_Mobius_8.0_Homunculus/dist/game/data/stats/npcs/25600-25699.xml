@@ -3042,10 +3042,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil - Robe -->
 				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -3073,10 +3073,10 @@
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17527" min="1" max="1" chance="79.08" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="17526" min="1" max="1" chance="19.89" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="1.682" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="1.164" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="17527" min="1" max="1" chance="80.72" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.28" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.748" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.248" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3229,9 +3229,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="72812268776" sp="65528352" />
+		<acquire exp="20025867264" sp="18019456" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1175118.38900064" hpRegen="436.263366" mp="48295.8304853042" mpRegen="3.3" />
+			<vitals hp="1679289.79420412" hpRegen="436.263366" mp="51429.0709290709" mpRegen="3.3" />
 			<attack physical="58949.0230882483" magical="5550.25498393345" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="3722.44971696977" magical="2115.88363461181" evasion="-18" />
 			<attribute>
@@ -3247,17 +3247,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4030" level="3" /> <!-- Might -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4172" level="7" /> <!-- Stun -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4415" level="11" /> <!-- Spear -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4458" level="2" /> <!-- Spear Vulnerability -->
 			<skill id="4736" level="7" /> <!-- Spinning Slasher -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3288,9 +3284,9 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="72812268776" sp="65528352" />
+		<acquire exp="40825674225" sp="36735300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1265783.80391155" hpRegen="444.7141361" mp="49361.2572994016" mpRegen="3.3" />
+			<vitals hp="1804865.18269635" hpRegen="444.7141361" mp="52212.7872127872" mpRegen="3.3" />
 			<attack physical="64139.9525456761" magical="6007.32055673886" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3828.7854654928" magical="2198.20480221649" evasion="-18" />
 			<attribute>
@@ -3306,17 +3302,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4031" level="3" /> <!-- Might -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/ 2x) -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4461" level="2" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4031" level="3" /> <!-- Might -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4766" level="7" /> <!-- Power Shot -->
 			<skill id="4771" level="7" /> <!-- Stun -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3388,10 +3380,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil - Robe -->
 				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -3419,10 +3411,10 @@
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17527" min="1" max="1" chance="79.13" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="17526" min="1" max="1" chance="20.43" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="1.791" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="1.174" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="17527" min="1" max="1" chance="78.04" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="20.07" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.815" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.157" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3821,7 +3813,11 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<dropLists>
+		<collision>
+			<radius normal="45" />
+			<height normal="50.8" />
+		</collision>
+	<dropLists>
 			<drop>
 				<item id="57" min="2970" max="6920" chance="100" /> <!-- Adena -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 2 -->
@@ -3841,10 +3837,6 @@
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 3 -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="45" />
-			<height normal="50.8" />
-		</collision>
 	</npc>
 	<npc id="25672" level="82" type="Monster" name="Spiked Stakato" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -4712,19 +4704,19 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17312" min="1" max="1" chance="4.557" /> <!-- Immortal Leather Leggings - Light armor -->
-				<item id="17314" min="1" max="1" chance="3.807" /> <!-- Immortal Leather Boots - Light armor -->
-				<item id="17316" min="1" max="1" chance="2.861" /> <!-- Immortal Tunic - Robe -->
-				<item id="17305" min="1" max="1" chance="2.769" /> <!-- Immortal Breastplate - Heavy armor -->
-				<item id="17315" min="1" max="1" chance="1.852" /> <!-- Immortal Circlet - Robe -->
-				<item id="17307" min="1" max="1" chance="1.188" /> <!-- Immortal Gauntlets - Heavy armor -->
+				<item id="17312" min="1" max="1" chance="4.497" /> <!-- Immortal Leather Leggings - Light armor -->
+				<item id="17314" min="1" max="1" chance="3.748" /> <!-- Immortal Leather Boots - Light armor -->
+				<item id="17305" min="1" max="1" chance="2.839" /> <!-- Immortal Breastplate - Heavy armor -->
+				<item id="17316" min="1" max="1" chance="2.777" /> <!-- Immortal Tunic - Robe -->
+				<item id="17315" min="1" max="1" chance="1.915" /> <!-- Immortal Circlet - Robe -->
+				<item id="17307" min="1" max="1" chance="1.097" /> <!-- Immortal Gauntlets - Heavy armor -->
 				<item id="17295" min="1" max="1" chance="0.75" /> <!-- Requiem Stormer -->
 				<item id="17298" min="1" max="1" chance="0.75" /> <!-- Requiem Buster -->
 				<item id="17299" min="1" max="1" chance="0.75" /> <!-- Requiem Caster -->
-				<item id="17526" min="1" max="1" chance="10.7" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="46504" min="1" max="1" chance="1.162" /> <!-- Lionel's Soul Crystal Lv. 1 -->
-				<item id="46489" min="1" max="1" chance="1.151" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
-				<item id="46474" min="1" max="1" chance="1.096" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="17526" min="1" max="1" chance="11.26" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="46489" min="1" max="1" chance="1.1" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="1.077" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="1.047" /> <!-- Lionel's Soul Crystal Lv. 1 -->
 				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
 				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 2 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 3 -->
@@ -4790,19 +4782,19 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17317" min="1" max="1" chance="4.493" /> <!-- Immortal Stockings - Robe -->
-				<item id="17309" min="1" max="1" chance="3.768" /> <!-- Immortal Shield -->
-				<item id="17311" min="1" max="1" chance="2.809" /> <!-- Immortal Leather Armor - Light armor -->
-				<item id="17320" min="1" max="1" chance="1.412" /> <!-- Immortal Sigil -->
+				<item id="17317" min="1" max="1" chance="4.508" /> <!-- Immortal Stockings - Robe -->
+				<item id="17309" min="1" max="1" chance="3.803" /> <!-- Immortal Shield - Heavy armor -->
+				<item id="17311" min="1" max="1" chance="2.888" /> <!-- Immortal Leather Armor - Light armor -->
+				<item id="17320" min="1" max="1" chance="1.473" /> <!-- Immortal Sigil - Robe -->
 				<item id="17292" min="1" max="1" chance="0.75" /> <!-- Requiem Slasher -->
 				<item id="17293" min="1" max="1" chance="0.75" /> <!-- Requiem Avenger -->
 				<item id="17294" min="1" max="1" chance="0.75" /> <!-- Requiem Fighter -->
 				<item id="17297" min="1" max="1" chance="0.75" /> <!-- Requiem Shooter -->
 				<item id="17306" min="1" max="1" chance="0.75" /> <!-- Immortal Gaiters - Heavy armor -->
-				<item id="17526" min="1" max="1" chance="10.81" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="46504" min="1" max="1" chance="1.155" /> <!-- Lionel's Soul Crystal Lv. 1 -->
-				<item id="46489" min="1" max="1" chance="1.126" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
-				<item id="46474" min="1" max="1" chance="1.067" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="17526" min="1" max="1" chance="11.32" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="46489" min="1" max="1" chance="1.076" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="1.076" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="1.065" /> <!-- Leona's Soul Crystal Lv. 1 -->
 				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
 				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 2 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 3 -->
@@ -4871,22 +4863,22 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17313" min="1" max="1" chance="5.06" /> <!-- Immortal Leather Gloves - Light armor -->
-				<item id="17319" min="1" max="1" chance="3.386" /> <!-- Immortal Shoes - Robe -->
-				<item id="17308" min="1" max="1" chance="2.547" /> <!-- Immortal Boots - Heavy armor -->
-				<item id="17318" min="1" max="1" chance="2.085" /> <!-- Immortal Gloves - Robe -->
-				<item id="17304" min="1" max="1" chance="1.095" /> <!-- Immortal Helmet - Heavy armor -->
+				<item id="17313" min="1" max="1" chance="5.094" /> <!-- Immortal Leather Gloves - Light armor -->
+				<item id="17319" min="1" max="1" chance="3.433" /> <!-- Immortal Shoes - Robe -->
+				<item id="17308" min="1" max="1" chance="2.61" /> <!-- Immortal Boots - Heavy armor -->
+				<item id="17318" min="1" max="1" chance="2.088" /> <!-- Immortal Gloves - Robe -->
+				<item id="17304" min="1" max="1" chance="1.2" /> <!-- Immortal Helmet - Heavy armor -->
 				<item id="17300" min="1" max="1" chance="0.75" /> <!-- Requiem Retributer -->
 				<item id="17296" min="1" max="1" chance="0.75" /> <!-- Requiem Thrower -->
 				<item id="17310" min="1" max="1" chance="0.75" /> <!-- Immortal Leather Helmet - Light armor -->
 				<item id="17291" min="1" max="1" chance="0.75" /> <!-- Requiem Cutter -->
 				<item id="17290" min="1" max="1" chance="0.75" /> <!-- Requiem Shaper -->
-				<item id="17526" min="1" max="1" chance="10.74" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="46474" min="1" max="1" chance="1.161" /> <!-- Leona's Soul Crystal Lv. 1 -->
-				<item id="46489" min="1" max="1" chance="1.111" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
-				<item id="46504" min="1" max="1" chance="1.062" /> <!-- Lionel's Soul Crystal Lv. 1 -->
-				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="17526" min="1" max="1" chance="11.46" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="46489" min="1" max="1" chance="1.176" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="1.158" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="1.048" /> <!-- Leona's Soul Crystal Lv. 1 -->
 				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 2 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 3 -->
 				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 3 -->
 				<item id="46475" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 2 -->
@@ -4916,7 +4908,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="780461.150776985" hpRegen="319.2293199" mp="18468.031968032" mpRegen="3" />
+			<vitals hp="780461.150776985" hpRegen="319.2293199" mp="18652.8471528472" mpRegen="3" />
 			<attack physical="11294.2313188472" magical="1914.82581448176" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1876.4367816092" magical="640.738571773055" evasion="-18" />
 			<attribute>
@@ -4930,18 +4922,17 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="6661" level="1" /> <!-- Raid Boss (Lv. 85) -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="6293" level="1" /> <!-- Power Strike -->
 			<skill id="6294" level="1" /> <!-- Leader's Roar -->
 			<skill id="6295" level="1" /> <!-- Point Target -->
 			<skill id="6297" level="1" /> <!-- Cylinder Throw -->
 			<skill id="6298" level="1" /> <!-- Summon Subordinate Knight -->
-			<skill id="6661" level="1" /> <!-- Raid Boss (Lv. 85) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>

@@ -42,7 +42,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17375" min="1" max="1" chance="4.987" /> <!-- Kimerian's Trace -->
+				<item id="17375" min="1" max="1" chance="5.012" /> <!-- Kimerian's Trace -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -391,21 +391,20 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="19409" level="99" type="Monster" name="Triol's High Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="19409" level="97" type="Monster" name="Triol's High Priest">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15685" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<vitals hp="156850.289017341" hpRegen="8.5" mp="2302.9702970297" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="6133.84931619787" magical="1082.67036126497" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
-			<defence physical="505.286762009" magical="290.083779855" />
+			<attack physical="16814.5260926054" magical="433.279237092112" critical="4.75" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="282.795698924731" magical="109.301252705916" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -414,11 +413,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 		</skillList>
@@ -431,32 +428,15 @@
 			<radius normal="8" />
 			<height normal="19.1" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
-				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
-		</dropLists>
 	</npc>
 	<npc id="19410" level="99" type="Monster" name="Triol's High Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<vitals hp="158409.826589595" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -471,13 +451,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -491,22 +469,6 @@
 			<radius normal="8" />
 			<height normal="19.1" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
-				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
-		</dropLists>
 	</npc>
 	<npc id="19411" level="85" type="Monster" name="Crevice">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

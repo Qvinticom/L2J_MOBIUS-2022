@@ -506,20 +506,20 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="23616" level="100" type="Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
+	<npc id="23616" level="110" type="Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="PhysicalSpecial" id="23730" level="1" />
 			<skill name="DeBuff" id="23729" level="1" />
 			<skill name="Skill_TYPE3" id="23728" level="1" />
 			<skill name="Skill_TYPE4" id="23732" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="616164100" sp="1232400" />
+		<acquire exp="745558561" sp="1491204" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -547,29 +547,21 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.89" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.001" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23617" level="100" type="Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
+	<npc id="23617" level="110" type="Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23736" level="1" />
 			<skill name="DeBuff" id="23735" level="1" />
 			<skill name="Skill_TYPE3" id="23733" level="1" />
 			<skill name="Skill_TYPE4" id="23734" level="1" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="616164100" sp="1232400" />
+		<acquire exp="745558561" sp="1491204" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -597,29 +589,21 @@
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.85" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.068" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23618" level="100" type="Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
+	<npc id="23618" level="110" type="Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23739" level="1" />
 			<skill name="Skill_TYPE2" id="23741" level="1" />
 			<skill name="Skill_TYPE3" id="23740" level="1" />
 			<skill name="Skill_TYPE4" id="23742" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="616164100" sp="1232400" />
+		<acquire exp="745558561" sp="1491204" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -647,29 +631,21 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.96" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.959" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23619" level="100" type="Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
+	<npc id="23619" level="110" type="Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23745" level="1" />
 			<skill name="Skill_TYPE2" id="23744" level="1" />
 			<skill name="Skill_TYPE3" id="23747" level="1" />
 			<skill name="Skill_TYPE4" id="23743" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="616164100" sp="1232400" />
+		<acquire exp="745558561" sp="1491204" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -697,16 +673,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.47" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.059" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23620" level="100" type="Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
+	<npc id="23620" level="110" type="Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23748" level="1" />
 			<skill name="Skill_TYPE2" id="23749" level="1" />
@@ -714,13 +682,13 @@
 			<skill name="Skill_TYPE4" id="23752" level="1" />
 			<param name="npc_class" value="4" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="616164100" sp="1232400" />
+		<acquire exp="745558561" sp="1491204" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="20" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="20" critical="4.75" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -748,16 +716,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.59" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.992" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23621" level="100" type="Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
+	<npc id="23621" level="110" type="Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23754" level="1" />
 			<skill name="Skill_TYPE2" id="23753" level="1" />
@@ -766,13 +726,13 @@
 			<skill name="Skill_TYPE5" id="23757" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="616164100" sp="1232400" />
+		<acquire exp="745558561" sp="1491204" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -801,16 +761,8 @@
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.97" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.964" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23622" level="100" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
+	<npc id="23622" level="110" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<minions name="Privates">
 				<npc id="23649" count="1" respawnTime="360" weightPoint="1" />
@@ -820,13 +772,13 @@
 			<skill name="Skill_TYPE2" id="11386" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="616164100" sp="1232400" />
+		<acquire exp="745558561" sp="1491204" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -852,16 +804,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.45" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.036" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23623" level="100" type="Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
+	<npc id="23623" level="110" type="Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23761" level="1" />
 			<skill name="Skill_TYPE2" id="23763" level="1" />
@@ -869,13 +813,13 @@
 			<skill name="Skill_TYPE4" id="23762" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="616164100" sp="1232400" />
+		<acquire exp="745558561" sp="1491204" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -903,29 +847,21 @@
 			<radius normal="8" />
 			<height normal="25.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.17" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.017" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23624" level="100" type="Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
+	<npc id="23624" level="110" type="Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="PhysicalSpecial" id="23730" level="1" />
 			<skill name="DeBuff" id="23729" level="1" />
 			<skill name="Skill_TYPE3" id="23728" level="1" />
 			<skill name="Skill_TYPE4" id="23732" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="693184600" sp="1386399" />
+		<acquire exp="838753367" sp="1677544" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -953,29 +889,21 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.59" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.995" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23625" level="100" type="Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
+	<npc id="23625" level="110" type="Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23736" level="1" />
 			<skill name="DeBuff" id="23735" level="1" />
 			<skill name="Skill_TYPE3" id="23733" level="1" />
 			<skill name="Skill_TYPE4" id="23734" level="1" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="693184600" sp="1386399" />
+		<acquire exp="838753367" sp="1677544" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1003,29 +931,21 @@
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.24" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.03" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23626" level="100" type="Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
+	<npc id="23626" level="110" type="Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23739" level="1" />
 			<skill name="Skill_TYPE2" id="23741" level="1" />
 			<skill name="Skill_TYPE3" id="23740" level="1" />
 			<skill name="Skill_TYPE4" id="23742" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="693184600" sp="1386399" />
+		<acquire exp="838753367" sp="1677544" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1053,29 +973,21 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.14" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.997" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23627" level="100" type="Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
+	<npc id="23627" level="110" type="Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23745" level="1" />
 			<skill name="Skill_TYPE2" id="23744" level="1" />
 			<skill name="Skill_TYPE3" id="23747" level="1" />
 			<skill name="Skill_TYPE4" id="23743" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="693184600" sp="1386399" />
+		<acquire exp="838753367" sp="1677544" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1103,16 +1015,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.23" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.058" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23628" level="100" type="Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
+	<npc id="23628" level="110" type="Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23748" level="1" />
 			<skill name="Skill_TYPE2" id="23749" level="1" />
@@ -1120,13 +1024,13 @@
 			<skill name="Skill_TYPE4" id="23752" level="1" />
 			<param name="npc_class" value="4" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="693184600" sp="1386399" />
+		<acquire exp="838753367" sp="1677544" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="20" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="20" critical="4.75" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1154,16 +1058,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.58" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.985" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23629" level="100" type="Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
+	<npc id="23629" level="110" type="Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23754" level="1" />
 			<skill name="Skill_TYPE2" id="23753" level="1" />
@@ -1172,13 +1068,13 @@
 			<skill name="Skill_TYPE5" id="23757" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="693184600" sp="1386399" />
+		<acquire exp="838753367" sp="1677544" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1207,16 +1103,8 @@
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.79" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.02" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23630" level="100" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
+	<npc id="23630" level="110" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<minions name="Privates">
 				<npc id="23649" count="1" respawnTime="360" weightPoint="1" />
@@ -1226,13 +1114,13 @@
 			<skill name="Skill_TYPE2" id="11386" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="693184600" sp="1386399" />
+		<acquire exp="838753367" sp="1677544" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1258,16 +1146,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.86" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.065" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23631" level="100" type="Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
+	<npc id="23631" level="110" type="Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23761" level="1" />
 			<skill name="Skill_TYPE2" id="23763" level="1" />
@@ -1275,13 +1155,13 @@
 			<skill name="Skill_TYPE4" id="23762" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="693184600" sp="1386399" />
+		<acquire exp="838753367" sp="1677544" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1309,29 +1189,21 @@
 			<radius normal="8" />
 			<height normal="25.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.51" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.057" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23632" level="100" type="Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
+	<npc id="23632" level="110" type="Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="PhysicalSpecial" id="23730" level="1" />
 			<skill name="DeBuff" id="23729" level="1" />
 			<skill name="Skill_TYPE3" id="23728" level="1" />
 			<skill name="Skill_TYPE4" id="23732" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="847225600" sp="1694500" />
+		<acquire exp="1025142976" sp="2050345" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1359,29 +1231,21 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.31" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.043" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23633" level="100" type="Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
+	<npc id="23633" level="110" type="Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23736" level="1" />
 			<skill name="DeBuff" id="23735" level="1" />
 			<skill name="Skill_TYPE3" id="23733" level="1" />
 			<skill name="Skill_TYPE4" id="23734" level="1" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="847225600" sp="1694500" />
+		<acquire exp="1025142976" sp="2050345" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1409,29 +1273,21 @@
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.21" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.041" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23634" level="100" type="Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
+	<npc id="23634" level="110" type="Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23739" level="1" />
 			<skill name="Skill_TYPE2" id="23741" level="1" />
 			<skill name="Skill_TYPE3" id="23740" level="1" />
 			<skill name="Skill_TYPE4" id="23742" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="847225600" sp="1694500" />
+		<acquire exp="1025142976" sp="2050345" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1459,29 +1315,21 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.82" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.962" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23635" level="100" type="Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
+	<npc id="23635" level="110" type="Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23745" level="1" />
 			<skill name="Skill_TYPE2" id="23744" level="1" />
 			<skill name="Skill_TYPE3" id="23747" level="1" />
 			<skill name="Skill_TYPE4" id="23743" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="847225600" sp="1694500" />
+		<acquire exp="1025142976" sp="2050345" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1509,16 +1357,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.2" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.953" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23636" level="100" type="Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
+	<npc id="23636" level="110" type="Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23748" level="1" />
 			<skill name="Skill_TYPE2" id="23749" level="1" />
@@ -1526,13 +1366,13 @@
 			<skill name="Skill_TYPE4" id="23752" level="1" />
 			<param name="npc_class" value="4" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="847225600" sp="1694500" />
+		<acquire exp="1025142976" sp="2050345" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="20" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="20" critical="4.75" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1560,16 +1400,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.59" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.021" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23637" level="100" type="Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
+	<npc id="23637" level="110" type="Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23754" level="1" />
 			<skill name="Skill_TYPE2" id="23753" level="1" />
@@ -1578,13 +1410,13 @@
 			<skill name="Skill_TYPE5" id="23757" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="847225600" sp="1694500" />
+		<acquire exp="1025142976" sp="2050345" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1613,16 +1445,8 @@
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.81" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.056" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23638" level="100" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
+	<npc id="23638" level="110" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<minions name="Privates">
 				<npc id="23649" count="1" respawnTime="360" weightPoint="1" />
@@ -1632,13 +1456,13 @@
 			<skill name="Skill_TYPE2" id="11386" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="847225600" sp="1694500" />
+		<acquire exp="1025142976" sp="2050345" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1664,16 +1488,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.81" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.931" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23639" level="100" type="Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
+	<npc id="23639" level="110" type="Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23761" level="1" />
 			<skill name="Skill_TYPE2" id="23763" level="1" />
@@ -1681,13 +1497,13 @@
 			<skill name="Skill_TYPE4" id="23762" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="847225600" sp="1694500" />
+		<acquire exp="1025142976" sp="2050345" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1715,29 +1531,21 @@
 			<radius normal="8" />
 			<height normal="25.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.23" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.063" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23640" level="100" type="Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
+	<npc id="23640" level="110" type="Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="PhysicalSpecial" id="23730" level="1" />
 			<skill name="DeBuff" id="23729" level="1" />
 			<skill name="Skill_TYPE3" id="23728" level="1" />
 			<skill name="Skill_TYPE4" id="23732" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="924246100" sp="1848500" />
+		<acquire exp="18429703600" sp="16586680" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1765,29 +1573,21 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.85" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.056" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23641" level="100" type="Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
+	<npc id="23641" level="110" type="Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23736" level="1" />
 			<skill name="DeBuff" id="23735" level="1" />
 			<skill name="Skill_TYPE3" id="23733" level="1" />
 			<skill name="Skill_TYPE4" id="23734" level="1" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="924246100" sp="1848500" />
+		<acquire exp="18429703600" sp="16586680" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1815,29 +1615,21 @@
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.93" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.941" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23642" level="100" type="Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
+	<npc id="23642" level="110" type="Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23739" level="1" />
 			<skill name="Skill_TYPE2" id="23741" level="1" />
 			<skill name="Skill_TYPE3" id="23740" level="1" />
 			<skill name="Skill_TYPE4" id="23742" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="924246100" sp="1848500" />
+		<acquire exp="18429703600" sp="16586680" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1865,29 +1657,21 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.74" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.001" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23643" level="100" type="Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
+	<npc id="23643" level="110" type="Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23745" level="1" />
 			<skill name="Skill_TYPE2" id="23744" level="1" />
 			<skill name="Skill_TYPE3" id="23747" level="1" />
 			<skill name="Skill_TYPE4" id="23743" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="924246100" sp="1848500" />
+		<acquire exp="18429703600" sp="16586680" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1915,16 +1699,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.7" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.019" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23644" level="100" type="Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
+	<npc id="23644" level="110" type="Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23748" level="1" />
 			<skill name="Skill_TYPE2" id="23749" level="1" />
@@ -1932,13 +1708,13 @@
 			<skill name="Skill_TYPE4" id="23752" level="1" />
 			<param name="npc_class" value="4" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="924246100" sp="1848500" />
+		<acquire exp="18429703600" sp="16586680" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="20" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="20" critical="4.75" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -1966,16 +1742,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.32" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.989" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23645" level="100" type="Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
+	<npc id="23645" level="110" type="Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23754" level="1" />
 			<skill name="Skill_TYPE2" id="23753" level="1" />
@@ -1984,13 +1752,13 @@
 			<skill name="Skill_TYPE5" id="23757" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<acquire exp="924246100" sp="1848500" />
+		<acquire exp="18429703600" sp="16586680" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2019,16 +1787,8 @@
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.1" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="2.038" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23646" level="100" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
+	<npc id="23646" level="110" type="Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<minions name="Privates">
 				<npc id="23649" count="1" respawnTime="360" weightPoint="1" />
@@ -2038,13 +1798,13 @@
 			<skill name="Skill_TYPE2" id="11386" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="924246100" sp="1848500" />
+		<acquire exp="18429703600" sp="16586680" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2070,16 +1830,8 @@
 			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="17.88" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.942" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
-	<npc id="23647" level="100" type="Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
+	<npc id="23647" level="110" type="Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23761" level="1" />
 			<skill name="Skill_TYPE2" id="23763" level="1" />
@@ -2087,13 +1839,13 @@
 			<skill name="Skill_TYPE4" id="23762" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="924246100" sp="1848500" />
+		<acquire exp="18429703600" sp="16586680" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
-			<attack physical="265208.012205788" magical="39741.082892845" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3543.38624338624" magical="2054.23716974872" />
+			<vitals hp="919628.901734104" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2121,14 +1873,6 @@
 			<radius normal="8" />
 			<height normal="25.5" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46337" min="1" max="1" chance="18.8" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</drop>
-			<spoil>
-				<item id="46337" min="1" max="1" chance="1.953" /> <!-- Scroll: Enchant Shadow Weapon -->
-			</spoil>
-		</dropLists>
 	</npc>
 	<npc id="23648" level="110" type="Monster" name="Dark Crusader">
 		<parameters>
@@ -2286,21 +2030,21 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23653" level="101" type="Monster" name="Unit 1 Commander" title="Ashen Shadow">
+	<npc id="23653" level="110" type="Monster" name="Unit 1 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="PhysicalSpecial" id="23730" level="1" />
 			<skill name="DeBuff" id="23729" level="1" />
 			<skill name="Skill_TYPE3" id="23728" level="1" />
 			<skill name="Skill_TYPE4" id="23732" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="46328" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2328,27 +2072,22 @@
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46318" min="1" max="2" chance="100" /> <!-- Shadow Cutter -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23654" level="101" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
+	<npc id="23654" level="110" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23735" level="1" />
 			<skill name="Skill_TYPE2" id="23733" level="1" />
 			<skill name="Skill_TYPE3" id="23734" level="1" />
 			<skill name="Skill_TYPE4" id="23736" level="1" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="46329" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2376,27 +2115,22 @@
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46319" min="1" max="2" chance="100" /> <!-- Shadow Slasher -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23655" level="101" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
+	<npc id="23655" level="110" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23735" level="1" />
 			<skill name="Skill_TYPE2" id="23733" level="1" />
 			<skill name="Skill_TYPE3" id="23734" level="1" />
 			<skill name="Skill_TYPE4" id="23736" level="1" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="46330" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2424,27 +2158,22 @@
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46320" min="1" max="2" chance="100" /> <!-- Shadow Fighter -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23656" level="101" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
+	<npc id="23656" level="110" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23735" level="1" />
 			<skill name="Skill_TYPE2" id="23733" level="1" />
 			<skill name="Skill_TYPE3" id="23734" level="1" />
 			<skill name="Skill_TYPE4" id="23736" level="1" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="46331" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" random="10" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2472,13 +2201,8 @@
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46321" min="1" max="2" chance="100" /> <!-- Shadow Stormer -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23657" level="101" type="Monster" name="Unit 3 Commander" title="Ashen Shadow">
+	<npc id="23657" level="110" type="Monster" name="Unit 3 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23739" level="1" />
 			<skill name="Skill_TYPE2" id="23741" level="1" />
@@ -2487,11 +2211,11 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46327" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2519,24 +2243,19 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46317" min="1" max="2" chance="100" /> <!-- Shadow Shaper -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23658" level="101" type="Monster" name="Unit 4 Commander" title="Ashen Shadow">
+	<npc id="23658" level="110" type="Monster" name="Unit 4 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23745" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="46332" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2564,24 +2283,19 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46322" min="1" max="2" chance="100" /> <!-- Shadow Thrower -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23659" level="101" type="Monster" name="Unit 4 Commander" title="Ashen Shadow">
+	<npc id="23659" level="110" type="Monster" name="Unit 4 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23745" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="46333" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2609,13 +2323,8 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46323" min="1" max="2" chance="100" /> <!-- Shadow Shooter -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23660" level="101" type="Monster" name="Unit 5 Commander" title="Ashen Shadow">
+	<npc id="23660" level="110" type="Monster" name="Unit 5 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23748" level="1" />
 			<skill name="Skill_TYPE2" id="23749" level="1" />
@@ -2624,14 +2333,14 @@
 			<skill name="Skill_TYPE5" id="23751" level="1" />
 			<param name="npc_class" value="4" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="46334" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2660,13 +2369,8 @@
 			<radius normal="7.5" />
 			<height normal="22.8" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46324" min="1" max="2" chance="100" /> <!-- Shadow Buster -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23661" level="101" type="Monster" name="Unit 6 Commander" title="Ashen Shadow">
+	<npc id="23661" level="110" type="Monster" name="Unit 6 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23754" level="1" />
 			<skill name="Skill_TYPE2" id="23753" level="1" />
@@ -2675,14 +2379,14 @@
 			<skill name="Skill_TYPE5" id="23757" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="46336" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2711,13 +2415,8 @@
 			<radius normal="7.5" />
 			<height normal="22.8" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46326" min="1" max="2" chance="100" /> <!-- Shadow Dual Sword -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23662" level="101" type="Monster" name="Unit 7 Commander" title="Ashen Shadow">
+	<npc id="23662" level="110" type="Monster" name="Unit 7 Commander" title="Ashen Shadow">
 		<parameters>
 			<minions name="Privates">
 				<npc id="23648" count="1" respawnTime="0" weightPoint="1" /> <!-- Dark Crusader -->
@@ -2728,14 +2427,14 @@
 			<skill name="Skill_TYPE3" id="23760" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37016" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2760,7 +2459,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23663" level="101" type="Monster" name="Unit 8 Commander" title="Ashen Shadow">
+	<npc id="23663" level="110" type="Monster" name="Unit 8 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23761" level="1" />
 			<skill name="Skill_TYPE2" id="23763" level="1" />
@@ -2769,14 +2468,14 @@
 			<skill name="Skill_TYPE5" id="23767" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="46335" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2807,13 +2506,8 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46325" min="1" max="2" chance="100" /> <!-- Shadow Retributer -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23664" level="101" type="Monster" name="Unit 8 Commander" title="Ashen Shadow">
+	<npc id="23664" level="110" type="Monster" name="Unit 8 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23761" level="1" />
 			<skill name="Skill_TYPE2" id="23763" level="1" />
@@ -2822,14 +2516,14 @@
 			<skill name="Skill_TYPE5" id="23767" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ORC</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="46334" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="516031967000" sp="464428734" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="3364500" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2860,26 +2554,21 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46324" min="1" max="2" chance="100" /> <!-- Shadow Buster -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23665" level="101" type="Monster" name="Unit 1 Commander" title="Ashen Shadow">
+	<npc id="23665" level="110" type="Monster" name="Unit 1 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23449" level="1" />
 			<skill name="Skill_TYPE2" id="23450" level="1" />
 			<skill name="Skill_TYPE3" id="23452" level="1" />
 		</parameters>
-		<race>DARK_ELF</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="46328" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
-			<attack physical="297710.974991222" magical="90953.3247945561" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
+			<attack physical="368976.088746177" magical="948.895573018099" random="30" critical="4.75" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2906,14 +2595,8 @@
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46318" min="2" max="3" chance="100" /> <!-- Shadow Cutter -->
-				<item id="46395" min="1" max="1" chance="2.035" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23666" level="101" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
+	<npc id="23666" level="110" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23458" level="1" />
 			<skill name="Skill_TYPE2" id="23459" level="1" />
@@ -2922,9 +2605,9 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46329" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2932,8 +2615,8 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -2955,14 +2638,8 @@
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46319" min="2" max="3" chance="100" /> <!-- Shadow Slasher -->
-				<item id="46395" min="1" max="1" chance="2.017" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23667" level="101" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
+	<npc id="23667" level="110" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23458" level="1" />
 			<skill name="Skill_TYPE2" id="23459" level="1" />
@@ -2971,9 +2648,9 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46330" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -2981,8 +2658,8 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -3003,14 +2680,8 @@
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46320" min="2" max="3" chance="100" /> <!-- Shadow Fighter -->
-				<item id="46395" min="1" max="1" chance="1.955" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23668" level="101" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
+	<npc id="23668" level="110" type="Monster" name="Unit 2 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23458" level="1" />
 			<skill name="Skill_TYPE2" id="23459" level="1" />
@@ -3019,9 +2690,9 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46331" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -3029,8 +2700,8 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -3051,14 +2722,8 @@
 			<radius normal="11" />
 			<height normal="28" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46321" min="2" max="3" chance="100" /> <!-- Shadow Stormer -->
-				<item id="46395" min="1" max="1" chance="2.064" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23669" level="101" type="Monster" name="Unit 3 Commander" title="Ashen Shadow">
+	<npc id="23669" level="110" type="Monster" name="Unit 3 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23467" level="1" />
 			<skill name="Skill_TYPE2" id="23468" level="1" />
@@ -3066,9 +2731,9 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46327" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -3076,8 +2741,8 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -3096,14 +2761,8 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46317" min="2" max="3" chance="100" /> <!-- Shadow Shaper -->
-				<item id="46395" min="1" max="1" chance="2.055" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23670" level="101" type="Monster" name="Unit 4 Commander" title="Ashen Shadow">
+	<npc id="23670" level="110" type="Monster" name="Unit 4 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23463" level="1" />
 			<skill name="Skill_TYPE2" id="23464" level="1" />
@@ -3112,9 +2771,9 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46332" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -3122,8 +2781,8 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="8" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -3143,14 +2802,8 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46322" min="2" max="3" chance="100" /> <!-- Shadow Thrower -->
-				<item id="46395" min="1" max="1" chance="1.955" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23671" level="101" type="Monster" name="Unit 4 Commander" title="Ashen Shadow">
+	<npc id="23671" level="110" type="Monster" name="Unit 4 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23463" level="1" />
 			<skill name="Skill_TYPE2" id="23464" level="1" />
@@ -3159,9 +2812,9 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46333" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -3169,8 +2822,8 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="8" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -3190,14 +2843,8 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46323" min="2" max="3" chance="100" /> <!-- Shadow Shooter -->
-				<item id="46395" min="1" max="1" chance="1.956" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23672" level="101" type="Monster" name="Unit 5 Commander" title="Ashen Shadow">
+	<npc id="23672" level="110" type="Monster" name="Unit 5 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23470" level="2" />
 			<skill name="Skill_TYPE2" id="23471" level="2" />
@@ -3207,9 +2854,9 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46334" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -3217,8 +2864,8 @@
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -3238,14 +2885,8 @@
 			<radius normal="7.5" />
 			<height normal="22.8" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46324" min="2" max="3" chance="100" /> <!-- Shadow Buster -->
-				<item id="46395" min="1" max="1" chance="1.978" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23673" level="101" type="Monster" name="Unit 6 Commander" title="Ashen Shadow">
+	<npc id="23673" level="110" type="Monster" name="Unit 6 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23474" level="1" />
 			<skill name="Skill_TYPE2" id="23475" level="1" />
@@ -3255,9 +2896,9 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46336" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -3265,8 +2906,8 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -3291,19 +2932,13 @@
 			<radius normal="7.5" />
 			<height normal="22.8" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46326" min="2" max="3" chance="100" /> <!-- Shadow Dual Sword -->
-				<item id="46395" min="1" max="1" chance="2.049" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23674" level="101" type="Monster" name="Unit 7 Commander" title="Ashen Shadow">
+	<npc id="23674" level="110" type="Monster" name="Unit 7 Commander" title="Ashen Shadow">
 		<race>ETC</race>
 		<equipment rhand="46335" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -3311,8 +2946,8 @@
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -3327,14 +2962,8 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46325" min="2" max="3" chance="100" /> <!-- Shadow Retributer -->
-				<item id="46395" min="1" max="1" chance="1.999" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23675" level="101" type="Monster" name="Unit 8 Commander" title="Ashen Shadow">
+	<npc id="23675" level="110" type="Monster" name="Unit 8 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23454" level="1" />
 			<skill name="Skill_TYPE2" id="23455" level="1" />
@@ -3344,9 +2973,9 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46335" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -3354,8 +2983,8 @@
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -3381,14 +3010,8 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46325" min="2" max="3" chance="100" /> <!-- Shadow Retributer -->
-				<item id="46395" min="1" max="1" chance="1.958" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="23676" level="101" type="Monster" name="Unit 8 Commander" title="Ashen Shadow">
+	<npc id="23676" level="110" type="Monster" name="Unit 8 Commander" title="Ashen Shadow">
 		<parameters>
 			<skill name="Skill_TYPE1" id="23454" level="1" />
 			<skill name="Skill_TYPE2" id="23455" level="1" />
@@ -3398,9 +3021,9 @@
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46334" />
-		<acquire exp="4194161041" sp="8388384" />
+		<acquire exp="1290079929600" sp="1161071835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514.450867052" hpRegen="9.5" mp="49380.198019802" mpRegen="3.3" />
+			<vitals hp="6729000.57803468" hpRegen="9.5" mp="65905.6105610561" mpRegen="3.3" />
 			<attribute>
 				<defence fire="550" water="550" wind="550" earth="550" holy="550" dark="550" />
 			</attribute>
@@ -3408,8 +3031,8 @@
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="297710.974991222" magical="90953.3247945561" critical="4" attackSpeed="253" range="40" />
-			<defence physical="5303.15789473684" magical="3074.5179781136" />
+			<attack physical="368976.088746177" magical="948.895573018099" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="3508.04020100503" magical="1345.00887274657" />
 		</stats>
 		<status randomWalk="false" />
 		<skillList>
@@ -3435,12 +3058,6 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46324" min="2" max="3" chance="100" /> <!-- Shadow Buster -->
-				<item id="46395" min="1" max="1" chance="1.963" /> <!-- Shadow Ingot -->
-			</drop>
-		</dropLists>
 	</npc>
 	<npc id="23677" level="101" type="Monster" name="Fortress Raider" title="Army Recruit">
 		<race>HUMANOID</race>
@@ -3657,7 +3274,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="265208.012205788" magical="39741.082892845" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1771.95767195767" magical="1027.11858487436" />
 			<attribute>
@@ -3683,9 +3300,9 @@
 	<npc id="23685" level="101" type="Monster" name="Seal Angel">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="2038660363" sp="4077339" />
+		<acquire exp="2038660364" sp="4077340" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="873508.092485549" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="297710.974991222" magical="45476.7341932766" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<attribute>
@@ -3709,46 +3326,42 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="19448" min="1" max="1" chance="80.25" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="17446" min="1" max="1" chance="0.0075" /> <!-- Eternal Sigil - Robe -->
+				<item id="17433" min="1" max="1" chance="0.0075" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0075" /> <!-- Eternal Shield - Heavy armor -->
+				<item id="17436" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0075" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0075" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0075" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0075" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0075" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0075" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0075" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0075" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.003" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.003" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.003" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.003" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.003" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.003" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.003" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.003" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
 				<item id="57" min="35000000" max="70000000" chance="20" /> <!-- Adena -->
-				<item id="19447" min="1" max="1" chance="20.42" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-				<item id="48568" min="1" max="3" chance="19.02" /> <!-- Guard Agathion Fragment -->
-				<item id="35473" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35474" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="48568" min="1" max="3" chance="20.21" /> <!-- Guard Agathion Fragment -->
+				<item id="19448" min="1" max="1" chance="7.035" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="4.784" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 				<item id="46537" min="1" max="1" chance="0.75" /> <!-- Mystic Soul Crystal Fragment -->
-				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
-				<item id="35472" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35464" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35465" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35466" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35467" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35468" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35469" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35470" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack -->
-				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light armor -->
-				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light armor -->
-				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy armor -->
-				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy armor -->
-				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy armor -->
-				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy armor -->
-				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy armor -->
-				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light armor -->
-				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light armor -->
-				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light armor -->
-				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3763,9 +3376,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="1528257600" sp="3056600" />
+		<acquire exp="1528257600" sp="3056601" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="403282.080924855" hpRegen="9.5" mp="23928.0528052805" mpRegen="3.3" />
+			<vitals hp="3871504.04624277" hpRegen="9.5" mp="24166.99669967" mpRegen="3.3" />
 			<attack physical="265208.012205788" magical="119222.958130003" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5314.81481481481" magical="3081.35575462308" />
 			<attribute>
@@ -3784,11 +3397,11 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="16551" level="1" /> <!-- Ice Attack -->
 			<skill id="16552" level="1" /> <!-- Ice Fist -->
 			<skill id="16553" level="1" /> <!-- Ice Breath -->
@@ -3801,9 +3414,9 @@
 	<npc id="23687" level="101" type="Monster" name="Frost Glacier Golem" title="Frostbringer">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="6235902311" sp="12471844" />
+		<acquire exp="6235902312" sp="12471845" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="403282.234355313" hpRegen="9.5" mp="23928.0719280719" mpRegen="3.3" />
+			<vitals hp="2812978.58042839" hpRegen="9.5" mp="18288.2117882118" mpRegen="3.3" />
 			<attack physical="297711.153397051" magical="119340.098774464" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5966.31578947368" magical="3458.90951154109" />
 			<attribute>
@@ -3822,11 +3435,11 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="16551" level="1" /> <!-- Ice Attack -->
 			<skill id="16552" level="1" /> <!-- Ice Fist -->
 			<skill id="16553" level="1" /> <!-- Ice Breath -->
@@ -3837,46 +3450,42 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="19448" min="1" max="1" chance="78.28" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="17446" min="1" max="1" chance="0.0075" /> <!-- Eternal Sigil - Robe -->
+				<item id="17433" min="1" max="1" chance="0.0075" /> <!-- Eternal Gauntlets - Heavy armor -->
+				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots - Heavy armor -->
+				<item id="17435" min="1" max="1" chance="0.0075" /> <!-- Eternal Shield - Heavy armor -->
+				<item id="17436" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Helmet - Light armor -->
+				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor - Light armor -->
+				<item id="17438" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Leggings - Light armor -->
+				<item id="17439" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Gloves - Light armor -->
+				<item id="17440" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Boots - Light armor -->
+				<item id="17441" min="1" max="1" chance="0.0075" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="0.0075" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.0075" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="0.0075" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="0.0075" /> <!-- Eternal Shoes - Robe -->
+				<item id="17432" min="1" max="1" chance="0.0075" /> <!-- Eternal Gaiters - Heavy armor -->
+				<item id="17431" min="1" max="1" chance="0.0075" /> <!-- Eternal Breastplate - Heavy armor -->
+				<item id="17430" min="1" max="1" chance="0.0075" /> <!-- Eternal Helmet - Heavy armor -->
+				<item id="17417" min="1" max="1" chance="0.003" /> <!-- Helios Cutter -->
+				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
+				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Helios Avenger -->
+				<item id="17420" min="1" max="1" chance="0.003" /> <!-- Helios Fighter -->
+				<item id="17421" min="1" max="1" chance="0.003" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.003" /> <!-- Helios Buster -->
+				<item id="17425" min="1" max="1" chance="0.003" /> <!-- Helios Caster -->
+				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Helios Retributer -->
+				<item id="17427" min="1" max="1" chance="0.003" /> <!-- Helios Dual Swords -->
+				<item id="17428" min="1" max="1" chance="0.003" /> <!-- Helios Dual Daggers -->
+				<item id="17429" min="1" max="1" chance="0.003" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
 				<item id="57" min="35000000" max="70000000" chance="20" /> <!-- Adena -->
-				<item id="19447" min="1" max="1" chance="19.98" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-				<item id="48568" min="1" max="3" chance="19.64" /> <!-- Guard Agathion Fragment -->
-				<item id="35473" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35474" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="48568" min="1" max="3" chance="19.13" /> <!-- Guard Agathion Fragment -->
+				<item id="19448" min="1" max="1" chance="6.938" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="4.833" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 				<item id="46537" min="1" max="1" chance="0.75" /> <!-- Mystic Soul Crystal Fragment -->
-				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
-				<item id="35472" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35464" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35465" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35466" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35467" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35468" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35469" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35470" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack -->
-				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light armor -->
-				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light armor -->
-				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy armor -->
-				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy armor -->
-				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy armor -->
-				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy armor -->
-				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy armor -->
-				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light armor -->
-				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light armor -->
-				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light armor -->
-				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3924,7 +3533,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="12498818.1436371" hpRegen="9.5" mp="47856.1438561439" mpRegen="3.3" />
+			<vitals hp="13748700.1259975" hpRegen="9.5" mp="48334.6653346653" mpRegen="3.3" />
 			<attack physical="1001981.95717733" magical="409194.773105296" random="30" critical="4" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6693.19371727749" magical="3880.41278093634" />
 			<speed>
@@ -3939,13 +3548,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="6279" level="1" /> <!-- Frozen Storm -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="6279" level="1" /> <!-- Frozen Storm -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<collision>
@@ -3954,11 +3563,11 @@
 		</collision>
 	</npc>
 	<npc id="23690" level="102" type="Monster" name="Kelbim" title="Dragonclaw Clan Leader">
-		<race>HUMANOID</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16152" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="12498818.1436371" hpRegen="7.5" mp="47856.1438561439" mpRegen="2.7" />
+			<vitals hp="11248936.1612768" hpRegen="7.5" mp="48334.6653346653" mpRegen="2.7" />
 			<attack physical="1001981.95717733" magical="409194.773105296" critical="4" attackSpeed="253" range="40" />
 			<defence physical="6693.19371727749" magical="3880.41278093634" />
 			<attribute>
@@ -4067,10 +3676,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.0075" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0075" /> <!-- Eternal Sigil - Robe -->
 				<item id="17433" min="1" max="1" chance="0.0075" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.0075" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.0075" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -4099,9 +3708,9 @@
 				<item id="17429" min="1" max="1" chance="0.003" /> <!-- Helios Dual Blunt Weapon -->
 				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
 				<item id="57" min="35000000" max="70000000" chance="20" /> <!-- Adena -->
-				<item id="48568" min="1" max="3" chance="19.27" /> <!-- Guard Agathion Fragment -->
-				<item id="19448" min="1" max="1" chance="6.988" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="4.91" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="48568" min="1" max="3" chance="19.36" /> <!-- Guard Agathion Fragment -->
+				<item id="19448" min="1" max="1" chance="7.046" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="4.818" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 				<item id="46537" min="1" max="1" chance="0.75" /> <!-- Mystic Soul Crystal Fragment -->
 			</drop>
 		</dropLists>
@@ -4183,13 +3792,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17527" min="2" max="3" chance="79.87" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="30297" min="1" max="2" chance="84.19" /> <!-- Superior Giant's Codex -->
-				<item id="17526" min="1" max="2" chance="19.88" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="46150" min="1" max="1" chance="10.049" /> <!-- Superior Giant's Codex - Chapter 1 -->
-				<item id="30298" min="1" max="1" chance="2.547" /> <!-- Superior Giant's Codex - Mastery -->
-				<item id="39738" min="1" max="1" chance="2.537" /> <!-- Rune Stone -->
-				<item id="46151" min="1" max="1" chance="2.489" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+				<item id="30297" min="1" max="2" chance="88.54" /> <!-- Superior Giant's Codex -->
+				<item id="17527" min="2" max="3" chance="80.04" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="2" chance="20.59" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="46150" min="1" max="1" chance="10.06" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="30298" min="1" max="1" chance="2.568" /> <!-- Superior Giant's Codex - Mastery -->
+				<item id="39738" min="1" max="1" chance="2.556" /> <!-- Rune Stone -->
+				<item id="46151" min="1" max="1" chance="2.53" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
 				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
 			</drop>
 		</dropLists>
@@ -4221,12 +3830,12 @@
 		</collision>
 	</npc>
 	<npc id="23698" level="100" type="Monster" name="Knight Archer">
-		<race>UNDEAD</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="15302" />
-		<acquire exp="463935300" sp="927900" />
+		<acquire exp="463935300" sp="927901" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754.335260116" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="436753.757225434" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="106083.204882315" magical="119222.958130003" random="30" critical="8" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1771.95767195767" magical="1027.11858487436" />
 			<attribute>

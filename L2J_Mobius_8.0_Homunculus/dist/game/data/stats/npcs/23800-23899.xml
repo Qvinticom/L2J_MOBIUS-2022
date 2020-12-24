@@ -2,9 +2,9 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23800" level="102" type="Monster" name="Delta Kshana" title="Superion Scout">
 		<race>GIANT</race>
-		<acquire exp="182435180" sp="364972" />
+		<acquire exp="364870361" sp="328351" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="283012.716763006" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="283012.138728324" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="140" />
@@ -20,7 +20,7 @@
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="16596" level="1" /> <!-- Plasma Ball -->
 			<skill id="16597" level="1" /> <!-- Plasma Wave -->
 		</skillList>
@@ -30,10 +30,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="47202" min="1" max="1" chance="5.608" /> <!-- Material for Giants Deterioration Protection Potion -->
-				<item id="47203" min="1" max="1" chance="5.582" /> <!-- Material for Giants Lightning Protection Potion -->
-				<item id="47204" min="1" max="1" chance="5.564" /> <!-- Particle Dissolver Component -->
+				<item id="47204" min="1" max="1" chance="5.625" /> <!-- Particle Dissolver Component -->
+				<item id="47203" min="1" max="1" chance="5.523" /> <!-- Material for Giants Lightning Protection Potion -->
+				<item id="47202" min="1" max="1" chance="5.515" /> <!-- Material for Giants Deterioration Protection Potion -->
 				<item id="47219" min="1" max="1" chance="0.003" /> <!-- Source of the Emperor -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -42,7 +43,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -50,8 +51,9 @@
 		<!-- Lillim Royal Knight ?? -->
 		<race>DEMONIC</race>
 		<equipment rhand="5800" lhand="5799" />
+		<acquire exp="15638848" sp="13976" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="58233.5260115607" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="58232.9479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<attribute>
@@ -71,16 +73,17 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="16106" level="1" /> <!-- Chain Smash -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16771" level="1" /> <!-- Death Lift -->
 		</skillList>
 	</npc>
 	<npc id="23802" level="101" type="Monster" name="Lillim Slayer">
 		<!-- Lillim Slayer ?? -->
 		<race>DEMONIC</race>
+		<acquire exp="15638848" sp="13976" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="58233.5260115607" hpRegen="9.5" mp="24690.4290429043" mpRegen="3.3" />
+			<vitals hp="58232.9479768786" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<attribute>
@@ -100,7 +103,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="16771" level="1" /> <!-- Death Lift -->
 			<skill id="16772" level="1" /> <!-- Fatal Strike -->
 		</skillList>
@@ -139,8 +142,9 @@
 	<npc id="23804" level="101" type="Monster" name="Lillim Great Magus">
 		<!-- Lillim Great Magus ?? -->
 		<race>DEMONIC</race>
+		<acquire exp="15638848" sp="13976" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="58233.5260115607" hpRegen="9.5" mp="24690.4290429043" mpRegen="3.3" />
+			<vitals hp="58232.9479768786" hpRegen="9.5" mp="24936.6336633663" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<attribute>
@@ -160,7 +164,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="16773" level="1" /> <!-- Unholy Spike -->
 			<skill id="16776" level="1" /> <!-- Sleep -->
 		</skillList>
@@ -168,8 +172,9 @@
 	<npc id="23805" level="101" type="Monster" name="Nephilim Royal Guard">
 		<!-- Nephilim Royal Guard ?? -->
 		<race>DIVINE</race>
+		<acquire exp="15638848" sp="13976" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="58233.5260115607" hpRegen="9.5" mp="24308.2508250825" mpRegen="3.3" />
+			<vitals hp="58232.9479768786" hpRegen="9.5" mp="24551.1551155116" mpRegen="3.3" />
 			<attack physical="59542.3510592642" magical="9095.40427545412" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1988.94736842105" magical="1153.03109258294" />
 			<attribute>
@@ -189,7 +194,7 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="16771" level="1" /> <!-- Death Lift -->
 			<skill id="16772" level="1" /> <!-- Fatal Strike -->
 		</skillList>
@@ -406,11 +411,21 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.678" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.701" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
@@ -455,11 +470,21 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.736" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.675" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
@@ -504,11 +529,21 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.664" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.71" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -548,11 +583,21 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.745" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.786" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -592,20 +637,30 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.666" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.8" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23816" level="103" type="Monster" name="Om Bathus" title="Hunter">
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<acquire exp="1111149422" sp="1111186" />
+		<acquire exp="1111149423" sp="1111187" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1509640.7937" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
+			<vitals hp="1383109.8265896" hpRegen="9.5" mp="24166.99669967" mpRegen="3.3" />
 			<attack physical="49070" magical="38776" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4489" magical="2606" />
 			<speed>
@@ -619,35 +674,32 @@
 			<height normal="46" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17430" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet - Heavy armor -->
-				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
-				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
-				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35462" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81217" min="1" max="1" chance="1.258" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.217" /> <!-- Angel's Feather -->
+				<item id="81218" min="1" max="1" chance="1.214" /> <!-- Dragon Scales -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 			</drop>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.55" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23817" level="103" type="Monster" name="Om Kshana" title="Hunter">
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<acquire exp="1111149422" sp="1111186" />
+		<acquire exp="1111149423" sp="1111187" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1509640.7937" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
+			<vitals hp="1383109.8265896" hpRegen="9.5" mp="24166.99669967" mpRegen="3.3" />
 			<attack physical="49070" magical="38776" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4489" magical="2606" />
 			<speed>
@@ -661,26 +713,24 @@
 			<height normal="47.5" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17432" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiters - Heavy armor -->
-				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
-				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35464" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="57" min="4527" max="10556" chance="70" /> <!-- Adena -->
+				<item id="81218" min="1" max="1" chance="1.268" /> <!-- Dragon Scales -->
+				<item id="81217" min="1" max="1" chance="1.2" /> <!-- Oriharukon Ore -->
+				<item id="81219" min="1" max="1" chance="1.152" /> <!-- Angel's Feather -->
+				<item id="81216" min="1" max="1" chance="0.75" /> <!-- Black Mithril -->
 			</drop>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.79" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23820" level="85" type="Monster" name="Ketra Elite Soldier">

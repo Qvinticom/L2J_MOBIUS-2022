@@ -1784,12 +1784,16 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
-		<dropLists>
+		<collision>
+			<radius normal="20" />
+			<height normal="75" />
+		</collision>
+	<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil - Robe -->
 				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -1817,16 +1821,12 @@
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17527" min="1" max="1" chance="79.38" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="17526" min="1" max="1" chance="20.66" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="1.776" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="1.179" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="17527" min="1" max="1" chance="80.98" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="20.84" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.689" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.161" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="75" />
-		</collision>
 	</npc>
 	<npc id="25564" level="99" type="Monster" name="Atrielle's Follower">
 		<!-- Confirmed CT2.5 -->
@@ -1971,12 +1971,16 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="10" />
+			<height normal="54" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil - Robe -->
 				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -2004,16 +2008,12 @@
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17527" min="1" max="1" chance="78.36" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="17526" min="1" max="1" chance="19.73" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="1.802" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="1.265" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="17527" min="1" max="1" chance="78.4" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.69" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.714" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.156" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="10" />
-			<height normal="54" />
-		</collision>
 	</npc>
 	<npc id="25567" level="99" type="Monster" name="Nagen's Cohort">
 		<!-- Confirmed CT2.5 -->
@@ -2160,12 +2160,16 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="17" />
+			<height normal="46.2" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil - Robe -->
 				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -2193,16 +2197,12 @@
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17527" min="1" max="1" chance="80.88" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="17526" min="1" max="1" chance="20.85" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="1.807" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="1.257" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="17527" min="1" max="1" chance="78.54" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.3" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.793" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.26" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="17" />
-			<height normal="46.2" />
-		</collision>
 	</npc>
 	<npc id="25570" level="99" type="Monster" name="Jax' Vanguard">
 		<!-- Confirmed CT2.5 -->
@@ -3171,12 +3171,16 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="19.5" />
+			<height normal="51" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil - Robe -->
 				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -3204,16 +3208,12 @@
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17527" min="1" max="1" chance="79.65" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="17526" min="1" max="1" chance="20.37" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="1.683" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="1.203" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="17527" min="1" max="1" chance="79.07" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="20.09" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.767" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.261" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="19.5" />
-			<height normal="51" />
-		</collision>
 	</npc>
 	<npc id="25590" level="97" type="Monster" name="Brand's Servant">
 		<!-- Confirmed CT2.5 -->
@@ -3362,10 +3362,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil - Robe -->
 				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -3393,10 +3393,10 @@
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17527" min="1" max="1" chance="79.14" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="17526" min="1" max="1" chance="19.93" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="1.806" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="1.147" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="17527" min="1" max="1" chance="81.58" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.08" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.702" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.229" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3443,12 +3443,16 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
+		<collision>
+			<radius normal="46" />
+			<height normal="71.5" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil - Robe -->
 				<item id="17433" min="1" max="1" chance="0.003" /> <!-- Eternal Gauntlets - Heavy armor -->
 				<item id="17434" min="1" max="1" chance="0.003" /> <!-- Eternal Boots - Heavy armor -->
-				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.003" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet - Light armor -->
 				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings - Light armor -->
@@ -3476,16 +3480,12 @@
 				<item id="17428" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Daggers -->
 				<item id="17429" min="1" max="1" chance="0.0009" /> <!-- Helios Dual Blunt Weapon -->
 				<item id="17416" min="1" max="1" chance="0.0009" /> <!-- Helios Shaper -->
-				<item id="17527" min="1" max="1" chance="81.06" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="17526" min="1" max="1" chance="19.94" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="1.805" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="1.26" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="17527" min="1" max="1" chance="79.13" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="1" chance="19.05" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="19448" min="1" max="1" chance="1.703" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
+				<item id="19447" min="1" max="1" chance="1.229" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="46" />
-			<height normal="71.5" />
-		</collision>
 	</npc>
 	<npc id="25594" level="99" type="Monster" name="Gerg's Follower">
 		<!-- Confirmed CT2.5 -->

@@ -2493,7 +2493,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1877539.30635838" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="1877538.7283237" hpRegen="8.5" mp="23027.7227722772" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="240" />
@@ -2508,7 +2508,6 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
@@ -3110,17 +3109,17 @@
 			<height normal="25.4" />
 		</collision>
 	</npc>
-	<npc id="19287" level="99" type="Monster" name="Zahak">
+	<npc id="19287" level="112" type="Monster" name="Zahak">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="99999999.4219653" hpRegen="1" mp="10000000" mpRegen="3000" />
+			<vitals hp="584420.231213873" hpRegen="1" mp="2890.42904290429" mpRegen="3000" />
 			<speed>
 				<walk ground="30" />
 				<run ground="240" />
 			</speed>
-			<attack physical="32582.0544769175" magical="4817.29706022657" critical="4" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="0" accuracy="5" />
-			<defence physical="3680.31914893617" magical="2133.62825644267" />
+			<attack physical="420724.767563222" magical="1040.79519617782" critical="4.75" attackSpeed="253" range="40" type="FIST" distance="0" width="0" random="0" accuracy="5" />
+			<defence physical="3827.3631840796" magical="1467.57959378027" />
 			<attribute>
 				<attack type="FIRE" value="400" />
 				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
@@ -3134,12 +3133,11 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="20" grown="1.5" />
@@ -3357,7 +3355,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17376" min="1" max="1" chance="5.052" /> <!-- Trace of Kimerian's Cavern -->
+				<item id="17376" min="1" max="1" chance="4.953" /> <!-- Trace of Kimerian's Cavern -->
 			</drop>
 		</dropLists>
 	</npc>

@@ -51,15 +51,15 @@
 				<clan>ICE</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="30" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="82" max="191" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="15" />
-			<height normal="30" />
-		</collision>
 	</npc>
 	<npc id="22101" level="58" type="Monster" name="Freya's Servant">
 		<parameters>
@@ -1412,9 +1412,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- Monster Only (Heretic Private Axe) / Monster Only (Heretic Private Axe) -->
-		<acquire exp="22175539" sp="19880" />
+		<acquire exp="22175540" sp="19881" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761.0404624277" hpRegen="8.5" mp="2317.49174917492" mpRegen="3" />
+			<vitals hp="189131.791907514" hpRegen="8.5" mp="2339.93399339934" mpRegen="3" />
 			<attack physical="8876.846782921" magical="947.829689139778" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="511.336014495956" magical="258.609960685898" evasion="3" />
 			<attribute>
@@ -1430,18 +1430,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
-			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
 			<skill id="4789" level="9" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -1458,14 +1456,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy armor -->
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35465" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="57" min="333" max="776" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22143" level="98" type="Monster" name="Triol's Believer">
@@ -1493,9 +1485,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="22870677" sp="20552" />
+		<acquire exp="22870678" sp="20553" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761.0404624277" hpRegen="8.5" mp="2317.49174917492" mpRegen="3" />
+			<vitals hp="189131.791907514" hpRegen="8.5" mp="2339.93399339934" mpRegen="3" />
 			<attack physical="8876.846782921" magical="947.829689139778" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="511.336014495956" magical="258.609960685898" evasion="4" />
 			<attribute>
@@ -1511,19 +1503,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4629" level="9" /> <!-- Drain Energy -->
 			<skill id="4668" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="9" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -1540,14 +1530,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="57" min="333" max="776" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22144" level="98" type="Monster" name="Resurrected Temple Knight">
@@ -1692,9 +1676,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="24275606" sp="21758" />
+		<acquire exp="24275607" sp="21759" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.0404624277" hpRegen="8.5" mp="2355.11551155116" mpRegen="3" />
+			<vitals hp="190091.907514451" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<attack physical="9309.40745551875" magical="991.029873079492" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="630.851063829787" magical="265.308677028665" evasion="2" />
 			<attribute>
@@ -1710,18 +1694,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
-			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
 			<skill id="4789" level="9" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -1739,10 +1721,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1751,12 +1731,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.873" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22147" level="99" type="Monster" name="Ritual Offering">
@@ -1771,9 +1747,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="24375871" sp="21856" />
+		<acquire exp="24375872" sp="21857" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.0404624277" hpRegen="8.5" mp="2355.11551155116" mpRegen="3" />
+			<vitals hp="190091.907514451" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<attack physical="9309.40745551875" magical="991.029873079492" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="5" />
 			<attribute>
@@ -1789,17 +1765,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4615" level="9" /> <!-- Bleed -->
 			<skill id="4789" level="9" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -1817,9 +1791,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1828,15 +1801,11 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.922" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22148" level="98" type="Monster" name="Triol's Believer">
+	<npc id="22148" level="99" type="Monster" name="Triol's Believer">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1850,11 +1819,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="15453220" sp="15462" />
+		<acquire exp="24275607" sp="21759" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15681.0299527063" hpRegen="8.5" mp="2331.32646597993" mpRegen="3" />
-			<attack physical="9215.37303677614" magical="981.019470321114" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="624.47883086181" magical="262.628791402113" evasion="4" />
+			<vitals hp="190091.907514451" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
+			<attack physical="50739.3983752814" magical="257.514968696121" random="10" critical="4.75" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="835.106382978723" magical="292.480681925732" evasion="4" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -1868,18 +1837,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4088" level="9" /> <!-- Bleed -->
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4088" level="9" /> <!-- Bleed -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="9" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -1897,17 +1864,18 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22149" level="99" type="Monster" name="Ritual Offering">
@@ -1923,9 +1891,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="24275606" sp="21758" />
+		<acquire exp="24275607" sp="21759" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.0404624277" hpRegen="8.5" mp="2355.11551155116" mpRegen="3" />
+			<vitals hp="190091.907514451" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<attack physical="9309.40745551875" magical="991.029873079492" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="4" />
 			<attribute>
@@ -1941,17 +1909,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- Power Strike -->
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4649" level="9" /> <!-- Poison -->
 			<skill id="4789" level="9" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -1969,10 +1935,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-				<item id="35451" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Shaper (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1981,15 +1945,11 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.919" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22150" level="98" type="Monster" name="Triol's Believer">
+	<npc id="22150" level="99" type="Monster" name="Triol's Believer">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2004,11 +1964,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="15453220" sp="15462" />
+		<acquire exp="24340196" sp="21857" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15681.0299527063" hpRegen="8.5" mp="2331.32646597993" mpRegen="3" />
-			<attack physical="9215.37303677614" magical="981.019470321114" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="624.47883086181" magical="262.628791402113" evasion="5" />
+			<vitals hp="190091.907514451" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
+			<attack physical="50739.3983752814" magical="257.514968696121" random="10" critical="4.75" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="835.106382978723" magical="292.480681925732" evasion="5" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -2022,19 +1982,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4088" level="9" /> <!-- Bleed -->
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4088" level="9" /> <!-- Bleed -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4629" level="9" /> <!-- Drain Energy -->
 			<skill id="4668" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="9" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -2052,17 +2010,18 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22151" level="99" type="Monster" name="Triol's Priest">
@@ -2090,9 +2049,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="16402463" sp="16465" />
+		<acquire exp="24669608" sp="22151" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.0404624277" hpRegen="8.5" mp="2355.11551155116" mpRegen="3" />
+			<vitals hp="190091.907514451" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<attack physical="9309.40745551875" magical="991.029873079492" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="630.851063829787" magical="265.308677028665" evasion="7" />
 			<attribute>
@@ -2108,19 +2067,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4615" level="9" /> <!-- Bleed -->
 			<skill id="4629" level="9" /> <!-- Drain Energy -->
 			<skill id="4668" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -2138,18 +2095,18 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22152" level="99" type="Monster" name="Temple Guard">
@@ -2165,9 +2122,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8215" /> <!-- Monster Only (Zombie Enlisted Man Sword) -->
-		<acquire exp="24375871" sp="21856" />
+		<acquire exp="24375872" sp="21857" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.0404624277" hpRegen="8.5" mp="2355.11551155116" mpRegen="3" />
+			<vitals hp="190091.907514451" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<attack physical="9309.40745551875" magical="991.029873079492" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="2" />
 			<attribute>
@@ -2183,17 +2140,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4615" level="9" /> <!-- Bleed -->
 			<skill id="4789" level="9" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -2211,10 +2166,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2223,12 +2176,8 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.886" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22153" level="99" type="Monster" name="Temple Guard Captain">
@@ -2245,9 +2194,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8215" /> <!-- Monster Only (Zombie Enlisted Man Sword) -->
-		<acquire exp="16402463" sp="16465" />
+		<acquire exp="24275607" sp="21759" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.0404624277" hpRegen="8.5" mp="2355.11551155116" mpRegen="3" />
+			<vitals hp="190091.907514451" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
 			<attack physical="9309.40745551875" magical="991.029873079492" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="2" />
 			<attribute>
@@ -2263,18 +2212,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="9" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -2286,27 +2233,27 @@
 				<clan>TRIOLL</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-				<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Slasher (60%) -->
-			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.903" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22154" level="98" type="Monster" name="Ritual Sacrifice">
+	<npc id="22154" level="99" type="Monster" name="Ritual Sacrifice">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2319,11 +2266,11 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="14983488" sp="15078" />
+		<acquire exp="24275607" sp="21759" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15681.0299527063" hpRegen="8.5" mp="2331.32646597993" mpRegen="3" />
-			<attack physical="9215.37303677614" magical="981.019470321114" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="624.47883086181" magical="262.628791402113" evasion="7" />
+			<vitals hp="190091.907514451" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
+			<attack physical="50739.3983752814" magical="257.514968696121" random="5" critical="4.75" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="835.106382978723" magical="292.480681925732" evasion="7" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -2337,16 +2284,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="36" /> <!-- Undead -->
 			<skill id="4614" level="9" /> <!-- Death Bomb -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
@@ -2364,16 +2309,18 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22155" level="99" type="Monster" name="Triol's High Priest">
@@ -2396,9 +2343,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8206" lhand="8206" /> <!-- Monster Only (Heretic Priest Sword) / Monster Only (Heretic Priest Sword) -->
-		<acquire exp="11547636" sp="11565" />
+		<acquire exp="17090494" sp="15290" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="525.700934579439" magical="304.990765674876" evasion="7" />
 			<attribute>
@@ -2414,19 +2361,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
-			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -2437,26 +2383,15 @@
 				<clan>TRIOLL</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
-				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="19.1" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22156" level="99" type="Monster" name="Triol's Priest">
 		<parameters>
@@ -2470,9 +2405,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="16402463" sp="16465" />
+		<acquire exp="18815176" sp="16858" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="630.841121495327" magical="265.209361456414" evasion="8" />
 			<attribute>
@@ -2488,17 +2423,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -2515,18 +2449,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22157" level="99" type="Monster" name="Triol's Priest">
@@ -2541,9 +2465,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="16402463" sp="16465" />
+		<acquire exp="17090494" sp="15290" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="630.841121495327" magical="265.209361456414" evasion="7" />
 			<attribute>
@@ -2564,12 +2488,11 @@
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -2586,21 +2509,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="22158" level="98" type="Monster" name="Triol's Believer">
+	<npc id="22158" level="99" type="Monster" name="Triol's Believer">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2614,11 +2527,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- Monster Only (Heretic Private Axe) / Monster Only (Heretic Private Axe) -->
-		<acquire exp="15453220" sp="15462" />
+		<acquire exp="18815176" sp="16858" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="352650.084661645" hpRegen="8.5" mp="23312.6112611261" mpRegen="30" />
-			<attack physical="129011.56537893" magical="13733.6813117891" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="624.46898895497" magical="262.53047901746" evasion="7" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
+			<attack physical="74157.582240796" magical="549.158427219438" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="390.236627560151" magical="352.386363765942" evasion="7" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -2637,14 +2550,13 @@
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -2661,17 +2573,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22159" level="99" type="Monster" name="Triol's High Priest">
@@ -2694,9 +2597,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8206" lhand="8206" /> <!-- Monster Only (Heretic Priest Sword) / Monster Only (Heretic Priest Sword) -->
-		<acquire exp="11547636" sp="11565" />
+		<acquire exp="17090494" sp="15290" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="525.700934579439" magical="304.990765674876" evasion="8" />
 			<attribute>
@@ -2712,19 +2615,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
-			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -2741,19 +2643,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
-				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22160" level="99" type="Monster" name="Triol's Priest">
@@ -2768,9 +2659,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="16402463" sp="16465" />
+		<acquire exp="18815176" sp="16858" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="420.560747663551" magical="358.812665499854" evasion="8" />
 			<attribute>
@@ -2786,17 +2677,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -2813,21 +2703,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="22161" level="98" type="Monster" name="Ritual Sacrifice">
+	<npc id="22161" level="99" type="Monster" name="Ritual Sacrifice">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2839,11 +2719,11 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="14983488" sp="15078" />
+		<acquire exp="22264246" sp="19995" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="352650.084661645" hpRegen="8.5" mp="23312.6112611261" mpRegen="30" />
-			<attack physical="129011.56537893" magical="13733.6813117891" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="624.46898895497" magical="262.53047901746" evasion="7" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
+			<attack physical="74157.582240796" magical="549.158427219438" random="5" critical="4.75" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="390.236627560151" magical="352.386363765942" evasion="7" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -2857,18 +2737,17 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4417" level="36" /> <!-- Undead -->
 			<skill id="4614" level="9" /> <!-- Death Bomb -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -2885,19 +2764,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="22162" level="98" type="Monster" name="Triol's Believer">
+	<npc id="22162" level="99" type="Monster" name="Triol's Believer">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2911,11 +2782,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- Monster Only (Heretic Private Axe) / Monster Only (Heretic Private Axe) -->
-		<acquire exp="15453220" sp="15462" />
+		<acquire exp="18815176" sp="16858" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="352650.084661645" hpRegen="8.5" mp="23312.6112611261" mpRegen="30" />
-			<attack physical="129011.56537893" magical="13733.6813117891" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="416.312659303314" magical="355.188295141269" evasion="7" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
+			<attack physical="74157.582240796" magical="549.158427219438" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="390.236627560151" magical="476.758021565686" evasion="7" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -2934,14 +2805,13 @@
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -2958,17 +2828,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22163" level="99" type="Monster" name="Triol's High Priest">
@@ -2994,9 +2855,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8208" /> <!-- Monster Only (Heretic Private Staff) -->
-		<acquire exp="11547636" sp="11565" />
+		<acquire exp="17090494" sp="15290" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="525.700934579439" magical="304.990765674876" evasion="8" />
 			<attribute>
@@ -3012,21 +2873,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="9" /> <!-- Heal -->
-			<skill id="4088" level="9" /> <!-- Bleed -->
-			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4065" level="9" /> <!-- Heal -->
+			<skill id="4088" level="9" /> <!-- Bleed -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4655" level="9" /> <!-- Death Link -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3043,22 +2903,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
-				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="22164" level="98" type="Monster" name="Triol's Believer">
+	<npc id="22164" level="99" type="Monster" name="Triol's Believer">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3070,11 +2919,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- Monster Only (Heretic Private Axe) / Monster Only (Heretic Private Axe) -->
-		<acquire exp="15453220" sp="15462" />
+		<acquire exp="18815176" sp="16858" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="352650.084661645" hpRegen="8.5" mp="23312.6112611261" mpRegen="30" />
-			<attack physical="129011.56537893" magical="13733.6813117891" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="416.312659303314" magical="355.188295141269" evasion="8" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
+			<attack physical="74157.582240796" magical="549.158427219438" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="390.236627560151" magical="476.758021565686" evasion="8" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -3093,12 +2942,11 @@
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3115,17 +2963,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22165" level="99" type="Monster" name="Triol's Priest">
@@ -3142,9 +2981,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="16402463" sp="16465" />
+		<acquire exp="17090494" sp="15290" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="630.841121495327" magical="265.209361456414" evasion="7" />
 			<attribute>
@@ -3165,14 +3004,13 @@
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3189,21 +3027,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="22166" level="98" type="Monster" name="Triol's Believer">
+	<npc id="22166" level="99" type="Monster" name="Triol's Believer">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3216,11 +3044,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="15453220" sp="15462" />
+		<acquire exp="17090494" sp="15290" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="352650.084661645" hpRegen="8.5" mp="23312.6112611261" mpRegen="30" />
-			<attack physical="129011.56537893" magical="13733.6813117891" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="624.46898895497" magical="262.53047901746" evasion="7" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
+			<attack physical="74157.582240796" magical="549.158427219438" random="10" critical="4.75" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="390.236627560151" magical="352.386363765942" evasion="7" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -3239,13 +3067,12 @@
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3262,17 +3089,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22167" level="99" type="Monster" name="Triol's High Priest">
@@ -3295,9 +3113,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8206" lhand="8206" /> <!-- Monster Only (Heretic Priest Sword) / Monster Only (Heretic Priest Sword) -->
-		<acquire exp="11547636" sp="11565" />
+		<acquire exp="17090494" sp="15290" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="525.700934579439" magical="304.990765674876" evasion="9" />
 			<attribute>
@@ -3313,19 +3131,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
-			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
+			<skill id="4065" level="9" /> <!-- Heal -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3342,19 +3159,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
-				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22168" level="99" type="Monster" name="Triol's Priest">
@@ -3371,9 +3177,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="16402463" sp="16465" />
+		<acquire exp="17090494" sp="15290" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="630.841121495327" magical="265.209361456414" evasion="9" />
 			<attribute>
@@ -3394,14 +3200,13 @@
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3418,21 +3223,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="22169" level="98" type="Monster" name="Ritual Sacrifice">
+	<npc id="22169" level="99" type="Monster" name="Ritual Sacrifice">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3444,11 +3239,11 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="14983488" sp="15078" />
+		<acquire exp="22264246" sp="19995" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="352650.084661645" hpRegen="8.5" mp="23312.6112611261" mpRegen="30" />
-			<attack physical="129011.56537893" magical="13733.6813117891" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="624.46898895497" magical="262.53047901746" evasion="8" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
+			<attack physical="74157.582240796" magical="549.158427219438" random="5" critical="4.75" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="390.236627560151" magical="352.386363765942" evasion="8" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -3462,18 +3257,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4417" level="36" /> <!-- Undead -->
 			<skill id="4614" level="9" /> <!-- Death Bomb -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3490,19 +3284,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="22170" level="98" type="Monster" name="Triol's Believer">
+	<npc id="22170" level="99" type="Monster" name="Triol's Believer">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3514,11 +3300,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- Monster Only (Heretic Private Axe) / Monster Only (Heretic Private Axe) -->
-		<acquire exp="15453220" sp="15462" />
+		<acquire exp="18815176" sp="16858" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="352650.084661645" hpRegen="8.5" mp="23312.6112611261" mpRegen="30" />
-			<attack physical="129011.56537893" magical="13733.6813117891" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="416.312659303314" magical="355.188295141269" evasion="8" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
+			<attack physical="74157.582240796" magical="549.158427219438" random="10" critical="4.75" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="390.236627560151" magical="476.758021565686" evasion="8" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -3532,17 +3318,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3559,17 +3344,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22171" level="99" type="Monster" name="Triol's High Priest">
@@ -3595,9 +3371,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8208" /> <!-- Monster Only (Heretic Private Staff) -->
-		<acquire exp="11547636" sp="11565" />
+		<acquire exp="17090494" sp="15290" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="525.700934579439" magical="304.990765674876" evasion="9" />
 			<attribute>
@@ -3613,21 +3389,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="9" /> <!-- Heal -->
-			<skill id="4088" level="10" /> <!-- Bleed -->
-			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4065" level="9" /> <!-- Heal -->
+			<skill id="4088" level="10" /> <!-- Bleed -->
+			<skill id="4158" level="9" /> <!-- Prominence -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4641" level="10" /> <!-- Super Strike -->
 			<skill id="4655" level="9" /> <!-- Death Link -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3644,22 +3419,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
-				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="22172" level="98" type="Monster" name="Ritual Sacrifice">
+	<npc id="22172" level="99" type="Monster" name="Ritual Sacrifice">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3671,11 +3435,11 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="14983488" sp="15078" />
+		<acquire exp="22264246" sp="19995" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="352650.084661645" hpRegen="8.5" mp="23312.6112611261" mpRegen="30" />
-			<attack physical="129011.56537893" magical="13733.6813117891" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="624.46898895497" magical="262.53047901746" evasion="8" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
+			<attack physical="74157.582240796" magical="549.158427219438" random="5" critical="4.75" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="390.236627560151" magical="352.386363765942" evasion="8" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -3689,18 +3453,17 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4417" level="36" /> <!-- Undead -->
 			<skill id="4614" level="9" /> <!-- Death Bomb -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3717,16 +3480,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22173" level="99" type="Monster" name="Triol's Priest">
@@ -3743,9 +3498,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="16402463" sp="16465" />
+		<acquire exp="17090494" sp="15290" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="630.841121495327" magical="265.209361456414" evasion="8" />
 			<attribute>
@@ -3761,19 +3516,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4088" level="10" /> <!-- Bleed -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4088" level="10" /> <!-- Bleed -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3790,18 +3544,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22174" level="99" type="Monster" name="Triol's Priest">
@@ -3818,9 +3562,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="16402463" sp="16465" />
+		<acquire exp="18815176" sp="16858" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.554913295" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="356247.976878613" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="130328.009923613" magical="13873.8209170114" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="630.841121495327" magical="265.209361456414" evasion="7" />
 			<attribute>
@@ -3841,14 +3585,13 @@
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spear -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3865,18 +3608,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22175" level="99" type="Monster" name="Andreas' Escort Captain">
@@ -3904,9 +3637,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8215" /> <!-- Monster Only (Zombie Enlisted Man Sword) -->
-		<acquire exp="50469857" sp="45378" />
+		<acquire exp="50469858" sp="45379" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.265895954" hpRegen="8.5" mp="23550.495049505" mpRegen="3" />
+			<vitals hp="712495.953757225" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
 			<attack physical="65164.108953835" magical="6936.97244026951" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="7" />
 			<attribute>
@@ -3922,16 +3655,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4573" level="9" /> <!-- Sonic Blaster -->
 			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -3948,16 +3679,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="30.32" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22176" level="99" type="Monster" name="Andreas' Escort">
@@ -3973,9 +3696,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8215" /> <!-- Monster Only (Zombie Enlisted Man Sword) -->
-		<acquire exp="50469857" sp="45378" />
+		<acquire exp="50469858" sp="45379" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.265895954" hpRegen="8.5" mp="23550.495049505" mpRegen="3" />
+			<vitals hp="712495.953757225" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
 			<attack physical="65164.108953835" magical="6936.97244026951" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="7" />
 			<attribute>
@@ -3991,15 +3714,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="2" /> <!-- Power Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="2" /> <!-- Power Strike -->
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4649" level="9" /> <!-- Poison -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -4016,15 +3737,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="30.96" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22188" level="99" type="Monster" name="Andreas' Escort Captain">
@@ -4041,12 +3755,12 @@
 			<skill name="PhysicalSpecial2" id="15436" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
-		<race>UNDEAD</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8208" /> <!-- Monster Only (Heretic Private Staff) -->
-		<acquire exp="34101305" sp="34107" />
+		<acquire exp="25228755" sp="22641" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.265895954" hpRegen="8.5" mp="23550.495049505" mpRegen="30" />
+			<vitals hp="712495.953757225" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
 			<attack physical="65164.108953835" magical="6936.97244026951" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="9" />
 			<attribute>
@@ -4062,15 +3776,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4612" level="9" /> <!-- Wide Sweep -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -4081,26 +3793,15 @@
 				<clan>ANDREAS</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
-			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="31.66" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="23.2" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22189" level="99" type="Monster" name="Andreas' Escort">
 		<parameters>
@@ -4111,12 +3812,12 @@
 			<skill name="PhysicalSpecial" id="15432" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
-		<race>UNDEAD</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="26438197" sp="23718" />
+		<acquire exp="26438198" sp="23719" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.265895954" hpRegen="8.5" mp="23550.495049505" mpRegen="3" />
+			<vitals hp="712495.953757225" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
 			<attack physical="65164.108953835" magical="6936.97244026951" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="8" />
 			<attribute>
@@ -4132,14 +3833,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -4156,16 +3855,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22190" level="98" type="Monster" name="Ritual Sacrifice">
+	<npc id="22190" level="99" type="Monster" name="Ritual Sacrifice">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4177,11 +3871,11 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="14983488" sp="15078" />
+		<acquire exp="28857183" sp="25875" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="352649.798563671" hpRegen="8.5" mp="23312.6112611261" mpRegen="30" />
-			<attack physical="64505.885631069" magical="6866.90201157992" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="624.47883086181" magical="262.628791402113" evasion="8" />
+			<vitals hp="712495.953757225" hpRegen="8.5" mp="23785.4785478548" mpRegen="30" />
+			<attack physical="67483.3998391243" magical="455.801494592134" random="5" critical="4.75" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="835.106382978723" magical="292.480681925732" evasion="8" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -4195,15 +3889,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="9" /> <!-- Power Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4032" level="9" /> <!-- Power Strike -->
 			<skill id="4417" level="36" /> <!-- Undead -->
 			<skill id="4614" level="9" /> <!-- Death Bomb -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -4220,16 +3912,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22191" level="99" type="Monster" name="Andreas' Escort Captain">
@@ -4243,12 +3927,12 @@
 			<skill name="DeBuff" id="15433" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
-		<race>UNDEAD</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8208" /> <!-- Monster Only (Heretic Private Staff) -->
-		<acquire exp="25228754" sp="22640" />
+		<acquire exp="25228755" sp="22641" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.265895954" hpRegen="8.5" mp="23550.495049505" mpRegen="3" />
+			<vitals hp="712495.953757225" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
 			<attack physical="65164.108953835" magical="6936.97244026951" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="9" />
 			<attribute>
@@ -4264,17 +3948,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4065" level="1" /> <!-- Heal -->
 			<skill id="4158" level="9" /> <!-- Prominence -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -4291,20 +3973,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1912" max="4454" chance="70" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="35466" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35465" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
-				<item id="35467" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant R-grade Weapon -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22192" level="99" type="Monster" name="Andreas' Escort">
@@ -4318,12 +3988,12 @@
 			<skill name="DeBuff" id="15433" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
-		<race>UNDEAD</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="25228754" sp="22640" />
+		<acquire exp="25228755" sp="22641" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.265895954" hpRegen="8.5" mp="23550.495049505" mpRegen="3" />
+			<vitals hp="712495.953757225" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
 			<attack physical="65164.108953835" magical="6936.97244026951" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="8" />
 			<attribute>
@@ -4339,16 +4009,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4466" level="3" /> <!-- Fall into Darkness -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -4364,14 +4032,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="2068" max="4816" chance="70" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35472" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant R-grade Weapon -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22193" level="99" type="Monster" name="Andreas' Escort">
@@ -4384,12 +4046,12 @@
 			<skill name="W_LongRangeDDMagic" id="15434" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
-		<race>UNDEAD</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="25228754" sp="22640" />
+		<acquire exp="25228755" sp="22641" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356248.265895954" hpRegen="8.5" mp="23550.495049505" mpRegen="3" />
+			<vitals hp="712495.953757225" hpRegen="8.5" mp="23785.4785478548" mpRegen="3" />
 			<attack physical="65164.108953835" magical="6936.97244026951" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="420.744680851064" magical="358.947033627017" evasion="8" />
 			<attribute>
@@ -4405,15 +4067,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4622" level="9" /> <!-- Drain Energy -->
 			<skill id="4665" level="9" /> <!-- Drain Energy -->
 			<skill id="4789" level="10" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -4429,14 +4089,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1912" max="4454" chance="70" /> <!-- Adena -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="57" min="340" max="792" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant R-grade Weapon -->
-			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="22194" level="99" type="Monster" name="Anteroom Gatekeeper">
@@ -4491,7 +4145,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="22195" level="98" type="Monster" name="Ritual Sacrifice">
+	<npc id="22195" level="99" type="Monster" name="Ritual Sacrifice">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4504,11 +4158,11 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="14983488" sp="15078" />
+		<acquire exp="6046531" sp="5391" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15681.0299527063" hpRegen="8.5" mp="2331.32646597993" mpRegen="3" />
-			<attack physical="9215.37303677614" magical="981.019470321114" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="624.47883086181" magical="262.628791402113" evasion="3" />
+			<vitals hp="158409.826589595" hpRegen="8.5" mp="2378.87788778878" mpRegen="3" />
+			<attack physical="50739.3983752814" magical="257.514968696121" random="5" critical="4.75" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="835.106382978723" magical="292.480681925732" evasion="3" />
 			<attribute>
 				<attack type="DARK" value="330" />
 				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
@@ -4522,16 +4176,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="18" /> <!-- HP Increase (10x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4417" level="36" /> <!-- Undead -->
 			<skill id="4614" level="9" /> <!-- Death Bomb -->
 			<skill id="4789" level="9" /> <!-- High Lv. -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Thin Skin -->
 		</skillList>
@@ -4548,16 +4200,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant R-grade Armor -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="57" min="164" max="384" chance="70" /> <!-- Adena -->
 			</drop>
-			<spoil>
-				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant R-grade Weapon -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="22196" level="80" type="Monster" name="Velociraptor">

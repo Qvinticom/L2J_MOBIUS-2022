@@ -209,81 +209,173 @@
 			<height normal="62.1" />
 		</collision>
 	</npc>
-	<npc id="24626" level="85" type="Npc" name="Ratel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24626" level="116" type="Monster" name="Ratel">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1546130008" sp="1391465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="33" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="30000" max="40000" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24627" level="85" type="Npc" name="Kiku">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24627" level="116" type="Monster" name="Kiku">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1546130008" sp="1391465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="30000" max="40000" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24628" level="85" type="Npc" name="Honeybee">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24628" level="116" type="Monster" name="Honeybee">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1546130008" sp="1391465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="43" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="30000" max="40000" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24629" level="85" type="Npc" name="Growler">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24629" level="116" type="Monster" name="Growler">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="1546130008" sp="1391465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="818645.086705202" hpRegen="10.5" mp="2890.42904290429" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="521192.934242167" magical="1212.14097575999" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="4447.31707317073" magical="1705.54616437254" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14765" level="5" /> <!-- Vampiric Rage Resistance -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="33104" level="1" /> <!-- Party Bonus -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="37" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="30000" max="40000" chance="70" /> <!-- Adena -->
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="24630" level="85" type="Npc" name="Evolved Growler">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

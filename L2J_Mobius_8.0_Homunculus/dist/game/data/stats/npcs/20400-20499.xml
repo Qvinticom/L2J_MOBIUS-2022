@@ -95,7 +95,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -749,7 +749,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -841,7 +841,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1077,6 +1077,40 @@
 			</drop>
 		</dropLists>
 	</npc>
+	<npc id="20468" level="6" type="Monster" name="Kaboo Orc">
+		<race>HUMANOID</race>
+		<acquire exp="320" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="54.3352601156069" hpRegen="2" mp="50.8250825082508" mpRegen="0.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="14.8257968865827" magical="6.63076508496" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="55.7894736842105" magical="27.0974465867639" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
+	</npc>
 	<npc id="20469" level="8" type="Monster" name="Kaboo Orc Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
@@ -1149,15 +1183,15 @@
 				<clan>ORC</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="21" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="10" />
-			<height normal="21" />
-		</collision>
 	</npc>
 	<npc id="20471" level="10" type="Monster" name="Kaboo Orc Warrior">
 		<parameters>
@@ -1194,15 +1228,15 @@
 				<clan>ORC</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="22" grown="26.4" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="12" grown="14" />
-			<height normal="22" grown="26.4" />
-		</collision>
 	</npc>
 	<npc id="20472" level="12" type="Monster" name="Kaboo Orc Warrior Captain">
 		<parameters>
@@ -1690,6 +1724,31 @@
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
 			</drop>
 		</dropLists>
+	</npc>
+	<npc id="20492" level="21" type="Monster" name="Kirunak's Escort">
+		<race>UNDEAD</race>
+		<acquire exp="1146" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="333.526011560694" hpRegen="3.5" mp="168.316831683168" mpRegen="1.5" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="48.8762534722505" magical="19.0751998350761" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="69.4214876033058" magical="37.0946185527644" />
+		</stats>
+		<skillList>
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
 	</npc>
 	<npc id="20494" level="31" type="Monster" name="Turek War Hound">
 		<parameters>

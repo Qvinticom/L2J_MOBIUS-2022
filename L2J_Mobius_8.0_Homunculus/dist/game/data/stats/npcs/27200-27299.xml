@@ -599,4 +599,24 @@
 			<height normal="35" />
 		</collision>
 	</npc>
+	<npc id="27214" level="76" type="Monster" name="Guardian of Forbidden Knowledge">
+		<race>DIVINE</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2491.32947976879" hpRegen="8.5" mp="1266.00660066007" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="358.963991284229" magical="100.965232790839" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="193.333333333333" magical="81.0515834192115" />
+		</stats>
+		<skillList>
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
 </list>

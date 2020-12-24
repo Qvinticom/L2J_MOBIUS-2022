@@ -50,7 +50,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -100,7 +100,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -144,7 +144,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -187,7 +187,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -231,7 +231,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -275,7 +275,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -319,7 +319,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1086,6 +1086,10 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="60.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="266" max="620" chance="70" /> <!-- Adena -->
@@ -1098,13 +1102,9 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="50" />
-			<height normal="60.5" />
-		</collision>
 	</npc>
 	<npc id="23350" level="87" type="Monster" name="Demonic Noctum" title="Gravekeeper">
 		<parameters>
@@ -1151,7 +1151,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1290,11 +1290,11 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.688" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.771" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1334,11 +1334,11 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.75" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.768" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1378,11 +1378,11 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.667" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.743" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -1422,12 +1422,47 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.674" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.72" /> <!-- Soul Crystal -->
 			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23358" level="99" type="Monster" name="Blow Archer ">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</dropLists>
 	</npc>
 	<npc id="23360" level="102" type="Monster" name="Bizuard">
@@ -1466,11 +1501,11 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.769" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.732" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
@@ -1515,11 +1550,11 @@
 				<item id="57" min="2496" max="5815" chance="70" /> <!-- Adena -->
 				<item id="81217" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
 				<item id="81218" min="1" max="1" chance="0.75" /> <!-- Dragon Scales -->
-				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel s Feather -->
+				<item id="81219" min="1" max="1" chance="0.75" /> <!-- Angel's Feather -->
 				<item id="81216" min="1" max="1" chance="0.3" /> <!-- Black Mithril -->
 			</drop>
 			<spoil>
-				<item id="81344" min="1" max="1" chance="1.774" /> <!-- Augmenting Stone Crystal -->
+				<item id="81344" min="1" max="1" chance="1.749" /> <!-- Soul Crystal -->
 			</spoil>
 		</dropLists>
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
@@ -1527,5 +1562,203 @@
 				<clan>BELETHS</clan>
 			</clanList>
 		</ai>
+	</npc>
+	<npc id="23362" level="99" type="Monster" name="Amos Soldier">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23363" level="99" type="Monster" name="Amos Officer">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23364" level="99" type="Monster" name="Amos Master">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="55771.4048257226" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23365" level="99" type="Monster" name="Ailith Hunter">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4276" level="2" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="23366" level="99" type="Monster" name="Durable Charger">
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="18819.6531791908" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="23370" level="99" type="Monster" name="Blow Archer ">
+		<race>DEMONIC</race>
+		<acquire exp="92008162" sp="82721" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="37638.7283236994" hpRegen="10.5" mp="23785.4785478548" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="67483.3998391243" magical="455.801494592134" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="835.106382978723" magical="336.352784214592" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<!-- Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>

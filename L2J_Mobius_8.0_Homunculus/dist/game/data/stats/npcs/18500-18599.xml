@@ -1717,7 +1717,7 @@
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Recovering Potion - Grizzly -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1925,9 +1925,9 @@
 				<item id="96" min="1" max="1" chance="0.3" /> <!-- Scythe -->
 				<item id="298" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive -->
 				<item id="302" min="1" max="1" chance="0.3" /> <!-- Body Slasher -->
-				<item id="2075" min="81" max="243" chance="22.81" /> <!-- Orcish Glaive Blade -->
-				<item id="2062" min="40" max="120" chance="22.62" /> <!-- Scythe Edge -->
-				<item id="2076" min="14" max="42" chance="21.13" /> <!-- Body Slasher Blade -->
+				<item id="2075" min="81" max="243" chance="23.06" /> <!-- Orcish Glaive Blade -->
+				<item id="2076" min="14" max="42" chance="21.72" /> <!-- Body Slasher Blade -->
+				<item id="2062" min="40" max="120" chance="21.56" /> <!-- Scythe Edge -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1989,15 +1989,15 @@
 				<item id="2452" min="1" max="1" chance="0.3" /> <!-- Reinforced Mithril Gloves -->
 				<item id="2453" min="1" max="1" chance="0.3" /> <!-- Chain Gloves -->
 				<item id="2454" min="1" max="1" chance="0.3" /> <!-- Karmian Gloves -->
-				<item id="2938" min="2" max="6" chance="18.56" /> <!-- Karmian Boot Fabric -->
-				<item id="1958" min="1" max="3" chance="18.45" /> <!-- Reinforced Mithril Boot Design -->
-				<item id="2939" min="2" max="6" chance="18.13" /> <!-- Plated Leather Boot Lining -->
-				<item id="2940" min="3" max="9" chance="18.13" /> <!-- Dwarven Chain Boot Fragment -->
-				<item id="2937" min="1" max="3" chance="17.96" /> <!-- Chain Boot Fragment -->
-				<item id="2944" min="1" max="1" chance="17.88" /> <!-- Karmian Glove Fabric -->
-				<item id="2942" min="4" max="12" chance="17.73" /> <!-- Reinforced Mithril Glove Design -->
-				<item id="2941" min="3" max="9" chance="17.7" /> <!-- Boot of Seal Pattern -->
-				<item id="2943" min="4" max="12" chance="16.95" /> <!-- Chain Glove Design -->
+				<item id="1958" min="1" max="3" chance="18.51" /> <!-- Reinforced Mithril Boot Design -->
+				<item id="2942" min="4" max="12" chance="18.4" /> <!-- Reinforced Mithril Glove Design -->
+				<item id="2940" min="3" max="9" chance="18.31" /> <!-- Dwarven Chain Boot Fragment -->
+				<item id="2937" min="1" max="3" chance="18.29" /> <!-- Chain Boot Fragment -->
+				<item id="2938" min="2" max="6" chance="18.2" /> <!-- Karmian Boot Fabric -->
+				<item id="2941" min="3" max="9" chance="17.59" /> <!-- Boot of Seal Pattern -->
+				<item id="2943" min="4" max="12" chance="17.42" /> <!-- Chain Glove Design -->
+				<item id="2939" min="2" max="6" chance="17.24" /> <!-- Plated Leather Boot Lining -->
+				<item id="2944" min="1" max="1" chance="16.91" /> <!-- Karmian Glove Fabric -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2077,10 +2077,10 @@
 			<skill name="Skill03_ID" id="4094" level="5" />
 			<skill name="SpawnSkill" id="4028" level="2" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="53155.2050473186" hpRegen="37.2348110463089" mp="747.769667477697" mpRegen="2.1" />
+			<vitals hp="53155.2050473186" hpRegen="37.2348110463089" mp="754.257907542579" mpRegen="2.1" />
 			<attack physical="1070.21820560081" magical="326.182027233143" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="320.38965101211" magical="468.226492582854" />
 			<speed>
@@ -2092,16 +2092,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="4225" level="1" /> <!-- Stun Resistance -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4028" level="2" /> <!-- Might -->
 			<skill id="4032" level="4" /> <!-- Power Strike -->
 			<skill id="4094" level="5" /> <!-- Cancellation -->
-			<skill id="4225" level="1" /> <!-- Stun Resistance -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="450" />
@@ -2109,6 +2106,11 @@
 			<radius normal="20" grown="25" />
 			<height normal="35" grown="41.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="60" max="140" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18552" level="50" type="Monster" name="Cruma Phantom">
 		<parameters>
@@ -2124,11 +2126,11 @@
 			<skill name="Skill01_ID" id="4157" level="4" />
 			<skill name="Skill02_ID" id="4077" level="4" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- Ultimate Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="17718.6119873817" hpRegen="37.2348110463089" mp="747.769667477697" mpRegen="2.1" />
+			<vitals hp="17717.9810725552" hpRegen="37.2348110463089" mp="754.257907542579" mpRegen="2.1" />
 			<attack physical="3314.49126413155" magical="2402.02420173111" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="320.38965101211" magical="468.226492582854" />
 			<speed>
@@ -2140,17 +2142,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4077" level="4" /> <!-- Aura Burn -->
-			<skill id="4157" level="4" /> <!-- Blaze -->
 			<skill id="4225" level="1" /> <!-- Stun Resistance -->
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4453" level="2" /> <!-- Sleep Vulnerability -->
 			<skill id="4454" level="2" /> <!-- Hold Vulnerability -->
+			<skill id="4077" level="4" /> <!-- Aura Burn -->
+			<skill id="4157" level="4" /> <!-- Blaze -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
@@ -2158,6 +2158,12 @@
 			<radius normal="11" />
 			<height normal="32" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="283" min="1" max="1" chance="0.3" /> <!-- Akat Longbow -->
+				<item id="2109" min="60" max="180" chance="14.29" /> <!-- Akat Longbow Shaft -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18553" level="50" type="Monster" name="Cruma Phantom">
 		<parameters>
@@ -2179,11 +2185,11 @@
 			<skill name="Skill02_ID" id="4033" level="4" />
 			<skill name="Skill03_ID" id="4065" level="4" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- Ultimate Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="17718.6119873817" hpRegen="37.2348110463089" mp="747.769667477697" mpRegen="2.1" />
+			<vitals hp="17717.9810725552" hpRegen="37.2348110463089" mp="754.257907542579" mpRegen="2.1" />
 			<attack physical="3314.49126413155" magical="1647.66949374944" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="384.735689709102" magical="407.153471811177" />
 			<speed>
@@ -2195,19 +2201,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4033" level="4" /> <!-- Aura Burn -->
-			<skill id="4065" level="4" /> <!-- Heal -->
-			<skill id="4157" level="4" /> <!-- Blaze -->
 			<skill id="4225" level="1" /> <!-- Stun Resistance -->
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4453" level="2" /> <!-- Sleep Vulnerability -->
 			<skill id="4454" level="2" /> <!-- Hold Vulnerability -->
+			<skill id="4033" level="4" /> <!-- Aura Burn -->
+			<skill id="4065" level="4" /> <!-- Heal -->
+			<skill id="4157" level="4" /> <!-- Blaze -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
@@ -2215,6 +2219,16 @@
 			<radius normal="15" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="885" min="1" max="1" chance="7.428" /> <!-- Ring of Ages -->
+				<item id="854" min="1" max="1" chance="4.968" /> <!-- Earring of Seal -->
+				<item id="917" min="1" max="1" chance="3.689" /> <!-- Necklace of Mermaid -->
+				<item id="1914" min="81" max="243" chance="100" /> <!-- Earring of Seal Gemstone -->
+				<item id="1915" min="28" max="84" chance="100" /> <!-- Ring of Ages Gemstone -->
+				<item id="1916" min="20" max="60" chance="100" /> <!-- Necklace of Mermaid Teardrop -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18554" level="23" type="Monster" name="Tomlan Kamos" title="Kaneus">
 		<parameters>

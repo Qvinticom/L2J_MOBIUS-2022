@@ -582,15 +582,15 @@
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="34.32" />
+			<height normal="62.4" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="2970" max="6920" chance="100" /> <!-- Adena -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="34.32" />
-			<height normal="62.4" />
-		</collision>
 	</npc>
 	<npc id="25711" level="29" type="Monster" name="Lost Guard">
 		<!-- Confirmed CT2.5 -->
@@ -2637,9 +2637,9 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="136101120" sp="32664" />
+		<acquire exp="136101120" sp="32665" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="648663.09148265" hpRegen="341.1770035" mp="1917.28813559322" mpRegen="3" />
+			<vitals hp="648663.09148265" hpRegen="341.1770035" mp="1936.27118644068" mpRegen="3" />
 			<attack physical="11040.0552486188" magical="535.658962350159" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
 			<defence physical="369.613259668508" magical="270.437306863939" />
 			<attribute>
@@ -2653,15 +2653,15 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14042" level="3" /> <!-- Disarm -->
 			<skill id="14061" level="1" /> <!-- Frontal Brandish -->
 			<skill id="14062" level="1" /> <!-- Sleep -->
@@ -2674,7 +2674,6 @@
 			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
 			<skill id="14718" level="1" /> <!-- Raid Boss (Lv. 92) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -2690,12 +2689,12 @@
 			<drop>
 				<item id="17357" min="1" max="1" chance="0.3" /> <!-- Twilight Ring -->
 				<item id="17342" min="1" max="1" chance="0.3" /> <!-- Twilight Boots - Heavy armor -->
-				<item id="17343" min="1" max="1" chance="0.3" /> <!-- Twilight Shield -->
+				<item id="17343" min="1" max="1" chance="0.3" /> <!-- Twilight Shield - Heavy armor -->
 				<item id="17347" min="1" max="1" chance="0.3" /> <!-- Twilight Leather Gloves - Light armor -->
 				<item id="17348" min="1" max="1" chance="0.3" /> <!-- Twilight Leather Boots - Light armor -->
 				<item id="17352" min="1" max="1" chance="0.3" /> <!-- Twilight Gloves - Robe -->
 				<item id="17353" min="1" max="1" chance="0.3" /> <!-- Twilight Shoes - Robe -->
-				<item id="17354" min="1" max="1" chance="0.3" /> <!-- Twilight Sigil -->
+				<item id="17354" min="1" max="1" chance="0.3" /> <!-- Twilight Sigil - Robe -->
 				<item id="17356" min="1" max="1" chance="0.3" /> <!-- Twilight Earring -->
 				<item id="17341" min="1" max="1" chance="0.3" /> <!-- Twilight Gauntlets - Heavy armor -->
 				<item id="17344" min="1" max="1" chance="0.075" /> <!-- Twilight Leather Helmet - Light armor -->
@@ -2719,7 +2718,7 @@
 				<item id="17332" min="1" max="1" chance="0.0075" /> <!-- Apocalypse Buster -->
 				<item id="17333" min="1" max="1" chance="0.0075" /> <!-- Apocalypse Caster -->
 				<item id="17324" min="1" max="1" chance="0.0075" /> <!-- Apocalypse Shaper -->
-				<item id="17527" min="1" max="2" chance="4.109" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17527" min="1" max="2" chance="4.102" /> <!-- Scroll: Enchant R-grade Armor -->
 				<item id="17526" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
@@ -3411,9 +3410,9 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="145122000" sp="34829" />
+		<acquire exp="145122000" sp="34830" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="1040959.6214511" hpRegen="363.8542499" mp="2059.66101694915" mpRegen="3" />
+			<vitals hp="1040958.99053628" hpRegen="363.8542499" mp="2079.32203389831" mpRegen="3" />
 			<attack physical="15456.0688405797" magical="614.554158057459" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
 			<defence physical="383.695652173913" magical="280.766396462786" />
 			<attribute>
@@ -3427,15 +3426,15 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<skillList>
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14042" level="1" /> <!-- Disarm -->
 			<skill id="14617" level="1" /> <!-- Knock Down/ Knock Back Resistance -->
 			<skill id="14618" level="1" /> <!-- Knock Down/ Knock Back Resistance -->
@@ -3445,7 +3444,6 @@
 			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
 			<skill id="14719" level="1" /> <!-- Raid Boss (Lv. 95) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3460,7 +3458,7 @@
 		<dropLists>
 			<drop>
 				<item id="17415" min="1" max="1" chance="0.03" /> <!-- Seraph Ring -->
-				<item id="17401" min="1" max="1" chance="0.03" /> <!-- Seraph Shield -->
+				<item id="17401" min="1" max="1" chance="0.03" /> <!-- Seraph Shield - Heavy armor -->
 				<item id="17402" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Helmet - Light armor -->
 				<item id="17404" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Leggings - Light armor -->
 				<item id="17405" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Gloves - Light armor -->
@@ -3469,7 +3467,7 @@
 				<item id="17409" min="1" max="1" chance="0.03" /> <!-- Seraph Stockings - Robe -->
 				<item id="17410" min="1" max="1" chance="0.03" /> <!-- Seraph Gloves - Robe -->
 				<item id="17411" min="1" max="1" chance="0.03" /> <!-- Seraph Shoes - Robe -->
-				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil -->
+				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil - Robe -->
 				<item id="17413" min="1" max="1" chance="0.03" /> <!-- Seraph Necklace -->
 				<item id="17414" min="1" max="1" chance="0.03" /> <!-- Seraph Earring -->
 				<item id="17400" min="1" max="1" chance="0.03" /> <!-- Seraph Boots - Heavy armor -->
@@ -3490,7 +3488,7 @@
 				<item id="17390" min="1" max="1" chance="0.003" /> <!-- Specter Buster -->
 				<item id="17391" min="1" max="1" chance="0.003" /> <!-- Specter Caster -->
 				<item id="17382" min="1" max="1" chance="0.003" /> <!-- Specter Shaper -->
-				<item id="17527" min="1" max="2" chance="3.267" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17527" min="1" max="2" chance="3.215" /> <!-- Scroll: Enchant R-grade Armor -->
 				<item id="17526" min="1" max="2" chance="0.3" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
@@ -3597,12 +3595,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.75" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.75" /> <!-- Eternal Sigil - Robe -->
 				<item id="17431" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate - Heavy armor -->
 				<item id="17438" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings - Light armor -->
 				<item id="17442" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic - Robe -->
-				<item id="30297" min="1" max="1" chance="10.09" /> <!-- Superior Giant's Codex -->
-				<item id="17526" min="1" max="1" chance="5.447" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="30297" min="1" max="1" chance="10.12" /> <!-- Superior Giant's Codex -->
+				<item id="17526" min="1" max="1" chance="5.503" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3665,7 +3663,7 @@
 				<item id="17387" min="1" max="1" chance="0.03" /> <!-- Specter Stormer -->
 				<item id="17390" min="1" max="1" chance="0.03" /> <!-- Specter Buster -->
 				<item id="17391" min="1" max="1" chance="0.03" /> <!-- Specter Caster -->
-				<item id="17526" min="1" max="1" chance="2.927" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="17526" min="1" max="1" chance="2.972" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3730,7 +3728,7 @@
 				<item id="17384" min="1" max="1" chance="0.03" /> <!-- Specter Slasher -->
 				<item id="17386" min="1" max="1" chance="0.03" /> <!-- Specter Fighter -->
 				<item id="17389" min="1" max="1" chance="0.03" /> <!-- Specter Shooter -->
-				<item id="17527" min="1" max="1" chance="20.17" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17527" min="1" max="1" chance="20.2" /> <!-- Scroll: Enchant R-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3788,11 +3786,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield -->
-				<item id="17412" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil -->
+				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield - Heavy armor -->
+				<item id="17412" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil - Robe -->
 				<item id="17383" min="1" max="1" chance="0.03" /> <!-- Specter Cutter -->
 				<item id="17388" min="1" max="1" chance="0.03" /> <!-- Specter Thrower -->
-				<item id="17526" min="1" max="1" chance="5.903" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="17526" min="1" max="1" chance="5.978" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3854,7 +3852,7 @@
 				<item id="17382" min="1" max="1" chance="0.03" /> <!-- Specter Shaper -->
 				<item id="17385" min="1" max="1" chance="0.03" /> <!-- Specter Avenger -->
 				<item id="17392" min="1" max="1" chance="0.03" /> <!-- Specter Retributer -->
-				<item id="17527" min="1" max="1" chance="20.23" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17527" min="1" max="1" chance="19.78" /> <!-- Scroll: Enchant R-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3964,12 +3962,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17435" min="1" max="1" chance="0.75" /> <!-- Eternal Shield -->
+				<item id="17435" min="1" max="1" chance="0.75" /> <!-- Eternal Shield - Heavy armor -->
 				<item id="17432" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters - Heavy armor -->
 				<item id="17437" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor - Light armor -->
 				<item id="17443" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings - Robe -->
-				<item id="17527" min="1" max="1" chance="22.22" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="30297" min="1" max="1" chance="14.03" /> <!-- Superior Giant's Codex -->
+				<item id="17527" min="1" max="1" chance="22.97" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="30297" min="1" max="1" chance="14.15" /> <!-- Superior Giant's Codex -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4031,7 +4029,7 @@
 				<item id="17404" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings - Light armor -->
 				<item id="17397" min="1" max="1" chance="0.075" /> <!-- Seraph Breastplate - Heavy armor -->
 				<item id="17408" min="1" max="1" chance="0.075" /> <!-- Seraph Tunic - Robe -->
-				<item id="17526" min="1" max="1" chance="2.916" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="17526" min="1" max="1" chance="2.981" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4093,7 +4091,7 @@
 				<item id="17398" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters - Heavy armor -->
 				<item id="17403" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor - Light armor -->
 				<item id="17409" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings - Robe -->
-				<item id="17527" min="1" max="1" chance="19.29" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17527" min="1" max="1" chance="19.09" /> <!-- Scroll: Enchant R-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4159,7 +4157,7 @@
 				<item id="17407" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet - Robe -->
 				<item id="17397" min="1" max="1" chance="0.075" /> <!-- Seraph Breastplate - Heavy armor -->
 				<item id="17408" min="1" max="1" chance="0.075" /> <!-- Seraph Tunic - Robe -->
-				<item id="17526" min="1" max="1" chance="6.002" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="17526" min="1" max="1" chance="5.956" /> <!-- Scroll: Enchant R-grade Weapon -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4228,7 +4226,7 @@
 				<item id="17409" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings - Robe -->
 				<item id="17410" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves - Robe -->
 				<item id="17403" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Armor - Light armor -->
-				<item id="17527" min="1" max="1" chance="20.79" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17527" min="1" max="1" chance="19.62" /> <!-- Scroll: Enchant R-grade Armor -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4555,10 +4553,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1011156496" sp="242677" raidPoints="7" />
+		<acquire exp="1011156496" sp="242678" raidPoints="7" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="863404.031919362" hpRegen="356.2141053" mp="22800.1998001998" mpRegen="3" />
+			<vitals hp="863404.031919362" hpRegen="356.2141053" mp="23027.972027972" mpRegen="3" />
 			<attack physical="14820.0120790842" magical="4842.52032732453" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
 			<defence physical="3333.33333333333" magical="1885.81909893385" />
 			<attribute>
@@ -4572,7 +4570,6 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<skillList>
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
@@ -4582,12 +4579,12 @@
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14721" level="1" /> <!-- Raid Boss (Lv. 94) -->
 			<skill id="14152" level="1" /> <!-- Roar of Destruction -->
 			<skill id="14617" level="1" /> <!-- Knock Down/ Knock Back Resistance -->
 			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
 			<skill id="14620" level="1" /> <!-- Aerial Yoke Attack Resistance -->
 			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14721" level="1" /> <!-- Raid Boss (Lv. 94) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="true" aggroRange="2000" />
@@ -4598,54 +4595,52 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="36574" min="1" max="1" chance="50.13" /> <!-- Scroll: Modify R-grade Weapon -->
-				<item id="36586" min="1" max="1" chance="49.4" /> <!-- Scroll: Modify R-grade Armor -->
-				<item id="17526" min="1" max="1" chance="30.88" /> <!-- Scroll: Enchant R-grade Weapon -->
-				<item id="38006" min="1" max="1" chance="1.234" /> <!-- Twilight Gloves Crafting Pack - Robe -->
-				<item id="37996" min="1" max="1" chance="1.228" /> <!-- Twilight Boots Crafting Pack - Heavy armor -->
-				<item id="38003" min="1" max="1" chance="1.223" /> <!-- Twilight Circlet Crafting Pack - Robe -->
-				<item id="38007" min="1" max="1" chance="1.216" /> <!-- Twilight Shoes Crafting Pack - Robe -->
-				<item id="38001" min="1" max="1" chance="1.21" /> <!-- Twilight Leather Gloves Crafting Pack - Light armor -->
-				<item id="37993" min="1" max="1" chance="1.206" /> <!-- Twilight Breastplate Crafting Pack - Heavy armor -->
-				<item id="37997" min="1" max="1" chance="1.194" /> <!-- Twilight Shield Crafting Box -->
-				<item id="38004" min="1" max="1" chance="1.192" /> <!-- Twilight Tunic Crafting Pack - Robe -->
-				<item id="37995" min="1" max="1" chance="1.185" /> <!-- Twilight Gauntlets Crafting Pack - Heavy armor -->
-				<item id="37994" min="1" max="1" chance="1.179" /> <!-- Twilight Gaiters Crafting Pack - Heavy armor -->
-				<item id="38002" min="1" max="1" chance="1.177" /> <!-- Twilight Leather Boots Crafting Pack - Light armor -->
-				<item id="37992" min="1" max="1" chance="1.177" /> <!-- Twilight Helmet Crafting Pack - Heavy armor -->
-				<item id="38000" min="1" max="1" chance="1.176" /> <!-- Twilight Leather Leggings Crafting Pack - Light armor -->
-				<item id="37998" min="1" max="1" chance="1.173" /> <!-- Twilight Leather Helmet Crafting Pack - Light armor -->
-				<item id="38005" min="1" max="1" chance="1.169" /> <!-- Twilight Stockings Crafting Pack - Robe -->
-				<item id="38008" min="1" max="1" chance="1.124" /> <!-- Twilight Sigil Crafting Pack -->
-				<item id="37999" min="1" max="1" chance="1.119" /> <!-- Twilight Leather Armor Crafting Pack - Light armor -->
-				<item id="17747" min="1" max="1" chance="0.75" /> <!-- Trace of Decaying Darkness -->
+				<item id="36513" min="3" max="5" chance="49.18" /> <!-- Elcyum Powder -->
+				<item id="17526" min="1" max="1" chance="30.53" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="37998" min="1" max="1" chance="1.242" /> <!-- Twilight Leather Helmet Crafting Pack - Light armor -->
+				<item id="38000" min="1" max="1" chance="1.227" /> <!-- Twilight Leather Leggings Crafting Pack - Light armor -->
+				<item id="38004" min="1" max="1" chance="1.219" /> <!-- Twilight Tunic Crafting Pack - Robe -->
+				<item id="37995" min="1" max="1" chance="1.216" /> <!-- Twilight Gauntlets Crafting Pack - Heavy armor -->
+				<item id="37994" min="1" max="1" chance="1.199" /> <!-- Twilight Gaiters Crafting Pack - Heavy armor -->
+				<item id="37992" min="1" max="1" chance="1.192" /> <!-- Twilight Helmet Crafting Pack - Heavy armor -->
+				<item id="38001" min="1" max="1" chance="1.184" /> <!-- Twilight Leather Gloves Crafting Pack - Light armor -->
+				<item id="38005" min="1" max="1" chance="1.18" /> <!-- Twilight Stockings Crafting Pack - Robe -->
+				<item id="38003" min="1" max="1" chance="1.173" /> <!-- Twilight Circlet Crafting Pack - Robe -->
+				<item id="37997" min="1" max="1" chance="1.173" /> <!-- Twilight Shield Crafting Box - Heavy armor -->
+				<item id="38007" min="1" max="1" chance="1.172" /> <!-- Twilight Shoes Crafting Pack - Robe -->
+				<item id="37993" min="1" max="1" chance="1.16" /> <!-- Twilight Breastplate Crafting Pack - Heavy armor -->
+				<item id="37999" min="1" max="1" chance="1.151" /> <!-- Twilight Leather Armor Crafting Pack - Light armor -->
+				<item id="38006" min="1" max="1" chance="1.144" /> <!-- Twilight Gloves Crafting Pack - Robe -->
+				<item id="38002" min="1" max="1" chance="1.128" /> <!-- Twilight Leather Boots Crafting Pack - Light armor -->
+				<item id="38008" min="1" max="1" chance="1.123" /> <!-- Twilight Sigil Crafting Pack - Robe -->
+				<item id="37996" min="1" max="1" chance="1.121" /> <!-- Twilight Boots Crafting Pack - Heavy armor -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 2 -->
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 1 -->
 				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 2 -->
-				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 1 -->
-				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
 				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
-				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 2 -->
-				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 1 -->
-				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
-				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
-				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
-				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 3 -->
-				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 3 -->
-				<item id="46477" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal Lv. 4 -->
-				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
-				<item id="46461" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
 				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46461" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
 				<item id="37987" min="1" max="1" chance="0.075" /> <!-- Apocalypse Thrower Crafting Pack -->
+				<item id="37983" min="1" max="1" chance="0.075" /> <!-- Apocalypse Slasher Crafting Pack -->
 				<item id="37984" min="1" max="1" chance="0.075" /> <!-- Apocalypse Avenger Crafting Pack -->
-				<item id="37985" min="1" max="1" chance="0.075" /> <!-- Apocalypse Fighter Crafting Pack -->
 				<item id="37986" min="1" max="1" chance="0.075" /> <!-- Apocalypse Stormer Crafting Pack -->
 				<item id="37981" min="1" max="1" chance="0.075" /> <!-- Apocalypse Shaper Crafting Pack -->
 				<item id="37988" min="1" max="1" chance="0.075" /> <!-- Apocalypse Shooter Crafting Pack -->
 				<item id="37989" min="1" max="1" chance="0.075" /> <!-- Apocalypse Buster Crafting Pack -->
 				<item id="37990" min="1" max="1" chance="0.075" /> <!-- Apocalypse Caster Crafting Pack -->
 				<item id="37991" min="1" max="1" chance="0.075" /> <!-- Apocalypse Retributer Crafting Pack -->
-				<item id="37983" min="1" max="1" chance="0.075" /> <!-- Apocalypse Slasher Crafting Pack -->
+				<item id="37985" min="1" max="1" chance="0.075" /> <!-- Apocalypse Fighter Crafting Pack -->
 				<item id="46446" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal Lv. 3 -->
 				<item id="37982" min="1" max="1" chance="0.075" /> <!-- Apocalypse Cutter Crafting Pack -->
 				<item id="46447" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal Lv. 4 -->
@@ -4918,11 +4913,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17311" min="1" max="1" chance="6.557" /> <!-- Immortal Leather Armor - Light armor -->
-				<item id="17305" min="1" max="1" chance="4.942" /> <!-- Immortal Breastplate - Heavy armor -->
-				<item id="17316" min="1" max="1" chance="1.984" /> <!-- Immortal Tunic - Robe -->
-				<item id="17527" min="3" max="9" chance="18.77" /> <!-- Scroll: Enchant R-grade Armor -->
-				<item id="17526" min="1" max="2" chance="8.385" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="17311" min="1" max="1" chance="6.493" /> <!-- Immortal Leather Armor - Light armor -->
+				<item id="17305" min="1" max="1" chance="4.893" /> <!-- Immortal Breastplate - Heavy armor -->
+				<item id="17316" min="1" max="1" chance="1.893" /> <!-- Immortal Tunic - Robe -->
+				<item id="17527" min="3" max="9" chance="17.08" /> <!-- Scroll: Enchant R-grade Armor -->
+				<item id="17526" min="1" max="2" chance="8.421" /> <!-- Scroll: Enchant R-grade Weapon -->
 				<item id="46504" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal Lv. 1 -->
 				<item id="46491" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
 				<item id="46489" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
