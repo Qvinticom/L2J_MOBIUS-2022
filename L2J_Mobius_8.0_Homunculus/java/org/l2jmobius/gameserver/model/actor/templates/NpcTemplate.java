@@ -57,7 +57,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 	
 	private int _id;
 	private int _displayId;
-	private byte _level;
+	private int _level;
 	private String _type;
 	private String _name;
 	private boolean _usingServerSideName;
@@ -134,7 +134,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		super.set(set);
 		_id = set.getInt("id");
 		_displayId = set.getInt("displayId", _id);
-		_level = set.getByte("level", (byte) 70);
+		_level = set.getInt("level", 85);
 		_type = set.getString("type", "Npc");
 		_name = set.getString("name", "");
 		_usingServerSideName = set.getBoolean("usingServerSideName", false);

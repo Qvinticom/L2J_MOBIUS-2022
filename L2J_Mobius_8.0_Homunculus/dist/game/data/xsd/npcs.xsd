@@ -289,7 +289,7 @@
 						</xs:all>
 						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="displayId" type="xs:positiveInteger" />
-						<xs:attribute name="level" type="xs:byte" />
+						<xs:attribute name="level" type="xs:positiveInteger" />
 						<xs:attribute name="type" type="xs:token" />
 						<xs:attribute name="name" type="xs:string" />
 						<xs:attribute name="usingServerSideName" type="xs:boolean" />
