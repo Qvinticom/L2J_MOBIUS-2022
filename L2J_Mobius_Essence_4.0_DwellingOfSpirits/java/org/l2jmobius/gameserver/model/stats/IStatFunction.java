@@ -147,7 +147,11 @@ public interface IStatFunction
 				}
 			}
 			
-			if ((stat == Stat.MAGICAL_DEFENCE) || (stat == Stat.PHYSICAL_DEFENCE))
+			if (stat == Stat.MAGICAL_DEFENCE)
+			{
+				value += calcEnchantmDefBonus(equippedItem, blessedBonus, enchant);
+			}
+			else if (stat == Stat.PHYSICAL_DEFENCE)
 			{
 				value += calcEnchantDefBonus(equippedItem, blessedBonus, enchant);
 			}
@@ -169,6 +173,21 @@ public interface IStatFunction
 	 * @param enchant
 	 * @return
 	 */
+	static double calcEnchantmDefBonus(ItemInstance item, double blessedBonus, int enchant)
+	{
+		switch (item.getItem().getCrystalTypePlus())
+		{
+			case A:
+			{
+				return ((3 * enchant) + (4 * Math.max(0, enchant - 3)));
+			}
+			default:
+			{
+				return enchant + (3 * Math.max(0, enchant - 3));
+			}
+		}
+	}
+	
 	static double calcEnchantDefBonus(ItemInstance item, double blessedBonus, int enchant)
 	{
 		switch (item.getItem().getCrystalTypePlus())
@@ -176,6 +195,10 @@ public interface IStatFunction
 			case R:
 			{
 				return ((2 * blessedBonus * enchant) + (6 * blessedBonus * Math.max(0, enchant - 3)));
+			}
+			case A:
+			{
+				return ((4 * enchant) + (5 * Math.max(0, enchant - 3)));
 			}
 			default:
 			{
@@ -205,18 +228,24 @@ public interface IStatFunction
 				return (4 * enchant) + (8 * Math.max(0, enchant - 3));
 			}
 			case A:
+			{
+				// M. Atk. increases by 6 for all A weapons.
+				// Starting at +4, M. Atk. bonus triple.
+				return (6 * enchant) + (12 * Math.max(0, enchant - 3));
+			}
 			case B:
 			case C:
+			case D:
 			{
-				// M. Atk. increases by 3 for all weapons.
+				// M. Atk. increases by 3 for all B,C,D weapons.
 				// Starting at +4, M. Atk. bonus double.
-				return (3 * enchant) + (6 * Math.max(0, enchant - 3));
+				return (3 * enchant) + (3 * Math.max(0, enchant - 3));
 			}
 			default:
 			{
 				// M. Atk. increases by 2 for all weapons. Starting at +4, M. Atk. bonus double.
 				// Starting at +4, M. Atk. bonus double.
-				return (2 * enchant) + (4 * Math.max(0, enchant - 3));
+				return (2 * enchant) + (2 * Math.max(0, enchant - 3));
 			}
 		}
 	}
@@ -267,36 +296,37 @@ public interface IStatFunction
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{
-						// P. Atk. increases by 8 for bows.
-						// Starting at +4, P. Atk. bonus double.
-						return (8 * enchant) + (16 * Math.max(0, enchant - 3));
+						// P. Atk. increases by 16 for A bows.
+						// Starting at +4, P. Atk. bonus triple.
+						return (16 * enchant) + (32 * Math.max(0, enchant - 3));
 					}
-					// P. Atk. increases by 5 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-					// Starting at +4, P. Atk. bonus double.
-					return (5 * enchant) + (10 * Math.max(0, enchant - 3));
+					// P. Atk. increases by 12 for two-handed swords, two-handed blunts, dualswords, and two-handed combat A weapons.
+					// Starting at +4, P. Atk. bonus triple.
+					return (12 * enchant) + (24 * Math.max(0, enchant - 3));
 				}
-				// P. Atk. increases by 4 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
-				// Starting at +4, P. Atk. bonus double.
-				return (4 * enchant) + (8 * Math.max(0, enchant - 3));
+				// P. Atk. increases by 10 for one-handed swords, one-handed blunts, daggers, spears, and other A weapons.
+				// Starting at +4, P. Atk. bonus triple.
+				return (10 * enchant) + (20 * Math.max(0, enchant - 3));
 			}
 			case B:
 			case C:
+			case D:
 			{
 				if ((item.getWeaponItem().getBodyPart() == Item.SLOT_LR_HAND) && (item.getWeaponItem().getItemType() != WeaponType.POLE))
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{
-						// P. Atk. increases by 6 for bows.
+						// P. Atk. increases by 8 for B,C,D bows.
 						// Starting at +4, P. Atk. bonus double.
-						return (6 * enchant) + (12 * Math.max(0, enchant - 3));
+						return (8 * enchant) + (8 * Math.max(0, enchant - 3));
 					}
-					// P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
+					// P. Atk. increases by 5 for two-handed swords, two-handed blunts, dualswords, and two-handed combat B,C,D weapons.
 					// Starting at +4, P. Atk. bonus double.
-					return (4 * enchant) + (8 * Math.max(0, enchant - 3));
+					return (5 * enchant) + (5 * Math.max(0, enchant - 3));
 				}
-				// P. Atk. increases by 3 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
+				// P. Atk. increases by 4 for one-handed swords, one-handed blunts, daggers, spears, and other B,C,D weapons.
 				// Starting at +4, P. Atk. bonus double.
-				return (3 * enchant) + (6 * Math.max(0, enchant - 3));
+				return (4 * enchant) + (4 * Math.max(0, enchant - 3));
 			}
 			default:
 			{
@@ -304,11 +334,11 @@ public interface IStatFunction
 				{
 					// Bows increase by 4.
 					// Starting at +4, P. Atk. bonus double.
-					return (4 * enchant) + (8 * Math.max(0, enchant - 3));
+					return (4 * enchant) + (4 * Math.max(0, enchant - 3));
 				}
 				// P. Atk. increases by 2 for all weapons with the exception of bows.
 				// Starting at +4, P. Atk. bonus double.
-				return (2 * enchant) + (4 * Math.max(0, enchant - 3));
+				return (2 * enchant) + (2 * Math.max(0, enchant - 3));
 			}
 		}
 	}
