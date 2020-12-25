@@ -457,8 +457,12 @@ public abstract class Inventory extends ItemContainer
 				}
 			}
 			
-			// Apply skill, if weapon have "skills on unequip"
-			it.forEachSkill(ItemSkillType.ON_UNEQUIP, holder -> holder.getSkill().activateSkill(player, player));
+			// Apply skill, if item has "skills on unequip" and it is not a secondary agathion.
+			if ((slot < PAPERDOLL_AGATHION2) || (slot > PAPERDOLL_AGATHION5))
+			{
+				it.forEachSkill(ItemSkillType.ON_UNEQUIP, holder -> holder.getSkill().activateSkill(player, player));
+			}
+			
 			if (update)
 			{
 				player.sendSkillList();
