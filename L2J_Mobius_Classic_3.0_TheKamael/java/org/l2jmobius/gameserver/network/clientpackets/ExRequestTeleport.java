@@ -21,6 +21,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.TeleportListData;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.holders.TeleportListHolder;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -73,6 +74,13 @@ public class ExRequestTeleport implements IClientIncomingPacket
 		
 		// Karma related configurations.
 		if ((!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT || !Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK) && (player.getReputation() < 0))
+		{
+			player.sendMessage("You cannot teleport right now.");
+			return;
+		}
+		
+		// Cannot escape effect.
+		if (player.isAffected(EffectFlag.CANNOT_ESCAPE))
 		{
 			player.sendMessage("You cannot teleport right now.");
 			return;
