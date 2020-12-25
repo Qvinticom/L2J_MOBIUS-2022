@@ -76,23 +76,6 @@ public class Link implements IBypassHandler
 		"teleporter/separatedsoul.htm",
 		"warehouse/clanwh.htm",
 		"warehouse/privatewh.htm",
-		// Quests
-		"teleporter/30006.htm",
-		"teleporter/30006-Q561.htm",
-		"teleporter/30006-Q561-1.htm",
-		"teleporter/30006-Q561-2.htm",
-		"teleporter/30134.htm",
-		"teleporter/30134-Q562.htm",
-		"teleporter/30134-Q562-1.htm",
-		"teleporter/30134-Q562-2.htm",
-		"teleporter/30256.htm",
-		"teleporter/30256-Q562.htm",
-		"teleporter/30256-Q562-1.htm",
-		"teleporter/30256-Q562-2.htm",
-		"teleporter/30848.htm",
-		"teleporter/30848-Q561-Q562.htm",
-		"teleporter/30848-Q561-Q562-1.htm",
-		"teleporter/30848-Q561-Q562-2.htm",
 	};
 	
 	@Override

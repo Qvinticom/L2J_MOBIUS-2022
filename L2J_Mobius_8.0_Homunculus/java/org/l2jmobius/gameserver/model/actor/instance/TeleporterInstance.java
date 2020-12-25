@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -53,20 +52,20 @@ public class TeleporterInstance extends Npc
 	};
 	
 	private static final Map<Integer, List<TeleporterQuestRecommendationHolder>> QUEST_RECOMENDATIONS = new HashMap<>();
-	static
-	{
-		// @formatter:off
-		QUEST_RECOMENDATIONS.put(30006, new ArrayList<>()); // Gatekeeper Milia
-		QUEST_RECOMENDATIONS.get(30006).add(new TeleporterQuestRecommendationHolder(30006, "Q00561_BasicMissionHarnakUndergroundRuins", new int[]{3}, "30006-Q561"));
-		QUEST_RECOMENDATIONS.put(30134, new ArrayList<>()); // Dark Elf Village Teleport Device
-		QUEST_RECOMENDATIONS.get(30134).add(new TeleporterQuestRecommendationHolder(30134, "Q00562_BasicMissionAltarOfEvil", new int[]{4}, "30134-Q562"));
-		QUEST_RECOMENDATIONS.put(30256, new ArrayList<>()); // Gatekeeper Bella
-		QUEST_RECOMENDATIONS.get(30256).add(new TeleporterQuestRecommendationHolder(30256, "Q00562_BasicMissionAltarOfEvil", new int[]{3}, "30256-Q562"));
-		QUEST_RECOMENDATIONS.put(30848, new ArrayList<>()); // Gatekeeper Elisa
-		QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00561_BasicMissionHarnakUndergroundRuins", new int[]{2,4}, "30848-Q561-Q562"));
-		QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00562_BasicMissionAltarOfEvil", new int[]{2,4}, "30848-Q561-Q562"));
+	// static
+	// {
+	// @formatter:off
+		// QUEST_RECOMENDATIONS.put(30006, new ArrayList<>()); // Gatekeeper Milia
+		// QUEST_RECOMENDATIONS.get(30006).add(new TeleporterQuestRecommendationHolder(30006, "Q00561_BasicMissionHarnakUndergroundRuins", new int[]{3}, "30006-Q561"));
+		// QUEST_RECOMENDATIONS.put(30134, new ArrayList<>()); // Dark Elf Village Teleport Device
+		// QUEST_RECOMENDATIONS.get(30134).add(new TeleporterQuestRecommendationHolder(30134, "Q00562_BasicMissionAltarOfEvil", new int[]{4}, "30134-Q562"));
+		// QUEST_RECOMENDATIONS.put(30256, new ArrayList<>()); // Gatekeeper Bella
+		// QUEST_RECOMENDATIONS.get(30256).add(new TeleporterQuestRecommendationHolder(30256, "Q00562_BasicMissionAltarOfEvil", new int[]{3}, "30256-Q562"));
+		// QUEST_RECOMENDATIONS.put(30848, new ArrayList<>()); // Gatekeeper Elisa
+		// QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00561_BasicMissionHarnakUndergroundRuins", new int[]{2,4}, "30848-Q561-Q562"));
+		// QUEST_RECOMENDATIONS.get(30848).add(new TeleporterQuestRecommendationHolder(30848, "Q00562_BasicMissionAltarOfEvil", new int[]{2,4}, "30848-Q561-Q562"));
 		// @formatter:on
-	}
+	// }
 	
 	public TeleporterInstance(NpcTemplate template)
 	{
