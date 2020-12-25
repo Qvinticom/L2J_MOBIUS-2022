@@ -638,6 +638,12 @@ public class NpcData implements IXmlReader
 							
 							for (DropHolder dropHolder : dropLists)
 							{
+								// Drop materials for random craft configuration.
+								if (!Config.DROP_RANDOM_CRAFT_MATERIALS && (dropHolder.getItemId() >= 92908) && (dropHolder.getItemId() <= 92919))
+								{
+									continue;
+								}
+								
 								switch (dropHolder.getDropType())
 								{
 									case DROP:

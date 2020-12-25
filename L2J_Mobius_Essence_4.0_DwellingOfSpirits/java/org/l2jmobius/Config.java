@@ -590,6 +590,7 @@ public class Config
 	public static boolean ENABLE_AUTO_POTION;
 	public static boolean ENABLE_AUTO_BUFF;
 	public static boolean ENABLE_AUTO_ITEM;
+	public static boolean DROP_RANDOM_CRAFT_MATERIALS;
 	
 	// --------------------------------------------------
 	// FloodProtector Settings
@@ -2046,6 +2047,7 @@ public class Config
 			ENABLE_AUTO_POTION = General.getBoolean("EnableAutoPotion", true);
 			ENABLE_AUTO_BUFF = General.getBoolean("EnableAutoBuff", true);
 			ENABLE_AUTO_ITEM = General.getBoolean("EnableAutoItem", true);
+			DROP_RANDOM_CRAFT_MATERIALS = General.getBoolean("DropRandomCraftMaterials", true);
 			
 			// Load FloodProtector config file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
