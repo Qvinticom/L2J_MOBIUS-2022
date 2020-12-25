@@ -19,7 +19,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21109" level="1" /> <!-- Release Agathion's Seal - Uthanka -->
+			<skill id="21109" level="1" type="ON_EQUIP" /> <!-- Release Agathion's Seal - Uthanka -->
 			<skill id="23087" level="1" /> <!-- Uthanka Agathion Cute Trick -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>

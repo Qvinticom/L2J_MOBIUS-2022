@@ -1212,6 +1212,7 @@
 		<!-- Equipping it in the Bracelet's main slot summons the Agathion Joy and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -1219,11 +1220,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="8256" level="1" type="ON_EQUIP" /> <!-- Release Agathion's Seal - Joy -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="90897" name="Agathion Joy" additionalName="7-day" type="Armor">
 		<!-- A 7-day item. Equipping it in the Bracelet's main slot summons the Agathion Joy and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -1232,6 +1238,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="8256" level="1" type="ON_EQUIP" /> <!-- Release Agathion's Seal - Joy -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="90898" name="Agathion's Soul" type="EtcItem">
 		<!-- Agathion enchancement material. If you take this item along with an Agathion Bracelet - Lv. 2 to Blacksmith Baggins in Giran, you can enchance Agathion Bracelet. Cannot be dropped. -->

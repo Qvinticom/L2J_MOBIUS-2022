@@ -551,7 +551,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50186" level="1" /> <!-- Adventurer's Agathion Griffin -->
+			<skill id="50186" level="1" type="ON_EQUIP" /> <!-- Adventurer's Agathion Griffin -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="91936" name="Jewel of Adventurer Fragment" type="Armor">

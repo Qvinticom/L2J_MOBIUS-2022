@@ -78,7 +78,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
-			<skill id="8256" level="1" /> <!-- Release Agathion's Seal - Joy -->
+			<skill id="8256" level="1" type="ON_EQUIP" /> <!-- Release Agathion's Seal - Joy -->
 			<skill id="5955" level="1" /> <!-- Agathion Cute Trick - Joy -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 			<skill id="39056" level="1" /> <!-- Agathion Teleport: Oren -->

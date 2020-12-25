@@ -1059,10 +1059,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
 		<skills>
-			<skill id="8527" level="1" /> <!-- Release Agathion's Seal - Magmeld Fairy -->
-			<skill id="14288" level="1" /> <!-- Agathion Cute Trick - Magmeld -->
-			<skill id="14187" level="1" /> <!-- Magmeld Teleport -->
-			<skill id="35622" level="1" /> <!-- Agathion Fairy Support -->
+			<skill id="8527" level="1" type="ON_EQUIP" /> <!-- Release Agathion's Seal - Magmeld Fairy -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>

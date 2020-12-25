@@ -51,6 +51,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
@@ -655,6 +656,13 @@ public class EnterWorld implements IClientIncomingPacket
 		if (Config.ENABLE_VITALITY)
 		{
 			player.sendPacket(new ExVitalityEffectInfo(player));
+		}
+		
+		// Activate first agathion when available.
+		final ItemInstance agathion = player.getInventory().unEquipItemInBodySlot(Item.SLOT_AGATHION);
+		if (agathion != null)
+		{
+			player.getInventory().equipItemAndRecord(agathion);
 		}
 		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)

@@ -36,6 +36,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.xml.AgathionData;
 import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
 import org.l2jmobius.gameserver.data.xml.EnchantItemOptionsData;
 import org.l2jmobius.gameserver.data.xml.EnsoulData;
@@ -70,7 +71,10 @@ import org.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemEnchantAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemSoulCrystalAdd;
 import org.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
+import org.l2jmobius.gameserver.model.holders.AgathionSkillHolder;
+import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -83,6 +87,7 @@ import org.l2jmobius.gameserver.model.options.EnchantOptions;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.model.skills.SkillConditionScope;
 import org.l2jmobius.gameserver.model.variables.ItemVariables;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.DropItem;
@@ -930,7 +935,56 @@ public class ItemInstance extends WorldObject
 		{
 			return;
 		}
+		
 		clearEnchantStats();
+		
+		// Agathion skills.
+		if (isEquipped() && (_item.getBodyPart() == Item.SLOT_AGATHION))
+		{
+			final AgathionSkillHolder agathionSkills = AgathionData.getInstance().getSkills(getId());
+			if (agathionSkills != null)
+			{
+				boolean update = false;
+				// Remove old skills.
+				for (SkillHolder holder : agathionSkills.getMainSkills(_enchantLevel))
+				{
+					getActingPlayer().removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+					update = true;
+				}
+				for (SkillHolder holder : agathionSkills.getSubSkills(_enchantLevel))
+				{
+					getActingPlayer().removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+					update = true;
+				}
+				// Add new skills.
+				if (getLocationSlot() == Inventory.PAPERDOLL_AGATHION1)
+				{
+					for (SkillHolder holder : agathionSkills.getMainSkills(enchantLevel))
+					{
+						if (holder.getSkill().isPassive() && !holder.getSkill().checkConditions(SkillConditionScope.PASSIVE, getActingPlayer(), getActingPlayer()))
+						{
+							continue;
+						}
+						getActingPlayer().addSkill(holder.getSkill(), false);
+						update = true;
+					}
+				}
+				for (SkillHolder holder : agathionSkills.getSubSkills(enchantLevel))
+				{
+					if (holder.getSkill().isPassive() && !holder.getSkill().checkConditions(SkillConditionScope.PASSIVE, getActingPlayer(), getActingPlayer()))
+					{
+						continue;
+					}
+					getActingPlayer().addSkill(holder.getSkill(), false);
+					update = true;
+				}
+				if (update)
+				{
+					getActingPlayer().sendSkillList();
+				}
+			}
+		}
+		
 		_enchantLevel = enchantLevel;
 		applyEnchantStats();
 		_storedInDb = false;

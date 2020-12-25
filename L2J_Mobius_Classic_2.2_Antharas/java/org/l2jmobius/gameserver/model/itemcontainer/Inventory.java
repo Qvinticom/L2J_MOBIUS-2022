@@ -35,6 +35,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.cache.PaperdollCache;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.xml.AgathionData;
 import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
 import org.l2jmobius.gameserver.data.xml.ArmorSetData;
 import org.l2jmobius.gameserver.enums.ItemLocation;
@@ -48,8 +49,10 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerItemUnequip;
+import org.l2jmobius.gameserver.model.holders.AgathionSkillHolder;
 import org.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
 import org.l2jmobius.gameserver.model.holders.ItemSkillHolder;
+import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
@@ -576,8 +579,12 @@ public abstract class Inventory extends ItemContainer
 				}
 			}
 			
-			// Apply skill, if weapon have "skills on equip"
-			item.getItem().forEachSkill(ItemSkillType.ON_EQUIP, holder -> holder.getSkill().activateSkill(player, player));
+			// Apply skill, if item has "skills on equip" and it is not a secondary agathion.
+			if ((slot < PAPERDOLL_AGATHION2) || (slot > PAPERDOLL_AGATHION5))
+			{
+				item.getItem().forEachSkill(ItemSkillType.ON_EQUIP, holder -> holder.getSkill().activateSkill(player, player));
+			}
+			
 			if (update)
 			{
 				player.sendSkillList();
@@ -1275,7 +1282,32 @@ public abstract class Inventory extends ItemContainer
 					listener.notifyUnequiped(slot, old, this);
 				}
 				old.updateDatabase();
+				
+				// Remove agathion skills.
+				if ((slot >= PAPERDOLL_AGATHION1) && (slot <= PAPERDOLL_AGATHION5) && getOwner().isPlayer())
+				{
+					final AgathionSkillHolder agathionSkills = AgathionData.getInstance().getSkills(old.getId());
+					if (agathionSkills != null)
+					{
+						boolean update = false;
+						for (SkillHolder holder : agathionSkills.getMainSkills(old.getEnchantLevel()))
+						{
+							getOwner().getActingPlayer().removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+							update = true;
+						}
+						for (SkillHolder holder : agathionSkills.getSubSkills(old.getEnchantLevel()))
+						{
+							getOwner().getActingPlayer().removeSkill(holder.getSkill(), false, holder.getSkill().isPassive());
+							update = true;
+						}
+						if (update)
+						{
+							getOwner().getActingPlayer().sendSkillList();
+						}
+					}
+				}
 			}
+			
 			// Add new item in slot of paperdoll
 			if (item != null)
 			{
@@ -1295,6 +1327,41 @@ public abstract class Inventory extends ItemContainer
 					listener.notifyEquiped(slot, item, this);
 				}
 				item.updateDatabase();
+				
+				// Add agathion skills.
+				if ((slot >= PAPERDOLL_AGATHION1) && (slot <= PAPERDOLL_AGATHION5) && getOwner().isPlayer())
+				{
+					final AgathionSkillHolder agathionSkills = AgathionData.getInstance().getSkills(item.getId());
+					if (agathionSkills != null)
+					{
+						boolean update = false;
+						if (slot == PAPERDOLL_AGATHION1)
+						{
+							for (SkillHolder holder : agathionSkills.getMainSkills(item.getEnchantLevel()))
+							{
+								if (holder.getSkill().isPassive() && !holder.getSkill().checkConditions(SkillConditionScope.PASSIVE, getOwner().getActingPlayer(), getOwner().getActingPlayer()))
+								{
+									continue;
+								}
+								getOwner().getActingPlayer().addSkill(holder.getSkill(), false);
+								update = true;
+							}
+						}
+						for (SkillHolder holder : agathionSkills.getSubSkills(item.getEnchantLevel()))
+						{
+							if (holder.getSkill().isPassive() && !holder.getSkill().checkConditions(SkillConditionScope.PASSIVE, getOwner().getActingPlayer(), getOwner().getActingPlayer()))
+							{
+								continue;
+							}
+							getOwner().getActingPlayer().addSkill(holder.getSkill(), false);
+							update = true;
+						}
+						if (update)
+						{
+							getOwner().getActingPlayer().sendSkillList();
+						}
+					}
+				}
 			}
 			
 			_paperdollCache.clearCachedStats();

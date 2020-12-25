@@ -46,6 +46,7 @@ import org.l2jmobius.gameserver.data.sql.CrestTable;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.data.xml.ActionData;
 import org.l2jmobius.gameserver.data.xml.AdminData;
+import org.l2jmobius.gameserver.data.xml.AgathionData;
 import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
 import org.l2jmobius.gameserver.data.xml.ArmorSetData;
 import org.l2jmobius.gameserver.data.xml.AttendanceRewardData;
@@ -267,6 +268,7 @@ public class GameServer
 		BuyListData.getInstance();
 		MultisellData.getInstance();
 		EquipmentUpgradeData.getInstance();
+		AgathionData.getInstance();
 		RecipeData.getInstance();
 		ArmorSetData.getInstance();
 		FishingData.getInstance();

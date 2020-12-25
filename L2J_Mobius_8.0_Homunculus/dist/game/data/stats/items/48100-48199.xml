@@ -334,9 +334,6 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8527" level="1" type="ON_EQUIP" /> <!-- Release Agathion's Seal - Magmeld Fairy -->
-			<skill id="14288" level="1" /> <!-- Agathion Cute Trick - Magmeld -->
-			<skill id="14187" level="1" /> <!-- Magmeld Teleport -->
-			<skill id="35622" level="1" /> <!-- Agathion Fairy Support -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
@@ -466,11 +463,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
 		<skills>
-			<skill id="3267" level="1" /> <!-- Seal Agathion -->
-			<skill id="18172" level="1" /> <!-- Joon's Magic -->
-			<skill id="18173" level="1" /> <!-- Joon's Ressurection -->
-			<skill id="18174" level="1" /> <!-- Agathion - Joon -->
-			<skill id="18175" level="1" /> <!-- Joon's Cute Trick -->
+			<skill id="18174" level="1" type="ON_EQUIP" /> <!-- Agathion - Joon -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
 	<item id="48134" name="Agathion - Shiny Charm" type="Armor">

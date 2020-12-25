@@ -460,22 +460,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
-			<skill id="35633" level="1" /> <!-- Primary Skill: Agathion Fire Dragon Lv. 1 -->
-			<skill id="35633" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Primary Skill: Agathion Fire Dragon Lv. 1 -->
-			<skill id="35633" level="2" type="ON_ENCHANT" type_value="4" /> <!-- Primary Skill: Agathion Fire Dragon Lv. 2 -->
-			<skill id="35633" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Primary Skill: Agathion Fire Dragon Lv. 3 -->
-			<skill id="35633" level="4" type="ON_ENCHANT" type_value="10" /> <!-- Primary Skill: Agathion Fire Dragon Lv. 4 -->
-			<skill id="35632" level="1" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 1 -->
-			<skill id="35632" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 2 -->
-			<skill id="35632" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 3 -->
-			<skill id="35632" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 4 -->
-			<skill id="35632" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 5 -->
-			<skill id="35632" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 6 -->
-			<skill id="35632" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 7 -->
-			<skill id="35632" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 8 -->
-			<skill id="35632" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 9 -->
-			<skill id="35632" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 10 -->
-			<skill id="35632" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 11 -->
 			<skill id="35634" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Fire Dragon -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
@@ -493,8 +477,6 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="35633" level="5" /> <!-- Primary Skill: Agathion Fire Dragon Lv. 5 -->
-			<skill id="35632" level="12" /> <!-- Secondary Skill: Agathion Fire Dragon Lv. 12 -->
 			<skill id="35635" level="1" type="ON_EQUIP" /> <!-- Summon Greater Agathion Fire Dragon -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>

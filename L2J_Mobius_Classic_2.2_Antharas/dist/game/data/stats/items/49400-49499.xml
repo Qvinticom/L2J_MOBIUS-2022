@@ -934,7 +934,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
-			<skill id="17619" level="1" /> <!-- Release Agathion - Pisces -->
+			<skill id="17619" level="1" type="ON_EQUIP" /> <!-- Release Agathion - Pisces -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 			<skill id="39053" level="1" /> <!-- Agathion Teleport: Gludio -->
 			<skill id="39054" level="1" /> <!-- Agathion Teleport: Dion -->

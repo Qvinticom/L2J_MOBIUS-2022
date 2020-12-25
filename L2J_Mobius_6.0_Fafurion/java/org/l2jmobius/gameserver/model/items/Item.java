@@ -828,6 +828,13 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	
 	public void addSkill(ItemSkillHolder holder)
 	{
+		// Agathion skills managed by AgathionData.
+		// if ((getBodyPart() == SLOT_AGATHION) && (holder.getType() != ItemSkillType.ON_EQUIP) && (holder.getType() != ItemSkillType.ON_UNEQUIP))
+		// {
+		// LOGGER.warning("Remove from agathion " + _itemId + " " + holder + "!");
+		// return;
+		// }
+		
 		if (_skills == null)
 		{
 			_skills = new ArrayList<>();
