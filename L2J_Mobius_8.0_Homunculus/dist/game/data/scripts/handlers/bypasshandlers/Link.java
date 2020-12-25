@@ -33,6 +33,8 @@ public class Link implements IBypassHandler
 	
 	private static final String[] VALID_LINKS =
 	{
+		"common/imbue_soul_crystal.htm",
+		"common/extract_soul_crystal.htm",
 		"common/attribute_info.htm",
 		"common/augmentation_01.htm",
 		"common/augmentation_02.htm",
