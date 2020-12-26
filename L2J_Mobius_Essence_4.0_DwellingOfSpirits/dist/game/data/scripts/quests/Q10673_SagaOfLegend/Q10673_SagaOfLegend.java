@@ -296,7 +296,7 @@ public class Q10673_SagaOfLegend extends Quest
 		}
 		
 		// Avoid reward more than once.
-		if (player.getVariables().getBoolean("ITEMS_REWARDED", false))
+		if (player.getVariables().getBoolean("3rdClassMountRewarded", false))
 		{
 			return;
 		}
@@ -304,7 +304,7 @@ public class Q10673_SagaOfLegend extends Quest
 		// Death Knights.
 		if (player.isDeathKnight())
 		{
-			player.getVariables().set("ITEMS_REWARDED", true);
+			player.getVariables().set("3rdClassMountRewarded", true);
 			giveItems(player, SPELLBOOK_DEATH_KNIGHT, 1);
 			return;
 		}
@@ -312,7 +312,7 @@ public class Q10673_SagaOfLegend extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCompleted())
 		{
-			player.getVariables().set("ITEMS_REWARDED", true);
+			player.getVariables().set("3rdClassMountRewarded", true);
 			
 			switch (player.getRace())
 			{
