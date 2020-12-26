@@ -290,7 +290,7 @@ public class Q10673_SagaOfLegend extends Quest
 			return;
 		}
 		
-		if (!CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()))
+		if (!CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, player.getClassId().getId()))
 		{
 			return;
 		}
@@ -302,8 +302,9 @@ public class Q10673_SagaOfLegend extends Quest
 		}
 		
 		// Death Knights.
-		if (player.getClassId().getId() > 195)
+		if (player.isDeathKnight())
 		{
+			player.getVariables().set("ITEMS_REWARDED", true);
 			giveItems(player, SPELLBOOK_DEATH_KNIGHT, 1);
 			return;
 		}
