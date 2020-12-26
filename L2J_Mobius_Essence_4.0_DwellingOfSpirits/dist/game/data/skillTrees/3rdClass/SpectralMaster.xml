@@ -5,8 +5,12 @@
 		<skill skillName="Anti Magic" skillId="146" skillLevel="46" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Warrior Bane" skillId="1350" skillLevel="1" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Mage Bane" skillId="1351" skillLevel="1" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="8300000">
+			<item id="8620" count="1" /> <!-- Buff Expansion Book Lv. 3 -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" levelUpSp="8300000">
+			<item id="8621" count="1" /> <!-- Buff Expansion Book Lv. 4 -->
+		</skill>
 		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="34" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLevel="42" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLevel="43" getLevel="76" levelUpSp="8300000" />
@@ -14,8 +18,12 @@
 			<item id="57" count="5000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="46" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Might" skillId="1068" skillLevel="4" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Might" skillId="1068" skillLevel="4" getLevel="76" levelUpSp="8300000">
+			<item id="94135" count="1" /> <!-- Master's Book: Might -->
+		</skill>
+		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="8300000">
+			<item id="57" count="5000000" /> <!-- Adena -->
+		</skill>
 		<skill skillName="Wind Shackle" skillId="1206" skillLevel="20" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLevel="1" getLevel="76">
 			<item id="90040" count="1" /> <!-- Spellbook: Ride Sabretooth Cougar -->
@@ -23,11 +31,17 @@
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="35" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Summon Spark Cubic" skillId="1281" skillLevel="11" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="9" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Servitor Share" skillId="1557" skillLevel="1" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Servitor Share" skillId="1557" skillLevel="1" getLevel="76" levelUpSp="8300000">
+			<item id="90131" count="1" /> <!-- Scroll: Servitor Share -->
+		</skill>
 		<skill skillName="Twister" skillId="1178" skillLevel="27" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="46" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Shield" skillId="1040" skillLevel="4" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="1" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Shield" skillId="1040" skillLevel="4" getLevel="76" levelUpSp="8300000">
+			<item id="94136" count="1" /> <!-- Master's Book: Shield -->
+		</skill>
+		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="1" getLevel="76" levelUpSp="8300000">
+			<item id="93870" count="1" /> <!-- Spellbook: Ethereal Strike -->
+		</skill>
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="47" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Light Armor Mastery" skillId="258" skillLevel="35" getLevel="77" levelUpSp="8300000" />
@@ -35,7 +49,9 @@
 		<skill skillName="Weapon Mastery" skillId="249" skillLevel="44" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="47" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Servitor Recharge" skillId="1126" skillLevel="36" getLevel="77" levelUpSp="8300000" />
-		<skill skillName="Summon Nightshade" skillId="1333" skillLevel="1" getLevel="77" levelUpSp="8300000" />
+		<skill skillName="Summon Nightshade" skillId="1333" skillLevel="1" getLevel="77" levelUpSp="8300000">
+			<item id="91205" count="1" /> <!-- Scroll: Summon Nightshade -->
+		</skill>
 		<skill skillName="Summon Spectral Lord" skillId="1408" skillLevel="1" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="47" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="2" getLevel="77" levelUpSp="8300000" />
@@ -53,14 +69,18 @@
 		<skill skillName="Summon Phantom Cubic" skillId="33" skillLevel="10" getLevel="78" levelUpSp="18300000" />
 		<skill skillName="Spirit Sharing" skillId="1547" skillLevel="4" getLevel="78" levelUpSp="18300000" />
 		<skill skillName="Servitor Share" skillId="1557" skillLevel="2" getLevel="78" levelUpSp="18300000" />
-		<skill skillName="Assassin Servitor" skillId="1348" skillLevel="1" getLevel="78" levelUpSp="18300000" />
+		<skill skillName="Assassin Servitor" skillId="1348" skillLevel="1" getLevel="78" levelUpSp="18300000">
+			<item id="90129" count="1" /> <!-- Scroll: Assassin Servitor -->
+		</skill>
 		<skill skillName="Twister" skillId="1178" skillLevel="28" getLevel="78" levelUpSp="18300000" />
 		<skill skillName="Swift Servitor Heal" skillId="45362" skillLevel="48" getLevel="78" levelUpSp="18300000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="3" getLevel="78" levelUpSp="18300000" />
 
 		<skill skillName="Wind Shackle" skillId="1206" skillLevel="22" getLevel="79" levelUpSp="18300000" />
 		<skill skillName="Summon Nightshade" skillId="1333" skillLevel="2" getLevel="79" levelUpSp="18300000" />
-		<skill skillName="Final Servitor" skillId="1349" skillLevel="1" getLevel="79" levelUpSp="18300000" />
+		<skill skillName="Final Servitor" skillId="1349" skillLevel="1" getLevel="79" levelUpSp="18300000">
+			<item id="90130" count="1" /> <!-- Scroll: Final Servitor -->
+		</skill>
 		<skill skillName="Twister" skillId="1178" skillLevel="29" getLevel="79" levelUpSp="18300000" />
 		<skill skillName="Ethereal Strike" skillId="45377" skillLevel="4" getLevel="79" levelUpSp="18300000" />
 
@@ -71,7 +91,9 @@
 		<skill skillName="Robe Mastery" skillId="234" skillLevel="45" getLevel="80" levelUpSp="18300000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLevel="46" getLevel="80" levelUpSp="18300000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLevel="49" getLevel="80" levelUpSp="18300000" />
-		<skill skillName="Spell Master" skillId="1831" skillLevel="4" getLevel="80" levelUpSp="2400000" />
+		<skill skillName="Spell Master" skillId="1831" skillLevel="4" getLevel="80" levelUpSp="2400000">
+			<item id="57" count="500000" /> <!-- Adena -->
+		</skill>
 		<skill skillName="Evolution Power" skillId="45189" skillLevel="1" getLevel="80">
 			<item id="57" count="10000000" /> <!-- Adena -->
 		</skill>

@@ -3,9 +3,15 @@
 	<skillTree type="classSkillTree" classId="94" parentClassId="12">
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="46" getLevel="76" levelUpSp="6900000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="6900000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" levelUpSp="6900000" />
-		<skill skillName="Flame Explosion" skillId="45378" skillLevel="1" getLevel="76" levelUpSp="6900000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="6900000">
+			<item id="8620" count="1" /> <!-- Buff Expansion Book Lv. 3 -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" levelUpSp="6900000">
+			<item id="8621" count="1" /> <!-- Buff Expansion Book Lv. 4 -->
+		</skill>
+		<skill skillName="Flame Explosion" skillId="45378" skillLevel="1" getLevel="76" levelUpSp="6900000">
+			<item id="93869" count="1" /> <!-- Spellbook: Elemental Burst -->
+		</skill>
 		<skill skillName="Robe Mastery" skillId="234" skillLevel="42" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLevel="43" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Slow" skillId="1160" skillLevel="16" getLevel="76" levelUpSp="6900000" />
@@ -13,14 +19,20 @@
 			<item id="57" count="5000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Inferno" skillId="1289" skillLevel="2" getLevel="76" levelUpSp="6900000" />
-		<skill skillName="Might" skillId="1068" skillLevel="4" getLevel="76" levelUpSp="6900000" />
-		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="6900000" />
+		<skill skillName="Might" skillId="1068" skillLevel="4" getLevel="76" levelUpSp="6900000">
+			<item id="94135" count="1" /> <!-- Master's Book: Might -->
+		</skill>
+		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="6900000">
+			<item id="57" count="5000000" /> <!-- Adena -->
+		</skill>
 		<skill skillName="Fire Vortex" skillId="1339" skillLevel="1" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Rain of Fire" skillId="1296" skillLevel="10" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Mount Golden Lion" skillId="1833" skillLevel="1" getLevel="76">
 			<item id="90038" count="1" /> <!-- Spellbook - Ride Golden Lion -->
 		</skill>
-		<skill skillName="Bind" skillId="53006" skillLevel="1" getLevel="76" levelUpSp="6900000" />
+		<skill skillName="Bind" skillId="53006" skillLevel="1" getLevel="76" levelUpSp="6900000">
+			<item id="91483" count="1" /> <!-- Scroll: Bind -->
+		</skill>
 		<skill skillName="Prominence" skillId="1230" skillLevel="31" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Blazing Circle" skillId="1171" skillLevel="20" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Aura Flare" skillId="1231" skillLevel="29" getLevel="76" levelUpSp="6900000" />
@@ -28,7 +40,9 @@
 		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="28" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Sleep" skillId="1069" skillLevel="46" getLevel="76" levelUpSp="6900000" />
 		<skill skillName="Sleeping Cloud" skillId="1072" skillLevel="6" getLevel="76" levelUpSp="6900000" />
-		<skill skillName="Shield" skillId="1040" skillLevel="4" getLevel="76" levelUpSp="6900000" />
+		<skill skillName="Shield" skillId="1040" skillLevel="4" getLevel="76" levelUpSp="6900000">
+			<item id="94136" count="1" /> <!-- Master's Book: Shield -->
+		</skill>
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="47" getLevel="77" levelUpSp="6900000" />
 		<skill skillName="Flame Explosion" skillId="45378" skillLevel="2" getLevel="77" levelUpSp="6900000" />
@@ -36,13 +50,17 @@
 		<skill skillName="Weapon Mastery" skillId="249" skillLevel="44" getLevel="77" levelUpSp="6900000" />
 		<skill skillName="Prominence" skillId="1230" skillLevel="32" getLevel="77" levelUpSp="6900000" />
 		<skill skillName="Aura Flare" skillId="1231" skillLevel="30" getLevel="77" levelUpSp="6900000" />
-		<skill skillName="Arcane Power" skillId="337" skillLevel="1" getLevel="77" levelUpSp="6900000" />
+		<skill skillName="Arcane Power" skillId="337" skillLevel="1" getLevel="77" levelUpSp="6900000">
+			<item id="90081" count="1" /> <!-- Scroll: Arcane Power -->
+		</skill>
 		<skill skillName="Higher Mana Gain" skillId="285" skillLevel="29" getLevel="77" levelUpSp="6900000" />
 		<skill skillName="Sleep" skillId="1069" skillLevel="47" getLevel="77" levelUpSp="6900000" />
 		<skill skillName="Sleeping Cloud" skillId="1072" skillLevel="7" getLevel="77" levelUpSp="6900000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="48" getLevel="78" levelUpSp="15100000" />
-		<skill skillName="Fire Vortex Buster" skillId="1451" skillLevel="1" getLevel="78" levelUpSp="15100000" />
+		<skill skillName="Fire Vortex Buster" skillId="1451" skillLevel="1" getLevel="78" levelUpSp="15100000">
+			<item id="90082" count="1" /> <!-- Scroll: Fire Vortex Buster -->
+		</skill>
 		<skill skillName="Flame Explosion" skillId="45378" skillLevel="3" getLevel="78" levelUpSp="15100000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLevel="44" getLevel="78" levelUpSp="15100000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLevel="45" getLevel="78" levelUpSp="15100000" />
@@ -64,7 +82,9 @@
 		<skill skillName="Prominence" skillId="1230" skillLevel="34" getLevel="79" levelUpSp="15100000" />
 		<skill skillName="Blazing Circle" skillId="1171" skillLevel="22" getLevel="79" levelUpSp="15100000" />
 		<skill skillName="Arcane Power" skillId="337" skillLevel="3" getLevel="79" levelUpSp="15100000" />
-		<skill skillName="Arcane Chaos" skillId="1338" skillLevel="1" getLevel="79" levelUpSp="15100000" />
+		<skill skillName="Arcane Chaos" skillId="1338" skillLevel="1" getLevel="79" levelUpSp="15100000">
+			<item id="90085" count="1" /> <!-- Scroll: Arcane Chaos -->
+		</skill>
 		<skill skillName="Sleep" skillId="1069" skillLevel="49" getLevel="79" levelUpSp="15100000" />
 		<skill skillName="Sleeping Cloud" skillId="1072" skillLevel="9" getLevel="79" levelUpSp="15100000" />
 
@@ -73,8 +93,12 @@
 		<skill skillName="Robe Mastery" skillId="234" skillLevel="45" getLevel="80" levelUpSp="15100000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLevel="46" getLevel="80" levelUpSp="15100000" />
 		<skill skillName="Inferno" skillId="1289" skillLevel="4" getLevel="80" levelUpSp="15100000" />
-		<skill skillName="Spell Master" skillId="1829" skillLevel="4" getLevel="80" levelUpSp="2400000" />
-		<skill skillName="Arcane Shield" skillId="1556" skillLevel="1" getLevel="80" levelUpSp="15100000" />
+		<skill skillName="Spell Master" skillId="1829" skillLevel="4" getLevel="80" levelUpSp="2400000">
+			<item id="57" count="500000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Arcane Shield" skillId="1556" skillLevel="1" getLevel="80" levelUpSp="15100000">
+			<item id="90086" count="1" /> <!-- Scroll: Arcane Shield -->
+		</skill>
 		<skill skillName="Evolution Power" skillId="45189" skillLevel="1" getLevel="80">
 			<item id="57" count="10000000" /> <!-- Adena -->
 		</skill>

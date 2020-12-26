@@ -3,8 +3,12 @@
 	<skillTree type="classSkillTree" classId="116" parentClassId="52">
 
 		<skill skillName="Anti Magic" skillId="146" skillLevel="46" getLevel="76" levelUpSp="6700000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="6700000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" levelUpSp="6700000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="3" getLevel="76" levelUpSp="6700000">
+			<item id="8620" count="1" /> <!-- Buff Expansion Book Lv. 3 -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="4" getLevel="76" levelUpSp="6700000">
+			<item id="8621" count="1" /> <!-- Buff Expansion Book Lv. 4 -->
+		</skill>
 		<skill skillName="Light Armor Mastery" skillId="252" skillLevel="46" getLevel="76" levelUpSp="6700000" />
 		<skill skillName="Robe Mastery" skillId="251" skillLevel="46" getLevel="76" levelUpSp="6700000" />
 		<skill skillName="Weapon Mastery" skillId="250" skillLevel="43" getLevel="76" levelUpSp="6700000" />
@@ -15,14 +19,24 @@
 		</skill>
 		<skill skillName="Steal Essence" skillId="1245" skillLevel="15" getLevel="76" levelUpSp="6700000" />
 		<skill skillName="Chant of Life" skillId="1229" skillLevel="19" getLevel="76" levelUpSp="6700000" />
-		<skill skillName="Chant of Might" skillId="1007" skillLevel="4" getLevel="76" levelUpSp="6700000" />
-		<skill skillName="Chant of Shield" skillId="1009" skillLevel="4" getLevel="76" levelUpSp="6700000" />
-		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="6700000" />
+		<skill skillName="Chant of Might" skillId="1007" skillLevel="4" getLevel="76" levelUpSp="6700000">
+			<item id="94135" count="1" /> <!-- Master's Book: Might -->
+		</skill>
+		<skill skillName="Chant of Shield" skillId="1009" skillLevel="4" getLevel="76" levelUpSp="6700000">
+			<item id="94136" count="1" /> <!-- Master's Book: Shield -->
+		</skill>
+		<skill skillName="Detection" skillId="45190" skillLevel="1" getLevel="76" levelUpSp="6700000">
+			<item id="57" count="5000000" /> <!-- Adena -->
+		</skill>
 		<skill skillName="Mount Black Bear" skillId="1837" skillLevel="1" getLevel="76">
 			<item id="90042" count="1" /> <!-- Spellbook - Mount Black Bear -->
 		</skill>
-		<skill skillName="Mana Gain" skillId="1460" skillLevel="1" getLevel="76" levelUpSp="6700000" />
-		<skill skillName="Prophecy of Victory" skillId="1363" skillLevel="1" getLevel="76" levelUpSp="6700000" />
+		<skill skillName="Mana Gain" skillId="1460" skillLevel="1" getLevel="76" levelUpSp="6700000">
+			<item id="90106" count="1" /> <!-- Scroll: Mana Gain -->
+		</skill>
+		<skill skillName="Prophecy of Victory" skillId="1363" skillLevel="1" getLevel="76" levelUpSp="6700000">
+			<item id="90112" count="1" /> <!-- Scroll: Prophecy of Victory -->
+		</skill>
 		<skill skillName="Power Break" skillId="260" skillLevel="38" getLevel="76" levelUpSp="6700000" />
 		<skill skillName="Dreaming Spirit" skillId="1097" skillLevel="21" getLevel="76" levelUpSp="6700000" />
 		<skill skillName="Life Rescue" skillId="1610" skillLevel="21" getLevel="76" levelUpSp="6700000" />
@@ -35,7 +49,9 @@
 		<skill skillName="Weapon Mastery" skillId="250" skillLevel="44" getLevel="77" levelUpSp="6700000" />
 		<skill skillName="Heavy Armor Mastery" skillId="253" skillLevel="45" getLevel="77" levelUpSp="6700000" />
 		<skill skillName="Freezing Flame" skillId="1244" skillLevel="6" getLevel="77" levelUpSp="6700000" />
-		<skill skillName="Chant of Spirit" skillId="1362" skillLevel="1" getLevel="77" levelUpSp="6700000" />
+		<skill skillName="Chant of Spirit" skillId="1362" skillLevel="1" getLevel="77" levelUpSp="6700000">
+			<item id="90113" count="1" /> <!-- Scroll: Chant of Spirit -->
+		</skill>
 		<skill skillName="Mana Gain" skillId="1460" skillLevel="2" getLevel="77" levelUpSp="6700000" />
 		<skill skillName="Power Break" skillId="260" skillLevel="39" getLevel="77" levelUpSp="6700000" />
 		<skill skillName="Life Rescue" skillId="1610" skillLevel="22" getLevel="77" levelUpSp="6700000" />
@@ -49,7 +65,9 @@
 		<skill skillName="Heavy Armor Mastery" skillId="253" skillLevel="46" getLevel="78" levelUpSp="14800000" />
 		<skill skillName="Freezing Flame" skillId="1244" skillLevel="7" getLevel="78" levelUpSp="14800000" />
 		<skill skillName="Steal Essence" skillId="1245" skillLevel="16" getLevel="78" levelUpSp="14800000" />
-		<skill skillName="Chant of Gate" skillId="1429" skillLevel="1" getLevel="78" levelUpSp="14800000" />
+		<skill skillName="Chant of Gate" skillId="1429" skillLevel="1" getLevel="78" levelUpSp="14800000">
+			<item id="90114" count="1" /> <!-- Scroll: Chant of Gate -->
+		</skill>
 		<skill skillName="Chant of Life" skillId="1229" skillLevel="20" getLevel="78" levelUpSp="14800000" />
 		<skill skillName="Mana Gain" skillId="1460" skillLevel="3" getLevel="78" levelUpSp="14800000" />
 		<skill skillName="Power Break" skillId="260" skillLevel="40" getLevel="78" levelUpSp="14800000" />
@@ -59,7 +77,9 @@
 		<skill skillName="Fatal Strike" skillId="190" skillLevel="40" getLevel="78" levelUpSp="14800000" />
 
 		<skill skillName="Freezing Flame" skillId="1244" skillLevel="8" getLevel="79" levelUpSp="14800000" />
-		<skill skillName="Chant of Protection" skillId="1461" skillLevel="1" getLevel="79" levelUpSp="14800000" />
+		<skill skillName="Chant of Protection" skillId="1461" skillLevel="1" getLevel="79" levelUpSp="14800000">
+			<item id="90115" count="1" /> <!-- Scroll: Chant of Protection -->
+		</skill>
 		<skill skillName="Mana Gain" skillId="1460" skillLevel="4" getLevel="79" levelUpSp="14800000" />
 		<skill skillName="Life Rescue" skillId="1610" skillLevel="24" getLevel="79" levelUpSp="14800000" />
 
@@ -70,12 +90,16 @@
 		<skill skillName="Heavy Armor Mastery" skillId="253" skillLevel="47" getLevel="80" levelUpSp="14800000" />
 		<skill skillName="Freezing Flame" skillId="1244" skillLevel="9" getLevel="80" levelUpSp="14800000" />
 		<skill skillName="Steal Essence" skillId="1245" skillLevel="17" getLevel="80" levelUpSp="14800000" />
-		<skill skillName="Spell Master" skillId="1832" skillLevel="4" getLevel="80" levelUpSp="2400000" />
+		<skill skillName="Spell Master" skillId="1832" skillLevel="4" getLevel="80" levelUpSp="2400000">
+			<item id="57" count="500000" /> <!-- Adena -->
+		</skill>
 		<skill skillName="Evolution Power" skillId="45189" skillLevel="1" getLevel="80">
 			<item id="57" count="10000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Chant of Life" skillId="1229" skillLevel="21" getLevel="80" levelUpSp="14800000" />
-		<skill skillName="Great Fury" skillId="1543" skillLevel="1" getLevel="80" levelUpSp="14800000" />
+		<skill skillName="Great Fury" skillId="1543" skillLevel="1" getLevel="80" levelUpSp="14800000">
+			<item id="90116" count="1" /> <!-- Scroll: Great Fury -->
+		</skill>
 		<skill skillName="Mana Gain" skillId="1460" skillLevel="5" getLevel="80" levelUpSp="14800000" />
 		<skill skillName="Swap Defense" skillId="1392" skillLevel="4" getLevel="80" levelUpSp="10000000" />
 		<skill skillName="Dreaming Spirit" skillId="1097" skillLevel="23" getLevel="80" levelUpSp="14800000" />
