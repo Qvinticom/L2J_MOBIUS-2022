@@ -148,13 +148,79 @@
 	</skill>
 	<skill id="29413" toLevel="4" name="Einhasad Overseeing">
 		<!-- The massacre has drawn the attention of Einhasad. Now the goddess is keeping an eye on you. P./ M. Def. -$s1, Speed -$s2. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.karma</icon>
+		<operateType>A2</operateType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLevel>
+		<abnormalType>PK_DEBUFF1</abnormalType>
+		<abnormalTime>
+			<value level="1">1800</value>
+			<value level="2">3600</value>
+			<value level="3">7200</value>
+			<value level="4">10800</value>
+		</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>0</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>-5</magicCriticalRate>
+		<irreplacableBuff>true</irreplacableBuff>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-15</value>
+					<value level="4">-30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-30</value>
+					<value level="4">-35</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="29414" toLevel="1" name="Einhasad's Chains">
 		<!-- Your location is shown on the world map. You can't use escape skills and teleport services. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.karma</icon>
+		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalType>PK_DEBUFF2</abnormalType>
+		<abnormalTime>10800</abnormalTime>
+		<canBeDispelled>false</canBeDispelled>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>0</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>-5</magicCriticalRate>
+		<irreplacableBuff>true</irreplacableBuff>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="BlockEscape" />
+		</effects>
 	</skill>
 	<skill id="29415" toLevel="1" name="Vitality Maintaining Rune">
 		<!-- Maintains Vitality when you have it in the inventory. -->

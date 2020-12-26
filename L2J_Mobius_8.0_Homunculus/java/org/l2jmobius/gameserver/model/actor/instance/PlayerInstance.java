@@ -1947,6 +1947,10 @@ public class PlayerInstance extends Playable
 	{
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPKChanged(this, _pkKills, pkKills), this);
 		_pkKills = pkKills;
+		if (_pkKills > 9)
+		{
+			World.getInstance().addPkPlayer(this);
+		}
 	}
 	
 	/**
@@ -2083,6 +2087,11 @@ public class PlayerInstance extends Playable
 		
 		sendPacket(new SystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1).addInt(getReputation()));
 		broadcastReputation();
+		
+		if (getReputation() >= 0)
+		{
+			World.getInstance().removePkPlayer(this);
+		}
 	}
 	
 	public int getWeightPenalty()
@@ -5132,6 +5141,25 @@ public class PlayerInstance extends Playable
 			{
 				setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), killedPlayable.isSummon()));
 				setPkKills(getPkKills() + 1);
+				
+				// Einhasad debuffs.
+				if (_pkKills > 9)
+				{
+					SkillCaster.triggerCast(this, this, CommonSkill.EINHASAD_OVERSEEING_4.getSkill());
+					SkillCaster.triggerCast(this, this, CommonSkill.EINHASAD_CHAINS.getSkill());
+				}
+				else if (_pkKills > 7)
+				{
+					SkillCaster.triggerCast(this, this, CommonSkill.EINHASAD_OVERSEEING_3.getSkill());
+				}
+				else if (_pkKills > 5)
+				{
+					SkillCaster.triggerCast(this, this, CommonSkill.EINHASAD_OVERSEEING_2.getSkill());
+				}
+				else if (_pkKills > 3)
+				{
+					SkillCaster.triggerCast(this, this, CommonSkill.EINHASAD_OVERSEEING_1.getSkill());
+				}
 			}
 		}
 		
@@ -10095,6 +10123,11 @@ public class PlayerInstance extends Playable
 			setCurrentMp(_originalMp);
 		}
 		
+		if ((_pkKills > 9) && (getReputation() < 0))
+		{
+			World.getInstance().addPkPlayer(this);
+		}
+		
 		revalidateZone(true);
 		
 		notifyFriends(FriendStatus.MODE_ONLINE);
@@ -10785,6 +10818,8 @@ public class PlayerInstance extends Playable
 	public boolean deleteMe()
 	{
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(this), this);
+		
+		World.getInstance().removePkPlayer(this);
 		
 		try
 		{

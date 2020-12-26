@@ -93,6 +93,8 @@ import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeAdd
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeWaitingList;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorCancel;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorList;
+import org.l2jmobius.gameserver.network.clientpackets.pk.RequestExPkPenaltyList;
+import org.l2jmobius.gameserver.network.clientpackets.pk.RequestExPkPenaltyListOnlyLoc;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeAnnounce;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeItemBuy;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeItemList;
@@ -595,8 +597,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_PLEDGE_ENEMY_INFO_LIST(0x1C6, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ENEMY_REGISTER(0x1C7, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ENEMY_DELETE(0x1C8, null, ConnectionState.IN_GAME),
-	EX_PK_PENALTY_LIST(0x1C9, null, ConnectionState.IN_GAME),
-	EX_PK_PENALTY_LIST_ONLY_LOC(0x1CA, null, ConnectionState.IN_GAME),
+	EX_PK_PENALTY_LIST(0x1C9, RequestExPkPenaltyList::new, ConnectionState.IN_GAME),
+	EX_PK_PENALTY_LIST_ONLY_LOC(0x1CA, RequestExPkPenaltyListOnlyLoc::new, ConnectionState.IN_GAME),
 	EX_TRY_PET_EXTRACT_SYSTEM(0x1CB, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_V3_SET_ANNOUNCE(0x1CC, null, ConnectionState.IN_GAME),
 	EX_MAX(0x1CD, null, ConnectionState.IN_GAME);

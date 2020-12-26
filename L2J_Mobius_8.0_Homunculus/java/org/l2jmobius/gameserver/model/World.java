@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
@@ -93,6 +94,9 @@ public class World
 	
 	private static final AtomicInteger _partyNumber = new AtomicInteger();
 	private static final AtomicInteger _memberInPartyNumber = new AtomicInteger();
+	
+	private static final Set<PlayerInstance> _pkPlayers = ConcurrentHashMap.newKeySet(30);
+	private static final AtomicInteger _lastPkTime = new AtomicInteger((int) System.currentTimeMillis() / 1000);
 	
 	private static final WorldRegion[][] _worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 	
@@ -815,6 +819,49 @@ public class World
 	public int getPartyMemberCount()
 	{
 		return _memberInPartyNumber.get();
+	}
+	
+	public synchronized void addPkPlayer(PlayerInstance player)
+	{
+		if (_pkPlayers.size() > 29)
+		{
+			PlayerInstance lowestPk = null;
+			int lowestPkCount = Integer.MAX_VALUE;
+			for (PlayerInstance pk : _pkPlayers)
+			{
+				if (pk.getPkKills() < lowestPkCount)
+				{
+					lowestPk = pk;
+					lowestPkCount = pk.getPkKills();
+				}
+			}
+			if ((lowestPk != null) && (lowestPkCount < player.getPkKills()))
+			{
+				_pkPlayers.remove(lowestPk);
+			}
+			else
+			{
+				return;
+			}
+		}
+		_pkPlayers.add(player);
+		_lastPkTime.set((int) System.currentTimeMillis() / 1000);
+	}
+	
+	public void removePkPlayer(PlayerInstance player)
+	{
+		_pkPlayers.remove(player);
+		_lastPkTime.set((int) System.currentTimeMillis() / 1000);
+	}
+	
+	public Set<PlayerInstance> getPkPlayers()
+	{
+		return _pkPlayers;
+	}
+	
+	public int getLastPkTime()
+	{
+		return _lastPkTime.get();
 	}
 	
 	/**
