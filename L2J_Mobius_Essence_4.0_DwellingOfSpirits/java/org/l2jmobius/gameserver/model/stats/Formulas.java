@@ -101,6 +101,7 @@ public class Formulas
 		final double criticalVulnMod = target.getStat().getValue(Stat.DEFENCE_CRITICAL_DAMAGE, 1);
 		final double criticalAddMod = attacker.getStat().getValue(Stat.CRITICAL_DAMAGE_ADD, 0);
 		final double criticalAddVuln = target.getStat().getValue(Stat.DEFENCE_CRITICAL_DAMAGE_ADD, 0);
+		final double criticalSkillMod = calcCritDamage(attacker, target, skill) / 2;
 		// Trait, elements
 		final double weaponTraitMod = calcWeaponTraitBonus(attacker, target);
 		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
@@ -112,7 +113,7 @@ public class Formulas
 		// Initial damage
 		final double ssmod = ss ? (2 * attacker.getStat().getValue(Stat.SHOTS_BONUS)) : 1; // 2.04 for dual weapon?
 		final double cdMult = criticalMod * (((criticalPositionMod - 1) / 2) + 1) * (((criticalVulnMod - 1) / 2) + 1);
-		final double cdPatk = criticalAddMod + criticalAddVuln;
+		final double cdPatk = (criticalAddMod + criticalAddVuln) * criticalSkillMod;
 		final Position position = Position.getPosition(attacker, target);
 		final double isPosition = position == Position.BACK ? 0.2 : position == Position.SIDE ? 0.05 : 0;
 		
@@ -132,10 +133,12 @@ public class Formulas
 			defence *= attacker.isPlayable() ? Config.PVP_BLOW_SKILL_DEFENCE_MULTIPLIERS[target.getActingPlayer().getClassId().getId()] : Config.PVE_BLOW_SKILL_DEFENCE_MULTIPLIERS[target.getActingPlayer().getClassId().getId()];
 		}
 		
+		final double skillPower = power + attacker.getStat().getValue(Stat.SKILL_POWER_ADD, 0);
+		
 		// ........................_____________________________Initial Damage____________________________...___________Position Additional Damage___________..._CriticalAdd_
 		// ATTACK CALCULATION 77 * [(skillpower+patk) * 0.666 * cdbonus * cdPosBonusHalf * cdVulnHalf * ss + isBack0.2Side0.05 * (skillpower+patk*ss) * random + 6 * cd_patk] / pdef
 		// ````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^
-		final double baseMod = (77 * (((power + attacker.getPAtk()) * 0.666) + (isPosition * (power + attacker.getPAtk()) * randomMod) + (6 * cdPatk))) / defence;
+		final double baseMod = (77 * (((skillPower + attacker.getPAtk()) * 0.666) + (isPosition * (skillPower + attacker.getPAtk()) * randomMod) + (6 * cdPatk))) / defence;
 		final double damage = baseMod * ssmod * cdMult * weaponTraitMod * generalTraitMod * weaknessMod * attributeMod * randomMod * pvpPveMod * balanceMod;
 		
 		return damage;
