@@ -5050,7 +5050,7 @@
 		</magicLevel>
 		<mpConsume>
 			<value level="1">66</value>
-			<value level="1">73</value>
+			<value level="2">73</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -7150,7 +7150,7 @@
 					<value level="27">158</value>
 					<value level="28">161</value>
 				</pAtkAmount>
-				<pAtkMode>PER</pAtkMode>
+				<pAtkMode>DIFF</pAtkMode>
 				<accuracyAmount>3</accuracyAmount>
 				<accuracyMode>DIFF</accuracyMode>
 			</effect>
@@ -7185,7 +7185,7 @@
 					<value level="27">158</value>
 					<value level="28">161</value>
 				</pAtkAmount>
-				<pAtkMode>PER</pAtkMode>
+				<pAtkMode>DIFF</pAtkMode>
 				<accuracyAmount>3</accuracyAmount>
 				<accuracyMode>DIFF</accuracyMode>
 			</effect>

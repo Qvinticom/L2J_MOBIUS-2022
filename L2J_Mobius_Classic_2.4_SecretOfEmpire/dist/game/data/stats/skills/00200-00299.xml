@@ -5465,7 +5465,7 @@
 		</magicLevel>
 		<mpConsume>
 			<value level="1">66</value>
-			<value level="1">73</value>
+			<value level="2">73</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -7769,7 +7769,7 @@
 					<value level="33">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 					<value level="34">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</pAtkAmount>
-				<pAtkMode>PER</pAtkMode>
+				<pAtkMode>DIFF</pAtkMode>
 				<accuracyAmount>3</accuracyAmount>
 				<accuracyMode>DIFF</accuracyMode>
 			</effect>
@@ -7810,7 +7810,7 @@
 					<value level="33">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 					<value level="34">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</pAtkAmount>
-				<pAtkMode>PER</pAtkMode>
+				<pAtkMode>DIFF</pAtkMode>
 				<accuracyAmount>3</accuracyAmount>
 				<accuracyMode>DIFF</accuracyMode>
 			</effect>

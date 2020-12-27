@@ -2343,16 +2343,12 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
-				<amount>8.5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PAtk">
 				<amount>
-					<value level="1">2</value>
-					<value level="2">3</value>
-					<value level="3">4</value>
-					<value level="4">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">40</value>
+					<value level="4">120</value>
+					<value level="5">250</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2373,21 +2369,21 @@
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">9</value>
-					<value level="2">11</value>
-					<value level="3">12</value>
-					<value level="4">13</value>
-					<value level="5">14</value>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">60</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalEvasion">
+			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">3</value>
-					<value level="5">3</value>
+					<value level="1">20</value>
+					<value level="2">30</value>
+					<value level="3">40</value>
+					<value level="4">50</value>
+					<value level="5">60</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>

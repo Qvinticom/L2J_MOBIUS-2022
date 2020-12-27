@@ -3370,10 +3370,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
-				<amount>45</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PAtk">
 				<amount>
 					<value level="1">1.5</value>
 					<value level="2">2.8</value>
@@ -3426,72 +3422,72 @@
 					<value level="49">104</value>
 					<value level="50">107</value>
 					<value level="51">110</value>
-					<value level="52">110</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="53">110</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="54">110</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="55">110</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="56">110</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="52">115</value>
+					<value level="53">120</value>
+					<value level="54">130</value>
+					<value level="55">140</value>
+					<value level="56">150</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MAtk">
 				<amount>
-					<value level="1">1.9</value>
-					<value level="2">3.5</value>
-					<value level="3">5.7</value>
-					<value level="4">7.2</value>
-					<value level="5">8.3</value>
-					<value level="6">10.3</value>
-					<value level="7">11.9</value>
-					<value level="8">14.6</value>
-					<value level="9">16.6</value>
-					<value level="10">20</value>
-					<value level="11">21.3</value>
-					<value level="12">22.6</value>
-					<value level="13">25.4</value>
-					<value level="14">26.9</value>
-					<value level="15">28.5</value>
-					<value level="16">31.8</value>
-					<value level="17">33.6</value>
-					<value level="18">35.4</value>
-					<value level="19">39.2</value>
-					<value level="20">41.2</value>
-					<value level="21">43.2</value>
-					<value level="22">47.5</value>
-					<value level="23">49.8</value>
-					<value level="24">52.1</value>
-					<value level="25">54.4</value>
-					<value level="26">56.8</value>
-					<value level="27">59.2</value>
-					<value level="28">61.7</value>
-					<value level="29">64.3</value>
-					<value level="30">66.8</value>
-					<value level="31">69.4</value>
-					<value level="32">72.1</value>
-					<value level="33">74.8</value>
-					<value level="34">77.4</value>
-					<value level="35">80.2</value>
-					<value level="36">82.9</value>
-					<value level="37">85.6</value>
-					<value level="38">88.4</value>
-					<value level="39">91.1</value>
-					<value level="40">93.8</value>
-					<value level="41">96.5</value>
-					<value level="42">99.3</value>
-					<value level="43">105</value>
-					<value level="44">108</value>
-					<value level="45">111</value>
-					<value level="46">117</value>
-					<value level="47">120</value>
-					<value level="48">123</value>
-					<value level="49">126</value>
-					<value level="50">129</value>
-					<value level="51">132</value>
-					<value level="52">132</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="53">132</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="54">132</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="55">132</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="56">132</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">60</value>
+					<value level="6">80</value>
+					<value level="7">100</value>
+					<value level="8">120</value>
+					<value level="9">130</value>
+					<value level="10">170</value>
+					<value level="11">180</value>
+					<value level="12">190</value>
+					<value level="13">200</value>
+					<value level="14">210</value>
+					<value level="15">220</value>
+					<value level="16">240</value>
+					<value level="17">250</value>
+					<value level="18">270</value>
+					<value level="19">290</value>
+					<value level="20">300</value>
+					<value level="21">310</value>
+					<value level="22">330</value>
+					<value level="23">340</value>
+					<value level="24">350</value>
+					<value level="25">360</value>
+					<value level="26">370</value>
+					<value level="27">380</value>
+					<value level="28">390</value>
+					<value level="29">400</value>
+					<value level="30">410</value>
+					<value level="31">420</value>
+					<value level="32">430</value>
+					<value level="33">440</value>
+					<value level="34">450</value>
+					<value level="35">460</value>
+					<value level="36">470</value>
+					<value level="37">480</value>
+					<value level="38">490</value>
+					<value level="39">500</value>
+					<value level="40">510</value>
+					<value level="41">520</value>
+					<value level="42">530</value>
+					<value level="43">550</value>
+					<value level="44">570</value>
+					<value level="45">580</value>
+					<value level="46">600</value>
+					<value level="47">610</value>
+					<value level="48">620</value>
+					<value level="49">630</value>
+					<value level="50">640</value>
+					<value level="51">650</value>
+					<value level="52">660</value>
+					<value level="53">670</value>
+					<value level="54">680</value>
+					<value level="55">690</value>
+					<value level="56">700</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3628,78 +3624,78 @@
 					<value level="43">83</value>
 					<value level="44">86</value>
 					<value level="45">89</value>
-					<value level="46">92</value>
-					<value level="47">95</value>
-					<value level="48">98</value>
-					<value level="49">101</value>
-					<value level="50">104</value>
-					<value level="51">107</value>
-					<value level="52">107</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="53">107</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="54">107</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="55">107</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="56">107</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="46">95</value>
+					<value level="47">98</value>
+					<value level="48">101</value>
+					<value level="49">104</value>
+					<value level="50">107</value>
+					<value level="51">110</value>
+					<value level="52">115</value>
+					<value level="53">120</value>
+					<value level="54">130</value>
+					<value level="55">140</value>
+					<value level="56">150</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MAtk">
 				<amount>
-					<value level="1">1.9</value>
-					<value level="2">3.5</value>
-					<value level="3">5.7</value>
-					<value level="4">7.2</value>
-					<value level="5">8.3</value>
-					<value level="6">10.3</value>
-					<value level="7">11.9</value>
-					<value level="8">14.6</value>
-					<value level="9">16.6</value>
-					<value level="10">20</value>
-					<value level="11">21.3</value>
-					<value level="12">22.6</value>
-					<value level="13">25.4</value>
-					<value level="14">26.9</value>
-					<value level="15">28.5</value>
-					<value level="16">31.8</value>
-					<value level="17">33.6</value>
-					<value level="18">35.4</value>
-					<value level="19">39.2</value>
-					<value level="20">41.2</value>
-					<value level="21">43.2</value>
-					<value level="22">47.5</value>
-					<value level="23">49.8</value>
-					<value level="24">52.1</value>
-					<value level="25">54.4</value>
-					<value level="26">56.8</value>
-					<value level="27">59.2</value>
-					<value level="28">61.7</value>
-					<value level="29">64.3</value>
-					<value level="30">66.8</value>
-					<value level="31">69.4</value>
-					<value level="32">72.1</value>
-					<value level="33">74.8</value>
-					<value level="34">77.4</value>
-					<value level="35">80.2</value>
-					<value level="36">82.9</value>
-					<value level="37">85.6</value>
-					<value level="38">88.4</value>
-					<value level="39">91.1</value>
-					<value level="40">93.8</value>
-					<value level="41">96.5</value>
-					<value level="42">99.3</value>
-					<value level="43">105</value>
-					<value level="44">108</value>
-					<value level="45">111</value>
-					<value level="46">114</value>
-					<value level="47">117</value>
-					<value level="48">120</value>
-					<value level="49">123</value>
-					<value level="50">126</value>
-					<value level="51">129</value>
-					<value level="52">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="53">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="54">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="55">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="56">129</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">60</value>
+					<value level="6">80</value>
+					<value level="7">100</value>
+					<value level="8">120</value>
+					<value level="9">130</value>
+					<value level="10">170</value>
+					<value level="11">180</value>
+					<value level="12">190</value>
+					<value level="13">200</value>
+					<value level="14">210</value>
+					<value level="15">220</value>
+					<value level="16">240</value>
+					<value level="17">250</value>
+					<value level="18">270</value>
+					<value level="19">290</value>
+					<value level="20">300</value>
+					<value level="21">310</value>
+					<value level="22">330</value>
+					<value level="23">340</value>
+					<value level="24">350</value>
+					<value level="25">360</value>
+					<value level="26">370</value>
+					<value level="27">380</value>
+					<value level="28">390</value>
+					<value level="29">400</value>
+					<value level="30">410</value>
+					<value level="31">420</value>
+					<value level="32">430</value>
+					<value level="33">440</value>
+					<value level="34">450</value>
+					<value level="35">460</value>
+					<value level="36">470</value>
+					<value level="37">480</value>
+					<value level="38">490</value>
+					<value level="39">500</value>
+					<value level="40">510</value>
+					<value level="41">520</value>
+					<value level="42">530</value>
+					<value level="43">550</value>
+					<value level="44">570</value>
+					<value level="45">580</value>
+					<value level="46">600</value>
+					<value level="47">610</value>
+					<value level="48">620</value>
+					<value level="49">630</value>
+					<value level="50">640</value>
+					<value level="51">650</value>
+					<value level="52">660</value>
+					<value level="53">670</value>
+					<value level="54">680</value>
+					<value level="55">690</value>
+					<value level="56">700</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -5623,7 +5619,7 @@
 		</magicLevel>
 		<mpConsume>
 			<value level="1">66</value>
-			<value level="1">73</value>
+			<value level="2">73</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -7981,13 +7977,13 @@
 					<value level="27">158</value>
 					<value level="28">161</value>
 					<value level="29">164</value>
-					<value level="30">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="31">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="32">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="33">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="34">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="30">170</value>
+					<value level="31">176</value>
+					<value level="32">184</value>
+					<value level="33">192</value>
+					<value level="34">200</value>
 				</pAtkAmount>
-				<pAtkMode>PER</pAtkMode>
+				<pAtkMode>DIFF</pAtkMode>
 				<accuracyAmount>3</accuracyAmount>
 				<accuracyMode>DIFF</accuracyMode>
 			</effect>
@@ -8022,13 +8018,13 @@
 					<value level="27">158</value>
 					<value level="28">161</value>
 					<value level="29">164</value>
-					<value level="30">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="31">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="32">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="33">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="34">164</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="30">170</value>
+					<value level="31">176</value>
+					<value level="32">184</value>
+					<value level="33">192</value>
+					<value level="34">200</value>
 				</pAtkAmount>
-				<pAtkMode>PER</pAtkMode>
+				<pAtkMode>DIFF</pAtkMode>
 				<accuracyAmount>3</accuracyAmount>
 				<accuracyMode>DIFF</accuracyMode>
 			</effect>
