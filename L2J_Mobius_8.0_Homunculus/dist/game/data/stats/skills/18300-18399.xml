@@ -54,7 +54,7 @@
 				<skillLevel>5</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
-			<condition name="OpSkill" fromLevel="1" toLevel="1" >
+			<condition name="OpSkill" fromLevel="1" toLevel="1">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>6</skillLevel>
 				<hasLearned>false</hasLearned>
@@ -99,12 +99,12 @@
 				<skillLevel>5</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
-			<condition name="OpSkill" fromLevel="6" toLevel="6" >
+			<condition name="OpSkill" fromLevel="6" toLevel="6">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>5</skillLevel>
 				<hasLearned>true</hasLearned>
 			</condition>
-			<condition name="OpSkill" fromLevel="6" toLevel="6" >
+			<condition name="OpSkill" fromLevel="6" toLevel="6">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>6</skillLevel>
 				<hasLearned>false</hasLearned>
@@ -131,7 +131,7 @@
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>5</skillLevel>
 			</effect>
-			<effect name="SetSkill" fromLevel="6" toLevel="6" >
+			<effect name="SetSkill" fromLevel="6" toLevel="6">
 				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>6</skillLevel>
 			</effect>

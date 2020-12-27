@@ -185,7 +185,7 @@
 			<hitTime>520</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" attackable="true" canMove="false"/>
+		<status undying="false" attackable="true" canMove="false" />
 		<skillList>
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -305,7 +305,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="9189932" sp="275697" />
-		<equipment rhand="5800" lhand="5799"/>
+		<equipment rhand="5800" lhand="5799" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1241577.52641" hpRegen="7.5" mp="2284.185" mpRegen="2.7" />
 			<attack physical="734.25" magical="501.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />

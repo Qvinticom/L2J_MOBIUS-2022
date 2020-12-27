@@ -2554,7 +2554,7 @@
 		<canBeDispelled>false</canBeDispelled>
 		<conditions>
 			<condition name="OpTargetPc" />
-			<condition name="OpNotInPeacezone"/>
+			<condition name="OpNotInPeacezone" />
 		</conditions>
 		<effects>
 			<effect name="BlockResurrection" />

@@ -405,15 +405,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems"/>
+		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="92176" min="1" max="1" chance="14"/>
-			<item id="92186" min="1" max="1" chance="15"/>
-			<item id="92196" min="1" max="1" chance="14"/>
-			<item id="92206" min="1" max="1" chance="15"/>
-			<item id="92216" min="1" max="1" chance="14"/>
-			<item id="92226" min="1" max="1" chance="14"/>
-			<item id="92236" min="1" max="1" chance="14"/>
+			<item id="92176" min="1" max="1" chance="14" />
+			<item id="92186" min="1" max="1" chance="15" />
+			<item id="92196" min="1" max="1" chance="14" />
+			<item id="92206" min="1" max="1" chance="15" />
+			<item id="92216" min="1" max="1" chance="14" />
+			<item id="92226" min="1" max="1" chance="14" />
+			<item id="92236" min="1" max="1" chance="14" />
 		</capsuled_items>
 	</item>
 	<item id="92035" name="Shiny Jewelry Box" additionalName="Event" type="EtcItem">
@@ -441,7 +441,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50194" level="1"/>
+			<skill id="50194" level="1" />
 		</skills>
 	</item>
 	<item id="92037" name="Amber" additionalName="Lv. 2" type="Armor">
@@ -457,7 +457,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50194" level="2"/>
+			<skill id="50194" level="2" />
 		</skills>
 	</item>
 	<item id="92038" name="Amber" additionalName="Lv. 3" type="Armor">
@@ -473,7 +473,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50194" level="3"/>
+			<skill id="50194" level="3" />
 		</skills>
 	</item>
 	<item id="92039" name="Amber" additionalName="Lv. 4" type="Armor">
@@ -489,7 +489,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50194" level="4"/>
+			<skill id="50194" level="4" />
 		</skills>
 	</item>
 	<item id="92040" name="Amber" additionalName="Lv. 5" type="Armor">
@@ -505,7 +505,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50194" level="5"/>
+			<skill id="50194" level="5" />
 		</skills>
 	</item>
 	<item id="92041" name="Amber" additionalName="Lv. 6" type="Armor">
@@ -521,7 +521,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50194" level="6"/>
+			<skill id="50194" level="6" />
 		</skills>
 	</item>
 	<item id="92042" name="Amber" additionalName="Lv. 7" type="Armor">
@@ -537,7 +537,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50194" level="7"/>
+			<skill id="50194" level="7" />
 		</skills>
 	</item>
 	<item id="92043" name="Amber" additionalName="Lv. 8" type="Armor">
@@ -553,7 +553,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50194" level="8"/>
+			<skill id="50194" level="8" />
 		</skills>
 	</item>
 	<item id="92044" name="Amber" additionalName="Lv. 9" type="Armor">
@@ -569,7 +569,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50194" level="9"/>
+			<skill id="50194" level="9" />
 		</skills>
 	</item>
 	<item id="92045" name="Amber" additionalName="Lv. 10" type="Armor">
@@ -585,7 +585,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50194" level="10"/>
+			<skill id="50194" level="10" />
 		</skills>
 	</item>
 	<item id="92046" name="Opal" additionalName="Lv. 1" type="Armor">
@@ -601,8 +601,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50195" level="1"/>
-			<skill id="50196" level="1"/>
+			<skill id="50195" level="1" />
+			<skill id="50196" level="1" />
 		</skills>
 	</item>
 	<item id="92047" name="Opal" additionalName="Lv. 2" type="Armor">
@@ -618,8 +618,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50195" level="2"/>
-			<skill id="50196" level="2"/>
+			<skill id="50195" level="2" />
+			<skill id="50196" level="2" />
 		</skills>
 	</item>
 	<item id="92048" name="Opal" additionalName="Lv. 3" type="Armor">
@@ -635,8 +635,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50195" level="3"/>
-			<skill id="50196" level="3"/>
+			<skill id="50195" level="3" />
+			<skill id="50196" level="3" />
 		</skills>
 	</item>
 	<item id="92049" name="Opal" additionalName="Lv. 4" type="Armor">
@@ -652,8 +652,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50195" level="4"/>
-			<skill id="50196" level="4"/>
+			<skill id="50195" level="4" />
+			<skill id="50196" level="4" />
 		</skills>
 	</item>
 	<item id="92050" name="Opal" additionalName="Lv. 6" type="Armor">
@@ -669,8 +669,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50195" level="6"/>
-			<skill id="50196" level="6"/>
+			<skill id="50195" level="6" />
+			<skill id="50196" level="6" />
 		</skills>
 	</item>
 	<item id="92051" name="Opal" additionalName="Lv. 7" type="Armor">
@@ -686,8 +686,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50195" level="7"/>
-			<skill id="50196" level="7"/>
+			<skill id="50195" level="7" />
+			<skill id="50196" level="7" />
 		</skills>
 	</item>
 	<item id="92052" name="Opal" additionalName="Lv. 8" type="Armor">
@@ -703,8 +703,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50195" level="8"/>
-			<skill id="50196" level="8"/>
+			<skill id="50195" level="8" />
+			<skill id="50196" level="8" />
 		</skills>
 	</item>
 	<item id="92053" name="Opal" additionalName="Lv. 8 (NOT USED)" type="Armor">
@@ -759,7 +759,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50197" level="1"/>
+			<skill id="50197" level="1" />
 		</skills>
 	</item>
 	<item id="92057" name="Coral" additionalName="Lv. 2" type="Armor">
@@ -775,7 +775,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50197" level="2"/>
+			<skill id="50197" level="2" />
 		</skills>
 	</item>
 	<item id="92058" name="Coral" additionalName="Lv. 3" type="Armor">
@@ -791,7 +791,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50197" level="3"/>
+			<skill id="50197" level="3" />
 		</skills>
 	</item>
 	<item id="92059" name="Coral" additionalName="Lv. 4" type="Armor">
@@ -807,7 +807,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50197" level="4"/>
+			<skill id="50197" level="4" />
 		</skills>
 	</item>
 	<item id="92060" name="Coral" additionalName="Lv. 6" type="Armor">
@@ -823,7 +823,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50197" level="6"/>
+			<skill id="50197" level="6" />
 		</skills>
 	</item>
 	<item id="92061" name="Coral" additionalName="Lv. 7" type="Armor">
@@ -839,7 +839,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50197" level="7"/>
+			<skill id="50197" level="7" />
 		</skills>
 	</item>
 	<item id="92062" name="Coral" additionalName="Lv. 8" type="Armor">
@@ -855,7 +855,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50197" level="8"/>
+			<skill id="50197" level="8" />
 		</skills>
 	</item>
 	<item id="92063" name="Coral" additionalName="Lv. 8 (NOT USED)" type="Armor">
@@ -910,7 +910,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50204" level="1"/>
+			<skill id="50204" level="1" />
 		</skills>
 	</item>
 	<item id="92067" name="Onyx" additionalName="Lv. 2" type="Armor">
@@ -926,7 +926,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50204" level="2"/>
+			<skill id="50204" level="2" />
 		</skills>
 	</item>
 	<item id="92068" name="Onyx" additionalName="Lv. 3" type="Armor">
@@ -942,7 +942,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50204" level="3"/>
+			<skill id="50204" level="3" />
 		</skills>
 	</item>
 	<item id="92069" name="Onyx" additionalName="Lv. 4" type="Armor">
@@ -958,7 +958,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50204" level="4"/>
+			<skill id="50204" level="4" />
 		</skills>
 	</item>
 	<item id="92070" name="Onyx" additionalName="Lv. 6" type="Armor">
@@ -974,7 +974,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50204" level="6"/>
+			<skill id="50204" level="6" />
 		</skills>
 	</item>
 	<item id="92071" name="Onyx" additionalName="Lv. 7" type="Armor">
@@ -990,7 +990,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50204" level="7"/>
+			<skill id="50204" level="7" />
 		</skills>
 	</item>
 	<item id="92072" name="Onyx" additionalName="Lv. 8" type="Armor">
@@ -1006,7 +1006,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50204" level="8"/>
+			<skill id="50204" level="8" />
 		</skills>
 	</item>
 	<item id="92073" name="Onyx" additionalName="Lv. 8 (Not Used)" type="Armor">
@@ -1061,8 +1061,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50206" level="1"/>
-			<skill id="50205" level="1"/>
+			<skill id="50206" level="1" />
+			<skill id="50205" level="1" />
 		</skills>
 	</item>
 	<item id="92077" name="Spinel" additionalName="Lv. 2" type="Armor">
@@ -1078,8 +1078,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50206" level="2"/>
-			<skill id="50205" level="2"/>
+			<skill id="50206" level="2" />
+			<skill id="50205" level="2" />
 		</skills>
 	</item>
 	<item id="92078" name="Spinel" additionalName="Lv. 3" type="Armor">
@@ -1095,8 +1095,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50206" level="3"/>
-			<skill id="50205" level="3"/>
+			<skill id="50206" level="3" />
+			<skill id="50205" level="3" />
 		</skills>
 	</item>
 	<item id="92079" name="Spinel" additionalName="Lv. 4" type="Armor">
@@ -1112,8 +1112,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50206" level="4"/>
-			<skill id="50205" level="4"/>
+			<skill id="50206" level="4" />
+			<skill id="50205" level="4" />
 		</skills>
 	</item>
 	<item id="92080" name="Spinel" additionalName="Lv. 6" type="Armor">
@@ -1129,8 +1129,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50206" level="6"/>
-			<skill id="50205" level="6"/>
+			<skill id="50206" level="6" />
+			<skill id="50205" level="6" />
 		</skills>
 	</item>
 	<item id="92081" name="Spinel" additionalName="Lv. 7" type="Armor">
@@ -1146,8 +1146,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50206" level="7"/>
-			<skill id="50205" level="7"/>
+			<skill id="50206" level="7" />
+			<skill id="50205" level="7" />
 		</skills>
 	</item>
 	<item id="92082" name="Spinel" additionalName="Lv. 8" type="Armor">
@@ -1163,8 +1163,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50206" level="8"/>
-			<skill id="50205" level="8"/>
+			<skill id="50206" level="8" />
+			<skill id="50205" level="8" />
 		</skills>
 	</item>
 	<item id="92083" name="Spinel" additionalName="Lv. 8 (Not Used)" type="Armor">
@@ -1219,7 +1219,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50207" level="1"/>
+			<skill id="50207" level="1" />
 		</skills>
 	</item>
 	<item id="92087" name="Zircon" additionalName="Lv. 2" type="Armor">
@@ -1235,7 +1235,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50207" level="2"/>
+			<skill id="50207" level="2" />
 		</skills>
 	</item>
 	<item id="92088" name="Zircon" additionalName="Lv. 3" type="Armor">
@@ -1251,7 +1251,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50207" level="3"/>
+			<skill id="50207" level="3" />
 		</skills>
 	</item>
 	<item id="92089" name="Zircon" additionalName="Lv. 4" type="Armor">
@@ -1267,7 +1267,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50207" level="4"/>
+			<skill id="50207" level="4" />
 		</skills>
 	</item>
 	<item id="92090" name="Zircon" additionalName="Lv. 6" type="Armor">
@@ -1283,7 +1283,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50207" level="6"/>
+			<skill id="50207" level="6" />
 		</skills>
 	</item>
 	<item id="92091" name="Zircon" additionalName="Lv. 7" type="Armor">
@@ -1299,7 +1299,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50207" level="7"/>
+			<skill id="50207" level="7" />
 		</skills>
 	</item>
 	<item id="92092" name="Zircon" additionalName="Lv. 8" type="Armor">
@@ -1315,7 +1315,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50207" level="8"/>
+			<skill id="50207" level="8" />
 		</skills>
 	</item>
 	<item id="92093" name="Zircon" additionalName="Lv. 8 (Not Used)" type="Armor">
@@ -1370,7 +1370,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50208" level="1"/>
+			<skill id="50208" level="1" />
 		</skills>
 	</item>
 	<item id="92097" name="Moonstone" additionalName="Lv. 2" type="Armor">
@@ -1386,7 +1386,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50208" level="2"/>
+			<skill id="50208" level="2" />
 		</skills>
 	</item>
 	<item id="92098" name="Moonstone" additionalName="Lv. 3" type="Armor">
@@ -1402,7 +1402,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50208" level="3"/>
+			<skill id="50208" level="3" />
 		</skills>
 	</item>
 	<item id="92099" name="Moonstone" additionalName="Lv. 4" type="Armor">
@@ -1418,7 +1418,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="50208" level="4"/>
+			<skill id="50208" level="4" />
 		</skills>
 	</item>
 </list>
