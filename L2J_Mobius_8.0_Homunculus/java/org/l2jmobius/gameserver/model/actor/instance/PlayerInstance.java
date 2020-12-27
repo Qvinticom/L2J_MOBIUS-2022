@@ -10819,7 +10819,10 @@ public class PlayerInstance extends Playable
 	{
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(this), this);
 		
-		World.getInstance().removePkPlayer(this);
+		if (getReputation() < 0)
+		{
+			World.getInstance().removePkPlayer(this);
+		}
 		
 		try
 		{
