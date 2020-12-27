@@ -3460,6 +3460,14 @@
 					<item>LIGHT</item>
 				</armorType>
 			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>-15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>-15</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Heal" fromLevel="3" toLevel="5" fromSubLevel="2001" toSubLevel="2020">
 				<power>
 					<value fromLevel="3" toLevel="5" fromSubLevel="2001" toSubLevel="2001">1936</value>

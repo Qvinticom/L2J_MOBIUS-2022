@@ -5,7 +5,7 @@
 		<set name="icon" val="icon.aphros_sample" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -15,7 +15,7 @@
 		<set name="icon" val="icon.flower_bud_sample" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -45,7 +45,7 @@
 		<set name="icon" val="icon.etc_str_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -55,7 +55,7 @@
 		<set name="icon" val="icon.etc_con_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -65,7 +65,7 @@
 		<set name="icon" val="icon.etc_dex_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -75,7 +75,7 @@
 		<set name="icon" val="icon.etc_int_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -85,7 +85,7 @@
 		<set name="icon" val="icon.etc_men_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -95,7 +95,7 @@
 		<set name="icon" val="icon.etc_wit_hena_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -110,7 +110,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
@@ -119,7 +119,7 @@
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -130,8 +130,8 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -146,6 +146,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="16747" level="1" /> <!-- Ring of the Beginning -->
 		</skills>
@@ -164,6 +165,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="151920000" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="16748" level="1" /> <!-- Ring of Authority -->
 		</skills>
@@ -181,6 +183,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="16748" level="2" /> <!-- Ring of Authority -->
 		</skills>
@@ -198,6 +201,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="151920000" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="16749" level="1" /> <!-- Ring of the Truth -->
 		</skills>
@@ -215,6 +219,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="16749" level="2" /> <!-- Ring of the Truth -->
 		</skills>
@@ -522,6 +527,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="889600" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="16750" level="1" /> <!-- Ramonas Fansy Earrings -->
 		</skills>
@@ -540,6 +546,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="1112000" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="16751" level="1" /> <!-- Helios Majestic Earrings -->
 		</skills>
@@ -558,6 +565,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="556000" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="16752" level="1" /> <!-- Harnak's Deformed Necklace -->
 		</skills>
@@ -576,6 +584,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="778400" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="16753" level="1" /> <!-- Mimir's Worn Ring -->
 		</skills>
@@ -594,6 +603,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="1167600" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="16754" level="1" /> <!-- Forgotten Ring of the Core -->
 		</skills>
@@ -621,7 +631,7 @@
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -631,7 +641,7 @@
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -641,7 +651,7 @@
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -651,7 +661,7 @@
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -661,7 +671,7 @@
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -671,7 +681,7 @@
 		<set name="icon" val="icon.general_energy_condense_i01" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -681,7 +691,7 @@
 		<set name="icon" val="icon.general_energy_condense_i04" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -691,7 +701,7 @@
 		<set name="icon" val="icon.general_energy_condense_i02" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -701,7 +711,7 @@
 		<set name="icon" val="icon.general_energy_condense_i03" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -711,7 +721,7 @@
 		<set name="icon" val="icon.general_energy_condense_i05" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -727,7 +737,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -745,7 +755,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -763,7 +773,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -781,7 +791,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -799,7 +809,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -817,7 +827,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -835,7 +845,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -853,7 +863,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -871,7 +881,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -889,7 +899,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -907,7 +917,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -925,7 +935,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -943,7 +953,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -961,7 +971,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -979,7 +989,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -997,7 +1007,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1015,7 +1025,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1033,7 +1043,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1051,7 +1061,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1069,7 +1079,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1087,7 +1097,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1105,7 +1115,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1123,7 +1133,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1141,7 +1151,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1159,7 +1169,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1177,7 +1187,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1195,7 +1205,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1213,7 +1223,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1231,7 +1241,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1249,7 +1259,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1267,7 +1277,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1285,7 +1295,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1303,7 +1313,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1321,7 +1331,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1339,7 +1349,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1357,7 +1367,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1375,7 +1385,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1393,7 +1403,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1411,7 +1421,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>

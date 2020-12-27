@@ -7,7 +7,7 @@
 		<set name="price" val="1000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48401" name="Release Seal Scroll" additionalName="15-min." type="EtcItem">
@@ -16,7 +16,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48402" name="Test_Count Items 1" type="EtcItem">
@@ -26,7 +26,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48403" name="Test_Count Items 2" type="EtcItem">
@@ -36,7 +36,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48404" name="Test_Count Items 3" type="EtcItem">
@@ -46,7 +46,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48405" name="Blackish Scarab" type="Weapon">
@@ -57,7 +57,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -71,7 +71,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -85,7 +85,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -133,7 +133,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48412" name="Scroll of Escape - Town of Aden" type="EtcItem">
@@ -179,7 +179,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
@@ -1304,6 +1304,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="5" />
 		<cond>
 			<player level="85" />
 		</cond>
@@ -1331,6 +1332,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="5" />
 		<cond>
 			<player level="99" />
 		</cond>

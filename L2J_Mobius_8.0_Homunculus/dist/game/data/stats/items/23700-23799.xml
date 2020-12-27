@@ -1084,7 +1084,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -1099,7 +1099,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -1115,7 +1115,7 @@
 	<item id="23763" name="Vitality Recovery Potion" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only. For 60 min., Vitality is restored upon XP gain. Cannot apply another buff with the same effect, and when applying a similar effect, the Vitaily Maintaining Potion's buff effect will disappear. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1135,7 +1135,7 @@
 	<item id="23764" name="Heavenly Cocktail" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only. For 60 min., you receive the effects of Horn Melody Lv. 2, Pipe Organ Melody Lv. 2, Guitar Melody Lv. 2. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1150,7 +1150,7 @@
 	<item id="23765" name="Feather of Blessing" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only. Can resurrect at the spot if stored in the inventory. -->
 		<set name="icon" val="icon.blessed_feather_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1187,7 +1187,7 @@
 	<item id="23767" name="Tarot Card" type="EtcItem">
 		<!-- Card used in the Lucky Game. A long time ago it could be purchased for Adena at Eve's Card Shop. No longer used. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1200,7 +1200,7 @@
 	<item id="23768" name="Luxury Tarot Card" type="EtcItem">
 		<!-- Card used in a Lucky Game. It can be purchased at Eve's Card Shop using a special coupon. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_i01" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />

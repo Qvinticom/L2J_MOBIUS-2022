@@ -399,12 +399,12 @@
 	<item id="46036" name="Spellbook: Fate of the Exalted" type="EtcItem">
 		<!-- A spellbook for learning Fate of the Exalted Lv. 1. Used by main classes only. Required level: 100. -->
 		<set name="icon" val="icon.giant_book_i02" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -423,11 +423,14 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18378" level="1" />
+		</skills>
 	</item>
 	<item id="46038" name="Indomitable Hero's Olympiad Gift" type="EtcItem">
 		<!-- An Olympiad gift for heroes who have participated in 50 Olympiad matches. -->
@@ -440,6 +443,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18379" level="1" />
+		</skills>
 	</item>
 	<item id="46039" name="PA Talisman - STR" additionalName="PA exclusive" type="Armor">
 		<!-- When equipped, STR +5. Effects of two identical talismans do not stack. -->

@@ -1207,7 +1207,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
@@ -1224,7 +1224,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="13970" level="2" /> <!-- Sayha's Talisman Stage 2 -->
@@ -1240,7 +1240,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="13970" level="3" /> <!-- Sayha's Talisman Stage 3 -->
@@ -1256,7 +1256,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="13970" level="4" /> <!-- Sayha's Talisman Stage 4 -->
@@ -1272,7 +1272,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="13970" level="5" /> <!-- Sayha's Talisman Stage 5 -->
@@ -1289,7 +1289,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="13970" level="6" /> <!-- Sayha's Talisman Stage 6 -->
@@ -1307,7 +1307,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="13970" level="7" /> <!-- Sayha's Talisman Stage 7 -->
@@ -1326,7 +1326,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="13970" level="8" /> <!-- Sayha's Talisman Stage 8 -->
@@ -1346,7 +1346,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="13970" level="9" /> <!-- Sayha's Talisman Stage 9 -->
@@ -1366,7 +1366,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="13970" level="10" /> <!-- Sayha's Talisman Stage 10 -->
@@ -1386,7 +1386,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29057" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 1 -->
+			<item id="28437" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="29068" name="Sayha's Talisman Stage 7 Pack" type="EtcItem">
@@ -1399,7 +1399,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29063" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 7 -->
+			<item id="28443" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 7 -->
 		</capsuled_items>
 	</item>
 	<item id="29069" name="Sayha's Talisman Stage 8 Pack" type="EtcItem">
@@ -1412,7 +1412,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29064" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 8 -->
+			<item id="28444" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 8 -->
 		</capsuled_items>
 	</item>
 	<item id="29070" name="Sayha's Talisman Stage 9 Pack" type="EtcItem">
@@ -1425,7 +1425,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29065" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 9 -->
+			<item id="28445" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 9 -->
 		</capsuled_items>
 	</item>
 	<item id="29071" name="Sayha's Talisman Stage 10 Pack" type="EtcItem">
@@ -1438,7 +1438,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29066" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 10 -->
+			<item id="28446" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 10 -->
 		</capsuled_items>
 	</item>
 	<item id="29072" name="Fortune Talisman Pack" type="EtcItem">
@@ -1461,8 +1461,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1548,7 +1548,7 @@
 		<set name="weight" val="1530" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
@@ -1560,7 +1560,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1578,7 +1578,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1596,7 +1596,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1614,7 +1614,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1632,7 +1632,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1650,7 +1650,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1668,7 +1668,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1686,7 +1686,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1704,7 +1704,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1722,7 +1722,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1740,7 +1740,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1758,7 +1758,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1776,7 +1776,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
@@ -1794,7 +1794,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -1812,7 +1812,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -1830,7 +1830,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -1848,7 +1848,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -1866,7 +1866,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>

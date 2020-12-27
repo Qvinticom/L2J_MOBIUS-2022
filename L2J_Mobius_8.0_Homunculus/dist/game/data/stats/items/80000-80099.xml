@@ -18,7 +18,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -41,7 +41,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="equip_reuse_delay" val="7200" />
@@ -65,7 +65,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -88,7 +88,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
@@ -179,7 +179,7 @@
 		<set name="icon" val="icon.ev_soccer_herb" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80017" name="Red Mask of Victory" additionalName="2018" type="Armor">
@@ -192,7 +192,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">15</stat>
@@ -205,7 +205,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -219,7 +219,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80020" name="White Potion" type="EtcItem">
@@ -494,6 +494,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<skills>
 			<skill id="35268" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+			<skill id="13847" level="1" />	<!-- PvE Damage Increase -->
 		</skills>
 		<stats>
 			<stat type="pAtk">575</stat>
@@ -524,6 +525,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<skills>
 			<skill id="35268" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+			<skill id="13847" level="1" />	<!-- PvE Damage Increase -->
 		</skills>
 		<stats>
 			<stat type="pAtk">575</stat>
@@ -556,6 +558,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<skills>
 			<skill id="35269" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+			<skill id="13847" level="1" />	<!-- PvE Damage Increase -->
 		</skills>
 		<stats>
 			<stat type="pAtk">700</stat>
@@ -587,6 +590,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<skills>
 			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+			<skill id="13847" level="1" />	<!-- PvE Damage Increase -->
 		</skills>
 		<stats>
 			<stat type="pAtk">875</stat>
@@ -615,6 +619,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<skills>
 			<skill id="35266" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+			<skill id="13847" level="1" />	<!-- PvE Damage Increase -->
 		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
@@ -644,6 +649,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<skills>
 			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+			<skill id="13847" level="1" />	<!-- PvE Damage Increase -->
 		</skills>
 		<stats>
 			<stat type="pAtk">875</stat>
@@ -1081,7 +1087,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="35263" level="1" /> <!-- Set Effect - Paulina's Eternal Heavy Armor, 5-piece -->
+			<skill id="35270" level="1" />	<!-- Paulina's Eternal Bracelet -->
 		</skills>
 		<stats>
 			<stat type="maxMp">225</stat>
@@ -1155,7 +1161,7 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>

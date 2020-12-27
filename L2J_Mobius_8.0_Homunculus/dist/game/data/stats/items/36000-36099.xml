@@ -474,7 +474,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -790,6 +790,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -812,6 +813,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -834,6 +836,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -857,6 +860,7 @@
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -880,6 +884,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -903,6 +908,7 @@
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -926,6 +932,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -949,6 +956,7 @@
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="damage_range" val="0;0;32;120" />
@@ -972,6 +980,7 @@
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="damage_range" val="0;0;66;120" />
@@ -998,6 +1007,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -1024,6 +1034,7 @@
 		<set name="weight" val="2050" />
 		<set name="soulshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="damage_range" val="0;0;44;120" />
@@ -1052,6 +1063,7 @@
 		<set name="soulshots" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="damage_range" val="0;0;10;0" />
@@ -1600,13 +1612,14 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="36079" name="Yum Yum Candy" type="EtcItem">
 		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Acquired XP/ SP +25%. Its effect applies together with that of Nom Nom Candy (limited to 1). Temporary event item. -->

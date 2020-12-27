@@ -716,6 +716,10 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="5" />
+		<skills>
+			<skill id="35624" level="1" /> <!-- Enchant Effect: Expert's Mask -->
+		</skills>
 	</item>
 	<item id="81346" name="Scroll: Enchant Expert's Mask" type="EtcItem">
 		<!-- Enchant scroll for Scroll: Enchant Expert s Mask. The maximum enchantment value is +5. -->
@@ -903,13 +907,14 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
-		<set name="is_tradable" val="false" />
+		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
 		<skills>
 			<skill id="39618" level="1" /> <!-- Time Stone of Abandoned Coal Mines -->
 		</skills>

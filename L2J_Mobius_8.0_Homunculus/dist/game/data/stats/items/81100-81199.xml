@@ -502,32 +502,6 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="extractableCountMin" val="1" />
-		<set name="extractableCountMax" val="2" />
-		<set name="handler" val="ExtractableItems" />
-		<capsuled_items> <!-- EternalWars -->
-			<item id="48933" min="1" max="30" chance="70.7619047619048" /> <!-- Lucien's Mark -->
-			<item id="47494" min="1" max="10" chance="6.7619047619048" /> <!-- Selenite -->
-			<item id="48418" min="1" max="1" chance="0.7619047619048" /> <!-- Authority Ornament -->
-			<item id="47983" min="1" max="5" chance="0.7619047619048" /> <!-- Brooch Augmenting Stone -->
-			<item id="48215" min="1" max="5" chance="0.7619047619048" /> <!-- Circlet Augmenting Stone -->
-			<item id="81011" min="1" max="4" chance="0.7619047619048" /> <!-- Honey Dark Beer - Event -->
-			<item id="48857" min="1" max="4" chance="0.7619047619048" /> <!-- Glowing Dragon's Attribute Potion (XP) - Event -->
-			<item id="80964" min="1" max="1" chance="3.7619047619048" /> <!-- Energy of Protection -->
-			<item id="48860" min="1" max="1" chance="0.7619047619048" /> <!-- Fallen Angel's Ring Pack -->
-			<item id="6393" min="1" max="20" chance="0.7619047619048" /> <!-- Event - Glittering Medal -->
-			<item id="48831" min="1" max="1" chance="3.7619047619048" /> <!-- Jewel Energy -->
-			<item id="36731" min="1" max="1" chance="0.7619047619048" /> <!-- Giant's Energy Spirit Stone -->
-			<item id="81134" min="1" max="3" chance="0.7619047619048" /> <!-- Crystal of Dyes -->
-			<item id="48848" min="1" max="4" chance="0.7619047619048" /> <!-- Freya's Ice Rose - Event -->
-			<item id="17526" min="1" max="3" chance="0.7619047619048" /> <!-- Scroll: Enchant R-grade Weapon -->
-			<item id="30297" min="1" max="10" chance="0.7619047619048" /> <!-- Superior Giant's Codex -->
-			<item id="46150" min="1" max="10" chance="0.7619047619048" /> <!-- Superior Giant's Codex - Chapter 1 -->
-			<item id="30298" min="1" max="10" chance="0.7619047619048" /> <!-- Superior Giant's Codex - Mastery -->
-			<item id="46151" min="1" max="10" chance="0.7619047619048" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
-			<item id="4356" min="1" max="1000" chance="0.7619047619048" /> <!-- Gold Einhasad -->
-			<item id="24139" min="1" max="1" chance="0.7619047619048" /> <!-- Starlight Jar -->
-		</capsuled_items>
 	</item>
 	<item id="81152" name="Fafurion's Treasure Chest" type="EtcItem">
 		<!-- Precious treasure chest obtained after the campaign against Fafurion. Double-click to obtain one rare item. -->

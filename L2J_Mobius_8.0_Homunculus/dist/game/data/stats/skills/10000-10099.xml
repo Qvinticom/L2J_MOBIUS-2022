@@ -2250,6 +2250,10 @@
 			<effect name="DispelBySlot">
 				<dispel>SIGEL_SHIELD,9</dispel>
 			</effect>
+			<effect name="CallSkill">
+				<skillId>10060</skillId> <!-- Aggression Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="PhysicalDefence" fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
@@ -2336,6 +2340,10 @@
 			<effect name="DispelBySlot">
 				<dispel>ABSORB,9</dispel>
 			</effect>
+			<effect name="CallSkill">
+				<skillId>10060</skillId> <!-- Aggression Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="PhysicalDefence" fromLevel="5" toLevel="10" fromSubLevel="2001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="5" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
@@ -2386,9 +2394,9 @@
 		<!-- Draws enemies' attention to you.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10026</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>4</abnormalTime>
+		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA_DEBUFF</abnormalType>
-		<activateRate>30</activateRate>
+		<activateRate>100</activateRate>
 		<abnormalVisualEffect>AURA_DEBUFF</abnormalVisualEffect>
 		<affectRange>600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
@@ -2398,7 +2406,7 @@
 		<hitTime>500</hitTime>
 		<effectPoint>-20000</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<reuseDelay>4000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

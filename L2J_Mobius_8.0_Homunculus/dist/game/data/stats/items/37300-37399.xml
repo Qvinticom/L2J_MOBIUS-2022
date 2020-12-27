@@ -2118,12 +2118,12 @@
 	<item id="37373" name="Chaos Fragment" type="EtcItem">
 		<!-- Used to receive the power of chaos. Use it to change your dual class through 'Hardin' at the Reliquary of the Giants. -->
 		<set name="icon" val="icon.etc_debris_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -2132,12 +2132,12 @@
 	<item id="37374" name="Chaos Pomander" type="EtcItem">
 		<!-- Use it to learn the revelation skill through the 'Monk of Chaos' at the Reliquary of the Giants. -->
 		<set name="icon" val="icon.etc_saint_pomander_bishop_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -2146,12 +2146,12 @@
 	<item id="37375" name="Chaos Pomander (Dual Class)" type="EtcItem">
 		<!-- Use it to learn the revelation skill through the 'Monk of Chaos' at the Reliquary of the Giants. (dual class only) -->
 		<set name="icon" val="icon.etc_saint_pomander_bishop_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />

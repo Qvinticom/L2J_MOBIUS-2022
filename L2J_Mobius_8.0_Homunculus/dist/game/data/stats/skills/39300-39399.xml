@@ -25,10 +25,10 @@
 		<icon>icon.agathion_tersi_guard_1</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
-			<condition name="OpSkillAcquire">
-				<!-- TODO: Enchant has to be higher than +8 13341 lvl 3-4-5 -->
-				<skillId>13341</skillId> <!-- Enchant R-grade Robe Set +6 -->
-				<hasLearned>true</hasLearned>
+			<condition name="EquipArmor">
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
 			</condition>
 		</passiveConditions>
 		<effects>

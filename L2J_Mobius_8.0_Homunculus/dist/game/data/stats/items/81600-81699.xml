@@ -74,6 +74,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18815" level="11" /> <!-- Tanzanite -->
 			<skill id="18565" level="11" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -86,6 +87,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18815" level="12" /> <!-- Tanzanite -->
 			<skill id="18565" level="12" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -98,6 +100,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18815" level="13" /> <!-- Tanzanite -->
 			<skill id="18565" level="13" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -110,6 +113,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18815" level="14" /> <!-- Tanzanite -->
 			<skill id="18565" level="14" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -122,6 +126,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18815" level="15" /> <!-- Tanzanite -->
 			<skill id="18565" level="15" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -134,6 +139,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18815" level="16" /> <!-- Tanzanite -->
 			<skill id="18565" level="16" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -146,6 +152,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18815" level="17" /> <!-- Tanzanite -->
 			<skill id="18565" level="17" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -158,6 +165,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18815" level="18" /> <!-- Tanzanite -->
 			<skill id="18565" level="18" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -170,6 +178,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18815" level="19" /> <!-- Tanzanite -->
 			<skill id="18565" level="19" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -182,6 +191,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18815" level="20" /> <!-- Tanzanite -->
 			<skill id="18565" level="20" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -573,6 +583,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="23336" level="1" /> <!-- Agathion Chuchu's Cute Trick -->
 			<skill id="35657" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Guardian Angel Chuchu -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
 		</skills>
@@ -631,18 +642,50 @@
 	<item id="81651" name="Maphr's Wind Scroll" type="EtcItem">
 		<!-- For 10 min., Vitality Consumption during hunting +30%, amount of dropped adena +30%. The effect remains after death. Cooldown: 9 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. Does not stack with the Freya's Frozen Scroll, Freya's Scroll of Storm, Maphr's Scroll of Storm effects. -->
 		<set name="icon" val="icon.bm_maphr_scroll" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="itemSkills" />
+		<cond>
+			<player MinimumVitalityPoints="35000" />
+		</cond>
+		<skills>
+			<skill id="39669" level="1" /> <!-- Maphr's Wind Scroll -->
+		</skills>
 	</item>
 	<item id="81652" name="Maphr's Scroll of Storm" type="EtcItem">
 		<!-- For 10 min., Vitality Consumption during hunting +50%, amount of dropped adena +50%. The effect remains after death. Cooldown: 9 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. Does not stack with the Freya's Scroll of Storm effect. -->
 		<set name="icon" val="icon.bm_maphr_scroll_up" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="itemSkills" />
+		<cond>
+			<player MinimumVitalityPoints="35000" />
+		</cond>
+		<skills>
+			<skill id="39670" level="1" /> <!-- Maphr's Scroll of Storm -->
+		</skills>
 	</item>
 	<item id="81653" name="Aden Traveler Pack" additionalName="Event" type="EtcItem">
 		<!-- A prize for participating in "Journey through Aden". Double-click to obtain one of the following rewards: Freya's Ice Rose, Emperor's Special Cocktail, Freya's Scroll of Storm (3 pcs.), Honey Dark Beer, Glowing Dragon's Attribute Potion, Shining Nevit's Gold Hourglass. -->

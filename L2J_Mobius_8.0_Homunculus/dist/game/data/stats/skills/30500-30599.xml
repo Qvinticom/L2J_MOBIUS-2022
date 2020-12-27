@@ -753,9 +753,10 @@
 		<icon>icon.skill30507</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
+		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate> <!-- Unconfirmed -->
-			<value fromLevel="1" toLevel="26">60</value>
+		<activateRate>
+			<value fromLevel="1" toLevel="26">30</value>
 			<value fromLevel="20" toLevel="26" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<effectPoint>-687</effectPoint>
@@ -831,7 +832,7 @@
 		<operateType>DA5</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<activateRate>60</activateRate>
+		<activateRate>35</activateRate>
 		<mpConsume>
 			<value level="1">7</value>
 			<value level="2">9</value>
@@ -1382,8 +1383,7 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<staticReuse>false</staticReuse>
-		<isMagic>6</isMagic>
+		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<trait>KNOCKDOWN</trait>
 		<conditions>
@@ -2536,9 +2536,9 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">30</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
-		</activateRate> <!-- Guessed -->
+			<value fromLevel="1" toLevel="13">20</value>
+			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
+		</activateRate>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<trait>KNOCKDOWN</trait>

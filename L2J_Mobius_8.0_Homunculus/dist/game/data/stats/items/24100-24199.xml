@@ -794,12 +794,12 @@
 		<!-- When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. -->
 		<set name="icon" val="BranchIcon.Icon.dark_assassin" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -1565,12 +1565,12 @@
 	<item id="24187" name="Easter Egg" additionalName="Event" type="EtcItem">
 		<!-- Gift for Easter. Double-click for a chance to obtain an event item. -->
 		<set name="icon" val="BranchSys3.lcon.g_ev_easter_egg_ru" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_commissionable" val="false" />

@@ -499,7 +499,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -511,7 +511,7 @@
 		</skills>
 	</item>
 	<item id="35935" name="Verdof's Vitality Replenishing Herb" type="EtcItem">
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1575,7 +1575,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -1597,7 +1597,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -1640,7 +1640,7 @@
 		</capsuled_items>
 	</item>
 	<item id="35983" name="HP Recovery Herb" type="EtcItem">
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1653,7 +1653,7 @@
 	</item>
 	<item id="35984" name="Power Herb" type="EtcItem">
 		<set name="icon" val="icon.etc_warrior_set_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1671,7 +1671,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -1690,7 +1690,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -1912,6 +1912,7 @@
 		<set name="weight" val="100" />
 		<set name="soulshots" val="1" />
 		<set name="reuse_delay" val="1350" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="blessed" val="true" />
@@ -1939,6 +1940,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="blessed" val="true" />
@@ -1961,6 +1963,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R99" />
+		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="blessed" val="true" />

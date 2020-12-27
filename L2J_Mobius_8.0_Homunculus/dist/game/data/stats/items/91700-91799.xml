@@ -10,8 +10,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_depositable" val="true" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>

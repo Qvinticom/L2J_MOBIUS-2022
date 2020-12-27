@@ -92,7 +92,7 @@
 	<item id="45378" name="Vitality Replenishing Herb - Party" additionalName="Event" type="EtcItem">
 		<!-- Restores a certain amount of Vitality for all party members. -->
 		<set name="icon" val="icon.general_fuel_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />

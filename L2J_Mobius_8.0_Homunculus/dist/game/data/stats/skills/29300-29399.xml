@@ -1016,7 +1016,7 @@
 		<operateType>A2</operateType>
 		<abnormalType>HEIR_PVE</abnormalType>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>3600</abnormalTime>
 		<reuseDelay>
 			<value level="1">21600000</value>
 			<value level="2">0</value>
@@ -1110,6 +1110,9 @@
 					<value level="5">35000</value>
 				</value>
 			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HEIR_PVP</slot>
+			</effect>
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
@@ -1134,7 +1137,7 @@
 		<operateType>A2</operateType>
 		<abnormalType>HEIR_PVP</abnormalType>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>3600</abnormalTime>
 		<reuseDelay>
 			<value level="1">21600000</value>
 			<value level="2">0</value>
@@ -1247,6 +1250,9 @@
 					<value level="5">1000</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HEIR_PVE</slot>
 			</effect>
 		</effects>
 		<endEffects>

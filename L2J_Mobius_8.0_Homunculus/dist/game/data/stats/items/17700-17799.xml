@@ -295,12 +295,12 @@
 	<item id="17722" name="Stone of Destiny" type="EtcItem">
 		<!-- Contains mysterious powers that could change your fate. -->
 		<set name="icon" val="icon.destiny_stone" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />

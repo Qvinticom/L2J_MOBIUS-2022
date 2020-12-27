@@ -29,6 +29,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17825" level="5" />	<!-- Emerald Lv. 5 -->
+		</skills>
 	</item>
 	<item id="81002" name="PA - Diamond Lv. 5" additionalName="4-hour" type="Armor">
 		<!-- For PA. P. Def. +1986 and decreases Received P. Critical Damage. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
@@ -42,6 +45,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17708" level="5" />	<!-- Diamond Lv. 5 -->
+		</skills>
 	</item>
 	<item id="81003" name="PA - Opal Lv. 5" additionalName="4-hour" type="Armor">
 		<!-- For PA. Attribute Attack +120. The effect doesn't stack if two identical gems are equipped, the higher-level gem takes precedence. -->
@@ -55,6 +61,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17705" level="5" />	<!-- Opal -->
+		</skills>
 	</item>
 	<item id="81004" name="PA - Vital Stone Lv. 5" additionalName="4-hour" type="Armor">
 		<!-- For PA. Vitality Bonus +30%, Vitality Consumption Rate -15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -68,6 +77,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="5" />
+			<skill id="27439" level="4" />
+		</skills>
 	</item>
 	<item id="81005" name="PA - Red Cat's Eye Lv. 5" additionalName="4-hour" type="Armor">
 		<!-- For PA. P. Critical Damage +12%, P. Skill Critical Damage +12%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -81,6 +94,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="5" />
+		</skills>
 	</item>
 	<item id="81006" name="PA - Blue Cat's Eye Lv. 5" additionalName="4-hour" type="Armor">
 		<!-- For PA. M. Skill Critical Damage +12%. When you wear the same type of gemstone. only the effect of the highest level gem is applied. -->
@@ -94,6 +110,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="5" />
+		</skills>
 	</item>
 	<item id="81007" name="PA - La Vie En Rose's Brooch" additionalName="4-hour" type="Armor">
 		<!-- For PA. Moon Voice Irene had inspired maestro Shadai to craft this brooch. The item activates 5 Jewel Slots. Inventory Slots +12. -->

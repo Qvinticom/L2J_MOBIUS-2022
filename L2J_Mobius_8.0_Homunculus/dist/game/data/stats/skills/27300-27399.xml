@@ -1261,18 +1261,6 @@
 				<SLEEP>100</SLEEP>
 				<AIRBIND>100</AIRBIND>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
-				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">
-				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="27358" toLevel="12" name="Slippery Scale">

@@ -40,7 +40,7 @@
 	<item id="35702" name="Zahak's Petra" type="EtcItem">
 		<!-- Petra obtained after defeating Zahak in the Seed of Hellfire. You can find out about the quest by clicking on it. Quest start item. -->
 		<set name="icon" val="icon.etc_torch_on_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -55,7 +55,7 @@
 	<item id="35703" name="Top Quality Petra" type="EtcItem">
 		<!-- Petra obtained after defeating Zahak in the Seed of Hellfire. It feels stronger than the Petra obtained from the Zofans. Bring it to Aku. -->
 		<set name="icon" val="icon.etc_torch_on_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -74,7 +74,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -142,6 +142,7 @@
 		<set name="weight" val="300" />
 		<set name="soulshots" val="2" />
 		<set name="for_npc" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
@@ -214,6 +215,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -234,6 +236,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -254,6 +257,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -274,6 +278,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -294,6 +299,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -314,6 +320,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -808,6 +815,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="reuse_delay" val="86400000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="60025, 60026, 60027" />
 		</cond>
@@ -979,6 +987,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="reuse_delay" val="86400000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="60025, 60026, 60027" />
 		</cond>
@@ -997,6 +1006,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="reuse_delay" val="86400000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="60025, 60026, 60027" />
 		</cond>
@@ -1015,6 +1025,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="reuse_delay" val="86400000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="60025, 60026, 60027" />
 		</cond>

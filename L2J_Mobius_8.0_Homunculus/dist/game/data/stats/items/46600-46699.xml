@@ -295,6 +295,9 @@
 		<set name="time" val="1440" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<skills>
+			<skill id="18559" level="1" />
+		</skills>
 	</item>
 	<item id="46626" name="Growth Accelerator Feed" additionalName="Mystic Tavern - Kelbim" type="EtcItem">
 		<!-- Feed for military dogs to accelerate growth. -->
@@ -698,6 +701,9 @@
 			<stat type="pAtkSpd">433.0</stat>
 			<stat type="rCrit">12.0</stat>
 		</stats>
+		<skills>
+			<skill id="13910" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46654" name="Elysium Cutter" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -720,6 +726,9 @@
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="rCrit">8.0</stat>
 		</stats>
+		<skills>
+			<skill id="13911" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46655" name="Elysium Slasher" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -742,6 +751,9 @@
 			<stat type="pAtkSpd">325.0</stat>
 			<stat type="rCrit">8.0</stat>
 		</stats>
+		<skills>
+			<skill id="13912" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46656" name="Elysium Avenger" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -765,6 +777,9 @@
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
 		</stats>
+		<skills>
+			<skill id="13913" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46657" name="Elysium Fighter" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -788,6 +803,9 @@
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
 		</stats>
+		<skills>
+			<skill id="13914" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46658" name="Elysium Stormer" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -806,6 +824,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="13915" level="1" />	<!--Elysium-->
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
 		<stats>
@@ -837,6 +856,9 @@
 			<stat type="pAtkSpd">293.0</stat>
 			<stat type="rCrit">12.0</stat>
 		</stats>
+		<skills>
+			<skill id="13916" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46660" name="Elysium Shooter" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -860,6 +882,9 @@
 			<stat type="pAtkSpd">325.0</stat>
 			<stat type="rCrit">12.0</stat>
 		</stats>
+		<skills>
+			<skill id="13917" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46661" name="Elysium Buster" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -882,6 +907,9 @@
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="rCrit">8.0</stat>
 		</stats>
+		<skills>
+			<skill id="13918" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46662" name="Elysium Caster" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -905,6 +933,9 @@
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
 		</stats>
+		<skills>
+			<skill id="13919" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46663" name="Elysium Retributer" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -929,6 +960,9 @@
 			<stat type="accMagic">8.0</stat>
 			<stat type="rCrit">6.0</stat>
 		</stats>
+		<skills>
+			<skill id="13920" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46664" name="Elysium Dual Sword" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -951,6 +985,9 @@
 			<stat type="pAtkSpd">325.0</stat>
 			<stat type="rCrit">8.0</stat>
 		</stats>
+		<skills>
+			<skill id="13921" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46665" name="Elysium Dual Dagger" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -974,6 +1011,9 @@
 			<stat type="pAtkSpd">433.0</stat>
 			<stat type="rCrit">12.0</stat>
 		</stats>
+		<skills>
+			<skill id="13922" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46666" name="Elysium Dual Blunt Weapon" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However. it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
@@ -997,6 +1037,9 @@
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
 		</stats>
+		<skills>
+			<skill id="13923" level="1" />	<!--Elysium-->
+		</skills>
 	</item>
 	<item id="46667" name="Lv.5 Giant Dye Pack" type="EtcItem">
 		<set name="icon" val="icon.five_vairy_potion" />
@@ -1215,6 +1258,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
+			<skill id="18815" level="1" /> <!-- Tanzanite -->
 			<skill id="18565" level="1" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -1232,6 +1276,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
+			<skill id="18815" level="2" /> <!-- Tanzanite -->
 			<skill id="18565" level="2" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -1249,6 +1294,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
+			<skill id="18815" level="3" /> <!-- Tanzanite -->
 			<skill id="18565" level="3" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -1266,6 +1312,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
+			<skill id="18815" level="4" /> <!-- Tanzanite -->
 			<skill id="18565" level="4" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -1278,6 +1325,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
+			<skill id="18815" level="5" /> <!-- Tanzanite -->
 			<skill id="18565" level="5" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
@@ -1410,7 +1458,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -1441,7 +1489,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -1471,7 +1519,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -1501,7 +1549,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -1532,7 +1580,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -1563,7 +1611,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
@@ -1595,7 +1643,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;10;0" />

@@ -169,6 +169,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -244,6 +245,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -320,6 +322,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1222,7 +1225,7 @@
 		<!-- Premium Only. Ancient charm endowed with mysterious symbols. When in inventory, Acquired XP +100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1239,7 +1242,7 @@
 		<!-- Premium Only. Ancient charm endowed with mysterious symbols. When in inventory, Acquired SP +100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1256,7 +1259,7 @@
 		<!-- Premium User Only. When carried during a hunt, Adena/ item drop rate/ item acquisition through Spoil +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />

@@ -2915,7 +2915,7 @@
 	<skill id="30872" toLevel="1" name="Limit of Aeore">
 		<!-- Does not apply Celestial Protection and Celestial Party Protection effects for $s1 -->
 		<icon>icon.skill11758</icon>
-		<operateType>A2</operateType>
+		<operateType>A3</operateType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>90</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -2927,14 +2927,14 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DisableSkill">
-				<disable>11759;11758</disable>
+				<disable>11759</disable>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30873" toLevel="1" name="Limit of Iss">
 		<!-- Makes Battle Rhapsody/ Rhapsody Frenzy ineffective for $s1 -->
 		<icon>icon.skill11544</icon>
-		<operateType>A2</operateType>
+		<operateType>A3</operateType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>90</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -2953,7 +2953,7 @@
 	<skill id="30874" toLevel="1" name="Limit of Sigel">
 		<!-- Protection of Faith/ Nine Aegis are ineffective for $s1 -->
 		<icon>icon.skill10019</icon>
-		<operateType>A2</operateType>
+		<operateType>A3</operateType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>90</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -3039,27 +3039,27 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
-				<amount>70</amount>
+				<amount>50</amount>
 				<attribute>FIRE</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>70</amount>
+				<amount>50</amount>
 				<attribute>WATER</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>70</amount>
+				<amount>50</amount>
 				<attribute>EARTH</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>70</amount>
+				<amount>50</amount>
 				<attribute>WIND</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>70</amount>
+				<amount>50</amount>
 				<attribute>HOLY</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>70</amount>
+				<amount>50</amount>
 				<attribute>DARK</attribute>
 			</effect>
 		</effects>

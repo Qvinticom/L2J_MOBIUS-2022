@@ -582,7 +582,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="81454" name="Atlas� Earring" additionalName="Vitality" type="Armor">
+	<item id="81454" name="Atlas' Earring" additionalName="Vitality" type="Armor">
 		<!-- A special mentor's earring. When enchanted, increases Stupor Atk./ Resistance, Attribute Resistance, Vampiric Rage effect, P. Critical Damage, P./ M. Skill Critical Damage, and decreases MP Consumption. Effects of two identical earrings do not stack. <Special effects>. Vitality Bonus +3%. <Enchanting>Use Scroll: Enchant Atlas Earring. Can be augmented. -->
 		<set name="icon" val="branchsys2.icon2.g_accessory_event_earring" />
 		<set name="default_action" val="EQUIP" />
@@ -666,12 +666,18 @@
 		<!-- For 30 min., all basic stats +3, Vitality bonus +30%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_royal_black_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuseDelay" val="300000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="itemSkills" />
+		<skills>
+			<skill id="39656" level="1" /> <!-- Honey Dark Beer -->
+		</skills>
 	</item>
 	<item id="81461" name="Common Dice" type="EtcItem">
 		<!-- Dice for the "Journey through Aden" game. After dice roll you got values from 1 to 6. -->
@@ -706,6 +712,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="36000000" />
 		<skills>
 			<skill id="39657" level="1" /> <!-- Tower of Insolence's Prolongation Stone -->
 		</skills>
@@ -1236,6 +1243,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18814" level="11" />
 			<skill id="17701" level="11" /> <!-- Topaz -->
 		</skills>
 	</item>
@@ -1248,6 +1256,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18814" level="12" />
 			<skill id="17701" level="12" /> <!-- Topaz -->
 		</skills>
 	</item>
@@ -1260,6 +1269,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18814" level="13" />
 			<skill id="17701" level="13" /> <!-- Topaz -->
 		</skills>
 	</item>
@@ -1272,6 +1282,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18814" level="14" />
 			<skill id="17701" level="14" /> <!-- Topaz -->
 		</skills>
 	</item>
@@ -1284,6 +1295,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18814" level="15" />
 			<skill id="17701" level="15" /> <!-- Topaz -->
 		</skills>
 	</item>

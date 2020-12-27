@@ -1478,12 +1478,12 @@
 		<!-- A coin that can be used to enjoy the various attractions in the Talkity Talk Talk Truope Festival. -->
 		<set name="icon" val="icon.ev_festival_coin" />
 		<set name="weight" val="1" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -1531,12 +1531,12 @@
 	<item id="45870" name="Spellbook: Favor of the Exalted" additionalName="Lv. 2" type="EtcItem">
 		<!-- Required for learning Favor of the Exalted Lv. 2. Used by main classes only. Required level: 100. -->
 		<set name="icon" val="icon.giant_book_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />

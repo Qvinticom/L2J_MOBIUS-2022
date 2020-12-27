@@ -519,6 +519,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18514" level="1" />	<!--Seal Altar of Earth-->
+		</skills>
 	</item>
 	<item id="46556" name="Altar of Wind Sealing Stone" type="EtcItem">
 		<!-- Required for sealing the Wind Altar in Kelbim's dungeon (Mystic Tavern). -->
@@ -530,6 +533,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18516" level="1" />	<!--Seal Altar of Wind-->
+		</skills>
 	</item>
 	<item id="46557" name="High-grade Fragment of Chaos" type="EtcItem">
 		<!-- Item obtained from defeating the monsters in Hellbound's Phantasmal Ridge. Collect these and take them to Leona Blackbird in the Refugee Village. -->
@@ -588,7 +594,7 @@
 	<item id="46561" name="Blue Dynasty" type="EtcItem">
 		<!-- Blue Dynasty armor. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -597,7 +603,7 @@
 	<item id="46562" name="Red Zubei" type="EtcItem">
 		<!-- Red Zubei's armor. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -678,6 +684,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<!-- TODO: capsuledItem item 46569 -->
 	</item>
 	<item id="46571" name="For NPC_Left Hand Meat Plate" type="Weapon">
 		<!-- For NPC. -->

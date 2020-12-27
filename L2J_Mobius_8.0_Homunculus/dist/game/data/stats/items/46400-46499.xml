@@ -43,6 +43,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<!-- TODO: Skill 18504 -->
 	</item>
 	<item id="46405" name="Mr. K's Gift Basket" type="EtcItem">
 		<!-- Mr. K's gift basket. Obtain 50 My Teleport Scrolls, 1 My Teleport Book, 10 Feathers of Blessing, 5 Emperor's Vitality Tonics, 5 Emperor's Rune 2-hour Boxes, 25 Vitality Replenishing Potions. Also, randomly get one of the following: Chic Silver Chapeau/ White Uniform Hat/ Ribbon Hairband. -->
@@ -65,7 +66,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -431,6 +432,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<!-- TODO Skill 18508 -->
 	</item>
 	<item id="46432" name="Divine Box" type="EtcItem">
 		<!-- Reward for defeating the pagans inside the Pagan Temple. Double-click to use. Cannot be used in the Olympiad. -->

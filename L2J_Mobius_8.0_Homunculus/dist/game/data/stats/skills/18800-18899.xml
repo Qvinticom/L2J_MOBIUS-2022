@@ -98,7 +98,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18814" toLevel="10" name="Topaz">
+	<skill id="18814" toLevel="20" name="Topaz">
 		<!-- Topaz: Spirit Hit can be used. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_topaz_i00</value>
@@ -111,6 +111,16 @@
 			<value level="8">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
 			<value level="9">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
 			<value level="10">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="11">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
+			<value level="12">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
+			<value level="13">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
+			<value level="14">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
+			<value level="15">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
+			<value level="16">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
+			<value level="17">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
+			<value level="18">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
+			<value level="19">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
+			<value level="20">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
 		</icon>
 		<operateType>A1</operateType>
 		<abnormalLevel>
@@ -124,6 +134,16 @@
 			<value level="8">9</value>
 			<value level="9">10</value>
 			<value level="10">11</value>
+			<value level="11">12</value>
+			<value level="12">13</value>
+			<value level="13">14</value>
+			<value level="14">15</value>
+			<value level="15">16</value>
+			<value level="16">17</value>
+			<value level="17">18</value>
+			<value level="18">19</value>
+			<value level="19">20</value>
+			<value level="20">21</value>
 		</abnormalLevel>
 		<magicLevel>
 			<value level="1">1</value>
@@ -136,6 +156,16 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
+			<value level="13">13</value>
+			<value level="14">14</value>
+			<value level="15">15</value>
+			<value level="16">16</value>
+			<value level="17">17</value>
+			<value level="18">18</value>
+			<value level="19">19</value>
+			<value level="20">20</value>
 		</magicLevel>
 		<effectPoint>-1000</effectPoint>
 		<staticReuse>true</staticReuse>
@@ -161,6 +191,16 @@
 					<value level="8">16461</value>
 					<value level="9">18054</value>
 					<value level="10">19647</value>
+					<value level="11">19647</value>
+					<value level="12">19647</value>
+					<value level="13">19647</value>
+					<value level="14">19647</value>
+					<value level="15">19647</value>
+					<value level="16">19647</value>
+					<value level="17">19647</value>
+					<value level="18">19647</value>
+					<value level="19">19647</value>
+					<value level="20">19647</value>
 				</power>
 			</effect>
 			<effect name="Lethal" fromLevel="6" toLevel="10">
@@ -168,7 +208,7 @@
 			</effect>
 		</pvpEffects>
 	</skill>
-	<skill id="18815" toLevel="10" name="Tanzanite">
+	<skill id="18815" toLevel="20" name="Tanzanite">
 		<!-- Tanzanite - Barrier can be used. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_tanzanite</value>
@@ -181,6 +221,16 @@
 			<value level="8">icon.bm_jewel_tanzanite_high_lv1_lavianrose</value>
 			<value level="9">icon.bm_jewel_tanzanite_high_lv1_lavianrose</value>
 			<value level="10">icon.bm_jewel_tanzanite_high_lv1_lavianrose</value>
+			<value level="11">icon.bm_jewel_tanzanite_lv1_lavianrose_high2</value>
+			<value level="12">icon.bm_jewel_tanzanite_lv1_lavianrose_high2</value>
+			<value level="13">icon.bm_jewel_tanzanite_lv1_lavianrose_high2</value>
+			<value level="14">icon.bm_jewel_tanzanite_lv1_lavianrose_high2</value>
+			<value level="15">icon.bm_jewel_tanzanite_lv1_lavianrose_high2</value>
+			<value level="16">icon.bm_jewel_tanzanite_lv1_lavianrose_high2</value>
+			<value level="17">icon.bm_jewel_tanzanite_lv1_lavianrose_high2</value>
+			<value level="18">icon.bm_jewel_tanzanite_lv1_lavianrose_high2</value>
+			<value level="19">icon.bm_jewel_tanzanite_lv1_lavianrose_high2</value>
+			<value level="20">icon.bm_jewel_tanzanite_lv1_lavianrose_high2</value>
 		</icon>
 		<operateType>P</operateType>
 		<staticReuse>true</staticReuse>

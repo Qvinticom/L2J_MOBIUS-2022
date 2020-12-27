@@ -1450,7 +1450,7 @@
 		<icon>icon.skill11850new</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY_PLEDGE</affectScope>
+		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>
 			<value level="1">148</value>
@@ -1464,6 +1464,7 @@
 			<value level="3">45</value>
 			<value level="4">49</value>
 		</mpInitialConsume>
+		<affectRange>1000</affectRange>
 		<hitTime>10000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
@@ -1474,6 +1475,7 @@
 			<value level="3">95</value>
 			<value level="4">99</value>
 		</magicLevel>
+		<staticReuse>true</staticReuse>
 		<effectPoint>560</effectPoint>
 		<conditions>
 			<condition name="RemainMpPer">

@@ -113,6 +113,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28305" name="Shilen's Ring - Not Used" type="Armor">
@@ -123,6 +124,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28306" name="Shilen's Ring" type="Armor">
@@ -133,6 +135,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28307" name="Shilen's Ring Fragment" type="EtcItem">
@@ -150,6 +153,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28309" name="Shilen's Necklace - Not Used" type="Armor">
@@ -160,6 +164,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28310" name="Shilen's Necklace - Not Used" type="Armor">
@@ -170,6 +175,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28311" name="Shilen's Necklace Fragment" type="EtcItem">
@@ -187,6 +193,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28313" name="Shilen's Earring - Not Used" type="Armor">
@@ -197,6 +204,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28314" name="Shilen's Earring - Not Used" type="Armor">
@@ -207,6 +215,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28315" name="Shilen's Earring Fragment" type="EtcItem">
@@ -676,7 +685,7 @@
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -732,7 +741,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -747,7 +756,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -762,7 +771,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -781,7 +790,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -819,7 +828,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -834,7 +843,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -849,7 +858,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -864,7 +873,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -879,7 +888,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -894,7 +903,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="true" />
 		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="true" />
@@ -1059,7 +1068,7 @@
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1077,7 +1086,7 @@
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1090,7 +1099,7 @@
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1219,8 +1228,8 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
@@ -1231,7 +1240,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
@@ -1250,7 +1259,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />

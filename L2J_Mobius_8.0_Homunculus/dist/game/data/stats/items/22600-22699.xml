@@ -405,7 +405,7 @@
 	<item id="22620" name="Miracle of the Tree - Vitality Recovery" additionalName="Event" type="EtcItem">
 		<!-- Item acquired upon completion of the Holiday Tree. When used, Vitality is restored as XP is acquired. Cooldown is 4 h.. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -424,7 +424,7 @@
 	<item id="22621" name="Vitality Recovery Potion" additionalName="1-hour" type="EtcItem">
 		<!-- Premium user exclusive item. When the Vitality recovery potion is used, for 60 min., Vitality is restored as XP is acquired. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -444,7 +444,7 @@
 	<item id="22622" name="Blessed Scroll of Escape" additionalName="1-day" type="EtcItem">
 		<!-- Premium user exclusive item. Magic scroll that teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -465,7 +465,7 @@
 		<!-- Premium user exclusive item. Magic scroll that resurrects a dead player and completely restores XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="weight" val="10" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -486,7 +486,7 @@
 		<!-- Premium user exclusive item. Restores HP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
 		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -512,7 +512,7 @@
 		<!-- Premium user exclusive item. Restores MP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i00" />
 		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -538,7 +538,7 @@
 		<!-- Premium user exclusive item. Restores CP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i01" />
 		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
