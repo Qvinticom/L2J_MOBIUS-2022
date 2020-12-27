@@ -772,6 +772,7 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
+		<set name="is_freightable" val="true" /> <!-- Should be freightable at +7 -->
 		<set name="crystal_type" val="S" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4950" />
