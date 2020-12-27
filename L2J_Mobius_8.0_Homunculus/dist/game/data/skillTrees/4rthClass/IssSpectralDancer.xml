@@ -307,7 +307,9 @@
 		<skill skillName="Crippling Attack" skillId="11509" skillLevel="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Stunning Assault" skillId="11536" skillLevel="6" getLevel="98" levelUpSp="4990000" />
 		
-		<skill skillName="Blessing Barrier" skillId="11621" skillLevel="1" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Blessing Barrier" skillId="11621" skillLevel="1" getLevel="99" levelUpSp="5000000">
+			<item id="39738" count="4" /> <!-- Rune Stone -->
+		</skill>
 		<skill skillName="Superior Anti Magic" skillId="11505" skillLevel="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Grand Dancing Spectral Sword" skillId="11585" skillLevel="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLevel="4" getLevel="99" levelUpSp="5000000" />
