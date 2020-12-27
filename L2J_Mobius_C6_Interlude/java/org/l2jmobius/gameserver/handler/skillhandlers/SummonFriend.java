@@ -245,7 +245,7 @@ public class SummonFriend implements ISkillHandler
 						else
 						{
 							PlayerInstance.teleToTarget(targetPlayer, activePlayer, activePlayer.getLocation(), skill);
-							targetPlayer.teleportRequest(null, null);
+							targetPlayer.teleportRequest(activePlayer, skill);
 						}
 					}
 				}
