@@ -6329,29 +6329,16 @@
 		<variation mineralId="81728">
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="35041" to="35076" chance="2.083" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="100.0">
-					<optionRange from="35077" to="35112" chance="2.083" />
-				</optionCategory>
-			</optionGroup>
-		</variation>
-		<!-- Armor Augmenting Chest -->
-		<variation mineralId="81728">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
 					<optionRange from="34753" to="34788" chance="2.083" />
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
-			<optionCategory chance="100.0">
-				<optionRange from="34789" to="34824" chance="2.083" />
-			</optionCategory>
-		</optionGroup>
+				<optionCategory chance="100.0">
+					<optionRange from="34789" to="34824" chance="2.083" />
+				</optionCategory>
+			</optionGroup>
 		</variation>
-		<!-- Armor Augmenting Pants -->
+		<!-- Armor Augmenting Chest -->
 		<variation mineralId="81728">
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
@@ -6364,11 +6351,24 @@
 				</optionCategory>
 			</optionGroup>
 		</variation>
-		<!-- Armor Augmenting Gloves -->
+		<!-- Armor Augmenting Pants -->
 		<variation mineralId="81728">
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
 					<optionRange from="34897" to="34932" chance="2.083" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="34933" to="34968" chance="2.083" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Armor Augmenting Gloves -->
+		<variation mineralId="81728">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="34969" to="34932" chance="2.083" />
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
@@ -6387,6 +6387,110 @@
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="100.0">
 					<optionRange from="35005" to="35040" chance="2.083" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Angel's Earring -->
+		<variation mineralId="81729">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="35113" to="35152" chance="2.5" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="35153" to="35196" chance="2.272" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Angel's Ring -->
+		<variation mineralId="81729">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="35197" to="35236" chance="2.5" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="35237" to="35280" chance="2.272" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Fallen Angel's Ring -->
+		<variation mineralId="81729">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="35281" to="35320" chance="2.5" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="35321" to="35364" chance="2.272" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Atlas' Earring -->
+		<variation mineralId="81729">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="35365" to="35404" chance="2.5" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="35405" to="35448" chance="2.272" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Angel's Necklace -->
+		<variation mineralId="81729">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="35449" to="35488" chance="2.5" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="35489" to="35532" chance="2.272" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Dragon's Necklace -->
+		<variation mineralId="81729">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="35533" to="35572" chance="2.5" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="35573" to="35616" chance="2.272" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Dragon's Earring -->
+		<variation mineralId="81729">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="35617" to="35656" chance="2.5" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="35657" to="35700" chance="2.272" />
+				</optionCategory>
+			</optionGroup>
+		</variation>
+		<!-- Dragon's Ring -->
+		<variation mineralId="81729">
+			<optionGroup weaponType="warrior" order="0">
+				<optionCategory chance="100.0">
+					<optionRange from="35701" to="35740" chance="2.5" />
+				</optionCategory>
+			</optionGroup>
+			<optionGroup weaponType="warrior" order="1">
+				<optionCategory chance="100.0">
+					<optionRange from="35741" to="35784" chance="2.272" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
@@ -17586,7 +17690,7 @@
 			<item id="80187" /> <!-- Limited Krishna Dual Daggers -->
 			<item id="80188" /> <!-- Limited Krishna Dual Blunt Weapon -->
 		</itemGroup>
-		<!-- Dragon Weapons -->
+		<!-- Dragon and Cursed Weapons -->
 		<itemGroup id="77">
 			<item id="36441" /> <!-- <Rare> Antharas Shaper(Standard) -->
 			<item id="36442" /> <!-- <Rare> Antharas Slasher(Standard) -->
@@ -17897,7 +18001,7 @@
 			<item id="80244" /> <!-- Supreme Leviathan Leather Boots (Light Armor) -->
 			<item id="80249" /> <!-- Supreme Leviathan Shoes (Robe) -->
 		</itemGroup>
-		<!-- Angel/Dragon Jewelry -->
+		<!-- Angel's Necklace -->
 		<itemGroup id="84">
 			<item id="48669" /> <!-- Angel's Necklace -->
 			<item id="81212" /> <!-- Angel's Necklace -->
@@ -17907,6 +18011,9 @@
 			<item id="81388" /> <!-- Angel's Necklace (Assault Lv. 1) -->
 			<item id="81389" /> <!-- Angel's Necklace (Assault Lv. 2) -->
 			<item id="81390" /> <!-- Angel's Necklace (Assault Lv. 3) -->
+		</itemGroup>
+		<!-- Angel's Earring -->
+		<itemGroup id="85">
 			<item id="48841" /> <!-- Angel's Earring -->
 			<item id="81213" /> <!-- Angel's Earring -->
 			<item id="81373" /> <!-- Angel's Earring (Security Lv. 1) -->
@@ -17915,6 +18022,9 @@
 			<item id="81391" /> <!-- Angel's Earring (Security Lv. 1) -->
 			<item id="81392" /> <!-- Angel's Earring (Security Lv. 2) -->
 			<item id="81393" /> <!-- Angel's Earring (Security Lv. 3) -->
+		</itemGroup>
+		<!-- Angel's Ring -->
+		<itemGroup id="86">
 			<item id="81154" /> <!-- Angel's Ring -->
 			<item id="81214" /> <!-- Angel's Ring -->
 			<item id="81376" /> <!-- Angel's Ring (Elements Lv. 1) -->
@@ -17923,20 +18033,35 @@
 			<item id="81394" /> <!-- Angel's Ring (Elements Lv. 1) -->
 			<item id="81395" /> <!-- Angel's Ring (Elements Lv. 2) -->
 			<item id="81396" /> <!-- Angel's Ring (Elements Lv. 3) -->
+		</itemGroup>
+		<!-- Atlas' Earring -->
+		<itemGroup id="87">
 			<item id="81350" /> <!-- Atlas' Earring -->
 			<item id="81454" /> <!-- Atlas' Earring (Vitality) -->
+		</itemGroup>
+		<!-- Fallen Angel's Ring -->
+		<itemGroup id="88">
 			<item id="48864" /> <!-- Fallen Angel's Ring -->
 			<item id="81364" /> <!-- Fallen Angel's Ring (Charisma Lv. 1) -->
 			<item id="81365" /> <!-- Fallen Angel's Ring (Charisma Lv. 2) -->
 			<item id="81366" /> <!-- Fallen Angel's Ring (Charisma Lv. 3) -->
+		</itemGroup>
+		<!-- Dragon's Necklace -->
+		<itemGroup id="89">
 			<item id="80333" /> <!-- Dragon's Necklace -->
 			<item id="81379" /> <!-- Dragon's Necklace (Battle Lv. 1) -->
 			<item id="81380" /> <!-- Dragon's Necklace (Battle Lv. 2) -->
 			<item id="81381" /> <!-- Dragon's Necklace (Battle Lv. 3) -->
+		</itemGroup>
+		<!-- Dragon's Earring -->
+		<itemGroup id="90">
 			<item id="80334" /> <!-- Dragon's Earring -->
 			<item id="81381" /> <!-- Dragon's Earring (Guardian Lv. 1) -->
 			<item id="81382" /> <!-- Dragon's Earring (Guardian Lv. 2) -->
 			<item id="81383" /> <!-- Dragon's Earring (Guardian Lv. 3) -->
+		</itemGroup>
+		<!-- Dragon's Ring -->
+		<itemGroup id="91">
 			<item id="80335" /> <!-- Dragon's Ring -->
 			<item id="81385" /> <!-- Dragon's Ring (Potential Lv. 1) -->
 			<item id="81386" /> <!-- Dragon's Ring (Potential Lv. 2) -->
@@ -18644,6 +18769,24 @@
 		</fee>
 		<!-- Accessories -->
 		<fee itemGroup="84" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+			<mineral id="81729" /> <!-- Accessory Augmenting Stone -->
+		</fee>
+		<fee itemGroup="85" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+			<mineral id="81729" /> <!-- Accessory Augmenting Stone -->
+		</fee>
+		<fee itemGroup="86" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+			<mineral id="81729" /> <!-- Accessory Augmenting Stone -->
+		</fee>
+		<fee itemGroup="87" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+			<mineral id="81729" /> <!-- Accessory Augmenting Stone -->
+		</fee>
+		<fee itemGroup="88" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+			<mineral id="81729" /> <!-- Accessory Augmenting Stone -->
+		</fee>
+		<fee itemGroup="89" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
+			<mineral id="81729" /> <!-- Accessory Augmenting Stone -->
+		</fee>
+		<fee itemGroup="90" itemId="19440" itemCount="7" cancelFee="12650000"> <!-- Gemstone (R-grade) -->
 			<mineral id="81729" /> <!-- Accessory Augmenting Stone -->
 		</fee>
 	</fees>
