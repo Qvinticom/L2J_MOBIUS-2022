@@ -1405,24 +1405,75 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="22151" level="85" type="Npc" name="Tanta Lizardman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="22151" level="80" type="Monster" name="Tanta Lizardman" element="WATER">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="8109" sp="3430" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6659.53757225433" hpRegen="10.5" mp="2042.90429042904" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="140" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="40.25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="92" min="1" max="1" chance="0.0009" /> <!-- Spirit's Staff -->
+				<item id="2398" min="1" max="1" chance="0.0009" /> <!-- Blue Wolf Tunic -->
+				<item id="2403" min="1" max="1" chance="0.0009" /> <!-- Blue Wolf Stockings -->
+				<item id="57" min="409" max="956" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="1.572" /> <!-- Old Resources -->
+				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
+				<item id="92997" min="1" max="1" chance="0.3" /> <!-- Unknown Resources -->
+				<item id="92909" min="1" max="1" chance="0.3" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
+				<item id="92911" min="1" max="1" chance="0.075" /> <!-- Material: Leather Scraps -->
+				<item id="92912" min="1" max="1" chance="0.03" /> <!-- Material: Plain Fabric -->
+				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
+				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.03" /> <!-- High-grade Resources -->
+				<item id="92914" min="1" max="1" chance="0.0075" /> <!-- Material: Sack Shreds -->
+				<item id="92775" min="1" max="1" chance="0.0075" /> <!-- Blue Wolf Stocking Pattern -->
+				<item id="92916" min="1" max="1" chance="0.003" /> <!-- Material: Animal Spirit -->
+				<item id="92915" min="1" max="1" chance="0.003" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92791" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff Head -->
+				<item id="92773" min="1" max="1" chance="0.003" /> <!-- Blue Wolf Tunic Fabric -->
+				<item id="49427" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Shield Deflect Magic -->
+				<item id="3055" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Lightning Strike -->
+				<item id="4912" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Benediction -->
+				<item id="4915" min="1" max="1" chance="0.0009" /> <!-- Blueprint: Summon Wild Hog Cannon -->
+				<item id="5811" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Mass Slow -->
+				<item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+				<item id="92988" min="1" max="1" chance="0.0009" /> <!-- Orcish Treasure -->
+				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
+				<item id="49568" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Sonic Move -->
+				<item id="49570" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Mass Curse Gloom -->
+				<item id="6350" min="1" max="1" chance="0.0009" /> <!-- Amulet: Pa'agrio's Honor -->
+				<item id="8388" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Attack Prowess -->
+				<item id="8389" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Defense Prowess -->
+				<item id="8890" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Summon Attractive Cubic -->
+				<item id="8891" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Aura Flash -->
+				<item id="49433" min="1" max="1" chance="0.0009" /> <!-- Amulet: Chant of Battle -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="30.38" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="5.825" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.915" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22152" level="78" type="Monster" name="Tanta Lizardman Warrior" element="WATER">
 		<race>HUMANOID</race>
@@ -1502,6 +1553,11 @@
 			<radius normal="28" />
 			<height normal="37.5" />
 		</collision>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>LIZARDMEN</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="300" min="1" max="1" chance="0.0009" /> <!-- Great Axe -->
